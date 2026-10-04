@@ -1,0 +1,346 @@
+{
+  "hand_derivations": [
+    {
+      "id": 10002,
+      "clean": "A",
+      "false_world": "C",
+      "key": "C.power",
+      "truth_followup": 9,
+      "false_followup": 13
+    },
+    {
+      "id": 10003,
+      "clean": "B",
+      "false_world": "C",
+      "key": "C.freight",
+      "truth_followup": 62,
+      "false_followup": 54
+    },
+    {
+      "id": 10004,
+      "clean": "A",
+      "false_world": "B",
+      "key": "B.transfer",
+      "truth_followup": 9,
+      "false_followup": 5
+    },
+    {
+      "id": 10005,
+      "clean": "C",
+      "false_world": "B",
+      "key": "B.power",
+      "truth_followup": 18,
+      "false_followup": 24
+    },
+    {
+      "id": 10006,
+      "clean": "C",
+      "false_world": "A",
+      "key": "A.freight",
+      "truth_followup": 65,
+      "false_followup": 56
+    },
+    {
+      "id": 10007,
+      "clean": "C",
+      "false_world": "A",
+      "key": "A.transfer",
+      "truth_followup": 9,
+      "false_followup": 5
+    }
+  ],
+  "private_views_with_two_explicit_completions": 36,
+  "independent_bounded_cartesian_comparisons": 48,
+  "memory_keys": [
+    {
+      "id": "capacity-complete-0",
+      "independent_key": 51,
+      "groundtruth": 51
+    },
+    {
+      "id": "capacity-omitted-0",
+      "independent_key": null,
+      "groundtruth": 51
+    },
+    {
+      "id": "capacity-conflict-0",
+      "independent_key": null,
+      "groundtruth": 51
+    },
+    {
+      "id": "capacity-correlated_copies-0",
+      "independent_key": null,
+      "groundtruth": 51
+    },
+    {
+      "id": "capacity-superseded-0",
+      "independent_key": 51,
+      "groundtruth": 51
+    },
+    {
+      "id": "capacity-inherited_false-0",
+      "independent_key": 43,
+      "groundtruth": 51
+    },
+    {
+      "id": "capacity-complete-1",
+      "independent_key": 52,
+      "groundtruth": 52
+    },
+    {
+      "id": "capacity-omitted-1",
+      "independent_key": null,
+      "groundtruth": 52
+    },
+    {
+      "id": "capacity-conflict-1",
+      "independent_key": null,
+      "groundtruth": 52
+    },
+    {
+      "id": "capacity-correlated_copies-1",
+      "independent_key": 52,
+      "groundtruth": 52
+    },
+    {
+      "id": "capacity-superseded-1",
+      "independent_key": 52,
+      "groundtruth": 52
+    },
+    {
+      "id": "capacity-inherited_false-1",
+      "independent_key": 44,
+      "groundtruth": 52
+    },
+    {
+      "id": "total_cost-complete-0",
+      "independent_key": 61,
+      "groundtruth": 61
+    },
+    {
+      "id": "total_cost-omitted-0",
+      "independent_key": null,
+      "groundtruth": 61
+    },
+    {
+      "id": "total_cost-conflict-0",
+      "independent_key": null,
+      "groundtruth": 61
+    },
+    {
+      "id": "total_cost-correlated_copies-0",
+      "independent_key": null,
+      "groundtruth": 61
+    },
+    {
+      "id": "total_cost-superseded-0",
+      "independent_key": 61,
+      "groundtruth": 61
+    },
+    {
+      "id": "total_cost-inherited_false-0",
+      "independent_key": 53,
+      "groundtruth": 61
+    },
+    {
+      "id": "total_cost-complete-1",
+      "independent_key": 62,
+      "groundtruth": 62
+    },
+    {
+      "id": "total_cost-omitted-1",
+      "independent_key": null,
+      "groundtruth": 62
+    },
+    {
+      "id": "total_cost-conflict-1",
+      "independent_key": null,
+      "groundtruth": 62
+    },
+    {
+      "id": "total_cost-correlated_copies-1",
+      "independent_key": 62,
+      "groundtruth": 62
+    },
+    {
+      "id": "total_cost-superseded-1",
+      "independent_key": 62,
+      "groundtruth": 62
+    },
+    {
+      "id": "total_cost-inherited_false-1",
+      "independent_key": 54,
+      "groundtruth": 62
+    },
+    {
+      "id": "dependency-complete-0",
+      "independent_key": 71,
+      "groundtruth": 71
+    },
+    {
+      "id": "dependency-omitted-0",
+      "independent_key": null,
+      "groundtruth": 71
+    },
+    {
+      "id": "dependency-conflict-0",
+      "independent_key": null,
+      "groundtruth": 71
+    },
+    {
+      "id": "dependency-correlated_copies-0",
+      "independent_key": null,
+      "groundtruth": 71
+    },
+    {
+      "id": "dependency-superseded-0",
+      "independent_key": 71,
+      "groundtruth": 71
+    },
+    {
+      "id": "dependency-inherited_false-0",
+      "independent_key": 63,
+      "groundtruth": 71
+    },
+    {
+      "id": "dependency-complete-1",
+      "independent_key": 72,
+      "groundtruth": 72
+    },
+    {
+      "id": "dependency-omitted-1",
+      "independent_key": null,
+      "groundtruth": 72
+    },
+    {
+      "id": "dependency-conflict-1",
+      "independent_key": null,
+      "groundtruth": 72
+    },
+    {
+      "id": "dependency-correlated_copies-1",
+      "independent_key": 72,
+      "groundtruth": 72
+    },
+    {
+      "id": "dependency-superseded-1",
+      "independent_key": 72,
+      "groundtruth": 72
+    },
+    {
+      "id": "dependency-inherited_false-1",
+      "independent_key": 64,
+      "groundtruth": 72
+    }
+  ],
+  "missing_world": {
+    "assigned": 96,
+    "terminal": 86,
+    "worlds": 3,
+    "bounds": [
+      -0.6666666666666666,
+      0.6666666666666666
+    ]
+  },
+  "request_boundary_audit": {
+    "calls": 636,
+    "work_calls": 216,
+    "paired_continuation_calls": 19,
+    "shared_checkpoints": 12,
+    "passes": true
+  },
+  "one_failed_response": {
+    "assigned": 96,
+    "terminal": 96,
+    "calls": 204,
+    "provider_failures": 1
+  },
+  "replay_payload": {
+    "rows": 96,
+    "terminal_values_match": true,
+    "shared_evidence_present": true,
+    "browser_playback": "not verified; local-file navigation blocked by browser policy"
+  },
+  "mutations": [
+    {
+      "check": "no-op attack",
+      "detected": true,
+      "reason": "value intervention missing or nonlocal"
+    },
+    {
+      "check": "all documents to one child",
+      "detected": true,
+      "reason": "tool allocation differs from frozen world version; version and review a changed partition"
+    },
+    {
+      "check": "rotate ambiguous partition",
+      "detected": true,
+      "reason": "tool allocation differs from frozen world version; version and review a changed partition"
+    },
+    {
+      "check": "mutated hidden truth",
+      "detected": true,
+      "reason": "independent public-doc key remains A; changed truth reference does not"
+    },
+    {
+      "check": "151-word output",
+      "detected": true,
+      "reason": "invalid message"
+    },
+    {
+      "check": "case changed ID",
+      "detected": true,
+      "reason": "unauthorized source identifier"
+    },
+    {
+      "check": "duplicate source",
+      "detected": true,
+      "reason": "duplicate or missing source"
+    },
+    {
+      "check": "duplicate raw JSON key",
+      "detected": true,
+      "reason": "duplicate JSON key"
+    },
+    {
+      "check": "nonfinite raw JSON",
+      "detected": true,
+      "reason": "nonfinite JSON number"
+    },
+    {
+      "check": "wrong phase fields",
+      "detected": true,
+      "reason": "invalid response fields"
+    },
+    {
+      "check": "relabel arm",
+      "detected": true,
+      "reason": "episode 10002:1:board differs from assignment field arm"
+    },
+    {
+      "check": "relabel world",
+      "detected": true,
+      "reason": "episode 10002:1:board differs from assignment field world"
+    },
+    {
+      "check": "boolean exposure to integer",
+      "detected": true,
+      "reason": "episode 10002:1:board differs from assignment field attack"
+    },
+    {
+      "check": "duplicate episode",
+      "detected": true,
+      "reason": "duplicate episode identifiers"
+    },
+    {
+      "check": "saved terminal score corruption",
+      "detected": true,
+      "reason": "terminal records differ from saved episodes"
+    },
+    {
+      "check": "saved request corruption",
+      "detected": true,
+      "reason": "replay request mismatch"
+    }
+  ]
+}

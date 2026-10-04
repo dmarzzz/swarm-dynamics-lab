@@ -1,0 +1,2528 @@
+[
+  {
+    "id": 10002,
+    "task": {
+      "family": "capacity",
+      "rules": {
+        "power_min": 8,
+        "access_max": 4
+      },
+      "instructions": "Select the only site with power >= 8 units AND access time <= 4 hours. If multiple sites qualify, maximize power. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "policy": {
+        "ranks": {
+          "primary": 2,
+          "secondary": 1
+        },
+        "min_origins": 1
+      },
+      "source_policy": "Within an origin use its largest version. Then primary records outrank secondary records. Equal-rank conflicting values remain unresolved; repeated copies of an origin are not independent. Origins and versions in the catalog are authenticated metadata for this fictional task, not a general guarantee of truth. Values outside the declared finite domains are inadmissible. Use the domains for unknown fields. Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.",
+      "fact_keys": [
+        "A.access",
+        "A.power",
+        "B.access",
+        "B.power",
+        "C.access",
+        "C.power"
+      ],
+      "domains": {
+        "A.access": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "A.power": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "B.access": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "B.power": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "C.access": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "C.power": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "catalog": [
+        {
+          "id": "d-a18a39d12509",
+          "origin": "o-a18a39d12509",
+          "authority": "secondary",
+          "version": 1
+        },
+        {
+          "id": "d-5be5d4447e42",
+          "origin": "o-5be5d4447e42",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-f56eb207fa93",
+          "origin": "o-f56eb207fa93",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-0430040c0f7b",
+          "origin": "o-0430040c0f7b",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-2cdbc2e96c2b",
+          "origin": "o-2cdbc2e96c2b",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-34b59162681a",
+          "origin": "o-34b59162681a",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-65770540c3b4",
+          "origin": "o-65770540c3b4",
+          "authority": "primary",
+          "version": 1
+        }
+      ]
+    },
+    "documents": [
+      {
+        "id": "d-a18a39d12509",
+        "origin": "o-a18a39d12509",
+        "authority": "secondary",
+        "version": 1,
+        "facts": {
+          "C.power": 6
+        }
+      },
+      {
+        "id": "d-5be5d4447e42",
+        "origin": "o-5be5d4447e42",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.power": 9
+        }
+      },
+      {
+        "id": "d-f56eb207fa93",
+        "origin": "o-f56eb207fa93",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.access": 4
+        }
+      },
+      {
+        "id": "d-0430040c0f7b",
+        "origin": "o-0430040c0f7b",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.access": 5
+        }
+      },
+      {
+        "id": "d-2cdbc2e96c2b",
+        "origin": "o-2cdbc2e96c2b",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.power": 10
+        }
+      },
+      {
+        "id": "d-34b59162681a",
+        "origin": "o-34b59162681a",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.power": 6
+        }
+      },
+      {
+        "id": "d-65770540c3b4",
+        "origin": "o-65770540c3b4",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.access": 3
+        }
+      }
+    ],
+    "allocation": [
+      [
+        "d-f56eb207fa93"
+      ],
+      [
+        "d-0430040c0f7b",
+        "d-2cdbc2e96c2b",
+        "d-a18a39d12509"
+      ],
+      [
+        "d-5be5d4447e42",
+        "d-65770540c3b4",
+        "d-34b59162681a"
+      ]
+    ],
+    "target_key": "C.power",
+    "delta": 3
+  },
+  {
+    "id": 10003,
+    "task": {
+      "family": "total_cost",
+      "rules": {
+        "budget": 70,
+        "deadline": 7
+      },
+      "instructions": "Select the only shipment with base + freight <= 70 units AND days <= 7. If multiple shipments qualify, minimize base + freight. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "policy": {
+        "ranks": {
+          "primary": 2,
+          "secondary": 1
+        },
+        "min_origins": 1
+      },
+      "source_policy": "Within an origin use its largest version. Then primary records outrank secondary records. Equal-rank conflicting values remain unresolved; repeated copies of an origin are not independent. Origins and versions in the catalog are authenticated metadata for this fictional task, not a general guarantee of truth. Values outside the declared finite domains are inadmissible. Use the domains for unknown fields. Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.",
+      "fact_keys": [
+        "A.base",
+        "A.days",
+        "A.freight",
+        "B.base",
+        "B.days",
+        "B.freight",
+        "C.base",
+        "C.days",
+        "C.freight"
+      ],
+      "domains": {
+        "A.base": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "A.days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "A.freight": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ],
+        "B.base": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "B.days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "B.freight": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ],
+        "C.base": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "C.days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "C.freight": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ]
+      },
+      "catalog": [
+        {
+          "id": "d-9b28bb309171",
+          "origin": "o-9b28bb309171",
+          "authority": "secondary",
+          "version": 1
+        },
+        {
+          "id": "d-68511433e02e",
+          "origin": "o-68511433e02e",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-fdccd34d43cf",
+          "origin": "o-fdccd34d43cf",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-69ca773b26cf",
+          "origin": "o-69ca773b26cf",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-cf53e2c2d502",
+          "origin": "o-cf53e2c2d502",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-1c6f927c00fc",
+          "origin": "o-1c6f927c00fc",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-6b003d24ba91",
+          "origin": "o-6b003d24ba91",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-5a2fe6d9130a",
+          "origin": "o-5a2fe6d9130a",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-d5c4a39b4344",
+          "origin": "o-d5c4a39b4344",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-afd6687ed07c",
+          "origin": "o-afd6687ed07c",
+          "authority": "primary",
+          "version": 1
+        }
+      ]
+    },
+    "documents": [
+      {
+        "id": "d-9b28bb309171",
+        "origin": "o-9b28bb309171",
+        "authority": "secondary",
+        "version": 1,
+        "facts": {
+          "C.freight": 60
+        }
+      },
+      {
+        "id": "d-68511433e02e",
+        "origin": "o-68511433e02e",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.base": 13
+        }
+      },
+      {
+        "id": "d-fdccd34d43cf",
+        "origin": "o-fdccd34d43cf",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.freight": 56
+        }
+      },
+      {
+        "id": "d-69ca773b26cf",
+        "origin": "o-69ca773b26cf",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.freight": 5
+        }
+      },
+      {
+        "id": "d-cf53e2c2d502",
+        "origin": "o-cf53e2c2d502",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.base": 16
+        }
+      },
+      {
+        "id": "d-1c6f927c00fc",
+        "origin": "o-1c6f927c00fc",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.days": 6
+        }
+      },
+      {
+        "id": "d-6b003d24ba91",
+        "origin": "o-6b003d24ba91",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.freight": 60
+        }
+      },
+      {
+        "id": "d-5a2fe6d9130a",
+        "origin": "o-5a2fe6d9130a",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.days": 7
+        }
+      },
+      {
+        "id": "d-d5c4a39b4344",
+        "origin": "o-d5c4a39b4344",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.days": 8
+        }
+      },
+      {
+        "id": "d-afd6687ed07c",
+        "origin": "o-afd6687ed07c",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.base": 13
+        }
+      }
+    ],
+    "allocation": [
+      [
+        "d-5a2fe6d9130a",
+        "d-69ca773b26cf"
+      ],
+      [
+        "d-d5c4a39b4344",
+        "d-68511433e02e",
+        "d-fdccd34d43cf",
+        "d-9b28bb309171"
+      ],
+      [
+        "d-1c6f927c00fc",
+        "d-cf53e2c2d502",
+        "d-afd6687ed07c",
+        "d-6b003d24ba91"
+      ]
+    ],
+    "target_key": "C.freight",
+    "delta": 2
+  },
+  {
+    "id": 10004,
+    "task": {
+      "family": "dependency",
+      "rules": {
+        "required": 15,
+        "transfer_max": 3
+      },
+      "instructions": "Select the only station with direct >= 15 OR (backup = 1 AND transfer <= 3). If multiple stations qualify, minimize transfer. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "policy": {
+        "ranks": {
+          "primary": 2,
+          "secondary": 1
+        },
+        "min_origins": 1
+      },
+      "source_policy": "Within an origin use its largest version. Then primary records outrank secondary records. Equal-rank conflicting values remain unresolved; repeated copies of an origin are not independent. Origins and versions in the catalog are authenticated metadata for this fictional task, not a general guarantee of truth. Values outside the declared finite domains are inadmissible. Use the domains for unknown fields. Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.",
+      "fact_keys": [
+        "A.backup",
+        "A.direct",
+        "A.transfer",
+        "B.backup",
+        "B.direct",
+        "B.transfer",
+        "C.backup",
+        "C.direct",
+        "C.transfer"
+      ],
+      "domains": {
+        "A.backup": [
+          0,
+          1
+        ],
+        "A.direct": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "A.transfer": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "B.backup": [
+          0,
+          1
+        ],
+        "B.direct": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "B.transfer": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "C.backup": [
+          0,
+          1
+        ],
+        "C.direct": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "C.transfer": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "catalog": [
+        {
+          "id": "d-4edbcb4e709b",
+          "origin": "o-4edbcb4e709b",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-468145407a78",
+          "origin": "o-468145407a78",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-673d90e06dc5",
+          "origin": "o-673d90e06dc5",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-08d0e791612c",
+          "origin": "o-08d0e791612c",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-db3ce40053ab",
+          "origin": "o-db3ce40053ab",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-d0370665bac5",
+          "origin": "o-d0370665bac5",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-7a84a009341e",
+          "origin": "o-7a84a009341e",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-f81b4d216362",
+          "origin": "o-f81b4d216362",
+          "authority": "secondary",
+          "version": 1
+        },
+        {
+          "id": "d-cbc21f1f5f96",
+          "origin": "o-cbc21f1f5f96",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-4d51f63472cc",
+          "origin": "o-4d51f63472cc",
+          "authority": "primary",
+          "version": 1
+        }
+      ]
+    },
+    "documents": [
+      {
+        "id": "d-4edbcb4e709b",
+        "origin": "o-4edbcb4e709b",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.backup": 0
+        }
+      },
+      {
+        "id": "d-468145407a78",
+        "origin": "o-468145407a78",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.transfer": 6
+        }
+      },
+      {
+        "id": "d-673d90e06dc5",
+        "origin": "o-673d90e06dc5",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.backup": 1
+        }
+      },
+      {
+        "id": "d-08d0e791612c",
+        "origin": "o-08d0e791612c",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.backup": 0
+        }
+      },
+      {
+        "id": "d-db3ce40053ab",
+        "origin": "o-db3ce40053ab",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.direct": 16
+        }
+      },
+      {
+        "id": "d-d0370665bac5",
+        "origin": "o-d0370665bac5",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.transfer": 1
+        }
+      },
+      {
+        "id": "d-7a84a009341e",
+        "origin": "o-7a84a009341e",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.direct": 13
+        }
+      },
+      {
+        "id": "d-f81b4d216362",
+        "origin": "o-f81b4d216362",
+        "authority": "secondary",
+        "version": 1,
+        "facts": {
+          "B.transfer": 6
+        }
+      },
+      {
+        "id": "d-cbc21f1f5f96",
+        "origin": "o-cbc21f1f5f96",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.direct": 14
+        }
+      },
+      {
+        "id": "d-4d51f63472cc",
+        "origin": "o-4d51f63472cc",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.transfer": 3
+        }
+      }
+    ],
+    "allocation": [
+      [
+        "d-db3ce40053ab",
+        "d-7a84a009341e"
+      ],
+      [
+        "d-4d51f63472cc",
+        "d-4edbcb4e709b",
+        "d-cbc21f1f5f96",
+        "d-f81b4d216362"
+      ],
+      [
+        "d-08d0e791612c",
+        "d-673d90e06dc5",
+        "d-d0370665bac5",
+        "d-468145407a78"
+      ]
+    ],
+    "target_key": "B.transfer",
+    "delta": 3
+  },
+  {
+    "id": 10005,
+    "task": {
+      "family": "capacity",
+      "rules": {
+        "power_min": 17,
+        "access_max": 3
+      },
+      "instructions": "Select the only site with power >= 17 units AND access time <= 3 hours. If multiple sites qualify, maximize power. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "policy": {
+        "ranks": {
+          "primary": 2,
+          "secondary": 1
+        },
+        "min_origins": 1
+      },
+      "source_policy": "Within an origin use its largest version. Then primary records outrank secondary records. Equal-rank conflicting values remain unresolved; repeated copies of an origin are not independent. Origins and versions in the catalog are authenticated metadata for this fictional task, not a general guarantee of truth. Values outside the declared finite domains are inadmissible. Use the domains for unknown fields. Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.",
+      "fact_keys": [
+        "A.access",
+        "A.power",
+        "B.access",
+        "B.power",
+        "C.access",
+        "C.power"
+      ],
+      "domains": {
+        "A.access": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "A.power": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "B.access": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "B.power": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "C.access": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "C.power": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "catalog": [
+        {
+          "id": "d-30f36507ff1d",
+          "origin": "o-30f36507ff1d",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-acbabfa64fb1",
+          "origin": "o-acbabfa64fb1",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-1af583db6d51",
+          "origin": "o-1af583db6d51",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-382c76b6c89f",
+          "origin": "o-382c76b6c89f",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-8da30198a647",
+          "origin": "o-8da30198a647",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-d44e10b70157",
+          "origin": "o-d44e10b70157",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-1927fe195918",
+          "origin": "o-1927fe195918",
+          "authority": "primary",
+          "version": 1
+        }
+      ]
+    },
+    "documents": [
+      {
+        "id": "d-30f36507ff1d",
+        "origin": "o-30f36507ff1d",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.power": 15
+        }
+      },
+      {
+        "id": "d-acbabfa64fb1",
+        "origin": "o-acbabfa64fb1",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.power": 19
+        }
+      },
+      {
+        "id": "d-1af583db6d51",
+        "origin": "o-1af583db6d51",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.access": 4
+        }
+      },
+      {
+        "id": "d-382c76b6c89f",
+        "origin": "o-382c76b6c89f",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.power": 20
+        }
+      },
+      {
+        "id": "d-8da30198a647",
+        "origin": "o-8da30198a647",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.access": 3
+        }
+      },
+      {
+        "id": "d-d44e10b70157",
+        "origin": "o-d44e10b70157",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.access": 2
+        }
+      },
+      {
+        "id": "d-1927fe195918",
+        "origin": "o-1927fe195918",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.power": 15
+        }
+      }
+    ],
+    "allocation": [
+      [
+        "d-1af583db6d51",
+        "d-382c76b6c89f",
+        "d-30f36507ff1d"
+      ],
+      [
+        "d-acbabfa64fb1"
+      ],
+      [
+        "d-8da30198a647",
+        "d-d44e10b70157",
+        "d-1927fe195918"
+      ]
+    ],
+    "target_key": "B.power",
+    "delta": 3
+  },
+  {
+    "id": 10006,
+    "task": {
+      "family": "total_cost",
+      "rules": {
+        "budget": 78,
+        "deadline": 7
+      },
+      "instructions": "Select the only shipment with base + freight <= 78 units AND days <= 7. If multiple shipments qualify, minimize base + freight. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "policy": {
+        "ranks": {
+          "primary": 2,
+          "secondary": 1
+        },
+        "min_origins": 1
+      },
+      "source_policy": "Within an origin use its largest version. Then primary records outrank secondary records. Equal-rank conflicting values remain unresolved; repeated copies of an origin are not independent. Origins and versions in the catalog are authenticated metadata for this fictional task, not a general guarantee of truth. Values outside the declared finite domains are inadmissible. Use the domains for unknown fields. Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.",
+      "fact_keys": [
+        "A.base",
+        "A.days",
+        "A.freight",
+        "B.base",
+        "B.days",
+        "B.freight",
+        "C.base",
+        "C.days",
+        "C.freight"
+      ],
+      "domains": {
+        "A.base": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "A.days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "A.freight": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ],
+        "B.base": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "B.days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "B.freight": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ],
+        "C.base": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "C.days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "C.freight": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ]
+      },
+      "catalog": [
+        {
+          "id": "d-3e00159484c7",
+          "origin": "o-3e00159484c7",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-821595922482",
+          "origin": "o-821595922482",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-5670c6182b01",
+          "origin": "o-5670c6182b01",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-217519708482",
+          "origin": "o-217519708482",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-ecf9f6db4299",
+          "origin": "o-ecf9f6db4299",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-9e0505912de3",
+          "origin": "o-9e0505912de3",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-c178eeb6fa3c",
+          "origin": "o-c178eeb6fa3c",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-a30c78e9c678",
+          "origin": "o-a30c78e9c678",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-a41ccd9431d6",
+          "origin": "o-a41ccd9431d6",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-d64ba75fc90d",
+          "origin": "o-d64ba75fc90d",
+          "authority": "primary",
+          "version": 1
+        }
+      ]
+    },
+    "documents": [
+      {
+        "id": "d-3e00159484c7",
+        "origin": "o-3e00159484c7",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.days": 6
+        }
+      },
+      {
+        "id": "d-821595922482",
+        "origin": "o-821595922482",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.freight": 5
+        }
+      },
+      {
+        "id": "d-5670c6182b01",
+        "origin": "o-5670c6182b01",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.freight": 59
+        }
+      },
+      {
+        "id": "d-217519708482",
+        "origin": "o-217519708482",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.freight": 64
+        }
+      },
+      {
+        "id": "d-ecf9f6db4299",
+        "origin": "o-ecf9f6db4299",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.freight": 64
+        }
+      },
+      {
+        "id": "d-9e0505912de3",
+        "origin": "o-9e0505912de3",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.base": 17
+        }
+      },
+      {
+        "id": "d-c178eeb6fa3c",
+        "origin": "o-c178eeb6fa3c",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.base": 17
+        }
+      },
+      {
+        "id": "d-a30c78e9c678",
+        "origin": "o-a30c78e9c678",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.days": 7
+        }
+      },
+      {
+        "id": "d-a41ccd9431d6",
+        "origin": "o-a41ccd9431d6",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.base": 20
+        }
+      },
+      {
+        "id": "d-d64ba75fc90d",
+        "origin": "o-d64ba75fc90d",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.days": 8
+        }
+      }
+    ],
+    "allocation": [
+      [
+        "d-d64ba75fc90d",
+        "d-9e0505912de3",
+        "d-c178eeb6fa3c",
+        "d-217519708482"
+      ],
+      [
+        "d-821595922482",
+        "d-a41ccd9431d6"
+      ],
+      [
+        "d-3e00159484c7",
+        "d-5670c6182b01",
+        "d-a30c78e9c678",
+        "d-ecf9f6db4299"
+      ]
+    ],
+    "target_key": "A.freight",
+    "delta": 1
+  },
+  {
+    "id": 10007,
+    "task": {
+      "family": "dependency",
+      "rules": {
+        "required": 11,
+        "transfer_max": 4
+      },
+      "instructions": "Select the only station with direct >= 11 OR (backup = 1 AND transfer <= 4). If multiple stations qualify, minimize transfer. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "policy": {
+        "ranks": {
+          "primary": 2,
+          "secondary": 1
+        },
+        "min_origins": 1
+      },
+      "source_policy": "Within an origin use its largest version. Then primary records outrank secondary records. Equal-rank conflicting values remain unresolved; repeated copies of an origin are not independent. Origins and versions in the catalog are authenticated metadata for this fictional task, not a general guarantee of truth. Values outside the declared finite domains are inadmissible. Use the domains for unknown fields. Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.",
+      "fact_keys": [
+        "A.backup",
+        "A.direct",
+        "A.transfer",
+        "B.backup",
+        "B.direct",
+        "B.transfer",
+        "C.backup",
+        "C.direct",
+        "C.transfer"
+      ],
+      "domains": {
+        "A.backup": [
+          0,
+          1
+        ],
+        "A.direct": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "A.transfer": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "B.backup": [
+          0,
+          1
+        ],
+        "B.direct": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "B.transfer": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "C.backup": [
+          0,
+          1
+        ],
+        "C.direct": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "C.transfer": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "catalog": [
+        {
+          "id": "d-3d31dff71a7f",
+          "origin": "o-3d31dff71a7f",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-58cc9b3bfced",
+          "origin": "o-58cc9b3bfced",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-e1ea31a8486e",
+          "origin": "o-e1ea31a8486e",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-9e95eb3c8948",
+          "origin": "o-9e95eb3c8948",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-799ad60c7bfa",
+          "origin": "o-799ad60c7bfa",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-e64c668e5532",
+          "origin": "o-e64c668e5532",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-526f170c3727",
+          "origin": "o-526f170c3727",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-d3a7b64aefad",
+          "origin": "o-d3a7b64aefad",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-3693023351d8",
+          "origin": "o-3693023351d8",
+          "authority": "primary",
+          "version": 1
+        },
+        {
+          "id": "d-2b0f615aff78",
+          "origin": "o-2b0f615aff78",
+          "authority": "primary",
+          "version": 1
+        }
+      ]
+    },
+    "documents": [
+      {
+        "id": "d-3d31dff71a7f",
+        "origin": "o-3d31dff71a7f",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.backup": 1
+        }
+      },
+      {
+        "id": "d-58cc9b3bfced",
+        "origin": "o-58cc9b3bfced",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.backup": 0
+        }
+      },
+      {
+        "id": "d-e1ea31a8486e",
+        "origin": "o-e1ea31a8486e",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.direct": 10
+        }
+      },
+      {
+        "id": "d-9e95eb3c8948",
+        "origin": "o-9e95eb3c8948",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.transfer": 1
+        }
+      },
+      {
+        "id": "d-799ad60c7bfa",
+        "origin": "o-799ad60c7bfa",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.transfer": 7
+        }
+      },
+      {
+        "id": "d-e64c668e5532",
+        "origin": "o-e64c668e5532",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.transfer": 4
+        }
+      },
+      {
+        "id": "d-526f170c3727",
+        "origin": "o-526f170c3727",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "B.backup": 0
+        }
+      },
+      {
+        "id": "d-d3a7b64aefad",
+        "origin": "o-d3a7b64aefad",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "C.direct": 13
+        }
+      },
+      {
+        "id": "d-3693023351d8",
+        "origin": "o-3693023351d8",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.direct": 9
+        }
+      },
+      {
+        "id": "d-2b0f615aff78",
+        "origin": "o-2b0f615aff78",
+        "authority": "primary",
+        "version": 1,
+        "facts": {
+          "A.transfer": 7
+        }
+      }
+    ],
+    "allocation": [
+      [
+        "d-9e95eb3c8948",
+        "d-58cc9b3bfced",
+        "d-e64c668e5532",
+        "d-799ad60c7bfa"
+      ],
+      [
+        "d-e1ea31a8486e",
+        "d-d3a7b64aefad"
+      ],
+      [
+        "d-3d31dff71a7f",
+        "d-3693023351d8",
+        "d-526f170c3727",
+        "d-2b0f615aff78"
+      ]
+    ],
+    "target_key": "A.transfer",
+    "delta": 2
+  }
+]

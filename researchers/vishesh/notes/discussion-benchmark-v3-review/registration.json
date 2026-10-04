@@ -1,0 +1,12 @@
+{
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/461442980b25620b662550a31191937f1601e285/researchers/vishesh/notes/discussion-benchmark-v3-review/PLAN.md",
+  "verified_content_url": "https://raw.githubusercontent.com/dmarzzz/swarm-lab/461442980b25620b662550a31191937f1601e285/researchers/vishesh/notes/discussion-benchmark-v3-review/PLAN.md",
+  "sha256": "c29c60f891df75e3b04e28c2df54a0a0b9310fec83a6eedcd9fbc504cc03576b",
+  "verified_at": "2026-10-04T02:51:25.622736+00:00",
+  "http_status": 200,
+  "conditions": {
+    "baseline": "Current selftests versus declared invariants; record pass/failure; software evidence only.",
+    "vishesh-independent-a1": "Evidence-policy dev clean/attack \u00d7 four arms, 3 rounds; 96 cases/636 calls and saved-response replay; no LLM inference.",
+    "reviewer-mutations": "Corrupted allocation, source support, response, assignment and score versus independent hand keys and original fixtures; detect violations and preserve unknowns; bounded review."
+  }
+}

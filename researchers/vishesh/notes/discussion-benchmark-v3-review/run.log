@@ -1,0 +1,19 @@
+{
+  "output": "/private/tmp/swarm-independent-reviews/data/discussion-v3/vishesh-independent-a1",
+  "reconciliation": {
+    "assigned": 96,
+    "input_tokens": null,
+    "missing": [],
+    "output_tokens": null,
+    "physical_model_calls": 0,
+    "planned_calls": 636,
+    "provider_failures": 0,
+    "started_calls": 636,
+    "terminal": 96,
+    "terminal_calls": 636,
+    "unresolved_calls": [],
+    "usage_missing_calls": null,
+    "validation_failures": 0
+  },
+  "scientific": false
+}
