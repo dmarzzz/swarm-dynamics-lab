@@ -40,8 +40,8 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | claimed | p0 | synthesis | shadow/sol-atlas |  | 2026-10-04T13:59Z | Draw the cross-topic landscape map |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed (stale) | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T09:29Z | Prepare and launch fresh Antsy v8 OCR qualification |
+| [consolidate-pi-next-decisions](tasks/consolidate-pi-next-decisions.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T14:25Z | Consolidate PI reviews into experiment next-step decisions |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed (stale) | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
@@ -54,6 +54,8 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
+| [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T14:27Z | Survey: agent budgets, budget visibility and self-allocation among agents |
+| [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | claimed | p1 | survey | shadow/sol-fm |  | 2026-10-04T14:21Z | Survey: corruption on reintegration in fork-and-merge agents |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -78,12 +80,10 @@
 | [scan-papers-avalon-swarm](tasks/scan-papers-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue LLM social-deduction benchmarks and any large-N or swarm variants (Avalon, Werewolf, Mafia) |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
-| [survey-agent-budgets](tasks/survey-agent-budgets.md) | open | p1 | survey |  |  |  | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [survey-collective-decision](tasks/survey-collective-decision.md) | open | p1 | survey |  |  |  | Survey: collective decision-making in biology |
 | [survey-collective-motion](tasks/survey-collective-motion.md) | open | p1 | survey |  |  |  | Survey: collective motion models |
 | [survey-criticality-measurement](tasks/survey-criticality-measurement.md) | open | p1 | survey |  |  |  | Survey: criticality, information and measurement |
 | [survey-crowds-and-traffic](tasks/survey-crowds-and-traffic.md) | open | p1 | survey |  |  |  | Survey: human crowds and traffic |
-| [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | open | p1 | survey |  |  |  | Survey: corruption on reintegration in fork-and-merge agents |
 | [survey-marl-emergence](tasks/survey-marl-emergence.md) | open | p1 | survey |  |  |  | Survey: multi-agent rl and emergent coordination |
 | [survey-swarm-detection](tasks/survey-swarm-detection.md) | open | p1 | survey |  |  |  | Survey: detecting AI agent swarms in the wild |
 | [survey-swarm-intelligence](tasks/survey-swarm-intelligence.md) | open | p1 | survey |  |  |  | Survey: swarm intelligence algorithms |
@@ -129,6 +129,7 @@
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | done | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T18:20Z | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | done | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T18:20Z | Catalogue swarm robotics papers from 2024 onward |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
+| [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | done | p0 | synthesis | shadow/sol-atlas |  | 2026-10-04T14:29Z | Draw the cross-topic landscape map |
 | [adaptive-quorum-api-v2](tasks/adaptive-quorum-api-v2.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:40Z | Expand adaptive quorum into evidence-based API selection |
 | [adaptive-quorum-pilot](tasks/adaptive-quorum-pilot.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:28Z | Build and launch adaptive-quorum exploratory qualification |
 | [add-experiment-evidence-metadata](tasks/add-experiment-evidence-metadata.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:20Z | Add evidence confidence and sample-size metadata to every study |
@@ -269,10 +270,11 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
+| shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | vishesh/codex-pi-review | done | transfer-dmarz-market-methods | 2026-10-04T14:02Z | Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs. |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
-| shadow/sol-atlas | working |  | 2026-10-04T13:58Z | TODO one line |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
 | dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T13:05Z | sybil-scarcity-xmodel: Qwen chain ready (code 2753b03d, source hash 06cbd97e, review reviews/chain-001-pre.md); next: gpt-6-sol path (reference OpenAI adapter, price row, tests, own review); no launch, no model call. |

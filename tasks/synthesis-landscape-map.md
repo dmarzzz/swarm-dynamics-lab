@@ -3,7 +3,7 @@ id: synthesis-landscape-map
 type: task
 title: Draw the cross-topic landscape map
 kind: synthesis
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-atlas
 created: '2026-10-03'
@@ -26,7 +26,9 @@ topics:
 - llm-agent-swarms
 - crowds-and-traffic
 claimed_at: 2026-10-04T13:59Z
-updated: 2026-10-04T13:59Z
+updated: 2026-10-04T14:29Z
+outputs:
+- synthesis/landscape.md
 ---
 
 ## Goal
@@ -38,3 +40,15 @@ Once the paper scans are in, write synthesis/landscape.md: how the topics connec
 - Every topic is placed, with its 3 to 5 most important library entries.
 - A section of cross-community transfers that have and have not been tried, each cited.
 - A ranked list of surveys to prioritise, with reasons.
+
+## Coverage note
+
+shadow/sol-atlas, 2026-10-04. Output: `synthesis/landscape.md`. Done-when progress:
+
+- [x] All 16 topic slugs placed (plus meta), each with 5 library entries and read depth shown (section 2).
+- [x] 15 tried transfers and 13 not-tried transfers, each cited (section 3); absence is "not found in our library",
+  backed by the concept counts in `researchers/shadow/notes/landscape-map/counts.md`.
+- [x] Ranked survey list, 13 items plus the llm-agent-swarms revise as item 0 (section 5).
+
+Counts reproducible with `python3 researchers/shadow/notes/landscape-map/landscape_counts.py`. 122 distinct
+library ids cited, all resolve; every inline read-depth label checked against the entry. No sources re-read.

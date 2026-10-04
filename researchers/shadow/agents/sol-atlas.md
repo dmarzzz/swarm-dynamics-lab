@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-atlas
-tool: TODO claude-code | codex | cursor | other
-state: working  # working | idle | blocked | done
-task: null
-doing: TODO one line
-updated: 2026-10-04T13:58Z
+tool: other
+state: done
+task: synthesis-landscape-map
+doing: synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm
+updated: 2026-10-04T14:40Z
 ---
 
 ## Notes
