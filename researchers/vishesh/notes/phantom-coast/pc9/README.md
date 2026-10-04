@@ -1,5 +1,14 @@
 # PC9: population exploration instrument
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `14504ced` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Population misinformation spread and acquisition feedback remain untested on native models; only the offline instrument is validated. Basis: Thirty software tests and replay of four conditions on one deliberately scripted development world pass. A positive fault witness and negative evidence-only control validate routing/scoring, not empirical susceptibility.
+- **sample_size_summary:** Native:0 worlds,0 requests. Saved unit fixture:1 world ×4 paired conditions ×5 scripted actors ×3 times; these60 decisions are dependent software fixtures. Candidate8-root pilot and8 qualification packets remain ungenerated/unrun.
+<!-- experiment-evidence:end -->
+
 **Built and validated offline; no native run.** Five separate actor contexts map four locations, share optional prior-round interpretations and choose two collective inspections. The four paired conditions cross honest/false initial evidence with peer communication on/off. No location is made inaccessible because of a belief. [Prospective implementation contract](PLAN.md).
 
 This refocuses Phantom on whether a seeded false map spreads and prevents its own correction. Spread, acquired evidence, post-receipt error, uncertainty and task loss are separate outputs. The engine is capable of recording a resilience/null result; neither avoidance nor contamination is baked into its scheduler.

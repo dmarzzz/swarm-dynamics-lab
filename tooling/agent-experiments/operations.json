@@ -22,8 +22,8 @@
       "setup_path": "researchers/vishesh/notes/phantom-coast/pc9/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:12:29.705635+00:00",
-      "checked_commit": "d100df92ed48c41c49fa079d6a8de9667fdb873d",
+      "checked_at": "2026-10-04T18:42:42.878812+00:00",
+      "checked_commit": "14504ced722726d845d0063e7b38b3cb8474a4e8",
       "next_action": "PC9 population exploration instrument built and offline validated;30 tests and replay pass. Read pc9/SETUP.md. HOLD native collection: fresh exact qualification/transport/admission scope remains to prepare; latest native PC8 is closed. Cumulative exposure .858328842 unchanged.",
       "next_run_approval": "owner"
     },

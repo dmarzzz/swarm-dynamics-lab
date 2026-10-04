@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: working
+state: done
 task: phantom-coast-pc9-instrument
-doing: Building and validating PC9 population exploration instrument; no native dispatch
-updated: 2026-10-04T18:37:54.608724+00:00
+doing: PC9 offline population instrument complete;30 tests and replay pass; no native run or new spend
+updated: 2026-10-04T18:42:42.878610+00:00
 ---
 
 ## Notes
