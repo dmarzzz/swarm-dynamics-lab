@@ -14,6 +14,10 @@ What each mark encodes
 - Amber path: the order the lab enforces, five nodes from the edge to the core:
   scan, survey, synthesis, hypothesis, experiment. It is the one mark that is not a record.
 
+- Bottom right: the dmarz mark in its film form, a wireframe tesseract rotating in the XW and YZ planes on the
+  16 s cycle, in the mark's oil-slick stops. It is the maker's mark, not data. Animated with SMIL, which runs
+  when GitHub serves the SVG through <img>.
+
 The scatter inside each band is a hash of the entry id, so the output is deterministic.
 Stdlib only. No text, fonts, scripts or external references in the SVG (GitHub serves it through <img>).
 """
@@ -143,6 +147,66 @@ def spiral(n_points=160):
     return pts
 
 
+# the mark: geometry and colour follow DmarzMark.tsx in the brand assets (tesseract unit 19 px at scale 1)
+MARK_SCALE = 1.25
+MARK_RIGHT, MARK_BOTTOM = 84, 40       # gap from the banner's right and bottom edges to the mark's 100 px box
+MARK_CYCLE = 16                        # seconds, sys.motion.mark-cycle
+MARK_FRAMES = 48
+MARK_DRIFT = 39                        # seconds per turn of the XY drift (0.16 rad/s in the film form)
+SLICK = ["#14d6ff", "#3060ff", "#8c3aff", "#ff2896", "#ff7a18"]
+
+
+def mark():
+    """The rotating tesseract as two SMIL-animated paths (edges, corner points).
+
+    Over one cycle the XW angle advances a half turn three times over (3 pi) and the YZ angle one full turn.
+    Both are symmetries of the tesseract, so the last frame draws the same figure as the first and the loop has
+    no seam. The slow XY drift is a rotation in the screen plane, so it is a separate animateTransform.
+    """
+    k = MARK_SCALE
+    unit, half = 19 * k, 50 * k
+    cx, cy = W - MARK_RIGHT - half, H - MARK_BOTTOM - half
+    verts = [[1 if i & (1 << b) else -1 for b in range(4)] for i in range(16)]
+    edges = [(i, i | (1 << b)) for i in range(16) for b in range(4) if not i & (1 << b)]
+
+    def project(step):
+        u = step / MARK_FRAMES
+        a, b, c = 0.4 + u * 3 * math.pi, 1.1 + u * 2 * math.pi, 0.0
+        out = []
+        for x, y, z, w in verts:
+            x1, w1 = x * math.cos(a) - w * math.sin(a), x * math.sin(a) + w * math.cos(a)
+            y1, z1 = y * math.cos(b) - z * math.sin(b), y * math.sin(b) + z * math.cos(b)
+            x2, y2 = x1 * math.cos(c) - y1 * math.sin(c), x1 * math.sin(c) + y1 * math.cos(c)
+            k4 = 2.6 / (2.6 - w1 * 0.62)
+            k3 = 5 / (5 - z1 * k4)
+            out.append((x2 * k4 * k3 * unit, -y2 * k4 * k3 * unit))
+        return out
+
+    n = lambda v: f"{v:.1f}".rstrip("0").rstrip(".").replace("-0", "0") if abs(v) >= 0.05 else "0"
+    wire, dots = [], []
+    for step in range(MARK_FRAMES + 1):
+        pts = project(step)
+        wire.append("".join(f"M{n(pts[i][0])} {n(pts[i][1])}L{n(pts[j][0])} {n(pts[j][1])}" for i, j in edges))
+        dots.append("".join(f"M{n(x)} {n(y)}h0" for x, y in pts))
+    anim = lambda vals: (f'<animate attributeName="d" dur="{MARK_CYCLE}s" repeatCount="indefinite" '
+                         f'values="{";".join(vals)}"/>')
+    reach = half * 1.25
+    stops = "".join(f'<stop offset="{i / (len(SLICK) - 1):.2f}" stop-color="{c}"/>' for i, c in enumerate(SLICK))
+    return (
+        f'<defs><linearGradient id="m" gradientUnits="userSpaceOnUse" x1="{-reach:.0f}" y1="{reach:.0f}" '
+        f'x2="{reach:.0f}" y2="{-reach:.0f}">{stops}</linearGradient>'
+        f'<radialGradient id="n" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="{VOID}" stop-opacity=".92"/>'
+        f'<stop offset=".6" stop-color="{VOID}" stop-opacity=".7"/><stop offset="1" stop-color="{VOID}" stop-opacity="0"/>'
+        f'</radialGradient></defs>'
+        f'<g transform="translate({cx:.0f} {cy:.0f})"><circle r="{half * 1.7:.0f}" fill="url(#n)"/><g>'
+        f'<animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="{MARK_DRIFT}s" '
+        f'repeatCount="indefinite"/>'
+        f'<path d="{wire[0]}" fill="none" stroke="url(#m)" stroke-width="{1.7 * k:.1f}" stroke-linecap="round">{anim(wire)}</path>'
+        f'<path d="{dots[0]}" fill="none" stroke="url(#m)" stroke-width="{4.4 * k:.1f}" stroke-linecap="round">{anim(dots)}</path>'
+        f'</g></g>'
+    )
+
+
 def main():
     entries, n_topics = read_library()
     cohorts = read_cohorts()
@@ -209,6 +273,7 @@ def main():
     s.append(f'<g fill="hsl({HUE},95%,74%)">{"".join(ones)}</g>')
     s.append(f'<g fill="none" stroke="hsl({HUE},60%,74%)" stroke-opacity=".7" stroke-width="1">{"".join(rings)}</g>')
 
+    s.append(mark())
     s.append("</g>")
     s.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="none" stroke="#ffffff" stroke-opacity=".12"/>')
     s.append("</svg>\n")

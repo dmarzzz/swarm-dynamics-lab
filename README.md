@@ -1,22 +1,28 @@
-![A swarm of 3,319 dots, one per catalogued source, around a core of 150 experiment cohorts, with an amber path from the edge to the core through the five phases](assets/banner.svg)
+![A swarm of 3,319 dots, one per catalogued source, around a core of 150 experiment cohorts, with an amber path from the edge to the core through the five phases and a rotating wireframe cube in the corner](assets/banner.svg)
 
 # Swarm Dynamics Lab
 
-A research lab run by the swarm it studies.
+An open source environment for studying swarm dynamics.
 
-Three researchers each ran their own AI agents (Claude Code, Codex and others) against this one repo for about
-30 hours on 3 and 4 October 2026, at the [AI Village x Grove Research AI Swarm Dynamics Hackathon](HACKATHON.md).
-The agents coordinated only through the repo: a task board, a library of prior work, gated surveys, experiments
-and reviews. They worked on three questions:
+Everything needed to study how swarms of LLM agents get attacked, captured and repaired is in this repo, in the
+open: a library of 3,319 catalogued sources, the surveys and question atlas built from it, an experiment toolkit
+with a worker template, 117 studies with their plans, code, records and post-mortems, the protocol that lets
+many agents share one repo, and a template of the server fleet that ran them. Clone it, point your own agents
+at it, and run your own studies.
+
+The lab was run by the swarm it studies. Three researchers each ran their own AI agents (Claude Code, Codex and
+others) against this one repo for about 30 hours on 3 and 4 October 2026, at the
+[AI Village x Grove Research AI Swarm Dynamics Hackathon](HACKATHON.md). The agents coordinated only through the
+repo, and worked on three questions:
 
 1. Under what scenarios will agents create Sybils?
 2. Can a few adversarial agents push an entire swarm into unsafe behavior?
 3. Can a swarm preserve its safety constraints as agents, memories, and context change?
 
 The event's prompt is "Building the tools we wished we had for the Hugging Face incident." The tool submitted
-here is the pipeline that keeps a research swarm checkable: a prior-art gate run by CI, plans committed before
-runs, every run reported, a post-mortem per attempt and an evidence score per claim. The findings
-below are what that pipeline produced in one weekend, failures included.
+here is the whole environment, and the pipeline inside it that keeps a research swarm checkable: a prior-art
+gate run by CI, plans committed before runs, every run reported, a post-mortem per attempt and an evidence
+score per claim. The findings below are what it produced in one weekend, failures included.
 
 [![lab][lab-badge]][lab-url]
 [![library][library-badge]][library-index]
@@ -33,6 +39,22 @@ below are what that pipeline produced in one weekend, failures included.
 > 48 score 0/4 (untested), 76 score 1/4 (exploratory), 25 score 2/4 (limited), one is unassessed and none
 > scores higher. No survey has passed cross-researcher review yet, so no hypothesis is accepted and nothing
 > below is a test of one. Caveats sit next to each result, in the study's own results file.
+
+## What is in the environment
+
+Every piece is in this repo and can be used on its own.
+
+| Piece | Where | What you get |
+|---|---|---|
+| Prior-art library | [`1-library/`](1-library/) | 3,319 sources on swarms, Sybil resistance, multi-agent LLM systems and agent security, one file each with a summary, topics and a stated read depth. `lab.py find` searches it. |
+| Surveys and question atlas | [`2-surveys/`](2-surveys/), [`3-synthesis/`](3-synthesis/) | 5 prior-art surveys with their search logs, and 214 candidate research questions across 15 areas. |
+| Experiment toolkit | [`5-experiments/toolkit/`](5-experiments/toolkit/README.md), [`lab/templates/experiment-worker/`](lab/templates/experiment-worker/) | The setup runbook, pre-run and post-mortem templates, claim-scope and run-quality rubrics, and a worker template for a distributed, pre-registered experiment. |
+| Studies | [`5-experiments/studies/`](5-experiments/studies/README.md) | 117 study folders with plans, code, saved records, results and post-mortems. Rerun one or start from the closest. |
+| Evidence registry | [`5-experiments/EVIDENCE.md`](5-experiments/EVIDENCE.md) | 150 cohorts, each with a stated claim, sample sizes and a 0 to 4 evidence score. |
+| Agent protocol and coordination | [`AGENTS.md`](AGENTS.md), [`lab/`](lab/README.md) | The rules, task board, claims and sync loop that let many agents from several people work in one repo. |
+| Fleet template | [`agentops/`](agentops/README.md) | OpenTofu, Ansible roles and a run hub for short-lived experiment servers, scrubbed for reuse. |
+| Dashboard | [`dashboard/`](dashboard/) | The research-question dashboard, built from the repo's own files. |
+| Provenance | [`artifacts/`](artifacts/), [`artifacts.yaml`](artifacts.yaml) | 113 shipped figures, films, docs and datasets, each filed with its inputs and the script that made it. |
 
 ## What the swarm found
 
@@ -111,7 +133,7 @@ The banner at the top of this page is drawn from these records by
 [`src/readme-banner/build.py`](src/readme-banner/build.py). Each outer dot is one library source: its direction
 is its topics, it sits nearer the centre the more relevant it was rated, and it is brighter the deeper it was
 read. The core is the 150 cohorts: white for evidence 2/4, violet for 1/4, hollow for 0/4. The amber path is
-the five phases in order.
+the five phases in order. The rotating cube in the corner is the maker's mark and encodes nothing.
 
 ## Run it yourself
 
