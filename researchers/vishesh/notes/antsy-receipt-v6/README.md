@@ -31,7 +31,7 @@ Initial policy inputs contain only candidate amounts, status and confidence for 
 
 ## Policies and primary measures
 
-Freeze thresholds before fresh evaluation. Baselines: fixed initial mode6; highest-confidence initial candidate; initial agreement-or-refer; always run both checkers then agreement-or-refer; selective checking (accept initial agreement, otherwise query checkers until agreement or exhausted, then refer). Agreement means at least two distinct pipeline outputs with the same numeric amount; ties/conflicting top support refer. These policies are transparent and can fail on correlated errors.
+Freeze thresholds before fresh evaluation. Baselines: fixed initial mode6; highest-confidence initial candidate; initial agreement-or-refer; always run both checkers then agreement-or-refer; selective checking (accept initial agreement, otherwise query checkers until agreement or exhausted, then refer). Agreement means at least two distinct pipeline outputs with the same numeric amount; ties/conflicting top support refer. These policies are transparent and can fail on correlated errors. Raw mean OCR-line confidence is not calibrated probability of a correct total; the confidence baseline deliberately tests that common heuristic.
 
 Primary: correct automatic acceptance per assigned/scorable receipt, incorrect automatic acceptance, referral rate, conditional error among accepted, checker calls and measured incremental checker wall time. Reference-ambiguous rows remain visibly unscored. Report a sensitivity loss of wrong acceptance +0.1/0.25/0.5×referral separately from actual compute latency; these penalties are assumptions, not dollars. No fabricated human-review time. A hindsight best-candidate oracle is diagnostic only.
 
@@ -47,7 +47,11 @@ Before fresh S1: publish E0 post-mortem, freeze all repairs and thresholds, reta
 
 ## Visualization and reproducibility
 
-Show candidate agreement and disagreements, actual checker invocations and elapsed times, accept/refer action, then evaluator reveal. First3 assigned receipts are fixed examples; any worst-case addition labeled post-hoc. Overview plots show correct/wrong/referral counts and measured latency separately; no decorative biological animation. Keep per-action histories for GIF/replay and all numeric outcomes for audit. Every run immutable, failures preserved, source/data/tool versions recorded, no outcome retries.
+Show candidate agreement and disagreements, actual checker invocations and elapsed times, accept/refer action, then evaluator reveal. First3 assigned receipts are fixed examples. An optional fourth trace shows the first receipt whose action changes with checking, labeled post-hoc; it is not a representative efficacy sample. Overview plots show correct/wrong/referral counts and measured latency separately; no decorative biological animation. Keep per-action histories for GIF/replay and all numeric outcomes for audit. Every run immutable, failures preserved, source/data/tool versions recorded, no outcome retries.
+
+## Scope and outstanding review
+
+See [issue closure](ISSUES.md) and [test adequacy](TESTING.md). V6 measures selective tool use, not a manipulated urgency effect or biological replication. The penalty sensitivity is an assumed decision cost, not a learned deadline response.
 
 ## Sources checked this session
 
