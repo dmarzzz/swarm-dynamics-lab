@@ -36,7 +36,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [adaptive-quorum-api-v2](tasks/adaptive-quorum-api-v2.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:30Z | Expand adaptive quorum into evidence-based API selection |
 | [external-influence-v2](tasks/external-influence-v2.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T00:34Z | Build expanded external-influence procurement pilot |
 | [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T00:39Z | Refine and run the exploratory immune-response instrument |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | claimed | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:35Z | Prepare and run the first real-model discussion-dose qualification |
@@ -100,6 +99,7 @@
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | done | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T18:20Z | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | done | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T18:20Z | Catalogue swarm robotics papers from 2024 onward |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
+| [adaptive-quorum-api-v2](tasks/adaptive-quorum-api-v2.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:40Z | Expand adaptive quorum into evidence-based API selection |
 | [adaptive-quorum-pilot](tasks/adaptive-quorum-pilot.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:28Z | Build and launch adaptive-quorum exploratory qualification |
 | [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
 | [build-dashboard-questions](tasks/build-dashboard-questions.md) | done | p1 | build | dmarz/dashboard-questions |  | 2026-10-03T21:56Z | Add question atlas and review tools to the research dashboard |
@@ -145,8 +145,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-methods | done | adaptive-quorum-api-v2 | 2026-10-04T00:39Z | Published factual API v2; 168 local Laya outcomes failed clean competence, no S1 |
 | vishesh/codex-immune | working |  | 2026-10-04T00:35Z | TODO one line |
-| vishesh/codex-methods | working | adaptive-quorum-api-v2 | 2026-10-04T00:27Z | Building factual API selection with five/nine agents, strong central controls and local qualification |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-experiments | blocked | build-actual-experiment-suite | 2026-10-04T00:10Z | Two studies deployed, 3162 scripted outcomes complete; moved to exclusive research-01; live qualification needs Anthropic workspace ID |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
