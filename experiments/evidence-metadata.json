@@ -2611,6 +2611,36 @@
       "assessor": "shadow/sol-audit-gap",
       "assessed_at": "2026-10-04",
       "source_commit": "d7301e98cefafe96f1a23c3d257beab06fea129c"
+    },
+    {
+      "id": "wild-askswarm",
+      "title": "AskSwarm: coverage-aware lexical diagnostics across three observed swarms",
+      "documents": [
+        "researchers/shadow/notes/wild-askswarm/README.md"
+      ],
+      "experiment_ids": [
+        "wild-askswarm"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The shared offline interface produces corpus-level lexical and participation descriptions and exposes unavailable identity/time endpoints in the released SwarmTraces artifacts.",
+        "rationale": "Selected dependent corpora, snapshot inheritance, self-asserted labels and unvalidated lexical proxies do not establish semantic adoption, causal influence or matched cross-swarm behavioral differences."
+      },
+      "sample_size_summary": "Observed: 3 selected source corpora, independence not established; 14,591 wiki revisions, 189,579 SwarmTraces artifacts, 2,673 non-merge git commits. Identity coverage: 13,692/14,591; 0/189,579; 1,924/2,673. No model calls or experimental trials.",
+      "sources": [
+        "researchers/shadow/notes/wild-askswarm/PLAN.md",
+        "researchers/shadow/notes/wild-askswarm/FINDING.md",
+        "researchers/shadow/notes/wild-askswarm/results/wiki/metrics.json",
+        "researchers/shadow/notes/wild-askswarm/results/swarmtraces/metrics.json",
+        "researchers/shadow/notes/wild-askswarm/results/git/metrics.json",
+        "researchers/shadow/notes/wild-askswarm/results/validation.json",
+        "researchers/shadow/notes/wild-askswarm/hub_spec.json"
+      ],
+      "status_at_assessment": "exploratory_offline_tool_and_corpus_census_complete",
+      "assessor": "shadow/sol-askswarm",
+      "assessed_at": "2026-10-04",
+      "source_commit": "d6463560b10d6468d2a165971dbbbebe61ae1e49"
     }
   ],
   "source_sha256": {
