@@ -205,7 +205,7 @@
 | vishesh/codex-heterogeneous | working | heterogeneous-priority-revision | 2026-10-04T03:40Z | Updating five scores and consolidating the self-differentiating swarm direction |
 | vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:40Z | Build practical continuity scenarios and qualify the next bounded iteration |
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T03:39Z | Building parallel verification-budget and newcomer-trust API studies; independent review waived by owner, engineering gates retained |
-| vishesh/codex-idea-scores | working | build-swarm-size-qualification | 2026-10-04T03:38Z | Built offline qualification package; preparing review and launch prerequisites |
+| vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:38Z | Awaiting numeric API cap and independent review; live integration, route pin and public preflight precede launch |
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T03:30Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc1 | 2026-10-04T03:30Z | Design PC-1 and validate offline contracts; live launch gates unresolved |
 | vishesh/codex-quorum-mirrors | working |  | 2026-10-04T03:30Z | Revise DM-02 design and validate offline evidence contracts; no model launch |
