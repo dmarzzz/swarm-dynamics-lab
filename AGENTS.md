@@ -474,3 +474,13 @@ Owner direction, 2026-10-04: define each claim prospectively and match its popul
 ## Evaluate test-case quality during iteration
 
 Owner direction, 2026-10-04 UTC: define and evaluate what makes the experiment’s cases good using the shared TEST-CASE-QUALITY.md rubric. Improve feasible gaps in task relevance, answerability, labels, isolation, controls, realistic challenge, strong baselines and holdouts before declaring cases ready. Publish evidence-linked acceptance checks and distinguish case readiness for a stated scope from native qualification and run admission. Preserve historical results and all spending/scope boundaries.
+
+## OpenRouter migration for direct Anthropic failures
+
+Owner direction, 2026-10-04 UTC: migrate Vishesh-owned experimental sessions blocked by HTTP429 on the direct Anthropic route to the existing authorized OpenRouter credential and route. This is explicit approval of that provider/credential change for already-approved bounded runs; do not request the same switch again or keep waiting for direct-Anthropic account recovery. Other researchers' credentials and policies are unchanged.
+
+The owning task updates the real endpoint, authentication, request/response handling, model/provider routing and cost calculation, rather than substituting a key into the old client. Preserve the intended model when available; do not silently substitute a scientifically different model or allow provider/model fallback. Record the actual served model/provider and source hashes; qualify the changed route under the applicable existing stage and distinguish it from historical direct-route cohorts.
+
+Use the established local OpenRouter consumer or bounded relay; consume the credential privately without printing or persistently copying it to experiment machines. Keep credential locations and access details in local private context. Publish the prospective routing amendment and verify current public-plan, offline checks, source/runtime, exclusive approved-account allocation and qualification evidence before dispatch. Direct-route recovery is no longer a prerequisite for these migrated scopes.
+
+Carry forward every original ledger, settled cost, unresolved reservation and spending cap, including qualification and failed calls. The switch creates no additional allowance, generic probe, new scientific scope or automatic full rerun. Already-OpenRouter HTTP429 failures need their own diagnosis; do not mislabel them as direct-Anthropic failures. Existing negative results, failed attempts and stopped workers remain intact. If the intended route is unavailable or cannot fit the remaining authorized envelope, complete offline preparation and report the specific remaining decision.

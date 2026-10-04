@@ -2,6 +2,11 @@
 
 Owner directive recorded 2026-10-04 UTC. This is standing authorization for the narrowly scoped transfer below, rather than a new one-off permission request for every experiment machine. It does not increase spending, authorize other projects' credentials, provision machines or waive experiment admission checks. Platform-enforced approval decisions still apply; report a rejection and its stated reason, and do not circumvent it.
 
+
+## Current route selection for failed direct Anthropic runs
+
+The owner's later [OpenRouter migration directive](../../AGENTS.md#openrouter-migration-for-direct-anthropic-failures) authorizes the existing OpenRouter credential and established local consumer/relay for affected Vishesh-owned runs. The Anthropic selector and workspace-header requirements below apply to direct Anthropic only; they must not be imposed on an OpenRouter client or cause a fallback to the failing route. Never send an Anthropic key or workspace header to OpenRouter. Endpoint, credential selector, model/provider routing, schemas and cost accounting must agree and be tested together. Keep the OpenRouter key local through the existing bounded relay pattern and close that relay at run completion. This authorization does not create extra spending or bypass qualification/admission.
+
 ## Authorized credential and scope
 
 For Vishesh's shared Anthropic Swarm Lab experiments, consume only the dedicated macOS Keychain generic-password entry with **service `swarm-lab-anthropic` and account `vishesh`**. These are credential selectors, not secret values. This exact selector was verified in the existing Swarm Lab launcher. The selected entry must contain exactly one identifiable Anthropic API key; an absent, invalid or ambiguous entry blocks transfer.

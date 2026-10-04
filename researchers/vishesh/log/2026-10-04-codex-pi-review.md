@@ -141,3 +141,7 @@ Linked shared AGENTS, setup/operations/review guides, methods index and next-run
 ## AI Village dataset review
 
 Authenticated metadata access verified at source revision 838b4150. Read card/schema/changelog and parsed four small tables; behavioral logs remain uninspected. Current manifest counts exceed the older card estimates. Prepared an exploratory memory/handoff replay design, study mapping, setup state and safe file hashes. Historical private goals, room filters and scaffolding changes prohibit treating the full archive as an agent's original context. No model calls, experiment launch or allocation. Next: bounded private episode inventory and label/visibility checks, then a concrete costed packet and owner decision.
+
+## Owner directed OpenRouter migration
+
+Recorded explicit provider/credential migration approval for direct-Anthropic429-blocked scopes. Forwarded implementation to Influence, Immune, Theseus and Optimal Swarm Size owning tasks. Existing budgets, unknown charges, public plans and qualification remain binding; direct-route recovery is no longer the migration's blocker. Local credential metadata verified without reading/printing values. Root made no paid call or allocation and does not claim that sending instructions completes each native adapter change.

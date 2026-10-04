@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: idle
-task: ai-village-dataset-design-2026-10-04
-doing: Dataset access verified and replay proposal published; no model run or allocation.
-updated: 2026-10-04T18:02Z
+state: working
+task: openrouter-route-switch-2026-10-04
+doing: Recording owner approved OpenRouter migration and coordinating affected native tasks.
+updated: 2026-10-04T18:43Z
 ---
 
 ## Notes
