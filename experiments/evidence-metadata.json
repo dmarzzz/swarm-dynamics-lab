@@ -4145,6 +4145,33 @@
         "researchers/vishesh/notes/influence-swarms/scenario/scale-up/saved-audit.json"
       ],
       "status_at_assessment": "completed_exploratory_baseline_gap_parked"
+    },
+    {
+      "id": "growth-pressure-200",
+      "title": "Growth pressure and rule evasion in a 200-agent economy",
+      "documents": [
+        "researchers/dmarz/notes/growth-pressure-200/README.md"
+      ],
+      "experiment_ids": [
+        "growth-pressure-200"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Assigned rival evasion changes sustained levy avoidance by growing ordinary focal owners.",
+        "rationale": "Prospective plan only; no experimental implementation, qualification or scientific observations."
+      },
+      "sample_size_summary": "Observed: none. Planned: 16 independent paired markets in four 200-agent batches; 3 arms, 5 shared opening + 20 continuation rounds; 32 focal owners/arm; 52,000 main and 3,296 qualification decisions.",
+      "sources": [
+        "researchers/dmarz/notes/growth-pressure-200/PLAN.md",
+        "researchers/dmarz/notes/growth-pressure-200/design.json",
+        "researchers/dmarz/notes/growth-pressure-200/SETUP.md",
+        "researchers/dmarz/notes/growth-pressure-200/reviews/design-review.md"
+      ],
+      "status_at_assessment": "plan_only_unrun",
+      "assessor": "dmarz/astra-ultra-review",
+      "assessed_at": "2026-10-04",
+      "source_commit": "8ab3e110433a2d53095b3efbe0ec0a82fdb2d366"
     }
   ],
   "source_sha256": {

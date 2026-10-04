@@ -1,0 +1,113 @@
+{
+  "study_id": "growth-pressure-200",
+  "version": 1,
+  "status": "plan_only_unrun",
+  "author": "Astra Ultra",
+  "owner": "dmarz",
+  "batches": 4,
+  "markets_per_batch": 4,
+  "owners_per_market": 50,
+  "focals_per_market": 2,
+  "potential_rivals_per_market": 4,
+  "ordinary_small_per_market": 44,
+  "assigned_doses": [
+    0,
+    1,
+    4
+  ],
+  "opening_rounds": 5,
+  "continuation_rounds": 20,
+  "primary_contrast": [
+    4,
+    0
+  ],
+  "primary_streak_rounds": 3,
+  "primary_practical_effect_pp": 25,
+  "model": "gpt-6-sol",
+  "reasoning_effort": "low",
+  "max_input_tokens": 6144,
+  "max_completion_tokens": 1024,
+  "initial_capacity": {
+    "market": 100,
+    "each_focal": 8,
+    "each_potential_rival": 11,
+    "small_total": 40
+  },
+  "economics": {
+    "intercept_range": [
+      59,
+      61
+    ],
+    "demand_slope": 0.2,
+    "unit_cost_floor": 12,
+    "unit_cost_scale_premium": 18,
+    "unit_cost_capacity_scale": 4,
+    "capacity_price": 200,
+    "depreciation": 0.01,
+    "cash_per_initial_capacity": 40,
+    "investment_fraction_previous_positive_net_profit": 0.75,
+    "firm_registration_fee": 20,
+    "firm_overhead": 3,
+    "max_firms": 4,
+    "terminal_capacity_value": 100,
+    "levy_share_strictly_above": 0.1,
+    "levy_fraction": 0.35,
+    "unpaid_overhead_deducted_from_terminal_wealth": true,
+    "operating_profit_includes_registration_fees": true
+  },
+  "qualification": {
+    "mechanics_calls": 48,
+    "seeder_fixtures": 8,
+    "seeder_steps": 6,
+    "opening_load_calls": 800,
+    "continuation_load_calls": 2400
+  },
+  "expected_counts": {
+    "independent_paired_markets": 16,
+    "agents_per_economy": 200,
+    "focals_per_arm": 32,
+    "ordinary_owners_per_arm": 736,
+    "main_calls": 52000,
+    "qualification_calls": 3296,
+    "planned_calls": 55296,
+    "max_extra_transport_attempts": 553,
+    "max_http_attempts": 55849
+  },
+  "time": {
+    "execution_limit_seconds": 3600,
+    "qualification_limit_seconds": 480,
+    "main_window_seconds": 2640,
+    "dispatch_deadline_seconds": 3120,
+    "local_drain_deadline_seconds": 3180,
+    "opening_wave_max_seconds": 60,
+    "continuation_wave_max_seconds": 90,
+    "projection_margin": 1.25,
+    "request_timeout_seconds": 45
+  },
+  "workers": {
+    "simulation_hosts": 12,
+    "max_global_inflight": 128,
+    "one_active_run_per_host": true
+  },
+  "budget": {
+    "fresh_allocation_verified": false,
+    "standing_aggregate_api_ceiling_usd": 500,
+    "historical_s1_cost_per_call_low": 0.006744,
+    "historical_s1_cost_per_call_high": 0.006781,
+    "historical_max_context_cost_per_call": 0.008980739,
+    "current_prices_verified": false
+  },
+  "evidence_confidence": {
+    "score": 0,
+    "claim": "Assigned rival evasion changes sustained levy avoidance by growing ordinary focal owners.",
+    "rationale": "Prospective plan only; no experimental implementation, qualification or scientific observations."
+  },
+  "sample_size_summary": "Observed: none. Planned: 16 independent paired markets in four 200-agent batches; 3 arms, 5 shared opening + 20 continuation rounds; 32 focal owners/arm; 52,000 main and 3,296 qualification decisions.",
+  "analysis": {
+    "independent_unit": "market",
+    "bootstrap_replicates": 10000,
+    "all_zero_difference_bound": "1 - 0.05**(1/16)",
+    "sparse_or_other_degenerate_interval": "Hoeffding, radius sqrt(2*log(40)/16)",
+    "unknown_primary_outcomes": "bounds only; no complete-case estimate"
+  }
+}

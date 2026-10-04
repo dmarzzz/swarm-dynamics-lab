@@ -4939,4 +4939,35 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-QUALITY.json
         commit: 3a7895ff9dd96bd2651622cc03b4374301e4ee13-dirty
         public: true
+  - id: growth-pressure-200-plan
+    category: content
+    type: doc
+    title: 'Astra Ultra’s experiment plan: growth pressure and rule evasion'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/growth-pressure-200-plan/growth-pressure-200-plan-v1.md
+        built_at: '2026-10-04T21:20:04Z'
+        note: Prospective exploratory plan; no native runs, server operations or empirical findings. One-hour schedule conditional
+          on measured qualification and remaining shared funds/quota.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10874-3409-7ff1-9671-5ea243883587
+        prompt: okay great, let's create an experiment plan and push it which targets finishing all the runs within 1 hour.
+          it can use as many machines and or agents as we want but I dont want to do wasted experiments which aren't useful
+          ya know, so design it well
+        ingredients:
+          - researchers/dmarz/notes/growth-pressure-200/PLAN.md
+          - researchers/dmarz/notes/growth-pressure-200/design.json
+          - researchers/dmarz/notes/growth-pressure-200/SETUP.md
+          - researchers/dmarz/notes/growth-pressure-200/reviews/design-review.md
+          - researchers/dmarz/notes/growth-pressure-200/src/build_plan.py
+          - researchers/dmarz/notes/growth-pressure-200/src/check_plan.py
+          - researchers/dmarz/notes/sybil-rules-180/RESULTS.md
+          - researchers/dmarz/notes/sybil-rules-180/design.yaml
+          - researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/s1-002-gpt-6-sol/summary.json
+          - researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol-r1/s1-002-gpt-6-sol-r1/summary.json
+          - https://arxiv.org/abs/2609.04170
+          - https://arxiv.org/abs/2410.08948
+        commit: 8ab3e110433a2d53095b3efbe0ec0a82fdb2d366-dirty
 requires: '1.2'
