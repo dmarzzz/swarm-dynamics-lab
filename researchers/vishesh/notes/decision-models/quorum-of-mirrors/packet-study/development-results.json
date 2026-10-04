@@ -1,0 +1,885 @@
+{
+  "split": "development",
+  "roots": 12,
+  "packets": 48,
+  "family_counts": {
+    "polarity": 8,
+    "time": 8,
+    "entity": 8,
+    "units": 8,
+    "modality": 8,
+    "correction": 8
+  },
+  "critical_mismatches": 0,
+  "correct": {
+    "source_parser": 48,
+    "report_vote": 30,
+    "deduplicated_claims": 36
+  },
+  "outcomes": [
+    {
+      "id": "development-polarity-0-n1-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n1-d0",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n1-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n5-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": false
+    },
+    {
+      "id": "development-polarity-0-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n5-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-0-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n1-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n1-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n1-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-polarity-1-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-polarity-1-n5-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n5-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-polarity-1-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-polarity-1-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-time-0-n1-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n1-d0",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n1-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n5-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": false
+    },
+    {
+      "id": "development-time-0-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n5-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-0-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n1-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n1-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n1-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-time-1-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-time-1-n5-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n5-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-time-1-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-time-1-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-entity-0-n1-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n1-d0",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n1-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n5-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": false
+    },
+    {
+      "id": "development-entity-0-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n5-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-0-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n1-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n1-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n1-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-entity-1-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-entity-1-n5-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n5-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-entity-1-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-entity-1-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-units-0-n1-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n1-d0",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n1-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n5-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": false
+    },
+    {
+      "id": "development-units-0-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n5-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-0-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n1-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n1-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n1-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-units-1-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-units-1-n5-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n5-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-units-1-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-units-1-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-modality-0-n1-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n1-d0",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n1-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n5-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": false
+    },
+    {
+      "id": "development-modality-0-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n5-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-0-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n1-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n1-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n1-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-modality-1-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-modality-1-n5-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n5-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-modality-1-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-modality-1-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-correction-0-n1-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n1-d0",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n1-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n5-d0",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": false
+    },
+    {
+      "id": "development-correction-0-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n5-d1",
+      "policy": "source_parser",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-0-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n1-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n1-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n1-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n1-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n1-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-correction-1-n1-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-correction-1-n5-d0",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n5-d0",
+      "policy": "report_vote",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n5-d0",
+      "policy": "deduplicated_claims",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n5-d1",
+      "policy": "source_parser",
+      "decision": "ONE",
+      "correct": true
+    },
+    {
+      "id": "development-correction-1-n5-d1",
+      "policy": "report_vote",
+      "decision": "ZERO",
+      "correct": false
+    },
+    {
+      "id": "development-correction-1-n5-d1",
+      "policy": "deduplicated_claims",
+      "decision": "ZERO",
+      "correct": false
+    }
+  ]
+}

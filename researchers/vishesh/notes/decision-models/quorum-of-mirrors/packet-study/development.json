@@ -1,0 +1,3802 @@
+[
+  {
+    "id": "development-polarity-0-n1-d0",
+    "root": "development-polarity-0",
+    "family": "polarity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "b047d7e5efdef19c",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-32886",
+        "time": "10:00"
+      },
+      "receipts": [
+        {
+          "id": "6b20e5bbb6",
+          "group": "group-6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was not running."
+        },
+        {
+          "id": "d510e49602",
+          "group": "group-d510e49602",
+          "text": "At 10:00, workshop-32886 was not stopped."
+        },
+        {
+          "id": "d18aee8ffa",
+          "group": "group-d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "08c3026a2a73",
+          "receipt_id": "d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "52a0c9b7d81f",
+          "receipt_id": "6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "739d4b736897",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "d510e49602": true,
+        "6b20e5bbb6": false,
+        "d18aee8ffa": false
+      },
+      "report_fidelity": {
+        "739d4b736897": true,
+        "52a0c9b7d81f": true,
+        "08c3026a2a73": true
+      },
+      "focal_receipt": "d510e49602"
+    }
+  },
+  {
+    "id": "development-polarity-0-n1-d1",
+    "root": "development-polarity-0",
+    "family": "polarity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "b047d7e5efdef19c",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-32886",
+        "time": "10:00"
+      },
+      "receipts": [
+        {
+          "id": "6b20e5bbb6",
+          "group": "group-6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was not running."
+        },
+        {
+          "id": "d510e49602",
+          "group": "group-d510e49602",
+          "text": "At 10:00, workshop-32886 was not stopped."
+        },
+        {
+          "id": "d18aee8ffa",
+          "group": "group-d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "08c3026a2a73",
+          "receipt_id": "d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "52a0c9b7d81f",
+          "receipt_id": "6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "739d4b736897",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "d510e49602": true,
+        "6b20e5bbb6": false,
+        "d18aee8ffa": false
+      },
+      "report_fidelity": {
+        "739d4b736897": false,
+        "52a0c9b7d81f": true,
+        "08c3026a2a73": true
+      },
+      "focal_receipt": "d510e49602"
+    }
+  },
+  {
+    "id": "development-polarity-0-n5-d0",
+    "root": "development-polarity-0",
+    "family": "polarity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "b047d7e5efdef19c",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-32886",
+        "time": "10:00"
+      },
+      "receipts": [
+        {
+          "id": "6b20e5bbb6",
+          "group": "group-6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was not running."
+        },
+        {
+          "id": "d510e49602",
+          "group": "group-d510e49602",
+          "text": "At 10:00, workshop-32886 was not stopped."
+        },
+        {
+          "id": "d18aee8ffa",
+          "group": "group-d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "08c3026a2a73",
+          "receipt_id": "d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "3369e6344a58",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was running."
+        },
+        {
+          "id": "4fe11c8c54d3",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was running."
+        },
+        {
+          "id": "52a0c9b7d81f",
+          "receipt_id": "6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "739d4b736897",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was running."
+        },
+        {
+          "id": "82e7f5da6671",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was running."
+        },
+        {
+          "id": "d680fea579e9",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "d510e49602": true,
+        "6b20e5bbb6": false,
+        "d18aee8ffa": false
+      },
+      "report_fidelity": {
+        "739d4b736897": true,
+        "3369e6344a58": true,
+        "d680fea579e9": true,
+        "82e7f5da6671": true,
+        "4fe11c8c54d3": true,
+        "52a0c9b7d81f": true,
+        "08c3026a2a73": true
+      },
+      "focal_receipt": "d510e49602"
+    }
+  },
+  {
+    "id": "development-polarity-0-n5-d1",
+    "root": "development-polarity-0",
+    "family": "polarity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "b047d7e5efdef19c",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-32886",
+        "time": "10:00"
+      },
+      "receipts": [
+        {
+          "id": "6b20e5bbb6",
+          "group": "group-6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was not running."
+        },
+        {
+          "id": "d510e49602",
+          "group": "group-d510e49602",
+          "text": "At 10:00, workshop-32886 was not stopped."
+        },
+        {
+          "id": "d18aee8ffa",
+          "group": "group-d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "08c3026a2a73",
+          "receipt_id": "d18aee8ffa",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "3369e6344a58",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "4fe11c8c54d3",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "52a0c9b7d81f",
+          "receipt_id": "6b20e5bbb6",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "739d4b736897",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "82e7f5da6671",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was stopped."
+        },
+        {
+          "id": "d680fea579e9",
+          "receipt_id": "d510e49602",
+          "text": "At 10:00, workshop-32886 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "d510e49602": true,
+        "6b20e5bbb6": false,
+        "d18aee8ffa": false
+      },
+      "report_fidelity": {
+        "739d4b736897": false,
+        "3369e6344a58": false,
+        "d680fea579e9": false,
+        "82e7f5da6671": false,
+        "4fe11c8c54d3": false,
+        "52a0c9b7d81f": true,
+        "08c3026a2a73": true
+      },
+      "focal_receipt": "d510e49602"
+    }
+  },
+  {
+    "id": "development-polarity-1-n1-d0",
+    "root": "development-polarity-1",
+    "family": "polarity",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "3783c028080853d1",
+      "query": {
+        "kind": "running",
+        "entity": "loading-98004",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "39eb1961a3",
+          "group": "group-39eb1961a3",
+          "text": "At 11:00, loading-98004 was not stopped."
+        },
+        {
+          "id": "76e62de25e",
+          "group": "group-76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "49d0ba1447",
+          "group": "group-49d0ba1447",
+          "text": "At 11:00, loading-98004 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3440accc15be",
+          "receipt_id": "76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "40598d2de2d0",
+          "receipt_id": "49d0ba1447",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "ce91c67e0818",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "39eb1961a3": true,
+        "76e62de25e": true,
+        "49d0ba1447": false
+      },
+      "report_fidelity": {
+        "ce91c67e0818": true,
+        "3440accc15be": true,
+        "40598d2de2d0": true
+      },
+      "focal_receipt": "39eb1961a3"
+    }
+  },
+  {
+    "id": "development-polarity-1-n1-d1",
+    "root": "development-polarity-1",
+    "family": "polarity",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "3783c028080853d1",
+      "query": {
+        "kind": "running",
+        "entity": "loading-98004",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "39eb1961a3",
+          "group": "group-39eb1961a3",
+          "text": "At 11:00, loading-98004 was not stopped."
+        },
+        {
+          "id": "76e62de25e",
+          "group": "group-76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "49d0ba1447",
+          "group": "group-49d0ba1447",
+          "text": "At 11:00, loading-98004 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3440accc15be",
+          "receipt_id": "76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "40598d2de2d0",
+          "receipt_id": "49d0ba1447",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "ce91c67e0818",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "39eb1961a3": true,
+        "76e62de25e": true,
+        "49d0ba1447": false
+      },
+      "report_fidelity": {
+        "ce91c67e0818": false,
+        "3440accc15be": true,
+        "40598d2de2d0": true
+      },
+      "focal_receipt": "39eb1961a3"
+    }
+  },
+  {
+    "id": "development-polarity-1-n5-d0",
+    "root": "development-polarity-1",
+    "family": "polarity",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "3783c028080853d1",
+      "query": {
+        "kind": "running",
+        "entity": "loading-98004",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "39eb1961a3",
+          "group": "group-39eb1961a3",
+          "text": "At 11:00, loading-98004 was not stopped."
+        },
+        {
+          "id": "76e62de25e",
+          "group": "group-76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "49d0ba1447",
+          "group": "group-49d0ba1447",
+          "text": "At 11:00, loading-98004 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "05c8cce52f81",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "3440accc15be",
+          "receipt_id": "76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "40598d2de2d0",
+          "receipt_id": "49d0ba1447",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "6d7a90afcda6",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "9dcf8aefa60b",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "ce91c67e0818",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "dd6705704faf",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "39eb1961a3": true,
+        "76e62de25e": true,
+        "49d0ba1447": false
+      },
+      "report_fidelity": {
+        "ce91c67e0818": true,
+        "dd6705704faf": true,
+        "6d7a90afcda6": true,
+        "05c8cce52f81": true,
+        "9dcf8aefa60b": true,
+        "3440accc15be": true,
+        "40598d2de2d0": true
+      },
+      "focal_receipt": "39eb1961a3"
+    }
+  },
+  {
+    "id": "development-polarity-1-n5-d1",
+    "root": "development-polarity-1",
+    "family": "polarity",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "3783c028080853d1",
+      "query": {
+        "kind": "running",
+        "entity": "loading-98004",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "39eb1961a3",
+          "group": "group-39eb1961a3",
+          "text": "At 11:00, loading-98004 was not stopped."
+        },
+        {
+          "id": "76e62de25e",
+          "group": "group-76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "49d0ba1447",
+          "group": "group-49d0ba1447",
+          "text": "At 11:00, loading-98004 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "05c8cce52f81",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "3440accc15be",
+          "receipt_id": "76e62de25e",
+          "text": "At 11:00, loading-98004 was running."
+        },
+        {
+          "id": "40598d2de2d0",
+          "receipt_id": "49d0ba1447",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "6d7a90afcda6",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "9dcf8aefa60b",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "ce91c67e0818",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was stopped."
+        },
+        {
+          "id": "dd6705704faf",
+          "receipt_id": "39eb1961a3",
+          "text": "At 11:00, loading-98004 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "39eb1961a3": true,
+        "76e62de25e": true,
+        "49d0ba1447": false
+      },
+      "report_fidelity": {
+        "ce91c67e0818": false,
+        "dd6705704faf": false,
+        "6d7a90afcda6": false,
+        "05c8cce52f81": false,
+        "9dcf8aefa60b": false,
+        "3440accc15be": true,
+        "40598d2de2d0": true
+      },
+      "focal_receipt": "39eb1961a3"
+    }
+  },
+  {
+    "id": "development-time-0-n1-d0",
+    "root": "development-time-0",
+    "family": "time",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "76390f397dcab288",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-37284",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "7b8d307f06",
+          "group": "group-7b8d307f06",
+          "text": "At 08:00, workshop-37284 was stopped.\nAt 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "3bf21f027c",
+          "group": "group-3bf21f027c",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "78d45919db",
+          "group": "group-78d45919db",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "507b5b5107f7",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "68774abf107d",
+          "receipt_id": "3bf21f027c",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "9eb456bda059",
+          "receipt_id": "78d45919db",
+          "text": "At 11:00, workshop-37284 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "7b8d307f06": true,
+        "78d45919db": false,
+        "3bf21f027c": false
+      },
+      "report_fidelity": {
+        "507b5b5107f7": true,
+        "9eb456bda059": true,
+        "68774abf107d": true
+      },
+      "focal_receipt": "7b8d307f06"
+    }
+  },
+  {
+    "id": "development-time-0-n1-d1",
+    "root": "development-time-0",
+    "family": "time",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "76390f397dcab288",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-37284",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "7b8d307f06",
+          "group": "group-7b8d307f06",
+          "text": "At 08:00, workshop-37284 was stopped.\nAt 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "3bf21f027c",
+          "group": "group-3bf21f027c",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "78d45919db",
+          "group": "group-78d45919db",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "507b5b5107f7",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "68774abf107d",
+          "receipt_id": "3bf21f027c",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "9eb456bda059",
+          "receipt_id": "78d45919db",
+          "text": "At 11:00, workshop-37284 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "7b8d307f06": true,
+        "78d45919db": false,
+        "3bf21f027c": false
+      },
+      "report_fidelity": {
+        "507b5b5107f7": false,
+        "9eb456bda059": true,
+        "68774abf107d": true
+      },
+      "focal_receipt": "7b8d307f06"
+    }
+  },
+  {
+    "id": "development-time-0-n5-d0",
+    "root": "development-time-0",
+    "family": "time",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "76390f397dcab288",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-37284",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "7b8d307f06",
+          "group": "group-7b8d307f06",
+          "text": "At 08:00, workshop-37284 was stopped.\nAt 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "3bf21f027c",
+          "group": "group-3bf21f027c",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "78d45919db",
+          "group": "group-78d45919db",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "4e975c432f42",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "507b5b5107f7",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "52d4e8bd63d0",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "5c9af23a5e02",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "68774abf107d",
+          "receipt_id": "3bf21f027c",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "91c4cfd88836",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "9eb456bda059",
+          "receipt_id": "78d45919db",
+          "text": "At 11:00, workshop-37284 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "7b8d307f06": true,
+        "78d45919db": false,
+        "3bf21f027c": false
+      },
+      "report_fidelity": {
+        "507b5b5107f7": true,
+        "5c9af23a5e02": true,
+        "91c4cfd88836": true,
+        "4e975c432f42": true,
+        "52d4e8bd63d0": true,
+        "9eb456bda059": true,
+        "68774abf107d": true
+      },
+      "focal_receipt": "7b8d307f06"
+    }
+  },
+  {
+    "id": "development-time-0-n5-d1",
+    "root": "development-time-0",
+    "family": "time",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "76390f397dcab288",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-37284",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "7b8d307f06",
+          "group": "group-7b8d307f06",
+          "text": "At 08:00, workshop-37284 was stopped.\nAt 11:00, workshop-37284 was running."
+        },
+        {
+          "id": "3bf21f027c",
+          "group": "group-3bf21f027c",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "78d45919db",
+          "group": "group-78d45919db",
+          "text": "At 08:00, workshop-37284 was running.\nAt 11:00, workshop-37284 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "4e975c432f42",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "507b5b5107f7",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "52d4e8bd63d0",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "5c9af23a5e02",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "68774abf107d",
+          "receipt_id": "3bf21f027c",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "91c4cfd88836",
+          "receipt_id": "7b8d307f06",
+          "text": "At 11:00, workshop-37284 was stopped."
+        },
+        {
+          "id": "9eb456bda059",
+          "receipt_id": "78d45919db",
+          "text": "At 11:00, workshop-37284 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "7b8d307f06": true,
+        "78d45919db": false,
+        "3bf21f027c": false
+      },
+      "report_fidelity": {
+        "507b5b5107f7": false,
+        "5c9af23a5e02": false,
+        "91c4cfd88836": false,
+        "4e975c432f42": false,
+        "52d4e8bd63d0": false,
+        "9eb456bda059": true,
+        "68774abf107d": true
+      },
+      "focal_receipt": "7b8d307f06"
+    }
+  },
+  {
+    "id": "development-time-1-n1-d0",
+    "root": "development-time-1",
+    "family": "time",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "7a2906e78012d858",
+      "query": {
+        "kind": "running",
+        "entity": "loading-44212",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "ecfba54343",
+          "group": "group-ecfba54343",
+          "text": "At 08:00, loading-44212 was running.\nAt 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "9214897da7",
+          "group": "group-9214897da7",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        },
+        {
+          "id": "8c2457aaa5",
+          "group": "group-8c2457aaa5",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "254f2c954928",
+          "receipt_id": "9214897da7",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "91a5e6da93e5",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "eaa9b5800404",
+          "receipt_id": "ecfba54343",
+          "text": "At 11:00, loading-44212 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "8c2457aaa5": true,
+        "9214897da7": true,
+        "ecfba54343": false
+      },
+      "report_fidelity": {
+        "91a5e6da93e5": true,
+        "254f2c954928": true,
+        "eaa9b5800404": true
+      },
+      "focal_receipt": "8c2457aaa5"
+    }
+  },
+  {
+    "id": "development-time-1-n1-d1",
+    "root": "development-time-1",
+    "family": "time",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "7a2906e78012d858",
+      "query": {
+        "kind": "running",
+        "entity": "loading-44212",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "ecfba54343",
+          "group": "group-ecfba54343",
+          "text": "At 08:00, loading-44212 was running.\nAt 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "9214897da7",
+          "group": "group-9214897da7",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        },
+        {
+          "id": "8c2457aaa5",
+          "group": "group-8c2457aaa5",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "254f2c954928",
+          "receipt_id": "9214897da7",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "91a5e6da93e5",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "eaa9b5800404",
+          "receipt_id": "ecfba54343",
+          "text": "At 11:00, loading-44212 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "8c2457aaa5": true,
+        "9214897da7": true,
+        "ecfba54343": false
+      },
+      "report_fidelity": {
+        "91a5e6da93e5": false,
+        "254f2c954928": true,
+        "eaa9b5800404": true
+      },
+      "focal_receipt": "8c2457aaa5"
+    }
+  },
+  {
+    "id": "development-time-1-n5-d0",
+    "root": "development-time-1",
+    "family": "time",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "7a2906e78012d858",
+      "query": {
+        "kind": "running",
+        "entity": "loading-44212",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "ecfba54343",
+          "group": "group-ecfba54343",
+          "text": "At 08:00, loading-44212 was running.\nAt 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "9214897da7",
+          "group": "group-9214897da7",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        },
+        {
+          "id": "8c2457aaa5",
+          "group": "group-8c2457aaa5",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "0f1b2c407cb9",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "254f2c954928",
+          "receipt_id": "9214897da7",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "2f162df7b161",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "330174a63442",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "91a5e6da93e5",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "b7faa5e85f42",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "eaa9b5800404",
+          "receipt_id": "ecfba54343",
+          "text": "At 11:00, loading-44212 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "8c2457aaa5": true,
+        "9214897da7": true,
+        "ecfba54343": false
+      },
+      "report_fidelity": {
+        "91a5e6da93e5": true,
+        "2f162df7b161": true,
+        "b7faa5e85f42": true,
+        "330174a63442": true,
+        "0f1b2c407cb9": true,
+        "254f2c954928": true,
+        "eaa9b5800404": true
+      },
+      "focal_receipt": "8c2457aaa5"
+    }
+  },
+  {
+    "id": "development-time-1-n5-d1",
+    "root": "development-time-1",
+    "family": "time",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "7a2906e78012d858",
+      "query": {
+        "kind": "running",
+        "entity": "loading-44212",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "ecfba54343",
+          "group": "group-ecfba54343",
+          "text": "At 08:00, loading-44212 was running.\nAt 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "9214897da7",
+          "group": "group-9214897da7",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        },
+        {
+          "id": "8c2457aaa5",
+          "group": "group-8c2457aaa5",
+          "text": "At 08:00, loading-44212 was stopped.\nAt 11:00, loading-44212 was running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "0f1b2c407cb9",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "254f2c954928",
+          "receipt_id": "9214897da7",
+          "text": "At 11:00, loading-44212 was running."
+        },
+        {
+          "id": "2f162df7b161",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "330174a63442",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "91a5e6da93e5",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "b7faa5e85f42",
+          "receipt_id": "8c2457aaa5",
+          "text": "At 11:00, loading-44212 was stopped."
+        },
+        {
+          "id": "eaa9b5800404",
+          "receipt_id": "ecfba54343",
+          "text": "At 11:00, loading-44212 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "8c2457aaa5": true,
+        "9214897da7": true,
+        "ecfba54343": false
+      },
+      "report_fidelity": {
+        "91a5e6da93e5": false,
+        "2f162df7b161": false,
+        "b7faa5e85f42": false,
+        "330174a63442": false,
+        "0f1b2c407cb9": false,
+        "254f2c954928": true,
+        "eaa9b5800404": true
+      },
+      "focal_receipt": "8c2457aaa5"
+    }
+  },
+  {
+    "id": "development-entity-0-n1-d0",
+    "root": "development-entity-0",
+    "family": "entity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "d9b5fdbd8427a5c7",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-66025",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "13dfacfd00",
+          "group": "group-13dfacfd00",
+          "text": "At 11:00, workshop-66025-other was stopped.\nAt 11:00, workshop-66025 was not stopped."
+        },
+        {
+          "id": "fdaf98da03",
+          "group": "group-fdaf98da03",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "fa79faa450",
+          "group": "group-fa79faa450",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "56a2c7b59fb1",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was running."
+        },
+        {
+          "id": "7d3d4acb60ab",
+          "receipt_id": "fa79faa450",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "c0945c4e5248",
+          "receipt_id": "fdaf98da03",
+          "text": "At 11:00, workshop-66025 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "13dfacfd00": true,
+        "fa79faa450": false,
+        "fdaf98da03": false
+      },
+      "report_fidelity": {
+        "56a2c7b59fb1": true,
+        "7d3d4acb60ab": true,
+        "c0945c4e5248": true
+      },
+      "focal_receipt": "13dfacfd00"
+    }
+  },
+  {
+    "id": "development-entity-0-n1-d1",
+    "root": "development-entity-0",
+    "family": "entity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "d9b5fdbd8427a5c7",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-66025",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "13dfacfd00",
+          "group": "group-13dfacfd00",
+          "text": "At 11:00, workshop-66025-other was stopped.\nAt 11:00, workshop-66025 was not stopped."
+        },
+        {
+          "id": "fdaf98da03",
+          "group": "group-fdaf98da03",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "fa79faa450",
+          "group": "group-fa79faa450",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "56a2c7b59fb1",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "7d3d4acb60ab",
+          "receipt_id": "fa79faa450",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "c0945c4e5248",
+          "receipt_id": "fdaf98da03",
+          "text": "At 11:00, workshop-66025 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "13dfacfd00": true,
+        "fa79faa450": false,
+        "fdaf98da03": false
+      },
+      "report_fidelity": {
+        "56a2c7b59fb1": false,
+        "7d3d4acb60ab": true,
+        "c0945c4e5248": true
+      },
+      "focal_receipt": "13dfacfd00"
+    }
+  },
+  {
+    "id": "development-entity-0-n5-d0",
+    "root": "development-entity-0",
+    "family": "entity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "d9b5fdbd8427a5c7",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-66025",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "13dfacfd00",
+          "group": "group-13dfacfd00",
+          "text": "At 11:00, workshop-66025-other was stopped.\nAt 11:00, workshop-66025 was not stopped."
+        },
+        {
+          "id": "fdaf98da03",
+          "group": "group-fdaf98da03",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "fa79faa450",
+          "group": "group-fa79faa450",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "0ea99b798432",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was running."
+        },
+        {
+          "id": "4800b21552f9",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was running."
+        },
+        {
+          "id": "56a2c7b59fb1",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was running."
+        },
+        {
+          "id": "7d3d4acb60ab",
+          "receipt_id": "fa79faa450",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "c0945c4e5248",
+          "receipt_id": "fdaf98da03",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "c7eade4e7125",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was running."
+        },
+        {
+          "id": "d8d3dde7d34f",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "13dfacfd00": true,
+        "fa79faa450": false,
+        "fdaf98da03": false
+      },
+      "report_fidelity": {
+        "56a2c7b59fb1": true,
+        "c7eade4e7125": true,
+        "4800b21552f9": true,
+        "d8d3dde7d34f": true,
+        "0ea99b798432": true,
+        "7d3d4acb60ab": true,
+        "c0945c4e5248": true
+      },
+      "focal_receipt": "13dfacfd00"
+    }
+  },
+  {
+    "id": "development-entity-0-n5-d1",
+    "root": "development-entity-0",
+    "family": "entity",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "d9b5fdbd8427a5c7",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-66025",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "13dfacfd00",
+          "group": "group-13dfacfd00",
+          "text": "At 11:00, workshop-66025-other was stopped.\nAt 11:00, workshop-66025 was not stopped."
+        },
+        {
+          "id": "fdaf98da03",
+          "group": "group-fdaf98da03",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "fa79faa450",
+          "group": "group-fa79faa450",
+          "text": "At 11:00, workshop-66025-other was running.\nAt 11:00, workshop-66025 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "0ea99b798432",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "4800b21552f9",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "56a2c7b59fb1",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "7d3d4acb60ab",
+          "receipt_id": "fa79faa450",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "c0945c4e5248",
+          "receipt_id": "fdaf98da03",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "c7eade4e7125",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was stopped."
+        },
+        {
+          "id": "d8d3dde7d34f",
+          "receipt_id": "13dfacfd00",
+          "text": "At 11:00, workshop-66025 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "13dfacfd00": true,
+        "fa79faa450": false,
+        "fdaf98da03": false
+      },
+      "report_fidelity": {
+        "56a2c7b59fb1": false,
+        "c7eade4e7125": false,
+        "4800b21552f9": false,
+        "d8d3dde7d34f": false,
+        "0ea99b798432": false,
+        "7d3d4acb60ab": true,
+        "c0945c4e5248": true
+      },
+      "focal_receipt": "13dfacfd00"
+    }
+  },
+  {
+    "id": "development-entity-1-n1-d0",
+    "root": "development-entity-1",
+    "family": "entity",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "42b91f1fa828edeb",
+      "query": {
+        "kind": "running",
+        "entity": "loading-58352",
+        "time": "16:00"
+      },
+      "receipts": [
+        {
+          "id": "cd412c993b",
+          "group": "group-cd412c993b",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "f8d8d4923e",
+          "group": "group-f8d8d4923e",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "82f121507b",
+          "group": "group-82f121507b",
+          "text": "At 16:00, loading-58352-other was running.\nAt 16:00, loading-58352 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "9b2f5e47cfa9",
+          "receipt_id": "cd412c993b",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "e37568a72969",
+          "receipt_id": "82f121507b",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "f6b2f26ffa0b",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "f8d8d4923e": true,
+        "cd412c993b": true,
+        "82f121507b": false
+      },
+      "report_fidelity": {
+        "f6b2f26ffa0b": true,
+        "9b2f5e47cfa9": true,
+        "e37568a72969": true
+      },
+      "focal_receipt": "f8d8d4923e"
+    }
+  },
+  {
+    "id": "development-entity-1-n1-d1",
+    "root": "development-entity-1",
+    "family": "entity",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "42b91f1fa828edeb",
+      "query": {
+        "kind": "running",
+        "entity": "loading-58352",
+        "time": "16:00"
+      },
+      "receipts": [
+        {
+          "id": "cd412c993b",
+          "group": "group-cd412c993b",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "f8d8d4923e",
+          "group": "group-f8d8d4923e",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "82f121507b",
+          "group": "group-82f121507b",
+          "text": "At 16:00, loading-58352-other was running.\nAt 16:00, loading-58352 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "9b2f5e47cfa9",
+          "receipt_id": "cd412c993b",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "e37568a72969",
+          "receipt_id": "82f121507b",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "f6b2f26ffa0b",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "f8d8d4923e": true,
+        "cd412c993b": true,
+        "82f121507b": false
+      },
+      "report_fidelity": {
+        "f6b2f26ffa0b": false,
+        "9b2f5e47cfa9": true,
+        "e37568a72969": true
+      },
+      "focal_receipt": "f8d8d4923e"
+    }
+  },
+  {
+    "id": "development-entity-1-n5-d0",
+    "root": "development-entity-1",
+    "family": "entity",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "42b91f1fa828edeb",
+      "query": {
+        "kind": "running",
+        "entity": "loading-58352",
+        "time": "16:00"
+      },
+      "receipts": [
+        {
+          "id": "cd412c993b",
+          "group": "group-cd412c993b",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "f8d8d4923e",
+          "group": "group-f8d8d4923e",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "82f121507b",
+          "group": "group-82f121507b",
+          "text": "At 16:00, loading-58352-other was running.\nAt 16:00, loading-58352 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "0866e2a14af6",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "4e350a9c6cbe",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "6da9efb28766",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "9b2f5e47cfa9",
+          "receipt_id": "cd412c993b",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "af05c35d5960",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "e37568a72969",
+          "receipt_id": "82f121507b",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "f6b2f26ffa0b",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "f8d8d4923e": true,
+        "cd412c993b": true,
+        "82f121507b": false
+      },
+      "report_fidelity": {
+        "f6b2f26ffa0b": true,
+        "6da9efb28766": true,
+        "0866e2a14af6": true,
+        "4e350a9c6cbe": true,
+        "af05c35d5960": true,
+        "9b2f5e47cfa9": true,
+        "e37568a72969": true
+      },
+      "focal_receipt": "f8d8d4923e"
+    }
+  },
+  {
+    "id": "development-entity-1-n5-d1",
+    "root": "development-entity-1",
+    "family": "entity",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "42b91f1fa828edeb",
+      "query": {
+        "kind": "running",
+        "entity": "loading-58352",
+        "time": "16:00"
+      },
+      "receipts": [
+        {
+          "id": "cd412c993b",
+          "group": "group-cd412c993b",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "f8d8d4923e",
+          "group": "group-f8d8d4923e",
+          "text": "At 16:00, loading-58352-other was stopped.\nAt 16:00, loading-58352 was not stopped."
+        },
+        {
+          "id": "82f121507b",
+          "group": "group-82f121507b",
+          "text": "At 16:00, loading-58352-other was running.\nAt 16:00, loading-58352 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "0866e2a14af6",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "4e350a9c6cbe",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "6da9efb28766",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "9b2f5e47cfa9",
+          "receipt_id": "cd412c993b",
+          "text": "At 16:00, loading-58352 was running."
+        },
+        {
+          "id": "af05c35d5960",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "e37568a72969",
+          "receipt_id": "82f121507b",
+          "text": "At 16:00, loading-58352 was stopped."
+        },
+        {
+          "id": "f6b2f26ffa0b",
+          "receipt_id": "f8d8d4923e",
+          "text": "At 16:00, loading-58352 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "f8d8d4923e": true,
+        "cd412c993b": true,
+        "82f121507b": false
+      },
+      "report_fidelity": {
+        "f6b2f26ffa0b": false,
+        "6da9efb28766": false,
+        "0866e2a14af6": false,
+        "4e350a9c6cbe": false,
+        "af05c35d5960": false,
+        "9b2f5e47cfa9": true,
+        "e37568a72969": true
+      },
+      "focal_receipt": "f8d8d4923e"
+    }
+  },
+  {
+    "id": "development-units-0-n1-d0",
+    "root": "development-units-0",
+    "family": "units",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "82d76e96975923e1",
+      "query": {
+        "kind": "mass",
+        "entity": "workshop-12309",
+        "time": "14:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "aec07478fe",
+          "group": "group-aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6 kilograms."
+        },
+        {
+          "id": "2a38ce80a1",
+          "group": "group-2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "ee32e008bb",
+          "group": "group-ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        }
+      ],
+      "reports": [
+        {
+          "id": "69a9432c59c7",
+          "receipt_id": "ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "ce5422b8d1b7",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6000 grams."
+        },
+        {
+          "id": "d59bc3f84f90",
+          "receipt_id": "2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "aec07478fe": true,
+        "ee32e008bb": false,
+        "2a38ce80a1": false
+      },
+      "report_fidelity": {
+        "ce5422b8d1b7": true,
+        "69a9432c59c7": true,
+        "d59bc3f84f90": true
+      },
+      "focal_receipt": "aec07478fe"
+    }
+  },
+  {
+    "id": "development-units-0-n1-d1",
+    "root": "development-units-0",
+    "family": "units",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "82d76e96975923e1",
+      "query": {
+        "kind": "mass",
+        "entity": "workshop-12309",
+        "time": "14:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "aec07478fe",
+          "group": "group-aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6 kilograms."
+        },
+        {
+          "id": "2a38ce80a1",
+          "group": "group-2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "ee32e008bb",
+          "group": "group-ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        }
+      ],
+      "reports": [
+        {
+          "id": "69a9432c59c7",
+          "receipt_id": "ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "ce5422b8d1b7",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "d59bc3f84f90",
+          "receipt_id": "2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "aec07478fe": true,
+        "ee32e008bb": false,
+        "2a38ce80a1": false
+      },
+      "report_fidelity": {
+        "ce5422b8d1b7": false,
+        "69a9432c59c7": true,
+        "d59bc3f84f90": true
+      },
+      "focal_receipt": "aec07478fe"
+    }
+  },
+  {
+    "id": "development-units-0-n5-d0",
+    "root": "development-units-0",
+    "family": "units",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "82d76e96975923e1",
+      "query": {
+        "kind": "mass",
+        "entity": "workshop-12309",
+        "time": "14:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "aec07478fe",
+          "group": "group-aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6 kilograms."
+        },
+        {
+          "id": "2a38ce80a1",
+          "group": "group-2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "ee32e008bb",
+          "group": "group-ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        }
+      ],
+      "reports": [
+        {
+          "id": "214983f4d026",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6000 grams."
+        },
+        {
+          "id": "26fac8694572",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6000 grams."
+        },
+        {
+          "id": "69a9432c59c7",
+          "receipt_id": "ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "9d2c2b0be06c",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6000 grams."
+        },
+        {
+          "id": "ce5422b8d1b7",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6000 grams."
+        },
+        {
+          "id": "d59bc3f84f90",
+          "receipt_id": "2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "e2c18764ee4a",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "aec07478fe": true,
+        "ee32e008bb": false,
+        "2a38ce80a1": false
+      },
+      "report_fidelity": {
+        "ce5422b8d1b7": true,
+        "26fac8694572": true,
+        "214983f4d026": true,
+        "e2c18764ee4a": true,
+        "9d2c2b0be06c": true,
+        "69a9432c59c7": true,
+        "d59bc3f84f90": true
+      },
+      "focal_receipt": "aec07478fe"
+    }
+  },
+  {
+    "id": "development-units-0-n5-d1",
+    "root": "development-units-0",
+    "family": "units",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "82d76e96975923e1",
+      "query": {
+        "kind": "mass",
+        "entity": "workshop-12309",
+        "time": "14:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "aec07478fe",
+          "group": "group-aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 6 kilograms."
+        },
+        {
+          "id": "2a38ce80a1",
+          "group": "group-2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "ee32e008bb",
+          "group": "group-ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        }
+      ],
+      "reports": [
+        {
+          "id": "214983f4d026",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "26fac8694572",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "69a9432c59c7",
+          "receipt_id": "ee32e008bb",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "9d2c2b0be06c",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "ce5422b8d1b7",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "d59bc3f84f90",
+          "receipt_id": "2a38ce80a1",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        },
+        {
+          "id": "e2c18764ee4a",
+          "receipt_id": "aec07478fe",
+          "text": "At 14:00, workshop-12309 measured 4000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "aec07478fe": true,
+        "ee32e008bb": false,
+        "2a38ce80a1": false
+      },
+      "report_fidelity": {
+        "ce5422b8d1b7": false,
+        "26fac8694572": false,
+        "214983f4d026": false,
+        "e2c18764ee4a": false,
+        "9d2c2b0be06c": false,
+        "69a9432c59c7": true,
+        "d59bc3f84f90": true
+      },
+      "focal_receipt": "aec07478fe"
+    }
+  },
+  {
+    "id": "development-units-1-n1-d0",
+    "root": "development-units-1",
+    "family": "units",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "1eb0a594d051ff36",
+      "query": {
+        "kind": "mass",
+        "entity": "loading-25458",
+        "time": "11:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "6175992ae6",
+          "group": "group-6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "edca602d9f",
+          "group": "group-edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4 kilograms."
+        },
+        {
+          "id": "b1e15f3d50",
+          "group": "group-b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6 kilograms."
+        }
+      ],
+      "reports": [
+        {
+          "id": "21c742424005",
+          "receipt_id": "edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "51e317e8f315",
+          "receipt_id": "b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "6c48141b271f",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "6175992ae6": true,
+        "b1e15f3d50": true,
+        "edca602d9f": false
+      },
+      "report_fidelity": {
+        "6c48141b271f": true,
+        "51e317e8f315": true,
+        "21c742424005": true
+      },
+      "focal_receipt": "6175992ae6"
+    }
+  },
+  {
+    "id": "development-units-1-n1-d1",
+    "root": "development-units-1",
+    "family": "units",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "1eb0a594d051ff36",
+      "query": {
+        "kind": "mass",
+        "entity": "loading-25458",
+        "time": "11:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "6175992ae6",
+          "group": "group-6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "edca602d9f",
+          "group": "group-edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4 kilograms."
+        },
+        {
+          "id": "b1e15f3d50",
+          "group": "group-b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6 kilograms."
+        }
+      ],
+      "reports": [
+        {
+          "id": "21c742424005",
+          "receipt_id": "edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "51e317e8f315",
+          "receipt_id": "b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "6c48141b271f",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "6175992ae6": true,
+        "b1e15f3d50": true,
+        "edca602d9f": false
+      },
+      "report_fidelity": {
+        "6c48141b271f": false,
+        "51e317e8f315": true,
+        "21c742424005": true
+      },
+      "focal_receipt": "6175992ae6"
+    }
+  },
+  {
+    "id": "development-units-1-n5-d0",
+    "root": "development-units-1",
+    "family": "units",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "1eb0a594d051ff36",
+      "query": {
+        "kind": "mass",
+        "entity": "loading-25458",
+        "time": "11:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "6175992ae6",
+          "group": "group-6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "edca602d9f",
+          "group": "group-edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4 kilograms."
+        },
+        {
+          "id": "b1e15f3d50",
+          "group": "group-b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6 kilograms."
+        }
+      ],
+      "reports": [
+        {
+          "id": "21c742424005",
+          "receipt_id": "edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "51e317e8f315",
+          "receipt_id": "b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "592b326011fb",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "6c48141b271f",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "8aa78875284c",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "c80e96bb990e",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "d29059f6f2cd",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "6175992ae6": true,
+        "b1e15f3d50": true,
+        "edca602d9f": false
+      },
+      "report_fidelity": {
+        "6c48141b271f": true,
+        "c80e96bb990e": true,
+        "8aa78875284c": true,
+        "d29059f6f2cd": true,
+        "592b326011fb": true,
+        "51e317e8f315": true,
+        "21c742424005": true
+      },
+      "focal_receipt": "6175992ae6"
+    }
+  },
+  {
+    "id": "development-units-1-n5-d1",
+    "root": "development-units-1",
+    "family": "units",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "1eb0a594d051ff36",
+      "query": {
+        "kind": "mass",
+        "entity": "loading-25458",
+        "time": "11:00",
+        "threshold_grams": 5000
+      },
+      "receipts": [
+        {
+          "id": "6175992ae6",
+          "group": "group-6175992ae6",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "edca602d9f",
+          "group": "group-edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4 kilograms."
+        },
+        {
+          "id": "b1e15f3d50",
+          "group": "group-b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6 kilograms."
+        }
+      ],
+      "reports": [
+        {
+          "id": "21c742424005",
+          "receipt_id": "edca602d9f",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "51e317e8f315",
+          "receipt_id": "b1e15f3d50",
+          "text": "At 11:00, loading-25458 measured 6000 grams."
+        },
+        {
+          "id": "592b326011fb",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "6c48141b271f",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "8aa78875284c",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "c80e96bb990e",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        },
+        {
+          "id": "d29059f6f2cd",
+          "receipt_id": "6175992ae6",
+          "text": "At 11:00, loading-25458 measured 4000 grams."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "6175992ae6": true,
+        "b1e15f3d50": true,
+        "edca602d9f": false
+      },
+      "report_fidelity": {
+        "6c48141b271f": false,
+        "c80e96bb990e": false,
+        "8aa78875284c": false,
+        "d29059f6f2cd": false,
+        "592b326011fb": false,
+        "51e317e8f315": true,
+        "21c742424005": true
+      },
+      "focal_receipt": "6175992ae6"
+    }
+  },
+  {
+    "id": "development-modality-0-n1-d0",
+    "root": "development-modality-0",
+    "family": "modality",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "ae0f0e1c549b25c5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-13972",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "00e6a74db3",
+          "group": "group-00e6a74db3",
+          "text": "Plan: at 11:00, workshop-13972 will be stopped.\nObservation: At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "a0a219b7d1",
+          "group": "group-a0a219b7d1",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        },
+        {
+          "id": "c5128f83e7",
+          "group": "group-c5128f83e7",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "7068f6edaed2",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "7f19547772d9",
+          "receipt_id": "c5128f83e7",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "8d9a823704e1",
+          "receipt_id": "a0a219b7d1",
+          "text": "At 11:00, workshop-13972 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "00e6a74db3": true,
+        "a0a219b7d1": false,
+        "c5128f83e7": false
+      },
+      "report_fidelity": {
+        "7068f6edaed2": true,
+        "8d9a823704e1": true,
+        "7f19547772d9": true
+      },
+      "focal_receipt": "00e6a74db3"
+    }
+  },
+  {
+    "id": "development-modality-0-n1-d1",
+    "root": "development-modality-0",
+    "family": "modality",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "ae0f0e1c549b25c5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-13972",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "00e6a74db3",
+          "group": "group-00e6a74db3",
+          "text": "Plan: at 11:00, workshop-13972 will be stopped.\nObservation: At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "a0a219b7d1",
+          "group": "group-a0a219b7d1",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        },
+        {
+          "id": "c5128f83e7",
+          "group": "group-c5128f83e7",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "7068f6edaed2",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "7f19547772d9",
+          "receipt_id": "c5128f83e7",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "8d9a823704e1",
+          "receipt_id": "a0a219b7d1",
+          "text": "At 11:00, workshop-13972 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "00e6a74db3": true,
+        "a0a219b7d1": false,
+        "c5128f83e7": false
+      },
+      "report_fidelity": {
+        "7068f6edaed2": false,
+        "8d9a823704e1": true,
+        "7f19547772d9": true
+      },
+      "focal_receipt": "00e6a74db3"
+    }
+  },
+  {
+    "id": "development-modality-0-n5-d0",
+    "root": "development-modality-0",
+    "family": "modality",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "ae0f0e1c549b25c5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-13972",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "00e6a74db3",
+          "group": "group-00e6a74db3",
+          "text": "Plan: at 11:00, workshop-13972 will be stopped.\nObservation: At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "a0a219b7d1",
+          "group": "group-a0a219b7d1",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        },
+        {
+          "id": "c5128f83e7",
+          "group": "group-c5128f83e7",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3ce338abb932",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "7068f6edaed2",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "7f19547772d9",
+          "receipt_id": "c5128f83e7",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "8d9a823704e1",
+          "receipt_id": "a0a219b7d1",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "e8c4da41c067",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "eb1f69fde19a",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "fc998b4800a3",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "00e6a74db3": true,
+        "a0a219b7d1": false,
+        "c5128f83e7": false
+      },
+      "report_fidelity": {
+        "7068f6edaed2": true,
+        "eb1f69fde19a": true,
+        "e8c4da41c067": true,
+        "3ce338abb932": true,
+        "fc998b4800a3": true,
+        "8d9a823704e1": true,
+        "7f19547772d9": true
+      },
+      "focal_receipt": "00e6a74db3"
+    }
+  },
+  {
+    "id": "development-modality-0-n5-d1",
+    "root": "development-modality-0",
+    "family": "modality",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "ae0f0e1c549b25c5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-13972",
+        "time": "11:00"
+      },
+      "receipts": [
+        {
+          "id": "00e6a74db3",
+          "group": "group-00e6a74db3",
+          "text": "Plan: at 11:00, workshop-13972 will be stopped.\nObservation: At 11:00, workshop-13972 was running."
+        },
+        {
+          "id": "a0a219b7d1",
+          "group": "group-a0a219b7d1",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        },
+        {
+          "id": "c5128f83e7",
+          "group": "group-c5128f83e7",
+          "text": "Plan: at 11:00, workshop-13972 will be running.\nObservation: At 11:00, workshop-13972 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3ce338abb932",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "7068f6edaed2",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "7f19547772d9",
+          "receipt_id": "c5128f83e7",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "8d9a823704e1",
+          "receipt_id": "a0a219b7d1",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "e8c4da41c067",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "eb1f69fde19a",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was stopped."
+        },
+        {
+          "id": "fc998b4800a3",
+          "receipt_id": "00e6a74db3",
+          "text": "At 11:00, workshop-13972 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "00e6a74db3": true,
+        "a0a219b7d1": false,
+        "c5128f83e7": false
+      },
+      "report_fidelity": {
+        "7068f6edaed2": false,
+        "eb1f69fde19a": false,
+        "e8c4da41c067": false,
+        "3ce338abb932": false,
+        "fc998b4800a3": false,
+        "8d9a823704e1": true,
+        "7f19547772d9": true
+      },
+      "focal_receipt": "00e6a74db3"
+    }
+  },
+  {
+    "id": "development-modality-1-n1-d0",
+    "root": "development-modality-1",
+    "family": "modality",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "4728b51ab22347e3",
+      "query": {
+        "kind": "running",
+        "entity": "loading-84734",
+        "time": "13:00"
+      },
+      "receipts": [
+        {
+          "id": "c5b48cb595",
+          "group": "group-c5b48cb595",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "cbb1b4ecfb",
+          "group": "group-cbb1b4ecfb",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "bbae6ee01f",
+          "group": "group-bbae6ee01f",
+          "text": "Plan: at 13:00, loading-84734 will be running.\nObservation: At 13:00, loading-84734 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "189bc0a5bd9e",
+          "receipt_id": "cbb1b4ecfb",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "2568119e8af1",
+          "receipt_id": "bbae6ee01f",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "895316ee6b99",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "c5b48cb595": true,
+        "cbb1b4ecfb": true,
+        "bbae6ee01f": false
+      },
+      "report_fidelity": {
+        "895316ee6b99": true,
+        "189bc0a5bd9e": true,
+        "2568119e8af1": true
+      },
+      "focal_receipt": "c5b48cb595"
+    }
+  },
+  {
+    "id": "development-modality-1-n1-d1",
+    "root": "development-modality-1",
+    "family": "modality",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "4728b51ab22347e3",
+      "query": {
+        "kind": "running",
+        "entity": "loading-84734",
+        "time": "13:00"
+      },
+      "receipts": [
+        {
+          "id": "c5b48cb595",
+          "group": "group-c5b48cb595",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "cbb1b4ecfb",
+          "group": "group-cbb1b4ecfb",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "bbae6ee01f",
+          "group": "group-bbae6ee01f",
+          "text": "Plan: at 13:00, loading-84734 will be running.\nObservation: At 13:00, loading-84734 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "189bc0a5bd9e",
+          "receipt_id": "cbb1b4ecfb",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "2568119e8af1",
+          "receipt_id": "bbae6ee01f",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "895316ee6b99",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "c5b48cb595": true,
+        "cbb1b4ecfb": true,
+        "bbae6ee01f": false
+      },
+      "report_fidelity": {
+        "895316ee6b99": false,
+        "189bc0a5bd9e": true,
+        "2568119e8af1": true
+      },
+      "focal_receipt": "c5b48cb595"
+    }
+  },
+  {
+    "id": "development-modality-1-n5-d0",
+    "root": "development-modality-1",
+    "family": "modality",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "4728b51ab22347e3",
+      "query": {
+        "kind": "running",
+        "entity": "loading-84734",
+        "time": "13:00"
+      },
+      "receipts": [
+        {
+          "id": "c5b48cb595",
+          "group": "group-c5b48cb595",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "cbb1b4ecfb",
+          "group": "group-cbb1b4ecfb",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "bbae6ee01f",
+          "group": "group-bbae6ee01f",
+          "text": "Plan: at 13:00, loading-84734 will be running.\nObservation: At 13:00, loading-84734 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "189bc0a5bd9e",
+          "receipt_id": "cbb1b4ecfb",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "2568119e8af1",
+          "receipt_id": "bbae6ee01f",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "44540314e76a",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "5fd8f4f54295",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "895316ee6b99",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "9e3c876efc24",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "c1e857fb7036",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "c5b48cb595": true,
+        "cbb1b4ecfb": true,
+        "bbae6ee01f": false
+      },
+      "report_fidelity": {
+        "895316ee6b99": true,
+        "5fd8f4f54295": true,
+        "9e3c876efc24": true,
+        "44540314e76a": true,
+        "c1e857fb7036": true,
+        "189bc0a5bd9e": true,
+        "2568119e8af1": true
+      },
+      "focal_receipt": "c5b48cb595"
+    }
+  },
+  {
+    "id": "development-modality-1-n5-d1",
+    "root": "development-modality-1",
+    "family": "modality",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "4728b51ab22347e3",
+      "query": {
+        "kind": "running",
+        "entity": "loading-84734",
+        "time": "13:00"
+      },
+      "receipts": [
+        {
+          "id": "c5b48cb595",
+          "group": "group-c5b48cb595",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "cbb1b4ecfb",
+          "group": "group-cbb1b4ecfb",
+          "text": "Plan: at 13:00, loading-84734 will be stopped.\nObservation: At 13:00, loading-84734 was not stopped."
+        },
+        {
+          "id": "bbae6ee01f",
+          "group": "group-bbae6ee01f",
+          "text": "Plan: at 13:00, loading-84734 will be running.\nObservation: At 13:00, loading-84734 was not running."
+        }
+      ],
+      "reports": [
+        {
+          "id": "189bc0a5bd9e",
+          "receipt_id": "cbb1b4ecfb",
+          "text": "At 13:00, loading-84734 was running."
+        },
+        {
+          "id": "2568119e8af1",
+          "receipt_id": "bbae6ee01f",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "44540314e76a",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "5fd8f4f54295",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "895316ee6b99",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "9e3c876efc24",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was stopped."
+        },
+        {
+          "id": "c1e857fb7036",
+          "receipt_id": "c5b48cb595",
+          "text": "At 13:00, loading-84734 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "c5b48cb595": true,
+        "cbb1b4ecfb": true,
+        "bbae6ee01f": false
+      },
+      "report_fidelity": {
+        "895316ee6b99": false,
+        "5fd8f4f54295": false,
+        "9e3c876efc24": false,
+        "44540314e76a": false,
+        "c1e857fb7036": false,
+        "189bc0a5bd9e": true,
+        "2568119e8af1": true
+      },
+      "focal_receipt": "c5b48cb595"
+    }
+  },
+  {
+    "id": "development-correction-0-n1-d0",
+    "root": "development-correction-0",
+    "family": "correction",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "143c1a4aaa80ecb5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-36852",
+        "time": "14:00"
+      },
+      "receipts": [
+        {
+          "id": "e19c681e98",
+          "group": "group-e19c681e98",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was not running."
+        },
+        {
+          "id": "b8d3ea7196",
+          "group": "group-b8d3ea7196",
+          "text": "Initial: at 14:00, workshop-36852 was stopped.\nCorrection: At 14:00, workshop-36852 was not stopped."
+        },
+        {
+          "id": "7b287d87fc",
+          "group": "group-7b287d87fc",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "346478971311",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was running."
+        },
+        {
+          "id": "454e83af95dc",
+          "receipt_id": "e19c681e98",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "4946b3adb34c",
+          "receipt_id": "7b287d87fc",
+          "text": "At 14:00, workshop-36852 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "b8d3ea7196": true,
+        "e19c681e98": false,
+        "7b287d87fc": false
+      },
+      "report_fidelity": {
+        "346478971311": true,
+        "454e83af95dc": true,
+        "4946b3adb34c": true
+      },
+      "focal_receipt": "b8d3ea7196"
+    }
+  },
+  {
+    "id": "development-correction-0-n1-d1",
+    "root": "development-correction-0",
+    "family": "correction",
+    "domain": "workshop",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "143c1a4aaa80ecb5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-36852",
+        "time": "14:00"
+      },
+      "receipts": [
+        {
+          "id": "e19c681e98",
+          "group": "group-e19c681e98",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was not running."
+        },
+        {
+          "id": "b8d3ea7196",
+          "group": "group-b8d3ea7196",
+          "text": "Initial: at 14:00, workshop-36852 was stopped.\nCorrection: At 14:00, workshop-36852 was not stopped."
+        },
+        {
+          "id": "7b287d87fc",
+          "group": "group-7b287d87fc",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "346478971311",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "454e83af95dc",
+          "receipt_id": "e19c681e98",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "4946b3adb34c",
+          "receipt_id": "7b287d87fc",
+          "text": "At 14:00, workshop-36852 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "b8d3ea7196": true,
+        "e19c681e98": false,
+        "7b287d87fc": false
+      },
+      "report_fidelity": {
+        "346478971311": false,
+        "454e83af95dc": true,
+        "4946b3adb34c": true
+      },
+      "focal_receipt": "b8d3ea7196"
+    }
+  },
+  {
+    "id": "development-correction-0-n5-d0",
+    "root": "development-correction-0",
+    "family": "correction",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "143c1a4aaa80ecb5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-36852",
+        "time": "14:00"
+      },
+      "receipts": [
+        {
+          "id": "e19c681e98",
+          "group": "group-e19c681e98",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was not running."
+        },
+        {
+          "id": "b8d3ea7196",
+          "group": "group-b8d3ea7196",
+          "text": "Initial: at 14:00, workshop-36852 was stopped.\nCorrection: At 14:00, workshop-36852 was not stopped."
+        },
+        {
+          "id": "7b287d87fc",
+          "group": "group-7b287d87fc",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "2d394065536d",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was running."
+        },
+        {
+          "id": "346478971311",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was running."
+        },
+        {
+          "id": "454e83af95dc",
+          "receipt_id": "e19c681e98",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "4946b3adb34c",
+          "receipt_id": "7b287d87fc",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "588057b802b0",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was running."
+        },
+        {
+          "id": "b2f2d95a7bf3",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was running."
+        },
+        {
+          "id": "bb0a2b9a23df",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "b8d3ea7196": true,
+        "e19c681e98": false,
+        "7b287d87fc": false
+      },
+      "report_fidelity": {
+        "346478971311": true,
+        "588057b802b0": true,
+        "b2f2d95a7bf3": true,
+        "2d394065536d": true,
+        "bb0a2b9a23df": true,
+        "454e83af95dc": true,
+        "4946b3adb34c": true
+      },
+      "focal_receipt": "b8d3ea7196"
+    }
+  },
+  {
+    "id": "development-correction-0-n5-d1",
+    "root": "development-correction-0",
+    "family": "correction",
+    "domain": "workshop",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "143c1a4aaa80ecb5",
+      "query": {
+        "kind": "running",
+        "entity": "workshop-36852",
+        "time": "14:00"
+      },
+      "receipts": [
+        {
+          "id": "e19c681e98",
+          "group": "group-e19c681e98",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was not running."
+        },
+        {
+          "id": "b8d3ea7196",
+          "group": "group-b8d3ea7196",
+          "text": "Initial: at 14:00, workshop-36852 was stopped.\nCorrection: At 14:00, workshop-36852 was not stopped."
+        },
+        {
+          "id": "7b287d87fc",
+          "group": "group-7b287d87fc",
+          "text": "Initial: at 14:00, workshop-36852 was running.\nCorrection: At 14:00, workshop-36852 was stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "2d394065536d",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "346478971311",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "454e83af95dc",
+          "receipt_id": "e19c681e98",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "4946b3adb34c",
+          "receipt_id": "7b287d87fc",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "588057b802b0",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "b2f2d95a7bf3",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was stopped."
+        },
+        {
+          "id": "bb0a2b9a23df",
+          "receipt_id": "b8d3ea7196",
+          "text": "At 14:00, workshop-36852 was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ZERO",
+      "source_votes": {
+        "b8d3ea7196": true,
+        "e19c681e98": false,
+        "7b287d87fc": false
+      },
+      "report_fidelity": {
+        "346478971311": false,
+        "588057b802b0": false,
+        "b2f2d95a7bf3": false,
+        "2d394065536d": false,
+        "bb0a2b9a23df": false,
+        "454e83af95dc": true,
+        "4946b3adb34c": true
+      },
+      "focal_receipt": "b8d3ea7196"
+    }
+  },
+  {
+    "id": "development-correction-1-n1-d0",
+    "root": "development-correction-1",
+    "family": "correction",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "c74d59089fb11b1c",
+      "query": {
+        "kind": "running",
+        "entity": "loading-96385",
+        "time": "15:00"
+      },
+      "receipts": [
+        {
+          "id": "eacfe71bbd",
+          "group": "group-eacfe71bbd",
+          "text": "Initial: at 15:00, loading-96385 was running.\nCorrection: At 15:00, loading-96385 was not running."
+        },
+        {
+          "id": "a8dd86ab42",
+          "group": "group-a8dd86ab42",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        },
+        {
+          "id": "473014fefb",
+          "group": "group-473014fefb",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3f86871ddc1f",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was running."
+        },
+        {
+          "id": "4c3cfe8578b9",
+          "receipt_id": "eacfe71bbd",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "a81fcb2029c5",
+          "receipt_id": "473014fefb",
+          "text": "At 15:00, loading-96385 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "a8dd86ab42": true,
+        "473014fefb": true,
+        "eacfe71bbd": false
+      },
+      "report_fidelity": {
+        "3f86871ddc1f": true,
+        "a81fcb2029c5": true,
+        "4c3cfe8578b9": true
+      },
+      "focal_receipt": "a8dd86ab42"
+    }
+  },
+  {
+    "id": "development-correction-1-n1-d1",
+    "root": "development-correction-1",
+    "family": "correction",
+    "domain": "loading",
+    "condition": {
+      "copies": 1,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "c74d59089fb11b1c",
+      "query": {
+        "kind": "running",
+        "entity": "loading-96385",
+        "time": "15:00"
+      },
+      "receipts": [
+        {
+          "id": "eacfe71bbd",
+          "group": "group-eacfe71bbd",
+          "text": "Initial: at 15:00, loading-96385 was running.\nCorrection: At 15:00, loading-96385 was not running."
+        },
+        {
+          "id": "a8dd86ab42",
+          "group": "group-a8dd86ab42",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        },
+        {
+          "id": "473014fefb",
+          "group": "group-473014fefb",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3f86871ddc1f",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "4c3cfe8578b9",
+          "receipt_id": "eacfe71bbd",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "a81fcb2029c5",
+          "receipt_id": "473014fefb",
+          "text": "At 15:00, loading-96385 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "a8dd86ab42": true,
+        "473014fefb": true,
+        "eacfe71bbd": false
+      },
+      "report_fidelity": {
+        "3f86871ddc1f": false,
+        "a81fcb2029c5": true,
+        "4c3cfe8578b9": true
+      },
+      "focal_receipt": "a8dd86ab42"
+    }
+  },
+  {
+    "id": "development-correction-1-n5-d0",
+    "root": "development-correction-1",
+    "family": "correction",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": false
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "c74d59089fb11b1c",
+      "query": {
+        "kind": "running",
+        "entity": "loading-96385",
+        "time": "15:00"
+      },
+      "receipts": [
+        {
+          "id": "eacfe71bbd",
+          "group": "group-eacfe71bbd",
+          "text": "Initial: at 15:00, loading-96385 was running.\nCorrection: At 15:00, loading-96385 was not running."
+        },
+        {
+          "id": "a8dd86ab42",
+          "group": "group-a8dd86ab42",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        },
+        {
+          "id": "473014fefb",
+          "group": "group-473014fefb",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3f86871ddc1f",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was running."
+        },
+        {
+          "id": "4c3cfe8578b9",
+          "receipt_id": "eacfe71bbd",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "56cd769f9056",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was running."
+        },
+        {
+          "id": "83e2b20bab80",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was running."
+        },
+        {
+          "id": "98b38b5e9f02",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was running."
+        },
+        {
+          "id": "9a9708e30964",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was running."
+        },
+        {
+          "id": "a81fcb2029c5",
+          "receipt_id": "473014fefb",
+          "text": "At 15:00, loading-96385 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "a8dd86ab42": true,
+        "473014fefb": true,
+        "eacfe71bbd": false
+      },
+      "report_fidelity": {
+        "3f86871ddc1f": true,
+        "56cd769f9056": true,
+        "98b38b5e9f02": true,
+        "83e2b20bab80": true,
+        "9a9708e30964": true,
+        "a81fcb2029c5": true,
+        "4c3cfe8578b9": true
+      },
+      "focal_receipt": "a8dd86ab42"
+    }
+  },
+  {
+    "id": "development-correction-1-n5-d1",
+    "root": "development-correction-1",
+    "family": "correction",
+    "domain": "loading",
+    "condition": {
+      "copies": 5,
+      "inverted": true
+    },
+    "actor": {
+      "contract": "Use the three authenticated source receipts, not the number of reports, to decide whether the query proposition is supported by a majority of the supplied independent equal-reliability sources. Return ONE for a source majority supporting the proposition, ZERO for an opposing majority, otherwise DEFER. Supplied source groups are independent by construction; unknown groups or incomplete/unparseable evidence require DEFER. Report receipt IDs are authenticated bindings. Reports may misstate their receipt; also assess their fidelity. Observation outranks a plan; a Correction replaces the Initial entry for the same entity/time. Do not interpolate missing times. Running and stopped are opposites; not running means stopped, not stopped means running. For mass use query threshold in grams; one kilogram is 1000 grams. Copying a report creates no new source. This is a synthetic evidence-MAP decision, not verified physical truth.",
+      "event": "c74d59089fb11b1c",
+      "query": {
+        "kind": "running",
+        "entity": "loading-96385",
+        "time": "15:00"
+      },
+      "receipts": [
+        {
+          "id": "eacfe71bbd",
+          "group": "group-eacfe71bbd",
+          "text": "Initial: at 15:00, loading-96385 was running.\nCorrection: At 15:00, loading-96385 was not running."
+        },
+        {
+          "id": "a8dd86ab42",
+          "group": "group-a8dd86ab42",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        },
+        {
+          "id": "473014fefb",
+          "group": "group-473014fefb",
+          "text": "Initial: at 15:00, loading-96385 was stopped.\nCorrection: At 15:00, loading-96385 was not stopped."
+        }
+      ],
+      "reports": [
+        {
+          "id": "3f86871ddc1f",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "4c3cfe8578b9",
+          "receipt_id": "eacfe71bbd",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "56cd769f9056",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "83e2b20bab80",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "98b38b5e9f02",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "9a9708e30964",
+          "receipt_id": "a8dd86ab42",
+          "text": "At 15:00, loading-96385 was stopped."
+        },
+        {
+          "id": "a81fcb2029c5",
+          "receipt_id": "473014fefb",
+          "text": "At 15:00, loading-96385 was running."
+        }
+      ]
+    },
+    "gold": {
+      "decision": "ONE",
+      "source_votes": {
+        "a8dd86ab42": true,
+        "473014fefb": true,
+        "eacfe71bbd": false
+      },
+      "report_fidelity": {
+        "3f86871ddc1f": false,
+        "56cd769f9056": false,
+        "98b38b5e9f02": false,
+        "83e2b20bab80": false,
+        "9a9708e30964": false,
+        "a81fcb2029c5": true,
+        "4c3cfe8578b9": true
+      },
+      "focal_receipt": "a8dd86ab42"
+    }
+  }
+]
