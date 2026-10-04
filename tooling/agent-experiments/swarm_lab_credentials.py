@@ -37,3 +37,19 @@ def validate_payload(payload):
     key = payload['SWARM_MODEL_API_KEY']
     if type(key) is not str or KEY_PATTERN.fullmatch(key) is None:
         raise CredentialUnavailable('invalid_credential_payload')
+
+
+def load_swarm_lab_routing(path):
+    """Read an operator-verified private mapping; never infer a workspace."""
+    import json
+    from pathlib import Path
+    try:
+        record=json.loads(Path(path).read_text())
+        if record.get('credential_service')!=SERVICE or record.get('credential_account')!=ACCOUNT or record.get('model_metadata_verified') is not True:
+            raise ValueError()
+        workspace=record['workspace_id']
+        if type(workspace) is not str or re.fullmatch(r'wrkspc_[A-Za-z0-9]+',workspace) is None:
+            raise ValueError()
+    except Exception:
+        raise CredentialUnavailable('swarm_lab_workspace_mapping_unverified') from None
+    return {'workspace_id':workspace}

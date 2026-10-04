@@ -27,4 +27,17 @@ class CredentialPolicy(unittest.TestCase):
         for payload in ({}, {'ANTHROPIC_API_KEY':'sk-ant-general'}, {'SWARM_MODEL_API_KEY':'sk-ant-lab','SWARM_MODEL_WORKSPACE_ID':'another-project'}, {'SWARM_MODEL_API_KEY':'wrong-format'}):
             with self.assertRaises(credentials.CredentialUnavailable):credentials.validate_payload(payload)
 
+class RoutingPolicy(unittest.TestCase):
+    def test_only_same_project_verified_mapping_is_used(self):
+        import tempfile,json
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'routing.json'
+            record={'credential_service':'swarm-lab-anthropic','credential_account':'vishesh','model_metadata_verified':True,'workspace_id':'wrkspc_testonly'}
+            path.write_text(json.dumps(record))
+            self.assertEqual(credentials.load_swarm_lab_routing(path),{'workspace_id':'wrkspc_testonly'})
+            for changes in ({'credential_service':'general-anthropic'},{'credential_account':'another-project'},{'model_metadata_verified':False},{'workspace_id':'invalid'}):
+                path.write_text(json.dumps(record|changes))
+                with self.assertRaises(credentials.CredentialUnavailable):credentials.load_swarm_lab_routing(path)
+
 if __name__ == '__main__':unittest.main()

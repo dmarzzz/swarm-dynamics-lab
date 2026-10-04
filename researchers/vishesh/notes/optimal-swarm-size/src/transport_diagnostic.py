@@ -1,5 +1,5 @@
 """One registered Anthropic transport call, charged to the canonical Q1 ledger."""
-import argparse,json,time
+import argparse,json,time,re
 from pathlib import Path
 from budget import Budget
 from provider import Provider
@@ -10,9 +10,10 @@ from tasks import strict_json
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--config',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--budget-ledger',type=Path,required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--config',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--budget-ledger',type=Path,required=True);p.add_argument('--attempt',default='anthropic-transport-q0-a1');a=p.parse_args()
+    if not re.fullmatch(r'anthropic-transport-q0-a[1-9][0-9]*',a.attempt):raise ValueError('invalid_attempt')
     cfg=json.loads(a.config.read_text());a.output.mkdir(exist_ok=False)
-    row={'id':'anthropic-transport-q0-a1','stage':'transport-diagnostic','family':'exact-json','structure':'one-call','root':0,'n':1}
+    row={'id':a.attempt,'stage':'transport-diagnostic','family':'exact-json','structure':'one-call','root':0,'n':1}
     tldr='TLDR: One real Anthropic Haiku transport call versus exact JSON {ok:true}; verify served route, complete response, usage, cost and public artifacts. Charged to the shared $20 cap. Plumbing qualification only, not model task competence or swarm-size evidence.'
     (a.output/'assignment.json').write_text(json.dumps(row|{'tldr':tldr},indent=2))
     reporter=Reporter(cfg['experiment_id'],row,tldr)
