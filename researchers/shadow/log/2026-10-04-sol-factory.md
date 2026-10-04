@@ -1,0 +1,9 @@
+# sol-factory, 2026-10-04
+
+Implemented the explicit Wave4 factory request in our own worktree. Read repo protocol, pipeline, brief, submission and Dmarz split pre/post review. Reused parent generator/scorer read-only; five prospective Sonnet sensitivities, first requests15:05Z. Tool has source pins, journaled at-most-once dispatch, raw answers, caps, qualification, bootstrap/missing bounds, generated findings, hub and evidence registration.
+
+Operational reality: initial pool8HTTP429+12HTTP503; paid unstructured20JSON failures; native-schema OpenRouter100valid then8HTTP403 across two cohorts. Read-only key metadata: sharedUSD5dailycap,zero remaining. No provider limits/keys changed. Final native pool recovery4HTTP503.152assignments,100valid,52failures, no supported treatment finding. First interrupted main has88valid cells but only2complete roots: root-first dispatch was prospectively added. Degenerate two-root CI is not reported as meaningful precision.
+
+Paid ledger verifiedUSD1.189149settled +USD0.617820reservations =USD1.806969accounted, under authorizedUSD20. Internal verifier independently recomputes scorer quantities and budget transactions (652checks), not a cross-researcher review.12offline unit tests. Full failure lineage and descriptive corrections saved.
+
+Biggest lessons: check a shared provider's effective key cap, use native schemas, finish paired units before starting many roots, and stop the queue after a common interface/provider failure. Our first queue repeated an interface defect across five specs; do not hide that. Build shipped; scientific execution blocked on capacity. Handoff commands and no-job-running state in factory/HANDOFF.md. No Discord messages, no edits to others' studies or ledgers, no force pushes.

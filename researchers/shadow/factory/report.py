@@ -30,7 +30,7 @@ def main():
         p=f.ROOT/'results'/name/'summary.json'
         if p.exists():summaries.append(json.loads(p.read_text()))
     allsum=[json.loads(p.read_text()) for p in (f.ROOT/'results').glob('*/summary.json')]
-    lines=['# Factory results: the attacker link assumption is a testable condition','',
+    lines=['# Factory results: tool shipped, treatment inference blocked by provider availability','',
       'Exploratory synthetic Sonnet 4.6 sensitivity checks, not a claim about real-world swarms or a new Sybil defense. Reuses Dmarz’s frozen split-policy worlds and credits that study as the source. Each completed comparison has 48 paired roots; the five cohorts share those roots. Source-reported, not independently reviewed.','',
       '## Current results','',
       '| Specification | Main valid / assigned | Paired roots | Primary pp [95% CI] | Status | Accounted USD |',
@@ -43,7 +43,7 @@ def main():
        '![Primary contrast with root-bootstrap intervals](results/contrasts.svg)','',
        '## Attempt lineage and costs','',
        f"All saved cohorts currently account for {sum(s['attempted'] for s in allsum)} attempted calls, {sum(s['valid'] for s in allsum)} valid, {sum(s['failed'] for s in allsum)} failed. Historical transport/schema failures remain separate, never last-valid-selected into repaired cohorts.",
-       '', 'The initial pool attempts: 20 HTTP429 failures, $0 external-paid spend. The first OpenRouter attempts: 20 schema-invalid answers (prose/fences), stopped before treatment calls. Both are interface/transport diagnostics, not negative evidence about the scientific contrast. The current attempt prospectively added native strict JSON-schema output and fresh clean qualification roots. See [route amendment](AMENDMENT-PAID.md) and [schema amendment](AMENDMENT-STRUCTURED.md).', '',
+       '', 'The initial pool attempts: 8 HTTP429 and12 HTTP503 failures, $0 external-paid spend. The first OpenRouter attempts: 20 schema-invalid answers (prose/fences), stopped before treatment calls. Both are interface/transport diagnostics, not negative evidence about the scientific contrast. The current attempt prospectively added native strict JSON-schema output and fresh clean qualification roots. See [route amendment](AMENDMENT-PAID.md) and [schema amendment](AMENDMENT-STRUCTURED.md).', '',
        'All paid attempts share one locked USD20 reservation ledger; each spec is capped at USD4. Reported costs and conservative outstanding reservations are in [the ledger](results/paid-ledger.jsonl). No retry or cap expansion. A failed competence screen stops the current queue.']
     contrasts=[]
     for reliability in ('strong','weak'):
@@ -61,7 +61,9 @@ def main():
         for c in contrasts:
             lines.append(f"- {c['condition']} checks: linked minus no-links primary = {100*c['linked_minus_no_links']:+.1f} pp, CI [{100*c['ci95'][0]:+.1f}, {100*c['ci95'][1]:+.1f}], {c['paired_roots']} paired roots.")
     f.dump(f.ROOT/'results'/'cross_spec_posthoc.json',contrasts)
-    lines+=['','## Provider stop and precision warning','',
+    lines+=['','## Native recovery attempt and verification','',
+      'The first new native-schema pool screen also stopped: four HTTP503 failures, zero model answers; the other native specs remain unlaunched. The queue did not bypass the outage or rotate credentials. All current outcomes remain leads or untested plans, not completed scientific findings. [Internal recomputation](results/verification.json) checks every terminal metric and each ledger transaction; it is not an independent-researcher review.', '',
+      '## Provider stop and precision warning','',
       'The first structured paid run stopped at a shared OpenRouter key limit (read-only metadata: USD5 daily cap, zero remaining). No key limit or credential was changed. It has only 2/48 complete roots despite 88 valid main calls: its narrow complete-case bootstrap is not meaningful precision. All-assigned bounds are -93.1 to +123.6 pp, so no directional finding is established. New native-schema pool specs, separately preregistered, use root-first dispatch and bounded429 backoff. See [native amendment](AMENDMENT-NATIVE.md).', '',
       '## Scope and interpretation','',
       '“Finding” is a within-spec, complete-data directional signal whose entire CI exceeds 10 points. “Negative” means the preregistered useful-direction criterion was not met, not equivalence or an absence of any effect. “Lead” includes partial data and failed qualification. None is formal hypothesis acceptance.', '',
@@ -85,6 +87,22 @@ def main():
         lo,hi=s['ci95'];color='#8ddd9a' if s['status']=='finding' else '#e9bc69'
         svg.append(f'<line x1="{x(lo)}" x2="{x(hi)}" y1="{yy}" y2="{yy}" stroke="{color}" stroke-width="5"/><circle cx="{x(s["primary"])}" cy="{yy}" r="8" fill="{color}"/>')
     svg+=['<text x="620" y="644" font-size="19">Degree-minus-coverage splitting effect (percentage points), 95% root-bootstrap CI</text>','</g></svg>']
+    if not any(s['paired_roots']>=10 for s in summaries):
+        # Do not draw a spurious precision plot from one root per family.
+        svg=['<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620">',
+          '<rect width="1600" height="620" fill="#11151c"/><g font-family="monospace" fill="#e6edf3">',
+          '<text x="60" y="70" font-size="34">Call count is not paired sample size</text>',
+          '<text x="60" y="120" font-size="23">Interrupted Sonnet run: 88 valid main cells, only 2 complete four-cell roots</text>',
+          '<text x="60" y="200" font-size="23">Valid main calls: 88 / 192</text>',
+          '<rect x="60" y="225" width="1450" height="48" fill="#343d4a"/>',
+          f'<rect x="60" y="225" width="{1450*88/192}" height="48" fill="#8ddd9a"/>',
+          '<text x="60" y="330" font-size="23">Complete paired roots: 2 / 48</text>',
+          '<rect x="60" y="355" width="1450" height="48" fill="#343d4a"/>',
+          f'<rect x="60" y="355" width="{1450*2/48}" height="48" fill="#e9bc69"/>',
+          '<text x="60" y="480" font-size="24">All-assigned effect bounds: -93.1 to +123.6 percentage points</text>',
+          '<text x="60" y="530" font-size="22">No directional finding. Repair: complete each paired root before starting another.</text>',
+          '<text x="60" y="575" font-size="19">Source: split-sonnet-linked-strong-or-json / saved records; synthetic, exploratory</text>',
+          '</g></svg>']
     (f.ROOT/'results'/'contrasts.svg').write_text('\n'.join(svg))
     print('report cohorts:',len(summaries),'posthoc contrasts:',len(contrasts))
 if __name__=='__main__':main()

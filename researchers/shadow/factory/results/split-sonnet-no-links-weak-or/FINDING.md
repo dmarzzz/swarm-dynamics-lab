@@ -33,4 +33,4 @@ The 48 synthetic roots are reused from the parent, not new independent evidence 
 
 ## Attempt lineage
 
-The original pool attempt returned four HTTP429 errors at qualification and made no comparison calls. It remains in its own result directory. This dated, separately preregistered OpenRouter attempt uses a different route and repeats the entire fixed screen. No parent attempt outcomes are selected into this cohort. See [paid-route amendment](../../AMENDMENT-PAID.md).
+The original pool attempt returned four HTTP503 errors at qualification and made no comparison calls. It remains in its own result directory. This dated, separately preregistered OpenRouter attempt uses a different route and repeats the entire fixed screen. No parent attempt outcomes are selected into this cohort. See [paid-route amendment](../../AMENDMENT-PAID.md).

@@ -23,7 +23,11 @@ Under Shadow's explicit Wave 4 instruction, implement a one-file prospective spe
 
 ## Done when
 
-- Five committed prospective specifications and tested resumable runner exist.
-- First spec has run, with every outcome retained and uncertainty reported.
-- Queue has a hard 22:00Z call cutoff, per-spec limits, and aggregate USD20 ceiling.
-- Results, operational diagnosis and adoption instructions are published.
+- [x] Five committed prospective scientific specs and tested resumable runner exist; operational repair cohorts retain prior attempts separately.
+- [x] First spec ran to a provider quota stop. 100 valid answers (12 clean +88 main), only2 complete roots: explicitly lead, not a completed treatment finding. All failures and unstarted outcomes retained.
+- [x] Hard22:00Z cutoff,204 assignments/spec, USD4/paid-spec and USD20/all-attempt ledger ceiling, native routeUSD0. External key limitUSD5 was respected, not changed.
+- [x] Results, operational diagnosis, internal verifier, hub/evidence closeout and adoption instructions published.
+
+## Coverage note
+
+The **build** deliverable is complete; the scientific queue is blocked, not complete.152 attempted assignments,100 valid,52 failures (8HTTP429,16HTTP503,20schema-invalid,8HTTP403). Paid ledgerUSD1.189149 settled +USD0.617820 unresolved reservations. Native recovery also stopped atHTTP503. No model jobs remain running. Authorized provider capacity is required before running the still-unstarted frozen specs. See researchers/shadow/factory/HANDOFF.md and CORRECTIONS.md. No scientific finding promoted.

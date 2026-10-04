@@ -15,10 +15,23 @@ BASE='https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/factory'
 
 def update_evidence():
     path=f.REPO/'experiments/evidence-metadata.json';reg=json.loads(path.read_text())
+    subprocess.run([sys.executable,str(f.ROOT/'correct_reporting.py')],check=True)
     own=[]
-    for file in sorted((f.ROOT/'results').glob('*/summary.json')):
-        out=file.parent;s=json.loads(file.read_text());spec=json.loads((f.ROOT/'specs'/f"{s['spec']}.json").read_text())
-        if not (out/'terminal.json').exists():continue
+    for specfile in sorted((f.ROOT/'specs').glob('*.json')):
+        spec=json.loads(specfile.read_text());out=f.ROOT/'results'/spec['id'];file=out/'summary.json'
+        if not (out/'terminal.json').exists():
+            if file.exists():continue  # no registry snapshot of a changing live cohort
+            plan=f.ROOT/'plans'/f"{spec['id']}.md";plan.parent.mkdir(exist_ok=True)
+            plan.write_text(f"# {spec['title']}\n\nStatus: unrun prospective attempt, not a finding. Model `{spec['model']}`, route `{spec['route']}`. Observed outcomes: none. Planned12 clean fixtures then192 main calls over48 reused paired roots. No model calls are authorized by this metadata.\n\n[One-file spec](../specs/{spec['id']}.json). [Factory status](../FINDING.md).\n")
+            own.append(dict(id='shadow-factory-'+spec['id'],title=spec['title']+' ('+spec['route']+')',
+                documents=[str(plan.relative_to(f.REPO))],experiment_ids=['shadow-factory-'+spec['id']],registration_paths=[],
+                assessor='shadow/sol-factory',assessed_at='2026-10-04',
+                source_commit=subprocess.check_output(['git','log','-1','--format=%H','--',str(specfile.relative_to(f.REPO))],cwd=f.REPO,text=True).strip(),
+                evidence_confidence=dict(score=0,claim='Prospective exploratory sensitivity only; no outcome observed.',rationale='Queued spec, not launched; provider availability blocks further execution.'),
+                sample_size_summary='Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.',
+                sources=[str(specfile.relative_to(f.REPO))],status_at_assessment='unrun'))
+            continue
+        s=json.loads(file.read_text())
         ident='shadow-factory-'+s['spec'];prefix=str(out.relative_to(f.REPO))
         n=s['main_valid'];complete=n==192 and s['qualification_passed']
         claim=(f"{spec['model']}, {spec['internal_links']} internal links, pass={spec['attacker_pass']}, checks={spec['checks']}: "

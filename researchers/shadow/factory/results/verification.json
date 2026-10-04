@@ -1,0 +1,97 @@
+{
+  "internal_verification": true,
+  "independent_researcher_review": false,
+  "checks": 652,
+  "cohorts": 13,
+  "attempted": 152,
+  "valid": 100,
+  "failures": {
+    "http_503": 16,
+    "JSONDecodeError": 20,
+    "http_429": 8,
+    "http_403": 8
+  },
+  "settled_paid_usd": 1.189149,
+  "unsettled_reservations_usd": 0.61782,
+  "accounted_paid_usd": 1.806969,
+  "studies": [
+    {
+      "spec": "split-sonnet-four-checks",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-four-checks-or",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-linked-strong",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-linked-strong-or",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-linked-strong-or-json",
+      "attempted": 104,
+      "valid": 100,
+      "paired_roots": 2
+    },
+    {
+      "spec": "split-sonnet-linked-weak",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-linked-weak-or",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-linked-weak-or-json",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-no-links-strong",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-no-links-strong-native-json",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-no-links-strong-or",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-no-links-weak",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    },
+    {
+      "spec": "split-sonnet-no-links-weak-or",
+      "attempted": 4,
+      "valid": 0,
+      "paired_roots": 0
+    }
+  ]
+}

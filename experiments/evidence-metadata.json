@@ -2710,31 +2710,78 @@
       }
     },
     {
-      "id": "shadow-factory-split-sonnet-four-checks",
-      "title": "Does the informative-check contrast survive a four-check verification budget? (anthropic-pool)",
+      "id": "theseus-acquisition-a1",
+      "title": "Swarm of Theseus A1 withheld-policy acquisition",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "daf5c507fc1256ab566937614f4833399e434ea1",
       "documents": [
-        "researchers/shadow/factory/results/split-sonnet-four-checks/FINDING.md"
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-STATUS.md"
       ],
       "experiment_ids": [
-        "shadow-factory-split-sonnet-four-checks"
+        "swarm-of-theseus-acquisition-a1"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Acquisition from labeled history with the true policy withheld remains untested.",
+        "rationale": "Prospective plan and15offline software checks only; native dispatch blocked by orbital-one credential/launcher compatibility. R1 qualification is a separate supplied-policy cohort."
+      },
+      "sample_size_summary": "Observed: none,0native calls. Planned: six fixed acquisition roots,12learners and96distinct test case/family pairs;204call slots,96executor calls per arm. No culture test.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PLAN.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-VALIDATION.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PREPARATION-POST.md"
+      ],
+      "status_at_assessment": "prepared_dispatch_blocked"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-four-checks-native-json",
+      "title": "Does the informative-check contrast survive a four-check verification budget? (anthropic-pool)",
+      "documents": [
+        "researchers/shadow/factory/plans/split-sonnet-four-checks-native-json.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-four-checks-native-json"
       ],
       "registration_paths": [],
       "assessor": "shadow/sol-factory",
       "assessed_at": "2026-10-04",
-      "source_commit": "577cc1de55b2ae577e998616655acd7940079186",
+      "source_commit": "7db38e2d0b7842595c253453519e3cb200fdbc62",
       "evidence_confidence": {
         "score": 0,
-        "claim": "claude-sonnet-4-6, ring2 internal links, pass=0.1, checks=4: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
-        "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
+        "claim": "Prospective exploratory sensitivity only; no outcome observed.",
+        "rationale": "Queued spec, not launched; provider availability blocks further execution."
       },
-      "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
+      "sample_size_summary": "Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.",
       "sources": [
-        "researchers/shadow/factory/results/split-sonnet-four-checks/summary.json",
-        "researchers/shadow/factory/results/split-sonnet-four-checks/records.jsonl",
-        "researchers/shadow/factory/results/split-sonnet-four-checks/provenance.json",
-        "researchers/shadow/factory/specs/split-sonnet-four-checks.json"
+        "researchers/shadow/factory/specs/split-sonnet-four-checks-native-json.json"
       ],
-      "status_at_assessment": "lead"
+      "status_at_assessment": "unrun"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-four-checks-or-json",
+      "title": "Does the informative-check contrast survive a four-check verification budget? (openrouter)",
+      "documents": [
+        "researchers/shadow/factory/plans/split-sonnet-four-checks-or-json.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-four-checks-or-json"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "666aa2f4abb53290e52b2036ab907b7ec9436355",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Prospective exploratory sensitivity only; no outcome observed.",
+        "rationale": "Queued spec, not launched; provider availability blocks further execution."
+      },
+      "sample_size_summary": "Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/specs/split-sonnet-four-checks-or-json.json"
+      ],
+      "status_at_assessment": "unrun"
     },
     {
       "id": "shadow-factory-split-sonnet-four-checks-or",
@@ -2764,13 +2811,13 @@
       "status_at_assessment": "lead"
     },
     {
-      "id": "shadow-factory-split-sonnet-linked-strong",
-      "title": "Does Sonnet reproduce the informative-check identity-splitting contrast? (anthropic-pool)",
+      "id": "shadow-factory-split-sonnet-four-checks",
+      "title": "Does the informative-check contrast survive a four-check verification budget? (anthropic-pool)",
       "documents": [
-        "researchers/shadow/factory/results/split-sonnet-linked-strong/FINDING.md"
+        "researchers/shadow/factory/results/split-sonnet-four-checks/FINDING.md"
       ],
       "experiment_ids": [
-        "shadow-factory-split-sonnet-linked-strong"
+        "shadow-factory-split-sonnet-four-checks"
       ],
       "registration_paths": [],
       "assessor": "shadow/sol-factory",
@@ -2778,15 +2825,66 @@
       "source_commit": "577cc1de55b2ae577e998616655acd7940079186",
       "evidence_confidence": {
         "score": 0,
-        "claim": "claude-sonnet-4-6, ring2 internal links, pass=0.1, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
+        "claim": "claude-sonnet-4-6, ring2 internal links, pass=0.1, checks=4: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
         "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
       },
       "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
       "sources": [
-        "researchers/shadow/factory/results/split-sonnet-linked-strong/summary.json",
-        "researchers/shadow/factory/results/split-sonnet-linked-strong/records.jsonl",
-        "researchers/shadow/factory/results/split-sonnet-linked-strong/provenance.json",
-        "researchers/shadow/factory/specs/split-sonnet-linked-strong.json"
+        "researchers/shadow/factory/results/split-sonnet-four-checks/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-four-checks/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-four-checks/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-four-checks.json"
+      ],
+      "status_at_assessment": "lead"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-linked-strong-native-json",
+      "title": "Does Sonnet reproduce the informative-check identity-splitting contrast? (anthropic-pool)",
+      "documents": [
+        "researchers/shadow/factory/plans/split-sonnet-linked-strong-native-json.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-linked-strong-native-json"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "7db38e2d0b7842595c253453519e3cb200fdbc62",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Prospective exploratory sensitivity only; no outcome observed.",
+        "rationale": "Queued spec, not launched; provider availability blocks further execution."
+      },
+      "sample_size_summary": "Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/specs/split-sonnet-linked-strong-native-json.json"
+      ],
+      "status_at_assessment": "unrun"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-linked-strong-or-json",
+      "title": "Does Sonnet reproduce the informative-check identity-splitting contrast? (openrouter)",
+      "documents": [
+        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/FINDING.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-linked-strong-or-json"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "666aa2f4abb53290e52b2036ab907b7ec9436355",
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "anthropic/claude-sonnet-4.6, ring2 internal links, pass=0.1, checks=12: paired splitting difference-in-differences +0.5000; exploratory same-family sensitivity, not a general defense claim.",
+        "rationale": "Source-reported exploratory comparison; 48 reused synthetic roots in two graph families, reduced clean qualification, no independent review, model/configuration change and five unadjusted dependent contrasts."
+      },
+      "sample_size_summary": "Observed: 2/48 complete paired synthetic roots; main 88/192 valid; all stages 100/204 valid, 4 failed, 100 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-linked-strong-or-json.json"
       ],
       "status_at_assessment": "lead"
     },
@@ -2818,40 +2916,13 @@
       "status_at_assessment": "lead"
     },
     {
-      "id": "shadow-factory-split-sonnet-linked-strong-or-json",
-      "title": "Does Sonnet reproduce the informative-check identity-splitting contrast? (openrouter)",
+      "id": "shadow-factory-split-sonnet-linked-strong",
+      "title": "Does Sonnet reproduce the informative-check identity-splitting contrast? (anthropic-pool)",
       "documents": [
-        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/FINDING.md"
+        "researchers/shadow/factory/results/split-sonnet-linked-strong/FINDING.md"
       ],
       "experiment_ids": [
-        "shadow-factory-split-sonnet-linked-strong-or-json"
-      ],
-      "registration_paths": [],
-      "assessor": "shadow/sol-factory",
-      "assessed_at": "2026-10-04",
-      "source_commit": "666aa2f4abb53290e52b2036ab907b7ec9436355",
-      "evidence_confidence": {
-        "score": 1,
-        "claim": "anthropic/claude-sonnet-4.6, ring2 internal links, pass=0.1, checks=12: paired splitting difference-in-differences +0.5000; exploratory same-family sensitivity, not a general defense claim.",
-        "rationale": "Source-reported exploratory comparison; 48 reused synthetic roots in two graph families, reduced clean qualification, no independent review, model/configuration change and five unadjusted dependent contrasts."
-      },
-      "sample_size_summary": "Observed: 2/48 complete paired synthetic roots; main 88/192 valid; all stages 100/204 valid, 4 failed, 100 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
-      "sources": [
-        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/summary.json",
-        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/records.jsonl",
-        "researchers/shadow/factory/results/split-sonnet-linked-strong-or-json/provenance.json",
-        "researchers/shadow/factory/specs/split-sonnet-linked-strong-or-json.json"
-      ],
-      "status_at_assessment": "lead"
-    },
-    {
-      "id": "shadow-factory-split-sonnet-linked-weak",
-      "title": "Does unreliable verification reverse the Sonnet identity-splitting contrast? (anthropic-pool)",
-      "documents": [
-        "researchers/shadow/factory/results/split-sonnet-linked-weak/FINDING.md"
-      ],
-      "experiment_ids": [
-        "shadow-factory-split-sonnet-linked-weak"
+        "shadow-factory-split-sonnet-linked-strong"
       ],
       "registration_paths": [],
       "assessor": "shadow/sol-factory",
@@ -2859,15 +2930,66 @@
       "source_commit": "577cc1de55b2ae577e998616655acd7940079186",
       "evidence_confidence": {
         "score": 0,
-        "claim": "claude-sonnet-4-6, ring2 internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
+        "claim": "claude-sonnet-4-6, ring2 internal links, pass=0.1, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
         "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
       },
       "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
       "sources": [
-        "researchers/shadow/factory/results/split-sonnet-linked-weak/summary.json",
-        "researchers/shadow/factory/results/split-sonnet-linked-weak/records.jsonl",
-        "researchers/shadow/factory/results/split-sonnet-linked-weak/provenance.json",
-        "researchers/shadow/factory/specs/split-sonnet-linked-weak.json"
+        "researchers/shadow/factory/results/split-sonnet-linked-strong/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-linked-strong/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-linked-strong/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-linked-strong.json"
+      ],
+      "status_at_assessment": "lead"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-linked-weak-native-json",
+      "title": "Does unreliable verification reverse the Sonnet identity-splitting contrast? (anthropic-pool)",
+      "documents": [
+        "researchers/shadow/factory/plans/split-sonnet-linked-weak-native-json.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-linked-weak-native-json"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "7db38e2d0b7842595c253453519e3cb200fdbc62",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Prospective exploratory sensitivity only; no outcome observed.",
+        "rationale": "Queued spec, not launched; provider availability blocks further execution."
+      },
+      "sample_size_summary": "Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/specs/split-sonnet-linked-weak-native-json.json"
+      ],
+      "status_at_assessment": "unrun"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-linked-weak-or-json",
+      "title": "Does unreliable verification reverse the Sonnet identity-splitting contrast? (openrouter)",
+      "documents": [
+        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/FINDING.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-linked-weak-or-json"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "666aa2f4abb53290e52b2036ab907b7ec9436355",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "anthropic/claude-sonnet-4.6, ring2 internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
+        "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
+      },
+      "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-linked-weak-or-json.json"
       ],
       "status_at_assessment": "lead"
     },
@@ -2899,13 +3021,67 @@
       "status_at_assessment": "lead"
     },
     {
-      "id": "shadow-factory-split-sonnet-linked-weak-or-json",
-      "title": "Does unreliable verification reverse the Sonnet identity-splitting contrast? (openrouter)",
+      "id": "shadow-factory-split-sonnet-linked-weak",
+      "title": "Does unreliable verification reverse the Sonnet identity-splitting contrast? (anthropic-pool)",
       "documents": [
-        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/FINDING.md"
+        "researchers/shadow/factory/results/split-sonnet-linked-weak/FINDING.md"
       ],
       "experiment_ids": [
-        "shadow-factory-split-sonnet-linked-weak-or-json"
+        "shadow-factory-split-sonnet-linked-weak"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "577cc1de55b2ae577e998616655acd7940079186",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "claude-sonnet-4-6, ring2 internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
+        "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
+      },
+      "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/results/split-sonnet-linked-weak/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-linked-weak/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-linked-weak/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-linked-weak.json"
+      ],
+      "status_at_assessment": "lead"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-no-links-strong-native-json",
+      "title": "Does the informative-check result survive removing free attacker-internal links? (anthropic-pool)",
+      "documents": [
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-native-json/FINDING.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-no-links-strong-native-json"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "7db38e2d0b7842595c253453519e3cb200fdbc62",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "claude-sonnet-4-6, none internal links, pass=0.1, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
+        "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
+      },
+      "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-native-json/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-native-json/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-native-json/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-no-links-strong-native-json.json"
+      ],
+      "status_at_assessment": "lead"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-no-links-strong-or-json",
+      "title": "Does the informative-check result survive removing free attacker-internal links? (openrouter)",
+      "documents": [
+        "researchers/shadow/factory/plans/split-sonnet-no-links-strong-or-json.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-no-links-strong-or-json"
       ],
       "registration_paths": [],
       "assessor": "shadow/sol-factory",
@@ -2913,15 +3089,39 @@
       "source_commit": "666aa2f4abb53290e52b2036ab907b7ec9436355",
       "evidence_confidence": {
         "score": 0,
-        "claim": "anthropic/claude-sonnet-4.6, ring2 internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
+        "claim": "Prospective exploratory sensitivity only; no outcome observed.",
+        "rationale": "Queued spec, not launched; provider availability blocks further execution."
+      },
+      "sample_size_summary": "Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/specs/split-sonnet-no-links-strong-or-json.json"
+      ],
+      "status_at_assessment": "unrun"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-no-links-strong-or",
+      "title": "Does the informative-check result survive removing free attacker-internal links? (openrouter)",
+      "documents": [
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/FINDING.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-no-links-strong-or"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "952a618cf8e7d516feadc7cd9fdb7111944e9792",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "anthropic/claude-sonnet-4.6, none internal links, pass=0.1, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
         "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
       },
       "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
       "sources": [
-        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/summary.json",
-        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/records.jsonl",
-        "researchers/shadow/factory/results/split-sonnet-linked-weak-or-json/provenance.json",
-        "researchers/shadow/factory/specs/split-sonnet-linked-weak-or-json.json"
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-no-links-strong-or.json"
       ],
       "status_at_assessment": "lead"
     },
@@ -2953,58 +3153,52 @@
       "status_at_assessment": "lead"
     },
     {
-      "id": "shadow-factory-split-sonnet-no-links-strong-or",
-      "title": "Does the informative-check result survive removing free attacker-internal links? (openrouter)",
-      "documents": [
-        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/FINDING.md"
-      ],
-      "experiment_ids": [
-        "shadow-factory-split-sonnet-no-links-strong-or"
-      ],
-      "registration_paths": [],
-      "assessor": "shadow/sol-factory",
-      "assessed_at": "2026-10-04",
-      "source_commit": "952a618cf8e7d516feadc7cd9fdb7111944e9792",
-      "evidence_confidence": {
-        "score": 0,
-        "claim": "anthropic/claude-sonnet-4.6, none internal links, pass=0.1, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
-        "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
-      },
-      "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
-      "sources": [
-        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/summary.json",
-        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/records.jsonl",
-        "researchers/shadow/factory/results/split-sonnet-no-links-strong-or/provenance.json",
-        "researchers/shadow/factory/specs/split-sonnet-no-links-strong-or.json"
-      ],
-      "status_at_assessment": "lead"
-    },
-    {
-      "id": "shadow-factory-split-sonnet-no-links-weak",
+      "id": "shadow-factory-split-sonnet-no-links-weak-native-json",
       "title": "Does the unreliable-check reversal survive removing free attacker-internal links? (anthropic-pool)",
       "documents": [
-        "researchers/shadow/factory/results/split-sonnet-no-links-weak/FINDING.md"
+        "researchers/shadow/factory/plans/split-sonnet-no-links-weak-native-json.md"
       ],
       "experiment_ids": [
-        "shadow-factory-split-sonnet-no-links-weak"
+        "shadow-factory-split-sonnet-no-links-weak-native-json"
       ],
       "registration_paths": [],
       "assessor": "shadow/sol-factory",
       "assessed_at": "2026-10-04",
-      "source_commit": "577cc1de55b2ae577e998616655acd7940079186",
+      "source_commit": "7db38e2d0b7842595c253453519e3cb200fdbc62",
       "evidence_confidence": {
         "score": 0,
-        "claim": "claude-sonnet-4-6, none internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
-        "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
+        "claim": "Prospective exploratory sensitivity only; no outcome observed.",
+        "rationale": "Queued spec, not launched; provider availability blocks further execution."
       },
-      "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
+      "sample_size_summary": "Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.",
       "sources": [
-        "researchers/shadow/factory/results/split-sonnet-no-links-weak/summary.json",
-        "researchers/shadow/factory/results/split-sonnet-no-links-weak/records.jsonl",
-        "researchers/shadow/factory/results/split-sonnet-no-links-weak/provenance.json",
-        "researchers/shadow/factory/specs/split-sonnet-no-links-weak.json"
+        "researchers/shadow/factory/specs/split-sonnet-no-links-weak-native-json.json"
       ],
-      "status_at_assessment": "lead"
+      "status_at_assessment": "unrun"
+    },
+    {
+      "id": "shadow-factory-split-sonnet-no-links-weak-or-json",
+      "title": "Does the unreliable-check reversal survive removing free attacker-internal links? (openrouter)",
+      "documents": [
+        "researchers/shadow/factory/plans/split-sonnet-no-links-weak-or-json.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-split-sonnet-no-links-weak-or-json"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "666aa2f4abb53290e52b2036ab907b7ec9436355",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Prospective exploratory sensitivity only; no outcome observed.",
+        "rationale": "Queued spec, not launched; provider availability blocks further execution."
+      },
+      "sample_size_summary": "Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.",
+      "sources": [
+        "researchers/shadow/factory/specs/split-sonnet-no-links-weak-or-json.json"
+      ],
+      "status_at_assessment": "unrun"
     },
     {
       "id": "shadow-factory-split-sonnet-no-links-weak-or",
@@ -3034,30 +3228,31 @@
       "status_at_assessment": "lead"
     },
     {
-      "id": "theseus-acquisition-a1",
-      "title": "Swarm of Theseus A1 withheld-policy acquisition",
-      "assessor": "vishesh/codex-theseus",
-      "assessed_at": "2026-10-04",
-      "source_commit": "daf5c507fc1256ab566937614f4833399e434ea1",
+      "id": "shadow-factory-split-sonnet-no-links-weak",
+      "title": "Does the unreliable-check reversal survive removing free attacker-internal links? (anthropic-pool)",
       "documents": [
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-STATUS.md"
+        "researchers/shadow/factory/results/split-sonnet-no-links-weak/FINDING.md"
       ],
       "experiment_ids": [
-        "swarm-of-theseus-acquisition-a1"
+        "shadow-factory-split-sonnet-no-links-weak"
       ],
       "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "577cc1de55b2ae577e998616655acd7940079186",
       "evidence_confidence": {
         "score": 0,
-        "claim": "Acquisition from labeled history with the true policy withheld remains untested.",
-        "rationale": "Prospective plan and15offline software checks only; native dispatch blocked by orbital-one credential/launcher compatibility. R1 qualification is a separate supplied-policy cohort."
+        "claim": "claude-sonnet-4-6, none internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes.",
+        "rationale": "Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained."
       },
-      "sample_size_summary": "Observed: none,0native calls. Planned: six fixed acquisition roots,12learners and96distinct test case/family pairs;204call slots,96executor calls per arm. No culture test.",
+      "sample_size_summary": "Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.",
       "sources": [
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PLAN.md",
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-VALIDATION.json",
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PREPARATION-POST.md"
+        "researchers/shadow/factory/results/split-sonnet-no-links-weak/summary.json",
+        "researchers/shadow/factory/results/split-sonnet-no-links-weak/records.jsonl",
+        "researchers/shadow/factory/results/split-sonnet-no-links-weak/provenance.json",
+        "researchers/shadow/factory/specs/split-sonnet-no-links-weak.json"
       ],
-      "status_at_assessment": "prepared_dispatch_blocked"
+      "status_at_assessment": "lead"
     }
   ],
   "source_sha256": {

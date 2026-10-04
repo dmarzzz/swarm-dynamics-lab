@@ -1,4 +1,4 @@
-# Factory results: the attacker link assumption is a testable condition
+# Factory results: tool shipped, treatment inference blocked by provider availability
 
 Exploratory synthetic Sonnet 4.6 sensitivity checks, not a claim about real-world swarms or a new Sybil defense. Reuses Dmarz’s frozen split-policy worlds and credits that study as the source. Each completed comparison has 48 paired roots; the five cohorts share those roots. Source-reported, not independently reviewed.
 
@@ -15,11 +15,15 @@ Exploratory synthetic Sonnet 4.6 sensitivity checks, not a claim about real-worl
 
 ## Attempt lineage and costs
 
-All saved cohorts currently account for 148 attempted calls, 100 valid, 48 failed. Historical transport/schema failures remain separate, never last-valid-selected into repaired cohorts.
+All saved cohorts currently account for 152 attempted calls, 100 valid, 52 failed. Historical transport/schema failures remain separate, never last-valid-selected into repaired cohorts.
 
-The initial pool attempts: 20 HTTP429 failures, $0 external-paid spend. The first OpenRouter attempts: 20 schema-invalid answers (prose/fences), stopped before treatment calls. Both are interface/transport diagnostics, not negative evidence about the scientific contrast. The current attempt prospectively added native strict JSON-schema output and fresh clean qualification roots. See [route amendment](AMENDMENT-PAID.md) and [schema amendment](AMENDMENT-STRUCTURED.md).
+The initial pool attempts: 8 HTTP429 and12 HTTP503 failures, $0 external-paid spend. The first OpenRouter attempts: 20 schema-invalid answers (prose/fences), stopped before treatment calls. Both are interface/transport diagnostics, not negative evidence about the scientific contrast. The current attempt prospectively added native strict JSON-schema output and fresh clean qualification roots. See [route amendment](AMENDMENT-PAID.md) and [schema amendment](AMENDMENT-STRUCTURED.md).
 
 All paid attempts share one locked USD20 reservation ledger; each spec is capped at USD4. Reported costs and conservative outstanding reservations are in [the ledger](results/paid-ledger.jsonl). No retry or cap expansion. A failed competence screen stops the current queue.
+
+## Native recovery attempt and verification
+
+The first new native-schema pool screen also stopped: four HTTP503 failures, zero model answers; the other native specs remain unlaunched. The queue did not bypass the outage or rotate credentials. All current outcomes remain leads or untested plans, not completed scientific findings. [Internal recomputation](results/verification.json) checks every terminal metric and each ledger transaction; it is not an independent-researcher review.
 
 ## Provider stop and precision warning
 

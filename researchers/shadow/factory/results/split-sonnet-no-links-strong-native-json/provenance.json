@@ -1,0 +1,19 @@
+{
+  "assignment_digest": "ed1650ce9482ac75a13bb65e503207acd56582a11a7f65512fe15e1ba129489a",
+  "command": "python3 researchers/shadow/factory/factory.py queue",
+  "commit": "7db38e2d0b7842595c253453519e3cb200fdbc62",
+  "created_at": "2026-10-04T15:31:09.324950+00:00",
+  "host": "shad0wbot",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "source_sha256": {
+    "researchers/dmarz/notes/sybil-split-opus/design.yaml": "d7dc94d14c85d2354abd9c6ec5423c52fe2da99a683b5c0ac5952d745eb39ea1",
+    "researchers/dmarz/notes/sybil-split-opus/src/provider.py": "83372572ce132884b86d87b6111d9334ce1a3491a1b7f0f092fc08061c0fa81b",
+    "researchers/dmarz/notes/sybil-split-opus/src/sim.py": "0e20bd3ef66d181ffe9b46b88a177ee8e8c56d88744d8c7109bb3d4067dd7df8",
+    "researchers/dmarz/notes/sybil-split-opus/src/study.py": "ffe107b449d930af5515cb697d46f0a2f257fdefdf7ce91aa092f3702aa5e3d9",
+    "researchers/shadow/factory/factory.py": "4494b46d47bc4832c13effac1c23294c5df4c00971791fc58233a88ee218cab3",
+    "researchers/shadow/factory/paid.py": "0e0b8ead651b2ba760c6af2c074a8c411104bdbf232ff888d5e85a38469a4852",
+    "researchers/shadow/factory/pool_structured.py": "fd7f974d391b84114473cc2ee9cc931c3b1263a8a8b0c29f9346f7266f726b89",
+    "researchers/shadow/factory/structured.py": "e7a882beac1e2cea12b6afeeb6b5f60ac5a395a122897fb3b0846e922218f898"
+  },
+  "spec_sha256": "0650875e39491e81f639534eb5408505599e327ffb2bc20e9c7816f257c0d660"
+}
