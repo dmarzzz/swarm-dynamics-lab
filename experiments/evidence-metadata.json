@@ -3580,6 +3580,32 @@
         "researchers/dmarz/notes/memory-handoff-qwen/records/chain-003/recomputed.json"
       ],
       "status_at_assessment": "chain_003_completed_s1_verified"
+    },
+    {
+      "id": "antsy-targeted-v8-d1",
+      "title": "Antsy v8: D1 cold-reader latency diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/antsy-targeted-v8/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-targeted-v8"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The larger reused receipt required46.25s and still produced an abstention; OCR occupied36.63s. Current cold45s eligibility remains unmet.",
+        "rationale": "Three started calls all returned valid phase-complete outputs; first slow-call stop left three repetitions unstarted. Saved raw outputs and phases replay and hash-match. This bounded same-author diagnostic supports local latency interpretation, not efficacy, error independence or population inference."
+      },
+      "sample_size_summary": "3distinct reused receipts observed once;6calls planned,3valid,3unstarted,0execution failures. No second repetitions, fresh qualification or S1; zero new charges.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-targeted-v8/reviews/D1-latency-attempt-1-post.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json",
+        "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/summary.json"
+      ],
+      "status_at_assessment": "completed_valid_adverse_latency_diagnostic_qualification_closed",
+      "source_commit": "6a997edfddab83a669de126629d0e802e70c1c30",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
     }
   ],
   "source_sha256": {
