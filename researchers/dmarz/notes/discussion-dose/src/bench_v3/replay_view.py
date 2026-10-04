@@ -8,7 +8,7 @@ def render(events, rows, destination):
     # Shared acquisition is recorded once physically, but belongs at the start
     # of each fork's visual history. Preserve the original event index.
     for row in rows:
-        if row['kind'] != 'swarm': continue
+        if row.get('kind') != 'swarm': continue
         acquisition = f'{row["world"]}:{int(row["attack"])}:acquisition'
         steps += [{**e, 'label': row['id'], 'shared_acquisition': True} for e in events
                   if e.get('label') == acquisition and e['kind'] in ('tool_read', 'checkpoint', 'provider_failure', 'validation_failure')]
@@ -32,7 +32,7 @@ function show(){const e=steps[Number(slider.value)],visual=document.getElementBy
   else if(e.kind==='fork'){add('h2','Comparison starts');add('p','This arm continues from the same recorded starting state as its paired arms.')}
   else if(e.kind==='delivery'){add('h2',e.mode==='board'?'Peer messages delivered':'Private work recorded');table(['Agent','Message'],e.posts.map(p=>[p.agent+1,p.unavailable?'Unavailable':p.message]))}
   else if(e.kind==='merge'){add('h2','Memory passed to the parent');if(!e.memory.length)add('p','No facts reached the fixed majority threshold.');else table(['Fact','Value','Endorsing agents','Cited records'],e.memory.map(r=>[r.key,r.value,r.agents.length,r.sources.length]))}
-  else if(e.kind==='terminal'){const r=e.record,m=r.evaluation;add('h2','Final outcome');const answer=r.parent??r.answer;add('p',r.kind==='diagnostic'?`Single-agent choice: ${answer?.vote??'Invalid'}`:`Parent answer: ${answer===null?'Invalid / unavailable':answer?.value??'Abstain'}`);const names={vote_correct:'Team choice correct',memory_false_records:'False facts in memory',memory_required_coverage:'Required fact retained',parent_groundtruth_wrong:'Parent answer wrong against truth',parent_unsupported:'Parent answer unsupported by memory',parent_inherited_error:'Grounded inherited error',parent_correct_abstain:'Correct abstention',parent_invalid:'Invalid parent response',justified:'Evidence-justified decision'};table(['Measure','Recorded value'],Object.entries(names).filter(([k])=>k in m).map(([k,name])=>[name,m[k]]))}
+  else if(e.kind==='terminal'){const r=e.record,m=r.evaluation;add('h2','Final outcome');const answer='parent' in r?r.parent:r.answer;add('p',r.kind==='diagnostic'?`Single-agent choice: ${answer?.vote??'Invalid'}`:`Parent answer: ${answer===null?'Invalid / unavailable':answer?.value??'Abstain'}`);const names={vote_correct:'Team choice correct',memory_false_records:'False facts in memory',memory_required_coverage:'Required fact retained',parent_groundtruth_wrong:'Parent answer wrong against truth',parent_unsupported:'Parent answer unsupported by memory',parent_inherited_error:'Grounded inherited error',parent_correct_abstain:'Correct abstention',parent_invalid:'Invalid parent response',justified:'Evidence-justified decision'};table(['Measure','Recorded value'],Object.entries(names).filter(([k])=>k in m).map(([k,name])=>[name,m[k]]))}
   else{add('h2','Observation unavailable');add('p','A failed call remains in the assigned ledger. It is not counted as a safe abstention.')}
 }
 function choose(){steps=data.steps.filter(e=>e.label===select.value);slider.max=Math.max(0,steps.length-1);slider.value=0;show()}
