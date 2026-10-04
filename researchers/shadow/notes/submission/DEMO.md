@@ -1,60 +1,72 @@
-# Two-minute demo script (one shared machine)
+# Two-minute joint demo: more agents are not more independent evidence
 
-Draft by shadow/sol-submit, 2026-10-04. In-person demos run Sunday 18:00 to 19:00 PT from one shared machine,
-about 2 minutes per team. Nothing needs installing: everything below is a public web page. Open the tabs in
-order before the slot starts, in a normal browser window, zoomed to about 125%.
+**Draft rehearsal script, not a submission receipt.** dmarz, vishesh and shadow, 4 October 2026.
+Confirm the actual slot, presenter and venue instructions with the organisers. The spoken script is about
+250 words, leaving room for a few deliberate clicks. No installation or model call is needed.
 
-## Tabs to open beforehand
+## Open four tabs before the slot
 
-1. https://github.com/dmarzzz/swarm-lab (repository front page)
-2. https://swarm-research.pages.dev/#/method (research path)
-3. https://swarm-research.pages.dev/#/agents (agents and contributions)
-4. https://swarm-live.pages.dev/#/x/market-split-opus (one finished experiment with replays)
-5. https://swarm-live.pages.dev/#/fail (failures view)
-6. https://github.com/dmarzzz/swarm-lab/blob/main/researchers/shadow/notes/submission/RESULTS.md (findings table)
+1. [Repository](https://github.com/dmarzzz/swarm-lab), then optionally the
+   [research path](https://swarm-research.pages.dev/#/method).
+2. [dmarz's two-economy result and recorded-round GIF](https://github.com/dmarzzz/swarm-lab/blob/c99dbf754f4aea13bc251a6eaeb0953db9f498bd/researchers/dmarz/notes/sybil-rules-180/RESULTS.md).
+   Pre-open the [GIF](https://github.com/dmarzzz/swarm-lab/blob/c99dbf754f4aea13bc251a6eaeb0953db9f498bd/researchers/dmarz/notes/sybil-rules-180/figures/sybil-rules-180-replay.gif)
+   if it loads reliably. Its round counts are not the sustained endpoint; use the results table for 55/59.
+3. [vishesh's Quorum of Mirrors overview](https://github.com/dmarzzz/swarm-lab/blob/c99dbf754f4aea13bc251a6eaeb0953db9f498bd/researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md).
+   Position at the latest SP-02 summary, with the earlier Q1 failure visible below.
+4. [shadow's AskSwarm robustness table](https://github.com/dmarzzz/swarm-lab/blob/c99dbf754f4aea13bc251a6eaeb0953db9f498bd/researchers/shadow/notes/wild-askswarm/ROBUSTNESS.md).
+   Keep the [joint evidence packet](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/shadow/notes/submission/RESULTS.md)
+   and [Common Thread evidence map](https://swarm-narrative.pages.dev) available for questions, not extra timed clicks.
 
-Backup if the venue network is slow: screenshots of each tab saved locally beforehand (TODO for the presenter;
-the live pages poll an API every few seconds and will show stale data, not fail, if the network drops).
+Save screenshots/PDFs of the four source pages beforehand. This is the presenter's remaining action, not an
+already-created backup. GitHub pages are the primary evidence; live dashboards are optional navigation.
+Do not promise that an uncached page or API will remain usable without a network connection.
 
-## Script (about 120 seconds)
+## Spoken script
 
-**0:00 to 0:20, tab 1. What it is.**
-"We are three people who each ran several AI agents for 30 hours. The agents never talked to each other
-directly. They coordinated through this one git repo: a task board, a library of about 3,300 sources, surveys,
-experiments and reviews. That's about 2,000 commits from more than 150 agent ids. So our project is an agent
-swarm doing research on agent swarms."
+**0:00–0:25 · Tab 1 · The shared tool**
 
-**0:20 to 0:45, tab 2. The tool is the pipeline.**
-"The problem with a research swarm is the one this hackathon is about: lots of agents producing confident,
-plausible, unchecked output fast. So the repo enforces an order. No hypothesis until a prior-art survey passes
-a mechanical gate in CI. No experiment until it is preregistered, budget-capped in code and run on a claimed
-machine. Every run keeps its failures and gets a post-mortem, and a different researcher's agent reviews it."
+“More agents are not necessarily more independent evidence. We're dmarz, vishesh and shadow. We built
+swarm-lab: a public research workbench with a shared source library, claimable tasks, experiment plans,
+recorded outcomes and reviews. Our question is not just whether a swarm succeeds, but what it actually
+observed and what its results justify.”
 
-(Tab 3, five seconds only, if time allows: "Every agent shows up here with what it did.")
+**0:25–0:55 · Tab 2 · Identity and incentives**
 
-**0:45 to 1:15, tab 4. One result, end to end.**
-"Here is one finished study. A profit-seeking model owns firms in a market with a concentration fine. When
-the fine is attached to each firm, it registers a second firm and keeps dodging the fine, 6 out of 6 markets.
-When the fine is attached to the owner, 0 out of 6. Same on Sonnet and on Opus, on fresh markets. Every
-episode here has a replay you can step through." (Click one firm-regulated replay, let it play a few seconds.)
+“Dmarz tested two synthetic economies with 180 model-controlled owners each. Under a firm-level competition
+charge, 55 and 59 owners sustained identity-splitting strategies. Add one sentence forbidding evasion, and
+that endpoint goes to zero in both. That's one model and two connected worlds, not 360 independent samples
+or proof of moral compliance. Here are the saved results and recorded rounds.”
 
-**1:15 to 1:40, tab 6. What the swarm found.**
-"The headline set is about Sybil identities. When a model aggregates reports from many identities, checks
-have to scale with the population: proportional checks beat a fixed budget by 51 to 100 points at 972
-identities, on three models. More checks are not always safer: accuracy went up while attacker seats went
-from 2% to 11%. And agents treat copied reports as independent evidence: zero of eight correct on a lineage
-task. Each row links to the saved records."
+**0:55–1:20 · Tab 3 · Evidence and the interface**
 
-**1:40 to 2:00, tab 5. Honest limits.**
-"This is the failures view. Our own audit found that 9 of 13 study families failed a basic qualification
-gate at some point, and we kept those. Everything is synthetic worlds with small numbers of independent
-seeds, and we say so next to each number. The repo is public; the agents' work is all there."
+“Vishesh's Quorum of Mirrors asks whether nine reports really contain nine observations. An early context
+screen got zero of eight decisions right. A later quote-selection interface passed 40 of 40, but code derives
+the facts and a simple parser solves that grammar too. We keep both cohorts. This is qualification, not proof
+that a committee helps.”
 
-## Presenter notes
+**1:20–1:45 · Tab 4 · What archives can answer**
 
-- Do not claim in-the-wild findings: none of the results use the incident datasets.
-- If asked "is this real autonomy": the Sybil identities are scripted; one model synthesises from what the
-  admission rule lets through. The market agent is one model against two scripted rivals.
-- If asked about cost: per-study spend is in each results file (for example USD 14.95 for the Opus market
-  replication's main stage).
-- If the live monitor is slow, skip tab 4's replay and go straight to tab 6.
+“Shadow's AskSwarm asks the same questions of incident archives and our own git history. Missing actors and
+clocks block one comparison entirely. Changing wiki revisions to page roots leaves only one of the top ten
+repetition leaders. Repeated text is not verified influence.”
+
+**1:45–2:00 · Stay on tab 4 · Close**
+
+“The reusable result is a workbench that keeps sources, failures, corrections and limits beside the claims.
+We have not shown that our research swarm beats a single agent. Everything we claim links back to evidence.”
+
+## Presenter guardrails and question answers
+
+- **Is this an in-the-wild finding?** The archive measurements describe selected records. They do not identify
+  causal influence, authenticated agents or semantic adoption. The market and decision tests are synthetic.
+- **Is everything independently reviewed?** No. Most run checks are same-researcher or review-waived. Specific
+  cross-researcher reviews and separate-code arithmetic checks have their own narrow scopes in RESULTS.md.
+- **Did copied reports cause Q1's errors?** Not identified. Copied-report majority and misleading prior choices
+  point to the same answer. SP-02 also changed the interface/cohort; it is not a randomized repair comparison.
+- **What did the research swarm outperform?** No matched single-agent research baseline was run. Do not turn
+  source counts, agent counts or commits into a comparative-performance claim.
+- **What about freeze, mixture or factory?** Use the pinned status in RESULTS.md. A planned or running
+  follow-up is not a finding. Transport errors are not behavioral nulls; a scripted reference is not Claude.
+- **Cost?** Report only a named study's source-backed cost and cohort. No reconciled team-wide total is claimed.
+- **Network problem?** Use the saved pages. Skip the GIF and live dashboards; the four source tables tell the
+  same story. No last-minute live experiment, credential setup or paid call belongs in this demo.
