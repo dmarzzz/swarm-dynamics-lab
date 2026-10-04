@@ -26,4 +26,8 @@ Continue the owner-requested RSI tooling demo on shadow/rsi. Import approved met
 - [x] Real capture-memory records and explicitly scoped pool metadata become swarm-trace envelopes; public teammate trace import is included if usable.
 - [x] The searcher supplies pinned declarative bundles, including a useful repair and a rejected alternative.
 - [x] An offline builder recomputes decisions and conserving attribution credits against frozen records.
-- [ ] Tests, limitations, privacy audit, DEMO.md and a pull request are published on shadow/rsi only.
+- [x] Tests, limitations, privacy audit, DEMO.md and a pull request are published on shadow/rsi only.
+
+## Coverage note
+
+Delivered [DEMO.md](../researchers/shadow/notes/rsi/DEMO.md), 566 validated envelopes and a deterministic real-record report/credit replay. Accepted lineage repair 195/195 accounting checks versus baseline 75/195; rejected shortcut 75/195. Eighteen R1 tests and fourteen protocol tests pass, as do desktop/mobile browser and local privacy checks. No paid calls, raw pool export or upstream deployment. [PR #84](https://github.com/dmarzzz/swarm-lab/pull/84) is open and unmerged, branch shadow/rsi.
