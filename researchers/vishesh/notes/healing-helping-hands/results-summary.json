@@ -1,0 +1,320 @@
+{
+  "replayed_worlds": 144,
+  "seconds": 274.07270802899984,
+  "assignments": {
+    "completed": 72,
+    "not_run": 108
+  },
+  "qualification": {
+    "jev": {
+      "status": "passed",
+      "accuracy": 1.0,
+      "per_label": {
+        "SUPPORT": 1.0,
+        "REFUTE": 1.0,
+        "UNCERTAIN": 1.0
+      }
+    }
+  },
+  "extraction": {
+    "8701": {
+      "correct": 200,
+      "total": 200
+    },
+    "8702": {
+      "correct": 200,
+      "total": 200
+    },
+    "8703": {
+      "correct": 200,
+      "total": 200
+    }
+  },
+  "contrasts": [
+    {
+      "arm": "exact",
+      "scenario": "none",
+      "mean_error_delta": 0.0,
+      "range": [
+        0.0,
+        0.0
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8702,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8703,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        }
+      ]
+    },
+    {
+      "arm": "exact",
+      "scenario": "withdrawal",
+      "mean_error_delta": -0.28095238095238095,
+      "range": [
+        -0.30357142857142855,
+        -0.2500000000000001
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": -0.28928571428571426,
+          "stale_delta": -0.13878227529128434,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8702,
+          "error_delta": -0.30357142857142855,
+          "stale_delta": -0.1457334032163702,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8703,
+          "error_delta": -0.2500000000000001,
+          "stale_delta": -0.17579839925860963,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        }
+      ]
+    },
+    {
+      "arm": "exact",
+      "scenario": "erasure",
+      "mean_error_delta": 0.0,
+      "range": [
+        0.0,
+        0.0
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8702,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8703,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        }
+      ]
+    },
+    {
+      "arm": "exact",
+      "scenario": "combined",
+      "mean_error_delta": -0.28095238095238095,
+      "range": [
+        -0.30357142857142855,
+        -0.2500000000000001
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": -0.28928571428571426,
+          "stale_delta": -0.13901981364987456,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8702,
+          "error_delta": -0.30357142857142855,
+          "stale_delta": -0.14544505336625208,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8703,
+          "error_delta": -0.2500000000000001,
+          "stale_delta": -0.17612406546218068,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        }
+      ]
+    },
+    {
+      "arm": "jev",
+      "scenario": "none",
+      "mean_error_delta": 0.0,
+      "range": [
+        0.0,
+        0.0
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8702,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8703,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        }
+      ]
+    },
+    {
+      "arm": "jev",
+      "scenario": "withdrawal",
+      "mean_error_delta": -0.28095238095238095,
+      "range": [
+        -0.30357142857142855,
+        -0.2500000000000001
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": -0.28928571428571426,
+          "stale_delta": -0.13878227529128434,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8702,
+          "error_delta": -0.30357142857142855,
+          "stale_delta": -0.1457334032163702,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8703,
+          "error_delta": -0.2500000000000001,
+          "stale_delta": -0.17579839925860963,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        }
+      ]
+    },
+    {
+      "arm": "jev",
+      "scenario": "erasure",
+      "mean_error_delta": 0.0,
+      "range": [
+        0.0,
+        0.0
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8702,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        },
+        {
+          "seed": 8703,
+          "error_delta": 0.0,
+          "stale_delta": 0.0,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 0
+        }
+      ]
+    },
+    {
+      "arm": "jev",
+      "scenario": "combined",
+      "mean_error_delta": -0.28095238095238095,
+      "range": [
+        -0.30357142857142855,
+        -0.2500000000000001
+      ],
+      "seeds": [
+        {
+          "seed": 8701,
+          "error_delta": -0.28928571428571426,
+          "stale_delta": -0.13901981364987456,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8702,
+          "error_delta": -0.30357142857142855,
+          "stale_delta": -0.14544505336625208,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        },
+        {
+          "seed": 8703,
+          "error_delta": -0.2500000000000001,
+          "stale_delta": -0.17612406546218068,
+          "final_accuracy": 1.0,
+          "final_stale": 0.0,
+          "recovery_rounds": 3
+        }
+      ]
+    }
+  ],
+  "calls": 660,
+  "cost_usd": 0.011912292,
+  "input_tokens": 283626,
+  "wire_ledger_matches": 660,
+  "all_time_jev_usd": 0.013004124
+}
