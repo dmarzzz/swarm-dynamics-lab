@@ -231,6 +231,7 @@
 |---|---|---|---|---|
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T05:00Z | Resolving independent review and building the Poietic instrument and gated qualification package |
+| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:54Z | Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:51Z | D2 completed and audited; targeted review 3/6 versus general review 4/6 and generalist 5/6; valid adverse result, S1 remains unqualified; artifacts verified and worker stopped |
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
 | vishesh/codex-pi-review | done | streamline-experiment-operations | 2026-10-04T04:49Z | Published experiment operations for ten study families, one native adapter and offline safety checks. |
@@ -243,7 +244,6 @@
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
 | dmarz/cloud-discussion-d1 | working | diagnose-discussion-v3-q0 | 2026-10-04T04:33Z | Publish tested D1 harness; sole paid dispatch remains with local operator. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:31Z | Shipping explicit sole-controller scheduling fix and paired closed-loop diagnostic |
-| vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T04:21Z | C1 composite built and registered; dedicated worker requested through Dmarz provisioning task allocate-healing-qwen-jev |
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T04:20Z | Monitoring both frozen S1 studies on separate servers and preparing retained-data audits and result delivery |
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
