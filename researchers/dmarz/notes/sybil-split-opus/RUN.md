@@ -5,22 +5,24 @@ Nothing here has been run. This file is for the operator who takes the request f
 ## Before launch
 
 1. The run request is in the private run queue and dmarz/fleet-monitor has done its same-researcher check of this package. Cross-researcher review is waived by dmarz for these exploratory runs (relayed by dmarz/fleet-monitor, 2026-10-04). The run is not independently reviewed.
-2. Read [reviews/chain-001-pre.md](reviews/chain-001-pre.md). It names the pinned commit and the source hash. [READY.yaml](READY.yaml) carries the same hash, the number of selftests, the call caps, the dollar cap and the chain timeout.
+2. Read [reviews/chain-001-pre.md](reviews/chain-001-pre.md). It names the code commit and the source hash. The launch commit is the commit named in the run request: the first commit on `main` that contains that review and has that source hash. The launcher reads `READY.yaml`, `README.md` and the review at the commit it is given and refuses a commit without the review; its setup step verifies the source hash on the server. [READY.yaml](READY.yaml) carries the same hash, the number of selftests, the call caps, the dollar cap and the chain timeout.
 3. Take the exclusive server claim `dmarz-sybil-split-opus` (`experiment: sybil-split-opus`).
-4. The server needs this directory at the pinned commit and Python 3.12 with `requirements.txt`. Nothing outside this directory is required: the comparison with the parent simulator uses frozen digests, and also compares directly when `../sybil-scale-xl/src/sim.py` is present.
+4. The server needs this directory at the launch commit and Python 3.12 with `requirements.txt`. Nothing outside this directory is required: the comparison with the parent simulator uses frozen digests, and also compares directly when `../sybil-scale-xl/src/sim.py` is present.
 
 ## Commands
 
 The generic private launcher, from the agentops repository:
 
 ```
-python3 scripts/run-ready-chain.py sybil-split-opus <commit> setup --host <server>
-python3 scripts/run-ready-chain.py sybil-split-opus <commit> chain --host <server> --confirm-paid
-python3 scripts/run-ready-chain.py sybil-split-opus <commit> status --host <server>
-python3 scripts/run-ready-chain.py sybil-split-opus <commit> verify --host <server>
+python3 scripts/run-ready-chain.py sybil-split-opus <launch commit> setup --host <server>
+python3 scripts/run-ready-chain.py sybil-split-opus <launch commit> chain --host <server> --confirm-paid
+python3 scripts/run-ready-chain.py sybil-split-opus <launch commit> status --host <server>
+python3 scripts/run-ready-chain.py sybil-split-opus <launch commit> verify --host <server>
 ```
 
-- `setup` checks out `<commit>`, installs the pinned requirements, runs `python3 src/selftest.py` (about 90 seconds on a laptop) and compares the number of tests and `study.source_hash()` with `READY.yaml`.
+The operator also passes `--source <its agent id>` (launcher note from its first real use, 2026-10-04).
+
+- `setup` checks out `<launch commit>`, installs the pinned requirements, runs `python3 src/selftest.py` (about 90 to 130 seconds on a laptop) and compares the number of tests and `study.source_hash()` with `READY.yaml`. Allow about 5 minutes for setup on the server (launcher note from its first real use, 2026-10-04).
 - `chain` starts one detached process, `python src/chain.py run --stages S0,P0,Q0,S1`, with `SWARM_MODEL_API_KEY`, `SWARM_MODEL_WORKSPACE_ID`, `STUDY_BUDGET_LEDGER`, `STUDY_RESULTS_DIR` and `SWARM_SOURCE` in its environment and the hub client on `PYTHONPATH`. `--confirm-paid` is required because P0, Q0 and S1 make model calls: 1, 60 and 2,688.
 - `status` prints `chain-status.json` and the ledger totals. `verify` checks artifact checksums against the hub, regrades every saved row and recomputes the totals, the gates and the analysis. Both print one JSON object on the last line; neither needs the model credential. `verify` exits non-zero when a check fails.
 
