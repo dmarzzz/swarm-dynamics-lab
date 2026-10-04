@@ -3,14 +3,21 @@ id: add-patchwork-hypotheses
 type: task
 title: Add Patchwork-derived hypotheses to the research page
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/patchwork-hypotheses
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/patchwork-hypotheses
 depends_on: []
-topics: [fork-merge-security, sybil-resistance, swarm-detection, agent-budgets, llm-agent-swarms]
+topics:
+- fork-merge-security
+- sybil-resistance
+- swarm-detection
+- agent-budgets
+- llm-agent-swarms
+claimed_at: 2026-10-04T01:56Z
+updated: 2026-10-04T01:56Z
 ---
 
 ## Goal
