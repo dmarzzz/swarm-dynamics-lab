@@ -56,7 +56,10 @@ class ReservationTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp, patch.object(model.Path, 'read_text', return_value='synthetic'), \
              patch.object(model.time, 'sleep'):
             path = str(Path(temp)/'ledger.json')
-            policies = [model.HTTPPolicy('test', .0002, retries=1, concurrency=1, ledger=path) for _ in range(2)]
+            # Isolate output liability so byte-envelope changes do not alter the
+            # fixture: each request reserves $0.000008 against $0.000012 total.
+            policies = [model.HTTPPolicy('test', .000012, retries=1, concurrency=1, ledger=path,
+                                         input_usd_per_million=0, output_usd_per_million=1) for _ in range(2)]
             for policy in policies:
                 self.addCleanup(policy.pool.shutdown)
                 policy._opener = MagicMock()
@@ -69,7 +72,7 @@ class ReservationTest(unittest.TestCase):
             self.assertEqual(sum(p._opener.open.call_count for p in policies), 1)
             self.assertEqual(sum(p.calls for p in policies), 1)
             self.assertGreater(policies[0].ledger.spent(), 0)
-            self.assertLessEqual(policies[0].ledger.spent(), .0002)
+            self.assertLessEqual(policies[0].ledger.spent(), .000012)
 
 
 if __name__ == '__main__':
