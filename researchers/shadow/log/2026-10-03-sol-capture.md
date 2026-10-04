@@ -26,3 +26,29 @@ Fleet: ran on sim-shadow (claim running then released via agentops PRs #28, #31)
 there with PYTHONPATH=/usr/local/lib/swarm (the profile.d export is not picked up by non-login ssh commands; the
 box is otherwise unprovisioned per agentops ROADMAP D1, did not touch that). S0 + S1 done, analysis attached on
 the hub, numbers identical to local. PR dmarzzz/swarm-lab#83 open, not merged.
+
+## 2026-10-04 03:30Z to 05:00Z: land PRs, run the pilot
+
+dmarz's point stood: PRs 82 and 83 had sat open while everyone else pushed to main, and AGENTS.md says push to
+main directly. Rebased both onto origin/main (clean, `lab.py check` 0 errors), squash-merged them myself: 82 =
+three hypotheses at `proposed` (no self-acceptance; `accepted` still needs another researcher's review), 83 = the
+capture-memory note tree. The one red check on 83 was the repo-wide flightdeck artifact schema error from vishesh's
+artifacts 10 to 13 (`by: vishesh/codex-theseus` not in the enum), unrelated and since fixed on main.
+
+Then the real-model pilot on Shadow's GO. Built: prefix fork in sim (arms share the entrench + takeover run,
+bit-identical for scripted), a Budget ledger in the adapter (call cap, dollar cap by reservation AND by provider
+usage, saved to disk), Q0 as a gate stage, S2_pilot as a dev-only stage needing `--go`. Q0 attempt 0 failed: the
+8B model wrote 'brusk' for 'brisk' 3 times in 36. Edit-distance-1 accept + one re-ask fixed it (hub Q0 validity
+1.00). S2_pilot: 12 episodes, 10,384 calls, 0.031 USD, 24/24 valid.
+
+Surprises: (1) the model's full-memory agents tip in 8 rounds, a running mean needs 80 to 100: it is not averaging
+the list. (2) Running the scripted rule at the pilot's own N = 12 / entrench 10 shows no freeze either, so the S1b
+freeze is about depth of banked history, not unbounded memory as such; the pre-run should have run
+`pilot_reference.py` first. (3) Two of six word pairs never captured because the model prefers one nonsense word
+(pira, olam): the yang-2026-when artefact, and the reason the (beta, h) per-pair fit is now a hard prerequisite.
+
+Memory 1 looks scripted-like (+0.18 back after purge vs +0.19 to +0.24 scripted). The memory contrast is
+undetermined at 4 tasks. sim-shadow refused ssh, so this ran on shadow's box again, no claim held.
+
+Next: per-pair prior fit (~1K calls), model-side dose sweep at N = 12 (~5K calls), a same-dose cell to test the
+"copies the last word" alternative, and nothing on holdout until the hypothesis is reviewed.
