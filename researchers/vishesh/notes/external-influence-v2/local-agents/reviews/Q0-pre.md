@@ -17,3 +17,5 @@ See ../PLAN.md for exact assignments, model and settings. Source/config hashes a
 ## Visualization mapping
 
 Use local-influence-v1 from ../PLAN.md, bound to Q0/task7200/seed23 and its six conditions. Calls and phases update live progress, events retain order/timestamps, final SVG and HTML replay show pending/invalid/correct states. Logical order is labeled and evaluator truth never enters prompts. Validate replay count and initial/middle/final/failure frames against journals. Public metrics are the fallback if the hub cannot embed richer files.
+
+Offline acceptance completed before inference: 6 local adapter/gate/replay tests and 11 unchanged parent protocol tests passed. All six scripted qualification fixtures are valid/correct. protocol.py, environment.py, common.py and provider.py byte-match historical model-source commit b107b1636c852b946ecf7e7e7383cec8810d0eda. Public browser inspection verified the new TLDR and immutable parent README link on Swarm Live. Local source provenance and preflight are enforced by the runner.
