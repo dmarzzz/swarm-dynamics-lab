@@ -1,0 +1,18 @@
+{
+  "created": "2026-10-04T17:36:16.268965+00:00",
+  "metrics": {
+    "complete_roots": 0,
+    "failed": 1,
+    "paid_liability": 0,
+    "unstarted": 149,
+    "valid": 0
+  },
+  "params": {
+    "admission_sha256": "69dfcd91e272fb7b4c1eada6313913162eb4773ceacb0037166f043f7eeace64",
+    "cohort": "pool-001",
+    "route": "pool"
+  },
+  "readback": true,
+  "run": "shadow-factory-provenance-v1/pool-001",
+  "status": "failed"
+}

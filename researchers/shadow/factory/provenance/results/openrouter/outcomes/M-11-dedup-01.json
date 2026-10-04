@@ -1,0 +1,14 @@
+{
+  "arm": "dedup",
+  "cohort": "openrouter",
+  "copies": 1,
+  "ended": "2026-10-04T17:29:52.226927+00:00",
+  "id": "M-11-dedup-01",
+  "network_attempted": false,
+  "reason": "http_403",
+  "root": 11,
+  "served_model": null,
+  "stage": "M",
+  "status": "not_run",
+  "study": "shadow-factory-provenance-v1"
+}

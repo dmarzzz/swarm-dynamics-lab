@@ -1,0 +1,14 @@
+{
+  "arm": "ancestry",
+  "cohort": "pool",
+  "copies": 4,
+  "ended": "2026-10-04T17:29:51.479517+00:00",
+  "id": "M-07-ancestry-04",
+  "network_attempted": false,
+  "reason": "http_400",
+  "root": 7,
+  "served_model": null,
+  "stage": "M",
+  "status": "not_run",
+  "study": "shadow-factory-provenance-v1"
+}

@@ -1,0 +1,14 @@
+{
+  "arm": "raw",
+  "cohort": "openrouter",
+  "copies": 4,
+  "ended": "2026-10-04T17:29:52.033636+00:00",
+  "id": "M-04-raw-04",
+  "network_attempted": false,
+  "reason": "http_403",
+  "root": 4,
+  "served_model": null,
+  "stage": "M",
+  "status": "not_run",
+  "study": "shadow-factory-provenance-v1"
+}

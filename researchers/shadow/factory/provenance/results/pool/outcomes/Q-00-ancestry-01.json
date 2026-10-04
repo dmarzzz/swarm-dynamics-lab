@@ -1,0 +1,19 @@
+{
+  "arm": "ancestry",
+  "cohort": "pool",
+  "copies": 1,
+  "cost_unknown": false,
+  "elapsed_seconds": 0.451337,
+  "ended": "2026-10-04T17:29:51.246701+00:00",
+  "error": "http_400",
+  "id": "Q-00-ancestry-01",
+  "init_sha256": "fcd62187a95856e6793b1c7ecd20ef50d22c01a475246326c1660612f366f15a",
+  "network_attempted": true,
+  "paid_usd": 0,
+  "root": 0,
+  "served_model": null,
+  "stage": "Q",
+  "started": "2026-10-04T17:29:50.795330+00:00",
+  "status": "failed",
+  "study": "shadow-factory-provenance-v1"
+}

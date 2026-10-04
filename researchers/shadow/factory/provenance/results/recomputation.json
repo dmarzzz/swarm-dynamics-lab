@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checks": 2026,
+  "initialized": 2,
+  "valid": 0,
+  "factory_paid_liability": 1.851345,
+  "spec_paid_liability": 0.044376,
+  "source_revision": "76f42cddddbffca75ddffb818415182b202e7e7f",
+  "method": "separately implemented scorer and contrast reconstruction; no runner or scorer imports",
+  "independence": "same-author computational check, not an independent researcher review",
+  "independently_reviewed_complete_contrasts": 0,
+  "scale_allowed": false
+}

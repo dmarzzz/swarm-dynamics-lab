@@ -3448,6 +3448,35 @@
         "researchers/dmarz/notes/memory-handoff-qwen/records/attempt-002/recomputed.json"
       ],
       "status_at_assessment": "attempt_002_completed_s1_recomputed"
+    },
+    {
+      "id": "shadow-factory-provenance-v1",
+      "title": "Provenance / duplication invariance, blocked clean-screen diagnostic",
+      "documents": [
+        "researchers/shadow/factory/provenance/results/FINDING.md",
+        "researchers/shadow/factory/provenance/POSTMORTEM.md"
+      ],
+      "experiment_ids": [
+        "shadow-factory-provenance-v1"
+      ],
+      "registration_paths": [],
+      "assessor": "shadow/sol-factory",
+      "assessed_at": "2026-10-04",
+      "source_commit": "76f42cddddbffca75ddffb818415182b202e7e7f",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "No model answer or treatment contrast observed; two qualification requests refused.",
+        "rationale": "Pool HTTP400 with unsupported wire-schema bounds identified; paid fallback HTTP403. All main cells unstarted. Same-author recomputation does not establish model competence or independent review."
+      },
+      "sample_size_summary": "Observed:2 HTTP attempts,0 valid answers,0 complete paired roots. Planned:12 synthetic numeric roots with12 main calls/root; six qualification calls/route.300 potential conditional assignments are fully enumerated; max151 actual HTTP requests across routes. Calls/copies are not independent worlds.",
+      "sources": [
+        "researchers/shadow/factory/provenance/SPEC.md",
+        "researchers/shadow/factory/provenance/results/admission.json",
+        "researchers/shadow/factory/provenance/results/summary.json",
+        "researchers/shadow/factory/provenance/results/recomputation.json",
+        "researchers/shadow/factory/provenance/results/numeric-inventory.json"
+      ],
+      "status_at_assessment": "blocked-unqualified"
     }
   ],
   "source_sha256": {

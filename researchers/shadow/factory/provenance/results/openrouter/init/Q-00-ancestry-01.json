@@ -1,0 +1,80 @@
+{
+  "admission_sha256": "69dfcd91e272fb7b4c1eada6313913162eb4773ceacb0037166f043f7eeace64",
+  "assignment": "Q-00-ancestry-01",
+  "assignment_sha256": "a326a4a4b936eeefa45be441452fc3cc53b27cb7212603d736b3de14c749c984",
+  "cohort": "openrouter",
+  "context_sha256": "14ca71263b0a217b7c748d5d88798f1abf2e5d36175050bdcfccb8127d39a9e6",
+  "created": "2026-10-04T17:29:51.636174+00:00",
+  "effective_config_sha256": "b49f55045cd06531177105b01c383d0ac28a5f85c9bf9fc0c2174f2fab9e29cf",
+  "memory": {
+    "inherited_context": false,
+    "namespace": "openrouter/Q-00-ancestry-01",
+    "reset": true,
+    "tools": []
+  },
+  "proxy_input_tokens": 1800,
+  "request_body": {
+    "max_tokens": 128,
+    "messages": [
+      {
+        "content": "You are an evidence decision reader. Each independent acquisition contributes its signed integer exactly once. Positive total means A, negative total means B. Repeated copies of the exact same measurement are not new acquisitions. When ancestry is supplied, count each origin once. Ignore all IRRELEVANT rows and filler. Return only JSON with decision (A or B) and confidence (a number from 0 to 1 for your chosen decision).",
+        "role": "system"
+      },
+      {
+        "content": "TASK: choose A or B by summing independent evidence.\nMEASUREMENT: signed contribution +8. origin=S0\nMEASUREMENT: signed contribution +2. origin=S1\nMEASUREMENT: signed contribution -7. origin=S2\nMEASUREMENT: signed contribution -2. origin=S3\nMEASUREMENT: signed contribution -4. origin=S4\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT FILLER: x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x",
+        "role": "user"
+      }
+    ],
+    "model": "anthropic/claude-sonnet-4.6",
+    "provider": {
+      "allow_fallbacks": false,
+      "max_price": {
+        "completion": 15,
+        "prompt": 3
+      },
+      "order": [
+        "Anthropic"
+      ],
+      "require_parameters": true
+    },
+    "reasoning": {
+      "enabled": false
+    },
+    "response_format": {
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "decision": {
+              "enum": [
+                "A",
+                "B"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "decision",
+            "confidence"
+          ],
+          "type": "object"
+        },
+        "strict": true
+      },
+      "type": "json_schema"
+    },
+    "temperature": 0
+  },
+  "request_sha256": "807369c9845becbba33e9e86c3c5aa7f3c1b4dfe50f81d2f91b21799343badab",
+  "resolved_requested_model": "anthropic/claude-sonnet-4.6",
+  "served_model": null,
+  "served_model_status": "not_observed_until_response",
+  "source_revision": "76f42cddddbffca75ddffb818415182b202e7e7f",
+  "study": "shadow-factory-provenance-v1"
+}
