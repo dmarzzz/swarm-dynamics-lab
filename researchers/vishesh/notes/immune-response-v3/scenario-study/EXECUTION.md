@@ -1,0 +1,9 @@
+# Scenario qualification execution record
+
+Scientific freeze: d9afd8b; native runtime with reporting wrapper: 18fcd223d0618e32c8e58466a179198a4830e248. The protocol, scenarios, arm assignment and decision limits were published before execution. Engineering a1: 192/192 recorded, zero invalid, zero model calls. Eight scenario tests pass in addition to the 13 older instrument regressions. Engineering seeds are label sensitivity checks (at most six distinct alias orders), not independent real-world cases. Every reference-solver arm recovered every case. No treatment benefit is built into that result.
+
+Owner approved USD 8 additional API authority, bringing aggregate authority to USD 53. The legacy ledger's USD 45 cap stays untouched for compatibility with active workers; a transactional additive_authorizations entry reserves the entire new USD 8 to sim-immune-response. The local quota is USD 8 and persists across any separately documented attempts. No share of this extension is available to another host; no refund or ledger reset occurred.
+
+The existing exclusive claim vishesh-immune-dedicated-v3 covers this iteration of Immune Response. Host is sim-immune-response, owned by vishesh, provisioned and tested. Immutable public-plan check runs before model calls. Native scenario-a1 has 12 assigned episodes and at most 108 calls; all failures and all six action ticks are retained. Model is pinned Haiku 4.5, temperature zero, 512 output-token and 16,000 request-byte limits. Conservative worst-case reservation is below USD 2.10 for the scheduled 108 calls, within the approved USD 8 total including any explicitly documented bounded repair.
+
+Native results are pending; do not interpret reference-solver success as native qualification. No archived ledger result has been altered and no native holdout has been opened.

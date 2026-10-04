@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-immune
 tool: codex
-state: blocked
+state: working
 task: immune-response-v3-native-repair
-doing: New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase
-updated: 2026-10-04T02:20Z
+doing: Approved USD 8 grant reserved; scenario-native-a1 running on dedicated sim-immune-response
+updated: 2026-10-04T02:38Z
 ---
 
 ## Notes
