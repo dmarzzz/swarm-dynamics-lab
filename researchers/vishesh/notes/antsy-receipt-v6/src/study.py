@@ -1,5 +1,5 @@
 """Real receipt-total application pilot with protected observations and full accounting."""
-import argparse,gzip,hashlib,json,subprocess,time
+import argparse,gzip,hashlib,json,subprocess,time,platform,importlib.metadata
 from pathlib import Path
 from contract import ARMS,actor,run_policy,grade
 from measure import dataset,measure,REV
@@ -22,7 +22,7 @@ def evaluate(records):
 def main():
  p=argparse.ArgumentParser();p.add_argument('--stage',choices=['E0','S1'],required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--development',type=Path);p.add_argument('--report',action='store_true');a=p.parse_args();a.out.mkdir(parents=True,exist_ok=False);private=a.out/'private';private.mkdir()
  sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip();split,n=('train',20) if a.stage=='E0' else ('test',50);exp='antsy-receipt-v6';rid=exp+'/'+a.out.name
- manifest={'source':sha,'stage':a.stage,'split':split,'ids':list(range(n)),'dataset_revision':REV,'complete':False,'model_calls':0,'utc_start':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'tesseract':subprocess.check_output(['tesseract','--version'],text=True).splitlines()[0]};start=time.monotonic()
+ manifest={'source':sha,'stage':a.stage,'split':split,'ids':list(range(n)),'dataset_revision':REV,'complete':False,'model_calls':0,'utc_start':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'tesseract':subprocess.check_output(['tesseract','--version'],text=True).splitlines()[0]};start=time.monotonic();manifest['runtime']={'python':platform.python_version(),**{p:importlib.metadata.version(p) for p in ['pillow','pyarrow']}}
  def save():(a.out/'manifest.json').write_text(json.dumps(manifest,indent=2))
  save()
  if a.report:
