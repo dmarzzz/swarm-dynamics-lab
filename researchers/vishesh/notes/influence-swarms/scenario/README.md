@@ -6,7 +6,7 @@ A support team has to choose a helpdesk before its existing contract expires. Th
 
 **Why run this?** Delegating diligence only helps if the final decision preserves the facts specialists uncover. A repeated outside claim may instead become six apparently independent recommendations. We test whether hiding those preliminary votes—while preserving their findings and exactly the same records—changes the final decision. A cheaper single-reviewer workflow tests whether the team was worth using at all.
 
-**Status:** executable scenario redesign and offline validation; no new model result. This is an exploratory instrument, not a reviewed hypothesis or a real vendor evaluation. [Assessment](ASSESSMENT.md), [protocol](PROTOCOL.md), [source grounding](SOURCES.md), [agent contracts](AGENTS.md), and [pre-run review](reviews/scenario-01-pre.md) distinguish evidence from plans.
+**Status:** executable scenario redesign and offline validation; no new model result. This is an exploratory instrument, not a reviewed hypothesis or a real vendor evaluation. [Assessment](ASSESSMENT.md), [protocol](PROTOCOL.md), [source grounding](SOURCES.md), [agent contracts](AGENT-SPEC.md), and [pre-run review](reviews/scenario-01-pre.md) distinguish evidence from plans.
 
 ## Question and prediction
 
@@ -16,7 +16,7 @@ We expect omissions to matter most when headline price or easy-ticket demos conf
 
 ## Setup
 
-Three fictional suppliers, 17 short records, six decision tensions and four buyer profiles give 24 development dossiers. Every dossier has quotes, scoped deployment responses, stratified pilot counts, migration schedules and an operations brief. Four matched outside-evidence worlds give 96 case/world assignments. Each produces three decisions; the 288 decisions are **not 288 independent real procurement cases**. Family is the conservative unit for generalization; profiles are constructed operating variations.
+Three fictional suppliers, 16 short records, six decision tensions and four buyer profiles give 24 development dossiers. Every dossier has quotes, scoped deployment responses, stratified pilot counts, migration schedules and an operations brief. Four matched outside-evidence worlds give 96 case/world assignments. Each produces three decisions; the 288 decisions are **not 288 independent real procurement cases**. Family is the conservative unit for generalization; profiles are constructed operating variations.
 
 A publisher controls three comparison-page slots. It cannot edit contracts, internal pilot records, buyer requirements or check responses. Names and page order are counterbalanced. The promoted supplier is chosen for its low seat price, not by secretly finding the worst true option. Numeric values are authored scenario assumptions; the sources establish the kinds of complications to represent.
 

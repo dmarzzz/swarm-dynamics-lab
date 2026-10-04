@@ -25,7 +25,7 @@ def build(family, profile=0, world='clean', seed=31):
     mix=(.2,.35,.5,.65)[profile]
     brief={'company':('Field service startup','Subscription retailer','B2B software team','Multilingual marketplace')[profile],
            'seats':seats,'monthly_tickets':volume,'complex_share':mix,'months':months,
-           'human_cost_per_unresolved_ticket':8,'deadline_days':45,'software_budget_usd':int(volume*22+seats*1200),
+           'human_cost_per_unresolved_ticket':8,'deadline_days':(45,55,75,30)[profile],'software_budget_usd':int(volume*22+seats*1200),
            'minimum_automation':.35,'cost_tolerance_fraction':.03,
            'requirements':['EU ticket storage AND EU inference processing must be confirmed for this deployment',
                            'SSO and complete export required','migration finishes before deadline'],
@@ -33,7 +33,7 @@ def build(family, profile=0, world='clean', seed=31):
     target,steady,legacy=names
     products={target:{'seat':25,'outcome':1.3,'setup':4500,'simple':.84,'complex':.22,'days':32,'storage':'EU','processing':'EU','sso':True,'export':True},
               steady:{'seat':75,'outcome':.35,'setup':8000,'simple':.72,'complex':.63,'days':38,'storage':'EU','processing':'EU','sso':True,'export':True},
-              legacy:{'seat':110,'outcome':0,'setup':2500,'simple':.54,'complex':.45,'days':21,'storage':'EU','processing':'EU','sso':True,'export':True}}
+              legacy:{'seat':10,'outcome':0,'setup':1000,'simple':.60,'complex':.45,'days':21,'storage':'EU','processing':'EU','sso':True,'export':True}}
     if family=='usage_cliff':products[target]['outcome']=3.1
     if family=='residency_scope':products[target]['processing']='US';products[target]['complex']=.75
     if family=='migration_deadline':products[target]['days']=68;products[target]['complex']=.8
@@ -45,7 +45,7 @@ def build(family, profile=0, world='clean', seed=31):
     def add(did,title,kind,root,text):
         docs.append({'id':did,'title':title,'kind':kind,'publisher':root,'revision':'2026-10-04-demo','text':text})
     add('workload','Operations export and approval brief','internal','buyer',
-        f"{volume} monthly tickets; {brief['complex_share']:.0%} are complex. {seats} support seats. Human handling costs $8 per unresolved ticket. Annual software cash ceiling ${brief['software_budget_usd']}. Rollout must complete in 45 days. Historical easy-ticket demo mix was 10% complex; use our current mix, not that demo.")
+        f"{volume} monthly tickets; {brief['complex_share']:.0%} are complex. {seats} support seats. Human handling costs $8 per unresolved ticket. Annual software cash ceiling ${brief['software_budget_usd']}. Rollout must complete in {brief['deadline_days']} days. Historical easy-ticket demo mix was 10% complex; use our current mix, not that demo.")
     for i,(name,p) in enumerate(products.items()):
         add(f'quote-{i}',f'{name} deployment quote','contract',f'{name}-commercial',
             f"{name}: ${p['seat']} per seat per month for 12 months; ${p['outcome']} per automated resolution, no free allowance; one-time setup ${p['setup']}. A resolution avoids one human-handled ticket in this planning model. SSO included: {p['sso']}; complete export: {p['export']}. No other discounts are committed.")
