@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: right-dissenter-reopening-native
-doing: "Integrating RD6 native admission, exact delivery, original ledger and offline fault tests; no paid launch."
-updated: 2026-10-04T18:36:39.797552+00:00
+doing: "RD6 native integration published; 73 offline checks and 12 public hash readbacks pass. Zero native calls; original488call ledger unchanged. Scope/lifetime650decision and live admission remain."
+updated: 2026-10-04T19:02:46.883488+00:00
 ---
 
 ## Notes
