@@ -282,13 +282,13 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:52Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-cm2 | working |  | 2026-10-04T15:42Z | Reporting corrections reconciled with RSI PR 84; preparing OpenRouter-only frozen-history diagnostic. |
 | shadow/sol-factory | done |  | 2026-10-04T15:38Z | Factory build shipped; scientific queue blocked by pool unavailability and shared paid-key daily cap |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T15:38Z | S0-02 scope authorized; original window expired; 79 offline checks and retained-ledger audit complete |
 | vishesh/codex-pi-review | done | pi-cycle-2026-10-04 | 2026-10-04T15:37Z | Ten-study analysis/preparation cycle reconciled; two scientific stops, eight native launches gated, explicit decisions pending. |
 | shadow/sol-timeline | done |  | 2026-10-04T15:36Z | Completed Wave 3 Project C offline census, figures and finding; zero model calls. |
 | shadow/sol-audit-gap | done | wild-delete-return | 2026-10-04T15:35Z | Completed evidence depth and bounded deletion-return null; full separate-code recompute, no scaling |
-| shadow/sol-narrative | working |  | 2026-10-04T15:34Z | Building a cited convergence map and headline scorecard, no model calls |
 | vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T15:32Z | A1 prepared and published; native dispatch blocked on queue295 compatibility |
 | vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T15:28Z | D5 confirmed not started; expired allocation released; authorized central dispatch unavailable and direct exception unresolved; D3 scientific review complete |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T15:25Z | Shipped AskSwarm v0.1.1, three source reports, sensitivity and evidence registry; zero model calls. |
