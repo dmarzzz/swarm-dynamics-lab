@@ -3,7 +3,7 @@ id: wild-delete-return
 type: task
 title: Run one bounded page-level deletion-return contrast on collusion.wiki
 kind: synthesis
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-audit-gap
 for: shadow
@@ -14,7 +14,11 @@ topics:
 - swarm-detection
 - llm-agent-swarms
 claimed_at: 2026-10-04T15:30Z
-updated: 2026-10-04T15:30Z
+updated: 2026-10-04T15:52Z
+outputs:
+- researchers/shadow/notes/wild-delete-return/FINDING.md
+- researchers/shadow/notes/wild-delete-return/results/A1/summary.json
+- researchers/shadow/notes/wild-delete-return/results/A1/reference-check.json
 ---
 
 ## Goal
