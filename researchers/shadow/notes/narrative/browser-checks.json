@@ -5,11 +5,14 @@
       1000
     ],
     "errors": [],
+    "http_errors": [],
+    "landed_cards": 2,
+    "no_document_overflow": true,
     "score_parity": true,
-    "score_edit_and_reset": true,
-    "search": true,
     "keyboard_graph": true,
-    "no_document_overflow": true
+    "target": "https://swarm-narrative.pages.dev/",
+    "search": true,
+    "score_edit_and_reset": null
   },
   {
     "viewport": [
@@ -17,10 +20,13 @@
       844
     ],
     "errors": [],
+    "http_errors": [],
+    "landed_cards": 2,
+    "no_document_overflow": true,
     "score_parity": true,
-    "score_edit_and_reset": true,
-    "search": true,
     "keyboard_graph": true,
-    "no_document_overflow": true
+    "target": "https://swarm-narrative.pages.dev/",
+    "search": true,
+    "score_edit_and_reset": null
   }
 ]

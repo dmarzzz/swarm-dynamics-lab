@@ -75,5 +75,15 @@
     "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
     "score": 49.65,
     "nodes": 215
+  },
+  {
+    "published_at": "2026-10-04T23:33:00+00:00",
+    "source_commit": "7487599fa4f11b03ab51d62341ed04217d1e7888",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 222,
+    "note": "Post-window closeout update: two landed findings (freeze-claude attempt 2, memory-mix Claude pool), swarm-dynamics-lab links, live dashboard link. Live narrative.json sha256 matched local output.",
+    "live_sha256": "a19c3703acb39089afe080c3a20469dd1c8fe062a3a03627c6e4510eb0281449",
+    "pages_deployment": "https://245f6e51.swarm-narrative.pages.dev"
   }
 ]
