@@ -3,10 +3,10 @@
   "study_id": "right-dissenter",
   "attempt": "rd5-h5-a1",
   "assessor": "vishesh/codex-decision-models",
-  "assessed_at": "2026-10-04T18:40:10.572706+00:00",
+  "assessed_at": "2026-10-04T19:07:36.227052+00:00",
   "parent_handoff_sha256": "66775acf7ab12f7434f979685899a636da1f5b24701aeff093e3fed0712c5752",
   "verdict": "diagnostic",
-  "outcome_interpretation": "Prospective successor assessment. RD5 stays a complete valid adverse result; no owner launch decision or native outcome is asserted.",
+  "outcome_interpretation": "Prospective successor assessment. RD5 remains a complete valid adverse result. The owner approved the unchanged18Q0/conditional144D0 scope and lifetime650 within the existing split cap; live admission and native outcomes remain pending.",
   "assessments": [
     {
       "dimension": "question",
@@ -15,7 +15,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         },
         {
           "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
@@ -30,7 +30,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
@@ -45,7 +45,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
@@ -73,7 +73,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
@@ -88,7 +88,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         }
       ]
     },
@@ -110,7 +110,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         }
       ],
       "next_action": "Reconcile every assigned outcome against original relay reservations and append-only events before scientific review.",
@@ -119,14 +119,14 @@
     {
       "dimension": "resources",
       "status": "gap",
-      "finding": "The proposed lifetime650 exceeds the old500 ceiling; USD2 split cap remains. Original488 calls and historical reservations are retained, but scope approval/allocation are absent.",
+      "finding": "Defined162-call scope and lifetime650 received owner authorization; original488calls and historical reservations remain. A fresh exclusive approved-account allocation and cost/runtime admission are still required.",
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         }
       ],
-      "next_action": "Obtain the concrete changed-scope decision and fresh approved-account exclusive allocation; do not reset the ledger.",
+      "next_action": "Bind the actual authorization and refresh the original ledger plus approved-account exclusive allocation; do not reset or top up.",
       "acceptance_check": "Bound owner scope receipt, lifetime650 and unchanged cumulative USD1 API/USD1 infrastructure caps plus current allocation."
     },
     {
@@ -140,7 +140,7 @@
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         }
       ]
     },
@@ -151,7 +151,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
         }
       ],
       "next_action": "Check all native cells, transitions and failure states against saved evidence, and verify rendering through an allowed interface.",

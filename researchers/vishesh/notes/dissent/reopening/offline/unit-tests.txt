@@ -73,6 +73,6 @@ test_unknown_missingness_is_bounded_not_zero (test_native.NativeTests.test_unkno
 test_wall_deadline_stops_trickling_or_stalled_transport (test_native.NativeTests.test_wall_deadline_stops_trickling_or_stalled_transport) ... ok
 
 ----------------------------------------------------------------------
-Ran 73 tests in 4.652s
+Ran 73 tests in 4.238s
 
 OK

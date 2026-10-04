@@ -1,6 +1,6 @@
 # RD6 manual native operator handoff
 
-**Implementation checked offline; launch is not admitted.** This handoff covers the existing prospective [plan](PLAN.md), not new scientific scope. The owner authorized native integration and offline checks. Approval of the proposed 18 Q0 / conditional 144 D0 requests and lifetime 650 stop is still required. The original USD 1 API / USD 1 infrastructure cap, historical 488 calls and unresolved reservations remain binding. No allocation is held.
+**Implementation checked offline; launch is not admitted.** This handoff covers the existing prospective [plan](PLAN.md), not new scientific scope. The owner authorized native integration and offline checks. The owner has now approved the defined 18 Q0 / conditional 144 D0 requests and lifetime 650 stop; see RUN-STATUS.md. The original USD 1 API / USD 1 infrastructure cap, historical 488 calls and unresolved reservations remain binding. No allocation is held.
 
 Use the [authoritative setup](../rd5/SETUP.md), [runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [implementation evidence](IMPLEMENTATION.md) and [new diagnostic assessment](DIAGNOSTIC-REVIEW.json). Historical RD5 completion stays unchanged. No independent researcher sign-off is required. Read local access/account policies before remote access; this public document deliberately contains no private account identity, host allocation or credential path.
 

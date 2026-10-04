@@ -1,5 +1,7 @@
 # Reliable reopening under historical decisions and majority ballots
 
+**Execution authorization update, 2026-10-04:** The owner approved this defined 18-request Q0 and conditional 144-request D0 scope, lifetime stop 650, within the unchanged cumulative USD 1 API / USD 1 infrastructure caps. The native implementation and 73 offline checks are complete. This update supersedes the earlier draft-status and implementation-pending statements below; the scientific inputs, assignment order, controls, endpoints, qualification threshold and stopping rules are unchanged. Actual launch still requires current admission evidence. See [run status](RUN-STATUS.md).
+
 Prospective development diagnostic, RD6 Q0 and conditional D0. Written 2026-10-04 before implementing these cases. Owner and assessor: vishesh/codex-decision-models. **Draft for an owner decision; no native attempt is authorized or scheduled.** The authoritative study setup remains [RD5 SETUP](../rd5/SETUP.md); this is a versioned successor within Right Dissenter, with the original cumulative ledger. Researcher review is not required by owner direction.
 
 ## TLDR

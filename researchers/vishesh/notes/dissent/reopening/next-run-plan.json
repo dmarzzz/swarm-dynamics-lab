@@ -7,7 +7,7 @@
   },
   "scientific_review": {
     "path": "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json",
-    "sha256": "65d04eba9e404a528e4a2ee3624c102c7ca4d1fa5dba9cdb87f1e3232035e576"
+    "sha256": "cf067328a2c52bf462018ddbb037d210adb85648ce7b122744d829f19304979e"
   },
   "question": "Does historical action and opposing ballot context reduce correct interpretation of current evidence, separately from absolute clock, evidence age and repeated-answer variability?",
   "changes": [
@@ -63,7 +63,7 @@
     "maximum_calls": 162,
     "maximum_cost_usd": 2,
     "machine_count": 1,
-    "cumulative_budget_ref": "Original USD1 API/USD1 infrastructure cap, existing488calls and USD0.022699069 committed API. Proposed lifetime ceiling650 exceeds original500 by150; explicit decision pending.",
+    "cumulative_budget_ref": "Original USD1 API/USD1 infrastructure cap, existing488calls and USD0.022699069 committed API. Proposed lifetime ceiling650 exceeds original500 by150; defined scope/lifetime ceiling now owner-approved; original cap retained.",
     "machine_requirements": "One exclusive approved-account CPU host, no GPU, one inflight call, 90min<=USD0.107145; admission/route/cost/source/ledger verified after approval.",
     "allocation_required": true,
     "maximum_new_api_reservation_usd": 0.217728,
@@ -89,9 +89,10 @@
     "operator": 1,
     "assumptions": "Conservative planning upper estimates; no new service and no experiment infrastructure allocated."
   },
-  "approval_state": "pending",
+  "approval_state": "approved_defined_scope",
   "native_dispatch_available": true,
   "plan_publication_before_implementation": "0c00781507b9477bfa2347504ed0bade43a7ae4b",
   "operations_binding": "Prospective scientific review is separate from the completed historical assessment. Manual admission requires the actual private RD5 H5 handoff and latest operational closeout, owner scope decision, original ledger identity, approved exclusive allocation and immutable public registration. This public proposal itself is not an admission receipt.",
-  "native_launch_admitted": false
+  "native_launch_admitted": false,
+  "authorization_note": "Owner go-ahead relayed by the coordinating task covers exactly18Q0 then conditional144D0, lifetime650, unchanged USD2 split cap; no broader study, retries or new allowance."
 }

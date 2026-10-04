@@ -31,7 +31,7 @@ The proposed sequence is 18 Q0 calls and, only after a correct valid Q0, 144 D0 
 
 The manual native runner is implemented and offline-tested. It requires a bound owner scope decision and fresh private admission before opening the provider path. Current public registration, native qualification, source/runtime/price verification and approved-account exclusive allocation remain absent because nothing is being launched. The original ledger remains at 488 calls and USD 0.022699069 committed API exposure.
 
-Disposition: **DECISION NEEDED** on whether this narrow component question is worth collecting. It proposes at most 162 new calls, lifetime 650, which is 150 above the original 500-call ceiling; the USD 2 split cap is unchanged. Conservative combined exposure would remain below USD 1.068 under the stated route and machine ceilings. The owner must approve that changed scope and call ceiling before allocation or dispatch. If Jev is not needed for a later semantic task, the literal baseline already supplies the practical answer and this draft should be parked.
+Disposition: **RUN — defined scope approved; current admission in preparation.** See [run status](RUN-STATUS.md). It proposes at most 162 new calls, lifetime 650, which is 150 above the original 500-call ceiling; the USD 2 split cap is unchanged. Conservative combined exposure would remain below USD 1.068 under the stated route and machine ceilings. The owner has approved this changed scope and call ceiling; allocation and dispatch still require current admission. If Jev is not needed for a later semantic task, the literal baseline already supplies the practical answer and this draft should be parked.
 
 ## Reproduce the offline preparation
 
