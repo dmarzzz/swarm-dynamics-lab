@@ -51,8 +51,17 @@ class Ledger:
     def __init__(self, path: Path):
         self.path = path
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        if not self.path.exists():
-            self.path.write_text(json.dumps({"spent_usd": 0.0, "calls": 0, "by_model": {}}))
+        # A stable sidecar serializes constructors even before the ledger exists.
+        # Exclusive creation never truncates an existing spend/reservation file.
+        with open(str(self.path) + ".init.lock", "a") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            try:
+                with self.path.open("x") as ledger:
+                    json.dump({"spent_usd": 0.0, "calls": 0, "by_model": {}}, ledger)
+                    ledger.flush()
+                    os.fsync(ledger.fileno())
+            except FileExistsError:
+                pass
 
     def add(self, model: str, usd: float, calls: int) -> float:
         with open(self.path, "r+") as f:
