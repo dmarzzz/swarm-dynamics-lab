@@ -1,0 +1,22 @@
+{
+  "stage": "SP-SOL",
+  "attempt": "native-SP-SOL-01",
+  "planned": 36,
+  "calls": 36,
+  "valid": 36,
+  "failed": 0,
+  "unstarted": 0,
+  "complete": true,
+  "failure": null,
+  "usage_missing": 0,
+  "actual_usd": 0.1634274,
+  "observed_usage_cost_usd": 0.1634274,
+  "new_reserved_usd": 1.125376,
+  "elapsed_seconds": 119.4447916479985,
+  "team_size": 10,
+  "independent_worlds": 1,
+  "run": "influence-swarms/1004-203432-80f0d1",
+  "source_commit": "43a80183888a0b4ab6087f8f9a75db404b032f59",
+  "packet_sha256": "4407a66252b7dc0d052c5c82a3a87d05a9edfb62f07c75968bc130ae1bc03555",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/43a80183888a0b4ab6087f8f9a75db404b032f59/researchers/vishesh/notes/influence-swarms/scenario/scale-up/PILOT.md"
+}
