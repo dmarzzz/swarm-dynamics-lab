@@ -1,0 +1,4 @@
+{
+  "source_commit": "32ad01d2c11e1bd997728e04a071ba1b10cc3d0b",
+  "transport": "bounded local memory consumer via verified SSH stdin"
+}

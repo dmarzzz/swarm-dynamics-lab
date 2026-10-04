@@ -1,0 +1,242 @@
+[
+  {
+    "id": "Q1-00",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/01",
+    "decision": {
+      "map": {
+        "s1495fa76ac50": "UNKNOWN",
+        "s14ad1ee4eef9": "UNKNOWN",
+        "s52ed084be4c6": "UNKNOWN",
+        "s3358e39ec707": "UNKNOWN"
+      },
+      "inspect": "s14ad1ee4eef9"
+    }
+  },
+  {
+    "id": "Q1-00",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/02",
+    "decision": {
+      "map": {
+        "s1495fa76ac50": "UNKNOWN",
+        "s14ad1ee4eef9": "UNKNOWN",
+        "s52ed084be4c6": "UNKNOWN",
+        "s3358e39ec707": "UNKNOWN"
+      },
+      "inspect": "s14ad1ee4eef9"
+    }
+  },
+  {
+    "id": "Q1-01",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/03",
+    "decision": {
+      "map": {
+        "s4697072ac288": "UNKNOWN",
+        "sf38bb3af866c": "LAND",
+        "sdc1d9f4d62ad": "UNKNOWN",
+        "sbad6e1c6bac4": "UNKNOWN"
+      },
+      "inspect": "sf38bb3af866c"
+    }
+  },
+  {
+    "id": "Q1-01",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/04",
+    "decision": {
+      "map": {
+        "s4697072ac288": "UNKNOWN",
+        "sf38bb3af866c": "LAND",
+        "sdc1d9f4d62ad": "UNKNOWN",
+        "sbad6e1c6bac4": "UNKNOWN"
+      },
+      "inspect": "sf38bb3af866c"
+    }
+  },
+  {
+    "id": "Q1-02",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/05",
+    "decision": {
+      "map": {
+        "sc4b27bb0d71c": "UNKNOWN",
+        "sfee4d6e77e5e": "WATER",
+        "sd8182af6bcdd": "UNKNOWN",
+        "s1c0f8363da06": "UNKNOWN"
+      },
+      "inspect": "sfee4d6e77e5e"
+    }
+  },
+  {
+    "id": "Q1-02",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/06",
+    "decision": {
+      "map": {
+        "sc4b27bb0d71c": "UNKNOWN",
+        "sfee4d6e77e5e": "WATER",
+        "sd8182af6bcdd": "UNKNOWN",
+        "s1c0f8363da06": "UNKNOWN"
+      },
+      "inspect": "sfee4d6e77e5e"
+    }
+  },
+  {
+    "id": "Q1-03",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/07",
+    "decision": {
+      "map": {
+        "saf2f41f996d3": "LAND",
+        "s314889e97080": "UNKNOWN",
+        "s7cfe07ccaafd": "UNKNOWN",
+        "s76b1eb68eeba": "UNKNOWN"
+      },
+      "inspect": "s314889e97080"
+    }
+  },
+  {
+    "id": "Q1-03",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/08",
+    "decision": {
+      "map": {
+        "saf2f41f996d3": "LAND",
+        "s314889e97080": "UNKNOWN",
+        "s7cfe07ccaafd": "UNKNOWN",
+        "s76b1eb68eeba": "UNKNOWN"
+      },
+      "inspect": "s314889e97080"
+    }
+  },
+  {
+    "id": "Q1-04",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/09",
+    "decision": {
+      "map": {
+        "sba497065a20c": "UNKNOWN",
+        "s22c766244336": "LAND",
+        "s34c636b0aabe": "UNKNOWN",
+        "s233b3d7dcfd6": "UNKNOWN"
+      },
+      "inspect": "sba497065a20c"
+    }
+  },
+  {
+    "id": "Q1-04",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/10",
+    "decision": {
+      "map": {
+        "sba497065a20c": "UNKNOWN",
+        "s22c766244336": "LAND",
+        "s34c636b0aabe": "UNKNOWN",
+        "s233b3d7dcfd6": "UNKNOWN"
+      },
+      "inspect": "sba497065a20c"
+    }
+  },
+  {
+    "id": "Q1-05",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/11",
+    "decision": {
+      "map": {
+        "s8b5614f87bbb": "UNKNOWN",
+        "s322d812b3b26": "WATER",
+        "s8d624b2ced34": "UNKNOWN",
+        "s4aacb1ea26b3": "UNKNOWN"
+      },
+      "inspect": "s4aacb1ea26b3"
+    }
+  },
+  {
+    "id": "Q1-05",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/12",
+    "decision": {
+      "map": {
+        "s8b5614f87bbb": "UNKNOWN",
+        "s322d812b3b26": "WATER",
+        "s8d624b2ced34": "UNKNOWN",
+        "s4aacb1ea26b3": "UNKNOWN"
+      },
+      "inspect": "s4aacb1ea26b3"
+    }
+  },
+  {
+    "id": "Q1-06",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/13",
+    "decision": {
+      "map": {
+        "sb6c5b4745df8": "WATER",
+        "s316126db8f54": "LAND",
+        "s57004bf34a6a": "UNKNOWN",
+        "sae6c39dd7016": "UNKNOWN"
+      },
+      "inspect": null
+    }
+  },
+  {
+    "id": "Q1-06",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/14",
+    "decision": {
+      "map": {
+        "sb6c5b4745df8": "WATER",
+        "s316126db8f54": "LAND",
+        "s57004bf34a6a": "UNKNOWN",
+        "sae6c39dd7016": "UNKNOWN"
+      },
+      "inspect": null
+    }
+  },
+  {
+    "id": "Q1-07",
+    "condition": "legacy",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/15",
+    "decision": {
+      "map": {
+        "scc6c1fdd8884": "WATER",
+        "s4e2d38ab8197": "UNKNOWN",
+        "s88cdaa47b68b": "UNKNOWN",
+        "sf08369b175a6": "UNKNOWN"
+      },
+      "inspect": null
+    }
+  },
+  {
+    "id": "Q1-07",
+    "condition": "clarified",
+    "status": "valid",
+    "trace_id": "pc10-q1-a1/16",
+    "decision": {
+      "map": {
+        "scc6c1fdd8884": "WATER",
+        "s4e2d38ab8197": "UNKNOWN",
+        "s88cdaa47b68b": "UNKNOWN",
+        "sf08369b175a6": "UNKNOWN"
+      },
+      "inspect": null
+    }
+  }
+]

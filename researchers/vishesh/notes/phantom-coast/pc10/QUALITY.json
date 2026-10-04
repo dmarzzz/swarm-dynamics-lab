@@ -1,0 +1,267 @@
+{
+  "attempt": "pc10-q1-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T19:51:28.256739+00:00",
+  "decision": "complete_valid_result",
+  "scientific_review": "complete",
+  "execution": "completed",
+  "qualification": "failed",
+  "pilot_dispatched": false,
+  "checks": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Paired clarification diagnostic answered narrowly: no action improvement.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Eight reachable matched known templates support a bounded diagnostic, not population realism.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Evidence identical within pair; only objective text changed; order4/4; exact values independently enumerated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Clarified32/32 map labels but4/6 optimal proposals; qualification failed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ],
+      "next_action": "Park this qualification path; no pilot or retry.",
+      "acceptance_check": "Any new objective needs its own prospective design and concrete owner decision; failure is not relabeled passing."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "16 assignments/valid outputs and32 events retained; six complete action pairs; all action transitions unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Eight authored pairs and two report-sign cases, no broad equivalence or population estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Explicit individual objective delivered; no cross-call context, operator prompts or future evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "execution",
+      "status": "pass",
+      "finding": "16 calls completed without retry/fallback; zero-call documentation preflight repaired before dispatch.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "New.001016736; known.847742490/exposure.859838490, all historical uncertainty retained and original caps unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source/runtime, original safe traces/digests and paired saved-data audit match.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Full paired table distinguishes map accuracy, optimal inspection and no-action cases; no native population animation claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+          "sha256": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+          "sha256": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+          "sha256": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/public-plan.json",
+          "sha256": "5bb70ae4217741531d038fbda023c7a0136081a517e25cac696d43bf838c40dc"
+        }
+      ]
+    }
+  ]
+}

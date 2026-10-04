@@ -1,0 +1,9 @@
+{
+  "experiment": "phantom-coast-pc10",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/32ad01d2c11e1bd997728e04a071ba1b10cc3d0b/researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+  "commit": "32ad01d2c11e1bd997728e04a071ba1b10cc3d0b",
+  "plan_sha256": "0e0f192c36c84c0a4518f3406cbe9124ec1f6bb9457ef9b5a992251f5830c92f",
+  "registered_tldr": "TLDR: PC10 Q1 compares original collective wording with explicit individual control on eight matched fresh snapshots. Evidence is identical within each pair; order counterbalanced. Score paired inspection optimality/regret and map correctness against an exact individual reference; clarified gate8valid/32maps/6actions. Maximum16calls/80questions, USD0.10752 within original cumulative cap. Narrow wording diagnostic, not population poisoning evidence; no retry or pilot.",
+  "run_tldr": "TLDR: PC10 Q1 compares original collective wording with explicit individual control on eight matched fresh snapshots. Evidence is identical within each pair; order counterbalanced. Score paired inspection optimality/regret and map correctness against an exact individual reference; clarified gate8valid/32maps/6actions. Maximum16calls/80questions, USD0.10752 within original cumulative cap. Narrow wording diagnostic, not population poisoning evidence; no retry or pilot.",
+  "checked_utc": "2026-10-04T19:50:22.771154+00:00"
+}

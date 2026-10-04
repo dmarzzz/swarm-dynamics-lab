@@ -1,0 +1,6 @@
+{
+  "verified": true,
+  "assigned": 16,
+  "terminal": 16,
+  "scope": "safe typed outputs and deterministic scoring, not independent provider receipt verification"
+}

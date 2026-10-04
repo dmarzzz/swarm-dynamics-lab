@@ -1,0 +1,77 @@
+{
+  "assigned": 16,
+  "totals": {
+    "legacy": {
+      "valid": 8,
+      "map_correct": 32,
+      "optimal": 4
+    },
+    "clarified": {
+      "valid": 8,
+      "map_correct": 32,
+      "optimal": 4
+    }
+  },
+  "paired_actions": [
+    {
+      "id": "Q1-00",
+      "kind": "no-evidence",
+      "legacy": true,
+      "clarified": true,
+      "legacy_mean_expected_regret": 0.0,
+      "clarified_mean_expected_regret": 0.0
+    },
+    {
+      "id": "Q1-01",
+      "kind": "private-positive",
+      "legacy": false,
+      "clarified": false,
+      "legacy_mean_expected_regret": 0.012500000000000011,
+      "clarified_mean_expected_regret": 0.012500000000000011
+    },
+    {
+      "id": "Q1-02",
+      "kind": "private-negative",
+      "legacy": false,
+      "clarified": false,
+      "legacy_mean_expected_regret": 0.012500000000000011,
+      "clarified_mean_expected_regret": 0.012500000000000011
+    },
+    {
+      "id": "Q1-03",
+      "kind": "nonrepeat",
+      "legacy": true,
+      "clarified": true,
+      "legacy_mean_expected_regret": 0.0,
+      "clarified_mean_expected_regret": 0.0
+    },
+    {
+      "id": "Q1-04",
+      "kind": "correct-negative",
+      "legacy": true,
+      "clarified": true,
+      "legacy_mean_expected_regret": 0.0,
+      "clarified_mean_expected_regret": 0.0
+    },
+    {
+      "id": "Q1-05",
+      "kind": "correct-positive",
+      "legacy": true,
+      "clarified": true,
+      "legacy_mean_expected_regret": 0.0,
+      "clarified_mean_expected_regret": 0.0
+    }
+  ],
+  "complete_action_pairs": 6,
+  "optimal_count_difference": 0,
+  "clarified_gate_passed": false,
+  "native_population_claim": false,
+  "budget": {
+    "calls": 16,
+    "new_known_nano": 1016736,
+    "cumulative_known_nano": 847742490,
+    "cumulative_exposure_nano": 859838490,
+    "original_api_cap_nano": 4000000000,
+    "original_total_cap_nano": 5000000000
+  }
+}
