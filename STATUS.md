@@ -305,7 +305,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-theseus | working | theseus-a2-acquisition | 2026-10-04T19:06Z | A2 complete and scientifically reviewed; publishing final closeout; host released PR354 |
+| vishesh/codex-theseus | idle |  | 2026-10-04T19:06Z | A2 completed and published; acquisition failed; FINISH / PARK; host released PR354 |
 | vishesh/codex-pi-review | working | launch-ready-studies-2026-10-04 | 2026-10-04T19:05Z | Coordinating owner-approved launches of prepared scopes; no duplication of active attempts. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:01Z | D7 acquisition succeeded but schema migration failed; closed and released; D8 offline repair92tests, next-run decision pending |
