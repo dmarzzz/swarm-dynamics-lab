@@ -117,6 +117,7 @@ def pool_key():
     return next(k['key'] for k in keys if k.get('enabled') and k.get('label') == 'default')
 
 def call(s, a, key):
+    enforce_launch_hold()
     study, sim, provider = load_parent()
     system = provider.SYSTEM + '\nReturn exactly {"values":{"0":integer_or_null,"1":integer_or_null,"2":integer_or_null,"3":integer_or_null,"4":integer_or_null,"5":integer_or_null}}.'
     body = dict(model=s['model'], max_tokens=500, temperature=0, system=system,
@@ -233,7 +234,17 @@ The 48 synthetic roots are reused from the parent, not new independent evidence 
 ''')
     return summary
 
+def enforce_launch_hold():
+    """No legacy dispatch until the PI receipt/reservation contract is implemented.
+
+    Deliberately no environment/CLI override. Offline replay is still supported.
+    See PI-REVIEW-RESPONSE.md. Historical plans and outcomes are not amended here.
+    """
+    raise RuntimeError('factory_launch_held: PI registration, init-receipt and immutable-outcome boundary required')
+
+
 def run(s):
+    enforce_launch_hold()
     out = ROOT/'results'/s['id']; out.mkdir(parents=True, exist_ok=True)
     with (out/'run.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX|fcntl.LOCK_NB)

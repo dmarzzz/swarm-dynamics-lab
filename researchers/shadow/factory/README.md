@@ -1,5 +1,7 @@
 # Shadow's small experiment factory
 
+**Launch hold (PI review follow-up):** the legacy execution boundary is disabled in the accompanying containment patch, pending janitor review/merge. It lacks the full required registration, per-transport reservation, initialization-receipt and immutable-outcome contract. Do not use the historical resume commands below or refresh old source pins. Read [PI review response](PI-REVIEW-RESPONSE.md). Analysis of saved data is unaffected.
+
 **Handoff: tool built, scientific execution blocked.** No model jobs remain running. 152 attempted assignments,100 valid,52 failures; no completed treatment finding. The native recovery screen returned HTTP503, and the paid key exhausted its shared daily allowance. See [operator handoff](HANDOFF.md), [honest result overview](FINDING.md), and [reporting corrections](CORRECTIONS.md). Twelve offline tests and652 internal recomputation checks pass. The five scientific questions have separate archived operational attempts, not20 independent experiments.
 
 **Current launcher:** `pool_structured.py queue`, [native-pool amendment](AMENDMENT-NATIVE.md). The shared OpenRouter key exhausted its externally enforced USD5 daily limit after 100 valid structured calls, leaving only two complete main roots. Paid dispatch stopped; no key limit or credential was changed. New zero-paid native-schema cohorts use bounded HTTP429 backoff and complete-root scheduling. The authorized USD20 factory ceiling does not override the provider key's lower limit.

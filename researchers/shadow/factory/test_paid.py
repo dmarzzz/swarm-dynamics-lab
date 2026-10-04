@@ -34,7 +34,7 @@ class BudgetTests(unittest.TestCase):
     def test_deadline_no_network(self):
         s={'id':'test','model':'anthropic/claude-sonnet-4.6','route':'openrouter','max_paid_usd':4}
         a={'id':'test','packet':{},'stage':'Q'}
-        with patch('paid.time.time',return_value=p.f.DEADLINE+1),patch('paid.urllib.request.urlopen') as net:
+        with patch.object(p.f,'enforce_launch_hold'),patch('paid.time.time',return_value=p.f.DEADLINE+1),patch('paid.urllib.request.urlopen') as net:
             r=p.call(s,a,'not-a-key')
         self.assertEqual(r['error'],'BudgetStop:deadline');net.assert_not_called()
 if __name__=='__main__':unittest.main()

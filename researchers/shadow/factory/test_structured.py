@@ -18,7 +18,7 @@ class StructuredTest(unittest.TestCase):
             self.assertEqual(body['response_format']['json_schema']['schema']['additionalProperties'],False)
             return io.BytesIO(json.dumps(data).encode())
         with tempfile.TemporaryDirectory() as d,patch.object(s,'LEDGER',s.Ledger(Path(d)/'ledger')):
-            with patch('structured.urllib.request.urlopen',side_effect=urlopen):r=s.call(spec,a,'test-key')
+            with patch.object(s.f,'enforce_launch_hold'),patch('structured.urllib.request.urlopen',side_effect=urlopen):r=s.call(spec,a,'test-key')
             self.assertEqual(r['status'],'completed');self.assertTrue(r['exact'])
             self.assertAlmostEqual(s.LEDGER.accounted(spec['id']),.01)
         self.assertEqual(len(seen),1)
