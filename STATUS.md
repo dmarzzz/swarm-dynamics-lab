@@ -254,7 +254,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
 | dmarz/v3-d2-opus | blocked |  | 2026-10-04T08:20Z | D2 v3-d2-a1 Phase 1 complete: pinned aef218e8, 72-assignment scripted rehearsal passed on sim-dmarz-3 with zero model calls. Waiting for an explicit go from dmarz/fleet-monitor before preflight, the one-call Opus probe and the 72-call run. |
+| dmarz/always-five-doc | blocked |  | 2026-10-04T08:17Z | Setup guide notes/always-five/README.md is committed on branch lane/always-five-doc and waits for the human's read before any push |
 | dmarz/newcomer-opus | idle |  | 2026-10-04T08:15Z | sybil-newcomer-opus launch-ready (plan, Opus adapter, selftests, local S0, launcher); waits for a claimed dmarz host (sim-dmarz-13 created for it) |
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
@@ -270,7 +272,6 @@
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T07:51Z | Preparing sybil-split-opus (identity splitting with fixed attacker resources, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/pipeline | working |  | 2026-10-04T07:51Z | Pipeline lead: keeps at least three launch-ready run requests prepared for dmarz's experiments (plan, code, offline tests, scripted stage, pre-run review, chained launcher); launches nothing and makes no model calls |
-| dmarz/scale-xl | working |  | 2026-10-04T07:50Z | sybil-scale-xl A1 (Opus): S0-a1 running on sim-dmarz; tmux chain scale-xl-chain launches Q0 then S1 at passed software gates |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
