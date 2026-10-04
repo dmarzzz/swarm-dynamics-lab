@@ -23,7 +23,7 @@ Turn [the scarcity plan](../researchers/dmarz/notes/sybil-scarcity-plan/README.m
 
 ## Done when
 
-- [ ] Study directory with frozen design, assignment manifest, code, offline tests and a scripted zero-model-call stage that passes offline.
-- [ ] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with call counts, gates, model settings, hard max_calls and the pinned commit.
-- [ ] Chained launcher (interface probe, qualification, main stage; stops by itself at a failed gate) with the server as a parameter.
+- [x] Study directory with frozen design, assignment manifest, code, offline tests and a scripted zero-model-call stage that passes offline. (researchers/dmarz/notes/sybil-scarcity-opus at 36a03510: selftest 33 OK, offline S0 168/168, rehearsal passed)
+- [x] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with call counts, gates, model settings, hard max_calls and the pinned commit. (reviews/chain-001-pre.md)
+- [x] Chained launcher (interface probe, qualification, main stage; stops by itself at a failed gate) with the server as a parameter. (src/chain.py; RUN.md gives the generic private launcher commands with --host)
 - [ ] Run request filed in the private run queue after the fleet monitor's go.
