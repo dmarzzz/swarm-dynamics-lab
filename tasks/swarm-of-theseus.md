@@ -3,7 +3,7 @@ id: swarm-of-theseus
 type: task
 title: Build and qualify Swarm of Theseus (SOC-24)
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-theseus
 for: vishesh
@@ -13,7 +13,11 @@ depends_on: []
 topics:
 - llm-agent-swarms
 claimed_at: 2026-10-04T01:30Z
-updated: 2026-10-04T02:41Z
+updated: 2026-10-04T02:45Z
+outputs:
+- researchers/vishesh/notes/swarm-of-theseus/RESULTS.md
+- artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz
+- artifacts/theseus-pilot-replay/theseus-pilot-replay-v1.html
 ---
 
 ## Goal
