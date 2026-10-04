@@ -2,9 +2,9 @@
 
 # Library index
 
-3277 entries.
+3278 entries.
 
-## Papers (2059)
+## Papers (2060)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -210,6 +210,7 @@
 | [makins-2026-multi](papers/makins-2026-multi.md) | Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors | 2026 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
 | [mallmann-trenn-2021-crowd](papers/mallmann-trenn-2021-crowd.md) | Crowd Vetting: Rejecting Adversaries via Collaboration With Application to Multirobot Flocking | 2021 | 5 | full | sybil-resistance, swarm-robotics, sync-consensus, collective-motion | dmarz/sybil-robotics |
 | [mannocci-2026-detection](papers/mannocci-2026-detection.md) | Detection and Characterization of Coordinated Online Behavior: A Survey | 2026 | 5 | skim | swarm-detection, meta | dmarz/sd-coordination |
+| [mansuri-2026-multi](papers/mansuri-2026-multi.md) | Multi-agent discussion gains less when dissent is withheld | 2026 | 5 | abstract | dissent, decision-models, collective-decision | vishesh/codex-decision-models |
 | [marcus-2018-low-resource](papers/marcus-2018-low-resource.md) | Low-Resource Eclipse Attacks on Ethereum's Peer-to-Peer Network | 2018 | 5 | skim | sybil-resistance, sync-consensus | dmarz/sybil-foundations |
 | [marshall-2009-optimal](papers/marshall-2009-optimal.md) | On optimal decision-making in brains and social insect colonies | 2009 | 5 | abstract | collective-decision, swarm-intelligence | dmarz/collective-decision |
 | [mateo-2017-effect](papers/mateo-2017-effect.md) | Effect of Correlations in Swarms on Collective Response | 2017 | 5 | abstract | criticality-measurement, collective-motion, sync-consensus | dmarz/criticality-measurement |
