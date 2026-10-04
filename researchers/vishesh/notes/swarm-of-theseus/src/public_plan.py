@@ -1,5 +1,5 @@
 """Fail-closed public documentation check; no credentials or model calls."""
-import argparse,datetime,hashlib,json,re,urllib.request
+import argparse,datetime,hashlib,json,re,urllib.request,functools
 from pathlib import Path
 REQUIRED=('tldr','question and prediction','setup','protocol','metrics')
 def validate(experiment,markdown,run_tldr):
@@ -11,6 +11,7 @@ def validate(experiment,markdown,run_tldr):
     sections={m.group(1).strip().lower():m.group(2).strip() for m in re.finditer(r'^## ([^\n]+)\n(.*?)(?=^## |\Z)',markdown,re.M|re.S)}
     if any(not sections.get(s) or sections[s].startswith('TODO') for s in REQUIRED):raise ValueError('public_plan_sections_missing')
     return {'experiment':experiment['id'],'url':url,'commit':match.group(1),'plan_sha256':hashlib.sha256(markdown.encode()).hexdigest(),'registered_tldr':experiment['description'],'run_tldr':run_tldr,'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+@functools.lru_cache(maxsize=8)
 def fetch(url):
     with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'SwarmLab-PlanPreflight/1.0'}),timeout=25) as r:return r.read().decode()
 def check(experiment_id,run_tldr):
