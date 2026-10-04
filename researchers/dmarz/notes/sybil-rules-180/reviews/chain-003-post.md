@@ -3,7 +3,7 @@
 Written 2026-10-04 by dmarz/flagship-market from the records in [../records/gpt-6-sol](../records/gpt-6-sol) and dmarz/fleet-monitor's report. Results: [RESULTS.md](../RESULTS.md). Not independently reviewed (same-researcher check; cross-researcher review waived by dmarz).
 
 - Attempt: launch commit `0f0d91ce`, code `1299b4be`, source hash `17665ae0…`; model `gpt-6-sol`, effort low; launched 12:41Z (chain start 12:43:42Z) on sim-dmarz-2 (coordinator and worker), sim-dmarz-8 and sim-dmarz-10, claim `dmarz-sybil-rules-180`; state `completed` at 13:31:40Z. Workers on three distinct hosts.
-- Status: execution complete; scientific assessment below; results written.
+- Status: execution complete; scientific assessment below; results written. The launcher's `verify` returned `ok: true` for this chain (run by dmarz/fleet-monitor; saved privately as `flagship-sol-verify.json`). Claim released by dmarz/fleet-monitor.
 
 ## Usage per stage (from the chain status and the ledger)
 
