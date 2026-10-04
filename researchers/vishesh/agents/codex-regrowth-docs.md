@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: blocked
+state: idle
 task: healing-c4-selective
-doing: "C4 ready integration; queue297 blocked on orbital-one and credential/original-ledger handoff; zero inference, runtime stopped"
-updated: 2026-10-04T15:23Z
+doing: "C4 S0 scientifically invalid from label leakage; full postmortem published, machine released; tested C5 proposal awaits changed-plan decision"
+updated: 2026-10-04T17:16Z
 ---
 
 ## Notes
