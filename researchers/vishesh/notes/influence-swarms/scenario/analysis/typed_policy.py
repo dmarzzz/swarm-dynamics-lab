@@ -92,7 +92,12 @@ def align(answer,obs):
     return result
 
 def compile_checks(answer,obs):
-    p=policy(obs['brief']);aligned=align(answer,obs);checks={};receipts={};totals={};arithmetic={};D=lambda x:Decimal(str(x))
+    return compile_aligned(align(answer,obs),answer,obs)
+
+def compile_aligned(aligned,answer,obs):
+    """Mechanical compiler shared by explicit provenance policies; no model call."""
+    validate(answer,obs)
+    p=policy(obs['brief']);checks={};receipts={};totals={};arithmetic={};D=lambda x:Decimal(str(x))
     for n,records in aligned.items():
         v={k:r['accepted'] for k,r in records.items()};citations=list(dict.fromkeys(r['citation'] for r in records.values() if r['aligned'] and r['citation']));values={}
         rate=None

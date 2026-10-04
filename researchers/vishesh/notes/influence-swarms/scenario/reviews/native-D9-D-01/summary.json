@@ -1,0 +1,43 @@
+{
+  "stage": "D9-D",
+  "attempt": "native-D9-D-01",
+  "planned": 1,
+  "started": 1,
+  "terminal": 1,
+  "valid": 0,
+  "failed": 1,
+  "unstarted": 0,
+  "calls": 1,
+  "usage_missing": 1,
+  "observed_usage_cost_usd": 0,
+  "actual_usd": null,
+  "new_reserved_usd": 0.04864,
+  "qualified": false,
+  "failures": [
+    {
+      "kind": "failure",
+      "attempt": 1,
+      "category": "http",
+      "http_status": 400,
+      "retry_after_seconds": null,
+      "request_id": null,
+      "retry_permitted": false,
+      "reported_reason": "schema_invalid_or_unsupported",
+      "error_body_status": "parsed",
+      "usage_known": false,
+      "actual_usd": null
+    }
+  ],
+  "assignments": [
+    {
+      "arm": "typed_inherited",
+      "case_id": "seasonal-usage-cost",
+      "status": "failed",
+      "category": "http"
+    }
+  ],
+  "run": "influence-swarms/1004-194048-12c6c8",
+  "source_commit": "4cf90005eba356fff135f491045fe374dde568b1",
+  "packet_sha256": "50a0b90f08a76dceba671ef79b9184201968032f112bc38d5ef38629d57fc090",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/4cf90005eba356fff135f491045fe374dde568b1/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-09-READINESS.md"
+}

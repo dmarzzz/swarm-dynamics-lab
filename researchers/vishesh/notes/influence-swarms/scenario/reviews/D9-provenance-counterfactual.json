@@ -1,0 +1,179 @@
+{
+  "kind": "retrospective_saved_response_counterfactual_not_native_validation",
+  "model_calls": 0,
+  "cases": 5,
+  "excluded_contract_failed_cases": [
+    "seasonal-usage-cost"
+  ],
+  "rows": [
+    {
+      "case_id": "regional-no-approval",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 15,
+      "statuses_total": 15,
+      "raw_preference": "Birch",
+      "original_guard": {
+        "action": "DEFER",
+        "raw_choice": "Birch",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      },
+      "proposed_guard": {
+        "action": "DEFER",
+        "raw_choice": "Birch",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      }
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 15,
+      "statuses_total": 15,
+      "raw_preference": "DEFER",
+      "original_guard": {
+        "action": "DEFER",
+        "raw_choice": "DEFER",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "raw deferral retained"
+      },
+      "proposed_guard": {
+        "action": "DEFER",
+        "raw_choice": "DEFER",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "raw deferral retained"
+      }
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 15,
+      "statuses_total": 15,
+      "raw_preference": "Birch",
+      "original_guard": {
+        "action": "DEFER",
+        "raw_choice": "Birch",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      },
+      "proposed_guard": {
+        "action": "DEFER",
+        "raw_choice": "Birch",
+        "eligible_alternatives": [
+          "Aster",
+          "Birch"
+        ],
+        "cost_acceptable_alternatives": [
+          "Aster"
+        ],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      }
+    },
+    {
+      "case_id": "export-approved-option",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 15,
+      "statuses_total": 15,
+      "raw_preference": "DEFER",
+      "original_guard": {
+        "action": "DEFER",
+        "raw_choice": "DEFER",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "raw deferral retained"
+      },
+      "proposed_guard": {
+        "action": "DEFER",
+        "raw_choice": "DEFER",
+        "eligible_alternatives": [
+          "Birch",
+          "Cobalt"
+        ],
+        "cost_acceptable_alternatives": [
+          "Birch"
+        ],
+        "unnecessary_deferral": true,
+        "purchase_refused": false,
+        "reason": "raw deferral retained"
+      }
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 15,
+      "statuses_total": 15,
+      "raw_preference": "Cobalt",
+      "original_guard": {
+        "action": "DEFER",
+        "raw_choice": "Cobalt",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      },
+      "proposed_guard": {
+        "action": "Cobalt",
+        "raw_choice": "Cobalt",
+        "eligible_alternatives": [
+          "Aster",
+          "Birch",
+          "Cobalt"
+        ],
+        "cost_acceptable_alternatives": [
+          "Cobalt"
+        ],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "all requirements and cost tolerance supported"
+      }
+    }
+  ],
+  "totals": {
+    "raw_facts_correct": 180,
+    "raw_facts_total": 180,
+    "aligned_facts": 180,
+    "wrong_accepted_facts": 0,
+    "statuses_correct": 75,
+    "statuses_total": 75
+  },
+  "limitations": [
+    "Uses synthetic labelled source grammar; not arbitrary document verification.",
+    "No model behavior is rerun or predicted; original scores stay unchanged.",
+    "No independent heldout validation; a proposed provenance contract needs a next-plan decision."
+  ]
+}

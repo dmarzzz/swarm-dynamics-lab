@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d9-d-01",
+  "native_attempt_id": "native-D9-D-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T19:42:21.516456+00:00",
+  "verdict": "repair",
+  "outcome_interpretation": "Regex-constrained schema rejected; preserve failure and restore successful schema for one formatting-only diagnostic.",
+  "parent_handoff_sha256": "1a0d5fd01c135d1d1cac861f95596275e3c05113c7fa721555e3727f30a475bc",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Native test shows proposed regex enforcement is unavailable on this request/route.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "One inspected length-failing case; no response or behavioral observation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Changed provider constraint only; original local300limit and facts retained, zero retries.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "fail",
+      "finding": "HTTP400; regex-constrained contract not acquired.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ],
+      "next_action": "Restore shared schema and test one format-only prompt with unchanged validator.",
+      "acceptance_check": "Complete local-valid response and usage; no second reroll if unsuccessful."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Safe parsed schema_invalid_or_unsupported retained; missing usage explicit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One acquisition request, not reliability or effect estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Same facts/instructions; provider regex is the changed instrument.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "One assigned/started/failed; request/failure retained, no missing outcome removed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "One call/.048640reservation;5.452512/8and258calls; actualunknown.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Published schema/wire/source,107deployedtests; offline success did not predict provider acceptance.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Explicit acquisition failure with unknowncost, no invented response.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-D-post.md",
+          "sha256": "d26f5ba5893e25a5d72eff014145db5bf31b1c0ab0112659a758b58004aaaba3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-D-01/summary.json",
+          "sha256": "53869cfb90eb76665490f8206bec4af37c710e9245e7872adec6beb38aab872c"
+        }
+      ]
+    }
+  ]
+}

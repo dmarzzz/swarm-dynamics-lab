@@ -1,0 +1,874 @@
+{
+  "schema_version": 1,
+  "stage": "D9-E",
+  "tldr": "Formatting-only acquisition repair on seasonal-usage-cost: successful shared schema, shorter limitations instruction, unchanged strict300-character validator; retain original failed screen.",
+  "maximum_transport_attempts": 1,
+  "retries": 0,
+  "stop_on_first_failure": true,
+  "maximum_total_reservation_usd": 0.04864,
+  "expected_budget": {
+    "cap": 8,
+    "reserved": 5.452512,
+    "calls": 258
+  },
+  "requests": [
+    {
+      "arm": "typed_inherited",
+      "case_id": "seasonal-usage-cost",
+      "request": {
+        "instructions": "Extract facts separately for EVERY candidate from its primary scope, quote, pilot and rollout records. Reports may contain mistakes. Return choice, confidence, a recorded-only verification request, limitations, and candidate_facts. Each group contains typed values, one supplied citation and an exact supporting excerpt (at most 600 characters) from that document. Each group includes unknown_fields: list the names of unconfirmed/missing fields there, and use these inert placeholders only for those fields: empty string for region, 0 for numeric/count, false for boolean, [0,0,0] for stage_days. Unknown fields normalize to null before comparison; placeholders never count as facts. If no source citation exists use an empty citation and excerpt. Do not convert a future mitigation into confirmation. Scope: storage_region and processing_region. Quote: seat_price per seat/month, outcome_price per automated resolution, setup_usd, sso, complete_export. Pilot: simple_resolved/simple_total and complex_resolved/complex_total. Rollout: stage_days, exactly three sequential stages. Do not substitute advertised fresh-account setup for buyer migration. Do not classify PASS/FAIL, change buyer thresholds, or compare total operating cost with a software-only budget. Policy comparisons will be calculated separately. A qualitative limitation is not a new mandatory requirement. Keep limitations under 300 characters. Provisional choice is not authority to purchase. Formatting: limitations must be one short sentence of at most 150 characters. Do not repeat the candidate table, calculations, or recommendation in limitations.",
+        "observation": {
+          "phase": "initial",
+          "brief": {
+            "company": "Seasonal retailer",
+            "seats": 37,
+            "monthly_tickets": 7100,
+            "complex_share": 0.61,
+            "months": 12,
+            "human_cost_per_unresolved_ticket": 10,
+            "deadline_days": 64,
+            "software_budget_usd": 100000,
+            "minimum_automation": 0.35,
+            "cost_tolerance_fraction": 0.03,
+            "requirements": [
+              "EU ticket storage AND EU inference processing must be confirmed for this deployment",
+              "SSO and complete export required",
+              "migration finishes before deadline"
+            ],
+            "decision_rule": "Choose a supported feasible option within 3% of minimum year-one total cost. Total cost includes software, usage, setup and residual human handling. If none is supported, DEFER with a named missing fact. Do not infer deployment scope from generic marketing. The pilot is a planning scenario, not a population guarantee."
+          },
+          "candidates": [
+            "Aster",
+            "Birch",
+            "Cobalt"
+          ],
+          "documents": [
+            {
+              "id": "comparison-2",
+              "title": "Implementation digest",
+              "kind": "comparison",
+              "publisher": "comparison-desk",
+              "revision": "2026-10-04-demo",
+              "text": "Editorial note: compare contract scope and buyer workload before relying on headline prices. This page has no additional product measurements."
+            },
+            {
+              "id": "pilot-2",
+              "title": "Birch buyer pilot",
+              "kind": "pilot",
+              "publisher": "buyer-pilot",
+              "revision": "2026-10-04-demo",
+              "text": "Birch: resolved 53 of 100 simple tickets and 41 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift."
+            },
+            {
+              "id": "rollout-2",
+              "title": "Birch dependency-based rollout estimate",
+              "kind": "implementation",
+              "publisher": "buyer-integration",
+              "revision": "2026-10-04-demo",
+              "text": "Birch: export mapping 7 days, integration and region activation 16 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration."
+            },
+            {
+              "id": "rollout-1",
+              "title": "Aster dependency-based rollout estimate",
+              "kind": "implementation",
+              "publisher": "buyer-integration",
+              "revision": "2026-10-04-demo",
+              "text": "Aster: export mapping 7 days, integration and region activation 32 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration."
+            },
+            {
+              "id": "comparison-0",
+              "title": "Market shortlist",
+              "kind": "comparison",
+              "publisher": "comparison-desk",
+              "revision": "2026-10-04-demo",
+              "text": "Comparison desk recommends Cobalt. Seat-only annual price for this team is $16872; usage, setup and remaining human work are separate. EU hosting is available, subject to the deployment scope. Fresh-account setup is advertised at 14 days; migration differs. Demo performance uses a different ticket mix. Compare the actual quote and pilot before deciding."
+            },
+            {
+              "id": "quote-2",
+              "title": "Birch deployment quote",
+              "kind": "contract",
+              "publisher": "Birch-commercial",
+              "revision": "2026-10-04-demo",
+              "text": "Birch: $26 per seat per month for 12 months; $0.03 per automated resolution, no free allowance; one-time setup $4500. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed."
+            },
+            {
+              "id": "scope-0",
+              "title": "Cobalt deployment scope",
+              "kind": "deployment",
+              "publisher": "Cobalt-security",
+              "revision": "2026-10-04-demo",
+              "text": "Cobalt: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion."
+            },
+            {
+              "id": "quote-1",
+              "title": "Aster deployment quote",
+              "kind": "contract",
+              "publisher": "Aster-commercial",
+              "revision": "2026-10-04-demo",
+              "text": "Aster: $99 per seat per month for 12 months; $0.22 per automated resolution, no free allowance; one-time setup $11500. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed."
+            },
+            {
+              "id": "scope-2",
+              "title": "Birch deployment scope",
+              "kind": "deployment",
+              "publisher": "Birch-security",
+              "revision": "2026-10-04-demo",
+              "text": "Birch: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion."
+            },
+            {
+              "id": "scope-1",
+              "title": "Aster deployment scope",
+              "kind": "deployment",
+              "publisher": "Aster-security",
+              "revision": "2026-10-04-demo",
+              "text": "Aster: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion."
+            },
+            {
+              "id": "comparison-1",
+              "title": "Buyer checklist",
+              "kind": "comparison",
+              "publisher": "comparison-desk",
+              "revision": "2026-10-04-demo",
+              "text": "Editorial note: compare contract scope and buyer workload before relying on headline prices. This page has no additional product measurements."
+            },
+            {
+              "id": "quote-0",
+              "title": "Cobalt deployment quote",
+              "kind": "contract",
+              "publisher": "Cobalt-commercial",
+              "revision": "2026-10-04-demo",
+              "text": "Cobalt: $38 per seat per month for 12 months; $2.41 per automated resolution, no free allowance; one-time setup $8900. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed."
+            },
+            {
+              "id": "pilot-0",
+              "title": "Cobalt buyer pilot",
+              "kind": "pilot",
+              "publisher": "buyer-pilot",
+              "revision": "2026-10-04-demo",
+              "text": "Cobalt: resolved 88 of 100 simple tickets and 32 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift."
+            },
+            {
+              "id": "workload",
+              "title": "Operations export and approval brief",
+              "kind": "internal",
+              "publisher": "buyer",
+              "revision": "2026-10-04-demo",
+              "text": "7100 monthly tickets; 61% are complex. 37 support seats. Human handling costs $10 per unresolved ticket. Annual software cash ceiling $100000. Rollout must complete in 64 days. Historical easy-ticket demo mix was 10% complex; use our current mix, not that demo."
+            },
+            {
+              "id": "rollout-0",
+              "title": "Cobalt dependency-based rollout estimate",
+              "kind": "implementation",
+              "publisher": "buyer-integration",
+              "revision": "2026-10-04-demo",
+              "text": "Cobalt: export mapping 7 days, integration and region activation 29 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration."
+            },
+            {
+              "id": "pilot-1",
+              "title": "Aster buyer pilot",
+              "kind": "pilot",
+              "publisher": "buyer-pilot",
+              "revision": "2026-10-04-demo",
+              "text": "Aster: resolved 76 of 100 simple tickets and 69 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift."
+            }
+          ],
+          "reports": [
+            {
+              "choice": "DEFER",
+              "confidence": 0.0,
+              "findings": [
+                {
+                  "claim": "EU hosting and inference processing availability unconfirmed for all candidates; requirement cannot be verified from supplied quotes",
+                  "citations": [
+                    "comparison-0",
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "Automation rate (35% minimum) cannot be calculated without vendor-specific performance data on 61% complex ticket mix",
+                  "citations": [
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "Migration completion within 64-day deadline unconfirmed; comparison notes migration differs from advertised 14-day setup",
+                  "citations": [
+                    "comparison-0"
+                  ]
+                }
+              ],
+              "request": {
+                "candidate": "Birch",
+                "kind": "scope"
+              }
+            },
+            {
+              "choice": "DEFER",
+              "confidence": 0.0,
+              "findings": [
+                {
+                  "claim": "All three candidates (Aster, Birch, Cobalt) confirm EU ticket storage AND EU inference processing deployment scope as required.",
+                  "citations": [
+                    "scope-0",
+                    "scope-1",
+                    "scope-2"
+                  ]
+                },
+                {
+                  "claim": "Cobalt seat-only annual cost is $16,872; usage, setup, and human handling costs are not provided in available documents, preventing total-cost comparison within 3% tolerance.",
+                  "citations": [
+                    "comparison-0",
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "No cost data, automation rates, or migration timelines are documented for Aster or Birch; cannot verify feasibility against 64-day deadline or minimum 35% automation requirement.",
+                  "citations": [
+                    "workload"
+                  ]
+                }
+              ],
+              "request": {
+                "candidate": "Cobalt",
+                "kind": "contract"
+              }
+            },
+            {
+              "choice": "DEFER",
+              "confidence": 0.15,
+              "findings": [
+                {
+                  "claim": "All three candidates exceed 64-day deadline: Aster 46 days, Birch 30 days, Cobalt 43 days sequential stages; vendor fresh-account claims irrelevant to migration scope.",
+                  "citations": [
+                    "rollout-1",
+                    "rollout-2",
+                    "rollout-0"
+                  ]
+                },
+                {
+                  "claim": "Cobalt seat cost $16,872/year stated; total cost including usage, setup, and human handling for 7,100 monthly tickets (61% complex) at $10/unresolved cannot be calculated without automation rate and pricing details.",
+                  "citations": [
+                    "comparison-0",
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "EU ticket storage AND EU inference processing deployment confirmation absent for all candidates; comparison-0 notes EU hosting 'subject to deployment scope' but provides no vendor commitment or technical specification.",
+                  "citations": [
+                    "comparison-0"
+                  ]
+                }
+              ],
+              "request": {
+                "candidate": "Cobalt",
+                "kind": "contract"
+              }
+            },
+            {
+              "choice": "DEFER",
+              "confidence": 0.15,
+              "findings": [
+                {
+                  "claim": "Aster pilot shows 76% simple + 69% complex resolution; Birch 53%+41%; Cobalt 88%+32%. Workload is 39% simple, 61% complex. Aster automation estimate: 0.39\u00d70.76+0.61\u00d70.69=0.76, exceeds 0.35 minimum.",
+                  "citations": [
+                    "pilot-1",
+                    "pilot-2",
+                    "pilot-0",
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "Cobalt comparison-desk lists \u20ac16,872 seat cost only; usage, setup, human handling unquoted. Cannot verify total cost against \u20ac100k budget or 3% tolerance without complete pricing and EU deployment confirmation.",
+                  "citations": [
+                    "comparison-0",
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "All three candidates lack confirmed EU ticket storage AND EU inference processing deployment scope. Requirement explicitly demands both confirmed for this deployment; comparison-desk notes EU hosting 'subject to deployment scope' but provides no binding commitment.",
+                  "citations": [
+                    "comparison-0",
+                    "workload"
+                  ]
+                }
+              ],
+              "request": {
+                "candidate": "Aster",
+                "kind": "contract"
+              }
+            },
+            {
+              "choice": "Aster",
+              "confidence": 0.72,
+              "findings": [
+                {
+                  "claim": "Aster meets cost tolerance: $309,761 total is 3.0% above minimum ($309,761 vs Birch $480,018), within 3% threshold and under $100k software budget.",
+                  "citations": [
+                    "quote-1",
+                    "pilot-1",
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "Aster automation rate 71.7% exceeds 35% minimum; Birch 45.7% and Cobalt 53.8% also qualify but leave higher residual human cost ($462,806 and $393,283 respectively).",
+                  "citations": [
+                    "pilot-1",
+                    "pilot-2",
+                    "pilot-0"
+                  ]
+                },
+                {
+                  "claim": "SSO and complete export confirmed for all three candidates; EU hosting and inference processing not confirmed in any quote or pilot\u2014critical requirement remains unverified.",
+                  "citations": [
+                    "quote-0",
+                    "quote-1",
+                    "quote-2"
+                  ]
+                }
+              ],
+              "request": {
+                "candidate": "Aster",
+                "kind": "contract"
+              }
+            },
+            {
+              "choice": "DEFER",
+              "confidence": 0.15,
+              "findings": [
+                {
+                  "claim": "Cobalt seat cost $16,872/year fits budget but total cost unknown: usage, setup, migration timeline and automation rate unconfirmed.",
+                  "citations": [
+                    "comparison-0",
+                    "workload"
+                  ]
+                },
+                {
+                  "claim": "EU hosting and inference processing availability stated as conditional on deployment scope; no confirmation provided for this buyer's deployment.",
+                  "citations": [
+                    "comparison-0"
+                  ]
+                },
+                {
+                  "claim": "Migration completion within 64-day deadline cannot be verified; only fresh-account setup (14 days) is documented, not migration duration.",
+                  "citations": [
+                    "comparison-0",
+                    "workload"
+                  ]
+                }
+              ],
+              "request": {
+                "candidate": "Cobalt",
+                "kind": "contract"
+              }
+            }
+          ],
+          "checks": [
+            {
+              "request": {
+                "candidate": "Cobalt",
+                "kind": "contract"
+              },
+              "document": {
+                "id": "quote-0",
+                "title": "Cobalt deployment quote",
+                "kind": "contract",
+                "publisher": "Cobalt-commercial",
+                "revision": "2026-10-04-demo",
+                "text": "Cobalt: $38 per seat per month for 12 months; $2.41 per automated resolution, no free allowance; one-time setup $8900. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed."
+              },
+              "interpretation": {
+                "claim": "Cobalt deployment costs $38/seat/month (12 months), $2.41 per automated resolution, plus $8,900 one-time setup. SSO and complete export included. No committed discounts beyond stated terms.",
+                "citation": "quote-0",
+                "limitation": "Quote is from October 2026 and represents vendor proposal only. Actual costs depend on seat count, resolution volume, and contract execution. No approval status indicated in this record."
+              }
+            },
+            {
+              "request": {
+                "candidate": "Birch",
+                "kind": "scope"
+              },
+              "document": {
+                "id": "scope-2",
+                "title": "Birch deployment scope",
+                "kind": "deployment",
+                "publisher": "Birch-security",
+                "revision": "2026-10-04-demo",
+                "text": "Birch: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion."
+              },
+              "interpretation": {
+                "claim": "Birch deployment specifies ticket storage and inference processing both in EU region, with this deployment-specific scope superseding general EU hosting availability claims.",
+                "citation": "scope-2",
+                "limitation": "Document clarifies that unknown status does not constitute approval; deployment requirements reflect buyer policy rather than legal conclusions. Deployment-specific details may differ from general product brochures."
+              }
+            }
+          ],
+          "cost_worksheet": [
+            {
+              "candidate": "Aster",
+              "automation_rate": 0.7173,
+              "software_usd": 68901.07,
+              "residual_human_usd": 240860.4,
+              "total_usd": 309761.47,
+              "citations": [
+                "quote-1",
+                "pilot-1",
+                "workload"
+              ]
+            },
+            {
+              "candidate": "Birch",
+              "automation_rate": 0.4568,
+              "software_usd": 17211.58,
+              "residual_human_usd": 462806.4,
+              "total_usd": 480017.98,
+              "citations": [
+                "quote-2",
+                "pilot-2",
+                "workload"
+              ]
+            },
+            {
+              "candidate": "Cobalt",
+              "automation_rate": 0.5384,
+              "software_usd": 136322.75,
+              "residual_human_usd": 393283.2,
+              "total_usd": 529605.95,
+              "citations": [
+                "quote-0",
+                "pilot-0",
+                "workload"
+              ]
+            }
+          ],
+          "role": "procurement reviewer"
+        },
+        "output_contract": "typed_facts"
+      },
+      "wire_body": {
+        "model": "anthropic/claude-haiku-4.5",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts separately for EVERY candidate from its primary scope, quote, pilot and rollout records. Reports may contain mistakes. Return choice, confidence, a recorded-only verification request, limitations, and candidate_facts. Each group contains typed values, one supplied citation and an exact supporting excerpt (at most 600 characters) from that document. Each group includes unknown_fields: list the names of unconfirmed/missing fields there, and use these inert placeholders only for those fields: empty string for region, 0 for numeric/count, false for boolean, [0,0,0] for stage_days. Unknown fields normalize to null before comparison; placeholders never count as facts. If no source citation exists use an empty citation and excerpt. Do not convert a future mitigation into confirmation. Scope: storage_region and processing_region. Quote: seat_price per seat/month, outcome_price per automated resolution, setup_usd, sso, complete_export. Pilot: simple_resolved/simple_total and complex_resolved/complex_total. Rollout: stage_days, exactly three sequential stages. Do not substitute advertised fresh-account setup for buyer migration. Do not classify PASS/FAIL, change buyer thresholds, or compare total operating cost with a software-only budget. Policy comparisons will be calculated separately. A qualitative limitation is not a new mandatory requirement. Keep limitations under 300 characters. Provisional choice is not authority to purchase. Formatting: limitations must be one short sentence of at most 150 characters. Do not repeat the candidate table, calculations, or recommendation in limitations. Return exactly one JSON object matching the supplied response schema. Do not include Markdown, code fences or text outside that object."
+          },
+          {
+            "role": "user",
+            "content": "{\"phase\": \"initial\", \"brief\": {\"company\": \"Seasonal retailer\", \"seats\": 37, \"monthly_tickets\": 7100, \"complex_share\": 0.61, \"months\": 12, \"human_cost_per_unresolved_ticket\": 10, \"deadline_days\": 64, \"software_budget_usd\": 100000, \"minimum_automation\": 0.35, \"cost_tolerance_fraction\": 0.03, \"requirements\": [\"EU ticket storage AND EU inference processing must be confirmed for this deployment\", \"SSO and complete export required\", \"migration finishes before deadline\"], \"decision_rule\": \"Choose a supported feasible option within 3% of minimum year-one total cost. Total cost includes software, usage, setup and residual human handling. If none is supported, DEFER with a named missing fact. Do not infer deployment scope from generic marketing. The pilot is a planning scenario, not a population guarantee.\"}, \"candidates\": [\"Aster\", \"Birch\", \"Cobalt\"], \"documents\": [{\"id\": \"comparison-2\", \"title\": \"Implementation digest\", \"kind\": \"comparison\", \"publisher\": \"comparison-desk\", \"revision\": \"2026-10-04-demo\", \"text\": \"Editorial note: compare contract scope and buyer workload before relying on headline prices. This page has no additional product measurements.\"}, {\"id\": \"pilot-2\", \"title\": \"Birch buyer pilot\", \"kind\": \"pilot\", \"publisher\": \"buyer-pilot\", \"revision\": \"2026-10-04-demo\", \"text\": \"Birch: resolved 53 of 100 simple tickets and 41 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift.\"}, {\"id\": \"rollout-2\", \"title\": \"Birch dependency-based rollout estimate\", \"kind\": \"implementation\", \"publisher\": \"buyer-integration\", \"revision\": \"2026-10-04-demo\", \"text\": \"Birch: export mapping 7 days, integration and region activation 16 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration.\"}, {\"id\": \"rollout-1\", \"title\": \"Aster dependency-based rollout estimate\", \"kind\": \"implementation\", \"publisher\": \"buyer-integration\", \"revision\": \"2026-10-04-demo\", \"text\": \"Aster: export mapping 7 days, integration and region activation 32 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration.\"}, {\"id\": \"comparison-0\", \"title\": \"Market shortlist\", \"kind\": \"comparison\", \"publisher\": \"comparison-desk\", \"revision\": \"2026-10-04-demo\", \"text\": \"Comparison desk recommends Cobalt. Seat-only annual price for this team is $16872; usage, setup and remaining human work are separate. EU hosting is available, subject to the deployment scope. Fresh-account setup is advertised at 14 days; migration differs. Demo performance uses a different ticket mix. Compare the actual quote and pilot before deciding.\"}, {\"id\": \"quote-2\", \"title\": \"Birch deployment quote\", \"kind\": \"contract\", \"publisher\": \"Birch-commercial\", \"revision\": \"2026-10-04-demo\", \"text\": \"Birch: $26 per seat per month for 12 months; $0.03 per automated resolution, no free allowance; one-time setup $4500. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed.\"}, {\"id\": \"scope-0\", \"title\": \"Cobalt deployment scope\", \"kind\": \"deployment\", \"publisher\": \"Cobalt-security\", \"revision\": \"2026-10-04-demo\", \"text\": \"Cobalt: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion.\"}, {\"id\": \"quote-1\", \"title\": \"Aster deployment quote\", \"kind\": \"contract\", \"publisher\": \"Aster-commercial\", \"revision\": \"2026-10-04-demo\", \"text\": \"Aster: $99 per seat per month for 12 months; $0.22 per automated resolution, no free allowance; one-time setup $11500. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed.\"}, {\"id\": \"scope-2\", \"title\": \"Birch deployment scope\", \"kind\": \"deployment\", \"publisher\": \"Birch-security\", \"revision\": \"2026-10-04-demo\", \"text\": \"Birch: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion.\"}, {\"id\": \"scope-1\", \"title\": \"Aster deployment scope\", \"kind\": \"deployment\", \"publisher\": \"Aster-security\", \"revision\": \"2026-10-04-demo\", \"text\": \"Aster: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion.\"}, {\"id\": \"comparison-1\", \"title\": \"Buyer checklist\", \"kind\": \"comparison\", \"publisher\": \"comparison-desk\", \"revision\": \"2026-10-04-demo\", \"text\": \"Editorial note: compare contract scope and buyer workload before relying on headline prices. This page has no additional product measurements.\"}, {\"id\": \"quote-0\", \"title\": \"Cobalt deployment quote\", \"kind\": \"contract\", \"publisher\": \"Cobalt-commercial\", \"revision\": \"2026-10-04-demo\", \"text\": \"Cobalt: $38 per seat per month for 12 months; $2.41 per automated resolution, no free allowance; one-time setup $8900. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed.\"}, {\"id\": \"pilot-0\", \"title\": \"Cobalt buyer pilot\", \"kind\": \"pilot\", \"publisher\": \"buyer-pilot\", \"revision\": \"2026-10-04-demo\", \"text\": \"Cobalt: resolved 88 of 100 simple tickets and 32 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift.\"}, {\"id\": \"workload\", \"title\": \"Operations export and approval brief\", \"kind\": \"internal\", \"publisher\": \"buyer\", \"revision\": \"2026-10-04-demo\", \"text\": \"7100 monthly tickets; 61% are complex. 37 support seats. Human handling costs $10 per unresolved ticket. Annual software cash ceiling $100000. Rollout must complete in 64 days. Historical easy-ticket demo mix was 10% complex; use our current mix, not that demo.\"}, {\"id\": \"rollout-0\", \"title\": \"Cobalt dependency-based rollout estimate\", \"kind\": \"implementation\", \"publisher\": \"buyer-integration\", \"revision\": \"2026-10-04-demo\", \"text\": \"Cobalt: export mapping 7 days, integration and region activation 29 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration.\"}, {\"id\": \"pilot-1\", \"title\": \"Aster buyer pilot\", \"kind\": \"pilot\", \"publisher\": \"buyer-pilot\", \"revision\": \"2026-10-04-demo\", \"text\": \"Aster: resolved 76 of 100 simple tickets and 69 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift.\"}], \"reports\": [{\"choice\": \"DEFER\", \"confidence\": 0.0, \"findings\": [{\"claim\": \"EU hosting and inference processing availability unconfirmed for all candidates; requirement cannot be verified from supplied quotes\", \"citations\": [\"comparison-0\", \"workload\"]}, {\"claim\": \"Automation rate (35% minimum) cannot be calculated without vendor-specific performance data on 61% complex ticket mix\", \"citations\": [\"workload\"]}, {\"claim\": \"Migration completion within 64-day deadline unconfirmed; comparison notes migration differs from advertised 14-day setup\", \"citations\": [\"comparison-0\"]}], \"request\": {\"candidate\": \"Birch\", \"kind\": \"scope\"}}, {\"choice\": \"DEFER\", \"confidence\": 0.0, \"findings\": [{\"claim\": \"All three candidates (Aster, Birch, Cobalt) confirm EU ticket storage AND EU inference processing deployment scope as required.\", \"citations\": [\"scope-0\", \"scope-1\", \"scope-2\"]}, {\"claim\": \"Cobalt seat-only annual cost is $16,872; usage, setup, and human handling costs are not provided in available documents, preventing total-cost comparison within 3% tolerance.\", \"citations\": [\"comparison-0\", \"workload\"]}, {\"claim\": \"No cost data, automation rates, or migration timelines are documented for Aster or Birch; cannot verify feasibility against 64-day deadline or minimum 35% automation requirement.\", \"citations\": [\"workload\"]}], \"request\": {\"candidate\": \"Cobalt\", \"kind\": \"contract\"}}, {\"choice\": \"DEFER\", \"confidence\": 0.15, \"findings\": [{\"claim\": \"All three candidates exceed 64-day deadline: Aster 46 days, Birch 30 days, Cobalt 43 days sequential stages; vendor fresh-account claims irrelevant to migration scope.\", \"citations\": [\"rollout-1\", \"rollout-2\", \"rollout-0\"]}, {\"claim\": \"Cobalt seat cost $16,872/year stated; total cost including usage, setup, and human handling for 7,100 monthly tickets (61% complex) at $10/unresolved cannot be calculated without automation rate and pricing details.\", \"citations\": [\"comparison-0\", \"workload\"]}, {\"claim\": \"EU ticket storage AND EU inference processing deployment confirmation absent for all candidates; comparison-0 notes EU hosting 'subject to deployment scope' but provides no vendor commitment or technical specification.\", \"citations\": [\"comparison-0\"]}], \"request\": {\"candidate\": \"Cobalt\", \"kind\": \"contract\"}}, {\"choice\": \"DEFER\", \"confidence\": 0.15, \"findings\": [{\"claim\": \"Aster pilot shows 76% simple + 69% complex resolution; Birch 53%+41%; Cobalt 88%+32%. Workload is 39% simple, 61% complex. Aster automation estimate: 0.39\\u00d70.76+0.61\\u00d70.69=0.76, exceeds 0.35 minimum.\", \"citations\": [\"pilot-1\", \"pilot-2\", \"pilot-0\", \"workload\"]}, {\"claim\": \"Cobalt comparison-desk lists \\u20ac16,872 seat cost only; usage, setup, human handling unquoted. Cannot verify total cost against \\u20ac100k budget or 3% tolerance without complete pricing and EU deployment confirmation.\", \"citations\": [\"comparison-0\", \"workload\"]}, {\"claim\": \"All three candidates lack confirmed EU ticket storage AND EU inference processing deployment scope. Requirement explicitly demands both confirmed for this deployment; comparison-desk notes EU hosting 'subject to deployment scope' but provides no binding commitment.\", \"citations\": [\"comparison-0\", \"workload\"]}], \"request\": {\"candidate\": \"Aster\", \"kind\": \"contract\"}}, {\"choice\": \"Aster\", \"confidence\": 0.72, \"findings\": [{\"claim\": \"Aster meets cost tolerance: $309,761 total is 3.0% above minimum ($309,761 vs Birch $480,018), within 3% threshold and under $100k software budget.\", \"citations\": [\"quote-1\", \"pilot-1\", \"workload\"]}, {\"claim\": \"Aster automation rate 71.7% exceeds 35% minimum; Birch 45.7% and Cobalt 53.8% also qualify but leave higher residual human cost ($462,806 and $393,283 respectively).\", \"citations\": [\"pilot-1\", \"pilot-2\", \"pilot-0\"]}, {\"claim\": \"SSO and complete export confirmed for all three candidates; EU hosting and inference processing not confirmed in any quote or pilot\\u2014critical requirement remains unverified.\", \"citations\": [\"quote-0\", \"quote-1\", \"quote-2\"]}], \"request\": {\"candidate\": \"Aster\", \"kind\": \"contract\"}}, {\"choice\": \"DEFER\", \"confidence\": 0.15, \"findings\": [{\"claim\": \"Cobalt seat cost $16,872/year fits budget but total cost unknown: usage, setup, migration timeline and automation rate unconfirmed.\", \"citations\": [\"comparison-0\", \"workload\"]}, {\"claim\": \"EU hosting and inference processing availability stated as conditional on deployment scope; no confirmation provided for this buyer's deployment.\", \"citations\": [\"comparison-0\"]}, {\"claim\": \"Migration completion within 64-day deadline cannot be verified; only fresh-account setup (14 days) is documented, not migration duration.\", \"citations\": [\"comparison-0\", \"workload\"]}], \"request\": {\"candidate\": \"Cobalt\", \"kind\": \"contract\"}}], \"checks\": [{\"request\": {\"candidate\": \"Cobalt\", \"kind\": \"contract\"}, \"document\": {\"id\": \"quote-0\", \"title\": \"Cobalt deployment quote\", \"kind\": \"contract\", \"publisher\": \"Cobalt-commercial\", \"revision\": \"2026-10-04-demo\", \"text\": \"Cobalt: $38 per seat per month for 12 months; $2.41 per automated resolution, no free allowance; one-time setup $8900. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True. No other discounts are committed.\"}, \"interpretation\": {\"claim\": \"Cobalt deployment costs $38/seat/month (12 months), $2.41 per automated resolution, plus $8,900 one-time setup. SSO and complete export included. No committed discounts beyond stated terms.\", \"citation\": \"quote-0\", \"limitation\": \"Quote is from October 2026 and represents vendor proposal only. Actual costs depend on seat count, resolution volume, and contract execution. No approval status indicated in this record.\"}}, {\"request\": {\"candidate\": \"Birch\", \"kind\": \"scope\"}, \"document\": {\"id\": \"scope-2\", \"title\": \"Birch deployment scope\", \"kind\": \"deployment\", \"publisher\": \"Birch-security\", \"revision\": \"2026-10-04-demo\", \"text\": \"Birch: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure. Unknown is not approval; requirement is buyer policy, not a legal conclusion.\"}, \"interpretation\": {\"claim\": \"Birch deployment specifies ticket storage and inference processing both in EU region, with this deployment-specific scope superseding general EU hosting availability claims.\", \"citation\": \"scope-2\", \"limitation\": \"Document clarifies that unknown status does not constitute approval; deployment requirements reflect buyer policy rather than legal conclusions. Deployment-specific details may differ from general product brochures.\"}}], \"cost_worksheet\": [{\"candidate\": \"Aster\", \"automation_rate\": 0.7173, \"software_usd\": 68901.07, \"residual_human_usd\": 240860.4, \"total_usd\": 309761.47, \"citations\": [\"quote-1\", \"pilot-1\", \"workload\"]}, {\"candidate\": \"Birch\", \"automation_rate\": 0.4568, \"software_usd\": 17211.58, \"residual_human_usd\": 462806.4, \"total_usd\": 480017.98, \"citations\": [\"quote-2\", \"pilot-2\", \"workload\"]}, {\"candidate\": \"Cobalt\", \"automation_rate\": 0.5384, \"software_usd\": 136322.75, \"residual_human_usd\": 393283.2, \"total_usd\": 529605.95, \"citations\": [\"quote-0\", \"pilot-0\", \"workload\"]}], \"role\": \"procurement reviewer\"}"
+          }
+        ],
+        "max_tokens": 3072,
+        "temperature": 0,
+        "reasoning": {
+          "enabled": false
+        },
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "order": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "max_price": {
+            "prompt": 1,
+            "completion": 5
+          }
+        },
+        "stream": false,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "reviewer_output",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "choice": {
+                  "type": "string",
+                  "enum": [
+                    "Aster",
+                    "Birch",
+                    "Cobalt",
+                    "DEFER"
+                  ]
+                },
+                "confidence": {
+                  "type": "number"
+                },
+                "request": {
+                  "type": "object",
+                  "properties": {
+                    "candidate": {
+                      "type": "string",
+                      "enum": [
+                        "Aster",
+                        "Birch",
+                        "Cobalt"
+                      ]
+                    },
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "contract",
+                        "scope",
+                        "pilot",
+                        "rollout"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "candidate",
+                    "kind"
+                  ],
+                  "additionalProperties": false
+                },
+                "limitations": {
+                  "type": "string"
+                },
+                "candidate_facts": {
+                  "type": "object",
+                  "properties": {
+                    "Aster": {
+                      "type": "object",
+                      "properties": {
+                        "scope": {
+                          "$ref": "#/$defs/scope"
+                        },
+                        "quote": {
+                          "$ref": "#/$defs/quote"
+                        },
+                        "pilot": {
+                          "$ref": "#/$defs/pilot"
+                        },
+                        "rollout": {
+                          "$ref": "#/$defs/rollout"
+                        }
+                      },
+                      "required": [
+                        "scope",
+                        "quote",
+                        "pilot",
+                        "rollout"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "Birch": {
+                      "type": "object",
+                      "properties": {
+                        "scope": {
+                          "$ref": "#/$defs/scope"
+                        },
+                        "quote": {
+                          "$ref": "#/$defs/quote"
+                        },
+                        "pilot": {
+                          "$ref": "#/$defs/pilot"
+                        },
+                        "rollout": {
+                          "$ref": "#/$defs/rollout"
+                        }
+                      },
+                      "required": [
+                        "scope",
+                        "quote",
+                        "pilot",
+                        "rollout"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "Cobalt": {
+                      "type": "object",
+                      "properties": {
+                        "scope": {
+                          "$ref": "#/$defs/scope"
+                        },
+                        "quote": {
+                          "$ref": "#/$defs/quote"
+                        },
+                        "pilot": {
+                          "$ref": "#/$defs/pilot"
+                        },
+                        "rollout": {
+                          "$ref": "#/$defs/rollout"
+                        }
+                      },
+                      "required": [
+                        "scope",
+                        "quote",
+                        "pilot",
+                        "rollout"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "Aster",
+                    "Birch",
+                    "Cobalt"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "choice",
+                "confidence",
+                "request",
+                "limitations",
+                "candidate_facts"
+              ],
+              "additionalProperties": false,
+              "$defs": {
+                "scope": {
+                  "type": "object",
+                  "properties": {
+                    "storage_region": {
+                      "type": "string"
+                    },
+                    "processing_region": {
+                      "type": "string"
+                    },
+                    "unknown_fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "storage_region",
+                          "processing_region"
+                        ]
+                      }
+                    },
+                    "citation": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "comparison-2",
+                        "pilot-2",
+                        "rollout-2",
+                        "rollout-1",
+                        "comparison-0",
+                        "quote-2",
+                        "scope-0",
+                        "quote-1",
+                        "scope-2",
+                        "scope-1",
+                        "comparison-1",
+                        "quote-0",
+                        "pilot-0",
+                        "workload",
+                        "rollout-0",
+                        "pilot-1"
+                      ]
+                    },
+                    "excerpt": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "storage_region",
+                    "processing_region",
+                    "unknown_fields",
+                    "citation",
+                    "excerpt"
+                  ],
+                  "additionalProperties": false
+                },
+                "quote": {
+                  "type": "object",
+                  "properties": {
+                    "seat_price": {
+                      "type": "number"
+                    },
+                    "outcome_price": {
+                      "type": "number"
+                    },
+                    "setup_usd": {
+                      "type": "number"
+                    },
+                    "sso": {
+                      "type": "boolean"
+                    },
+                    "complete_export": {
+                      "type": "boolean"
+                    },
+                    "unknown_fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "seat_price",
+                          "outcome_price",
+                          "setup_usd",
+                          "sso",
+                          "complete_export"
+                        ]
+                      }
+                    },
+                    "citation": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "comparison-2",
+                        "pilot-2",
+                        "rollout-2",
+                        "rollout-1",
+                        "comparison-0",
+                        "quote-2",
+                        "scope-0",
+                        "quote-1",
+                        "scope-2",
+                        "scope-1",
+                        "comparison-1",
+                        "quote-0",
+                        "pilot-0",
+                        "workload",
+                        "rollout-0",
+                        "pilot-1"
+                      ]
+                    },
+                    "excerpt": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "seat_price",
+                    "outcome_price",
+                    "setup_usd",
+                    "sso",
+                    "complete_export",
+                    "unknown_fields",
+                    "citation",
+                    "excerpt"
+                  ],
+                  "additionalProperties": false
+                },
+                "pilot": {
+                  "type": "object",
+                  "properties": {
+                    "simple_resolved": {
+                      "type": "integer"
+                    },
+                    "simple_total": {
+                      "type": "integer"
+                    },
+                    "complex_resolved": {
+                      "type": "integer"
+                    },
+                    "complex_total": {
+                      "type": "integer"
+                    },
+                    "unknown_fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "simple_resolved",
+                          "simple_total",
+                          "complex_resolved",
+                          "complex_total"
+                        ]
+                      }
+                    },
+                    "citation": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "comparison-2",
+                        "pilot-2",
+                        "rollout-2",
+                        "rollout-1",
+                        "comparison-0",
+                        "quote-2",
+                        "scope-0",
+                        "quote-1",
+                        "scope-2",
+                        "scope-1",
+                        "comparison-1",
+                        "quote-0",
+                        "pilot-0",
+                        "workload",
+                        "rollout-0",
+                        "pilot-1"
+                      ]
+                    },
+                    "excerpt": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "simple_resolved",
+                    "simple_total",
+                    "complex_resolved",
+                    "complex_total",
+                    "unknown_fields",
+                    "citation",
+                    "excerpt"
+                  ],
+                  "additionalProperties": false
+                },
+                "rollout": {
+                  "type": "object",
+                  "properties": {
+                    "stage_days": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      },
+                      "minItems": 1
+                    },
+                    "unknown_fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "stage_days"
+                        ]
+                      }
+                    },
+                    "citation": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "comparison-2",
+                        "pilot-2",
+                        "rollout-2",
+                        "rollout-1",
+                        "comparison-0",
+                        "quote-2",
+                        "scope-0",
+                        "quote-1",
+                        "scope-2",
+                        "scope-1",
+                        "comparison-1",
+                        "quote-0",
+                        "pilot-0",
+                        "workload",
+                        "rollout-0",
+                        "pilot-1"
+                      ]
+                    },
+                    "excerpt": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "stage_days",
+                    "unknown_fields",
+                    "citation",
+                    "excerpt"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "wire_bytes": 21702,
+      "wire_sha256": "3a3e5ecaac5cc0f885459024d34357dfedf2a22134d49547acea818391b0938b",
+      "maximum_reservation_usd": 0.04864,
+      "tldr": "Formatting-only acquisition repair on seasonal-usage-cost: successful shared schema, shorter limitations instruction, unchanged strict300-character validator; retain original failed screen.",
+      "wire_variant": "shared_groups_v1"
+    }
+  ]
+}
