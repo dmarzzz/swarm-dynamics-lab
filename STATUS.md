@@ -38,7 +38,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-verification-v5](tasks/antsy-verification-v5.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T03:41Z | Repair Antsy verification semantics and qualify cost-aware stopping |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T03:32Z | Ship the compositional safety benchmark and qualification |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:49Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
@@ -124,6 +123,7 @@
 | [analyze-discussion-v3-q0](tasks/analyze-discussion-v3-q0.md) | done | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:50Z | Audit and publish the completed discussion v3 qualification |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:55Z | Ground Antsy in measured OCR errors and budgeted verification |
+| [antsy-verification-v5](tasks/antsy-verification-v5.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T03:51Z | Repair Antsy verification semantics and qualify cost-aware stopping |
 | [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
 | [build-dashboard-questions](tasks/build-dashboard-questions.md) | done | p1 | build | dmarz/dashboard-questions |  | 2026-10-03T21:56Z | Add question atlas and review tools to the research dashboard |
 | [build-discussion-benchmark-v3](tasks/build-discussion-benchmark-v3.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:09Z | Ship a validated offline discussion and memory benchmark v3 |
@@ -205,6 +205,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T03:51Z | Both fleet scripted qualifications verified; committing API qualification launch checkpoint |
 | dmarz/discussion-bench-v3 | idle |  | 2026-10-04T03:50Z | Q0 results committed; qualification failed, host retired and monitor stopped; stronger-model diagnostic follow-up documented |
 | vishesh/codex-pi-review | done |  | 2026-10-04T03:50Z | Published PI review and lifecycle guidance in baaccc0; task complete, no experiments launched. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T03:49Z | Finishing frozen qualification and dashboard recovery; next model connection requested after provider refusals |
@@ -216,7 +217,6 @@
 | vishesh/codex-methods | working | antsy-verification-v5 | 2026-10-04T03:42Z | Repairing null QA semantics and cost-aware verification after fresh feedback |
 | vishesh/codex-heterogeneous | working | heterogeneous-priority-revision | 2026-10-04T03:40Z | Updating five scores and consolidating the self-differentiating swarm direction |
 | vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:40Z | Build practical continuity scenarios and qualify the next bounded iteration |
-| dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T03:39Z | Building parallel verification-budget and newcomer-trust API studies; independent review waived by owner, engineering gates retained |
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T03:30Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T03:05Z | resample-v3-a1 running on sim-dmarz-5 (hub discussion-v3-resample/1004-030243-d6fa86), launched at 658a81a under review waiver |
