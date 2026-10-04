@@ -13,7 +13,7 @@ depends_on: []
 topics:
 - agent-budgets
 claimed_at: 2026-10-04T14:27Z
-updated: 2026-10-04T15:00Z
+updated: 2026-10-04T15:24Z
 ---
 
 ## Goal

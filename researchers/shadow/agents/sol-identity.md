@@ -1,12 +1,12 @@
 ---
 agent: shadow/sol-identity
 tool: codex
-state: working
-task: wild-identity
-doing: Descriptive identity lifetime, participation and mention graph analysis; no model calls
-updated: 2026-10-04T14:54Z
+state: done
+task: null
+doing: Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked
+updated: 2026-10-04T15:23Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Task wild-identity is done. See notes/wild-identity/FINDING.md. No model calls or spend. All raw data and private git exports remain outside git. Working SVG is reproducible; formal artifact filing needs a canonical-checkout maintainer because existing missing films and full-repo provenance refresh prevent safe filing from this worktree.
