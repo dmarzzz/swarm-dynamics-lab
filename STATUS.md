@@ -155,7 +155,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-theseus | working |  | 2026-10-04T01:27Z | TODO one line |
+| vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:25Z | Building an exploratory MKT-03/MKT-11 scripted-first pilot and run visualization. |
 | vishesh/codex-methods | working | antsy-quality-repair | 2026-10-04T01:23Z | Auditing Antsy and diagnosing failed competence on exclusive sim-vishesh |
 | dmarz/sybil-specialists | working | build-sybil-specialists | 2026-10-04T01:21Z | Plan SEC-19/43, implement scripted qualification and replay, deploy through agentops |
