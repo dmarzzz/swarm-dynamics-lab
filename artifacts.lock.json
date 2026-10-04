@@ -3868,6 +3868,124 @@
    "sha256": "d079adb417eb5f0a62388d17ee056b00c54c6e0ee3f9cb173c557f6cbfb8247b",
    "size_bytes": 121202
   },
+  "theseus-film@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791107597,
+     "sha256": "adba02eb011dc5d26c5973ff1fd07108cad3af94290bff8d64508dd7bb0706c0",
+     "size": 2661,
+     "uri": "researchers/dmarz/notes/theseus-film/_decision.md"
+    },
+    {
+     "mtime": 1791106354,
+     "sha256": "4e80f30de76a233608c80b9f4762099fa2026df3d61e1136a019a974f30aad71",
+     "size": 7842,
+     "uri": "researchers/dmarz/notes/theseus-film/script.json"
+    },
+    {
+     "mtime": 1791106324,
+     "sha256": "eb5e8f911b227b22d707baf5faca9347889626eeb5d387651ac97bb1c341e5b2",
+     "size": 5408,
+     "uri": "researchers/dmarz/notes/theseus-film/film_data.py"
+    },
+    {
+     "mtime": 1791106555,
+     "sha256": "193b20dc2ee52364747ccc659e5dbbe415a2404e26f8b84c071b4805ace11a2e",
+     "size": 8662,
+     "uri": "researchers/dmarz/notes/theseus-film/make_film.py"
+    },
+    {
+     "mtime": 1791107136,
+     "sha256": "a36feb23e3da7c23e07422c0c7930b0dbb36da1cf34d1367d951d251878d2f4c",
+     "size": 24569,
+     "uri": "researchers/dmarz/notes/theseus-film/film.html"
+    },
+    {
+     "mtime": 1791107597,
+     "sha256": "142bf28cc701ca295f353385800b1f7da74261edddc55d045bf91f5934c2b8aa",
+     "size": 2533,
+     "uri": "researchers/dmarz/notes/market-split-film/narrated/vo.py"
+    },
+    {
+     "mtime": 1791107597,
+     "sha256": "7e981c0985fc85f830aa52fb94779fbea0cc5d8bf9d877b9efc291f5366a16aa",
+     "size": 8519,
+     "uri": "researchers/dmarz/notes/market-split-film/narrated/build.py"
+    },
+    {
+     "mtime": 1791102930,
+     "sha256": "bf14d79818e219b1bb1f56cf818bfbf6c8f661fc306338e29c2469dee7c3d031",
+     "size": 6279,
+     "uri": "researchers/dmarz/notes/market-split-film/build.py"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89",
+     "size": 5194,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2",
+     "size": 1528,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+    },
+    {
+     "mtime": 1791102041,
+     "sha256": "432fc6742b7e632d669e2c46507e010762a2ce6b953ff7f52c6d6cb14d4111e5",
+     "size": 175934,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/rows.json"
+    },
+    {
+     "mtime": 1791102041,
+     "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad",
+     "size": 3296,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json"
+    },
+    {
+     "mtime": 1791102041,
+     "sha256": "bc452a324567602da4afbb168aabc0d5161431505b17e7961da2331142b453ad",
+     "size": 5635,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/manifest.json"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+     "size": 372168,
+     "uri": "artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz"
+    },
+    {
+     "mtime": 1791102041,
+     "sha256": "517cc2ba1563947af78f740f01230cbdc5cb2947621c2ec851de26faf15f2db2",
+     "size": 16323,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/README.md"
+    },
+    {
+     "mtime": 1791102041,
+     "sha256": "405d7e0788300fb538a16372dccf42bf97a72cc2117819b24a22728a0f0a0d45",
+     "size": 5600,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md"
+    },
+    {
+     "mtime": 1791105364,
+     "sha256": "9e83e324f126035f2dd2e5adcce4ec08c20c461f9eb07f93429a690236ea2c76",
+     "size": 6195,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md"
+    }
+   ],
+   "media": {
+    "duration_s": 224.2,
+    "height": 1080,
+    "width": 1920
+   },
+   "mime": "video/mp4",
+   "mtime": 1791107547,
+   "path": "artifacts/theseus-film/theseus-film-v1.mp4",
+   "prompt_sha256": "281778622afb8920e929d821b6fa3b0fafd1569229a16610b26812079d3104c3",
+   "sha256": "cad999fced48f99b6c33c4d2c900a896266ab85b13a594ab91c8ed6b5498bce7",
+   "size_bytes": 45865466
+  },
   "theseus-pilot-evidence@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -6747,7 +6865,7 @@
    "size_bytes": 1542505
   }
  },
- "generated": "2026-10-04T02:16:06-0700",
+ "generated": "2026-10-04T02:53:20-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

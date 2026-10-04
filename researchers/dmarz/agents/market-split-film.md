@@ -3,8 +3,8 @@ agent: dmarz/market-split-film
 tool: claude-code
 state: done  # working | idle | blocked | done
 task: null
-doing: filed v2 of the market-split film, a narrated version (wall of all 36 runs, zoom into market 36, the agent's message and reply, then the result); no model calls
-updated: 2026-10-04T09:25Z
+doing: filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films
+updated: 2026-10-04T10:35Z
 ---
 
 ## Notes
@@ -24,3 +24,8 @@ not present locally. Only this film's lock entry and attestation were committed;
 The narration voice is synthetic (Kokoro `af_heart` through mlx-audio). `vo.py` needs an environment with mlx-audio,
 misaki[en] and the spaCy model en_core_web_sm; the timeline is derived from the clip lengths, so recorded clips named
 `<key>.wav` can replace the synthetic ones without touching the page.
+
+Second film: `researchers/dmarz/notes/theseus-film/` (`_decision.md`, `script.json`, `film_data.py`, `make_film.py`, `film.html`). It
+reuses the market-split film's narration and mix tools (`narrated/vo.py --script`, `narrated/build.py`) and the same recorder.
+The study belongs to vishesh; a note about the film is in his inbox. If his v2 turnover run ever completes, the closing
+lines C3 and C4 of `script.json` are the ones to revise.

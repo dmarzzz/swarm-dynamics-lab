@@ -24,8 +24,9 @@ def seconds(path):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--out', required=True); ap.add_argument('--only', default='')
+    ap.add_argument('--script', default=str(HERE / 'script.json'), help='another film can reuse this with its own script')
     args = ap.parse_args()
-    script = json.loads((HERE / 'script.json').read_text())
+    script = json.loads(Path(args.script).read_text())
     voice, segs = script['voice'], [s for s in script['segments'] if s['say']]
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
     only = set(filter(None, args.only.split(',')))

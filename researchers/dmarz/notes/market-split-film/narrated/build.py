@@ -28,8 +28,8 @@ import build as first                                # noqa: E402  (the first fi
 VO_OFFSET = 0.15                                     # the voice starts this long after its subtitle
 
 
-def timeline(vo):
-    script = json.loads((HERE / 'script.json').read_text())
+def timeline(vo, script=None):
+    script = json.loads(Path(script or HERE / 'script.json').read_text())
     durations = json.loads((Path(vo) / 'durations.json').read_text())
     t, out = script['lead'], []
     for s in script['segments']:
@@ -94,7 +94,7 @@ def page(args):
 
 
 def mix(args):
-    vo, tl = Path(args.vo), [s for s in timeline(args.vo) if s['spoken']]
+    vo, tl = Path(args.vo), [s for s in timeline(args.vo, getattr(args, 'script', None)) if s['spoken']]
     total = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', args.picture],
                                  check=True, capture_output=True, text=True).stdout)
     inputs, delays = [], []

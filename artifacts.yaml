@@ -2319,4 +2319,44 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/manifest.json
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json
         commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
+  - id: theseus-film
+    category: content
+    type: film
+    title: 'Swarm of Theseus: a crew replaced one member at a time'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-film/theseus-film-v1.mp4
+        built_at: '2026-10-04T09:53:19Z'
+        note: 'Narrated film, 3 min 44 s, of vishesh''s Swarm of Theseus pilot (attempt S1-a1: 36 runs, 864 calls, Claude
+          Haiku 4.5). Opens on all 36 runs playing at once (six conditions for what a newcomer is handed, six worlds), goes
+          into the seed-bank run with notes plus one question, shows the seeded notebook, a newcomer''s question, the departing
+          founder''s answer and what the newcomer returned (copied from the saved requests and responses), then the same world
+          with nothing handed down, then returns to the wall for the result and the study''s own stated limits. Spoken narration
+          with matching subtitles; synthetic voice (Kokoro af_heart), levelled to -14 LUFS. make_film.py refuses to build
+          if the records stop supporting a narrated fact. The study is vishesh''s; this film reads his committed results and
+          evidence archive and changes nothing of his. Exploratory pilot; the study rates its own evidence 1 of 4.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:98fe1379-eadd-4848-ad40-51815e288d96
+        prompt: make one more for the ship of thesues work by vishes
+        ingredients:
+          - researchers/dmarz/notes/theseus-film/_decision.md
+          - researchers/dmarz/notes/theseus-film/script.json
+          - researchers/dmarz/notes/theseus-film/film_data.py
+          - researchers/dmarz/notes/theseus-film/make_film.py
+          - researchers/dmarz/notes/theseus-film/film.html
+          - researchers/dmarz/notes/market-split-film/narrated/vo.py
+          - researchers/dmarz/notes/market-split-film/narrated/build.py
+          - researchers/dmarz/notes/market-split-film/build.py
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg
+          - researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/rows.json
+          - researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/manifest.json
+          - artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/README.md
+          - researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md
+        commit: e12f660813ea4924659cb0401a0a96c1336b60ca-dirty
 requires: '1.2'
