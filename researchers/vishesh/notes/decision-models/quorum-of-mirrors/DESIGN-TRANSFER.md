@@ -26,3 +26,17 @@ Source evidence: [M2](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Exact root-aware arithmetic already solves complete trusted-lineage cases. Historical S0 versus Q1 is not a matched causal comparison. |
 | What the collective contributes | Source sharing changes dependence; test native peer content against own re-evaluation only after the reader is competent. |
 | Boundaries and stopping | Consumed repair remains closed. A new diagnostic needs its own concrete plan, sample rationale and approval; existing finite fixture counts are not world n. |
+
+## Focused research refresh — 2026-10-04
+
+**RED — native study needs a new question.** [Cross-study review and opened sources](../../pi-research-refresh-2026-10-04/README.md#quorum). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Adopt the already-built receipt gate; keep the arithmetic experiment parked. The new 23-check provenance/audit result is software evidence, not a swarm result. |
+| Improve next design | Investigate semantic report-to-receipt resolution only when authoritative receipts exist. Include paraphrased copies, identical wording from distinct acquisitions, missing receipts and distinct acquisitions sharing a common cause. Acquisition identity alone does not prove independence. |
+| Control the inference | Use exact lookup and lexical matching plus the same downstream arithmetic. First curate 24 development bundles across four provenance failure families; only if meaningful ambiguity survives those baselines propose a separately sealed collection split by acquisition/event family. No invented natural-corpus claim. |
+| Sample and claim boundary | Primary decision: useful resolution coverage at a declared false-independent-admission loss; retain abstentions and verification cost. If deterministic lookup resolves the application, ship it and stop. If origins are unknowable, abstain; extra agents cannot restore absent evidence. |
+| Exact remaining blocker | No admissible semantic corpus, baseline headroom or qualified resolver yet. No machine or permission request resolves this scientific gap. Historical native Q1:16 valid,0/8 graded correct; eight ungraded. |
+
+Prior-art inputs: [[bertalanic-2026-ringelmann]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

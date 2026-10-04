@@ -102,3 +102,12 @@ Continued the ten existing study tasks, preserving their own source, context, im
 The coordinator challenged PC6 decision value, verified exact study commits and Cytonomy identity, reran nine Quorum audit/solver checks, six Antsy audit checks and twelve Poietic synthetic renewal checks, and checked source/link/registry consistency. Source-pinned cycle report retains per-study counts and cost categories without pooling reservations, actuals or budgets. Required central dispatch, a rejected specific-host allocation and an expired time window remain distinct from scientific/design approval. Pending owner decisions are not fabricated as approvals. Idle claims were released by their operators; resume through each owning packet after current admission.
 
 This completes coordination and publication of the cycle outcomes or exact blockers, not the eight gated native runs. The next owner decision can resume only its named scope; no automatic successor or additional spending allowance.
+
+
+## Focused research refresh
+
+Refreshed the ten active study pointers and latest scientific closeouts, including Quorum's newer receipt-validation gate and Poietic's owner-authorized bounded renewal. Read eight primary/engineering sources and two firsthand social reports at explicitly limited depths; catalogued four new papers with verified citations. Reused existing library records rather than duplicating them. The community material informs handoff and OCR failure cases, not model rankings or causal effects.
+
+Appended study-specific accepted changes, next-design improvements, controls, sample limits and blockers to all ten DESIGN-TRANSFER notes. Quorum and Phantom remain native-design stops; eight prepared scopes remain operationally gated. New hunches do not amend frozen diagnostics or create new launch/budget authority. No native calls, allocation, credential transfer or ledger mutation. Seven private queue/allocation metadata records refreshed at16:32 UTC without exposing bodies or infrastructure identifiers; central acknowledgment absent. Dissenter's wait is retained from its published operator closeout.
+
+Validation: four paper citations verified with zero problems,103 relative links resolve,10 evidence hashes match,0 repository errors and5 existing warnings, diff whitespace clean. Published source ledger separates this pass's reading depth from older full-read entries. Next action is packet-specific dispatch acknowledgment/admission; repeating literature/readiness loops cannot substitute for it.

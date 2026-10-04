@@ -31,3 +31,17 @@ Source evidence: [M4](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 ## Current owning-session update
 
 The owner subsequently authorized the bounded C4 scope and request envelope. Native integration is now implemented and20offline tests pass; do not retain historical approval-pending/integration-incomplete language as current status. Scientific thresholds/sample limits are unchanged. C3 reporting was already completed and published. C4 has not run: the remaining gate is orbital-one acknowledgement plus approved credential and original single-writer ledger handoff. See [current pre-run assessment](S0-PRE.md).
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — prepared; dispatch blocked.** [Cross-study review and opened sources](../../pi-research-refresh-2026-10-04/README.md#healing). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Keep C4 selective routing versus always-Jev and matched-random routing. C3 remains a valid negative result for the composite. |
+| Improve next design | Treat agreement as a routing feature, not calibrated correctness. Choose any later threshold on development families, freeze it and evaluate on held-out families. Report wrong accepted answers, abstentions, useful coverage and total route cost together. |
+| Control the inference | Count both initial model and fallback/judge charges. A preference router is related prior art, not proof that document agreement identifies errors. Retain always-strong and equal-budget random controls. |
+| Sample and claim boundary | C4 stays60 qualification cases and432 conditional reports over12 families (492 maximum new calls). Twelve families do not justify a2pp noninferiority claim. Compare family-level paired costs and errors before proposing a larger study. |
+| Exact remaining blocker | Central acceptance plus authorized credential/original sole-writer ledger handoff; then fresh exclusive admission. A previous prepared runtime was stopped and its claim released. |
+
+Prior-art inputs: [[ong-2024-routellm]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

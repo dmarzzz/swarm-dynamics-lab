@@ -30,3 +30,17 @@ Source evidence: [D2](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 ## Current evidence reconciliation, 2026-10-04
 
 The historical failure summary above predates [D2 and R1](../execution-diagnostic/RESULTS-R1.md). F qualifies192/192; the2.08point repair gain in twoof six worlds fails the separate material-benefit threshold. Freeze F; hold turnover. The current [A1 acquisition plan](../execution-diagnostic/A1-PLAN.md) withholds the mapping and audits source-content support, preserving the original USD5 diagnostic authority. No old S0 stage is restarted.
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — prepared; dispatch blocked.** [Cross-study review and opened sources](../../pi-research-refresh-2026-10-04/README.md#theseus). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Keep A1 acquisition as the next experiment. R1 procedure execution does not demonstrate culture or inherited learning. |
+| Improve next design | After genuine acquisition, distinguish static archive lookup, transfer of learned policy and cumulative improvement. An equal-experience individual baseline is necessary before attributing improvements to generations. |
+| Control the inference | Freeze acquired artifacts at turnover; version each message/memory write and record visibility per agent. Keep evaluator true policy out of learner context. Compare matched total examples/compute, not a many-generation treatment with an underexposed baseline. |
+| Sample and claim boundary | A1 remains six fresh roots,12 learning calls and192 evaluation calls:204 total. Learning/evaluation outputs are nested within roots. Passing acquisition permits proposing turnover, not automatic escalation or a culture claim. |
+| Exact remaining blocker | Central Haiku dispatch, compatible scoped credential handoff and fresh allocation/admission. Historical v2 adapter and larger budget do not authorize this manual USD5 A1 lineage. |
+
+Prior-art inputs: [[cook-2024-artificial]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

@@ -1,0 +1,183 @@
+{
+  "assessed_at": "2026-10-04T16:32:04.684565+00:00",
+  "source_commit": "4499c267943ceebb00ec25e868763559936bf4d7",
+  "scope": "Ten-study focused research refresh; not live admission or full systematic survey",
+  "new_native_calls": 0,
+  "studies": [
+    {
+      "id": "quorum",
+      "study": "Quorum of Mirrors",
+      "status": "RED \u2014 native study needs a new question",
+      "design_note": "decision-models/quorum-of-mirrors/DESIGN-TRANSFER.md",
+      "evidence": "decision-models/quorum-of-mirrors/provenance/RESULTS.md",
+      "evidence_sha256": "37b155dd72d5dcdbad813226e896448016c9f9acbbc46783497c306202df0177",
+      "adopt_now": "Adopt the already-built receipt gate; keep the arithmetic experiment parked. The new 23-check provenance/audit result is software evidence, not a swarm result.",
+      "next_design": "Investigate semantic report-to-receipt resolution only when authoritative receipts exist. Include paraphrased copies, identical wording from distinct acquisitions, missing receipts and distinct acquisitions sharing a common cause. Acquisition identity alone does not prove independence.",
+      "controls": "Use exact lookup and lexical matching plus the same downstream arithmetic. First curate 24 development bundles across four provenance failure families; only if meaningful ambiguity survives those baselines propose a separately sealed collection split by acquisition/event family. No invented natural-corpus claim.",
+      "sample_size_summary": "Primary decision: useful resolution coverage at a declared false-independent-admission loss; retain abstentions and verification cost. If deterministic lookup resolves the application, ship it and stop. If origins are unknowable, abstain; extra agents cannot restore absent evidence.",
+      "blocker": "No admissible semantic corpus, baseline headroom or qualified resolver yet. No machine or permission request resolves this scientific gap. Historical native Q1:16 valid,0/8 graded correct; eight ungraded.",
+      "sources": [
+        "bertalanic-2026-ringelmann"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "phantom",
+      "study": "Phantom Coast",
+      "status": "RED \u2014 old successor has no decision value",
+      "design_note": "phantom-coast/pc5/DESIGN-TRANSFER.md",
+      "evidence": "phantom-coast/pc6/reviews/PI-POST.md",
+      "evidence_sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e",
+      "adopt_now": "Keep PC6 disabled. Retain PC5 reliable-source regressions and the stronger always-check/exact policies. Do not buy another supplied-cost minimum-selection test.",
+      "next_design": "Candidate hunch: learn whether to buy verification when reliability must be inferred from finite calibration history. Cross low/high observation noise with cheap/expensive checking and stable/shifted reliability. Agent sees calibration observations, never the latent reliability or answer table.",
+      "controls": "Compare empirical-threshold and posterior/Bayesian value-of-information controllers with the same prior, history and tool access, plus a separately labelled true-parameter ceiling. Start with offline development worlds, not model calls; distinguish inference from acquisition errors.",
+      "sample_size_summary": "Proposed feasibility scope if warranted:24 development roots and48 sealed roots,12 per cost-by-shift cell; noise balanced within cells. Paired controllers share exogenous worlds but keep separate observations and evolving memories. Root-level net loss and checks are primary; n=48 is exploratory (worst-case single-proportion95% half-width about14pp), not proof of small gains. If Bayes fully solves the application, keep it.",
+      "blocker": "No PC7 launch plan admitted. Freeze a useful task, exact loss/priors, qualification and request-cost envelope within remaining original USD5 only after offline headroom exists; then seek the updated-plan decision. No successor is automatically authorized.",
+      "sources": [
+        "dong-2026-value"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "dissenter",
+      "study": "Right Dissenter",
+      "status": "YELLOW \u2014 prepared; dispatch blocked",
+      "design_note": "dissent/DESIGN-TRANSFER.md",
+      "evidence": "dissent/rd5/RUN-STATUS.md",
+      "evidence_sha256": "d706f80d56378c72b1c3b22347efb01e02ead6114cb7293d18a2f7757a376252",
+      "adopt_now": "Preserve Q5 and conditional H5; first establish semantic competence rather than expand the policy comparison.",
+      "next_design": "For a later influence claim, distinguish unassisted reconsideration, stance-only challenge and evidence-bearing challenge. Cross challenger correctness with evidence availability; include warranted withdrawal and harmful false reversal.",
+      "controls": "Fork from the same initial answer/context; equalize additional inference allowance and available evidence. Report all eligible roots and the initially-wrong subgroup separately. Repeat branches estimate model variability, not extra independent worlds.",
+      "sample_size_summary": "Current scope remains24 Q5 requests and at most36 conditional H5 calls across six authored roots. These counts establish bounded feasibility only. A later causal extension requires a prospective sample/precision plan; do not silently add an arm to H5.",
+      "blocker": "Central launch acknowledgment, refreshed exclusive allocation and original-ledger/time admission. No new researcher sign-off is needed; old activation delivered no Q5 samples.",
+      "sources": [
+        "hao-2026-not"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "size",
+      "study": "Optimal Swarm Size",
+      "status": "YELLOW \u2014 prepared; dispatch blocked",
+      "design_note": "optimal-swarm-size/DESIGN-TRANSFER.md",
+      "evidence": "optimal-swarm-size/reviews/q-a7-preparation-post.md",
+      "evidence_sha256": "8fd45c33532d40010361464e11846926c74e11858a6dfdcd98a2e1d4b0b13650",
+      "adopt_now": "Run the frozen fixed-N1 Q-A7 input-binding diagnostic once admitted; keep broad headcount sweeps parked until useful work is demonstrated.",
+      "next_design": "A later size study should vary task dependency structure (parallel components versus sequential dependencies) as well as N. Track root-level correctness, duplicated evidence, handoff information loss and coordinator overhead. Agent number is not independent evidence.",
+      "controls": "Compare one fully tooled agent, independent sampling and coordinated teams with matched total budgets. Keep full-context and compressed-handoff variants distinct so a bad information partition is not blamed on swarm size.",
+      "sample_size_summary": "Q-A7 remains two constructed roots/eight episodes with its existing futility rule. It cannot estimate a universal optimal N or a context-pruning benefit. Select a task-conditional cost/quality frontier only after qualification.",
+      "blocker": "Central dispatcher, eligible exclusive worker and secure original-ledger/credential handoff. The historical worker is occupied; a registry entry is not available capacity.",
+      "sources": [
+        "kim-2025-towards",
+        "bertalanic-2026-ringelmann"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "theseus",
+      "study": "Swarm of Theseus",
+      "status": "YELLOW \u2014 prepared; dispatch blocked",
+      "design_note": "swarm-of-theseus/v2/DESIGN-TRANSFER.md",
+      "evidence": "swarm-of-theseus/execution-diagnostic/A1-STATUS.md",
+      "evidence_sha256": "330eefe9899a196e4d81f00410e9daf3ad686fcf07e5d8cf3ea161064f45a1e7",
+      "adopt_now": "Keep A1 acquisition as the next experiment. R1 procedure execution does not demonstrate culture or inherited learning.",
+      "next_design": "After genuine acquisition, distinguish static archive lookup, transfer of learned policy and cumulative improvement. An equal-experience individual baseline is necessary before attributing improvements to generations.",
+      "controls": "Freeze acquired artifacts at turnover; version each message/memory write and record visibility per agent. Keep evaluator true policy out of learner context. Compare matched total examples/compute, not a many-generation treatment with an underexposed baseline.",
+      "sample_size_summary": "A1 remains six fresh roots,12 learning calls and192 evaluation calls:204 total. Learning/evaluation outputs are nested within roots. Passing acquisition permits proposing turnover, not automatic escalation or a culture claim.",
+      "blocker": "Central Haiku dispatch, compatible scoped credential handoff and fresh allocation/admission. Historical v2 adapter and larger budget do not authorize this manual USD5 A1 lineage.",
+      "sources": [
+        "cook-2024-artificial"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "immune",
+      "study": "Immune Response",
+      "status": "YELLOW \u2014 prepared; host authorization blocked",
+      "design_note": "immune-response-v3/evidence-study/DESIGN-TRANSFER.md",
+      "evidence": "immune-response-v3/freshness-study/README.md",
+      "evidence_sha256": "dddbad2ffde3d43502a764672aff758ff23c5e3a61587830c44a2d5125cd2aeb",
+      "adopt_now": "Preserve A4 freshness diagnosis and its six paired constructed cases. Do not treat A3 zero health difference as successful immunity.",
+      "next_design": "For the next design, express each scenario as hidden system state, triggering observation, permitted actions and verified service outcome. Separate stale alert, hidden failure and a damaging repair; include recovery delay and unaffected service continuity.",
+      "controls": "Keep the same observed evidence across annotation arms, independent hidden truth and a simple freshness-aware controller. Score needless mutations alongside successful restoration. Borrow ITBench scenario semantics without installing its infrastructure.",
+      "sample_size_summary": "A4 stays12 episodes/60 calls, not a powered reliability estimate. A later family-held-out stress suite needs enough independent fault/workload roots for its chosen harm bound; repeated controllers are not new faults.",
+      "blocker": "The specific candidate-host claim was rejected by automatic approval review under the earlier infrastructure restriction. Explicit host resolution and central dispatch remain necessary; account verification alone is insufficient.",
+      "sources": [
+        "jha-2025-itbench"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "influence",
+      "study": "How to win agents and influence swarms",
+      "status": "YELLOW \u2014 prepared; dispatch blocked",
+      "design_note": "influence-swarms/scenario/DESIGN-TRANSFER.md",
+      "evidence": "influence-swarms/scenario/RUN-HANDOFF.md",
+      "evidence_sha256": "89b0996cb8d4f5256e523a1970e73c368bea3574804d83a8582caf6d0d9ad287",
+      "adopt_now": "Preserve D5 as a development diagnostic. D3 false FAIL classifications and reused clusters preclude a broad causal influence claim.",
+      "next_design": "For a later causal study, compare private reconsideration, stance-only advice and inspectable evidence-bearing advice. Hold task truth and evidence access fixed; randomize adviser identity/order separately from content quality.",
+      "controls": "Keep raw decision changes, correct-to-wrong corruption, wrong-to-correct repair and unnecessary deferral distinct. Describe missing self-reflection controls honestly in old data. Do not infer conformity from agreement alone.",
+      "sample_size_summary": "D5 remains six inspected clusters,24 decisions/48 nominal calls within its96-attempt envelope. Those are development clusters, not a sealed external-validation sample; no added arm or calls in this update.",
+      "blocker": "Central dispatcher acceptance and fresh bounded handoff/allocation. Previous handoff expired without credential delivery or native worker start.",
+      "sources": [
+        "hao-2026-not",
+        "bertalanic-2026-ringelmann"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "healing",
+      "study": "Healing Helping Hands",
+      "status": "YELLOW \u2014 prepared; dispatch blocked",
+      "design_note": "healing-helping-hands/c4/DESIGN-TRANSFER.md",
+      "evidence": "healing-helping-hands/c4/ADMISSION-POST.md",
+      "evidence_sha256": "a5f7570ab6bf37e11fa58fe157c9f6c1c341091aa9ad571e90d9ae351524024e",
+      "adopt_now": "Keep C4 selective routing versus always-Jev and matched-random routing. C3 remains a valid negative result for the composite.",
+      "next_design": "Treat agreement as a routing feature, not calibrated correctness. Choose any later threshold on development families, freeze it and evaluate on held-out families. Report wrong accepted answers, abstentions, useful coverage and total route cost together.",
+      "controls": "Count both initial model and fallback/judge charges. A preference router is related prior art, not proof that document agreement identifies errors. Retain always-strong and equal-budget random controls.",
+      "sample_size_summary": "C4 stays60 qualification cases and432 conditional reports over12 families (492 maximum new calls). Twelve families do not justify a2pp noninferiority claim. Compare family-level paired costs and errors before proposing a larger study.",
+      "blocker": "Central acceptance plus authorized credential/original sole-writer ledger handoff; then fresh exclusive admission. A previous prepared runtime was stopped and its claim released.",
+      "sources": [
+        "ong-2024-routellm"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "antsy",
+      "study": "Antsy",
+      "status": "YELLOW \u2014 prepared; dispatch blocked",
+      "design_note": "antsy-targeted-v8/DESIGN-TRANSFER.md",
+      "evidence": "antsy-targeted-v8/reviews/Q0-readiness-review.md",
+      "evidence_sha256": "cd69d99954c65bceeb335c98e7e945d2970e4a386acecc1588b25d969a3291f1",
+      "adopt_now": "Keep v8 Q0: first test whether the OCR pair is competent and complementary; no automatic S1.",
+      "next_design": "Before broader claims, split by merchant/layout/source document, not extracted field. Include number transcription, table association, low-quality scans and missing fields. Distinguish correct abstention from confidently wrong text.",
+      "controls": "Record paired OCR error overlap by field type and exact engine/model/preprocessing versions. Use single-engine, always-check and targeted-check controls at matched cost. Community tool rankings from one document do not select a winning engine.",
+      "sample_size_summary": "Current Q0 uses20 fresh CORD receipts/40 OCR calls. Report the full paired correctness table and uncertainty; a small competence gate cannot certify rare wrong-acceptance rates.",
+      "blocker": "Existing central queue awaits acknowledgment/staging and fresh admission. No hosted-model calls or new incremental charges are included in this Q0 scope.",
+      "sources": [
+        "ong-2024-routellm"
+      ],
+      "new_native_calls": 0
+    },
+    {
+      "id": "poietic",
+      "study": "Poietic Agents",
+      "status": "YELLOW \u2014 renewal authorized; dispatch blocked",
+      "design_note": "poietic-agents/DESIGN-TRANSFER.md",
+      "evidence": "poietic-agents/reviews/S0-02-launch-loop.md",
+      "evidence_sha256": "28daedb361c0841a6e1a9095603a2beacea05503d89d32b4100ada2b0bece3e9",
+      "adopt_now": "Latest owner direction authorizes the prepared bounded S0-02 renewal; do not repeat the obsolete general approval wait. The renewal has not been applied and qualification remains unrun.",
+      "next_design": "For later specialization efficacy, cross reusable versus novel work with independent versus interdependent tasks. Test service benefit beyond caching and static specialization. Charge startup, adaptation, migration, restoration and all failed attempts.",
+      "controls": "Agent contracts must bind effective model/version, prompt bytes, tools, initial memory and visibility. Start new role agents from the specified clean snapshot; record every memory transfer and truncation. Deterministic configuration does not guarantee deterministic hosted responses.",
+      "sample_size_summary": "S0-02 stays144 planned requests:12 case roots\u00d7three roles\u00d7four dependent checks, with the existing stop rules and no S1/S2. Latest owner reports81 offline checks including worker-loop fault rehearsals; these are not native samples.",
+      "blocker": "Central acknowledgment precedes exclusive claim and activation; a claim-before-ack action was rejected by automatic approval review. Original cumulative USD2 caps and unresolved36-call exposure survive the bounded renewal.",
+      "sources": [
+        "anthropic-2025-how",
+        "kim-2025-towards"
+      ],
+      "new_native_calls": 0
+    }
+  ],
+  "queue_checked_at": "2026-10-04T16:32:29.697418+00:00",
+  "queue_scope": "Seven issue/allocation metadata records refreshed; Right Dissenter central wait retained from its published owner closeout, not independently re-probed. No dispatcher acknowledgment observed in refreshed metadata."
+}

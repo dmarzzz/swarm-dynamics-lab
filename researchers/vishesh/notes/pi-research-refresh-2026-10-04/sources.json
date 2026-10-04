@@ -1,0 +1,72 @@
+{
+  "accessed": "2026-10-04",
+  "systematic_survey": false,
+  "new_library_papers": [
+    "cook-2024-artificial",
+    "jha-2025-itbench",
+    "dong-2026-value",
+    "hao-2026-not"
+  ],
+  "sources": [
+    {
+      "id": "kim-2025-towards",
+      "url": "https://arxiv.org/abs/2512.08296v3",
+      "read_depth": "abstract",
+      "disposition": "2026-04-08 v3;260 configurations/six benchmarks, not older180/four summary. Task alignment matters; no universal optimal headcount or45% launch rule."
+    },
+    {
+      "id": "bertalanic-2026-ringelmann",
+      "url": "https://arxiv.org/abs/2606.02646",
+      "read_depth": "abstract",
+      "disposition": "Effective diversity/correctness redundancy differ from nominal size; fit claims are source-reported and not independently reproduced here."
+    },
+    {
+      "id": "ong-2024-routellm",
+      "url": "https://arxiv.org/abs/2406.18665v4",
+      "read_depth": "abstract",
+      "disposition": "Routing trades quality against cost; benchmark preference results do not validate agreement-based factual routing here."
+    },
+    {
+      "id": "anthropic-2025-how",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "read_depth": "selected engineering sections",
+      "disposition": "Vendor experience about task boundaries, tool context and coordination. Reported15x token use is relative to chat, not a15x single-agent ratio."
+    },
+    {
+      "id": "cook-2024-artificial",
+      "url": "https://arxiv.org/abs/2406.00392v2",
+      "read_depth": "abstract",
+      "disposition": "RL analogy for matched-experience acquisition/transfer controls; not evidence of LLM culture."
+    },
+    {
+      "id": "jha-2025-itbench",
+      "url": "https://arxiv.org/html/2502.05352v1",
+      "read_depth": "abstract and sections1\u20133",
+      "disposition": "Borrow observation/state/action/outcome separation; no local benchmark deployment or reproduction."
+    },
+    {
+      "id": "dong-2026-value",
+      "url": "https://arxiv.org/html/2601.06407v1",
+      "read_depth": "abstract, introduction/formulation and calibration subsection",
+      "disposition": "Cost-sensitive acquisition motivates a candidate; model-estimated probability is not true calibration. Full methods/abstract domain discrepancy not resolved."
+    },
+    {
+      "id": "hao-2026-not",
+      "url": "https://arxiv.org/html/2606.00820v1",
+      "read_depth": "abstract and sections3\u20134",
+      "disposition": "Self-reflection/stance/reasoning controls and root clustering. Operational counterfactual categories do not reveal internal psychology."
+    },
+    {
+      "id": "reddit-ksrijith-1thl3bo",
+      "url": "https://www.reddit.com/r/aiagents/comments/1thl3bo/we_tested_singleagent_vs_multiagent_on_a_real/",
+      "read_depth": "original post and selected author replies",
+      "disposition": "First-person enterprise-task report: fragmented evidence at specialist handoffs. Uncontrolled single task, different configurations; do not generalize its10\u201320x ratio."
+    },
+    {
+      "id": "reddit-coconautico-1jz80f1",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1jz80f1/i_benchmarked_7_ocr_solutions_on_a_complex/",
+      "read_depth": "original post and selected discussion",
+      "disposition": "First-person seven-tool comparison on one academic document; layout failure cases useful, rankings subjective and not receipt-domain validation."
+    }
+  ]
+}

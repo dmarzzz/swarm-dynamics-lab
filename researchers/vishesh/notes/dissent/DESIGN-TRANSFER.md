@@ -26,3 +26,17 @@ Source evidence: [M4](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | RD5 already includes bounded always-check B0 and memory B1, with B2 reserve−B1 primary. Do not resurrect a learned admission veto that RD4 did not justify. |
 | What the collective contributes | Initial votes are scripted; this studies evidence eligibility, state and scarce verification, not spontaneous opinion formation. |
 | Boundaries and stopping | No new sample or protocol edits: Q5 24 requests, conditional H5 six authored roots/72 dependent outcomes, at most 60 additional calls under the existing lifetime stop. Freshness of operational receipts must be checked by its operator. |
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — prepared; dispatch blocked.** [Cross-study review and opened sources](../pi-research-refresh-2026-10-04/README.md#dissenter). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Preserve Q5 and conditional H5; first establish semantic competence rather than expand the policy comparison. |
+| Improve next design | For a later influence claim, distinguish unassisted reconsideration, stance-only challenge and evidence-bearing challenge. Cross challenger correctness with evidence availability; include warranted withdrawal and harmful false reversal. |
+| Control the inference | Fork from the same initial answer/context; equalize additional inference allowance and available evidence. Report all eligible roots and the initially-wrong subgroup separately. Repeat branches estimate model variability, not extra independent worlds. |
+| Sample and claim boundary | Current scope remains24 Q5 requests and at most36 conditional H5 calls across six authored roots. These counts establish bounded feasibility only. A later causal extension requires a prospective sample/precision plan; do not silently add an arm to H5. |
+| Exact remaining blocker | Central launch acknowledgment, refreshed exclusive allocation and original-ledger/time admission. No new researcher sign-off is needed; old activation delivered no Q5 samples. |
+
+Prior-art inputs: [[hao-2026-not]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

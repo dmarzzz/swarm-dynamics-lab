@@ -26,3 +26,17 @@ Source evidence: [M3](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Strong confidence/single-reader, always-check, same-count random checking and measured oracle headroom. Analyze estimator artifacts before blaming agents. |
 | What the collective contributes | Multiple OCR configurations or role labels do not create independent evidence. Native LLM judgments, tool outputs and replayed policies have different denominators. |
 | Boundaries and stopping | No changes to the queued Q0 packet. Test stop AND continue only where the architecture uses adaptive stopping. Vendor/layout clustering and actual check cost belong in any new field-study plan. |
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — prepared; dispatch blocked.** [Cross-study review and opened sources](../pi-research-refresh-2026-10-04/README.md#antsy). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Keep v8 Q0: first test whether the OCR pair is competent and complementary; no automatic S1. |
+| Improve next design | Before broader claims, split by merchant/layout/source document, not extracted field. Include number transcription, table association, low-quality scans and missing fields. Distinguish correct abstention from confidently wrong text. |
+| Control the inference | Record paired OCR error overlap by field type and exact engine/model/preprocessing versions. Use single-engine, always-check and targeted-check controls at matched cost. Community tool rankings from one document do not select a winning engine. |
+| Sample and claim boundary | Current Q0 uses20 fresh CORD receipts/40 OCR calls. Report the full paired correctness table and uncertainty; a small competence gate cannot certify rare wrong-acceptance rates. |
+| Exact remaining blocker | Existing central queue awaits acknowledgment/staging and fresh admission. No hosted-model calls or new incremental charges are included in this Q0 scope. |
+
+Prior-art inputs: [[ong-2024-routellm]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

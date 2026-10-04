@@ -30,3 +30,17 @@ Source evidence: [D2](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 ## Owning-task reconciliation with newer evidence
 
 The older PI table is superseded operationally by [A3 post-mortem](reviews/receipt-a3-post.md):16 valid episodes/120 calls; narrow null contrast and failed healthy restraint, not an interrupted A3. [A4 plan](../freshness-study/README.md) is an authorized, prepared metadata-freshness diagnostic with a distinct runtime-liveness model. It does not test team-versus-solo value, unseen topologies or production reliability. Current cycle permits one60-call attempt only; native collection is blocked on exact-host authorization, not on an additional researcher review. See current SETUP for timestamped admission evidence.
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — prepared; host authorization blocked.** [Cross-study review and opened sources](../../pi-research-refresh-2026-10-04/README.md#immune). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Preserve A4 freshness diagnosis and its six paired constructed cases. Do not treat A3 zero health difference as successful immunity. |
+| Improve next design | For the next design, express each scenario as hidden system state, triggering observation, permitted actions and verified service outcome. Separate stale alert, hidden failure and a damaging repair; include recovery delay and unaffected service continuity. |
+| Control the inference | Keep the same observed evidence across annotation arms, independent hidden truth and a simple freshness-aware controller. Score needless mutations alongside successful restoration. Borrow ITBench scenario semantics without installing its infrastructure. |
+| Sample and claim boundary | A4 stays12 episodes/60 calls, not a powered reliability estimate. A later family-held-out stress suite needs enough independent fault/workload roots for its chosen harm bound; repeated controllers are not new faults. |
+| Exact remaining blocker | The specific candidate-host claim was rejected by automatic approval review under the earlier infrastructure restriction. Explicit host resolution and central dispatch remain necessary; account verification alone is insufficient. |
+
+Prior-art inputs: [[jha-2025-itbench]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

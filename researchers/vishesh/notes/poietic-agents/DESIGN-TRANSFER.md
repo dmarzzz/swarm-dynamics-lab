@@ -30,3 +30,17 @@ Source evidence: [M1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 ## Current cycle reconciliation — 2026-10-04
 
 The owner conditionally authorized one ready S0-02 continuation within existing boundaries; the historical generic approval status above is superseded. Read-only native/ledger audit found the original execution window expired, with all 36 unresolved calls and USD 0.556455767 conservative cumulative exposure preserved. S0-02 remains unrun. The prepared repair passes 79 checks; two verify immutable expiry and two verify prior infrastructure in cumulative admission. See [reassessment](reviews/S0-02-reassessment-2026-10-04.md) for accepted PI lessons, planned sample/controls and the exact time-renewal proposal. Efficacy expansion remains parked.
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — renewal authorized; dispatch blocked.** [Cross-study review and opened sources](../pi-research-refresh-2026-10-04/README.md#poietic). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Latest owner direction authorizes the prepared bounded S0-02 renewal; do not repeat the obsolete general approval wait. The renewal has not been applied and qualification remains unrun. |
+| Improve next design | For later specialization efficacy, cross reusable versus novel work with independent versus interdependent tasks. Test service benefit beyond caching and static specialization. Charge startup, adaptation, migration, restoration and all failed attempts. |
+| Control the inference | Agent contracts must bind effective model/version, prompt bytes, tools, initial memory and visibility. Start new role agents from the specified clean snapshot; record every memory transfer and truncation. Deterministic configuration does not guarantee deterministic hosted responses. |
+| Sample and claim boundary | S0-02 stays144 planned requests:12 case roots×three roles×four dependent checks, with the existing stop rules and no S1/S2. Latest owner reports81 offline checks including worker-loop fault rehearsals; these are not native samples. |
+| Exact remaining blocker | Central acknowledgment precedes exclusive claim and activation; a claim-before-ack action was rejected by automatic approval review. Original cumulative USD2 caps and unresolved36-call exposure survive the bounded renewal. |
+
+Prior-art inputs: [[anthropic-2025-how]], [[kim-2025-towards]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

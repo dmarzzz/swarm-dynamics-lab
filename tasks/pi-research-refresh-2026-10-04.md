@@ -21,7 +21,7 @@ Review current ten-study evidence and dispatch blockers; perform focused primary
 
 ## Done when
 
-- [ ] Reconcile ten current study decisions and exact next actions.
-- [ ] Record opened sources, reading depth, evidence limits and accepted/deferred transfers.
-- [ ] Update each owned design note, validate and publish.
-- [ ] Dispatch only if the exact scope has current admission; otherwise name the unresolved gate.
+- [x] Reconcile ten current study decisions and exact next actions.
+- [x] Record opened sources, reading depth, evidence limits and accepted/deferred transfers.
+- [x] Update each owned design note, validate and publish.
+- [x] Dispatch only if the exact scope has current admission; otherwise name the unresolved gate.

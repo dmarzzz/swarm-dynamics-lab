@@ -26,3 +26,17 @@ Source evidence: [M1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Equal-total-resource single controller and deterministic scheduler; separate evidence supply, capacity and concurrency from headcount. |
 | What the collective contributes | The collective mechanism is task dependency and concurrent coordination; demonstrate it rather than treating the number of worker names as the treatment. |
 | Boundaries and stopping | Q-A6 has zero full successes on two roots. Existing USD20 authority is not permission for a new design; prioritize diagnosis over a general model × N grid. |
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — prepared; dispatch blocked.** [Cross-study review and opened sources](../pi-research-refresh-2026-10-04/README.md#size). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Run the frozen fixed-N1 Q-A7 input-binding diagnostic once admitted; keep broad headcount sweeps parked until useful work is demonstrated. |
+| Improve next design | A later size study should vary task dependency structure (parallel components versus sequential dependencies) as well as N. Track root-level correctness, duplicated evidence, handoff information loss and coordinator overhead. Agent number is not independent evidence. |
+| Control the inference | Compare one fully tooled agent, independent sampling and coordinated teams with matched total budgets. Keep full-context and compressed-handoff variants distinct so a bad information partition is not blamed on swarm size. |
+| Sample and claim boundary | Q-A7 remains two constructed roots/eight episodes with its existing futility rule. It cannot estimate a universal optimal N or a context-pruning benefit. Select a task-conditional cost/quality frontier only after qualification. |
+| Exact remaining blocker | Central dispatcher, eligible exclusive worker and secure original-ledger/credential handoff. The historical worker is occupied; a registry entry is not available capacity. |
+
+Prior-art inputs: [[kim-2025-towards]], [[bertalanic-2026-ringelmann]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

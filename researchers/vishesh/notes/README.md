@@ -35,6 +35,10 @@ This collection documents candidate work on swarm evidence, communication, share
 | Explore containment and recovery | [Swarm immune response](swarm-immune-response/README.md) | Exploratory design separating source isolation, private-memory repair and shared-store repair, with recurrence and correct-minority controls, existing-toolkit integration and primary-source boundaries. |
 | Browse research connections | [Dashboard research-area guide](../../../dashboard/RESEARCH-AREAS.md) | Eight cross-cutting focus areas, all sixteen project briefs, contributed designs and explicit formal-hypothesis tagging. |
 
+## Current ten-study update
+
+[Focused research refresh and launch blockers](pi-research-refresh-2026-10-04/README.md) records the next decision for each active study, four new primary sources and two community failure reports. It supersedes older generic approval-wait descriptions where explicitly noted; it is not live machine admission.
+
 ## How the artifacts relate
 
 The **library** contains canonical source records. **Reading notes** document how a source was accessed and interpreted. The **digest** compares findings across sources. **Project briefs** turn those observations into possible questions and design sketches. The **HTML files** explain and illustrate; they do not supply experimental evidence.

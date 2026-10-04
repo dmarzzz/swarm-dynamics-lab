@@ -26,3 +26,17 @@ Source evidence: [M1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Same-evidence single reviewer, deterministic policy calculation and records-only control. Future peer tests distinguish resampling, private reflection, peer answers and peer evidence. |
 | What the collective contributes | A chair error is not automatically a cascade. A later collective claim requires measured transmission/conversion and a matched communication intervention. |
 | Boundaries and stopping | D5 uses six inspected clusters; no new n or arms here. Do not revive the root score-enforcement repair or build the 50–72-hour SEO harness merely to get another swarm claim. |
+
+## Focused research refresh — 2026-10-04
+
+**YELLOW — prepared; dispatch blocked.** [Cross-study review and opened sources](../../pi-research-refresh-2026-10-04/README.md#influence). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Preserve D5 as a development diagnostic. D3 false FAIL classifications and reused clusters preclude a broad causal influence claim. |
+| Improve next design | For a later causal study, compare private reconsideration, stance-only advice and inspectable evidence-bearing advice. Hold task truth and evidence access fixed; randomize adviser identity/order separately from content quality. |
+| Control the inference | Keep raw decision changes, correct-to-wrong corruption, wrong-to-correct repair and unnecessary deferral distinct. Describe missing self-reflection controls honestly in old data. Do not infer conformity from agreement alone. |
+| Sample and claim boundary | D5 remains six inspected clusters,24 decisions/48 nominal calls within its96-attempt envelope. Those are development clusters, not a sealed external-validation sample; no added arm or calls in this update. |
+| Exact remaining blocker | Central dispatcher acceptance and fresh bounded handoff/allocation. Previous handoff expired without credential delivery or native worker start. |
+
+Prior-art inputs: [[hao-2026-not]], [[bertalanic-2026-ringelmann]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

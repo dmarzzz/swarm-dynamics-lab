@@ -26,3 +26,17 @@ Source evidence: [D1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Analytic minimum-loss, always-check and always-explore references; do not buy the same failed configuration’s full grid again. |
 | What the collective contributes | Later sampling feedback requires belief-dependent versus matched/random acquisition and corrective-evidence arrival time. Current one-step decisions are not a swarm cascade. |
 | Boundaries and stopping | The 768-choice candidate is not a default next action. Re-scope only under a prospective approved update; original cumulative cap and reliable-source protection persist. |
+
+## Focused research refresh — 2026-10-04
+
+**RED — old successor has no decision value.** [Cross-study review and opened sources](../../pi-research-refresh-2026-10-04/README.md#phantom). This is an editable planning supplement; frozen packets, historical results, launch scope and budget are unchanged.
+
+| Decision | Specific update |
+|---|---|
+| Adopt now | Keep PC6 disabled. Retain PC5 reliable-source regressions and the stronger always-check/exact policies. Do not buy another supplied-cost minimum-selection test. |
+| Improve next design | Candidate hunch: learn whether to buy verification when reliability must be inferred from finite calibration history. Cross low/high observation noise with cheap/expensive checking and stable/shifted reliability. Agent sees calibration observations, never the latent reliability or answer table. |
+| Control the inference | Compare empirical-threshold and posterior/Bayesian value-of-information controllers with the same prior, history and tool access, plus a separately labelled true-parameter ceiling. Start with offline development worlds, not model calls; distinguish inference from acquisition errors. |
+| Sample and claim boundary | Proposed feasibility scope if warranted:24 development roots and48 sealed roots,12 per cost-by-shift cell; noise balanced within cells. Paired controllers share exogenous worlds but keep separate observations and evolving memories. Root-level net loss and checks are primary; n=48 is exploratory (worst-case single-proportion95% half-width about14pp), not proof of small gains. If Bayes fully solves the application, keep it. |
+| Exact remaining blocker | No PC7 launch plan admitted. Freeze a useful task, exact loss/priors, qualification and request-cost envelope within remaining original USD5 only after offline headroom exists; then seek the updated-plan decision. No successor is automatically authorized. |
+
+Prior-art inputs: [[dong-2026-value]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.

@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-04T16:33:39.503562+00:00",
+  "study_count": 10,
+  "source_count": 10,
+  "new_library_papers": 4,
+  "evidence_sha256_matches": 10,
+  "relative_links_checked": 103,
+  "broken_relative_links": [],
+  "new_native_calls": 0,
+  "validation_kind": "documentation and retained-evidence checks; no scientific regrading or native collection",
+  "lab_check": {
+    "errors": 0,
+    "warnings": 5,
+    "warning_scope": "pre-existing unresolved library links"
+  },
+  "citation_verification": {
+    "papers": 4,
+    "problems": 0,
+    "method": "lab.py verify --agent vishesh/codex-pi-review with network access"
+  },
+  "git_diff_check": "passed"
+}
