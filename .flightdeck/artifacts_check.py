@@ -152,6 +152,20 @@ def _vkey(v):
     return tuple(int(x) for x in parts) if parts else (-1,)
 
 
+def _pullable(folder, aid, ver, path):
+    """a version whose file is not here but can be fetched: git-ignored in this repo and pinned in the lock by sha256.
+    Films and other large outputs are kept out of git and served from the hub mirror (`fd pull`); a fresh clone has
+    none of them, and calling that an error blocked every session in such a clone (trace analysis #16)."""
+    try:
+        with open(os.path.join(folder, "artifacts.lock.json")) as f:
+            lock = json.load(f)
+        if not ((lock.get("entries") or {}).get(f"{aid}@{ver}") or {}).get("sha256"):
+            return False
+        r = subprocess.run(["git", "-C", folder, "check-ignore", "-q", "--no-index", path], capture_output=True, timeout=10)
+        return r.returncode == 0
+    except Exception:
+        return False
+
 def check_manifest(folder, data):
     """-> (errors, warnings). `data` is the parsed YAML."""
     errors, warnings = [], []
@@ -227,7 +241,9 @@ def check_manifest(folder, data):
                         errors.append(f"{vw}: url must start with http(s)://")
                     if v.get("path"):
                         fp = expand(folder, v["path"])
-                        if not fp or not os.path.exists(fp):
+                        if (not fp or not os.path.exists(fp)) and _pullable(folder, aid, v.get("v"), str(v["path"])):
+                            warnings.append(f"{vw}: {v['path']} is not here (git-ignored, pinned in the lock): `fd-project pull {aid}` fetches it")
+                        elif not fp or not os.path.exists(fp):
                             errors.append(f"{vw}: path does not exist: {v['path']}")
                         elif not VERSIONED_NAME_RE.search(str(v["path"])):
                             warnings.append(f"{vw}: {v['path']} does not carry its version in its name")

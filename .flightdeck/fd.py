@@ -690,6 +690,10 @@ def check_folder(folder, strict=False):
     data, me, mw, mp = ac.load_manifest(folder)                                        # rule 2
     errors += me
     warnings += mw
+    # a version that is git-ignored here and pinned in the lock can be fetched (`fd pull`): a note, never a --strict error,
+    # or every session in a fresh clone is blocked by files it cannot make (agent-dashboard ed46562)
+    notes += [w for w in warnings if "pinned in the lock" in w]
+    warnings = [w for w in warnings if "pinned in the lock" not in w]
     try:                                                                               # generated exports older than their sources
         import fd_meta
         for stale in fd_meta.stale_exports(folder):
