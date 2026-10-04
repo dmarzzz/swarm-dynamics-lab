@@ -18,7 +18,7 @@ def semantic(rows,path,fixture=False):
     fig.suptitle(('SCRIPTED — NOT MODEL EVIDENCE\n' if fixture else '')+'Healing Helping Hands | does Jev correct or follow Qwen?',fontsize=19)
     p=s['paired'];fig.text(.05,.035,f'Assigned {len(rows)} cases; complete paired observations {p["complete"]}. Qwen errors corrected: {p["qwen_wrong_corrected"]}; correct Qwen damaged: {p["qwen_right_damaged"]}; anchoring: {p["anchoring"]}.\nAccuracy delta composite − Jev-only: {p["accuracy_delta"]:+.1%}. Finite synthetic templates; no independent-case inference.',fontsize=11);fig.tight_layout(rect=[0,.2,1,.9]);fig.savefig(path);plt.close(fig)
 
-def temporal(worlds,path,seed=8801,scenario='combined',fixture=False):
+def temporal(worlds,path,seed=8811,scenario='combined',fixture=False):
     images=[]
     for t in range(30):
         fig,axes=plt.subplots(3,4,figsize=(18,11),dpi=100,gridspec_kw={'width_ratios':[1,1,1,1.5]});policies=('central-append','central-verified','peer-verified')
