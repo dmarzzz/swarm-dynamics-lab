@@ -3,7 +3,7 @@ id: allocate-healing-qwen-jev
 type: task
 title: Provision dedicated Healing Qwen plus Jev worker in approved fleet
 kind: admin
-status: claimed
+status: done
 priority: p0
 owner: vishesh/codex-regrowth-docs
 for: dmarz
@@ -12,7 +12,9 @@ created_by: vishesh/codex-regrowth-docs
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T06:12Z
-updated: 2026-10-04T06:12Z
+updated: 2026-10-04T06:13Z
+outputs:
+- researchers/vishesh/notes/healing-helping-hands/composite/DEPLOYMENT.md
 ---
 
 ## Goal
