@@ -1,0 +1,25 @@
+{
+  "commit": "15c018083951d07c6eb3a0c478a59a2c4e59e016",
+  "artifacts": [
+    {
+      "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
+      "sha256": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf",
+      "public_readback_match": true
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/dispatch-closeout.png",
+      "sha256": "6d8bc14a4987e6c9f56a05a5252c739da26cef9bb98a77b8fa270f8c48cd023f",
+      "public_readback_match": true
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md",
+      "sha256": "9206b1b8c7bd872154c3ab486e86813fb139d59cd0ccb1cba003fb4a084b6598",
+      "public_readback_match": true
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-QUALITY.json",
+      "sha256": "2962f27cb35b31bb0bb2748a3336ac51f7b0c8e999f90047f2c623ee3cfae649",
+      "public_readback_match": true
+    }
+  ]
+}

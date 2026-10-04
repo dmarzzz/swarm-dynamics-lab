@@ -1975,20 +1975,24 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Remembering unresolved evidence and reserving a later check may improve timely correct actions under a two-check budget, with urgent-early delay costs.",
-        "rationale": "Successor instrument has offline development coverage only. Q5 and H5 have no native outcomes; six authored fixed-timing roots are a proposed mechanism pilot, not independent semantic or population evidence."
+        "rationale": "No native RD5 outcomes. The expired Q5-A1 activation was reconciled to 24 unstarted requests, zero provider calls and no worker. Qualification and the reserve contrast remain unobserved. Unchanged packets and 61 scientific offline checks plus five activation checks are software evidence only."
       },
-      "sample_size_summary": "Observed native: none. Planned Q5: 12 authored packets in two forms (24 calls). Planned H5: 6 authored roots, 3 policies, 4 epochs (72 dependent decisions; at most 36 calls). Offline unit fixtures are software checks, not model evidence.",
+      "sample_size_summary": "Observed native: zero. Q5-A1: 24 frozen requests, 0 started, 0 valid, 24 unstarted. Renewed Q5-A2 retains 12 authored packets in paired raw/card forms. Conditional H5: 6 authored roots \u00d7 3 policies \u00d7 4 epochs = 72 dependent decisions, at most 36 calls; no population precision claim.",
       "sources": [
         "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
-        "researchers/vishesh/notes/dissent/rd5/validation/VALIDATION.json"
+        "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
+        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md",
+        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-QUALITY.json"
       ],
-      "status_at_assessment": "implemented_offline_native_unrun",
+      "status_at_assessment": "blocked_before_native_dispatch_renewal_prepared",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "27d63232559a2b6ccd9e317b1af5786b32c383bc",
+      "source_commit": "15c018083951d07c6eb3a0c478a59a2c4e59e016",
       "source_sha256": {
         "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa",
-        "researchers/vishesh/notes/dissent/rd5/validation/VALIDATION.json": "4d659b98fa4295c387e50242b7e105eea804516c26a022a9172efa2eb0079f7f"
+        "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf",
+        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md": "9206b1b8c7bd872154c3ab486e86813fb139d59cd0ccb1cba003fb4a084b6598",
+        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-QUALITY.json": "2962f27cb35b31bb0bb2748a3336ac51f7b0c8e999f90047f2c623ee3cfae649"
       }
     },
     {

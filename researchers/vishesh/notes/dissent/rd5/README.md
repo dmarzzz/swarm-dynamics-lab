@@ -5,10 +5,10 @@ Current execution status: [owner-approved RD5 launch](RUN-STATUS.md).
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `27d63232` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `15c01808` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Remembering unresolved evidence and reserving a later check may improve timely correct actions under a two-check budget, with urgent-early delay costs. Basis: Successor instrument has offline development coverage only. Q5 and H5 have no native outcomes; six authored fixed-timing roots are a proposed mechanism pilot, not independent semantic or population evidence.
-- **sample_size_summary:** Observed native: none. Planned Q5: 12 authored packets in two forms (24 calls). Planned H5: 6 authored roots, 3 policies, 4 epochs (72 dependent decisions; at most 36 calls). Offline unit fixtures are software checks, not model evidence.
+- **evidence_confidence:** **0/4** — Remembering unresolved evidence and reserving a later check may improve timely correct actions under a two-check budget, with urgent-early delay costs. Basis: No native RD5 outcomes. The expired Q5-A1 activation was reconciled to 24 unstarted requests, zero provider calls and no worker. Qualification and the reserve contrast remain unobserved. Unchanged packets and 61 scientific offline checks plus five activation checks are software evidence only.
+- **sample_size_summary:** Observed native: zero. Q5-A1: 24 frozen requests, 0 started, 0 valid, 24 unstarted. Renewed Q5-A2 retains 12 authored packets in paired raw/card forms. Conditional H5: 6 authored roots × 3 policies × 4 epochs = 72 dependent decisions, at most 36 calls; no population precision claim.
 <!-- experiment-evidence:end -->
 
 **Implemented and checked offline; no new native results.** Areas: dissent and decision models. This successor to [RD4](../rd4/REPORT.md) tests evidence memory and check reservation separately; it does not inherit RD4's qualification.
