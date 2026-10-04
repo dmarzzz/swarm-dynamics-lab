@@ -1,0 +1,271 @@
+{
+  "analyzed": 144,
+  "answered_calls": 0,
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0,
+  "calibration": {
+    "cases": [
+      {
+        "always_check": 0.05,
+        "always_explore": 0.0,
+        "always_first": 0.025,
+        "always_second": 0.025,
+        "error": 0.05,
+        "margin": 0.05,
+        "optimal": 0.0,
+        "optimal_action": "explore",
+        "unknown_cost": 0.1
+      },
+      {
+        "always_check": 0.2,
+        "always_explore": 0.0,
+        "always_first": 0.1,
+        "always_second": 0.1,
+        "error": 0.05,
+        "margin": 0.2,
+        "optimal": 0.0,
+        "optimal_action": "explore",
+        "unknown_cost": 0.25
+      },
+      {
+        "always_check": 0.7,
+        "always_explore": 0.0,
+        "always_first": 0.35,
+        "always_second": 0.35,
+        "error": 0.05,
+        "margin": 0.7,
+        "optimal": 0.0,
+        "optimal_action": "explore",
+        "unknown_cost": 0.75
+      },
+      {
+        "always_check": 0.0,
+        "always_explore": 0.1,
+        "always_first": 0.05,
+        "always_second": 0.05,
+        "error": 0.2,
+        "margin": 0.1,
+        "optimal": 0.0,
+        "optimal_action": "check",
+        "unknown_cost": 0.1
+      },
+      {
+        "always_check": 0.05,
+        "always_explore": 0.0,
+        "always_first": 0.025,
+        "always_second": 0.025,
+        "error": 0.2,
+        "margin": 0.05,
+        "optimal": 0.0,
+        "optimal_action": "explore",
+        "unknown_cost": 0.25
+      },
+      {
+        "always_check": 0.55,
+        "always_explore": 0.0,
+        "always_first": 0.275,
+        "always_second": 0.275,
+        "error": 0.2,
+        "margin": 0.55,
+        "optimal": 0.0,
+        "optimal_action": "explore",
+        "unknown_cost": 0.75
+      },
+      {
+        "always_check": 0.0,
+        "always_explore": 0.4,
+        "always_first": 0.2,
+        "always_second": 0.2,
+        "error": 0.5,
+        "margin": 0.4,
+        "optimal": 0.0,
+        "optimal_action": "check",
+        "unknown_cost": 0.1
+      },
+      {
+        "always_check": 0.0,
+        "always_explore": 0.25,
+        "always_first": 0.125,
+        "always_second": 0.125,
+        "error": 0.5,
+        "margin": 0.25,
+        "optimal": 0.0,
+        "optimal_action": "check",
+        "unknown_cost": 0.25
+      },
+      {
+        "always_check": 0.25,
+        "always_explore": 0.0,
+        "always_first": 0.125,
+        "always_second": 0.125,
+        "error": 0.5,
+        "margin": 0.25,
+        "optimal": 0.0,
+        "optimal_action": "explore",
+        "unknown_cost": 0.75
+      },
+      {
+        "always_check": 0.0,
+        "always_explore": 0.7,
+        "always_first": 0.35,
+        "always_second": 0.35,
+        "error": 0.8,
+        "margin": 0.7,
+        "optimal": 0.0,
+        "optimal_action": "check",
+        "unknown_cost": 0.1
+      },
+      {
+        "always_check": 0.0,
+        "always_explore": 0.55,
+        "always_first": 0.275,
+        "always_second": 0.275,
+        "error": 0.8,
+        "margin": 0.55,
+        "optimal": 0.0,
+        "optimal_action": "check",
+        "unknown_cost": 0.25
+      },
+      {
+        "always_check": 0.0,
+        "always_explore": 0.05,
+        "always_first": 0.025,
+        "always_second": 0.025,
+        "error": 0.8,
+        "margin": 0.05,
+        "optimal": 0.0,
+        "optimal_action": "check",
+        "unknown_cost": 0.75
+      }
+    ],
+    "kind": "engineering",
+    "largest_possible_contrast": 0.32083333333333336,
+    "layouts": 4,
+    "mean_regret": {
+      "always_check": 0.15,
+      "always_explore": 0.1708333333333333,
+      "always_first": 0.16041666666666668,
+      "always_second": 0.16041666666666668,
+      "optimal": 0.0
+    }
+  },
+  "choice_contradicts_own_costs": 0,
+  "content_bytes_mean": 2206.222222222222,
+  "continuation": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 1.8721120419995714,
+  "episodes": 144,
+  "errors": [],
+  "experiment": "verify-cost-qwen",
+  "failed": 0,
+  "failed_in_stage": 0,
+  "graded": 144,
+  "initial_study_accounting": {},
+  "input_tokens": 0,
+  "invalid": 0,
+  "invariant_violations": [],
+  "largest_request_bytes": 2602,
+  "max_failed": null,
+  "model_calls": 0,
+  "not_started": 0,
+  "output_tokens": 0,
+  "params": {
+    "backend": "scripted",
+    "batch": "s0-002",
+    "code": "7e04308638dbc4db2838bbb22e27f13d51ddc52f",
+    "source_hash": "ef40246d5f7790898ed120146d9c873c7af2fe70bd2aed4ad4c8e6eea0970fd1",
+    "stage": "S0"
+  },
+  "passed": true,
+  "planned": 144,
+  "probe": null,
+  "qualification": {
+    "a": {
+      "assigned": 24,
+      "misses": [],
+      "passed": true,
+      "prose": {
+        "assigned": 12,
+        "optimal": 12,
+        "valid": 12
+      },
+      "sets": [
+        "a"
+      ],
+      "table": {
+        "assigned": 12,
+        "optimal": 12,
+        "valid": 12
+      },
+      "valid": 24
+    },
+    "b": {
+      "assigned": 24,
+      "misses": [],
+      "passed": true,
+      "prose": {
+        "assigned": 12,
+        "optimal": 12,
+        "valid": 12
+      },
+      "sets": [
+        "b"
+      ],
+      "table": {
+        "assigned": 12,
+        "optimal": 12,
+        "valid": 12
+      },
+      "valid": 24
+    }
+  },
+  "qualification_passed": 1,
+  "reason": null,
+  "regret_prose": 0.0,
+  "regret_table": 0.0,
+  "reporting_errors": [],
+  "resumable": false,
+  "stage_units": {
+    "assigned": 144,
+    "completed": 144,
+    "failed": 0,
+    "not_started": 0
+  },
+  "started": 144,
+  "stop_reason": null,
+  "study_accounting": {},
+  "table_minus_prose_bounds": [
+    0.0,
+    0.0
+  ],
+  "table_minus_prose_regret": 0.0,
+  "terminal": 144,
+  "transport_attempts": 0,
+  "visualization": {
+    "mapping": "v1",
+    "replay_frames": 8
+  },
+  "voided_reservations": 0,
+  "work": {
+    "both_correct": 144,
+    "both_written": 144,
+    "checked": 144,
+    "choice_contradicts_own_costs": 0,
+    "max_abs_error": 0.0,
+    "mean_abs_error_check": 0.0,
+    "mean_abs_error_explore": 0.0,
+    "own_costs_favour_the_optimum": 144,
+    "own_costs_tied": 0,
+    "tolerated": {
+      "cost_keys_respaced": 0,
+      "costs_as_strings": 0,
+      "extra_keys": 0,
+      "inspect_before_cost": 0,
+      "inspect_respaced": 0
+    },
+    "valid": 144,
+    "work_malformed": 0
+  },
+  "work_malformed": 0
+}
