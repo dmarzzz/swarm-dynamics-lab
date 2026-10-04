@@ -1,10 +1,10 @@
 ---
 agent: dmarz/always-five-doc
 tool: claude-code
-state: blocked  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: null
-doing: Setup guide notes/always-five/README.md is committed on branch lane/always-five-doc and waits for the human's read before any push
-updated: 2026-10-04T08:17Z
+doing: Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned
+updated: 2026-10-04T08:22Z
 ---
 
 ## Notes
