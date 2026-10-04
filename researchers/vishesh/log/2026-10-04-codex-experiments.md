@@ -9,3 +9,7 @@ Implemented scenario-grounded costs and mandatory approvals, matched chair forks
 ## Iteration 2 after fresh pull
 
 Read PI follow-through and inbox updates. Implemented four fresh numeric qualification dossiers, selected-deployment approval semantics, explicit name counterbalance, full-Q4 gate and immutable deployed-plan URL check. Added paired missingness bounds with manifest denominators and duplicate rejection. Offline iteration-02 found a one-name answer imbalance despite correct parser results; preserved it and reran iteration-03 with all four labels covered. 24 tests pass; 12/12 scripted decisions acceptable, zero API calls. Full model qualification remains pending budget, independent dossier review and fresh fleet allocation. Created review-influence-q4-dossiers; no paid/native run or machine claim while blocked.
+
+## Budget approval recorded
+
+User approved the pending up-to-USD-10 increase and said someone will review the dossier. Updated shared authority atomically from 45 to 55 with idempotent authorization; all reservations preserved. No model calls. Refreshed review task (still open) and fleet; old sim-dmarz-3 now claimed by another experiment. No claim or worker started while review pending. See scenario/BUDGET-AUTHORIZATION.md for exact launch sequence.

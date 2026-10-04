@@ -39,3 +39,5 @@ Model competence is still unverified under the final contract. The external-infl
 Q4: four assignments, twelve outcomes, 56 nominal calls; at most 112 attempts with the existing one-transient-retry limit. Conservative maximum USD 3.15392 under the current input/output envelope. No native run started. Additional shared budget, independent dossier review and a fresh exclusive claim are pending. The old subquota and shared authority remain unchanged.
 
 Reproduce locally with `python3 analysis/verify_qualification.py --out /tmp/influence-qualification-new` from this directory, then inspect the saved events and outcomes. See [protocol](PROTOCOL.md), [measured historical results](RESULTS.md), and [post-mortem](reviews/iteration-03-post.md).
+
+Budget update: the additional USD 10 is now approved and recorded; see [authorization](BUDGET-AUTHORIZATION.md). Independent review and fresh allocation remain pending. Earlier budget snapshots above describe the iteration before approval.
