@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split
 tool: codex
-state: working
+state: done
 task: build-market-split
-doing: 450 scripted episodes verified; plan and replay filed; temporary server destroyed; finishing records.
-updated: 2026-10-04T01:57Z
+doing: Completed 450 valid scripted episodes and verified replay; plan filed, claim released, temporary server destroyed. API remains disabled.
+updated: 2026-10-04T02:02Z
 ---
 
 ## Notes

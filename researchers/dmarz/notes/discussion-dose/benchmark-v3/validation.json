@@ -1,0 +1,80 @@
+{
+  "artifact_sha256": {
+    "episodes.json": "4f8d5ca27f1a4dd4a0c16891c48abe7ba291dd177999ad8300a3cc4bc6995ff2",
+    "events.jsonl": "2d7112c4777a8ee3613d04e9467ee5242f1563c7a437b87fe6c70b1dea521f75",
+    "manifest.json": "216356db22c329c73681706c5cbed1e664c6ab56d0cb5b4f075227dcb1e32dc2",
+    "replay.html": "dfc46cbcf19078d39aec9b6907d7c01176ee8257208ac1fff8bf9f4c69944d27",
+    "summary.json": "a4701a7b477b6ff940e44ef59fd2e9dc9bf26cbaca561e604cb88e2d5de1d849"
+  },
+  "browser_checked": [
+    "stage navigation",
+    "play and pause",
+    "final endpoint matches saved record",
+    "omitted fact yields abstention",
+    "inherited false fact yields grounded error"
+  ],
+  "created_utc": "2026-10-04T02:06:59.761236+00:00",
+  "local_pre_rebase_commit": "883a4fd",
+  "post_sync_source_hashes_unchanged": true,
+  "qualification": {
+    "assigned_each": 6,
+    "clean_full_evidence_correct": 6,
+    "clean_reports_correct": 6,
+    "competence_screen_pass": true,
+    "execution_complete": true,
+    "independent_research_review": "not established by this software check",
+    "model_qualified": false,
+    "required_each": 5
+  },
+  "reconciliation": {
+    "assigned": 96,
+    "input_tokens": null,
+    "missing": [],
+    "output_tokens": null,
+    "physical_model_calls": 0,
+    "planned_calls": 636,
+    "provider_failures": 0,
+    "started_calls": 636,
+    "terminal": 96,
+    "terminal_calls": 636,
+    "unresolved_calls": [],
+    "usage_missing_calls": null,
+    "validation_failures": 0
+  },
+  "replay_audit": {
+    "episodes": 96,
+    "journal_events": 1790,
+    "ok": true,
+    "requests_replayed": 636,
+    "source_hashes_verified": true,
+    "summary_recomputed": true
+  },
+  "runtime": {
+    "machine": "arm64",
+    "python": "3.9.6",
+    "system": "Darwin"
+  },
+  "runtime_commit": "0f5044a",
+  "source_hashes": {
+    "bench_v3/__init__.py": "3c5fe43228d361bcf91c582c907545ba65ce7badf65b29f6941beb628e633d72",
+    "bench_v3/analysis.py": "17bd39a47e781aaba215802229ebfb05971aee895040cfac4d2c8b7d1545c0ac",
+    "bench_v3/cli.py": "10ac983279ac671576d343c37cfca26e2e5fc250efdc246fe81d1015f0081f73",
+    "bench_v3/contracts.py": "d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7",
+    "bench_v3/evidence.py": "f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc",
+    "bench_v3/journal.py": "ceb2f23b417b8408da4c06a93523a98b0f68686d261a7b779090d75ee50d7256",
+    "bench_v3/policies.py": "7eb0ddb3e8d520754aac18eb62fb96714ee28829bc9139f516c50d69198e3cd9",
+    "bench_v3/replay_view.py": "ff5a658976e685cb5bc1f5be0828a585849c934e0b07b2db195b0d8f51a241e1",
+    "bench_v3/runner.py": "4c3f7d6c60397d50e088fdda7b0c9ee74fa3ee010346e182066150e2880a0ce9",
+    "bench_v3/scoring.py": "879234b5ffacc7229fda6989dc85d6bf69d298dcc805e3c285f48a8ebd42194b",
+    "bench_v3/selftest.py": "76abf3175f93000b01ae603d7052736623694f385aacc7f1a482518169493ea4",
+    "bench_v3/worlds.py": "1db34be2c93ce8f1fe22f75286562fde846571aba78b639e85394fee6e263b74",
+    "providers.py": "3ba5279e2b8065ef036e489352dea9d6c69d8a35a97260eb626260e71df7c897",
+    "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
+  },
+  "status": "offline-qualified; independent review and model qualification pending",
+  "unit_tests": {
+    "existing_v1_v2": 34,
+    "passed": 74,
+    "v3": 40
+  }
+}

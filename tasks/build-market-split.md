@@ -3,7 +3,7 @@ id: build-market-split
 type: task
 title: Build and deploy an exploratory owner-splitting market pilot
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/market-split
 for: dmarz
@@ -14,7 +14,11 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T01:27Z
-updated: 2026-10-04T01:49Z
+updated: 2026-10-04T02:02Z
+outputs:
+- researchers/dmarz/notes/market-split
+- artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md
+- artifacts/market-split-scripted-frame/market-split-scripted-frame-v1.png
 ---
 
 ## Goal

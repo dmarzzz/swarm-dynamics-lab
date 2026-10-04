@@ -67,3 +67,7 @@ S0-a2 failed qualification; its outcomes remain archived. The original answer-fi
 ## Provenance repair v3 — 2026-10-04 UTC
 
 S0-a3 completed without execution failures, and both seed-bank and repair-dock verbatim controls scored 1.0 accuracy/convention. Observatory verbatim accuracy was 0.75 across the two counterbalanced worlds, below the unchanged 0.85 threshold. Inspection found erroneous source selection inside the anonymous evidence list. V3 pairs every returned signal with its original source_id; the model, not the harness, still chooses evidence and counts roots. Fresh seeds 106/107 form S0-a4, the last bounded repair qualification in this cycle. The shared USD 45 authority reserved another USD 3 (Theseus total USD 15, same 1,728-call cap) before any further calls. S1 stays blocked unless every gate passes. Updated per-run plan links preserve historical versions; S1 additionally requires independent event audit and matching study/provider/model hashes against the qualified source.
+
+## Qualified exploratory pilot — 2026-10-04 UTC
+
+S0-a4 passed all original competence thresholds on fresh seeds 106/107: 12/12 complete outcomes, 72 independently audited frames, and 1.0 verbatim task accuracy/convention in every scenario. The next preplanned S1-a1 comparison uses untouched seeds 200/201 and the exact qualified study/provider/model hashes. This permits exploratory execution only; it does not clear formal research gates or establish the culture result. See reviews/S0-a4-post.md and reviews/S1-a1-pre.md.

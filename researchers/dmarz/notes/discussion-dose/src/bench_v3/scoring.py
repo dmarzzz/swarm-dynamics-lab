@@ -92,10 +92,19 @@ def checkpoint(case, ballots):
         b = ballots[i]
         return b['claims'][key]['value'] if b is not None and b['claims'][key] is not None else None
     values = [endorsement(i) for i in range(3)]
+    consistency = []
+    for b in ballots:
+        if b is None:
+            consistency.append('invalid'); continue
+        endorsed = [{'id': k, 'origin': k, 'authority': 'primary', 'version': 1, 'facts': {k: c['value']}}
+                    for k, c in b['claims'].items() if c is not None]
+        choices = possible_decisions(case['task'], endorsed)
+        consistency.append('incomplete' if len(choices) != 1 else 'consistent' if b['vote'] == choices[0] else 'inconsistent')
     return {'decision': majority(ballots), 'valid_ballots': sum(b is not None for b in ballots),
             'false_endorsements': values.count(case['false_value']), 'true_endorsements': values.count(true),
             'witness_false': int(values[case['roles']['witness']] == case['false_value']),
-            'votes': [b['vote'] if b else 'INVALID' for b in ballots], 'target_values': values}
+            'votes': [b['vote'] if b else 'INVALID' for b in ballots], 'target_values': values,
+            'vote_claim_consistency': consistency}
 
 
 def evaluate(case, corpus, ballots, memory, parent, initial):

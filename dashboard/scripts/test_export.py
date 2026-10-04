@@ -294,5 +294,50 @@ class ContributionActivityTest(unittest.TestCase):
             with self.subTest(metadata=metadata):
                 with self.assertRaises(ValueError): activity_payload({'briefs':['memory'], 'activity':metadata}, now)
 
+
+class IdeaScoreContractTest(unittest.TestCase):
+    def test_complete_initial_coverage_and_nullable_reviewers(self):
+        from idea_scores import validate_record
+        scores = load('idea-scores')
+        ids = {q['id'] for q in load('questions')['candidates']} | {q['id'] for q in load('contributions')['questions']}
+        self.assertEqual(set(scores['ideas']), ids)
+        for ident, idea in scores['ideas'].items():
+            self.assertEqual(set(idea['ratings']), {'vishesh', 'dmarz', 'shadow'})
+            for record in idea['ratings'].values():
+                validate_record(record, ident)
+        # Other reviewers may contribute later; no test freezes their ratings at NA.
+        self.assertTrue(any(q['ratings']['vishesh'] is not None for q in scores['ideas'].values()))
+
+    def test_validation_zero_missing_and_bad_totals(self):
+        from idea_scores import validate_record
+        record = {'dimensions': {'visual': 0, 'practical': 0, 'theory': 0, 'novelty': 0}, 'score': 0,
+                  'rationale': 'Zero is not missing', 'assessed_by': 'test', 'assessed_at': '2026-10-04', 'candidate_sha256': 'a'}
+        validate_record(None, 'SOC-01')
+        validate_record(record, 'SOC-01')
+        for value in (-1, 101, float('nan'), float('inf'), True, '50'):
+            bad = copy.deepcopy(record); bad['dimensions']['visual'] = value
+            with self.assertRaises(ValueError): validate_record(bad, 'SOC-01')
+        with self.assertRaises(ValueError): validate_record({**record, 'score': 1}, 'SOC-01')
+
+    def test_content_fingerprints_ignore_activity_not_research(self):
+        from idea_scores import fingerprint
+        item = load('contributions')['questions'][0]
+        altered = copy.deepcopy(item); altered['activity'] = {'is_new': False}
+        self.assertEqual(fingerprint(item), fingerprint(altered))
+        altered['question'] += ' Changed question.'
+        self.assertNotEqual(fingerprint(item), fingerprint(altered))
+
+    def test_missing_new_idea_defaults_to_na_and_old_score_is_stale(self):
+        from idea_scores import build_scores
+        atlas = copy.deepcopy(load('questions'))
+        contributions = copy.deepcopy(load('contributions'))
+        original = atlas['candidates'][0]['id']
+        atlas['candidates'][0]['candidate_sha256'] = 'changed'
+        atlas['candidates'].append({'id': 'NEW-01', 'title': 'New unreviewed idea', 'candidate_sha256': 'new'})
+        scores = build_scores(exporter.ROOT, atlas, contributions)
+        self.assertTrue(scores['ideas'][original]['ratings']['vishesh']['stale'])
+        self.assertEqual(scores['ideas']['NEW-01']['ratings'], {'vishesh': None, 'dmarz': None, 'shadow': None})
+        self.assertEqual(scores['ideas'][original]['ratings']['vishesh']['candidate_sha256'], load('idea-scores')['ideas'][original]['ratings']['vishesh']['candidate_sha256'])
+
 if __name__ == '__main__':
     unittest.main()

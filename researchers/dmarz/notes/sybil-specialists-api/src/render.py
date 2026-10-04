@@ -58,7 +58,7 @@ def frame(rows, total, stage, elapsed=0, accounting=None):
     return im
 
 
-def replay(rows, out, stage, total):
+def replay(rows, out, stage, total, initial_accounting=None):
     terminal=[r for r in rows if r['status']!='not_started']
     counts=sorted(set([0,len(terminal),*range(8,len(terminal),8)]))
     images=[]
@@ -66,7 +66,7 @@ def replay(rows, out, stage, total):
         prefix=terminal[:n]
         shown=rows if n==len(terminal) else prefix
         last=prefix[-1] if prefix else {}
-        images.append(frame(shown,total,stage,last.get('elapsed_seconds',0),last.get('study_accounting')))
+        images.append(frame(shown,total,stage,last.get('elapsed_seconds',0),last.get('study_accounting',initial_accounting)))
     images[0].save(out/'initial_frame.png')
     images[-1].save(out/'final_frame.png')
     images[0].save(out/'replay.gif',save_all=True,append_images=images[1:],duration=[500]*(len(images)-1)+[2200],loop=0)

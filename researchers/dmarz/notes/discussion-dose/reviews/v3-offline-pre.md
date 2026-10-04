@@ -37,3 +37,11 @@ Mapping `v3-stage-ledger-1`: a local HTML replay uses an event slider/playback a
 ## Remaining gates
 
 The different-researcher review task remains open. This implementation can be shipped and independently inspected while that gate is pending; it cannot honestly be marked externally reviewed or model-qualified. Review terminal private-control artifacts and write a new pre-run assessment before any v3 model launch. Formal hypothesis/confirmation gates remain unchanged.
+
+## Amendment before release qualification, 2026-10-04 UTC
+
+The final [private-control report](pc-H4-a1-post.md) is now available and has been read alongside [RESULTS-V2.md](../RESULTS-V2.md). All 24 private-control assignments are terminal, with one invalid board episode. The reported attacked target counts are board 2/6 and private 4/6; neither a neutral private trajectory nor a preferred discussion-effect sign is required for v3. These small numbers do not establish a protective effect.
+
+Share one exact post-report checkpoint between reports/private/board arms, in addition to the private acquisition snapshot. This avoids independent starting-ballot resampling while retaining matched continuation calls. The frozen release allocation is now **636 policy calls**, 96 cases, three rounds. Per-round work and probes remain separate and never feed probe ballots back into actors. The original 708-call local prototype completed and replayed successfully; it was an engineering prototype, not an LLM run, and its local output remains in `data/discussion-v3/offline-a1`.
+
+Final release tests include the native-provider request/strict-decoder mock, vote-to-own-claims consistency, public-domain rejection, usage/dispatch accounting, and an explicit model-qualification result that cannot be true for scripted outputs. No qualification or holdout IDs are opened by these tests. The new [review packet](../benchmark-v3/REVIEW.md) supplies six hand-derived development cases and mutation instructions. The code is committed before the final release qualification run; its manifest freezes file hashes and Python/platform information.

@@ -50,3 +50,24 @@ class Tests(unittest.TestCase):
  def test_missing_route_tape_label_rejected(self):
   with self.assertRaises(ValueError):rollout(self.c,['bad']*200,'none','none')
 if __name__=='__main__':unittest.main()
+
+class TerminalAccountingTests(unittest.TestCase):
+ def test_provider_failure_terminates_every_assignment(self):
+  from unittest.mock import patch
+  import run
+  class Broken:
+   metadata={'fixture':'offline fault injection'}
+   def predict(self,*args):raise TimeoutError('sensitive provider diagnostic must be suppressed')
+   def close(self):pass
+  with tempfile.TemporaryDirectory() as tmp:
+   out=Path(tmp)/'attempt'
+   with patch.object(run,'source_check',return_value={}),patch.object(run,'Qwen',Broken),patch.object(run,'Laya',Broken),patch.object(run,'qualify',return_value={'status':'passed'}),patch('builtins.print'):
+    m=run.execute(out,{'commit':'offline-fault-test'})
+   self.assertEqual(len(m['assignments']),144)
+   self.assertEqual(collections.Counter(a['status'] for a in m['assignments']),{'completed':36,'not_run':108})
+   self.assertEqual(m['calls'],{'qwen':1,'laya':0})
+   self.assertTrue(all((out/(a['id']+'.json')).exists() for a in m['assignments']))
+   self.assertNotIn('sensitive provider', (out/'calls.jsonl').read_text())
+ def test_unreachable_recovery_is_null(self):
+  c=make(8201);r=rollout(c,['SUPPORT']*200,'none','combined')
+  self.assertIsNone(r['metrics']['recovery_rounds'])

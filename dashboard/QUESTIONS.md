@@ -1,5 +1,7 @@
 # Question review
 
+Both Questions and Contributions now show independent Vishesh, Dimarz and Shadow rubric scores, with component explanations, reviewer sorting and optional local drafts. Unfilled scores display NA. See [IDEA-SCORES.md](IDEA-SCORES.md) for provenance, source metadata and publishing instructions. These ratings are separate from the shortlist workflow below.
+
 Research navigation now includes grouped literature topics and cross-cutting focus areas, a sixteen-project filter, linked exploratory designs and explicit formal-hypothesis tags. See [RESEARCH-AREAS.md](RESEARCH-AREAS.md) for contribution rules and source ownership. Question content and review fingerprints remain unchanged.
 
 `#/questions` presents the canonical research question atlas for human selection. It includes each question, tentative hypothesis, proposed test, comparison, metrics, falsifier, confounds, promotion requirements and linked prior work. Search and filters are encoded in the URL; `#/questions?id=BUD-01` links directly to one candidate.

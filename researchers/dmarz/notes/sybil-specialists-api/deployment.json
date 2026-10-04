@@ -13,7 +13,7 @@
   "workers": 1,
   "max_stage_seconds": 1800,
   "automatic_retries": 0,
-  "status": "qualifying",
+  "status": "analysis-publication",
   "runs": [
     {
       "run": "sybil-specialists-api/62c03464",
@@ -32,6 +32,73 @@
         "progress.png",
         "initial_frame.png"
       ]
+    },
+    {
+      "run": "sybil-specialists-api/08338820",
+      "stage": "Q0",
+      "status": "done",
+      "planned": 24,
+      "valid": 24,
+      "model_calls": 24,
+      "cost_usd": 0.041316,
+      "source": "7257d107fda42a6860b8448f75df8d90908fcc01",
+      "verified_artifacts": [
+        "final_frame.png",
+        "replay.gif",
+        "assignment.json",
+        "episodes.jsonl",
+        "summary.json",
+        "progress.png",
+        "initial_frame.png"
+      ]
+    },
+    {
+      "run": "sybil-specialists-api/bac7d9ae",
+      "stage": "S1",
+      "status": "done",
+      "planned": 192,
+      "valid": 192,
+      "model_calls": 192,
+      "cost_usd": 0.268486,
+      "source": "2b8895abce333d3e4cdd44a78f8566d3e2608b09",
+      "verified_artifacts": [
+        "final_frame.png",
+        "replay.gif",
+        "assignment.json",
+        "episodes.jsonl",
+        "summary.json",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "verified_images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1180,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1180,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1180,
+          "frames": 25
+        }
+      }
     }
-  ]
+  ],
+  "budget": {
+    "attempted_calls": 216,
+    "reserved_usd": 2.133561,
+    "actual_usd": 0.309802,
+    "usage_reported_calls": 216
+  },
+  "environment": {
+    "python": "3.12.3",
+    "pillow": "11.3.0",
+    "pyyaml": "6.0.1"
+  },
+  "worker_active": false
 }

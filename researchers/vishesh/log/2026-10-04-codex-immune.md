@@ -21,3 +21,7 @@ Pulled current main, audited all eight native v2 outcomes and traced its one inv
 Added historical/native and engineering final frames, 24-frame animations and interactive replay; checked state cells, selectors, playback and live dashboard image loads. Public run: https://swarm-live.pages.dev/#/r/immune-response-v3%2Fengineering-a1-5409a091 . Detailed assessment and post-mortem are in notes/immune-response-v3. Registered immutable public protocol; imported original evidence, without rerunning. Added prospective gated native worker and per-round reporting.
 
 Native repair remains blocked: fleet exclusive-claim checks rejected occupied hosts. Requested a dedicated or released machine from the owner; no conflicting machine or extra budget was used. Next: verify a real exclusive claim, reserve USD 8 from the existing shared ledger, deploy exact committed runtime, and execute frozen task 6700. Do not claim the model failure repaired until that qualification passes. Native S1 and holdout remain locked.
+
+## Exclusive native allocation
+
+Refreshed fleet and claimed sim-dmarz-3 exclusively through merged agentops PR 48 (claim vishesh-immune-native-v3). Previous holder dmarz/discussion-dose released H5 calibration. Host is reachable and reporter exists. Shared budget now has only USD 1.497684 unreserved, below the frozen USD 8 qualification grant. Requested USD 8 additional authorization; no paid run or grant started. See native-repair-a1-pre.md.

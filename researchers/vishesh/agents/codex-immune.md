@@ -2,9 +2,9 @@
 agent: vishesh/codex-immune
 tool: codex
 state: blocked
-task: null
-doing: V2 reported and v3 engineering passed; awaiting exclusive fleet host for fresh native repair qualification
-updated: 2026-10-04T01:57Z
+task: immune-response-v3-native-repair
+doing: Exclusive sim-dmarz-3 allocated; native launch awaits approval for USD 8 budget increase
+updated: 2026-10-04T02:06Z
 ---
 
 ## Notes

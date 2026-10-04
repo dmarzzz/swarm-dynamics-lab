@@ -1,0 +1,413 @@
+{
+  "params": {
+    "stage": "S1",
+    "backend": "anthropic",
+    "batch": "s1-001",
+    "source_hash": "12ff89f2f54322f07245640708a0c243ad09ab8d933163e71869c3ce08255f6a",
+    "code": "2b8895abce333d3e4cdd44a78f8566d3e2608b09"
+  },
+  "planned": 192,
+  "valid": 192,
+  "invalid": 0,
+  "model_calls": 192,
+  "cost_usd": 0.268486,
+  "study_accounting": {
+    "attempted_calls": 216,
+    "reserved_usd": 2.133561,
+    "actual_usd": 0.309802,
+    "usage_reported_calls": 216
+  },
+  "qualification": null,
+  "cells": [
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "arm": "coverage",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.9444444444444444,
+        "task_accuracy": 0.9722222222222222,
+        "malicious_admission": 0.07407407407407407,
+        "specialist_rejection": 0.4444444444444444,
+        "qualification_accuracy": 0.9722222222222222,
+        "scripted_rare_accuracy": 0.9166666666666666
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "arm": "degree",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.08333333333333333,
+        "task_accuracy": 0.5416666666666666,
+        "malicious_admission": 0.037037037037037035,
+        "specialist_rejection": 0.9722222222222222,
+        "qualification_accuracy": 0.9444444444444444,
+        "scripted_rare_accuracy": 0.08333333333333333
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "arm": "no_verification",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.0,
+        "task_accuracy": 0.5,
+        "malicious_admission": 0.0,
+        "specialist_rejection": 1.0,
+        "qualification_accuracy": 1.0,
+        "scripted_rare_accuracy": 0.0
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "arm": "random",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.4722222222222222,
+        "task_accuracy": 0.7361111111111112,
+        "malicious_admission": 0.018518518518518517,
+        "specialist_rejection": 0.7037037037037037,
+        "qualification_accuracy": 0.9722222222222222,
+        "scripted_rare_accuracy": 0.4722222222222222
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "arm": "coverage",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.9444444444444444,
+        "task_accuracy": 0.9722222222222222,
+        "malicious_admission": 0.07407407407407407,
+        "specialist_rejection": 0.4444444444444444,
+        "qualification_accuracy": 0.9722222222222222,
+        "scripted_rare_accuracy": 0.9166666666666666
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "arm": "degree",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.08333333333333333,
+        "task_accuracy": 0.5416666666666666,
+        "malicious_admission": 0.037037037037037035,
+        "specialist_rejection": 0.9722222222222222,
+        "qualification_accuracy": 0.9444444444444444,
+        "scripted_rare_accuracy": 0.08333333333333333
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "arm": "no_verification",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.0,
+        "task_accuracy": 0.5,
+        "malicious_admission": 0.0,
+        "specialist_rejection": 1.0,
+        "qualification_accuracy": 1.0,
+        "scripted_rare_accuracy": 0.0
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "arm": "random",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.4722222222222222,
+        "task_accuracy": 0.7361111111111112,
+        "malicious_admission": 0.018518518518518517,
+        "specialist_rejection": 0.7037037037037037,
+        "qualification_accuracy": 0.9722222222222222,
+        "scripted_rare_accuracy": 0.4722222222222222
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "arm": "coverage",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.25,
+        "task_accuracy": 0.5138888888888888,
+        "malicious_admission": 0.8055555555555556,
+        "specialist_rejection": 0.32407407407407407,
+        "qualification_accuracy": 0.625,
+        "scripted_rare_accuracy": 0.3333333333333333
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "arm": "degree",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.08333333333333333,
+        "task_accuracy": 0.5416666666666666,
+        "malicious_admission": 0.037037037037037035,
+        "specialist_rejection": 0.9722222222222222,
+        "qualification_accuracy": 0.9444444444444444,
+        "scripted_rare_accuracy": 0.08333333333333333
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "arm": "no_verification",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.0,
+        "task_accuracy": 0.5,
+        "malicious_admission": 0.0,
+        "specialist_rejection": 1.0,
+        "qualification_accuracy": 1.0,
+        "scripted_rare_accuracy": 0.0
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "arm": "random",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.3055555555555556,
+        "task_accuracy": 0.6527777777777778,
+        "malicious_admission": 0.08333333333333333,
+        "specialist_rejection": 0.7407407407407407,
+        "qualification_accuracy": 0.888888888888889,
+        "scripted_rare_accuracy": 0.3055555555555556
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "arm": "coverage",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.3333333333333333,
+        "task_accuracy": 0.5555555555555556,
+        "malicious_admission": 0.8055555555555556,
+        "specialist_rejection": 0.32407407407407407,
+        "qualification_accuracy": 0.6666666666666666,
+        "scripted_rare_accuracy": 0.3333333333333333
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "arm": "degree",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.08333333333333333,
+        "task_accuracy": 0.5416666666666666,
+        "malicious_admission": 0.037037037037037035,
+        "specialist_rejection": 0.9722222222222222,
+        "qualification_accuracy": 0.9444444444444444,
+        "scripted_rare_accuracy": 0.08333333333333333
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "arm": "no_verification",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.0,
+        "task_accuracy": 0.5,
+        "malicious_admission": 0.0,
+        "specialist_rejection": 1.0,
+        "qualification_accuracy": 1.0,
+        "scripted_rare_accuracy": 0.0
+      }
+    },
+    {
+      "kind": "pilot",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "arm": "random",
+      "assigned": 12,
+      "valid": 12,
+      "metrics": {
+        "rare_accuracy": 0.3055555555555556,
+        "task_accuracy": 0.6527777777777778,
+        "malicious_admission": 0.08333333333333333,
+        "specialist_rejection": 0.7407407407407407,
+        "qualification_accuracy": 0.888888888888889,
+        "scripted_rare_accuracy": 0.3055555555555556
+      }
+    }
+  ],
+  "primary": {
+    "clusters": 12,
+    "mean": 0.8611111111111112,
+    "descriptive_interval": [
+      0.7222222222222222,
+      0.9722222222222222
+    ],
+    "per_world": [
+      {
+        "task": 4000,
+        "difference": 0.3333333333333333
+      },
+      {
+        "task": 4001,
+        "difference": 1.0
+      },
+      {
+        "task": 4002,
+        "difference": 1.0
+      },
+      {
+        "task": 4003,
+        "difference": 1.0
+      },
+      {
+        "task": 4004,
+        "difference": 1.0
+      },
+      {
+        "task": 4005,
+        "difference": 0.6666666666666667
+      },
+      {
+        "task": 4006,
+        "difference": 1.0
+      },
+      {
+        "task": 4007,
+        "difference": 1.0
+      },
+      {
+        "task": 4008,
+        "difference": 1.0
+      },
+      {
+        "task": 4009,
+        "difference": 1.0
+      },
+      {
+        "task": 4010,
+        "difference": 0.6666666666666667
+      },
+      {
+        "task": 4011,
+        "difference": 0.6666666666666667
+      }
+    ]
+  },
+  "badges_high_attack_pass": {
+    "clusters": 12,
+    "mean": 0.08333333333333333,
+    "descriptive_interval": [
+      -0.02777777777777779,
+      0.19444444444444442
+    ],
+    "per_world": [
+      {
+        "task": 4000,
+        "difference": 0.0
+      },
+      {
+        "task": 4001,
+        "difference": -0.33333333333333337
+      },
+      {
+        "task": 4002,
+        "difference": 0.0
+      },
+      {
+        "task": 4003,
+        "difference": 0.0
+      },
+      {
+        "task": 4004,
+        "difference": 0.0
+      },
+      {
+        "task": 4005,
+        "difference": 0.3333333333333333
+      },
+      {
+        "task": 4006,
+        "difference": 0.0
+      },
+      {
+        "task": 4007,
+        "difference": 0.3333333333333333
+      },
+      {
+        "task": 4008,
+        "difference": 0.3333333333333333
+      },
+      {
+        "task": 4009,
+        "difference": 0.3333333333333333
+      },
+      {
+        "task": 4010,
+        "difference": 0.0
+      },
+      {
+        "task": 4011,
+        "difference": 0.0
+      }
+    ]
+  },
+  "qualification_screen": {
+    "count": 24,
+    "fact_accuracy": 1.0,
+    "exact_packet_rate": 1.0,
+    "missing_abstention": 1.0,
+    "passed": true
+  },
+  "aggregate": {
+    "attempted_calls": 216,
+    "reserved_usd": 2.133561,
+    "actual_usd": 0.309802,
+    "usage_reported_calls": 216
+  },
+  "environment": {
+    "python": "3.12.3",
+    "pillow": "11.3.0",
+    "pyyaml": "6.0.1"
+  }
+}

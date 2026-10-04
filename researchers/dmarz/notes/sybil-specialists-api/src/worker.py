@@ -34,7 +34,8 @@ def execute(p, out, run=None, backend=None):
         ledger=provider.Ledger(path)
         backend=backend or provider.Anthropic(ledger)
     start=time.monotonic(); rows=[]; stopped=False
-    render.frame([],total,p['stage']).save(out/'initial_frame.png')
+    initial_accounting=ledger.transact() if ledger else {}
+    render.frame([],total,p['stage'],accounting=initial_accounting).save(out/'initial_frame.png')
     if run: upload(run,out/'initial_frame.png')
     with (out/'episodes.jsonl').open('x') as log:
         for index,a in enumerate(assigned):
@@ -61,8 +62,8 @@ def execute(p, out, run=None, backend=None):
             log.write(json.dumps(r,sort_keys=True)+'\n'); log.flush(); os.fsync(log.fileno()); rows.append(r)
             if run and r['status']!='not_started':
                 run.progress(index+1,total,episodes=index+1,invalid=int(stopped),
-                             model_calls=r['study_accounting'].get('attempted_calls',0),
-                             cost_usd=r['study_accounting'].get('actual_usd',0))
+                             model_calls=sum(x.get('accounting',{}).get('attempted',False) for x in rows),
+                             cost_usd=sum(x.get('accounting',{}).get('actual_usd',0) for x in rows))
                 if (index+1)%4==0 or stopped:
                     render.frame(rows,total,p['stage'],r['elapsed_seconds'],r['study_accounting']).save(out/'progress.png')
                     upload(run,out/'progress.png')
@@ -77,7 +78,8 @@ def execute(p, out, run=None, backend=None):
              'output_tokens':sum(r.get('accounting',{}).get('output_tokens',0) for r in rows),
              'elapsed_seconds':time.monotonic()-start,'qualification':q,
              'study_accounting':ledger.transact() if ledger else {},
-             'visualization':{'mapping':'v1','frames':render.replay(rows,out,p['stage'],total)}}
+             'initial_study_accounting':initial_accounting,
+             'visualization':{'mapping':'v1.1','frames':render.replay(rows,out,p['stage'],total,initial_accounting)}}
     write_json(out/'summary.json',summary)
     if run:
         for name in ('final_frame.png','replay.gif','assignment.json','episodes.jsonl','summary.json'):
@@ -91,7 +93,7 @@ def execute(p, out, run=None, backend=None):
         run.done(message=f'{p["stage"]}: {len(good)}/{total} valid; model calls {summary["model_calls"]}; see all-policy replay',
                  episodes=total,invalid=0,model_calls=summary['model_calls'],cost_usd=summary['cost_usd'],
                  qualification_passed=int(bool(q and q['passed'])),
-                 rare_accuracy=sum(r['evaluation']['rare_accuracy'] for r in pilot)/len(pilot) if pilot else 0,
+                 **({'rare_accuracy':sum(r['evaluation']['rare_accuracy'] for r in pilot)/len(pilot)} if pilot else {}),
                  task_accuracy=sum(r['evaluation']['task_accuracy'] for r in good)/len(good))
     return summary
 

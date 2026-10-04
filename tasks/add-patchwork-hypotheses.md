@@ -3,7 +3,7 @@ id: add-patchwork-hypotheses
 type: task
 title: Add Patchwork-derived hypotheses to the research page
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: dmarz/patchwork-hypotheses
 for: dmarz
@@ -17,7 +17,11 @@ topics:
 - agent-budgets
 - llm-agent-swarms
 claimed_at: 2026-10-04T01:56Z
-updated: 2026-10-04T01:56Z
+updated: 2026-10-04T02:04Z
+outputs:
+- researchers/dmarz/notes/question-atlas/patchwork-addendum.md
+- researchers/dmarz/notes/question-atlas/candidates.json
+- library/code/gh-dmarzzz-patchwork.md
 ---
 
 ## Goal
@@ -28,5 +32,5 @@ User request: "can u add hypotheses relevant to this to the swarm research page 
 
 - [x] Add falsifiable candidates, matched comparisons, metrics, source relationships and prerequisites.
 - [x] Record Patchwork evidence and distinguish live-model pilots from scripted conformance.
-- [ ] Validate the atlas, repository and dashboard contract; push to GitHub.
-- [ ] Confirm the deployed research page includes the new candidates.
+- [x] Validate the atlas, repository and dashboard contract; push to GitHub.
+- [x] Confirm the deployed research page includes the new candidates.
