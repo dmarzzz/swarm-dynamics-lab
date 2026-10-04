@@ -1,0 +1,14 @@
+{
+  "calls": 384,
+  "decisions": 384,
+  "hard_conflict_positive_cases": {
+    "probe": 3,
+    "ledger": 2,
+    "canary": 1
+  },
+  "max_request_bytes": 2135,
+  "assignments_sha256": "569643bc644087420dc3973cb5d418003f1ee38738a83c422278cda369b0233e",
+  "offline_tests": 8,
+  "model_calls": 0,
+  "evidence_type": "SCRIPTED \u2014 NOT MODEL EVIDENCE"
+}
