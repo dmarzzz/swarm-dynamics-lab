@@ -1,0 +1,1067 @@
+[
+  {
+    "id": "paraphrase-0",
+    "family": "paraphrase",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "At dawn the access gate was unobstructed.",
+        "event": "event-paraphrase-0"
+      },
+      "receipts": [
+        {
+          "id": "R0",
+          "event": "event-paraphrase-0",
+          "capture": "capture-a",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R1",
+          "event": "event-paraphrase-0",
+          "capture": "capture-b",
+          "text": "At sunrise the entry barrier was blocked.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R2",
+          "event": "event-paraphrase-0-old",
+          "capture": "capture-c",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R0",
+    "expected_new_group": true
+  },
+  {
+    "id": "paraphrase-1",
+    "family": "paraphrase",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The container was vacant after unloading.",
+        "event": "event-paraphrase-1"
+      },
+      "receipts": [
+        {
+          "id": "R0",
+          "event": "event-paraphrase-1-old",
+          "capture": "capture-c",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R1",
+          "event": "event-paraphrase-1",
+          "capture": "capture-a",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R2",
+          "event": "event-paraphrase-1",
+          "capture": "capture-b",
+          "text": "The vessel was full after unloading.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R1",
+    "expected_new_group": true
+  },
+  {
+    "id": "paraphrase-2",
+    "family": "paraphrase",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The motor ceased rotating during inspection.",
+        "event": "event-paraphrase-2"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-paraphrase-2-old",
+          "capture": "capture-c",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R2",
+          "event": "event-paraphrase-2",
+          "capture": "capture-a",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R0",
+          "event": "event-paraphrase-2",
+          "capture": "capture-b",
+          "text": "The engine continued turning during inspection.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R2",
+    "expected_new_group": true
+  },
+  {
+    "id": "paraphrase-3",
+    "family": "paraphrase",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The inlet remained shut during the check.",
+        "event": "event-paraphrase-3"
+      },
+      "receipts": [
+        {
+          "id": "R2",
+          "event": "event-paraphrase-3-old",
+          "capture": "capture-c",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R0",
+          "event": "event-paraphrase-3",
+          "capture": "capture-a",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R1",
+          "event": "event-paraphrase-3",
+          "capture": "capture-b",
+          "text": "The intake stayed open during the check.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R0",
+    "expected_new_group": true
+  },
+  {
+    "id": "paraphrase-4",
+    "family": "paraphrase",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The pipe emitted no fluid at midday.",
+        "event": "event-paraphrase-4"
+      },
+      "receipts": [
+        {
+          "id": "R0",
+          "event": "event-paraphrase-4-old",
+          "capture": "capture-c",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R1",
+          "event": "event-paraphrase-4",
+          "capture": "capture-a",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R2",
+          "event": "event-paraphrase-4",
+          "capture": "capture-b",
+          "text": "The conduit released liquid at noon.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R1",
+    "expected_new_group": true
+  },
+  {
+    "id": "paraphrase-5",
+    "family": "paraphrase",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The warning lamp was illuminated before departure.",
+        "event": "event-paraphrase-5"
+      },
+      "receipts": [
+        {
+          "id": "R2",
+          "event": "event-paraphrase-5",
+          "capture": "capture-a",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R0",
+          "event": "event-paraphrase-5",
+          "capture": "capture-b",
+          "text": "The alert light was dark before departure.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R1",
+          "event": "event-paraphrase-5-old",
+          "capture": "capture-c",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R2",
+    "expected_new_group": true
+  },
+  {
+    "id": "identical_independent-0",
+    "family": "identical_independent",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "At sunrise the entry barrier was clear.",
+        "event": "event-identical_independent-0",
+        "capture": "capture-a"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-identical_independent-0",
+          "capture": "capture-b",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R2",
+          "event": "event-identical_independent-0-old",
+          "capture": "capture-c",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R0",
+          "event": "event-identical_independent-0",
+          "capture": "capture-a",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R0",
+    "expected_new_group": true
+  },
+  {
+    "id": "identical_independent-1",
+    "family": "identical_independent",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The vessel was empty after unloading.",
+        "event": "event-identical_independent-1"
+      },
+      "receipts": [
+        {
+          "id": "R2",
+          "event": "event-identical_independent-1",
+          "capture": "capture-b",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R0",
+          "event": "event-identical_independent-1-old",
+          "capture": "capture-c",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R1",
+          "event": "event-identical_independent-1",
+          "capture": "capture-a",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "identical_independent-2",
+    "family": "identical_independent",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The engine stopped turning during inspection.",
+        "event": "event-identical_independent-2",
+        "capture": "capture-a"
+      },
+      "receipts": [
+        {
+          "id": "R0",
+          "event": "event-identical_independent-2",
+          "capture": "capture-b",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R2",
+          "event": "event-identical_independent-2",
+          "capture": "capture-a",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R1",
+          "event": "event-identical_independent-2-old",
+          "capture": "capture-c",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R2",
+    "expected_new_group": true
+  },
+  {
+    "id": "identical_independent-3",
+    "family": "identical_independent",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The intake stayed closed during the check.",
+        "event": "event-identical_independent-3"
+      },
+      "receipts": [
+        {
+          "id": "R0",
+          "event": "event-identical_independent-3",
+          "capture": "capture-a",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R1",
+          "event": "event-identical_independent-3",
+          "capture": "capture-b",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R2",
+          "event": "event-identical_independent-3-old",
+          "capture": "capture-c",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "identical_independent-4",
+    "family": "identical_independent",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The conduit released no liquid at noon.",
+        "event": "event-identical_independent-4",
+        "capture": "capture-a"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-identical_independent-4",
+          "capture": "capture-a",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R2",
+          "event": "event-identical_independent-4",
+          "capture": "capture-b",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R0",
+          "event": "event-identical_independent-4-old",
+          "capture": "capture-c",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R1",
+    "expected_new_group": true
+  },
+  {
+    "id": "identical_independent-5",
+    "family": "identical_independent",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The alert light was lit before departure.",
+        "event": "event-identical_independent-5"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-identical_independent-5-old",
+          "capture": "capture-c",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R2",
+          "event": "event-identical_independent-5",
+          "capture": "capture-a",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R0",
+          "event": "event-identical_independent-5",
+          "capture": "capture-b",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "missing-0",
+    "family": "missing",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "At dawn the access gate was unobstructed.",
+        "event": "event-missing-0-unrecorded"
+      },
+      "receipts": [
+        {
+          "id": "R2",
+          "event": "event-missing-0-old",
+          "capture": "capture-c",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R0",
+          "event": "event-missing-0",
+          "capture": "capture-a",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R1",
+          "event": "event-missing-0",
+          "capture": "capture-b",
+          "text": "At sunrise the entry barrier was blocked.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "missing-1",
+    "family": "missing",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The container was vacant after unloading.",
+        "event": "event-missing-1-unrecorded"
+      },
+      "receipts": [
+        {
+          "id": "R0",
+          "event": "event-missing-1-old",
+          "capture": "capture-c",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R2",
+          "event": "event-missing-1",
+          "capture": "capture-b",
+          "text": "The vessel was full after unloading.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R1",
+          "event": "event-missing-1",
+          "capture": "capture-a",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "missing-2",
+    "family": "missing",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The motor ceased rotating during inspection.",
+        "event": "event-missing-2-unrecorded"
+      },
+      "receipts": [
+        {
+          "id": "R2",
+          "event": "event-missing-2",
+          "capture": "capture-a",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R1",
+          "event": "event-missing-2-old",
+          "capture": "capture-c",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R0",
+          "event": "event-missing-2",
+          "capture": "capture-b",
+          "text": "The engine continued turning during inspection.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "missing-3",
+    "family": "missing",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The inlet remained shut during the check.",
+        "event": "event-missing-3-unrecorded"
+      },
+      "receipts": [
+        {
+          "id": "R0",
+          "event": "event-missing-3",
+          "capture": "capture-a",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R1",
+          "event": "event-missing-3",
+          "capture": "capture-b",
+          "text": "The intake stayed open during the check.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R2",
+          "event": "event-missing-3-old",
+          "capture": "capture-c",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "missing-4",
+    "family": "missing",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The pipe emitted no fluid at midday.",
+        "event": "event-missing-4-unrecorded"
+      },
+      "receipts": [
+        {
+          "id": "R2",
+          "event": "event-missing-4",
+          "capture": "capture-b",
+          "text": "The conduit released liquid at noon.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "R0",
+          "event": "event-missing-4-old",
+          "capture": "capture-c",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R1",
+          "event": "event-missing-4",
+          "capture": "capture-a",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "missing-5",
+    "family": "missing",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The warning lamp was illuminated before departure.",
+        "event": "event-missing-5-unrecorded"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-missing-5-old",
+          "capture": "capture-c",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R2",
+          "event": "event-missing-5",
+          "capture": "capture-a",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "R0",
+          "event": "event-missing-5",
+          "capture": "capture-b",
+          "text": "The alert light was dark before departure.",
+          "acquisition": "b",
+          "dependency_group": "other"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": null,
+    "expected_new_group": false
+  },
+  {
+    "id": "common_cause-0",
+    "family": "common_cause",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "At sunrise the entry barrier was clear.",
+        "event": "event-common_cause-0",
+        "receipt_ref": "R0"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-common_cause-0",
+          "capture": "capture-b",
+          "text": "At sunrise the entry barrier was blocked.",
+          "acquisition": "b",
+          "dependency_group": "known-cause"
+        },
+        {
+          "id": "R0",
+          "event": "event-common_cause-0",
+          "capture": "capture-a",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "a",
+          "dependency_group": "known-cause"
+        },
+        {
+          "id": "R2",
+          "event": "event-common_cause-0-old",
+          "capture": "capture-c",
+          "text": "At sunrise the entry barrier was clear.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R0",
+    "expected_new_group": false
+  },
+  {
+    "id": "common_cause-1",
+    "family": "common_cause",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The vessel was empty after unloading.",
+        "event": "event-common_cause-1",
+        "receipt_ref": "R1"
+      },
+      "receipts": [
+        {
+          "id": "R2",
+          "event": "event-common_cause-1",
+          "capture": "capture-b",
+          "text": "The vessel was full after unloading.",
+          "acquisition": "b",
+          "dependency_group": "known-cause"
+        },
+        {
+          "id": "R0",
+          "event": "event-common_cause-1-old",
+          "capture": "capture-c",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R1",
+          "event": "event-common_cause-1",
+          "capture": "capture-a",
+          "text": "The vessel was empty after unloading.",
+          "acquisition": "a",
+          "dependency_group": "known-cause"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R1",
+    "expected_new_group": false
+  },
+  {
+    "id": "common_cause-2",
+    "family": "common_cause",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The engine stopped turning during inspection.",
+        "event": "event-common_cause-2",
+        "receipt_ref": "R2"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-common_cause-2-old",
+          "capture": "capture-c",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R0",
+          "event": "event-common_cause-2",
+          "capture": "capture-b",
+          "text": "The engine continued turning during inspection.",
+          "acquisition": "b",
+          "dependency_group": "known-cause"
+        },
+        {
+          "id": "R2",
+          "event": "event-common_cause-2",
+          "capture": "capture-a",
+          "text": "The engine stopped turning during inspection.",
+          "acquisition": "a",
+          "dependency_group": "known-cause"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R2",
+    "expected_new_group": false
+  },
+  {
+    "id": "common_cause-3",
+    "family": "common_cause",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The intake stayed closed during the check.",
+        "event": "event-common_cause-3",
+        "receipt_ref": "R0"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-common_cause-3",
+          "capture": "capture-b",
+          "text": "The intake stayed open during the check.",
+          "acquisition": "b",
+          "dependency_group": "known-cause"
+        },
+        {
+          "id": "R2",
+          "event": "event-common_cause-3-old",
+          "capture": "capture-c",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R0",
+          "event": "event-common_cause-3",
+          "capture": "capture-a",
+          "text": "The intake stayed closed during the check.",
+          "acquisition": "a",
+          "dependency_group": "known-cause"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R0",
+    "expected_new_group": false
+  },
+  {
+    "id": "common_cause-4",
+    "family": "common_cause",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The conduit released no liquid at noon.",
+        "event": "event-common_cause-4",
+        "receipt_ref": "R1"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-common_cause-4",
+          "capture": "capture-a",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "a",
+          "dependency_group": "known-cause"
+        },
+        {
+          "id": "R0",
+          "event": "event-common_cause-4-old",
+          "capture": "capture-c",
+          "text": "The conduit released no liquid at noon.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R2",
+          "event": "event-common_cause-4",
+          "capture": "capture-b",
+          "text": "The conduit released liquid at noon.",
+          "acquisition": "b",
+          "dependency_group": "known-cause"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R1",
+    "expected_new_group": false
+  },
+  {
+    "id": "common_cause-5",
+    "family": "common_cause",
+    "evidence_type": "authored synthetic development; not held out or native",
+    "actor": {
+      "report": {
+        "text": "The alert light was lit before departure.",
+        "event": "event-common_cause-5",
+        "receipt_ref": "R2"
+      },
+      "receipts": [
+        {
+          "id": "R1",
+          "event": "event-common_cause-5-old",
+          "capture": "capture-c",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "c",
+          "dependency_group": "old"
+        },
+        {
+          "id": "R2",
+          "event": "event-common_cause-5",
+          "capture": "capture-a",
+          "text": "The alert light was lit before departure.",
+          "acquisition": "a",
+          "dependency_group": "known-cause"
+        },
+        {
+          "id": "R0",
+          "event": "event-common_cause-5",
+          "capture": "capture-b",
+          "text": "The alert light was dark before departure.",
+          "acquisition": "b",
+          "dependency_group": "known-cause"
+        }
+      ],
+      "known_dependency_groups": [
+        "old",
+        "known-cause"
+      ],
+      "registry_scope": "fixture assumes authenticated receipts and supplied dependence groups"
+    },
+    "expected_receipt": "R2",
+    "expected_new_group": false
+  }
+]

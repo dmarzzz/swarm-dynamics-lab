@@ -9,9 +9,9 @@
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T16:17:54.765096+00:00",
-      "checked_commit": "7f36f08cded49590a2f69ddba60883feccd96d8d",
-      "next_action": "Provenance gate validated offline; D1 parked. See provenance/RESULTS.md. Native semantic report-to-receipt mapping needs adjudicated corpus, held-out acquisition families, strong lookup baseline and bounded semantic qualification before launch. No current allocation or native admission asserted.",
+      "checked_at": "2026-10-04T16:45:28.133996+00:00",
+      "checked_commit": "36aa5db93817fd6870868eaa83e6405c550cb910",
+      "next_action": "Trace review complete; see trace-review/RESULTS.md and PROPOSAL.md. Conditional semantic task requires independent corpus and meaningful headroom against frozen hybrid before native adapter/qualification. D1 remains parked; no allocation or admission asserted.",
       "next_run_approval": "owner"
     },
     {

@@ -1,0 +1,26 @@
+{
+  "scope": "offline trace and development review only",
+  "tests_passed": 9,
+  "html_structural_check": "96 balanced expandable trace entries; no browser visual QA claimed",
+  "assigned": 96,
+  "started": 49,
+  "retained_valid": 48,
+  "discarded_response": 1,
+  "unstarted": 47,
+  "development_bundles": 24,
+  "native_calls_this_cycle": 0,
+  "allocation_this_cycle": false,
+  "native_proposal_ready": false,
+  "artifacts_sha256": {
+    "PLAN.md": "662dcbc6f82b34e2dee23abf58dcffb8d9ec18b2b73df93fae0cb5feb6a26120",
+    "PROPOSAL.md": "37e5d7f1bcc1cf8fdba546c4e29f64666f2d5ea2ba66544dbdf6790cf0d4231b",
+    "RESULTS.md": "43e26176aeb32726c3f06b5bf1f50f4b3d963418dc44bf76f74c530857510b77",
+    "audit_traces.py": "0285036b007d8cd008dabbfd6d34fc5d751a8ce66ccb0acf41bd2402fb6f9076",
+    "baseline-results.json": "7ea2d5f5ef58b8532d04ccfcdc3e62f425c3d7ffea18a2d8b42add332756c26e",
+    "development-bundles.json": "6fe6edcfabf8152e54de7f98ea254af0728606c475f870ac299db6503fa371ec",
+    "development.py": "0b6cb9d36c12a75878558691974687a306cb82bca49eca18ce5c6a505e733d96",
+    "test_review.py": "7f064e7440352f9eedb80d9a9a782464b8025bfc6efe652ef8967b9b5e1138c5",
+    "traces.html": "c0676f49660f6c3f2dc00edc24003436bdbb08ffd2b153a02d48d4e8be4871b0",
+    "traces.json": "1a70f8659fd4e9fac635612d9f361263870eb23fd844a6245917c5fe68934c3f"
+  }
+}

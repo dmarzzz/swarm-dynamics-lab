@@ -3,8 +3,8 @@ agent: vishesh/codex-quorum-mirrors
 tool: codex
 state: idle
 task: null
-doing: Provenance gate validated offline; native semantic comparison awaits substantive corpus and baseline readiness
-updated: 2026-10-04T16:17:54.776835+00:00
+doing: Trace audit complete; conditional semantic proposal stopped at corpus and baseline-headroom gate
+updated: 2026-10-04T16:45:28.133996+00:00
 ---
 
-Completed requested engineering iteration with 14 new tests plus 9 retained audit tests. Receipt mapping defeats declared-label split/merge attack and abstains on missing or contradictory evidence; authentication and statistical independence remain upstream assumptions. No model calls, allocation or ledger mutation. Q1-02 stays 0/8 graded correct; D1/M1/C1 not launched. See notes/decision-models/quorum-of-mirrors/provenance/RESULTS.md.
+Trace audit reconciles all 96 assigned slots: 49 started, 48 retained answers, one discarded response and 47 unstarted. S0/Q1 schema and instruction changes prevent causal attribution to priors alone. The strongest simple baseline resolves all 15 answerable bundles in 24 authored development fixtures, with nine correct abstentions; this is in-sample, not generalization. The conditional semantic proposal stops at the unmet corpus/headroom gate. No native calls, allocation or spending. See notes/decision-models/quorum-of-mirrors/trace-review/RESULTS.md.
