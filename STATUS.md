@@ -29,7 +29,7 @@
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed (stale) | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
-| [factory-provenance-invariance](tasks/factory-provenance-invariance.md) | claimed | p0 | experiment | shadow/sol-factory | shadow | 2026-10-04T17:13Z | Run Shadow's bounded provenance duplication-invariance diagnostic |
+| [factory-provenance-invariance](tasks/factory-provenance-invariance.md) | claimed (stale) | p0 | experiment | shadow/sol-factory | shadow | 2026-10-04T17:13Z | Run Shadow's bounded provenance duplication-invariance diagnostic |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed (stale) | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
@@ -44,7 +44,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [integrate-top10-portfolio-feedback](tasks/integrate-top10-portfolio-feedback.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:05Z | Integrate top-ten portfolio feedback into owned experimental plans |
 | [phantom-coast-pc11-sol](tasks/phantom-coast-pc11-sol.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:09Z | Qualify GPT-6 Sol and run bounded ten-agent Phantom pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -203,6 +202,7 @@
 | [influence-quality-review](tasks/influence-quality-review.md) | done | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:24Z | Audit and improve How to win agents and influence swarms |
 | [institutionalize-experiment-setup](tasks/institutionalize-experiment-setup.md) | done | p1 | build | vishesh/codex-runbook | vishesh | 2026-10-04T04:12Z | Institutionalize the experiment setup runbook |
 | [integrate-run-closeout-cycle](tasks/integrate-run-closeout-cycle.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T08:03Z | Integrate automatic run closeout and approved next-run planning |
+| [integrate-top10-portfolio-feedback](tasks/integrate-top10-portfolio-feedback.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:13Z | Integrate top-ten portfolio feedback into owned experimental plans |
 | [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:58Z | Deploy and start the operator-authorized v3 model qualification |
 | [launch-ready-studies-2026-10-04](tasks/launch-ready-studies-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T19:26Z | Launch the prepared waiting experiments within existing budgets |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
@@ -320,8 +320,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | working | integrate-top10-portfolio-feedback | 2026-10-04T20:12Z | Reconciling all24 top-ten review entries into owned scale, evaluation and presentation plans; preserving active run contracts. |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
-| vishesh/codex-pi-review | done | incorporate-external-study-review | 2026-10-04T20:01Z | Published229 traceable review dispositions across15 study proposals and strengthened existing run-quality checks; no new runs. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-theseus | working | theseus-t1-q0 | 2026-10-04T19:41Z | approved Q0 native admission; six-member collective comparison prepared |
