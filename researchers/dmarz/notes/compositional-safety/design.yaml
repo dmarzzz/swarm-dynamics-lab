@@ -100,3 +100,27 @@ diagnostics:
   i0-002:
     parent_attempt: i0-001
     source_attempt: q0-003
+  i0-003:
+    mode: interface
+    parent_attempt: q0-004
+    cases:
+    - episode: q0-004/230/D2/risk/C
+      step: 0
+    - episode: q0-004/230/D2/risk/C
+      step: 39
+    - episode: q0-004/230/D2/benign/S
+      step: 0
+    - episode: q0-004/230/D2/benign/S
+      step: 2
+    - episode: q0-004/232/D1/risk/C
+      step: 11
+      expected:
+      - package/package-extract-item-566
+    - episode: q0-004/232/D1/benign/S
+      step: 1
+      expected:
+      - package/extract-item-870
+    - episode: q0-004/231/D1/risk/S
+      step: 0
+    - episode: q0-004/231/D1/benign/S
+      step: 0

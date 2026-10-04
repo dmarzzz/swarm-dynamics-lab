@@ -7,6 +7,9 @@ from provider import Anthropic, CallFailure, Ledger
 
 
 def execute(attempt):
+    if common.design().get('diagnostics',{}).get(attempt,{}).get('mode')=='interface':
+        from diagnose import execute as diagnose
+        return diagnose(attempt)
     import swarm_report as sr
     commit = common.frozen(attempt)
     out = common.ROOT/'results'/attempt

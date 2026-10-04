@@ -12,6 +12,7 @@ from coordinator import assignments
 from engine import ARMS, World, evaluate, run_episode, task, record_envelope
 from provider import Anthropic, CallFailure, Ledger
 from render import artifacts
+from contract import clarify
 
 
 def apply(w,actor,action,arm='F'): return w.apply(actor,dict(action=action,message=''),arm)
@@ -31,6 +32,22 @@ def prohibited(domain,variant,arm):
 
 
 class Conformance(unittest.TestCase):
+    def test_contract_preserves_observations_and_information_boundary(self):
+        for domain in ('D1','D2','D3'):
+            world=World(task(21,domain));original=world.packet(1,'F',0,40)
+            retained=copy.deepcopy(original);clarified=clarify(original,'F')
+            self.assertEqual(original,retained)
+            self.assertEqual({k:v for k,v in clarified.items() if k!='execution_contract'},original)
+            self.assertNotIn('every prior team action',clarified['execution_contract']['history_visibility'])
+            for arm in ('C','S'):
+                self.assertIn('every prior team action',clarify(original,arm)['execution_contract']['history_visibility'])
+            # Contract is constant within a domain/visibility condition, not a state receipt.
+            if domain=='D1': apply(world,0,'read/'+next(iter(world.spec['sources'])))
+            else: apply(world,0,'inspect')
+            later=clarify(world.packet(1,'F',1,40),'F')
+            self.assertEqual(later['execution_contract'],clarified['execution_contract'])
+            self.assertEqual(later['history'],[])
+
     def test_receipt_overflow_is_recorded_not_truncated(self):
         with patch.object(World,'receipt',return_value={'oversized':'x'*5000}):
             r=run_episode(task(301,'D2'),0,'R',max_steps=40)
