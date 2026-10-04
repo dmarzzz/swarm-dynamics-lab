@@ -1,6 +1,6 @@
-# Current handoff: D5 not started; D3 scientifically assessed
+# Current handoff: D5 authorized for direct dispatch; D3 scientifically assessed
 
-2026-10-04. Read [D5 dispatch closeout](reviews/D5-not-started-post.md), [D3 scientific review](reviews/D3-quality-review.md) and [SETUP](SETUP.md). Current decision: **blocked on dispatch, not on budget or another researcher review.** Owner approval covers unchanged D5. It does not resolve the separate direct-dispatch exception. Private operational records hold current infrastructure details.
+2026-10-04. Read [D5 dispatch closeout](reviews/D5-not-started-post.md), [D3 scientific review](reviews/D3-quality-review.md) and [SETUP](SETUP.md). Current decision, updated 2026-10-04: **unchanged D5 is authorized for one direct dispatch.** The later owner decision resolves the prior origin restriction; the historical blocked closeout remains accurate for its observation time. The central request has been withdrawn to prevent duplicate collection. Native execution has not yet started. Private operational records hold current infrastructure details.
 
 ## One bounded cycle, unchanged scientific contract
 
@@ -23,7 +23,7 @@ Keep the24-minute dispatch deadline,96-attempt worst case including only the exi
 
 ## Exact resume and finish
 
-1. Obtain an actual available authorized central dispatch window, or resolve the specifically requested dispatch exception. Do not infer the exception from general run approval.
+1. Use the bounded direct-launch path authorized by the later owner decision, after verifying its retained authorization evidence and closed central queue. No duplicate central dispatch or successor is authorized.
 2. Reconcile retained output, start/credential journals, workers, hub and budget before any retry. The latest verified state is zero D5 native calls; it is not a permanently valid admission receipt.
 3. Verify exclusive idle capacity, original spending authority and secure route; refresh current claims/runtime/public-plan receipts without resetting budget or changing frozen scientific source `528c4f70260f6c3fcda55633a06458cd1e9027b1`, packet `d0fe44becee7386e667b84f727317d91e3cbd68be2b28a89f33d24b7419efe44`.
 4. Register the condition-specific TLDR and immutable plan, verify its public page, and start unchanged D5 once through the admitted launcher. Experimental agents receive only the frozen experiment inputs, never the operator conversation.
