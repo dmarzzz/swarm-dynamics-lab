@@ -1,0 +1,224 @@
+{
+  "attempt": "controller-c1",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "diagnostic",
+  "scientific_baseline": "gap",
+  "evidence_revision": "e6e4c5f0be5c532726ef69afb6f61102d8d0d719",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Exact paired output-order discriminator completed; no hidden-reasoning or population claim.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Four inspected authored preservation/repair/freshness roots are feasible under public-observation rule comparator; scope limited to this discriminator.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same explicit diagnosis definitions, initial worlds, model, actions and budgets;16/16actual action orders match treatment; no gold repair.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Both arms fail stale-alarm restraint and2/4joint gates; ordering does not qualify the necessary controller.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ],
+      "next_action": "PI may explicitly fund a revised12world/two-fresh-repeat baseline against the public-observation rule controller; no automatic Q/A.",
+      "acceptance_check": "Valid analytic/simulator labels and comparator, complete fresh repeats with per-world/family variability and unchanged outcomes; adverse results retained. Do not claim larger competence unless its fixed gates pass."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All32requests/usages and16state frames reconcile; fixed outcome scoring separates healthy ticks from needless/rejected intervention; manual review separates semantic failure classes.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Four paired roots,one rollout/arm/root; no independent n8or32claim. Insufficient for reliability or native stability, explicitly outside C1 scope.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact requests verify identical shared diagnosis and uncorrected handoff; response route pinned; fresh explicit contexts and no operator memory.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All8assigned trajectories complete;32known usage receipts;7indexedhubartifacts hash-match; no retries or dropped adverse outcomes.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "ActualUSD0.329025;newreservations1.435980;original517calls/6.248035reserved/cap8.425secondexisting-host claim released; infrastructure estimate separated from central invoice.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Frozen source and57local/remote tests support instrument reproducibility; no same-condition fresh native replication establishes stability.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ],
+      "next_action": "PI may explicitly fund a revised12world/two-fresh-repeat baseline against the public-observation rule controller; no automatic Q/A.",
+      "acceptance_check": "Valid analytic/simulator labels and comparator, complete fresh repeats with per-world/family variability and unchanged outcomes; adverse results retained. Do not claim larger competence unless its fixed gates pass."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Measured frame/replay reflects native health and interventions; rowPASS is outcome-only; emptyholdoutpane disclosed as inherited placeholder, not a funded stage.",
+      "evidence": [
+        {
+          "path": "c1-post.md",
+          "sha256": "1271b2624e0567663c4956608b30a2770a34e444405f2ceffe32bb51ccedf66f"
+        },
+        {
+          "path": "c1-reconciliation.json",
+          "sha256": "ac1fbfbe1fad0bc5d6063b819ac0cfb0968da458df4bde5542b3daea526c12d2"
+        },
+        {
+          "path": "c1-manual-review.json",
+          "sha256": "19154117154f4c30ba235f5264af97f3324a3558db831df638acb8096e050df2"
+        }
+      ]
+    }
+  ]
+}

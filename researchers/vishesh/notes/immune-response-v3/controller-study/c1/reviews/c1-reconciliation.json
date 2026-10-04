@@ -1,0 +1,151 @@
+{
+  "episodes_replayed": 8,
+  "frames_replayed": 16,
+  "manual_semantic_agreement_review": "complete_all16actions_all16diagnoses",
+  "new_model_calls": 0,
+  "requests_reconciled": 32,
+  "actual_usd": 0.329025,
+  "reserved_usd": 1.43598,
+  "cells": [
+    {
+      "case": "healthy",
+      "order": "action_first",
+      "outcome_pass": true,
+      "diagnosis_pass": true,
+      "healthy_ticks": 2,
+      "rejected": 0,
+      "useful_restarts": 0
+    },
+    {
+      "case": "healthy",
+      "order": "justification_first",
+      "outcome_pass": true,
+      "diagnosis_pass": true,
+      "healthy_ticks": 2,
+      "rejected": 0,
+      "useful_restarts": 0
+    },
+    {
+      "case": "worker_crash",
+      "order": "justification_first",
+      "outcome_pass": true,
+      "diagnosis_pass": true,
+      "healthy_ticks": 2,
+      "rejected": 0,
+      "useful_restarts": 1
+    },
+    {
+      "case": "worker_crash",
+      "order": "action_first",
+      "outcome_pass": true,
+      "diagnosis_pass": true,
+      "healthy_ticks": 2,
+      "rejected": 0,
+      "useful_restarts": 1
+    },
+    {
+      "case": "stale_alarm",
+      "order": "action_first",
+      "outcome_pass": false,
+      "diagnosis_pass": false,
+      "healthy_ticks": 2,
+      "rejected": 1,
+      "useful_restarts": 0
+    },
+    {
+      "case": "stale_alarm",
+      "order": "justification_first",
+      "outcome_pass": false,
+      "diagnosis_pass": false,
+      "healthy_ticks": 2,
+      "rejected": 0,
+      "useful_restarts": 0
+    },
+    {
+      "case": "configuration",
+      "order": "justification_first",
+      "outcome_pass": true,
+      "diagnosis_pass": false,
+      "healthy_ticks": 2,
+      "rejected": 0,
+      "useful_restarts": 0
+    },
+    {
+      "case": "configuration",
+      "order": "action_first",
+      "outcome_pass": true,
+      "diagnosis_pass": false,
+      "healthy_ticks": 2,
+      "rejected": 0,
+      "useful_restarts": 0
+    }
+  ],
+  "runtime_commit": "e6e4c5f0be5c532726ef69afb6f61102d8d0d719",
+  "native_order_compliance": {
+    "action_outputs": 16,
+    "matched": 16
+  },
+  "arms": {
+    "action_first": {
+      "calls": 16,
+      "input_tokens": 25702,
+      "output_tokens": 1475,
+      "actual_usd": 0.165385,
+      "reserved_usd": 0.718405,
+      "outcome_gates": 3,
+      "joint_gates": 2,
+      "diagnoses_correct": 6,
+      "healthy_ticks": 8
+    },
+    "justification_first": {
+      "calls": 16,
+      "input_tokens": 25708,
+      "output_tokens": 1404,
+      "actual_usd": 0.16364,
+      "reserved_usd": 0.717575,
+      "outcome_gates": 3,
+      "joint_gates": 2,
+      "diagnoses_correct": 6,
+      "healthy_ticks": 8
+    }
+  },
+  "cumulative_calls": 517,
+  "cumulative_reserved_usd": 6.248035,
+  "study_cap_usd": 8,
+  "hub_readback": {
+    "checks": [
+      {
+        "file": "manifest.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "events.jsonl",
+        "sha256_matches": true
+      },
+      {
+        "file": "episodes.jsonl",
+        "sha256_matches": true
+      },
+      {
+        "file": "summary.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "replay.html",
+        "sha256_matches": true
+      },
+      {
+        "file": "visualization-provenance.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "usage.jsonl",
+        "sha256_matches": true
+      }
+    ],
+    "all_match": true
+  },
+  "fresh_repetitions_per_arm_world": 1,
+  "paired_world_roots": 4,
+  "independent_authorship": false
+}
