@@ -24,8 +24,11 @@ Evaluate and improve the three scenario directions, freeze a discriminating expl
 
 ## Done when
 
-- [x] Evaluate scenario alternatives and freeze the revised plan before implementation (v2/PLAN.md).
-- [x] Build evaluator, lineage tracking, failure accounting and replay; 14 offline tests pass.
-- [x] Register and verify immutable plan addecbcd43ee6f07993db2f3f4578ef2aab356e1, exact SHA-256 ca0cab4c530e6ca6e4966da3385d10c475067ffb0a8fd110a8ebc55036aa3d06; 0 runs.
-- [x] Resource blocker documented: existing authority has USD0.097684; additional USD15 requested, not approved. No v2 deployment or calls. Fresh dedicated claim and unblocked review required after approval.
-- [x] Publish v2/ASSESSMENT.md plus registered labeled fixture artifacts; paid execution remains pending.
+- [x] Evaluate three scenarios and freeze the revised plan before implementation.
+- [x] Build evaluator, lineage, failure accounting and replay; 16 offline/server checks pass.
+- [x] Publish and verify immutable per-attempt public plan/review and condition TLDRs.
+- [x] Apply explicitly approved separate USD15 allocation and fresh exclusive idle host claim.
+- [x] Execute S0 and its one prospective repair: 48 calls, 24 completed experimental runs, no invalid outputs/provider failures/audit disagreements. Both joint qualification gates fail; no S1 dispatched.
+- [x] Publish all failures, post-mortems, measured replay/figure/raw evidence; follow the stop rule and release host via merged private PR119.
+
+The bounded iteration is complete; the cultural-preservation question remains unanswered. A successor requires prospective design and unresolved research-review gates. See researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md and SETUP.md.

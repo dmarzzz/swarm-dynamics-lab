@@ -15,3 +15,7 @@ Prior publication correction: four artifact versions had an invalid `by` harness
 ## Terminal execution status
 
 S0: 12 runs /24calls, completed but failed qualification. S0-repair: fresh302/303, source095534bfab16085ac6f4032cd5137cf1e2c7b875,16 server tests passed, planSHA256 7cd472518a76eb901598852847a004c23e8d39836cd9c6523f96284021af4110;12runs/24calls completed but joint qualification again failed. Two-hour ledger retained; total48calls, estimatedUSD0.165211, conservativeUSD0.568098. No S1, no hidden retry, no quota/deadline reset. Full records retrieved with verified bundle hashes. Fleet checkout was isolated before repair because another agent had uncommitted private infrastructure state; that state was left untouched.
+
+Closeout: worker exit verified, both raw bundles retrieved, final measured figure uploaded, then exclusive claim released through merged private fleet PR119 and mirrored to the hub. No teardown or new server purchase.
+
+Dashboard reporting deviation: an experiment-level closeout log created a default administrative row named swarm-of-theseus-v2. It was explicitly closed and labeled zero calls/cases, not an experimental condition. The hub therefore has 25 rows, but exactly 24 experimental runs. All manifests and measured analyses retain the correct 24-run denominator.
