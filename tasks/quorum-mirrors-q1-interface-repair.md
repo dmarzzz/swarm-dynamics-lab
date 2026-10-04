@@ -3,7 +3,7 @@ id: quorum-mirrors-q1-interface-repair
 type: task
 title: Preserve rejected-response usage and reconcile Q1 output-token contract
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-quorum-mirrors
 for: vishesh
@@ -14,7 +14,10 @@ depends_on:
 topics:
 - decision-models
 claimed_at: 2026-10-04T07:49Z
-updated: 2026-10-04T07:49Z
+updated: 2026-10-04T08:03Z
+outputs:
+- researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md
+- researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02
 ---
 
 ## Goal
