@@ -46,6 +46,7 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T17:31Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
+| [right-dissenter-reopening-design](tasks/right-dissenter-reopening-design.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T18:12Z | Draft and validate the Right Dissenter reopening diagnostic |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -369,8 +370,8 @@
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc8-live | 2026-10-04 18:12:29.707680+00:00 | PC8 Q0 closed and reviewed; failed qualification, S1 unrun; parser defect repaired retrospectively; allocation released; FINISH / PARK |
+| vishesh/codex-decision-models | working | right-dissenter-reopening-design | 2026-10-04 18:12:07.337384+00:00 | Drafting the RD5 successor on reliable reopening and validating context controls offline; no native dispatch. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:08:12.715614+00:00 | Claim-fidelity case design complete; native progression needs strong baseline and varied corpus |
-| vishesh/codex-decision-models | done | right-dissenter-rd5-run | 2026-10-04 17:41:06.299361+00:00 | RD5 complete and published: Q5 24/24; H5 6/8/6 across 72 decisions. Adverse result and context-transfer limitation retained, public evidence verified, allocation released. No next run scheduled. |
 | vishesh/codex-methods | idle |  | 2026-10-04 17:01:34.898350+00:00 | Offline Antsy repair published with13passing tests; D1 concrete plan awaits owner approval; no additional native calls |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
