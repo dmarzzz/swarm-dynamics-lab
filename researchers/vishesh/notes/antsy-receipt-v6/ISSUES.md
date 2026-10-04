@@ -7,6 +7,7 @@
 | Extra checking treated as free | Initial and incremental measured tool seconds and calls | Replayed measured costs, fixed execution order; not online response time |
 | Evaluation reused development material | First20 train development, then first50 test once frozen | Hash disjointness from old validation and development; layout independence unproven |
 | Unit fixtures missed actual data schema | E0 attempt1 preserved as failed qualification; structured-reference and literal-quote TSV regressions | Post-mortem and repair qualification; zero-scorable audit now fails closed |
+| Subtotal matched total through a hyphen | Reject common hyphen/dash separators; preserve and reparse original TSV | Development receipt9 apparent improvement disappears; before/after ledger retained |
 | Missing/error cases disappeared into aggregate accuracy | Assigned/scorable/unscorable and invalid OCR counts, bounds on unknown accepted references | Timeout retained as tool error; audit requires zero execution defects |
 | Unclear visual evidence | Outcome bars, every-receipt decision map, first3 fixed-case traces | Ground truth revealed only after commitment; no success-based example selection |
 | Correlated consensus mistaken for truth | Explicit wrong-consensus fixture and observed-error reporting | All pipelines share Tesseract; no independent-expert claim |

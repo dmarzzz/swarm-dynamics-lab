@@ -1,0 +1,44 @@
+[
+  {
+    "id": 9,
+    "tool": "A",
+    "before": {
+      "status": "ok",
+      "value": "40.00",
+      "confidence": 0.610233825
+    },
+    "after": {
+      "status": "missing",
+      "value": null,
+      "confidence": 0.0
+    }
+  },
+  {
+    "id": 9,
+    "tool": "B",
+    "before": {
+      "status": "ok",
+      "value": "40000.00",
+      "confidence": 0.8783584950000001
+    },
+    "after": {
+      "status": "missing",
+      "value": null,
+      "confidence": 0.0
+    }
+  },
+  {
+    "id": 9,
+    "tool": "E",
+    "before": {
+      "status": "ok",
+      "value": "40000.00",
+      "confidence": 0.94226219
+    },
+    "after": {
+      "status": "missing",
+      "value": null,
+      "confidence": 0.0
+    }
+  }
+]
