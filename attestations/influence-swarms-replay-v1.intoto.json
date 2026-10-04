@@ -4,7 +4,7 @@
   "buildDefinition": {
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
-    "harness": "vishesh/codex-experiments",
+    "harness": "codex",
     "prompt": "Build an interactive replay of all recorded experiment cases."
    },
    "internalParameters": {
@@ -40,7 +40,7 @@
   },
   "runDetails": {
    "builder": {
-    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/vishesh/codex-experiments"
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
    },
    "metadata": {
     "finishedOn": "2026-10-04T01:55:46Z",

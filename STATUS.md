@@ -14,13 +14,13 @@
 | sync-consensus | 255 | 24 | 11 | 17 | 1 | 28 | 336 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
-| llm-agent-swarms | 553 | 118 | 106 | 197 | 47 | 14 | 1035 |
+| llm-agent-swarms | 553 | 119 | 106 | 197 | 47 | 14 | 1036 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
-| sybil-resistance | 331 | 65 | 62 | 57 | 8 | 22 | 545 |
-| fork-merge-security | 357 | 46 | 62 | 69 | 8 | 13 | 555 |
-| swarm-detection | 390 | 45 | 80 | 193 | 35 | 11 | 754 |
-| agent-budgets | 53 | 1 | 7 | 0 | 0 | 0 | 61 |
+| sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
+| fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
+| swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
+| agent-budgets | 53 | 2 | 7 | 0 | 0 | 0 | 62 |
 
 ## Tasks
 
@@ -39,7 +39,6 @@
 | [add-patchwork-hypotheses](tasks/add-patchwork-hypotheses.md) | claimed | p1 | synthesis | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T01:56Z | Add Patchwork-derived hypotheses to the research page |
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:57Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [build-discussion-benchmark-v3](tasks/build-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T01:51Z | Ship a validated offline discussion and memory benchmark v3 |
-| [build-market-split](tasks/build-market-split.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T01:49Z | Build and deploy an exploratory owner-splitting market pilot |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:57Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [influence-quality-review](tasks/influence-quality-review.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T01:48Z | Audit and improve How to win agents and influence swarms |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -114,6 +113,7 @@
 | [build-dashboard-questions](tasks/build-dashboard-questions.md) | done | p1 | build | dmarz/dashboard-questions |  | 2026-10-03T21:56Z | Add question atlas and review tools to the research dashboard |
 | [build-discussion-dose](tasks/build-discussion-dose.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-03T23:39Z | Build and deploy the SEC-47 discussion dose exploratory study |
 | [build-discussion-dose-v2](tasks/build-discussion-dose-v2.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:38Z | Build the harder contested-evidence version of discussion-dose (v2), ready to roll out |
+| [build-market-split](tasks/build-market-split.md) | done | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:02Z | Build and deploy an exploratory owner-splitting market pilot |
 | [build-sybil-specialists](tasks/build-sybil-specialists.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:46Z | Plan and deploy a scripted Sybil admission and specialist preservation study |
 | [contribution-new-badges](tasks/contribution-new-badges.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T23:40Z | Show recent contributions and added project tags |
 | [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | done | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:06Z | Plan five shared-environment distributed-evidence studies |
@@ -163,9 +163,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | done |  | 2026-10-04T02:00Z | pc-H4 done (d0725be0, qualified, private_contrast -0.33); post-mortem reviews/pc-H4-a1-post.md |
+| dmarz/patchwork-hypotheses | working | add-patchwork-hypotheses | 2026-10-04T01:59Z | Add Patchwork-derived unreviewed hypotheses and publish the research-page update |
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:57Z | 450 scripted episodes verified; plan and replay filed; temporary server destroyed; finishing records. |
 | vishesh/codex-immune | blocked |  | 2026-10-04T01:57Z | V2 reported and v3 engineering passed; awaiting exclusive fleet host for fresh native repair qualification |
-| dmarz/patchwork-hypotheses | working |  | 2026-10-04T01:55Z | Add Patchwork-derived unreviewed hypotheses and publish the research-page update |
 | dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T01:55Z | Building fixed-model qualification and paired badge pilot; aggregate USD 5 cap, no API calls yet |
 | dmarz/discussion-bench-v3 | working | build-discussion-benchmark-v3 | 2026-10-04T01:49Z | Building the offline v3 benchmark, with paid runs and holdout release deferred |
 | vishesh/codex-idea-scores | working |  | 2026-10-04T01:49Z | Implement researcher rubric scores across all research ideas |

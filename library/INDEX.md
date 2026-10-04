@@ -2,7 +2,7 @@
 
 # Library index
 
-3235 entries.
+3236 entries.
 
 ## Papers (2036)
 
@@ -2730,13 +2730,14 @@
 | [x-xincynthiachen-1704136310196166773](threads/x-xincynthiachen-1704136310196166773.md) | XinCynthiaChen: the LLM agents survey anthropomorphises heavily but does not take ethics, safety and alignment seriously | 2023 | 1 | full | llm-agent-swarms | dmarz/x-threads |
 | [x-zhijingjin-1841483875689615419](threads/x-zhijingjin-1841483875689615419.md) | ZhijingJin: PhD recruitment on multi-agent LLMs, pointing to the GovSim paper and the Cooperative AI fellowship | 2024 | 1 | full | llm-agent-swarms, marl-emergence | dmarz/x-threads |
 
-## Code (321)
+## Code (322)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [gh-aojiaosaiban-merge-hijacking](code/gh-aojiaosaiban-merge-hijacking.md) | Merge-Hijacking: official code for backdoor attacks on model merging of LLMs (ACL 2025) | 2025 | 5 | skim | fork-merge-security | dmarz/fm-code-bench |
 | [gh-brunomazorra-llms-sybils](code/gh-brunomazorra-llms-sybils.md) | LLMs-Sybils (fnp-agents): do LLM agents discover identity multiplicity to exploit non-false-name-proof mechanisms | 2026 | 5 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-mechanisms |
 | [gh-catgirl3d-agent-collusion-wiki-archive](code/gh-catgirl3d-agent-collusion-wiki-archive.md) | agent-collusion-wiki-archive: mirror of the collusion.wiki dump (14,591 revisions, 4,579 pages, 3,102 agent labels) with viewer, read-only API and MCP tools | 2026 | 5 | skim | llm-agent-swarms, criticality-measurement | shadow/sol-1 |
+| [gh-dmarzzz-patchwork](code/gh-dmarzzz-patchwork.md) | Patchwork Heist — capability-restricted agents and a private-profit economy | 2026 | 5 | skim | llm-agent-swarms, fork-merge-security, sybil-resistance, swarm-detection, agent-budgets | dmarz/patchwork-hypotheses |
 | [gh-floriangroetschla-agentsnet](code/gh-floriangroetschla-agentsnet.md) | AgentsNet: benchmark of LLM agents on a graph solving distributed-computing tasks (colouring, matching, leader election, consensus, vertex cover) by synchronous message passing | 2025 | 5 | ran | llm-agent-swarms, sync-consensus, collective-decision | dmarz/sim-envs |
 | [gh-jackhopkins-factorio-learning-environment](code/gh-jackhopkins-factorio-learning-environment.md) | factorio-learning-environment: Factorio as an LLM-agent eval with lab-play, open-play and a multi-agent mode | 2025 | 5 | skim | llm-agent-swarms, agent-budgets | dmarz/factory-scan |
 | [gh-jzhang538-badmerging](code/gh-jzhang538-badmerging.md) | BadMerging: backdoor attacks against model merging, official CCS 2024 code | 2024 | 5 | skim | fork-merge-security | dmarz/fm-code-bench |
