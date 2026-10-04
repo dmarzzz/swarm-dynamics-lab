@@ -3,14 +3,16 @@ id: launch-discussion-benchmark-v3
 type: task
 title: Deploy and start the operator-authorized v3 model qualification
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/discussion-bench-v3
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T02:38Z
+updated: 2026-10-04T02:38Z
 ---
 
 ## Goal
