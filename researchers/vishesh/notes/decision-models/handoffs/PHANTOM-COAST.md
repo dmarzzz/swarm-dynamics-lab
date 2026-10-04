@@ -1,5 +1,7 @@
 # Phantom Coast handoff
 
+Latest completed cohort: [PC-3 coverage guard](../../phantom-coast/pc3/README.md), 2026-10-04. Eight roots, 96 complete episodes; guard fixed repeats but missed the practical loss threshold and did not beat uniform. Source 06ac568a; qualification passed, all native traces audited. USD0.574334208 cumulative exposure, nine uncertain charges; stopped worker/key removed/claim released. [Setup and exact status](../../phantom-coast/pc3/SETUP.md), [post-mortem](../../phantom-coast/pc3/reviews/S1-A1-POST.md), [next proposal](../../phantom-coast/pc3/NEXT-ITERATION.md). No further cohort is running.
+
 Owner preference: a primary project. Working headline: **The Island No One Visits**. Canonical ID DM-01, area decision-models. Current exploratory context is in ../REIMAGINING.md; PC-1 and PC-2 native cohorts are complete; no formal accepted hypothesis is claimed.
 
 ## Current handoff: native PC-2 closed out

@@ -1,0 +1,34 @@
+{
+  "mapping": "PC-V4",
+  "operator": "vishesh/codex-phantom-coast",
+  "checked_utc": "2026-10-04T08:21:05.775104+00:00",
+  "fixture_visual_verified": "600 team guard-on slot6 displays no observation and five unique cells after failed quorum",
+  "native_gif": {
+    "frames": 624,
+    "size_bytes": 2644330,
+    "duration_ms_each": 160,
+    "sha256": "b9831938a99ce423420809e10b2334f0d605bdfb37f803148ef9b20f3c1df97c",
+    "frame_12_inspected": true
+  },
+  "png_final_verified": "807 uniform guard-on: 12 unique, one reported cell; misleading wrong3/unknown21, benign wrong0/unknown21",
+  "interactive_replay": {
+    "episodes": 96,
+    "initial_state": "800 team off slot0: zero inspections, endpoint not yet measured",
+    "guarded_endpoint": "800 team on slot12: misleading unique12/report4/wrong0/unknown24; benign unique12/report2/wrong0/unknown23",
+    "missing_slot": "803 single off slot7 benign: target none, 0/1 valid proposals; misleading repeat target0,0",
+    "adverse_case": "801 team on slot12: misleading unique12/report0/wrong4/unknown20",
+    "playback": "Play advanced from7 and stopped automatically at12 with button reset to Play",
+    "layout_screenshot_checked": true,
+    "url": "http://127.0.0.1:8775/measured-replay.html"
+  },
+  "comparison_plot": {
+    "size": [
+      2240,
+      840
+    ],
+    "mean_lines_and_individual_roots": true,
+    "measured_primary_points": -2.256944444444444,
+    "visual_verified": true
+  },
+  "public_delivery": "All native PNG/GIF and derived comparison PNG hash-match public endpoint; all native and derived artifacts verified on authenticated hub."
+}

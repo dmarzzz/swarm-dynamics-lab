@@ -1,34 +1,26 @@
 # Experiment setup record: Phantom Coast PC-3
 
-Owner/operator: vishesh/codex-phantom-coast. Exploratory engineering study. Researcher review not required by owner; no independent approval claimed. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [operations](../../../../../tooling/agent-experiments/OPERATIONS.md), [previous post-mortem](../pc2/reviews/S1-A1-POST.md).
-
-## Ownership and question
-
-Test whether excluding measured cells improves mapping loss and whether it adds useful prioritization over uniform. See PLAN.md and reviews/RUNNER-PRE.md for design, controls, populations, resource limits and visualization PC-V4. No formal accepted hypothesis. Previous cohorts preserved.
+Owner/operator/self-assessor vishesh/codex-phantom-coast. Exploratory engineering study; no accepted formal hypothesis or independent review claimed. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [operations](../../../../../tooling/agent-experiments/OPERATIONS.md), [previous post-mortem](../pc2/reviews/S1-A1-POST.md).
 
 ## Gate evidence
 
-| Gate | Status | Evidence / next action |
+| Gate | Status | Evidence |
 |---|---|---|
-| G0 scope | Exploratory | PC-2 findings; prior-art limits retained |
-| G1 plan before implementation | Written | PLAN.md; publish before coding |
-| G2 instrument | Pending | Implement and validate |
-| G3 native admission | Pending | Immutable registration, page, budget, source/runtime and fresh exclusive claim |
-| G4 qualification | Pending | Q0-A1 fresh 700-703 before S1 |
-| G5 closeout | Pending | Audit, report, artifact readback, budget backup, key removal, release |
+| G0 scope | Exploratory | PC-2 results and honest prior-art limits; review optional by owner |
+| G1 prospective plan | Pass | PLAN published at a1162ca49d12ed7e699cec8c4fdf06db6a001aa4 before PC-3 source implementation |
+| G2 instrument | Pass |48 tests locally and on Linux; VALIDATION.json and results/runtime.json |
+| G3 admission | Pass Q0/S1 | PLAN-PUBLICATION.json, committed pre-assessments, fresh private allocation/budget/runtime receipts |
+| G4 qualification | Pass | Q0-A1-POST:24/24 valid,432 correct labels,4 guarded and8 unrestricted targets correct |
+| G5 closeout | Complete | S1-A1-POST, audited requests/events/endpoints, VISUAL-QA, readbacks and CLOSEOUT.json |
 
 ## Design and instrument index
 
-PLAN.md fixes all contracts and stage limits. Development 600-607; qualification 700-703; S1 800-807; confirmation 1000-1099 sealed. Planned four qualification roots and eight scientific roots, 96 dependent episodes. Qualification and S1 are separate cohorts. Native commands use src/run.py prepare/run; resume unsupported. Registry is historical navigation, manual study adapter retained.
+PLAN defines the guard, twelve-arm within-root pairing, primary loss and sensitivity, PC-V4 visuals and bounded stages. Source 06ac568a23ae9212372b8e0156715a71adc5b598; snapshot typesafe/jev-1.13-20260917. Development 600-607 only; qualification 700-703 and pilot 800-807 separate. Eight pilot roots,96 complete dependent episodes,1784/1792 valid requests,8 invalid retained; one failed sensing slot. No 1000-1099 confirmation roots opened. Manual src/run.py prepare/run adapter; no resume. Reporting commands in RUNBOOK.md make no model calls.
 
-## Current attempt admission
+## Admission and attempt history
 
-No native stage admitted yet. Exact private receipts must bind current exclusive Mars fleet, immutable plan, Linux runtime, source, qualification and the one cumulative ledger. USD5 total, USD4 API cap; carry USD0.358051260 conservative historical exposure and closed PC-2 ledger hash. No retry or top-up. Credentials consumed only from the approved protected local store and removed from the run host at closeout. Direct launch authorized by owner; no queue ticket required.
+Q0-A1 and S1-A1 ran once each, fixed scientific fingerprint throughout. Public page showed immutable readable plan before dispatch. Owner authorized direct launch instead of a launch request and temporary project credential transfer. Fresh exclusive sim-dmarz-10 allocation, no new machine. No researcher review requested or fabricated. Pre-assessments and post-mortems are operator assessments. Budget carries closed PC-2 ledger ancestry; no reset or new grant.
 
-## Attempt and repair history
+## Closeout and next action
 
-New PC-3, parent PC-2 S1-A1 complete-valid-result. No PC-3 model calls. Known PC-2 faults: quadratic persistence, opaque validation reason and oversized public GIF; planned repairs and tests in RUNNER-PRE.md.
-
-## Closeout
-
-Pending. Next action: publish plan, build and verify instrument, then obtain fresh stage admission. Update this record with actual counts/costs, evidence links and resource release.
+Execution complete, qualification passed, guard mechanically prevents repeats. Scientific practical threshold not met: team loss reduction 2.26 points versus 5.56 target; guarded team remains 1.82 points worse than uniform. All outcomes retained. Known cumulative API costUSD 0.562238208; conservative exposureUSD 0.574334208 with 9 unresolved charges. OriginalUSD 5 total/USD 4 API cap. Worker stopped, temporary credential removed, ledger backed up, artifacts verified and allocation release recorded in results/CLOSEOUT.json. Owner retains VM. NEXT-ITERATION.md proposes report-verification quotas; no further native cohort admitted. Shared evidence-registry limitations are recorded separately in results/METADATA-VALIDATION.json.

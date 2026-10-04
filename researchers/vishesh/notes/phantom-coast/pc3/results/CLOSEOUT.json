@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-04T08:18:32.870768+00:00",
+  "worker_stopped": true,
+  "credential_removed": true,
+  "calls": 1816,
+  "known_api_usd": 0.562238208,
+  "api_exposure_usd": 0.574334208,
+  "new_unresolved_calls": 8,
+  "historical_unresolved_calls": 1,
+  "unresolved_calls": 9,
+  "incremental_infrastructure_usd": 0,
+  "new_machine_created": false,
+  "api_cap_usd": 4,
+  "total_cap_usd": 5,
+  "budget_backup_sha256": "e7ec455a033558faa758e0857233dbb93cbd52222c6395ba415fa8860aea75f5",
+  "attempts": [
+    [
+      "Q0",
+      "q0-a1"
+    ],
+    [
+      "S1",
+      "s1-a1"
+    ]
+  ],
+  "allocation_release": "merged",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/228",
+  "public_delivery": "Verified replay.gif, final_frame.png and results-frame.png",
+  "operator_audit": "S1-A1-audit.json",
+  "public_replay": "https://swarm-live.pages.dev/api/a/phantom-coast-pc3/s1-a1/replay.gif"
+}

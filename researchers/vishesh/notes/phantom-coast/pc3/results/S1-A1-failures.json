@@ -1,0 +1,50 @@
+[
+  {
+    "id": "801-team-benign-guard1-slot12-1",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.23901702099988142
+  },
+  {
+    "id": "803-team-misleading-guard1-slot1-1",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.17816139499996098
+  },
+  {
+    "id": "803-team-misleading-guard1-slot5-2",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.18791144600004372
+  },
+  {
+    "id": "803-single-benign-guard0-slot7-0",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.18548383999996076
+  },
+  {
+    "id": "803-team-misleading-guard0-slot10-2",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.17161740599999575
+  },
+  {
+    "id": "807-team-benign-guard1-slot6-0",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.16261413100005484
+  },
+  {
+    "id": "807-team-benign-guard1-slot9-2",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.16096379499981595
+  },
+  {
+    "id": "807-team-misleading-guard1-slot12-1",
+    "status": "invalid",
+    "failure_code": "probability_mass",
+    "elapsed_seconds": 0.2051877109997804
+  }
+]
