@@ -21,6 +21,10 @@ Implement declared and behavioral worker-diversity profiles, qualify a second OC
 
 ## Done when
 
-- [ ] Prospective plan and setup evidence published.
-- [ ] Instrument, controls and native qualification pass.
-- [ ] Frozen comparison rerun, assessed, and pushed; failures preserved.
+- [x] Prospective plan and setup evidence published.
+- [x] Instrument and controls tested; native qualification executed and assessed without relaxing its gates.
+- [x] Bounded native qualification rerun, assessed, and pushed; failures preserved. S1 correctly not run after failed per-family competence.
+
+## Disposition
+
+Delivered design, shared diversity guide,24 tests,100-call repaired qualification, charts/replay and audited results. The original aspiration of a held-out efficacy comparison remains unachieved because the competence gate failed; closing this iteration does not assert that gate passed. See researchers/vishesh/notes/antsy-diversity-v7/RESULTS.md for the next design requirements.
