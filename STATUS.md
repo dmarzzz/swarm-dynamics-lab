@@ -40,7 +40,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-haiku-panel](tasks/antsy-haiku-panel.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:24Z | Improve and run the forty-member Haiku receipt panel |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -145,6 +144,7 @@
 | [ai-village-study-integration](tasks/ai-village-study-integration.md) | done | p1 | build | vishesh/codex-village-fit | vishesh | 2026-10-04T18:16Z | Integrate AI Village evidence contracts into relevant studies |
 | [analyze-discussion-v3-q0](tasks/analyze-discussion-v3-q0.md) | done | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:50Z | Audit and publish the completed discussion v3 qualification |
 | [antsy-diversity-v7](tasks/antsy-diversity-v7.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T06:29Z | Measure worker diversity and correlated errors in Antsy |
+| [antsy-haiku-panel](tasks/antsy-haiku-panel.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:32Z | Improve and run the forty-member Haiku receipt panel |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-receipt-comparison](tasks/antsy-receipt-comparison.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T19:55Z | Build and validate receipt extraction comparison with standard traces |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
@@ -396,7 +396,7 @@
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:31:03.068871+00:00 | SP-02 quote-only repair reviewed and closed; no main evaluation |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc11-sol | 2026-10-04 20:20:22.452084+00:00 | PC11 qualified and120-decision ten-agent pilot reviewed; no spread in one world, exposure1.193795490, allocation released |
 | vishesh/codex-decision-models | working | right-dissenter-freshness-diagnostic | 2026-10-04 20:20:19.112342+00:00 | Implementing the approved 48-request freshness diagnostic and strong eligibility baseline. |
-| vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Forty-agent Haiku panel authorized under USD20 total; native admission preparation |
+| vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Haiku Q0 and locale diagnostic closed;96 valid calls, qualification failed, USD0.182328 new charge; E0 blocked |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
