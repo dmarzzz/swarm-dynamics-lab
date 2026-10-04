@@ -273,9 +273,9 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-decision-models | working | right-dissenter-rd4 | 2026-10-04 06:26:11.141200+00:00 | RD4 complete; publishing 576-decision analysis, measured replay and released allocation closeout. |
 | vishesh/codex-quorum-mirrors | working | quorum-mirrors-q1-launch | 2026-10-04 06:25:31.707497+00:00 | Completing authorized memory-only credential delivery and Q1 execution |
 | vishesh/codex-phantom-coast | done | phantom-coast-review-process | 2026-10-04 05:51:41.825522+00:00 | Researcher review made optional; PC-2 gate updated; 44 tests pass; operational admission next |
-| vishesh/codex-decision-models | working | right-dissenter-rd4 | 2026-10-04 04:59:02.303479+00:00 | Incorporating fresh RD-R1/R2/R3 review and designing symmetric recovery with persistent evidence closures. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
