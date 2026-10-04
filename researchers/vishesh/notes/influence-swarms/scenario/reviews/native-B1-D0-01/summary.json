@@ -1,0 +1,25 @@
+{
+  "stage": "B1-D0",
+  "attempt": "native-B1-D0-01",
+  "run": "influence-swarms/1004-214130-f8e3f2",
+  "source_commit": "f986b944f9ecd9e37d415c37750be344cf82258c",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/f986b944f9ecd9e37d415c37750be344cf82258c/researchers/vishesh/notes/influence-swarms/scenario/scale-up/B1-SCIENTIFIC-BASELINE-PLAN.md",
+  "packet_sha256": "1fb19aa7c8cdcad23dd1acf724acf9febbdf6c7be3e4e075eae78bc79e9799ef",
+  "planned_calls": 240,
+  "calls": 0,
+  "valid_calls": 0,
+  "unstarted_calls": 240,
+  "complete": false,
+  "failure": "public_page_http403_before_model_dispatch",
+  "usage_missing": 0,
+  "actual_usd": 0,
+  "new_reserved_usd": 0,
+  "budget_after": [
+    50,
+    7.961696,
+    530
+  ],
+  "retries": 0,
+  "worker_stopped": true,
+  "process_status": "failed_before_acquisition"
+}

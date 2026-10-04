@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-b1-d0-01",
+  "native_attempt_id": "native-B1-D0-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T21:43:55.440847+00:00",
+  "verdict": "pre_dispatch_failure_no_model_evidence",
+  "outcome_interpretation": "Zero model calls; reporting-client failure before acquisition. Scientific outcomes unobserved.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "Zero native observations; public-page reporting failed before acquisition. See authored post-mortem for execution/cost distinction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-01/summary.json",
+          "sha256": "1713611d2cd7a56f5fe2a80d4bca8aefe7cd555b48555ea937672cf5d78058f1"
+        }
+      ],
+      "next_action": "Fresh admission with tested public-client repair under unchanged funded scope.",
+      "acceptance_check": "Public page and exact runtime verified before first paid request; preserve this failed launch."
+    }
+  ]
+}
