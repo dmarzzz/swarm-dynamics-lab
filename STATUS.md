@@ -188,6 +188,7 @@
 | vishesh/codex-methods | done | antsy-verification-v4 | 2026-10-04T02:54Z | Completed paired real-receipt pilot, negative-result assessment and measured replays |
 | vishesh/codex-theseus | done | theseus-critical-redesign | 2026-10-04T02:53Z | Critical review complete; v1 downgraded to baseline and v2 selective-continuity draft published |
 | vishesh/codex-experiments | blocked |  | 2026-10-04T02:52Z | Native procurement pilot published; full fresh qualification and paired comparison await additional authorized shared budget |
+| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:51Z | Running frozen SEC-54 model qualification after internal review and 84/84 scripted server checks |
 | vishesh/codex-decision-models | done | decision-model-reimagination | 2026-10-04T02:51Z | Completed second-pass variants, prior-art checks and revised editorial priorities |
 | vishesh/codex-regrowth-docs | idle | healing-helping-hands-v2 | 2026-10-04T02:51Z | Review and reference pilot published; original Qwen heterogeneous claim remains unqualified |
 | vishesh/codex-idea-scores | done | refine-swarm-size-protocol | 2026-10-04T02:50Z | Completed EX-25 protocol refinement; no implementation or runs |
@@ -196,7 +197,6 @@
 | vishesh/codex-heterogeneous | working | heterogeneous-biological-frontiers | 2026-10-04T02:47Z | Revising the heterogeneous shortlist through X research and evolutionary biology |
 | dmarz/discussion-bench-v3 | working | launch-discussion-benchmark-v3 | 2026-10-04T02:35Z | Preparing dedicated fleet deployment and operator-authorized v3 Haiku qualification; independent review pending |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
-| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
