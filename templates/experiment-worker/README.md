@@ -57,9 +57,21 @@ metrics the dashboard shows.
 stages, seed lists, and the one `primary_contrast`. `preregistration.md`: every section. Then run
 `python3 src/selftest.py` until it passes, and adapt its checks to your simulator.
 
-**5. Claim servers** (swarm-labs-agentops):
+**5. Allocate and exclusively claim servers** (swarm-labs-agentops). Refresh the fleet and active
+claims before selecting hosts; do not treat an existing checkout as permission to use its machine.
+For vishesh's experiments, follow the root AGENTS.md dedicated-machine directive and
+[detailed allocation checklist](../../researchers/vishesh/notes/experiment-machine-workflow.md):
+each new experiment gets a fresh exclusive allocation from Dmarz's machine list, including exploratory
+qualification and separately launched versions. If none is available, resolve authorized provisioning
+before launch. Preserve shared budget limits across hosts. Verify the merged claim before step 6.
+
 ```bash
-python3 scripts/agentops.py claim <you>-<id> --servers sim-01,sim-02 --by $SWARM_SOURCE \
+python3 scripts/agentops.py claims
+```
+
+After selecting available hosts (replace placeholders):
+```bash
+python3 scripts/agentops.py claim <you>-<id> --servers <available-host> --by $SWARM_SOURCE \
     --until 6h --experiment <id> --note "S0+S1"
 ```
 
@@ -90,8 +102,11 @@ started with `--forever`), then `python3 src/analyze.py --stage S2`. The results
 README's **Results** section, interpret under **Analysis**, and update the hypothesis status (`supported`
 or `refuted`).
 
-**10. Release and ship.** `python3 scripts/agentops.py release <you>-<id> --note "S2 done"`. Stop workers
-with `tmux kill-session -t workers`. File figures that leave the team through `.flightdeck/fd.py add`
+**10. Release and ship.** Keep the claim valid through completion and artifact upload. Stop this
+experiment's workers (for this template's dedicated tmux session, `tmux kill-session -t workers`),
+verify durable artifacts, then run `python3 scripts/agentops.py release <you>-<id> --note "S2 done"`.
+Temporary machine teardown follows the private fleet's owner-controlled process. File figures that
+leave the team through `.flightdeck/fd.py add`
 (AGENTS.md: *Deliverables*).
 
 ## Where each requirement is met

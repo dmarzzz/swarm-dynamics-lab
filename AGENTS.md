@@ -259,6 +259,37 @@ Statuses: `draft`, `proposed` (ready for review), `accepted`, `testing`, `suppor
 - Report every run, including failures. Separate measured results from interpretation.
 - When results land, update the hypothesis status (`supported`, `refuted`) and log it.
 
+## Machine allocation for vishesh's experiments
+
+Owner directive, 2026-10-04 UTC: before every new experiment launch, obtain a fresh, dedicated
+machine allocation from Dmarz's machine list in the private `swarm-labs-agentops` fleet. This applies
+to exploratory/model qualification as well as formal experiments, and to new versions launched as
+separate experiments. A new checkout, container or process on another experiment's host does not
+satisfy this requirement. Offline local unit tests do not need a fleet allocation.
+
+- Refresh `fleet.yml` and active claims; select an available, authorized host from Dmarz's list and
+  create an exclusive claim tied to the experiment before deploying, queueing or starting workers.
+  Verify the claim is merged and still exclusive immediately before launch. Do not use `--shared`
+  or reuse a host held by a different experiment, including another experiment of vishesh's.
+- A fresh allocation may use an idle existing machine; an already-running unrelated machine is not
+  spare capacity. The same experiment may keep its allocation across stages and replicate batches.
+- If no eligible host is available, resolve a new machine through the private fleet's documented
+  provisioning process before launching. Respect server ownership and the authorized infrastructure
+  budget; do not run `task up` for somebody else's account or create an untracked host. New machines
+  must be added to the fleet, have an expiry, be provisioned and be exclusively claimed before use.
+- Record host name, claim ID/expiry, experiment ID, source commit and resource budget in the deployment
+  record. Keep IPs, private inventory, credentials and billing tokens out of the public repository and
+  transcripts. Preserve any existing shared API cap across machines; copying a per-host budget ledger
+  does not create additional spending authorization.
+- Extend the claim while jobs or artifact uploads remain active. Stop this experiment's workers,
+  verify uploads, then release; the owner handles teardown of temporary machines through agentops.
+  Do not interrupt or move existing runs merely to apply this new rule retroactively.
+
+The detailed launch checklist is
+[researchers/vishesh/notes/experiment-machine-workflow.md](researchers/vishesh/notes/experiment-machine-workflow.md).
+This directive supersedes older instructions in vishesh's notes to use a shared test server or a
+single multi-experiment machine. Other researchers retain their own allocation directives.
+
 ## Deliverables
 
 This repo is a Flight Deck project (`project.yaml`). Working material (library entries, surveys, experiment
