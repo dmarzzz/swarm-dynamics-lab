@@ -1,0 +1,16 @@
+{
+  "corpus_sha256": "768c41591b892137e8d06c912db3e330626b07c2037a07ab78707afc29699cca",
+  "roots": 12,
+  "calls": 24,
+  "mechanisms": 6,
+  "automated_parser_qa": "24/24 exact",
+  "individual_qualification_read_by_operator": false,
+  "fresh_values_known_grammar": true,
+  "old_evaluation_opened": false,
+  "source_sha256": {
+    "cases.py": "33c8884144569bad9623dc756fd1fb2db1a95bc7d59394a29164f263d9163547",
+    "contract.py": "2e40b0a4b9adaceb7de9eafc2bccfeb403d0ecfbbb34a032e010ebc871e192c5",
+    "baseline.py": "961159c7675a6069119bde671ab81a3e3a270a00350ee38604129f4746a60c55",
+    "runtime.py": "7ee1e382160e93aea62c0d2d65523a5ae549f61337bc95e6cd73ebba97be33ec"
+  }
+}
