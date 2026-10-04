@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: blocked
 task: right-dissenter-live-study
-doing: Preparing RD-2 live qualification and dedicated deployment; study cap pending
-updated: '2026-10-04T03:43:19Z'
+doing: Standalone study registered and implemented; awaiting the pending USD 2 cap approval before dedicated provisioning and native Q0
+updated: '2026-10-04T03:51:21Z'
 ---
 
 ## Notes
