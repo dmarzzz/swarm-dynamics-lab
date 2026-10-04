@@ -56,7 +56,7 @@ Sizes for v10 from the one measured root (sent to dmarz/fleet-monitor at 09:14Z)
 
 - The fresh Q0 needs a fourth set of unused roots (244/253/256 and 257/282/293 are spent).
 - Whether a 40-turn stall counts as "incomplete" for F, G and H when the turn limit is itself the stopping rule deserves a line in the analysis plan before the numbers are read.
-- Forecast: q0-011 ends about 09:27Z (three passes in a row at 24 of 24, 8 of 8 and 24 of 24), then `p1-003` runs about 4.7 hours, to about 14:10Z, about USD 45 to 55. The claim `dmarz-compositional-q0-opus` was set to about 12:30Z; it needs extending to cover that.
+- Forecast: q0-011 ends about 09:27Z (three passes in a row at 24 of 24, 8 of 8 and 24 of 24), then `p1-003` runs about 4.7 hours, to about 14:10Z, about USD 45 to 55. The claim was extended at about 09:14Z and runs to 18:13Z, which covers it.
 
 **After P1:** P1 is the last open stage (S1, S2, D3, W and held-out roots are closed). The written successor is proposal 4 in `notes/next-experiments-2026-10-04/README.md` (delayed and missing receipts). It has no study folder. P1 will run for 1.5 to 4 hours, which is the window to write it.
 
