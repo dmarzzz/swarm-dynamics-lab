@@ -1,0 +1,47 @@
+id: memory-handoff-qwen
+title: Can successors repair inherited false memory? (Qwen3.7 Flash)
+description: One fresh successor per assignment inherits a predecessor's notes in one of six
+  memory states (clean, misquoted source, stale version, copies presented as independent,
+  equal-authority contradiction, false original source) under one of four handoff policies
+  (raw inheritance, metadata-only origin and version resolution, content-bound retrieval of
+  the cited records, reset). 24 roots x 6 states x 4 policies = 576 calls of qwen/qwen3.7-flash
+  (OpenRouter, Alibaba, reasoning disabled). Research program v5, line M. Exploratory.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: fixed
+  batch:
+    type: str
+    role: replicate
+  source_hash:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- failed
+- model_calls
+- input_tokens
+- output_tokens
+- cost_usd
+- transport_attempts
+- qualification_passed
+- inherited_error_content_minus_metadata
+- clean_correct_content
+- clean_correct_metadata
+- clean_correct_raw
+- clean_correct_reset
+- retrieval_count
+- retrieval_bytes
+- billing_pauses
+- billing_pause_seconds
+- billing_affected_calls
+primary_metric: inherited_error_content_minus_metadata
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/memory-handoff-qwen
