@@ -1,0 +1,16 @@
+{"kind": "session", "maximum_attempts": 3, "retries": 0}
+{"kind": "request_artifact", "attempt": 1, "name": "01-request.bin", "bytes": 8429, "sha256": "b62652a99b5e843256239ffd1abc472b7c8e763accef2836a23a8a77d432df01"}
+{"kind": "attempt_start", "attempt": 1, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "01-request.bin", "bytes": 8429, "sha256": "b62652a99b5e843256239ffd1abc472b7c8e763accef2836a23a8a77d432df01"}}
+{"kind": "response_artifact", "attempt": 1, "name": "01-response.bin", "bytes": 1404, "sha256": "d796423946bef1c96985a4b6e39e1c454ca9cfe7b3818a6a4d83c11171a75e23"}
+{"kind": "usage", "attempt": 1, "usage_known": true, "tokens": {"input_tokens": 1693, "output_tokens": 128}, "reported_usd": 0.00027555}
+{"kind": "response_validated", "attempt": 1, "usage_known": true, "actual_usd": 0.00027555}
+{"kind": "request_artifact", "attempt": 2, "name": "02-request.bin", "bytes": 8402, "sha256": "b408c008abb4849cdce2c95634b5ed61209b84304ff6f6b717a5e7b846efaec5"}
+{"kind": "attempt_start", "attempt": 2, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "02-request.bin", "bytes": 8402, "sha256": "b408c008abb4849cdce2c95634b5ed61209b84304ff6f6b717a5e7b846efaec5"}}
+{"kind": "response_artifact", "attempt": 2, "name": "02-response.bin", "bytes": 1583, "sha256": "1b6997d09525d23732864821960fca05793ab47cef96451d3cba8bc928442f88"}
+{"kind": "usage", "attempt": 2, "usage_known": true, "tokens": {"input_tokens": 1689, "output_tokens": 191}, "reported_usd": 0.00030655}
+{"kind": "response_validated", "attempt": 2, "usage_known": true, "actual_usd": 0.00030655}
+{"kind": "request_artifact", "attempt": 3, "name": "03-request.bin", "bytes": 8388, "sha256": "b71b4f135dad97afca2d6fd39422c87f2951d203ca6f62c2ad387dc92ce33686"}
+{"kind": "attempt_start", "attempt": 3, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "03-request.bin", "bytes": 8388, "sha256": "b71b4f135dad97afca2d6fd39422c87f2951d203ca6f62c2ad387dc92ce33686"}}
+{"kind": "response_artifact", "attempt": 3, "name": "03-response.bin", "bytes": 1507, "sha256": "ed23b0f9fcf08c3b9df0bf7c6a0b067b1afaac2bfe62b4cf8a5f7f6e89449e06"}
+{"kind": "usage", "attempt": 3, "usage_known": true, "tokens": {"input_tokens": 1683, "output_tokens": 168}, "reported_usd": 0.0002943}
+{"kind": "response_validated", "attempt": 3, "usage_known": true, "actual_usd": 0.0002943}

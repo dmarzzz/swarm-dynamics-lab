@@ -114,7 +114,8 @@ class Session:
         output_bound=body.get('max_tokens')
         if output_bound not in (768,3072) or len(encoded)>(10240 if output_bound==768 else 32768):raise AcquisitionStopped('role_bound')
         expected_provider={'only':['openai'],'order':['openai'],'allow_fallbacks':False,'require_parameters':True,'max_price':{'prompt':input_rate,'completion':output_rate}}
-        if body.get('provider')!=expected_provider or body.get('reasoning')!={'effort':'none'} or body.get('stream') is not False or 'temperature' in body or 'tools' in body:raise AcquisitionStopped('route_settings')
+        reasoning_ok=body.get('reasoning')=={'effort':'none'} or (body.get('model')=='openai/gpt-6-luna' and body.get('reasoning')=={'effort':'low'} and output_bound==3072 and body.get('verbosity')=='low')
+        if body.get('provider')!=expected_provider or not reasoning_ok or body.get('stream') is not False or 'temperature' in body or 'tools' in body:raise AcquisitionStopped('route_settings')
         minimum=((len(encoded)+512)*input_rate+output_bound*output_rate)/1e6
         if reservation+1e-12<minimum:raise AcquisitionStopped('insufficient_reservation')
         # Existing database only. Reservation is irrevocable, including later journal failure.
