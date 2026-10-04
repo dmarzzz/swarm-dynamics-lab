@@ -4155,7 +4155,9 @@
       "experiment_ids": [
         "growth-pressure-200"
       ],
-      "registration_paths": [],
+      "registration_paths": [
+        "researchers/dmarz/notes/growth-pressure-200/experiment.yaml"
+      ],
       "evidence_confidence": {
         "score": 0,
         "claim": "Untested v2 question: whether assigned rival evasion changes sustained levy avoidance by ordinary owners, and whether peer messaging changes that effect.",
