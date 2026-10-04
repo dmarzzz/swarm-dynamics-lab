@@ -1,0 +1,15 @@
+# Antsy D1: printed total versus normalized amount
+
+Prospective diagnostic, 2026-10-04. Authority: standing owner authorization for necessary post-mortem diagnostics within the current USD20 cumulative budget. No full successor evaluation is authorized by this diagnostic.
+
+## Observed failure and decision
+
+Q0 Haiku qualification completed80 valid traced calls atUSD0.15156. On the first receipt40/40 were correct; on the second40/40 quoted the printed total14.300 but returned14.30 versus the corroborated reference14300.00. All checking roles share this error. The receipt's Indonesian labels and grouping convention support the reference. The failure is a decimal/grouping interpretation, not failure to locate the total. Preserve failed qualification; never retroactively change its gold or prompt.
+
+Saved evidence establishes the symptom but cannot establish whether clearer locale information changes native behavior. Test the smallest useful prompt contrast on these two now-inspected receipts: original direct prompt versus the same prompt with a general Indonesian-locale clarification. Four fresh responses per condition per receipt:16 calls maximum, same Haiku route/image/generation/schema, paired at receipt level. New identities, no peer outputs, no gold values or case-specific examples in prompts. Alternate conditions to avoid the main study's fixed block order. These are reused diagnostic cases, not fresh qualification or generalization evidence.
+
+Treatment adds: “This receipt is from an Indonesian receipt corpus. Interpret amounts in the original currency's major units. A period separating a final group of three digits is commonly a thousands separator, not a decimal point. Preserve the full amount when removing grouping separators. Use the receipt's labels and consistent number formatting; refer if the convention remains ambiguous.” This explicitly supplies corpus locale, a deployment assumption absent from the initial contract. It does not test role diversity or introduce independent visual evidence.
+
+Acceptance:16 reconciled valid route/schema/usage/trace calls; all4 clarified outputs correct on each case, with original-condition errors separately retained. Correct on the failed receipt without harming the passing receipt supports a prompt-contract repair on these two used cases only. If both conditions now pass, stochastic/service variation remains plausible; if clarified fails, do not escalate agent count. A refer is not correct extraction. No gold-assisted repair of outputs.
+
+Retain original cumulative ledger in place andUSD5 historical hold. ReserveUSD0.015 before each call;16 calls reserve at mostUSD0.24. Add this scope to the same ledger without erasing the80 original rows or unknown reservations. Maximum2 concurrent calls,10minutes, stop on first API/schema/route/usage/trace error and reconcile in-flight calls; no retries. Fresh immutable public plan, exclusive approved-team allocation and offline contract tests required. Preserve raw private traces and publish only sanitized measurements. Finish with an authored post-mortem; original evaluation remains blocked regardless of this diagnostic result.
