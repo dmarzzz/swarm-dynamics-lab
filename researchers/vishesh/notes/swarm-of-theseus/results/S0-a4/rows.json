@@ -1,0 +1,2540 @@
+[
+  {
+    "status": "completed",
+    "scenario": "observatory",
+    "seed": 106,
+    "arm": "verbatim",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 2,
+        "turnover": 0.3333333333333333,
+        "rule_changed": false,
+        "accuracy": 0.75,
+        "convention": 1.0,
+        "mutation": 0.25,
+        "collective": [
+          "dax",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "founder-2"
+        ],
+        "original_count": 1,
+        "turnover": 0.6666666666666666,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 0.75,
+        "convention": 1.0,
+        "mutation": 0.25,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ]
+      }
+    ],
+    "access": [
+      {
+        "step": 1,
+        "actor": "new-1",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 2,
+        "actor": "new-2",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 3,
+        "actor": "new-3",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      }
+    ],
+    "final_accuracy": 1.0,
+    "final_convention": 1.0,
+    "run": "swarm-of-theseus/S0-a4-observatory-verbatim-106",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 67.0420491695404,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.05842299999999999,
+      "input_tokens": 23313,
+      "output_tokens": 7022,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "seed-bank",
+    "seed": 107,
+    "arm": "verbatim",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 2,
+        "turnover": 0.3333333333333333,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "founder-2"
+        ],
+        "original_count": 1,
+        "turnover": 0.6666666666666666,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      }
+    ],
+    "access": [
+      {
+        "step": 1,
+        "actor": "new-1",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 2,
+        "actor": "new-2",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 3,
+        "actor": "new-3",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      }
+    ],
+    "final_accuracy": 1.0,
+    "final_convention": 1.0,
+    "run": "swarm-of-theseus/S0-a4-seed-bank-verbatim-107",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 66.85330152511597,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.04868900000000001,
+      "input_tokens": 18239,
+      "output_tokens": 6090,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "observatory",
+    "seed": 106,
+    "arm": "founders",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 0.75,
+        "convention": 0.0,
+        "mutation": 0.25,
+        "collective": [
+          "dax",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 0.75,
+        "convention": 0.0,
+        "mutation": 0.16666666666666666,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "observatory",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 0.75,
+        "convention": 0.0,
+        "mutation": 0.25,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ]
+      }
+    ],
+    "access": [],
+    "final_accuracy": 0.75,
+    "final_convention": 0.0,
+    "run": "swarm-of-theseus/S0-a4-observatory-founders-106",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 72.63124585151672,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.05971700000000003,
+      "input_tokens": 22692,
+      "output_tokens": 7405,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "repair-dock",
+    "seed": 106,
+    "arm": "verbatim",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 2,
+        "turnover": 0.3333333333333333,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "founder-2"
+        ],
+        "original_count": 1,
+        "turnover": 0.6666666666666666,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      }
+    ],
+    "access": [
+      {
+        "step": 1,
+        "actor": "new-1",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 2,
+        "actor": "new-2",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 3,
+        "actor": "new-3",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      }
+    ],
+    "final_accuracy": 1.0,
+    "final_convention": 1.0,
+    "run": "swarm-of-theseus/S0-a4-repair-dock-verbatim-106",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 62.00863337516785,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.047309000000000004,
+      "input_tokens": 18559,
+      "output_tokens": 5750,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "repair-dock",
+    "seed": 106,
+    "arm": "founders",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.3333333333333333,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 0.3333333333333333,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "repair-dock",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      }
+    ],
+    "access": [],
+    "final_accuracy": 1.0,
+    "final_convention": 0.16666666666666666,
+    "run": "swarm-of-theseus/S0-a4-repair-dock-founders-106",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 61.733877420425415,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.04850000000000001,
+      "input_tokens": 17805,
+      "output_tokens": 6139,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "seed-bank",
+    "seed": 106,
+    "arm": "founders",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      }
+    ],
+    "access": [],
+    "final_accuracy": 1.0,
+    "final_convention": 0.0,
+    "run": "swarm-of-theseus/S0-a4-seed-bank-founders-106",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 65.49444770812988,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.046329999999999996,
+      "input_tokens": 17370,
+      "output_tokens": 5792,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "seed-bank",
+    "seed": 107,
+    "arm": "founders",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "seed-bank",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      }
+    ],
+    "access": [],
+    "final_accuracy": 1.0,
+    "final_convention": 0.0,
+    "run": "swarm-of-theseus/S0-a4-seed-bank-founders-107",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 65.49085712432861,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.048627000000000004,
+      "input_tokens": 17442,
+      "output_tokens": 6237,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "seed-bank",
+    "seed": 106,
+    "arm": "verbatim",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 2,
+        "turnover": 0.3333333333333333,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "founder-2"
+        ],
+        "original_count": 1,
+        "turnover": 0.6666666666666666,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "seed-bank",
+        "seed": 106,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      }
+    ],
+    "access": [
+      {
+        "step": 1,
+        "actor": "new-1",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 2,
+        "actor": "new-2",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 3,
+        "actor": "new-3",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      }
+    ],
+    "final_accuracy": 1.0,
+    "final_convention": 1.0,
+    "run": "swarm-of-theseus/S0-a4-seed-bank-verbatim-106",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 61.83130359649658,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.047638,
+      "input_tokens": 18303,
+      "output_tokens": 5867,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "observatory",
+    "seed": 107,
+    "arm": "verbatim",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 2,
+        "turnover": 0.3333333333333333,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "founder-2"
+        ],
+        "original_count": 1,
+        "turnover": 0.6666666666666666,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      }
+    ],
+    "access": [
+      {
+        "step": 1,
+        "actor": "new-1",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 2,
+        "actor": "new-2",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 3,
+        "actor": "new-3",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      }
+    ],
+    "final_accuracy": 1.0,
+    "final_convention": 1.0,
+    "run": "swarm-of-theseus/S0-a4-observatory-verbatim-107",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 68.10016250610352,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.05871399999999999,
+      "input_tokens": 23314,
+      "output_tokens": 7080,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "repair-dock",
+    "seed": 107,
+    "arm": "verbatim",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 2,
+        "turnover": 0.3333333333333333,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "founder-2"
+        ],
+        "original_count": 1,
+        "turnover": 0.6666666666666666,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "verbatim",
+        "members": [
+          "new-1",
+          "new-2",
+          "new-3"
+        ],
+        "original_count": 0,
+        "turnover": 1.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ]
+      }
+    ],
+    "access": [
+      {
+        "step": 1,
+        "actor": "new-1",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 2,
+        "actor": "new-2",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      },
+      {
+        "step": 3,
+        "actor": "new-3",
+        "notes_access": false,
+        "mentor_access": false,
+        "bytes": 0,
+        "sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "parent_ids": [],
+        "archive_sha256": null
+      }
+    ],
+    "final_accuracy": 1.0,
+    "final_convention": 1.0,
+    "run": "swarm-of-theseus/S0-a4-repair-dock-verbatim-107",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 62.0248908996582,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.047192,
+      "input_tokens": 18542,
+      "output_tokens": 5730,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "observatory",
+    "seed": 107,
+    "arm": "founders",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.08333333333333333,
+        "collective": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "dax",
+          "wug",
+          "wug"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.08333333333333333,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "observatory",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 0.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      }
+    ],
+    "access": [],
+    "final_accuracy": 1.0,
+    "final_convention": 0.0,
+    "run": "swarm-of-theseus/S0-a4-observatory-founders-107",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 65.577951669693,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.060349999999999994,
+      "input_tokens": 22710,
+      "output_tokens": 7528,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  },
+  {
+    "status": "completed",
+    "scenario": "repair-dock",
+    "seed": 107,
+    "arm": "founders",
+    "history": [
+      {
+        "step": 0,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 1,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "dax",
+          "wug"
+        ]
+      },
+      {
+        "step": 2,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 3,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": false,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "dax",
+          "wug",
+          "dax"
+        ]
+      },
+      {
+        "step": 4,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.3333333333333333,
+        "collective": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ],
+        "expected": [
+          "wug",
+          "wug",
+          "dax",
+          "dax"
+        ]
+      },
+      {
+        "step": 5,
+        "scenario": "repair-dock",
+        "seed": 107,
+        "arm": "founders",
+        "members": [
+          "founder-0",
+          "founder-1",
+          "founder-2"
+        ],
+        "original_count": 3,
+        "turnover": 0.0,
+        "rule_changed": true,
+        "accuracy": 1.0,
+        "convention": 1.0,
+        "mutation": 0.0,
+        "collective": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ],
+        "expected": [
+          "dax",
+          "wug",
+          "dax",
+          "wug"
+        ]
+      }
+    ],
+    "access": [],
+    "final_accuracy": 1.0,
+    "final_convention": 1.0,
+    "run": "swarm-of-theseus/S0-a4-repair-dock-founders-107",
+    "source_commit": "586c476892c442c29fc290358ce21a75cbcc07fe",
+    "elapsed_seconds": 66.33321714401245,
+    "usage": {
+      "calls": 24,
+      "actual_usd": 0.04797699999999999,
+      "input_tokens": 17792,
+      "output_tokens": 6037,
+      "usage_missing": 0
+    },
+    "process_compliance": "preflight-passed"
+  }
+]

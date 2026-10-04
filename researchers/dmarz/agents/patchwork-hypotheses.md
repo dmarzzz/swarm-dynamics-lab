@@ -1,10 +1,10 @@
 ---
 agent: dmarz/patchwork-hypotheses
 tool: codex
-state: done
-task: add-patchwork-hypotheses
-doing: Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests
-updated: 2026-10-04T02:03Z
+state: working
+task: build-compositional-safety
+doing: Building the SEC-54 simulator and exploratory qualification with enforced research gates
+updated: 2026-10-04T02:31Z
 ---
 
 ## Notes

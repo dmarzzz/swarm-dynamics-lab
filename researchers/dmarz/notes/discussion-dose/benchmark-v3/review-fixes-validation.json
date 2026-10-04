@@ -1,0 +1,84 @@
+{
+  "artifact_sha256": {
+    "episodes.json": "1ca911d7c3d5ecf8740f2090b7c603a029bbb66a563f549b648f1978d6f09c7c",
+    "events.jsonl": "ad28df19dd58e0f289ccee702120e2616f4620f1942d760897ee89c2b8c13f92",
+    "manifest.json": "0fcaa98c8c779b933fb095545b5072c5d03ca57d1f460910489211e8f6201a1a",
+    "replay.html": "b92a96b647f1b8c395620c0c52a15740b5b53c855c6c6b3739a2ce0109f58f63",
+    "summary.json": "c152fbbd01c09977e97fc4e2bdd5f2519c77df9487fdb3793adadb10800d8da2"
+  },
+  "created_utc": "2026-10-04T02:33:42.445603+00:00",
+  "local_bundle": "data/discussion-v3/vishesh-fixes-a1",
+  "local_pre_rebase_commit": "0a8ecec7b6cf622885b75041593489be5dc7e858",
+  "model_calls": 0,
+  "model_cost_usd": 0,
+  "parent_runtime_commit": "0f5044a",
+  "post_sync_source_hashes_unchanged": true,
+  "qualification": {
+    "assigned_each": 6,
+    "clean_full_evidence_correct": 6,
+    "clean_reports_correct": 6,
+    "competence_screen_pass": true,
+    "execution_complete": true,
+    "independent_research_review": "not established by this software check",
+    "model_qualified": false,
+    "required_each": 5
+  },
+  "reconciliation": {
+    "assigned": 96,
+    "input_tokens": null,
+    "missing": [],
+    "output_tokens": null,
+    "physical_model_calls": 0,
+    "planned_calls": 636,
+    "provider_failures": 0,
+    "started_calls": 636,
+    "terminal": 96,
+    "terminal_calls": 636,
+    "unresolved_calls": [],
+    "usage_missing_calls": null,
+    "validation_failures": 0
+  },
+  "replay_audit": {
+    "episodes": 96,
+    "journal_events": 1790,
+    "ok": true,
+    "requests_replayed": 636,
+    "source_hashes_verified": true,
+    "summary_recomputed": true
+  },
+  "reserved_splits_opened": false,
+  "runtime": {
+    "machine": "arm64",
+    "python": "3.9.6",
+    "system": "Darwin"
+  },
+  "runtime_commit": "d76146b3fd7bf8d2287e4f67f5a683c656b03f2b",
+  "source_hashes": {
+    "bench_v3/__init__.py": "3c5fe43228d361bcf91c582c907545ba65ce7badf65b29f6941beb628e633d72",
+    "bench_v3/analysis.py": "375ffd16ebbc37d4b5f75d7351bdf8587e30f4f9a1a3a32fd3f7ecb7b1c2a626",
+    "bench_v3/cli.py": "10ac983279ac671576d343c37cfca26e2e5fc250efdc246fe81d1015f0081f73",
+    "bench_v3/contracts.py": "d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7",
+    "bench_v3/evidence.py": "f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc",
+    "bench_v3/journal.py": "ceb2f23b417b8408da4c06a93523a98b0f68686d261a7b779090d75ee50d7256",
+    "bench_v3/policies.py": "7eb0ddb3e8d520754aac18eb62fb96714ee28829bc9139f516c50d69198e3cd9",
+    "bench_v3/replay_view.py": "ff5a658976e685cb5bc1f5be0828a585849c934e0b07b2db195b0d8f51a241e1",
+    "bench_v3/runner.py": "1e4c61caf5bb6c9897341119ac0a541b5e5e9033c4a66bc4cabd819178b28495",
+    "bench_v3/scoring.py": "8d27d82be02cdce99031447f661466ac85847d24ec005402684dd4c5a9a3d256",
+    "bench_v3/selftest.py": "b035fea31f5a2cc8890787e6eb4d822b9581f1fc32d903c535f513295eef2b43",
+    "bench_v3/worlds.py": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
+    "providers.py": "3ba5279e2b8065ef036e489352dea9d6c69d8a35a97260eb626260e71df7c897",
+    "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
+  },
+  "status": "offline repairs verified; independent review and model qualification pending",
+  "unit_tests": {
+    "distinct_passed": 84,
+    "existing_v1_v2_distinct": 34,
+    "runner_tests_rechecked_after_final_label_guard": 16,
+    "v3_distinct": 50
+  },
+  "visual_payload": {
+    "all_terminal_metrics_match": true,
+    "browser_repeated": false,
+    "rows_match_saved": true
+  }
+}

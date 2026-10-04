@@ -11,6 +11,8 @@
     "travel": 11
   },
   "unexposed_agents_total": 115,
+  "attack_unexposed_observations": 20,
+  "attack_unexposed_conversions": 0,
   "unexposed_target_conversions": 0,
   "note": "Post-hoc replay of recorded estimates and check results; neither fresh model evidence nor a causal attribution. Categories can overlap with arithmetic, evidence extraction and objective misspecification.",
   "cases": [

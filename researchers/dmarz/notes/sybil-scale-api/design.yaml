@@ -1,0 +1,112 @@
+version: 1
+experiment: sybil-scale-api
+status: exploratory
+questions:
+- SEC-19
+- SEC-43
+model: claude-haiku-4-5-20251001
+arms:
+- no_verification
+- degree
+- random
+- coverage
+visibility:
+- masked
+- visible
+cfg:
+  core: 18
+  community: 9
+  trusted_seeds: 2
+  admission_seats: 18
+  pagerank_restart: 0.2
+  pagerank_iterations: 120
+  honest_check_pass: 0.9
+  skills: 6
+stages:
+  S0:
+    backend: scripted
+  Q0:
+    backend: anthropic
+  S1:
+    backend: anthropic
+  S2:
+    enabled: false
+    reserved_task_range:
+    - 10000
+    - 19999
+pilot:
+  attacker_pass:
+  - 0.1
+  - 0.9
+budget:
+  aggregate_usd: 180
+  max_attempted_calls: 2600
+  max_output_tokens: 500
+  max_input_bytes: 240000
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 14400
+  retries: 0
+  workers: 4
+  input_usd_per_million: 1
+  output_usd_per_million: 5
+qualification:
+  structural_valid_rate: 1.0
+  fact_accuracy: 0.95
+  exact_packet_rate: 0.9
+  missing_abstention: 1.0
+primary_contrast:
+  metric: rare_accuracy
+  arm: coverage
+  visibility: visible
+  attacker_pass: 0.1
+  contrast: (proportional-fixed at N=972) minus (proportional-fixed at N=36)
+  useful_difference_pp: 10
+  status: exploratory
+secondary_contrast:
+  compare:
+  - visible
+  - masked
+  arm: coverage
+  attacker_pass: 0.9
+  metric: rare_accuracy
+sizes:
+- 36
+- 108
+- 324
+- 972
+worlds:
+- 6000
+- 6001
+- 6002
+- 6003
+- 6004
+- 6005
+- 6006
+- 6007
+- 6008
+- 6009
+- 6010
+- 6011
+- 6012
+- 6013
+- 6014
+- 6015
+- 6016
+- 6017
+- 6018
+- 6019
+- 6020
+- 6021
+- 6022
+- 6023
+qualification_worlds:
+- 5000
+- 5001
+- 5002
+- 5003
+engineering_worlds:
+- 4900
+- 4901
+budget_modes:
+- fixed
+- proportional

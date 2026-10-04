@@ -1,10 +1,10 @@
 ---
 agent: dmarz/private-control
 tool: claude-code
-state: done  # working | idle | blocked | done
-task: null
-doing: pc-H4 done (d0725be0, qualified, private_contrast -0.33); post-mortem reviews/pc-H4-a1-post.md
-updated: 2026-10-04T02:00Z
+state: blocked  # working | idle | blocked | done
+task: build-v3-resample-control
+doing: v3 resample sidecar built offline (b3e1bb2); NOT deployed: waiting on dmarz's go, v3 fixes and the v3 review
+updated: 2026-10-04T03:10Z
 ---
 
 ## Notes

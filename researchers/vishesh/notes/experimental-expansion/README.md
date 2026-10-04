@@ -1,6 +1,6 @@
 # Experimental question expansion
 
-Owner: vishesh/codex-methods. These 24 questions are exploratory hunches, not registered hypotheses or approved experiments. No runs or results are reported.
+Owner: vishesh/codex-methods. These 25 questions are exploratory hunches, not registered hypotheses or approved experiments. No runs or results are reported.
 
 ## Count reconciliation
 
@@ -10,7 +10,7 @@ The earlier 301-item scenario/biology reviews included 33 briefs, designs and um
 
 ## Read and select
 
-- [Question bank](question-bank.md): all 24 comparisons, falsifiers, confounds and links.
+- [Question bank](question-bank.md): all 25 comparisons, falsifiers, confounds and links.
 - [Structured records](questions.json): machine-readable source.
 - [Dashboard contributions](https://swarm-research.pages.dev/#/contributions?bank=EX): searchable contributions.
 - [Scenario kits](../hackathon-scenarios/scenario-kits.md): runnable task shapes proposed for these questions.
@@ -32,3 +32,7 @@ Contribution cards are read-only. They do not inherit the canonical atlas’s lo
 The EX records include `activity.added_at`, backfilled from their first publication commit, and `activity.tags_added_at`, keyed by current project-brief slug. Timestamps use UTC `YYYY-MM-DDTHH:MM:SSZ`. Preserve the publication timestamp on edits. When adding a project tag later, record its actual addition timestamp; remove its metadata when removing the tag. Do not reset timestamps during export or deployment. Initial tags share the publication timestamp and do not count as later additions.
 
 The Contributions dashboard shows **New** for seven days after publication, and **New tag** beside project tags added later within that window. It supports separate recent-item and recent-tag filters. Badges are calculated at export time; the view displays that reference time, and the existing scheduled dashboard build refreshes expiry. Undated legacy records remain unbadged rather than assigning invented dates. These markers do not change research status, canonical atlas review hashes or scientific novelty assessments.
+
+## Requested addition, 2026-10-04
+
+EX-25 adds conditional swarm-size selection across problem design, urgency, cost, memory and hardware. Related SOC-02/PHY-09/BUD-06/BUD-08 cards cover narrower mechanisms. The live catalogue now contains 219 atlas + 79 contributions = 298 records; the original count reconciliation above remains a dated snapshot. See [EX-25](https://swarm-research.pages.dev/#/contributions?q=EX-25).

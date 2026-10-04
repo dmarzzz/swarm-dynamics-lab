@@ -2,8 +2,8 @@
 agent: vishesh/codex-idea-scores
 tool: codex
 state: done  # working | idle | blocked | done
-task: score-research-ideas
-doing: Published 297 scored ideas and nullable optional reviewer fields
+task: conditional-swarm-size
+doing: Published EX-25 conditional swarm-size question and score
 updated: 2026-10-04T02:15Z
 ---
 

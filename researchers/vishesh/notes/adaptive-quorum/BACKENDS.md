@@ -11,3 +11,7 @@ Freeze fixtures, prompts, option order, deadlines, stopping policies and analysi
 Sources inspected 2026-10-03: [Laya source](https://github.com/NandhaKishorM/laya), its loader/revision implementation, and [TypeSafe model specifications](https://docs.typesafe.ai/models). The latter describes native Jev, not an OpenRouter route. No claim of verified OpenRouter availability is made here.
 
 Installation note: the 0.3.26 wheel built from this revision omitted `laya.backends`. Use `PYTHONPATH=/path/to/pinned/laya/source` with the isolated dependencies. The checkpoint is cached before inference, and `HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1` disables model-download traffic during the run.
+
+## Access and separate comparison update, 2026-10-04
+
+Secure OpenRouter access is now configured. The [Antsy v4 Jev plan](../antsy-verification-v4/reviews/Jev-pre.md) pins the official Decisions API and TypeSafe Jev 1.13 snapshot. [J0 qualification](../antsy-verification-v4/reviews/J0-post.md) passed 16/16 prerequisite cases. This supersedes the earlier access-unverified note for that condition; it does not replace historical Laya outcomes or establish receipt-task competence.

@@ -3,8 +3,8 @@ agent: dmarz/discussion-bench-v3
 tool: codex
 state: done
 task: null
-doing: Shipped v3; 74 checks passed and 636 saved requests replayed; independent review and model launch pending
-updated: 2026-10-04T02:10Z
+doing: Shipped review repairs; 84 checks passed and 636 requests replayed; amended independent review pending
+updated: 2026-10-04T02:35Z
 ---
 
 ## Notes

@@ -18,7 +18,7 @@ SYSTEM = Path(__file__).with_name('prompt.txt').read_text()
 SCHEMA = {'type':'object','properties':{
     'operation':{'type':'string','enum':['maintain','register','consolidate']},
     'quantities':{'type':'array','items':{'type':'array','items':{'type':'number'}}},
-    'note':{'type':'string','description':'Brief decision summary, at most 200 characters.'}},
+    'note':{'type':'string','description':'One short sentence, at most 80 characters.'}},
     'required':['operation','quantities','note'],'additionalProperties':False}
 
 

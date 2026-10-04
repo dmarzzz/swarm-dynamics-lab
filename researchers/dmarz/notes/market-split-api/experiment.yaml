@@ -21,6 +21,25 @@ params:
   backend:
     type: str
     role: fixed
+  attempt_id:
+    type: str
+    role: replicate
+  code:
+    role: fixed
+  engine_sha256:
+    role: fixed
+  design_sha256:
+    role: fixed
+  model:
+    role: fixed
+  rounds:
+    role: fixed
+  arms:
+    role: fixed
+  threshold:
+    role: fixed
+  registration_fee:
+    role: fixed
 metrics:
 - episodes
 - invalid

@@ -1,0 +1,62 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Come up with a series of improvements both to the design and writing of the experiment that make it more compelling, more well-designed, less grounded simply in our construction, and more grounded in the actual scenario"
+   },
+   "internalParameters": {
+    "commit": "5a5dbdd5cbd3167388c8c13ead34773783fdf374-dirty",
+    "session": "codex:01a1041f-9bfc-7891-be03-69925e274e9f"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "5b4977f63aabec350cf4b96f34bc03c54858177fdfd960164819fd755583789d"
+     },
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/build_explorer.py"
+    },
+    {
+     "digest": {
+      "sha256": "892004b0068dedc926558846933826e5d6534b0617bad10e4faff0c36c6ce135"
+     },
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/explorer.html"
+    },
+    {
+     "digest": {
+      "sha256": "d7c95945c917a80eede34b94dad632e0783319ccab8795b18f336730e3502f15"
+     },
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/dossier.py"
+    },
+    {
+     "digest": {
+      "gitCommit": "5a5dbdd5cbd3167388c8c13ead34773783fdf374"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T02:22:17Z",
+    "invocationId": "codex:01a1041f-9bfc-7891-be03-69925e274e9f",
+    "startedOn": "2026-10-04T02:22:17Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "6272adebf96524823f188cd91ff91ba5752527e3b6b44328df827679acbd505c"
+   },
+   "name": "artifacts/influence-swarms-decision-design/influence-swarms-decision-design-v1.html"
+  }
+ ]
+}

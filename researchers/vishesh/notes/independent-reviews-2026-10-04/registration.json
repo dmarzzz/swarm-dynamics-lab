@@ -1,0 +1,12 @@
+{
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/19a96531330a39ccfbe17b38fbab1e7259a8b737/researchers/vishesh/notes/independent-reviews-2026-10-04/PLAN.md",
+  "verified_content_url": "https://raw.githubusercontent.com/dmarzzz/swarm-lab/19a96531330a39ccfbe17b38fbab1e7259a8b737/researchers/vishesh/notes/independent-reviews-2026-10-04/PLAN.md",
+  "sha256": "eb361e19c61a6a07db3229d68e0c53496e088f4e690b2da29cbecefebf37906e",
+  "verified_at": "2026-10-04T02:21:33.421543+00:00",
+  "http_status": 200,
+  "conditions": {
+    "unit_checks": "Test original invariants with development fixture selftests versus declared expectations; count failures, zero live-model evidence.",
+    "reviewer_mutations": "Test six document-derived answers and deliberate answer/allocation/scorer corruptions versus clean fixtures; record detection and missing-outcome accounting; synthetic software checks only.",
+    "survey": "Test revised claims against original cited sources and three independent searches; record unresolved assertions and source-access limits."
+  }
+}

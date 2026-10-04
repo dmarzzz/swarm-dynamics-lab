@@ -1,0 +1,22 @@
+[
+  {
+    "target": "A",
+    "choice": "A",
+    "correct": true
+  },
+  {
+    "target": "B",
+    "choice": "B",
+    "correct": true
+  },
+  {
+    "target": "C",
+    "choice": "C",
+    "correct": true
+  },
+  {
+    "target": "STOP",
+    "choice": "STOP",
+    "correct": true
+  }
+]

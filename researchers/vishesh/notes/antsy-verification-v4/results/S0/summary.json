@@ -1,0 +1,79 @@
+{
+  "best-fixed": {
+    "quality": 0.42171101591634663,
+    "regret": 0.12731111641981208,
+    "checks": 0.0,
+    "utility_at_002": 0.42171101591634663,
+    "within_2pp_oracle": 0.4,
+    "n": 10,
+    "total_exact_n": 9,
+    "total_exact": 4,
+    "logical_calls": 0
+  },
+  "confidence-only": {
+    "quality": 0.5024507037647301,
+    "regret": 0.046571428571428576,
+    "checks": 0.0,
+    "utility_at_002": 0.5024507037647301,
+    "within_2pp_oracle": 0.7,
+    "n": 10,
+    "total_exact_n": 9,
+    "total_exact": 2,
+    "logical_calls": 0
+  },
+  "random-checks": {
+    "quality": 0.5139289646342953,
+    "regret": 0.03509316770186336,
+    "checks": 2.0,
+    "utility_at_002": 0.4739289646342953,
+    "within_2pp_oracle": 0.8,
+    "n": 10,
+    "total_exact_n": 9,
+    "total_exact": 4,
+    "logical_calls": 0
+  },
+  "decision-focused": {
+    "quality": 0.4942896203720002,
+    "regret": 0.054732511964158445,
+    "checks": 2.0,
+    "utility_at_002": 0.45428962037200027,
+    "within_2pp_oracle": 0.6,
+    "n": 10,
+    "total_exact_n": 9,
+    "total_exact": 3,
+    "logical_calls": 0
+  },
+  "single-agent": {
+    "quality": 0.48481135950243504,
+    "regret": 0.06421077283372366,
+    "checks": 2.0,
+    "utility_at_002": 0.444811359502435,
+    "within_2pp_oracle": 0.6,
+    "n": 10,
+    "total_exact_n": 9,
+    "total_exact": 1,
+    "logical_calls": 20
+  },
+  "swarm-fixed": {
+    "quality": 0.48481135950243504,
+    "regret": 0.06421077283372366,
+    "checks": 2.0,
+    "utility_at_002": 0.444811359502435,
+    "within_2pp_oracle": 0.6,
+    "n": 10,
+    "total_exact_n": 9,
+    "total_exact": 1,
+    "logical_calls": 100
+  },
+  "swarm-adaptive": {
+    "quality": 0.48481135950243504,
+    "regret": 0.06421077283372366,
+    "checks": 2.0,
+    "utility_at_002": 0.444811359502435,
+    "within_2pp_oracle": 0.6,
+    "n": 10,
+    "total_exact_n": 9,
+    "total_exact": 1,
+    "logical_calls": 100
+  }
+}

@@ -3,7 +3,7 @@ id: conditional-swarm-size
 type: task
 title: Add conditional optimal swarm-size research question
 kind: question
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-idea-scores
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T02:17Z
-updated: 2026-10-04T02:17Z
+updated: 2026-10-04T02:19Z
+outputs:
+- researchers/vishesh/notes/experimental-expansion/questions.json
 ---
 
 ## Goal

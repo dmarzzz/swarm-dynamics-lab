@@ -2,7 +2,7 @@
 import json,math,statistics
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
-from policies import ARMS,MODES,estimate,initial,choose
+from policies import ARMS,MODES,ROLES,estimate,initial,choose
 BG='#0d1424';FG='#eef4ff';MUTED='#9cacc6';COLORS=['#50d9c6','#f2bd60','#9992ff']
 def font(n):
     for p in ['/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf','/System/Library/Fonts/Supplemental/Arial.ttf']:
@@ -24,7 +24,7 @@ def render_overview(blocks,out,stage):
         write(d,(950,y),f"{100*a['regret']:.1f} pp");write(d,(1210,y),f"{a['checks']:.2f}")
     write(d,(50,806),'What this tests: selecting useful checks and deciding when to stop.',25)
     write(d,(50,855),'All configurations were actually run; the agents never see hidden scores before committing.',21,MUTED)
-    write(d,(50,893),'Same local Laya checkpoint, five role prompts; votes are not independent evidence. CORD / CC BY 4.0.',20,MUTED)
+    write(d,(50,893),'One checkpoint per backend, five role prompts; votes are not independent evidence. CORD / CC BY 4.0.',20,MUTED)
     im.save(out/'final_frame.png')
     im,d=canvas('Antsy | how much room is there to improve?',f'{stage}: each dot is one receipt; all three configurations run on the same image')
     x0,y0,w,h=145,180,720,610
@@ -65,7 +65,13 @@ def replay(block,arm,out):
             q='no target text' if c['quality'] is None else f"recall {c['quality']:.2f}"
             write(d,(55,652+j*39),f"QA: {c['mode']}, region {c['region']} -> {q}",23)
         if final:write(d,(55,755),f"Selected {result['choice']} | oracle gap {100*result['metrics']['regret']:.1f} pp",29)
-        else:write(d,(55,755),'Votes this step: '+', '.join(events[index]['votes']),25)
+        else:
+            votes=events[index]['votes']
+            for j,v in enumerate(votes):
+                x=55+j*300;role=ROLES[4] if len(votes)==1 else ROLES[j]
+                d.rounded_rectangle((x,740,x+285,814),radius=8,fill='#1d2a41')
+                write(d,(x+12,748),role,17,MUTED)
+                write(d,(x+12,777),'Vote: '+v,23,COLORS[MODES.index(v)] if v in MODES else FG)
         write(d,(55,824),'Regions: top / middle / bottom thirds. QA returns reference-based recall for one region.',21,MUTED)
         write(d,(55,865),'Estimates average region scores; this approximation can misrank whole receipts.',21,MUTED)
         write(d,(55,906),'Measured events only. This replay shows decisions, not model internal reasoning.',20,MUTED)

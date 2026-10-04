@@ -14,7 +14,7 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T02:08Z
-updated: 2026-10-04T02:08Z
+updated: 2026-10-04T02:29Z
 ---
 
 ## Goal
@@ -23,7 +23,7 @@ Qualify the paid model adapter offline, then run bounded neutral-agent competenc
 
 ## Done when
 
-- [ ] Frozen neutral design and durable accounting pass mocked API tests.
-- [ ] Exclusive host and reviewed model qualification pass before discovery.
+- [x] Frozen neutral design and durable accounting pass mocked API tests.
+- [x] Exclusive host and reviewed model qualification pass before discovery.
 - [ ] Bounded discovery pilot reports all episodes, failures, cost and replay.
 - [ ] Post-mortem, artifact verification and claim release completed.

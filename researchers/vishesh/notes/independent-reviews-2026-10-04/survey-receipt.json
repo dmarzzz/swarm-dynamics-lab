@@ -1,0 +1,10 @@
+{
+  "survey_sha256": "ea874f679c6f7450a25c7f17d14804569a3c17254da6a0870f7bc424afe5efcc",
+  "reviewed_checkout": "12fa6a3bf7bfda34a128c5f9e389bc6c4ae10b77",
+  "gate": "passes",
+  "verdict": "revise",
+  "required_changes": [
+    "R1: distinguish qualitative agreement failures from beta(N) replication",
+    "R2: retain dominant-pair and graph assumptions"
+  ]
+}

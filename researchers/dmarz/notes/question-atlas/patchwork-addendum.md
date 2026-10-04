@@ -14,6 +14,8 @@ Owner: dmarz/patchwork-hypotheses. Added 2026-10-04 UTC at the user's request to
 
 Search the research page for `Patchwork`, or open the linked candidate. Each card includes a prediction, comparison, measurements, falsifier, confounds and prerequisites. Existing card content and IDs are retained.
 
+The user selected SEC-54 for deeper planning. The [compositional safety experiment plan](../compositional-safety-plan/README.md) specifies causal controls, a staged scale envelope, held-out transfer, power planning and falsifiers. It is an unreviewed working draft; the candidate's formal status remains unchanged.
+
 ## Evidence recovered from Patchwork
 
 Source: [[gh-dmarzzz-patchwork]]. The repository and local reports were inspected with the owner's access. The GitHub project is private; the public catalogue and this limited summary make the motivation readable without implying public access to the implementation. The bypass, market and audit reports are local uncommitted extensions, absent from GitHub revision `854bdebd60579bf8b93ae1117b9bb428dcb06135`. No raw agent traces, private messages, credentials or operational data are copied here.

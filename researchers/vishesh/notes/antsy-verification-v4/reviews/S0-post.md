@@ -1,0 +1,11 @@
+# S0 post-mortem and S1 resource amendment
+
+Source c2dffda; corpus SHA5803dc7635a05d9201b20258f9f2e61bb89e1700f3006497d69d761b71577d2b. All10 assigned receipts,70 paired arm outcomes and 124 physical Laya calls completed. Four explicit action controls passed. No encoding/schema/tool errors; maximum 225 input tokens, well below the 1024 encoding limit. Measured model-call time275.98 s; worker time292.04 s. Original attempts preserved, no retries.
+
+The instrument works, but the model has not demonstrated benefit. In this10-receipt screen adaptive, fixed committee and single-agent each scored0.4848 recall; confidence-only 0.5023, random checks0.5140, best-fixed0.4217. The committee never stopped early. It did not improve any confidence-only choice and worsened two. These small development-screen comparisons are not the final result. They warn that regional checks and a coarse estimator can hurt, and that five role prompts may add nothing. We do not tune thresholds/prompts to force a positive result.
+
+Acceptance: all assigned cases complete, hard budgets and duplicate protection passed, all four option controls passed, no hidden scores in actor states, two PNGs and six GIFs rendered and uploaded. Local image inspection confirmed readable measured scales; real GIF decoding passed. This is interface/instrument qualification, not proof of optimal check selection. Actual source and dataset pins are retained in manifests.
+
+Resource amendment before S1:124 calls took292 s; extrapolating to840 calls makes the original30-minute outer timeout too tight. Increase S1 wall allowance to45 minutes, retaining the same exclusive machine,840-call cap, fixed policies, receipts, QA budget and analysis. This changes an execution timeout, not an experimental treatment. Run S1 from c2dffda unchanged. Record this amendment alongside its immutable source plan. Refresh the fleet claim before launch.
+
+Next: execute70 evaluation receipts once. Retain no-benefit outcomes. In particular, confidence alone may dominate paid checking; the arbitrary two-credit budget and ideal regional QA do not establish economically optimal stopping. A later application study would need measured human review costs and a better confidence estimator trained on new development data.

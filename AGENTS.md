@@ -318,6 +318,10 @@ satisfy this requirement. Offline local unit tests do not need a fleet allocatio
   verify uploads, then release; the owner handles teardown of temporary machines through agentops.
   Do not interrupt or move existing runs merely to apply this new rule retroactively.
 
+Owner clarification, 2026-10-04 UTC: for Immune Response, provision a new `sim-immune-response`
+machine owned by vishesh. Do not allocate an existing dmarz-owned or dmarz-named machine merely
+because it is free. The prior sim-dmarz-3 claim was released without running an experiment.
+
 The detailed launch checklist is
 [researchers/vishesh/notes/experiment-machine-workflow.md](researchers/vishesh/notes/experiment-machine-workflow.md).
 This directive supersedes older instructions in vishesh's notes to use a shared test server or a

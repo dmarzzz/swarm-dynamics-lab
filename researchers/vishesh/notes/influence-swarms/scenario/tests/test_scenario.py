@@ -9,6 +9,19 @@ from study import reference_decision,run,validate
 from run import Scripted
 
 class ScenarioTests(unittest.TestCase):
+    def test_worksheet_uses_visible_sources_without_recommendation(self):
+        from study import cost_worksheet
+        c=build('usage_cliff',5)
+        obs={'brief':c['brief'],'candidates':c['candidates'],'documents':c['documents']}
+        rows=cost_worksheet(obs)
+        self.assertEqual(len(rows),3)
+        for r in rows:
+            self.assertFalse(set(r)&{'choice','eligible','acceptable','target'})
+            self.assertEqual(r['total_usd'],costs(c['brief'],c['evaluator']['products'][r['candidate']])['total'])
+        obs['documents']=c['allocations'][0];self.assertEqual(cost_worksheet(obs),[])
+    def test_sensitivity_is_visible(self):
+        from sensitivity import audit
+        a=audit();self.assertEqual(a['cases'],24);self.assertGreater(a['sensitivity_dependent'],0)
     def test_worlds_change_only_comparison_text(self):
         for family in FAMILIES:
             for profile in range(4):

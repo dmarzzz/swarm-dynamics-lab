@@ -62,6 +62,7 @@ class Runner:
             return None
 
     def acquire(self, case, attack):
+        validate_case(case)
         label = f'{case["id"]}:{int(attack)}:acquisition'
         corpus = documents(case, attack)
         states = []; reports = []; initial = []
@@ -175,12 +176,19 @@ class Runner:
                 'trajectory': trajectory, 'transitions': transitions, 'memory': memory, 'parent': parent, 'evaluation': evaluation}
 
     def execute(self, cases, assignments):
+        # Preflight the entire design before the first provider request. A bad
+        # later world or missing assignment must not consume a partial run.
+        if len({case['id'] for case in cases}) != len(cases):
+            raise ValueError('duplicate world identifiers')
+        planned, _ = allocation(cases, self.rounds)
+        if digest(sorted(assignments, key=lambda a: a['id'])) != digest(sorted(planned, key=lambda a: a['id'])):
+            raise ValueError('assignments differ from frozen allocation')
+        for case in cases: validate_case(case)
         rows = []; expected = {r['id'] for r in assignments}
         def terminal(row):
             if row['id'] not in expected: raise ValueError('unassigned terminal record')
             expected.remove(row['id']); rows.append(row); self.journal.emit('terminal', record=row)
         for case in cases:
-            validate_case(case)
             exposure_order = [False, True]; rng_for(VERSION, case['id'], 'exposure-order').shuffle(exposure_order)
             for attack in exposure_order:
                 snapshot = self.prepare_reports(case, attack, self.acquire(case, attack))

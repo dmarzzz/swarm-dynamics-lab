@@ -1,0 +1,47 @@
+{
+  "six_manual_keys": "pass",
+  "noop_attack": "detected",
+  "wrong_answer_checker_mutation": {
+    "saved_correct": 0,
+    "literal_expected": 1,
+    "detected_by_reviewer": true
+  },
+  "bad_allocation": {
+    "rejected_by_runtime": false,
+    "initial_document_counts": [
+      5,
+      0,
+      0
+    ],
+    "reviewer_detects_changed_initial_partition": true
+  },
+  "baseline_replay": {
+    "episodes": 4,
+    "policy_calls": 46,
+    "observations_replayed": true,
+    "event_chains_verified": 6,
+    "scores_verified": true,
+    "usage_verified": false,
+    "runtime_commit": "b8c34da436ae2205f7500383cbd89445ee3f4487",
+    "audit_source_sha256": "29972c92747cde9d74201e793d26e28e624b51b1037fb7bba3c584e4d2209722"
+  },
+  "score_tamper": "Replay differs: evaluation",
+  "whole_world_omission": {
+    "before_clusters": 2,
+    "after_clusters": 1,
+    "rejected": false
+  },
+  "unsupported_correct_guess": {
+    "followup_correct": 1,
+    "support_metric_present": false
+  },
+  "missing_responses": {
+    "assigned": 8,
+    "invalid": 8,
+    "contrast_bounds": [
+      -2.0,
+      2.0
+    ],
+    "all_cells_assigned_one": true
+  }
+}

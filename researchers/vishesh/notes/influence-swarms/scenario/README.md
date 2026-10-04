@@ -18,7 +18,7 @@ We expect omissions to matter most when headline price or easy-ticket demos conf
 
 Three fictional suppliers, 16 short records, six decision tensions and four buyer profiles give 24 development dossiers. Every dossier has quotes, scoped deployment responses, stratified pilot counts, migration schedules and an operations brief. Four matched outside-evidence worlds give 96 case/world assignments. Each produces three decisions; the 288 decisions are **not 288 independent real procurement cases**. Family is the conservative unit for generalization; profiles are constructed operating variations.
 
-A publisher controls three comparison-page slots. It cannot edit contracts, internal pilot records, buyer requirements or check responses. Names and page order are counterbalanced. The promoted supplier is chosen for its low seat price, not by secretly finding the worst true option. Numeric values are authored scenario assumptions; the sources establish the kinds of complications to represent.
+A publisher controls three comparison-page slots. It cannot edit contracts, internal pilot records, buyer requirements or check responses. Names and page order are counterbalanced. The promoted supplier is chosen for its advertised entry-tier seat price, not by secretly finding the worst true option. Numeric values are authored scenario assumptions; the sources establish the kinds of complications to represent.
 
 ## Protocol
 

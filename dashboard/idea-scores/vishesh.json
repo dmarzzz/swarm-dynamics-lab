@@ -3864,6 +3864,19 @@
       "assessed_at": "2026-10-04",
       "candidate_sha256": "2f5ee5bfba8ef965ba41cdc9cbd53af3847a8cca927b2146c42862f322af18f8"
     },
+    "EX-25": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 85,
+        "novelty": 80
+      },
+      "score": 92,
+      "rationale": "A resource-dependent best-size map can animate queues, worker coordination and memory pressure while directly guiding real agent launches. Queueing and finite-group information connect the mechanism to theory; existing scaling work limits novelty.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5b6d5a03a3d709f7fcf9b2717ec231981cbcfc5d9fef01a31baf52e299752006"
+    },
     "DM-01": {
       "dimensions": {
         "visual": 96,

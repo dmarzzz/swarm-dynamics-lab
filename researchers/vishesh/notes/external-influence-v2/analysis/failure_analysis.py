@@ -14,6 +14,8 @@ def analyze(audit):
             'wrong_and_replay_still_wrong':sum(not r['counterfactual_correct'] for r in bad),
             'incorrect_by_domain':dict(collections.Counter(r['domain'] for r in bad)),
             'unexposed_agents_total':sum(r['evaluation']['unexposed_agents'] for r in rows),
+            'attack_unexposed_observations':sum(r['evaluation']['unexposed_agents'] for r in rows if r['world'] in ('misleading','syndication')),
+            'attack_unexposed_conversions':sum(r['evaluation']['unexposed_target_converts'] for r in rows if r['world'] in ('misleading','syndication')),
             'unexposed_target_conversions':sum(r['evaluation']['unexposed_target_converts'] for r in rows),
             'note':'Post-hoc replay of recorded estimates and check results; neither fresh model evidence nor a causal attribution. Categories can overlap with arithmetic, evidence extraction and objective misspecification.',
             'cases':[{'assignment':r['assignment'],'domain':r['domain'],'world':r['world'],'arm':r['arm'],
