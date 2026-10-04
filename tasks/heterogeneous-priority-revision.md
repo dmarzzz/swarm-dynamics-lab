@@ -3,14 +3,18 @@ id: heterogeneous-priority-revision
 type: task
 title: Revise heterogeneous-swarm priorities from owner feedback
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-heterogeneous
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-heterogeneous
 depends_on: []
-topics: [llm-agent-swarms, agent-budgets]
+topics:
+- llm-agent-swarms
+- agent-budgets
+claimed_at: 2026-10-04T03:40Z
+updated: 2026-10-04T03:40Z
 ---
 
 ## Goal
