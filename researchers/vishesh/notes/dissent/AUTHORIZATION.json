@@ -1,0 +1,11 @@
+{
+  "approved": true,
+  "approved_utc": "2026-10-04T04:04:19.842414+00:00",
+  "approval_source": "Owner explicitly approved the cap and instructed execution in this task.",
+  "api_cap_usd": 1,
+  "infrastructure_cap_usd": 1,
+  "total_cap_usd": 2,
+  "max_calls": 500,
+  "max_hours": 6,
+  "fleet_instruction": "Go ahead and create and borrow a machine from Demars's DigitalOcean machine list."
+}
