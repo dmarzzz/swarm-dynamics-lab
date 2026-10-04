@@ -45,7 +45,6 @@
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T06:51Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [integrate-run-closeout-cycle](tasks/integrate-run-closeout-cycle.md) | claimed | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T07:50Z | Integrate automatic run closeout and approved next-run planning |
-| [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T07:31Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T07:49Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [quorum-mirrors-q1-interface-repair](tasks/quorum-mirrors-q1-interface-repair.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T07:49Z | Preserve rejected-response usage and reconcile Q1 output-token contract |
 | [right-dissenter-rd5-build](tasks/right-dissenter-rd5-build.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T07:53Z | Build and prepare Right Dissenter RD5 |
@@ -178,6 +177,7 @@
 | [phantom-coast-live](tasks/phantom-coast-live.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:31Z | Launch bounded Phantom Coast native pilot |
 | [phantom-coast-pc1](tasks/phantom-coast-pc1.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:45Z | Develop Phantom Coast PC-1 plan and offline instrument |
 | [phantom-coast-pc2-design](tasks/phantom-coast-pc2-design.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:49Z | Iterate Phantom Coast after the native ceiling result |
+| [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T07:55Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
 | [phantom-coast-pc2-runner](tasks/phantom-coast-pc2-runner.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:04Z | Build the Phantom Coast PC-2 launch instrument |
 | [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:51Z | Remove mandatory researcher review from owner experiment process |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
@@ -288,7 +288,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-phantom-coast | working | phantom-coast-pc2-live | 2026-10-04 07:51:01.469582+00:00 | Native PC-2 complete and audited; allocation released; publishing results and evidence metadata |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc2-live | 2026-10-04 07:55:17.660703+00:00 | PC-2 complete; 1791/1792 pilot responses valid; USD 0.358051260 cumulative exposure; artifacts verified and allocation released |
 | vishesh/codex-methods | idle |  | 2026-10-04 07:02:35.547829+00:00 | Antsy v8 development and design delivered; fresh checker qualification pending |
 | vishesh/codex-quorum-mirrors | working | quorum-mirrors-q1-interface-repair | 2026-10-04 06:59:50.549036+00:00 | Fixing output-token contract and rerunning the sole bounded Q1 interface repair |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
