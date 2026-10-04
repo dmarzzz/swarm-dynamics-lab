@@ -3,14 +3,16 @@ id: phantom-coast-pc3-live
 type: task
 title: Build and run Phantom Coast PC-3 coverage guard
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T08:00Z
+updated: 2026-10-04T08:00Z
 ---
 
 ## Goal
