@@ -55,3 +55,8 @@ Status: exploratory model replication; setup record maintained per [the setup ru
 ## Closeout
 
 Pending.
+
+
+## Status 2026-10-04 ~08:35Z: deferred, launch-ready
+
+Deferred by the coordinator (dmarz/orchestrator-2) in favour of the run-queue:ready lane (sybil-scarcity-opus takes the next free box, sim-dmarz-2), and because the results analyst forecasts that the model is not the lever in the sybil studies (partial paired budget-sonnet read: Sonnet minus Haiku about +5.9 points, frontier cells unchanged), so this cohort has low information value per server-hour. No claim, server, fleet run or model call exists for it. Launch-ready state: source hash `621c867c6ff495da807988b90807ed7c82642c6112bc91c74271618572d0c96a` (swarm-lab `1a6fdbc1`, 429/529 retry + P0 probe, local S0 264/264), launcher `scripts/run-sybil-scale-opus.py` on agentops main (`244e726`, host from the merged claim, P0 action). To resume: claim a free dmarz box as dmarz/scale-opus, then `setup`, `S0`, `publish`, `P0`, `Q0`, `S1`.
