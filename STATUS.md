@@ -45,6 +45,7 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-pc11-sol](tasks/phantom-coast-pc11-sol.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:09Z | Qualify GPT-6 Sol and run bounded ten-agent Phantom pilot |
+| [right-dissenter-freshness-diagnostic](tasks/right-dissenter-freshness-diagnostic.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T20:14Z | Diagnose expired evidence and implement a strong eligibility baseline |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -389,8 +390,8 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-decision-models | working |  | 2026-10-04 20:14:11.995791+00:00 | Implementing the approved 48-request freshness diagnostic and strong eligibility baseline. |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Forty-agent Haiku panel authorized under USD20 total; native admission preparation |
-| vishesh/codex-decision-models | idle |  | 2026-10-04 20:07:47.728732+00:00 | RD6 Q0-A2 reviewed and published: 15/18 qualification, D0 unrun; no worker or allocation held. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:06:15.346937+00:00 | R1 stopped and reviewed; offline guard validated; repaired native design next |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc11-sol | 2026-10-04 19:38:27.157070+00:00 | Preparing owner-requested GPT-6 Sol qualification and ten-agent conditional pilot |
