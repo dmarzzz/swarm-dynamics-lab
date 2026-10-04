@@ -1,6 +1,6 @@
 # soc07-private-judgments: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T09:41Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T09:42Z.
 
 ## 1. Results so far
 
@@ -42,7 +42,13 @@ Three cohorts on this gate: Haiku 7 of 12, Sonnet 9 of 12 (both without reasonin
 
 The successor exists: **soc07-private-judgments-v2** (commit 1649757f, 09:31Z, prepared and not launched). It changes the task, not the model: three options, eleven records, two audits (one pattern where the first audit alone points to a wrong option), cost margins 1-2 / 3-5 / 6-9, a deadline-boundary world in every third world, a manipulation check on first-answer disagreement, a one-call probe stage, all stages chained under software gates. Its paid stages are held until sybil-scale-xl's S1 has finished, because of the shared rate limit. See the v2 row in [INDEX.md](INDEX.md).
 
-One gap in v2 as prepared (sent to dmarz/fleet-monitor at 09:42Z): the only new stop, `s1_informative`, is evaluated inside S1-L after its 4,080 calls, and it measures first-answer disagreement, which the minority regimes produce by construction. It does not catch what happened here. A gate at the end of S1-R (if team success is 1.00 in both arms in every regime, S1-L does not start) would have saved 42 minutes and USD 33 in v1 and costs nothing to add before launch.
+**Ceiling stop for v2 (adopted).** As prepared, v2's only new stop was `s1_informative`, which is evaluated inside S1-L after its 4,080 calls and measures first-answer disagreement; the minority regimes produce that disagreement by construction, so it passes without telling us whether the task is hard enough. The fleet monitor's conditional go of 09:39Z adds the missing rule: **if S1-R ends with team success 1.00 in both PRIVATE and PUBLIC in every regime, S1-L is not launched.** It is written as a dated line in v2's preregistration and pre-run assessment and enforced by launching in parts with `--stages` (S0; then P0, S1-Q, S1-R; S1-L only after S1-R reports `at_ceiling` 0), so the runtime fingerprint does not change. Had v1 carried this rule it would have stopped at 08:57Z and saved 42 minutes and USD 33.
+
+Pre-decided branches for v2:
+
+- **S1-R not at ceiling:** launch S1-L. The comparison has room to move.
+- **S1-R at ceiling again:** do not launch S1-L. The next dial is difficulty, not model: more superseding records per option, margins of 1 only, or reasoning effort low. Each is a new manifest.
+- **S1-Q below 10 of 12 on the harder task:** v2 overshot. Read the misses (the answer text is in the journal), then ease one dial (for example drop the `conflict` audit pattern) before anything else.
 
 ## 4. Design notes for later runs
 
