@@ -1,0 +1,182 @@
+{
+  "attempt": "Q3-A2/P1-A1",
+  "assessor": "vishesh/codex-theseus;owningagent",
+  "date": "2026-10-04",
+  "evidence_revision": "074eff22aaf778046b23d2fcb7c5fc671959f7c9",
+  "decision": "diagnostic",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Bounded inferred-policy/consultation/handover/update qualification;no claim of scaled completion.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Current-history evidence supports the newpair and model actuallyselected it;no missingessentialevidence or labeldefect identified.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Exactcontroller verifies saved-labelbehavior;paired interactive/static/broken/retained nativecontrols unstarted.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ],
+      "next_action": "Test single-authority selector interface on bounded inspected-context diagnostic,then separately requalify before fundedturnover.",
+      "acceptance_check": "Diagnostic3correctpairchoices/18correctdecisions/0harm;fullnativeQ3allcorrectgate stillrequired;P1onlythenmeasuresreplication."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Failoverupdatedincumbent persisted stale note despite selecting correctpair;3/6terminaldecisions wrong.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ],
+      "next_action": "Test single-authority selector interface on bounded inspected-context diagnostic,then separately requalify before fundedturnover.",
+      "acceptance_check": "Diagnostic3correctpairchoices/18correctdecisions/0harm;fullnativeQ3allcorrectgate stillrequired;P1onlythenmeasuresreplication."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "69request/result replays match;allfour terminalowners and failures retained;no scoreupgrade.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Two qualificationworlds,onefamilyunstarted;zeroindependent P1worlds or complete-replacement trajectories.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ],
+      "next_action": "Test single-authority selector interface on bounded inspected-context diagnostic,then separately requalify before fundedturnover.",
+      "acceptance_check": "Diagnostic3correctpairchoices/18correctdecisions/0harm;fullnativeQ3allcorrectgate stillrequired;P1onlythenmeasuresreplication."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Actorcontext faithfully recorded;redundant chosenpair/notefields diverged and equality invariant was insufficiently explicit.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ],
+      "next_action": "Test single-authority selector interface on bounded inspected-context diagnostic,then separately requalify before fundedturnover.",
+      "acceptance_check": "Diagnostic3correctpairchoices/18correctdecisions/0harm;fullnativeQ3allcorrectgate stillrequired;P1onlythenmeasuresreplication."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All69native requests/responses replay;source,inputhashes,failedgate andallunstartedassignments retained.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.18160668333333332 allocatedallin;unusedUSD21.098793316666665released;oldunknownpreserved;workerandclaimreleased.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Exactsource/manifest replay plus35offlinechecks;this establishes instrumentcustody,notfreshnative replication.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Observedstage table labels P1unstarted;no fabricatedturnover trajectory ormissing-as-zeroaccuracy.",
+      "evidence": [
+        {
+          "path": "Q3-A2-P1-AUDIT.json",
+          "sha256": "e12c123a9f06c4bcd0913d20bdd822b10c8fcd8d20feaab069fa7ba40e9f926b"
+        },
+        {
+          "path": "SELECTION-REPAIR-AUDIT.json",
+          "sha256": "a471fbac504bb66ec352be934ea14f8d8aa6e81a9bd1dd0a77a41ed29627a658"
+        }
+      ]
+    }
+  ]
+}

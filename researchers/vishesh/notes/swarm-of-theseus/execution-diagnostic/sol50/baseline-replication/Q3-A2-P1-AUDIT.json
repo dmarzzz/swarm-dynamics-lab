@@ -1,0 +1,143 @@
+{
+  "source_commit": "074eff22aaf778046b23d2fcb7c5fc671959f7c9",
+  "source_sha256": "c325190317df0948ac0d684f1e42193c95ce20c483e20073c66a58f28f7038c8",
+  "manifest_sha256": "1df610bd4704f23b3044fc3de8adafaa88cc472fff5de2041d1af5ca58d817f6",
+  "native_trajectories": [
+    {
+      "stage": "Q3-A2",
+      "trajectory": "Q3-A2-release",
+      "family": "release",
+      "status": "complete",
+      "started_calls": 34,
+      "error": null,
+      "founders": {
+        "assigned": 6,
+        "qualified": 6
+      },
+      "initial": {
+        "assigned": 36,
+        "correct": 36,
+        "harmful": 0,
+        "useful": 12
+      },
+      "passed": true,
+      "stop": null,
+      "handover": {
+        "passed": true,
+        "teacher_correct": true,
+        "successor_note_correct": true,
+        "retired": "position_04/g0",
+        "successor": "position_04/g1"
+      },
+      "terminal": {
+        "assigned": 12,
+        "correct": 12,
+        "harmful": 0,
+        "useful": 4
+      }
+    },
+    {
+      "stage": "Q3-A2",
+      "trajectory": "Q3-A2-failover",
+      "family": "failover",
+      "status": "failed",
+      "started_calls": 35,
+      "error": null,
+      "founders": {
+        "assigned": 6,
+        "qualified": 6
+      },
+      "initial": {
+        "assigned": 36,
+        "correct": 36,
+        "harmful": 0,
+        "useful": 12
+      },
+      "passed": false,
+      "stop": "terminal_gate",
+      "handover": {
+        "passed": true,
+        "teacher_correct": true,
+        "successor_note_correct": true,
+        "retired": "position_03/g0",
+        "successor": "position_03/g1"
+      },
+      "terminal": {
+        "assigned": 12,
+        "correct": 9,
+        "harmful": 0,
+        "useful": 2
+      }
+    },
+    {
+      "stage": "Q3-A2",
+      "trajectory": "Q3-A2-delegation",
+      "status": "unstarted"
+    },
+    {
+      "stage": "P1",
+      "trajectory": "P1-release-r0",
+      "status": "unstarted"
+    },
+    {
+      "stage": "P1",
+      "trajectory": "P1-release-r1",
+      "status": "unstarted"
+    },
+    {
+      "stage": "P1",
+      "trajectory": "P1-failover-r0",
+      "status": "unstarted"
+    },
+    {
+      "stage": "P1",
+      "trajectory": "P1-failover-r1",
+      "status": "unstarted"
+    },
+    {
+      "stage": "P1",
+      "trajectory": "P1-delegation-r0",
+      "status": "unstarted"
+    },
+    {
+      "stage": "P1",
+      "trajectory": "P1-delegation-r1",
+      "status": "unstarted"
+    }
+  ],
+  "replayed_requests": 69,
+  "request_or_grade_disagreements": 0,
+  "input_tokens": 55261,
+  "output_tokens": 4831,
+  "native_api_usd": 0.169662,
+  "phases": {
+    "learn": 12,
+    "select": 16,
+    "attest": 19,
+    "decide": 16,
+    "question": 2,
+    "teach": 2,
+    "commit": 2
+  },
+  "Q3_gate": {
+    "qualified": false,
+    "trajectories": {
+      "Q3-A2-failover": {
+        "complete": false,
+        "error": null,
+        "retries": 0,
+        "stage": "Q3-A2",
+        "started_calls": 35,
+        "trajectory": "Q3-A2-failover"
+      },
+      "Q3-A2-release": {
+        "complete": true,
+        "error": null,
+        "retries": 0,
+        "stage": "Q3-A2",
+        "started_calls": 34,
+        "trajectory": "Q3-A2-release"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "packet_sha256": "76118c06c346866bc4d62a58303977ac80c8d91fa29894d9947214474403efdc",
+  "contexts": [
+    {
+      "name": "changed-failover",
+      "family": "failover",
+      "source_request_sha256": "a7e23dc0251fdafb7978d0ede854b69163d750da7296023c996ad9773d5652a6"
+    },
+    {
+      "name": "preserved-failover",
+      "family": "failover",
+      "source_request_sha256": "b47691260a3bd9bd01781b135c04e821b69ad817dea51ff5be3dd0dacd6eaab0"
+    },
+    {
+      "name": "changed-release",
+      "family": "release",
+      "source_request_sha256": "0062719706b3c76cfa2ca3380c07138e4404e5b85025e073ed5ed7b36d66a6f6"
+    }
+  ],
+  "counterfactual_software_checks": [
+    {
+      "context": "changed-failover",
+      "archived_selected_matches_archived_note": false,
+      "old_note_controller_correct": 3,
+      "selected_pair_controller_correct": 6,
+      "assigned": 6,
+      "native_rerun": false
+    },
+    {
+      "context": "preserved-failover",
+      "archived_selected_matches_archived_note": true,
+      "old_note_controller_correct": 6,
+      "selected_pair_controller_correct": 6,
+      "assigned": 6,
+      "native_rerun": false
+    },
+    {
+      "context": "changed-release",
+      "archived_selected_matches_archived_note": true,
+      "old_note_controller_correct": 6,
+      "selected_pair_controller_correct": 6,
+      "assigned": 6,
+      "native_rerun": false
+    }
+  ],
+  "scripted_diagnostic_passed": true,
+  "scripted_calls": 6,
+  "max_request_bytes": 5761,
+  "new_native_calls": 0,
+  "does_not_rescore_original": true
+}
