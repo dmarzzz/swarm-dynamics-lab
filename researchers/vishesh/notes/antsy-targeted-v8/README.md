@@ -3,10 +3,19 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-methods; source `f76f0248` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-methods; source snapshots shown per cohort ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — Corrected extraction improves the primary reader on reused development receipts; fresh qualification and checker benefit remain untested. Basis: Two parser defects corrected after inspecting development failures. Replaying the same observations yields 13 rather than 11 correct primary totals of 19 scorable receipts; weak-checker fallback adds an error and is rejected.
-- **sample_size_summary:** 20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun.
+**Antsy v8: development replay cohort** (`antsy-targeted-v8`)
+Source: `f76f0248`.
+
+- **evidence_confidence:** **1/4** — Corrected extraction improves the primary reader on reused development receipts; this cohort does not establish fresh qualification or checker benefit. Basis: Two parser defects corrected after inspecting development failures. Replaying the same observations yields 13 rather than 11 correct primary totals of 19 scorable receipts; weak-checker fallback adds an error and is rejected.
+- **sample_size_summary:** Development only:20 reused receipts,19 scorable;100 saved OCR observations replayed twice,not40 independent receipts. Zero new calls in this cohort. Fresh native Q0 is assessed separately.
+
+**Antsy v8: fresh Q0 runtime qualification** (`antsy-targeted-v8-q0`)
+Source: `023fe193`.
+
+- **evidence_confidence:** **1/4** — The frozen checker failed its execution deadline; fresh competence and complementary correction remain unestablished. Basis: Six starts produced five valid outputs and one45-second timeout. Two completed pairs were correct; the third is partial and17never started. Same-author saved-output audit verifies retained decisions, not population safety or error independence.
+- **sample_size_summary:** 20 paired receipts assigned;2complete,1partial,17unstarted.40OCR calls assigned;6started,5valid,1timeout,34unstarted. Conditional rescue and error correlation are not estimable; no S1.
 <!-- experiment-evidence:end -->
 
 Exploratory study. **Fresh Q0 stopped on a checker timeout: 6 calls started, 5 valid, 1 timed out, 34 unstarted; only2/20 complete pairs. Qualification is incomplete.**

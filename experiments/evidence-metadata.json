@@ -1790,7 +1790,7 @@
     },
     {
       "id": "antsy-targeted-v8",
-      "title": "Antsy v8: targeted field verification",
+      "title": "Antsy v8: development replay cohort",
       "documents": [
         "researchers/vishesh/notes/antsy-targeted-v8/README.md"
       ],
@@ -1800,17 +1800,17 @@
       "registration_paths": [],
       "evidence_confidence": {
         "score": 1,
-        "claim": "Corrected extraction improves the primary reader on reused development receipts; fresh qualification and checker benefit remain untested.",
+        "claim": "Corrected extraction improves the primary reader on reused development receipts; this cohort does not establish fresh qualification or checker benefit.",
         "rationale": "Two parser defects corrected after inspecting development failures. Replaying the same observations yields 13 rather than 11 correct primary totals of 19 scorable receipts; weak-checker fallback adds an error and is rejected."
       },
-      "sample_size_summary": "20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun.",
+      "sample_size_summary": "Development only:20 reused receipts,19 scorable;100 saved OCR observations replayed twice,not40 independent receipts. Zero new calls in this cohort. Fresh native Q0 is assessed separately.",
       "sources": [
         "researchers/vishesh/notes/antsy-targeted-v8/PLAN.md",
         "researchers/vishesh/notes/antsy-targeted-v8/AMENDMENT-01.md",
         "researchers/vishesh/notes/antsy-targeted-v8/RESULTS.md",
         "researchers/vishesh/notes/antsy-targeted-v8/reviews/development-02-post.md"
       ],
-      "status_at_assessment": "development_repaired_checker_rejected_fresh_qualification_pending",
+      "status_at_assessment": "development_repaired_checker_rejected_separate_native_cohort",
       "source_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
       "assessed_at": "2026-10-04",
       "assessor": "vishesh/codex-methods"
@@ -3381,6 +3381,33 @@
         "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0",
         "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
       }
+    },
+    {
+      "id": "antsy-targeted-v8-q0",
+      "title": "Antsy v8: fresh Q0 runtime qualification",
+      "documents": [
+        "researchers/vishesh/notes/antsy-targeted-v8/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-targeted-v8"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The frozen checker failed its execution deadline; fresh competence and complementary correction remain unestablished.",
+        "rationale": "Six starts produced five valid outputs and one45-second timeout. Two completed pairs were correct; the third is partial and17never started. Same-author saved-output audit verifies retained decisions, not population safety or error independence."
+      },
+      "sample_size_summary": "20 paired receipts assigned;2complete,1partial,17unstarted.40OCR calls assigned;6started,5valid,1timeout,34unstarted. Conditional rescue and error correlation are not estimable; no S1.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-targeted-v8/reviews/Q0-attempt-1-post.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/manifest.json",
+        "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/audit.json",
+        "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/assignments.json"
+      ],
+      "status_at_assessment": "failed_execution_qualification_incomplete_closed_no_retry",
+      "source_commit": "023fe193e694eae914cb8e1e0cd2509be56c6fb1",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
     }
   ],
   "source_sha256": {
