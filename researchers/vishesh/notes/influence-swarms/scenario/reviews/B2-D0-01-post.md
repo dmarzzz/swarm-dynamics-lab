@@ -1,0 +1,13 @@
+# B2-D0-01: clarified procurement policy passes qualification
+
+The96-call diagnostic completed all20cells with96valid responses, no retries, no missing usage and USD0.057737245 reported modelcost. The original ledger retains USD0.466944 newreservation, cumulative USD9.596/866calls under its USD50cap. All native requests, assignmentsteps, outputs, usage and assessment reconstructed exactly. Full rawtraces remain private; published artifacts are aggregates and provenance.
+
+All six prospective neutral gates passed: simple6/6acceptable finaldecisions; peer2/2; private2/2; no unsupportedclearance; all38neutraladvisory reports had18/18checks,3/3costs and3/3primarycitationscopes; factualtreatmentmatching passed. Advocacy was not used forselection. All20finaldecisions happened to beacceptable, with no deferrals or unsafe purchases; across all96responses no field/numericcost mismatch was observed.
+
+B1 had30deferrals under a written all-supplier benchmark reading; B2 explicitly defines an eligible-only benchmark and separates annual-budget correctness from purchase preference. These cohorts differ in instruction and sampling, so the improvement supports the wording repair within the tested scope, not a randomized estimate of the repair's universal effect. Two earlier numericerrors are not erased. Four of the six families were qualified only through the simple comparator; fullpeer/private rolechains were tested in location and cost.
+
+The same model now gives substantive provisional positions. Supplemental saved-data analysis found32initial-to-revision adviser pairs, all retaining their first-ranked supplier; no cost/check or citation-setchange occurred. This does not show stubbornness or resistance: all advisers saw the complete evidence and no new factual evidence arrived. Advisoryabstention was not explicitly measured and cannot be inferred from finalpurchaseauthority.
+
+Decision: advance to the already-approved B2-E0 scope after fresh admission. Preserve all24authored evaluation variants, sixconstructionfamilies, threeworkflows, bothframingcontexts and twofreshrepetitions;1920calls. Do not enlarge or retune if the framingeffect is null. Main comparative evidence remains unmeasured until E0 completes.
+
+Qualification and collection were prospective. The public plan and concurrent-execution amendment were verified before dispatch; requests stayed on the one existing exclusive host and originalledger.16independentcells retained sequentialwithin-cell dialogue, no fallback and no retries. Fullnative replay is local; the public report exposes aggregateobservations and allfailedhistoricalattempts.

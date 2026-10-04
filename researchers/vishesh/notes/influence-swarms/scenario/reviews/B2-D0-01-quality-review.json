@@ -1,0 +1,218 @@
+{
+  "assessor": "owning session; not independent replication",
+  "date": "2026-10-04T22:28:17.230921+00:00",
+  "attempt": "native-B2-D0-01",
+  "evidence_revision": "949b36c80618f8e065b498983c63e51c6232cea5",
+  "decision": "advance",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Finite diagnostic resolves a specific buyer/evaluator ambiguity before the unchanged framing comparison.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "All six authored families and affected/unaffected benchmark examples were tested; realism and shared-format limits are explicit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Both factual framing contexts and simple/peer/private workflows match the prospective subset; advocacy never gates qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "All strict scoped neutral gates pass, including every advisorycheck/cost/citationscope; other four families lack fullrole qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Explicit eligible-only policy matches unchanged numericgold; native exactwire and frozenassessment reproduced.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six developmentfamilies/20cells/96dependentcalls are reported as diagnostic exposure, not populationprecision.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen source/packet, exact requests and isolated assignment/step state verified; no operator context or gold supplied.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All96requests valid/accounted;20completecells;no unknownusage, duplicateattempt or replacement.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.057737245reported and0.466944reserved within original named round; originalledger retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "All96native wires, stable IDs, usage and frozenqualification replay; source949b36c8 andpacketecdb1e31 retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Terminal localbrowser replay shows96/96valid, zero unstarted, USD0.057737rounded usage and all six gatesPASS, separately from retained B1failure. Aggregate report derives the same saved counts.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/summary.json",
+          "sha256": "ca18a50574d02a042e1971a10c96cb2e1d5a85b3bde4df3375270e8d17ab7c5d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/assessment.json",
+          "sha256": "20809aa03b6bbe5c3b324f17e8bfad4dbcabaf8db9d99b31f683a26e3fece912"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-D0-01/saved-audit.json",
+          "sha256": "48ea11558b3c30f4e5a6c4f492517b57ac21640b7ce09839ca05de41ffc8d3ec"
+        }
+      ]
+    }
+  ]
+}
