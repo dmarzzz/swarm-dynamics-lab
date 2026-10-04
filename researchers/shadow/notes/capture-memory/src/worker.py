@@ -25,7 +25,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import sim  # noqa: E402
 import model  # noqa: E402
-from common import ROOT, SCRIPTED_STAGES, load, memory_value, runs_for_stage, task_range  # noqa: E402
+from common import ALL_STAGES, MODEL_STAGES, ROOT, load, memory_value, runs_for_stage, task_range  # noqa: E402
 
 
 def code_commit() -> str | None:
@@ -49,6 +49,11 @@ def metrics(stats: dict) -> dict:
         m["wipe_minus_purge"] = round(m["frac_T_A2_purge_wipe"] - m["frac_T_A1_purge"], 4)
     m["episodes"] = sum(a["n"] for a in stats.values())
     m["invalid"] = sum(a["invalid"] for a in stats.values())
+    m["validity"] = round(m["episodes"] / (m["episodes"] + m["invalid"]), 4) if (m["episodes"] + m["invalid"]) else None
+    for k in ("model_calls", "prompt_tokens", "completion_tokens", "cost_usd", "parse_failures", "fuzzy_parses", "parse_retries"):
+        m[k] = round(sum(a.get(k, 0) for a in stats.values()), 6)
+    if m["model_calls"]:
+        m["call_parse_rate"] = round(1 - (m["parse_retries"] + m["parse_failures"]) / m["model_calls"], 4)
     return m
 
 
@@ -57,7 +62,9 @@ def execute(p: dict, out: Path, policy, backend_name: str, progress=lambda *a, *
     memory = memory_value(p["memory"])
     out.parent.mkdir(parents=True, exist_ok=True)
     code = code_commit()
-    stats = {a: {"n": 0, "captured": 0, "cap100": 0, "cap200": 0, "frac_T": 0.0, "rec": 0, "invalid": 0} for a in arms}
+    stats = {a: {"n": 0, "captured": 0, "cap100": 0, "cap200": 0, "frac_T": 0.0, "rec": 0, "invalid": 0,
+                 "model_calls": 0, "prompt_tokens": 0, "completion_tokens": 0, "cost_usd": 0.0, "parse_failures": 0,
+                 "fuzzy_parses": 0, "parse_retries": 0} for a in arms}
     total, done = len(tasks) * len(seeds), 0
     with out.open("a") as f:
         for t in tasks:
@@ -69,6 +76,11 @@ def execute(p: dict, out: Path, policy, backend_name: str, progress=lambda *a, *
                                 "python": platform.python_version()})
                     f.write(json.dumps(rec) + "\n")
                     a = stats[rec["arm"]]
+                    c = rec["cost_actual"]
+                    pre = c.get("prefix", {}) if rec["arm"] == arms[0] else {}      # prefix spend counted once, under the first arm
+                    a["model_calls"] += c.get("model_calls", 0) + pre.get("calls", 0)
+                    for k in ("prompt_tokens", "completion_tokens", "cost_usd", "parse_failures", "fuzzy_parses", "parse_retries"):
+                        a[k] += c.get(k, 0) + pre.get(k, 0)
                     if rec["validity"]["ok"]:
                         e = rec["evaluation"]
                         a["n"] += 1
@@ -84,6 +96,9 @@ def execute(p: dict, out: Path, policy, backend_name: str, progress=lambda *a, *
                 progress(done, total, **metrics(stats))
     summary = {"run": run_id, "params": p, "episodes_per_arm": total, "stats": stats, "metrics": metrics(stats),
                "backend": backend_name, "code": code, "file": out.name}
+    if getattr(policy, "budget", None) is not None:
+        policy.budget.save()
+        summary["budget"] = policy.budget.state()
     out.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2))
     return summary
 
@@ -92,7 +107,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hub", action="store_true", help="take queued runs from the hub (needs swarm_report)")
     ap.add_argument("--forever", action="store_true")
-    ap.add_argument("--stage", choices=list(SCRIPTED_STAGES), default="S0")
+    ap.add_argument("--stage", choices=list(ALL_STAGES), default="S0")
     ap.add_argument("--backend", choices=["scripted", "http"], default="scripted")
     ap.add_argument("--out", help="local mode: output directory (must not exist)")
     ap.add_argument("--limit", type=int, help="local mode: run only the first N cells")
@@ -111,10 +126,12 @@ def main():
 
         def work(run):
             p = run.params
-            if p.get("stage") not in SCRIPTED_STAGES:
-                raise ValueError("only S0/S1/S1b exist before hypothesis acceptance")
+            if p.get("stage") not in ALL_STAGES:
+                raise ValueError(f"unknown stage {p.get('stage')}")
             if p.get("backend", "scripted") != a.backend:
                 raise ValueError("worker backend mismatch")
+            if p.get("stage") in MODEL_STAGES and not p.get("go"):
+                raise ValueError("model stage run carries no human GO stamp; refusing")
             out = ROOT / "results" / "episodes" / (run.id.replace("/", "__") + ".jsonl")
             summary = execute(p, out, policy, backend_name,
                               lambda done, total, **m: run.progress(done, total, **m),
@@ -124,6 +141,8 @@ def main():
             msg = f"{summary['episodes_per_arm']} episodes x {len(p['arms'])} arms, {backend_name}"
             if backend_name == "scripted":
                 msg += "; scripted policy, not LLM evidence"
+            else:
+                msg += f"; GO: {p.get('go')}; spend so far {summary.get('budget', {}).get('actual_usd', 0):.4f} USD"
             run.done(message=msg, **summary["metrics"])
 
         n = sr.work(exp, work, stop_when_empty=not a.forever)
