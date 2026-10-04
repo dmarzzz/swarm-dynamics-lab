@@ -1,0 +1,146 @@
+{
+  "action": "verify",
+  "exit": 0,
+  "result": {
+    "experiment": "sybil-scarcity-synth",
+    "model": "claude-opus-5-5",
+    "ok": true,
+    "source_hash": "b75d7b372e7e9780d79ab7b358f175752225f881e1dba87b8d6024f0a8129725",
+    "stages": {
+      "P0": {
+        "batch": "p0-001",
+        "checks": {
+          "analysis_recomputed": true,
+          "artifacts_complete": true,
+          "artifacts_match_hub": true,
+          "assignments_match_manifest": true,
+          "grades_recomputed": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "no_unit_counted_twice": true,
+          "packet_hashes_recomputed": true,
+          "records_readable": true,
+          "rows_cover_assignments": true,
+          "source_hash_matches": true,
+          "summary_recomputed": true
+        },
+        "cost_usd": 0.094904,
+        "failure": null,
+        "model_calls": 1,
+        "ok": true,
+        "parts": 1,
+        "rows": 1,
+        "run": "sybil-scarcity-synth/03aad727",
+        "stage_failed": 0,
+        "stage_not_started": 0,
+        "stage_valid": 1
+      },
+      "Q0": {
+        "batch": "q0-001",
+        "checks": {
+          "analysis_recomputed": true,
+          "artifacts_complete": true,
+          "artifacts_match_hub": true,
+          "assignments_match_manifest": true,
+          "grades_recomputed": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "no_unit_counted_twice": true,
+          "packet_hashes_recomputed": true,
+          "records_readable": true,
+          "rows_cover_assignments": true,
+          "source_hash_matches": true,
+          "summary_recomputed": true
+        },
+        "cost_usd": 4.625896,
+        "failure": null,
+        "model_calls": 48,
+        "ok": true,
+        "parts": 1,
+        "rows": 48,
+        "run": "sybil-scarcity-synth/3e594c13",
+        "stage_failed": 0,
+        "stage_not_started": 0,
+        "stage_valid": 48
+      },
+      "S0": {
+        "batch": "s0-001",
+        "checks": {
+          "analysis_recomputed": true,
+          "artifacts_complete": true,
+          "artifacts_match_hub": true,
+          "assignments_match_manifest": true,
+          "grades_recomputed": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "no_unit_counted_twice": true,
+          "packet_hashes_recomputed": true,
+          "records_readable": true,
+          "rows_cover_assignments": true,
+          "source_hash_matches": true,
+          "summary_recomputed": true
+        },
+        "cost_usd": 0.0,
+        "failure": null,
+        "model_calls": 0,
+        "ok": true,
+        "parts": 1,
+        "rows": 128,
+        "run": "sybil-scarcity-synth/e1ada5ff",
+        "stage_failed": 0,
+        "stage_not_started": 0,
+        "stage_valid": 128
+      },
+      "S1": {
+        "batch": "s1-001",
+        "checks": {
+          "analysis_recomputed": true,
+          "artifacts_complete": true,
+          "artifacts_match_hub": true,
+          "assignments_match_manifest": true,
+          "grades_recomputed": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "no_unit_counted_twice": true,
+          "packet_hashes_recomputed": true,
+          "records_readable": true,
+          "rows_cover_assignments": true,
+          "source_hash_matches": true,
+          "summary_recomputed": true
+        },
+        "cost_usd": 28.331772,
+        "failure": "failed_calls_exceed_limit:12",
+        "model_calls": 304,
+        "ok": true,
+        "parts": 1,
+        "primary": {
+          "all_assigned_bounds": [
+            -0.6527777777777778,
+            0.8055555555555555
+          ],
+          "complete_case_mean": null,
+          "complete_roots": 0,
+          "interval": null,
+          "mean": null,
+          "roots": 24
+        },
+        "rows": 960,
+        "run": "sybil-scarcity-synth/d955e1b4",
+        "stage_failed": 12,
+        "stage_not_started": 656,
+        "stage_valid": 292
+      }
+    },
+    "state": "stopped_at_gate"
+  },
+  "chain_active": false,
+  "worker_active": false,
+  "role": "single",
+  "foreign_workers": 0,
+  "logs": {
+    "chain-opus-5-p0-q0-s1.log": "chain stopped at P0: invalid_rows:http_429",
+    "chain-s0-p0-q0-s1.log": "chain stopped at S1: failed_calls_exceed_limit:12"
+  },
+  "revision": "34c11486ca6c49d0c14d60fc5e20c4aca0317f32",
+  "host": "sim-test-01"
+}

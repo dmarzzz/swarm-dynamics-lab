@@ -1,0 +1,210 @@
+{
+  "params": {
+    "stage": "Q0",
+    "backend": "anthropic",
+    "batch": "q0-001",
+    "source_hash": "b75d7b372e7e9780d79ab7b358f175752225f881e1dba87b8d6024f0a8129725",
+    "code": "34c11486ca6c49d0c14d60fc5e20c4aca0317f32",
+    "model": "claude-opus-5-5"
+  },
+  "model": "claude-opus-5-5",
+  "part": 0,
+  "planned": 48,
+  "part_units": 48,
+  "started": 48,
+  "terminal": 48,
+  "graded": 48,
+  "analyzed": 48,
+  "invalid": 0,
+  "failed": 0,
+  "not_started": 0,
+  "max_failed": 0,
+  "model_calls": 48,
+  "input_tokens": 1133304,
+  "output_tokens": 4634,
+  "cost_usd": 4.625896,
+  "transport_attempts": 48,
+  "count_fallbacks": 0,
+  "part_usage": {
+    "model_calls": 48,
+    "input_tokens": 1133304,
+    "output_tokens": 4634,
+    "cost_usd": 4.625896,
+    "transport_attempts": 48,
+    "count_fallbacks": 0,
+    "completed": 48,
+    "failed": 0,
+    "not_started": 0
+  },
+  "billing": {
+    "billing_pauses": 0,
+    "billing_pause_seconds": 0.0,
+    "billing_affected_calls": 0
+  },
+  "by_effort": {
+    "low": {
+      "calls": 24,
+      "cost_usd": 2.284848,
+      "input_tokens": 566652,
+      "output_tokens": 912,
+      "max_output_tokens": 38,
+      "mean_latency_seconds": 2.509749865082995,
+      "max_latency_seconds": 5.348393428997952
+    },
+    "high": {
+      "calls": 24,
+      "cost_usd": 2.341048,
+      "input_tokens": 566652,
+      "output_tokens": 3722,
+      "max_output_tokens": 642,
+      "mean_latency_seconds": 3.6362047969169,
+      "max_latency_seconds": 8.810797158999776
+    }
+  },
+  "failure_categories": [],
+  "elapsed_seconds": 81.60797774800449,
+  "qualification": {
+    "groups": [
+      {
+        "prompt": "base",
+        "effort": "low",
+        "assigned": 12,
+        "valid": 12,
+        "expected": 12,
+        "profiles": [
+          1,
+          9,
+          81
+        ],
+        "fields_matched": 72,
+        "fields": 72,
+        "exact_packets": 12,
+        "withheld_fields": 6,
+        "withheld_abstained": 6,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      },
+      {
+        "prompt": "rule",
+        "effort": "low",
+        "assigned": 12,
+        "valid": 12,
+        "expected": 12,
+        "profiles": [
+          1,
+          9,
+          81
+        ],
+        "fields_matched": 72,
+        "fields": 72,
+        "exact_packets": 12,
+        "withheld_fields": 6,
+        "withheld_abstained": 6,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      },
+      {
+        "prompt": "base",
+        "effort": "high",
+        "assigned": 12,
+        "valid": 12,
+        "expected": 12,
+        "profiles": [
+          1,
+          9,
+          81
+        ],
+        "fields_matched": 72,
+        "fields": 72,
+        "exact_packets": 12,
+        "withheld_fields": 6,
+        "withheld_abstained": 6,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      },
+      {
+        "prompt": "rule",
+        "effort": "high",
+        "assigned": 12,
+        "valid": 12,
+        "expected": 12,
+        "profiles": [
+          1,
+          9,
+          81
+        ],
+        "fields_matched": 72,
+        "fields": 72,
+        "exact_packets": 12,
+        "withheld_fields": 6,
+        "withheld_abstained": 6,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      }
+    ],
+    "packets": 48,
+    "structurally_valid": 48,
+    "passed": true
+  },
+  "probe": null,
+  "invariants": null,
+  "gate": {
+    "passed": true
+  },
+  "failure": null,
+  "reference_cells": null,
+  "study_accounting": {
+    "attempted_calls": 49,
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 48
+    },
+    "transport_attempts": 49,
+    "cap_transport_attempts": 1300,
+    "usage_reported_calls": 49,
+    "released_calls": 0,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "reserved_usd": 20.412312,
+    "actual_usd": 4.7208,
+    "committed_usd": 4.7208,
+    "input_tokens": 1156840,
+    "output_tokens": 4672,
+    "cap_usd": 240,
+    "cap_calls": 1009
+  },
+  "initial_study_accounting": {
+    "attempted_calls": 1,
+    "calls_by_stage": {
+      "P0": 1
+    },
+    "transport_attempts": 1,
+    "cap_transport_attempts": 1300,
+    "usage_reported_calls": 1,
+    "released_calls": 0,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "reserved_usd": 0.41628,
+    "actual_usd": 0.094904,
+    "committed_usd": 0.094904,
+    "input_tokens": 23536,
+    "output_tokens": 38,
+    "cap_usd": 240,
+    "cap_calls": 1009
+  },
+  "reporting_errors": [],
+  "visualization": {
+    "mapping": "v1",
+    "frames": 33
+  }
+}
