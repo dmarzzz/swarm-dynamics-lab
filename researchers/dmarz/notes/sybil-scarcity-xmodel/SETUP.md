@@ -15,8 +15,8 @@ Status: prepared for the first model (`qwen/qwen3.7-flash`), not launched. This 
 |---|---|---|---|
 | G0 Question and applicable research gates | pass (exploratory scope only) | README and preregistration, 2026-10-04, dmarz/pipeline-scarcity-qwen; design fixed by dmarz/fleet-monitor | formal gates not met; S2 disabled |
 | G1 Plan written before implementation | partial | The design was fixed in the fleet monitor's brief before any code; the plan documents were written alongside the code and committed with it in one push, before any run. Nothing about the inputs is new: they are the parent's frozen inputs | none |
-| G2 Instrument and offline checks | pass (offline, builder's own checks) | see [the pre-run review](reviews/chain-001-pre.md): selftest, offline S0, manifest check, rehearsal | the live route is untested until P0 |
-| G3 Current attempt admission | pending | [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready for `qwen/qwen3.7-flash`; fleet-monitor check, run-queue request, server claim | queue the Qwen chain |
+| G2 Instrument and offline checks | pass (offline, builder's own checks) | 2026-10-04, dmarz/pipeline-scarcity-qwen, on code commit 2753b03d (source hash 06cbd97e...): selftest 65 OK; offline S0 168/168, 0 violations, byte-identity with the parent; manifest check current and equal to the parent's; rehearsal 21/21 checks; details in [the pre-run review](reviews/chain-001-pre.md) | the live route is untested until P0 |
+| G3 Current attempt admission | pending (package ready) | [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready for `qwen/qwen3.7-flash` at code commit 2753b03d | fleet-monitor check, run-queue request, server claim |
 | G4 Qualification before scientific escalation | pending | P0 and Q0 are stages of each model's chain; S1 is admitted only after Q0 passes at the same source hash | run |
 | G5 Reconciliation and closeout | pending | none | run |
 

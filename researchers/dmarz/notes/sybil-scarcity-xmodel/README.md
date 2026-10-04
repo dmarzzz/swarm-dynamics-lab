@@ -48,7 +48,7 @@ Each model runs as its own chain on its own server: batches `s0-001-<tag>`, `p0-
 | Q0 | 48 | the parent's 48 clean packets | the parent's gate: 48 of 48 valid; per carrier profile (16 packets) field accuracy ≥ 0.95, exact packets ≥ 0.90, null on every withheld fact |
 | S1 | 1,440 | 24 roots × 60 cells | at most 15 failed calls and no integrity failure |
 
-Before Q0 and S1 the chain stops (`input_ceiling_projection`) if the largest measured tokens per byte times the largest request (57,092 bytes) exceeds 31,000 tokens, which keeps Qwen inside its under-32,000-prompt-token price tier; before S1 it stops (`projection_exceeds_cap`) if 1,440 × Q0's cost per call exceeds what is left under the cap.
+Before Q0 and S1 the chain stops (`input_ceiling_projection`) if the largest measured tokens per byte times the stage's largest request (57,085 bytes in Q0, 57,169 in S1) exceeds 31,000 tokens, which keeps Qwen inside its under-32,000-prompt-token price tier; before S1 it stops (`projection_exceeds_cap`) if 1,440 × Q0's cost per call exceeds what is left under the cap.
 
 ## Metrics
 

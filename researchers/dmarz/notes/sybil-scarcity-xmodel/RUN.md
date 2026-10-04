@@ -28,7 +28,7 @@ The operator also passes `--source <its agent id>`. `setup` runs `python3 src/se
 |---|---|---|---|
 | S0 | 0 | 168 scripted rows valid; byte-identity with the parent (simulator file, packet texts and labels from the parent's code, manifest lines); clean gate passes under plurality; primary cell not constant | chain stops; nothing paid happened |
 | P0 | 1 | response parses, model slug matches, provider named and Alibaba, usage reported, finish `stop`, no reasoning tokens, valid structure; tokens per byte and the raw response metadata are written to the summary, the hub metrics (`probe_*`) and the run message | chain stops after one call |
-| Q0 | 48 | before queueing: P0's tokens per byte × 57,092 bytes ≤ 31,000 tokens; then the parent's gate: 48/48 valid, per carrier profile field accuracy ≥ 0.95 and exact ≥ 0.90, null on all 24 withheld facts | `input_ceiling_projection` or `gate_failed`; S1 is never queued; the stop is the result for this model |
+| Q0 | 48 | before queueing: P0's tokens per byte × 57,085 bytes (largest Q0 request) ≤ 31,000 tokens; then the parent's gate: 48/48 valid, per carrier profile field accuracy ≥ 0.95 and exact ≥ 0.90, null on all 24 withheld facts | `input_ceiling_projection` or `gate_failed`; S1 is never queued; the stop is the result for this model |
 | S1 | 1,440 | before queueing: the ceiling projection again and 1,440 × Q0's cost per call within the remaining USD 4; then at most 15 failed calls and no integrity failure | `input_ceiling_projection`, `projection_exceeds_cap`, `failed_units_over_limit`, or an integrity reason |
 
 Every stage's pre-dispatch check also proves byte-identity of that stage's inputs with the parent's manifest (S1: about 2.5 minutes of preparation before the first call).
