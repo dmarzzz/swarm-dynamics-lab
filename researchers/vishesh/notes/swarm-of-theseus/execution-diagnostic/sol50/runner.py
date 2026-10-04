@@ -1,5 +1,5 @@
 """Fail-closed SOL50 qualification/conditional pilot runner, no automatic retries."""
-import argparse,hashlib,json,os,socket,sqlite3,subprocess,time,urllib.request
+import argparse,hashlib,json,os,socket,sqlite3,subprocess,sys,time,urllib.request
 from pathlib import Path
 import instrument as i
 import native as n
@@ -46,7 +46,24 @@ class NativeCalls:
     def __init__(self,root,receipt,ledger):
         self.root=Path(root);self.receipt=receipt;self.ledger=Path(ledger);self.count=0
         if not self.ledger.is_file():raise ValueError('existing_ledger_required')
+        with sqlite3.connect(self.ledger) as db:
+            authority=db.execute('SELECT id,model_cap_usd,cumulative_cap_usd,prior_exposure_usd FROM sol50_authority').fetchone()
+            if authority!=(receipt['allocation_id'],53.1456,60.0,1.0408920437):raise ValueError('ledger_authority')
+        sys.path.insert(0,'/usr/local/lib/swarm');import swarm_report
+        self.reporter=swarm_report;self.condition=None;self.condition_start=0
         self.deadline=min(time.time()+14400,receipt['claim_until_epoch']);self.capability=os.environ['THESEUS_SOL50_RELAY_CAPABILITY']
+    def set_condition(self,condition):
+        if condition==self.condition:return
+        self.finish_condition()
+        self.condition=condition;self.condition_start=self.count
+        run_id=self.receipt['attempt']+'-'+condition
+        tldr='TLDR: SOL50 '+self.receipt['stage']+' '+condition+': bounded direct transmission and native consultation; interactive/static/broken/retained controls, exact learned-note reference; measure correct service, harm and inherited routes. One paired synthetic institution, not population evidence.'
+        for kind in ('plan','start'):
+            if not self.reporter.report(kind,EXPERIMENT,run_id,message=tldr,url=self.receipt['plan_url'],strict=True):raise ValueError('reporting_admission')
+    def finish_condition(self,failed=False):
+        if self.condition is not None:
+            if not self.reporter.report('fail' if failed else 'done',EXPERIMENT,self.receipt['attempt']+'-'+self.condition,message='Execution segment closed; scientific interpretation pending.',metrics={'completed_calls':self.count-self.condition_start},strict=True):raise ValueError('reporting_close')
+            self.condition=None
     def __call__(self,phase,packet):
         body=n.request(phase,packet);encoded=json.dumps(body,separators=(',',':')).encode();i.check_wire(body)
         if time.time()>=self.deadline:raise ValueError('deadline')
@@ -86,6 +103,9 @@ def run(admission,design,ledger,output):
     if len(d['world']['members'])!=(5 if r['stage']=='qualification' else 50):raise ValueError('stage_population')
     if socket.gethostname().split('.')[0]!=r['host']:raise ValueError('host')
     if subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip():raise ValueError('dirty_source')
+    allocation_path=Path(r['allocation_path']);allocation=json.loads(allocation_path.read_text())
+    if hashlib.sha256(allocation_path.read_bytes()).hexdigest()!=r['allocation_sha256']:raise ValueError('allocation_hash')
+    if allocation.get('id')!=r['allocation_id'] or allocation.get('status')!='reserved' or allocation.get('model_cap_usd')!=53.1456 or allocation.get('cumulative_cap_usd')!=60 or allocation.get('prior_exposure_usd')!=1.0408920437 or r['attempt'] not in allocation.get('attempts',[]):raise ValueError('allocation_scope')
     root=Path(output)
     if root.exists():raise ValueError('attempt_exists_no_resume')
     public=public_check(r);root.mkdir(parents=True);save(root/'manifest.json',{'admission':r,'design':d,'public_preflight':public})
@@ -95,6 +115,8 @@ def run(admission,design,ledger,output):
         save(root/'results.json',result)
     except Exception as e:error=type(e).__name__
     finally:
+        try:caller.finish_condition(failed=error is not None)
+        except Exception:error=error or 'reporting_close'
         save(root/'terminal.json',{'status':'stopped' if error else 'complete','error_class':error,'started_calls':caller.count,'retries':0,'scientific_review':'required','automatic_successor':False})
     print(json.dumps({'status':'stopped' if error else 'complete','started_calls':caller.count,'scientific_review':'required'}))
 if __name__=='__main__':

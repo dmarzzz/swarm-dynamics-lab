@@ -42,7 +42,7 @@ Bound qualification to30 calls within the2400 total; freeze its exact assignment
 
 ## Publication and custody
 
-Public plan and condition-specific TLDR must be registered at an immutable revision and actually verified before launch. A previous platform review rejected full and aggregate result disclosure; explicit permission for the new plan and aggregate output is pending. Raw native traces and private configuration remain local/private. No owner prompt text is published. Results will include an honest post-mortem even for zero-start or negative outcomes.
+Public plan and condition-specific TLDR must be registered at an immutable revision and actually verified before launch. A previous platform review rejected full and aggregate result disclosure; the owner has now explicitly approved the new plan and aggregate output. Raw native traces and private configuration remain local/private. No owner prompt text is published. Results will include an honest post-mortem even for zero-start or negative outcomes.
 
 ## Implementation status
 
@@ -57,3 +57,7 @@ The native controller would require a separately qualified aggregate context and
 Each witness can attend to at most two owner requests per checkpoint, each bundling six cases. Requests are admitted in the same deterministic owner order across arms; overflow is logged as unavailable communication, never silently serviced for one arm. Correct learned ring routing exactly fills every witness capacity. Incorrect routing can produce congestion; report overflow and lost service separately. This is a declared capacity consequence of routing, not a hidden input truncation.
 
 Successor commitment receives no answer-bearing test panel: only its inherited messages (none in broken inheritance), current roster and empty private successor context. Behavior is evaluated later through actual consultations. Teacher declarations are scored for correctness; in the main pilot a bad lesson is transmitted and counted as a failure, not repaired or silently dropped. Qualification stops on a bad lesson. Public generic rules define evidence validity; what is learned and transmitted is local routing and application, not the invention of those rules.
+
+## Publication decision before dispatch
+
+Owner approved publication of the new plan and aggregate results to the existing Swarm Live and shared Swarm Lab destinations. Raw traces, private configuration and exact owner prompts remain excluded. This decision does not waive native qualification or current admission.

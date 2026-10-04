@@ -8,6 +8,7 @@ import native as n
 KINDS=('allow','veto','missing','stale','conflict','irrelevant_veto')
 
 def initialize(w,call):
+    if hasattr(call,'set_condition'):call.set_condition('founder-acquisition')
     states={};grades=[]
     for p in w['members']:
         packet,cases=n.founder_packet(w,p);value=call('learn',packet)
@@ -16,6 +17,7 @@ def initialize(w,call):
     return states,grades
 
 def replace(g,p,call,changed=False,require_teacher=False):
+    if hasattr(call,'set_condition'):call.set_condition(g.arm+'-handover')
     old=g.identity(p);inherited=copy.deepcopy(g.notes.get(p));teaching=None;inspection=None
     if g.arm=='interactive':
         question=call('question',{'position':p,'successor_identity':f'{p}/g{g.generation[p]+1}','inherited_note':inherited})
@@ -39,6 +41,7 @@ def replace(g,p,call,changed=False,require_teacher=False):
     return {'retired':old,'successor':g.identity(p),'teacher_semantics_correct':teacher_ok,'behavior_evaluated_at_checkpoint':True,'note_correct':i.valid_note(g.notes.get(p),p,i.route_at(g.world,p,changed))}
 
 def checkpoint(g,index,call,changed=False,owners=None):
+    if hasattr(call,'set_condition'):call.set_condition(g.arm+'-checkpoint-'+str(index))
     w=g.world;owners=owners or w['members'];selections={};cases={};inboxes={p:[] for p in w['members']};events=[];overflow=[]
     for owner in owners:
         new=i.examples(w,owner,True) if changed and w['routes'][owner]!=w['changed_routes'][owner] else []

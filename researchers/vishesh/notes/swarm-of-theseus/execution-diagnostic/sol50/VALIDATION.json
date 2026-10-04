@@ -18,9 +18,9 @@
   "reasoning_effort": "none",
   "source_files": {
     "test_instrument.py": "f6926422735185f583b7cf4ac9ecbb0f6efd7f6852089e909c7486244169f698",
-    "coordinator.py": "1f6bfd87c469e69179525249cec8a130d495a9cf91b09d9b9777ee1ce268bf1c",
+    "coordinator.py": "e9f1a45dddd57db2f770ff538211a9b8af9b7f963371fd81b592ece777bb8c51",
     "test_relay.py": "136a5fd4ce895803c7c3770c889807f652347d98b1e1c4556b56d1bfa486253b",
-    "runner.py": "7175999c3eb4c867aa556a59ce5080dec620dbc618d1533e565bc0c146ae451a",
+    "runner.py": "84899f5df82ceb021bcb4cecc052b0033d88aec99bab1752ad0edc6b10ab2ca3",
     "test_coordinator.py": "fcfbe44c4e12a84ed6397a7d761b72f2c5f8799ccef09f38965aa307bd6d7b21",
     "native.py": "ff57aab0a1f4a76a297f4b2ae7ae85ad93c09d98301cdd9b09849f41d9973f81",
     "test_runner.py": "da9c796c0956237d04e4ab4da6b7408f2d743b8f434c45016e3e830c697a8e57",
@@ -29,7 +29,6 @@
     "test_native.py": "78a5bc226f0746c9410e715289247c7b4be59637d24f6a3362dbf554f0c555a9"
   },
   "outstanding": [
-    "Explicit new plan/aggregate publication permission after platform rejection",
     "Immutable public plan registration and page verification",
     "Exclusive approved-account allocation and current runtime",
     "Native route/semantic qualification and authored review",
