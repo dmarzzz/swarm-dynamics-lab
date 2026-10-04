@@ -1,0 +1,7 @@
+{
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/a7e85e69a3225b8c450b14faca6dae53c2be43fc/researchers/vishesh/notes/optimal-swarm-size-engineering-review/PLAN.md",
+  "sha256": "993066006f05df4869c0ab4b5b648cca0a03f6cea984eac877e404966af3c433",
+  "http_status": 200,
+  "verified_utc": "2026-10-04T04:00:02.251826+00:00",
+  "tldr": "TLDR: Offline unit baseline, mocked failure checks and arithmetic evaluator comparisons; no models, spend or scientific effect inference."
+}
