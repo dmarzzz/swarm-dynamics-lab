@@ -184,7 +184,7 @@ class Tests(unittest.TestCase):
             def fake(req, timeout):
                 calls['n'] += 1
                 # Probe passes; every Q0 call fails -> execution complete but not qualified.
-                if calls['n'] == 1: return reply([{'type': 'text', 'text': '{"value": 51}'}])
+                if calls['n'] == 1: return reply([{'type': 'text', 'text': json.dumps(self.probe_answer())}])
                 return reply([{'type': 'text', 'text': '{}'}], stop='refusal')
             with mock.patch('urllib.request.urlopen', side_effect=fake):
                 state = bo.chain(hub, launch, Path(d) / 'out', 'test')
@@ -194,6 +194,23 @@ class Tests(unittest.TestCase):
             self.assertEqual(state['stages']['q0']['accounting']['refusals'], 66)
             self.assertEqual(calls['n'], 67)
             self.assertTrue(any(e[0] == 'done' and 'stopped early' in e[2]['message'] for e in hub.events))
+
+    def probe_answer(self):
+        request, expected = bo.probe_request()
+        source = request['context']['memory'][0]['sources']
+        return {'value': expected, 'sources': source}
+
+    def test_probe_accepts_valid_parent_answer_and_rejects_bad(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = bo.Opus(1, 1.0)
+            with mock.patch('urllib.request.urlopen', return_value=reply([{'type': 'thinking', 'thinking': ''}, {'type': 'text', 'text': json.dumps(self.probe_answer())}])):
+                ok, record = bo.run_probe(p, Path(d))
+            self.assertTrue(ok, record)
+        with tempfile.TemporaryDirectory() as d:
+            p = bo.Opus(1, 1.0)
+            with mock.patch('urllib.request.urlopen', return_value=reply([{'type': 'text', 'text': '{"value": 51, "sources": ["not-a-source"]}'}])):
+                ok, record = bo.run_probe(p, Path(d))
+            self.assertFalse(ok)
 
     def launch(self, folder):
         evidence = folder / 'auth.md'; evidence.write_text('owner waiver')

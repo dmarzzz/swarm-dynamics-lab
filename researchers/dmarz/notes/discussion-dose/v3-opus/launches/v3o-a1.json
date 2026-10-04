@@ -38,7 +38,7 @@
     "bench_v3/scoring.py": "6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4",
     "bench_v3/selftest.py": "12b8b2d94696322fbb5f38bdf407a868525641745ed73388110d6af86cccec48",
     "bench_v3/worlds.py": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
-    "bench_v3_opus.py": "cdc1fad0f10bafa95e29848ef7d48acf3c2df5f016474f12bf75236a674657b7",
+    "bench_v3_opus.py": "b56e769c176cb95a87cdcaa3edb09c0b355232f38f3ec97cb509d6f936afc2e9",
     "providers.py": "22a2e672aeb168ab630bcc65ca2eb9838be910f332820b221720ffa09d82d500",
     "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
   },

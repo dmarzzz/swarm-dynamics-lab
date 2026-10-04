@@ -10,7 +10,7 @@ on `sim-dmarz-9`. Follows [the setup runbook](../../../../../tooling/agent-exper
   the four communication arms compare on 24 fresh worlds? Claim boundary: exploratory; no hypothesis, no holdout.
 - Prior evidence: [Q0](../benchmark-v3/RESULTS-Q0.md), [D1](../benchmark-v3/RESULTS-D1.md), [D1-Opus](../d1-opus/README.md).
   D2 (`dmarz/v3-d2-opus`, sim-dmarz-3) is a separate diagnostic; no shared ids, files or servers.
-- Current stage / next action: G3 for `v3o-a1`: rehearsal, then the chained launch.
+- Current stage / next action: G3 for `v3o-a2` (v3o-a1 stopped at an operator probe-check defect, see [DEPLOYMENT.md](DEPLOYMENT.md)): chained launch.
 
 ## Gate evidence
 
@@ -18,7 +18,7 @@ on `sim-dmarz-9`. Follows [the setup runbook](../../../../../tooling/agent-exper
 |---|---|---|---|
 | G0 Question and applicable research gates | waived by owner | [OWNER-AUTHORIZATION.md](OWNER-AUTHORIZATION.md): dmarz first-hand ~07:55Z "Great messages starting [fleet-monitor] as my instructions including claims lUcnhes model switches And budget costs thanks And stop Asking for my permission", plus the fleet-monitor relay (~08:10Z) to start this qualification on Opus with review waived. Owner waiver only; no independent review was performed. | none |
 | G1 Plan written before implementation | pass | [README](README.md) and [pre-run](reviews/v3o-a1-pre.md) committed before any server stage or model call; dmarz/v3-q0-opus 2026-10-04 | none |
-| G2 Instrument and offline checks | pass | `src/bench_v3_opus_selftest.py` 10/10 (fresh disjoint balanced worlds, clean-first dispatch order and early gate, 429/529-only transport retry with attempt cap and timeout window, request contract without temperature, thinking+text parsing, refusal/mismatch/truncation/HTTP 400 fail closed, call and cost caps, scripted Q0 run + replay audit, chain stops on failed probe and at the Q0 early gate after 66 calls); `python3.12 -m bench_v3.selftest` 57/57 unchanged | none |
+| G2 Instrument and offline checks | pass | `src/bench_v3_opus_selftest.py` 11/11 (probe validated with the v3 parent contract, fresh disjoint balanced worlds, clean-first dispatch order and early gate, 429/529-only transport retry with attempt cap and timeout window, request contract without temperature, thinking+text parsing, refusal/mismatch/truncation/HTTP 400 fail closed, call and cost caps, scripted Q0 run + replay audit, chain stops on failed probe and at the Q0 early gate after 66 calls); `python3.12 -m bench_v3.selftest` 57/57 unchanged | none |
 | G3 Current attempt admission | pending | launch record `launches/v3o-a1.json` (source hashes, caps, authorization digest); claim `dmarz-v3-q0-opus` on sim-dmarz-9 | rehearsal and probe on the server, then chain |
 | G4 Qualification before scientific escalation | software gate | Q0 `model_qualified`; S1 starts only on a pass | automatic |
 | G5 Reconciliation and closeout | pending | | audit, post-mortem, claim release after the chain |

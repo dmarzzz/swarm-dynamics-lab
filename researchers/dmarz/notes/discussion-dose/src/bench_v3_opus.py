@@ -23,7 +23,7 @@ import urllib.request
 from tasks import digest
 from providers import Anthropic, ProviderFailure
 from bench_v3 import VERSION as BENCH_VERSION
-from bench_v3.contracts import SYSTEM, schema, strict_json
+from bench_v3.contracts import SYSTEM, schema, strict_json, validate
 from bench_v3.worlds import make_case, memory_fixtures, SPLITS, validate_case
 from bench_v3.scoring import parent_score
 from bench_v3.runner import Runner, allocation, ARMS
@@ -428,7 +428,10 @@ def run_probe(provider, outdir):
         answer = provider.complete(request)
         record.update(status='valid', answer=answer, expected_supported=expected, model_returned=provider.last_model,
                       stop_reason=provider.last_stop_reason, usage=provider.last_usage)
-        ok = type(answer) is dict and set(answer) == {'value'}
+        try:
+            validate(answer, 'parent', request['context']); ok = True  # same contract the runner applies
+        except (ValueError, TypeError, KeyError):
+            ok = False; record['status'] = 'invalid_contract'
     except ProviderFailure as exc:
         record.update(status='failed', **safe_failure(exc), usage=provider.last_usage, stop_reason=getattr(provider, 'last_stop_reason', None))
         ok = False
