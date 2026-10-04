@@ -23,7 +23,7 @@
     "src/test_replay.py": "f2581e553095420d4a72874406ff5ce4eff3c537c5916adbd78474727f315b37",
     "src/test_reporting.py": "ae31a74d7ec55f894830e2aae263e48ad745823c95f283876fd181df262a395e",
     "src/test_tasks.py": "c28dbd1b1a3cd8a2daab8e009b49bc69844c3f09ce3501d202475fe2ff70af49",
-    "src/transport_diagnostic.py": "a248f8e4430e8846c6a031e2792a070848d59cc758d81eb7ac1bb1578fb40ef8"
+    "src/transport_diagnostic.py": "840e0664027fded89132a0b3747773dcbc0371beb148d9e04f09dbbc8cea6f78"
   },
   "unverified": [
     "Anthropic live transport diagnostic",
