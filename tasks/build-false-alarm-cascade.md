@@ -3,9 +3,9 @@ id: build-false-alarm-cascade
 type: task
 title: Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/pipeline-alarm
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/pipeline
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - swarm-detection
 - llm-agent-swarms
+claimed_at: 2026-10-04T08:07Z
+updated: 2026-10-04T08:07Z
 ---
 
 ## Goal
