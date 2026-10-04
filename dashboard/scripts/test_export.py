@@ -112,6 +112,28 @@ class NavigationTest(unittest.TestCase):
         source['reviewed_atlas_sha256'] = 'old'
         self.assertTrue(self.build(source)['mapping_stale'])
 
+    def test_hypothesis_topics_require_canonical_unique_slugs(self):
+        for tags, diagnostic in [(['message-board'], "unknown=['message-board']"),
+                                 (['llm-agent-swarms', 'llm-agent-swarms'],
+                                  "duplicates=['llm-agent-swarms']")]:
+            with self.subTest(tags=tags):
+                doc = SimpleNamespace(fm={'status': 'proposed', 'topics': tags},
+                                      rel='hypotheses/example.md')
+                with self.assertRaises(ValueError) as error:
+                    self.build(hypotheses={'example': doc})
+                self.assertIn('hypothesis topic in hypotheses/example.md', str(error.exception))
+                self.assertIn(diagnostic, str(error.exception))
+
+    def test_hypothesis_keywords_are_not_navigation_topics(self):
+        doc = SimpleNamespace(fm={'status': 'proposed', 'topics': ['llm-agent-swarms'],
+                                  'keywords': ['message-board', 'broadcast']},
+                              rel='hypotheses/example.md')
+        before = copy.deepcopy(doc.fm)
+        nav = self.build(hypotheses={'example': doc})
+        self.assertEqual(nav['hypotheses'][0]['topics'], ['llm-agent-swarms'])
+        self.assertEqual(nav['hypotheses'][0]['status'], 'proposed')
+        self.assertEqual(doc.fm, before)
+
     def test_explicit_hypothesis_tags_and_untagged_fallback(self):
         def doc(fm):
             return SimpleNamespace(fm=fm, rel='hypotheses/example.md')

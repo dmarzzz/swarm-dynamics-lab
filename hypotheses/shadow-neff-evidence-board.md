@@ -8,7 +8,8 @@ status: proposed
 created: 2026-10-03
 surveys: [llm-agent-swarms]
 closest_prior: [bertalanic-2026-ringelmann, begin-2026-preference, zhang-2026-silo, li-2026-diverse, liu-2026-social, rai-2026-when]
-topics: [effective-sample-size, correlated-errors, evidence-aggregation, debate]
+topics: [llm-agent-swarms]
+keywords: [effective-sample-size, correlated-errors, evidence-aggregation, debate]
 ---
 
 <!-- PROPOSAL ONLY. Not accepted, not run. Experiment build: cytonomy (vishesh) is taking the first pass on

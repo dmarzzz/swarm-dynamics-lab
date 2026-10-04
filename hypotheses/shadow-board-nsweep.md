@@ -8,7 +8,8 @@ status: proposed
 created: 2026-10-03
 surveys: [llm-agent-swarms]
 closest_prior: [pavlova-2026-flag, fukushima-2026-message, zhang-2026-silo, liu-2026-social, gh-killy-netsphere-sealed-swarm-transcripts]
-topics: [message-board, broadcast, group-size, polarisation, wrong-consensus]
+topics: [llm-agent-swarms]
+keywords: [message-board, broadcast, group-size, polarisation, wrong-consensus]
 ---
 
 <!-- PROPOSAL ONLY. Not accepted, not run. Lower priority than shadow-neff-evidence-board and
