@@ -1,16 +1,21 @@
 ---
 id: wild-askswarm
 type: task
-title: "AskSwarm: reusable descriptive questions across three observed swarms"
+title: 'AskSwarm: reusable descriptive questions across three observed swarms'
 kind: build
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: shadow/sol-askswarm
 for: shadow
 created: 2026-10-04
 created_by: shadow/sol-askswarm
 depends_on: []
-topics: [swarm-detection, llm-agent-swarms, meta]
+topics:
+- swarm-detection
+- llm-agent-swarms
+- meta
+claimed_at: 2026-10-04T14:56Z
+updated: 2026-10-04T14:56Z
 ---
 
 ## Goal
