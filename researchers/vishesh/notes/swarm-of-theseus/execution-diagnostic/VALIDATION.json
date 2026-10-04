@@ -7,7 +7,7 @@
   "planned_decisions": 480,
   "independent_worlds": 3,
   "planned_assignments_sha256": "c31e2d76f23856dcd4e6894b8693a0b39be5245541c8a4f84fc6f96e1a9050e9",
-  "instrument_sha256": "1d23e482d614e11a4a0256c149ae46d4ff7f5bb516cb73111d544054d989232c",
+  "instrument_sha256": "ea05db5eaeffb014a40e8f611e5a938e89723ca6b53e1afb6eb921aaad93274e",
   "all_call_conservative_reservations_usd": 1.229731,
   "max_request_bytes": 3626,
   "viewer_checks": [
@@ -23,5 +23,6 @@
     "warnings": 0,
     "preexisting_missing_artifact": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
     "theseus_artifact_errors": 0
-  }
+  },
+  "authorization_update": "Owner confirmed USD5/144 calls and ordered run after independent review and fresh allocation; scientific design unchanged."
 }

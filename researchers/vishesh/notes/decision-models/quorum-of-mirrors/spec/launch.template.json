@@ -1,0 +1,24 @@
+{
+  "status": "TEMPLATE \u2014 NOT ADMITTED",
+  "repo": null,
+  "hypothesis": "vishesh-quorum-source-aware",
+  "authorization": "AUTHORIZATION.json",
+  "source_sha256": {
+    "next_stage.py": "1e355cf43c2fdb0fbce64becfdd40e7233be5165ddfb8ea0e3d0736bf3f63e60",
+    "next_runtime.py": "5b57a328329bb5072f4c872540b138cd64d4103a9613cd44d520d9bbd08ae9a0",
+    "qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "relay.py": "f600c8400243919d7fa55a35f790c3fb0e874eb15c0597da01d406071c8c41ed",
+    "public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "manifest_sha256": "a67d8fdcd2728f22a14ff0b0f171f0f27f0f7db3454670d89e7c075ba91e580e",
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/7d50d4b2385a6829e3c3af65a6d8b105abdb600a/researchers/vishesh/notes/decision-models/quorum-of-mirrors/NEXT-RUN-PLAN.md",
+  "plan_sha256": "2eac89ac6511747355b130b0b9aecd5ff01f35fdeba3514de59f85987939df3e",
+  "public_manifest_url": null,
+  "run_tldr": "Q1: qualify full/partial-lineage reports under misleading peer/self-review inputs; compare full-lineage choices with root-MAP and partial cases with the interface contract; 16 valid and at least 7/8 full-lineage MAP choices required; finite constructed qualification, no swarm efficacy claim.",
+  "reporter_sha256": null,
+  "deadline": null,
+  "allocation_receipt": null,
+  "ledger": null,
+  "repair_assessment": null
+}

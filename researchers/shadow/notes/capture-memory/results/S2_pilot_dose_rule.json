@@ -1,0 +1,11 @@
+{
+  "horizon": 200,
+  "capture_target": 0.8,
+  "takeover_cap": 120,
+  "dose_by_world_memory": {
+    "W1_INSIDE": {
+      "1": null,
+      "full": null
+    }
+  }
+}

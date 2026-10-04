@@ -19,7 +19,7 @@ Updated 2026-10-04 by dmarz/market-split. This record is retrospective for compl
 | G2 instrument | Pass in bounded checks | S0-fleet-003: 17 offline checks, 12 mock episodes, 42 verified artifacts, 96 exactly replayed actions | Preserve frozen hashes |
 | G3 current attempt | Historical admission recorded | [R0 pre-assessment](reviews/r0-001-pre.md), [deployment](deployment.md), exclusive claim and finite worker | Preserve historical evidence; do not claim a newly added public-preflight helper ran historically |
 | G4 qualification | Failed R0 | D0 two terminal legal responses, I0 six legal operations, Q0 four valid/profitable episodes above unchanged 75% floor | 3 complete,1 invalid,4 unstarted; numeric validity failed. No escalation. |
-| G5 closeout | In progress | 14 artifact hashes and all94calls replay-audited; worker stopped; post-mortem complete | Publish, release and destroy temporary host |
+| G5 closeout | Complete for R0 | Published results/post-mortem;14run+5analysis artifacts byte-verified;94calls replayed;claimPR148released;temporaryhostdestroyed afterPR150 | Next diagnostic remains unstarted |
 
 ## Design and instrument index
 
@@ -45,4 +45,4 @@ All pre/post reviews remain in [reviews](reviews/). V1 mechanics failure, V2 qua
 
 ## Closeout
 
-Execution, response validity, qualification, scientific conclusions, process compliance and delivery will be reported separately in R0's post-mortem. Archive every attempt and cost ledger before releasing the claim and destroying the temporary host. Publish analysis and updated evidence metadata using independent market counts. Leave the next plan unstarted; no automatic discovery launch follows a qualification pass.
+Execution, response validity, qualification, scientific conclusions, process compliance and delivery are reported separately in R0's post-mortem. Every attempt and the complete cost ledger were archived before claim release and verified temporary-host destruction. Publish analysis and updated evidence metadata using independent market counts. Leave the next plan unstarted; no automatic discovery launch follows a qualification pass.

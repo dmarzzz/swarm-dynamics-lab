@@ -27,3 +27,5 @@ The [post-mortem](reviews/r0-001-post.md) explains methods, failure cause, limit
 - [Next diagnostic plan — not started](NEXT-EXPERIMENT.md)
 
 The next plan proposes a bounded numeric-interface diagnostic. It remains unstarted under the user's instruction, even though an existing dollar budget is available. Sonnet's ongoing discovery cohort is a separate experiment.
+
+The temporary Haiku server was destroyed after verified archival and claim release. All other servers were preserved. The next plan has no running worker or machine allocation.

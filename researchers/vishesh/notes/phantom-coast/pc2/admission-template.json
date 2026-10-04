@@ -1,0 +1,62 @@
+{
+  "design": "PC-2",
+  "stage": "Q0",
+  "attempt": "q0-a1",
+  "source_commit": null,
+  "instrument": null,
+  "assignment_sha256": null,
+  "reviewer_researcher": null,
+  "researcher_review_passed": false,
+  "research_scope_admitted": false,
+  "authorization": "phantom-coast-usd5-20261004",
+  "prior_spend_nano": 162723246,
+  "api_cap_nano": 4000000000,
+  "max_calls": 1816,
+  "checked_utc": null,
+  "claim_until": null,
+  "deadline": null,
+  "host": null,
+  "model": "typesafe/jev-1.13-20260917",
+  "ledger_path": null,
+  "ledger_sha256": null,
+  "predecessor_sha256": null,
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/a250808391bb2e1f224a12d23d3d2f1fcbc0ace0/researchers/vishesh/notes/phantom-coast/pc2/PLAN.md",
+  "plan_sha256": "503085960b8813b7f34156a4ac51ff2288213c69de53352d31384c80e138e20a",
+  "run_tldr": null,
+  "qualification_directory": null,
+  "qualification_hashes": null,
+  "researcher_review": {
+    "path": null,
+    "sha256": null
+  },
+  "research_scope": {
+    "path": null,
+    "sha256": null
+  },
+  "pre_assessment": {
+    "path": null,
+    "sha256": null
+  },
+  "page_verification": {
+    "path": null,
+    "sha256": null
+  },
+  "allocation": {
+    "path": null,
+    "sha256": null
+  },
+  "budget_lineage": {
+    "path": null,
+    "sha256": null
+  },
+  "runtime": {
+    "path": null,
+    "sha256": null
+  },
+  "predecessor_fenced": false,
+  "predecessor_reconciled": false,
+  "single_ledger_authority": false,
+  "exclusive_allocation": false,
+  "approved_mars_fleet": false,
+  "rendered_page_verified": false
+}

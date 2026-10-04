@@ -9,12 +9,12 @@ SNAPSHOT='typesafe/jev-1.13-20260917'
 PLAN_COMMIT='794a3f3'  # resolved to full immutable SHA in deployment configuration
 RANDOM_CHECK_INDICES=frozenset(random.Random(93021).sample(range(52),26))
 
-def qualification():
+def qualification(seed_start=2100, case_stage='qualification'):
     rows=[]
     for si,scenario in enumerate(SCENARIOS):
         for j in range(6):
             truth=('PROCEED','HOLD')[j%2]
-            c=make_case(scenario,2100+si*6+j,truth=truth,majority='HOLD' if truth=='PROCEED' else 'PROCEED',stage='qualification')
+            c=make_case(scenario,seed_start+si*6+j,truth=truth,majority='HOLD' if truth=='PROCEED' else 'PROCEED',stage=case_stage)
             packet=actor_packet(c)
             packet.update(records=[record('q','source-q',c['task']['scope'],'v1',0,truth,scenario)],votes=[],challenge=None)
             rows.append({'case_id':c['case_id'],'scenario':scenario,'packet':packet,'expected':truth,'seed':c['seed']})
@@ -31,20 +31,20 @@ def clarify(task,scenario):
         'An observation that fails this requirement means HOLD. With no applicable observation or unresolved conflicting current observations, DEFER. '
         'Do not infer additional unstated requirements. Use the newest applicable independent check when available.')
 
-def diagnostic():
+def diagnostic(seed_start=2120, case_stage='qualification'):
     rows=[]
     for si,scenario in enumerate(SCENARIOS):
         for j in range(6):
-            truth=('PROCEED','HOLD')[j%2];seed=2120+si*6+j
-            c=make_case(scenario,seed,truth=truth,majority='HOLD' if truth=='PROCEED' else 'PROCEED',stage='qualification')
+            truth=('PROCEED','HOLD')[j%2];seed=seed_start+si*6+j
+            c=make_case(scenario,seed,truth=truth,majority='HOLD' if truth=='PROCEED' else 'PROCEED',stage=case_stage)
             p=actor_packet(c);p.update(records=[record('q','source-q',c['task']['scope'],'v1',0,truth,scenario)],votes=[],challenge=None)
             for arm in (('generic','clarified') if j%2==0 else ('clarified','generic')):
                 packet=deepcopy(p)
                 if arm=='clarified':clarify(packet['task'],scenario)
                 rows.append({'case_id':digest([scenario,seed,arm])[:12],'scenario':scenario,'packet':packet,'expected':truth,'seed':seed,'arm':arm})
         for j,condition in enumerate(('absent','conflicting')):
-            seed=2140+si*2+j
-            c=make_case(scenario,seed,truth='PROCEED',majority='HOLD',stage='qualification')
+            seed=seed_start+20+si*2+j
+            c=make_case(scenario,seed,truth='PROCEED',majority='HOLD',stage=case_stage)
             packet=actor_packet(c);clarify(packet['task'],scenario)
             packet.update(records=[] if j==0 else [record('qa','root-a',c['task']['scope'],'v1',0,'PROCEED',scenario),record('qb','root-b',c['task']['scope'],'v1',0,'HOLD',scenario)],votes=[],challenge=None)
             rows.append({'case_id':digest([scenario,seed,condition])[:12],'scenario':scenario,'packet':packet,'expected':'DEFER','seed':seed,'arm':'uncertainty','condition':condition})
@@ -76,7 +76,7 @@ def development():
     return rows
 
 
-def validation_diagnostic():
+def validation_diagnostic(seed_start=2160, case_stage='qualification'):
     import json
     from pathlib import Path
     prior=json.loads((Path(__file__).resolve().parents[1]/'results/s1-a1/calls.json').read_text())
@@ -89,7 +89,7 @@ def validation_diagnostic():
     assert len(rows)==3
     for si,scenario in enumerate(SCENARIOS):
         for j,truth in enumerate(('PROCEED','HOLD')):
-            seed=2160+si*2+j;c=make_case(scenario,seed,truth=truth,majority='HOLD' if truth=='PROCEED' else 'PROCEED',stage='qualification')
+            seed=seed_start+si*2+j;c=make_case(scenario,seed,truth=truth,majority='HOLD' if truth=='PROCEED' else 'PROCEED',stage=case_stage)
             packet=actor_packet(c);clarify(packet['task'],scenario);packet.update(records=[record('q','source-q',c['task']['scope'],'v1',0,truth,scenario)],votes=[],challenge=None)
             rows.append({'case_id':'control-'+str(seed),'phase':'private','packet':packet,'arm':'fresh-control','scenario':scenario,'expected':truth,'seed':seed})
     return rows

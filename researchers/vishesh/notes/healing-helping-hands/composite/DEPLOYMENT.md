@@ -21,3 +21,7 @@ The user directed resolving fleet capacity rather than stopping at claimed machi
 ## Authorized dedicated capacity, 2026-10-04 UTC
 
 The user confirmed provisioner access and explicitly authorized creation. The approved local credential now matches all 12 known Dmarz fleet hosts. Created only sim-healing-c1, 4 CPU / 8 GiB, USD 0.07143/hour, using the original empty Vishesh owner state with locking. Private fleet PR 143 merged the host, generated inventory and heterogeneous-map typing fix; PR 145 merged its fresh exclusive three-hour claim. SSH and cloud-init readiness verified. Standard secured simulation software is being installed. No C1 inference yet. The earlier statement that access was unavailable is superseded; the allocation request is obsolete. No existing machine was changed.
+
+## C1-S0 dispatched
+
+Prospective plan and deployed source: `66ec09017284892a59623c7e7a73d93651b4a686`. Public page verified the immutable link and composite protocol before runtime load. Standard Ansible sim/reporter setup completed; reporting credentials transferred securely without transcript output. Ollama 0.11.11 image pinned to `sha256:24d41d792306fc3221de215bb6f225faf981712d1f38083d8c61301dfa2b69b3`; Qwen weights match the declared digest. Fresh source-byte, workload, exclusive claim and original ledger checks passed. Claim expires 2026-10-04T07:52:58Z. The 60-case S0 started after current admission; hub start acknowledged. Jev credential remains local behind the bounded loopback SSH relay. No automatic transition to S1.

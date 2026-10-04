@@ -2,9 +2,9 @@
 agent: vishesh/codex-phantom-coast
 tool: codex
 state: done
-task: phantom-coast-pc2-design
-doing: PC-2 prospective plan and 20-check development contract complete; full measured PC-1 replay verified
-updated: 2026-10-04T04:47:41Z
+task: phantom-coast-pc2-runner
+doing: Published native PC-2 runner; 42 offline checks pass; researcher review and current admission pending
+updated: 2026-10-04T05:04:00.440841+00:00
 ---
 
 ## Notes

@@ -43,8 +43,8 @@ def validate_challenge(packet, closed):
     if any(e['observed_at'] > t['now'] or t['now']-e['observed_at'] > t['ttl'] for e in chosen):
         return False, 'stale_or_future', None
     # Alias IDs do not create fresh evidence. Time/source/content/version do.
-    lineage = sorted((e['root'], e['scope'], e['revision'], e['observed_at'], e['text']) for e in chosen)
-    key = digest({'scope':t['scope'],'revision':t['revision'],'alternative':c['alternative'],'lineage':lineage})
+    lineage = sorted({(e['root'], e['scope'], e['revision'], e['observed_at'], e['text']) for e in chosen})
+    key = digest({'scope':t['scope'],'revision':t['revision'],'lineage':lineage})
     if key in closed: return False, 'already_closed', key
     return True, 'valid', key
 
@@ -53,6 +53,8 @@ class Ledger:
     max_checks: int = 1
     checks: int = 0
     closed: set = field(default_factory=set)
+    resolutions: dict = field(default_factory=dict)
+    current: dict | None = None
 
 
 def choose(policy, phase, packet):
@@ -67,14 +69,24 @@ def step(case, arm, policy, ledger=None, *, random_check=None):
     if arm=='matched-random' and type(random_check) is not bool:raise ValueError('frozen_random_assignment_required')
     ledger = ledger or Ledger()
     packet = actor_packet(case); initial = majority(packet['votes']); now = packet['task']['now']
+    cached = ledger.current
+    applicable = cached is not None and cached['scope']==packet['task']['scope'] and cached['revision']==packet['task']['revision'] and cached['request_tick']<=now and now-cached['observed_at']<=packet['task']['ttl']
+    current = cached['action'] if applicable else ('DEFER' if cached is not None else initial)
+    if arm == 'majority': current = initial
+    packet['current_decision'] = current
+    for oldkey, resolved in list(ledger.resolutions.items()):
+        if resolved['scope'] != packet['task']['scope'] or resolved['revision'] != packet['task']['revision'] or not (resolved['request_tick']<=now and now-resolved['observed_at']<=packet['task']['ttl']):
+            ledger.closed.discard(oldkey)
     events = [{'phase':'initial','tick':now,'action':initial,'votes':packet['votes'],
                'unique_sources':len({e['root'] for e in packet['records']})}]
-    action, status, reason, admitted, used = initial, 'completed', 'no_intervention', False, False
+    action, status, reason, admitted, used = current, 'completed', 'no_intervention', False, False
     valid, validity, key = validate_challenge(packet, ledger.closed)
     events.append({'phase':'challenge','tick':now,'valid':valid,'reason':validity,
                    'alternative':packet['challenge']['alternative'] if packet['challenge'] else None})
     try:
-        if arm == 'pooled':
+        if arm not in ('majority','pooled') and validity == 'already_closed':
+            action = ledger.resolutions[key]['action']; now=max(now,ledger.resolutions[key]['observed_at']); reason = 'retained_closure'
+        elif arm == 'pooled':
             action = choose(policy, 'resolve', packet)
             reason = 'pooled_evidence'
         elif arm != 'majority' and valid:
@@ -102,13 +114,20 @@ def step(case, arm, policy, ledger=None, *, random_check=None):
                             else:
                                 revised = actor_packet(case, observed)
                                 revised['task']['now'] = now
+                                revised['current_decision'] = current
                                 action = choose(policy, 'resolve', revised); reason = 'checked'
-                                if action != 'DEFER': ledger.closed.add(key)
+                                if action != 'DEFER':
+                                    ledger.closed.add(key)
+                                    ledger.resolutions[key]={'action':action,'scope':packet['task']['scope'],'revision':packet['task']['revision'],'observed_at':now,'request_tick':packet['task']['now']}
+                                    ledger.current=dict(ledger.resolutions[key])
                 else: reason = 'challenge_not_admitted'
         elif arm != 'majority': reason = validity
     except Exception as exc:
         # Fixed error type only; a provider's message could contain request/credential data.
         action, status, reason = 'DEFER', 'failed', type(exc).__name__
+    if arm == 'pooled' and action != 'DEFER' and status == 'completed':
+        applicable_records=[e for e in packet['records'] if e['scope']==packet['task']['scope'] and e['revision']==packet['task']['revision'] and 0<=now-e['observed_at']<=packet['task']['ttl']]
+        if applicable_records:ledger.current={'action':action,'scope':packet['task']['scope'],'revision':packet['task']['revision'],'observed_at':max(e['observed_at'] for e in applicable_records),'request_tick':now}
     if action == 'DEFER' and status == 'completed': status = 'unresolved'
     closure = ('supported' if action == packet['challenge']['alternative'] else 'withdrawn') if key in ledger.closed and packet['challenge'] else 'open'
     if validity == 'already_closed': closure = 'suppressed_repeat'

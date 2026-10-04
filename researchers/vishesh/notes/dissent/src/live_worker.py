@@ -17,9 +17,9 @@ def quiet(fn,*args,**kwargs):
 class TransportFailure(RuntimeError):pass
 
 class NativePolicy:
-    def __init__(self,out,allowed):self.out=out;self.allowed=allowed;self.cache={};self.calls=[];self.logical_calls=0;self.started=time.monotonic();self.consecutive=0
+    def __init__(self,out,allowed,request_builder=request):self.request_builder=request_builder;self.request_history=[];self.out=out;self.allowed=allowed;self.cache={};self.calls=[];self.logical_calls=0;self.started=time.monotonic();self.consecutive=0
     def __call__(self,phase,packet):
-        req=request(phase,packet);h=digest(req);self.logical_calls+=1
+        req=self.request_builder(phase,packet);h=digest(req);self.logical_calls+=1;self.request_history.append(h)
         if h not in self.allowed or req!=self.allowed[h]:raise ValueError('request_not_frozen')
         if h not in self.cache:
             row={'request_sha256':h,'request':req,'status':'started'};self.calls.append(row);save(self.out/'calls.json',self.calls)

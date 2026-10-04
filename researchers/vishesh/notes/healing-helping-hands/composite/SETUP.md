@@ -10,7 +10,7 @@ Follow [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-S
 | G1 | pass | PLAN.md written before composite implementation, 2026-10-04 UTC | Commit |
 | G2 | pass, runtime checks pending | 16 composite + 44 existing offline checks; S0-PRE.md | Verify deployed runtime |
 | G3 S0 | admission in progress | Dedicated sim-healing-c1 created on verified account; exclusive claim merged; S0-PRE.md | Finish runtime checks and register amended plan before inference |
-| G4 | pending | No composite observations yet | Run S0 after G3 |
+| G4 | pass | S0-POST.md: composite and Jev-only 60/60; complete audit | Refresh G3 for S1 |
 | G5 | pending | No execution yet | Reconcile and close |
 
 ## Design and instrument index
@@ -19,8 +19,8 @@ Follow [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-S
 
 ## Attempt and repair history
 
-No C1 attempts started. Previous practical-02 is complete and adverse to swarm superiority. Intended composite omission acknowledged; old Laya history retained.
+C1-S0 completed: 60/60 composite and Jev-only, 36/60 Qwen-only; see S0-POST.md. Previous practical-02 is complete and adverse to swarm superiority. Intended composite omission acknowledged; old Laya history retained.
 
 ## Closeout
 
-Pending execution, qualification, reconciliation, visual audit, costs, durable uploads and release. Current gate G3; next action finish deployed runtime checks, register amended plan and admit S0.
+Pending execution, qualification, reconciliation, visual audit, costs, durable uploads and release. Current gate G3 for S1; next action register S1-PRE.md at the new immutable revision, verify unchanged qualified code and refresh operational receipts.

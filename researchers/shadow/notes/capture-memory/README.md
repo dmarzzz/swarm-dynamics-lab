@@ -12,11 +12,12 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](..
 Exploratory build and scripted S0/S1/S1b, owned by **shadow/sol-capture**, 3 to 4 October 2026. Attribution: Sol.
 
 **Status: labelled hunch, not an accepted hypothesis.** The hypothesis text is
-[shadow-capture-memory, PR 82](https://github.com/dmarzzz/swarm-lab/pull/82), status `proposed`, which rests on
-`surveys/llm-agent-swarms` (review verdict `revise`, see `reviews/llm-agent-swarms--dmarz.md`). Per
-`templates/experiment-worker/README.md` step 1 this lives in researcher notes and runs S0 and S1 only. There is
-no S2 in the coordinator. Nothing here has run an LLM: the backend is a deterministic scripted policy, and the
-numbers below describe that rule, not agents.
+[`hypotheses/shadow-capture-memory.md`](../../../../hypotheses/shadow-capture-memory.md) (merged via PR 82, status
+`proposed`), which rests on `surveys/llm-agent-swarms` (review verdict `revise`, see
+`reviews/llm-agent-swarms--dmarz.md`). Per `templates/experiment-worker/README.md` step 1 this lives in researcher
+notes. Scripted S0/S1/S1b describe the tanh rule, not agents. **2026-10-04: one real-model pilot has run** on
+Shadow's GO, `S2_pilot` (12 episodes, llama-3.1-8b, 0.03 USD, dev tasks only): see
+[results/S2.md](results/S2.md). It is a pilot on a hunch, not the S2 of an accepted hypothesis.
 
 ## Question
 
@@ -127,7 +128,9 @@ removal-phase simulation was inspected per memory length; the capture and recove
 | S0 | 50 dev tasks x 1 seed x 4 memories x 3 arms = 600 episodes | clean world holds the convention at every memory length |
 | S1 | 100 dev tasks x 2 seeds x 2 worlds x 2 doses x 4 memories x 3 arms = 9,600 episodes | capture rates, the declared contrast, variance for a later sample size |
 | S1b | 100 dev tasks x 2 seeds x 2 worlds x 8 doses x 4 memories x 3 arms = 38,400 episodes, takeover cap 400 | dose sweep: the capture threshold per memory length, fixes the dose rule (below) before any later stage |
-| S2 | none | needs an accepted hypothesis; holdout tasks 1000 to 1999 are never opened here. A costed pilot *draft* is in design.yaml `s2_pilot_draft` and below; it is not a stage |
+| Q0 | 1 task x 2 memories x A1, short horizons, real model | qualification gate: validity >= 0.90 before any pilot spend |
+| S2_pilot | 6 dev tasks x 1 seed x {memory 1 @ 0.42, full @ 0.54} x {A0, A1}, N = 12, real model | the costed pilot (below), run 2026-10-04; results/S2.md |
+| S2 | none | needs an accepted hypothesis; holdout tasks 1000 to 1999 are never opened here |
 
 ## Run and deploy
 
@@ -302,11 +305,13 @@ are a starting grid, not a result that transfers); set `SWARM_MODEL_CONFIG` with
 cap and token prices through the private agentops secret path. About 80 populations x 24 agents x 160 rounds
 is roughly 300K short calls at full scale; the pilot below is 50x smaller.
 
-## S2 pilot draft (costed, NOT run, not a stage)
+## S2 pilot (costed here; RUN 2026-10-04 as stage `S2_pilot`, see results/S2.md)
 
-`design.yaml -> s2_pilot_draft`. The coordinator cannot queue it (`runs_for_stage` only reads `stages`, and the
-non-scripted backend is refused), and `max_cost_usd` / `max_calls` are `null` placeholders that a human fills
-in through `SWARM_MODEL_CONFIG`. The adapter in `src/model.py` refuses to start until they are positive.
+`design.yaml -> stages.S2_pilot` (promoted from `s2_pilot_draft` on Shadow's GO). Queueing it needs
+`--backend http` and a `--go "<who>, <when>"` stamp that every run carries, plus a finished hub Q0 at validity
+>= 0.90. Caps (5 USD, 26,000 calls) are enforced in `src/model.py` per worker process by reservation before each
+request and by the provider's actual usage after it. **Actual: 10,384 calls, 1.46M input tokens, 0.031 USD.**
+The estimate below is kept as written before the run.
 
 Smallest configuration that can still show the memory 1 versus full contrast on a model:
 
@@ -348,6 +353,19 @@ trace look like any of the three scripted regimes (return, persist, freeze), and
 tokens per call for the real S2 budget. It is not enough for a CI on the contrast; that is what the S1 variance
 is for once a model's own variance is known.
 
+## S2_pilot in one paragraph (2026-10-04, llama-3.1-8b-instruct via OpenRouter, 12 episodes, 0.03 USD)
+
+Validity 1.00 (24/24 records; 74 fuzzy one-letter accepts and 1 re-ask in 10,384 calls). Captured 4/6 at memory 1
+(k = 5 of 12, median 3 rounds) and 5/6 at full (k = 6, median 8 rounds); the misses are two word pairs where the
+model's own string prior beat the committed minority. After a perfect purge, memory 1 drifts back +0.18 [+0.07,
++0.29] on the original by round 50 (scripted at the same N: +0.19 to +0.24), full memory +0.13 [-0.03, +0.30].
+Purge minus no purge: +0.11 [+0.00, +0.21] at memory 1, +0.03 [-0.13, +0.20] at full. Full minus memory 1 under
+purge: -0.09 [-0.27, +0.18], 4 tasks, undetermined. The model's full-memory agents tip in 8 rounds where a running
+mean needs 80 to 100, so they are not averaging the list; and at N = 12 / entrench 10 the scripted rule does not
+freeze either (`src/pilot_reference.py`), so the S1b freeze is a property of long entrenchment, untested here.
+Full write-up, Q0 table, cost ledger and the scripted-reference comparison: [results/S2.md](results/S2.md);
+pre-run and post-mortem in `reviews/`.
+
 ## Fleet record
 
 2026-10-04, sim-shadow, Python 3.12.3, code commit `b4fa626`, worker ids `shadow/sol-capture-w1..w4`, backend
@@ -363,6 +381,12 @@ queue by six scripted workers on shadow's own box (host `shad0wbot`, Python 3.12
 about 4 minutes wall). 38,400 episode records, 0 invalid. `capture-memory/analysis-S1b` carries `S1b.md`,
 `S1b_cells.csv` and `S1b_dose_rule.json`. A full local rerun (`results/local-s1b`, single core, 5 min)
 matches the hub tables exactly. No fleet server was used, no claim was held, no model calls, no spend.
+
+2026-10-04 (Q0 + S2_pilot): sim-shadow refused ssh (port 22) at 03:50Z and every other fleet box held an exclusive
+claim, so the 2 Q0 and 12 S2_pilot hub runs were taken by four http workers on shad0wbot (worker ids
+`shadow/sol-capture-q0`, `shadow/sol-capture-s2w1..w4`, code commit `6e116dce`, host `shad0wbot-local`). Model
+calls: 10,384 (pilot) + 161 (hub Q0), 0.031 USD from OpenRouter usage fields, caps 5 USD / 26,000 calls never
+approached. `capture-memory/analysis-S2_pilot` carries the tables. No claim held.
 
 ## Prospective design amendment 2026-10-04
 

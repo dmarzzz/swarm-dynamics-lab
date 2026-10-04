@@ -1230,6 +1230,33 @@
         "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D2-01-post.md"
       ],
       "status_at_assessment": "diagnostic_complete_repair_failed_main_unrun"
+    },
+    {
+      "id": "right-dissenter-rd4",
+      "title": "Right Dissenter recovery protocol RD4",
+      "documents": [
+        "researchers/vishesh/notes/dissent/rd4/README.md"
+      ],
+      "experiment_ids": [
+        "right-dissenter-rd4"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/dissent/rd4/experiment.json"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested successor: symmetric stop/resume admission on repaired persistent closure mechanics.",
+        "rationale": "Offline regression checks establish software behavior only; no native successor outcomes observed. Fixed authored templates and scripted votes limit any later claim."
+      },
+      "sample_size_summary": "Observed: no native RD4 outcomes. Planned Q4: 24 clean/uncertainty decisions. Planned S4: 24 fixed roots with reused grammar, 6 policies, 4 epochs = 576 dependent decisions. Prior cohort remains separate.",
+      "sources": [
+        "researchers/vishesh/notes/dissent/rd4/PLAN.md",
+        "researchers/vishesh/notes/dissent/rd4/FEEDBACK.md"
+      ],
+      "status_at_assessment": "planned_not_run",
+      "assessor": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04",
+      "source_commit": "88feac7ea6218c2712914fb5462ab5d66814a50a"
     }
   ],
   "source_sha256": {

@@ -8,14 +8,27 @@ from protocol import episode,actor_packet,validate_challenge
 from policies import ExactReference
 from cases import digest
 
+# Pure tests remap every constructor to explicit development seeds; production
+# defaults remain reserved and are never invoked by discovery.
+import live_design
+_native_q, _native_d, _native_v = live_design.qualification, live_design.diagnostic, live_design.validation_diagnostic
+def qualification(): return _native_q(1100, 'development')
+def diagnostic(): return _native_d(1120, 'development')
+def validation_diagnostic(): return _native_v(1160, 'development')
+
 class LiveTests(unittest.TestCase):
+    def setUp(self):
+        import live_worker
+        for module,name,value in [(live_design,'qualification',qualification),(live_design,'diagnostic',diagnostic),(live_design,'validation_diagnostic',validation_diagnostic),(live_worker,'qualification',qualification),(live_worker,'diagnostic',diagnostic)]:
+            p=patch.object(module,name,value);p.start();self.addCleanup(p.stop)
+
     def test_diagnostic_pairs_uncertainty_and_seeds(self):
         from jev import request
         q=diagnostic();self.assertEqual(len(q),42);self.assertEqual(len(frozen_requests('Q1')),42)
         self.assertFalse({x['seed'] for x in q}&{x['seed'] for x in qualification()})
         self.assertEqual(sum(x['arm']=='uncertainty' for x in q),6)
         for x in q:self.assertEqual(ExactReference()('private',x['packet']),x['expected'])
-        for seed in range(2120,2138):
+        for seed in range(1120,1138):
             a,b=[x for x in q if x['seed']==seed]
             self.assertEqual(list(request('private',a['packet'])['questions']['action']['criteria']),list(request('private',b['packet'])['questions']['action']['criteria']))
             import copy
