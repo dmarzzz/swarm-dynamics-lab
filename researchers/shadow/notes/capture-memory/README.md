@@ -208,3 +208,11 @@ Not done, deliberately. Needs a human GO and these steps first: pick a small ope
 one outside pair; decide how the full-memory arm is dosed; set `SWARM_MODEL_CONFIG` with model id, call cap,
 dollar cap and token prices through the private agentops secret path; pilot memory {1, full} with 3 seeds.
 About 80 populations x 24 agents x 160 rounds is roughly 300K short calls at full scale.
+
+## Fleet record
+
+2026-10-04, sim-shadow, Python 3.12.3, code commit `b4fa626`, worker ids `shadow/sol-capture-w1..w4`, backend
+scripted. Hub experiment `capture-memory`: S0 8 runs done (one duplicate analysis run), S1 64 runs done, 9,600
+episode records, 0 invalid. `capture-memory/analysis-S0` and `capture-memory/analysis-S1` carry the tables as
+artifacts. The fleet S1 primary contrast is identical to the local one (-0.294 [-0.311, -0.277]), as it must be
+for a deterministic policy on fixed seeds. Claim `shadow-capture-memory` released. No model calls, no spend.

@@ -21,3 +21,8 @@ surviving peers re-infect emptied agents faster than a weak prior pulls them bac
 vishesh's private-versus-shared restoration arms.
 
 Next: fleet run on sim-shadow for hub provenance, PR to main (not merged), then wait for the hypothesis gate.
+
+Fleet: ran on sim-shadow (claim running then released via agentops PRs #28, #31). swarm_report is importable
+there with PYTHONPATH=/usr/local/lib/swarm (the profile.d export is not picked up by non-login ssh commands; the
+box is otherwise unprovisioned per agentops ROADMAP D1, did not touch that). S0 + S1 done, analysis attached on
+the hub, numbers identical to local. PR dmarzzz/swarm-lab#83 open, not merged.

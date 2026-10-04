@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-capture
 tool: other  # Sol (claude-based assistant), shadow's agent runtime
-state: working  # working | idle | blocked | done
+state: idle  # working | idle | blocked | done
 task: null
 doing: "capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged"
-updated: 2026-10-04T01:30Z
+updated: 2026-10-04T01:35Z
 ---
 
 ## Notes
