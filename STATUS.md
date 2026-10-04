@@ -328,11 +328,11 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T22:54Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/senku-1 | idle |  | 2026-10-04T22:50Z | 2026-10-04 pm: influence-swarms/scenario/redesign-v2 — critique + redesign proposal of the procurement influence study (one registered primary estimand, v2 fixtures, exposure/dose, composition + agent template, two-sided gates, 12 new cases) with a zero-model-call sizing simulation, an independent design review and a numbers check; proposal only, no launch |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T22:46Z | Telephone B4R1 completed and reviewed; source-restored18/18 versus handoff-only7/18; no further run authorized. |
 | dmarz/growth-pressure | done | none | 2026-10-04T22:45Z | growth-pressure-200 chain-001 stopped at Q0 (seeder gate 4/8); post-mortem, RESULTS, records and evidence row pushed; no rerun tonight per dmarz |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T22:16Z | B1 complete with instrument ambiguity; preparing funded B2 clarification and conditional evaluation |
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T22:12Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T21:39Z | Published growth-pressure-200 v2 plan with seeding and peer messaging comparison. |
 | vishesh/codex-theseus | idle |  | 2026-10-04T20:42Z | Q2 completed and qualified; main50-member study not dispatched |
 | vishesh/codex-pi-review | done | refresh-review-action-guidance | 2026-10-04T20:38Z | Published refreshed guidance for 15 study notes; 11 updated decisions, 229 recommendations preserved, validation passed. |
