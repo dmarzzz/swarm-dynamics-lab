@@ -1,0 +1,32 @@
+{
+  "attempt": "R3-Q3-A1",
+  "stage": "Q3",
+  "packet_sha256": "21b58f9445006d98e1d83f1af79c23f80d54d9471a1a02d76dab25385a9ff918",
+  "source_sha256": "875b9b1d69dd4093e1e3baf81209f7c65ea9058cbb50679524966a76e0c8bdda",
+  "assignments": [
+    {
+      "family": "release",
+      "world_sha256": "5e5ce8b86b3e030007ba9753c8457dd1b09b6f9e3ccdba656b65fb38a56c5007",
+      "members": 6
+    },
+    {
+      "family": "failover",
+      "world_sha256": "65173ac07fef31648de74a626928cfdccf2478e5df32826523fde9eab7577133",
+      "members": 6
+    },
+    {
+      "family": "delegation",
+      "world_sha256": "6c1e98c72bc435fd724498a4e4699fc1db822bb2a728ab065128b278fb2afa38",
+      "members": 6
+    }
+  ],
+  "fresh_private_random_seeds": true,
+  "development_inputs_reused": false,
+  "native_calls": 0,
+  "max_calls": 108,
+  "model_cap_usd": "2.4462",
+  "infrastructure_cycle_cap_usd": "1",
+  "all_in_cap_usd": "3.4462",
+  "funding_decision": "PI-FUND-20261004-06",
+  "evaluation_inputs_generated": false
+}

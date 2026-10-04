@@ -1,0 +1,18 @@
+{
+  "evidence_type": "scripted full worker-caller custody/replay fixture; no provider calls",
+  "scripted_calls": 104,
+  "families_passed": 3,
+  "phases": {
+    "learn": 18,
+    "select": 24,
+    "attest": 29,
+    "decide": 24,
+    "question": 3,
+    "teach": 3,
+    "commit": 3
+  },
+  "maximum_request_bytes": 5851,
+  "exact_replayed_requests": 104,
+  "replay_disagreements": 0,
+  "native_calls": 0
+}
