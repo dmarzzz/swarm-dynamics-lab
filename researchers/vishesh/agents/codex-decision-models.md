@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: done  # working | idle | blocked | done
-task: decision-model-research
-doing: Completed initial scan, fifteen scored hunches and five design sketches; formal survey remains in progress
-updated: 2026-10-04T02:38Z
+state: working
+task: decision-model-reimagination
+doing: Comparing causal variants and revising editorial priorities
+updated: 2026-10-04T02:49Z
 ---
 
 ## Notes

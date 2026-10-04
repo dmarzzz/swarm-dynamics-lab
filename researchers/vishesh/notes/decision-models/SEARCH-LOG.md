@@ -22,3 +22,7 @@ No claim of exhaustive citation chasing, full-methods coverage or search saturat
 - Text-only clarification: https://x.com/karpathy/status/2105912048668590090
 
 These were read as public discourse. Views, reposts and author enthusiasm are not evidence of correctness or scientific novelty.
+
+## Second-pass targeted checks
+
+Searched for repeated-information social learning, self-confirming learning, and Jev correlated errors. Opened primary arXiv 1309.6687, the AEA page for DOI 10.1257/mic.20180317, arXiv 2609.29769, Hamdi’s HTML introduction and the official model specification. The targeted checks changed the novelty framing: the two leading mechanisms have established predecessors. They were not saturation rounds or a full systematic review.

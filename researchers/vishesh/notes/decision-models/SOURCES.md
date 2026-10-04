@@ -38,3 +38,7 @@ Social posts supply demonstrations and questions, not controlled evidence. The o
 The map repository has no declared license in inspected metadata; do not copy its implementation without resolving permission. Source snapshots and commit hashes are recorded in source-manifest.json.
 
 Formal novelty and saturation remain unresolved. The separate survey stays in progress until its gate and substantive reading requirements pass.
+
+## Second-pass additions
+
+Two missing foundations were added during the preference-driven re-review: [[hamdi-2013-removal]] (abstract and introduction inspected; conservatively abstract depth) and [[fudenberg-2019-learning]] (publisher abstract only). The area now links 22 canonical resources: 17 added, five reused. [[rao-2026-jev]] and [[typesafe-2026-models]] were reopened. No code or model was run.

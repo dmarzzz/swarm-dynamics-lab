@@ -4,6 +4,8 @@ Research area established 2026-10-04 UTC for Vishesh. “JEB” and “Geoff” 
 
 ## Start here
 
+**Latest editorial recommendation:** [second-pass variants and reframing](REIMAGINING.md). Following the owner’s preference, develop Phantom Coast as **The Island No One Visits** and Quorum of Mirrors as **One Witness, a Hundred Votes**. Fold Stop-Signal into a dissent/recovery test, keep Menu Parasites as an ablation, and retain Panic Queue as a reserve project. The original scores below remain historical.
+
 - [Five strongest research questions](TOP-FIVE.md)
 - [All 15 ideas and rubric assessment](ASSESSMENT.md)
 - [Source ledger and reading limits](SOURCES.md)
@@ -24,3 +26,5 @@ Current confidence documentation now publishes its formulas [[typesafe-2026-conf
 ## Status and boundaries
 
 Completed: initial source scan, social review, 15-question brainstorm, rubric scoring, overlap assessment and five design sketches. Added 15 canonical source entries; reused five existing sources with fresh-access limits recorded. These are assistant assessments, not independent peer ratings. The formal survey remains in progress: full-methods depth, citation chasing and saturation have not been established. No hypothesis accepted, no experiment implemented, no paid API calls made.
+
+Second-pass review added two foundational resources on repeated evidence and self-confirming learning, bringing this area to 17 new entries and five reused entries. No formal survey completion is claimed.

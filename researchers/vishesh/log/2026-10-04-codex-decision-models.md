@@ -7,3 +7,7 @@ Six new papers passed lab.py verify against arXiv/Crossref with zero problems. L
 Formal survey remains in progress: gate reports 0/5 full paper reads and missing structured search/citation rounds. Narrative search families do not substitute for measured saturation. Social entries use short excerpts and paraphrases instead of full copyrighted thread archives. No model calls, experiment implementation or launch.
 
 After merging concurrent changes, 29 exporter tests passed again. A newly arrived malformed YAML field in researchers/dmarz/agents/private-control.md causes a repository-wide check error; it is upstream and outside this task. Research additions passed before that merge.
+
+## Second-pass reimagination
+
+Compared four Phantom variants and four Quorum variants after the owner selected these two. Recommended The Island No One Visits and One Witness, a Hundred Votes; the simpler Two Swarms, One World comparison comes before a closed observation loop. Reframed the remaining three with concrete stories and retained only Stop-Signal as a core recovery treatment. Preserved original scores rather than retrofitting them to the preference. Added two verified-primary reading records, abstract depth. Proposed diagram is explicitly conceptual. No experiment code or model calls.

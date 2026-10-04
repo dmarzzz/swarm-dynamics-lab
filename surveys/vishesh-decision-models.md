@@ -42,6 +42,10 @@ Coordinate map reference [[gh-dy-ma-jev-world]], prospectively described evaluat
 
 Fifteen exploratory questions, overlap assessments and five top-ranked design sketches are in researchers/vishesh/notes/decision-models/. They remain hunches pending substantive methods review, qualified model access and public registered experimental plans. Scores use the existing owner rubric, with no invented peer ratings.
 
+## Second-pass note
+
+The owner preferred Phantom Coast and Quorum of Mirrors. Their stronger variants are documented in researchers/vishesh/notes/decision-models/REIMAGINING.md. Repeated-evidence theory [[hamdi-2013-removal]] and self-confirming learning [[fudenberg-2019-learning]] are newly catalogued antecedents, so the proposed increment must be a tested intervention and identifiable Jev mechanism.
+
 ## Saturation
 
 Not established. The formal survey is in progress. Full-paper reading, structured citation trails and low-yield terminal rounds remain necessary. The completed deliverable is initial research screening and prioritization.

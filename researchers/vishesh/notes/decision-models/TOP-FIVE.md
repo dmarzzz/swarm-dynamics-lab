@@ -1,5 +1,7 @@
 # Five decision-model research sketches
 
+Latest: [second-pass variants and revised editorial priorities](REIMAGINING.md). This document preserves the initial shortlist and assessment.
+
 These are exploratory hunches, not accepted hypotheses or preregistered runs. No model calls have been made. Each requires a completed prior-art gate, applicable review, and a separate published run plan before execution.
 
 ## DM-01 — Phantom Coast

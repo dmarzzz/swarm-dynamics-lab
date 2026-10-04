@@ -1,5 +1,7 @@
 # Decision-model idea assessment
 
+Latest: [second-pass variants and revised editorial priorities](REIMAGINING.md). This document preserves the initial shortlist and assessment.
+
 Assistant assessment for Vishesh, 2026-10-04 UTC. One editorial evaluator; no independent reviewer or team consensus is implied. These are prospective priorities, not measured results.
 
 ## Rubric
