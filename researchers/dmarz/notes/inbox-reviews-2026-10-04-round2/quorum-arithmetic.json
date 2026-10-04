@@ -1,0 +1,70 @@
+{
+  "scope": "Completed S0 plus generic exhaustive bit/copy arithmetic; no reserved S1 worlds opened",
+  "model_calls": 0,
+  "s0": {
+    "calls": 32,
+    "model_correct": 29,
+    "naive_correct": 24,
+    "root_rule_correct": 32,
+    "strata": {
+      "conflict": {
+        "calls": 8,
+        "correct": 5
+      },
+      "agreement": {
+        "calls": 24,
+        "correct": 24
+      }
+    },
+    "errors": [
+      {
+        "id": "q65-011-r1",
+        "case": "q65-011",
+        "oracle": "ONE",
+        "naive": "ZERO",
+        "choice": "ZERO",
+        "conflict": true,
+        "correct": false
+      },
+      {
+        "id": "q65-011-r2",
+        "case": "q65-011",
+        "oracle": "ONE",
+        "naive": "ZERO",
+        "choice": "DEFER",
+        "conflict": true,
+        "correct": false
+      },
+      {
+        "id": "q80-100-r2",
+        "case": "q80-100",
+        "oracle": "ZERO",
+        "naive": "ONE",
+        "choice": "ONE",
+        "conflict": true,
+        "correct": false
+      }
+    ]
+  },
+  "observable_count_rule": {
+    "enumerations": 48,
+    "correct": 48,
+    "predict_ONE_for_report_one_counts": [
+      2,
+      6,
+      8,
+      9
+    ],
+    "needs_root_ids": false,
+    "needs_copy_shape_label": false,
+    "assumptions": "Three roots, common q>0.5, fair truth prior, multiplicities either (3,3,3) or a permutation of (7,1,1). This is MAP agreement, not perfect world-truth accuracy."
+  },
+  "budget": {
+    "current_new_calls": 544,
+    "current_total_calls": 576,
+    "current_total_reserved_usd": 0.7741439999999999,
+    "optional_matched_pooled_extra_calls": 48,
+    "optional_total_calls": 624,
+    "optional_total_reserved_usd": 0.838656
+  }
+}
