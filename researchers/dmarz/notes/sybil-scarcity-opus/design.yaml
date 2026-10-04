@@ -35,6 +35,10 @@ cfg:
   pagerank_iterations: 120
   honest_check_pass: 0.9
   skills: 6
+parent:
+  study: sybil-scale-api
+  sim_sha256: f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398
+  study_sha256: e0897afec8025248d5653c28d92b0ca331957a53aca95e215d97d6f63a8c079e
 manipulation:
   carrier_seed: scarcity-carriers
   rare_skills:
@@ -124,13 +128,24 @@ budget:
     Q0: 48
     S1: 1440
   max_attempted_calls: 1489
-  aggregate_usd: 390
+  aggregate_usd: 220
   max_output_tokens: 8000
+  max_answer_chars: 500
   max_input_bytes: 240000
   request_timeout_seconds: 300
   stage_timeout_seconds: 14400
   chain_timeout_seconds: 18000
   retries: 0
+  retry:
+    transport_retries: 2
+    retryable_http_status:
+    - 429
+    - 529
+    backoff_seconds:
+    - 2
+    - 6
+    retry_after_cap_seconds: 20
+  max_transport_attempts: 1640
   workers: 4
   input_usd_per_million: 4
   output_usd_per_million: 20

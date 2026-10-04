@@ -1,0 +1,12 @@
+contract: ready-chain-v1
+study: sybil-scarcity-opus
+experiment: sybil-scarcity-opus
+stages: [S0, P0, Q0, S1]
+model: claude-opus-5-5
+effort: low
+max_calls: {S0: 0, P0: 1, Q0: 48, S1: 1440}
+max_calls_total: 1489
+usd_cap: 220
+chain_timeout_seconds: 18000
+selftests: 33
+source_hash: 82efefd1159ad26c22ae70e53f5e3e71e2e5a9a1f7ab0a40a13ba18043b50be7

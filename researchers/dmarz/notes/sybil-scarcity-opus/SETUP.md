@@ -49,7 +49,7 @@ Operations entry: manual, through the generic private launcher named in [RUN.md]
 
 - Attempt / stage / pre-run assessment: chain-001 (S0, P0, Q0, S1) / [reviews/chain-001-pre.md](reviews/chain-001-pre.md).
 - Public plan URL: this directory on `main`; the pinned commit is named in the pre-run review.
-- Budget: call caps P0 1, Q0 48, S1 1,440, total 1,489; ledger cap USD 390 on settled cost plus open reservations; expected spend USD 141 to 155 ([AMENDMENTS.md](AMENDMENTS.md)). As relayed, dollars are not the gate for these runs. Reconciliation with the shared USD 500 dmarz allowance is left to dmarz/pipeline and dmarz/fleet-monitor.
+- Budget: call caps P0 1, Q0 48, S1 1,440, total 1,489; at most 1,640 transport attempts (retry only on HTTP 429 and 529); ledger cap USD 220 on settled cost plus open reservations, with a projection gate before S1; expected spend USD 141 to 155 ([AMENDMENTS.md](AMENDMENTS.md)). As relayed, dollars are not the gate for these runs. Reconciliation with the shared USD 500 dmarz allowance is left to dmarz/pipeline and dmarz/fleet-monitor.
 - Allocation: none. The server is a launcher parameter; the claim id will be `dmarz-sybil-scarcity-opus`.
 - Credentials: environment aliases `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID`, set by the launcher in memory only. Never in files, arguments or logs.
 - Go / no-go: not decided. This builder launches nothing.
