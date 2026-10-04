@@ -3,7 +3,7 @@ id: right-dissenter-rd5-design
 type: task
 title: Plan Right Dissenter repairs and the right to reopen
 kind: question
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,15 @@ topics:
 - dissent
 - decision-models
 claimed_at: 2026-10-04T06:40Z
-updated: 2026-10-04T06:40Z
+updated: 2026-10-04T06:50Z
+outputs:
+- researchers/vishesh/notes/dissent/rd5/PLAN.md
+- researchers/vishesh/notes/dissent/rd5/FAILURE-ANALYSIS.md
+- researchers/vishesh/notes/dissent/rd5/IMPROVEMENTS.md
+- researchers/vishesh/notes/dissent/rd5/RESEARCH-QUESTIONS.md
+- researchers/vishesh/notes/dissent/rd5/analysis/rd4-failure-decomposition.json
+- library/papers/hay-2012-selecting.md
+- library/papers/tan-2016-honey.md
 ---
 
 ## Goal
