@@ -3,7 +3,7 @@ id: right-dissenter-reopening-design
 type: task
 title: Draft and validate the Right Dissenter reopening diagnostic
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,12 @@ topics:
 - dissent
 - decision-models
 claimed_at: 2026-10-04T18:12Z
-updated: 2026-10-04T18:12Z
+updated: 2026-10-04T18:24Z
+outputs:
+- researchers/vishesh/notes/dissent/reopening/PLAN.md
+- researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md
+- researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md
+- researchers/vishesh/notes/dissent/reopening/offline/validation.json
 ---
 
 ## Goal
