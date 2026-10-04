@@ -5,10 +5,10 @@ Current execution status: [completed native cycle](RUN-STATUS.md).
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `15c01808` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `cad818c9` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Remembering unresolved evidence and reserving a later check may improve timely correct actions under a two-check budget, with urgent-early delay costs. Basis: No native RD5 outcomes. The expired Q5-A1 activation was reconciled to 24 unstarted requests, zero provider calls and no worker. Qualification and the reserve contrast remain unobserved. Unchanged packets and 61 scientific offline checks plus five activation checks are software evidence only.
-- **sample_size_summary:** Observed native: zero. Q5-A1: 24 frozen requests, 0 started, 0 valid, 24 unstarted. Renewed Q5-A2 retains 12 authored packets in paired raw/card forms. Conditional H5: 6 authored roots × 3 policies × 4 epochs = 72 dependent decisions, at most 36 calls; no population precision claim.
+- **evidence_confidence:** **1/4** — In this native pilot, a fixed late reserve scored 6/24 correct versus 8/24 for memory alone; four late-resume interpretation misses limit attribution to allocation alone. Basis: Q5 passed at ceiling, but its empty-history qualification did not transfer fully to H5 context. Six fixed authored roots, dependent decisions, one numeric domain and scripted ballots support a descriptive adverse result, not a general swarm or causal allocation claim. Saved-response replay and owning-agent arithmetic checks agree; they are not independent replication.
+- **sample_size_summary:** Observed: 6 fixed authored H5 roots, 18 policy trajectories, 72/72 dependent decisions and 36 valid calls; 0 missing. Separate Q5: 12 authored raw/card pairs, 24/24 correct calls. Historical Q5-A1: 24 unstarted, 0 calls. No population precision claim.
 <!-- experiment-evidence:end -->
 
 **Completed: Q5 passed; H5 returned an adverse result for the fixed reserve.** Areas: dissent and decision models. This successor to [RD4](../rd4/REPORT.md) tests evidence memory and check reservation separately; it does not inherit RD4's qualification.

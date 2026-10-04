@@ -2010,26 +2010,32 @@
         "researchers/vishesh/notes/dissent/rd5/experiment.json"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Remembering unresolved evidence and reserving a later check may improve timely correct actions under a two-check budget, with urgent-early delay costs.",
-        "rationale": "No native RD5 outcomes. The expired Q5-A1 activation was reconciled to 24 unstarted requests, zero provider calls and no worker. Qualification and the reserve contrast remain unobserved. Unchanged packets and 61 scientific offline checks plus five activation checks are software evidence only."
+        "score": 1,
+        "claim": "In this native pilot, a fixed late reserve scored 6/24 correct versus 8/24 for memory alone; four late-resume interpretation misses limit attribution to allocation alone.",
+        "rationale": "Q5 passed at ceiling, but its empty-history qualification did not transfer fully to H5 context. Six fixed authored roots, dependent decisions, one numeric domain and scripted ballots support a descriptive adverse result, not a general swarm or causal allocation claim. Saved-response replay and owning-agent arithmetic checks agree; they are not independent replication."
       },
-      "sample_size_summary": "Observed native: zero. Q5-A1: 24 frozen requests, 0 started, 0 valid, 24 unstarted. Renewed Q5-A2 retains 12 authored packets in paired raw/card forms. Conditional H5: 6 authored roots \u00d7 3 policies \u00d7 4 epochs = 72 dependent decisions, at most 36 calls; no population precision claim.",
+      "sample_size_summary": "Observed: 6 fixed authored H5 roots, 18 policy trajectories, 72/72 dependent decisions and 36 valid calls; 0 missing. Separate Q5: 12 authored raw/card pairs, 24/24 correct calls. Historical Q5-A1: 24 unstarted, 0 calls. No population precision claim.",
       "sources": [
-        "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
-        "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
-        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md",
-        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-QUALITY.json"
+        "researchers/vishesh/notes/dissent/rd5/REPORT.md",
+        "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-POST.md",
+        "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-QUALITY.json",
+        "researchers/vishesh/notes/dissent/rd5/results/h5-a1/summary.json",
+        "researchers/vishesh/notes/dissent/rd5/results/h5-a1/extended-audit.json",
+        "researchers/vishesh/notes/dissent/rd5/results/q5-a2/summary.json",
+        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md"
       ],
-      "status_at_assessment": "blocked_before_native_dispatch_renewal_prepared",
+      "status_at_assessment": "completed_adverse_screen_context_transfer_gap",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "15c018083951d07c6eb3a0c478a59a2c4e59e016",
+      "source_commit": "cad818c9ca88ac8cb6d25baf123c8cd9ba287c27",
       "source_sha256": {
-        "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa",
-        "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf",
-        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md": "9206b1b8c7bd872154c3ab486e86813fb139d59cd0ccb1cba003fb4a084b6598",
-        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-QUALITY.json": "2962f27cb35b31bb0bb2748a3336ac51f7b0c8e999f90047f2c623ee3cfae649"
+        "researchers/vishesh/notes/dissent/rd5/REPORT.md": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d",
+        "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-POST.md": "5db4f5a6f71c91733b62b199f654c35bd6c53148c40304ce4d0f901094d0b69a",
+        "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-QUALITY.json": "29255a7125c2b6b477e948a1b90425e93c1031fdea7d9655686775c72e375c3d",
+        "researchers/vishesh/notes/dissent/rd5/results/h5-a1/summary.json": "9a744637d7a07b4b3187731c6026aa76ad8216c905829f0f431554592ac216db",
+        "researchers/vishesh/notes/dissent/rd5/results/h5-a1/extended-audit.json": "68bfaf8774270da2190459695b7ae2279f1e732cb6cd1e77339e069a562060ec",
+        "researchers/vishesh/notes/dissent/rd5/results/q5-a2/summary.json": "953992dffc38b41f53203047d63b39ba877df820432517218b1aca6f0fc68df8",
+        "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md": "9206b1b8c7bd872154c3ab486e86813fb139d59cd0ccb1cba003fb4a084b6598"
       }
     },
     {
