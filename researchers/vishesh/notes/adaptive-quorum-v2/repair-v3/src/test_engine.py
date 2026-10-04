@@ -71,3 +71,16 @@ class GuardTests(unittest.TestCase):
         self.assertEqual(ns['visible_decisions'](r,0),{})
         self.assertNotIn('adaptive',ns['visible_decisions'](r,5))
         self.assertIn('adaptive',ns['visible_decisions'](r,6))
+
+class RenderTests(unittest.TestCase):
+    def test_gif_has_initial_and_every_event_frame(self):
+        import tempfile
+        from pathlib import Path
+        from PIL import Image
+        from render import animation
+        r=e.episode(8200,9,6,'late-wrong','late',lambda rows,c:e.symbolic(rows))
+        with tempfile.TemporaryDirectory() as td:
+            p=Path(td)/'replay';animation(r,p)
+            with Image.open(p.with_suffix('.gif')) as im:
+                self.assertEqual(im.size,(1600,1000));self.assertEqual(im.n_frames,7)
+                im.seek(6);self.assertEqual(im.info['duration'],2400)

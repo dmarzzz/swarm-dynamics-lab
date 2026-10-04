@@ -1,0 +1,20 @@
+{
+  "stage": "S1-engineering",
+  "code": "6580cc099be9b0972066f8ecf41bcc2716eb20fa",
+  "assignments": 384,
+  "independent_task_clusters": 12,
+  "complete": false,
+  "parent_attempt": "Q2-attempt-1",
+  "qualification_sha256": "790ce9fd96b7fe8c06e6acd28176c04b5e1a91ab4eec9aaea205d957487fc7fb",
+  "source_sha256": {
+    "runtime.py": "b7ef8a523ec863552cf95d34d9c5da469143a17247d714648628b51a87163cf1",
+    "qualify.py": "167098087ae9da0c7a7c0157c8ca2c83fc9c2b5ebb3964ab43524c8543f138ee",
+    "engine.py": "8a8cd21f6d87d2217823a040e7a3cce7102ba0f59f371b55db6ec373c02c2818",
+    "diagnose.py": "cd1afe7625133c0e04a708b91d0b42eb04f4611a8568f38d278a70ae2461c64d",
+    "sweep.py": "93c0429adbfcb50c6fd71336d61cbcaa49b41fc5fa5e72034aeb63c62f25eb95",
+    "adapter.py": "bcd8b0233f660a9f63969895d01a0de83ac6a16b0a0c49dd70a90dd34d4378eb",
+    "render.py": "127a7d35b2579ceb7f7c050135f2079d3de35fff91a03222926d111f29e835e8",
+    "test_engine.py": "e96246dca872b53c0bfb849cba5dfc05489c4237667ccfd31d56aa8385e9c147",
+    "publish_diagnostics.py": "440eb53b0aee8fcd0d0decce8f91e916df3fe02838b30528f3b6aa15b954c3e7"
+  }
+}

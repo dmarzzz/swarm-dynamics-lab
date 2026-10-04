@@ -57,7 +57,7 @@ def frame(record,t):
 def animation(record,destination):
     frames=[frame(record,t) for t in range(record['deadline']+1)]
     frames[-1].save(destination.with_suffix('.png'))
-    frames[0].save(destination.with_suffix('.gif'),save_all=True,append_images=frames[1:],duration=[900]*(len(frames)-1)+2400,loop=0,optimize=True)
+    frames[0].save(destination.with_suffix('.gif'),save_all=True,append_images=frames[1:],duration=[900]*(len(frames)-1)+[2400],loop=0,optimize=True)
 
 
 def diagnostic(results,destination,title):

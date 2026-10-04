@@ -1,0 +1,7 @@
+# S1 attempt 1 post-mortem
+
+Operational failure in rendering, not model decisions. Of 384 assigned blocks, 25 completed and were persisted (175 policy outcomes); 359 were not executed. Twelve physical predicate receipts were valid. The first animation attempted to concatenate a list of frame durations with an integer rather than a one-element list, raising TypeError. A PNG smoke check did not cover GIF creation. Hub correctly records failed execution; no outcome is dropped or relabeled.
+
+Repair: correct duration construction; add an actual seven-frame GIF test with final-frame duration assertion; move rendering after durable completion of all outcomes. Nine offline tests now pass including end-to-end GIF encoding. This is a verified cause, not speculation. No scientific inference is made from the interrupted prefix.
+
+Resume as a new operational attempt ID, importing the exact 25 completed block records, original receipts, invocation references and guard events. Assert unchanged engine/adapter/runtime source hashes and assignment-prefix equality. Continue the 359 unexecuted assignments. Reuse deterministic cached receipts; do not call the model again for completed decisions. Final scientific denominator is 384 distinct assignments, not 25+384 independent observations. Preserve attempt1 and report resumed blocks explicitly. Replay rendering can be repeated without model execution.
