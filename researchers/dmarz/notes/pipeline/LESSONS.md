@@ -1,6 +1,6 @@
 # Cross-lane lessons
 
-Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T09:02Z. Each item says what was observed, where, and what to do in the next plan.
+Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T09:41Z. Each item says what was observed, where, and what to do in the next plan.
 
 ## 1. Caps and timeouts are part of the hash that binds a stage to its qualification. Size them for the whole ladder before the qualifying run.
 
@@ -75,12 +75,14 @@ A 429 or 529 response carries no model output and is not billed, so retrying it 
 
 ## 9. Moving every lane to the strongest model fixes the floor and can hit the ceiling.
 
-Tonight's qualifications failed from below on Haiku and Sonnet (SOC-07 7 and 9 of 12; discussion v3 2 and 3 of 6; compositional-safety 21 of 24) and pass at or near the maximum on Opus 5.5 with reasoning (12 of 12; 12 of 12 and 6 of 6; 24 of 24 three times). For studies whose measure is a difference between arms, that is a risk in the other direction. SOC-07's S1-R came out at team success 1.00 in both arms. compositional-safety P1 looked the same after two D1 bundles (14 of 14 safe) and then showed spread in D2/risk (3 of 7: the fragmented arms stalled, receipts completed), so it is not at ceiling. discussion-v3-opus is different: its clean reports-only arm is 6 of 6 while the other clean arms abstain, so it still has spread.
+Tonight's qualifications failed from below on Haiku and Sonnet (SOC-07 7 and 9 of 12; discussion v3 2 and 3 of 6; compositional-safety 21 of 24) and pass at or near the maximum on Opus 5.5 with reasoning (12 of 12; 12 of 12 and 6 of 6; 24 of 24 three times). For studies whose measure is a difference between arms, that is a risk in the other direction. SOC-07's S1-R came out at team success 1.00 in both arms, and S1-L (4,080 calls, USD 32.60) repeated it exactly: +0.000. compositional-safety P1 looked the same after two D1 bundles (14 of 14 safe) and then showed spread in D2/risk (3 of 7: the fragmented arms stalled, receipts completed), so it is not at ceiling. discussion-v3-opus is different: its clean reports-only arm is 6 of 6 while the other clean arms abstain, so it still has spread.
 
 For the next plans: give each qualification an upper bound as well as a lower one, or add a difficulty dial (more records, narrower margins, lower effort) that is set so the control arm lands between about 60% and 90%. A run where every arm scores 100% costs the same as one that can answer its question.
 
 ## 10. Nobody can say what the Opus rate limit is, because no adapter keeps the response headers.
 
 At 09:20Z the question was whether sybil-scale-xl's S1 (about 6 to 7M input tokens per minute, four in flight) and sybil-scarcity-opus's S1 (about 1M per minute) can overlap. The number that settles it, `anthropic-ratelimit-input-tokens-limit`, is returned on every successful call. No dmarz adapter stores it; I searched every record and log on all nine servers. The largest volume shown to work is 2.46M input tokens in one minute (scale-xl Q0).
+
+Measured at 09:20Z by the scale-xl session with one header call: 5,000,000 input tokens, 1,000,000 output tokens and 5,000 requests per minute for the workspace. Against that: scale-xl's S1 asks for about 5.9M per minute by itself (q0-a2 records: 2,458,711 tokens completing inside 22 seconds with four in flight), scarcity's S1 0.9M, every other lane together under 0.2M. The fleet monitor paused scale-xl's worker until scarcity was nearly done.
 
 For the next adapter revision: record the `anthropic-ratelimit-*` limit and remaining values from each response (numbers only, no other headers) next to the usage counts. Then any session can read the headroom from the records, and a chain can hold itself when `remaining` is low instead of finding the limit by hitting it.
