@@ -1,0 +1,9 @@
+{
+  "status": "blocked_global_registration_coverage",
+  "detail": "uncovered experiment registrations: researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml",
+  "owned_rows_schema_and_paths_validated": true,
+  "source_commit": "9bfb44a289f5caad76f0c12a1083d21376eec486",
+  "source_hashes_verified_from_published_commit": true,
+  "other_researcher_documents_modified": false,
+  "utc": "2026-10-04T09:06:29.583605+00:00"
+}
