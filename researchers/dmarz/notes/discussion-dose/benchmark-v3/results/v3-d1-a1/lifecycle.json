@@ -1,0 +1,23 @@
+{
+  "assigned_calls": 120,
+  "attempt": "v3-d1-a1",
+  "claim": "dmarz-discussion-d1",
+  "claim_released": false,
+  "cleanup_status": "pending_report_publication",
+  "cloud_raw_retrieval_verified": false,
+  "completed_model_calls": 120,
+  "execution_complete": true,
+  "holdout_opened": false,
+  "hub_artifacts_readback_verified": 6,
+  "invalid_calls": 0,
+  "lifecycle_mode": "owner-controlled-local-cleanup",
+  "local_exact_audit_passed": true,
+  "model_qualified": false,
+  "next_experiment_started": false,
+  "next_plan": "D2-PLAN.md",
+  "observed_model_cost_usd": 0.75478,
+  "remote_exact_audit_passed": true,
+  "server": "sim-discussion-d1",
+  "server_retired": false,
+  "usage_missing_calls": 0
+}

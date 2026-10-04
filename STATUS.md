@@ -40,6 +40,7 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-poietic-agents-instrument](tasks/build-poietic-agents-instrument.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:50Z | Build the Poietic Agents offline instrument and qualification package |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
+| [clarify-pi-review-visual-guide](tasks/clarify-pi-review-visual-guide.md) | claimed | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T05:01Z | Clarify the PI review visual guide |
 | [deploy-discussion-v3-d1](tasks/deploy-discussion-v3-d1.md) | claimed | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:41Z | Deploy and preserve the bounded discussion v3 D1 diagnostic |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:52Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:56Z | Qualify and run Healing Qwen plus Jev composite |
@@ -48,7 +49,7 @@
 | [phantom-coast-pc2-runner](tasks/phantom-coast-pc2-runner.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:56Z | Build the Phantom Coast PC-2 launch instrument |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | claimed | p1 | survey | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:47Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [right-dissenter-rd4](tasks/right-dissenter-rd4.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:59Z | Repair and evaluate the Right Dissenter recovery protocol |
-| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:37Z | Ship the neutral-agent market-splitting pilot |
+| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:59Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -58,7 +59,8 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:37Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
+| [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:59Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
+| [theseus-d1-launch](tasks/theseus-d1-launch.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T05:00Z | Admit and run Theseus execution diagnostic D1 |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
@@ -70,6 +72,7 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
+| [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -234,9 +237,9 @@
 |---|---|---|---|---|
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T05:00Z | Resolving independent review and building the Poietic instrument and gated qualification package |
-| dmarz/patchwork-hypotheses | idle | build-compositional-safety | 2026-10-04T04:56Z | q0-005 finished and failed qualification; publishing full results and next plan, which must not start without later user instruction |
+| vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:00Z | Coordinate independent D1 review, exclusive allocation and authorized queue launch |
+| dmarz/patchwork-hypotheses | idle |  | 2026-10-04T04:59Z | q0-005 results, analysis, post-mortem and d0-003 plan published; no worker or claim; DO NOT START another experiment without later explicit user instruction |
 | vishesh/codex-local-agents | done |  | 2026-10-04T04:56Z | Completed local external-influence comparison; 11/50 correct versus historical 19/50; 48 valid and 2 deadline outcomes; results and replay published |
-| vishesh/codex-theseus | done | theseus-targeted-repairs | 2026-10-04T04:56Z | D1 preparation built and pushed; pending separate run admission |
 | vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:54Z | Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:51Z | D2 completed and audited; targeted review 3/6 versus general review 4/6 and generalist 5/6; valid adverse result, S1 remains unqualified; artifacts verified and worker stopped |
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
