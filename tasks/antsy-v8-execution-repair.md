@@ -3,7 +3,7 @@ id: antsy-v8-execution-repair
 type: task
 title: Prepare trace-preserving Antsy execution repair and bounded D1 proposal
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T16:56Z
-updated: 2026-10-04T16:56Z
+updated: 2026-10-04T17:01Z
+outputs:
+- researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/PLAN.md
+- researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/validation.json
 ---
 
 ## Goal
