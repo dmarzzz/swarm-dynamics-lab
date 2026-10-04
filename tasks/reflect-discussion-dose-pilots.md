@@ -3,7 +3,7 @@ id: reflect-discussion-dose-pilots
 type: task
 title: Reflect on the original discussion dose pilot before running more
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: dmarz/discussion-dose
 for: dmarz
@@ -12,7 +12,9 @@ created_by: dmarz/discussion-dose
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T01:23Z
-updated: 2026-10-04T01:23Z
+updated: 2026-10-04T01:25Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/RESULTS-AND-REFLECTION.md
 ---
 
 ## Goal
