@@ -40,6 +40,7 @@
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:41Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:30Z | Ship the compositional safety benchmark and qualification |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
+| [decision-model-reimagination](tasks/decision-model-reimagination.md) | claimed | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:48Z | Reimagine Phantom Coast and Quorum of Mirrors |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:41Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [heterogeneous-biological-frontiers](tasks/heterogeneous-biological-frontiers.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:47Z | Biological frontiers for heterogeneous swarms grounded in X discussions |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:41Z | Qualify the repaired immune-response contract on a dedicated host |
