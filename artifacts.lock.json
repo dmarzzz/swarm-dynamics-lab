@@ -197,6 +197,65 @@
    "sha256": "42ed38cbdb659e3009802f0eef8d6d7b5bbf8b9632345ad3069c7feed00558e6",
    "size_bytes": 193345
   },
+  "market-split-experiment-plan@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791079108,
+     "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
+     "size": 11521,
+     "uri": "researchers/dmarz/notes/market-split/README.md"
+    },
+    {
+     "mtime": 1791077826,
+     "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263",
+     "size": 884,
+     "uri": "researchers/dmarz/notes/market-split/design.yaml"
+    },
+    {
+     "mtime": 1791077477,
+     "sha256": "1cf1743d53db84fe3d0e063539c10e51c18c232b39cf331c893ed28a4ebcf861",
+     "size": 1382,
+     "uri": "researchers/dmarz/notes/market-split/src/prompt.txt"
+    },
+    {
+     "mtime": 1791077826,
+     "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d",
+     "size": 14042,
+     "uri": "researchers/dmarz/notes/market-split/src/sim.py"
+    },
+    {
+     "mtime": 1791077826,
+     "sha256": "4eecbfe40359c77a27ca108a381e2fbf3af199f3ab363a8fc18edb67de45373e",
+     "size": 3729,
+     "uri": "researchers/dmarz/notes/market-split/src/analyze.py"
+    },
+    {
+     "mtime": 1791079108,
+     "sha256": "ab3fca119d5aea55fd9040f2b315012bf94d137eeb567d93e5ac838f0113f786",
+     "size": 28109,
+     "uri": "researchers/dmarz/notes/market-split/analysis/s1-summary.json"
+    },
+    {
+     "mtime": 1791079108,
+     "sha256": "3a6643417417b833bbcf8fb6b4da995a136403aadf3bf07593f142e9a8528dfc",
+     "size": 28532,
+     "uri": "researchers/dmarz/notes/market-split/analysis/s1-reconciliation.json"
+    },
+    {
+     "mtime": 1791079108,
+     "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1",
+     "size": 4042,
+     "uri": "researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791079108,
+   "path": "artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md",
+   "prompt_sha256": "d0fd797b2ddd3fa7f96fa0db70f1205d2f836341cb53c0c557a2d1f948ce6bef",
+   "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
+   "size_bytes": 11521
+  },
   "market-split-scripted-frame@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -232,7 +291,7 @@
    "size_bytes": 137073
   }
  },
- "generated": "2026-10-03T18:55:46-0700",
+ "generated": "2026-10-03T18:59:04-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

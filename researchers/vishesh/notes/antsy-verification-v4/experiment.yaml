@@ -1,0 +1,11 @@
+id: antsy-verification-v4
+title: 'Antsy: test before trust'
+owner: vishesh
+description: 'Budgeted quality checks for routing real receipts between measured OCR configurations. Exploratory; no assigned winners.'
+params:
+  stage: {type: str, role: stage}
+  backend: {type: str, role: condition}
+  code: {type: str, role: fixed}
+metrics: [completed, invalid, mean_regret, mean_checks]
+primary_metric: mean_regret
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/antsy-verification-v4

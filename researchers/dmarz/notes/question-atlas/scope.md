@@ -66,3 +66,7 @@ An editorial audit across lanes checked overlap, coverage and directional consis
 The five lane JSON files are the editable source. `revision.json` records the frozen research snapshot and previous candidate fingerprints; `research-delta-v2.json` records the input changes. `python3 src/question-atlas/build.py` validates their fields and references and regenerates the consolidated JSON, Markdown bank and self-contained HTML review. The canvas is an optional local projection of the same bank. Its review notes and the HTML browser's notes are separate stores; JSON export allows human transfer without an external service.
 
 The renderer checks unique IDs/questions, all topic areas, all original brief mappings and every source and brief path. Human editorial review is still required for semantic duplication and whether the comparison answers the question.
+
+## Patchwork addition, 2026-10-04
+
+The user explicitly requested adding the diamond-heist connections to the public research page and repo. [The Patchwork addendum](patchwork-addendum.md) records the five new unreviewed cards, source fingerprints, private/uncommitted source-access limits, and exact reading scope. The canonical bank is rebuilt from its editable lanes; the dashboard is generated from that same bank. This addition does not promote formal hypotheses or rerun the earlier experiments. Existing papers retain their original read-depth metadata.

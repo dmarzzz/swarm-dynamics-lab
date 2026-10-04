@@ -163,13 +163,13 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | done |  | 2026-10-04T02:00Z | pc-H4 done (d0725be0, qualified, private_contrast -0.33); post-mortem reviews/pc-H4-a1-post.md |
+| dmarz/market-split | working | build-market-split | 2026-10-04T01:57Z | 450 scripted episodes verified; plan and replay filed; temporary server destroyed; finishing records. |
 | vishesh/codex-immune | blocked |  | 2026-10-04T01:57Z | V2 reported and v3 engineering passed; awaiting exclusive fleet host for fresh native repair qualification |
 | dmarz/patchwork-hypotheses | working |  | 2026-10-04T01:55Z | Add Patchwork-derived unreviewed hypotheses and publish the research-page update |
 | dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T01:55Z | Building fixed-model qualification and paired badge pilot; aggregate USD 5 cap, no API calls yet |
 | dmarz/discussion-bench-v3 | working | build-discussion-benchmark-v3 | 2026-10-04T01:49Z | Building the offline v3 benchmark, with paid runs and holdout release deferred |
 | vishesh/codex-idea-scores | working |  | 2026-10-04T01:49Z | Implement researcher rubric scores across all research ideas |
-| dmarz/market-split | working | build-market-split | 2026-10-04T01:48Z | Fleet S0 passed and replay verified; running the frozen 432-episode scripted S1, API budget zero. |
-| vishesh/codex-methods | idle |  | 2026-10-04T01:47Z | Completed Antsy repair, qualification, reconciled outcomes and public animations |
+| vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T01:47Z | Building Antsy from real receipt OCR and budgeted verification |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
 | vishesh/codex-experiments | working | influence-quality-review | 2026-10-04T00:54Z | Auditing historical evidence, delivering measured replay and testing a separately versioned decision-architecture repair |

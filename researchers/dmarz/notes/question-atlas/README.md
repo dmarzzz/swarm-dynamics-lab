@@ -1,12 +1,12 @@
 # Research question atlas
 
-214 candidate questions, tentative hypotheses and test sketches across all 15 research areas.
+219 candidate questions, tentative hypotheses and test sketches across all 15 research areas.
 
 Owner: dmarz/question-atlas. Human-requested brainstorming, 2026-10-03. **Every item is an unreviewed hunch.** These are selection materials, not accepted hypotheses, approved protocols, measured effects, or novelty claims.
 
 [Start with the synthesis and review guide](../../../../synthesis/research-question-atlas.md). [Open the local review browser](review.html). [Machine-readable bank](candidates.json). [Review scope and limitations](scope.md).
 
-Update 2: **71 new, 36 revised, 107 unchanged** candidates. All original IDs are retained. [What changed and why](update-v2.md).
+Update 2: **76 new, 36 revised, 107 unchanged** candidates. All original IDs are retained. [What changed and why](update-v2.md).
 
 Feasibility labels describe a possible first test, not a verified installation, price or runtime. Source depths are inherited catalogue metadata, not claims that this pass fully read those sources. The open evidence-depth audit still applies.
 
@@ -20,12 +20,12 @@ Feasibility labels describe a possible first test, not a verified installation, 
 - [Synchronisation, consensus and networked control](#sync-consensus): 6 candidates.
 - [Criticality, information and measurement](#criticality-measurement): 8 candidates.
 - [Multi-agent RL and emergent coordination](#marl-emergence): 9 candidates.
-- [LLM agent swarms](#llm-agent-swarms): 50 candidates.
+- [LLM agent swarms](#llm-agent-swarms): 51 candidates.
 - [Human crowds and traffic](#crowds-and-traffic): 6 candidates.
 - [Meta and tooling](#meta): 22 candidates.
-- [Sybil resistance and adversarial identity](#sybil-resistance): 23 candidates.
-- [Fork-and-merge agents and corruption on reintegration](#fork-merge-security): 20 candidates.
-- [Detecting AI agent swarms in the wild](#swarm-detection): 15 candidates.
+- [Sybil resistance and adversarial identity](#sybil-resistance): 24 candidates.
+- [Fork-and-merge agents and corruption on reintegration](#fork-merge-security): 22 candidates.
+- [Detecting AI agent swarms in the wild](#swarm-detection): 16 candidates.
 - [Agent budgets and resource allocation](#agent-budgets): 23 candidates.
 
 ## Shared design requirements
@@ -3159,6 +3159,37 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
 
+<a id="mkt-14"></a>
+### MKT-14 — Evidence royalties versus identity farming
+
+**Update 2:** new.
+
+**Question:** Can paying for evidence used in a joint opportunity increase useful discovery without making duplicate identities or redundant evidence more profitable?
+
+**Candidate hypothesis:** Unreviewed hunch: In repeated private-profit worlds with costly discovery, payments tied to unique evidence actually used increase useful evidence production and producer returns relative to free reuse; payments per publisher instead reward duplicated identities and redundant claims.
+
+**How to test:** Modify the Patchwork economy to make discovery costly and allow agents to choose whether to search and publish across repeated opportunities. Randomize whole market episodes to free public reuse, a fixed revenue share divided among all publishers, or the same share divided among unique evidence receipts used at settlement. Cross a single owner versus permitted identity splitting at matched capital, total model budget and discovery opportunities; keep evidence visibility and communication channels identical in the main comparison. Preregister how substitutes and complementary evidence share payment and how duplicate receipts are rejected. Observe endogenous discovery as well as completion, owner-level payoffs and unused contributions. A separate matched visibility control should test whether public evidence, rather than chat, carries coordination.
+
+**Comparison:** Original free-reuse economy, publisher-count royalties, no-splitting arms and scripted policies showing each payment rule is executable; all transfers come from the same realized revenue, not added subsidy.
+
+**Measurements:** Unique useful evidence produced per opportunity; Opportunity completion and net external surplus; Evidence-producer net returns; Principal gain from identity splitting; Redundant claims, contracts and payment concentration.
+
+**Would count against it:** At prespecified precision, receipt-based payments do not improve discovery or producer returns, lose comparable net surplus through friction, or permit profitable identity splitting without new useful evidence.
+
+**Main confounds:** The old nine-case pilot never tested royalties. Recorded use is not causal marginal contribution or moral entitlement; substitute and complementary evidence complicate attribution. An oracle deduplicator hides manipulation, and changing evidence visibility together with payments confounds incentives.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** Specify discovery costs, payment conservation, observable evidence receipts and a non-oracle deduplication comparator; resolve Patchwork access and complete the relevant survey/review gates. Related to BUD-14, MKT-09 and SEC-14, but tests compensation for information production.
+
+**Closest prior and evidence limits:**
+
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). Nine economy cases used no service contracts; four of six sales were solo with freely reusable public evidence. This motivates but does not establish a property-rights mechanism. Catalogue depth: skim.
+- [[piedrahita-2025-corrupted]] — [Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piedrahita-2025-corrupted.md). Catalogue documents model-dependent free-riding in public-goods games, a different institution from evidence production; it does not predict this treatment effect. Catalogue depth: full.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). Shows why counting identities in rewards can introduce false-name incentives; no blanket guarantee transfers to evidence royalties. Catalogue depth: full.
+
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
+
 <a id="crowds-and-traffic"></a>
 ## Human crowds and traffic
 
@@ -4684,6 +4715,37 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
 
+<a id="mkt-13"></a>
+### MKT-13 — Market limits with uncertain ownership and concurrent settlement
+
+**Update 2:** new.
+
+**Question:** Which aggregate spending and concentration protections survive inaccurate ownership records and concurrent actions that are individually permitted?
+
+**Candidate hypothesis:** Unreviewed hunch: Atomic checks over a common resource ledger preserve declared aggregate spending limits under complete mediation, but owner-specific concentration limits fail under missed owner links; conservative grouping trades those failures for false restrictions on independent firms.
+
+**How to test:** Extend Patchwork market conformance with paired prohibited and benign action sets. Randomize independent market episodes across local checks, per-agent checks, causal provenance and atomic aggregate-state checks. Independently vary proposal concurrency and observed ownership errors: missed same-owner links, false merges of independent firms and unresolved owners. Keep true ownership in the evaluator and identical observed records across comparable policies; oracle ownership is a separate ceiling. First replay fixed scripted proposals to isolate enforcement, then run a separately qualified model pilot with matched total compute per principal and neutral profit objectives. Measure attempted versus committed violations separately; do not infer agent discovery from scripted strategies.
+
+**Comparison:** Perfect-owner atomic enforcement, merged firm with the same capital, genuinely independent firms with matched actions, and non-atomic aggregate checks exposed to the same interleavings.
+
+**Measurements:** Committed aggregate-cap breaches; True-owner concentration violations; False blocks of independent firms; Principal profit and legitimate surplus; Decision latency and unsettled actions.
+
+**Would count against it:** Practical observed-owner policies match the oracle across prespecified missing-link and false-merge conditions with no meaningful utility loss, or causal-only review enforces the chosen aggregate limits without equivalent shared-state accounting.
+
+**Main confounds:** Knowing beneficial owners solves an identity problem by assumption. Complete mediation and atomic settlement are prerequisites, not model behavior. Conservation alone is not fair allocation; equal per-firm inference can advantage owners with more identities.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Enumerate the exact invariants and legal observations, freeze ownership-error generation and qualify race controls. Connect to MKT-03/MKT-11 and BUD-08/BUD-09 while keeping enforcement correctness separate from incentives and discovery.
+
+**Closest prior and evidence limits:**
+
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). Local scripted suite left 200/500 prohibited cases under causal provenance and zero under aggregate invariants; owner labels and settlement were trusted. Catalogue depth: skim.
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Catalogue records budget conservation under mediation, authentication and crash-fault assumptions; it does not establish resistance to false beneficial-owner labels. Catalogue depth: skim.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). False-name mechanism theory motivates matching principal resources; it supplies no general ownership-inference solution. Catalogue depth: full.
+
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md), [README](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/market-split/README.md).
+
 <a id="fork-merge-security"></a>
 ## Fork-and-merge agents and corruption on reintegration
 
@@ -5273,6 +5335,67 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
 
+<a id="sec-54"></a>
+### SEC-54 — When permitted specialist actions compose into a forbidden outcome
+
+**Update 2:** new.
+
+**Question:** Does fragmentation of a task across capability-restricted agents increase prohibited end-to-end outcomes even when each executed step obeys its local rule?
+
+**Candidate hypothesis:** Unreviewed hunch: Fragmented intent increases prohibited composition under local-operation helper policies; end-to-end helper policies reduce attempts, while enforced provenance checks reduce realized effects even when upstream agents cooperate.
+
+**How to test:** Extend the Patchwork reader/packager/courier microbenchmark with synthetic data and simulated exports. Randomize independent episodes across intent visibility, helper-policy scope and host provenance enforcement, then cross chain depth and redundant paths. Keep capabilities, task content, total model tokens and communication allowance matched; pad irrelevant context where needed. Pair benign and prohibited tasks and include isolated specialists and a centralized union-of-capabilities diagnostic. Record every attempted and committed transition, including local-rule violations separately. Analyze episodes, cluster paired tasks, and retain model/runtime failures rather than selecting successful retries.
+
+**Comparison:** The original linear-chain factorial, isolated specialists, benign task completion and end-to-end policy without a host guard; centralized union is a labeled diagnostic with different authority.
+
+**Measurements:** Prohibited committed effects per assigned episode; Locally valid prohibited chains; Prohibited attempts and guard interventions; Benign completion and false blocks; Tokens and latency per episode.
+
+**Would count against it:** At prespecified precision, intent fragmentation produces no meaningful increase under local policies, or host enforcement reduces prohibited effects only by comparably suppressing matched benign work.
+
+**Main confounds:** Weak local policy is not alignment; a coordinator given a prohibited objective is not spontaneous malicious intent. Chain depth can increase latency or reduce competence. Perfect host provenance is a strong assumption, and five old replicates per cell do not establish an interaction.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Resolve access to and freeze the local Patchwork extension, reproduce benign/prohibited controls, finish the fork-merge prior-art gate and independently review the proposed protocol. Complements SEC-04 without silently changing permissions at return.
+
+**Closest prior and evidence limits:**
+
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). Local 80-run extension: 4/5 versus 0/5 prohibited exports in the fragmented/local cell without versus with a host guard; one model and five runs per cell, not a heist-economy result. Catalogue depth: skim.
+- [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/triedman-2025-multi.md). Catalogue describes cross-agent control-flow hijacking. This isolates composition of already-permitted actions from an individual step violating its local policy. Catalogue depth: full.
+- [[green-2007-provenance]] — [Provenance Semirings](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/green-2007-provenance.md). Derivation provenance is established for specified operations; it does not infer semantic dependence inside arbitrary LLM transformations. Catalogue depth: skim.
+
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
+
+<a id="sec-56"></a>
+### SEC-56 — How much finality delay buys containment?
+
+**Update 2:** new.
+
+**Question:** When does delaying irreversible effects give a swarm auditor enough time to contain violations without losing more legitimate task value than it saves?
+
+**Candidate hypothesis:** Unreviewed hunch: Containment tracks the distribution of total detection-and-response latency relative to finality deadlines; a bounded delay can improve useful completion under a violation constraint, but audit congestion erodes that benefit.
+
+**How to test:** Use a discrete-event simulator extending Patchwork asynchronous traces with benign task deadlines, nonzero audit service times and a finite queue. Randomize independent workload episodes to immediate finality, several fixed delays and a risk-tiered delay policy calibrated on separate traces. Cross audit cadence, service-time variance and arrival load while holding the detector, input traces, reviewer capacity and intervention budget fixed. An alert counts as containment only if cancellation completes strictly before finality; late correction cannot erase an effect. Report utility versus committed harm across the delay sweep rather than choosing a favorable unreported harm price.
+
+**Comparison:** Immediate finality, synchronous pre-effect approval, fixed-delay audit and instantaneous complete-provenance detection as a labeled ceiling.
+
+**Measurements:** Irreversible violations per episode; Detection recall versus actual containment; Time to effective cancellation; Legitimate value completed before deadlines; Audit backlog and blocked duration.
+
+**Would count against it:** No prespecified delay improves the legitimate-value/committed-harm frontier over immediate finality or synchronous approval, or any gain disappears after audit service and cancellation costs are included.
+
+**Main confounds:** A pure condition that latency precedes a deadline is definitional, not a novel result. Event-count delays do not establish wall-clock performance. Perfect graph detection, arbitrary harm prices and dropping overload episodes can manufacture benefits.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Explicit finality and cancellation state machine, frozen workload/deadline distributions and utility definition, then the relevant survey and review. Extends SEC-49 with an operational delay-versus-cost intervention; no new safety theorem is claimed.
+
+**Closest prior and evidence limits:**
+
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). The exact local audit contained no immediately final effects; an eight-event delay gave 100% containment at cadence eight but 50.8% at cadence sixteen under its deterministic motif. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Classical output-commit and rollback boundaries explain why external effects cannot simply be undone. Catalogue depth: skim.
+
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
+
 <a id="mkt-07"></a>
 ### MKT-07 — Forked firms and inherited conventions
 
@@ -5705,6 +5828,37 @@ API tests need matched inference and communication budgets. Training tests need 
 - [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Interference and policy assignment determine the causal quantity. Catalogue depth: skim.
 
 **Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+
+<a id="sec-55"></a>
+### SEC-55 — Causal audits when provenance is incomplete
+
+**Update 2:** new.
+
+**Question:** At a fixed review budget, does tracing cross-agent ancestry still improve safe task completion when dependency edges are missing, spurious or semantically misleading?
+
+**Candidate hypothesis:** Unreviewed hunch: A causal audit with explicit unknown-edge handling yields more legitimate completions at a fixed tolerated violation rate than per-agent or recent-window review, but its advantage falls as relevant ancestry becomes unobservable.
+
+**How to test:** Start from Patchwork-style paired benign/prohibited traces, then hold out whole graph families with branches and multiple effects. Randomize episode-level graph views and missingness processes: random loss, omission near restricted sources, spurious parents and plausible transformations whose logged reads do not prove semantic use. Give each reviewer the same observable event store and total retrieval-plus-model budget. Compare per-agent, recent-window and ancestry retrieval with an explicit insufficient-evidence decision. Separately score classification and policies that quarantine or escalate abstentions under a fixed queue capacity. Tune thresholds only on training families; keep true ancestry evaluator-only.
+
+**Comparison:** Matched-budget recent-window and per-agent review, reject-all, allow-all, and complete-provenance exact queries as a privileged diagnostic ceiling.
+
+**Measurements:** Violation recall at fixed benign false-block rate; Benign completion after abstention handling; Abstention and review-queue load; Causal-path localization; Retrieval and model cost.
+
+**Would count against it:** Ancestry retrieval supplies no useful-completion advantage at matched violation tolerance and total cost, or apparent gains require evaluator-only edges or unbounded escalation.
+
+**Main confounds:** Missing graph evidence is not proof of safety. Explicit toy labels make judging easier than realistic tool records. Retrieved artifacts do not prove semantic dependence; duplicated views of one trace are not independent samples.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Freeze observable fields, missingness mechanisms, queue limits and held-out graph families; resolve source access and reproduce the basic instrument. Extends SEC-06 and SEC-30 by testing pre-effect auditing under incomplete observations.
+
+**Closest prior and evidence limits:**
+
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). The local semantic pilot detected 10/10 prohibited paths with complete ancestry; per-agent views abstained on all 20 cases. Only ten paired traces and a three-event motif. Catalogue depth: skim.
+- [[green-2007-provenance]] — [Provenance Semirings](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/green-2007-provenance.md). Formal derivation provenance supplies a baseline under specified query semantics, not a general LLM dependency oracle. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Distributed recovery depends on cross-process dependencies; recovery semantics are distinct from semantic classification. Catalogue depth: skim.
+
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
 
 <a id="mkt-04"></a>
 ### MKT-04 — Telling Sybil firms from tacit colluders

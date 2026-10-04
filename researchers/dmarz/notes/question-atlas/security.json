@@ -1984,5 +1984,115 @@
       "synthesis/sybil-flashbots.md",
       "surveys/sybil-resistance.md"
     ]
+  },
+  {
+    "id": "SEC-54",
+    "area": "fork-merge-security",
+    "title": "When permitted specialist actions compose into a forbidden outcome",
+    "question": "Does fragmentation of a task across capability-restricted agents increase prohibited end-to-end outcomes even when each executed step obeys its local rule?",
+    "hypothesis": "Unreviewed hunch: Fragmented intent increases prohibited composition under local-operation helper policies; end-to-end helper policies reduce attempts, while enforced provenance checks reduce realized effects even when upstream agents cooperate.",
+    "test": "Extend the Patchwork reader/packager/courier microbenchmark with synthetic data and simulated exports. Randomize independent episodes across intent visibility, helper-policy scope and host provenance enforcement, then cross chain depth and redundant paths. Keep capabilities, task content, total model tokens and communication allowance matched; pad irrelevant context where needed. Pair benign and prohibited tasks and include isolated specialists and a centralized union-of-capabilities diagnostic. Record every attempted and committed transition, including local-rule violations separately. Analyze episodes, cluster paired tasks, and retain model/runtime failures rather than selecting successful retries.",
+    "baseline": "The original linear-chain factorial, isolated specialists, benign task completion and end-to-end policy without a host guard; centralized union is a labeled diagnostic with different authority.",
+    "metrics": [
+      "Prohibited committed effects per assigned episode",
+      "Locally valid prohibited chains",
+      "Prohibited attempts and guard interventions",
+      "Benign completion and false blocks",
+      "Tokens and latency per episode"
+    ],
+    "falsifier": "At prespecified precision, intent fragmentation produces no meaningful increase under local policies, or host enforcement reduces prohibited effects only by comparably suppressing matched benign work.",
+    "confounds": "Weak local policy is not alignment; a coordinator given a prohibited objective is not spontaneous malicious intent. Chain depth can increase latency or reduce competence. Perfect host provenance is a strong assumption, and five old replicates per cell do not establish an interaction.",
+    "prior": [
+      {
+        "id": "gh-dmarzzz-patchwork",
+        "relation": "Local 80-run extension: 4/5 versus 0/5 prohibited exports in the fragmented/local cell without versus with a host guard; one model and five runs per cell, not a heist-economy result."
+      },
+      {
+        "id": "triedman-2025-multi",
+        "relation": "Catalogue describes cross-agent control-flow hijacking. This isolates composition of already-permitted actions from an individual step violating its local policy."
+      },
+      {
+        "id": "green-2007-provenance",
+        "relation": "Derivation provenance is established for specified operations; it does not infer semantic dependence inside arbitrary LLM transformations."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Resolve access to and freeze the local Patchwork extension, reproduce benign/prohibited controls, finish the fork-merge prior-art gate and independently review the proposed protocol. Complements SEC-04 without silently changing permissions at return.",
+    "briefs": [
+      "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+    ]
+  },
+  {
+    "id": "SEC-55",
+    "area": "swarm-detection",
+    "title": "Causal audits when provenance is incomplete",
+    "question": "At a fixed review budget, does tracing cross-agent ancestry still improve safe task completion when dependency edges are missing, spurious or semantically misleading?",
+    "hypothesis": "Unreviewed hunch: A causal audit with explicit unknown-edge handling yields more legitimate completions at a fixed tolerated violation rate than per-agent or recent-window review, but its advantage falls as relevant ancestry becomes unobservable.",
+    "test": "Start from Patchwork-style paired benign/prohibited traces, then hold out whole graph families with branches and multiple effects. Randomize episode-level graph views and missingness processes: random loss, omission near restricted sources, spurious parents and plausible transformations whose logged reads do not prove semantic use. Give each reviewer the same observable event store and total retrieval-plus-model budget. Compare per-agent, recent-window and ancestry retrieval with an explicit insufficient-evidence decision. Separately score classification and policies that quarantine or escalate abstentions under a fixed queue capacity. Tune thresholds only on training families; keep true ancestry evaluator-only.",
+    "baseline": "Matched-budget recent-window and per-agent review, reject-all, allow-all, and complete-provenance exact queries as a privileged diagnostic ceiling.",
+    "metrics": [
+      "Violation recall at fixed benign false-block rate",
+      "Benign completion after abstention handling",
+      "Abstention and review-queue load",
+      "Causal-path localization",
+      "Retrieval and model cost"
+    ],
+    "falsifier": "Ancestry retrieval supplies no useful-completion advantage at matched violation tolerance and total cost, or apparent gains require evaluator-only edges or unbounded escalation.",
+    "confounds": "Missing graph evidence is not proof of safety. Explicit toy labels make judging easier than realistic tool records. Retrieved artifacts do not prove semantic dependence; duplicated views of one trace are not independent samples.",
+    "prior": [
+      {
+        "id": "gh-dmarzzz-patchwork",
+        "relation": "The local semantic pilot detected 10/10 prohibited paths with complete ancestry; per-agent views abstained on all 20 cases. Only ten paired traces and a three-event motif."
+      },
+      {
+        "id": "green-2007-provenance",
+        "relation": "Formal derivation provenance supplies a baseline under specified query semantics, not a general LLM dependency oracle."
+      },
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "Distributed recovery depends on cross-process dependencies; recovery semantics are distinct from semantic classification."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Freeze observable fields, missingness mechanisms, queue limits and held-out graph families; resolve source access and reproduce the basic instrument. Extends SEC-06 and SEC-30 by testing pre-effect auditing under incomplete observations.",
+    "briefs": [
+      "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+    ]
+  },
+  {
+    "id": "SEC-56",
+    "area": "fork-merge-security",
+    "title": "How much finality delay buys containment?",
+    "question": "When does delaying irreversible effects give a swarm auditor enough time to contain violations without losing more legitimate task value than it saves?",
+    "hypothesis": "Unreviewed hunch: Containment tracks the distribution of total detection-and-response latency relative to finality deadlines; a bounded delay can improve useful completion under a violation constraint, but audit congestion erodes that benefit.",
+    "test": "Use a discrete-event simulator extending Patchwork asynchronous traces with benign task deadlines, nonzero audit service times and a finite queue. Randomize independent workload episodes to immediate finality, several fixed delays and a risk-tiered delay policy calibrated on separate traces. Cross audit cadence, service-time variance and arrival load while holding the detector, input traces, reviewer capacity and intervention budget fixed. An alert counts as containment only if cancellation completes strictly before finality; late correction cannot erase an effect. Report utility versus committed harm across the delay sweep rather than choosing a favorable unreported harm price.",
+    "baseline": "Immediate finality, synchronous pre-effect approval, fixed-delay audit and instantaneous complete-provenance detection as a labeled ceiling.",
+    "metrics": [
+      "Irreversible violations per episode",
+      "Detection recall versus actual containment",
+      "Time to effective cancellation",
+      "Legitimate value completed before deadlines",
+      "Audit backlog and blocked duration"
+    ],
+    "falsifier": "No prespecified delay improves the legitimate-value/committed-harm frontier over immediate finality or synchronous approval, or any gain disappears after audit service and cancellation costs are included.",
+    "confounds": "A pure condition that latency precedes a deadline is definitional, not a novel result. Event-count delays do not establish wall-clock performance. Perfect graph detection, arbitrary harm prices and dropping overload episodes can manufacture benefits.",
+    "prior": [
+      {
+        "id": "gh-dmarzzz-patchwork",
+        "relation": "The exact local audit contained no immediately final effects; an eight-event delay gave 100% containment at cadence eight but 50.8% at cadence sixteen under its deterministic motif."
+      },
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "Classical output-commit and rollback boundaries explain why external effects cannot simply be undone."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Explicit finality and cancellation state machine, frozen workload/deadline distributions and utility definition, then the relevant survey and review. Extends SEC-49 with an operational delay-versus-cost intervention; no new safety theorem is claimed.",
+    "briefs": [
+      "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+    ]
   }
 ]

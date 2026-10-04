@@ -1,0 +1,92 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "create an experiment plan and also lets make sure theres some type of visual we show in the UI and make sure to do a scripted version to make sure everything works before we actully use api key and then follow swarm-labs-agentops to deploy the exerpiment and all of that for \"Can one owner’s many firms defeat a concentration-based regulator? — MKT-03 + MKT-11\" and in particular, Im actually curious if agents will naturally discover the strategy to split apart to avoid the regulator"
+   },
+   "internalParameters": {
+    "commit": "52e83f415d91aa79e761d5d9bf82893e1c3807a6-dirty",
+    "session": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab"
+     },
+     "uri": "researchers/dmarz/notes/market-split/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+     },
+     "uri": "researchers/dmarz/notes/market-split/design.yaml"
+    },
+    {
+     "digest": {
+      "sha256": "1cf1743d53db84fe3d0e063539c10e51c18c232b39cf331c893ed28a4ebcf861"
+     },
+     "uri": "researchers/dmarz/notes/market-split/src/prompt.txt"
+    },
+    {
+     "digest": {
+      "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d"
+     },
+     "uri": "researchers/dmarz/notes/market-split/src/sim.py"
+    },
+    {
+     "digest": {
+      "sha256": "4eecbfe40359c77a27ca108a381e2fbf3af199f3ab363a8fc18edb67de45373e"
+     },
+     "uri": "researchers/dmarz/notes/market-split/src/analyze.py"
+    },
+    {
+     "digest": {
+      "sha256": "ab3fca119d5aea55fd9040f2b315012bf94d137eeb567d93e5ac838f0113f786"
+     },
+     "uri": "researchers/dmarz/notes/market-split/analysis/s1-summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "3a6643417417b833bbcf8fb6b4da995a136403aadf3bf07593f142e9a8528dfc"
+     },
+     "uri": "researchers/dmarz/notes/market-split/analysis/s1-reconciliation.json"
+    },
+    {
+     "digest": {
+      "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1"
+     },
+     "uri": "researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "52e83f415d91aa79e761d5d9bf82893e1c3807a6"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T01:59:03Z",
+    "invocationId": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4",
+    "startedOn": "2026-10-04T01:59:03Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab"
+   },
+   "name": "artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md"
+  }
+ ]
+}

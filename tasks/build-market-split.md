@@ -23,7 +23,7 @@ Build the MKT-03/MKT-11 hunch as a neutral discovery environment. Validate with 
 
 ## Done when
 
-- [ ] Exploratory design and neutral prompt committed; S2 disabled pending the research gate.
-- [ ] Scripted physics, accounting, controls, failures and renderer tests pass without model APIs.
-- [ ] Exclusively claimed host runs the scripted stages and reports images, replay and traces to the hub.
-- [ ] Post-mortem and next model-pilot gate recorded; claim released after uploads.
+- [x] Exploratory design and neutral prompt committed; S2 disabled pending the research gate.
+- [x] Scripted physics, accounting, controls, failures and renderer tests pass without model APIs.
+- [x] Exclusively claimed host runs the scripted stages and reports images, replay and traces to the hub.
+- [x] Post-mortem and next model-pilot gate recorded; claim released after uploads.

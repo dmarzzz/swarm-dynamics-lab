@@ -4221,7 +4221,8 @@
         "llm-agent-swarms"
       ],
       "cited_by": [
-        "SOC-28"
+        "SOC-28",
+        "MKT-14"
       ]
     },
     {
@@ -4729,7 +4730,8 @@
       ],
       "cited_by": [
         "SEC-04",
-        "SEC-08"
+        "SEC-08",
+        "SEC-54"
       ]
     },
     {
@@ -5349,7 +5351,8 @@
       "cited_by": [
         "BUD-08",
         "BUD-09",
-        "BUD-18"
+        "BUD-18",
+        "MKT-13"
       ]
     },
     {

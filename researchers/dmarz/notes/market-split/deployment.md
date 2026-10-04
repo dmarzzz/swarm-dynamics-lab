@@ -14,4 +14,36 @@
 
 ## Run reconciliation
 
-Pending fleet qualification. Local runs s0-local-001 and s0-local-002 are retained, with the metric-definition repair documented in their reviews. Only the corrected evaluator will be launched on the fleet.
+Local s0-local-001 and s0-local-002 are retained separately; the evaluator repair is recorded in their reviews. Fleet S0 used only the corrected evaluator.
+
+- s0-fleet-001: three runs, 18/18 valid episodes; source dd99268244e3d48ce8750ea1e336709cfd0089c8.
+- s1-fleet-001: twelve runs, 432/432 valid episodes; source 6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3.
+- Engine SHA-256 shared by both: 8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312.
+- Design SHA-256 shared by both: fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263.
+- All 15 simulation runs have complete traces, progress/final PNGs and full-round GIFs. All 90 artifact hashes were checked against server files and again against downloaded local recovery copies. Reconciliation manifests and aggregate S1 diagnostics are committed in analysis/. Raw recovery copies remain in ignored results/fleet-all and results/fleet-s1; hub copies are retained independently of the temporary worker.
+- market-split/analysis-s1-scripted-v1 is a separate reporting run with verified analysis.json, cells.csv and reconciliation.json uploads. It does not add a simulation or independent replicate.
+- One finite worker exited successfully after the 12 S1 runs. No failures, retries, model calls or API spending. Actual browser playback verified representative S0 and S1 GIFs; S1 observed round 1 advancing to round 10.
+
+## Teardown
+
+Claim dmarz-market-split was released as done in agentops PR 42 after worker exit and recovery-copy verification. The temporary sim-dmarz-market-split server was destroyed on 2026-10-04 UTC through the original provisioning checkout and dmarz state. A saved plan was inspected before applying: only the target droplet, firewall, root key resources and generated inventory changed. Apply succeeded; the target is absent from state and generated inventory. All other generated server entries are byte-equivalent after JSON parsing. The simulator results remain on the hub and local disk. Infrastructure cost is separate from the zero model API cost.
+
+The fleet/inventory removal is recorded in agentops PR 45. The public experiment and its stored PNG/GIF artifacts remain accessible after teardown. A future paid pilot must reacquire an exclusive host and set an explicit model budget; nothing is left running for this experiment.
+
+| Stage | Regulator | Threshold | Registration fee | Run |
+|---|---|---:|---:|---|
+| S0 | none | 0.38 | 20 | market-split/d37a320f |
+| S0 | firm | 0.38 | 20 | market-split/07d3a530 |
+| S0 | owner | 0.38 | 20 | market-split/803b9107 |
+| S1 | none | 0.38 | 20 | market-split/4f5c01e6 |
+| S1 | none | 0.38 | 2500 | market-split/2e22ba11 |
+| S1 | none | 0.46 | 20 | market-split/003256cd |
+| S1 | none | 0.46 | 2500 | market-split/a0c01a75 |
+| S1 | firm | 0.38 | 20 | market-split/c473a1f2 |
+| S1 | firm | 0.38 | 2500 | market-split/f837b597 |
+| S1 | firm | 0.46 | 20 | market-split/edbf1b22 |
+| S1 | firm | 0.46 | 2500 | market-split/d4c749f3 |
+| S1 | owner | 0.38 | 20 | market-split/9b718064 |
+| S1 | owner | 0.38 | 2500 | market-split/571440e6 |
+| S1 | owner | 0.46 | 20 | market-split/beb86549 |
+| S1 | owner | 0.46 | 2500 | market-split/80dc3fe5 |

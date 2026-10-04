@@ -226,5 +226,82 @@
   "novelty": "measurement", "feasibility": "access-dependent",
   "needs": "Confirm a headless Factorio server can run on team hardware and what FLE's market layer would take.",
   "briefs": ["researchers/dmarz/notes/swarm-factory.md"]
- }
+ },
+{
+  "id": "MKT-13",
+  "area": "sybil-resistance",
+  "title": "Market limits with uncertain ownership and concurrent settlement",
+  "question": "Which aggregate spending and concentration protections survive inaccurate ownership records and concurrent actions that are individually permitted?",
+  "hypothesis": "Unreviewed hunch: Atomic checks over a common resource ledger preserve declared aggregate spending limits under complete mediation, but owner-specific concentration limits fail under missed owner links; conservative grouping trades those failures for false restrictions on independent firms.",
+  "test": "Extend Patchwork market conformance with paired prohibited and benign action sets. Randomize independent market episodes across local checks, per-agent checks, causal provenance and atomic aggregate-state checks. Independently vary proposal concurrency and observed ownership errors: missed same-owner links, false merges of independent firms and unresolved owners. Keep true ownership in the evaluator and identical observed records across comparable policies; oracle ownership is a separate ceiling. First replay fixed scripted proposals to isolate enforcement, then run a separately qualified model pilot with matched total compute per principal and neutral profit objectives. Measure attempted versus committed violations separately; do not infer agent discovery from scripted strategies.",
+  "baseline": "Perfect-owner atomic enforcement, merged firm with the same capital, genuinely independent firms with matched actions, and non-atomic aggregate checks exposed to the same interleavings.",
+  "metrics": [
+    "Committed aggregate-cap breaches",
+    "True-owner concentration violations",
+    "False blocks of independent firms",
+    "Principal profit and legitimate surplus",
+    "Decision latency and unsettled actions"
+  ],
+  "falsifier": "Practical observed-owner policies match the oracle across prespecified missing-link and false-merge conditions with no meaningful utility loss, or causal-only review enforces the chosen aggregate limits without equivalent shared-state accounting.",
+  "confounds": "Knowing beneficial owners solves an identity problem by assumption. Complete mediation and atomic settlement are prerequisites, not model behavior. Conservation alone is not fair allocation; equal per-firm inference can advantage owners with more identities.",
+  "prior": [
+    {
+      "id": "gh-dmarzzz-patchwork",
+      "relation": "Local scripted suite left 200/500 prohibited cases under causal provenance and zero under aggregate invariants; owner labels and settlement were trusted."
+    },
+    {
+      "id": "zhu-2026-fault",
+      "relation": "Catalogue records budget conservation under mediation, authentication and crash-fault assumptions; it does not establish resistance to false beneficial-owner labels."
+    },
+    {
+      "id": "mazorra-2023-cost",
+      "relation": "False-name mechanism theory motivates matching principal resources; it supplies no general ownership-inference solution."
+    }
+  ],
+  "novelty": "boundary-test",
+  "feasibility": "offline",
+  "needs": "Enumerate the exact invariants and legal observations, freeze ownership-error generation and qualify race controls. Connect to MKT-03/MKT-11 and BUD-08/BUD-09 while keeping enforcement correctness separate from incentives and discovery.",
+  "briefs": [
+    "researchers/dmarz/notes/question-atlas/patchwork-addendum.md",
+    "researchers/dmarz/notes/market-split/README.md"
+  ]
+},
+{
+  "id": "MKT-14",
+  "area": "llm-agent-swarms",
+  "title": "Evidence royalties versus identity farming",
+  "question": "Can paying for evidence used in a joint opportunity increase useful discovery without making duplicate identities or redundant evidence more profitable?",
+  "hypothesis": "Unreviewed hunch: In repeated private-profit worlds with costly discovery, payments tied to unique evidence actually used increase useful evidence production and producer returns relative to free reuse; payments per publisher instead reward duplicated identities and redundant claims.",
+  "test": "Modify the Patchwork economy to make discovery costly and allow agents to choose whether to search and publish across repeated opportunities. Randomize whole market episodes to free public reuse, a fixed revenue share divided among all publishers, or the same share divided among unique evidence receipts used at settlement. Cross a single owner versus permitted identity splitting at matched capital, total model budget and discovery opportunities; keep evidence visibility and communication channels identical in the main comparison. Preregister how substitutes and complementary evidence share payment and how duplicate receipts are rejected. Observe endogenous discovery as well as completion, owner-level payoffs and unused contributions. A separate matched visibility control should test whether public evidence, rather than chat, carries coordination.",
+  "baseline": "Original free-reuse economy, publisher-count royalties, no-splitting arms and scripted policies showing each payment rule is executable; all transfers come from the same realized revenue, not added subsidy.",
+  "metrics": [
+    "Unique useful evidence produced per opportunity",
+    "Opportunity completion and net external surplus",
+    "Evidence-producer net returns",
+    "Principal gain from identity splitting",
+    "Redundant claims, contracts and payment concentration"
+  ],
+  "falsifier": "At prespecified precision, receipt-based payments do not improve discovery or producer returns, lose comparable net surplus through friction, or permit profitable identity splitting without new useful evidence.",
+  "confounds": "The old nine-case pilot never tested royalties. Recorded use is not causal marginal contribution or moral entitlement; substitute and complementary evidence complicate attribution. An oracle deduplicator hides manipulation, and changing evidence visibility together with payments confounds incentives.",
+  "prior": [
+    {
+      "id": "gh-dmarzzz-patchwork",
+      "relation": "Nine economy cases used no service contracts; four of six sales were solo with freely reusable public evidence. This motivates but does not establish a property-rights mechanism."
+    },
+    {
+      "id": "piedrahita-2025-corrupted",
+      "relation": "Catalogue documents model-dependent free-riding in public-goods games, a different institution from evidence production; it does not predict this treatment effect."
+    },
+    {
+      "id": "mazorra-2023-cost",
+      "relation": "Shows why counting identities in rewards can introduce false-name incentives; no blanket guarantee transfers to evidence royalties."
+    }
+  ],
+  "novelty": "extension",
+  "feasibility": "api-small",
+  "needs": "Specify discovery costs, payment conservation, observable evidence receipts and a non-oracle deduplication comparator; resolve Patchwork access and complete the relevant survey/review gates. Related to BUD-14, MKT-09 and SEC-14, but tests compensation for information production.",
+  "briefs": [
+    "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+  ]
+}
 ]
