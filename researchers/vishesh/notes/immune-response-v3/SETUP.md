@@ -15,7 +15,7 @@ Read the [interrupted A2 post-mortem](evidence-study/reviews/receipt-a2-post.md)
 | G0 question/claim scope | exploratory diagnostic | Plan states practical recovery decision, controls and finite constructed-world limits. No formal hypothesis acceptance claimed. |
 | G1 prospective design | recorded | A3 plan and pre-run assessment predate dispatch; no A3 calls made. |
 | G2 instrument | offline evidence recorded | Fourteen tests and engineering A3 assignment/trace audit; not native qualification. |
-| G3 current admission | in progress | Correct-account machine created and exclusively claimed; exact original ledger restored and integrity checked. Standard provisioning, current public-plan registration and queued dispatch checks still required. |
+| G3 current admission | in progress | Correct-account machine created and exclusively claimed; exact original ledger restored and integrity checked. Pinned runtime installed and all fourteen offline tests pass on this host. Final reporting/public-plan registration and queued dispatch checks still required. |
 | G4 native qualification | not run | Require healthy controls 6/6 without deployment, incident recovery thresholds, valid responses and durable usage. No automatic escalation. |
 | G5 reconciliation/closeout | not run | Reconcile all sixteen assignments, twenty-four reviewers and ninety-six decisions, audit frames/usage, publish post-mortem, preserve ledger and retire only owned resources. |
 
