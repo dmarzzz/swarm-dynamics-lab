@@ -1,0 +1,9 @@
+# Prospective offline provider-diagnostics repair
+
+Written after the A1 post-mortem and before implementation. This is an offline instrument repair, not a new attempt or permission to resume A1. The frozen native source dd09575d and original evidence, assignments, model, scientific design and USD0.010452 unresolved reservation remain unchanged.
+
+The observed defect is loss of provider metadata: one HTTP429 was recorded without error category or Retry-After. Its cause remains unknown. Add bounded parsing that retains only HTTP status, an exact allowlisted provider error type, numeric retry timing, and validated nonnegative numeric token counts when supplied. Never retain error messages, arbitrary bodies, request IDs, routing or authentication headers. Unrecognized/malformed values become unknown. Do not infer quota or billing from HTTP429 or free text. Numeric usage on an error is diagnostic only; actual cost remains unresolved until separately reconciled.
+
+Fault fixtures will cover known and unknown types, malformed/oversized bodies, poisoned headers/messages, invalid usage, numeric and date Retry-After, read failure, and the actual invoke boundary. Verify exactly one dispatch, no retry, no raw-text response on errors, no credential/fixture marker leakage and unchanged assignment hashes. Existing scientific checks must continue to pass. No network or credential access is needed.
+
+Any future run requires its own approved attempt and admission, provider availability evidence, the original cumulative budget and current approved-account allocation. A1's six fixed roots, twelve learners and paired 96/96 learned/true-policy decisions remain a finite acquisition screen, not a cultural inheritance experiment. This repair cannot establish model competence or justify increasing sample size. Next decision: review offline evidence and provider health before proposing a separately authorized attempt; no host request or dispatch is part of this work.
