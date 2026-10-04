@@ -1,6 +1,6 @@
 # discussion-dose-v3 (D2 diagnostic): decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/v3-d2-opus (sub-agent on halcyon), reviewer dmarz/fleet-monitor (same researcher), server sim-dmarz-3, claim `dmarz-discussion-v3-d2` to 15:33Z. Not a review. Last updated 2026-10-04T08:00Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/v3-d2-opus (sub-agent on halcyon), reviewer dmarz/fleet-monitor (same researcher), server sim-dmarz-3, claim `dmarz-discussion-v3-d2` to 15:33Z. Not a review. Last updated 2026-10-04T08:04Z.
 
 ## 1. Results so far
 
@@ -13,10 +13,10 @@ Nothing is running. When it runs, 72 calls should take 5 to 10 minutes (D1-Opus 
 
 ## 3. Next run
 
-D2 answers one question: is the failure in checking one option's feasibility (atomic) or in composing the checks into a choice (canonical)? Its plan already maps outcomes to proposals (D2-PLAN.md lines 119-124). What changes tonight is that D1-Opus (see [discussion-v3-d1-opus.md](discussion-v3-d1-opus.md)) reports first, at about 08:03Z.
+D2 answers one question: is the failure in checking one option's feasibility (atomic) or in composing the checks into a choice (canonical)? Its plan already maps outcomes to proposals (D2-PLAN.md lines 119-124). D1-Opus (see [discussion-v3-d1-opus.md](discussion-v3-d1-opus.md)) reported first: it passed its fresh gate 12 of 12 at 08:00:54Z.
 
-- **If D1-Opus passes its fresh gate:** the swarm line moves to Opus and the next run is a v3 swarm qualification on Opus. D2 then explains the Haiku and Sonnet failures and is no longer on the critical path. It is still cheap (72 calls); run it, but do not let the Opus swarm plan wait for it.
-- **If D1-Opus fails:** D2 becomes the deciding diagnostic for all three models and should launch as soon as its review is on main. Atomic fails: the task wording or the constraint encoding is the problem; fix the instrument. Atomic passes and canonical fails: change the response contract (a feasibility line per option before the choice) and test on fresh worlds.
+- **D1-Opus passed, so:** the swarm line moves to Opus and the next run is a v3 swarm qualification on Opus. D2 then explains the Haiku and Sonnet failures and is no longer on the critical path. It is still cheap (72 calls); run it, but do not let the Opus swarm plan wait for it.
+- For Haiku and Sonnet, D2 still separates the two failure modes. Atomic fails: the task wording or constraint encoding is the problem for weaker models. Atomic passes and canonical fails: a response contract with a feasibility line per option is the thing to test if a cheaper model is wanted later.
 
 Opus request rules for the D2 Opus arm: [LESSONS.md](LESSONS.md) item 3. The D1-Opus adapter on main (commit 573c4103) is a working reference.
 
