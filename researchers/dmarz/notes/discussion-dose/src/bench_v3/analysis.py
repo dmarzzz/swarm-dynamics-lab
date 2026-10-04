@@ -1,5 +1,6 @@
 """Assigned-denominator summaries and paired-world descriptive contrasts."""
 from collections import defaultdict
+import math
 
 
 def reconcile_assignments(assignments, rows):
@@ -89,7 +90,7 @@ def summarize(manifest, rows, events):
         cells[name] = {'assigned': n, 'terminal': len(records), 'missing': n - len(records), 'metrics': {}}
         for metric in metrics:
             values = [r['evaluation'][metric] for r in records if r['evaluation'].get(metric) is not None]
-            total = sum(values)
+            total = math.fsum(values) if any(type(v) is float for v in values) else sum(values)
             cells[name]['metrics'][metric] = {'sum': total, 'observed': len(values), 'assigned': n,
                                               'observed_mean': total / len(values) if values else None,
                                               'assigned_observed_sum_over_n': total / n}

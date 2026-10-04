@@ -1,0 +1,28 @@
+{
+  "actual_retained_q0_integration": "not available in this coordinator; owner verifies before launch",
+  "cross_runtime": "owner Python 3.12.3 integration pending; no cross-runtime result claimed",
+  "fixed_electorate_combinations": 625,
+  "holdout_opened": false,
+  "paid_dispatch_owner": "dmarz/discussion-bench-v3",
+  "python": "3.12.14",
+  "real_model_calls": 0,
+  "status": "offline-software-pass-owner-integration-pending",
+  "tests": {
+    "d1": {
+      "log_sha256": "9f0f3d42f1f0882ba6bcaf2c6f886bb1e3b41a873286e0da09676c7e0b64750c",
+      "passed": 15
+    },
+    "legacy": {
+      "log_sha256": "bebdefc617d9ec3c77b06c879899d451110c7c1bebb65e1dd3b733a4dcd651a4",
+      "passed": 34
+    },
+    "v2": {
+      "log_sha256": "36d67cd5e35572e3901da4b31fcac78a0c5195d37daf7f8ae5794141e4e5357f",
+      "passed": 12
+    },
+    "v3": {
+      "log_sha256": "fc1a51df5033897382f0dca7649a03782ead437d36a5f43c2db0554dc20084ef",
+      "passed": 57
+    }
+  }
+}

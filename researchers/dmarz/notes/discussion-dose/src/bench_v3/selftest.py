@@ -591,7 +591,7 @@ class ReviewF2Tests(unittest.TestCase):
         class Bare:
             name = 'bare'; scientific = False
             def complete(self, request): raise RuntimeError('secret body text')
-        for provider, reason in ((Failing(), 'provider_http_429'), (Bare(), 'RuntimeError')):
+        for provider, reason in ((Failing(), 'provider_rate_limit'), (Bare(), 'provider_unknown')):
             journal = Journal(); r = Runner(provider, journal, 1)
             self.assertIsNone(r.call('ballot', {'task': {}}, 'x:0:reports', 0))
             event = next(e for e in journal.events if e['kind'] == 'provider_failure')
