@@ -1,0 +1,21 @@
+{
+  "decision": "PI-FUND-20261004-02",
+  "approved_by": "PI Review under delegated owner portfolio authority",
+  "reviewed_source": "00465126d2d1e993685f2c97c7dbef27000d5a36",
+  "manifest_sha256": "526de1221ac9b23bef84254caddb9b3f9514a8e461499098fe987230ffee7705",
+  "new_api_cap_nano": 3584000000,
+  "cumulative_api_cap_nano": 5182553490,
+  "cumulative_infrastructure_cap_nano": 1000000000,
+  "cumulative_all_in_cap_nano": 6182553490,
+  "maximum_calls": 800,
+  "qualification_calls": 32,
+  "main_calls": 768,
+  "maximum_concurrency": 4,
+  "maximum_minutes": 90,
+  "new_machine": false,
+  "retries": 0,
+  "fallback": false,
+  "prior_conservative_api_nano": 1598553490,
+  "historical_uncertain_nano": 12096000,
+  "disclosure_block_overridden": false
+}
