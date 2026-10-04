@@ -1,0 +1,65 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "After it merges, file wild-identity's and wild-askswarm's figures yourself as a follow-up PR (two separate PRs)."
+   },
+   "internalParameters": {
+    "commit": "6d0a2ebbf6e64c34c2498aab8cdc406c2b4446c9-dirty"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "cd403858b41cbbfbfc67ef3079eea663ce0b7b2fff86dfa817b904a24e7d47d4"
+     },
+     "uri": "researchers/shadow/notes/wild-identity/results/identity-observability.svg"
+    },
+    {
+     "digest": {
+      "sha256": "9597c7d91319ca9066805b43211388ca7a2abb1040444c87af6ac17feb341ae5"
+     },
+     "uri": "researchers/shadow/notes/wild-identity/analyze.py"
+    },
+    {
+     "digest": {
+      "sha256": "a9e97f7046f67afd15659953ea520535651e9a232353e3c78c4a94367ee94ff0"
+     },
+     "uri": "researchers/shadow/notes/wild-identity/results/curves.csv"
+    },
+    {
+     "digest": {
+      "sha256": "f51844d60ac52a4efe423365c44550f29d54923e1a23f92dac8974e695b21c91"
+     },
+     "uri": "researchers/shadow/notes/wild-identity/results/summary.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "6d0a2ebbf6e64c34c2498aab8cdc406c2b4446c9"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/shad0wbot/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T17:01:49Z",
+    "startedOn": "2026-10-04T17:01:49Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "cd403858b41cbbfbfc67ef3079eea663ce0b7b2fff86dfa817b904a24e7d47d4"
+   },
+   "name": "artifacts/wild-identity-observability/wild-identity-observability-v1.svg"
+  }
+ ]
+}

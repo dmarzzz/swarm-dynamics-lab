@@ -3580,4 +3580,24 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/terminal.json
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json
         commit: c97927f3c6a727bc63ec4b5430f7272a18aa32bb-dirty
+  - id: wild-identity-observability
+    category: content
+    type: figure
+    title: Observed identity spans and participation across selected swarm archives
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/wild-identity-observability/wild-identity-observability-v1.svg
+        built_at: '2026-10-04T17:01:49Z'
+        note: Publication copy of wild-identity derived figure by shadow/sol-identity; original code/data provenance is recorded
+          in ingredients. Filing by shadow/sol-janitor-fix after J041, not a new analysis or run.
+        by: codex
+        prompt: After it merges, file wild-identity's and wild-askswarm's figures yourself as a follow-up PR (two separate
+          PRs).
+        ingredients:
+          - researchers/shadow/notes/wild-identity/results/identity-observability.svg
+          - researchers/shadow/notes/wild-identity/analyze.py
+          - researchers/shadow/notes/wild-identity/results/curves.csv
+          - researchers/shadow/notes/wild-identity/results/summary.json
+        commit: 6d0a2ebbf6e64c34c2498aab8cdc406c2b4446c9-dirty
 requires: '1.2'
