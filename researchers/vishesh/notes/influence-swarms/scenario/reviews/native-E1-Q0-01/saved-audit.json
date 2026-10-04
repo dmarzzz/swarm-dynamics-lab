@@ -1,0 +1,9 @@
+{
+  "attempt": "native-E1-Q0-01",
+  "exact_wires": 80,
+  "valid_outputs_reproduced": 80,
+  "records_and_assessment_reproduced": true,
+  "costs_reconciled": true,
+  "invalids": [],
+  "new_model_calls": 0
+}

@@ -1,0 +1,262 @@
+{
+  "assessor": "owning session; not independent replication",
+  "date": "2026-10-04T22:58:55.142248+00:00",
+  "attempt": "native-E1-Q0-01",
+  "evidence_revision": "9eaa1d3188128f0411a0d5e10b02181575c90049",
+  "decision": "advance_conditional_main",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Readiness tests native compatibility of failure containment for unchanged framing study.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Two developmentfamilies, not main24roots; sampledscope explicit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Bothframingcontexts andallthreeworkflows; neutralonlycompetencegate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Allstrictneutralfidelity/actioncriteria met; advocacy retained separately.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "1440/1440checks and240/240costs; nativeexactwire/assessmentreplayed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "80dependentcalls/12cells/2developmentfamilies; no rarefailure or populationprecision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "OriginalB2compiler/prompt/schema unchanged; nooperatorcontext; exact80wires reproduced.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "80responses accounted,12cellscomplete,0invalid/unknownusage/retry.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD.04818232actual;.38912reservation preserved; originalledger50/10.354784/1022.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen9eaa source andmanifest; deployed6tests andnative80replay agree.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Terminalaggregate native artifacts and localreplay updated; no completedmain effectgraphic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/summary.json",
+          "sha256": "87f58f5dbb5978848b4f1d12f6df671f101c7b51695ce58cc5b1551db28fe52b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/assessment.json",
+          "sha256": "5b44c0bc7e42088c339ac0136b1d79366447c42188c077a7ee23b7ef46c49ba5"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/saved-audit.json",
+          "sha256": "80212ee3625a546d96e7290813c2e53fe2e80a66bdddc828e89ef3999645d303"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-Q0-01/semantic-summary.json",
+          "sha256": "52cfc344044687075fb95415970affd0c87204145902e95b3a367bba3c2be462"
+        }
+      ]
+    }
+  ]
+}

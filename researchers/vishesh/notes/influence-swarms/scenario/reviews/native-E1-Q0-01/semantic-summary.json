@@ -1,0 +1,11 @@
+{
+  "reports": 80,
+  "checks_correct": 1440,
+  "checks_possible": 1440,
+  "costs_correct": 240,
+  "costs_possible": 240,
+  "finals": 12,
+  "acceptable_finals": 12,
+  "unsupported_clearance": 0,
+  "scope": "two development families; not new independent evaluation roots"
+}

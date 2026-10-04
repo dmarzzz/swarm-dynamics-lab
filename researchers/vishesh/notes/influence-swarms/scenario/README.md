@@ -9,13 +9,13 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `84ee032e` ([registry](..
 - **sample_size_summary:** Q4:4 authored dossiers × 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers × 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0–Q3 retained separately. Main comparison unrun.
 <!-- experiment-evidence:end -->
 
-**Current status (2026-10-04 22:55 UTC):** [Current findings and next run](LATEST-RESULTS.md). E1 readiness is being prepared; no completed framing-effect comparison is claimed.
+**Current status — 2026-10-04 23:02 UTC:** [Findings and live run](LATEST-RESULTS.md).
 
-- B1 completed240calls but exposed an ambiguous price benchmark; B2 clarified it and passed96-call qualification.
-- B2 evaluation stopped after62providercalls/61valid replies; one formatting failure left the main comparison incomplete.
-- F0 completed12calls:9valid; removing backend text limits alone caused3overlength rationales. The whitespace failure did not recur.
-- These are authored scenarios and bounded diagnostics, not proof of population robustness or peer-influence effects.
-- E1 preserves the task/model contract and contains known formatting failures per cell; fresh80-call readiness precedes the conditional main run.
+- **Progress:** B1 exposed a price-rule ambiguity; B2 passed 96-call qualification after clarification.
+- **Failure:** B2 evaluation stopped at 62 provider calls, with 61 valid replies; the comparison remains incomplete.
+- **Finding:** F0 produced 9/12 valid replies. Keep backend text limits; the whitespace failure did not recur.
+- **Limitation:** These authored cases and diagnostics do not yet establish a peer-influence effect or real-world robustness.
+- **Next:** E1 is running after an 80/80 readiness pass, with at most 1,920 calls and no retries.
 
 ## Redesign proposal v2 — 2026-10-04
 
