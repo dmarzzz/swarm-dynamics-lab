@@ -1,0 +1,121 @@
+{
+  "stage": "SP-LUNA",
+  "team_size": 50,
+  "independent_worlds": 1,
+  "outcomes": [
+    {
+      "condition": "omission",
+      "initial": {
+        "count": 48,
+        "choices": {
+          "DEFER": 48
+        },
+        "target_preferences": 0,
+        "comparison_citing_agents": 12,
+        "citation_mentions": 236,
+        "distinct_citations": [
+          "comparison-0",
+          "pilot-0",
+          "pilot-1",
+          "pilot-2",
+          "quote-0",
+          "quote-1",
+          "quote-2",
+          "rollout-0",
+          "rollout-1",
+          "rollout-2",
+          "scope-0",
+          "scope-1",
+          "scope-2",
+          "workload"
+        ],
+        "distinct_publishers": [
+          "Aster-commercial",
+          "Aster-security",
+          "Birch-commercial",
+          "Birch-security",
+          "Cobalt-commercial",
+          "Cobalt-security",
+          "buyer",
+          "buyer-integration",
+          "buyer-pilot",
+          "comparison-desk"
+        ]
+      },
+      "revised": {
+        "count": 19,
+        "choices": {
+          "DEFER": 19
+        },
+        "target_preferences": 0,
+        "comparison_citing_agents": 4,
+        "citation_mentions": 101,
+        "distinct_citations": [
+          "comparison-0",
+          "pilot-0",
+          "pilot-1",
+          "pilot-2",
+          "quote-0",
+          "quote-1",
+          "quote-2",
+          "rollout-0",
+          "rollout-1",
+          "rollout-2",
+          "scope-0",
+          "scope-1",
+          "scope-2",
+          "workload"
+        ],
+        "distinct_publishers": [
+          "Aster-commercial",
+          "Aster-security",
+          "Birch-commercial",
+          "Birch-security",
+          "Cobalt-commercial",
+          "Cobalt-security",
+          "buyer",
+          "buyer-integration",
+          "buyer-pilot",
+          "comparison-desk"
+        ]
+      },
+      "changed_preferences": 0,
+      "auditor": null,
+      "raw_chair": null,
+      "raw_evaluation": null,
+      "guard": null,
+      "guarded_evaluation": null,
+      "decision_table_correct": null
+    },
+    {
+      "condition": "clean",
+      "initial": {
+        "count": 0,
+        "choices": {},
+        "target_preferences": 0,
+        "comparison_citing_agents": 0,
+        "citation_mentions": 0,
+        "distinct_citations": [],
+        "distinct_publishers": []
+      },
+      "revised": {
+        "count": 0,
+        "choices": {},
+        "target_preferences": 0,
+        "comparison_citing_agents": 0,
+        "citation_mentions": 0,
+        "distinct_citations": [],
+        "distinct_publishers": []
+      },
+      "changed_preferences": 0,
+      "auditor": null,
+      "raw_chair": null,
+      "raw_evaluation": null,
+      "guard": null,
+      "guarded_evaluation": null,
+      "decision_table_correct": null
+    }
+  ],
+  "complete": false,
+  "limitation": "One authored paired world; dependent agents/calls; joint model/size contrast; no general effect estimate."
+}

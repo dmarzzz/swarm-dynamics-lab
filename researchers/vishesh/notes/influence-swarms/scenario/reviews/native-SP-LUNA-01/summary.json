@@ -1,0 +1,22 @@
+{
+  "stage": "SP-LUNA",
+  "attempt": "native-SP-LUNA-01",
+  "planned": 196,
+  "calls": 68,
+  "valid": 67,
+  "failed": 1,
+  "unstarted": 128,
+  "complete": false,
+  "failure": "contract",
+  "usage_missing": 0,
+  "actual_usd": 0.012044425,
+  "observed_usage_cost_usd": 0.012044425,
+  "new_reserved_usd": 0.09226240000000002,
+  "elapsed_seconds": 166.06050672900164,
+  "team_size": 50,
+  "independent_worlds": 1,
+  "run": "influence-swarms/1004-204111-119eeb",
+  "source_commit": "4bd440706fae25da35528fa44ef8150222d2c3a6",
+  "packet_sha256": "53bebaddfddb9c0746c1ea5a2944767ddb3a557d30150bb4518b0906a977a383",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/4bd440706fae25da35528fa44ef8150222d2c3a6/researchers/vishesh/notes/influence-swarms/scenario/scale-up/PILOT.md"
+}

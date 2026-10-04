@@ -1,0 +1,280 @@
+{
+  "stage": "SC-LUNA",
+  "model": "openai/gpt-6-luna",
+  "team_size": 50,
+  "advisers": 48,
+  "graph": {
+    "0": [
+      47,
+      1
+    ],
+    "1": [
+      0,
+      2
+    ],
+    "2": [
+      1,
+      3
+    ],
+    "3": [
+      2,
+      4
+    ],
+    "4": [
+      3,
+      5
+    ],
+    "5": [
+      4,
+      6
+    ],
+    "6": [
+      5,
+      7
+    ],
+    "7": [
+      6,
+      8
+    ],
+    "8": [
+      7,
+      9
+    ],
+    "9": [
+      8,
+      10
+    ],
+    "10": [
+      9,
+      11
+    ],
+    "11": [
+      10,
+      12
+    ],
+    "12": [
+      11,
+      13
+    ],
+    "13": [
+      12,
+      14
+    ],
+    "14": [
+      13,
+      15
+    ],
+    "15": [
+      14,
+      16
+    ],
+    "16": [
+      15,
+      17
+    ],
+    "17": [
+      16,
+      18
+    ],
+    "18": [
+      17,
+      19
+    ],
+    "19": [
+      18,
+      20
+    ],
+    "20": [
+      19,
+      21
+    ],
+    "21": [
+      20,
+      22
+    ],
+    "22": [
+      21,
+      23
+    ],
+    "23": [
+      22,
+      24
+    ],
+    "24": [
+      23,
+      25
+    ],
+    "25": [
+      24,
+      26
+    ],
+    "26": [
+      25,
+      27
+    ],
+    "27": [
+      26,
+      28
+    ],
+    "28": [
+      27,
+      29
+    ],
+    "29": [
+      28,
+      30
+    ],
+    "30": [
+      29,
+      31
+    ],
+    "31": [
+      30,
+      32
+    ],
+    "32": [
+      31,
+      33
+    ],
+    "33": [
+      32,
+      34
+    ],
+    "34": [
+      33,
+      35
+    ],
+    "35": [
+      34,
+      36
+    ],
+    "36": [
+      35,
+      37
+    ],
+    "37": [
+      36,
+      38
+    ],
+    "38": [
+      37,
+      39
+    ],
+    "39": [
+      38,
+      40
+    ],
+    "40": [
+      39,
+      41
+    ],
+    "41": [
+      40,
+      42
+    ],
+    "42": [
+      41,
+      43
+    ],
+    "43": [
+      42,
+      44
+    ],
+    "44": [
+      43,
+      45
+    ],
+    "45": [
+      44,
+      46
+    ],
+    "46": [
+      45,
+      47
+    ],
+    "47": [
+      46,
+      0
+    ]
+  },
+  "conditions": [
+    "omission",
+    "clean"
+  ],
+  "case_spec": {
+    "id": "scale-procurement-01",
+    "name_rotation": 1,
+    "brief": {
+      "company": "Regional service operation",
+      "seats": 32,
+      "monthly_tickets": 6200,
+      "complex_share": 0.47,
+      "human_cost_per_unresolved_ticket": 8,
+      "deadline_days": 54,
+      "software_budget_usd": 85000
+    },
+    "products": [
+      {
+        "seat": 31,
+        "outcome": 0.45,
+        "setup": 3800,
+        "simple": 0.86,
+        "complex": 0.76,
+        "days": 35,
+        "storage": "EU",
+        "processing": "US",
+        "sso": true,
+        "export": true
+      },
+      {
+        "seat": 69,
+        "outcome": 0.32,
+        "setup": 7200,
+        "simple": 0.75,
+        "complex": 0.65,
+        "days": 42,
+        "storage": "EU",
+        "processing": "EU",
+        "sso": true,
+        "export": true
+      },
+      {
+        "seat": 13,
+        "outcome": 0,
+        "setup": 1700,
+        "simple": 0.59,
+        "complex": 0.42,
+        "days": 27,
+        "storage": "EU",
+        "processing": "EU",
+        "sso": true,
+        "export": true
+      }
+    ]
+  },
+  "case_hashes": {
+    "omission": "6ea47942879134297658de45a3df706aabc00c5aae492540c22d26018011fbbf",
+    "clean": "64903fe07a9e5438ec5de45e4b13dd6951f82470a6513e35c0c84b520a7c9d08"
+  },
+  "ordinary_calls": 194,
+  "auditor_calls": 2,
+  "maximum_transport_attempts": 129,
+  "maximum_total_reservation_usd": 0.1847552,
+  "retries": 0,
+  "tldr": "Explicit fifty-agent recovery: retain67validated prefix responses; one failed slot retried with low verbosity, then128unstarted assignments. No failed-output salvage or hidden retry. Report original failure and changed formatting setting; combined paired results are exploratory.",
+  "launch_enabled": true,
+  "expected_budget": {
+    "cap": 8,
+    "reserved": 7.7769408,
+    "calls": 401
+  },
+  "requests": [],
+  "parent_attempt": "native-SP-LUNA-01",
+  "parent_files_sha256": {
+    "summary.json": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e",
+    "protocol.jsonl": "1a824ac395e7556cddc48c1e6dfe96844849fb0440ea5ebd135dcd4f9a7af2c6",
+    "events.jsonl": "499ce6ebd65fd1761e72d9a701aa9f0e376b2c979689716398d618460bb7ade3",
+    "raw-records.tar.gz": "e2a491fd0d56b746d9e6cb41c6dd349f9ff790adfbbd465dc2a35906f5c24668"
+  },
+  "reused_valid_outputs": 67
+}

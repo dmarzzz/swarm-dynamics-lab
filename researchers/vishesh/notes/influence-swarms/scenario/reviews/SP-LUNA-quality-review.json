@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-sp-luna-01",
+  "native_attempt_id": "native-SP-LUNA-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T20:47:01.608836+00:00",
+  "verdict": "failed_acquisition",
+  "outcome_interpretation": "67valid,1malformed,128unstarted; original pilot failed. Separate prospective recovery, no retroactive pass.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "gap",
+      "finding": "One-world outcome does not establish a general influence or size effect.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ],
+      "next_action": "Prepare a prospective instrument revision separating preference from authority and testing attainable information coverage with independent roots.",
+      "acceptance_check": "Before an efficacy study, pass offline coverage controls and bounded capability checks; preregister independent sample/holdout, metrics and resource envelope."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "One authored procurement world; no independent external holdout.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ],
+      "next_action": "Prepare a prospective instrument revision separating preference from authority and testing attainable information coverage with independent roots.",
+      "acceptance_check": "Before an efficacy study, pass offline coverage controls and bounded capability checks; preregister independent sample/holdout, metrics and resource envelope."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Matched primary records, fixed graph degree, conditional exposure and fresh condition states.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Inspect advice abstention and raw/table/guard outcomes separately; complete transport is not collective competence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All initial/revised outputs, cited sources, auditor facts, raw choices, guards and missingness retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Independent unit explicitly one world; no call-level confidence or population inference.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Partial dossiers and one peer round may prevent advisers from assembling all decision evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ],
+      "next_action": "Prepare a prospective instrument revision separating preference from authority and testing attainable information coverage with independent roots.",
+      "acceptance_check": "Before an efficacy study, pass offline coverage controls and bounded capability checks; preregister independent sample/holdout, metrics and resource envelope."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "67/196valid,1failed,no retries; immutable raw archive and event hashes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Reported0.012044,reserved0.0922624;cumulative7.7769408/8,original ledger.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen published protocol, native source recorded, exact requests/responses and graph retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Saved-response replay separates observed steps from graph structure and raw decisions from guard actions.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-LUNA-post.md",
+          "sha256": "2124aee1c0d859eb606d17357cac62b6acab7367308747dc9d3e3d595d2301fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/assessment.json",
+          "sha256": "c697c8bb1f61ec1d39b2817c5877f3ecdaba9a3e72e4aacf1f2d1f506bb64d0d"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SP-LUNA-01/summary.json",
+          "sha256": "edb95e005b4dd30109f6bbfc9b0c196efe5701e6c8e042cc5ee4a671991cbc6e"
+        }
+      ]
+    }
+  ]
+}
