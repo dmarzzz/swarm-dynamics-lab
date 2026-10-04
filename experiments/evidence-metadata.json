@@ -2386,6 +2386,34 @@
         "researchers/dmarz/notes/verify-cost-qwen/experiment.yaml"
       ],
       "status_at_assessment": "planned_unrun"
+    },
+    {
+      "id": "trust-credit-qwen",
+      "title": "When verification amplifies capture (program v5, line T)",
+      "documents": [
+        "researchers/dmarz/notes/trust-credit-qwen/README.md"
+      ],
+      "experiment_ids": [
+        "trust-credit-qwen"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/trust-credit-qwen/experiment.yaml"
+      ],
+      "assessor": "dmarz/pipeline-split",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Placing the credit of a passed check on the passed identity alone, instead of propagating it to neighbours, attenuates the rise in attacker seats between 32 and 108 coverage checks at 324 scripted identities.",
+        "rationale": "Unrun. Plan and frozen design only; no stage has run on a server and no model call has been made."
+      },
+      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic roots \u00d7 21 cells = 504 S1 calls (qwen3.7-flash) at 324 scripted identities and one synthesizer; 24 qualification calls on 8 roots. Roots are the independent units; the primary seat outcome is scripted.",
+      "sources": [
+        "researchers/dmarz/notes/trust-credit-qwen/README.md",
+        "researchers/dmarz/notes/trust-credit-qwen/preregistration.md",
+        "researchers/dmarz/notes/trust-credit-qwen/design.yaml",
+        "researchers/dmarz/notes/trust-credit-qwen/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
     }
   ],
   "source_sha256": {
