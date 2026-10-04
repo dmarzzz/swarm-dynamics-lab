@@ -4,3 +4,4 @@ Public metadata only. Host sim-dmarz-5, exclusive claim `dmarz-sybil-newcomer-so
 
 | Stage | Attempt | Revision | Source hash | Run ID | Result |
 |---|---|---|---|---|---|
+| S0 (fleet) | s0-001 | 5ad4d2526eec267b8fda1acdb9f579495ef06cd0 | a0fa7692…833ed4 | sybil-newcomer-sonnet/b8f340a9 | done, 198/198 valid, 0 calls; verified after publish |

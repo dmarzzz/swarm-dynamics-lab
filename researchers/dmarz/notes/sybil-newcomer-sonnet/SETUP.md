@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-newcomer-sonnet v1
 
-Status: S0 admitted; Q0 and S1 BLOCKED on review (see G0). Follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
+Status: S0 passed on the fleet; Q0 and S1 BLOCKED on review (see G0). Follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
 
 ## Ownership and question
 
@@ -9,7 +9,7 @@ Status: S0 admitted; Q0 and S1 BLOCKED on review (see G0). Follows [the setup ru
 - Research status: exploratory model replication in notes; no accepted hypothesis.
 - Prior art, survey/hypothesis gates and reviews: as for the parent study; no new survey or hypothesis. Formal S2 disabled.
 - Previous study/post-mortem and lessons incorporated: [Haiku S1 post-mortem](../sybil-newcomer-api/reviews/s1-001-post.md), [Haiku results](../sybil-newcomer-api/RESULTS.md). Lesson: low available truth after admission bounds any synthesizer, which motivates this model check.
-- Current stage / next action / exact blocker and responsible owner: fleet S0. Q0 needs either dmarz's explicit per-experiment waiver of cross-researcher review or a filed review from another researcher (task `review-sybil-newcomer-sonnet`). Responsible: dmarz.
+- Current stage / next action / exact blocker and responsible owner: fleet S0 passed (run b8f340a9). Q0 needs either dmarz's explicit per-experiment waiver of cross-researcher review or a filed review from another researcher (task `review-sybil-newcomer-sonnet`). Responsible: dmarz.
 
 ## Gate evidence
 
@@ -18,7 +18,7 @@ Status: S0 admitted; Q0 and S1 BLOCKED on review (see G0). Follows [the setup ru
 | G0 Question and applicable research gates | blocked | 2026-10-04 dmarz/newcomer-sonnet: question and claim boundary written; review neither performed nor waived | dmarz waiver or cross-researcher review before Q0 |
 | G1 Plan written before implementation | pass | README (public plan sections), preregistration.md, design.yaml committed before any fleet stage | — |
 | G2 Instrument and offline checks | pass | 8/8 selftests; local S0 198/198 valid, qualification passed; Q0/S1 assignment IDs, packet hashes, expected answers and dispatch order equal to sybil-newcomer-api (digests Q0 3618407e334e40da, S1 036295a938cf8235) | — |
-| G3 Current attempt admission | S0 only | [fleet-s0-001-pre](reviews/fleet-s0-001-pre.md); launcher checks exclusive claim and immutable public plan | Q0 admission blocked by G0 |
+| G3 Current attempt admission | S0 only | [fleet-s0-001-pre](reviews/fleet-s0-001-pre.md); launcher checked exclusive claim and immutable public plan (README sha256 7eeb4c0d…) at 5ad4d252 | Q0 admission blocked by G0 |
 | G4 Qualification before scientific escalation | pending | | Q0 must pass unchanged thresholds |
 | G5 Reconciliation and closeout | pending | | |
 
@@ -52,6 +52,7 @@ Operations entry: explicitly manual (private launcher `scripts/run-sybil-newcome
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
+| s0-001 / s0-local-001 | fleet S0 v1 | reviews/fleet-s0-001-pre.md; run b8f340a9 | 198/198/198/198/198 | reviews/fleet-s0-001-post.md: advance (engineering) |
 | s0-local-001 | local S0 v1 | reviews/s0-local-001-pre.md | 198/198/198/198/198 | reviews/s0-local-001-post.md: advance |
 
 ## Closeout
