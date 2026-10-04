@@ -3,14 +3,16 @@ id: healing-helping-hands-v2
 type: task
 title: Review and rebuild Healing Helping Hands as an evidence atlas
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-regrowth-docs
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-regrowth-docs
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T01:26Z
+updated: 2026-10-04T01:26Z
 ---
 
 ## Goal
