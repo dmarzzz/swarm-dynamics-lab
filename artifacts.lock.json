@@ -13552,6 +13552,41 @@
    "sha256": "947099de5b6743a4ea0badfd13a714402e966c883216d44686446e010bafca16",
    "size_bytes": 156759
   },
+  "right-dissenter-rd7-freshness@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791146017,
+     "sha256": "5ba6f1b87c112b2dc1be0f480c988ea00e674db9f2a9f7926d8a5e94ac185889",
+     "size": 66363,
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json"
+    },
+    {
+     "mtime": 1791146017,
+     "sha256": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009",
+     "size": 3538,
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json"
+    },
+    {
+     "mtime": 1791145854,
+     "sha256": "0e98a064128ab8ba5cb0a6e2f408a53ffa4cec2b8f5e2c3fb23ff340797a5855",
+     "size": 1526,
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/figure-data.json"
+    },
+    {
+     "mtime": 1791145700,
+     "sha256": "631bd1f1c535a1c2d4d0ae2478aa2a9fc14e2881a35cadbf28fea638222de36a",
+     "size": 2369,
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/plot_results.py"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791145854,
+   "path": "artifacts/right-dissenter-rd7-freshness/right-dissenter-rd7-freshness-v1.png",
+   "prompt_sha256": "7861f456417b8c6fcbeb684095d29ace6d53bba7d394d561284b36c5e5217b98",
+   "sha256": "52f5556af9bd8ed224b79b955e30787564029f8e629a0be123184bf5f9abb328",
+   "size_bytes": 152476
+  },
   "right-dissenter-s1@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

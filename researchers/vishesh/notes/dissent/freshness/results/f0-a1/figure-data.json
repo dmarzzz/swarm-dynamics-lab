@@ -1,0 +1,71 @@
+{
+  "assessment_sha256": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009",
+  "groups": {
+    "R0/fresh": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 6,
+      "wrong_PROCEED": 0,
+      "unsupported_HOLD": 0,
+      "unnecessary_DEFER": 0
+    },
+    "R0/expired": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 0,
+      "wrong_PROCEED": 3,
+      "unsupported_HOLD": 3,
+      "unnecessary_DEFER": 0
+    },
+    "R1/fresh": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 6,
+      "wrong_PROCEED": 0,
+      "unsupported_HOLD": 0,
+      "unnecessary_DEFER": 0
+    },
+    "R1/expired": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 0,
+      "wrong_PROCEED": 3,
+      "unsupported_HOLD": 3,
+      "unnecessary_DEFER": 0
+    },
+    "E0/fresh": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 6,
+      "wrong_PROCEED": 0,
+      "unsupported_HOLD": 0,
+      "unnecessary_DEFER": 0
+    },
+    "E0/expired": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 6,
+      "wrong_PROCEED": 0,
+      "unsupported_HOLD": 0,
+      "unnecessary_DEFER": 0
+    },
+    "E1/fresh": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 6,
+      "wrong_PROCEED": 0,
+      "unsupported_HOLD": 0,
+      "unnecessary_DEFER": 0
+    },
+    "E1/expired": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 6,
+      "wrong_PROCEED": 0,
+      "unsupported_HOLD": 0,
+      "unnecessary_DEFER": 0
+    }
+  },
+  "native_requests": 48,
+  "independent_field_sample": false
+}

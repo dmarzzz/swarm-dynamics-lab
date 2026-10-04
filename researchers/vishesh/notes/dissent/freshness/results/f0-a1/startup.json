@@ -1,0 +1,7 @@
+{
+  "schema": "rd7-startup-v1",
+  "packet_sha256": "a3872304165f838ffd5dd8a6d5675319c33650ae565ed48a98c5f1d72c74313f",
+  "phase": "finished",
+  "state": "completed",
+  "native_dispatch": "inspect_original_ledger"
+}

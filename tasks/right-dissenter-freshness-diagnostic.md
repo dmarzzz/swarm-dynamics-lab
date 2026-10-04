@@ -23,6 +23,6 @@ Implement and run the owner-approved 48-request freshness representation/context
 
 ## Done when
 
-- [ ] Publish prospective design and validate controller, balanced cases and native gates offline.
-- [ ] Obtain fresh approved-account exclusive allocation and run F0-A1 once under the unchanged cumulative caps.
-- [ ] Reconcile all outcomes, finish operational and scientific post-mortem, publish evidence and release the claim.
+- [x] Publish prospective design and validate controller, balanced cases and native gates offline.
+- [x] Obtain fresh approved-account exclusive allocation and run F0-A1 once under the unchanged cumulative caps.
+- [x] Reconcile all outcomes, finish operational and scientific post-mortem, publish evidence and release the claim.

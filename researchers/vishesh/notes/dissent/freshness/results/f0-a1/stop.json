@@ -1,0 +1,10 @@
+{
+  "attempt": "rd7-f0-a1",
+  "bundle_sha256": "e8f170dfbaf96eba57b6c2c8d849e0919e442cca8893c28b17031f5bd398698b",
+  "worker_stopped_verified": true,
+  "relay_stopped_verified": true,
+  "verifier": "vishesh/codex-decision-models",
+  "remote_owned_workers": [],
+  "local_owned_processes": [],
+  "local_relay_port_closed": true
+}

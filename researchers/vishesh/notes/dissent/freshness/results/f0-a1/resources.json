@@ -1,0 +1,36 @@
+{
+  "attempt": "rd7-f0-a1",
+  "original_api_cap_nano": 1000000000,
+  "original_infrastructure_cap_nano": 1000000000,
+  "lifetime_call_ceiling": 650,
+  "attempt_lifetime_ceiling": 554,
+  "lifetime_calls": 554,
+  "new_native_calls": 48,
+  "stage_actual_api_nano": 2046072,
+  "api_committed_nano": 25480519,
+  "historical_unknown_api_nano": 4032000,
+  "new_unknown_reservations": 0,
+  "prior_infrastructure_estimate_nano": 755090409,
+  "allocation_started_utc": "2026-10-04T20:22:52Z",
+  "allocation_released_utc": "2026-10-04T20:30:43Z",
+  "allocation_seconds": 471,
+  "hourly_rate_nano": 35710000,
+  "new_infrastructure_estimate_nano": 4672059,
+  "cumulative_infrastructure_estimate_nano": 759762468,
+  "combined_committed_and_estimated_nano": 785242987,
+  "infrastructure_invoice_status": "unavailable; allocation estimate, not invoice settlement",
+  "worker_stopped_verified": true,
+  "relay_stopped_verified": true,
+  "allocation_released_verified": true,
+  "account_match_verified_before_launch": true,
+  "attempt_rows": [
+    [
+      "F0",
+      "rd7-f0-a1",
+      "completed"
+    ]
+  ],
+  "qualification_calls": 0,
+  "D0_calls": 0,
+  "automatic_retry": false
+}

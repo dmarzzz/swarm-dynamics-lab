@@ -54,3 +54,9 @@ The actual latest operational handoff is `a5493a765b57b14270a6e3a4ea893162fe5809
 ## RD7 freshness diagnostic approved
 
 The owner approved the eligibility-baseline improvements, updated dissent question and 48-request diagnostic. Read [the prospective plan](../freshness/PLAN.md). Preserve RD6's failed qualification and original ledger. G1 plan written before implementation; G2 offline preparation in progress; G3 current allocation/public/source/runtime admission still required. Native F0-A1 is unstarted. This is one bounded diagnostic, not a restart of D0 or automatic launch of the broader dissent study.
+
+## RD7 native diagnostic closeout
+
+F0-A1 completed48/48valid requests on frozen source`a4de7c2d1f9fcdcf148a150288e15cd742e27674`: explicit eligibility24/24correct versus raw12/24, with all12expired failures corrected and fresh service preserved. All61offline checks passed locally/remotely. [Report](../freshness/REPORT.md), [post-mortem](../freshness/reviews/F0-A1-POST.md), [eleven-dimension review](../freshness/reviews/F0-A1-QUALITY.json) and [resources](../freshness/results/f0-a1/resources.json) separate execution, diagnostic signal, qualification, reporting and cost.
+
+G1prospective plan/registration complete; G2offline passed; G3current source/runtime/account/allocation admission passed; G4diagnostic signal met, separate54-case native qualification unrun; G5operational and owning scientific closeout complete, worker/relay stopped and claim released; G6FINISH/PARK. Original ledger554calls/USD0.025480519committed API, historical uncertainty preserved. NoRD6D0 or broader main-stage calls, no retry and no new allowance. The machine-readable completion links the actual latest operational handoff hash. This remains the single authoritative setup; older headings preserve their then-current status.

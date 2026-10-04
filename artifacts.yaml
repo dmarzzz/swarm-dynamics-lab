@@ -4882,4 +4882,23 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-QUALITY.json
         commit: a1bcae2e1835224e91af8520c298e5f0a31afa76-dirty
         public: true
+  - id: right-dissenter-rd7-freshness
+    category: content
+    type: figure
+    title: Explicit eligibility repairs observed expiry errors
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/right-dissenter-rd7-freshness/right-dissenter-rd7-freshness-v1.png
+        built_at: '2026-10-04T20:33:53Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: sha256:7861f456417b8c6fcbeb684095d29ace6d53bba7d394d561284b36c5e5217b98
+        ingredients:
+          - researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json
+          - researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json
+          - researchers/vishesh/notes/dissent/freshness/results/f0-a1/figure-data.json
+          - researchers/vishesh/notes/dissent/freshness/results/f0-a1/plot_results.py
+        commit: a4de7c2d1f9fcdcf148a150288e15cd742e27674-dirty
 requires: '1.2'

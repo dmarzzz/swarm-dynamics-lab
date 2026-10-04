@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "attempt": "rd7-f0-a1",
+  "allocation_lineage_sha256": "07b544f762241b098fed1801535c5ef0f7ebde230f37f56703762633d4000c25",
+  "worker_loop_ended": true,
+  "elapsed_seconds": 30.81077989899495,
+  "mode": "native",
+  "scientific_review": "required",
+  "qualification": "unreviewed",
+  "cost_status": "relay_reconciliation_required",
+  "allocation_release": "not_verified"
+}

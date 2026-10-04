@@ -1,0 +1,16 @@
+{
+  "attempt": "rd7-f0-a1",
+  "execution": "completed",
+  "diagnostic_repair_signal": true,
+  "scientific_review": "completed_by_owning_agent",
+  "researcher_review": "not_required_by_owner_direction",
+  "qualification": "not_run",
+  "main_comparison": "not_run",
+  "operational_handoff_sha256": "ad37ddcfd31eb034923bece38123d82babceb8ef889c879eca821f555fb8fa93",
+  "native_bundle_sha256": "e8f170dfbaf96eba57b6c2c8d849e0919e442cca8893c28b17031f5bd398698b",
+  "frozen_execution_markers": "Preserved unchanged. Their pre-closeout required/unreviewed/not_verified fields are historical; this closeout and the linked scientific review resolve completion separately.",
+  "reporting": "Seven native files uploaded by the reporting helper; public repository byte readback recorded separately.",
+  "allocation_released_verified": true,
+  "next_disposition": "complete_valid_result",
+  "automatic_successor": false
+}

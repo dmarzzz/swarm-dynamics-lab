@@ -1,0 +1,193 @@
+{
+  "study_id": "right-dissenter",
+  "attempt": "rd7-f0-a1",
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_at": "2026-10-04T20:33:20.975069+00:00",
+  "evidence_revision": "a4de7c2d1f9fcdcf148a150288e15cd742e27674",
+  "native_bundle_sha256": "e8f170dfbaf96eba57b6c2c8d849e0919e442cca8893c28b17031f5bd398698b",
+  "operational_handoff_sha256": "ad37ddcfd31eb034923bece38123d82babceb8ef889c879eca821f555fb8fa93",
+  "verdict": "complete_valid_result",
+  "scientific_review": "completed_by_owning_agent",
+  "researcher_review": "not_required_by_owner_direction",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The prospective paired diagnostic answers whether the explicit eligibility aid repairs expiry errors under both context conditions; broader dissent utility stays separate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "1673fb9cf033954446236f4585402ce5fd1a4530b824263e502932366eb0d516"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json",
+          "sha256": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Three shared authored grammars and six favorable/adverse roots exercise fresh and expired evidence; ceiling after repair is disclosed and does not justify scaling these same cases.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/CASE-QUALITY.md",
+          "sha256": "c803a3474394a075afefe7663a292cf60718146f1afcccb0276e9000314e1d79"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json",
+          "sha256": "5ba6f1b87c112b2dc1be0f480c988ea00e674db9f2a9f7926d8a5e94ac185889"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Matched raw/explicit source and action criteria, source-only/full-context contrast, fresh positive/negative controls, literal reference and 24-case raw-arm gated replay support the finite contrast.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json",
+          "sha256": "5ba6f1b87c112b2dc1be0f480c988ea00e674db9f2a9f7926d8a5e94ac185889"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/analyze_saved.py",
+          "sha256": "67f0d624854aa95c140961dcb157c08e59ed3330e3e8a1964cdd18b220b48bb3"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "48/48 schema-valid and explicit24/24 correct establishes this diagnostic signal. The separate54-case native qualification remains unrun; no broad competence or main-stage admission follows.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json",
+          "sha256": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/QUALIFICATION-RESERVE.json",
+          "sha256": "36a53b03a2375f42a52b37930040e23addcde322e0288fdabd1b29371c401382"
+        }
+      ],
+      "next_action": "Freeze and admit a distinct readiness check using the54sealed cases before any broader comparison; no automatic successor.",
+      "acceptance_check": "Apply a prospectively fixed semantic criterion to all assigned reserved cases, preserve every miss and outcome, and retain original cumulative accounting."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "48 assigned denominators retained, no missing cells; wrong PROCEED, unsupported HOLD and unnecessary DEFER separated; paired bounds are not population confidence intervals.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json",
+          "sha256": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/native/summary.json",
+          "sha256": "131eae35a1dfc376630a343820999ad0492fa1543215e6e426d31f069663c19a"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Finite diagnostic scope stated prospectively: six semantic roots, three shared grammars, twelve task/age cases,48 dependent exposures; no hosted repeats, field sample or precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "1673fb9cf033954446236f4585402ce5fd1a4530b824263e502932366eb0d516"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/REPORT.md",
+          "sha256": "062f59276804e358c2c3b3bc505173860a24fcccec3b0455c6a537cc8b728dda"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned model/provider in every visible response; one stateless resolver/request, scripted ballots, fixed source-only/full-context payloads, no operator conversation or evaluator labels in actor requests.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/native/packet.json",
+          "sha256": "617ffe5c5c26d63893fd531c9317f5a4cb74df65c5559fcf98a7a32169de931b"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/accounting.json",
+          "sha256": "2291de191481224719ef50e6b930bee4a388b10f387aef97867b8ca4cd49cc8e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All48 assignments reconcile through request, response, parser, outcome and settled charge; all12 misses inspected; original7-file bundle and prior attempts preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/native/bundle.json",
+          "sha256": "2eef08be7adb94fa1bd591f38fa409ad6609a43ee8c0649ad5fa9f211519b39e"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/reconciliation.json",
+          "sha256": "dcc489e8cfe0c5905335ce1808ea9c93874c00a7e333854098b0cc55a987ebd1"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json",
+          "sha256": "5ba6f1b87c112b2dc1be0f480c988ea00e674db9f2a9f7926d8a5e94ac185889"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "48 new calls,554 lifetime, no retries/new unknowns; original split caps and historical uncertainty preserved; workers/relay stopped and allocation released. Infrastructure is a rate-based estimate, not an invoice.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/resources.json",
+          "sha256": "177b89c874ffc11765d5e545fc866a20f9ca827ed8906b8b20afe545f11ae7aa"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/stop.json",
+          "sha256": "d1b8364b80d16b6d17a6e7fe921566ce7d2a1dc14518f937f04b7fcf5a6f9492"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source, packet and native hashes retained;61offline checks locally/remotely; saved-data analyzer reconstructs assessment. Hosted responses are not asserted deterministic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/offline/validation.json",
+          "sha256": "3e499a6fbe39d2e4a155358a8ac2542fbe5d87d87486c04d6f906ace95a36270"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/native/packet.json",
+          "sha256": "617ffe5c5c26d63893fd531c9317f5a4cb74df65c5559fcf98a7a32169de931b"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/analyze_saved.py",
+          "sha256": "67f0d624854aa95c140961dcb157c08e59ed3330e3e8a1964cdd18b220b48bb3"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Static figure visually inspected: eight cells with6-assignment denominators agree with saved metrics and disclose dependent diagnostic scope. Full48-cell HTML replay retained; no temporal swarm dynamics claimed and browser rendering unverified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/diagnostic.png",
+          "sha256": "52f5556af9bd8ed224b79b955e30787564029f8e629a0be123184bf5f9abb328"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/figure-data.json",
+          "sha256": "0e98a064128ab8ba5cb0a6e2f408a53ffa4cec2b8f5e2c3fb23ff340797a5855"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/native/replay.html",
+          "sha256": "783cfa35dc48d5164be9c5e2cb9f2a58e6650a4573bb63543e1a5731e72347e0"
+        }
+      ]
+    }
+  ]
+}

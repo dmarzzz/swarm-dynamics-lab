@@ -9,10 +9,8 @@ Assessed 2026-10-04 by vishesh/codex-decision-models; source `edcd7757` ([regist
 - **sample_size_summary:** Observed native: none. Planned: six authored semantic roots, 12 task/age cases × four conditions = 48 dependent requests. Separate 54-case generated qualification reserve sealed and unrun; no field sample or independent replication.
 <!-- experiment-evidence:end -->
 
-The owner approved a 48-request diagnostic comparing raw timestamps with explicit eligibility, with and without opposing history/ballots. It addresses the three stale-evidence failures in RD6. The prior failures remain preserved, and the main comparison remains unrun.
+The approved48-request diagnostic is complete: explicit eligibility24/24correct, raw timestamps12/24; fresh evidence12/12in both representations, expired evidence0/12raw versus12/12explicit. Adding opposing history/ballots changed no actions in this matrix.
 
-[Prospective plan](PLAN.md) · [Predecessor result](../reopening/REPORT.md) · [Authoritative setup](../rd5/SETUP.md).
+[Results and figure](REPORT.md) · [Post-mortem](reviews/F0-A1-POST.md) · [Quality review](reviews/F0-A1-QUALITY.json) · [Current status](RUN-STATUS.md) · [Prospective plan](PLAN.md) · [Authoritative setup](../rd5/SETUP.md).
 
-Current disposition: RUN after offline preparation and fresh admission. No native RD7 evidence yet.
-
-The eligibility controller and 48-cell design are implemented; [61 offline checks](offline/validation.json) pass. [Case quality](CASE-QUALITY.md), [native integration](IMPLEMENTATION.md) and [reserved qualification manifest](QUALIFICATION-RESERVE.json) document readiness and limits. Native launch admission is being refreshed.
+Current disposition: **FINISH / PARK this diagnostic**. All48requests and costs reconcile, worker/relay stopped, allocation released. The deterministic eligibility baseline and61offline checks are complete. The separate54-case qualification reserve remains sealed/unrun; the broader approved dissent direction is not a launched main comparison. Six authored roots and three grammars support a finite repair finding, not a field-rate or collective-benefit claim.

@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "sha256:7861f456417b8c6fcbeb684095d29ace6d53bba7d394d561284b36c5e5217b98"
+   },
+   "internalParameters": {
+    "commit": "a4de7c2d1f9fcdcf148a150288e15cd742e27674-dirty",
+    "session": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "5ba6f1b87c112b2dc1be0f480c988ea00e674db9f2a9f7926d8a5e94ac185889"
+     },
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json"
+    },
+    {
+     "digest": {
+      "sha256": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009"
+     },
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json"
+    },
+    {
+     "digest": {
+      "sha256": "0e98a064128ab8ba5cb0a6e2f408a53ffa4cec2b8f5e2c3fb23ff340797a5855"
+     },
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/figure-data.json"
+    },
+    {
+     "digest": {
+      "sha256": "631bd1f1c535a1c2d4d0ae2478aa2a9fc14e2881a35cadbf28fea638222de36a"
+     },
+     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/plot_results.py"
+    },
+    {
+     "digest": {
+      "gitCommit": "a4de7c2d1f9fcdcf148a150288e15cd742e27674"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T20:33:53Z",
+    "invocationId": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8",
+    "startedOn": "2026-10-04T20:33:53Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "52f5556af9bd8ed224b79b955e30787564029f8e629a0be123184bf5f9abb328"
+   },
+   "name": "artifacts/right-dissenter-rd7-freshness/right-dissenter-rd7-freshness-v1.png"
+  }
+ ]
+}

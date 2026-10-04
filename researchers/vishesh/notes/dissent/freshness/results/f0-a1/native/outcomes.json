@@ -1,0 +1,2018 @@
+[
+  {
+    "id": "F0-case-f05e78699e21aadd-fresh-E0",
+    "request_sha256": "bc25767bb791f7dec3ecef8b256c57bc1104e742926d616cdd09b2faedf6b64b",
+    "ordered_request_sha256": "aaddd1ac5134d358a92042b2ed8f54b3d4f6998c7c6f0f4211190fe8c3ab53e6",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "HOLD": 0.01,
+        "DEFER": 0.04,
+        "PROCEED": 0.95
+      },
+      "confidence": 0.92,
+      "request_sha256": "bc25767bb791f7dec3ecef8b256c57bc1104e742926d616cdd09b2faedf6b64b",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.3218e-05,
+      "input_tokens": 1029
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "HOLD": 0.01,
+            "DEFER": 0.04,
+            "PROCEED": 0.95
+          },
+          "confidence": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 1029,
+        "cost": 4.3218e-05
+      }
+    },
+    "settled_nano": 43218,
+    "latency_seconds": 0.2782023749896325
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-fresh-E0",
+    "request_sha256": "82233d78281f53a46c814dc08a20933f36f45724b51c2097ec79f3c480eec8b3",
+    "ordered_request_sha256": "000056b67fdfc44033a6596551ef3a90ac9df78df15237977b2581b4517d787e",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.06,
+        "HOLD": 0,
+        "PROCEED": 0.9400000000000001
+      },
+      "confidence": 0.9,
+      "request_sha256": "82233d78281f53a46c814dc08a20933f36f45724b51c2097ec79f3c480eec8b3",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.3092e-05,
+      "input_tokens": 1026
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.06,
+            "HOLD": 0,
+            "PROCEED": 0.9400000000000001
+          },
+          "confidence": 0.9
+        }
+      },
+      "usage": {
+        "input_tokens": 1026,
+        "cost": 4.3092e-05
+      }
+    },
+    "settled_nano": 43092,
+    "latency_seconds": 0.14859037499991246
+  },
+  {
+    "id": "F0-case-f05e78699e21aadd-expired-R0",
+    "request_sha256": "03e4386443db00bb277def113531f41b855a2e1b988685909c27459a90d936ce",
+    "ordered_request_sha256": "6cda7ccb005d97208962188cfb803769c7ac90433921c44ab2437e1b0d197753",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "HOLD": 0.02,
+        "PROCEED": 0.86,
+        "DEFER": 0.12
+      },
+      "confidence": 0.79,
+      "request_sha256": "03e4386443db00bb277def113531f41b855a2e1b988685909c27459a90d936ce",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.738e-05,
+      "input_tokens": 890
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "HOLD": 0.02,
+            "PROCEED": 0.86,
+            "DEFER": 0.12
+          },
+          "confidence": 0.79
+        }
+      },
+      "usage": {
+        "input_tokens": 890,
+        "cost": 3.738e-05
+      }
+    },
+    "settled_nano": 37380,
+    "latency_seconds": 0.25230366599862464
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-fresh-E0",
+    "request_sha256": "ce34e4804f93f67c6dae9d9192ef3146e8392d6eaaad957fc51793e187e960a6",
+    "ordered_request_sha256": "ec4486afe91b41277a5498a79ed7b59153431ba14c1941d90785d92aaebd858f",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.1,
+        "HOLD": 0.9,
+        "PROCEED": 0
+      },
+      "confidence": 0.84,
+      "request_sha256": "ce34e4804f93f67c6dae9d9192ef3146e8392d6eaaad957fc51793e187e960a6",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.242e-05,
+      "input_tokens": 1010
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.1,
+            "HOLD": 0.9,
+            "PROCEED": 0
+          },
+          "confidence": 0.84
+        }
+      },
+      "usage": {
+        "input_tokens": 1010,
+        "cost": 4.242e-05
+      }
+    },
+    "settled_nano": 42420,
+    "latency_seconds": 0.16595899999083485
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-expired-E0",
+    "request_sha256": "685c593fe1cfa9fc214f8afa1778596807f0a33f9cbee917c510f65aced361da",
+    "ordered_request_sha256": "8d24f0ade5785458f4a89a799e923cc5863e8938196f4cac0289a41343425c71",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "DEFER": 0.98,
+        "PROCEED": 0.02,
+        "HOLD": 0
+      },
+      "confidence": 0.98,
+      "request_sha256": "685c593fe1cfa9fc214f8afa1778596807f0a33f9cbee917c510f65aced361da",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.3554e-05,
+      "input_tokens": 1037
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "DEFER": 0.98,
+            "PROCEED": 0.02,
+            "HOLD": 0
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 1037,
+        "cost": 4.3554e-05
+      }
+    },
+    "settled_nano": 43554,
+    "latency_seconds": 0.1761751669982914
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-expired-E0",
+    "request_sha256": "8cedc3f63458a4d11ec62fee68eab8c98a2f6f3ecd849c5ba18f16081a8c5836",
+    "ordered_request_sha256": "2e51f08d20ca3a56184bd0a12eca097c2ebdf8af1821dca251bcda3bfbed8586",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "HOLD": 0,
+        "PROCEED": 0,
+        "DEFER": 1
+      },
+      "confidence": 0.99,
+      "request_sha256": "8cedc3f63458a4d11ec62fee68eab8c98a2f6f3ecd849c5ba18f16081a8c5836",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.3092e-05,
+      "input_tokens": 1026
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "HOLD": 0,
+            "PROCEED": 0,
+            "DEFER": 1
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 1026,
+        "cost": 4.3092e-05
+      }
+    },
+    "settled_nano": 43092,
+    "latency_seconds": 0.34457920800196007
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-expired-R0",
+    "request_sha256": "21fa6b306d51e8cfe4bb59232250ac614c3c1acaeae412770128833e04842dd3",
+    "ordered_request_sha256": "2fd268cebc73f291d3849820b79f4a1f3a9b98839f2b03a38c0d1bf250f86859",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.1,
+        "HOLD": 0.9,
+        "PROCEED": 0
+      },
+      "confidence": 0.84,
+      "request_sha256": "21fa6b306d51e8cfe4bb59232250ac614c3c1acaeae412770128833e04842dd3",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.675e-05,
+      "input_tokens": 875
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.1,
+            "HOLD": 0.9,
+            "PROCEED": 0
+          },
+          "confidence": 0.84
+        }
+      },
+      "usage": {
+        "input_tokens": 875,
+        "cost": 3.675e-05
+      }
+    },
+    "settled_nano": 36750,
+    "latency_seconds": 0.1430002919951221
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-fresh-R1",
+    "request_sha256": "ea66623a0275b2fdf324a2780fbf3a3cdab4a17020bb5257fc879c704ebef6f2",
+    "ordered_request_sha256": "de4ac667317c77f02db264142f8d815863e2e62a6253462cb144388957444710",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.05,
+        "PROCEED": 0,
+        "HOLD": 0.95
+      },
+      "confidence": 0.93,
+      "request_sha256": "ea66623a0275b2fdf324a2780fbf3a3cdab4a17020bb5257fc879c704ebef6f2",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.263e-05,
+      "input_tokens": 1015
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.05,
+            "PROCEED": 0,
+            "HOLD": 0.95
+          },
+          "confidence": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 1015,
+        "cost": 4.263e-05
+      }
+    },
+    "settled_nano": 42630,
+    "latency_seconds": 0.20952416700311005
+  },
+  {
+    "id": "F0-case-f05e78699e21aadd-fresh-R0",
+    "request_sha256": "a064e823b564dde587b45a1b0237a5c340ab3fc2b5d073eb29d7ed65a47e1787",
+    "ordered_request_sha256": "bf4332cb44484408035d9b50cb178150875bed1465c4dda7b385c2950167bbd4",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "HOLD": 0.01,
+        "PROCEED": 0.91,
+        "DEFER": 0.08
+      },
+      "confidence": 0.87,
+      "request_sha256": "a064e823b564dde587b45a1b0237a5c340ab3fc2b5d073eb29d7ed65a47e1787",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.738e-05,
+      "input_tokens": 890
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "HOLD": 0.01,
+            "PROCEED": 0.91,
+            "DEFER": 0.08
+          },
+          "confidence": 0.87
+        }
+      },
+      "usage": {
+        "input_tokens": 890,
+        "cost": 3.738e-05
+      }
+    },
+    "settled_nano": 37380,
+    "latency_seconds": 0.17117458400025498
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-expired-R0",
+    "request_sha256": "33c1e6657acdb66c4afebba12f0ccb0ad0677d2ce9c3bfcbd33729924c7434d2",
+    "ordered_request_sha256": "51383d0198b210651b63ea031f242bd578d373e29b52711796aef7eb3048366b",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "PROCEED": 0.01,
+        "HOLD": 0.76,
+        "DEFER": 0.23
+      },
+      "confidence": 0.65,
+      "request_sha256": "33c1e6657acdb66c4afebba12f0ccb0ad0677d2ce9c3bfcbd33729924c7434d2",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.8094e-05,
+      "input_tokens": 907
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "PROCEED": 0.01,
+            "HOLD": 0.76,
+            "DEFER": 0.23
+          },
+          "confidence": 0.65
+        }
+      },
+      "usage": {
+        "input_tokens": 907,
+        "cost": 3.8094e-05
+      }
+    },
+    "settled_nano": 38094,
+    "latency_seconds": 0.29001116700237617
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-fresh-E0",
+    "request_sha256": "fcd7f349946980d6c9e9a0bf4dd8346ec546141ee68c7766c018838026159bae",
+    "ordered_request_sha256": "d61b76997da379e1013e279e4c9f1ac1ddf79516d9298903f4f1b98e1fa06fa9",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.14,
+        "PROCEED": 0,
+        "HOLD": 0.86
+      },
+      "confidence": 0.79,
+      "request_sha256": "fcd7f349946980d6c9e9a0bf4dd8346ec546141ee68c7766c018838026159bae",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.41e-05,
+      "input_tokens": 1050
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.14,
+            "PROCEED": 0,
+            "HOLD": 0.86
+          },
+          "confidence": 0.79
+        }
+      },
+      "usage": {
+        "input_tokens": 1050,
+        "cost": 4.41e-05
+      }
+    },
+    "settled_nano": 44100,
+    "latency_seconds": 0.13567645801231265
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-expired-E1",
+    "request_sha256": "6755799714f1db42b1b0b7b010d8ea2683af5616be8fb1f53aa623c6d908a7ec",
+    "ordered_request_sha256": "a6bea8ccb4384f1809f82d0e4ab4d46f7a965f40ce7fcd6ef6f82b23bd8b5a12",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "DEFER": 0.99,
+        "PROCEED": 0,
+        "HOLD": 0.01
+      },
+      "confidence": 0.99,
+      "request_sha256": "6755799714f1db42b1b0b7b010d8ea2683af5616be8fb1f53aa623c6d908a7ec",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.851e-05,
+      "input_tokens": 1155
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "DEFER": 0.99,
+            "PROCEED": 0,
+            "HOLD": 0.01
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 1155,
+        "cost": 4.851e-05
+      }
+    },
+    "settled_nano": 48510,
+    "latency_seconds": 0.17055725000682287
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-expired-R1",
+    "request_sha256": "b22fb46644468ae5c28def4192b34d915fb27ad378c4780b95c931286f9e6c0b",
+    "ordered_request_sha256": "0c2589cdae17461e14017b60e3c6ec044c2d96043d1146c3243644ac560d1438",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "PROCEED": 0.9,
+        "DEFER": 0.1,
+        "HOLD": 0
+      },
+      "confidence": 0.85,
+      "request_sha256": "b22fb46644468ae5c28def4192b34d915fb27ad378c4780b95c931286f9e6c0b",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.1454e-05,
+      "input_tokens": 987
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "PROCEED": 0.9,
+            "DEFER": 0.1,
+            "HOLD": 0
+          },
+          "confidence": 0.85
+        }
+      },
+      "usage": {
+        "input_tokens": 987,
+        "cost": 4.1454e-05
+      }
+    },
+    "settled_nano": 41454,
+    "latency_seconds": 0.25434795799083076
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-expired-R1",
+    "request_sha256": "01328976421305fc188513bed5956ec10ed41dd4122cf25e6b1dde317ae8dc6c",
+    "ordered_request_sha256": "75b132ab4b58da0add7daa9d77b93dde2fc9f07fead0c132a0f139c0a4a9adee",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "PROCEED": 0.79,
+        "HOLD": 0.01,
+        "DEFER": 0.2
+      },
+      "confidence": 0.68,
+      "request_sha256": "01328976421305fc188513bed5956ec10ed41dd4122cf25e6b1dde317ae8dc6c",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.1832e-05,
+      "input_tokens": 996
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "PROCEED": 0.79,
+            "HOLD": 0.01,
+            "DEFER": 0.2
+          },
+          "confidence": 0.68
+        }
+      },
+      "usage": {
+        "input_tokens": 996,
+        "cost": 4.1832e-05
+      }
+    },
+    "settled_nano": 41832,
+    "latency_seconds": 0.2932310000032885
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-fresh-R1",
+    "request_sha256": "3f55ee13ab8427662b3c03a47f070033111e70c0438307f683fe3b1a73d34349",
+    "ordered_request_sha256": "8deda153b8dff2ee3a192c4d2b8826abebae5bf106e29791bd6eda9c224b0560",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "HOLD": 0.91,
+        "PROCEED": 0,
+        "DEFER": 0.09
+      },
+      "confidence": 0.86,
+      "request_sha256": "3f55ee13ab8427662b3c03a47f070033111e70c0438307f683fe3b1a73d34349",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.0992e-05,
+      "input_tokens": 976
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "HOLD": 0.91,
+            "PROCEED": 0,
+            "DEFER": 0.09
+          },
+          "confidence": 0.86
+        }
+      },
+      "usage": {
+        "input_tokens": 976,
+        "cost": 4.0992e-05
+      }
+    },
+    "settled_nano": 40992,
+    "latency_seconds": 0.16668337499140762
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-fresh-R0",
+    "request_sha256": "b4d1b86246a6d30b4f50d606a5f49e78640a5913fc3100a957d4bd5174853cc5",
+    "ordered_request_sha256": "c3cb0f19e579f5ca6ed1f6336b7852223ddfd4106cf9772356d7d49dc487635c",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "HOLD": 0,
+        "DEFER": 0.09,
+        "PROCEED": 0.91
+      },
+      "confidence": 0.86,
+      "request_sha256": "b4d1b86246a6d30b4f50d606a5f49e78640a5913fc3100a957d4bd5174853cc5",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.7338e-05,
+      "input_tokens": 889
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "HOLD": 0,
+            "DEFER": 0.09,
+            "PROCEED": 0.91
+          },
+          "confidence": 0.86
+        }
+      },
+      "usage": {
+        "input_tokens": 889,
+        "cost": 3.7338e-05
+      }
+    },
+    "settled_nano": 37338,
+    "latency_seconds": 0.15846137500193436
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-fresh-E1",
+    "request_sha256": "86fa68773a04663ef47f8da40489b2cdfac5cc77c624ccaabc9638d2c2241d3b",
+    "ordered_request_sha256": "fdf9c29a2506cb5abc5261fc5e458a16cf0498e37dceb7179af8315d967e5862",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.18,
+        "PROCEED": 0,
+        "HOLD": 0.8200000000000001
+      },
+      "confidence": 0.72,
+      "request_sha256": "86fa68773a04663ef47f8da40489b2cdfac5cc77c624ccaabc9638d2c2241d3b",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.851e-05,
+      "input_tokens": 1155
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.18,
+            "PROCEED": 0,
+            "HOLD": 0.8200000000000001
+          },
+          "confidence": 0.72
+        }
+      },
+      "usage": {
+        "input_tokens": 1155,
+        "cost": 4.851e-05
+      }
+    },
+    "settled_nano": 48510,
+    "latency_seconds": 0.27719754200370517
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-expired-R1",
+    "request_sha256": "6457f88fe25947b8143bc872ee864f30f57b5e76ced2af1861543c9750f73e73",
+    "ordered_request_sha256": "e0ed2c358e1967052c67140cd1b3ddb08ab9d8af708c2719d4da1ad80a80728e",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.28,
+        "PROCEED": 0,
+        "HOLD": 0.72
+      },
+      "confidence": 0.58,
+      "request_sha256": "6457f88fe25947b8143bc872ee864f30f57b5e76ced2af1861543c9750f73e73",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.2504e-05,
+      "input_tokens": 1012
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.28,
+            "PROCEED": 0,
+            "HOLD": 0.72
+          },
+          "confidence": 0.58
+        }
+      },
+      "usage": {
+        "input_tokens": 1012,
+        "cost": 4.2504e-05
+      }
+    },
+    "settled_nano": 42504,
+    "latency_seconds": 0.20133024999813642
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-fresh-R1",
+    "request_sha256": "eaae0981d58faa6b47ab47b32dfa124b8a288a9e3513fad8f8f28292b0314d7c",
+    "ordered_request_sha256": "b5f66501ff57a78a45e827b08e058916efd4d90283efdc9926a92114217a76f1",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.22,
+        "HOLD": 0.78,
+        "PROCEED": 0
+      },
+      "confidence": 0.66,
+      "request_sha256": "eaae0981d58faa6b47ab47b32dfa124b8a288a9e3513fad8f8f28292b0314d7c",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.2504e-05,
+      "input_tokens": 1012
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.22,
+            "HOLD": 0.78,
+            "PROCEED": 0
+          },
+          "confidence": 0.66
+        }
+      },
+      "usage": {
+        "input_tokens": 1012,
+        "cost": 4.2504e-05
+      }
+    },
+    "settled_nano": 42504,
+    "latency_seconds": 0.17733941601181868
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-fresh-R0",
+    "request_sha256": "98d1d6428cbf588feae147466fa3a72836ea1bac8252a6c67480128f5c8b8cf2",
+    "ordered_request_sha256": "3f25aca2ccd96811d80f85b0b9d8d31e664c1e7831bbf24df1989b758c0bf29a",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "HOLD": 0,
+        "PROCEED": 0.93,
+        "DEFER": 0.07
+      },
+      "confidence": 0.89,
+      "request_sha256": "98d1d6428cbf588feae147466fa3a72836ea1bac8252a6c67480128f5c8b8cf2",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.7632e-05,
+      "input_tokens": 896
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "HOLD": 0,
+            "PROCEED": 0.93,
+            "DEFER": 0.07
+          },
+          "confidence": 0.89
+        }
+      },
+      "usage": {
+        "input_tokens": 896,
+        "cost": 3.7632e-05
+      }
+    },
+    "settled_nano": 37632,
+    "latency_seconds": 0.1373458330053836
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-fresh-E1",
+    "request_sha256": "9bc6ac61cf438b85c293eab3fad6c00bd9a123a7b2197e497d44e443047baba8",
+    "ordered_request_sha256": "285972c345f83c94692583c134932b57e6bcd14147adb92616c0286c3241e598",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.05,
+        "PROCEED": 0,
+        "HOLD": 0.95
+      },
+      "confidence": 0.93,
+      "request_sha256": "9bc6ac61cf438b85c293eab3fad6c00bd9a123a7b2197e497d44e443047baba8",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.6662e-05,
+      "input_tokens": 1111
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.05,
+            "PROCEED": 0,
+            "HOLD": 0.95
+          },
+          "confidence": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 1111,
+        "cost": 4.6662e-05
+      }
+    },
+    "settled_nano": 46662,
+    "latency_seconds": 0.3403808329894673
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-expired-E1",
+    "request_sha256": "8ad2e5178a0948ddeffa8cd3f2c3262cbf37751580ab8872dae428b8a237d7c4",
+    "ordered_request_sha256": "9439f6a6ddbd5b0a87b883338d3a00e39e81cc730b886feee0ae3ee472d590ad",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "HOLD": 0,
+        "PROCEED": 0.02,
+        "DEFER": 0.98
+      },
+      "confidence": 0.97,
+      "request_sha256": "8ad2e5178a0948ddeffa8cd3f2c3262cbf37751580ab8872dae428b8a237d7c4",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.7754e-05,
+      "input_tokens": 1137
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "HOLD": 0,
+            "PROCEED": 0.02,
+            "DEFER": 0.98
+          },
+          "confidence": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 1137,
+        "cost": 4.7754e-05
+      }
+    },
+    "settled_nano": 47754,
+    "latency_seconds": 0.14784912500181235
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-expired-E0",
+    "request_sha256": "0a398c300989042908a7d43ca4180a286bb48f07bd37878a464fb678894a32a6",
+    "ordered_request_sha256": "2afac72a3e6da7216eb74f4091f2eab5eedec77089451ffb544c850352267021",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "HOLD": 0.04,
+        "PROCEED": 0,
+        "DEFER": 0.96
+      },
+      "confidence": 0.94,
+      "request_sha256": "0a398c300989042908a7d43ca4180a286bb48f07bd37878a464fb678894a32a6",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.41e-05,
+      "input_tokens": 1050
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "HOLD": 0.04,
+            "PROCEED": 0,
+            "DEFER": 0.96
+          },
+          "confidence": 0.94
+        }
+      },
+      "usage": {
+        "input_tokens": 1050,
+        "cost": 4.41e-05
+      }
+    },
+    "settled_nano": 44100,
+    "latency_seconds": 0.29184841699316166
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-expired-R1",
+    "request_sha256": "657982159333c7242b0e7d080e72ee7051b9e7bb67065d3173340bc4490d1001",
+    "ordered_request_sha256": "babee8619964b179009f02f33969f85db167983aa2efc82768a0dc9521fdfe24",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.09,
+        "HOLD": 0.91,
+        "PROCEED": 0
+      },
+      "confidence": 0.86,
+      "request_sha256": "657982159333c7242b0e7d080e72ee7051b9e7bb67065d3173340bc4490d1001",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.0992e-05,
+      "input_tokens": 976
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.09,
+            "HOLD": 0.91,
+            "PROCEED": 0
+          },
+          "confidence": 0.86
+        }
+      },
+      "usage": {
+        "input_tokens": 976,
+        "cost": 4.0992e-05
+      }
+    },
+    "settled_nano": 40992,
+    "latency_seconds": 0.2484203339990927
+  },
+  {
+    "id": "F0-case-f05e78699e21aadd-fresh-E1",
+    "request_sha256": "68397d1b7dc4f6256e47f059f2c3c84039432ba4305fd124c9a61a1a35c1c381",
+    "ordered_request_sha256": "bf7f244ae3d480f3e4daa0f463c1fdf060f6b13d9d20430fa3bea4b97b37f8e2",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.04,
+        "PROCEED": 0.95,
+        "HOLD": 0.01
+      },
+      "confidence": 0.93,
+      "request_sha256": "68397d1b7dc4f6256e47f059f2c3c84039432ba4305fd124c9a61a1a35c1c381",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.7334e-05,
+      "input_tokens": 1127
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.04,
+            "PROCEED": 0.95,
+            "HOLD": 0.01
+          },
+          "confidence": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 1127,
+        "cost": 4.7334e-05
+      }
+    },
+    "settled_nano": 47334,
+    "latency_seconds": 0.2872453340096399
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-fresh-E1",
+    "request_sha256": "4786dfae9017cc651c05ebae7b366b04d3d922c484d4732ea33734d4bcfaa0af",
+    "ordered_request_sha256": "80d55ef282d56bbd8c998bcc0053e6cd2cc60845644297c704554a34325f3e03",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "PROCEED": 0,
+        "DEFER": 0.04,
+        "HOLD": 0.96
+      },
+      "confidence": 0.95,
+      "request_sha256": "4786dfae9017cc651c05ebae7b366b04d3d922c484d4732ea33734d4bcfaa0af",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.8636e-05,
+      "input_tokens": 1158
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "PROCEED": 0,
+            "DEFER": 0.04,
+            "HOLD": 0.96
+          },
+          "confidence": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 1158,
+        "cost": 4.8636e-05
+      }
+    },
+    "settled_nano": 48636,
+    "latency_seconds": 0.14144875000056345
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-expired-R0",
+    "request_sha256": "75cf68692a1d89d923bb593f6f9509b75cf07a2916351dabe04cfdce9539761c",
+    "ordered_request_sha256": "db09448fa13f6c43a18613a1a51c25677822a37a68e922ef0555ad27d10e72f9",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.15,
+        "PROCEED": 0.84,
+        "HOLD": 0.01
+      },
+      "confidence": 0.76,
+      "request_sha256": "75cf68692a1d89d923bb593f6f9509b75cf07a2916351dabe04cfdce9539761c",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.7632e-05,
+      "input_tokens": 896
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.15,
+            "PROCEED": 0.84,
+            "HOLD": 0.01
+          },
+          "confidence": 0.76
+        }
+      },
+      "usage": {
+        "input_tokens": 896,
+        "cost": 3.7632e-05
+      }
+    },
+    "settled_nano": 37632,
+    "latency_seconds": 0.21559495900874026
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-fresh-R0",
+    "request_sha256": "1a0503dcd8a9631a4b86e34c9564dd4a0285c977a87cd04bb61d12740df5459e",
+    "ordered_request_sha256": "7c7d7e5f2c6b435785b3518ddb46197fbc4ca10d32bd817c0a7334a0341e2911",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "PROCEED": 0,
+        "HOLD": 0.85,
+        "DEFER": 0.15
+      },
+      "confidence": 0.77,
+      "request_sha256": "1a0503dcd8a9631a4b86e34c9564dd4a0285c977a87cd04bb61d12740df5459e",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.675e-05,
+      "input_tokens": 875
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.85,
+            "DEFER": 0.15
+          },
+          "confidence": 0.77
+        }
+      },
+      "usage": {
+        "input_tokens": 875,
+        "cost": 3.675e-05
+      }
+    },
+    "settled_nano": 36750,
+    "latency_seconds": 0.20964204099436756
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-fresh-E1",
+    "request_sha256": "4f94280d1a289c8b8346ad38e730981f174528a7617bbeedf9f9aefd00c6ab1c",
+    "ordered_request_sha256": "234bdb46dfdafee1b6a447b9a64aa3b73022ebcb51283e8091f22db3bb01eea3",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "HOLD": 0,
+        "DEFER": 0.02,
+        "PROCEED": 0.98
+      },
+      "confidence": 0.97,
+      "request_sha256": "4f94280d1a289c8b8346ad38e730981f174528a7617bbeedf9f9aefd00c6ab1c",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.7208e-05,
+      "input_tokens": 1124
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "HOLD": 0,
+            "DEFER": 0.02,
+            "PROCEED": 0.98
+          },
+          "confidence": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 1124,
+        "cost": 4.7208e-05
+      }
+    },
+    "settled_nano": 47208,
+    "latency_seconds": 0.3544448329921579
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-fresh-R1",
+    "request_sha256": "1c8660e29afd2ce23920218644e983773623982b2d11e31f45da6a7017ca4dd6",
+    "ordered_request_sha256": "160fad95a44c6202bf38b2a1156960091502153c356072d3c86e73cc5c53ba34",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.06,
+        "PROCEED": 0.93,
+        "HOLD": 0.01
+      },
+      "confidence": 0.9,
+      "request_sha256": "1c8660e29afd2ce23920218644e983773623982b2d11e31f45da6a7017ca4dd6",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.1832e-05,
+      "input_tokens": 996
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.06,
+            "PROCEED": 0.93,
+            "HOLD": 0.01
+          },
+          "confidence": 0.9
+        }
+      },
+      "usage": {
+        "input_tokens": 996,
+        "cost": 4.1832e-05
+      }
+    },
+    "settled_nano": 41832,
+    "latency_seconds": 0.25648625000030734
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-fresh-R1",
+    "request_sha256": "610e3c04f2691735aa91a2be9b48576435b94fb75862edf680c83adcd571a449",
+    "ordered_request_sha256": "fef629ff7f5a59ac8ddf172f4fdc84a7f4d68e17a5d455d71bc0e83f7bfa064a",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "PROCEED": 0.97,
+        "HOLD": 0,
+        "DEFER": 0.03
+      },
+      "confidence": 0.95,
+      "request_sha256": "610e3c04f2691735aa91a2be9b48576435b94fb75862edf680c83adcd571a449",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.1454e-05,
+      "input_tokens": 987
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "PROCEED": 0.97,
+            "HOLD": 0,
+            "DEFER": 0.03
+          },
+          "confidence": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 987,
+        "cost": 4.1454e-05
+      }
+    },
+    "settled_nano": 41454,
+    "latency_seconds": 0.15132649999577552
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-fresh-E1",
+    "request_sha256": "3697dc552a0afd775a16c1f3794bf17ebdfc1dda97234032134a22fc25a0feea",
+    "ordered_request_sha256": "466e7d8a9c693132bfb190d4055c3cbe8e8cb89d1d89cbecc160f253d3d6193d",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.04,
+        "HOLD": 0.01,
+        "PROCEED": 0.95
+      },
+      "confidence": 0.93,
+      "request_sha256": "3697dc552a0afd775a16c1f3794bf17ebdfc1dda97234032134a22fc25a0feea",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.7754e-05,
+      "input_tokens": 1137
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.04,
+            "HOLD": 0.01,
+            "PROCEED": 0.95
+          },
+          "confidence": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 1137,
+        "cost": 4.7754e-05
+      }
+    },
+    "settled_nano": 47754,
+    "latency_seconds": 0.15813304200128186
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-fresh-E0",
+    "request_sha256": "0e2e488407b88e68381c327a5905792e8c7908c428a571454ad040997609270a",
+    "ordered_request_sha256": "55d1897962607b8a40f8973538c911d18cead7916f2ef2712ad615928c351706",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "PROCEED": 0,
+        "HOLD": 0.97,
+        "DEFER": 0.03
+      },
+      "confidence": 0.95,
+      "request_sha256": "0e2e488407b88e68381c327a5905792e8c7908c428a571454ad040997609270a",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.4226e-05,
+      "input_tokens": 1053
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.97,
+            "DEFER": 0.03
+          },
+          "confidence": 0.95
+        }
+      },
+      "usage": {
+        "input_tokens": 1053,
+        "cost": 4.4226e-05
+      }
+    },
+    "settled_nano": 44226,
+    "latency_seconds": 0.5253861670062179
+  },
+  {
+    "id": "F0-case-f05e78699e21aadd-expired-E0",
+    "request_sha256": "88510634ae887c385a2ed1b16a9e87e3018a70feea8e194a394e47ae933634c9",
+    "ordered_request_sha256": "8ac822aa19e39ecede5531138272f3fbf693b651e601b459e4593d9a5e79bd05",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "HOLD": 0.01,
+        "DEFER": 0.98,
+        "PROCEED": 0.01
+      },
+      "confidence": 0.97,
+      "request_sha256": "88510634ae887c385a2ed1b16a9e87e3018a70feea8e194a394e47ae933634c9",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.3218e-05,
+      "input_tokens": 1029
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "HOLD": 0.01,
+            "DEFER": 0.98,
+            "PROCEED": 0.01
+          },
+          "confidence": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 1029,
+        "cost": 4.3218e-05
+      }
+    },
+    "settled_nano": 43218,
+    "latency_seconds": 0.15574195799126755
+  },
+  {
+    "id": "F0-case-39e9539a0cb1e0f3-fresh-E0",
+    "request_sha256": "080439ec5ab9ea8aca18c0c04b3850fa0bc3146a89262d77cf11c78504220303",
+    "ordered_request_sha256": "d6c9d039f587bba41bb2eb3b6cb976dbf1684ddcca6d988022ac79570978df9d",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.05,
+        "HOLD": 0,
+        "PROCEED": 0.95
+      },
+      "confidence": 0.92,
+      "request_sha256": "080439ec5ab9ea8aca18c0c04b3850fa0bc3146a89262d77cf11c78504220303",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.3554e-05,
+      "input_tokens": 1037
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.05,
+            "HOLD": 0,
+            "PROCEED": 0.95
+          },
+          "confidence": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 1037,
+        "cost": 4.3554e-05
+      }
+    },
+    "settled_nano": 43554,
+    "latency_seconds": 0.17657395800051745
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-expired-E0",
+    "request_sha256": "beac478a288dae381152fbf9fff0a4cc8d1dcb698bf0405b5699a3135711219a",
+    "ordered_request_sha256": "87def03509d02ae82ae8d2051f5d9486c2617ac4a798ff9b7de39f970913a5dd",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "HOLD": 0.01,
+        "DEFER": 0.99,
+        "PROCEED": 0
+      },
+      "confidence": 0.98,
+      "request_sha256": "beac478a288dae381152fbf9fff0a4cc8d1dcb698bf0405b5699a3135711219a",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.4226e-05,
+      "input_tokens": 1053
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "HOLD": 0.01,
+            "DEFER": 0.99,
+            "PROCEED": 0
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 1053,
+        "cost": 4.4226e-05
+      }
+    },
+    "settled_nano": 44226,
+    "latency_seconds": 0.2210437500034459
+  },
+  {
+    "id": "F0-case-32d8008d2958948c-fresh-R0",
+    "request_sha256": "a643a4506808f1bf33026b603993db6a2af6ba0e54a6e0640d6f46d0afb381d6",
+    "ordered_request_sha256": "c52e9b3347f760c489da30549c94252def89b9bbbbedecdfc5321a961b3a8671",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "PROCEED": 0,
+        "HOLD": 0.83,
+        "DEFER": 0.17
+      },
+      "confidence": 0.74,
+      "request_sha256": "a643a4506808f1bf33026b603993db6a2af6ba0e54a6e0640d6f46d0afb381d6",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.8094e-05,
+      "input_tokens": 907
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.83,
+            "DEFER": 0.17
+          },
+          "confidence": 0.74
+        }
+      },
+      "usage": {
+        "input_tokens": 907,
+        "cost": 3.8094e-05
+      }
+    },
+    "settled_nano": 38094,
+    "latency_seconds": 0.2294288749981206
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-expired-R0",
+    "request_sha256": "19537ad388b55f74ad469b8ef8f59ed9884f47a3d8b769c08dca70d1fb31cca8",
+    "ordered_request_sha256": "1bf91d2e70c2f3b2fd614234b7928cf2ed51d46c0f47b08584f8610d46b6598c",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.1,
+        "HOLD": 0,
+        "PROCEED": 0.9
+      },
+      "confidence": 0.84,
+      "request_sha256": "19537ad388b55f74ad469b8ef8f59ed9884f47a3d8b769c08dca70d1fb31cca8",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.7338e-05,
+      "input_tokens": 889
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.1,
+            "HOLD": 0,
+            "PROCEED": 0.9
+          },
+          "confidence": 0.84
+        }
+      },
+      "usage": {
+        "input_tokens": 889,
+        "cost": 3.7338e-05
+      }
+    },
+    "settled_nano": 37338,
+    "latency_seconds": 0.2486732499965001
+  },
+  {
+    "id": "F0-case-aac4df6326e00056-expired-E1",
+    "request_sha256": "52b55fb60bffdce4ccfd6e7f631a837eeeccc7820622166aac15ef102be894a5",
+    "ordered_request_sha256": "1040c11dd15e81a9d4010bbb3c3c7873d998f7569fc974e74c900b0eb958db49",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "HOLD": 0,
+        "DEFER": 1,
+        "PROCEED": 0
+      },
+      "confidence": 0.99,
+      "request_sha256": "52b55fb60bffdce4ccfd6e7f631a837eeeccc7820622166aac15ef102be894a5",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.7208e-05,
+      "input_tokens": 1124
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "HOLD": 0,
+            "DEFER": 1,
+            "PROCEED": 0
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 1124,
+        "cost": 4.7208e-05
+      }
+    },
+    "settled_nano": 47208,
+    "latency_seconds": 0.3028013340081088
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-expired-R0",
+    "request_sha256": "ccea6b1b5faa4476af8735110e556da2eea79369cbb7a28bbdacad279e7c34b5",
+    "ordered_request_sha256": "99442711e4e5117c75302e2dc6d04b132b8c8b73a9ce7cffc320b1d0b8de1c6d",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "PROCEED": 0,
+        "HOLD": 0.92,
+        "DEFER": 0.08
+      },
+      "confidence": 0.87,
+      "request_sha256": "ccea6b1b5faa4476af8735110e556da2eea79369cbb7a28bbdacad279e7c34b5",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.822e-05,
+      "input_tokens": 910
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.92,
+            "DEFER": 0.08
+          },
+          "confidence": 0.87
+        }
+      },
+      "usage": {
+        "input_tokens": 910,
+        "cost": 3.822e-05
+      }
+    },
+    "settled_nano": 38220,
+    "latency_seconds": 0.21722337500250433
+  },
+  {
+    "id": "F0-case-f05e78699e21aadd-expired-E1",
+    "request_sha256": "97e0a3a4f0eeb1dd8f812d3f2225cfbf688863a244770a98d5f1cdc763a3f9aa",
+    "ordered_request_sha256": "2f9b4badbe99cf276795300de108bc92af2719933e3f7a67fecf7d5d9593cb87",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "DEFER": 1,
+        "PROCEED": 0,
+        "HOLD": 0
+      },
+      "confidence": 0.99,
+      "request_sha256": "97e0a3a4f0eeb1dd8f812d3f2225cfbf688863a244770a98d5f1cdc763a3f9aa",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.7334e-05,
+      "input_tokens": 1127
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "DEFER": 1,
+            "PROCEED": 0,
+            "HOLD": 0
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 1127,
+        "cost": 4.7334e-05
+      }
+    },
+    "settled_nano": 47334,
+    "latency_seconds": 0.17983799999637995
+  },
+  {
+    "id": "F0-case-f05e78699e21aadd-fresh-R1",
+    "request_sha256": "0dc6c13d2b575a446e706fedd1c70d16d0a4f24cd8f0cf8fd99e680aed6a6a77",
+    "ordered_request_sha256": "bce76cc1305e5e864882f07a21e88c1b8700d11dea07b5f43ed2fd051235ee34",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.04,
+        "HOLD": 0.01,
+        "PROCEED": 0.95
+      },
+      "confidence": 0.92,
+      "request_sha256": "0dc6c13d2b575a446e706fedd1c70d16d0a4f24cd8f0cf8fd99e680aed6a6a77",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.1496e-05,
+      "input_tokens": 988
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.04,
+            "HOLD": 0.01,
+            "PROCEED": 0.95
+          },
+          "confidence": 0.92
+        }
+      },
+      "usage": {
+        "input_tokens": 988,
+        "cost": 4.1496e-05
+      }
+    },
+    "settled_nano": 41496,
+    "latency_seconds": 0.22445666600833647
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-expired-E1",
+    "request_sha256": "9b541680510ca0a0eed65fd8fbb4456de81b7bc0557657b3fa16b3ed4fbf06bb",
+    "ordered_request_sha256": "7fa785978bcd6a5722d0f523497c81b5c6f67637ba18648d125bb7b1187a0595",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "DEFER": 0.99,
+        "HOLD": 0.01,
+        "PROCEED": 0
+      },
+      "confidence": 0.99,
+      "request_sha256": "9b541680510ca0a0eed65fd8fbb4456de81b7bc0557657b3fa16b3ed4fbf06bb",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.8636e-05,
+      "input_tokens": 1158
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "DEFER": 0.99,
+            "HOLD": 0.01,
+            "PROCEED": 0
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 1158,
+        "cost": 4.8636e-05
+      }
+    },
+    "settled_nano": 48636,
+    "latency_seconds": 0.15790720899531152
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-expired-E0",
+    "request_sha256": "a963ec98a966cb7e5019a1680f3aa87d7aecd1fd31325ae0a5feb7c46900de68",
+    "ordered_request_sha256": "bd5afde5fb07aea97b6eff7922578f5b108e7528b7b4dd866029e4b8c89f1845",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "PROCEED": 0,
+        "DEFER": 0.99,
+        "HOLD": 0.01
+      },
+      "confidence": 0.99,
+      "request_sha256": "a963ec98a966cb7e5019a1680f3aa87d7aecd1fd31325ae0a5feb7c46900de68",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.242e-05,
+      "input_tokens": 1010
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "PROCEED": 0,
+            "DEFER": 0.99,
+            "HOLD": 0.01
+          },
+          "confidence": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 1010,
+        "cost": 4.242e-05
+      }
+    },
+    "settled_nano": 42420,
+    "latency_seconds": 0.15899620800337289
+  },
+  {
+    "id": "F0-case-fea064e6cee6c325-expired-E1",
+    "request_sha256": "87ad052bc9302c66d79d9fc8bf85227bec66b0fd30d3b848c4975925a551640c",
+    "ordered_request_sha256": "fe3fa89b0ee97a76e8417a10bba31c254e3aa1e2d8f2f04a30449daf90cafce8",
+    "status": "completed",
+    "action": "DEFER",
+    "reservation": "settled",
+    "checked": {
+      "action": "DEFER",
+      "probabilities": {
+        "DEFER": 0.99,
+        "HOLD": 0.01,
+        "PROCEED": 0
+      },
+      "confidence": 0.98,
+      "request_sha256": "87ad052bc9302c66d79d9fc8bf85227bec66b0fd30d3b848c4975925a551640c",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.6662e-05,
+      "input_tokens": 1111
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "DEFER",
+          "probabilities": {
+            "DEFER": 0.99,
+            "HOLD": 0.01,
+            "PROCEED": 0
+          },
+          "confidence": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 1111,
+        "cost": 4.6662e-05
+      }
+    },
+    "settled_nano": 46662,
+    "latency_seconds": 0.4976790410000831
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-expired-R1",
+    "request_sha256": "ca0876abfbf84459ae4367d94495962e05199d775923931063ee877b891f6a6e",
+    "ordered_request_sha256": "ba09b41d4b287c8ece795d575971e9d308d2a0e97de9f54d9c8ac63cb5e642ba",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "DEFER": 0.07,
+        "PROCEED": 0,
+        "HOLD": 0.93
+      },
+      "confidence": 0.89,
+      "request_sha256": "ca0876abfbf84459ae4367d94495962e05199d775923931063ee877b891f6a6e",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.263e-05,
+      "input_tokens": 1015
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "DEFER": 0.07,
+            "PROCEED": 0,
+            "HOLD": 0.93
+          },
+          "confidence": 0.89
+        }
+      },
+      "usage": {
+        "input_tokens": 1015,
+        "cost": 4.263e-05
+      }
+    },
+    "settled_nano": 42630,
+    "latency_seconds": 0.2485644999978831
+  },
+  {
+    "id": "F0-case-78a1b4e56e88d287-fresh-R0",
+    "request_sha256": "0e8a33e5b2a193279f9a99520738f0d47282b9639fcb66a687ed5b3ebeeb90e3",
+    "ordered_request_sha256": "887c2797842bc8e560ef22b60d031112341b0ae35dede83033edd55221f5084b",
+    "status": "completed",
+    "action": "HOLD",
+    "reservation": "settled",
+    "checked": {
+      "action": "HOLD",
+      "probabilities": {
+        "PROCEED": 0,
+        "HOLD": 0.93,
+        "DEFER": 0.07
+      },
+      "confidence": 0.89,
+      "request_sha256": "0e8a33e5b2a193279f9a99520738f0d47282b9639fcb66a687ed5b3ebeeb90e3",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 3.822e-05,
+      "input_tokens": 910
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "HOLD",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.93,
+            "DEFER": 0.07
+          },
+          "confidence": 0.89
+        }
+      },
+      "usage": {
+        "input_tokens": 910,
+        "cost": 3.822e-05
+      }
+    },
+    "settled_nano": 38220,
+    "latency_seconds": 0.16537770800641738
+  },
+  {
+    "id": "F0-case-f05e78699e21aadd-expired-R1",
+    "request_sha256": "5ffc5f7b7c9aa2cc403b0b22458e14009a389f4abff5986ab09afdd76b7cc049",
+    "ordered_request_sha256": "ad00b74614275e992b49ae4963455ed6bf9be08a0c38c6cd9752c3e8209b0cf7",
+    "status": "completed",
+    "action": "PROCEED",
+    "reservation": "settled",
+    "checked": {
+      "action": "PROCEED",
+      "probabilities": {
+        "DEFER": 0.09,
+        "HOLD": 0.02,
+        "PROCEED": 0.89
+      },
+      "confidence": 0.83,
+      "request_sha256": "5ffc5f7b7c9aa2cc403b0b22458e14009a389f4abff5986ab09afdd76b7cc049",
+      "served_model": "typesafe/jev-1.13-20260917",
+      "cost_usd": 4.1496e-05,
+      "input_tokens": 988
+    },
+    "visible_response": {
+      "model": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "answers": {
+        "action": {
+          "choice": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.09,
+            "HOLD": 0.02,
+            "PROCEED": 0.89
+          },
+          "confidence": 0.83
+        }
+      },
+      "usage": {
+        "input_tokens": 988,
+        "cost": 4.1496e-05
+      }
+    },
+    "settled_nano": 41496,
+    "latency_seconds": 0.2017100829980336
+  }
+]
