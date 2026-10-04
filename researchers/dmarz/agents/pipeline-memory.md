@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-memory
 tool: claude-code
-state: working  # working | idle | blocked | done
-task: build-memory-handoff-qwen
-doing: "memory-handoff-qwen is launch-ready for the same-researcher check: code commit b6990122, source hash b4ab9025, pre-run review on main; nothing launched, no model call; waiting for the lead"
-updated: 2026-10-04T11:31Z
+state: done  # working | idle | blocked | done
+task: null
+doing: "memory-handoff-qwen (program v5 line M) package finished and filed as a ready run request (run queue 275) after the fleet monitor's same-researcher check; nothing launched by this agent"
+updated: 2026-10-04T11:38Z
 ---
 
 ## Notes
