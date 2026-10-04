@@ -5,10 +5,10 @@
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
     "harness": "vishesh/codex-theseus",
-    "prompt": "Build and verify a clear visual explanation of the improved experiment."
+    "prompt": "Verify and correct the visual fixture frame, preserving its explicit non-model provenance."
    },
    "internalParameters": {
-    "commit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty",
+    "commit": "33fa302579480d100117c2fd6590f82b255e3163-dirty",
     "session": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
    },
    "resolvedDependencies": [
@@ -38,9 +38,18 @@
     },
     {
      "digest": {
-      "gitCommit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1"
+      "gitCommit": "33fa302579480d100117c2fd6590f82b255e3163"
      },
      "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    },
+    {
+     "annotations": {
+      "supersedes": true
+     },
+     "digest": {
+      "sha256": "2b54c848f5197147017dfd6c915686f42b305a211ec8548417988aadd7f7afd1"
+     },
+     "uri": "artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v1.png"
     }
    ]
   },
@@ -49,9 +58,9 @@
     "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/vishesh/codex-theseus"
    },
    "metadata": {
-    "finishedOn": "2026-10-04T03:54:59Z",
+    "finishedOn": "2026-10-04T03:56:52Z",
     "invocationId": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
-    "startedOn": "2026-10-04T03:54:59Z"
+    "startedOn": "2026-10-04T03:56:52Z"
    }
   }
  },
@@ -59,9 +68,9 @@
  "subject": [
   {
    "digest": {
-    "sha256": "2b54c848f5197147017dfd6c915686f42b305a211ec8548417988aadd7f7afd1"
+    "sha256": "426e66f25bc1fe67812696465e1ecb5af649a03d14e287d6064a93fe686729eb"
    },
-   "name": "artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v1.png"
+   "name": "artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v2.png"
   }
  ]
 }

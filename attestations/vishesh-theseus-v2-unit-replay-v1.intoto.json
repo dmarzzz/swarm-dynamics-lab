@@ -14,7 +14,7 @@
    "resolvedDependencies": [
     {
      "digest": {
-      "sha256": "553b5991529f5cca1e028618d753cd3d8eb3ae0842e6e657cea494f3149dc801"
+      "sha256": "c132411cf0eb0a18cad5bd56396393d42855794ed0f05d68b071e60b1a1f4133"
      },
      "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py"
     },

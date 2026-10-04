@@ -38,7 +38,7 @@ def render(root):
         font = ImageFont.truetype('DejaVuSans.ttf', 27); title = ImageFont.truetype('DejaVuSans.ttf', 48)
     except OSError:
         font = ImageFont.load_default(size=27); title = ImageFont.load_default(size=48)
-    label = 'SCRIPTED — NOT MODEL EVIDENCE' if fixture else 'RECORDED MODEL OUTPUTS — EXPLORATORY'
+    label = 'SCRIPTED | NOT MODEL EVIDENCE' if fixture else 'RECORDED MODEL OUTPUTS | EXPLORATORY'
     draw.rectangle((0, 0, 1800, 80), fill='#54340b'); draw.text((45, 20), label, font=font, fill='#ffe0a0')
     draw.text((55, 115), 'Swarm of Theseus · procedure continuity', font=title, fill='white')
     draw.text((55, 190), 'Two complete replacements. Preserve valid checks; retire obsolete rules.', font=font, fill='#aabac6')
@@ -47,7 +47,7 @@ def render(root):
         draw.text((55, 260), f"{last['scenario']} / world {last['seed']} / {last['arm']} / step {last['step']}", font=font, fill='white')
         for i, row in enumerate(last['scores']):
             y = 330 + i * 80
-            text = f"Case {i+1}: action {row.get('action') or 'MISSING'} | evaluator {row['truth']} | " + ('correct' if row['correct'] else 'incorrect / missing')
+            text = f"Case {i+1}: action {row.get('action') or 'MISSING'} | evaluator {row['truth']} | " + ('correct' if row['correct'] else 'incorrect' if row['observed'] else 'missing')
             draw.text((70, y), text, font=font, fill='#72dfb6' if row['correct'] else '#ffb68e')
         draw.text((55, 860), 'Truth displayed after scoring; withheld from current actor inputs.', font=font, fill='#aabac6')
     else:
