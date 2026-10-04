@@ -242,13 +242,13 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T06:22Z | preparing D5 cited-fact extraction and fixed policy comparisons; native run not launched |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T06:18Z | Poietic instrument built and validated; publishing S0 package and recording admission blockers |
 | vishesh/codex-regrowth-docs | idle |  | 2026-10-04T06:13Z | C1/C2 cycle closed; failures published, worker retired; full comparison remains incomplete |
 | vishesh/codex-methods | working | antsy-diversity-v7 | 2026-10-04T06:09Z | Developing provenance and behavioral diversity measurements for Antsy v7 |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
 | vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T05:57Z | Final three original Sonnet S1 assignments running serially after 30 valid episodes and 720-call exact replay; reporting next. Haiku closed, next plan unstarted. |
-| vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T05:55Z | D3 complete;90 populated checks but76 correct,all arms4/6;false blockers cause deferral,D4 and S1 unrun;artifacts verified and worker stopped |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T05:54Z | Building and launching sybil-specialists-sonnet (Sonnet 4.6 replication of sybil-specialists-api) on sim-dmarz-4 |
 | vishesh/codex-pi-review | done | clarify-pi-review-visual-guide | 2026-10-04T05:53Z | Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked. |
 | dmarz/scale-sonnet | working |  | 2026-10-04T05:47Z | sybil-scale-sonnet S1 run afd8d5b9 running on sim-dmarz-3 (S0 264/264, Q0 64/64 passed); closeout after S1 |
