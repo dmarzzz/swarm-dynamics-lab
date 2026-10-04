@@ -30,8 +30,6 @@
 |---|---|---|---|---|---|---|---|
 | [build-memory-handoff-qwen](tasks/build-memory-handoff-qwen.md) | claimed | p0 | build | dmarz/pipeline-memory | dmarz | 2026-10-04T10:30Z | Prepare program v5 line M (can successors repair inherited false memory) to launch-ready |
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
-| [build-trust-credit-qwen](tasks/build-trust-credit-qwen.md) | claimed | p0 | build | dmarz/pipeline-split | dmarz | 2026-10-04T10:30Z | Prepare program v5 line T (trust credit, when verification amplifies capture) to launch-ready |
-| [build-verify-cost-qwen](tasks/build-verify-cost-qwen.md) | claimed | p0 | build | dmarz/pipeline-verify | dmarz | 2026-10-04T10:30Z | Prepare program v5 line V (when is verification worth its cost) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed (stale) | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
@@ -107,6 +105,8 @@
 | [survey-avalon-swarm](tasks/survey-avalon-swarm.md) | open | p2 | survey |  | dmarz |  | Survey: swarm-scale hidden-role games as a Sybil / fork-merge testbed |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | done | p0 | admin | vishesh/codex-regrowth-docs | dmarz | 2026-10-04T06:13Z | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
+| [build-trust-credit-qwen](tasks/build-trust-credit-qwen.md) | done | p0 | build | dmarz/pipeline-split | dmarz | 2026-10-04T11:37Z | Prepare program v5 line T (trust credit, when verification amplifies capture) to launch-ready |
+| [build-verify-cost-qwen](tasks/build-verify-cost-qwen.md) | done | p0 | build | dmarz/pipeline-verify | dmarz | 2026-10-04T11:37Z | Prepare program v5 line V (when is verification worth its cost) to launch-ready |
 | [quorum-mirrors-q1-launch](tasks/quorum-mirrors-q1-launch.md) | done | p0 | experiment | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T06:59Z | Launch bounded Quorum context qualification under owner no-review direction |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | done | p0 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:16Z | Re-review survey: llm agent swarms (after revise) |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | done | p0 | review | dmarz/reviewer-1 | dmarz | 2026-10-03T19:27Z | Review survey: llm agent swarms (cross-researcher) |
@@ -266,9 +266,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:45Z | build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check |
+| dmarz/pipeline-split | done |  | 2026-10-04T11:37Z | trust-credit-qwen (program v5 line T) package finished and filed as a ready run request (run queue 270) after the fleet monitor's same-researcher check; earlier package sybil-split-opus is run queue 252; nothing launched by this agent |
+| dmarz/pipeline-verify | done |  | 2026-10-04T11:37Z | verify-cost-qwen (program v5 line V) package finished and filed as a ready run request (run queue 272) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | dmarz/pipeline-memory | working | build-memory-handoff-qwen | 2026-10-04T11:31Z | memory-handoff-qwen is launch-ready for the same-researcher check: code commit b6990122, source hash b4ab9025, pre-run review on main; nothing launched, no model call; waiting for the lead |
-| dmarz/pipeline-verify | working | build-verify-cost-qwen | 2026-10-04T11:27Z | verify-cost-qwen (program v5 line V): package complete and waiting for review. Code commit fa61358a, source hash 72895482, 84 selftests, caps 1/23/576 calls and USD 2; pre-run review reviews/chain-001-pre.md, READY.yaml, RUN.md on main. Nothing launched, no model call |
-| dmarz/pipeline-split | working | build-trust-credit-qwen | 2026-10-04T11:24Z | trust-credit-qwen (program v5 line T): launch-ready package on main (code commit d3219ceb, source hash e24e85f5, amendment A1, pre-run review ready); waiting for the pipeline lead's review; nothing launched, no model call. Earlier package sybil-split-opus is filed as run queue 252. |
 | dmarz/pipeline-scarcity | done |  | 2026-10-04T11:19Z | sybil-scarcity-synth package finished and filed as a ready run request (run queue 268) after the fleet monitor's same-researcher check; earlier package sybil-scarcity-opus ran as run queue 248; nothing launched by this agent |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T10:45Z | building the sybil-rules-180 package (program v5 flagship F); engine and invariants first, then chain, three-host transport, adapter, replay; nothing launched, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
