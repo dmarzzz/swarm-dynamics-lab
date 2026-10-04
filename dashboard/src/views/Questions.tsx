@@ -1,3 +1,5 @@
+import { ScoreGuide, ScoreSort, ScoreBadges, ScorePanel, useIdeaScores } from '../components/IdeaScores';
+import { sortIdeas } from '../lib/ideaScores';
 import { ContributionCount } from './Contributions';
 import { useDeferredValue, useMemo, useRef, useState } from 'react';
 import { questionsDataUrl, useQuestionAtlas, type Question, type QuestionAtlas } from '../data/questions';
@@ -35,6 +37,8 @@ export function Questions({ params, navigation }: { params: URLSearchParams; nav
 
 function QuestionBrowser({ atlas, params, navigation }: { atlas: QuestionAtlas; params: URLSearchParams; navigation: ResearchNavigation }) {
   const setParams = useParamSetter('/questions');
+  const scores = useIdeaScores();
+  const scoreSort = params.get('score') || '';
   const ids = useMemo(() => new Set(atlas.candidates.map(d => d.id)), [atlas]);
   const [loaded] = useState(() => {
     try { return parseReviewState(localStorage.getItem(QUESTION_REVIEW_STORAGE_KEY), ids); }
@@ -58,10 +62,11 @@ function QuestionBrowser({ atlas, params, navigation }: { atlas: QuestionAtlas; 
   const decision = params.get('review') || '';
   const review = reviewState.review;
   const index = useMemo(() => atlas.candidates.map(d => ({ d, text: normalize(JSON.stringify(d)) })), [atlas]);
-  const rows = index.filter(({ d, text }) => (!query || query.split(/\s+/).every(t => text.includes(t)))
+  const filteredRows = index.filter(({ d, text }) => (!query || query.split(/\s+/).every(t => text.includes(t)))
     && matchesResearch(d, navigation, topic, focus, project) && (!kind || d.novelty === kind) && (!testClass || d.feasibility === testClass)
     && (!decision || (review[d.id]?.status || 'Unreviewed') === decision)
     && (!change || (change === 'recheck' ? needsRecheck(d, review[d.id]) : d.change === change))).map(({ d }) => d);
+  const rows = sortIdeas(filteredRows, scoreSort, scores.data, scores.drafts);
   const selected = rows.find(d => d.id === params.get('id')) || rows[0];
   const shortlisted = atlas.candidates.filter(d => review[d.id]?.status === 'Shortlist').length;
   const pending = atlas.candidates.filter(d => needsRecheck(d, review[d.id])).length;
@@ -81,7 +86,7 @@ function QuestionBrowser({ atlas, params, navigation }: { atlas: QuestionAtlas; 
       return false;
     }
   };
-  const clear = () => setParams({ q: null, topic: null, focus: null, project: null, kind: null, test: null, change: null, review: null, id: null });
+  const clear = () => setParams({ q: null, topic: null, focus: null, project: null, kind: null, test: null, change: null, review: null, score: null, id: null });
   const select = (id: string) => {
     setParams({ id });
     requestAnimationFrame(() => {
@@ -117,8 +122,10 @@ function QuestionBrowser({ atlas, params, navigation }: { atlas: QuestionAtlas; 
       <div className="q-update"><span>Update {atlas.version}</span><button onClick={() => setParams({ change: 'new', id: null })}>{atlas.changes.new.length} new</button><button onClick={() => setParams({ change: 'revised', id: null })}>{atlas.changes.revised.length} revised</button><span>{atlas.date}</span><a href={GUIDE}>Research guide</a><a href={questionsDataUrl} download="swarm-lab-questions.json">Download question bank</a></div>
     </header>
 
+    <ScoreGuide />
     <section className="q-tools" aria-label="Find and review questions">
       <div className="q-filters">
+        <ScoreSort value={scoreSort} onChange={value => setParams({ score: value || null, id: null })} />
         <label className="q-search">Search questions, tests and sources<input type="search" value={search} placeholder="Try memory, dissent or commons" onChange={e => setParams({ q: e.target.value || null, id: null })} /></label>
         <label>Research area<select value={focus ? `focus:${focus}` : topic} onChange={e => { const value = e.target.value; setParams({ topic: value.startsWith('focus:') ? null : value || null, focus: value.startsWith('focus:') ? value.slice(6) : null, id: null }); }}><option value="">All areas</option><optgroup label="Literature topics">{Object.entries(atlas.topics).sort((a, b) => a[1].localeCompare(b[1])).map(([id, name]) => <option key={id} value={id}>{name} ({topicCounts[id] ?? 0})</option>)}</optgroup><optgroup label="Cross-cutting focus areas">{navigation.focus_areas.map(f => <option key={f.id} value={`focus:${f.id}`}>{f.name} ({f.questions.length})</option>)}</optgroup></select></label>
         <label>Project idea<select value={project} onChange={e => setParams({ project: e.target.value || null, id: null })}><option value="">All project ideas</option>{navigation.projects.map(p => <option key={p.id} value={p.id}>{p.name} ({p.questions.length})</option>)}</select></label>
@@ -148,11 +155,12 @@ function QuestionBrowser({ atlas, params, navigation }: { atlas: QuestionAtlas; 
     {selected ? <div className="q-browser">
       <nav className="q-list" aria-label="Candidate questions">{rows.map(d => <button key={d.id} className={`q-row${d.id === selected.id ? ' selected' : ''}`} aria-current={d.id === selected.id ? 'true' : undefined} onClick={() => select(d.id)}>
         <span className="q-row-meta"><span>{d.id}</span><span>{review[d.id]?.status || 'Unreviewed'}</span>{d.change !== 'unchanged' && <span className="q-change">{d.change}</span>}</span>
-        <strong>{d.title}</strong><span className="q-row-topic">{atlas.topics[d.area]}</span>{needsRecheck(d, review[d.id]) && <span className="q-recheck">Review again</span>}
+        <strong>{d.title}</strong><ScoreBadges id={d.id} /><span className="q-row-topic">{atlas.topics[d.area]}</span>{needsRecheck(d, review[d.id]) && <span className="q-recheck">Review again</span>}
       </button>)}</nav>
       <article className="q-detail" tabIndex={-1} ref={detailRef} aria-label={`${selected.id}: ${selected.title}`} key={selected.id}>
         <div className="q-detail-meta"><span>{selected.id}</span><span>{atlas.topics[selected.area]}</span><a href={href('/questions', { id: selected.id })}>Link to this question</a></div>
         <h2>{selected.title}</h2>
+        <ScorePanel id={selected.id} />
         <div className="q-tags"><span>{selected.novelty}</span><span>{TEST_CLASSES[selected.feasibility]}</span><span>{selected.change} in update {atlas.version}</span></div>
         <div className="research-tags" aria-label="Research connections">{navigation.focus_areas.filter(f => f.questions.includes(selected.id)).map(f => <a key={f.id} href={href('/questions', { focus: f.id })}>{f.name}</a>)}</div>
         {navigation.projects.some(p => p.questions.includes(selected.id)) && <section className="q-section"><h3>Project connections</h3><ul>{navigation.projects.filter(p => p.questions.includes(selected.id)).map(p => <li key={p.id}><a href={repoLink(p.path)}>{p.name}</a> — {p.direct_questions.includes(selected.id) ? 'linked by the question author' : 'reviewer cross-connection'} · <a href={href('/questions', { project: p.id })}>Explore project questions</a></li>)}</ul></section>}

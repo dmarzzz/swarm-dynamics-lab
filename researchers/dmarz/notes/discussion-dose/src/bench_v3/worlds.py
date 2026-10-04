@@ -10,7 +10,8 @@ POLICY = {'ranks': {'primary': 2, 'secondary': 1}, 'min_origins': 1}
 POLICY_TEXT = ('Within an origin use its largest version. Then primary records outrank secondary records. '
                'Equal-rank conflicting values remain unresolved; repeated copies of an origin are not independent. '
                'Origins and versions in the catalog are authenticated metadata for this fictional task, not a general guarantee of truth. '
-               'Use the finite domains for unknown fields. Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.')
+               'Values outside the declared finite domains are inadmissible. Use the domains for unknown fields. '
+               'Answer only if all evidence-consistent completions have the same winning option; otherwise ABSTAIN.')
 
 
 def public_task(base, docs):

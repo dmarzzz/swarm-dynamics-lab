@@ -1,6 +1,7 @@
 """Offline acceptance and mutation tests. No credentials, network or fleet needed."""
 import copy
 import json
+import os
 from pathlib import Path
 import random
 import tempfile
@@ -70,6 +71,12 @@ class WorldTests(unittest.TestCase):
         for a, b in (('dev', 'qualification'), ('dev', 'holdout'), ('qualification', 'holdout')):
             self.assertFalse(set(SPLITS[a]) & set(SPLITS[b]))
         with self.assertRaisesRegex(ValueError, 'holdout reserved'): cases('holdout')
+
+    def test_impossible_public_value_is_not_a_solution(self):
+        c = cases()[0]; ds = documents(c)
+        for d in ds:
+            if c['target_key'] in d['facts']: d['facts'][c['target_key']] = 9999
+        self.assertEqual(possible_decisions(c['task'], ds), [])
 
     def test_actor_surface_has_no_evaluator_fields(self):
         c = cases()[0]
@@ -181,11 +188,11 @@ class RunnerTests(unittest.TestCase):
 
     def test_exact_assignment_and_call_accounting(self):
         rec = reconcile(self.frozen, self.rows, self.journal.events)
-        self.assertEqual((rec['assigned'], rec['terminal'], rec['started_calls'], rec['physical_model_calls']), (96, 96, 708, 0))
+        self.assertEqual((rec['assigned'], rec['terminal'], rec['started_calls'], rec['physical_model_calls']), (96, 96, 636, 0))
         self.assertEqual(rec['missing'] + rec['unresolved_calls'], [])
         for r in self.rows:
             if r['kind'] == 'swarm':
-                self.assertEqual(r['physical_continuation_calls'], {'independent': 1, 'reports': 4, 'private': 22, 'board': 22}[r['arm']])
+                self.assertEqual(r['physical_continuation_calls'], {'independent': 1, 'reports': 1, 'private': 19, 'board': 19}[r['arm']])
 
     def test_shared_snapshots_and_no_cross_arm_mutation(self):
         for c in self.worlds:
@@ -211,13 +218,13 @@ class RunnerTests(unittest.TestCase):
                 self.assertNotEqual(p['agent'], e['agent'])
                 self.assertLessEqual(p['turn'], e['turn'] - int(phase == 'work'))
 
-    def test_round_zero_same_requests_between_matched_arms(self):
-        starts = [e for e in self.journal.events if e['kind'] == 'call_start' and e['request']['phase'] == 'ballot' and e['turn'] == 0]
+    def test_round_zero_exact_ballots_shared_between_arms(self):
         for c in self.worlds:
             for attack in (False, True):
-                for agent in range(3):
-                    pair = [e['request'] for e in starts if e['agent'] == agent and e['label'] in (f'{c["id"]}:{int(attack)}:private', f'{c["id"]}:{int(attack)}:board')]
-                    self.assertEqual(len(pair), 2); self.assertEqual(*pair)
+                group = [r for r in self.rows if r.get('world') == c['id'] and r.get('attack') == attack and r.get('arm') in ('reports', 'private', 'board')]
+                self.assertEqual(len(group), 3)
+                self.assertEqual(group[0]['trajectory'][0], group[1]['trajectory'][0])
+                self.assertEqual(group[1]['trajectory'][0], group[2]['trajectory'][0])
 
     def test_saved_requests_and_outcomes_replay(self):
         p = Replay(self.journal.events)
@@ -265,9 +272,9 @@ class RunnerTests(unittest.TestCase):
 
     def test_discussion_dose_zero_has_equal_call_counts(self):
         p = Scripted(); j = Journal(); c = self.worlds[0]; runner = Runner(p, j, 0)
-        snapshot = runner.acquire(c, False)
+        snapshot = runner.prepare_reports(c, False, runner.acquire(c, False))
         a = runner.continue_arm(c, False, 'private', snapshot); b = runner.continue_arm(c, False, 'board', snapshot)
-        self.assertEqual(a['evaluation'], b['evaluation']); self.assertEqual(a['physical_continuation_calls'], 4)
+        self.assertEqual(a['evaluation'], b['evaluation']); self.assertEqual(a['physical_continuation_calls'], 1)
         self.assertEqual(a['physical_continuation_calls'], b['physical_continuation_calls'])
 
 
@@ -291,12 +298,51 @@ class DurabilityTests(unittest.TestCase):
     def test_paid_launch_defaults_closed(self):
         with self.assertRaisesRegex(ValueError, 'separately reviewed'): approved_model_config(None, 'dev', 3)
 
+    def test_native_provider_v3_schema_parser_and_usage_without_network(self):
+        from providers import ProviderFailure
+        c = cases()[0]
+        context = {'task': c['task'], 'documents': documents(c), 'reports': [], 'board': [], 'private_history': []}
+        request = {'phase': 'ballot', 'context': context}
+        response = Scripted().complete(request)
+        class Reply:
+            def __init__(self, text): self.text = text
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def read(self, size):
+                return json.dumps({'usage': {'input_tokens': 20, 'output_tokens': 10}, 'stop_reason': 'end_turn',
+                                   'content': [{'type': 'text', 'text': self.text}]}).encode()
+        config = dict(model='offline-mock', max_calls=2, max_output_tokens=1500, max_input_bytes=60000,
+                      timeout=1, max_cost_usd=100, input_usd_per_million=1, output_usd_per_million=5)
+        with patch.dict(os.environ, {'SWARM_MODEL_API_KEY': 'offline-dummy', 'SWARM_MODEL_WORKSPACE_ID': 'offline-workspace'}):
+            adapter = anthropic(config)
+            def inspect(req, timeout):
+                body = json.loads(req.data)
+                self.assertEqual(body['system'], SYSTEM)
+                self.assertEqual(body['output_config']['format']['schema'], schema('ballot', context))
+                return Reply(json.dumps(response))
+            with patch('urllib.request.urlopen', side_effect=inspect):
+                self.assertEqual(adapter.complete(request), response)
+            self.assertEqual(adapter.last_usage, {'input_tokens': 20, 'output_tokens': 10})
+            duplicate = '{"value":1,"value":2,"sources":[]}'
+            with patch('urllib.request.urlopen', return_value=Reply(duplicate)), self.assertRaises(ProviderFailure):
+                adapter.complete(request)
+            self.assertEqual(adapter.last_response_text, duplicate)
+            self.assertEqual(adapter.calls, 2)
+
+    def test_scripted_results_cannot_model_qualify(self):
+        from .analysis import summarize
+        frozen, worlds = manifest('dev', 0, Scripted('abstain'))
+        j = Journal(); rows = Runner(Scripted('abstain'), j, 0).execute(worlds, frozen['assignments'])
+        q = summarize(frozen, rows, j.events)['qualification']
+        self.assertFalse(q['model_qualified']); self.assertFalse(q['competence_screen_pass'])
+        self.assertEqual((q['clean_full_evidence_correct'], q['clean_reports_correct']), (0, 0))
+
     def test_file_run_and_audit_and_summary_mutation(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'run'
             with patch('urllib.request.urlopen', side_effect=AssertionError('offline runner touched network')):
                 run(path, rounds=0); result = audit(path)
-            self.assertEqual(result['requests_replayed'], 276)
+            self.assertEqual(result['requests_replayed'], 204)
             with self.assertRaises(FileExistsError): run(path, rounds=0)
             (path / 'summary.json').write_text('{}')
             with self.assertRaisesRegex(ValueError, 'summary mismatch'): audit(path)

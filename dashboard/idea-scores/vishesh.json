@@ -1,0 +1,3803 @@
+{
+  "schema": "swarm-idea-review-v1",
+  "rubric_version": "vishesh-visual-bio-v1",
+  "reviewer": "vishesh",
+  "ratings": {
+    "PHY-01": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 75,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 87,
+      "rationale": "Occluded flocks offer clear geometry and a real physical mechanism; software transfer needs separate validation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "398fea280eca64b84686470c39e943898d43908fdf6835894d7858ce12d30c31"
+    },
+    "PHY-02": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 55,
+        "theory": 100,
+        "novelty": 80
+      },
+      "score": 82,
+      "rationale": "Paired turning pulses distinguish mechanisms with striking waves, but immediate agent-team utility is limited.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "164933464ee3f2ad5ba669dd7db8d660d31b93142fca55c0b1be5f958c09ae64"
+    },
+    "PHY-03": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 80,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 88,
+      "rationale": "Order-versus-progress is visually legible and useful for judging swarm dashboards without equating alignment with success.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7787e9d48ff61c09f68c6271bd59b50ce6d3d8fb0bbb2a55db80d3edae80fbea"
+    },
+    "PHY-04": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 95,
+        "novelty": 70
+      },
+      "score": 88,
+      "rationale": "Expert placement under local failure gives a clear spatial intervention and a useful reviewer-allocation analogue.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "aef7609911350f589aa8c1d97d297c74431340b12ac0584c2116645bbbd58d46"
+    },
+    "PHY-05": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 35,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 75,
+      "rationale": "Hydrodynamic fragmentation is beautiful physics with a weak direct connection to software agents.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e6fd059051a98fed53d6bfc5f726ce36b41ce20f9d5cb3de62d095ada147d71f"
+    },
+    "PHY-06": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 60,
+        "theory": 95,
+        "novelty": 80
+      },
+      "score": 82,
+      "rationale": "Alternating bursts expose coordination limits; translation from moving groups to worker schedules is plausible but untested.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "885064d56db0e9e0d1626621d642bd41e21e95fcb6dfb51892b66f16924c246a"
+    },
+    "PHY-07": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 90,
+      "rationale": "Sparse links versus fresh sampling separate two adaptation mechanisms in an accessible changing-world animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "67e22541880ae8c35808fc78ac0c81e692f91d8e51826d08470ee7bd024dbce3"
+    },
+    "PHY-08": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 75,
+        "theory": 100,
+        "novelty": 60
+      },
+      "score": 82,
+      "rationale": "Noise-driven escape from deadlock is compelling, but overlaps the team's quorum agenda.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5500ce883133527db0ba4f030c666937899705d2ffd219281934b32c1f0b9e6b"
+    },
+    "PHY-09": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 90,
+        "novelty": 40
+      },
+      "score": 81,
+      "rationale": "Independent-evidence saturation is useful and visualizable, but closely overlaps existing evidence-quorum work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "053a6c24ba0417323118b39cad7ddc5ddd2b1b274c20fa3efd0005a2ba153af1"
+    },
+    "PHY-10": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 85,
+        "theory": 95,
+        "novelty": 65
+      },
+      "score": 85,
+      "rationale": "Travel and sampling bias have a concrete procurement analogue and can be shown as unequal inspection flows.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "db44e963219433f193d4a54229fc925c141e9340e6da20ab1f482a7f90cde42f"
+    },
+    "PHY-11": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 75,
+        "theory": 100,
+        "novelty": 75
+      },
+      "score": 86,
+      "rationale": "Neutral participants changing collective choice is biologically grounded and surprising; software mediation needs controls.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "951a24e0bdb03f33c9fa32b066e9741c01812075e514fb67d256704a19a1c293"
+    },
+    "PHY-12": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 95,
+        "novelty": 45
+      },
+      "score": 83,
+      "rationale": "Continuing reinspection makes adaptation visible, with substantial overlap in existing quorum and memory studies.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "81cbb7a87c1e028c88333a7b9fc7c47fc188009a4336c6bf1fae2462c3ba244b"
+    },
+    "PHY-13": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 45,
+        "theory": 100,
+        "novelty": 80
+      },
+      "score": 79,
+      "rationale": "Identical clusters with different causes support excellent perturbation visuals but indirect agent applications.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "9a998c888ec2288aff8c43a0ac0c7cb7fa87a02a1132eddd5120a09613aff2d0"
+    },
+    "PHY-14": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 40,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 76,
+      "rationale": "Boundary-guided transport is visually strong, although software permission boundaries are only an analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d1fb8bf85dae7be55f29cf8859546a307020db3f365727308290076d4237046a"
+    },
+    "PHY-15": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 75,
+        "theory": 100,
+        "novelty": 80
+      },
+      "score": 88,
+      "rationale": "Delayed feedback produces visible aggregation cycles and suggests useful tests of lagged load-balancing signals.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "deaee7ac86ad1ec25fe9590da273090ebe0ff4260141e0a711aa8b1281f79433"
+    },
+    "PHY-16": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 35,
+        "theory": 100,
+        "novelty": 80
+      },
+      "score": 76,
+      "rationale": "Nonreciprocal rotation is rich physics; useful work extraction has limited immediate software transfer.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "1d4b9e84e69bd7d6652b010a1a2a9a55caea0b89306d30c6c7464fe6be97d54b"
+    },
+    "PHY-17": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 75,
+        "theory": 100,
+        "novelty": 40
+      },
+      "score": 82,
+      "rationale": "Appearance versus functional repair is important, but already close to the team's Regrowth and healing work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "572ca9796358f16713e69431c7990390d4e75f147cbcba5ab4e45d5e4abb6923"
+    },
+    "PHY-18": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 65,
+        "theory": 100,
+        "novelty": 80
+      },
+      "score": 85,
+      "rationale": "Mixing versus transport creates beautiful contrasting flows; search-coverage applications remain adaptations.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "913cba20d4284192bf6773e8802ebc2cded0bcbcea4c5c2f22bf5df4f88e1d8a"
+    },
+    "PHY-19": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 90,
+        "novelty": 65
+      },
+      "score": 85,
+      "rationale": "Raw versus corrected motion exposes where capability comes from and translates well to tool-broker attribution.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ecbad0a49b6a422990256167656b88f7813ce4b1b43462f205da9ad6ca763e77"
+    },
+    "PHY-20": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 90,
+        "novelty": 70
+      },
+      "score": 89,
+      "rationale": "Tiny intent signals make conflict prevention visible and suggest direct tests of concurrent worker reservations.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "58df46059a50ae7053c4d1353bfa6c84282e2327144fa4b0b878744d541e5133"
+    },
+    "PHY-21": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 95,
+        "novelty": 60
+      },
+      "score": 85,
+      "rationale": "Correlated sensor failures produce clear collective breakdowns; shared-runtime errors give a practical analogue.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "43f3255149aba0f6bed4a4ab05cf985787184224325bd81f5d4f3409f1c5cc43"
+    },
+    "PHY-22": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 85,
+        "theory": 95,
+        "novelty": 40
+      },
+      "score": 79,
+      "rationale": "Physical trust observations are concrete, but dependency-aware voting overlaps current quorum and Sybil work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "78819d891de506b72a8b0bf08c88bdba2635832cb3971514ec0a2234ae26b929"
+    },
+    "PHY-23": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 60,
+        "theory": 100,
+        "novelty": 55
+      },
+      "score": 80,
+      "rationale": "Losing coordinate seeds has strong morphogenesis visuals, with narrower agent-infrastructure applicability.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ee679e56a56e0d001ca05daae7b83d98b73fbd573f43399fda8b7d2767b7c728"
+    },
+    "PHY-24": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 65,
+        "theory": 100,
+        "novelty": 55
+      },
+      "score": 81,
+      "rationale": "Failed bodies blocking repair are visually concrete; resource-lock analogies require a separate software test.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c9b11f82d58b0188c1bfed9aa51e4cbc57ec701bf02f4788a8349ee1416be79a"
+    },
+    "PHY-25": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 95,
+        "novelty": 60
+      },
+      "score": 88,
+      "rationale": "Identical graphs with different contact ordering expose an actionable asynchronous coordination failure.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ea3cd21a9adf4249035ec3eacf1a1b6b9f621c14929832428ada99744f5ab96e"
+    },
+    "PHY-26": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 95,
+        "novelty": 60
+      },
+      "score": 87,
+      "rationale": "Latency-priced shortcuts connect control theory directly to message scheduling, though the graph visual is familiar.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "653e7af0129292bf1fcd0fc132cf4e368a385e6682f726c2cd6564d2c6e7c6a3"
+    },
+    "PHY-27": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 60,
+        "theory": 100,
+        "novelty": 75
+      },
+      "score": 83,
+      "rationale": "Moving bridges synchronize isolated clusters beautifully; literal mobility is less applicable to software workers.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "938c15c9f642915f60af95d1ec4bd264bb7cbc6a0a69553a2302afa4d8ad5dfc"
+    },
+    "PHY-28": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 85,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 91,
+      "rationale": "Traveling activation waves make useful non-synchrony unmistakable, with a plausible staged-work application.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f4d4fbb91f00d93f3158c689670caa67ed7961ab98dcc5a0659385522501f53b"
+    },
+    "PHY-29": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 40,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 76,
+      "rationale": "Distribution-dependent phase changes are compelling physics but less directly useful for everyday agent workflows.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5f6fcc30e6189358db63c0f6f1b5b23c28b7e4da78c2dcbe9095410eaf06eb4d"
+    },
+    "PHY-30": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 100,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 96,
+      "rationale": "Oscillatory bursts and queue overload connect an excellent animation to real polling and retry problems.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3515aec6c5c8ab9bc835de9c19233be4ea1991d7cc87781e6b04695cf26ae598"
+    },
+    "PHY-31": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 55,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 81,
+      "rationale": "Counterflow lanes reveal anticipation mechanisms; software conflict-avoidance transfer remains indirect.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5766a80db3b0d0c45624b4ddf4af38bcf2a8a8675a4efcc7a7956e10911d178b"
+    },
+    "PHY-32": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 95,
+        "novelty": 65
+      },
+      "score": 92,
+      "rationale": "Visible queue spillback and total waiting connect collective traffic to realistic tool-pool backpressure.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ca45468c71b9c6ce1e7fa50fb759fe4ff0a7e98c681b00958a61defe4617ad50"
+    },
+    "PHY-33": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 90,
+        "theory": 100,
+        "novelty": 65
+      },
+      "score": 90,
+      "rationale": "Minority pacing can dissolve visible traffic waves; software retry-storm transfer still needs a fair demand control.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "fbcaa5149e95f196ab5135b7f9302fe0c1fe4a0ab562f298d9f4870b42bdc02e"
+    },
+    "PHY-34": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 35,
+        "theory": 100,
+        "novelty": 70
+      },
+      "score": 75,
+      "rationale": "Confinement-driven oscillations are aesthetically strong but distant from practical agent-team decisions.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "205fbb40a2544f9623d2a881354ab09af1ef4ce078cf241407091dfe959cdd80"
+    },
+    "PHY-35": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 65,
+        "theory": 95,
+        "novelty": 65
+      },
+      "score": 82,
+      "rationale": "Wider passages worsening encounters challenge intuition, with a possible shared-resource concurrency analogue.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d80fce6e8aa966b412ea20324106cbc4e827208bb275ae5a515e9e59a2f7e1d7"
+    },
+    "PHY-36": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 90,
+        "novelty": 65
+      },
+      "score": 83,
+      "rationale": "Transferable bottleneck capacity is operationally useful, with less dramatic animation than emergent traffic waves.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a4864ad84190fd11592eca9212fd064793e1e2e4783c1a2df8a45b1476c71b00"
+    },
+    "PHY-37": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 65,
+        "theory": 100,
+        "novelty": 45
+      },
+      "score": 81,
+      "rationale": "Hidden-state lesions reveal functional versus visual repair, but overlap Regrowth and require a compatible checkpoint.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "6ced2cb0fba0866c4f10688e973c63a07d947e06b73872d3c5d2f6eba5d25555"
+    },
+    "PHY-38": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 80,
+        "theory": 100,
+        "novelty": 40
+      },
+      "score": 84,
+      "rationale": "Asynchronous cellular fronts expose execution semantics clearly; novelty is limited by existing runtime and repair work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5b113a4f66898c69ae9595b31744eb5b11ec6f054582dcc8f1f5542533a4e75b"
+    },
+    "SOC-01": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 55
+      },
+      "score": 80,
+      "rationale": "Model versus evidence diversity is highly actionable but already central to the team's current comparisons.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "101b47ed6cdd23dcee07482422914a93bed60dfa07cc550bd506cf8eca49711a"
+    },
+    "SOC-02": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 60
+      },
+      "score": 78,
+      "rationale": "Effective population size makes redundancy visible; the main contribution is measurement rather than new dynamics.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "abdbaed15057b18778f563c6521633b911063c8e6616eb3bcc34c14f4820219e"
+    },
+    "SOC-03": {
+      "dimensions": {
+        "visual": 55,
+        "practical": 85,
+        "theory": 30,
+        "novelty": 55
+      },
+      "score": 58,
+      "rationale": "Scoring-unit sensitivity is essential methodology but offers little physical mechanism or animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d9045af48b7981f74a1c9140f7646bec62ac63381e43e9768edc67b57bf26f4c"
+    },
+    "SOC-04": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 70
+      },
+      "score": 81,
+      "rationale": "Evidence routing can form legible sparse networks and improve real teams, though biology is an analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d045d1b5c7fad95ce7bd8bcfb95a701ae60213ea371870a51a40498506536952"
+    },
+    "SOC-05": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 85,
+        "theory": 45,
+        "novelty": 70
+      },
+      "score": 70,
+      "rationale": "Reading capacity versus bias yields useful thresholds but weaker physical grounding than explicit dynamical models.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7167617d9a3c1fcb0fbc16c38ca6ff074d5a103dc0e01fb398c3780d615500f0"
+    },
+    "SOC-06": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 80,
+        "theory": 40,
+        "novelty": 65
+      },
+      "score": 65,
+      "rationale": "Anchoring controls improve interpretation of influence, with moderate visual and biological appeal.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "894cf58a1c2063bb9ba07c85c4a548a2c056fe7eb53ed17e4110bd0d8fe0c2e5"
+    },
+    "SOC-07": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 55,
+        "novelty": 35
+      },
+      "score": 70,
+      "rationale": "Private commitment is practical but already has a design task and overlaps discussion-dose work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ec746f8c42c5e5c60aaf5bf54f77f74f05589bc09c49823d5ff4e8997953b537"
+    },
+    "SOC-08": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 60,
+        "novelty": 30
+      },
+      "score": 74,
+      "rationale": "Evidence-based stopping is useful but closely covered by current quorum experiments.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "befa36772eeac03ee38171968ecd39eb4cf8c8b87acc0576ee11e30695d2c144"
+    },
+    "SOC-09": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 35
+      },
+      "score": 73,
+      "rationale": "Evidence-seeking criticism fits real review tasks but closely overlaps influence and independent-checking work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0702d5495d6a3cb5848d2576ecc8088baa3b71fc43f9b963f45f2b0aa4f197a8"
+    },
+    "SOC-10": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 40
+      },
+      "score": 72,
+      "rationale": "Quality of minority evidence is useful, with substantial overlap in existing dissent and influence studies.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "279b09bf76ab4ff667cfd1a6007e558aba45f27b11d6ed5d6160b9500f75c43b"
+    },
+    "SOC-11": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 65
+      },
+      "score": 74,
+      "rationale": "Actionable uncertainty helps allocate checks; visuals are primarily evidence gaps rather than physical dynamics.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "1dae0695f22ba3a7c02411b160148e5e08247537cb9fa194bb62ba248d7c54f9"
+    },
+    "SOC-12": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 65,
+        "novelty": 55
+      },
+      "score": 77,
+      "rationale": "Persistent minority reports offer adaptation dynamics, but overlap changing-state influence and memory work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7da0eaf4ceb99bb419feff574029185d9354c3bfa80f220a9c2fa2e6b507fa4e"
+    },
+    "SOC-13": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 75
+      },
+      "score": 86,
+      "rationale": "Exploration before communication suggests a clear foraging analogy and directly tests duplicated research effort.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3db7bcfb82fa69ea859a6ca2fa6741880e81155646087218015ef562468b64e4"
+    },
+    "SOC-14": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 100,
+        "theory": 90,
+        "novelty": 90
+      },
+      "score": 96,
+      "rationale": "Construction through shared artifacts makes stigmergy visible and directly serves collaborative coding and research.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3f0252aa399f1d4ff55396d64095a8ab13ba522d8efb6d4291c69010de55a66f"
+    },
+    "SOC-15": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 75
+      },
+      "score": 83,
+      "rationale": "Uneven tool latency maps directly to asynchronous workflows with useful queue and stale-message animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b4e3b253d8a7afacbe084d0b901c408a58d1689aeb1e693e105ad6d228b0a4c8"
+    },
+    "SOC-16": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 90,
+        "novelty": 85
+      },
+      "score": 94,
+      "rationale": "Dynamic roles create a legible division-of-labor animation and directly address changing project bottlenecks.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b1591d05afc770fbf83b22808718ef8081cf358986dd8cfff702c73a42c2a893"
+    },
+    "SOC-17": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 85,
+        "theory": 50,
+        "novelty": 65
+      },
+      "score": 72,
+      "rationale": "Leader labels versus evidence distinguish authority from competence; biological leadership is only an analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a020fa1389b26d67a9fe884d4bd9679e45b5e526f6b9c781ff0606447cef52c9"
+    },
+    "SOC-18": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 65
+      },
+      "score": 82,
+      "rationale": "Coordinator handoff is visibly testable and operationally relevant, but touches existing continuity work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a9d72f36ea6033573639dd331f536449235b39268428f1d42e34aafc8cf2d627"
+    },
+    "SOC-19": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 80
+      },
+      "score": 86,
+      "rationale": "Targeted requests replace message fog with traceable pathways; selective biological signaling is an analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0af980340113e9ef5427477706b9eae2561094304e536fc03fccd456cad86343"
+    },
+    "SOC-20": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 100,
+        "theory": 35,
+        "novelty": 75
+      },
+      "score": 71,
+      "rationale": "Recognizing impossible tasks is useful but has less intrinsic physical theory or animation potential.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c6995fbc3adab80ef1009f7b4d6448fbfe03850e22abd344a1156e28c384691e"
+    },
+    "SOC-21": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 60
+      },
+      "score": 79,
+      "rationale": "Memory selection can animate retention and forgetting, though it overlaps ongoing evidence-atlas development.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0dce48ec699c41d8a53a39e1e87e9207dff572be0ed0ab12523102cc59150a2a"
+    },
+    "SOC-22": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 40
+      },
+      "score": 80,
+      "rationale": "Rare-fact replication offers clear resilience visuals but is close to existing knowledge-recovery work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d6cc3cf388795690772ef882e7e11fc84c3aff3cfb9f86d9f39ced486c591801"
+    },
+    "SOC-23": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 75,
+        "novelty": 20
+      },
+      "score": 80,
+      "rationale": "Strong recovery demonstration and utility, but Regrowth and Healing Helping Hands already occupy this direction.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "96ee437e9c5efd65579834f81651ea2957a1b810ceedf76b1f83b72766f78911"
+    },
+    "SOC-24": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 80,
+        "novelty": 20
+      },
+      "score": 80,
+      "rationale": "Generational turnover has excellent visuals and institutional utility, but Swarm of Theseus is already registered.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7740a7b38a79dbb9f8d400946c4de81ae4f50f69e2068c164e2a397140c53679"
+    },
+    "SOC-25": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 60
+      },
+      "score": 82,
+      "rationale": "Retiring obsolete conventions gives cultural adaptation a useful measurable endpoint beyond persistence.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e65231b426c31c2ce9c1aecaa93e42e7b4c3eb565fdf21b629087cc39eb11b77"
+    },
+    "SOC-26": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 85,
+        "novelty": 80
+      },
+      "score": 90,
+      "rationale": "Complementary artifacts surviving different disturbances support an ecological analogy and practical fallback portfolios.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c977f92081ddf8c9f3ddd1a280aaa7b8819e57d0b329b148590662dd43444b4d"
+    },
+    "SOC-27": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 60,
+        "novelty": 70
+      },
+      "score": 81,
+      "rationale": "Contribution credit is directly useful and can show resource flows, with a loose evolutionary-incentive connection.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8409cdc4f68649e279e6594a1392c66fbbc6cc323729794727f8a3b2726716b6"
+    },
+    "SOC-28": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 75
+      },
+      "score": 83,
+      "rationale": "Funding verification tests a real collective-action problem and can show checking effort and reuse flows.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5dbf0bd5d3fd28b754acc6138078af6983b4ef4db4add9e8c89db635d18c7e6f"
+    },
+    "SOC-29": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 65
+      },
+      "score": 76,
+      "rationale": "Report-to-correction workflows matter operationally, with less distinctive physical grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "aa883691ad67cd0e19398e1a7761ca949d67782832f973d80c41635d6d1fac35"
+    },
+    "SOC-30": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 70
+      },
+      "score": 74,
+      "rationale": "Appeals preserve useful rejected work; the central mechanism is institutional rather than biological.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "4ebf319ab01ebde831b3430c0249bb4575a7e660d46e436e436172f64ff5475f"
+    },
+    "SOC-31": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 75
+      },
+      "score": 82,
+      "rationale": "Retelling visibly changes uncertainty and scope, directly relevant to summaries but only loosely biological.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e16d1d5a5a860178cef61b7a2347e88853f8289da618a5d73b5d22bd4e156d74"
+    },
+    "SOC-32": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 65
+      },
+      "score": 74,
+      "rationale": "Missing-log casefiles aid diagnosis, though timeline graphics have less emergent-motion appeal.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "148344a8c03cee959625b07425e4aca7986124c02f5cc14bf32a61f1860ff7c2"
+    },
+    "SOC-33": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 85,
+        "theory": 35,
+        "novelty": 50
+      },
+      "score": 63,
+      "rationale": "Transfer of preferences is testable but close to the original influence research and weakly physical.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "08a03d423b64a2889557742adb366423fb4b30f7c7ff916d93381bb1bf79135a"
+    },
+    "SOC-34": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 80,
+        "theory": 40,
+        "novelty": 60
+      },
+      "score": 66,
+      "rationale": "Separating lexical from decision convergence prevents misleading visuals but offers modest biological depth.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "41616e7f8673992dee5c031fb89fe6eb39487b12938ffc5d4b06338c986785df"
+    },
+    "SOC-35": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 70,
+        "novelty": 65
+      },
+      "score": 80,
+      "rationale": "Collective surrogate validation could enable large animations, but fidelity must precede visually impressive scale.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "626598f7136b1395b987bde5cd10a2d8cf6752e52a51cbe04c42207a7ead0a6b"
+    },
+    "SOC-36": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 35,
+        "novelty": 65
+      },
+      "score": 70,
+      "rationale": "Evidence-based incident discovery is useful, with weaker physical links than dynamical failure prediction.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "720698760e611a11621088d0bfccbecfd65eff0dc4b7ec0417c3e8190c33b0eb"
+    },
+    "SOC-37": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 20
+      },
+      "score": 73,
+      "rationale": "External influence has direct use and propagation visuals but is already an active experiment family.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "afb8ab57f0f89731a1a886ff31f50d7e203c4b5b1293e1c678f23bd51237e959"
+    },
+    "SOC-38": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 70
+      },
+      "score": 82,
+      "rationale": "Complementarity-based team selection is practical; the biological diversity link is a qualified analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "674088c43d3feaefb6660eff79777b81e978ce4919501405e825465365d232db"
+    },
+    "SOC-39": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 70
+      },
+      "score": 84,
+      "rationale": "Equal average correlation hiding distinct failure clusters offers an informative network visualization.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d8cddf1059cbeb1efff31d578559aca0b3685a3e1dde7737da554e03f2fb54b3"
+    },
+    "SOC-40": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 70
+      },
+      "score": 85,
+      "rationale": "Isolated deliberating groups resemble population islands and test a practical anti-convergence architecture.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "615e853f9fab1480ed9cd91bda753b12d667e61b15c5401ccc2a951ecaf3b37e"
+    },
+    "SOC-41": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 50,
+        "novelty": 75
+      },
+      "score": 75,
+      "rationale": "Interpretation diversity is a useful alternative to personas, with less intrinsic physical structure.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "4567b9894ae1fa370dd014987bfdef9fe58a8a98f2d575366d9e1c2613b35f43"
+    },
+    "SOC-42": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 65
+      },
+      "score": 75,
+      "rationale": "Generation-versus-selection allocation is directly useful but visually less distinctive than collective adaptation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a8fe73fcef0a1eed98874caf0374987508cbe1e1706f78efc594d6e1398d87c4"
+    },
+    "SOC-43": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 55
+      },
+      "score": 76,
+      "rationale": "Shared confident errors form clear failure clusters, but overlap quorum and correlated-evidence work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "be73533f07fd7c6a1ad3f15e74ae228630a521f94fecbb4ce63d761550b1f9ea"
+    },
+    "SOC-44": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 80,
+        "theory": 45,
+        "novelty": 70
+      },
+      "score": 68,
+      "rationale": "Training-induced shared mistakes are interesting but require stronger model controls and offer limited biological mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f4aa91fee12da7af30ba49ba7c97e4f4102ee7270cbe6132f64d8e031b1d43c7"
+    },
+    "SOC-45": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 80,
+        "theory": 85,
+        "novelty": 25
+      },
+      "score": 78,
+      "rationale": "Memory-driven convention persistence is highly visual but overlaps capture-memory and generational culture work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "10edc1d0738fa39f7cf45be2b7a110050b3b8b02608f75610fa9284178bc247a"
+    },
+    "SEC-01": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 85,
+        "theory": 25,
+        "novelty": 70
+      },
+      "score": 66,
+      "rationale": "Hidden selection versus metadata leakage gives a clear attack-path graph but little biological grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "748c7efc9bf130257ffeab47d40239043abc9014c3a769486e939564cfa71221"
+    },
+    "SEC-02": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 95,
+        "theory": 20,
+        "novelty": 60
+      },
+      "score": 62,
+      "rationale": "Parent-held selection is practical security engineering with limited animation beyond protocol timelines.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "260dcf8922a2f6b88dfdf8ab05ea32fc05b8c91e3e62e80925aed2740aa95175"
+    },
+    "SEC-03": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 60,
+        "novelty": 20
+      },
+      "score": 74,
+      "rationale": "Counting independent roots is central to current quorum work and has little remaining novelty for this team.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "dd38e332d75f7039cd4e1abf1f22edf488219c9f867e2197b903d4417e278428"
+    },
+    "SEC-04": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 25,
+        "novelty": 50
+      },
+      "score": 66,
+      "rationale": "Evidence-authority boundaries are important tool contracts, but membrane metaphors do not establish biological theory.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "9a482322e4b4bf507b4a5b729c16f7fd3e4f6311f5021245a2a6f201176929e0"
+    },
+    "SEC-05": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 55
+      },
+      "score": 78,
+      "rationale": "Compaction-induced promotion is visibly traceable and useful, with overlap in current memory and influence work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "afd951d6a7150ef86fca2bc4400a997fb4906399c5b0b29714f9948bbcbd369d"
+    },
+    "SEC-06": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 75,
+        "novelty": 20
+      },
+      "score": 80,
+      "rationale": "Selective repair has strong immune analogies but is already covered by the immune-response family.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5dda87da3dd71348b4b79247dcfee30c1023c30da56b70d4822b090832dae493"
+    },
+    "SEC-07": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 60,
+        "novelty": 30
+      },
+      "score": 77,
+      "rationale": "Stale returns cause legible recurrence, but overlap existing memory-repair designs.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "efec635d91129476d79bb3c2ca8c8197d16433daec0aac43e7dc2f3ce679fad7"
+    },
+    "SEC-08": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 55
+      },
+      "score": 82,
+      "rationale": "Reserved correction capacity connects queueing with useful dissent and can show blocked evidence flows.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "cf9f13c9fc51452c092c48ac5c17b064f1bd0dc8865f1d462ad58c11c35281df"
+    },
+    "SEC-09": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 75,
+        "theory": 40,
+        "novelty": 70
+      },
+      "score": 66,
+      "rationale": "Joint weight-update interactions are interesting but farther from the team's lightweight agent architecture.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d7b60d4b292e526f52edf092e4b0c4a499664b4df5e16e71a135b0e55474cead"
+    },
+    "SEC-10": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 65
+      },
+      "score": 80,
+      "rationale": "Separating specialization from harmful drift supports a useful differentiation analogy and practical admission rules.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8e329197c48b6ad801dc1e30747d3486ee0ca02add37fa35087d996ed6b16984"
+    },
+    "SEC-11": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 45
+      },
+      "score": 72,
+      "rationale": "Merge ordering is operationally important but close to discussion-dose and compaction experiments.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a7838a2b4a196682c40abbc082676fca95af84dcb0dc5249edfc0da2df4d6198"
+    },
+    "SEC-12": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 60,
+        "novelty": 45
+      },
+      "score": 76,
+      "rationale": "Validator diversity is useful but overlaps existing independent-evidence comparisons.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d5fe26dcd2990e2f8dfad377d45b812cea228ee4f4916f2260a5a050b47eafc4"
+    },
+    "SEC-13": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 60,
+        "novelty": 40
+      },
+      "score": 75,
+      "rationale": "Attention allocation is visual and practical, with significant overlap in Sybil-specialist work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "68780d57130b4701db4470ee925e63171af1f72b9e1143ea1cccc4a03ce2dc44"
+    },
+    "SEC-14": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 85,
+        "theory": 35,
+        "novelty": 65
+      },
+      "score": 68,
+      "rationale": "Noisy coalition caps are a mechanism-design question with limited biological or physical depth.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0754755ab18d897e4fc0521910da5e0320a609b4e52090f8542a822a97358907"
+    },
+    "SEC-15": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 35,
+        "novelty": 70
+      },
+      "score": 70,
+      "rationale": "Skill-specific reputation matters for routing, but its visual explanation is primarily a trust graph.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "46ada49b2aa4b409a56016bd0eee87e233b5329c43edb6c6888ce359ecf6bb7a"
+    },
+    "SEC-16": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 85,
+        "theory": 45,
+        "novelty": 65
+      },
+      "score": 71,
+      "rationale": "Newcomer admission has an ecological analogy, though the tested mechanism is deposits and probation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ea5bc6b3074c42d0c65366666a6dc3298ac08eff9cd7a651cf5de5fcdace1bae"
+    },
+    "SEC-17": {
+      "dimensions": {
+        "visual": 55,
+        "practical": 85,
+        "theory": 15,
+        "novelty": 50
+      },
+      "score": 53,
+      "rationale": "Credential accounting is important but poorly matched to the requested biological and animation emphasis.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f7bd81008164d873f588e9e3ab714d771948610b956eaa686f163c8000a4311c"
+    },
+    "SEC-18": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 65,
+        "novelty": 45
+      },
+      "score": 76,
+      "rationale": "Identity resistance can concentrate evidence, but this touches both current Sybil work and the prior monoculture pick.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "eb5a79ccddf38a7f29f23bd4347f6e9ba1e23d5a30f08881e064b173a74b23ef"
+    },
+    "SEC-19": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 20
+      },
+      "score": 75,
+      "rationale": "Specialist communities rejected by graph defenses are already represented by sybil-specialists.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "fa5575dffdb882c615f6db7d0c3682fa574448b65cf6f9dc11181757d53df89f"
+    },
+    "SEC-20": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 85,
+        "theory": 20,
+        "novelty": 55
+      },
+      "score": 58,
+      "rationale": "Credential versus autonomous control is conceptually useful but less visually and biologically compelling.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e63898a8e5d3bc951d843f7d191240370b0bb1ece151c32f052824613c9cd3f8"
+    },
+    "SEC-21": {
+      "dimensions": {
+        "visual": 60,
+        "practical": 90,
+        "theory": 15,
+        "novelty": 55
+      },
+      "score": 57,
+      "rationale": "Attestation semantics are practical infrastructure work with little natural swarm animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "142c68b69a8190e689e30736a9066b7b2ed8670dc6ceffebe5f91b68f39ce77d"
+    },
+    "SEC-22": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 70,
+        "novelty": 75
+      },
+      "score": 86,
+      "rationale": "Timing incentives create visible polling storms and connect to collective resource competition.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "252bdc91fc0ea7dc6a0a064a456f751b8aaf2993922f1999077f0d4252527088"
+    },
+    "SEC-23": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 65,
+        "theory": 90,
+        "novelty": 60
+      },
+      "score": 77,
+      "rationale": "Radio and motion signatures have direct physical grounding, but hardware assumptions limit agent-team transfer.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7b436c70c3cf3238b70d4453184d35a84b5ef2180a53757fe98960613cdfbfc2"
+    },
+    "SEC-24": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 65
+      },
+      "score": 76,
+      "rationale": "Circular endorsements can form visible reward loops; independent utility checks are practical but not biological mechanisms.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7a5a763a1019839057712092e37764ccfe9c58724c067a7f44b1da1baae52ad9"
+    },
+    "SEC-25": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 80,
+        "theory": 20,
+        "novelty": 60
+      },
+      "score": 59,
+      "rationale": "Attribution controls matter, but offer weaker physical links and less dynamic demonstration.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e83fd4a00238d027d5bb6d603283f619391ec4d07f3a69cb93ab6768a398f0de"
+    },
+    "SEC-26": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 90,
+        "theory": 25,
+        "novelty": 55
+      },
+      "score": 61,
+      "rationale": "Simulator fingerprinting is valuable validation work rather than an intrinsically animated collective mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d9f1f133825e2d0d042a2d73c6abab87edd91d5cedd43f48d2e7638c46f6b3d5"
+    },
+    "SEC-27": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 60,
+        "novelty": 60
+      },
+      "score": 77,
+      "rationale": "Common-input synchrony is visually persuasive and useful for avoiding false coordination claims.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "fb64ba92adf4a766778c4f1ece0cbe01d8ff467b2920d436b2364ae55b085b27"
+    },
+    "SEC-28": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 35,
+        "novelty": 65
+      },
+      "score": 71,
+      "rationale": "Canary pathways animate evidence transport well; route attribution remains different from biological tracing.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "2e50bfc34760ec3a1620287d2b469ae6d50029d4471a7186bfe313129754b25f"
+    },
+    "SEC-29": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 70,
+        "novelty": 75
+      },
+      "score": 81,
+      "rationale": "Pooled probe recognition suggests adaptation dynamics, with bounded diagnostic utility and a qualified learning analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ff68dbeb1e959d5ea99102b5298c9b374950dc6c3c36ffe94fc97846241bffbc"
+    },
+    "SEC-30": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 95,
+        "theory": 35,
+        "novelty": 60
+      },
+      "score": 67,
+      "rationale": "Review-queue calibration is practical but lower on biological connection and visual novelty.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "12f581665be9359de3f8715e149ce315a2a457750de46b1b87be1a3f5d9ded6e"
+    },
+    "SEC-31": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 80,
+        "theory": 20,
+        "novelty": 60
+      },
+      "score": 58,
+      "rationale": "Autonomy classification needs careful data and has little intrinsic physical or biological mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f71398684900696157bcda407912fbbc38a1a962ebc12a93e788ecdfa53a13b7"
+    },
+    "SEC-32": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 85,
+        "theory": 20,
+        "novelty": 60
+      },
+      "score": 59,
+      "rationale": "Automation-library confounds are actionable but mostly measurement engineering.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ab6e3a552d494cacd44e9195652c85fb49ef1c936032a75c8231bd32bdf0449b"
+    },
+    "SEC-33": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 80,
+        "theory": 30,
+        "novelty": 60
+      },
+      "score": 65,
+      "rationale": "Shared-funder graphs are visually legible, though financial attribution is farther from the selected swarm theme.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "18e26329b87a26857d01f15a722509560b1e1859e0efe9aae5b2753c9074b37e"
+    },
+    "SEC-34": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 30,
+        "novelty": 60
+      },
+      "score": 68,
+      "rationale": "Missing failures can reverse conclusions, but the contribution is methodological rather than dynamical.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "9d07251836e508e9d96e4314b7ad111e50d45c6b460f67930f252db8836cfe5c"
+    },
+    "SEC-35": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 90,
+        "theory": 45,
+        "novelty": 65
+      },
+      "score": 71,
+      "rationale": "Detector aging creates an adaptation curve, with only a loose ecological connection.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "165767d6abb0deb45dff68658bcd6a3c51e7bf8e26569b44ed44f6be472dae9c"
+    },
+    "SEC-36": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 40,
+        "novelty": 70
+      },
+      "score": 72,
+      "rationale": "Minimal telemetry is useful and can show information loss; biological grounding is limited.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5cf441f7162b233a6c2e7be626de37bba06cb07bbde38be1f287753046bc1044"
+    },
+    "SEC-37": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 70
+      },
+      "score": 76,
+      "rationale": "Complementary bundles create clear allocation graphs, but the mechanism is economic rather than biological.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e86bda1b6af75fb0d8b12ce4358036687c7b4fd3a1191839e9169b3e2d11f0b3"
+    },
+    "SEC-38": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 95,
+        "theory": 25,
+        "novelty": 65
+      },
+      "score": 64,
+      "rationale": "Tiny allocator counterexamples are rigorous and useful, with modest aesthetic potential.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "6db152555de32b5c9e4d67f9c127f81d77627188bf002dc45ae882bc2236c40b"
+    },
+    "SEC-39": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 60,
+        "novelty": 75
+      },
+      "score": 82,
+      "rationale": "Splitting and merging jobs changes visible queues under conserved work, connecting incentives and flow.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "67d80fd80eec4ce950c1a5c95465360ae0d20e3af239b53665eb80098e248ee7"
+    },
+    "SEC-40": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 80,
+        "theory": 50,
+        "novelty": 65
+      },
+      "score": 70,
+      "rationale": "Participation costs connect resource competition and collective choice, with a less direct physical model.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "420cdce320b4a98363132c470a4906c1f7616ef44d1f79109730a137c5522d08"
+    },
+    "SEC-41": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 35,
+        "novelty": 70
+      },
+      "score": 73,
+      "rationale": "Trust amplification through fake intermediaries produces clear cascades but weak biological grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "de2671be09f2df7a07badac503a41aab9521f78bb6c7a8e262d6a7f3dcb7bdc9"
+    },
+    "SEC-42": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 75
+      },
+      "score": 78,
+      "rationale": "False availability windows affect practical task scheduling and offer legible temporal-allocation visuals.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "01a0a22b845229eae3d18e88c34a97e890c5389840d0a3632406da722b41240d"
+    },
+    "SEC-43": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 60,
+        "novelty": 20
+      },
+      "score": 74,
+      "rationale": "Verification of useful bridges overlaps the implemented Sybil-specialist experiment.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "fedf8460d453da11cf4c077bc9f88d492b1ec27629b88acfd44f0590160ff2a2"
+    },
+    "SEC-44": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 80,
+        "theory": 25,
+        "novelty": 65
+      },
+      "score": 64,
+      "rationale": "Conserved voting weight versus power is a useful graph comparison, with limited physical theory.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e3a6470c3fcdcf571cfeb5fb5d7f698006ec52f44bdff25fe2ad2bdfdd3a0a7f"
+    },
+    "SEC-45": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 35
+      },
+      "score": 80,
+      "rationale": "Comparing factual and permission contagion is visual but close to influence and immune-response work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f7d7585a9a9a0ee880f3260879c4d84ab9a121dd634d27673ab9a689891b69fa"
+    },
+    "SEC-46": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 70,
+        "novelty": 25
+      },
+      "score": 80,
+      "rationale": "Shared-store reinfection is actionable and visually clear, but already adjacent to memory-repair studies.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "eb6f56932c61d12a7eeda6e7878ed5be87091670921d161ccd6c0359a3667c3b"
+    },
+    "SEC-47": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 15
+      },
+      "score": 72,
+      "rationale": "The fork-return chain is directly represented by discussion-dose and should not be ranked as unused.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ba2f5a6d2e9d742b64d71b6d8d685a39da964df63f3ed2ef9e46cab5f6e957d4"
+    },
+    "SEC-48": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 40
+      },
+      "score": 80,
+      "rationale": "Re-entry resembles quarantine release and is useful, but overlaps the existing immune-response agenda.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c5055ccde31b796babbb5d33f5118348a5793d4a607e9c06dfedcc9b60858736"
+    },
+    "SEC-49": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 50
+      },
+      "score": 77,
+      "rationale": "Cumulative harm versus final recovery improves reporting, with a less distinct animation than propagation itself.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3e692d4f327e593b17ef44282598715e932b23e309264171ff1467cde173d3f9"
+    },
+    "SEC-50": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 80,
+        "novelty": 60
+      },
+      "score": 86,
+      "rationale": "Isolation changes network ecology and evidence availability; the feedback can produce an informative dynamic demo.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "cbd78ee08092a5d43202557dc1c527aefcf114e7b66e7eaed09adaf31750f506"
+    },
+    "SEC-51": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 70
+      },
+      "score": 82,
+      "rationale": "Shared evaluators narrowing strategies offers a selection-pressure analogy and practical judge-diversity tests.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "9b38f9422fc2c8ccfe4eb1dee6599e8167436aaf360642143a2a9504b24bcb45"
+    },
+    "SEC-52": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 80,
+        "novelty": 35
+      },
+      "score": 82,
+      "rationale": "Accumulating inherited errors creates striking lineage dynamics but overlaps capture-memory and turnover work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ba7a68612914bc23a9bf0a3e115776e49b6e87c8a65c2f062394414b49736281"
+    },
+    "SEC-53": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 65
+      },
+      "score": 75,
+      "rationale": "Selective service failure is a realistic routing problem, with weaker biological grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "849e6ffd5ce010cbd7478902913c32402bc6646d57c449cfe8515626f1dfe4ab"
+    },
+    "MET-01": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 60,
+        "theory": 100,
+        "novelty": 75
+      },
+      "score": 83,
+      "rationale": "Response scaling tests criticality directly, but usefulness for real agent operations needs another step.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5e5f711d88162b41a775f77bdc7f06955dfd9d248528c8a2a03e029678eda92d"
+    },
+    "MET-02": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 90,
+        "theory": 95,
+        "novelty": 60
+      },
+      "score": 88,
+      "rationale": "Alert avalanches expose responsiveness versus false alarms with a concrete incident-response application.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "53008338c5bc9d193427de441ac3bd029a7fbeabd91002d10a779520afc90492"
+    },
+    "MET-03": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 85,
+        "theory": 75,
+        "novelty": 65
+      },
+      "score": 80,
+      "rationale": "Biased observation changes inferred structure visibly and improves practical swarm telemetry.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "dcec349c4a5e665bb9ef26bba601e091e887ab3484e52220ffb0e09b26f93e85"
+    },
+    "MET-04": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 85,
+        "novelty": 75
+      },
+      "score": 85,
+      "rationale": "Synergy linked to intervention loss bridges collective information theory and useful team complementarity.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c7c1d1075e4eae23a156649f5fda769886dabaf4005d85470302b8e259213346"
+    },
+    "MET-05": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 80,
+        "novelty": 65
+      },
+      "score": 84,
+      "rationale": "Shared drivers can mimic information flow, offering a strong causal visualization and diagnostic use.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "781bda3747b3d175cc5c6d7f36a48172763b81e2d666fdf8d8aaa85eb3729fd3"
+    },
+    "MET-06": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 70,
+        "theory": 100,
+        "novelty": 75
+      },
+      "score": 86,
+      "rationale": "Slow relaxation versus true transitions produces compelling hysteresis visuals but narrower immediate software utility.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8b3f20965097c7e95008341f1d306a701e89c71571eb389072f1853aefd67b77"
+    },
+    "MET-07": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 90,
+        "novelty": 80
+      },
+      "score": 87,
+      "rationale": "Different mechanisms with similar trajectories make intervention-based diagnosis both visual and useful.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7b427f40e718bde218c2fda5c02fe3114eeb1160baa87d660f1f61bd3a5b5e4e"
+    },
+    "MET-08": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 95,
+        "novelty": 70
+      },
+      "score": 91,
+      "rationale": "Recovery slowing and disagreement could give interpretable fleet warnings if they generalize beyond gradual failures.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a95cc0817f91bbdefcd475437863cdc7a478b2cde12ec6c0dc584715a4bf7e94"
+    },
+    "RL-01": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 85,
+        "theory": 70,
+        "novelty": 70
+      },
+      "score": 79,
+      "rationale": "Partner diversity offers an adaptation analogy and useful cross-team transfer, with training overhead.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "90fc6ffbf7a094d3ba98b9d43ca30443454c12bc458b9dd8d5cf9c71ba058eb5"
+    },
+    "RL-02": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 75
+      },
+      "score": 86,
+      "rationale": "Rare essential actions give a keystone-role analogy and a practical incentive question, but require training controls.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a3e48457d391e946cd7f5592f1b84e1645cd0969dd08585eaa51fd3b8dc66721"
+    },
+    "RL-03": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 65,
+        "novelty": 65
+      },
+      "score": 79,
+      "rationale": "Robust communication under loss is useful and animated, though coding theory is a closer link than biology.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ccbb3775ae96d0dbe468b9310ac9f7d29a26d324293f44aa923b69ef1ed486fa"
+    },
+    "RL-04": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 65,
+        "novelty": 65
+      },
+      "score": 79,
+      "rationale": "Averaging away rare specialists gives a clear information-loss visual and useful aggregation test.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "cb0bcbba5f7a58b44232913969f327fd29599eae1f1bb87ed3c194db883f15c7"
+    },
+    "RL-05": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 80,
+        "theory": 85,
+        "novelty": 70
+      },
+      "score": 83,
+      "rationale": "Population size versus topology transfer is physically grounded and visually clear, with training dependencies.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "01427b6ab052ddf1ed94635a031817bea90f9b8314a21a4e99567e600a36ae28"
+    },
+    "RL-06": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 70,
+        "novelty": 65
+      },
+      "score": 80,
+      "rationale": "Simulator exploits can look emergent; cross-engine controls provide a useful falsification demo.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0f1213f99178d1ca42d2a41e6e0c92aaaacd6938fc54cbb0b67a2d990c9b199c"
+    },
+    "RL-07": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 85,
+        "theory": 90,
+        "novelty": 45
+      },
+      "score": 85,
+      "rationale": "Beautiful alignment without task progress is a strong visual lesson, but the reward-mismatch principle is familiar.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a79a45e2c3ea780319a3d8e4860395b7d9664f8d31ba213c751adbf2a4b3ac4a"
+    },
+    "RL-08": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 85,
+        "theory": 75,
+        "novelty": 65
+      },
+      "score": 80,
+      "rationale": "Co-adaptation under changing partners offers evolutionary dynamics with a heavier training burden.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a3603e32dd8b44d1f761ea1d2810f6151926004603f0ed1859bbf184adc5c074"
+    },
+    "OPT-01": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 70,
+        "theory": 70,
+        "novelty": 55
+      },
+      "score": 72,
+      "rationale": "Rotated landscapes make benchmark bias visible but are less connected to practical agent-team work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3dfa2899e5c08bbb60fc2ca614b8abe76cb460216045ce48a42d04b1996fa502"
+    },
+    "OPT-02": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 90,
+        "theory": 95,
+        "novelty": 80
+      },
+      "score": 93,
+      "rationale": "Sparse search islands visibly preserve alternatives and suggest practical independent exploration before sharing.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "65e5ef25002c517012b78d0568be8d3f82c12aaf89d3da5ba45b3002ef1c4620"
+    },
+    "OPT-03": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 80,
+        "theory": 95,
+        "novelty": 60
+      },
+      "score": 85,
+      "rationale": "Pheromone trails offer strong visuals; the central value is isolating sharing from ordinary local search.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7eba593f6c69f7415817a6b8896cf2b2109256b1ad43afcb18df05e9d8c3ae37"
+    },
+    "OPT-04": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 65
+      },
+      "score": 81,
+      "rationale": "Independent reevaluation versus more particles is useful resource allocation, with less dramatic collective behavior.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "13722b6fa87a47a85caa250b3401e75d40a0a6be061944f356d9171e040507fb"
+    },
+    "OPT-05": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 90,
+        "novelty": 85
+      },
+      "score": 92,
+      "rationale": "Decaying trails under changing objectives connect adaptation, memory policy and realistic tool changes.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "346825a3304c1372d363b54e989b49a5ede72789ca62c1f33d0f8dbb3e09681f"
+    },
+    "OPT-06": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 45,
+        "theory": 100,
+        "novelty": 65
+      },
+      "score": 75,
+      "rationale": "The stochastic limit is strong theory with less immediate practical or narrative value for agent teams.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "9e3a3a7de590a3aa041ac567e00961678062cde137c71f752e5c1896cca66aee"
+    },
+    "MTH-01": {
+      "dimensions": {
+        "visual": 60,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 45
+      },
+      "score": 65,
+      "rationale": "Correct experimental units are essential but do not intrinsically produce biological mechanisms or rich animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c24885a3c5e2df752896c607bcf525342e724d248bf6cdae00b26fd6c511d297"
+    },
+    "MTH-02": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 45
+      },
+      "score": 69,
+      "rationale": "Outcome definitions can expose coordinated failure, though similar distinctions are already central to our work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b7d4a90bd7caaae2717f97c6ea9b69e4423ed4b8dd82b4f2348266b2dac37cc8"
+    },
+    "MTH-03": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 60
+      },
+      "score": 66,
+      "rationale": "Version robustness is operationally important and visually modest.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "56625df301098f51cc82b1a2a160550b8eec1a7415a83f842b6be3453aeb7fcd"
+    },
+    "MTH-04": {
+      "dimensions": {
+        "visual": 60,
+        "practical": 95,
+        "theory": 30,
+        "novelty": 55
+      },
+      "score": 62,
+      "rationale": "Seed-versus-world allocation improves evidence quality but is primarily statistical design.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "dcbfa2a2a4da78e77582f13a806d511eef2d4bc46d26d6ad79112017a550eb08"
+    },
+    "MTH-05": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 50
+      },
+      "score": 72,
+      "rationale": "Replayable checkpoints matter for real workflows, with limited biological grounding and existing continuity overlap.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ef222d40c3a27eb8fdc30f7150bb68bf62acf34ce96b9ec7187c62129ba45ce4"
+    },
+    "MTH-06": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 90,
+        "theory": 30,
+        "novelty": 55
+      },
+      "score": 62,
+      "rationale": "Selection bias is useful methodology but weaker under the visual and biological rubric.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "6ef5fd13b4d3f42335e3357557e55a6e47428524f758f28536d2e19748fa7134"
+    },
+    "SIM-01": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 35,
+        "novelty": 60
+      },
+      "score": 72,
+      "rationale": "Narrator leakage can be animated as hidden channels and is directly useful for honest simulations.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0afd18aa232cd6d58007496f02bebcde77089ee4e3a51802200943591b6547d9"
+    },
+    "SIM-02": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 65
+      },
+      "score": 83,
+      "rationale": "Scheduling changes collective dynamics visibly and translates directly to asynchronous execution.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e04c0e5810d1ae01b7c258b7d4f68ad76c31b4b0324dd9abc0eff326352864a8"
+    },
+    "SIM-03": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 90,
+        "theory": 35,
+        "novelty": 55
+      },
+      "score": 67,
+      "rationale": "Peer-free baselines expose fake collaboration but provide less new collective mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d7fce9b8becb0425c3ba7e7d437a3bcfda9bd88dcd0be1bcf8ec380593fa5532"
+    },
+    "SIM-04": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 85,
+        "theory": 75,
+        "novelty": 55
+      },
+      "score": 78,
+      "rationale": "Matched engines test whether a visual phenomenon is real or a scheduling artifact.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "315b4784ff0f630b65ad0c6a3e4978bf72932168b74d48b3df0714313d30db5f"
+    },
+    "MTH-07": {
+      "dimensions": {
+        "visual": 60,
+        "practical": 90,
+        "theory": 25,
+        "novelty": 55
+      },
+      "score": 60,
+      "rationale": "Independent labels improve conclusions with little inherent physical or animation content.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "192d0bc072f678553418f4a67fc235f7692ac0ff0a6abf0842d023c3b3df2200"
+    },
+    "MTH-08": {
+      "dimensions": {
+        "visual": 55,
+        "practical": 90,
+        "theory": 20,
+        "novelty": 50
+      },
+      "score": 56,
+      "rationale": "Holding out complete games is essential validation but has limited visual or biological appeal.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "95d9dab4e5e8abfa89066b390e6afb4f92d3b87681214679162724ee45e5aad2"
+    },
+    "MTH-09": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 95,
+        "theory": 30,
+        "novelty": 60
+      },
+      "score": 66,
+      "rationale": "Information-limited evaluation is useful and can show visibility boundaries, without a direct biological model.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3e376ef21f42e08f20500321fcf234d5fcaf1c245432c86bdd6c7a01793b6b18"
+    },
+    "MTH-10": {
+      "dimensions": {
+        "visual": 55,
+        "practical": 75,
+        "theory": 20,
+        "novelty": 65
+      },
+      "score": 54,
+      "rationale": "Translation effects are interesting measurement work but distant from this rubric's physical emphasis.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "61eb0169bb56ba1cea7ea17a8cd58084fb9b0ebc6a831e2f6f4f22d7439f45da"
+    },
+    "MTH-11": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 50
+      },
+      "score": 68,
+      "rationale": "Including failed runs is directly valuable, though the visual is mostly accounting rather than emergent motion.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "70b6104d0e863fa6bb1bfaf099872882ffd857be1d4ce7cf0f2c30324fb0e34e"
+    },
+    "MTH-12": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 40,
+        "novelty": 60
+      },
+      "score": 72,
+      "rationale": "Trace-defined collaboration can reveal actual dependencies instead of impressive population counts.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "bacd9959a2b414b7d9c20ad10936744163839058262bb9032158fb7484e57b8a"
+    },
+    "MTH-13": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 85,
+        "theory": 35,
+        "novelty": 60
+      },
+      "score": 63,
+      "rationale": "Cross-task cooperation rankings are useful but less suited to a distinctive physical animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "63d41bb683918d3f69225093d7e0762a66a34d2b07907ed7e6ac1af96e98e066"
+    },
+    "MTH-14": {
+      "dimensions": {
+        "visual": 65,
+        "practical": 85,
+        "theory": 25,
+        "novelty": 55
+      },
+      "score": 60,
+      "rationale": "Crawler stability protects trend interpretation but contributes little biological mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c854e54394f8f67c4bd7efe42f207626fbc4ef9afe4fae2efcdabc85ba39f138"
+    },
+    "MTH-15": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 80,
+        "theory": 70,
+        "novelty": 65
+      },
+      "score": 75,
+      "rationale": "Entropy and collaboration connect information measures to team behavior, with predictive validity still uncertain.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b8ef09541f885f2d06158ba17593d0d6ac1f9be5158b9d8b6ba390d63dbe5540"
+    },
+    "SIM-05": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 45
+      },
+      "score": 68,
+      "rationale": "Event reconstruction makes animations trustworthy but is supporting infrastructure rather than a novel swarm mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a6fb698e4a8f345ed3b2985c97a13b2cb299a4845f253786d0d1538e7dc64bfe"
+    },
+    "SIM-06": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 85,
+        "theory": 50,
+        "novelty": 70
+      },
+      "score": 71,
+      "rationale": "Joint-support failures in offline evaluation are important but more abstract to demonstrate.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a57c516e6da4832f6ce3c8975aff466848e43b4a529c8a630283bf789a93d67a"
+    },
+    "SIM-07": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 60
+      },
+      "score": 71,
+      "rationale": "Deployable versus oracle baselines improve practical comparisons but have moderate visual appeal.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d3c06a7ef94b3ad54e611873bb8f18f6f1445520c92f72972adf094029a65cfc"
+    },
+    "BUD-01": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 80
+      },
+      "score": 85,
+      "rationale": "Shared-pool depletion gives a clear commons animation and directly tests real fleet budgeting.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e6125032f2c258b68acb0a751e8cfe7ef03bb84683ec0c8b0700c2d4dbf06f27"
+    },
+    "BUD-02": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 75
+      },
+      "score": 79,
+      "rationale": "Visible peer spending can create resource cascades, with social rather than physical grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5e6ce57d414d4b352571b7c8a4c35d2f864978dc6734c47ba4bfa11b076139d0"
+    },
+    "BUD-03": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 35,
+        "novelty": 70
+      },
+      "score": 72,
+      "rationale": "Displayed versus enforced balances are practical and easy to visualize, with weak biological connection.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ad0f5a47c2011e3a97cc6d7ef6b646f7ed03f8d6bb492a48a69ce3509c12089c"
+    },
+    "BUD-04": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 40,
+        "novelty": 80
+      },
+      "score": 75,
+      "rationale": "Separating context from spending pressure could improve agents, but the mechanism is interface-driven.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8cfce90c1009300afa2f4f28f1512ef7ee2691648534443529210c05dced86b9"
+    },
+    "BUD-05": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 35,
+        "novelty": 65
+      },
+      "score": 71,
+      "rationale": "Forecasting stranded budget is useful allocation engineering with less natural animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "bc342b4f38cb11170f01e8808492ac3211d0b1b5b6acb2669468e3b56c682802"
+    },
+    "BUD-06": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 90
+      },
+      "score": 88,
+      "rationale": "Quota-driven reproduction is visually compelling and practical, with an evolutionary analogy rather than literal biology.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "70da899582406468d4fd19b5cdb66b1769cecb5c384256ec7452e9198142317e"
+    },
+    "BUD-07": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 65,
+        "novelty": 75
+      },
+      "score": 82,
+      "rationale": "Discovery of quota incentives creates observable adaptation, but extends the spawning idea closely.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "4ed4c12ff7e7786b6446dd8c5c4feaff53e39f0f9c72bae4419cc9aa6f6bcc6a"
+    },
+    "BUD-08": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 75
+      },
+      "score": 85,
+      "rationale": "Lineage budgets provide a clear resource-conservation visual and a direct control on unnecessary spawning.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "1e087b9ec11f874aaec61a728022d1579db2d6192c05a85dc20ee119482cad82"
+    },
+    "BUD-09": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 70
+      },
+      "score": 78,
+      "rationale": "Escrow and uneven demand produce useful allocation dynamics with an indirect physical connection.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7db18bc0dbc431b51248c63c4dcc0388d92e84196b53e3c8efc95f62fdbd4ae7"
+    },
+    "BUD-10": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 70
+      },
+      "score": 79,
+      "rationale": "Alternative allocation institutions are practically important but less biologically grounded.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "169fdf42eba4873e9ed6012064f1781c10e46aa6a547b9bc9615b7d0ddb85859"
+    },
+    "BUD-11": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 40,
+        "novelty": 65
+      },
+      "score": 71,
+      "rationale": "Calibration versus self-reported bids is useful but visually less distinctive.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "6ccb75c6b99a160fa4426d5dd332a82c304ba69f416c695d22edbbb7f187f297"
+    },
+    "BUD-12": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 80,
+        "novelty": 80
+      },
+      "score": 89,
+      "rationale": "Event-triggered control directly links control theory to reducing unnecessary orchestration work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d5838efd101255b9e545a7673284ad3e0a24435a1b6dcb39dbef4e2577393834"
+    },
+    "BUD-13": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 70
+      },
+      "score": 76,
+      "rationale": "Charged difficulty diagnosis gives useful resource flows but only a loose foraging analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "23598ddf4bdb9be14b40055351944c5ff84576d34ca9ac1855c4d124672f502b"
+    },
+    "BUD-14": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 85,
+        "novelty": 75
+      },
+      "score": 91,
+      "rationale": "A public task ledger supports a concrete stigmergic coordination test closely related to artifact-based work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "37ea84af4df3cb4fad8b076d8722c6296ee4927a91c7d37f5e77be28c0158694"
+    },
+    "BUD-15": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 60,
+        "novelty": 80
+      },
+      "score": 83,
+      "rationale": "Spending imitation creates observable depletion waves and a realistic shared-budget failure.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a13726b4b19b046de96e0d1a7010cc88935f9707921e66bed221d07dcd65f562"
+    },
+    "BUD-16": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 75
+      },
+      "score": 77,
+      "rationale": "Priority rights versus labels is a clear allocation experiment with weaker biological grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "4a4f740a56f16d2a7055f3075b6f04d527bc334c2c7914a28bbf8bffbbc34708"
+    },
+    "BUD-17": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 70
+      },
+      "score": 78,
+      "rationale": "Finalization reserves have a useful energy-reserve analogy and direct relevance to verified completion.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3704195fb91b849a7ec07616b94873834bdfbab3922c5d18fc79787c6e3bf84c"
+    },
+    "BUD-18": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 65
+      },
+      "score": 75,
+      "rationale": "Multiple resource constraints improve operational realism but are less distinctive aesthetically.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "4abe932ddabaebb02e341a2ef4c30d25bc15e73de3a0be3b30dee6260febd1a9"
+    },
+    "BUD-19": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 65
+      },
+      "score": 75,
+      "rationale": "Soft targets inside hard limits are practical, with a modest reserve-management analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "286d99ee3a7c4bda0017dd79987799af8010bb0e552ca4977fb1225ba8450543"
+    },
+    "BUD-20": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 55
+      },
+      "score": 68,
+      "rationale": "Correct budget bookkeeping is important infrastructure, not a strong physical mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b9c78c7a46a96ead4e77a3caad963b02398b8cadba87ac8ac64d865464af959a"
+    },
+    "BUD-21": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 85,
+        "theory": 55,
+        "novelty": 65
+      },
+      "score": 73,
+      "rationale": "Budget-aware training has useful constrained-control connections but adds training cost.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5e73ee2841967d06644b7467130af2749c92b97bccbd2bae2cb7ae696d2ed7bd"
+    },
+    "BUD-22": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 75
+      },
+      "score": 85,
+      "rationale": "Starvation versus total throughput offers a strong resource-flow animation and practical fairness tradeoff.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8689fd7012d946a35244fc11f2bdc8dbaad27f875bad1e764482bfa52a1026f9"
+    },
+    "MKT-01": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 65,
+        "novelty": 70
+      },
+      "score": 79,
+      "rationale": "Sunk capacity produces visible specialization, with ecological niche occupation as an analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "545f66e34b30a0c220f3203591cd575d30f262fc34f2e350362daed34013e343"
+    },
+    "MKT-02": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 80,
+        "theory": 75,
+        "novelty": 70
+      },
+      "score": 80,
+      "rationale": "Firm-to-good ratios create legible niche crowding and a testable transition, though the mechanism is economic.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3f0a07c11facb32ee48aecf137cfd77b81c68482ea4dc99144434f03ae631995"
+    },
+    "MKT-03": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 40,
+        "novelty": 15
+      },
+      "score": 66,
+      "rationale": "Owner splitting is now represented by market-split and is no longer a fresh direction for the team.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "96d90aa859d0882ce71ba521801802dee317302d6a9b849e546fb1e13d2f9fae"
+    },
+    "MKT-04": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 85,
+        "theory": 35,
+        "novelty": 45
+      },
+      "score": 67,
+      "rationale": "Distinguishing common ownership from collusion is useful but close to the current market experiment.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7163a9930cbcd107c986a84ad592dadca90fd59f037552ee5bf8c483b591dd4c"
+    },
+    "MKT-05": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 35,
+        "novelty": 55
+      },
+      "score": 68,
+      "rationale": "Actions versus messages improve market monitoring, with limited physical grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "fa90bfabf6f38b0367a502b069f938a09afc63b1ca68c679e2d96d0a600abc8a"
+    },
+    "MKT-06": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 55,
+        "novelty": 65
+      },
+      "score": 76,
+      "rationale": "Communication changes market partitioning visibly, but links to agent operations are indirect.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ae53206231c4f44f1e8b471536794a30072ae40f0649c5ac8b7056951995a504"
+    },
+    "MKT-07": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 80,
+        "theory": 75,
+        "novelty": 30
+      },
+      "score": 76,
+      "rationale": "Inherited market conventions are visually rich but overlap capture-memory and turnover work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b67e4af42e5538876f4d2501185d11a127352b71378a401e6867cca43a0a5a24"
+    },
+    "MKT-08": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 65,
+        "novelty": 65
+      },
+      "score": 79,
+      "rationale": "Heterogeneous firms offer a diversity analogy, with capability differences complicating useful interpretation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "cca0815110d188bbc2ce493e8ecf7f928cfef938e2a1c160d313a560bcc2dc3c"
+    },
+    "MKT-09": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 85,
+        "theory": 60,
+        "novelty": 65
+      },
+      "score": 77,
+      "rationale": "Public ledgers can create visible territory boundaries; the tested mechanism is economic signaling.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8b2ecd4ca91104fbc0e80253930c216e5156b3ef3cb809f7b97b543fa7f0110a"
+    },
+    "MKT-10": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 85,
+        "theory": 75,
+        "novelty": 75
+      },
+      "score": 84,
+      "rationale": "A competitive entrant disrupting niches gives a clear invasion analogy and market dynamics demo.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "eedf235b71692f02d3b20d9cd9b8ba32bbaae018785956e36c3b273156a47496"
+    },
+    "MKT-11": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 40,
+        "novelty": 35
+      },
+      "score": 69,
+      "rationale": "Regulator evasion is important but closely adjacent to the current owner-splitting experiment.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f8a5465bd49f33f404a51de930b43519f9f47973f84507cc1072151d0f8ae316"
+    },
+    "MKT-12": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 30,
+        "novelty": 55
+      },
+      "score": 67,
+      "rationale": "Small-to-full-game transfer is practical validation rather than a new biological or visual mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "cbf85d8b634d39b9da29720c212c5c830a0e60c30885fc8e7eae4f200d0b836e"
+    },
+    "VX-01": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 60,
+        "novelty": 30
+      },
+      "score": 75,
+      "rationale": "Observation-level provenance is useful but overlaps template-quorum and independent-evidence work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "91dd807d56212e2951392c48f3f69ab57ac6cd1fed19542694871ee34be30c58"
+    },
+    "VX-02": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 55
+      },
+      "score": 76,
+      "rationale": "False merges versus splits show informative graph errors and help prioritize provenance estimation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f63f0871b2f98ff05a314909b0723591ce4c5d661bf9b7c5d62df209798bd595"
+    },
+    "VX-03": {
+      "dimensions": {
+        "visual": 60,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 25
+      },
+      "score": 59,
+      "rationale": "Stopping-rule reachability is necessary engineering already close to Antsy repair, with little biological content.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3a375dd4b316426ac89a4cf6cb2c4b07a70336e8df3ec59d250367130d838c73"
+    },
+    "VX-04": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 35
+      },
+      "score": 72,
+      "rationale": "Separating critic labels from purchased evidence is useful but close to existing influence controls.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "1ca3590a08d563164cd2b7020d8862c92b14f378d3432c8614618f20844659fd"
+    },
+    "VX-05": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 75,
+        "novelty": 65
+      },
+      "score": 86,
+      "rationale": "Quarantine consuming correction time connects queueing with an immune analogy and practical review capacity.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b1a4266dab423b941cb66bc91a3bc19c41f57408d8118474828ee7d096aa7ad9"
+    },
+    "VX-06": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 25
+      },
+      "score": 79,
+      "rationale": "Stale-return recurrence is visual but closely overlaps current memory-repair work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0950c054726c6c069951e0d82cf8f109b89dc31d4f14b9165a789fe58f69518a"
+    },
+    "VX-07": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 35
+      },
+      "score": 81,
+      "rationale": "Common loss of backups and sources is a strong resilience visual adjacent to Healing Helping Hands.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a22386f761c9e15800962b2c7af18726e90237f8b6eedf78c2c9a7902e18c88b"
+    },
+    "VX-08": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 60,
+        "novelty": 75
+      },
+      "score": 80,
+      "rationale": "Arrival order creating apparent leadership gives a clear causal animation and realistic scheduling relevance.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e8eb9c14eb26afa1f16e90c38d4531269ed707fa8e3c363e7a6b95c8c634c9dd"
+    },
+    "VX-09": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 70,
+        "novelty": 85
+      },
+      "score": 86,
+      "rationale": "Delayed maintenance value connects resource allocation to a useful ecological stewardship analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "270e58260bafacf0e5bbdb4da6fd601346bd9cf3ba06ace63c02dfc9fa2696a2"
+    },
+    "VX-10": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 30
+      },
+      "score": 71,
+      "rationale": "Hidden recovery channels matter but are an audit of the existing Regrowth claim rather than a new direction.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "97d99b7beed65b0c2ad8d6ac57c5572204d3d2c5d8d89d10803cfea225d066c1"
+    },
+    "VX-11": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 55
+      },
+      "score": 78,
+      "rationale": "Irreversible actions make recovery limits visible, with transactional rather than biological mechanisms.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f5e48e4d7ec725f2e3b50e6512ba13337668c17ff2db8a6a17ad519c2fbb06cf"
+    },
+    "VX-12": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 75
+      },
+      "score": 78,
+      "rationale": "Truth versus faithful retelling gives a clear evidence-lineage animation and useful diagnostic distinction.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "568030a0eae9c3c420d65eee671a9b49ade0af93ac5cb0d7179857758d8615f4"
+    },
+    "VX-13": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 40,
+        "novelty": 80
+      },
+      "score": 75,
+      "rationale": "Alternative causal explanations improve investigation decisions, though physical grounding is mainly inferential.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "259a35805cd32b6933fe16a19cfdfeced2dffeed37fe22e5496cc3d3725cd163"
+    },
+    "VX-14": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 80,
+        "novelty": 75
+      },
+      "score": 88,
+      "rationale": "Probes changing the swarm create a compelling feedback experiment and practical monitoring tradeoff.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "10f7b31b4288243c33244645b34a5da22e1bfa7797b6d6071e5fc79a8f6bd021"
+    },
+    "VX-15": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 65
+      },
+      "score": 81,
+      "rationale": "In-flight action ownership makes handoff failures concrete, with more engineering than biological content.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "413635de0711d130c016100eeea8fec25e15d2848c62fa21a52ddabd4d3e61c2"
+    },
+    "VX-16": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 80,
+        "novelty": 45
+      },
+      "score": 84,
+      "rationale": "Selective cultural revision is useful and visual but closely related to the registered turnover study.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e472dcfeb42b9007b8d424e72f03c4e978cdb389637259c670323a3359306e2c"
+    },
+    "VX-17": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 80,
+        "novelty": 65
+      },
+      "score": 87,
+      "rationale": "Verification norms across generations connect institutions and inheritance, with overlap in culture work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d80f9c4efbe4fda8967b7e0452bc37deeb2e79d959beb65d9fad0e72fcec1ac6"
+    },
+    "VX-18": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 65,
+        "theory": 100,
+        "novelty": 40
+      },
+      "score": 81,
+      "rationale": "Hidden-state versus visible repair is striking, but close to existing recovery demonstrations.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "bb8879206ff1cc9a10a026e37906a8ce3e97def72aff2a726cfea7af32859617"
+    },
+    "VX-19": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 85,
+        "theory": 95,
+        "novelty": 55
+      },
+      "score": 86,
+      "rationale": "Restoration under changed clocks exposes genuine execution semantics with strong cellular visuals.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "061643097eabc7133a4c6f0cb30ab90434379fcfee215453cd9f362f3ff3bcb3"
+    },
+    "VX-20": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 75,
+        "novelty": 90
+      },
+      "score": 91,
+      "rationale": "Reward-driven evidence monoculture joins resource flows and diversity loss; the ecological link is an analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "efc74a171962ee52bfb31907ee0db143a31e50a618dd7655f5950d88f934e51d"
+    },
+    "VX-21": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 80
+      },
+      "score": 85,
+      "rationale": "Urgency-driven starvation is a realistic queueing problem and yields clear attention-flow animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "1e23d1f5c88aa8b7aad76ad1e00869674b262ce26f103b2a11ce600dbb203d06"
+    },
+    "VX-22": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 55
+      },
+      "score": 76,
+      "rationale": "Buying source versus model diversity is actionable but close to existing evidence-diversity comparisons.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "adeb4b520bfbf29845d538f7659df8edaad92a13b1390b935431694e1f391841"
+    },
+    "VX-23": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 60
+      },
+      "score": 78,
+      "rationale": "Appeals reviving stale claims form visible cycles and a practical versioning problem.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ee5ba5333e4664aa8424263fbf9841d9f72de84f05f81e0e2818273c80594187"
+    },
+    "VX-24": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 75
+      },
+      "score": 81,
+      "rationale": "Timing changes the harm of false reports, making intervention cost visible across a real workflow.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "966e5283b06412c05f69695999c423908324a4e084527ea6be5570caccea7ace"
+    },
+    "VX-25": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 75
+      },
+      "score": 85,
+      "rationale": "Stale expertise maps create clear routing failures and a useful adaptation problem.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "61235b4ae213c589b664730ca1295c40b03eb241bf7f9388a2a42caab935a692"
+    },
+    "VX-26": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 15
+      },
+      "score": 72,
+      "rationale": "Retrieval exposure versus peer amplification is directly covered by the influence experiment family.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e9d5eee864c5c04f1b29ab83014345b0a56fce450b909717c8fd0f66701ea052"
+    },
+    "VX-27": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 80,
+        "theory": 90,
+        "novelty": 50
+      },
+      "score": 83,
+      "rationale": "Order-versus-function across domains is visually rich but primarily a comparative measurement tool.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3dcbfaee6678ddb56bdb94a0a39ef6a5a6153a7761779659a9157b9818b41d8e"
+    },
+    "VX-28": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 100,
+        "theory": 25,
+        "novelty": 45
+      },
+      "score": 64,
+      "rationale": "Option-set confidence is useful for TypeSafe integration but closely adjacent to Antsy qualification.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "2bd0ae2263ef544461774dcf5be7620e2258d6ba1aa2857f947db9ff040a0903"
+    },
+    "VX-29": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 60,
+        "novelty": 20
+      },
+      "score": 74,
+      "rationale": "Correct newcomers suppressed by identity defenses overlap sybil-specialists.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5d14b3f93fe3a057329c4ecda7fce792019730ce3a7b6dc854df47144019ded8"
+    },
+    "VX-30": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 35,
+        "novelty": 60
+      },
+      "score": 72,
+      "rationale": "Selective missing verifier logs are useful to audit but weaker on physical mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "bc580fee7b63d967dc36613e7eb2e30e71b24ecf309d3ab2a1882c3b857fc22f"
+    },
+    "VX-31": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 75
+      },
+      "score": 77,
+      "rationale": "Turning abstention into information purchase gives a practical search-allocation experiment.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5d5dc55595582574469e13025c774d3bcae93dae60ab728c39d1be8b524cd39c"
+    },
+    "VX-32": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 60
+      },
+      "score": 75,
+      "rationale": "Broker interventions can make apparent coordination visible, but the main connection is systems attribution.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "300a236b40d3d809edbd5929a279b1f5bf0516314f87c23b7b99c787e4a3b7ca"
+    },
+    "VX-33": {
+      "dimensions": {
+        "visual": 70,
+        "practical": 100,
+        "theory": 35,
+        "novelty": 40
+      },
+      "score": 66,
+      "rationale": "Budget exhaustion affects conclusions but is supporting experimental accounting rather than a new swarm dynamic.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "17d9953f56bb425f4f622a9e05e218c520681629cab8559aaf6b5c093ec8d94a"
+    },
+    "VX-34": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 55,
+        "novelty": 70
+      },
+      "score": 78,
+      "rationale": "Value-guided routing is useful if split integrity holds; its biological link is only selective-attention analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e38ae3d460224acdb23cb49b3c9558414c1c1c6f180e34208057d8fdbf524cd3"
+    },
+    "VX-35": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 95,
+        "theory": 75,
+        "novelty": 80
+      },
+      "score": 88,
+      "rationale": "Majority exposure changing subsequent search creates a compelling self-reinforcing information ecology.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7ea350ba156b75f3c7302b4d6c337be96b83d1fbef4ba07b2a79f0a66d8f5d0e"
+    },
+    "VX-36": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 25,
+        "novelty": 40
+      },
+      "score": 65,
+      "rationale": "Truth and permission separation is a useful interface test but substantially overlaps existing boundary work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "fc3fc6791ba2c8a761644617e759e5d5d14db744b990799b0ed5e363734a82a6"
+    },
+    "VX-37": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 35,
+        "novelty": 65
+      },
+      "score": 70,
+      "rationale": "Reserved confirmation improves discovery reliability, with limited physical and aesthetic novelty.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c30bc8bb22f0d23256caedc915b9162e4e37320ae2e2bd4b3248c3d806b8e67b"
+    },
+    "VX-38": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 60,
+        "novelty": 70
+      },
+      "score": 83,
+      "rationale": "A shared summarizer causing correlated reviewer failure is practical and visually clear.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d4658d40aa1eb8da5fa1f954e970555cf4f5da37cfc5924b86b75d50b9695cda"
+    },
+    "VX-39": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 40
+      },
+      "score": 81,
+      "rationale": "Clean but outdated checkpoints expose a real repair limit, adjacent to ongoing recovery work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "661c4a35ce5d5ab552d7ed7fe5df5f078b9f33f9adb47dfec5dcca4cf3faff5e"
+    },
+    "VX-40": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 75,
+        "novelty": 40
+      },
+      "score": 82,
+      "rationale": "Arrival-order robustness under deadlines is useful but close to quorum and scheduling studies.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "023a761dbf1da6f736eb7d7be8926f9543eac8b678c7af6e9b133544d08dea18"
+    },
+    "PX-01": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 55,
+        "novelty": 65
+      },
+      "score": 79,
+      "rationale": "Paraphrased copies versus independent observations gives a concrete memory-selection and provenance test.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "46817cfa08664bf57b24b47cb59d393af4db52c085a3f85c70f9a663fd1fe0a9"
+    },
+    "PX-02": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 80
+      },
+      "score": 80,
+      "rationale": "Negative dependencies extend repair beyond ordinary graphs and have direct scheduling applicability.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b042a78dad914b4b83a73afca5947beb6c749fa028222bdb5b2c583c806695d1"
+    },
+    "PX-03": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 55
+      },
+      "score": 78,
+      "rationale": "Correction visibility versus storage is a useful consistency distinction with clear delayed-flow animation.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0990ed30873a3d656b5f93a9b74fe1f801f472de50bbc5f7acae2694fbeda8f0"
+    },
+    "PX-04": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 60
+      },
+      "score": 82,
+      "rationale": "Continuation-based release resembles quarantine testing and is useful, but near the immune-response agenda.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e24f0113d5900ae55dbaeea8a496bd17eac6464d2abd92e0f4691efb2864d483"
+    },
+    "PX-05": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 55
+      },
+      "score": 75,
+      "rationale": "Lost retrieval keys versus lost facts is practical and visibly diagnosable, with existing recovery overlap.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "feee602b5d043e331c042f648f9ac8c887a519125a94771026dbb735dc1cc869"
+    },
+    "PX-06": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 30,
+        "novelty": 65
+      },
+      "score": 68,
+      "rationale": "Completeness contracts make absence claims defensible but are less naturally biological or animated.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "41b5a98c72377604db1cc613572059edf7ea9134fad161daf2a95541af6671a2"
+    },
+    "PX-07": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 65
+      },
+      "score": 79,
+      "rationale": "Attrition changing apparent independence produces useful population visuals and measurement discipline.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ead1afef06213806746187f299a0107fa93f575eac466fb053bce685b69e9363"
+    },
+    "PX-08": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 65
+      },
+      "score": 83,
+      "rationale": "Protecting minority evidence without endorsing it fits useful dissent, though influence work is nearby.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "531a38f0ac3742482fd123c72973b9ba6c4f966721d7d45dba2cbedd4ee0ffae"
+    },
+    "PX-09": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 70,
+        "novelty": 80
+      },
+      "score": 88,
+      "rationale": "Compression turning examples into unsupported rules connects cultural inheritance to a practical memory failure.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "61c1162b583c8040ad181e4a07c2e3910f9c141379fce84aa418f42bd8ff6b64"
+    },
+    "PX-10": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 65,
+        "novelty": 80
+      },
+      "score": 84,
+      "rationale": "Rewarding decision change can select disruption, producing clear routing dynamics and a useful objective test.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "98b2d935f0c80a0a110dc2f27a256dfe18449dafa4027b2e1aafa6d02525305b"
+    },
+    "PX-11": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 65
+      },
+      "score": 75,
+      "rationale": "Receipts versus actual remediation are operationally important but mainly workflow semantics.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3f8edb11e411bc6b5bd899884eb1d763275b1d61f02bfb60216dad22690a93f2"
+    },
+    "PX-12": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 60
+      },
+      "score": 74,
+      "rationale": "Finalization reserve versus infrastructure headroom is useful causal accounting with moderate animation potential.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3c1b8ea5a505eb396bf3b505cba003e0c92a04b4fa471b3e4dff17dd86857709"
+    },
+    "PX-13": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 70
+      },
+      "score": 73,
+      "rationale": "Abstaining from inconclusive team selection saves real profiling cost but has a weaker physical connection.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "72d9913d8729df4593e73e9a663b724e338d475a1e6d9559490f6880e64bfdff"
+    },
+    "PX-14": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 70,
+        "novelty": 55
+      },
+      "score": 83,
+      "rationale": "Separating backup availability from evidential independence offers clear graphs, near ongoing memory work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "4fd339c8ee5041c31b1bcd945fa98943a2dea3fc39e8be84ffb4991934c2a982"
+    },
+    "EX-01": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 25,
+        "novelty": 70
+      },
+      "score": 71,
+      "rationale": "Schema mismatch is a realistic composition failure, but not intrinsically biological or physical.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "9c056dd4b5346ed86920138871972657ff598339b98aa59a2dc9cdd49fff196c"
+    },
+    "EX-02": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 75
+      },
+      "score": 77,
+      "rationale": "Adaptive testing can select lucky estimates, offering useful sequential sampling visuals and direct tool-selection value.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d688d2f9790a5527e808a34d82d492b496470cb513b23d4e46efd41258617701"
+    },
+    "EX-03": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 75
+      },
+      "score": 80,
+      "rationale": "Individually safe edits breaking a joint invariant give an excellent concurrency animation and practical coding case.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5579b483950e7429a19d167dc30ae9ae82b31afafef84ebed56a134e317682b9"
+    },
+    "EX-04": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 25,
+        "novelty": 65
+      },
+      "score": 70,
+      "rationale": "Version-bound approval is directly useful security engineering with limited biological grounding.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c0267029172ce3eca8baaddb15644f7a695a81f1d8786b91a0a40b670ab139b2"
+    },
+    "EX-05": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 35,
+        "novelty": 75
+      },
+      "score": 76,
+      "rationale": "Historical versus current truth produces clear timelines and directly improves evidence-ledger semantics.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c285b79b4ca939501ab40f23bbe66e29a3e9712435e7799a94ee25292d01210d"
+    },
+    "EX-06": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 75
+      },
+      "score": 80,
+      "rationale": "Prepare-then-commit retains visible progress during disputes and directly serves agent action workflows.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e1fdcac407b281563b679dfc0a84d37d722807e463c353b854f6c89aadfc52f3"
+    },
+    "EX-07": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 25,
+        "novelty": 60
+      },
+      "score": 71,
+      "rationale": "Lost acknowledgments and duplicate effects are practical, but largely established distributed-systems engineering.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "321c5cd2c621377f0361d06bf3561ccb73cd87f807278ffc4a0b4a54c73f5cfd"
+    },
+    "EX-08": {
+      "dimensions": {
+        "visual": 100,
+        "practical": 100,
+        "theory": 85,
+        "novelty": 80
+      },
+      "score": 93,
+      "rationale": "Correction loops resemble unstable immune feedback and create a distinct, practical oscillation experiment.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "cda5e936b570ebd8611934e17cdcc2c6a1ea3f4132ba8fe18f59fb48bcf757c5"
+    },
+    "EX-09": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 75
+      },
+      "score": 78,
+      "rationale": "Local service choices breaking global feasibility give a realistic pipeline animation and coordination problem.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e894f469b7593ff5fe1b072a8f122d7c803f11620af27b079b03d2dbc348807e"
+    },
+    "EX-10": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 80
+      },
+      "score": 85,
+      "rationale": "Partition boundaries cutting dependencies connect graph structure directly to realistic research decomposition.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "10316edef04ac3eec1df82379118694d09c738c29ebcdac3b56c27e8c2a3310f"
+    },
+    "EX-11": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 80
+      },
+      "score": 74,
+      "rationale": "Checkable witnesses can improve review cost, with less physical theory than proof and verification engineering.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f57d5ee963ca004ed6af8f587d3b387d55858163e78f63366f03082f2669da58"
+    },
+    "EX-12": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 85,
+        "novelty": 75
+      },
+      "score": 91,
+      "rationale": "Repeated changes and noisy corrections connect hysteresis and feedback control to real provider monitoring.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "844a067a5449e16ec79bd60f68b276ca6a58877eaa7e818a1148d48be22b4336"
+    },
+    "EX-13": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 75
+      },
+      "score": 77,
+      "rationale": "Adaptive evasion versus randomized audits is useful and visualizable, with a qualified predator-prey analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "30f5ae9d295d96b4a61d7ad24c44995afdc59864038ca530fb0ca3c77ceaafe6"
+    },
+    "EX-14": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 75
+      },
+      "score": 74,
+      "rationale": "Targeted methods reading directly improves research curation but has limited biological mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ef5dd802ee928d042fa69080ba6733e6ddb4c290894e413161661ca01db4d3bf"
+    },
+    "EX-15": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 50,
+        "novelty": 80
+      },
+      "score": 80,
+      "rationale": "Incentives suppressing uncertainty create visible reporting distortions and a practical scorecard question.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "615fc3b16fc88032b1e4e39a580e04bddb5e716f7cfe070f4bf559263a667572"
+    },
+    "EX-16": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 85
+      },
+      "score": 78,
+      "rationale": "Cause-specific dispute routing is highly useful for cheap classifiers, but its biological connection is loose.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "cb22f304686b63bda1a5d7260ac60e56679fbfc96bfd6c788f7c098f9c1857cd"
+    },
+    "EX-17": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 75
+      },
+      "score": 71,
+      "rationale": "Preference uncertainty versus missing facts improves human interaction, with weaker physical and visual appeal.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d6b2dc9a845bb901738cc137ae5582aa2ecc65c8c492254b517fdf81ef15b0eb"
+    },
+    "EX-18": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 80
+      },
+      "score": 87,
+      "rationale": "Goal changes propagating through running workers provide clear waves and direct orchestration relevance.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "1376c6a5f5a717ff76ba10117e0c76351d7ee5b94adb8e9fbf3b0be1ee23201e"
+    },
+    "EX-19": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 100,
+        "theory": 80,
+        "novelty": 55
+      },
+      "score": 87,
+      "rationale": "Repair triage by recoverable value has an immune analogy but extends the ongoing recovery family.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d6db66b4d420f71050ac1c9124bcf70bf1c836f601903816a1e723870b290bf5"
+    },
+    "EX-20": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 45,
+        "novelty": 75
+      },
+      "score": 80,
+      "rationale": "Cross-task contamination is a realistic shared-memory problem with clear namespace and evidence-flow visuals.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ee0d4039187aececc54ac179bdec367431d73e17d58c790c1c0c286db755bd3d"
+    },
+    "EX-21": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 100,
+        "theory": 35,
+        "novelty": 65
+      },
+      "score": 73,
+      "rationale": "Finite-sample reliability bounds are directly useful but predominantly statistical rather than biological.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "648b5b4d3b653c9a7b69856be3c47ff9bf907ebfc100dbeae670802d58b6a18e"
+    },
+    "EX-22": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 30,
+        "novelty": 70
+      },
+      "score": 74,
+      "rationale": "Tool failures becoming false facts are practical and traceable, with limited physical theory.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5840524f8f76be826c777ea23a3d66e9d2ea024d6fbbe7774d3ae54e80d0c59e"
+    },
+    "EX-23": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 100,
+        "theory": 40,
+        "novelty": 75
+      },
+      "score": 77,
+      "rationale": "Evidence capsules expose the utility-disclosure tradeoff visually, but membranes remain an analogy.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e81e60a8b1831ce0f84d5ce2327e18589a887b7aa2100385bde1998f301fc355"
+    },
+    "EX-24": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 100,
+        "theory": 65,
+        "novelty": 80
+      },
+      "score": 85,
+      "rationale": "Cross-caller diagnosis separates noise from selective failure, suggesting useful active-sensing interventions.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "be7851bf69b7b7bde9a41b0880f02336765ab1a3317e3721768e20f972ae63fc"
+    }
+  }
+}
