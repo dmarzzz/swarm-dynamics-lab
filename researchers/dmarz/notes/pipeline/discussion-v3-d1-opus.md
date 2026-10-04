@@ -1,6 +1,6 @@
 # discussion-v3-d1-opus: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/d1-opus (orbital-one), server sim-dmarz-9, claim `dmarz-d1-opus` to 15:44Z. Not a review. Last updated 2026-10-04T08:15Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/d1-opus (orbital-one), server sim-dmarz-9, claim `dmarz-d1-opus` to 15:44Z. Not a review. Last updated 2026-10-04T08:18Z.
 
 ## 1. Results so far
 
@@ -35,18 +35,18 @@ Named in the post-mortem: a fresh v3 swarm qualification on Opus, lane `dmarz/v3
 Forecast for that run's two clean gates (5 of 6 each), from the D1-Opus numbers:
 
 - Clean full-evidence decisions: pass expected (6 of 6 reused, 12 of 12 fresh).
-- Clean reports-only votes: **at risk.** On the saved reports Opus reached quorum in 4 of 6 worlds, one short of the gate, and every miss was abstention, none a wrong vote. Whether Opus-written reports remove the abstentions is the open question; it is not answered by anything run so far.
+- Clean reports-only votes: **depends on the reports, not the ballots.** On the saved reports Opus reached quorum in 4 of 6 worlds, one short of the gate. I read the ballot breakdown in `records/d1o-a1/summary.json` (group `report_snapshot`): all 8 abstentions are `choice_claim_incomplete` (the ballot's own extracted claims did not cover every needed value), 0 are `choice_claim_inconsistent`, and the 10 ballots with every value extracted are exactly the 10 correct ones. Opus never abstained with a complete set of claims and never cast a wrong vote. In `v3-q0-a1` Haiku abstained despite its own claims identifying a winner in four worlds; Opus shows none of that. The saved reports were written by Haiku and at least one world's reports are known to omit a needed fact (20001 in the Q0 results). So the reports-only gate in the Opus swarm run turns on whether Opus-written reports carry every needed value. Nothing run so far measures that.
 
 Pre-decided branches for the swarm qualification:
 
 - **Both clean gates pass:** the configuration is qualified for the v3 sweep. The sweep's plan (which arms, how many worlds, holdout 30000-30023 stays closed) should be written while the qualification runs.
-- **Full-evidence passes, reports-only fails on abstention:** this is the ballot's abstention rule meeting incomplete or cautious reports, not model competence. Do not change the model. Separate two causes with the records the run already keeps: (a) a needed fact missing from all three reports (a report-writing problem), (b) ballots abstaining although the endorsed claims identify a winner (a ballot-contract problem; Haiku did this in four worlds). The change to test is then in the report or ballot contract, on fresh worlds.
+- **Full-evidence passes, reports-only fails on abstention:** from the D1-Opus breakdown the expected cause is a needed value missing from the reports (report writing), not ballots abstaining against their own claims. Check `choice_claim_incomplete` against `choice_claim_inconsistent` in the new run to confirm. If it is report completeness, the change to test is the report contract (require every option's constraint values), on fresh worlds. Do not change the model.
 - **Any invalid, truncated or refused call:** request shape; the D1-Opus adapter ran 72 of 72 clean, so compare the ported `bench_v3` request body with it byte for byte.
 
 Two things that would shorten the loop:
 
 - Dispatch order. If the clean arms run first, both clean gates are decided in roughly the first 100 calls (about 10 minutes). A software stop there saves about 55 minutes and USD 11 when a gate fails, and costs nothing when it passes.
-- The saved-report ballots can be reused offline: reading the eight abstaining Opus ballots in `d1o-a1`'s records shows which of the two causes above dominates before the swarm run is launched.
+- A cheap pre-check exists for the at-risk gate: the report-writing step alone (6 clean worlds x 3 agents = 18 calls) can be scored for whether every needed value appears in at least one report, before the remaining 600 calls are spent.
 
 ## 4. Design notes for later runs
 
