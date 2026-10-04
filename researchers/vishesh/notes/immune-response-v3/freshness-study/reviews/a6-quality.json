@@ -1,0 +1,187 @@
+{
+  "attempt": "freshness-a6",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "repair",
+  "evidence_revision": "4016ed91ceb5f999399abb719aa66e5f2d9172f9",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The three-case bounded capability question and no-efficacy boundary were explicit.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Both returned advisors misread the fully healthy catalog; no crash or stale-alarm case reached collection.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ],
+      "next_action": "Resolve hosted contract offline and propose bounded qualification; retain substantive advisor errors and original gates.",
+      "acceptance_check": "Documented supported lossless schema, exhaustive mapping checks and separately admitted native contract/capability evidence; no retrospective A6 repair."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Neither arm completed and no matched contrast exists.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ],
+      "next_action": "Resolve hosted contract offline and propose bounded qualification; retain substantive advisor errors and original gates.",
+      "acceptance_check": "Documented supported lossless schema, exhaustive mapping checks and separately admitted native contract/capability evidence; no retrospective A6 repair."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Hosted controller request rejected; advisor factual errors observed; repair and restraint unmeasured.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ],
+      "next_action": "Resolve hosted contract offline and propose bounded qualification; retain substantive advisor errors and original gates.",
+      "acceptance_check": "Documented supported lossless schema, exhaustive mapping checks and separately admitted native contract/capability evidence; no retrospective A6 repair."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Counts retain 6 assignments,1 incomplete,5 unstarted and0 scored episodes; missing outcomes are not zeros.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Three planned development roots yielded no complete root/pair; two advisor answers are not independent world samples.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ],
+      "next_action": "Resolve hosted contract offline and propose bounded qualification; retain substantive advisor errors and original gates.",
+      "acceptance_check": "Documented supported lossless schema, exhaustive mapping checks and separately admitted native contract/capability evidence; no retrospective A6 repair."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All three retained requests inspected; two returned route identities match Anthropic Haiku4.5; no controller route completion claimed.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "gap",
+      "finding": "All request/response/usage IDs retained and7hubhashes match, but provider diagnostic body absent and1usage unknown.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ],
+      "next_action": "Resolve hosted contract offline and propose bounded qualification; retain substantive advisor errors and original gates.",
+      "acceptance_check": "Documented supported lossless schema, exhaustive mapping checks and separately admitted native contract/capability evidence; no retrospective A6 repair."
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Stopped after3requests; originalcap8 and3.329282reserved retained; claim released, no new machine or budget.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Frozen requests recoverable but hosted rejection cause unresolved;23offline tests did not demonstrate provider acceptance.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ],
+      "next_action": "Resolve hosted contract offline and propose bounded qualification; retain substantive advisor errors and original gates.",
+      "acceptance_check": "Documented supported lossless schema, exhaustive mapping checks and separately admitted native contract/capability evidence; no retrospective A6 repair."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Coverage figure shows partial denominators, no invented transitions or native animation.",
+      "evidence": [
+        {
+          "path": "a6-post.md",
+          "sha256": "8aafad26910904b5bb521cca5f1e80a8bedde99e5132b9773930555a80f7d9ed"
+        },
+        {
+          "path": "a6-reconciliation.json",
+          "sha256": "4271e761cceae6f119af856cf765bf520974ea9fab35c55f052e3e3ff96e92b1"
+        }
+      ]
+    }
+  ]
+}
