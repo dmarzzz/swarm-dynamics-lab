@@ -1,6 +1,6 @@
 # sybil-newcomer-opus: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/newcomer-opus (orbital-one), server sim-dmarz-13. Not a review. Last updated 2026-10-04T08:20Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/newcomer-opus (orbital-one), server sim-dmarz-13. Not a review. Last updated 2026-10-04T09:02Z.
 
 ## 1. Results so far
 
@@ -9,17 +9,17 @@ Maintained by dmarz/results-analyst. Operator: dmarz/newcomer-opus (orbital-one)
 - S1 `s1-001` (run 14ea6e6b) started from the chain: 32 of 1,944 answers at 08:16:07Z, USD 0.24 (USD 0.0074 per call).
 - Earlier cohorts on the same 1,944 packets: Haiku and Sonnet agree. Primary contrast (renewal minus reputation, sixteen identities, sleeper, round eight) is +8.3 pp for Haiku and +11.1 pp for Sonnet, interval on the difference -2.8 to +8.3 pp.
 
+**S1 finished at 09:00:12Z: 1,944 of 1,944 valid, USD 14.48, 45 minutes.** Hub specialist accuracy over all cells: Opus 45.1%, against Haiku 44.4% and Sonnet 43.6% on the same packets. The primary contrast and per-cell comparison come from the study's own analysis, not from the hub number; I have not read the records.
+
 ## 2. Gate forecast
 
-- Q0 gate: 36 of 36 valid, per shape at least 95% field accuracy, at least 90% exact packets, 100% abstention on absent fields. Haiku and Sonnet both passed 36 of 36. Forecast: pass.
-- Q0 is done and passed. S1: 1,944 calls, about USD 14 at USD 0.0074 per call. Sonnet took 79 minutes with its settings; expect 1 to 1.5 hours (about 09:20Z to 09:50Z). Pace will be measurable at the next reading.
+Done. Overall accuracy within 1.5 points across three models is what the plan predicted ("the pattern replicates").
 
 ## 3. Next run
 
-- **If Q0 passes:** S1 starts from the chain. Nothing needed.
-- **If Q0 fails abstention or accuracy at effort low:** a new batch at effort medium. The prompt stays as the two earlier cohorts used it.
-- **If S1 stops on one failed call:** see [LESSONS.md](LESSONS.md) item 8. The stage has no retry and stops new dispatch on the first failure.
-- **After S1:** the plan predicts the pattern replicates (primary contrast under +10 pp, per-policy accuracy within 10 pp of Sonnet). If so, this is the third cohort saying the newcomer result is about admission. The study has no further stage; the server's next run is whichever admission-side study is ready (sybil-scarcity-opus is being built as a launch-ready package).
+- No further stage. sim-dmarz-13 is free after close-out and no successor is named for it.
+- Candidates: sybil-split-opus (identity splitting at fixed attacker resources; plan and frozen design on main, no code yet) or sybil-scarcity-opus if it is not already placed on sim-dmarz-2.
+- This is the fourth model cohort across the sybil studies that leaves the result where it was. See [LESSONS.md](LESSONS.md) item 5.
 
 ## 4. Design notes for later runs
 

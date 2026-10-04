@@ -1,6 +1,6 @@
 # market-split-opus: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/market-split-opus (sub-agent on halcyon), reviewer dmarz/fleet-monitor (same researcher), server sim-test-01, claim `dmarz-market-split-opus` to 17:46Z. Not a review. Last updated 2026-10-04T08:46Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/market-split-opus (sub-agent on halcyon), reviewer dmarz/fleet-monitor (same researcher), server sim-test-01, claim `dmarz-market-split-opus` to 17:46Z. Not a review. Last updated 2026-10-04T09:02Z.
 
 ## 1. Results so far
 
@@ -8,22 +8,23 @@ Maintained by dmarz/results-analyst. Operator: dmarz/market-split-opus (sub-agen
 - 07:59Z (commit b097331b): the reviewer's go is recorded and a dated amendment raises the study cap from USD 60 to USD 160 before any model call. Because the cap is in the hashed design, S0 was repeated as `s0-fleet-002`: 6 of 6 bundles done 08:00:28Z to 08:01:23Z.
 - I0 `i0-001`: **passed**, 6 of 6 mandated operations valid, 6 calls, USD 0.061, 27 seconds (08:01:55Z to 08:02:22Z). The mandated-operation conflict that failed Haiku V1 did not occur. USD 0.010 per call.
 - Q0 `q0-001`: **passed**, both bundles `qualification_pass` 1, 32 calls, USD 0.333 (USD 0.0104 per call), 08:02:56Z to 08:05:07Z. In both unregulated qualification markets the flexible arm kept one firm and earned exactly the locked arm's profit (19,503 and 15,177 credits).
-- S1 `s1-001` started 08:05:57Z: 18 bundles of 48 calls. At 08:44Z, 6 of 18 bundles done, 0 invalid, USD 5.10:
+- S1 `s1-001` started 08:05:57Z: 18 bundles of 48 calls. At 09:00:44Z, 9 of 18 bundles done, 0 invalid, USD 8.6:
 
-| Regulation | Bundles done | Flexible arm split (2 or more firms) | Markets |
+| Regulation | Bundles done | Flexible arm split (2 or more firms) | Markets done |
 |---|---:|---:|---|
-| Owner-based | 3 of 6 | 0 | 111, 110, 115 |
-| Firm-based | 1 of 6 | 1 | 114 (2 firms; profit 40,256 against 36,365 locked) |
-| None | 2 of 6 | 0 | 111, 113 (profit identical to the locked arm) |
+| Firm-based | 2 of 6 | 2 | 114, 115 (profit 40,256 and 47,293 against 36,365 and 39,720 locked) |
+| Owner-based | 4 of 6 | 0 | 110, 111, 114, 115 |
+| None | 3 of 6 | 0 | 111, 113, 114 (profit identical to the locked arm) |
 
   The hub shows firm counts and `fragmentation_dynamic`, not the three-round evasion criterion; "split" here is the firm count. The Sonnet pilot ended 6 of 6, 0 of 6, 0 of 6.
+- **09:00:44Z: the worker stopped after its ninth bundle and nothing is running.** The remaining nine bundles are planned and need the `S1-continue` command. Reported to dmarz/fleet-monitor at 09:02Z.
 
 ## 2. Gate forecast
 
 - S1 has no pass gate; it ends when 18 bundles are terminal. A single invalid, truncated or unpriced response fails its bundle and stops the worker (plan, "S1 execution").
-- Time: regulated bundles take about 8 minutes and unregulated ones about 3; 6 bundles took 39 minutes. Remaining 12 (5 firm, 3 owner, 4 none): about 75 minutes, end about 10:00Z. One worker; the nine-bundle `S1` command is followed by `S1-continue` for the rest, which is a second launch someone has to issue unless it is chained.
+- Time: regulated bundles take about 8 minutes and unregulated ones about 3; 6 bundles took 39 minutes. Remaining 9 (4 firm, 2 owner, 3 none): about 60 minutes once `S1-continue` is issued. One worker; the nine-bundle `S1` command is followed by `S1-continue` for the rest, which is a second launch someone has to issue unless it is chained.
 - Cost: about USD 15 for S1; study total about USD 16 against the USD 160 cap.
-- Result forecast: the first six outcomes all match the Sonnet pattern. "Replicates" needs at least 5 of 6 firm-regulated and at most 1 of 6 owner-regulated; with 1 of 1 and 0 of 3 so far it is on course, on one firm-regulated market.
+- Result forecast: the first nine outcomes all match the Sonnet pattern. "Replicates" needs at least 5 of 6 firm-regulated and at most 1 of 6 owner-regulated; with 2 of 2 and 0 of 4 so far it is on course.
 
 ## 3. Next run
 

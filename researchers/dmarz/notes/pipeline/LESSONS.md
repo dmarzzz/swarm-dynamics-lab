@@ -1,6 +1,6 @@
 # Cross-lane lessons
 
-Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T08:16Z. Each item says what was observed, where, and what to do in the next plan.
+Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T09:02Z. Each item says what was observed, where, and what to do in the next plan.
 
 ## 1. Caps and timeouts are part of the hash that binds a stage to its qualification. Size them for the whole ladder before the qualifying run.
 
@@ -70,3 +70,9 @@ Read in the code, not yet observed tonight. In the sybil chains (`sybil-scale-xl
 Tonight's base rate is good: about 10,000 Haiku and Sonnet calls and about 350 Opus calls with zero provider errors. The exposure is the size of what is now starting: sybil-scale-xl S1 (576 calls, about USD 240, four in flight, packets up to about 200,000 tokens, so rate limits on input tokens per minute are the likeliest error), sybil-newcomer-opus S1 (1,944 calls), sybil-scarcity-opus S1 (1,440 calls, about USD 150), market-split-opus S1 (864 calls over 2.3 hours).
 
 A 429 or 529 response carries no model output and is not billed, so retrying it does not resample anything. SOC-07 already does this (`execution.json` `retry`: statuses 429 and 529, backoff 2 s and 6 s, `retry_after` capped at 20 s). For chains not yet launched, copying that rule costs one edit before S0. For runs already going, the thing to prepare is a resume path: a command that dispatches only the not-started assignments at the same source hash.
+
+## 9. Moving every lane to the strongest model fixes the floor and can hit the ceiling.
+
+Tonight's qualifications failed from below on Haiku and Sonnet (SOC-07 7 and 9 of 12; discussion v3 2 and 3 of 6; compositional-safety 21 of 24) and pass at or near the maximum on Opus 5.5 with reasoning (12 of 12; 12 of 12 and 6 of 6; 24 of 24 three times). For studies whose measure is a difference between arms, that is a risk in the other direction. SOC-07's S1-R came out at team success 1.00 in both arms. compositional-safety P1 is 14 of 14 safe with 0 violations after two bundles covering all seven arms; if that holds there is nothing for the receipt arms to improve. discussion-v3-opus is different: its clean reports-only arm is 6 of 6 while the other clean arms abstain, so it still has spread.
+
+For the next plans: give each qualification an upper bound as well as a lower one, or add a difficulty dial (more records, narrower margins, lower effort) that is set so the control arm lands between about 60% and 90%. A run where every arm scores 100% costs the same as one that can answer its question.
