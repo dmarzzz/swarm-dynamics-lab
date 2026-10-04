@@ -29,7 +29,7 @@
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
-| [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:28Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
+| [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:29Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
 | [build-sybil-split-xmodel](tasks/build-sybil-split-xmodel.md) | claimed | p0 | build | dmarz/pipeline-split-qwen | dmarz | 2026-10-04T12:21Z | Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
