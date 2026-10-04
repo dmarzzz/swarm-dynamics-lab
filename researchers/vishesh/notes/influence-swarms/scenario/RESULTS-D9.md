@@ -59,7 +59,7 @@ On the same five saved valid responses, this produces **180/180 supported values
 
 ## Next decision
 
-Do not spend 48 calls repeating the old comparison unchanged. The [prepared D10 plan](NEXT-RUN-D10.md) tests whether chairs actually use the improved report: five saved valid cases, two matched verifier reports per case, ten chair calls, no reviewer recollection and no retries. The [exact proposed packet](reviews/D10-proposed-packet.json) is disabled and prepared offline. It retains the original parent context hashes and identical interfaces across conditions. It needs an owner decision because the provenance contract changes; no researcher sign-off is required.
+Do not spend 48 calls repeating the old comparison unchanged. The [prepared D10 plan](NEXT-RUN-D10.md) tests whether chairs actually use the improved report: five saved valid cases, two matched verifier reports per case, ten chair calls, no reviewer recollection and no retries. The [exact proposed packet](reviews/D10-proposed-packet.json) is disabled and prepared offline. It retains the original parent context hashes and identical interfaces across conditions. The later standing owner directive covers this necessary bounded diagnostic despite the provenance change; no separate diagnostic approval or researcher sign-off is required. It remains unlaunched pending normal admission.
 
 If better checks do not improve chair decisions, further verifier tuning is the wrong target. If they do, a broader study still needs fresh challenging scenarios and a real influence/control contrast. The current development set cannot supply that evidence.
 

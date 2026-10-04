@@ -51,7 +51,7 @@ The study owner prepares the evidence and remains responsible for admission. A r
 | G3 — stage admission | Committed pre-run assessment, immutable public plan registration, verified page, current resource/budget/source checks | Only the named registered stage |
 | G4 — qualification | S0 outcomes reconciled, controls pass predeclared thresholds, qualified hashes match intended study | S1 preparation; repeat G3 for S1 |
 | G5 — review and closeout | Automatic operational closeout plus completed scientific post-mortem against [run quality](RUN-QUALITY.md), durable evidence and resource reconciliation | Finish a valid result, or propose a next-run update |
-| G6 — owner-approved update (Vishesh) | Concrete [next-run plan](templates/next-run-plan.md), completed offline changes/checks and owner approval of the proposed scope | Verify/obtain machines, repeat G3, then launch the approved attempt |
+| G6 — authorized update (Vishesh) | Concrete [next-run plan](templates/next-run-plan.md), completed offline changes/checks and applicable authority: [standing necessary-diagnostic authorization](RUN-REVIEW.md#standing-authorization-for-necessary-post-mortem-diagnostics), existing exact approval, or a new owner decision for scope outside those authorities | Verify/obtain machines, repeat G3, then launch the approved attempt |
 
 S0 means a bounded competence/qualification screen; S1 means the exploratory comparison; S2 denotes a separately authorized confirmatory or replication stage if planned. Names do not determine evidential strength. Never advance automatically because a process exited successfully.
 

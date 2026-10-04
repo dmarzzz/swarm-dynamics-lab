@@ -1,6 +1,6 @@
 # D10 proposal: can chairs use better verified evidence?
 
-**Prepared for an owner decision; not authorized or launched.** The proposed provenance contract changes how evidence enters the decision, so it is a scientific revision rather than another transport repair. Researcher sign-off is not required.
+**Prepared under standing necessary-diagnostic authority; not launched.** The owner’s later 2026-10-04 directive authorizes necessary bounded post-mortem diagnostics without another approval, including diagnostic changes to evidence handling. This ten-call discriminator is covered by that purpose within the original budget; current admission and a bound runner remain required. Researcher sign-off is not required. See [the standing workflow](../../../../../tooling/agent-experiments/RUN-REVIEW.md#standing-authorization-for-necessary-post-mortem-diagnostics). Historical requests for a separate diagnostic-plan decision are superseded.
 
 ## Why this experiment is needed
 

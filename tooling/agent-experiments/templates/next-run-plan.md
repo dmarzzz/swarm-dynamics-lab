@@ -1,6 +1,6 @@
 # Proposed next run for [study and version]
 
-Status: **draft; owner update approval pending**. Follow [the review cycle](../RUN-REVIEW.md); fix copied links in the study directory. Use the companion [structured next-run plan](next-run-plan.json) for supported operations. This proposal selects one design for the owner to approve; it does not authorize allocation, model calls or a budget increase.
+Status: **draft; classify authority before launch**. For Vishesh-owned necessary post-mortem diagnostics, use [standing diagnostic authorization](../RUN-REVIEW.md#standing-authorization-for-necessary-post-mortem-diagnostics) and proceed after admission without another owner approval. A broader main experiment or new authority remains a separate decision. Follow [the review cycle](../RUN-REVIEW.md); fix copied links in the study directory. Use the companion [structured next-run plan](next-run-plan.json) for supported operations. This proposal selects one concrete design and binds it to applicable existing or newly required authority; the document alone does not create authority or increase a budget.
 
 - Owner / preparing agent / proposed attempt and stage / parent attempt:
 - Latest handoff, completed post-mortem and [structured scientific review](scientific-post-mortem.json): [paths/hashes]
@@ -85,9 +85,10 @@ If this exceeds existing authority, request the exact increment and reason. Othe
 
 ## Owner decision and execution handoff
 
-- Approval state: [pending | confirmed | existing exact scope reused]
+- Approval state: [standing necessary-diagnostic authorization | confirmed | existing exact scope reused | new authority required]
 - Actual owner decision reference and approved plan/contract digest: [private provenance; not the agent's own approval]
-- If reusing approval: exact unchanged scope and evidence it already covers this update:
+- If using standing diagnostic authority: explain the necessary diagnostic purpose, bounded scope and remaining original budget; reference the real directive and this plan digest, not a fabricated per-packet human decision.
+- If reusing other approval: exact unchanged scope and evidence it already covers this update:
 - Conditions, authorized stage, expiry or limits stated by the owner:
 - Any subsequent material delta requiring renewed approval:
 - After approval: prospective immutable public plan, condition TLDRs, pre-run assessment, qualification and runtime checks:

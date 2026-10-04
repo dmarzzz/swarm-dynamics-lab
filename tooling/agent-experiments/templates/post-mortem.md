@@ -89,9 +89,11 @@ A proposed fix is not verified closure. Read earlier recommendations critically;
 - Remaining gaps and exact blocker; independent work still possible:
 - Chosen next decision and evidence supporting it:
 - If proposing a successor: [next-run plan](next-run-plan.md), including sample/scenario/data changes, acceptance tests and cumulative resource envelope:
-- Owner update approval: [pending | existing exact scope reused | confirmed], evidence reference and scope match; never self-approve:
+- Diagnostic required: [yes | no]; evidence, empirical unknown, smallest useful test, bounded cumulative envelope and acceptance/stop criteria:
+- Diagnostic execution: [not needed | prepared | running | completed | blocked by specific prerequisite]; run/evidence links, result, reconciliation and next action. For Vishesh, use standing diagnostic authority and run an admitted necessary diagnostic without another approval request.
+- Owner authority: [standing necessary-diagnostic authorization | existing exact scope reused | confirmed | new authority genuinely required], evidence reference and scope match; never fabricate a per-run approval:
 - Workers stopped, artifacts verified and allocation released or deliberately retained for an already admitted stage:
 
-For Vishesh, independent researcher review is not required by owner direction. Material next-run updates still need the owner's approval before allocation or execution. Keep the overall run closeout pending while this scientific assessment is unresolved; a completed review may honestly end with `repair` or `blocked`.
+For Vishesh, independent researcher review is not required by owner direction. Necessary bounded diagnostics proceed under standing owner authorization; a broader main experiment or authority increase still needs its applicable owner decision. Keep the overall run closeout pending while this scientific assessment is unresolved; a completed review may honestly end with `repair` or `blocked`.
 
 Never put secrets, private account identities, endpoints or raw sensitive logs here. Link sanitized evidence and private receipt references where necessary.
