@@ -1,0 +1,36 @@
+{
+  "stage": "offline preparation; NOT a run or launch receipt",
+  "new_native_calls": 0,
+  "scientific_worlds_generated": 0,
+  "q1_calls": 16,
+  "q1_repair_ceiling": 16,
+  "campaign_call_ceiling_including_S0": 672,
+  "campaign_reservation_usd": 0.903168,
+  "source_sha256": {
+    "next_stage.py": "1e355cf43c2fdb0fbce64becfdd40e7233be5165ddfb8ea0e3d0736bf3f63e60",
+    "next_runtime.py": "5b57a328329bb5072f4c872540b138cd64d4103a9613cd44d520d9bbd08ae9a0",
+    "qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "relay.py": "f600c8400243919d7fa55a35f790c3fb0e874eb15c0597da01d406071c8c41ed",
+    "public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "original_budget_audit": {
+    "calls": 32,
+    "reserved_usd": 0.043008,
+    "uncertain": 0
+  },
+  "tests": {
+    "passed": 52,
+    "new_tests": 18,
+    "command": "python -W ignore::ResourceWarning -m unittest discover -p test_*.py -q",
+    "warning_note": "Historical S0 SQLite test helpers emit ResourceWarning on Python 3.13; new ledger closes connections."
+  },
+  "remaining": [
+    "survey saturation",
+    "formal survey/hypothesis acceptance",
+    "immutable current plan and condition-manifest registration",
+    "fresh exclusive approved-account allocation",
+    "deployed source/reporter/current pricing preflight"
+  ],
+  "browser_check": "In-app browser verified scripted label and all 16 rows, including DEFER, failure, 14 unstarted and ungraded partial cases."
+}

@@ -30,6 +30,8 @@ We have not established that source-aware instructions improve a model, that dis
 
 The [current run roadmap](RUN-ROADMAP.md) starts with 16 context checks and a 64-call native copying/instruction screen. If that exposes an interpretable problem, four paired worlds compare peer discussion with judges reviewing their own answers, a pooled solver and deterministic rules. This buys a stronger control at the cost of very weak precision. [Fresh research findings](RESEARCH-GATES.md) narrow the claim to a controlled engineering replication; search saturation and formal survey/hypothesis acceptance remain open. The requested design review arrived with revisions, now addressed in the [review response](REVIEW-RESPONSE.md).
 
+The next 16-call qualification instrument is now implemented and checked: [readiness and remaining steps](NEXT-RUN-READINESS.md), [frozen prospective plan](NEXT-RUN-PLAN.md). All 52 study tests pass; no new native calls or scientific worlds were generated.
+
 **Launch status: blocked on current research and runtime admission gates.** Existing spending approval remains valid; no new paid calls were made for this analysis. [SETUP.md](SETUP.md) records the exact gates and next actions. The [one researcher-review task](../../../../../tasks/review-quorum-mirrors-qm3.md) requests design feedback, not duplicate sign-offs.
 
 <!-- experiment-evidence:start -->

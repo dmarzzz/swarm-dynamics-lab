@@ -1,0 +1,1967 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-Q1-01",
+  "stage": "Q1",
+  "assignments": [
+    {
+      "id": "QM-Q1-01-006",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.8,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "1118cf24662932bc7c725451cd4c9bf76cc5cdf49933e0f3315a81e3a42ab022",
+      "run_tldr": "Q1: full lineage, self context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-002",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.8,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "709bde3bcad9f0a9054f51166fd01218910e71bc35b306b11efef86fa0e4b09d",
+      "run_tldr": "Q1: full lineage, peer context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-003",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.8,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "b9542aef7665c05eea8ceb8711f499d6668c29e12a4b6b1a97de6ba8096e06eb",
+      "run_tldr": "Q1: full lineage, peer context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-012",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.65,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": null
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": null
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "e8a885df1014201a6ddd960097a31411101bf260f63edec326f3021af9bb02ce",
+      "run_tldr": "Q1: partial lineage, self context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-000",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.65,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "81bf9c0d0a4233eaf4378a3f9af26ea3f3abd082bc889e8abadbd7fe9c9e993d",
+      "run_tldr": "Q1: full lineage, peer context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-008",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.65,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": null
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": null
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "ab8555a7eacc1030c596639b1d92feed222771f9be12e5cb2d5442f55497895b",
+      "run_tldr": "Q1: partial lineage, peer context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-007",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.8,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "ae2b8f50de512ff8a3a410e1b5b4db000f1d738f7590ab2bd2f67e88986ac2b6",
+      "run_tldr": "Q1: full lineage, self context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-014",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.8,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s02"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "9530f698ff2dc0e2f3063547f898b976a8926b15a9a566330227eeb444c3706c",
+      "run_tldr": "Q1: partial lineage, self context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-013",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.65,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": null
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": null
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "dd0f7796d607c4b3ad5427228e3f7a8d8848a99eec5bfb89413ac9d475aa7c67",
+      "run_tldr": "Q1: partial lineage, self context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-001",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.65,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "72cc7612641e14f6a2e8f7c4979b207372089c2b4b99b1ffd156ad4da4dc65d3",
+      "run_tldr": "Q1: full lineage, peer context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-010",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.8,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "df75b3d74e2981cf20e5f58b23a0e6d3b470c63e3fe94c2c5cb31409790f4200",
+      "run_tldr": "Q1: partial lineage, peer context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-011",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.8,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "d9e2d30d4049589798c5ccd8ed0ce80559c7f1799ea31474a2551e9778aa904c",
+      "run_tldr": "Q1: partial lineage, peer context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-009",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.65,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": null
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": null
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 1,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 2,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 3,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            },
+            {
+              "slot": 4,
+              "status": "unavailable"
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision after inspecting the five prior-decision slots. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "3f17b21c20cd67b4653ca60bb2d31979e2c70cc7a8f331e5a0a616af54acbe3a",
+      "run_tldr": "Q1: partial lineage, peer context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-004",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.65,
+      "expected": "ZERO",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d05",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s02"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ONE",
+              "choice_scores": {
+                "ONE": 0.8,
+                "ZERO": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "f59d7400e3cd1a82aaabf159467b7f3cca66717f5471e2d48cb90dd86e2e9492",
+      "run_tldr": "Q1: full lineage, self context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-005",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.65,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d03",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.65,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d08",
+              "value": 1,
+              "q": 0.65,
+              "visible_root": "s02"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "f1bc1e2c92c112ed92a26731abf2dbccfbbad438edbe5d0bff092aab61b7ee4e",
+      "run_tldr": "Q1: full lineage, self context, q=0.65; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    },
+    {
+      "id": "QM-Q1-01-015",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.8,
+      "expected": "ONE",
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d01",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d02",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d03",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d04",
+              "value": 1,
+              "q": 0.8,
+              "visible_root": null
+            },
+            {
+              "id": "d05",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d06",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d08",
+              "value": 0,
+              "q": 0.8,
+              "visible_root": "s02"
+            }
+          ],
+          "focal_slot": 0,
+          "prior_decisions": [
+            {
+              "slot": 0,
+              "status": "available",
+              "choice": "ZERO",
+              "choice_scores": {
+                "ZERO": 0.8,
+                "ONE": 0.15,
+                "DEFER": 0.05
+              }
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE, or DEFER if unable to decide. The prior probability of each state is 1/2. Each acquired observation reports the true state with probability q. Distinct acquired observations are independent conditional on the state. Reports may repeat the same observation. A visible_root label identifies an observation; a null label means ancestry is undisclosed. Available prior decisions were computed from these same reports; unavailable slots contain no decision. Count reports with the same visible_root once. Do not assume that reports with null ancestry are independent or that missing ancestry can be recovered. Prior decisions and their choice scores are not fresh measurements. Base the choice on the evidence that is available, and acknowledge uncertainty with DEFER only if unable to decide. Reconsider the focal decision using only its own prior-decision slot. ",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "5d87c103456f3c1e819b37b3e54ba542219284ad8cfa5fc47f0b290facc2e1c3",
+      "run_tldr": "Q1: partial lineage, self context, q=0.8; source-aware instruction with constructed prior choices; test copied-evidence handling against root-MAP, measure validity and all-assigned MAP choices; finite grammar, no swarm efficacy or hidden-information claim."
+    }
+  ],
+  "assignments_sha256": "8bb28fdc592cfe25016edae0b1ed071e9bf90e54027929c59b67ae0459b2ded0",
+  "max_calls": 16,
+  "reserved_usd": 0.021504,
+  "qualify": {
+    "valid": 16,
+    "full_MAP": 7,
+    "full_denominator": 8
+  }
+}

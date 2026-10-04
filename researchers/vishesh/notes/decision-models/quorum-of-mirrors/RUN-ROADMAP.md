@@ -1,6 +1,6 @@
 # Quorum progression: earn the next run
 
-2026-10-04 · conditional research/design draft · no new paid calls, sampled worlds or accepted hypothesis. This roadmap supersedes the six-world call allocation in the earlier S1 draft. It must be reviewed, frozen and registered before implementation/dispatch under [SETUP.md](SETUP.md).
+2026-10-04 · conditional research/design draft · no new paid calls, sampled worlds or accepted hypothesis. This roadmap supersedes the six-world call allocation in the earlier S1 draft. The literal next-stage [plan](NEXT-RUN-PLAN.md) was published before offline implementation under the owner's preparation request. Immutable public registration and all research/runtime gates remain mandatory before dispatch under [SETUP.md](SETUP.md).
 
 The practical question is whether to buy more model judgments, track sources better, or use a deterministic rule. S0 only established limited reader competence (29/32 exact-MAP choices); it did not compare native instruction arms or test communication. The next stages separate those questions.
 
