@@ -43,7 +43,6 @@
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [healing-practical-repair](tasks/healing-practical-repair.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T03:40Z | Compare Healing evidence repair with practical central baselines |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:46Z | Prepare and qualify Quorum of Mirrors S0 |
 | [reconcile-dmarz-pi-review-2026-10-04](tasks/reconcile-dmarz-pi-review-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:54Z | Incorporate and respond to Dmarz PI recommendations |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:53Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -162,6 +161,7 @@
 | [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:00Z | Plan the next discussion benchmark diagnostic and offline orchestration |
 | [publish-pi-review-2026-10-04](tasks/publish-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:50Z | Publish the PI project review and agent lifecycle guidance |
 | [quorum-mirrors-design-v2](tasks/quorum-mirrors-design-v2.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:45Z | Refine Quorum of Mirrors design and offline contracts |
+| [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:02Z | Prepare and qualify Quorum of Mirrors S0 |
 | [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:51Z | Refine swarm-size coordination and policy evaluation design |
 | [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | done | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:25Z | Reflect on the original discussion dose pilot before running more |
 | [regrowth-plan-registration](tasks/regrowth-plan-registration.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:15Z | Repair missing Regrowth plan registration and publish experiment TLDRs |
@@ -232,7 +232,7 @@
 | vishesh/codex-regrowth-docs | working | healing-practical-repair | 2026-10-04T02:51Z | Build the prospective practical repair comparison using saved extraction tapes |
 | shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-quorum-mirrors | blocked | quorum-mirrors-s0 | 2026-10-04 03:48:53.029072+00:00 | S0 plan publicly verified; 32-request package and 23 checks prepared; awaiting separate budget before allocation and native setup |
+| vishesh/codex-quorum-mirrors | done | quorum-mirrors-s0 | 2026-10-04 04:00:42.508828+00:00 | S0 complete and qualified: 29/32 correct, 32 valid; artifacts preserved and worker released |
 | vishesh/codex-phantom-coast | blocked | phantom-coast-live | 2026-10-04 03:45:59+00:00 | Public plan registered and native worker tested; awaiting study cap and verified dedicated allocation |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
