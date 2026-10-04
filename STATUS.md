@@ -44,7 +44,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-pc12-wide](tasks/phantom-coast-pc12-wide.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:35Z | Wide sourced-evidence diagnostic for Phantom Coast |
-| [right-dissenter-acquisition-development](tasks/right-dissenter-acquisition-development.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T21:39Z | Build acquisition development cases and strong offline comparators |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -256,6 +255,7 @@
 | [review-quorum-mirrors-qm3](tasks/review-quorum-mirrors-qm3.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:42Z | Review Quorum of Mirrors practical value and S1 feasibility design |
 | [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:17Z | Review Right Dissenter RD-1 design and offline prototype |
 | [review-swarm-size-qualification](tasks/review-swarm-size-qualification.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:17Z | Independently review the optimal swarm-size qualification package |
+| [right-dissenter-acquisition-development](tasks/right-dissenter-acquisition-development.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T21:40Z | Build acquisition development cases and strong offline comparators |
 | [right-dissenter-design-build](tasks/right-dissenter-design-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T03:13Z | Build the Right Dissenter exploratory design and scenario harness |
 | [right-dissenter-freshness-diagnostic](tasks/right-dissenter-freshness-diagnostic.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T20:36Z | Diagnose expired evidence and implement a strong eligibility baseline |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:54Z | Deploy and assess the Right Dissenter exploratory live study |
@@ -397,7 +397,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-decision-models | working | right-dissenter-acquisition-development | 2026-10-04 21:38:54.315998+00:00 | Publishing six offline acquisition episodes, comparator audit and an unfunded candidate packet. |
+| vishesh/codex-decision-models | idle |  | 2026-10-04 21:41:00.756029+00:00 | Acquisition development published; first alternate, scientific baseline gap, no paid stage active. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 21:33:04.352456+00:00 | B32 source audit complete: 5 development controls of 40; 19 offline checks; continue corpus/context preparation |
 | vishesh/codex-methods | working | antsy-literal-v2 | 2026-10-04 20:54:36.808713+00:00 | Q1/Q2 closed; qualification failed; four receipt units; evaluation unrun; worker released |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 20:43:34.476809+00:00 | C6 finished: Haiku–Jev main reviewed, finite negative result published, ledger restored and claim released; FINISH / PARK |
