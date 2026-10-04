@@ -48,6 +48,7 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T08:16Z | Run the revised procurement influence experiment |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T08:29Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
+| [quorum-mirrors-d1-design](tasks/quorum-mirrors-d1-design.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T08:32Z | Review Quorum Q1 failure and prepare a controlled D1 diagnostic |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
