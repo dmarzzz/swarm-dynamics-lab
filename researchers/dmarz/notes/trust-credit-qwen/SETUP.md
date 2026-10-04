@@ -16,8 +16,8 @@ Status: prepared, not launched. This record follows [the setup runbook](../../..
 |---|---|---|---|
 | G0 Question and applicable research gates | pass (exploratory scope only) | program v5 line T; README and preregistration, 2026-10-04T10:42Z, dmarz/pipeline-split | formal gates not met; S2 disabled |
 | G1 Plan written before implementation | pass | README, preregistration, design.yaml, experiment.yaml and this record committed before the study code; the admission replay existed as uncommitted working files used for the calibration below | none |
-| G2 Instrument and offline checks | pending | to be filled when selftest, offline S0, rehearsal and the manifest check have run | implement and test |
-| G3 Current attempt admission | pending | pre-run review to be written after the code is pinned | fleet-monitor check, run-queue request, server claim |
+| G2 Instrument and offline checks | pass (offline, builder's own checks) | 2026-10-04T11:10Z, dmarz/pipeline-split, on commit baefdb6b (source hash ddc370fd...): selftest 68 tests OK; offline S0 216/216 valid, 0 violations, 0 calls; manifest check current (digest e09119d1...); rehearsal against a throwaway local hub with a stubbed endpoint passes the full chain, the failed-qualification stop and a billing stop with resume; details in [the pre-run review](reviews/chain-001-pre.md) | the live route and the full suite under Python 3.12 with numpy and Pillow are untested until the server |
+| G3 Current attempt admission | pending | [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready, code commit baefdb6baf1a8e22a9914cd3b9290d10915500ab, source hash ddc370fd694b7646555bbe44679e17a875896afc4654116c2693ff2a3f97387a; launch commit is the one named in the run request | fleet-monitor check, run-queue request, server claim, launcher setup |
 | G4 Qualification before scientific escalation | pending | P0 and Q0 are stages of the chain; S1 is admitted only after the 24-fixture gate passes at the same source hash | run |
 | G5 Reconciliation and closeout | pending | none | run |
 
@@ -28,11 +28,12 @@ Status: prepared, not launched. This record follows [the setup runbook](../../..
 - Sample size: the program's (24 roots, 504 calls). Not a power claim.
 - Splits: engineering 4481-4488; qualification 4591-4598; repair qualification 4650-4657; comparison 9541-9564; holdout 10000-19999 unopened.
 - Agent definition: one stateless synthesizer call per assignment; instruction text and local answer validation in `src/study.py`; adapter `src/provider.py` is the pipeline's reference OpenRouter adapter, copied unchanged.
+- Visualization: [VISUALIZATION.md](VISUALIZATION.md), mapping v1.
 - Versions: `qwen/qwen3.7-flash` (canonical slug observed by the program: `qwen/qwen3.7-flash-20260727`), provider Alibaba; requirements.txt pinned; the source hash covers design.yaml, experiment.yaml, requirements.txt and `src/*.py`.
 
 ### Root-range scan (2026-10-04T10:42Z)
 
-Every text file under `researchers/`, `experiments/`, `hypotheses/`, `tooling/`, `templates/`, `src/`, `scripts/`, `tasks/`, `synthesis/`, `surveys/` and `reviews/` (yaml, yml, json, md, py, txt, csv, sh; files over 5 MB skipped; 3,880 files) was searched for every four-digit number as a standalone token. The chosen ranges 4481-4488, 4591-4598, 4650-4657 and 9541-9564 do not occur anywhere outside this directory. A first choice for the qualification roots (4533-4540) was dropped because 4540 occurs in an unrelated state snapshot. The scan is repeated before the pre-run review.
+Every text file under `researchers/`, `experiments/`, `hypotheses/`, `tooling/`, `templates/`, `src/`, `scripts/`, `tasks/`, `synthesis/`, `surveys/` and `reviews/` (yaml, yml, json, md, py, txt, csv, sh; files over 5 MB skipped; 3,880 files) was searched for every four-digit number as a standalone token. The chosen ranges 4481-4488, 4591-4598, 4650-4657 and 9541-9564 do not occur anywhere outside this directory. A first choice for the qualification roots (4533-4540) was dropped because 4540 occurs in an unrelated state snapshot. Repeated at 11:10Z (3,956 files): still no occurrence.
 
 ### Engineering calibration (2026-10-04, no model call)
 
@@ -60,14 +61,15 @@ Operations entry: manual, through the generic private launcher `scripts/run-read
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|
-| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | pending (code not yet committed) |
+| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | all pass on baefdb6b (builder, offline) |
 | Prepare named stage | `python3 scripts/run-ready-chain.py trust-credit-qwen <launch commit> setup --host <server>` | pending |
 | Dispatch named stage | `python3 scripts/run-ready-chain.py trust-credit-qwen <launch commit> chain --host <server> --confirm-paid` | pending |
 | Resume interrupted execution | only after a billing stop (`provider_credit_balance_low`): `python src/chain.py resume`; otherwise unsupported by design | pending |
 | Analyze saved evidence and rebuild visuals | `... status --host <server>`, `... verify --host <server>` | pending |
 | Stop this study and close out | stop the chain process, verify uploads, release claim `dmarz-trust-credit-qwen` | pending |
 
-- Attempt: chain-001 (S0, P0, Q0, S1); no parent attempt; pre-run assessment pending.
+- Attempt: chain-001 (S0, P0, Q0, S1); no parent attempt; pre-run assessment [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready, not launched.
+- Frozen assigned manifest: [manifest.json](manifest.json), digest e09119d1f0fcad81876d7b87cf94cf639725f026aa20007f8eea9be4a0129f50.
 - Budget authority: program v5 as relayed (see Ownership); hard call caps P0 1, Q0 23, S1 504, total 528; ledger cap USD 2.
 - Allocation: none yet; the operator takes the exclusive claim `dmarz-trust-credit-qwen` at launch.
 - Credentials: `SWARM_OPENROUTER_API_KEY`, supplied in memory by the launcher; never written to a file, an argument or a log. No credential was used to prepare this package.

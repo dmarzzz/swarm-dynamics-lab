@@ -7,3 +7,10 @@ Builder for the pipeline lead dmarz/pipeline. Task: build-sybil-split-opus. Noth
 - What surprised me: with attachment edges fixed and no links among the attacker's own identities, a 27-way split is almost never admitted, so one end of the note's primary contrast sits at zero. Harm peaks at an intermediate identity count (9), where each identity is connected enough to be seated and too small to be checked by a degree-first policy. The frozen design links the attacker's identities in a ring (free, as in the parent's attacker); on engineering roots the scripted primary is +0.41 with those links and +0.01 without. That dependence is stated in the README and the setup record.
 - Also noted: 1,554 of the 2,688 comparison assignments have a packet identical to another cell of the same root, almost always the same cell at the other check strength, because no attacker identity was checked there. They are kept as a test-retest measure.
 - Next, for whoever continues: the lead's review, the fleet monitor's same-researcher check, then the run request. After a run: post-mortem per RUN-REVIEW.md, evidence row and README results from the saved analysis.
+
+## trust-credit-qwen (program v5, line T)
+
+- Built `researchers/dmarz/notes/trust-credit-qwen/` to launch-ready: plan 32f751b0, code baefdb6b (source hash ddc370fd...), then READY.yaml, runbook, visualization mapping and the pre-run review. Nothing launched, no model call.
+- Offline evidence on the code commit: 68 selftests (28 are the reference adapter's); scripted S0 216 of 216; rehearsal passes the full chain, a failed-qualification stop and a billing stop with resume in 73 s.
+- What surprised me: the primary is positive and large on engineering roots (+23.4 seats), but direct-only credit does not make admission safer in level: at 32 checks it seats about 20 attacker identities where propagated credit seats about 2. The budget escalation and the level are different questions; the README reports both.
+- The propagated rule equals the budget study's ranking exactly when no identity is dangling; with a dangling identity the seat sets differ by 6 to 13 seats (attacker seats by at most 1).
