@@ -1,0 +1,187 @@
+{
+  "n_unique_receipts": 70,
+  "shared_controls_counted_once": true,
+  "backend_contrasts": {
+    "single-agent": {
+      "jev_minus_laya": -0.004647568837159402,
+      "paired_bootstrap_95": [
+        -0.02860602178355535,
+        0.020056802478653615
+      ]
+    },
+    "swarm-fixed": {
+      "jev_minus_laya": -0.005749148357856571,
+      "paired_bootstrap_95": [
+        -0.028563217401656005,
+        0.017905577690013202
+      ]
+    },
+    "swarm-adaptive": {
+      "jev_minus_laya": -0.005749148357856571,
+      "paired_bootstrap_95": [
+        -0.028563217401656005,
+        0.017905577690013202
+      ]
+    }
+  },
+  "arms": {
+    "Laya": {
+      "best-fixed": {
+        "quality": 0.48028738936044224,
+        "quality_bootstrap_95": [
+          0.4028730076961688,
+          0.5581936319709808
+        ],
+        "checks": 0.0,
+        "regret": 0.12932497865682815,
+        "total_exact": 29,
+        "total_exact_n": 69
+      },
+      "confidence-only": {
+        "quality": 0.5678045857473897,
+        "quality_bootstrap_95": [
+          0.5003099668632781,
+          0.6345617278279501
+        ],
+        "checks": 0.0,
+        "regret": 0.041807782269880724,
+        "total_exact": 30,
+        "total_exact_n": 69
+      },
+      "random-checks": {
+        "quality": 0.543255839547109,
+        "quality_bootstrap_95": [
+          0.4767612892940634,
+          0.6088819923604369
+        ],
+        "checks": 2.0,
+        "regret": 0.06635652847016145,
+        "total_exact": 25,
+        "total_exact_n": 69
+      },
+      "decision-focused": {
+        "quality": 0.5664140551949929,
+        "quality_bootstrap_95": [
+          0.4993578719085177,
+          0.63278587838166
+        ],
+        "checks": 2.0,
+        "regret": 0.04319831282227764,
+        "total_exact": 29,
+        "total_exact_n": 69
+      },
+      "single-agent": {
+        "quality": 0.5588167260729685,
+        "quality_bootstrap_95": [
+          0.4909598516774692,
+          0.6260129375988638
+        ],
+        "checks": 2.0,
+        "regret": 0.0507956419443019,
+        "total_exact": 28,
+        "total_exact_n": 69
+      },
+      "swarm-fixed": {
+        "quality": 0.5629606336359938,
+        "quality_bootstrap_95": [
+          0.4953778167900772,
+          0.6291576387454989
+        ],
+        "checks": 2.0,
+        "regret": 0.0466517343812767,
+        "total_exact": 28,
+        "total_exact_n": 69
+      },
+      "swarm-adaptive": {
+        "quality": 0.5629606336359938,
+        "quality_bootstrap_95": [
+          0.4953778167900772,
+          0.6291576387454989
+        ],
+        "checks": 2.0,
+        "regret": 0.0466517343812767,
+        "total_exact": 28,
+        "total_exact_n": 69
+      }
+    },
+    "Jev": {
+      "best-fixed": {
+        "quality": 0.48028738936044224,
+        "quality_bootstrap_95": [
+          0.4028730076961688,
+          0.5581936319709808
+        ],
+        "checks": 0.0,
+        "regret": 0.12932497865682815,
+        "total_exact": 29,
+        "total_exact_n": 69
+      },
+      "confidence-only": {
+        "quality": 0.5678045857473897,
+        "quality_bootstrap_95": [
+          0.5003099668632781,
+          0.6345617278279501
+        ],
+        "checks": 0.0,
+        "regret": 0.041807782269880724,
+        "total_exact": 30,
+        "total_exact_n": 69
+      },
+      "random-checks": {
+        "quality": 0.543255839547109,
+        "quality_bootstrap_95": [
+          0.4767612892940634,
+          0.6088819923604369
+        ],
+        "checks": 2.0,
+        "regret": 0.06635652847016145,
+        "total_exact": 25,
+        "total_exact_n": 69
+      },
+      "decision-focused": {
+        "quality": 0.5664140551949929,
+        "quality_bootstrap_95": [
+          0.4993578719085177,
+          0.63278587838166
+        ],
+        "checks": 2.0,
+        "regret": 0.04319831282227764,
+        "total_exact": 29,
+        "total_exact_n": 69
+      },
+      "single-agent": {
+        "quality": 0.5541691572358091,
+        "quality_bootstrap_95": [
+          0.48496695615106955,
+          0.6221066762555204
+        ],
+        "checks": 1.957142857142857,
+        "regret": 0.055443210781461305,
+        "total_exact": 27,
+        "total_exact_n": 69
+      },
+      "swarm-fixed": {
+        "quality": 0.5572114852781371,
+        "quality_bootstrap_95": [
+          0.48827373086760395,
+          0.6239434540194008
+        ],
+        "checks": 2.0,
+        "regret": 0.052400882739133264,
+        "total_exact": 28,
+        "total_exact_n": 69
+      },
+      "swarm-adaptive": {
+        "quality": 0.5572114852781371,
+        "quality_bootstrap_95": [
+          0.48827373086760395,
+          0.6239434540194008
+        ],
+        "checks": 2.0,
+        "regret": 0.052400882739133264,
+        "total_exact": 28,
+        "total_exact_n": 69
+      }
+    }
+  }
+}

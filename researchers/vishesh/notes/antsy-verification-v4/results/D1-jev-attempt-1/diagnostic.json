@@ -1,0 +1,46 @@
+{
+  "source": "2cadca451b9ecb67bc62d1fe235ea46269d3d8eb",
+  "previous_context": {
+    "task": 25,
+    "arm": "swarm",
+    "step": 0,
+    "role": 4
+  },
+  "response": {
+    "context": {
+      "task": 25,
+      "arm": "swarm",
+      "step": 0,
+      "role": 4
+    },
+    "state": "Two checks maximum. Choose which OCR configuration to verify next, or STOP to commit to the current estimated leader. Checks reveal annotated-token recall in its least-confident unchecked region. These confidence estimates may be wrong.\nChecks left: 2. Current estimated leader: B.\nA: estimated quality 0.00; OCR confidence by region 0.00,0.00,0.00.\nB: estimated quality 0.53; OCR confidence by region 0.57,0.44,0.45.\nC: estimated quality 0.52; OCR confidence by region 0.61,0.57,0.40.",
+    "question": {
+      "type": "choice",
+      "instructions": "You are the verification coordinator. Select the most useful next check for choosing high-quality OCR. Stop if another check is unlikely to change the choice. Consider uncertainty and the two-check limit.",
+      "criteria": {
+        "A": "Check configuration A",
+        "B": "Check configuration B",
+        "C": "Check configuration C",
+        "STOP": "Stop checking and commit"
+      }
+    },
+    "input_hash": "3e439d3a42f048075d1ef736785d20cd05010242523af4a6633ee9bcd8a2b374",
+    "valid": true,
+    "encoded_tokens": 514,
+    "choice": "C",
+    "probabilities": {
+      "STOP": 0.08,
+      "C": 0.51,
+      "B": 0.39,
+      "A": 0.02
+    },
+    "usage": {
+      "cost": 2.1588e-05,
+      "input_tokens": 514,
+      "output_tokens": 45
+    },
+    "served_model": "typesafe/jev-1.13-20260917",
+    "provider": "TypeSafe",
+    "wall_s": 0.32973815799778095
+  }
+}

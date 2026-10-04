@@ -11,7 +11,7 @@ def analyze(blocks):
     for a in ARMS:
         vals=[b['arms'][a] for b in blocks]
         result['arms'][a]={'quality':avg([v['metrics']['quality'] for v in vals]),'regret':avg([v['metrics']['regret'] for v in vals]),'checks':avg([v['metrics']['checks'] for v in vals]),'bad_over_2pp':sum(v['metrics']['regret']>.02 for v in vals),'qa_helps_vs_confidence':sum(v['metrics']['quality']>b['arms']['confidence-only']['metrics']['quality']+1e-9 for v,b in zip(vals,blocks)),'qa_hurts_vs_confidence':sum(v['metrics']['quality']<b['arms']['confidence-only']['metrics']['quality']-1e-9 for v,b in zip(vals,blocks)),'utility':{str(c):avg([v['metrics']['quality']-c*v['metrics']['checks'] for v in vals]) for c in [0,.01,.02,.05]}}
-    for a,b in [('swarm-adaptive','best-fixed'),('swarm-adaptive','decision-focused'),('swarm-adaptive','single-agent'),('swarm-adaptive','swarm-fixed'),('single-agent','best-fixed'),('decision-focused','best-fixed')]:
+    for a,b in [('swarm-adaptive','confidence-only'),('swarm-adaptive','best-fixed'),('swarm-adaptive','decision-focused'),('swarm-adaptive','single-agent'),('swarm-adaptive','swarm-fixed'),('single-agent','best-fixed'),('decision-focused','best-fixed')]:
         diffs=[r['arms'][a]['metrics']['quality']-r['arms'][b]['metrics']['quality'] for r in blocks]
         result['contrasts'][f'{a} minus {b}']={'mean_quality_difference':avg(diffs),'bootstrap_95':interval(diffs),'better':sum(v>1e-9 for v in diffs),'worse':sum(v< -1e-9 for v in diffs),'tied':sum(abs(v)<=1e-9 for v in diffs)}
     result['oracle_quality']=avg([max(b['mode_scores'].values()) for b in blocks]);result['optimistic_budget_oracle']=avg([b['budget_oracle'] for b in blocks])
@@ -29,6 +29,13 @@ def main():
             assert abs(r['metrics']['quality']-b['mode_scores'][r['choice']])<1e-10
     result=analyze(blocks);receipts=json.loads((a.run/'receipts.json').read_text())
     result['runtime']={'physical_calls':sum(not r.get('reused_from') for r in receipts),'replayed_calls':sum(bool(r.get('reused_from')) for r in receipts),'invalid':sum(not r['valid'] for r in receipts),'encoded_tokens':sum(r['encoded_tokens'] for r in receipts),'inference_s':sum(r['wall_s'] for r in receipts),'max_encoded_tokens':max(r['encoded_tokens'] for r in receipts),'logical_calls':{arm:sum(b['arms'][arm]['logical_calls'] for b in blocks) for arm in ARMS},'action_counts':dict(collections.Counter(r.get('choice') for r in receipts))}
+    harms=[]
+    for b in blocks:
+        adaptive=b['arms']['swarm-adaptive'];initial=b['arms']['confidence-only']
+        loss=initial['metrics']['quality']-adaptive['metrics']['quality']
+        if loss>0:harms.append({'receipt':b['id'],'initial':initial['choice'],'final':adaptive['choice'],'lost_recall':loss,'checks':adaptive['checks']})
+    diffs=[b['arms']['swarm-adaptive']['metrics']['quality']-b['arms']['confidence-only']['metrics']['quality'] for b in blocks]
+    (a.run/'decision-audit.json').write_text(json.dumps({'paired_vs_confidence':{'mean':avg(diffs),'bootstrap_95':interval(diffs)},'null_checks':sum(c['quality'] is None for b in blocks for c in b['arms']['swarm-adaptive']['checks']),'harmful_switches':harms},indent=2))
     (a.run/'analysis.json').write_text(json.dumps(result,indent=2))
     with (a.run/'outcomes.csv').open('w') as f:
         w=csv.writer(f);w.writerow(['receipt','arm','choice','quality','regret','checks','total_field_exact','logical_calls'])

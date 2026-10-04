@@ -1,0 +1,102 @@
+{
+  "paired_vs_confidence": {
+    "mean": -0.010593100469252544,
+    "bootstrap_95": [
+      -0.02601088374417868,
+      0.0010942760942760936
+    ]
+  },
+  "null_checks": 94,
+  "harmful_switches": [
+    {
+      "receipt": 44,
+      "initial": "C",
+      "final": "B",
+      "lost_recall": 0.25,
+      "checks": [
+        {
+          "mode": "B",
+          "region": 0,
+          "quality": null
+        },
+        {
+          "mode": "C",
+          "region": 1,
+          "quality": 0.2916666666666667
+        }
+      ]
+    },
+    {
+      "receipt": 53,
+      "initial": "B",
+      "final": "C",
+      "lost_recall": 0.03703703703703709,
+      "checks": [
+        {
+          "mode": "A",
+          "region": 2,
+          "quality": null
+        },
+        {
+          "mode": "C",
+          "region": 2,
+          "quality": null
+        }
+      ]
+    },
+    {
+      "receipt": 60,
+      "initial": "B",
+      "final": "A",
+      "lost_recall": 0.21428571428571427,
+      "checks": [
+        {
+          "mode": "A",
+          "region": 2,
+          "quality": null
+        },
+        {
+          "mode": "A",
+          "region": 0,
+          "quality": 0.0
+        }
+      ]
+    },
+    {
+      "receipt": 65,
+      "initial": "B",
+      "final": "C",
+      "lost_recall": 0.03125,
+      "checks": [
+        {
+          "mode": "C",
+          "region": 1,
+          "quality": 0.0
+        },
+        {
+          "mode": "B",
+          "region": 1,
+          "quality": 0.0
+        }
+      ]
+    },
+    {
+      "receipt": 72,
+      "initial": "B",
+      "final": "C",
+      "lost_recall": 0.32258064516129037,
+      "checks": [
+        {
+          "mode": "C",
+          "region": 0,
+          "quality": null
+        },
+        {
+          "mode": "B",
+          "region": 0,
+          "quality": null
+        }
+      ]
+    }
+  ]
+}

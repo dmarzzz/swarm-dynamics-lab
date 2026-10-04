@@ -1,0 +1,17 @@
+{
+  "receipts": 70,
+  "paired_arm_outcomes": 490,
+  "model_inputs_verified": 840,
+  "unique_images": 100,
+  "checks": [
+    "assigned receipts complete",
+    "scores equal measured OCR table",
+    "QA exposes only purchased regional score",
+    "actor state equals allowlisted observations at that step",
+    "votes equal recorded model choices",
+    "input hashes match",
+    "adaptive ballots share the fixed prefix",
+    "budgets and check uniqueness"
+  ],
+  "passed": true
+}

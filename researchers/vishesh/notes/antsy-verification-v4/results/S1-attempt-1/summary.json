@@ -1,0 +1,79 @@
+{
+  "best-fixed": {
+    "quality": 0.48028738936044224,
+    "regret": 0.12932497865682815,
+    "checks": 0.0,
+    "utility_at_002": 0.48028738936044224,
+    "within_2pp_oracle": 0.6142857142857143,
+    "n": 70,
+    "total_exact_n": 69,
+    "total_exact": 29,
+    "logical_calls": 0
+  },
+  "confidence-only": {
+    "quality": 0.5678045857473897,
+    "regret": 0.041807782269880724,
+    "checks": 0.0,
+    "utility_at_002": 0.5678045857473897,
+    "within_2pp_oracle": 0.7285714285714285,
+    "n": 70,
+    "total_exact_n": 69,
+    "total_exact": 30,
+    "logical_calls": 0
+  },
+  "random-checks": {
+    "quality": 0.543255839547109,
+    "regret": 0.06635652847016145,
+    "checks": 2.0,
+    "utility_at_002": 0.5032558395471091,
+    "within_2pp_oracle": 0.5857142857142857,
+    "n": 70,
+    "total_exact_n": 69,
+    "total_exact": 25,
+    "logical_calls": 0
+  },
+  "decision-focused": {
+    "quality": 0.5664140551949929,
+    "regret": 0.04319831282227764,
+    "checks": 2.0,
+    "utility_at_002": 0.5264140551949927,
+    "within_2pp_oracle": 0.7142857142857143,
+    "n": 70,
+    "total_exact_n": 69,
+    "total_exact": 29,
+    "logical_calls": 0
+  },
+  "single-agent": {
+    "quality": 0.5588167260729685,
+    "regret": 0.0507956419443019,
+    "checks": 2.0,
+    "utility_at_002": 0.5188167260729685,
+    "within_2pp_oracle": 0.7,
+    "n": 70,
+    "total_exact_n": 69,
+    "total_exact": 28,
+    "logical_calls": 140
+  },
+  "swarm-fixed": {
+    "quality": 0.5629606336359938,
+    "regret": 0.0466517343812767,
+    "checks": 2.0,
+    "utility_at_002": 0.5229606336359937,
+    "within_2pp_oracle": 0.7285714285714285,
+    "n": 70,
+    "total_exact_n": 69,
+    "total_exact": 28,
+    "logical_calls": 700
+  },
+  "swarm-adaptive": {
+    "quality": 0.5629606336359938,
+    "regret": 0.0466517343812767,
+    "checks": 2.0,
+    "utility_at_002": 0.5229606336359937,
+    "within_2pp_oracle": 0.7285714285714285,
+    "n": 70,
+    "total_exact_n": 69,
+    "total_exact": 28,
+    "logical_calls": 700
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "n_receipts": 70,
+  "interpretation": "Exploratory receipt-paired descriptive bootstrap; one validation corpus, not independent agent votes",
+  "arms": {
+    "best-fixed": {
+      "quality": 0.48028738936044224,
+      "regret": 0.12932497865682815,
+      "checks": 0.0,
+      "bad_over_2pp": 27,
+      "qa_helps_vs_confidence": 7,
+      "qa_hurts_vs_confidence": 16,
+      "utility": {
+        "0": 0.48028738936044224,
+        "0.01": 0.48028738936044224,
+        "0.02": 0.48028738936044224,
+        "0.05": 0.48028738936044224
+      }
+    },
+    "confidence-only": {
+      "quality": 0.5678045857473897,
+      "regret": 0.041807782269880724,
+      "checks": 0.0,
+      "bad_over_2pp": 19,
+      "qa_helps_vs_confidence": 0,
+      "qa_hurts_vs_confidence": 0,
+      "utility": {
+        "0": 0.5678045857473897,
+        "0.01": 0.5678045857473897,
+        "0.02": 0.5678045857473897,
+        "0.05": 0.5678045857473897
+      }
+    },
+    "random-checks": {
+      "quality": 0.543255839547109,
+      "regret": 0.06635652847016145,
+      "checks": 2.0,
+      "bad_over_2pp": 29,
+      "qa_helps_vs_confidence": 4,
+      "qa_hurts_vs_confidence": 12,
+      "utility": {
+        "0": 0.543255839547109,
+        "0.01": 0.523255839547109,
+        "0.02": 0.5032558395471091,
+        "0.05": 0.443255839547109
+      }
+    },
+    "decision-focused": {
+      "quality": 0.5664140551949929,
+      "regret": 0.04319831282227764,
+      "checks": 2.0,
+      "bad_over_2pp": 20,
+      "qa_helps_vs_confidence": 2,
+      "qa_hurts_vs_confidence": 2,
+      "utility": {
+        "0": 0.5664140551949929,
+        "0.01": 0.5464140551949928,
+        "0.02": 0.5264140551949927,
+        "0.05": 0.46641405519499285
+      }
+    },
+    "single-agent": {
+      "quality": 0.5588167260729685,
+      "regret": 0.0507956419443019,
+      "checks": 2.0,
+      "bad_over_2pp": 21,
+      "qa_helps_vs_confidence": 5,
+      "qa_hurts_vs_confidence": 6,
+      "utility": {
+        "0": 0.5588167260729685,
+        "0.01": 0.5388167260729685,
+        "0.02": 0.5188167260729685,
+        "0.05": 0.45881672607296853
+      }
+    },
+    "swarm-fixed": {
+      "quality": 0.5629606336359938,
+      "regret": 0.0466517343812767,
+      "checks": 2.0,
+      "bad_over_2pp": 19,
+      "qa_helps_vs_confidence": 5,
+      "qa_hurts_vs_confidence": 4,
+      "utility": {
+        "0": 0.5629606336359938,
+        "0.01": 0.5429606336359938,
+        "0.02": 0.5229606336359937,
+        "0.05": 0.46296063363599377
+      }
+    },
+    "swarm-adaptive": {
+      "quality": 0.5629606336359938,
+      "regret": 0.0466517343812767,
+      "checks": 2.0,
+      "bad_over_2pp": 19,
+      "qa_helps_vs_confidence": 5,
+      "qa_hurts_vs_confidence": 4,
+      "utility": {
+        "0": 0.5629606336359938,
+        "0.01": 0.5429606336359938,
+        "0.02": 0.5229606336359937,
+        "0.05": 0.46296063363599377
+      }
+    }
+  },
+  "contrasts": {
+    "swarm-adaptive minus confidence-only": {
+      "mean_quality_difference": -0.0048439521113959735,
+      "bootstrap_95": [
+        -0.025014293671852206,
+        0.009805268945522878
+      ],
+      "better": 5,
+      "worse": 4,
+      "tied": 61
+    },
+    "swarm-adaptive minus best-fixed": {
+      "mean_quality_difference": 0.08267324427555146,
+      "bootstrap_95": [
+        0.02042048858681246,
+        0.1467952237883597
+      ],
+      "better": 21,
+      "worse": 11,
+      "tied": 38
+    },
+    "swarm-adaptive minus decision-focused": {
+      "mean_quality_difference": -0.0034534215589990605,
+      "bootstrap_95": [
+        -0.024736788514407904,
+        0.014258606668473846
+      ],
+      "better": 4,
+      "worse": 3,
+      "tied": 63
+    },
+    "swarm-adaptive minus single-agent": {
+      "mean_quality_difference": 0.00414390756302521,
+      "bootstrap_95": [
+        0.0,
+        0.010751050420168069
+      ],
+      "better": 3,
+      "worse": 0,
+      "tied": 67
+    },
+    "swarm-adaptive minus swarm-fixed": {
+      "mean_quality_difference": 0.0,
+      "bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "better": 0,
+      "worse": 0,
+      "tied": 70
+    },
+    "single-agent minus best-fixed": {
+      "mean_quality_difference": 0.07852933671252625,
+      "bootstrap_95": [
+        0.016026518764507204,
+        0.14272361648156762
+      ],
+      "better": 21,
+      "worse": 13,
+      "tied": 36
+    },
+    "decision-focused minus best-fixed": {
+      "mean_quality_difference": 0.08612666583455052,
+      "bootstrap_95": [
+        0.027238823704380313,
+        0.14602930308282167
+      ],
+      "better": 18,
+      "worse": 9,
+      "tied": 43
+    }
+  },
+  "oracle_quality": 0.6096123680172705,
+  "optimistic_budget_oracle": 0.6076583450287647,
+  "adaptive_stopping": {
+    "stopped_before_budget": 0,
+    "saved_checks": 0,
+    "worse_than_fixed": 0,
+    "better_than_fixed": 0
+  },
+  "runtime": {
+    "physical_calls": 840,
+    "replayed_calls": 0,
+    "invalid": 0,
+    "encoded_tokens": 161613,
+    "inference_s": 1820.859537097931,
+    "max_encoded_tokens": 225,
+    "logical_calls": {
+      "best-fixed": 0,
+      "confidence-only": 0,
+      "random-checks": 0,
+      "decision-focused": 0,
+      "single-agent": 140,
+      "swarm-fixed": 700,
+      "swarm-adaptive": 700
+    },
+    "action_counts": {
+      "C": 173,
+      "A": 413,
+      "B": 254
+    }
+  }
+}

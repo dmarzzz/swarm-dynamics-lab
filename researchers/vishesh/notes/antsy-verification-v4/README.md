@@ -54,7 +54,7 @@ The biological connection is limited: distributed assessment and commitment rese
 
 A measured comparison chart, an oracle-headroom plot, and time-ordered replays for the first three receipts in each run—not selected success stories. A replay shows estimated quality, actual paid checks, votes, stopping and final selection. Hidden scores appear only after commitment. There are no decorative ants implying movements or observations that did not occur.
 
-Results and the skeptical post-mortem are added after execution. A failed run remains visible, with the repair and its unchanged or amended protocol identified separately.
+**Completed results:** [the skeptical assessment](RESULTS.md) reports both 70-receipt studies. Confidence alone achieved 56.78% recall, versus 56.30% for Laya and 55.72% for Jev committees; neither adaptive committee saved checks. Both full runs passed the integrity audit with zero invalid calls. Earlier Jev qualification failures remain documented. A failed run remains visible, with the repair and its unchanged or amended protocol identified separately.
 
 ## Separately authorized Jev comparison
 
