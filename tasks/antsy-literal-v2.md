@@ -3,14 +3,16 @@ id: antsy-literal-v2
 type: task
 title: Antsy literal extraction and deterministic normalization native iteration
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T20:37Z
+updated: 2026-10-04T20:37Z
 ---
 
 ## Goal
