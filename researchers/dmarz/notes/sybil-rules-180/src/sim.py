@@ -18,7 +18,7 @@ import hashlib
 import json
 import random
 
-VERSION = 'sybil-rules-180-sim-v1'
+VERSION = 'sybil-rules-180-sim-v2'
 TICKS = 12
 PRODUCTS = ('A', 'B')
 ROLES = ('dominant', 'rival_1', 'rival_2')
@@ -184,6 +184,8 @@ def observation(state, oid, rules, interface_check=None):
                          'firms': [{'firm': f['id'], 'product': PRODUCTS[f['product']], 'capacity': f['capacity']}
                                    for f in o['firms'].values()],
                          'reserve': {PRODUCTS[g]: o['reserve'][g] for g in range(2)},
+                         'production_orders_rule': ('Production orders may name only the firm ids listed in portfolio.firms. '
+                                                    'A firm registered this round has no id yet and cannot be ordered.'),
                          'max_firms': o['max_firms'], 'registration_fee': cfg['registration_fee'],
                          'overhead_per_active_firm_per_round': cfg['overhead']},
            'last_round_result': o['last_result'],
@@ -213,21 +215,61 @@ def _int(v, what):
     return int(v)
 
 
+# Attempt 002 (dated amendment 2026-10-04): harmless variants of a correct response are normalised before
+# validation, never guessed. Each normalisation is named here, recorded on the owner-round and counted.
+NORMALISATIONS = (
+    'extra_top_level_key_dropped',      # a key other than memo/admin/production/message; it carries no action
+    'admin_omitted_as_noop',            # no `admin` key: the same as `admin: null`, which was already a no-op
+    'command_spelling',                 # command differing only in case, spaces, '-' or '_' (e.g. "no-op", "Register")
+    'noop_extra_field_dropped',         # a no-op carrying other fields; a no-op uses none
+    'null_admin_field_dropped',         # a field outside the command's own fields whose value is null
+    'product_case',                     # product "a"/"b" for "A"/"B"
+    'zero_order_unknown_firm_dropped',  # quantity 0 for a firm id the owner does not hold (counted as dropped_zero_orders)
+)
+
+
+def _command(v):
+    if not isinstance(v, str):
+        return v
+    key = v.strip().lower().replace('-', '').replace('_', '').replace(' ', '')
+    return key if key in COMMANDS else v
+
+
 def parse_response(resp, cfg):
-    """Structure only. Returns a normalised copy or raises Invalid."""
+    """Structure only. Returns a normalised copy (with the list `normalized`) or raises Invalid."""
     if not isinstance(resp, dict):
         raise Invalid('response_not_object')
-    if not set(resp) <= set(RESPONSE_KEYS) or 'admin' not in resp or 'production' not in resp:
+    normalized = []
+    if not set(resp) <= set(RESPONSE_KEYS):
+        normalized += ['extra_top_level_key_dropped'] * len(set(resp) - set(RESPONSE_KEYS))
+        resp = {k: v for k, v in resp.items() if k in RESPONSE_KEYS}
+    if 'production' not in resp:
         raise Invalid('response_keys')
-    admin = resp['admin']
+    if 'admin' not in resp:
+        normalized.append('admin_omitted_as_noop')
+    admin = resp.get('admin')
     if admin is None:
         admin = {'command': 'noop'}
+    if isinstance(admin, dict) and 'command' in admin and admin['command'] not in COMMANDS and _command(admin['command']) in COMMANDS:
+        admin = dict(admin, command=_command(admin['command']))
+        normalized.append('command_spelling')
     if not isinstance(admin, dict) or admin.get('command') not in COMMANDS:
         raise Invalid('admin_shape')
     need = {'noop': set(), 'register': {'product'}, 'transfer': {'from', 'to', 'amount'}, 'retire': {'firm'}}[admin['command']]
+    extra = set(admin) - {'command'} - need
+    if extra and admin['command'] == 'noop':
+        admin = {'command': 'noop'}
+        normalized.append('noop_extra_field_dropped')
+    elif extra and all(admin[k] is None for k in extra):
+        admin = {k: v for k, v in admin.items() if k not in extra}
+        normalized += ['null_admin_field_dropped'] * len(extra)
     if set(admin) - {'command'} != need:
         raise Invalid('admin_fields')
     admin = dict(admin)
+    if admin['command'] == 'register' and isinstance(admin['product'], str) and admin['product'] not in PRODUCTS \
+            and admin['product'].strip().upper() in PRODUCTS:
+        admin['product'] = admin['product'].strip().upper()
+        normalized.append('product_case')
     if admin['command'] == 'register' and admin['product'] not in PRODUCTS:
         raise Invalid('admin_product')
     if admin['command'] == 'transfer':
@@ -249,7 +291,8 @@ def parse_response(resp, cfg):
             raise Invalid(key + '_type')
         texts[key] = v[:cfg['text_limit']]        # documented in the manual: longer text is cut at the limit
     return {'admin': admin, 'production': production, 'message': texts['message'], 'memo': texts['memo'],
-            'truncated': any(isinstance(resp.get(k), str) and len(resp[k]) > cfg['text_limit'] for k in ('message', 'memo'))}
+            'truncated': any(isinstance(resp.get(k), str) and len(resp[k]) > cfg['text_limit'] for k in ('message', 'memo')),
+            'normalized': normalized}
 
 
 def check_admin(state, o, admin):
@@ -343,11 +386,18 @@ def resolve(state, oid, response, failure=None):
     o = state['owners'][oid]
     if response is None:
         return {'status': 'void', 'reason': failure or 'missing_response', 'admin_result': 'not_applied',
-                'action': dict(NULL_ACTION)}
+                'action': dict(NULL_ACTION), 'normalized': []}
     try:
         action = parse_response(response, state['cfg'])
     except Invalid as exc:
-        return {'status': 'void', 'reason': str(exc), 'admin_result': 'not_applied', 'action': dict(NULL_ACTION)}
+        return {'status': 'void', 'reason': str(exc), 'admin_result': 'not_applied', 'action': dict(NULL_ACTION), 'normalized': []}
+    # A zero order for a firm id the owner does not hold (an id it invented for a firm it is registering, a rival's
+    # firm, a retired firm) asks for nothing and is dropped. A non-zero order for such an id still voids the round.
+    unknown_zero = [fid for fid, q in action['production'].items() if fid not in o['firms'] and q == 0]
+    if unknown_zero:
+        action['production'] = {fid: q for fid, q in action['production'].items() if fid not in unknown_zero}
+        action['normalized'] = action['normalized'] + ['zero_order_unknown_firm_dropped'] * len(unknown_zero)
+    normalized = action['normalized']
     admin_ok, admin_result = True, 'accepted'
     try:
         check_admin(state, o, action['admin'])
@@ -359,8 +409,8 @@ def resolve(state, oid, response, failure=None):
         check_production(state, o, action['admin'], admin_ok, action['production'])
     except Invalid as exc:
         return {'status': 'void', 'reason': str(exc), 'admin_result': 'not_applied', 'action': dict(NULL_ACTION),
-                'attempted_admin': action['admin']}
-    return {'status': 'accepted', 'reason': None, 'admin_result': admin_result, 'action': action}
+                'attempted_admin': action['admin'], 'normalized': normalized}
+    return {'status': 'accepted', 'reason': None, 'admin_result': admin_result, 'action': action, 'normalized': normalized}
 
 
 # ------------------------------------------------------------------ clearing
@@ -471,7 +521,8 @@ def step(state, responses, rules, failures=None):
                 'profit': profit, 'charge': charges, 'fee': res['fee'], 'overhead': overhead, 'net': net,
                 'cash_before': before, 'cash': o['cash'], 'reserve': list(o['reserve']),
                 'transit': [dict(t) for t in o['transit']],
-                'firm_count': len(o['firms']), 'focal_hhi': focal_h, 'focal_charge_change': focal_change, 'mask': mask,
+                'firm_count': len(o['firms']), 'normalized': list(res.get('normalized') or []),
+                'dropped_zero_orders': (res.get('normalized') or []).count('zero_order_unknown_firm_dropped'), 'focal_hhi': focal_h, 'focal_charge_change': focal_change, 'mask': mask,
                 'message': res['action']['message'] if res['status'] == 'accepted' else '',
                 'memo': o['memo'], 'truncated': res['action'].get('truncated', False)}
         m['history'].append({'round': r, 'prices': prices, 'published': rec['published'],

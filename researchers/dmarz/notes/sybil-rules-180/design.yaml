@@ -2,7 +2,7 @@
 version: 1
 experiment: sybil-rules-180
 status: exploratory
-attempt: '001'
+attempt: '002'
 program: ../overnight-program-2026-10-04/program.json
 model: qwen/qwen3.7-flash
 canonical_model: qwen/qwen3.7-flash-20260727
@@ -63,15 +63,17 @@ material:
   branch_void_limit: 180
 fixtures:
   development_markets: [318500, 318501, 318502, 318503, 318504, 318505]
-  probe_first_market_id: 318400
-  ordinary_markets: [318200, 318201, 318202, 318203, 318204, 318205]
+  # Attempt 002: fresh probe and Q0 fixtures from the range reserved for one repair configuration (second and last
+  # configuration the program allows). Attempt 001 used probe 318400, ordinary 318200-318205, smoke 318100-318105.
+  probe_first_market_id: 318600
+  ordinary_markets: [318620, 318621, 318622, 318623, 318624, 318625]
   ordinary_rounds: 8
-  smoke_markets: [318100, 318101, 318102, 318103, 318104, 318105]
+  smoke_markets: [318630, 318631, 318632, 318633, 318634, 318635]
   smoke_rounds: 4
   context_first_market_id: 318700
   diagnostic_markets: [318300, 318301, 318302, 318303, 318304, 318305, 318306, 318307, 318308, 318309, 318310, 318311]
   diagnostic_rounds: 8
-  reserved_for_one_repair_configuration: [318600, 318699]
+  reserved_for_one_repair_configuration: consumed by attempt 002
 qualification:
   probes_exact: 18
   ordinary_min_profit_ratio: 0.75
@@ -82,18 +84,21 @@ qualification:
   planning_marker_calls_per_second: 1.0
   projection_overhead_factor: 1.25
 stages:
-  S0: {backend: scripted, batch: s0-001, calls: 0}
-  P0: {backend: openrouter, batch: p0-001, calls: 1}
-  Q0: {backend: openrouter, batch: q0-001, calls: 185}
-  X0: {backend: openrouter, batch: x0-001, calls: 180}
-  S1: {backend: openrouter, batch: s1-001, calls: 7560}
-  D1: {backend: openrouter, batch: d1-001, calls: 192}
+  S0: {backend: scripted, batch: s0-002, calls: 0}
+  P0: {backend: openrouter, batch: p0-002, calls: 1}
+  Q0: {backend: openrouter, batch: q0-002, calls: 185}
+  X0: {backend: openrouter, batch: x0-002, calls: 180}
+  S1: {backend: openrouter, batch: s1-002, calls: 7560}
+  D1: {backend: openrouter, batch: d1-002, calls: 192}
 budget:
   authorization: 'dmarz to dmarz/fleet-monitor 2026-10-04: ship the big agent swarm run; OpenRouter key limit USD 50; this study hard cap USD 5'
   aggregate_usd: 5
   # REISSUE: ledger reservations for call ids re-issued once after a lost task (the lost send may have been billed).
   max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192, REISSUE: 360}
   max_attempted_calls: 8478
+  # Attempt 002 continues attempt 001's ledger file (one ledger, one cumulative USD 5 cap). The ledger's caps are the
+  # caps above plus what attempt 001 reserved (one P0 call), see study.ledger_budget().
+  carried_from_attempt_001: {P0: 1}
   max_transport_attempts: 9800
   max_output_tokens: 1000
   max_input_tokens: 8000

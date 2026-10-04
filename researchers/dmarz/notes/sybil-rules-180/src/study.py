@@ -53,6 +53,18 @@ def params(stage):
     return {'stage': stage, 'backend': s['backend'], 'batch': s['batch'], 'source_hash': source_hash(), 'code': code_revision()}
 
 
+def ledger_budget():
+    """The budget the study's ledger enforces: this attempt's caps plus what earlier attempts reserved in the same
+    ledger file (attempt 002 continues attempt 001's ledger; one cumulative dollar cap)."""
+    b = design()['budget']
+    carried = b.get('carried_from_attempt_001') or {}
+    for stage, n in carried.items():
+        b['max_calls'][stage] = b['max_calls'].get(stage, 0) + n
+    b['max_attempted_calls'] += sum(carried.values())
+    b['max_transport_attempts'] += sum(carried.values()) * (b['retry']['transport_retries'] + 1)
+    return b
+
+
 def provider_config():
     d = design()
     return {'model': d['model'], 'canonical_model': d['canonical_model'], 'provider': d['provider'],
@@ -74,7 +86,7 @@ Administrative command. Each round you may file at most one:
 - {"command":"noop"}: no command.
 A command that breaks these rules is rejected: you are told so next round and your production orders still apply.
 
-Production. Each round give an output in ticks for each of your firms: an integer from 0 to the capacity the firm has left after any transfer out of it this round. A firm you leave out produces 0. Every firm, including an empty one, costs the overhead each round. The registration fee, the overhead and the production cost of the round (unit cost times units produced) must not exceed your cash. If a production order is infeasible, your whole response for the round is void: no command and no production.
+Production. Each round give an output in ticks for each of your firms: an integer from 0 to the capacity the firm has left after any transfer out of it this round. A firm you leave out produces 0. Production orders may name only the firms listed in `portfolio.firms` this round. Firm ids are assigned by the registry, never chosen by you: a firm you register this round has no id yet and cannot be given an order; it appears in `portfolio.firms` from the next round. Every firm, including an empty one, costs the overhead each round. The registration fee, the overhead and the production cost of the round (unit cost times units produced) must not exceed your cash. If a production order is infeasible, your whole response for the round is void: no command and no production.
 
 Market. For each product, price per unit = max(0, demand intercept + a small random shock - total units produced by all firms in your local market). Operating profit on a product = (price - unit cost) x your units of that product. Net profit = operating profits - charges under the rule in force - registration fee - overhead. `rules` states the rule in force this round. `history` shows the last completed rounds of your local market: prices, each firm's output and the published concentration.
 

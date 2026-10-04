@@ -340,6 +340,114 @@ class Polling(unittest.TestCase):
             self.assertEqual(d.transport['events'][-1]['event'], 'worker_silent')
 
 
+class Normalisation(unittest.TestCase):
+    """Attempt 002's interface repair: harmless variants of a correct response are normalised and counted."""
+
+    def setUp(self):
+        self.s = world()
+        sim.begin_round(self.s)
+        self.oid = 'own-00a'
+        self.o = self.s['owners'][self.oid]
+        self.first = next(iter(self.o['firms']))
+        self.cap = self.o['firms'][self.first]['capacity']
+        self.other = sim.PRODUCTS[1 - self.s['markets'][0]['start_product']]
+        self.rival_firm = next(iter(self.s['owners']['own-00b']['firms']))
+
+    def resolve(self, resp):
+        return sim.resolve(self.s, self.oid, resp)
+
+    def test_p0_case_of_attempt_001_is_accepted(self):
+        # The exact P0 answer of attempt 001: correct registration plus a zero order for an invented id.
+        resp = {'memo': 'Round 1: Register B firm.', 'admin': {'command': 'register', 'product': self.other},
+                'production': {self.first: self.cap, 'firm-00-02': 0}, 'message': ''}
+        self.assertEqual(self.rival_firm, 'firm-00-02')                     # the invented id is a rival's firm
+        r = self.resolve(resp)
+        self.assertEqual((r['status'], r['admin_result']), ('accepted', 'accepted'))
+        self.assertEqual(r['normalized'], ['zero_order_unknown_firm_dropped'])
+        self.assertNotIn('firm-00-02', r['action']['production'])
+
+    def test_nonzero_order_for_unknown_or_rival_firm_stays_void(self):
+        for fid in ('firm-00-99', self.rival_firm):
+            r = self.resolve(act(production={self.first: self.cap, fid: 12}))
+            self.assertEqual((r['status'], r['reason']), ('void', 'production_unknown_firm'))
+
+    def test_zero_order_for_rival_firm_dropped(self):
+        r = self.resolve(act(production={self.first: self.cap, self.rival_firm: 0}))
+        self.assertEqual(r['status'], 'accepted')
+        self.assertEqual(r['normalized'], ['zero_order_unknown_firm_dropped'])
+
+    def test_harmless_variants_accepted_and_counted(self):
+        cases = [
+            ({'memo': '', 'admin': {'command': 'noop'}, 'production': {self.first: 576.0 if self.cap == 576 else float(self.cap)},
+              'message': None}, []),
+            ({'memo': '', 'admin': {'command': 'no-op'}, 'production': {self.first: self.cap}, 'message': ''}, ['command_spelling']),
+            ({'memo': '', 'admin': {'command': 'NOOP'}, 'production': {self.first: self.cap}, 'message': ''}, ['command_spelling']),
+            ({'memo': '', 'production': {self.first: self.cap}, 'message': ''}, ['admin_omitted_as_noop']),
+            ({'memo': '', 'admin': {'command': 'noop', 'product': 'A'}, 'production': {self.first: self.cap}}, ['noop_extra_field_dropped']),
+            ({'admin': {'command': 'register', 'product': self.other.lower()}, 'production': {self.first: self.cap}}, ['product_case']),
+            ({'admin': {'command': 'Register', 'product': self.other, 'amount': None}, 'production': {self.first: self.cap}},
+             ['command_spelling', 'null_admin_field_dropped']),
+            ({'admin': {'command': 'noop'}, 'production': {self.first: self.cap}, 'reasoning': 'x', 'plan': 'y'},
+             ['extra_top_level_key_dropped', 'extra_top_level_key_dropped']),
+        ]
+        for resp, expected in cases:
+            r = self.resolve(resp)
+            self.assertEqual(r['status'], 'accepted', resp)
+            self.assertEqual(r['normalized'], expected, resp)
+            self.assertTrue(set(expected) <= set(sim.NORMALISATIONS))
+
+    def test_ambiguous_variants_still_void(self):
+        for resp, reason in (({'admin': {'command': 'noop'}}, 'response_keys'),
+                             ({'admin': {'command': 'skip'}, 'production': {}}, 'admin_shape'),
+                             ({'admin': {'command': 'register', 'product': 'B', 'amount': 5}, 'production': {}}, 'admin_fields'),
+                             ({'admin': {'command': 'noop'}, 'production': {self.first: 12.5}}, 'production_quantity'),
+                             ({'admin': {'command': 'noop'}, 'production': {self.first: self.cap + 1}}, 'production_exceeds_available_capacity'),
+                             ({'admin': {'command': 'noop'}, 'production': {self.first: self.cap}, 'message': 7}, 'message_type')):
+            r = self.resolve(resp)
+            self.assertEqual((r['status'], r['reason']), ('void', reason), resp)
+
+    def test_pending_and_retired_firms_with_zero(self):
+        s, oid, o, first = self.s, self.oid, self.o, self.first
+        recs = sim.step(s, {x: (act({'command': 'register', 'product': self.other}, {first: self.cap}) if x == oid
+                                else act(production=full_production(s, x))) for x in s['owners']}, {'regime': 'none'})
+        new = [f for f in o["firms"] if f != first][0]
+        self.assertEqual(o['firms'][new]['status'], 'pending')
+        sim.begin_round(s)
+        r = sim.resolve(s, oid, act({'command': 'retire', 'firm': new}, {first: self.cap, new: 0}))
+        self.assertEqual((r['status'], r['admin_result']), ('accepted', 'accepted'))
+        sim.step(s, {x: (act({'command': 'retire', 'firm': new}, {first: self.cap, new: 0}) if x == oid
+                         else act(production=full_production(s, x))) for x in s['owners']}, {'regime': 'none'})
+        self.assertNotIn(new, o['firms'])
+        sim.begin_round(s)
+        r = sim.resolve(s, oid, act(production={first: self.cap, new: 0}))           # retired firm, zero order
+        self.assertEqual((r['status'], r['normalized']), ('accepted', ['zero_order_unknown_firm_dropped']))
+        recs = sim.step(s, {x: (act(production={first: self.cap, new: 0}) if x == oid else act(production=full_production(s, x)))
+                            for x in s['owners']}, {'regime': 'none'})
+        row = next(r['owners'][oid] for r in recs if oid in r['owners'])
+        self.assertEqual(row['dropped_zero_orders'], 1)
+        self.assertEqual(sim.conservation(s), [])
+
+    def test_documentation_half(self):
+        for k in ('messages', 'plain', 'cued'):
+            self.assertIn('Production orders may name only the firms listed in `portfolio.firms` this round', study.SYSTEMS[k])
+            self.assertIn('never chosen by you', study.SYSTEMS[k])
+        obs = sim.observation(world(), 'own-00a', study.branch_rules('A'))
+        self.assertIn('cannot be ordered', obs['portfolio']['production_orders_rule'])
+
+    def test_fresh_fixtures_and_batches(self):
+        d = study.design()
+        f = d['fixtures']
+        used_001 = set(range(318400, 318418)) | set(range(318200, 318206)) | set(range(318100, 318106))
+        fresh = set(range(f['probe_first_market_id'], f['probe_first_market_id'] + 18)) | set(f['ordinary_markets']) | set(f['smoke_markets'])
+        self.assertFalse(used_001 & fresh)
+        self.assertTrue(all(318600 <= m <= 318699 for m in fresh))
+        self.assertEqual(len(fresh), 30)
+        self.assertEqual(d['attempt'], '002')
+        self.assertTrue(all(study.params(s)['batch'].endswith('-002') for s in study.STAGES))
+        b = study.ledger_budget()
+        self.assertEqual((b['max_calls']['P0'], b['max_attempted_calls']), (2, 8479))
+
+
 class Gates(unittest.TestCase):
     def run_of(self, stage, status='done', **metrics):
         p = study.params(stage)
