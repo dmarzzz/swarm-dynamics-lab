@@ -64,3 +64,10 @@ Deferred by the coordinator (dmarz/orchestrator-2) in favour of the run-queue:re
 ## Status 2026-10-04 ~10:55Z: resumed
 
 Resumed by dmarz/orchestrator-2 on sim-dmarz-13 (freed by sybil-split-opus). Reason: only two dmarz runs were live against Dan's standing goal of five, the ready queue was empty, and the boxes reserved for program v5 (sim-dmarz-2, -8, -10) are not used. Source hash and configuration unchanged from the deferred launch-ready state (Opus 5.5, effort low, 429/529 retry). Night rule (fleet-monitor relay of Dan, ~10:40Z): if a stage stops on a provider limit or credit error that does not clear within 20 minutes, relaunch it as a new dated attempt on claude-opus-5 with a fresh probe and qualification, gates unchanged, results labelled by model and never pooled.
+
+## Handover 2026-10-04 ~11:20Z (operator may be cut off)
+
+- Server sim-dmarz-13, claim `dmarz-sybil-scale-opus` (agentops #267, by dmarz/scale-opus, until ~19:00Z). Revision `80d70b7a9ec6ad489a0e36a3acfd704d488dada2`.
+- S1 run `sybil-scale-opus/79bb3882` (2,400 calls) started ~11:05Z by `scripts/run-sybil-scale-opus.py <rev> S1`: one `src/worker.py --hub` process under `timeout`, log `/srv/swarm/sybil-scale-opus-lab/researchers/dmarz/notes/sybil-scale-opus/results/s1-001-worker.log`.
+- From ~/swarm-labs-agentops with `set -a; . ./.env; set +a; export SOPS_AGE_KEY_FILE=$HOME/swarm-labs-agentops/keys.txt`: `python3 scripts/run-sybil-scale-opus.py 80d70b7a9ec6ad489a0e36a3acfd704d488dada2 status` (worker_active false = ended), then `publish`, then `verify --save <file>`.
+- Remaining after it ends: publish, verify, RESULTS.md + reviews/s1-001-post.md (three-model paired comparison vs sybil-scale-api/56defc84 and sybil-scale-sonnet/afd8d5b9, using reporting/compare_models.py), evidence row, `python3 scripts/agentops.py release dmarz-sybil-scale-opus --status done`.
