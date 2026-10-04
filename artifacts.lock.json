@@ -1343,6 +1343,71 @@
    "sha256": "9a3368a2485a94a354550689ca6c17a1a0aba42cab27b5698a8cd45ced086fc6",
    "size_bytes": 59552
   },
+  "sybil-newcomer-api-s1@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791085306,
+     "sha256": "c7970f14a00ed46fd07a52189f0da0e626f299957fa69081826146aa1c143fd7",
+     "size": 6019,
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/render.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "eeb2705e1d01329cfb5f379e6490cfcad48ed0234c12c8cc7f7bbe16928813a3",
+     "size": 7012,
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/sim.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "bf6109198ea22ce597c402c7c2f2783cce07f8231f15632548dc5efda8f13301",
+     "size": 6154,
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/study.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2",
+     "size": 1497,
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/design.yaml"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce",
+     "size": 42,
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/requirements.txt"
+    },
+    {
+     "mtime": 1791088234,
+     "sha256": "5bd9725703a6c52f47939a2807928f15dbc18e8995f82e7488a828534d2f3150",
+     "size": 319453,
+     "uri": "data/sybil-followups/newcomer-s1/episodes.jsonl.gz"
+    },
+    {
+     "mtime": 1791088239,
+     "sha256": "cdac3ffe94f69e3e3751896a5cbcc59720f37807a4089c0bbd17f7d2b3da2d5d",
+     "size": 689593,
+     "uri": "data/sybil-followups/newcomer-s1/history.jsonl.gz"
+    },
+    {
+     "mtime": 1791088225,
+     "sha256": "1efb7499d707b4c624fe40a411500a35b1f9b52f9fa1e6f034b9f92d9157f2e5",
+     "size": 928,
+     "uri": "data/sybil-followups/newcomer-s1/summary.json"
+    },
+    {
+     "mtime": 1788431650,
+     "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+     "size": 773236,
+     "uri": "/System/Library/Fonts/Supplemental/Arial.ttf"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791088269,
+   "path": "artifacts/sybil-newcomer-api-s1/sybil-newcomer-api-s1-v1.png",
+   "prompt_sha256": "d8b28d31782698fcc790b9fec2fd246ffbc5d2b13d13a2f3099a1301583ab4f0",
+   "sha256": "a2c2523cda7b4465f79356a22d0286f3279cb9219c43a5c297437a8bb4e8c4d2",
+   "size_bytes": 138104
+  },
   "sybil-scale-api-hidden@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -3725,7 +3790,7 @@
    "size_bytes": 1542505
   }
  },
- "generated": "2026-10-03T21:29:22-0700",
+ "generated": "2026-10-03T21:35:46-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

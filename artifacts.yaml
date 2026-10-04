@@ -1,5 +1,5 @@
-# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `python3 .flightdeck/fd.py add …`;
-# check with `python3 .flightdeck/fd.py check --strict .`
+# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `fd add`, check with
+#   python3 .flightdeck/fd.py check --strict .
 manifest: 1
 project: Swarm Lab
 summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses
@@ -1174,4 +1174,29 @@ artifacts:
           - data/influence-native/native-D1-01/events-1.jsonl
           - data/influence-native/native-D1-01/outcomes.json
         commit: 84ee032eda80360cc54c5234f8ffc3afe3649cec-dirty
+  - id: sybil-newcomer-api-s1
+    category: content
+    type: figure
+    title: 'Newcomer trust: measured S1 histories and specialist accuracy'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-newcomer-api-s1/sybil-newcomer-api-s1-v1.png
+        built_at: '2026-10-04T04:35:45Z'
+        by: codex
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: okay so lets create an experiment plan for the next experiment on the previous result, and then in parallel
+          create another experiment plan for what you just mentioned in the last reply, and ignore the indepdent review requreiment
+          and ship both of those experiments in parallel
+        ingredients:
+          - researchers/dmarz/notes/sybil-newcomer-api/src/render.py
+          - researchers/dmarz/notes/sybil-newcomer-api/src/sim.py
+          - researchers/dmarz/notes/sybil-newcomer-api/src/study.py
+          - researchers/dmarz/notes/sybil-newcomer-api/design.yaml
+          - researchers/dmarz/notes/sybil-newcomer-api/requirements.txt
+          - data/sybil-followups/newcomer-s1/episodes.jsonl.gz
+          - data/sybil-followups/newcomer-s1/history.jsonl.gz
+          - data/sybil-followups/newcomer-s1/summary.json
+          - /System/Library/Fonts/Supplemental/Arial.ttf
+        commit: e2d7b6a577f8c3b938eaccfe2778e0de8742ba78-dirty
 requires: '1.2'
