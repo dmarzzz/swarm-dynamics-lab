@@ -1,0 +1,12 @@
+id: swarm-of-theseus
+title: Swarm of Theseus — SOC-24
+owner: vishesh
+description: 'TLDR: Can useful culture survive complete member replacement? Compare notes, mentoring, both and neither with founders and a verbatim procedure ceiling in seed-bank, observatory and repair-dock worlds. Measure unseen-case accuracy, arbitrary convention retention, turnover and onboarding cost. Small exploratory single-model study of seeded procedures; not spontaneous culture or confirmatory evidence.'
+params:
+  stage: {type: string, role: stage}
+  scenario: {type: string, role: condition}
+  arm: {type: string, role: condition}
+  seed: {type: int, role: replicate}
+metrics: [accuracy, convention, turnover, calls, invalid]
+primary_metric: accuracy
+url: pending-immutable-commit

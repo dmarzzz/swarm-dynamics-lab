@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-theseus
-tool: TODO claude-code | codex | cursor | other
+tool: codex
 state: working  # working | idle | blocked | done
-task: null
-doing: TODO one line
+task: swarm-of-theseus
+doing: Build and qualify SOC-24 with public preregistration and dedicated allocation
 updated: 2026-10-04T01:27Z
 ---
 
