@@ -2062,6 +2062,40 @@ artifacts:
     type: film
     title: 'Market split: one owner, two firms'
     versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/market-split-film/market-split-film-v2.mp4
+        built_at: '2026-10-04T09:16:05Z'
+        note: Narrated version, 3 min 29 s. Opens on all 36 episodes of the Sonnet pilot playing at once (six markets, three
+          rules, free and one-firm arms), goes into market 36 under the per-firm rule, shows the round-1 message the agent
+          was sent and the JSON it returned (copied from the saved call record), replays that run and its per-owner and no-rule
+          neighbours, then returns to the wall for the result. Spoken narration with matching subtitles; the voice is synthetic
+          (Kokoro af_heart through mlx-audio), levelled to -14 LUFS. build.py refuses to build if the data stops supporting
+          a narrated number. Supersedes v1 on dmarz's request for a narrated, YouTube-style run. Exploratory pilot with no
+          independent review; the Opus 5.5 replication is named in one line only.
+        by: claude
+        model: claude-fable-5-1
+        session: claude:98fe1379-eadd-4848-ad40-51815e288d96
+        prompt: lets think more like a youtube video narrating an agent society run. like explain the pov in the no market
+          simulation, even maybe show a bunch of simulations then zoom into that one
+        ingredients:
+          - researchers/dmarz/notes/market-split-film/_decision.md
+          - researchers/dmarz/notes/market-split-film/narrated/script.json
+          - researchers/dmarz/notes/market-split-film/narrated/vo.py
+          - researchers/dmarz/notes/market-split-film/narrated/build_data.py
+          - researchers/dmarz/notes/market-split-film/narrated/build.py
+          - researchers/dmarz/notes/market-split-film/narrated/film.html
+          - researchers/dmarz/notes/market-split-film/build_data.py
+          - researchers/dmarz/notes/market-split-film/build.py
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg
+          - artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip
+          - researchers/dmarz/notes/market-split-api/report/s1-002/usage.json
+          - researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json
+          - researchers/dmarz/notes/market-split-api/report/s1-002/first-registration-notes.json
+          - researchers/dmarz/notes/market-split-api/report/s1-002/descriptive-summary.json
+          - researchers/dmarz/notes/market-split-api/src/prompt.txt
+        commit: cce29d5804dc7b39b7d196c83c046bd8be33ff5b-dirty
       - v: 1
         date: 2026-10-04
         path: artifacts/market-split-film/market-split-film-v1.mp4

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+  film: market split, narrated run. Sonnet pilot market-split-api/s1-002
+  source: artifacts/market-split-sonnet-s1-002-records (episodes, calls) reduced by narrated/build_data.py; narration in narrated/script.json
+  generated_by: researchers/dmarz/notes/market-split-film/narrated/build.py
+  visual_claim: "Out of a wall of 36 runs of one market, the six where firms are scored alone and the agent is free to register are the six where one owner becomes two firms; inside one of them, the message the agent was sent and the line it returned show the move being made."
+  form: data-driven
+  omitted on purpose: the scripted study, the Haiku cohorts, cost accounting, the same-action counterfactual
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>market split</title>
+<style>
+/*__TOKENS__*/
+/*__FONTS__*/
+:root { --void: var(--color-void); --ink: var(--color-ink); --dim: var(--color-dim); --amber: var(--color-amber);
+  --zip: var(--color-zip); --bone: var(--color-bone); --no: var(--color-state-no); --mono: var(--text-mono-family); --display: var(--text-display-family); }
+html, body { margin: 0; height: 100%; background: var(--void); overflow: hidden; }
+#film { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; transform-origin: 0 0;
+  background: var(--void); color: var(--ink); font-family: var(--mono); font-size: 18px; }
+#film * { box-sizing: border-box; }
+.abs, #film > div, #film svg { position: absolute; }
+.fill { left: 0; top: 0; width: 1920px; height: 1080px; }
+#zip { left: 46px; top: 0; bottom: 0; width: 2px; opacity: .55;
+  background: linear-gradient(180deg, transparent, var(--zip) 18%, var(--zip) 82%, transparent);
+  box-shadow: 0 0 8px var(--zip), 0 0 24px rgba(60,255,230,.35); }
+#title { left: 100px; top: 44px; font-family: var(--display); font-weight: var(--text-display-weight); font-size: 54px;
+  line-height: 1; letter-spacing: -0.01em; white-space: nowrap; }
+.inst { font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); white-space: nowrap; }
+#inst { left: 100px; top: 112px; }
+#clock { left: 1420px; top: 112px; width: 400px; text-align: right; color: var(--amber); }
+#cap { left: 100px; top: 936px; width: 1590px; height: 100px; }
+#cap p { position: absolute; left: 0; bottom: 0; margin: 0; font-size: 28px; line-height: 1.42; opacity: 0; white-space: nowrap; }
+.g, .g > div { position: absolute; }
+.g { left: 0; top: 0; }
+/* the wall is clipped to the band between the header and the subtitles, so the zoom never runs under either */
+#wallclip { left: 0; top: 160px; width: 1920px; height: 765px; overflow: hidden; }
+#wall { top: -160px; width: 1920px; height: 1080px; transform-origin: 0 0; }
+#wall svg { left: 0; top: 0; width: 1920px; height: 1080px; }
+.name { white-space: nowrap; font-size: 24px; line-height: 1; }
+.rname { white-space: nowrap; font-size: 20px; line-height: 1; }
+.small { white-space: nowrap; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+.t-ink { color: var(--ink); } .t-zip { color: var(--zip); } .t-no { color: var(--no); } .t-dim { color: var(--dim); }
+/* a firm is a box: the outline is its capacity, the fill is its output this round */
+.own { border: 1.6px solid rgba(232,234,237,.72); }
+.wall { width: 1.6px; background: rgba(232,234,237,.72); }
+.fillq { background: var(--ink); opacity: .86; }
+.riv { border: 1.4px solid rgba(127,136,150,.6); }
+.rivq { background: var(--dim); opacity: .6; }
+.tile { border: 1px solid rgba(127,136,150,.3); background: rgba(3,5,10,.35); }
+.tile .own { border-width: 1.2px; } .tile .riv { border-width: 1px; }
+.brk { height: 7px; border: 1.4px solid var(--ink); border-bottom: 0; opacity: .8; }
+.num { font-family: var(--display); font-weight: var(--text-display-weight); font-size: 42px; line-height: 1; white-space: nowrap; }
+.quote { font-size: 17px; line-height: 1.45; width: 500px; color: var(--ink); }
+.quote i { font-style: normal; color: var(--dim); }
+.axis { stroke: var(--dim); stroke-width: 1; opacity: .55; fill: none; }
+.thr { stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 5 6; opacity: .75; fill: none; }
+.s-ink { stroke: var(--ink); stroke-width: 2; fill: none; opacity: .9; stroke-linejoin: round; }
+.s-zip { stroke: var(--zip); stroke-width: 2.2; fill: none; stroke-linejoin: round; }
+.cursor { stroke: var(--amber); stroke-width: 1.2; opacity: .6; }
+/* the agent's view */
+.code { font-size: 15px; line-height: 22px; white-space: pre; }
+.say { font-size: 17px; line-height: 27px; white-space: pre; }
+.say b { font-weight: 400; color: var(--amber); }
+.instr { font-size: 15px; line-height: 22px; width: 520px; color: var(--ink); }
+.prog { height: 2px; background: var(--dim); transform-origin: 0 50%; }
+/* end card */
+#end .by { left: 100px; top: 392px; }
+#end .who { left: 96px; top: 424px; font-family: var(--display); font-weight: var(--text-display-weight); font-size: 132px; line-height: 1; }
+#end .how { left: 100px; top: 632px; font-size: 20px; line-height: 1.6; color: var(--dim); white-space: nowrap; }
+#end .qr { left: 1290px; top: 330px; width: 330px; height: 330px; background: var(--bone); padding: 18px; }
+#end .qr svg { position: static; width: 100%; height: 100%; display: block; }
+#end .url { left: 1290px; top: 676px; width: 330px; text-align: center; font-size: 16px; color: var(--dim); white-space: nowrap; }
+#mark { position: absolute; left: 1700px; top: 910px; width: 134px; height: 134px; }
+#mark2 { position: absolute; left: 530px; top: 376px; width: 220px; height: 220px; opacity: 0; }
+body.record #mark, body.record #mark2, body.record #bar { display: none; }
+#bar { position: fixed; left: 0; right: 0; bottom: 0; height: 6px; background: rgba(127,136,150,.25); cursor: pointer; }
+#bar div { height: 100%; width: 0; background: var(--dim); }
+</style>
+</head>
+<body>
+<div id="film" role="img" aria-label="Narrated film of the Sonnet market-split pilot. The subtitles carry the full narration.">
+  <div id="field" class="fill"></div>
+  <div id="zip"></div>
+  <div id="title">market split</div>
+  <div id="inst" class="inst"></div>
+  <div id="clock" class="inst"></div>
+  <div id="wallclip"><div id="wall" class="g"><svg viewBox="0 0 1920 1080"></svg></div></div>
+  <svg id="wires" class="fill" viewBox="0 0 1920 1080"></svg>
+  <div id="heads" class="g"></div>
+  <div id="stage" class="g"></div>
+  <div id="pov" class="g"></div>
+  <div id="end" class="g"></div>
+  <div id="cap"></div>
+  <img id="mark" alt="" src="__MARK__">
+  <img id="mark2" alt="" src="__MARK__">
+</div>
+<div id="bar"><div></div></div>
+<script>
+const D = /*__DATA__*/null;
+const QR = `/*__QR__*/`;
+const W = D.worked, R = D.rule, NR = R.rounds, TH = R.threshold;
+const KEYS = ['none', 'firm', 'owner'];
+const NAME = { none: 'no rule', firm: 'per-firm rule', owner: 'per-owner rule' };
+const SUB = { none: 'concentration is not enforced', firm: 'each registered firm is scored alone', owner: `an owner's firms are scored as one` };
+const LX = { none: 100, firm: 690, owner: 1280 };
+const film = document.getElementById('film'), wires = document.getElementById('wires');
+const NS = 'http://www.w3.org/2000/svg';
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = x => 1 - Math.pow(1 - clamp(x), 3);              // entrances ease out
+const io = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const lerp = (a, b, u) => a + (b - a) * u;
+const vis = (t, a, b = 1e9, din = .733, dout = .467) => ease((t - a) / din) * (1 - ease((t - b) / dout));
+const bump = (age, k = .12) => 1 + (age > 0 && age < .45 ? Math.sin(Math.PI * age / .45) * k : 0);   // "the state changed"
+const anims = []; const on = fn => anims.push(fn);
+const el = (cls, parent, html, css) => { const n = document.createElement('div'); n.className = cls; if (html != null) n.innerHTML = html;
+  if (css) n.style.cssText = css; parent.appendChild(n); return n; };
+const at = (n, x, y) => { n.style.left = x + 'px'; n.style.top = y + 'px'; return n; };
+const box = (n, x, y, w, h) => { n.style.left = x + 'px'; n.style.top = y + 'px'; n.style.width = Math.max(0, w) + 'px'; n.style.height = h + 'px'; return n; };
+const svg = (tag, attrs, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); (parent || wires).appendChild(n); return n; };
+const draw = (p, t, a, d = .8) => { const u = io((t - a) / d); p.setAttribute('pathLength', 1); p.style.strokeDasharray = '1'; p.style.strokeDashoffset = 1 - u; p.style.visibility = u > 0 ? 'visible' : 'hidden'; };
+const show = (n, o, dy = 0) => { n.style.opacity = o; if (dy) n.style.transform = `translateY(${(1 - Math.min(1, o)) * dy}px)`; };
+const text = (n, s) => { if (n._s !== s) { n.textContent = s; n._s = s; } };
+const credits = x => Math.round(x).toLocaleString('en-US');
+const units = x => Number.isInteger(x) ? String(x) : x.toFixed(1);
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+/* ------------------------------------------------------------------ timeline: one segment per narration clip, timed by build.py */
+const T = {}, DUR = {};
+for (const s of D.timeline) { T[s.key] = s.start; DUR[s.key] = s.dur; }
+const DURATION = Math.max(...D.timeline.map(s => s.start + s.dur));
+const LINE_MAX = 90;                                 // Space Mono at 28 px: a longer line reaches the mark
+const wrap = s => { if (s.length <= LINE_MAX) return [s];                   // two balanced lines, broken at the space nearest the middle
+  let cut = -1; for (let i = 0; i < s.length; i++) if (s[i] === ' ' && Math.abs(i - s.length / 2) < Math.abs(cut - s.length / 2)) cut = i;
+  return [s.slice(0, cut), s.slice(cut + 1)]; };
+const SUBS = D.timeline.filter(s => s.text).map(s => ({ ...s, lines: wrap(s.text) }));
+for (const s of SUBS) for (const l of s.lines) if (l.length > LINE_MAX) throw new Error(`subtitle ${s.key} has a ${l.length}-character line`);
+const capBox = document.getElementById('cap');
+SUBS.forEach(s => { const p = document.createElement('p'); p.innerHTML = s.lines.map(esc).join('<br>'); capBox.appendChild(p);
+  on(t => show(p, vis(t, s.start + .05, s.start + s.dur - .2, .35, .25), 6)); });
+
+/* round clocks: time -> rounds played, one per view */
+const clockOf = pk => ({ pk,
+  p: t => { if (t <= pk[0][0]) return pk[0][1];
+    for (let i = 1; i < pk.length; i++) if (t <= pk[i][0]) { const [t0, p0] = pk[i - 1], [t1, p1] = pk[i]; return lerp(p0, p1, (t - t0) / (t1 - t0)); }
+    return pk[pk.length - 1][1]; },
+  t: r => { for (let i = 1; i < pk.length; i++) { const [t0, p0] = pk[i - 1], [t1, p1] = pk[i]; if (p1 >= r && p1 > p0) return lerp(t0, t1, (r - p0) / (p1 - p0)); }
+    return pk[pk.length - 1][0]; } });
+const CLK = {
+  wall: clockOf([[T.W1 + 1.0, 0], [T.W5 + DUR.W5 - .6, NR]]),
+  firm: clockOf([[T.M1 + .9, 0], [T.M1 + 2.5, 1], [T.M2 + .4, 1], [T.M2 + 4.4, 8], [T.M3 + .3, 8], [T.M3 + DUR.M3 - 1.0, NR]]),
+  owner: clockOf([[T.N2 + .2, 0], [T.N2 + 1.0, 1], [T.N2 + 1.8, 2], [T.N2 + 2.8, 3], [T.N2 + DUR.N2 - .2, NR]]),
+  none: clockOf([[T.N3 + .8, 0], [T.N3 + DUR.N3 - .8, NR]]),
+};
+/* the camera: 0 = the wall of runs, 1 = inside the worked run */
+const zoomU = t => io((t - (T.Z1 + .5)) / 1.6) - io((t - T.R1) / 1.5);
+
+/* ------------------------------------------------------------------ field (the painted ground) */
+const field = document.getElementById('field');
+const fUp = el('abs', field, '', 'left:-6%;right:-6%;top:-8%;background:radial-gradient(70% 90% at 30% 40%, var(--color-field-upper), rgba(40,60,190,.34) 55%, transparent 100%);filter:blur(70px)');
+const fLo = el('abs', field, '', 'left:-6%;right:-6%;bottom:-10%;background:radial-gradient(75% 95% at 68% 62%, var(--color-field-lower), rgba(120,40,200,.32) 55%, transparent 100%);filter:blur(80px)');
+const fSeam = el('abs', field, '', 'left:8%;right:8%;height:6%;background:linear-gradient(90deg, transparent, var(--color-field-seam), rgba(120,190,255,.22), transparent);filter:blur(38px)');
+el('abs', field, '', 'left:-4%;bottom:-12%;width:34%;height:38%;background:radial-gradient(closest-side, var(--color-field-warm), transparent);filter:blur(60px)');
+// held darker than the kit's card field: this film puts small type across the whole frame
+el('abs fill', field, '', 'background:radial-gradient(78% 74% at 50% 50%, rgba(3,5,10,.9), rgba(3,5,10,.72) 70%, rgba(3,5,10,.4) 100%)');
+const fGrid = el('abs fill', field, '', 'background-image:repeating-linear-gradient(0deg, rgba(170,200,255,.05) 0 1px, transparent 1px 48px), repeating-linear-gradient(90deg, rgba(170,200,255,.05) 0 1px, transparent 1px 48px);-webkit-mask-image:radial-gradient(80% 75% at 50% 50%, rgba(0,0,0,.85), transparent 100%);mask-image:radial-gradient(80% 75% at 50% 50%, rgba(0,0,0,.85), transparent 100%)');
+on(t => { const f = t * 30, a = Math.sin(f / 150), b = Math.cos(f / 190), seam = 50 + 2.2 * Math.sin(f / 120);
+  fUp.style.height = (seam + 4) + '%'; fUp.style.transform = `translate(${a * 26}px, ${b * 14}px)`;
+  fLo.style.height = (100 - seam + 8) + '%'; fLo.style.transform = `translate(${-a * 30}px, ${-b * 12}px)`;
+  fSeam.style.top = (seam - 3) + '%'; fSeam.style.opacity = .8 + .2 * a;
+  fGrid.style.backgroundPosition = `${(f * .16) % 48}px 0px`; });
+
+/* ------------------------------------------------------------------ title, instrument line, round clock */
+const title = document.getElementById('title'), inst = document.getElementById('inst'), clock = document.getElementById('clock');
+inst.textContent = `swarm lab // ${D.wall.length} runs of one simulated market // claude sonnet 4.6 // pilot ${D.run.attempt} // 2026-10-04`;
+const rr = p => String(clamp(Math.ceil(p - 1e-9), 1, NR)).padStart(2, '0');
+on(t => { show(title, vis(t, .8, T.E - .2), 14); show(inst, vis(t, 1.3, T.E - .2), 10);
+  const onWall = t < T.Z1 + 1;
+  text(clock, onWall ? `round ${rr(CLK.wall.p(t))} / ${NR}` : `market ${W.task} // round ${rr(CLK.firm.p(t))} / ${NR}`);
+  clock.style.color = onWall ? '' : 'var(--ink)';          // inside the run the one amber thing is the agent's move
+  show(clock, onWall ? vis(t, CLK.wall.pk[0][0], T.Z1 + .3) : vis(t, CLK.firm.pk[0][0], T.N1 - .3)); });
+
+/* one market row: the owner's firms inside one continuous outline, then the rivals. Used by the wall and by the lanes */
+function row(parent, bx, y, h, s, capacity, rivalCaps, pad = 3) {
+  const own = box(el('own', parent), bx, y, capacity * s, h);
+  const walls = [1, 2, 3].map(() => el('wall', parent)), fills = [0, 1, 2, 3].map(() => el('fillq', parent));
+  let x = bx + capacity * s + 10;
+  const riv = rivalCaps.map(c => { const o = box(el('riv', parent), x, y, c * s, h), f = el('rivq', parent); f._x = x; x += c * s + 6; return [o, f]; });
+  const all = [own, ...walls, ...fills, ...riv.flat()];
+  // n firms of capacity cpf each; q[i] is firm i's output; wallU draws the walls top to bottom
+  const set = (n, cpf, q, rq, wallU = 1) => {
+    walls.forEach((wl, i) => { box(wl, bx + (i + 1) * cpf * s - .8, y, 1.6, h * wallU); wl.style.visibility = i < n - 1 ? 'visible' : 'hidden'; });
+    fills.forEach((fl, i) => { box(fl, bx + i * cpf * s + pad, y + pad, i < n ? q[i] * s - 2 * pad : 0, h - 2 * pad); });
+    riv.forEach(([o, f], j) => box(f, f._x + pad, y + pad, rq[j] * s - 2 * pad, h - 2 * pad)); };
+  return { all, set, walls, focalW: capacity * s };
+}
+
+/* ------------------------------------------------------------------ the wall: every run of the pilot, playing at once */
+const wall = document.getElementById('wall'), wSvg = wall.querySelector('svg');
+const GX0 = 318, TW = 238, CGAP = 13, TILE_H = 98;
+const ROWS = [['none', true], ['none', false], ['firm', true], ['firm', false], ['owner', true], ['owner', false]];
+const rowY = i => 200 + i * (TILE_H + 10) + Math.floor(i / 2) * 16, colX = j => GX0 + j * (TW + CGAP);
+const TASKS = [...new Set(D.wall.map(x => x.task))].sort((a, b) => a - b), WS = 2.85;
+const sy = (y, v) => y + 88 - (clamp(v, .2, .6) - .2) / .4 * 44;
+const colHeads = TASKS.map((task, j) => at(el('small', wall, `market ${task}`), colX(j), 176));
+const rowLabels = ROWS.map(([lane, free], i) => { const y = rowY(i);
+  const nm = free ? at(el('rname', wall, NAME[lane]), 100, y + 8) : null;
+  const arm = at(el('small', wall, free ? 'free to register' : 'held to one firm'), 100, y + (free ? 40 : 10));
+  const res = at(el('small', wall, ''), 100, y + (free ? 62 : 32)), res2 = at(el('small t-ink', wall, ''), 100, y + (free ? 82 : 52));
+  return { lane, free, nm, arm, res, res2 }; });
+const tiles = D.wall.map(run => { const i = ROWS.findIndex(([l, f]) => l === run.lane && f === run.free), j = TASKS.indexOf(run.task), x = colX(j), y = rowY(i);
+  const frame = box(el('tile', wall), x, y, TW, TILE_H), g = el('g tile', wall); g.style.border = '0'; g.style.background = 'none';
+  const rw = row(g, x + 10, y + 12, 18, WS, run.capacity, run.rival_capacities, 2);
+  svg('path', { class: 'thr', d: `M${x + 10},${sy(y, TH)} H${x + 228}`, style: `stroke-width:.8;stroke-dasharray:3 4;opacity:${run.lane === 'none' ? .3 : .6}` }, wSvg);
+  const line = svg('path', { class: run.lane === 'none' ? 's-ink' : 's-zip', style: `stroke-width:1.4;opacity:${run.lane === 'none' ? .45 : .95}` }, wSvg);
+  const px = r => x + 10 + (r - 1) / (NR - 1) * 218;
+  const state = r => r < 1 ? { q: [0], r: run.rival_capacities.map(() => 0), c: run.capacity } : run.rounds[r - 1];
+  return { run, i, j, frame, g, rw, line, px, state, y }; });
+const target = tiles.find(tl => tl.run.lane === 'firm' && tl.run.free && tl.run.task === W.task);
+const legend = at(el('small', wall, 'each tile: one 24-round run // boxes: output of product a, the owner then two rivals // line: concentration as the rule scores it // dashes: 0.38'), GX0, 884);
+const N6 = TASKS.length, splitCount = (lane, free) => tiles.filter(tl => tl.run.lane === lane && tl.run.free === free && tl.run.split != null).length;
+on(t => { const u = zoomU(t), o = clamp(1 - (u - .45) / .4) * (1 - io((t - (T.E - .3)) / .4));
+  wall.style.opacity = o; wall.style.visibility = o > 0 ? 'visible' : 'hidden'; if (o <= 0) return;
+  // the camera moves toward the worked run's tile
+  const Z = 2.27, cx = colX(target.j) + TW / 2, cy = rowY(target.i) + TILE_H / 2, s = lerp(1, Z, u);
+  wall.style.transform = `translate(${lerp(0, 960 - Z * cx, u)}px, ${lerp(0, 440 - Z * cy, u)}px) scale(${s})`;
+  const p = CLK.wall.p(t), r0 = Math.floor(p), r1 = Math.min(NR, Math.ceil(p)), fr = p - r0, e = io(fr);
+  for (const tl of tiles) { const a = tl.state(r0), b = tl.state(r1), n = b.q.length, grew = a.q.length !== n, tot = a.q.reduce((x, y) => x + y, 0);
+    tl.rw.set(n, b.c, b.q.map((q, k) => lerp(grew ? tot / n : a.q[k], q, e)), b.r.map((q, k) => lerp(a.r[k], q, e)), grew ? io(fr / .35) : 1);
+    let d = ''; for (let r = 1; r <= r0; r++) d += `${r === 1 ? 'M' : 'L'}${tl.px(r).toFixed(1)},${sy(tl.y, tl.run.rounds[r - 1].h).toFixed(1)}`;
+    if (r0 >= 1 && r0 < NR && fr > 0) d += `L${tl.px(p).toFixed(1)},${lerp(sy(tl.y, tl.run.rounds[r0 - 1].h), sy(tl.y, tl.run.rounds[r0].h), fr).toFixed(1)}`;
+    tl.line.setAttribute('d', d || 'M0,0');
+    const tin = vis(t, 1.2 + tl.i * .12 + tl.j * .05, 1e9, .5); tl.frame.style.opacity = tin; tl.g.style.opacity = tin; tl.line.style.visibility = tin > .5 ? 'visible' : 'hidden';
+    // back on the wall: the runs that split are marked
+    const isSplit = tl.run.split != null, lit = isSplit ? vis(t, T.R1 + 2.2 + tl.j * .12, 1e9, .4) : 0, pick = tl === target ? vis(t, T.Z1 + .1, T.Z1 + 2.2, .3, .3) : 0;
+    tl.frame.style.borderColor = lit > .5 ? 'var(--zip)' : pick > .5 ? 'var(--ink)' : ''; }
+  colHeads.forEach((n, j) => show(n, vis(t, 1.4 + j * .05)));
+  rowLabels.forEach((rl, i) => { if (rl.nm) show(rl.nm, vis(t, T.W4 + .3 + Math.floor(i / 2) * .5)); show(rl.arm, vis(t, rl.free ? T.W4 + .5 + Math.floor(i / 2) * .5 : T.W5 + .3));
+    const n = splitCount(rl.lane, rl.free), tR = rl.lane === 'firm' ? T.R1 + 2.4 : T.R2 + .6;
+    if (rl.free) { text(rl.res, `split in ${n} of ${N6}`); rl.res.style.color = n ? 'var(--zip)' : 'var(--ink)'; show(rl.res, vis(t, tR)); }
+    if (rl.lane === 'firm') { text(rl.free ? rl.res2 : rl.res, `mean profit ${credits(rl.free ? D.means.free : D.means.held)}`);
+      (rl.free ? rl.res2 : rl.res).style.color = 'var(--ink)'; show(rl.free ? rl.res2 : rl.res, vis(t, rl.free ? T.R3 + DUR.R3 * .62 : T.R3 + .8)); } });
+  show(legend, vis(t, T.W1 + 2.0, T.Z1 + .2) + vis(t, T.R1 + 1.6)); });
+
+/* ------------------------------------------------------------------ inside one run: the lanes */
+const heads = document.getElementById('heads'), stage = document.getElementById('stage'), wStage = svg('g', {});
+const S = 496 / 68;                                   // px per unit of output; the widest market row is 67 units
+const BY = [286, 330], BH = 34;                       // product A and B rows
+const CW = 470, CY0 = 420, CY1 = 650, VMIN = .2, VMAX = .6;
+const py = v => CY1 - (clamp(v, VMIN, VMAX) - VMIN) / (VMAX - VMIN) * (CY1 - CY0);
+const T_IN = { firm: T.Z1 + 1.4, owner: T.N1 + .4, none: T.N3 + .2 };
+const finedRounds = W.lanes.owner.rounds.filter(r => r.fine > 0).map(r => r.round);
+const NOTE_ROUND = { none: 1, firm: W.lanes.firm.registered_round, owner: Math.max(...finedRounds) + 1 };
+
+function lane(key) {
+  const x0 = LX[key], bx = x0 + 28, cx = x0 + 46, L = W.lanes[key], rounds = L.rounds, t0 = T_IN[key], C = CLK[key];
+  const g = el('g', stage), w = svg('g', {}, wStage), px = r => cx + (r - 1) / (NR - 1) * CW;
+  const name = at(el('name', heads, NAME[key]), x0, 170), sub = at(el('small', heads, SUB[key]), x0, 204);
+  on(t => { const out = T.R1 + .2; show(name, vis(t, t0, out), 10); show(sub, vis(t, key === 'firm' ? T.P3 + .2 : t0 + .3, out)); });
+
+  // the market rows
+  const cap = W.market.capacity, rc = W.market.rival_capacities;
+  const rows = [0, 1].map(k => row(g, bx, BY[k], BH, S, cap[k], rc.map(c => c[k])));
+  const prod = ['a', 'b'].map((s, k) => at(el('small', g, s), x0 + 4, BY[k] + 10));
+  const brk = box(el('brk', g), bx, 262, rows[0].focalW, 7), brkLabel = at(el('small t-ink', g, ''), bx, 240);
+  const out = el('small', g, '', `left:${x0}px;top:240px;width:540px;text-align:right`);
+  const tags = [at(el('small', g, 'rival'), bx + cap[0] * S + 10, 270), at(el('small', g, 'rival'), bx + (cap[0] + rc[0][0]) * S + 16, 270)];
+  const legend = key === 'firm' ? at(el('small', g, 'outline = capacity // fill = output this round'), bx, 374) : null;
+  const state = r => r < 1 ? { firms: [[0, 0]], rivals: rc.map(() => [0, 0]), cpf: cap, own: [0, 0] }
+    : { firms: rounds[r - 1].firms, rivals: rounds[r - 1].rivals, cpf: rounds[r - 1].capacity_per_firm, own: rounds[r - 1].owner_q };
+  let splitT = null;                                                          // when the firm count first goes up
+  for (let r = 1; r <= NR; r++) if (state(r).firms.length > state(r - 1).firms.length && splitT == null) splitT = C.t(r - 1);
+  on(t => { const p = C.p(t), r0 = Math.floor(p), r1 = Math.min(NR, Math.ceil(p)), fr = p - r0, u = io(fr), a = state(r0), b = state(r1), n = b.firms.length;
+    const grew = a.firms.length !== n, wallU = grew ? io(fr / .35) : 1;
+    [0, 1].forEach(k => { const tot = a.firms.reduce((s, f) => s + f[k], 0);
+      rows[k].set(n, b.cpf[k], b.firms.map((f, i) => lerp(grew ? tot / n : a.firms[i][k], f[k], u)), b.rivals.map((f, j) => lerp(a.rivals[j][k], f[k], u)), wallU); });
+    rows.forEach((rw, k) => rw.all.forEach(nd => show(nd, vis(t, t0 + k * .15))));
+    prod.forEach((nd, k) => show(nd, vis(t, t0 + .3 + k * .15)));
+    show(brk, vis(t, t0 + .5) * .8); show(brkLabel, vis(t, t0 + .5)); tags.forEach(nd => show(nd, vis(t, t0 + .7)));
+    text(brkLabel, `one owner // ${n} firm${n > 1 ? 's' : ''}`);
+    brkLabel.style.transform = `scale(${splitT == null ? 1 : bump(t - splitT - .3)})`; brkLabel.style.transformOrigin = '0 50%';
+    const lit = splitT == null ? 0 : clamp(1 - (t - splitT - .2) / 1.6) * (t > splitT ? 1 : 0);                 // the new wall arrives lit, then settles
+    rows.forEach(rw => rw.walls.forEach(wl => { wl.style.boxShadow = lit > 0 ? `0 0 ${10 * lit}px rgba(232,234,237,${.7 * lit})` : 'none'; wl.style.background = lit > 0 ? 'var(--ink)' : ''; }));
+    if (legend) show(legend, vis(t, t0 + 1.0, C.pk[0][0] - .2));
+    text(out, p > 0 ? `output // a ${units(b.own[0])} // b ${units(b.own[1])}` : ''); show(out, vis(t, C.pk[0][0] + .4)); });
+
+  // the concentration chart: by owner in ink, what the rule reads in teal
+  const frame = svg('path', { class: 'axis', d: `M${cx - 6},${CY0} V${CY1} M${cx},${CY1 + 6} H${cx + CW}` }, w);
+  const thr = svg('path', { class: 'thr', d: `M${cx - 6},${py(TH)} H${cx + CW}` }, w);
+  const yTitle = at(el('small', g, 'concentration (hhi) // products a and b'), cx, 398);
+  const ticks = [[VMAX, 'small'], [TH, 'small t-ink'], [VMIN, 'small']].map(([v, cls]) => el(cls, g, v.toFixed(v === TH ? 2 : 1), `left:${x0 - 14}px;top:${py(v) - 8}px;width:50px;text-align:right;letter-spacing:0`));
+  const thrLabel = el('small t-ink', g, key === 'none' ? 'not enforced' : `${Math.round(R.fine_rate * 100)}% fine above`, `left:${cx}px;top:${py(TH) - 22}px;width:${CW}px;text-align:right`);
+  if (key === 'none') { thr.style.opacity = .4; thrLabel.className = 'small'; }
+  const xl = [at(el('small', g, 'round 1'), cx, CY1 + 12), el('small', g, String(NR), `left:${cx + CW - 60}px;top:${CY1 + 12}px;width:60px;text-align:right`)];
+  on(t => { draw(frame, t, t0 + .5, .7); show(yTitle, vis(t, t0 + .7)); ticks.forEach(nd => show(nd, vis(t, t0 + .9)));
+    draw(thr, t, t0 + .9, .9); show(thrLabel, vis(t, t0 + 1.4)); xl.forEach(nd => show(nd, vis(t, t0 + 1.1))); });
+  const SERIES = key === 'none' ? [['owner_hhi', 's-ink']] : key === 'firm' ? [['owner_hhi', 's-ink'], ['firm_hhi', 's-zip']] : [['owner_hhi', 's-zip']];
+  const ruleReads = key === 'firm' ? 'firm_hhi' : key === 'owner' ? 'owner_hhi' : null;
+  const paths = SERIES.flatMap(([m, cls]) => [0, 1].map(k => ({ m, k, n: svg('path', { class: cls }, w),
+    dot: svg('circle', { r: 3.2, fill: cls === 's-zip' ? 'var(--zip)' : 'var(--ink)' }, w) })));
+  const fineDots = !ruleReads ? [] : rounds.flatMap(rd => rd.fine > 0 ? [0, 1].filter(k => rd[ruleReads][k] > TH).map(k =>
+    ({ r: rd.round, n: svg('circle', { cx: px(rd.round), cy: py(rd[ruleReads][k]), r: 5, fill: 'var(--no)' }, w) })) : []);
+  const cursor = svg('line', { class: 'cursor', y1: CY0, y2: CY1 }, w);
+  const tDone = C.pk[C.pk.length - 1][0] + .4;
+  on(t => { const p = C.p(t), r0 = Math.floor(p), fr = p - r0;
+    for (const s of paths) { let d = '';
+      for (let r = 1; r <= r0; r++) d += `${r === 1 ? 'M' : 'L'}${px(r).toFixed(1)},${py(rounds[r - 1][s.m][s.k]).toFixed(1)}`;
+      if (r0 >= 1 && r0 < NR && fr > 0) d += `L${px(p).toFixed(1)},${lerp(py(rounds[r0 - 1][s.m][s.k]), py(rounds[r0][s.m][s.k]), fr).toFixed(1)}`;
+      s.n.setAttribute('d', d || 'M0,0'); s.n.style.visibility = r0 >= 1 ? 'visible' : 'hidden';
+      const pe = clamp(p, 1, NR), e0 = Math.min(NR - 1, Math.floor(pe)), v = lerp(rounds[e0 - 1][s.m][s.k], rounds[e0][s.m][s.k], pe - e0);   // the live end of the line
+      s.dot.setAttribute('cx', px(pe)); s.dot.setAttribute('cy', py(v)); s.dot.style.opacity = vis(t, C.t(1) - .15, tDone, .3); }
+    fineDots.forEach(fd => { const age = t - C.t(fd.r); fd.n.style.opacity = age >= 0 ? 1 : 0; fd.n.setAttribute('r', 5 * bump(age, .5)); });
+    cursor.setAttribute('x1', px(Math.max(1, p))); cursor.setAttribute('x2', px(Math.max(1, p))); cursor.style.opacity = .6 * vis(t, C.t(1) - .2, tDone); });
+  // line labels, once three rounds are on the chart
+  const endV = m => rounds[NR - 1][m], tLab = C.t(3) + .4, labs = [];
+  if (key !== 'owner') labs.push(el('small t-ink', g, 'by owner', `left:${cx}px;top:${py(Math.max(...endV('owner_hhi'))) - 26}px;width:${CW}px;text-align:right`));
+  if (key === 'firm') labs.push(el('small t-zip', g, 'per firm: what the rule reads', `left:${cx}px;top:${py(Math.min(...endV('firm_hhi'))) + 10}px;width:${CW}px;text-align:right`));
+  if (key === 'owner') labs.push(el('small t-zip', g, 'by owner: what the rule reads', `left:${cx}px;top:${py(Math.min(...endV('owner_hhi'))) + 10}px;width:${CW}px;text-align:right`));
+  on(t => labs.forEach((nd, i) => show(nd, vis(t, tLab + i * .2))));
+
+  // running totals and the note the model returned
+  const cum = (f, p) => { const r0 = Math.floor(p); let s = 0; for (let r = 1; r <= r0; r++) s += rounds[r - 1][f]; return s + (r0 < NR ? (p - r0) * rounds[r0][f] : 0); };
+  const lp = at(el('small', g, 'profit, credits'), bx, 700), vp = at(el('num', g, ''), bx, 722);
+  const lf = at(el('small', g, 'fines paid'), bx + 270, 700), vf = at(el('num', g, ''), bx + 270, 722);
+  const nr = NOTE_ROUND[key], quote = at(el('quote', g, `<i>round ${nr} //</i> “${esc(rounds[nr - 1].note)}”`), bx, 800);
+  on(t => { const p = C.p(t), o = vis(t, C.pk[0][0] + .4);
+    text(vp, credits(cum('net', p))); text(vf, credits(cum('fine', p)));
+    [lp, vp, lf, vf].forEach(nd => show(nd, o)); vf.style.color = cum('fine', p) > 0 ? 'var(--no)' : 'var(--dim)';
+    const fAge = Math.min(...rounds.filter(rd => rd.fine > 0).map(rd => t - C.t(rd.round)).filter(a => a >= 0), 9);
+    vf.style.transform = `scale(${bump(fAge, .1)})`; vf.style.transformOrigin = '0 50%';
+    show(quote, vis(t, key === 'firm' ? T.N1 + .2 : C.t(nr) + .3), 8); });      // the per-firm note is first read in the reply panel
+}
+KEYS.forEach(lane);
+on(t => { const o = clamp((zoomU(t) - .55) / .4); for (const n of [stage, wStage, heads, pov]) { n.style.opacity = o; n.style.visibility = o > 0 ? 'visible' : 'hidden'; } });
+
+/* ------------------------------------------------------------------ the agent's view: the message it was sent, the line it returned */
+const pov = document.getElementById('pov'), O = D.pov.observation, J = JSON.stringify;
+const list = a => '[' + a.join(', ') + ']';
+const SEE = [
+  [`"round": ${O.round},`, 'rest'],
+  [`"portfolio": {`, 'firm'],
+  [`  "firm_count": ${O.portfolio.firm_count},  "max_firms": ${O.portfolio.max_firms},`, 'firm'],
+  [`  "total_capacity": ${list(O.portfolio.total_capacity)},`, 'firm'],
+  [`  "cash": ${O.portfolio.cash},`, 'firm'],
+  [`  "registration_fee": ${O.portfolio.registration_fee},  "overhead_per_firm": ${O.portfolio.overhead_per_firm} },`, 'moves'],
+  [`"rules": {`, 'rule'],
+  [`  "enforcement": ${O.rules.enforcement},`, 'rule'],
+  [`  "hhi_threshold": ${O.rules.hhi_threshold},`, 'rule'],
+  [`  "positive_operating_profit_fine_fraction": ${O.rules.positive_operating_profit_fine_fraction},`, 'rule'],
+  [`  "aggregation": ${J(O.rules.aggregation)} },`, 'agg'],
+  [`"legal_operations": {`, 'moves'],
+  ...Object.entries(O.legal_operations).flatMap(([op, v]) => [
+    [`  ${J(op)}: { "resulting_firm_count": ${v.resulting_firm_count},`, 'moves'],
+    [`                "capacity_per_firm": ${list(v.capacity_per_firm)} },`, 'moves']]),
+  [`"last_competitor_outputs": ${list(O.last_competitor_outputs.map(list))},`, 'rest'],
+  [`"history": ${J(O.history)}`, 'rest'],
+];
+const FOCUS = [['P1', 'firm'], ['P2', 'rule'], ['P3', 'agg'], ['P4', 'moves']];
+const seeHead = at(el('small', pov, `what the agent is sent // round ${O.round} // abridged`), 100, 176);
+const instr = at(el('instr', pov, `“${esc(D.pov.instruction)}”`), 100, 206);
+const seeLines = SEE.map(([s, grp], i) => { const n = at(el('code', pov, esc(s)), 100, 288 + i * 22); n._g = grp; return n; });
+on(t => { const o = vis(t, T.P1 + .1, T.N3 - .3); show(seeHead, o); show(instr, o * (t < T.P1 + DUR.P1 * .45 ? 1 : .55));
+  const f = FOCUS.find(([k]) => t >= T[k] && t < T[k] + DUR[k]), read = t >= T.P1 && t < T.P5;
+  seeLines.forEach((n, i) => { const hot = f && n._g === f[1] && (f[0] !== 'P1' || t > T.P1 + DUR.P1 * .4);
+    n.style.opacity = vis(t, T.P1 + .3 + i * .04, T.N3 - .3) * (hot ? 1 : read ? .38 : .6); n.style.color = hot && n._g === 'agg' ? 'var(--zip)' : ''; }); });
+// the reply, broken for the column: after each top-level field, and once inside the note
+const reply = D.pov.response_text, SAY_W = 46;
+const parts = reply.replace(/,"(quantities|note)"/g, ',\n"$1"').split('\n').flatMap(l => { if (l.length <= SAY_W) return [l];
+  const cut = l.lastIndexOf(' ', SAY_W); return [l.slice(0, cut), l.slice(cut)]; });
+const sayHead = at(el('small', pov, `what it returns // one call, ${Math.round(D.pov.latency_seconds)} s`), 1280, 176);
+const prog = box(el('prog', pov), 1280, 204, 520, 2);
+const sayBox = at(el('say', pov, ''), 1280, 226), sayChars = [], opWord = J(JSON.parse(reply).operation);
+parts.forEach(line => { const a = line.includes('"operation"') ? line.indexOf(opWord) : -1;      // the chosen operation is the one amber thing
+  [...line].forEach((ch, i) => { const sp = document.createElement(a >= 0 && i >= a && i < a + opWord.length ? 'b' : 'span'); sp.textContent = ch; sayBox.appendChild(sp); sayChars.push(sp); });
+  sayBox.appendChild(document.createElement('br')); });
+on(t => { const out = T.N1 - .2; show(sayHead, vis(t, T.P5 + .1, out));
+  prog.style.transform = `scaleX(${clamp((t - (T.P5 + .3)) / (DUR.P5 - .5))})`; prog.style.opacity = .7 * vis(t, T.P5 + .2, out);
+  const typed = clamp((t - (T.P6 + .3)) / 2.0) * sayChars.length, o = vis(t, T.P5, out, .2);
+  sayChars.forEach((sp, i) => sp.style.opacity = i < typed ? o : 0); });
+
+/* ------------------------------------------------------------------ end card */
+const end = document.getElementById('end');
+const eBy = el('by inst', end, 'made by'), eName = el('who', end, 'dmarz');
+const eHow = el('how', end, `built by an AI agent from the pilot's saved records: ${D.run.calls} model calls, ${D.run.episodes} episodes, $${D.run.cost_usd.toFixed(2)}<br>the narration is a synthetic voice // exploratory pilot; no independent review`);
+const eQr = el('qr', end, QR), eUrl = el('url', end, 'github.com/dmarzzz/swarm-lab');
+const mark = document.getElementById('mark'), mark2 = document.getElementById('mark2');
+on(t => { [eBy, eName, eHow, eQr, eUrl].forEach((n, i) => show(n, vis(t, T.E + .4 + i * .12), 10));
+  mark.style.opacity = vis(t, 1.6, T.E - .2); mark2.style.opacity = vis(t, T.E + .5); });
+
+/* ------------------------------------------------------------------ playback */
+function seek(t) { t = clamp(t, 0, DURATION); for (const f of anims) f(t); window.__t = t; }
+window.__seek = seek;
+window.__meta = { caps: SUBS.flatMap(s => s.lines.map(l => l.length)), duration: DURATION, fps: 30, end: T.E, times: T,
+  mark: { x: 1700, y: 910, size: 134 }, mark2: { x: 530, y: 376, size: 220 } };
+const params = new URLSearchParams(location.search), bar = document.getElementById('bar');
+if (params.has('record')) { document.body.classList.add('record'); seek(0); }
+else {
+  const fit = () => { const s = Math.min(innerWidth / 1920, innerHeight / 1080); film.style.transform = `scale(${s})`;
+    film.style.left = (innerWidth - 1920 * s) / 2 + 'px'; film.style.top = (innerHeight - 1080 * s) / 2 + 'px'; };
+  addEventListener('resize', fit); fit();
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches, rest = T.R3 + DUR.R3 - .5;   // the static fallback: the wall with its results
+  let playing = !still && !params.has('t'), t0 = performance.now() - 1000 * (parseFloat(params.get('t')) || (still ? rest : 0));
+  const tick = now => { if (playing) { let t = (now - t0) / 1000; if (t >= DURATION) { t = DURATION; playing = false; } seek(t); bar.firstChild.style.width = (100 * t / DURATION) + '%'; } requestAnimationFrame(tick); };
+  seek(parseFloat(params.get('t')) || (still ? rest : 0)); requestAnimationFrame(tick);
+  const jump = t => { t0 = performance.now() - 1000 * t; seek(t); bar.firstChild.style.width = (100 * t / DURATION) + '%'; };
+  addEventListener('keydown', e => { if (e.code === 'Space') { playing = !playing; t0 = performance.now() - 1000 * window.__t; }
+    if (e.code === 'ArrowRight') jump(Math.min(DURATION, window.__t + 2)); if (e.code === 'ArrowLeft') jump(Math.max(0, window.__t - 2)); });
+  bar.addEventListener('click', e => jump(DURATION * e.clientX / innerWidth));
+}
+</script>
+</body>
+</html>
