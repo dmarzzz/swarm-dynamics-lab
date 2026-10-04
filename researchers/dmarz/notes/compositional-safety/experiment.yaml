@@ -1,0 +1,30 @@
+id: compositional-safety
+title: Permitted actions and forbidden outcomes
+description: 'SEC-54 exploratory qualification: exact simulated information flow,
+  approval reuse and aggregate commitments. Distinct from the reviewed scaled study.'
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  domain:
+    type: str
+    role: condition
+  variant:
+    type: str
+    role: condition
+  task_id:
+    type: int
+    role: replicate
+  backend:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- violation_rate
+- safe_completion_rate
+- invalid
+- model_calls
+- api_cost_usd
+primary_metric: safe_completion_rate
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/compositional-safety

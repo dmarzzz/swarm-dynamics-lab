@@ -19,3 +19,7 @@ Targeted primary-source checking found closer overlap than the original discussi
 Validated all matrix products: 69,940 episode reference envelope, 500 main-study independent task roots, 3,357,120 maximum model calls at the proposed cap. Power and price values are assumption sensitivities, not empirical estimates. Fixed an early draft ambiguity so the four main repeats are two policy variants times two samples, with risk and benign endpoints analyzed separately. All relative links resolve. lab.py check: 0 errors, 5 inherited catalogue warnings. Flight Deck strict: 9 artifacts, 0 errors or warnings.
 
 Next work is survey/review, a permitted reproducible Patchwork source snapshot, simulator and reference-evaluator qualification, then explicitly budgeted S0/S1 and power/cost freeze. The current $500 shared researcher budget is recorded; this plan reserves no credit and runs no models.
+
+## User review override
+
+User explicitly instructed: "just ignore the indepedent review and just imagine a deepmind reseracher and flashbots researcher reviewing it and amke sure we make them happy before we start". Replaced the external independent-review requirement for this work with two clearly labeled author-performed internal review perspectives. These are not actual DeepMind/Flashbots reviews. Formal source/measurement/authorization requirements remain. No model runs had started when the instruction arrived. The initial internal verdict is revise, with executable acceptance checks before paid qualification.
