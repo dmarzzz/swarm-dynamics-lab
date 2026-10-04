@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: done
-task: right-dissenter-live-study
-doing: Completed bounded Right Dissenter study; results and measured replay published, Dmarz fleet claim released, no running workers. Formal S2 unopened.
-updated: 2026-10-04T04:54:16.003385+00:00
+state: working
+task: right-dissenter-rd4
+doing: Incorporating fresh RD-R1/R2/R3 review and designing symmetric recovery with persistent evidence closures.
+updated: 2026-10-04T04:59:02.303479+00:00
 ---
 
 ## Notes
