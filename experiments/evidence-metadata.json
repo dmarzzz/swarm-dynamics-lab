@@ -3708,6 +3708,39 @@
         "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519",
         "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-QUALITY.json": "bb9412d18e5dbe948900216bd60a9ea179cde34dcd98422fe42bdf8b65b30574"
       }
+    },
+    {
+      "id": "phantom-coast-pc10",
+      "title": "Phantom Coast PC10: inspection objective diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc10/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc10"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether objective clarification changes native inspection decisions is untested.",
+        "rationale": "13 new offline tests and47 unchanged PC9 tests pass; paired evidence equality and independent enumeration validate the diagnostic only."
+      },
+      "sample_size_summary": "Native PC10:0 calls. Eight inspected development pairs, two wording conditions, six action pairs. Proposed16 calls/76 questions remain unrun; prior PC9 outcome preserved separately.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc10/CASE-QUALITY.json"
+      ],
+      "status_at_assessment": "offline_repair_complete_native_plan_decision_needed",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "136cd57e8f1210a8c498b8875148bf5bed91817b",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979",
+        "researchers/vishesh/notes/phantom-coast/pc10/CASE-QUALITY.json": "c65b2ca496e11f74d6baecc5a41e0275b1a59c02215c9a75d29e10b69f6b4b8e"
+      }
     }
   ],
   "source_sha256": {

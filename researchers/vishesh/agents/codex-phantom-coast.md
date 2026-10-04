@@ -2,8 +2,8 @@
 agent: vishesh/codex-phantom-coast
 tool: codex
 state: done
-task: phantom-coast-pc9-native-preparation
-doing: PC9 Q0 closed;32/32 maps and4/6 actions, qualification failed; pilot held, post-mortem complete, claim released
+task: phantom-coast-pc10-objective
+doing: PC10 objective repair complete;13 new tests pass; concrete paired16-call diagnostic awaiting decision, no new spend
 updated: 2026-10-04T19:38:27.157070+00:00
 ---
 

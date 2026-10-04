@@ -19,12 +19,12 @@
       "title": "Phantom Coast",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
-      "setup_path": "researchers/vishesh/notes/phantom-coast/pc9/SETUP.md",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/pc10/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:38:27.157070+00:00",
-      "checked_commit": "3bcc9b8ba17e4cb683657dfc010a7e2f4a943216",
-      "next_action": "PC9 Q0 completed8valid calls;32/32 map labels,4/6 actions, qualification FAILED. HOLD pilot. Clarify individual versus collective acquisition objective and comparator offline; no retry. Worker stopped, claim released,10 hub readbacks verified; cumulative exposure .858821754 under original cap. Read pc9/SETUP.md.",
+      "checked_at": "2026-10-04T19:45:36.748344+00:00",
+      "checked_commit": "136cd57e8f1210a8c498b8875148bf5bed91817b",
+      "next_action": "PC10 objective clarification and paired diagnostic built;13 new tests plus47 PC9 tests pass. DECISION NEEDED for concrete16-call plan, maximum.10752 API inside original cap. PC9 native gate failed; no retry/pilot. Current exposure.858821754; no machine held.",
       "next_run_approval": "owner"
     },
     {

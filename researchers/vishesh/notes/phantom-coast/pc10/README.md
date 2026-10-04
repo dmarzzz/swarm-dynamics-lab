@@ -1,5 +1,14 @@
 # PC10: acquisition objective repair
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `136cd57e` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Whether objective clarification changes native inspection decisions is untested. Basis: 13 new offline tests and47 unchanged PC9 tests pass; paired evidence equality and independent enumeration validate the diagnostic only.
+- **sample_size_summary:** Native PC10:0 calls. Eight inspected development pairs, two wording conditions, six action pairs. Proposed16 calls/76 questions remain unrun; prior PC9 outcome preserved separately.
+<!-- experiment-evidence:end -->
+
 **Offline iteration complete; concrete native decision needed.** [Plan](PLAN.md), [case-quality review](CASE-QUALITY.json), [setup](SETUP.md). This repairs the ambiguity found in [PC9 Q0](../pc9/reviews/Q0-A1-POST.md), preserving that attempt's failed gate and all original traces.
 
 The clarified actor controls all remaining inspections and optimizes only its own final map loss. No further reports or peer updates arrive. The exact individual reference therefore matches the explicit decision problem. Existing observations, costs and loss are unchanged. No correct action or expected value is supplied to the model. This is an individual-control diagnostic; it does not redefine the population instrument or establish collective planning competence.
