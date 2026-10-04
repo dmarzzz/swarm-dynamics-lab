@@ -1,0 +1,302 @@
+{
+  "assessor": "vishesh/codex-phantom-coast",
+  "date": "2026-10-04",
+  "scope": "PC9 Q0 native preparation and additional offline scenarios",
+  "case_readiness": "ready for proposed bounded clean-task qualification; not native qualified or admitted",
+  "native_instrument_qualified": false,
+  "run_admitted": false,
+  "native_worlds": 0,
+  "fixture_worlds": 4,
+  "paired_fixture_arms": 4,
+  "assessments": [
+    {
+      "dimension": "decision_relevance",
+      "status": "pass",
+      "acceptance_criterion": "Q0 asks whether clean competence is sufficient to interpret future population errors. Susceptibility is not a selection gate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "No causal population conclusion from Q0."
+    },
+    {
+      "dimension": "answerability",
+      "status": "pass",
+      "acceptance_criterion": "Eight packets use reachable two-inspection histories; unavailable evidence expects UNKNOWN.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Fallible source choices are minimum expected loss, not certain truth."
+    },
+    {
+      "dimension": "target_scorer_validity",
+      "status": "pass",
+      "acceptance_criterion": "32 map decisions plus six exact optimal inspection sets; accepts ties. Saved audit recomputes and rejects changed grades.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Same-author exact comparator, not independent audit."
+    },
+    {
+      "dimension": "actor_isolation",
+      "status": "pass",
+      "acceptance_criterion": "Only actual actor packets enter wire requests; case names, expected decisions and world evaluator fields stay outside.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Provider execution not yet verified."
+    },
+    {
+      "dimension": "mechanism_isolation",
+      "status": "pass",
+      "acceptance_criterion": "Three new four-arm scripted witnesses separate false positives, receipt recovery and evidence gaps.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Programmed trajectories validate measurement; they are not empirical mechanisms."
+    },
+    {
+      "dimension": "challenge_coverage",
+      "status": "limited",
+      "acceptance_criterion": "Both source signs, both correction directions, consensus correction, no evidence and repeated receipt.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Eight narrow tasks do not establish operational competence."
+    },
+    {
+      "dimension": "strong_comparisons",
+      "status": "pass",
+      "acceptance_criterion": "Original exact/evidence-only controls retained; qualification compares with exact reachable-state solutions.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "No decentralized team optimum claim."
+    },
+    {
+      "dimension": "realism_scope",
+      "status": "limited",
+      "acceptance_criterion": "Tiny transparent maps isolate acquisition and correction; no fabricated realism claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Four sites and noiseless inspection, no external geography."
+    },
+    {
+      "dimension": "independence_precision",
+      "status": "limited",
+      "acceptance_criterion": "Eight capability checks; actors, times and arms are dependent. No p-value or susceptibility estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "A future pilot needs an explicit population/precision decision."
+    },
+    {
+      "dimension": "holdout_integrity",
+      "status": "limited",
+      "acceptance_criterion": "Eight inspected development packets saved; reserved Q0 identities/orders not materialized by preparation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Deterministic published generator and known templates; not a secret or independently authored holdout."
+    },
+    {
+      "dimension": "robustness_failure_handling",
+      "status": "pass",
+      "acceptance_criterion": "47 offline tests cover schema, uncertain reservations, double claim, caps, stop, unstarted assignments and grade tampering.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "No actual outage, remote runtime or credential relay tested."
+    },
+    {
+      "dimension": "reproducibility_costs",
+      "status": "pass",
+      "acceptance_criterion": "Frozen assignments, hashed source, three regenerated fixture families; original exposure carried forward.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
+          "sha256": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
+          "sha256": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_native.py",
+          "sha256": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/audit.json",
+          "sha256": "298fa097834ecf9329aa410e84420a89df3e5ef1be641e54d98c26993722b37e"
+        }
+      ],
+      "scope_limit": "Historical pricing; current public route and allocation require admission."
+    }
+  ],
+  "development_snapshots": 8
+}

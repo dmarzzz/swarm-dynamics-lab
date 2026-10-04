@@ -1,0 +1,33 @@
+{
+  "assessed_utc": "2026-10-04T19:27:26.376018+00:00",
+  "evidence_kind": "OFFLINE SOFTWARE VALIDATION \u2014 NOT NATIVE QUALIFICATION",
+  "tests": 47,
+  "tests_passed": 47,
+  "command": "python3 -m unittest discover -s researchers/vishesh/notes/phantom-coast/pc9/tests -q",
+  "additional_fixture_branches": 12,
+  "branch_replay_audits_passed": 12,
+  "development_snapshots": 8,
+  "reserved_snapshots_materialized": 0,
+  "native_calls": 0,
+  "new_spend": 0,
+  "native_qualification_passed": false,
+  "run_admitted": false,
+  "source_hashes": {
+    "src/analysis.py": "ddb9e8c8d8e196ea7b4a86f244d905738b2b9d7e9fae2cd384d359120286b163",
+    "src/contract.py": "d4a52fdd524e9ffd66bd3a9169dff968dab12c8ee558012b6d014e99e38ad067",
+    "src/engine.py": "e7059974959f14a693cc7bd06a44d8a255115560b8eac7e16d62dbdb64c2e62c",
+    "src/fixtures.py": "c15cfe725a8de8703bde732655f2b702f893a03aca5558866574e2f40cf1c805",
+    "src/native.py": "70a2f67163a34432cbf1756c93baa273cd08355ddaa197df4b0846524766598b",
+    "src/policies.py": "e24a4ebef6a40e56103834ab87da259442db9bd01ed8af8d79bad9487a6c9a8d",
+    "src/q0_admission.py": "e93703384543a70920ffdf12b2c9176423d5f834b6edf9ee5b8a64b20aaa6cf4",
+    "src/q0_ledger.py": "b0e0ff09bb613b60470d9f01ec4a8d27bacadf5207f47368ed2020a1d3b4a27b",
+    "src/qualification.py": "e7fbf03f4be19ad3079244f2e069b7f7d29455b1b039c3e354f3f02998e7a57d",
+    "src/render.py": "a72ddaaee1be5797e8a6c1cd02905a13a5062cdea3824151bcf8f370e560f8e1",
+    "src/scenario_fixtures.py": "43691a29ab736c88966c71800b3894126f6c7cf0efb1eea9a48a957608b2820b",
+    "tests/test_instrument.py": "23dd8ca073676de9c148d9bc83c04e6de4112906b724b74f9ee295707cb97343",
+    "tests/test_native.py": "8c4f1bd102ad86179fc035f0e153f863725292a932295c529aa25703789eb279",
+    "q0.py": "843bab249bc1099c1b8b9abbdd6384fc2fc54a25306df0ce7053741896e5c5b4",
+    "build_scenarios.py": "6f78c5f495a42f51add96c25d23c38e67be04b146a064ffc0b6f13d810ddeff9",
+    "NATIVE-PLAN.md": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb"
+  }
+}

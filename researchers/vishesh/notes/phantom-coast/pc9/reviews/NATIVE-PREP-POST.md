@@ -1,0 +1,15 @@
+# PC9 native preparation review
+
+Offline build closeout, 2026-10-04. This is not a native attempt or independent review. Latest native evidence remains PC8 Q0-A1: all16 requests structurally valid, but structured semantic misses failed qualification; a separate frozen-parser defect was corrected only retrospectively. That history motivates clean-interface gates before interpreting population effects.
+
+Prospective NATIVE-PLAN.md was written before new implementation. Three new scripted scenario families cover false-positive diversion, correction after false peer consensus and repeated observation with missing evidence. They add mechanism coverage without expanding S1 or consuming paid budget. Qualification now uses eight reachable states; the tempting three-known-sites/one-slot unit witness was rejected because this two-inspection experiment cannot reach it. All tied optimal inspections are accepted. No tuning on native poisoning outcomes occurred.
+
+Validation:47 tests passed. Twelve new scenario branch replays audit exactly; eight development snapshots cover38 questions. Safe-response decoding, reservation-before-dispatch, ambiguous-charge retention, duplicate claim, eight-call cap, two-failure stop, assignment reconciliation and tampered-grade rejection were checked offline. Mock-provider success is only software validation. New Q0/S1 reserved packets have not been materialized. The fixed known templates and public deterministic generator are not an independently authored or secret holdout.
+
+The concrete Q0 adapter is implemented, including its transport, private receipt checks, metering and saved-result audit. Actual account ownership and scope evidence must be verified by the operator; flags/hashes are attestations, not account discovery. Full native population/S1 orchestration is not implemented. The existing population engine is a scripted-fixture engine and must not be mistaken for the admitted native Q0 runner. Public result reporting and offline finalize remain operator closeout steps in RUNBOOK-Q0.
+
+Scientific outcome: no native population result. Evidence confidence stays0/4. The cases are ready for the proposed bounded clean-task qualification only; live route, provider behavior and machine runtime remain untested. Q0 pass would not prove poisoning, realistic exploration or model-population generality. Failures remain failures; no automatic repair run or eligibility selection for susceptibility.
+
+Cost/resource outcome:0 new calls/spend, no claim/machine/credential operation. Original known .846232842 and conservative .858328842 remain; original total5/API4 unchanged. Proposed Q0 exact reservation .051072, conservative ceiling .05376. Historical uncertain charges are not erased.
+
+Disposition: **DECISION NEEDED** on NATIVE-PLAN Q0, then current public registration, runtime/route and exclusive approved-account allocation using RUNBOOK-Q0. The requested preparation is complete. Researcher review remains not required by owner direction. Preserve PC8 closeout and original PC9 validation; do not overwrite them with this new software evidence.

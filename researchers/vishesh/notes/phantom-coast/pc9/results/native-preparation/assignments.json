@@ -1,0 +1,71 @@
+{
+  "scope": "pc9-q0-a1",
+  "stage": "Q0",
+  "assignments": [
+    {
+      "id": "Q0-00",
+      "kind": "no-evidence",
+      "questions": 5
+    },
+    {
+      "id": "Q0-01",
+      "kind": "private-positive",
+      "questions": 5
+    },
+    {
+      "id": "Q0-02",
+      "kind": "private-negative",
+      "questions": 5
+    },
+    {
+      "id": "Q0-03",
+      "kind": "nonrepeat",
+      "questions": 5
+    },
+    {
+      "id": "Q0-04",
+      "kind": "correct-negative",
+      "questions": 5
+    },
+    {
+      "id": "Q0-05",
+      "kind": "correct-positive",
+      "questions": 5
+    },
+    {
+      "id": "Q0-06",
+      "kind": "consensus-correction",
+      "questions": 4
+    },
+    {
+      "id": "Q0-07",
+      "kind": "evidence-gap",
+      "questions": 4
+    }
+  ],
+  "assignments_sha256": "13006e5fabc87d6af6b77bde8c4fa7e4b467a46b41a396fb9a3a9a5d5eaa26f6",
+  "instrument": {
+    "src/analysis.py": "ddb9e8c8d8e196ea7b4a86f244d905738b2b9d7e9fae2cd384d359120286b163",
+    "src/contract.py": "d4a52fdd524e9ffd66bd3a9169dff968dab12c8ee558012b6d014e99e38ad067",
+    "src/engine.py": "e7059974959f14a693cc7bd06a44d8a255115560b8eac7e16d62dbdb64c2e62c",
+    "src/fixtures.py": "c15cfe725a8de8703bde732655f2b702f893a03aca5558866574e2f40cf1c805",
+    "src/native.py": "70a2f67163a34432cbf1756c93baa273cd08355ddaa197df4b0846524766598b",
+    "src/policies.py": "e24a4ebef6a40e56103834ab87da259442db9bd01ed8af8d79bad9487a6c9a8d",
+    "src/q0_admission.py": "e93703384543a70920ffdf12b2c9176423d5f834b6edf9ee5b8a64b20aaa6cf4",
+    "src/q0_ledger.py": "b0e0ff09bb613b60470d9f01ec4a8d27bacadf5207f47368ed2020a1d3b4a27b",
+    "src/qualification.py": "e7fbf03f4be19ad3079244f2e069b7f7d29455b1b039c3e354f3f02998e7a57d",
+    "src/render.py": "a72ddaaee1be5797e8a6c1cd02905a13a5062cdea3824151bcf8f370e560f8e1",
+    "src/scenario_fixtures.py": "43691a29ab736c88966c71800b3894126f6c7cf0efb1eea9a48a957608b2820b",
+    "NATIVE-PLAN.md": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb",
+    "PLAN.md": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e",
+    "q0.py": "843bab249bc1099c1b8b9abbdd6384fc2fc54a25306df0ce7053741896e5c5b4"
+  },
+  "max_calls": 8,
+  "max_questions": 40,
+  "exact_questions": 38,
+  "prior_exposure_nano": 858328842,
+  "predecessor_sha256": "765c4004d5e9e259c7afac09860862e14bc4a6a8596258a4e839725b9a905029",
+  "native_calls": 0,
+  "admission": "not granted",
+  "owner_scope_approved": false
+}

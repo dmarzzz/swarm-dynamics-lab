@@ -1,0 +1,68 @@
+{
+  "false-positive": [
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "06bdedf16070826c5ee87c1fa8ad13724d60e08e1cc109e224e0bd761b19c470"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "0d173b28d4e0d826e6dee3af98099f962777560d00120b8f0eeac683cf7ab429"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "7ee22da20c69146b3e52d900ba870da452339ef2a8cdec9ae62a878f95998226"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "ed7e6760237e46ec4649d5f1f0d6a49c48266257692d96a3e9b4bf0cd1560fa6"
+    }
+  ],
+  "consensus-correction": [
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "ae1f0602136613618c9b530c8d337c887ba1168a17661063a90f2c0c6cdfe9fb"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "40f40bf8618cd28a4e6e84f9fa63d5b991d89546547a8d1511397a7e9f107cc3"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "289079e8b9de38f207521829535d936b4098157a2813db150d27580fa0d1f7bc"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "d02465808e75f1fcd50c96512cf525241695aad350c947e39b0d1db1e971b9f6"
+    }
+  ],
+  "missing-evidence": [
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "7ad8afb35e7926b1679c2194fc232bfa349a24f5c09bf1f8ed3c4090d8e0a4a0"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "0c5044a118a8adaa44ce9d63f26484c6b8a45f51684433634765e021d665bcd1"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "d51d1904706b40d81b29fa91dc21e4cf2c8dbc96e7b0f914791b1f4b81e75c03"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "2499a2ee3595f954e9ef5374b43fcf791e8b478b0a8d1e61474e3d48a165464e"
+    }
+  ]
+}
