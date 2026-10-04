@@ -3,14 +3,16 @@ id: inbox-followthrough-vishesh-oct04
 type: task
 title: Resolve Vishesh inbox evidence and review follow-ups
 kind: admin
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/fm-security-review
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/fm-security-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T17:39Z
+updated: 2026-10-04T17:39Z
 ---
 
 ## Goal
