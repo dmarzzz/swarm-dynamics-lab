@@ -3,7 +3,7 @@ id: sybil-scale-api
 type: task
 title: Plan and ship the Sybil identity scaling experiment
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sybil-specialists
 for: dmarz
@@ -15,7 +15,13 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T02:30Z
-updated: 2026-10-04T03:11Z
+updated: 2026-10-04T03:20Z
+outputs:
+- researchers/dmarz/notes/sybil-scale-api/RESULTS.md
+- researchers/dmarz/notes/sybil-scale-api/results-summary.json
+- researchers/dmarz/notes/sybil-scale-api/DEPLOYMENT.md
+- artifacts/sybil-scale-api-visible/sybil-scale-api-visible-v1.png
+- artifacts/sybil-scale-api-hidden/sybil-scale-api-hidden-v1.png
 ---
 
 ## Goal
