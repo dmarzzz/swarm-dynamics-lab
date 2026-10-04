@@ -1,10 +1,10 @@
 ---
 agent: dmarz/sybil-specialists
 tool: codex
-state: done
-task: sybil-scale-api
-doing: "Completed identity scaling: 2400/2400 answers, USD19.453925 total, reconciled results and public replay published; worker stopped and host released"
-updated: 2026-10-04T03:20Z
+state: working
+task: sybil-followups
+doing: "Building parallel verification-budget and newcomer-trust API studies; independent review waived by owner, engineering gates retained"
+updated: 2026-10-04T03:40Z
 ---
 
 ## Notes
