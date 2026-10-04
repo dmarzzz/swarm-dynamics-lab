@@ -1,0 +1,14 @@
+{
+  "id": "wild-askswarm",
+  "title": "AskSwarm: same descriptive questions, three observed swarms",
+  "description": "Offline exploratory tooling, not a controlled experiment: collusion.wiki revisions, SwarmTraces redacted artifacts and frozen swarm-lab git history. Counts are dependent artifacts, not independent trials. SwarmTraces has no observed actors or clocks. Lexical clusters are not semantic ideas, and reuse credit is not causal influence. Measurement plan committed before runs; this hub registration is post-run publication.",
+  "owner": "shadow",
+  "params": {
+    "source": {"type": "str", "description": "wiki | swarmtraces | git", "role": "condition"},
+    "threshold": {"type": "float", "description": "Lexical Jaccard threshold", "role": "fixed"},
+    "git_ref": {"type": "str", "description": "Frozen research-swarm history cutoff", "role": "fixed"}
+  },
+  "metrics": ["records", "identities", "identity_coverage", "time_coverage", "clusters", "multi_record_clusters", "multi_identity_clusters", "participation_gini", "model_calls", "cost_usd"],
+  "primary_metric": "identity_coverage",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/notes/wild-askswarm"
+}

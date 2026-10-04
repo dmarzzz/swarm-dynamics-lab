@@ -1,0 +1,55 @@
+{
+  "reports": [
+    {
+      "report": "results/git",
+      "records": 2673,
+      "clusters": 1725,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/git-0.5",
+      "records": 2673,
+      "clusters": 1685,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/git-0.9",
+      "records": 2673,
+      "clusters": 1736,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/wiki-0.5",
+      "records": 14591,
+      "clusters": 6041,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/wiki-0.9",
+      "records": 14591,
+      "clusters": 10408,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/swarmtraces",
+      "records": 189579,
+      "clusters": 114586,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "unavailable"
+    },
+    {
+      "report": "results/wiki",
+      "records": 14591,
+      "clusters": 8024,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    }
+  ],
+  "raw_source_rows_exported": false,
+  "scope": "Internal arithmetic and aggregate-export checks, not independent external review"
+}

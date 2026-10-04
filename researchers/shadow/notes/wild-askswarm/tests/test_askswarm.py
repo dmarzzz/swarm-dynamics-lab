@@ -17,6 +17,8 @@ class AskSwarmTests(unittest.TestCase):
         self.assertIsNone(parse_time('2026-01-01'))
         self.assertIsNone(parse_time('not a date'))
         self.assertIsNone(parse_time(float('nan')))
+        self.assertEqual(parse_time('1234.5'), 1234.5)
+        self.assertIsNone(parse_time(1e308))
 
     def test_gini(self):
         self.assertEqual(gini([1, 1, 1]), 0)
@@ -115,6 +117,18 @@ class AskSwarmTests(unittest.TestCase):
             p.write_text('name,text\na,hello\n')
             with self.assertRaises(ValueError):
                 list(table(p))
+
+    def test_compact_export(self):
+        from askswarm.cli import save_result, checksum
+        result = analyze([Event('a', 0, str(i)) for i in range(120)])
+        with tempfile.TemporaryDirectory() as root:
+            compact = save_result(result, root)
+            self.assertEqual(len(compact['clusters']), 100)
+            with gzip.open(Path(root) / 'clusters.json.gz', 'rt') as stream:
+                self.assertEqual(len(json.load(stream)), 120)
+            before = checksum(Path(root) / 'clusters.json.gz')
+            save_result(result, root)
+            self.assertEqual(before, checksum(Path(root) / 'clusters.json.gz'))
 
     def test_git_adapter(self):
         with tempfile.TemporaryDirectory() as root:

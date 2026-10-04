@@ -24,9 +24,26 @@ python3 -m askswarm analyze --source git --data /path/to/swarm-lab --ref 4959a80
 python3 -m askswarm compare results/wiki/metrics.json results/swarmtraces/metrics.json results/git/metrics.json --out results/comparison.html
 ```
 
-Each analysis writes derived `metrics.json` and a self-contained `report.html`. Open the HTML
-locally. No raw source text is exported. Source SHA256/file size or frozen git commit, Python
-and NumPy versions, and clustering parameters are recorded. Never commit source dataset rows.
+Each analysis writes derived `metrics.json` (top 100 clusters inline), a complete derived
+`clusters.json.gz` table, and a self-contained `report.html`. Open the HTML locally. No raw
+source text is exported. Source SHA256/file size or frozen git commit, package-code hashes,
+Python and NumPy versions, and parameters are recorded. Never commit source dataset rows.
+
+The complete measured run, including threshold sensitivity, took 102.9 seconds in one process
+on the local machine, with zero model or paid API calls. Reproduce all outputs from this directory:
+
+```bash
+nice -n 10 python3 run_all.py --data /path/to/data --repo /path/to/swarm-lab --sensitivity
+python3 verify_results.py
+```
+
+Start with [FINDING.md](FINDING.md), [comparison HTML](results/comparison.html), and
+[validation receipt](results/validation.json). Three baseline reports were also published to
+hub experiment `wild-askswarm`, with all three read back as done: [receipt](results/hub-receipt.json).
+`hub_publish.py` is an optional reporting-only command requiring the sanctioned `swarm_report`
+client and environment credentials; it is not part of offline analysis. The publication is
+post-run and does not masquerade as preregistration. There are 18 offline unit tests; saved-output
+checks independently recompute Gini with pairwise differences and reconcile all cluster counts.
 
 Generic tables: `--source table --data events.csv` or `events.jsonl`, gzip supported.
 Required keys: `agent_id`, `time`, `text`; optional `thread`, `event_id`, `kind`.

@@ -11,7 +11,7 @@ import unicodedata
 import numpy as np
 from .adapters import Event, iso_time
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 DISSENT = re.compile(r"\b(disagree|disagreement|dissent|reject|rejected|incorrect|false|refute|refuted|not true)\b", re.I)
 REVERT = re.compile(r"\b(revert|reverted|reverting|rollback|roll back|undo|undid)\b", re.I)
 
@@ -170,7 +170,7 @@ def analyze(events, name="swarm", threshold=.7, window=100, k_values=(2, 3, 5, 1
                 prior = {actor for old_index, time, actor in previous
                          if time < event.time and 0 < boundary - old_index <= window and actor != event.agent_id}
                 if prior:
-                    for actor in prior:
+                    for actor in sorted(prior):
                         influence[actor] += 1 / len(prior)
                 seen.add(event.agent_id)
             previous.append((boundary, event.time, event.agent_id))

@@ -1,0 +1,342 @@
+[
+  {
+    "source": "wiki",
+    "threshold": 0.5,
+    "summary": {
+      "records": 14591,
+      "nonempty_text_records": 14514,
+      "identities": 3102,
+      "identity_coverage": 0.9383866767185252,
+      "time_coverage": 1.0,
+      "identity_and_time_records": 13692,
+      "known_identity_records": 13692,
+      "dated_records": 14591,
+      "clusters": 6041,
+      "multi_identity_clusters": 1854,
+      "multi_record_clusters": 2236,
+      "participation_gini": 0.6019975615328703,
+      "identity_span_seconds": {
+        "n": 3102,
+        "min": 0.0,
+        "median": 198.0,
+        "p90": 80360.0,
+        "max": 2456735.0
+      },
+      "single_record_identities": 1332,
+      "dissent_marker_records": 149,
+      "dissent_marker_fraction": 0.010211774381468029,
+      "revert_marker_records": 20,
+      "revert_marker_fraction": 0.0013707079706668495,
+      "temporal_clusters": 5856,
+      "time_to_k": {
+        "2": {
+          "reached": 1854,
+          "at_risk_clusters": 5856,
+          "not_observed_to_reach": 4002,
+          "seconds_among_reached": {
+            "n": 1854,
+            "min": 0.0,
+            "median": 389.5,
+            "p90": 8879.0,
+            "max": 2229755.0
+          }
+        },
+        "3": {
+          "reached": 882,
+          "at_risk_clusters": 5856,
+          "not_observed_to_reach": 4974,
+          "seconds_among_reached": {
+            "n": 882,
+            "min": 1.0,
+            "median": 770.0,
+            "p90": 22848.0,
+            "max": 2300586.0
+          }
+        },
+        "5": {
+          "reached": 308,
+          "at_risk_clusters": 5856,
+          "not_observed_to_reach": 5548,
+          "seconds_among_reached": {
+            "n": 308,
+            "min": 7.0,
+            "median": 1508.5,
+            "p90": 37054.0,
+            "max": 2000953.0
+          }
+        },
+        "10": {
+          "reached": 50,
+          "at_risk_clusters": 5856,
+          "not_observed_to_reach": 5806,
+          "seconds_among_reached": {
+            "n": 50,
+            "min": 23.0,
+            "median": 3759.0,
+            "p90": 59542.0,
+            "max": 2295446.0
+          }
+        }
+      }
+    },
+    "diagnostics": {
+      "long_unique_texts_sampled": 2494,
+      "candidate_comparisons": 18840
+    }
+  },
+  {
+    "source": "git",
+    "threshold": 0.5,
+    "summary": {
+      "records": 2673,
+      "nonempty_text_records": 2673,
+      "identities": 161,
+      "identity_coverage": 0.7197904975682754,
+      "time_coverage": 1.0,
+      "identity_and_time_records": 1924,
+      "known_identity_records": 1924,
+      "dated_records": 2673,
+      "clusters": 1685,
+      "multi_identity_clusters": 40,
+      "multi_record_clusters": 81,
+      "participation_gini": 0.6423858162988598,
+      "identity_span_seconds": {
+        "n": 161,
+        "min": 0.0,
+        "median": 2684.0,
+        "p90": 18927.0,
+        "max": 41401.0
+      },
+      "single_record_identities": 21,
+      "dissent_marker_records": 63,
+      "dissent_marker_fraction": 0.02356902356902357,
+      "revert_marker_records": 2,
+      "revert_marker_fraction": 0.0007482229704451926,
+      "temporal_clusters": 1642,
+      "time_to_k": {
+        "2": {
+          "reached": 40,
+          "at_risk_clusters": 1642,
+          "not_observed_to_reach": 1602,
+          "seconds_among_reached": {
+            "n": 40,
+            "min": 2.0,
+            "median": 3848.0,
+            "p90": 17664.0,
+            "max": 25678.0
+          }
+        },
+        "3": {
+          "reached": 21,
+          "at_risk_clusters": 1642,
+          "not_observed_to_reach": 1621,
+          "seconds_among_reached": {
+            "n": 21,
+            "min": 4.0,
+            "median": 5630.0,
+            "p90": 20052.0,
+            "max": 34544.0
+          }
+        },
+        "5": {
+          "reached": 14,
+          "at_risk_clusters": 1642,
+          "not_observed_to_reach": 1628,
+          "seconds_among_reached": {
+            "n": 14,
+            "min": 32.0,
+            "median": 10653.0,
+            "p90": 26826.0,
+            "max": 37962.0
+          }
+        },
+        "10": {
+          "reached": 4,
+          "at_risk_clusters": 1642,
+          "not_observed_to_reach": 1638,
+          "seconds_among_reached": {
+            "n": 4,
+            "min": 22620.0,
+            "median": 24911.0,
+            "p90": 52075.0,
+            "max": 52075.0
+          }
+        }
+      }
+    },
+    "diagnostics": {
+      "long_unique_texts_sampled": 0,
+      "candidate_comparisons": 127
+    }
+  },
+  {
+    "source": "wiki",
+    "threshold": 0.9,
+    "summary": {
+      "records": 14591,
+      "nonempty_text_records": 14514,
+      "identities": 3102,
+      "identity_coverage": 0.9383866767185252,
+      "time_coverage": 1.0,
+      "identity_and_time_records": 13692,
+      "known_identity_records": 13692,
+      "dated_records": 14591,
+      "clusters": 10408,
+      "multi_identity_clusters": 826,
+      "multi_record_clusters": 1157,
+      "participation_gini": 0.6019975615328703,
+      "identity_span_seconds": {
+        "n": 3102,
+        "min": 0.0,
+        "median": 198.0,
+        "p90": 80360.0,
+        "max": 2456735.0
+      },
+      "single_record_identities": 1332,
+      "dissent_marker_records": 149,
+      "dissent_marker_fraction": 0.010211774381468029,
+      "revert_marker_records": 20,
+      "revert_marker_fraction": 0.0013707079706668495,
+      "temporal_clusters": 10122,
+      "time_to_k": {
+        "2": {
+          "reached": 826,
+          "at_risk_clusters": 10122,
+          "not_observed_to_reach": 9296,
+          "seconds_among_reached": {
+            "n": 826,
+            "min": 0.0,
+            "median": 173.5,
+            "p90": 5990.0,
+            "max": 1768060.0
+          }
+        },
+        "3": {
+          "reached": 190,
+          "at_risk_clusters": 10122,
+          "not_observed_to_reach": 9932,
+          "seconds_among_reached": {
+            "n": 190,
+            "min": 0.0,
+            "median": 311.0,
+            "p90": 36276.0,
+            "max": 1830080.0
+          }
+        },
+        "5": {
+          "reached": 48,
+          "at_risk_clusters": 10122,
+          "not_observed_to_reach": 10074,
+          "seconds_among_reached": {
+            "n": 48,
+            "min": 3.0,
+            "median": 413.0,
+            "p90": 39482.0,
+            "max": 2000953.0
+          }
+        },
+        "10": {
+          "reached": 14,
+          "at_risk_clusters": 10122,
+          "not_observed_to_reach": 10108,
+          "seconds_among_reached": {
+            "n": 14,
+            "min": 4.0,
+            "median": 1627.5,
+            "p90": 1901694.0,
+            "max": 2295446.0
+          }
+        }
+      }
+    },
+    "diagnostics": {
+      "long_unique_texts_sampled": 2494,
+      "candidate_comparisons": 38025
+    }
+  },
+  {
+    "source": "git",
+    "threshold": 0.9,
+    "summary": {
+      "records": 2673,
+      "nonempty_text_records": 2673,
+      "identities": 161,
+      "identity_coverage": 0.7197904975682754,
+      "time_coverage": 1.0,
+      "identity_and_time_records": 1924,
+      "known_identity_records": 1924,
+      "dated_records": 2673,
+      "clusters": 1736,
+      "multi_identity_clusters": 26,
+      "multi_record_clusters": 54,
+      "participation_gini": 0.6423858162988598,
+      "identity_span_seconds": {
+        "n": 161,
+        "min": 0.0,
+        "median": 2684.0,
+        "p90": 18927.0,
+        "max": 41401.0
+      },
+      "single_record_identities": 21,
+      "dissent_marker_records": 63,
+      "dissent_marker_fraction": 0.02356902356902357,
+      "revert_marker_records": 2,
+      "revert_marker_fraction": 0.0007482229704451926,
+      "temporal_clusters": 1693,
+      "time_to_k": {
+        "2": {
+          "reached": 26,
+          "at_risk_clusters": 1693,
+          "not_observed_to_reach": 1667,
+          "seconds_among_reached": {
+            "n": 26,
+            "min": 9.0,
+            "median": 5462.5,
+            "p90": 17664.0,
+            "max": 19142.0
+          }
+        },
+        "3": {
+          "reached": 14,
+          "at_risk_clusters": 1693,
+          "not_observed_to_reach": 1679,
+          "seconds_among_reached": {
+            "n": 14,
+            "min": 1776.0,
+            "median": 8379.5,
+            "p90": 23312.0,
+            "max": 34544.0
+          }
+        },
+        "5": {
+          "reached": 10,
+          "at_risk_clusters": 1693,
+          "not_observed_to_reach": 1683,
+          "seconds_among_reached": {
+            "n": 10,
+            "min": 7653.0,
+            "median": 16851.5,
+            "p90": 26826.0,
+            "max": 37962.0
+          }
+        },
+        "10": {
+          "reached": 4,
+          "at_risk_clusters": 1693,
+          "not_observed_to_reach": 1689,
+          "seconds_among_reached": {
+            "n": 4,
+            "min": 22620.0,
+            "median": 24911.0,
+            "p90": 52075.0,
+            "max": 52075.0
+          }
+        }
+      }
+    },
+    "diagnostics": {
+      "long_unique_texts_sampled": 0,
+      "candidate_comparisons": 121
+    }
+  }
+]

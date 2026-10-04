@@ -1,0 +1,36 @@
+{
+  "experiment": "wild-askswarm",
+  "scope": "post-run publication of derived aggregates; no launch",
+  "runs": [
+    {
+      "run": "wild-askswarm/wiki-4959a80b-v011",
+      "done_event_acknowledged": true,
+      "readback_status": "done",
+      "artifacts": [
+        "metrics.json",
+        "report.html"
+      ],
+      "readback_artifact_count": 2
+    },
+    {
+      "run": "wild-askswarm/swarmtraces-4959a80b-v011",
+      "done_event_acknowledged": true,
+      "readback_status": "done",
+      "artifacts": [
+        "metrics.json",
+        "report.html"
+      ],
+      "readback_artifact_count": 2
+    },
+    {
+      "run": "wild-askswarm/git-4959a80b-v011",
+      "done_event_acknowledged": true,
+      "readback_status": "done",
+      "artifacts": [
+        "metrics.json",
+        "report.html"
+      ],
+      "readback_artifact_count": 2
+    }
+  ]
+}

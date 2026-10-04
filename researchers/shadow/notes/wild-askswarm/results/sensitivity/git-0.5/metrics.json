@@ -1,0 +1,2758 @@
+{
+  "schema_version": "0.1.1",
+  "name": "swarm-lab",
+  "summary": {
+    "records": 2673,
+    "nonempty_text_records": 2673,
+    "identities": 161,
+    "identity_coverage": 0.7197904975682754,
+    "time_coverage": 1.0,
+    "identity_and_time_records": 1924,
+    "known_identity_records": 1924,
+    "dated_records": 2673,
+    "clusters": 1685,
+    "multi_identity_clusters": 40,
+    "multi_record_clusters": 81,
+    "participation_gini": 0.6423858162988598,
+    "identity_span_seconds": {
+      "n": 161,
+      "min": 0.0,
+      "median": 2684.0,
+      "p90": 18927.0,
+      "max": 41401.0
+    },
+    "single_record_identities": 21,
+    "dissent_marker_records": 63,
+    "dissent_marker_fraction": 0.02356902356902357,
+    "revert_marker_records": 2,
+    "revert_marker_fraction": 0.0007482229704451926,
+    "temporal_clusters": 1642,
+    "time_to_k": {
+      "2": {
+        "reached": 40,
+        "at_risk_clusters": 1642,
+        "not_observed_to_reach": 1602,
+        "seconds_among_reached": {
+          "n": 40,
+          "min": 2.0,
+          "median": 3848.0,
+          "p90": 17664.0,
+          "max": 25678.0
+        }
+      },
+      "3": {
+        "reached": 21,
+        "at_risk_clusters": 1642,
+        "not_observed_to_reach": 1621,
+        "seconds_among_reached": {
+          "n": 21,
+          "min": 4.0,
+          "median": 5630.0,
+          "p90": 20052.0,
+          "max": 34544.0
+        }
+      },
+      "5": {
+        "reached": 14,
+        "at_risk_clusters": 1642,
+        "not_observed_to_reach": 1628,
+        "seconds_among_reached": {
+          "n": 14,
+          "min": 32.0,
+          "median": 10653.0,
+          "p90": 26826.0,
+          "max": 37962.0
+        }
+      },
+      "10": {
+        "reached": 4,
+        "at_risk_clusters": 1642,
+        "not_observed_to_reach": 1638,
+        "seconds_among_reached": {
+          "n": 4,
+          "min": 22620.0,
+          "median": 24911.0,
+          "p90": 52075.0,
+          "max": 52075.0
+        }
+      }
+    }
+  },
+  "parameters": {
+    "jaccard_threshold": 0.5,
+    "minhash_permutations": 64,
+    "lsh_bands": 16,
+    "shingle_cap": 512,
+    "seed": 20261004,
+    "influence_step_window": 100
+  },
+  "diagnostics": {
+    "long_unique_texts_sampled": 0,
+    "candidate_comparisons": 127
+  },
+  "record_kinds": {
+    "commit": 2264,
+    "task_claim": 206,
+    "task_done": 166,
+    "task_release": 30,
+    "task_touch": 7
+  },
+  "task_events": {
+    "task_claim": 206,
+    "task_done": 166,
+    "task_release": 30,
+    "task_touch": 7
+  },
+  "participation_counts_descending": [
+    133,
+    81,
+    74,
+    69,
+    68,
+    65,
+    65,
+    64,
+    57,
+    55,
+    52,
+    50,
+    47,
+    39,
+    34,
+    34,
+    32,
+    31,
+    31,
+    28,
+    27,
+    25,
+    25,
+    19,
+    19,
+    18,
+    17,
+    17,
+    16,
+    16,
+    16,
+    15,
+    15,
+    15,
+    14,
+    13,
+    13,
+    13,
+    12,
+    12,
+    12,
+    12,
+    11,
+    10,
+    10,
+    9,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "identity_spans_seconds_sorted": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    64.0,
+    104.0,
+    177.0,
+    214.0,
+    239.0,
+    241.0,
+    271.0,
+    341.0,
+    356.0,
+    372.0,
+    389.0,
+    395.0,
+    404.0,
+    405.0,
+    407.0,
+    415.0,
+    428.0,
+    431.0,
+    442.0,
+    454.0,
+    465.0,
+    465.0,
+    471.0,
+    558.0,
+    573.0,
+    600.0,
+    644.0,
+    645.0,
+    707.0,
+    759.0,
+    811.0,
+    829.0,
+    1016.0,
+    1030.0,
+    1073.0,
+    1075.0,
+    1107.0,
+    1108.0,
+    1117.0,
+    1123.0,
+    1270.0,
+    1361.0,
+    1516.0,
+    1575.0,
+    1638.0,
+    1759.0,
+    1850.0,
+    1871.0,
+    2007.0,
+    2139.0,
+    2168.0,
+    2214.0,
+    2223.0,
+    2239.0,
+    2308.0,
+    2464.0,
+    2496.0,
+    2534.0,
+    2619.0,
+    2684.0,
+    2900.0,
+    3024.0,
+    3033.0,
+    3056.0,
+    3128.0,
+    3258.0,
+    3313.0,
+    3525.0,
+    3667.0,
+    3890.0,
+    3929.0,
+    4359.0,
+    4650.0,
+    4653.0,
+    4653.0,
+    4656.0,
+    4657.0,
+    4659.0,
+    4697.0,
+    4698.0,
+    4700.0,
+    4719.0,
+    4720.0,
+    4721.0,
+    4734.0,
+    4745.0,
+    4829.0,
+    4838.0,
+    4968.0,
+    4976.0,
+    6414.0,
+    6475.0,
+    6485.0,
+    6763.0,
+    6805.0,
+    7542.0,
+    7588.0,
+    7638.0,
+    7672.0,
+    7749.0,
+    7768.0,
+    7849.0,
+    8526.0,
+    9269.0,
+    9593.0,
+    9643.0,
+    9999.0,
+    10227.0,
+    10543.0,
+    11098.0,
+    11511.0,
+    11584.0,
+    11706.0,
+    12178.0,
+    12350.0,
+    12424.0,
+    12901.0,
+    13038.0,
+    13386.0,
+    14429.0,
+    15905.0,
+    17248.0,
+    18894.0,
+    18927.0,
+    19419.0,
+    19871.0,
+    20119.0,
+    20343.0,
+    21295.0,
+    24185.0,
+    24910.0,
+    25992.0,
+    26536.0,
+    27921.0,
+    28790.0,
+    31522.0,
+    33293.0,
+    38503.0,
+    39233.0,
+    41401.0
+  ],
+  "influence": [
+    {
+      "identity": "dmarz/sybil-specialists",
+      "fractional_new_adopter_credit": 9.083333333333332,
+      "credit_per_record": 0.13974358974358972
+    },
+    {
+      "identity": "vishesh/codex-experiments",
+      "fractional_new_adopter_credit": 6.5,
+      "credit_per_record": 0.09558823529411764
+    },
+    {
+      "identity": "dmarz/decision-suite-plan",
+      "fractional_new_adopter_credit": 6.166666666666667,
+      "credit_per_record": 0.24666666666666667
+    },
+    {
+      "identity": "dmarz/market-split",
+      "fractional_new_adopter_credit": 5.033333333333332,
+      "credit_per_record": 0.06213991769547324
+    },
+    {
+      "identity": "dmarz/patchwork-hypotheses",
+      "fractional_new_adopter_credit": 3.5,
+      "credit_per_record": 0.08974358974358974
+    },
+    {
+      "identity": "dmarz/discussion-bench-v3",
+      "fractional_new_adopter_credit": 3.45,
+      "credit_per_record": 0.07340425531914894
+    },
+    {
+      "identity": "vishesh/codex-phantom-coast",
+      "fractional_new_adopter_credit": 3.3666666666666663,
+      "credit_per_record": 0.05906432748538011
+    },
+    {
+      "identity": "dmarz/sd-attribution",
+      "fractional_new_adopter_credit": 3.283333333333333,
+      "credit_per_record": 0.5472222222222222
+    },
+    {
+      "identity": "vishesh/codex-pi-review",
+      "fractional_new_adopter_credit": 3.0333333333333337,
+      "credit_per_record": 0.08921568627450982
+    },
+    {
+      "identity": "dmarz/collective-decision",
+      "fractional_new_adopter_credit": 3.0,
+      "credit_per_record": 1.5
+    },
+    {
+      "identity": "dmarz/sybil-foundations",
+      "fractional_new_adopter_credit": 2.9166666666666665,
+      "credit_per_record": 1.4583333333333333
+    },
+    {
+      "identity": "dmarz/fm-sutton",
+      "fractional_new_adopter_credit": 2.6999999999999997,
+      "credit_per_record": 1.3499999999999999
+    },
+    {
+      "identity": "vishesh/codex-methods",
+      "fractional_new_adopter_credit": 2.5,
+      "credit_per_record": 0.018796992481203006
+    },
+    {
+      "identity": "vishesh/codex-quorum-mirrors",
+      "fractional_new_adopter_credit": 2.333333333333333,
+      "credit_per_record": 0.035897435897435895
+    },
+    {
+      "identity": "dmarz/fm-ai-control",
+      "fractional_new_adopter_credit": 2.083333333333333,
+      "credit_per_record": 1.0416666666666665
+    },
+    {
+      "identity": "dmarz/fm-contagion",
+      "fractional_new_adopter_credit": 2.033333333333333,
+      "credit_per_record": 0.6777777777777777
+    },
+    {
+      "identity": "dmarz/swarm-robotics-recent",
+      "fractional_new_adopter_credit": 2.0,
+      "credit_per_record": 1.0
+    },
+    {
+      "identity": "shadow/sol-w7",
+      "fractional_new_adopter_credit": 2.0,
+      "credit_per_record": 0.16666666666666666
+    },
+    {
+      "identity": "dmarz/pipeline-quota",
+      "fractional_new_adopter_credit": 2.0,
+      "credit_per_record": 0.3333333333333333
+    },
+    {
+      "identity": "dmarz/sybil-credentials",
+      "fractional_new_adopter_credit": 1.8333333333333333,
+      "credit_per_record": 0.9166666666666666
+    },
+    {
+      "identity": "dmarz/soc07-plan",
+      "fractional_new_adopter_credit": 1.8333333333333333,
+      "credit_per_record": 0.36666666666666664
+    },
+    {
+      "identity": "shadow/sol-aud",
+      "fractional_new_adopter_credit": 1.8333333333333333,
+      "credit_per_record": 0.15277777777777776
+    },
+    {
+      "identity": "vishesh/codex-theseus",
+      "fractional_new_adopter_credit": 1.75,
+      "credit_per_record": 0.025362318840579712
+    },
+    {
+      "identity": "dmarz/discussion-dose",
+      "fractional_new_adopter_credit": 1.6666666666666665,
+      "credit_per_record": 0.03205128205128205
+    },
+    {
+      "identity": "dmarz/fm-biology",
+      "fractional_new_adopter_credit": 1.45,
+      "credit_per_record": 0.725
+    },
+    {
+      "identity": "vishesh/codex-idea-scores",
+      "fractional_new_adopter_credit": 1.4499999999999997,
+      "credit_per_record": 0.022656249999999996
+    },
+    {
+      "identity": "dmarz/sd-ai-content",
+      "fractional_new_adopter_credit": 1.2833333333333332,
+      "credit_per_record": 0.21388888888888888
+    },
+    {
+      "identity": "dmarz/sybil-robotics",
+      "fractional_new_adopter_credit": 1.0833333333333333,
+      "credit_per_record": 0.5416666666666666
+    },
+    {
+      "identity": "dmarz/collective-motion-recent",
+      "fractional_new_adopter_credit": 1.0,
+      "credit_per_record": 0.5
+    },
+    {
+      "identity": "dmarz/llm-agent-swarms-recent",
+      "fractional_new_adopter_credit": 1.0,
+      "credit_per_record": 0.5
+    },
+    {
+      "identity": "shadow/sol-xcheck",
+      "fractional_new_adopter_credit": 1.0,
+      "credit_per_record": 0.2
+    },
+    {
+      "identity": "dmarz/sybil",
+      "fractional_new_adopter_credit": 1.0,
+      "credit_per_record": 0.125
+    },
+    {
+      "identity": "dmarz/pipeline-alarm",
+      "fractional_new_adopter_credit": 1.0,
+      "credit_per_record": 0.25
+    },
+    {
+      "identity": "dmarz/fm-bft-aggregation",
+      "fractional_new_adopter_credit": 0.9499999999999998,
+      "credit_per_record": 0.4749999999999999
+    },
+    {
+      "identity": "dmarz/dashboard-questions",
+      "fractional_new_adopter_credit": 0.8333333333333333,
+      "credit_per_record": 0.13888888888888887
+    },
+    {
+      "identity": "dmarz/sd-web-agents",
+      "fractional_new_adopter_credit": 0.7833333333333332,
+      "credit_per_record": 0.09791666666666665
+    },
+    {
+      "identity": "dmarz/fm-unlinkability",
+      "fractional_new_adopter_credit": 0.6166666666666667,
+      "credit_per_record": 0.30833333333333335
+    },
+    {
+      "identity": "dmarz/sybil-llm-agents",
+      "fractional_new_adopter_credit": 0.5833333333333333,
+      "credit_per_record": 0.29166666666666663
+    },
+    {
+      "identity": "dmarz/sybil-mechanisms",
+      "fractional_new_adopter_credit": 0.5833333333333333,
+      "credit_per_record": 0.29166666666666663
+    },
+    {
+      "identity": "dmarz/sd-honeypots",
+      "fractional_new_adopter_credit": 0.45,
+      "credit_per_record": 0.04090909090909091
+    },
+    {
+      "identity": "vishesh/codex-regrowth-docs",
+      "fractional_new_adopter_credit": 0.3333333333333333,
+      "credit_per_record": 0.006060606060606061
+    },
+    {
+      "identity": "vishesh/codex-decision-models",
+      "fractional_new_adopter_credit": 0.3333333333333333,
+      "credit_per_record": 0.0045045045045045045
+    },
+    {
+      "identity": "dmarz/sd-onchain",
+      "fractional_new_adopter_credit": 0.2,
+      "credit_per_record": 0.02
+    },
+    {
+      "identity": "dmarz/fm-identity-hijack",
+      "fractional_new_adopter_credit": 0.16666666666666666,
+      "credit_per_record": 0.08333333333333333
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": 202,
+      "records": 44,
+      "identities": 20,
+      "dated_identities": 20,
+      "first_time": "2026-10-03T19:32:51+00:00",
+      "first_movers": [
+        "shadow/sol-w7"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 634.0,
+        "3": 2592.0,
+        "5": 13017.0,
+        "10": 22620.0
+      }
+    },
+    {
+      "cluster": 223,
+      "records": 44,
+      "identities": 20,
+      "dated_identities": 20,
+      "first_time": "2026-10-03T19:44:12+00:00",
+      "first_movers": [
+        "shadow/sol-w3"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 4595.0,
+        "3": 7991.0,
+        "5": 9850.0,
+        "10": 24178.0
+      }
+    },
+    {
+      "cluster": 349,
+      "records": 29,
+      "identities": 12,
+      "dated_identities": 12,
+      "first_time": "2026-10-03T20:44:38+00:00",
+      "first_movers": [
+        "vishesh/codex-methods"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 17664.0,
+        "3": 18280.0,
+        "5": 20686.0,
+        "10": 25644.0
+      }
+    },
+    {
+      "cluster": 478,
+      "records": 15,
+      "identities": 10,
+      "dated_identities": 10,
+      "first_time": "2026-10-04T00:14:28+00:00",
+      "first_movers": [
+        "dmarz/discussion-dose"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 6597.0,
+        "3": 8189.0,
+        "5": 9654.0,
+        "10": 52075.0
+      }
+    },
+    {
+      "cluster": 227,
+      "records": 11,
+      "identities": 8,
+      "dated_identities": 8,
+      "first_time": "2026-10-03T19:45:23+00:00",
+      "first_movers": [
+        "shadow/sol-g49"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 18544.0,
+        "3": 23312.0,
+        "5": 24997.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 46,
+      "records": 8,
+      "identities": 8,
+      "dated_identities": 8,
+      "first_time": "2026-10-03T18:11:47+00:00",
+      "first_movers": [
+        "dmarz/fm-sutton"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 18.0,
+        "3": 25.0,
+        "5": 38.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 16,
+      "records": 8,
+      "identities": 7,
+      "dated_identities": 7,
+      "first_time": "2026-10-03T17:15:37+00:00",
+      "first_movers": [
+        "dmarz/swarm"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 19142.0,
+        "3": 34544.0,
+        "5": 37962.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 314,
+      "records": 8,
+      "identities": 7,
+      "dated_identities": 7,
+      "first_time": "2026-10-03T20:22:25+00:00",
+      "first_movers": [
+        "shadow/sol-w8"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 10941.0,
+        "3": 20052.0,
+        "5": 26826.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 63,
+      "records": 6,
+      "identities": 6,
+      "dated_identities": 6,
+      "first_time": "2026-10-03T18:18:53+00:00",
+      "first_movers": [
+        "dmarz/fm-ai-control"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 7.0,
+        "3": 11.0,
+        "5": 32.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 73,
+      "records": 6,
+      "identities": 6,
+      "dated_identities": 6,
+      "first_time": "2026-10-03T18:19:40+00:00",
+      "first_movers": [
+        "dmarz/sd-attribution"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 6.0,
+        "3": 8.0,
+        "5": 32.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 392,
+      "records": 6,
+      "identities": 5,
+      "dated_identities": 5,
+      "first_time": "2026-10-03T21:55:49+00:00",
+      "first_movers": [
+        "dmarz/dashboard-questions"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 9620.0,
+        "3": 15803.0,
+        "5": 25443.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 580,
+      "records": 6,
+      "identities": 5,
+      "dated_identities": 5,
+      "first_time": "2026-10-04T01:45:52+00:00",
+      "first_movers": [
+        "dmarz/sybil-specialists"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 3101.0,
+        "3": 5630.0,
+        "5": 7653.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 38,
+      "records": 5,
+      "identities": 5,
+      "dated_identities": 5,
+      "first_time": "2026-10-03T18:01:38+00:00",
+      "first_movers": [
+        "dmarz/sybil-foundations"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 4.0,
+        "3": 12.0,
+        "5": 37.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 647,
+      "records": 5,
+      "identities": 5,
+      "dated_identities": 5,
+      "first_time": "2026-10-04T02:15:01+00:00",
+      "first_movers": [
+        "dmarz/sybil-specialists"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 1717.0,
+        "3": 2199.0,
+        "5": 11456.0,
+        "10": null
+      }
+    },
+    {
+      "cluster": 638,
+      "records": 7,
+      "identities": 4,
+      "dated_identities": 4,
+      "first_time": "2026-10-04T02:11:53+00:00",
+      "first_movers": [
+        "vishesh/codex-experiments"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 1188.0,
+        "3": 1776.0,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 516,
+      "records": 5,
+      "identities": 4,
+      "dated_identities": 4,
+      "first_time": "2026-10-04T01:07:26+00:00",
+      "first_movers": [
+        "dmarz/decision-suite-plan"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 5047.0,
+        "3": 8570.0,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 77,
+      "records": 4,
+      "identities": 4,
+      "dated_identities": 4,
+      "first_time": "2026-10-03T18:20:10+00:00",
+      "first_movers": [
+        "dmarz/sybil-credentials"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 5.0,
+        "3": 11.0,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 667,
+      "records": 4,
+      "identities": 4,
+      "dated_identities": 4,
+      "first_time": "2026-10-04T02:21:23+00:00",
+      "first_movers": [
+        "vishesh/codex-experiments"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 5878.0,
+        "3": 5977.0,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 5,
+      "records": 3,
+      "identities": 3,
+      "dated_identities": 3,
+      "first_time": "2026-10-03T17:01:03+00:00",
+      "first_movers": [
+        "dmarz/collective-decision"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 3.0,
+        "3": 4.0,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 60,
+      "records": 3,
+      "identities": 3,
+      "dated_identities": 3,
+      "first_time": "2026-10-03T18:18:36+00:00",
+      "first_movers": [
+        "dmarz/collective-decision"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 3.0,
+        "3": 7.0,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 446,
+      "records": 3,
+      "identities": 3,
+      "dated_identities": 3,
+      "first_time": "2026-10-03T23:33:46+00:00",
+      "first_movers": [
+        "dmarz/decision-suite-plan"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 11442.0,
+        "3": 18244.0,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 8,
+      "records": 3,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-03T17:01:13+00:00",
+      "first_movers": [
+        "dmarz/llm-agent-swarms-recent"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 2.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 12,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-03T17:01:22+00:00",
+      "first_movers": [
+        "dmarz/swarm-robotics-recent"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 2.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 74,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-03T18:19:42+00:00",
+      "first_movers": [
+        "dmarz/sd-attribution"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 12.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 76,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-03T18:20:02+00:00",
+      "first_movers": [
+        "dmarz/swarm-robotics-recent"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 3.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 181,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-03T19:19:24+00:00",
+      "first_movers": [
+        "dmarz/reviewer-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 25678.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 192,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-03T19:27:09+00:00",
+      "first_movers": [
+        "dmarz/reviewer-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 25358.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 294,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-03T20:12:21+00:00",
+      "first_movers": [
+        "dmarz/sybil"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 9.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 504,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T00:49:18+00:00",
+      "first_movers": [
+        "vishesh/codex-experiments"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 6462.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 606,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T01:57:59+00:00",
+      "first_movers": [
+        "vishesh/codex-experiments"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 4910.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 612,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T01:59:52+00:00",
+      "first_movers": [
+        "dmarz/decision-suite-plan"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 6307.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 704,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T02:35:14+00:00",
+      "first_movers": [
+        "vishesh/codex-experiments"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 833.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 900,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T03:55:57+00:00",
+      "first_movers": [
+        "dmarz/sybil-specialists"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 2842.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1312,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T07:52:22+00:00",
+      "first_movers": [
+        "dmarz/pipeline-scarcity"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 16631.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1313,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T07:52:32+00:00",
+      "first_movers": [
+        "dmarz/pipeline-split"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 16137.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1358,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T08:07:08+00:00",
+      "first_movers": [
+        "dmarz/pipeline-alarm"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 9664.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1498,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T09:27:13+00:00",
+      "first_movers": [
+        "dmarz/pipeline-quota"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 4851.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1499,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T09:28:51+00:00",
+      "first_movers": [
+        "dmarz/pipeline-split"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 11323.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1557,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T10:47:42+00:00",
+      "first_movers": [
+        "dmarz/pipeline-quota"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 1837.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1558,
+      "records": 2,
+      "identities": 2,
+      "dated_identities": 2,
+      "first_time": "2026-10-04T10:47:51+00:00",
+      "first_movers": [
+        "dmarz/pipeline-alarm"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": 1830.0,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 761,
+      "records": 6,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T02:51:32+00:00",
+      "first_movers": [
+        "vishesh/codex-experiments"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 832,
+      "records": 6,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T03:39:01+00:00",
+      "first_movers": [
+        "vishesh/codex-experiments"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 304,
+      "records": 3,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:16:14+00:00",
+      "first_movers": [
+        "shadow/sol-g49"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1050,
+      "records": 3,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T04:38:39+00:00",
+      "first_movers": [
+        "vishesh/codex-phantom-coast"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1194,
+      "records": 3,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T06:07:05+00:00",
+      "first_movers": [
+        "vishesh/codex-quorum-mirrors"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1262,
+      "records": 3,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T06:59:12+00:00",
+      "first_movers": [
+        "vishesh/codex-heterogeneous"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1273,
+      "records": 3,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T07:14:46+00:00",
+      "first_movers": [
+        "vishesh/codex-heterogeneous"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 81,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T18:20:39+00:00",
+      "first_movers": [
+        "dmarz/sd-bots"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 145,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T19:05:05+00:00",
+      "first_movers": [
+        "dmarz/x-threads"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 146,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T19:05:15+00:00",
+      "first_movers": [
+        "dmarz/x-threads"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 190,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T19:24:25+00:00",
+      "first_movers": [
+        "shadow/sol-w4"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 275,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:05:26+00:00",
+      "first_movers": [
+        "shadow/sol-w5"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 276,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:05:48+00:00",
+      "first_movers": [
+        "shadow/sol-w5"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 278,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:06:42+00:00",
+      "first_movers": [
+        "shadow/sol-g50"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 280,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:07:06+00:00",
+      "first_movers": [
+        "shadow/sol-w3"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 281,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:07:17+00:00",
+      "first_movers": [
+        "shadow/sol-w8"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 282,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:07:29+00:00",
+      "first_movers": [
+        "shadow/sol-w8"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 283,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:07:53+00:00",
+      "first_movers": [
+        "shadow/sol-dash-d"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 284,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:08:02+00:00",
+      "first_movers": [
+        "shadow/sol-g50"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 286,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T20:09:04+00:00",
+      "first_movers": [
+        "shadow/sol-g50"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 469,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T23:50:20+00:00",
+      "first_movers": [
+        "dmarz/discussion-dose"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 596,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T01:52:41+00:00",
+      "first_movers": [
+        "dmarz/sybil-specialists"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 690,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T02:30:26+00:00",
+      "first_movers": [
+        "dmarz/patchwork-hypotheses"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 826,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T03:35:36+00:00",
+      "first_movers": [
+        "vishesh/codex-decision-models"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 836,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T03:40:18+00:00",
+      "first_movers": [
+        "vishesh/codex-theseus"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 862,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T03:45:29+00:00",
+      "first_movers": [
+        "vishesh/codex-pi-review"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 886,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T03:52:14+00:00",
+      "first_movers": [
+        "vishesh/codex-phantom-coast"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 894,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T03:54:16+00:00",
+      "first_movers": [
+        "vishesh/codex-pi-review"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 923,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T04:04:24+00:00",
+      "first_movers": [
+        "dmarz/patchwork-hypotheses"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 984,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T04:17:51+00:00",
+      "first_movers": [
+        "vishesh/codex-regrowth-docs"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1032,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T04:32:21+00:00",
+      "first_movers": [
+        "vishesh/codex-quorum-mirrors"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1076,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T04:45:25+00:00",
+      "first_movers": [
+        "vishesh/codex-quorum-mirrors"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1089,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T04:49:05+00:00",
+      "first_movers": [
+        "vishesh/codex-phantom-coast"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1210,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T06:18:52+00:00",
+      "first_movers": [
+        "vishesh/codex-quorum-mirrors"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1236,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T06:40:03+00:00",
+      "first_movers": [
+        "vishesh/codex-decision-models"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1242,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T06:48:09+00:00",
+      "first_movers": [
+        "vishesh/codex-phantom-coast"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1249,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T06:50:37+00:00",
+      "first_movers": [
+        "vishesh/codex-decision-models"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1263,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T06:59:15+00:00",
+      "first_movers": [
+        "vishesh/codex-quorum-mirrors"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1479,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T09:12:02+00:00",
+      "first_movers": [
+        "dmarz/pipeline-scarcity"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1556,
+      "records": 2,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-04T10:47:16+00:00",
+      "first_movers": [
+        "dmarz/pipeline"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 2,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:00:56+00:00",
+      "first_movers": [
+        "dmarz/setup"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 3,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:01:00+00:00",
+      "first_movers": [
+        "dmarz/setup"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 4,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:01:02+00:00",
+      "first_movers": [
+        "dmarz/active-matter"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 6,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:01:09+00:00",
+      "first_movers": [
+        "dmarz/criticality-measurement"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 7,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:01:11+00:00",
+      "first_movers": [
+        "dmarz/crowds-and-traffic"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 9,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:01:16+00:00",
+      "first_movers": [
+        "dmarz/marl-emergence"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 10,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:01:18+00:00",
+      "first_movers": [
+        "dmarz/swarm-intelligence"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 13,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:01:25+00:00",
+      "first_movers": [
+        "dmarz/sync-consensus"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 14,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:05:32+00:00",
+      "first_movers": [
+        "dmarz/setup"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 15,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:14:12+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 17,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:21:54+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 18,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:25:40+00:00",
+      "first_movers": [
+        "dmarz/swarm"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 19,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:30:07+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 20,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:34:39+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 21,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:35:44+00:00",
+      "first_movers": [
+        "dmarz/swarm"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 22,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:37:39+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 23,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:38:41+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 24,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:45:49+00:00",
+      "first_movers": [
+        "dmarz/swarm"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 25,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:54:46+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 26,
+      "records": 1,
+      "identities": 1,
+      "dated_identities": 1,
+      "first_time": "2026-10-03T17:54:50+00:00",
+      "first_movers": [
+        "shadow/sol-1"
+      ],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    }
+  ],
+  "adoption_events_by_elapsed_hour_and_rank": [
+    {
+      "elapsed_hour": 0,
+      "adopter_rank": 1,
+      "clusters": 1642
+    },
+    {
+      "elapsed_hour": 0,
+      "adopter_rank": 2,
+      "clusters": 20
+    },
+    {
+      "elapsed_hour": 0,
+      "adopter_rank": 3,
+      "clusters": 10
+    },
+    {
+      "elapsed_hour": 0,
+      "adopter_rank": 4,
+      "clusters": 5
+    },
+    {
+      "elapsed_hour": 0,
+      "adopter_rank": 5,
+      "clusters": 4
+    },
+    {
+      "elapsed_hour": 0,
+      "adopter_rank": 6,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 0,
+      "adopter_rank": 7,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 1,
+      "adopter_rank": 2,
+      "clusters": 8
+    },
+    {
+      "elapsed_hour": 1,
+      "adopter_rank": 3,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 1,
+      "adopter_rank": 4,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 2,
+      "adopter_rank": 2,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 2,
+      "adopter_rank": 3,
+      "clusters": 3
+    },
+    {
+      "elapsed_hour": 2,
+      "adopter_rank": 4,
+      "clusters": 5
+    },
+    {
+      "elapsed_hour": 2,
+      "adopter_rank": 5,
+      "clusters": 3
+    },
+    {
+      "elapsed_hour": 2,
+      "adopter_rank": 6,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 2,
+      "adopter_rank": 8,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 3,
+      "adopter_rank": 2,
+      "clusters": 3
+    },
+    {
+      "elapsed_hour": 3,
+      "adopter_rank": 4,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 3,
+      "adopter_rank": 5,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 3,
+      "adopter_rank": 6,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 4,
+      "adopter_rank": 2,
+      "clusters": 3
+    },
+    {
+      "elapsed_hour": 4,
+      "adopter_rank": 3,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 4,
+      "adopter_rank": 6,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 4,
+      "adopter_rank": 7,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 4,
+      "adopter_rank": 8,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 2,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 3,
+      "clusters": 3
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 4,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 5,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 6,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 7,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 8,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 5,
+      "adopter_rank": 9,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 3,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 4,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 5,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 7,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 8,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 9,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 10,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 11,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 12,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 6,
+      "adopter_rank": 13,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 2,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 5,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 6,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 7,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 9,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 10,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 11,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 12,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 13,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 7,
+      "adopter_rank": 14,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 8,
+      "adopter_rank": 6,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 8,
+      "adopter_rank": 15,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 8,
+      "adopter_rank": 16,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 8,
+      "adopter_rank": 17,
+      "clusters": 2
+    },
+    {
+      "elapsed_hour": 8,
+      "adopter_rank": 18,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 9,
+      "adopter_rank": 3,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 9,
+      "adopter_rank": 4,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 9,
+      "adopter_rank": 8,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 10,
+      "adopter_rank": 5,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 10,
+      "adopter_rank": 6,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 11,
+      "adopter_rank": 7,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 12,
+      "adopter_rank": 18,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 12,
+      "adopter_rank": 19,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 13,
+      "adopter_rank": 7,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 14,
+      "adopter_rank": 10,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 18,
+      "adopter_rank": 19,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 18,
+      "adopter_rank": 20,
+      "clusters": 1
+    },
+    {
+      "elapsed_hour": 19,
+      "adopter_rank": 20,
+      "clusters": 1
+    }
+  ],
+  "limits": [
+    "Lexical similarity, not semantic ideas or proof of copying.",
+    "First observed identity is not inventor; no causal influence is identified.",
+    "Missing clocks/identities are not imputed. Identity spans are observation-window censored.",
+    "Fixed-representative LSH can miss near duplicates; long texts use sampled shingles.",
+    "Dissent/revert are unvalidated English lexical markers, not behavioral outcomes.",
+    "Full-corpus descriptive statistics have no IID confidence interval.",
+    "Agent prefixes are self-asserted; administrative commit templates can produce lexical reuse without research-idea transmission."
+  ],
+  "source": {
+    "adapter": "git",
+    "python": "3.12.3",
+    "numpy": "2.4.3",
+    "code_sha256": {
+      "__init__.py": "1d2e99015ded05b5b32fe918b5aa71adef52efe53776566dd7cccf90478a59c9",
+      "__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+      "adapters.py": "e4c174b0fb89f5ea493c83641050038b87de7b5c0743b1ac630cbfeb9ccf0c09",
+      "cli.py": "a71e0d2c32fca032ece2157cdcfaeedf50ff4c0e080e3b8619d01dfeca8e875b",
+      "core.py": "89c911a92d1ae72568ca15d87169375310723d573f97d483cf9abbd96e618e86",
+      "report.py": "4030d453d3fbbb681c16a9dbcb41508e4f9e5801d629e833c7702396f62f79ef"
+    },
+    "git_ref": "4959a80b2e48050066630c5d22ea5d1fa1b0beb2",
+    "time_basis": "git author timestamp, not validated real execution time"
+  },
+  "cluster_table": {
+    "file": "clusters.json.gz",
+    "total_clusters": 1685,
+    "inline_top_clusters": 100,
+    "sha256": "412383b4247a2e743f36a94e4bebeee88e2ef345cd72eb48cb8f1fe7289a15bd"
+  },
+  "cluster_size_histogram": {
+    "1": 1604,
+    "2": 51,
+    "3": 9,
+    "4": 2,
+    "5": 3,
+    "6": 6,
+    "7": 1,
+    "8": 3,
+    "11": 1,
+    "15": 1,
+    "29": 1,
+    "44": 2,
+    "707": 1
+  }
+}

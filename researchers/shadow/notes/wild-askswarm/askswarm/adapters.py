@@ -27,8 +27,14 @@ def parse_time(value) -> float | None:
     import math
     if value is None or value == "":
         return None
+    if isinstance(value, str) and re.fullmatch(r"-?\d+(?:\.\d+)?", value.strip()):
+        value = float(value)
     if isinstance(value, (int, float)) and not isinstance(value, bool):
-        return float(value) if math.isfinite(value) else None
+        try:
+            datetime.fromtimestamp(value, timezone.utc)
+            return float(value) if math.isfinite(value) else None
+        except (ValueError, OverflowError, OSError):
+            return None
     try:
         dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
         return dt.timestamp() if dt.tzinfo else None

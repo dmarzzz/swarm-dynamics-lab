@@ -1,5 +1,6 @@
 import argparse
 import hashlib
+import gzip
 import json
 from pathlib import Path
 import platform
@@ -19,6 +20,25 @@ def checksum(path):
     return digest.hexdigest()
 
 
+def save_result(result, output):
+    """Keep compact headline JSON; full derived cluster table is deterministic gzip."""
+    from collections import Counter
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=True)
+    clusters = result['clusters']
+    packed = json.dumps(clusters, separators=(',', ':'), allow_nan=False).encode()
+    (output / 'clusters.json.gz').write_bytes(gzip.compress(packed, mtime=0))
+    compact = dict(result)
+    compact['clusters'] = clusters[:100]
+    compact['cluster_table'] = {'file': 'clusters.json.gz', 'total_clusters': len(clusters),
+                                'inline_top_clusters': min(100, len(clusters)),
+                                'sha256': checksum(output / 'clusters.json.gz')}
+    compact['cluster_size_histogram'] = dict(sorted(Counter(c['records'] for c in clusters).items()))
+    (output / 'metrics.json').write_text(json.dumps(compact, indent=2, allow_nan=False) + '\n')
+    write_report(compact, output / 'report.html')
+    return compact
+
+
 def run(source, data, output, name=None, ref='HEAD', threshold=.7, window=100, wiki_identity='label'):
     path = Path(data)
     if source == 'wiki':
@@ -32,7 +52,8 @@ def run(source, data, output, name=None, ref='HEAD', threshold=.7, window=100, w
     else:
         events = adapters.table(path)
     result = analyze(events, name or source, threshold, window)
-    provenance = {'adapter': source, 'python': platform.python_version(), 'numpy': np.__version__}
+    provenance = {'adapter': source, 'python': platform.python_version(), 'numpy': np.__version__,
+                  'code_sha256': {p.name: checksum(p) for p in sorted(Path(__file__).parent.glob('*.py'))}}
     if source == 'git':
         provenance['git_ref'] = subprocess.check_output(['git', '-C', str(path), 'rev-parse', '--verify', '--end-of-options', ref + '^{commit}'], text=True).strip()
         provenance['time_basis'] = 'git author timestamp, not validated real execution time'
@@ -46,10 +67,7 @@ def run(source, data, output, name=None, ref='HEAD', threshold=.7, window=100, w
     if source == 'git':
         result['limits'].append('Agent prefixes are self-asserted; administrative commit templates can produce lexical reuse without research-idea transmission.')
     result['source'] = provenance
-    output = Path(output)
-    output.mkdir(parents=True, exist_ok=True)
-    (output / 'metrics.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
-    write_report(result, output / 'report.html')
+    save_result(result, output)
     print(json.dumps({'name': result['name'], **result['summary']}, allow_nan=False))
     return result
 

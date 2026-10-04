@@ -12,7 +12,7 @@ def display(value):
     if value is None:
         return "Unavailable"
     if isinstance(value, float):
-        return f"{value:,.4f}"
+        return f"{value:.3g}" if 0 < abs(value) < .0001 else f"{value:,.4f}"
     if isinstance(value, int):
         return f"{value:,}"
     return esc(value)
@@ -52,6 +52,8 @@ def render(results, title="AskSwarm / same questions, three swarms"):
     for result in results:
         summary = result['summary']
         body += '<section><h2>' + esc(result['name']) + '</h2>'
+        if len(result['limits']) > 6:
+            body += '<p>' + esc(result['limits'][-1]) + '</p>'
         body += '<h3>Time to k observed identities</h3>'
         body += table(['k (includes first)', 'Reached', 'Not observed to reach', 'Eligible clusters', 'Median seconds, reached only'],
                       [[k, v['reached'], v['not_observed_to_reach'], v['at_risk_clusters'], v['seconds_among_reached']['median']] for k, v in summary['time_to_k'].items()])
