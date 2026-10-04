@@ -1,4 +1,6 @@
-# Pre-run assessment: chain-001 of model gpt-6-sol (S0, P0, Q0, S1), code commit 2
+# Pre-run assessment: gpt-6-sol chain (S0, P0, Q0, S1), code commit 3
+
+**Current pin (code commit 3, 2026-10-04 evening): code commit `21eb3fe0ab10f6ab91910a92702d182bc5f10cfa`, source hash `f3ffc908cfb96205a4abbbd3c1594de54eec133ec3313c380475e82972b369b7`, batches `s0-002-sol`, `p0-002-sol`, `q0-002-sol`, `s1-002-sol`.** See "Amendment: code commit 3" at the end; it supersedes the code commit, source hash and batch names stated in the sections below, which describe code commit 2 (9461ba1c, cac7255a…) and remain as written.
 
 File name: this is the second pre-run review of the study and the first for `gpt-6-sol`. The batches of this chain are `s0-001-sol`, `p0-001-sol`, `q0-001-sol`, `s1-001-sol` (attempt 001 of this model), hub experiment `sybil-scarcity-xmodel-sol`. [chain-001-pre.md](chain-001-pre.md) covers the Qwen chain at the first code commit, which was launched separately (launch commit c0537bf7, source hash 06cbd97e...) and is not affected by this commit.
 
@@ -49,3 +51,16 @@ Inputs, roots, packets, cells, primary, Q0 thresholds and analysis are the same 
 ## Visualization mapping
 
 Mapping v1 in [VISUALIZATION.md](../VISUALIZATION.md), unchanged; the frames name the model and its route in the header, and bind `sybil-scarcity-xmodel-sol/<run id>`.
+
+## Amendment: code commit 3 (before any model call of gpt-6-sol)
+
+- What failed: the launcher's `setup` at launch commit 4997223e ran `src/selftest.py` on the server with `STUDY_MODEL=gpt-6-sol` and `STUDY_PROVIDER=openai` in the environment. The suite read `STUDY_MODEL`, so tests written for the first model ran against gpt-6-sol and failed (KeyError on the Qwen price keys, model mismatches, the hub experiment and batch names of the other model). The builder had run the suite only with the variable unset. The operator's `chain` command ran after the refused setup and was stopped by dmarz/fleet-monitor within 60 s, during S0, before any model call; the sol ledger has 0 lines; a stopped `s0-001-sol` run may exist on the hub under `sybil-scarcity-xmodel-sol`.
+- Fix: the suite clears `STUDY_MODEL` and `STUDY_PROVIDER` at import and every test that exercises gpt-6-sol pins it explicitly (the flagship's fix). gpt-6-sol gets fresh batch names through a per-model `attempt: '002'` in design.yaml (`s0-002-sol` … `s1-002-sol`, continuation `s1-002-sol-r1`), so the coordinator never meets the stopped `s0-001-sol` batch. The manifest's `attempt` field reads the study's attempt, so the manifest does not depend on the model. Nothing else changed: request, prices, caps, margin, gates, inputs and analysis are as above, and the Qwen configuration digest is still the first commit's.
+- Note for the operator: the coordinator also refuses to queue while any run of the hub experiment is `planned`, `assigned` or `running` (`queue_not_empty`). If the stopped `s0-001-sol` run was left in one of those states on the hub, it must be closed before launch.
+- Checks on code commit 3 (Python 3.9.6, offline):
+  - `python3 src/selftest.py`: 96 tests OK three ways: environment unset; `STUDY_MODEL=gpt-6-sol STUDY_PROVIDER=openai`; `STUDY_MODEL=qwen/qwen3.7-flash STUDY_PROVIDER=openrouter`.
+  - `STUDY_MODEL=gpt-6-sol python3 src/worker.py --stage S0 --attempt s0sol`: 168/168 valid, 0 violations, 0 calls.
+  - `STUDY_MODEL=gpt-6-sol python3 src/manifest.py --check`: current, unchanged (`cf501136…`).
+  - `python3 src/rehearse.py --model gpt-6-sol`: 22/22 checks in 292 s; hub runs `s0-002-sol`, `p0-002-sol`, `q0-002-sol`, `s1-002-sol` all done and verified; never-abstaining stub stops at Q0 with no S1 run; billing stop then resume completes S1 inside the cap.
+- Launch: `python3 scripts/run-ready-chain.py sybil-scarcity-xmodel <launch commit> setup|chain|status|verify --host <server> --model gpt-6-sol`; the launch commit is the first commit on `main` containing this amendment with source hash `f3ffc908…`. Status: **ready**.
+- Qwen chain outcome, for the record (relayed by dmarz/fleet-monitor): S0 168/168, P0 passed, Q0 failed its gate with 48/48 valid answers (USD 0.0292); the Qwen route of this study ends there as a result; its post-mortem follows from the server records.
