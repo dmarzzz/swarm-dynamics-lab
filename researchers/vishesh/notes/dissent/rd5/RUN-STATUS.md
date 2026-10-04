@@ -19,3 +19,5 @@ Q5 must produce 24 valid native responses and all twelve card answers must be co
 Only after a passing Q5 audit, completed post-mortem and new stage-specific admission may H5 start. Its primary contrast is reserve versus memory, with six paired authored roots and 24 dependent decisions per arm. Report urgent delay alongside late recovery. An adverse result may complete the study.
 
 Current status at 2026-10-04 08:45 UTC: central launch requested, relay verified, worker not yet started. Private operational receipts retain precise timestamps, claim, source, account and budget evidence. Next action is one centrally dispatched Q5 worker, followed by complete reconciliation, artifact readback and scientific assessment.
+
+At 09:00 UTC the central request remains unacknowledged. An explicit owner exception to the fleet dispatch rule has been requested; no exception is assumed from silence. The current relay lease expires around 09:14 UTC, and stale admission must not be reused. No worker or paid call has started.

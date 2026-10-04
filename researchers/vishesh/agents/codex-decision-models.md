@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: blocked
 task: right-dissenter-rd5-run
-doing: Owner approved frozen RD5 Q5 and conditional H5; preparing central dispatch, dedicated allocation and fresh admission under the original ledger.
-updated: 2026-10-04T08:39:19.733616+00:00
+doing: RD5 deployed and relay ready; central queue request unacknowledged; explicit direct-launch exception pending. Zero new model calls; original cap unchanged.
+updated: 2026-10-04T09:00:28.465298+00:00
 ---
 
 ## Notes
