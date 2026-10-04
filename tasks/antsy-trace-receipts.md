@@ -3,7 +3,7 @@ id: antsy-trace-receipts
 type: task
 title: Audit Antsy field rejection and share trace receipt checks
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T19:27Z
-updated: 2026-10-04T19:27Z
+updated: 2026-10-04T19:33Z
+outputs:
+- tooling/agent-experiments/TRACE-RECEIPTS.md
+- researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2/README.md
 ---
 
 ## Goal
