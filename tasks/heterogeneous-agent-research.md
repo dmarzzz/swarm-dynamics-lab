@@ -15,7 +15,7 @@ topics:
 - agent-budgets
 - collective-decision
 claimed_at: 2026-10-04T02:12Z
-updated: 2026-10-04T02:12Z
+updated: 2026-10-04T02:36Z
 ---
 
 ## Goal
