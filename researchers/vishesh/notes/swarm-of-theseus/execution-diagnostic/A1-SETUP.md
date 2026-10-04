@@ -23,3 +23,11 @@ A2 ran via the owner-approved OpenRouter route. 196 of 204 assigned calls comple
 **FINISH / PARK.** Read [the post-mortem](RESULTS-A2.md). No A3 or turnover run is authorized by this closeout. New cost USD0.156627; cumulative estimated plus unresolved exposure USD0.9793100437 of originalUSD5. A1unknownUSD0.010452 retained. Direct-Anthropic recovery remains unestablished.
 
 The worker exited; twelve uploaded artifacts passed hash readback. Exclusive machine claim released in [PR354](https://github.com/dmarzzz/swarm-labs-agentops/pull/354).
+
+## Institutional transmission revision — 2026-10-04
+
+Owner requested moving from shared storage toward direct predecessor/successor teaching. Read [T1 prospective plan](transmission/PLAN.md), [development instrument](transmission/README.md), and [case-quality review](transmission/CASE-QUALITY.json).31 offline checks pass;18 scripted roots,54 role policies, no native calls. Actor history and retired identities are excluded from successor packets. Exact evidence baseline remains competitive by construction. Acquisition, multigeneration behavior, controller benefit and generality remain empirical gaps. DECISION NEEDED for concrete T1-Q0<=72calls/<=USD1.80 within originalUSD5; no allocation made. Native admission integration remains to be completed before any launch. This extends the authoritative setup record; it does not replace A2's negative closeout.
+
+## Institutional transmission revision — 2026-10-04
+
+Owner requested moving from shared storage toward direct predecessor/successor teaching. Read [T1 prospective plan](transmission/PLAN.md), [development instrument](transmission/README.md), and [case-quality review](transmission/CASE-QUALITY.json).31 offline checks pass;18 scripted roots,54 role policies, no native calls. Actor history and retired identities are excluded from successor packets. Exact evidence baseline remains competitive by construction. Acquisition, multigeneration behavior, controller benefit and generality remain empirical gaps. DECISION NEEDED for concrete T1-Q0<=72calls/<=USD1.80 within originalUSD5; no allocation made. Native admission integration remains to be completed before any launch. This extends the authoritative setup record; it does not replace A2's negative closeout.

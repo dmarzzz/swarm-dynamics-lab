@@ -1,0 +1,288 @@
+{
+  "assessor": "vishesh/codex-theseus",
+  "date": "2026-10-04",
+  "evidence_type": "offline_development_not_native",
+  "case_ready_for": "bounded synthetic role-level apprenticeship development",
+  "native_qualified": false,
+  "run_admitted": false,
+  "tests_passed": 31,
+  "model_calls": 0,
+  "dimensions": [
+    {
+      "dimension": "decision_relevance",
+      "status": "pass",
+      "finding": "Tests a useful inherited practice through context replacement; Q0 decides whether native teaching is ready to study.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "answerability",
+      "status": "pass",
+      "finding": "54 founder policies uniquely identifiable; current evidence explicitly distinguishes unique, contradictory and ambiguous states.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "target_scorer_validity",
+      "status": "pass",
+      "finding": "Exhaustive independent truth-table expression agrees for all64 signal patterns, three sources and three roles; missing/duplicate IDs cannot pass.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "actor_isolation",
+      "status": "pass",
+      "finding": "Packet allowlists omit latent source and ancestor histories; founder gold notes suppressed; extra gold fields rejected.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "mechanism_isolation",
+      "status": "limited",
+      "finding": "Three separate role lineages demonstrate transmission. Joint coordination and emergent collective behavior remain untested; no swarm-superiority claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "challenge_coverage",
+      "status": "pass",
+      "finding": "18 development roots, six per mechanism; each founder/successor action panel has at least two allow and two hold cases and distinguishes every wrong source.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "strong_comparisons",
+      "status": "limited",
+      "finding": "Exact source reference solves all answerable development cases; static/broken packet contrasts implemented. Native continuing-controller comparison is specified but not run or implemented as a paid stage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "realism_scope",
+      "status": "limited",
+      "finding": "Synthetic monitor decisions, known finite hypotheses, noiseless ordinary evidence. Changing/contradictory information adds meaningful mechanism coverage but not field validity.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "independence_precision",
+      "status": "limited",
+      "finding": "18 inspected development roots; proposed six fresh native roots,72calls are feasibility-only. Authored strata share grammar and do not provide broad population precision.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "holdout_integrity",
+      "status": "limited",
+      "finding": "Development seeds11000\u201311005,11100\u201311105,11200\u201311205 inspected. No native seeds generated; admission must freeze source first and retain private custody until launch.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "robustness_failure",
+      "status": "pass",
+      "finding": "Reordering/renaming, incorrect source, missing provenance, ambiguity, contradiction, retired actor, message overflow and missing assignments covered.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility_costs",
+      "status": "limited",
+      "finding": "Offline replay and72-assignment manifest exist; native endpoint integration, exact price/token envelope and admission remain pending. No cost incurred.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/instrument.py",
+          "sha256": "5dc34984d3ed3ee5942336679abb80280a83a1af106891b624c4e467c64db8fc"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/test_instrument.py",
+          "sha256": "ef61b77d764eca42dbc20dbe292c9f5f5076181abf5de436604254e6f2729d3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/validation.json",
+          "sha256": "eb3d755db51fe32d421b958aefcc9af55028269be2da9b9da4463998e0a94d54"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md",
+          "sha256": "fc0a23fc93fc4f2445c7956d5d5409c63202488cd8dd69a64ce90fe7a477bf0c"
+        }
+      ]
+    }
+  ]
+}

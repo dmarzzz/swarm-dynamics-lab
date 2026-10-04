@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: idle
-task: null
-doing: A2 completed and published; acquisition failed; FINISH / PARK; host released PR354
-updated: 2026-10-04T19:06Z
+state: working
+task: theseus-institutional-transmission
+doing: publish validated institutional-transmission prototype and concrete T1-Q0 proposal
+updated: 2026-10-04T19:28Z
 ---
 
-Acquisition6/12, ceiling96/96; all21 wrong actions policy-induced. FINISH / PARK; no successor.
+31 offline checks; no native calls or allocation. Material T1-Q0 decision pending.

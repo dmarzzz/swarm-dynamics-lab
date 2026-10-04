@@ -1,0 +1,628 @@
+{
+  "stage": "T1-Q0",
+  "status": "offline_prepared_not_admitted",
+  "native_dispatch_enabled": false,
+  "max_calls": 72,
+  "max_input_tokens": 16000,
+  "max_output_tokens": 1024,
+  "model_cap_usd": 1.7,
+  "infrastructure_cap_usd": 0.1,
+  "total_cap_usd": 1.8,
+  "prior_exposure_usd": 0.9793100437,
+  "original_cap_usd": 5,
+  "max_retries": 0,
+  "assignments": [
+    {
+      "id": "T1-Q0-r0-release-founder",
+      "root": 0,
+      "role": "release",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r0-release-question",
+      "root": 0,
+      "role": "release",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r0-release-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-release-answer",
+      "root": 0,
+      "role": "release",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r0-release-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-release-commit",
+      "root": 0,
+      "role": "release",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r0-release-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-incident-founder",
+      "root": 0,
+      "role": "incident",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r0-incident-question",
+      "root": 0,
+      "role": "incident",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r0-incident-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-incident-answer",
+      "root": 0,
+      "role": "incident",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r0-incident-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-incident-commit",
+      "root": 0,
+      "role": "incident",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r0-incident-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-recovery-founder",
+      "root": 0,
+      "role": "recovery",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r0-recovery-question",
+      "root": 0,
+      "role": "recovery",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r0-recovery-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-recovery-answer",
+      "root": 0,
+      "role": "recovery",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r0-recovery-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r0-recovery-commit",
+      "root": 0,
+      "role": "recovery",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r0-recovery-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-release-founder",
+      "root": 1,
+      "role": "release",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r1-release-question",
+      "root": 1,
+      "role": "release",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r1-release-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-release-answer",
+      "root": 1,
+      "role": "release",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r1-release-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-release-commit",
+      "root": 1,
+      "role": "release",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r1-release-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-incident-founder",
+      "root": 1,
+      "role": "incident",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r1-incident-question",
+      "root": 1,
+      "role": "incident",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r1-incident-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-incident-answer",
+      "root": 1,
+      "role": "incident",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r1-incident-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-incident-commit",
+      "root": 1,
+      "role": "incident",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r1-incident-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-recovery-founder",
+      "root": 1,
+      "role": "recovery",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r1-recovery-question",
+      "root": 1,
+      "role": "recovery",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r1-recovery-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-recovery-answer",
+      "root": 1,
+      "role": "recovery",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r1-recovery-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r1-recovery-commit",
+      "root": 1,
+      "role": "recovery",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r1-recovery-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-release-founder",
+      "root": 2,
+      "role": "release",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r2-release-question",
+      "root": 2,
+      "role": "release",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r2-release-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-release-answer",
+      "root": 2,
+      "role": "release",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r2-release-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-release-commit",
+      "root": 2,
+      "role": "release",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r2-release-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-incident-founder",
+      "root": 2,
+      "role": "incident",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r2-incident-question",
+      "root": 2,
+      "role": "incident",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r2-incident-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-incident-answer",
+      "root": 2,
+      "role": "incident",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r2-incident-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-incident-commit",
+      "root": 2,
+      "role": "incident",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r2-incident-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-recovery-founder",
+      "root": 2,
+      "role": "recovery",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r2-recovery-question",
+      "root": 2,
+      "role": "recovery",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r2-recovery-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-recovery-answer",
+      "root": 2,
+      "role": "recovery",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r2-recovery-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r2-recovery-commit",
+      "root": 2,
+      "role": "recovery",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r2-recovery-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-release-founder",
+      "root": 3,
+      "role": "release",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r3-release-question",
+      "root": 3,
+      "role": "release",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r3-release-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-release-answer",
+      "root": 3,
+      "role": "release",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r3-release-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-release-commit",
+      "root": 3,
+      "role": "release",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r3-release-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-incident-founder",
+      "root": 3,
+      "role": "incident",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r3-incident-question",
+      "root": 3,
+      "role": "incident",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r3-incident-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-incident-answer",
+      "root": 3,
+      "role": "incident",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r3-incident-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-incident-commit",
+      "root": 3,
+      "role": "incident",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r3-incident-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-recovery-founder",
+      "root": 3,
+      "role": "recovery",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r3-recovery-question",
+      "root": 3,
+      "role": "recovery",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r3-recovery-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-recovery-answer",
+      "root": 3,
+      "role": "recovery",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r3-recovery-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r3-recovery-commit",
+      "root": 3,
+      "role": "recovery",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r3-recovery-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-release-founder",
+      "root": 4,
+      "role": "release",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r4-release-question",
+      "root": 4,
+      "role": "release",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r4-release-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-release-answer",
+      "root": 4,
+      "role": "release",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r4-release-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-release-commit",
+      "root": 4,
+      "role": "release",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r4-release-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-incident-founder",
+      "root": 4,
+      "role": "incident",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r4-incident-question",
+      "root": 4,
+      "role": "incident",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r4-incident-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-incident-answer",
+      "root": 4,
+      "role": "incident",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r4-incident-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-incident-commit",
+      "root": 4,
+      "role": "incident",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r4-incident-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-recovery-founder",
+      "root": 4,
+      "role": "recovery",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r4-recovery-question",
+      "root": 4,
+      "role": "recovery",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r4-recovery-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-recovery-answer",
+      "root": 4,
+      "role": "recovery",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r4-recovery-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r4-recovery-commit",
+      "root": 4,
+      "role": "recovery",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r4-recovery-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-release-founder",
+      "root": 5,
+      "role": "release",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r5-release-question",
+      "root": 5,
+      "role": "release",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r5-release-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-release-answer",
+      "root": 5,
+      "role": "release",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r5-release-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-release-commit",
+      "root": 5,
+      "role": "release",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r5-release-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-incident-founder",
+      "root": 5,
+      "role": "incident",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r5-incident-question",
+      "root": 5,
+      "role": "incident",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r5-incident-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-incident-answer",
+      "root": 5,
+      "role": "incident",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r5-incident-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-incident-commit",
+      "root": 5,
+      "role": "incident",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r5-incident-answer"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-recovery-founder",
+      "root": 5,
+      "role": "recovery",
+      "phase": "founder",
+      "depends_on": []
+    },
+    {
+      "id": "T1-Q0-r5-recovery-question",
+      "root": 5,
+      "role": "recovery",
+      "phase": "question",
+      "depends_on": [
+        "T1-Q0-r5-recovery-founder"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-recovery-answer",
+      "root": 5,
+      "role": "recovery",
+      "phase": "answer",
+      "depends_on": [
+        "T1-Q0-r5-recovery-question"
+      ]
+    },
+    {
+      "id": "T1-Q0-r5-recovery-commit",
+      "root": 5,
+      "role": "recovery",
+      "phase": "commit",
+      "depends_on": [
+        "T1-Q0-r5-recovery-answer"
+      ]
+    }
+  ]
+}

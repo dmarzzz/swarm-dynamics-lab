@@ -98,3 +98,11 @@ Current continuation: [A2 approved acquisition](A2-STATUS.md), prepared offline 
 ## Latest A2 outcome
 
 [Completed A2 post-mortem](RESULTS-A2.md):6/12 acquisition policies qualified; true-policy execution96/96. All21 wrong learned-arm actions are policy-induced. FINISH / PARK; no automatic successor.
+
+## Institutional memory revision
+
+[Direct apprenticeship prototype and T1 plan](transmission/README.md):31 offline checks, actual context retirement and evidence-gated note scoring. No new native results; A2 remains negative.
+
+## Institutional memory revision
+
+[Direct apprenticeship prototype and T1 plan](transmission/README.md):31 offline checks, actual context retirement and evidence-gated note scoring. No new native results; A2 remains negative.

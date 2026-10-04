@@ -37,3 +37,11 @@ Offline follow-through: [safe diagnostics repair](A1-DIAGNOSTICS-REPAIR-PLAN.md)
 ## Superseding A2 decision — 2026-10-04
 
 A2 completed through the owner-approved OpenRouter route: acquisition6/12; true-policy execution96/96; all21 wrong actions from wrong learned policies. [Post-mortem](RESULTS-A2.md). FINISH / PARK this qualification lane; no automatic paid successor. Next useful offline work is evidence admission versus exact consistency checking under incomplete/changing evidence, with both service retained and harm measured. The selective-preservation process and equal-information/controller comparison are specified in SELECTIVE-PRESERVATION.md. A material successor needs a concrete updated design decision. Remaining unallocatedUSD4.0206899563 is not launch authority.
+
+## Owner-requested transmission development
+
+The next revision is [T1 institutional apprenticeship](transmission/PLAN.md), built and validated offline. Direct teaching replaces agent-readable shared storage as the treatment. T1-Q0 is a new concrete native scope, not an A2 retry. It would qualify18 founder/successor pairs over six roots,<=72calls/<=USD1.80.31 software checks pass. No native run or allocation yet; material-scope decision required.
+
+## Owner-requested transmission development
+
+The next revision is [T1 institutional apprenticeship](transmission/PLAN.md), built and validated offline. Direct teaching replaces agent-readable shared storage as the treatment. T1-Q0 is a new concrete native scope, not an A2 retry. It would qualify18 founder/successor pairs over six roots,<=72calls/<=USD1.80.31 software checks pass. No native run or allocation yet; material-scope decision required.

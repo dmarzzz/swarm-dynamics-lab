@@ -1,0 +1,26 @@
+{
+  "evidence_type": "scripted_development_only",
+  "native_calls": 0,
+  "roots": 18,
+  "roles": 54,
+  "scenario_counts": {
+    "stable_exception": 6,
+    "changed_practice": 6,
+    "unreliable_evidence": 6
+  },
+  "exact_founder_policies": 54,
+  "two_cycle_rosters_verified": 18,
+  "max_packet_bytes": 1049,
+  "states": {
+    "retain": 36,
+    "revise": 6,
+    "quarantine": 6,
+    "provisional": 6
+  },
+  "actions": {
+    "allow": 142,
+    "hold": 210,
+    "defer": 80
+  },
+  "actor_history_leaks": 0
+}
