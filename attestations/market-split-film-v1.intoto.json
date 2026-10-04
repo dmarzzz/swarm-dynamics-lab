@@ -1,0 +1,104 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "i want u to make a video for the sybil market experiments where we were looking for an agent who would create sybils"
+   },
+   "internalParameters": {
+    "commit": "2c261f3d33e594a8169619949fdd6a6ce295048a-dirty",
+    "session": "claude:98fe1379-eadd-4848-ad40-51815e288d96"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "7bdd8e3f023e81e0105cf50e561c8bed11cc92ac508a8d9fa8bdd39f28ba1580"
+     },
+     "uri": "researchers/dmarz/notes/market-split-film/_decision.md"
+    },
+    {
+     "digest": {
+      "sha256": "db0486d60d1e30fc30b47a5b01cabe2ca6d427b0d47273a5520fcff63f54752b"
+     },
+     "uri": "researchers/dmarz/notes/market-split-film/build_data.py"
+    },
+    {
+     "digest": {
+      "sha256": "bf14d79818e219b1bb1f56cf818bfbf6c8f661fc306338e29c2469dee7c3d031"
+     },
+     "uri": "researchers/dmarz/notes/market-split-film/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "49b09238845bdfbf8400aad7aa04c15c5895505a0b3dedb32ba4f58ed4aa6b7d"
+     },
+     "uri": "researchers/dmarz/notes/market-split-film/film.html"
+    },
+    {
+     "digest": {
+      "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+    },
+    {
+     "digest": {
+      "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+    },
+    {
+     "digest": {
+      "sha256": "23b5e7583fcac54e748e4e8b3525f6c11f39cb0e0bbc37f87db22baf8b3e8dbd"
+     },
+     "uri": "artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip"
+    },
+    {
+     "digest": {
+      "sha256": "35943045c19e053bee7137dbd4c73bd52b2a0e56e7dba5e434e74936d84da6f3"
+     },
+     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/usage.json"
+    },
+    {
+     "digest": {
+      "sha256": "1b0e374abe50ba004f733b53ff0541be299fc90f973dd1d1452a48a8784fef5f"
+     },
+     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json"
+    },
+    {
+     "digest": {
+      "sha256": "b3f65bd61bb63306752b1b8756755d8f1317c51b44fddfd3d30639e495fd796c"
+     },
+     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/first-registration-notes.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "2c261f3d33e594a8169619949fdd6a6ce295048a"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T08:33:11Z",
+    "invocationId": "claude:98fe1379-eadd-4848-ad40-51815e288d96",
+    "startedOn": "2026-10-04T08:33:11Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "c751dc8d846fbcdf388c9a980d83662ca0e65ddc94100c7bc56ad49488433d42"
+   },
+   "name": "artifacts/market-split-film/market-split-film-v1.mp4"
+  }
+ ]
+}

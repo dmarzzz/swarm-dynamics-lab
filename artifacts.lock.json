@@ -881,6 +881,82 @@
    "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
    "size_bytes": 11521
   },
+  "market-split-film@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791102217,
+     "sha256": "7bdd8e3f023e81e0105cf50e561c8bed11cc92ac508a8d9fa8bdd39f28ba1580",
+     "size": 2093,
+     "uri": "researchers/dmarz/notes/market-split-film/_decision.md"
+    },
+    {
+     "mtime": 1791102209,
+     "sha256": "db0486d60d1e30fc30b47a5b01cabe2ca6d427b0d47273a5520fcff63f54752b",
+     "size": 4841,
+     "uri": "researchers/dmarz/notes/market-split-film/build_data.py"
+    },
+    {
+     "mtime": 1791102492,
+     "sha256": "bf14d79818e219b1bb1f56cf818bfbf6c8f661fc306338e29c2469dee7c3d031",
+     "size": 6279,
+     "uri": "researchers/dmarz/notes/market-split-film/build.py"
+    },
+    {
+     "mtime": 1791102591,
+     "sha256": "49b09238845bdfbf8400aad7aa04c15c5895505a0b3dedb32ba4f58ed4aa6b7d",
+     "size": 30373,
+     "uri": "researchers/dmarz/notes/market-split-film/film.html"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89",
+     "size": 5194,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2",
+     "size": 1528,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+    },
+    {
+     "mtime": 1791102039,
+     "sha256": "23b5e7583fcac54e748e4e8b3525f6c11f39cb0e0bbc37f87db22baf8b3e8dbd",
+     "size": 262653,
+     "uri": "artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "35943045c19e053bee7137dbd4c73bd52b2a0e56e7dba5e434e74936d84da6f3",
+     "size": 901,
+     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/usage.json"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "1b0e374abe50ba004f733b53ff0541be299fc90f973dd1d1452a48a8784fef5f",
+     "size": 2262,
+     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "b3f65bd61bb63306752b1b8756755d8f1317c51b44fddfd3d30639e495fd796c",
+     "size": 1283,
+     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/first-registration-notes.json"
+    }
+   ],
+   "media": {
+    "duration_s": 115.8,
+    "height": 1080,
+    "width": 1920
+   },
+   "mime": "video/mp4",
+   "mtime": 1791102741,
+   "path": "artifacts/market-split-film/market-split-film-v1.mp4",
+   "prompt_sha256": "4758fda0048ee4b41839290d85a55d0f073957e4eb5b4ea139734918598ff8f8",
+   "sha256": "c751dc8d846fbcdf388c9a980d83662ca0e65ddc94100c7bc56ad49488433d42",
+   "size_bytes": 21267761
+  },
   "market-split-haiku-r0-001-records@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -6237,7 +6313,7 @@
    "size_bytes": 1542505
   }
  },
- "generated": "2026-10-04T01:09:20-0700",
+ "generated": "2026-10-04T01:33:12-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

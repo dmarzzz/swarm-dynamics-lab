@@ -2057,4 +2057,37 @@ artifacts:
           - researchers/vishesh/notes/healing-helping-hands/composite/definition.py
           - researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/observations.json
         commit: 8de1578f020db9593fbf44dd4c7b808badbe5438-dirty
+  - id: market-split-film
+    category: content
+    type: film
+    title: 'Market split: one owner, two firms'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/market-split-film/market-split-film-v1.mp4
+        built_at: '2026-10-04T08:33:11Z'
+        note: 116 s explainer of the Sonnet 4.6 market-split pilot (market-split-api, attempt s1-002, 36 episodes, 864 calls).
+          Market 36 replayed over its 24 recorded rounds under no rule, the per-firm rule and the per-owner rule, then the
+          final round of all six markets and the six registration notes. Every bar, line and number is read from the filed
+          records archive; build.py refuses to build if the data stops supporting a caption. Look (tokens, fonts, cube) is
+          read from the brand kit at build time. No narration; silent AAC track for the project format. Exploratory pilot
+          with no independent review; the Opus 5.5 replication was still running when this was made and is named in one caption
+          only.
+        by: claude
+        model: claude-fable-5-1
+        session: claude:98fe1379-eadd-4848-ad40-51815e288d96
+        prompt: i want u to make a video for the sybil market experiments where we were looking for an agent who would create
+          sybils
+        ingredients:
+          - researchers/dmarz/notes/market-split-film/_decision.md
+          - researchers/dmarz/notes/market-split-film/build_data.py
+          - researchers/dmarz/notes/market-split-film/build.py
+          - researchers/dmarz/notes/market-split-film/film.html
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg
+          - artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip
+          - researchers/dmarz/notes/market-split-api/report/s1-002/usage.json
+          - researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json
+          - researchers/dmarz/notes/market-split-api/report/s1-002/first-registration-notes.json
+        commit: 2c261f3d33e594a8169619949fdd6a6ce295048a-dirty
 requires: '1.2'
