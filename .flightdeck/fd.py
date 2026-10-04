@@ -392,10 +392,12 @@ def version_pairs(data, lock):
     return out
 
 
-def write_statements(folder, data, lock):
-    """(re)write attestations/<id>-v<N>.intoto.json for every locked version; deterministic, so unchanged = no rewrite"""
+def write_statements(folder, data, lock, selected_keys=None):
+    """Write selected statements, or all locked versions for explicit bulk maintenance."""
     written = 0
     for a, v, key, e, prev in version_pairs(data, lock):
+        if selected_keys is not None and key not in selected_keys:
+            continue
         st = build_statement(folder, a, v, e, prev)
         text = json.dumps(st, indent=1, sort_keys=True, ensure_ascii=False) + "\n"
         sp = statement_path(folder, a["id"], v["v"])
@@ -812,10 +814,11 @@ def check_hooks(folder):
     return sorted(set(out))
 
 
-def refresh_lock(folder, data):
-    lock = ac.fill_lock(folder, data, ac.load_lock(folder), host=hostname())
+def refresh_lock(folder, data, selected_keys=None):
+    old = ac.load_lock_for_add(folder) if selected_keys is not None else ac.load_lock(folder)
+    lock = ac.fill_lock(folder, data, old, host=hostname(), selected_keys=selected_keys)
     lp = ac.write_lock(folder, lock)
-    write_statements(folder, data, lock)
+    write_statements(folder, data, lock, selected_keys=selected_keys)
     return lp, len(lock["entries"])
 
 
@@ -880,6 +883,8 @@ def cmd_add(a):
             "authorship: python3 .flightdeck/fd.py adopt . (or ask the user what it is)." %
             (os.path.relpath(src, folder), lay["artifacts"], lay["code"]))
     data, header, mp = _load_or_new_manifest(folder, proj)
+    # Do not move the source or change the manifest if historical facts cannot be read.
+    ac.load_lock_for_add(folder)
     art = next((x for x in data["artifacts"] if isinstance(x, dict) and x.get("id") == a.id), None)
     if art is None:
         if not (a.type and a.title):
@@ -931,7 +936,7 @@ def cmd_add(a):
     art["versions"] = [entry] + versions
     ac.stamp_format(data, "manifest")
     write_yaml(mp, data, header)
-    lp, cnt = refresh_lock(folder, data)
+    lp, cnt = refresh_lock(folder, data, selected_keys={f"{a.id}@{n}"})
     print("%s v%d -> %s (%s, %s: %d files)" % (a.id, n, rel, os.path.basename(mp), os.path.basename(lp), cnt))
     return 0
 
