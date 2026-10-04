@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split-opus
 tool: claude-code
-state: working
+state: blocked
 task: null
-doing: Phase 1 of market-split-opus (Opus replication of the Sonnet market-splitting pilot on fresh markets); plan, offline checks and scripted rehearsal only, no model call before the reviewer's go
-updated: 2026-10-04T08:20Z
+doing: market-split-opus Phase 1 done (plan, 18/18 offline tests on sim-test-01, scripted S0 6/6, pre-run review for I0/Q0/S1); waiting for the reviewer's go, no model call made
+updated: 2026-10-04T07:55Z
 ---
 
 ## Notes

@@ -9,3 +9,13 @@ Budget: at most 950 attempted calls and USD 60 for the whole study, enforced bef
 Process note: the agentops run-queue document says dmarz's runs are launched from orbital-one. This study is launched from halcyon on the instruction of the reviewer session dmarz/fleet-monitor, which relays dmarz. The conflict is recorded in [ISSUES.md](ISSUES.md) as O3.
 
 Stage receipts are appended below after verification.
+
+## Receipts
+
+2026-10-04 07:46 UTC: claim `dmarz-market-split-opus` merged (private agentops PR 204), exclusive, `sim-test-01`, until 17:46 UTC. Immediately before claiming, agentops main had no active claim naming the server and `ps` on the box showed no worker, container or session of any study.
+
+2026-10-04 07:47 UTC: `setup` at commit `8c27b690b42cf473c65975d58b8ed3d7487730e1`. 18/18 offline tests passed on the server. Runtime Python 3.12.3, PyYAML 6.0.3, numpy 2.0.2, matplotlib 3.9.4, Pillow 11.3.0. Engine `9f520ef8fc17f8c2fcba0ebfbd2555a91fbbf026db55c5c04b9b2fc9a720577d`, design `c0e9af0975b0d6a00a38202cce0af20ea152cd060673225f04f3f6ef6aa4823f`.
+
+2026-10-04 07:47-07:50 UTC: `s0-fleet-001`. Public plan at `8c27b690` checked by the launcher (SHA-256 `729cd1b2c193308849126e69329c616e7498dbda47daa22efc76de9fd07e0b92`, published bytes equal local bytes). Experiment registered with that immutable link. Six bundles done, 12 valid scripted episodes, 0 model calls, USD 0, 42 artifacts hash-verified against the hub. The study ledger does not exist yet. See [s0-fleet-001-post](reviews/s0-fleet-001-post.md).
+
+The paid stages are pinned to the commit that adds the pre-run review [phase2-pre](reviews/phase2-pre.md); its hash and the server redeployment are recorded in the next receipt. Source and design are unchanged from `8c27b690`, so the S0 gate applies.

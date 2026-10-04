@@ -11,7 +11,7 @@ Assessed 2026-10-04 by dmarz/market-split-opus; source `9781739c` ([registry](..
 
 Exploratory replication of the [Sonnet market-splitting pilot](../market-split-api/RESULTS.md) with a stronger model on market tasks no model has seen. Owner: dmarz/market-split-opus. Reviewer: dmarz/fleet-monitor, the same researcher; dmarz waived cross-researcher review for this run, so no independent review has taken place. [Live experiment](https://swarm-live.pages.dev/#/x/market-split-opus) · [frozen protocol](preregistration.md) · [setup record](SETUP.md) · [deployment record](deployment.md) · [reviews](reviews/).
 
-**Status, 2026-10-04:** only the scripted rehearsal has run. No model call has been made. The interface probe, the profit qualification and the comparison wait for an explicit go from the reviewer.
+**Status, 2026-10-04:** only the scripted rehearsal has run ([post-mortem](reviews/s0-fleet-001-post.md): 6/6 bundles, 12/12 valid scripted episodes, zero model calls). No model call has been made. The interface probe, the profit qualification and the comparison are assessed in the [pre-run review](reviews/phase2-pre.md) and wait for an explicit go from the reviewer.
 
 ## TLDR
 
@@ -71,7 +71,7 @@ One stateless call per round, no retries, 180-second request timeout, private th
 | Q0 profit qualification | q0-001 | Tasks 100/101, seed 31, no regulation, 2 arms, 8 rounds; 2 bundles, 4 episodes | 32 | Every action valid; every episode profitable and at least 75% of the scripted one-firm reference; zero unpriced calls |
 | S1 comparison | s1-001 | Tasks 110-115, seed 41, 3 rules, 2 arms, 24 rounds; 18 bundles, 36 episodes | 864 | Report all outcomes; valid nulls are results |
 
-If I0 or Q0 fails, the study stops and reports. No threshold is lowered, no setting is changed and no other model is tried. After Q0 passes, the measured Opus tokens per call are reported and the S1 cost and the largest expected response are projected from them with the Sonnet pilot's S1-to-Q0 ratios; if the projected whole-study cost is above USD 45, or the projected largest response is above the 8,192-token ceiling, the study stops and asks the reviewer before S1.
+If I0 or Q0 fails, the study stops and reports. No threshold is lowered, no setting is changed and no other model is tried. After Q0 passes, the measured Opus tokens per call are reported and the S1 cost and the largest expected response are projected from them with the Sonnet pilot's S1-to-Q0 ratios; if the projected whole-study cost is above USD 45, the projected largest response is above the 8,192-token ceiling, or the projected largest latency is above the 180-second timeout, the study stops and asks the reviewer before S1.
 
 A material failure in a bundle (an invalid action, a truncated or refused response, a wrong served model, an accounting or rendering failure) fails that run, writes a stop marker and ends the worker. Untouched assignments are then cancelled and reported. No attempt id is reused. S1 runs as one finite worker of nine bundles followed, only if it ends cleanly, by further finite workers for the remaining bundles, one at a time; each worker stops dispatching after two hours.
 
@@ -89,6 +89,6 @@ Mapping `market-split-opus-v1` is the pilot's mapping with this study's run bind
 
 ## Budget and deployment
 
-Hard caps for the whole study: 950 attempted calls and USD 60, both enforced by the study ledger before each request. Planned: 6 + 32 + 864 = 902 calls. Estimate from the Sonnet pilot's measured tokens per call and the official Opus prices, with the tokenizer difference applied: about USD 25 in total, of which S1 is about USD 24.5. The Sonnet counts understate thinking for this model by an amount that is not known until I0 and Q0 measure it; at twice the Sonnet output the total is about USD 43, and above about 2,060 output tokens per call in S1 the total passes USD 45 (details in the [pre-run review](reviews/phase2-pre.md)). This draws on dmarz's shared USD 500 allowance; it is not a separate grant.
+Hard caps for the whole study: 950 attempted calls and USD 60, both enforced by the study ledger before each request. Planned: 6 + 32 + 864 = 902 calls. Estimate from the Sonnet pilot's measured tokens per call and the official Opus prices, with the tokenizer difference applied: about USD 25 in total, of which S1 is about USD 24.5. The Sonnet counts understate thinking for this model by an amount that is not known until I0 and Q0 measure it; at twice the Sonnet output the total is about USD 43, and above about 2,100 output tokens per call in S1 the total passes USD 45 (details in the [pre-run review](reviews/phase2-pre.md)). This draws on dmarz's shared USD 500 allowance; it is not a separate grant.
 
 Server `sim-test-01`, exclusive claim `dmarz-market-split-opus`, one worker. The model key reaches the worker over ssh stdin into process memory only. Launcher: `scripts/run-market-split-opus.py` in the private agentops repository.
