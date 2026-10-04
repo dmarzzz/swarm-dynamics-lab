@@ -1,0 +1,34 @@
+{
+  "kind": "software_fixture_validation_not_native_evidence",
+  "unit_tests_passed": 9,
+  "source_file_hashes": {
+    "freshness-study/freshness.py": "78777a76bc4e706bb26ceed97e992dadea66bbf6a2890c110cb6a7095780f1e8",
+    "freshness-study/README.md": "48928fd34ba664a765c743aa962a365e1b79907c16eed6abbbcce1c361483d30",
+    "freshness-study/render.py": "53502d9faed207cbc3d926140ffa78527f8636cc792d2f99efc985386c0531f8",
+    "freshness-study/worker.py": "3066777d83243ffecf5dc78658da608109010ddaada2a303b67b626c09ce82b5",
+    "evidence-study/durable_provider.py": "294aa080a5f0f1b756a602aa3851ca32dfb8d213f98d12e2bdcda55326cfa261",
+    "scenario-study/study.py": "a2556967df07da7800996a5577b9771520ebba991b0f31186cfa6eed9b141083",
+    "src/provider.py": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f"
+  },
+  "source_commit": "776004e672e35ecc00370f7057e48992e6d5db57",
+  "audit": {
+    "assigned": 12,
+    "recorded": 12,
+    "paired_worlds": 6,
+    "advice_records": 12,
+    "decision_records": 48,
+    "source_records_identical_within_pairs": true,
+    "all_frames_match": true,
+    "health_and_restart_classification_recomputed": true,
+    "paired_healthy_tick_deltas": {
+      "healthy_fresh": 0,
+      "stale_false_alarm": 0,
+      "fresh_crash": 0,
+      "masked_crash": 0,
+      "schema_transition": 0,
+      "registry_unavailable": 0
+    }
+  },
+  "reference_qualification_passed": true,
+  "native_calls": 0
+}
