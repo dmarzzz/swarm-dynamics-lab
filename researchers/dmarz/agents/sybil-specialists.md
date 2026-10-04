@@ -3,8 +3,8 @@ agent: dmarz/sybil-specialists
 tool: codex
 state: working
 task: sybil-scale-api
-doing: "Building and validating identity-size follow-up; scripted before API; exclusive fleet deployment"
-updated: 2026-10-04T02:29Z
+doing: "Identity scaling deployed; scripted264/264; API qualification64calls returned; verifying before2400comparison calls"
+updated: 2026-10-04T02:49Z
 ---
 
 ## Notes
