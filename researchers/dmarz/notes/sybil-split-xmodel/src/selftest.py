@@ -20,6 +20,11 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+# The suite tests the code, not the chain it runs in: the launcher's setup step sets STUDY_MODEL,
+# STUDY_PROVIDER and STUDY_REPLICATION for the chosen configuration, and the tests must give the same result
+# under any of them. Tests that need a configuration set it themselves with patch.dict.
+for _name in ('STUDY_MODEL', 'STUDY_PROVIDER', 'STUDY_REPLICATION'):
+    os.environ.pop(_name, None)
 
 import analyze      # noqa: E402
 import chain        # noqa: E402
@@ -501,10 +506,10 @@ class Tests(unittest.TestCase):
                     {'values': {k: (None if v is None else v + 0.5) for k, v in good['values'].items()}}):
             with self.assertRaises(ValueError): study.validate(bad)
 
-    def probe_through_adapter(self, content, provider_name='Alibaba', model=''):
-        """P0 run by the worker with the real adapter of `model` and a stubbed endpoint returning `content`."""
-        a = study.assignments('P0')[0]
-        with patch.dict(os.environ, {'STUDY_MODEL': model}): mod = study.route(); slug = study.adapter_config()['canonical_model']
+    def probe_through_adapter(self, content, provider_name='Alibaba', model='', replication='', reasoning=0):
+        """P0 run by the worker with the real adapter of `model` (and `replication`) and a stubbed endpoint returning `content`."""
+        a = study.assignments('P0')[0]; conf = {'STUDY_MODEL': model, 'STUDY_REPLICATION': replication}
+        with patch.dict(os.environ, conf): mod = study.route(); slug = study.adapter_config()['canonical_model']
         def opener(request, timeout=None):
             body = json.loads(request.data)
             self.assertEqual(request.full_url, mod.URL); self.assertEqual(list(body), list(mod.BODY_KEYS))
@@ -513,8 +518,8 @@ class Tests(unittest.TestCase):
             route = {'provider': provider_name} if mod is provider else {}
             return rehearse.Response(json.dumps({'id': 'gen-t', 'model': slug, **route,
                 'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': content}}],
-                'usage': {'prompt_tokens': 4000, 'completion_tokens': 40, 'completion_tokens_details': {'reasoning_tokens': 0}}}).encode())
-        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {mod.KEY_ENV: 'k', provider.LEDGER_ENV: str(Path(td) / 'ledger'), 'STUDY_MODEL': model}):
+                'usage': {'prompt_tokens': 4000, 'completion_tokens': 40, 'completion_tokens_details': {'reasoning_tokens': reasoning}}}).encode())
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, dict(conf, **{mod.KEY_ENV: 'k', provider.LEDGER_ENV: str(Path(td) / 'ledger')})):
             try:
                 return worker.execute(study.params('P0'), Path(td) / 'p0', opener=opener, clock=lambda: 0.0, sleep=lambda s: None)
             except worker.StageFailed as exc:
@@ -541,6 +546,39 @@ class Tests(unittest.TestCase):
         self.assertTrue(s['passed']); self.assertEqual(s['params']['model'], 'gpt-6-sol'); self.assertEqual(s['params']['batch'], 'p0-001-sol')
         self.assertFalse(self.probe_through_adapter(json.dumps({'values': {k: str(v) for k, v in good['values'].items()}}), model='gpt-6-sol')['passed'])
 
+    def test_effort_none_follow_up_configuration(self):
+        import openai_provider
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_REPLICATION': 'r1'}):
+            self.assertEqual(study.config_name(), 'gpt-6-sol/r1'); self.assertEqual(study.model_name(), 'gpt-6-sol')
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001-solnone', 'p0-001-solnone', 'q0-001-solnone', 's1-001-solnone'])
+            c = study.adapter_config(); self.assertIs(openai_provider.check_config(c), c)
+            # only reasoning_effort differs from the effort-low configuration; no sampling parameter is sent
+            self.assertEqual(c['request_template'], {'model': 'gpt-6-sol', 'reasoning_effort': 'none', 'max_completion_tokens': 2000,
+                                                     'response_format': {'type': 'json_object'}})
+            self.assertFalse(set(c['request_template']) & set(openai_provider.SAMPLING_KEYS))
+            self.assertEqual((c['model'], c['budget']['aggregate_usd'], c['budget']['prices']), ('gpt-6-sol', 90, openai_provider.PRICES['gpt-6-sol']))
+            self.assertEqual(study.params('Q0')['model'], 'gpt-6-sol/r1')
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_REPLICATION': ''}):
+            low = study.adapter_config()['request_template']
+        self.assertEqual({k: v for k, v in low.items() if k != 'reasoning_effort'}, {k: v for k, v in c['request_template'].items() if k != 'reasoning_effort'})
+        for bad in ({'STUDY_MODEL': '', 'STUDY_REPLICATION': 'r1'}, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_REPLICATION': 'r2'}):
+            with patch.dict(os.environ, bad):
+                with self.assertRaises(ValueError): study.config_name()
+
+    def test_effort_none_probe_through_its_adapter(self):
+        good = study.scripted(study.assignments('P0')[0]['packet'])
+        s = self.probe_through_adapter(json.dumps(good), model='gpt-6-sol', replication='r1')
+        self.assertTrue(s['passed']); self.assertEqual((s['params']['model'], s['params']['batch']), ('gpt-6-sol/r1', 'p0-001-solnone'))
+        self.assertFalse(self.probe_through_adapter(json.dumps(good), model='gpt-6-sol', replication='r1', reasoning=12)['passed'])
+
+    def test_suite_does_not_depend_on_the_launch_configuration(self):
+        base = study.source_hash()
+        for conf in ({}, {'STUDY_MODEL': 'gpt-6-sol'}, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_REPLICATION': 'r1'}, {'STUDY_PROVIDER': 'openai'}):
+            with patch.dict(os.environ, conf):
+                self.assertEqual(study.source_hash(), base)
+                self.assertEqual([a['packet_hash'] for a in study.assignments('P0')], [a['packet_hash'] for a in scripted_rows('P0')])
+                self.assertEqual(study.SYSTEM, study.PARENT_SYSTEM + '\n\n' + study.SHAPE)
+
     def test_gates_look_only_at_this_models_runs(self):
         hub = FakeHub()
         with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol'}): hub.add('S0'); hub.add('P0')
@@ -551,6 +589,11 @@ class Tests(unittest.TestCase):
             coordinator.check(hub, 'P0')                                                      # the other model running: allowed
             hub.rows.append({'run': 'x/planned', 'status': 'planned', 'params': dict(p, model='gpt-6-sol', batch='s1-001-sol'), 'metrics': {}})
             with self.assertRaises(coordinator.GateRefused): coordinator.check(hub, 'P0')      # a planned run of either model: refused
+        hub = FakeHub()
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol'}): hub.add('S0')
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_REPLICATION': 'r1'}):
+            with self.assertRaises(coordinator.GateRefused): coordinator.check(hub, 'P0')      # the effort-low S0 does not admit effort none
+            hub.add('S0'); self.assertEqual(coordinator.check(hub, 'P0')[0]['batch'], 'p0-001-solnone')
 
 
 if __name__ == '__main__':

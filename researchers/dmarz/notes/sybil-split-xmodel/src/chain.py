@@ -135,11 +135,11 @@ def run_chain(stages, sr=None, opener=None, clock=None, sleep=None):
     if status and status.get('source_hash') != study.source_hash():
         os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("source_hash"))[:12]}.json'))
         status = None
-    if status and status.get('model') != study.model_name():
+    if status and status.get('model') != study.config_name():
         # another model's chain record: kept beside, never mixed (the launcher gives each model its own results directory)
         os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("model")).replace("/", "_")}.json'))
         status = None
-    status = status or {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'stages': {}, 'model': study.model_name()}
+    status = status or {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'stages': {}, 'model': study.config_name()}
     status.update(state='running', source_hash=study.source_hash(), code=study.code_revision(), requested=stages,
                   started=status.get('started') or now(), stopped_stage=None, reason=None)
     write_status(status)
@@ -288,7 +288,7 @@ def verify_run(sr, stage, entry, reference, prior_rows, earlier_rows):
         close(r['evaluation'], study.evaluate(by_id[r['id']], r['answer']))
         and close(r['scripted_evaluation'], study.evaluate(by_id[r['id']], study.scripted(by_id[r['id']]['packet'])))
         and close(r['identity_evaluation'], study.evaluate(by_id[r['id']], study.scripted(by_id[r['id']]['packet'], by_identity=True)))
-        and r['model'] == study.model_name() for r in good)
+        and r['model'] == study.config_name() for r in good)
     checks['failed_rows_keep_evidence'] = all(r.get('error') and isinstance(r.get('accounting'), dict) for r in rows if r['status'] == 'failed')
     summary = json.loads((out / 'summary.json').read_text()); saved = json.loads((out / 'analysis.json').read_text())
     whole = worker.merge(prior_rows, rows)
@@ -322,7 +322,7 @@ def s1_whole(entry, reference):
             'model_calls_all_runs': calls, 'calls_within_cap': calls <= study.design()['budget']['max_calls']['S1'],
             'completed': sum(r['status'] == 'completed' for r in rows), 'failed': sum(r['status'] == 'failed' for r in rows),
             'not_started': sum(r['status'] == 'not_started' for r in rows),
-            'model': study.model_name(),
+            'model': study.config_name(),
             'primary': None if not a else {k: a['primary'][k] for k in ('estimate', 'interval', 'by_family', 'assigned_roots', 'bounds_all_assigned')},
             'versus_parent': None if not a else a.get('versus_parent', {}).get('primary'),
             'test_retest': None if not a else a['test_retest']}

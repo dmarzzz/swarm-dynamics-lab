@@ -228,7 +228,7 @@ def main():
         'd_verify_exit_0': two.get('verify_exit') == 0,
     }
     ok = all(checks.values())
-    print(json.dumps({'ok': ok, 'checks': checks, 'model': study.model_name(), 'full_chain': full, 'failed_qualification': gate,
+    print(json.dumps({'ok': ok, 'checks': checks, 'model': study.config_name(), 'full_chain': full, 'failed_qualification': gate,
                       'billing_stop_and_resume': bill, 'two_failed_calls': two,
                       'seconds': round(time.monotonic() - started, 1),
                       'note': 'stub answers only; nothing here is a sample and nothing left this machine'}, sort_keys=True))

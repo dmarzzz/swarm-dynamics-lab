@@ -82,7 +82,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
     stage = p['stage']; d = study.design(); budget = d['budget']; strict = stage in STRICT
     route = provider if p['backend'] == 'scripted' else study.route()     # CallFailure, BILLING_STOP and INTEGRITY of this model's adapter
     assert p['source_hash'] == study.source_hash(), 'runtime_source_mismatch'
-    assert p['backend'] == ('scripted' if stage == 'S0' else study.model_config()['backend']) and p['model'] == study.model_name()
+    assert p['backend'] == ('scripted' if stage == 'S0' else study.model_config()['backend']) and p['model'] == study.config_name()
     assert (units is None) == ('continuation' not in p) and (units is None or stage == 'S1')
     out = Path(out); out.mkdir(parents=True, exist_ok=False)
     start = time.monotonic(); run_name = run.id if run else out.name

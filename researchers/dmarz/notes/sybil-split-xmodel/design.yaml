@@ -61,6 +61,28 @@ models:
       prices: {input: 2.0, cached_input: 0.2, cache_write: 2.5, output: 10.0}   # reference openai_provider.PRICES row, retrieved 2026-10-04T12:10Z
       input_usd_per_million: 2.0
       output_usd_per_million: 10.0
+  # Amendment A1 (2026-10-04, preregistration item 13): one follow-up configuration of gpt-6-sol, added after
+  # the effort-low chain stopped at Q0. Selected by STUDY_MODEL=gpt-6-sol with STUDY_REPLICATION=r1 (launcher
+  # --model gpt-6-sol --replication r1): own batches, ledger, results and cap; never pooled. Only
+  # reasoning_effort differs; no sampling parameter is sent although effort none would allow one.
+  gpt-6-sol/r1:
+    tag: solnone
+    backend: openai
+    canonical_model: gpt-6-sol
+    provider: openai
+    request_template:
+      model: gpt-6-sol
+      reasoning_effort: none
+      max_completion_tokens: 2000
+      response_format:
+        type: json_object
+    budget:
+      aggregate_usd: 90
+      max_output_tokens: 2000
+      max_input_tokens: 31000
+      prices: {input: 2.0, cached_input: 0.2, cache_write: 2.5, output: 10.0}   # reference openai_provider.PRICES row, retrieved 2026-10-04T12:10Z
+      input_usd_per_million: 2.0
+      output_usd_per_million: 10.0
 # The parent package whose packets this study reuses byte for byte, and the parent's recorded S1 rows.
 parent:
   study: researchers/dmarz/notes/sybil-split-opus

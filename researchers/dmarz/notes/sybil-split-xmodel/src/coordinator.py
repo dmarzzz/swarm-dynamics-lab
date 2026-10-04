@@ -27,7 +27,7 @@ def _runs(sr):
 
 
 def _mine(runs):
-    model = study.model_name()
+    model = study.config_name()
     return [r for r in runs if (r.get('params') or {}).get('model') == model]
 
 

@@ -53,7 +53,7 @@ def header(d, rows, total, stage, elapsed):
     good = sum(r.get('status') == 'completed' for r in rows); failed = sum(r.get('status') == 'failed' for r in rows)
     waiting = sum(r.get('status') == 'not_started' for r in rows)
     text(60, 24, 'Does splitting one attacker into more identities help it?', 40)
-    label = 'SCRIPTED PLURALITY RULE - NOT MODEL EVIDENCE' if stage == 'S0' else study.model_name() + ' (' + study.model_config()['backend'] + ')'
+    label = 'SCRIPTED PLURALITY RULE - NOT MODEL EVIDENCE' if stage == 'S0' else study.config_name() + ' (' + study.model_config()['backend'] + ', effort ' + str(study.model_config()['request_template'].get('reasoning_effort', 'n/a')) + ')'
     text(60, 82, f'{stage} | {label} | 27 rows, 27 edges, 27 attempts at every identity count | exploratory', 24, ACCENT)
     text(60, 122, f'Completed {good}/{total} | failed {failed} | not started {waiting} | pending {max(0, total - len(rows))} | elapsed {elapsed:.0f}s', 23)
     return text

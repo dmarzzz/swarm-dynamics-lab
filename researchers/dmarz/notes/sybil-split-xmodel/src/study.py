@@ -67,8 +67,18 @@ def model_name():
     return name
 
 
+def config_name():
+    """The configuration of this chain: the model, or `<model>/<replication>` for a pre-registered follow-up
+    configuration selected with STUDY_REPLICATION (launcher --replication; amendment A1: gpt-6-sol/r1 is
+    gpt-6-sol at reasoning_effort none). Every gate, batch, row and status uses this name."""
+    rep = os.environ.get('STUDY_REPLICATION') or ''
+    name = model_name() + ('/' + rep if rep else '')
+    if name not in design()['models']: raise ValueError('configuration_not_preregistered')
+    return name
+
+
 def model_config():
-    return design()['models'][model_name()]
+    return design()['models'][config_name()]
 
 
 def batch(stage):
@@ -80,7 +90,7 @@ def params(stage):
     if stage not in STAGES:
         raise ValueError('Formal S2 disabled')
     return dict(stage=stage, backend='scripted' if stage == 'S0' else model_config()['backend'], batch=batch(stage),
-                model=model_name(), source_hash=source_hash(), code=code_revision())
+                model=config_name(), source_hash=source_hash(), code=code_revision())
 
 
 def adapter_config():
