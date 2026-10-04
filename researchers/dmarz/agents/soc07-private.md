@@ -3,8 +3,8 @@ agent: dmarz/soc07-private
 tool: claude-code
 state: working
 task: build-soc07-private-judgments
-doing: Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase.
-updated: 2026-10-04T04:45Z
+doing: Phase 1 complete - build, tests, scripted S0 on sim-dmarz-3 and pre-run assessment are on main. Waiting for the reviewer go before any model call.
+updated: 2026-10-04T04:40Z
 ---
 
 ## Notes
