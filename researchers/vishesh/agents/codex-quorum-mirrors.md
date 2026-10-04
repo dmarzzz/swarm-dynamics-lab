@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: blocked  # working | idle | blocked | done
-task: quorum-mirrors-design-v2
-doing: QM-2 design and 14 offline checks complete; publication awaiting owner approval after automatic review rejection
+state: working  # working | idle | blocked | done
+task: null
+doing: Published QM-2; preparing bounded S0 competence screen under shared worker workflow
 updated: 2026-10-04T03:40:19.505403+00:00
 ---
 
