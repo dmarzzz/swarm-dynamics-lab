@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: blocked
+state: done
 task: influence-native-rerun
-doing: D5 confirmed not started; expired allocation released; authorized central dispatch unavailable and direct exception unresolved; D3 scientific review complete
-updated: 2026-10-04T15:28Z
+doing: D5 executed and failed acquisition; all24 assignments audited,48 failed transports,0responses; post-mortem complete and allocation released
+updated: 2026-10-04T16:55Z
 ---
 
-See notes/influence-swarms/scenario/RUN-HANDOFF.md. D5 source and scope remain frozen; no new calls or spending. No idle resource held. The one-cycle independent analysis and readiness work is complete; actual run requires current authorized dispatch and fresh runtime admission, not generic reapproval or another researcher review.
+See notes/influence-swarms/scenario/reviews/D5-post.md and RUN-HANDOFF.md. Original ledger retained; no automatic successor. D3 remains latest behavioral evidence.

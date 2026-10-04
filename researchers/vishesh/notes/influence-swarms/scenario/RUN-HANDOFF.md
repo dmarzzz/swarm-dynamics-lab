@@ -1,3 +1,11 @@
+# Current handoff: D5 failed and closed; no successor launched
+
+D5 executed once and failed before any usable response. Read [D5 post-mortem](reviews/D5-post.md), [quality review](reviews/D5-quality-review.json), [all-assignment audit](reviews/D5-failure-audit.json) and [latest results](LATEST-RESULTS.md).24 assignments,48 failed transports,0valid decisions,48 missing usage records. Scientific comparisons are unavailable. Preserve the original ledger: cap8,reserved4.868832,calls246; remaining3.131168. No automatic replacement attempt. Full prior D5 worst-case envelope4.669440 no longer fits.
+
+The direct launch was authorized, the central queue fenced and the dedicated allocation released after worker exit. Offline telemetry/circuit-breaker repairs and a concrete bounded successor plan are the next work; a changed execution contract or resource envelope needs the corresponding owner decision. D3 remains the latest behavioral finding. The historical blocked-request closeout is preserved separately.
+
+## Historical pre-run handoff (superseded by closeout above)
+
 # Current handoff: D5 authorized for direct dispatch; D3 scientifically assessed
 
 2026-10-04. Read [D5 dispatch closeout](reviews/D5-not-started-post.md), [D3 scientific review](reviews/D3-quality-review.md) and [SETUP](SETUP.md). Current decision, updated 2026-10-04: **unchanged D5 is authorized for one direct dispatch.** The later owner decision resolves the prior origin restriction; the historical blocked closeout remains accurate for its observation time. The central request has been withdrawn to prevent duplicate collection. Native execution has not yet started. Private operational records hold current infrastructure details.

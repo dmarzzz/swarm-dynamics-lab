@@ -53,3 +53,8 @@ D3 complete on frozen source 8087faf9; [results](RESULTS-D3.md), [post-mortem](r
 ### D5 direct-dispatch admission update — 2026-10-04
 
 The later owner decision explicitly covers one unchanged D5 direct launch. The prior central queue request is closed with a no-dispatch fence. Existing dedicated capacity is reallocated exclusively; no new machine or allowance is needed. Current private accounting retains cap USD8, reserved USD3.178320,198 calls and USD4.821680 unreserved against D5’s maximum new reservation USD4.669440. These are pre-dispatch observations, not execution results. The scoped launcher keeps exact packet/source, fresh allocation/runtime checks, duplicate journals, public-plan verification and memory-only credential transfer. Platform action review remains binding. The scientific instrument and frozen plan are unchanged; no D4, S1 or successor follows automatically. Native traces will be reconciled across all24 assigned decisions, with operational and scientific closeout even if this attempt fails.
+
+
+### Native D5 failed closeout — 2026-10-04
+
+One authorized attempt completed its failure bookkeeping:24 assigned/terminal,0valid,48 failed transport attempts,48missing usage. Scientific effect unavailable. Original reserved budget now4.868832 of8; no refund/reset,3.131168 remains. Worker exited and credential socket removed; dedicated claim released. See reviews/D5-post.md and reviews/D5-quality-review.json. Native finalize wrote a separate failed-attempt closeout; its zero model_calls field describes the offline finalize operation, not the48 failed acquisition attempts. No successor launched.
