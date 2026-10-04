@@ -426,7 +426,7 @@
       "sources": [
         "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
         "researchers/vishesh/notes/influence-swarms/scenario/README.md",
-        "researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md"
+        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-Q4-D1.md"
       ],
       "status_at_assessment": "qualification_failed_main_unrun",
       "source_commit": "84ee032eda80360cc54c5234f8ffc3afe3649cec"
@@ -1133,6 +1133,32 @@
       "source_sha256": {
         "researchers/vishesh/notes/antsy-receipt-v6/README.md": "9f9756efc0f597a421a6f07349655800fed0a51c8a16da8308fe5363bac51587"
       }
+    },
+    {
+      "id": "influence-approval-review-d2",
+      "title": "Influence procurement: matched approval-review diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D2.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [],
+      "source_commit": "518d4412bc566a388dd4dc022118ade8dd637fa3",
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Targeted approval-review instructions were insufficient to repair this six-case procurement workflow.",
+        "rationale": "All 30 outputs valid; matched targeted review 3/6 acceptable versus general review 4/6, with one unfavorable paired difference. Six authored template variants, inconsistent checklist coverage and failed competence prevent broad efficacy claims."
+      },
+      "sample_size_summary": "D2:6 fresh authored dossier configurations \u00d75 dependent workflows =30/30 valid decisions,17 acceptable;108 calls. Shared team prefixes. Targeted/general review pairs:0 improved,1 worsened,5 equal. Main external-influence comparison unrun.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D2-01-summary.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D2-01-audit.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D2-01-post.md"
+      ],
+      "status_at_assessment": "diagnostic_complete_repair_failed_main_unrun"
     }
   ],
   "source_sha256": {

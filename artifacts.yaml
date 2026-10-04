@@ -1402,4 +1402,52 @@ artifacts:
           - data/discussion-v3/v3-q0-a1/events.jsonl
           - data/discussion-v3/v3-q0-a1/manifest.json
         commit: 09b4b0cc5e3abd1de430c4055df7ba0cb38ba841-dirty
+  - id: influence-approval-review-results
+    category: content
+    type: figure
+    title: 'Matched approval review: measured decisions across six procurement dossiers'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-approval-review-results/influence-approval-review-results-v1.png
+        built_at: '2026-10-04T04:51:23Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Improve the design, evaluate against the plan, and resolve gaps or failures from previous experiment runs.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/approval_review.py
+          - data/influence-native/native-D2-01/outcomes.json
+          - data/influence-native/native-D2-01/summary.json
+        commit: 518d4412bc566a388dd4dc022118ade8dd637fa3-dirty
+  - id: influence-approval-review-replay
+    category: content
+    type: doc
+    title: 'Recorded approval-review diagnostic: requests, findings and final decisions'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-approval-review-replay/influence-approval-review-replay-v1.html
+        built_at: '2026-10-04T04:51:24Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Make the results more practical, robust, compelling, and interesting, with measured replays.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py
+          - data/influence-native/native-D2-01/manifest.json
+          - data/influence-native/native-D2-01/summary.json
+          - data/influence-native/native-D2-01/case-0.json
+          - data/influence-native/native-D2-01/case-1.json
+          - data/influence-native/native-D2-01/case-2.json
+          - data/influence-native/native-D2-01/case-3.json
+          - data/influence-native/native-D2-01/case-4.json
+          - data/influence-native/native-D2-01/case-5.json
+          - data/influence-native/native-D2-01/events-0.jsonl
+          - data/influence-native/native-D2-01/events-1.jsonl
+          - data/influence-native/native-D2-01/events-2.jsonl
+          - data/influence-native/native-D2-01/events-3.jsonl
+          - data/influence-native/native-D2-01/events-4.jsonl
+          - data/influence-native/native-D2-01/events-5.jsonl
+        commit: 518d4412bc566a388dd4dc022118ade8dd637fa3-dirty
 requires: '1.2'
