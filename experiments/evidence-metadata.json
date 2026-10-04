@@ -1132,6 +1132,32 @@
       "assessed_at": "2026-10-04"
     },
     {
+      "id": "market-split-opus",
+      "title": "Market splitting: Opus replication on fresh markets",
+      "documents": [
+        "researchers/dmarz/notes/market-split-opus/README.md"
+      ],
+      "experiment_ids": [
+        "market-split-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/market-split-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Claude Opus 5.5 reproduces the Sonnet pilot's firm-splitting contrast on six fresh markets.",
+        "rationale": "No model call has been made. Only a scripted rehearsal of the copied instrument is planned or run at this assessment; it is a software check and gives no evidence about model behavior."
+      },
+      "sample_size_summary": "Observed: none. Planned: 6 fresh paired market tasks, 3 regulators x 2 arms = 36 episodes / 864 calls, after a 6-call mechanics probe and a 2-market, 4-episode qualification. One model owner, two scripted rivals.",
+      "sources": [
+        "researchers/dmarz/notes/market-split-opus/README.md",
+        "researchers/dmarz/notes/market-split-opus/preregistration.md"
+      ],
+      "status_at_assessment": "planned_scripted_rehearsal_only_no_model_calls",
+      "assessor": "dmarz/market-split-opus",
+      "assessed_at": "2026-10-04"
+    },
+    {
       "id": "compositional-safety",
       "title": "Compositional safety: historical qualifications through q0-004",
       "documents": [
