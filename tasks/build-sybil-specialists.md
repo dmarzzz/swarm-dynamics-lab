@@ -3,7 +3,7 @@ id: build-sybil-specialists
 type: task
 title: Plan and deploy a scripted Sybil admission and specialist preservation study
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sybil-specialists
 for: dmarz
@@ -14,7 +14,11 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T01:28Z
-updated: 2026-10-04T01:28Z
+updated: 2026-10-04T01:46Z
+outputs:
+- researchers/dmarz/notes/sybil-specialists/README.md
+- researchers/dmarz/notes/sybil-specialists/reviews/fleet-s1-001-post.md
+- researchers/dmarz/notes/sybil-specialists/deployment.json
 ---
 
 ## Goal
