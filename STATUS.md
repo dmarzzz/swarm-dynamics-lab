@@ -58,6 +58,7 @@
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [telephone-native-both](tasks/telephone-native-both.md) | claimed | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
 | [theseus-t1-q0](tasks/theseus-t1-q0.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T19:55Z | Theseus approved apprenticeship qualification and collective study design |
+| [update-experiment-budget-defaults](tasks/update-experiment-budget-defaults.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T20:15Z | Update default and promising-study budget tiers |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
