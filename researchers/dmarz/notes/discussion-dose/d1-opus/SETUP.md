@@ -1,7 +1,7 @@
 # Experiment setup record: discussion-v3-d1-opus / d1o-a1
 
-Status: plan, source and offline checks committed; zero-model rehearsal pending on the dedicated
-server; **no model call made; paid dispatch awaits dmarz's go-ahead.** Follows
+Status: plan, source, offline checks, server rehearsal and the one-call interface probe done (1 paid call,
+$0.022468); **the 72-call run has not started and awaits dmarz's go-ahead.** Follows
 [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical
 receipts and attempts are preserved below.
 
@@ -28,7 +28,7 @@ receipts and attempts are preserved below.
 | G0 Question and applicable research gates | pending (owner decision) | Exploratory model diagnostic in the dmarz discussion-dose line; Dan's direction relayed by fleet-monitor ~07:20Z 2026-10-04 ("I would like to start testing with a strong model like opus or something like that"). Relayed, not first-hand. No cross-researcher review performed. | dmarz confirms first-hand and records a review decision (waiver or review) before paid dispatch |
 | G1 Plan written before implementation | pass | [README](README.md) TLDR/Question and prediction/Setup/Protocol/Metrics, committed before any server stage or model call; dmarz/d1-opus 2026-10-04 | none |
 | G2 Instrument and offline checks | pass | Offline: 72/72 scripted control rows valid, fresh 12/12 evidence-justified under the scripted reader, gate correctly unpassed for a non-scientific run; mocked Opus responses: thinking+text accepted, two texts / `max_tokens` / tool block / refusal all fail closed; request body has no temperature, adaptive thinking, effort high. `src/diagnostic_v3_opus_selftest.py` | none |
-| G3 Current attempt admission | pending | [pre-run](reviews/d1o-a1-pre.md); claim and rehearsal receipts recorded in DEPLOYMENT once done | rehearsal, then dmarz go-ahead, then preflight under 30 min |
+| G3 Current attempt admission | pending (go-ahead) | [pre-run](reviews/d1o-a1-pre.md); claim `dmarz-d1-opus` on sim-dmarz-9; rehearsal 72/72 audited and uploaded; probe d1o-p1 passed ([DEPLOYMENT](DEPLOYMENT.md)) | dmarz first-hand go-ahead + G0 decision, then preflight (<30 min) and run |
 | G4 Qualification before scientific escalation | pending | Fresh gate is the qualification signal; no escalation is authorized by this study | n/a until results |
 | G5 Reconciliation and closeout | pending | | after the run |
 
@@ -63,7 +63,7 @@ Operations entry: manual (no registry adapter).
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
-| d1o-p1 / none | one-call interface probe, dev world 10002 / d1-opus-v1 | [d1o-a1-pre](reviews/d1o-a1-pre.md) | 1 / 0 / 0 / n/a / n/a | pending |
+| d1o-p1 / none | one-call interface probe, dev world 10002 / d1-opus-v1 | [d1o-a1-pre](reviews/d1o-a1-pre.md); [DEPLOYMENT](DEPLOYMENT.md) | 1 / 1 / 1 / n/a / n/a | passed: valid answer, end_turn, model matched, $0.022468 |
 | d1o-a1 / v3-d1-a1 | rehearsal + paid / d1-opus-v1 | [d1o-a1-pre](reviews/d1o-a1-pre.md) | 72 / 0 / 0 / 0 / 0 | pending |
 
 ## Closeout
