@@ -14,7 +14,7 @@ from engine import execute
 from provider import Provider
 from replay import render
 from reporting import Reporter
-from tasks import generate,qualification_manifest,evaluate,operational
+from tasks import generate,qualification_manifest,evaluate,operational,digest
 from failures import SafeFailure,safe_code
 from response_contract import VERSION,LEGACY
 
@@ -65,6 +65,14 @@ def preflight(config,source_root):
 
 
 def assignments_for(config):
+    if config.get('stage')=='canary':
+        if config.get('attempt_id')!='q-a3-canary' or config.get('attempt_cap_microdollars')!=5000000 or config.get('episode_cap_microdollars')!=1250000 or config.get('response_contract')!=VERSION:raise ValueError('invalid_canary_config')
+        rows=[]
+        for family,structure in [('evidence','parallel'),('repository','chain'),('evidence','chain'),('repository','parallel')]:
+            task=generate(family,structure,0,width=2)
+            identity=config['attempt_id']+'/'+task.public['id']+'/width2/n1'
+            rows.append(dict(id=identity,parent_id=task.public['id'],root_id=task.public['id']+'/width2',root=0,n=1,stage='canary',family=family,structure=structure,width=2,attempt_id=config['attempt_id'],public_task_sha256=digest(task.public)))
+        return rows
     rows=[row for row in qualification_manifest() if row['stage']=='Q-A']
     attempt=config.get('attempt_id')
     if attempt is not None:
@@ -87,8 +95,8 @@ def main():
     if not args.output or not args.budget_ledger:raise ValueError('output_and_shared_ledger_required')
     source_root=Path(subprocess.check_output(['git','rev-parse','--show-toplevel'],text=True).strip())
     commit=preflight(config,source_root)
-    args.output.mkdir(parents=True,exist_ok=False)
     assignments=assignments_for(config)
+    args.output.mkdir(parents=True,exist_ok=False)
     (args.output/'assigned.json').write_text(json.dumps(assignments,indent=2)+'\n')
     return run_batch(config,commit,args.output,args.budget_ledger,assignments)
 
@@ -105,11 +113,11 @@ def run_batch(config,commit,output,ledger,assignments):
     for row in assignments:
         target=output/hashlib.sha256(row['id'].encode()).hexdigest()[:16]
         target.mkdir(exist_ok=False)
-        tldr=f"TLDR: {row.get('attempt_id','Q-A')} {row['family']} {row['structure']} root {row['root']}, N=1 under screening caps; single-agent calibration reference for later matched-N comparisons. Metrics: verified on-time success, quality, cost and latency. Exploratory synthetic tasks; not a size-effect result."
+        tldr=f"TLDR: {row.get('attempt_id','Q-A')} {row['family']} {row['structure']} root {row['root']}, width={row.get('width',16)}, N=1 under screening caps; single-agent calibration reference for later matched-N comparisons. Metrics: verified on-time success, quality, cost and latency. Exploratory synthetic tasks; not a size-effect result."
         save_json(target/'assignment.json',row|{'commit':commit,'run_tldr':tldr,'status':'assigned'})
         states.append({'episode':row['id'],'directory':target.name,'execution':'not_started','reason':None,'exposure_microdollars':0,'publication':'not_started'})
     try:
-        bank=Budget(ledger,config['stage_cap_microdollars'])
+        bank=Budget(ledger,config['stage_cap_microdollars'],config['attempt_id'] if config.get('stage')=='canary' else None,config.get('attempt_cap_microdollars') if config.get('stage')=='canary' else None)
         for row,state in zip(assignments,states):
             target=output/state['directory'];lock=threading.Lock();completed=0
             def journal(event):
@@ -138,10 +146,11 @@ def run_batch(config,commit,output,ledger,assignments):
                         # At most one update in flight; reporting never blocks actor work.
                         if pending_progress is None or pending_progress.done():
                             pending_progress=progress_pool.submit(send_progress,completed)
-                task=generate(row['family'],row['structure'],row['root'])
+                task=generate(row['family'],row['structure'],row['root'],width=row.get('width',16))
+                if row.get('public_task_sha256') and digest(task.public)!=row['public_task_sha256']:raise ValueError('task_hash_mismatch')
                 runtime=Provider(config,bank,row['id'],journal,task.public)
                 try:
-                    record=execute(task.public,1,config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event)
+                    record=execute(task.public,1,config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event,strict_contract=config.get('stage')=='canary')
                 finally:
                     progress_pool.shutdown(wait=True,cancel_futures=True)
                 result=evaluate(task,record['artifact'] or '{}');exposure=bank.exposure(row['id'])
@@ -158,6 +167,8 @@ def run_batch(config,commit,output,ledger,assignments):
                 print(json.dumps({'episode':row['id'],'terminal':True,'success':record['operational_success'],'publication':state['publication']}),flush=True)
                 if not acknowledged:stop_reason='publication_incomplete';break
                 if record.get('fatal'):stop_reason=record['failure'];break
+                if config.get('stage')=='canary' and (record['failure'] or record['work_failures']):
+                    stop_reason=record['failure'] or 'work_contract_failed';break
                 consecutive_malformed=consecutive_malformed+1 if record['failure']=='malformed_output' else 0
                 if config.get('attempt_id') and consecutive_malformed>=2:
                     stop_reason='repeated_malformed_output';break
@@ -188,7 +199,9 @@ def run_batch(config,commit,output,ledger,assignments):
         terminal=sum(s['execution']=='terminal' for s in states)
         reconciliation={'assigned':len(states),'terminal':terminal,'execution_complete':terminal==len(states),
                         'publication_complete':all(s['publication']=='acknowledged' for s in states),
-                        'stop_reason':stop_reason,'episodes':states}
+                        'stop_reason':stop_reason,'episodes':states,
+                        'executed_publication_complete':terminal>0 and all(s['publication']=='acknowledged' for s in states if s['execution']=='terminal'),
+                        'unstarted':sum(s['execution']=='not_started' for s in states)}
         save_json(output/'reconciliation.json',reconciliation)
     print(json.dumps({'stage':'Q-A','terminal':terminal,'assigned':len(states),'stop_reason':stop_reason}),flush=True)
     return 0 if stop_reason is None and terminal==len(states) else 2
