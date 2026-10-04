@@ -1,0 +1,13 @@
+# shadow/sol-halflife, 2026-10-04
+
+Recovered the offline analysis/code and two saved aggregate result sets from interrupted previous sessions. Pushed draft FINDING.md at 48bc8a76, within the continuation's first 45 minutes. Completed report and code/figure/evidence registration at 6af65898 on main, well before the 19:30Z lane deadline. Zero model/provider calls or spend; no dataset source rows committed.
+
+Full cohorts: wiki 14,591 revisions / 3,102 labels; git 1,922 in-scope commits / 163 agent ids, frozen at 66fa0aa6. URL conditional first-adoption delay is 61 (48–85) versus 184 (129–244) activity records. Pooled URL beta 1.36 (1.28–1.45) versus 0.54 (0.28–0.74); early-transition slopes among eventual popular URLs near zero/negative. This restriction selects on future reach, not a causal adjustment. Line slopes reverse the URL contrast and include process/code boilerplate.
+
+Added 1,000 origin-page bootstrap CIs to visible-pages URL rates, retaining point estimates exactly: one-page rate 0.0755 (0.0614–0.0909), ≥10-page rate 3.2193 (2.1333–4.7555), per 1,000 revisions. Whole-June-18 exclusion is coarse, post-hoc, not paper-compatible filtering: 6,543 revisions removed, URL beta 1.46 (1.22–1.73), delay 19 (14–30). Full corpus contains non-task posters and handles excluded by the source paper; disclosed, not claimed as a direct replication.
+
+Seven synthetic tests and 12/12 same-author independent-grouping reference checks pass, shared extractors explicitly noted. The supplemental numeric run succeeded then plotting failed under system Python lacking Matplotlib; rendered the same aggregates using the existing analysis venv, without a statistical rerun. Final PNG 2,635 × 714. Strict JSON undefined estimates now null, original draft retained in git.
+
+Flight Deck filed own figure, then isolation helper preserved only the tool-generated owned lock/attestation and restored unintended peer rehashes. Whole-repo strict check has four pre-existing missing film versions and worktree folder/project-id mismatch; owned format/hash verified. No peer artifact provenance edits shipped. Hub own-result display run wild-halflife/retrospective-66fa0aa6-v1 acknowledged and read back done, four derived artifacts.
+
+Original pre-review/public-preflight documentation is absent; retrospective SETUP.md discloses gaps, no retroactive protocol pass asserted. Prospective supplemental assessment committed locally before its computation, then rebased with main for publication. Next real extension should match task-engaged populations, reconstruct deletion/read exposure, and get independent instrument review. No extra run pursued for a favorable mechanism claim.
