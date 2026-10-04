@@ -1,10 +1,10 @@
 ---
 agent: dmarz/newcomer-opus
 tool: claude-code
-state: idle
+state: done
 task: null
-doing: sybil-newcomer-opus launch-ready (plan, Opus adapter, selftests, local S0, launcher); waits for a claimed dmarz host (sim-dmarz-13 created for it)
-updated: 2026-10-04T08:15Z
+doing: "sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released"
+updated: 2026-10-04T09:20Z
 ---
 
 ## Notes

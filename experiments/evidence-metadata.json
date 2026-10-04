@@ -1868,7 +1868,8 @@
       "id": "sybil-newcomer-opus",
       "title": "Knowledgeable newcomers versus a trusted Sybil coalition (Opus 5.5 configuration)",
       "documents": [
-        "researchers/dmarz/notes/sybil-newcomer-opus/README.md"
+        "researchers/dmarz/notes/sybil-newcomer-opus/README.md",
+        "researchers/dmarz/notes/sybil-newcomer-opus/RESULTS.md"
       ],
       "experiment_ids": [
         "sybil-newcomer-opus"
@@ -1877,20 +1878,23 @@
         "researchers/dmarz/notes/sybil-newcomer-opus/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Proposed: on identical newcomer-study packets, Opus 5.5 at effort low reproduces the Haiku/Sonnet pattern (all policies lose specialist accuracy under the sleeper attack; renewal minus reputation below +10 pp).",
-        "rationale": "No Opus outcomes exist yet. Plan, adapter and offline checks only (10/10 selftests, local scripted S0 198/198). Configuration differs from earlier cohorts (no temperature, model-default thinking)."
+        "score": 2,
+        "claim": "In this synthetic newcomer task, an Opus 5.5 synthesizer (effort low) on assignments identical to the Haiku 4.5 and Sonnet 4.6 cohorts did not materially change outcomes: the policy ranking (random > renewal > reputation) was unchanged, renewal minus reputation stayed inconclusive (+9.7 pp, interval -1.4 to +20.8 pp), and the difference from Haiku in that contrast was +1.4 pp (interval -4.2 to +6.9 pp). Accuracy never exceeded the share of truth present in admitted packets.",
+        "rationale": "Same-owner assessment: twenty-four paired roots, passed probe and qualification, 1,944/1,944 outcomes paired by assignment with both earlier cohorts and fully recomputed from frozen runtime. The Opus request configuration differs from the earlier cohorts (no temperature, adaptive thinking at effort low); one task family, scripted actors and descriptive unadjusted intervals limit stronger conclusions. Independent review was waived by the owner."
       },
-      "sample_size_summary": "Observed: none (local scripted S0 198/198 only). Planned: 24 paired world roots, 1,944 S1 calls paired by assignment ID with the Haiku and Sonnet cohorts (never pooled), 36 Q0 calls, one probe call.",
+      "sample_size_summary": "Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing, each paired by assignment ID with the separate Haiku and Sonnet cohorts (not pooled); 24 honest + 1/4/16 controller identities, one synthesizer model. Q0 separately: 36/36 clean calls plus one probe call.",
       "sources": [
-        "researchers/dmarz/notes/sybil-newcomer-opus/README.md",
+        "researchers/dmarz/notes/sybil-newcomer-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-newcomer-opus/design.yaml",
         "researchers/dmarz/notes/sybil-newcomer-opus/SETUP.md",
-        "researchers/dmarz/notes/sybil-newcomer-opus/reviews/s0-local-001-post.md"
+        "researchers/dmarz/notes/sybil-newcomer-opus/RESULTS.md",
+        "researchers/dmarz/notes/sybil-newcomer-opus/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-newcomer-opus/records/s1-001-opus-minus-haiku.json",
+        "researchers/dmarz/notes/sybil-newcomer-opus/records/s1-001-opus-minus-sonnet.json"
       ],
-      "status_at_assessment": "planned_launch_ready_no_model_outcomes",
+      "status_at_assessment": "complete_valid_inconclusive_primary_allocation_closed",
       "assessor": "dmarz/newcomer-opus",
-      "assessed_at": "2026-10-04",
-      "source_commit": "17b65c09185ad9097be673a30771c937e172d543"
+      "assessed_at": "2026-10-04"
     },
     {
       "id": "discussion-v3-opus",
