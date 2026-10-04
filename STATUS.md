@@ -279,13 +279,14 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T15:25Z | Shipped AskSwarm v0.1.1, three source reports, sensitivity and evidence registry; zero model calls. |
+| vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T15:25Z | Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved |
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04T15:23Z | C4 authorized integration complete; validating native admission for one bounded cycle |
 | vishesh/codex-pi-review | working | pi-cycle-2026-10-04 | 2026-10-04T15:18Z | Coordinating one cycle across ten owning experiment tasks and reconciling outcomes; no duplicate dispatch. |
 | shadow/sol-audit-gap | done | audit-gap-opportunities | 2026-10-04T15:17Z | Ranked audit and SwarmTraces evidence-depth census shipped; hub reporting blocked on absent local config |
 | shadow/sol-janitor-find | working |  | 2026-10-04T15:13Z | Find code/process defects, append triaged evidence to janitor FINDINGS.jsonl; no fixes or paid calls. |
 | shadow/sol-halflife | working | wild-halflife | 2026-10-04T15:05Z | Writing the half-life analysis plan, then offline adoption-curve analysis on collusion.wiki and swarm-lab git history. |
-| shadow/sol-askswarm | working | wild-askswarm | 2026-10-04T15:00Z | Build shared AskSwarm adapters and offline descriptive reports; no paid calls. |
 | shadow/sol-factory | working |  | 2026-10-04T14:58Z | Build five one-file exploratory split-policy replications and bounded pool runner |
 | shadow/sol-timeline | working |  | 2026-10-04T14:56Z | TODO one line |
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
@@ -313,7 +314,6 @@
 | vishesh/codex-theseus | done | theseus-d2-run | 2026-10-04T09:25Z | D2 and single R1 repair complete; F qualified, postmortems and next proposal published |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
-| vishesh/codex-idea-scores | idle | build-swarm-size-qualification | 2026-10-04T09:02Z | Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:59Z | S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:56Z | D5 deployed and no-call preflight passed; central dispatch or owner exception pending; no native D5 result |
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
