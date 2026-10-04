@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: done
-task: right-dissenter-rd5-design
-doing: RD5 planning complete; failure decomposition and repair/research design published; no new native run.
-updated: 2026-10-04T06:50:05.636200+00:00
+state: working
+task: right-dissenter-rd5-build
+doing: Implementing RD5 repairs and offline fault checks; preparing bounded Q5/H5 packets without native dispatch.
+updated: 2026-10-04T07:59:48.671019+00:00
 ---
 
 ## Notes
