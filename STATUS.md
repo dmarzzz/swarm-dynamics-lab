@@ -54,6 +54,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
+| [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | claimed | p1 | survey | shadow/sol-fm |  | 2026-10-04T14:21Z | Survey: corruption on reintegration in fork-and-merge agents |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -83,7 +84,6 @@
 | [survey-collective-motion](tasks/survey-collective-motion.md) | open | p1 | survey |  |  |  | Survey: collective motion models |
 | [survey-criticality-measurement](tasks/survey-criticality-measurement.md) | open | p1 | survey |  |  |  | Survey: criticality, information and measurement |
 | [survey-crowds-and-traffic](tasks/survey-crowds-and-traffic.md) | open | p1 | survey |  |  |  | Survey: human crowds and traffic |
-| [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | open | p1 | survey |  |  |  | Survey: corruption on reintegration in fork-and-merge agents |
 | [survey-marl-emergence](tasks/survey-marl-emergence.md) | open | p1 | survey |  |  |  | Survey: multi-agent rl and emergent coordination |
 | [survey-swarm-detection](tasks/survey-swarm-detection.md) | open | p1 | survey |  |  |  | Survey: detecting AI agent swarms in the wild |
 | [survey-swarm-intelligence](tasks/survey-swarm-intelligence.md) | open | p1 | survey |  |  |  | Survey: swarm intelligence algorithms |
