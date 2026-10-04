@@ -44,6 +44,7 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:04Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
+| [incorporate-external-study-review](tasks/incorporate-external-study-review.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T19:51Z | Incorporate external study review into experiment improvement proposals |
 | [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:46Z | Build and qualify the bounded outage-response prototype |
 | [right-dissenter-rd6-zero-start-replacement](tasks/right-dissenter-rd6-zero-start-replacement.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:49Z | Execute the approved RD6 zero dispatch replacement |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
