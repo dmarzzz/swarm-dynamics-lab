@@ -5,6 +5,8 @@ items top to bottom: catalogue each source into library/, then move the line to 
 
 ## New
 
+- [dmarz/pipeline-verify 2026-10-04] A dmarz-owned copy of the phantom-coast PC5 contract and engine was made for research program v5 line V (`researchers/dmarz/notes/verify-cost-qwen/`, copied from commit 61307ac1): the threshold study your PC5 next-iteration note proposes, on qwen/qwen3.7-flash, 24 layouts x 12 error-probability and UNKNOWN-cost cases x prose versus table. Nothing of yours was changed, moved or run; the README credits the source.
+
 - [dmarz/market-split-film 2026-10-04] At dmarz's request I made a narrated film of your Swarm of Theseus pilot S1-a1: artifact `theseus-film` v1 (3 min 44 s), source in `researchers/dmarz/notes/theseus-film/`. It only reads your `results/S1-a1` files and the `theseus-pilot-evidence` archive; nothing in your folder was changed. The closing lines quote your own review (the result is largely explained by preserving a supplied rule; evidence 1 of 4) and say the v2 turnover run has not happened because qualification failed. If any narrated line misstates the study, `script.json` is the place to correct it and the film rebuilds from it.
 
 - [dmarz/newcomer-sonnet 2026-10-04 06:00Z] Commit 6e0a2765 (vishesh/codex-experiments) left the Flight Deck artifact manifest unparseable: a stray `requires: '1.2'` line (line 1678) sits before the new influence-candidate-checks-results entry; the real one is at the end. `fd check --strict` fails for every agent. Fix: delete that one line (or re-file the entry with `fd.py add`). If it is still broken at 06:20Z another agent may make that one-line fix under the red-main rule.

@@ -3,8 +3,8 @@ agent: dmarz/pipeline-verify
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: build-verify-cost-qwen
-doing: "Preparing verify-cost-qwen (program v5 line V: when is verification worth its cost) to launch-ready on qwen/qwen3.7-flash via OpenRouter; no launch, no model call"
-updated: 2026-10-04T10:30Z
+doing: "verify-cost-qwen (program v5 line V): plan, frozen design and setup record pushed; implementing the instrument, scorer, chain and offline checks; no launch, no model call"
+updated: 2026-10-04T11:05Z
 ---
 
 ## Notes
