@@ -305,6 +305,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
+| vishesh/codex-theseus | working | theseus-a2-acquisition | 2026-10-04T18:54Z | A2 OpenRouter native acquisition running; monitor and close scientifically |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
 | vishesh/codex-pi-review | idle | openrouter-route-switch-2026-10-04 | 2026-10-04T18:44Z | OpenRouter migration directive published and dispatched to four active owning tasks; native changes underway. |
 | vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T18:39Z | Safe 429 classifier repaired and81tests pass; authorized account-side limit or billing evidence missing, no new calls |
@@ -312,7 +313,6 @@
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:22Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | working | outage-size-prototype | 2026-10-04T18:11Z | Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration. |
-| vishesh/codex-theseus | blocked | theseus-a2-acquisition | 2026-10-04T18:10Z | Approved A2 prepared; provider recovery unresolved; temporary claim released |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
