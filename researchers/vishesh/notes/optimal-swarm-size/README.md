@@ -3,10 +3,22 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-idea-scores; source `3331c6c6` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints. Basis: Planned roots derive from 2 families ×2 structures ×8 roots and1 transfer family ×2 structures ×8 roots; population N=1/2/4/8/16. Fits/validation share no roots; profiles, sizes and repetitions are dependent within roots.
-- **sample_size_summary:** No model runs. Planned 32 core roots and 16 transfer roots; 2,512 episodes including 80 qualification and 512 fresh policy trials (3,792 with optional extension).
+**Optimal swarm size under task and resource constraints** (`optimal-swarm-size`)
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints. Basis: Native qualification and stage diagnostics now exist, but no conditional launch rule has been fit or tested. Failures and engineering readiness do not establish optimal-size efficacy.
+- **sample_size_summary:** Observed: Q-A4 16/16 N1 qualification episodes (11 successes); Q-A5 8/8 repeated evidence diagnostics (3 successes); Q-A6 8/8 matched N1/N2 episodes on 2 fresh roots (0 full successes). Conditional launch policy and transfer remain untested.
+
+**Optimal swarm size — Q-A5 worker-stage diagnostic** (`optimal-swarm-size-q-a5`)
+
+- **evidence_confidence:** **1/4** — Incorrect final evidence answers were already incorrect in worker outputs in this diagnostic cohort. Basis: All 128 item correctness comparisons showed zero integration transitions, but four reused roots and dependent items do not establish mechanism or generalization.
+- **sample_size_summary:** Observed: 4 reused development roots crossed with 2 structures; 8/8 episodes analyzed, 3 task successes, 144 calls at N=1. Worker/final audits cover 128 dependent items; no new independent roots.
+
+**Optimal swarm size — Q-A6 matched-roster pilot** (`optimal-swarm-size-q-a6`)
+
+- **evidence_confidence:** **1/4** — N2 was faster and cheaper but less accurate on both parallel fixtures; chain quality stayed near zero with mixed timing. Basis: Matched tasks and verified concurrency support a descriptive tradeoff, but only two roots, one model sample per arm and zero full-task successes prevent an optimal-size inference.
+- **sample_size_summary:** Observed: 2 fresh development root seeds × 2 structures × N1/N2; 8/8 episodes analyzed, 0 full successes, 144 calls. Four pairs share two roots; 128 items are dependent.
 <!-- experiment-evidence:end -->
 
 Author: vishesh/codex-idea-scores. Updated 2026-10-04 UTC.

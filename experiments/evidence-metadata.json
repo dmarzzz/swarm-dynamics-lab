@@ -109,15 +109,20 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints.",
-        "rationale": "Planned roots derive from 2 families \u00d72 structures \u00d78 roots and1 transfer family \u00d72 structures \u00d78 roots; population N=1/2/4/8/16. Fits/validation share no roots; profiles, sizes and repetitions are dependent within roots."
+        "rationale": "Native qualification and stage diagnostics now exist, but no conditional launch rule has been fit or tested. Failures and engineering readiness do not establish optimal-size efficacy."
       },
-      "sample_size_summary": "No model runs. Planned 32 core roots and 16 transfer roots; 2,512 episodes including 80 qualification and 512 fresh policy trials (3,792 with optional extension).",
+      "sample_size_summary": "Observed: Q-A4 16/16 N1 qualification episodes (11 successes); Q-A5 8/8 repeated evidence diagnostics (3 successes); Q-A6 8/8 matched N1/N2 episodes on 2 fresh roots (0 full successes). Conditional launch policy and transfer remain untested.",
       "sources": [
         "researchers/vishesh/notes/optimal-swarm-size/README.md",
         "researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md",
-        "researchers/vishesh/notes/optimal-swarm-size/design.json"
+        "researchers/vishesh/notes/optimal-swarm-size/design.json",
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a5-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a6-post.md"
       ],
-      "status_at_assessment": "planned_not_run"
+      "status_at_assessment": "qualification_observed_conditional_policy_untested",
+      "assessor": "vishesh/codex-idea-scores",
+      "assessed_at": "2026-10-04",
+      "source_commit": "3331c6c6083caf1f69ccfdac4d5faa704c94c183"
     },
     {
       "id": "heterogeneous-swarms",
@@ -2029,6 +2034,52 @@
       "assessor": "vishesh/codex-heterogeneous",
       "assessed_at": "2026-10-04",
       "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044"
+    },
+    {
+      "id": "optimal-swarm-size-q-a5",
+      "title": "Optimal swarm size \u2014 Q-A5 worker-stage diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/optimal-swarm-size/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Incorrect final evidence answers were already incorrect in worker outputs in this diagnostic cohort.",
+        "rationale": "All 128 item correctness comparisons showed zero integration transitions, but four reused roots and dependent items do not establish mechanism or generalization."
+      },
+      "sample_size_summary": "Observed: 4 reused development roots crossed with 2 structures; 8/8 episodes analyzed, 3 task successes, 144 calls at N=1. Worker/final audits cover 128 dependent items; no new independent roots.",
+      "sources": [
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a5-post.md"
+      ],
+      "status_at_assessment": "complete_diagnostic",
+      "assessor": "vishesh/codex-idea-scores",
+      "assessed_at": "2026-10-04",
+      "source_commit": "3331c6c6083caf1f69ccfdac4d5faa704c94c183"
+    },
+    {
+      "id": "optimal-swarm-size-q-a6",
+      "title": "Optimal swarm size \u2014 Q-A6 matched-roster pilot",
+      "documents": [
+        "researchers/vishesh/notes/optimal-swarm-size/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "N2 was faster and cheaper but less accurate on both parallel fixtures; chain quality stayed near zero with mixed timing.",
+        "rationale": "Matched tasks and verified concurrency support a descriptive tradeoff, but only two roots, one model sample per arm and zero full-task successes prevent an optimal-size inference."
+      },
+      "sample_size_summary": "Observed: 2 fresh development root seeds \u00d7 2 structures \u00d7 N1/N2; 8/8 episodes analyzed, 0 full successes, 144 calls. Four pairs share two roots; 128 items are dependent.",
+      "sources": [
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a6-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/results/q-a6/analysis.json",
+        "researchers/vishesh/notes/optimal-swarm-size/results/q-a6/verification.json"
+      ],
+      "status_at_assessment": "complete_valid_exploratory_result",
+      "assessor": "vishesh/codex-idea-scores",
+      "assessed_at": "2026-10-04",
+      "source_commit": "3331c6c6083caf1f69ccfdac4d5faa704c94c183"
     }
   ],
   "source_sha256": {

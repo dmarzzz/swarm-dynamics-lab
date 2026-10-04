@@ -1,0 +1,385 @@
+{
+  "attempt": "q-a6",
+  "results": [
+    {
+      "n": 1,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/chain/5/width16",
+      "used_contexts": [
+        0
+      ],
+      "peak_work_concurrency": 1,
+      "quality": 0.0,
+      "run": "optimal-swarm-size-q1/02b708e40b901df8",
+      "root": 5,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.0,
+          "reason": "contract_failed",
+          "value_accuracy": 0.0,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 16,
+        "final_wrong_values": 16,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_00",
+        "first_final_value_error": "item_00",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "chain",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 33.737000533001265,
+      "exposure_microdollars": 75398,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    },
+    {
+      "n": 1,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/parallel/4/width16",
+      "used_contexts": [
+        0
+      ],
+      "peak_work_concurrency": 1,
+      "quality": 0.8125,
+      "run": "optimal-swarm-size-q1/0ca4694cfc9ac4a4",
+      "root": 4,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.8125,
+          "reason": "contract_failed",
+          "value_accuracy": 0.8125,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 3,
+        "final_wrong_values": 3,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_01",
+        "first_final_value_error": "item_01",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "parallel",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 29.431972255995788,
+      "exposure_microdollars": 41336,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    },
+    {
+      "n": 1,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/chain/4/width16",
+      "used_contexts": [
+        0
+      ],
+      "peak_work_concurrency": 1,
+      "quality": 0.0625,
+      "run": "optimal-swarm-size-q1/3e7979f7b2f4bb68",
+      "root": 4,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.0625,
+          "reason": "contract_failed",
+          "value_accuracy": 0.0625,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 15,
+        "final_wrong_values": 15,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_01",
+        "first_final_value_error": "item_01",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "chain",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 40.896345160996134,
+      "exposure_microdollars": 75393,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    },
+    {
+      "n": 2,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/parallel/4/width16",
+      "used_contexts": [
+        0,
+        1
+      ],
+      "peak_work_concurrency": 2,
+      "quality": 0.6875,
+      "run": "optimal-swarm-size-q1/5bacfa9e9d0f833b",
+      "root": 4,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.6875,
+          "reason": "contract_failed",
+          "value_accuracy": 0.6875,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 5,
+        "final_wrong_values": 5,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_01",
+        "first_final_value_error": "item_01",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "parallel",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 16.108388730004663,
+      "exposure_microdollars": 35328,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    },
+    {
+      "n": 1,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/parallel/5/width16",
+      "used_contexts": [
+        0
+      ],
+      "peak_work_concurrency": 1,
+      "quality": 0.6875,
+      "run": "optimal-swarm-size-q1/5d6d86912fc0ec4f",
+      "root": 5,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.6875,
+          "reason": "contract_failed",
+          "value_accuracy": 0.6875,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 5,
+        "final_wrong_values": 5,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_01",
+        "first_final_value_error": "item_01",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "parallel",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 25.166248474000895,
+      "exposure_microdollars": 41336,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    },
+    {
+      "n": 2,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/chain/4/width16",
+      "used_contexts": [
+        0,
+        1
+      ],
+      "peak_work_concurrency": 1,
+      "quality": 0.0625,
+      "run": "optimal-swarm-size-q1/7cdc83a1503e33b6",
+      "root": 4,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.0625,
+          "reason": "contract_failed",
+          "value_accuracy": 0.0625,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 15,
+        "final_wrong_values": 15,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_01",
+        "first_final_value_error": "item_01",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "chain",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 38.94941511700017,
+      "exposure_microdollars": 60421,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    },
+    {
+      "n": 2,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/parallel/5/width16",
+      "used_contexts": [
+        0,
+        1
+      ],
+      "peak_work_concurrency": 2,
+      "quality": 0.3125,
+      "run": "optimal-swarm-size-q1/7e5e06c13b609610",
+      "root": 5,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.3125,
+          "reason": "contract_failed",
+          "value_accuracy": 0.3125,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 11,
+        "final_wrong_values": 11,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_00",
+        "first_final_value_error": "item_00",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "parallel",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 17.016874791006558,
+      "exposure_microdollars": 35180,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    },
+    {
+      "n": 2,
+      "pair_id": "swarm-size-fixtures-v1/qualification/evidence/chain/5/width16",
+      "used_contexts": [
+        0,
+        1
+      ],
+      "peak_work_concurrency": 1,
+      "quality": 0.0,
+      "run": "optimal-swarm-size-q1/b5680a8f80e1ceb6",
+      "root": 5,
+      "audit": {
+        "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+        "assembled_worker_evaluation": {
+          "valid": true,
+          "substantive_success": false,
+          "quality": 0.0,
+          "reason": "contract_failed",
+          "value_accuracy": 0.0,
+          "grounding_accuracy": 1.0
+        },
+        "correct_to_wrong": 0,
+        "wrong_to_correct": 0,
+        "worker_wrong_values": 16,
+        "final_wrong_values": 16,
+        "worker_wrong_proofs": 0,
+        "final_wrong_proofs": 0,
+        "first_worker_value_error": "item_00",
+        "first_final_value_error": "item_00",
+        "extra_edges": 0,
+        "missing_required_edges": 0
+      },
+      "family": "evidence",
+      "structure": "chain",
+      "success": false,
+      "completed_items": 16,
+      "elapsed_s": 43.251084143994376,
+      "exposure_microdollars": 60294,
+      "hash_matches": {
+        "assignment.json": true,
+        "trace.jsonl": true,
+        "outcome.json": true,
+        "replay.html": true
+      },
+      "public_status": "done",
+      "condition_tldr_matches": true
+    }
+  ],
+  "ledger": {
+    "calls": 631,
+    "exposure_microdollars": 2031320,
+    "settled_microdollars": 1810840
+  },
+  "attempt_cap_microdollars": 4000000,
+  "readback_passed": true,
+  "successes": 0
+}

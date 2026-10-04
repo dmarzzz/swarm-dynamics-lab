@@ -4,13 +4,14 @@
   "passed": true,
   "model_calls": 0,
   "files": {
+    "src/analyze_matched.py": "0068309a45fd752985fa38cfd3053405e34bbff2f04ab0b70f4d37022fb6749d",
     "src/budget.py": "b916d8656178d10af02858185083f36d6356d6e07ebbc2e15cf5fe6fbdc2f17a",
     "src/engine.py": "469d35a3eb87ad7c2c03379fba2ee28c9d8df6a458388c17441292968338604f",
     "src/failures.py": "e49e106568eefdbd084be47c921d80474fa24ea392cfd628e95194310dae0b90",
     "src/manifest.py": "f744a392e1cdb9cf4d73fa54d87402900f815028727a85f426bcd094d28bf627",
     "src/provider.py": "874861a2f51cd4c317885e5b2a8194057236dc71a64cf74707033254f30c97b7",
     "src/register.py": "2986669a444deceb80fdf37a7db3fa8fb6f0f7aa338b46cf0bc70f54a8b54349",
-    "src/replay.py": "155508d85102ffc5c3f5aa974d3e7c2bef2eece044f92bcd20006a48ac0ccf97",
+    "src/replay.py": "9c4e89bd731870f984f76285594276cd0f10e1644fd61b92f8422f3bf113f31e",
     "src/reporting.py": "1649ec5d4a6964f2d5c6db574b942aa6c8d88ab927ee970cb216b25d8be2849f",
     "src/reporting_diagnostic.py": "d4039b4c19d80c75c22d7d9c230e6dc40657b4a547b97d8950cb11dbe56025bb",
     "src/response_contract.py": "a4b7c5d11ffab073de1d5a370126a1db0b16846d02a2344c82a153958c6b5c04",
@@ -32,7 +33,7 @@
     "src/transport_diagnostic.py": "840e0664027fded89132a0b3747773dcbc0371beb148d9e04f09dbbc8cea6f78"
   },
   "unverified": [
-    "Q-A6 live matched-roster qualification",
-    "Fresh source/public admission"
-  ]
+    "Larger-N/core/transfer inference and conditional launch policy"
+  ],
+  "notes": "Q-A6 execution source 3331c6c6 frozen; current presentation-only replay fix and saved-data analysis do not change executed instrument."
 }
