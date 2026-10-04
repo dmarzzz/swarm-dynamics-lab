@@ -53,7 +53,7 @@ def execute(run) -> None:
         for t in tasks:
             for s in seeds:
                 for rec in sim.run_episode(t, s, p["world"], p["dose"], arms, p["cfg"]):
-                    rec.update({"run": run.id, "stage": p["stage"], "split": p["split"],
+                    rec.update({"run": run.id, "attempt": run.attempt, "stage": p["stage"], "split": p["split"],
                                 "prereg": p.get("prereg"), "code": code or None, "worker": os.environ.get("SWARM_SOURCE")})
                     f.write(json.dumps(rec) + "\n")
                     a = stats[rec["arm"]]
@@ -68,9 +68,30 @@ def execute(run) -> None:
     summary = {"run": run.id, "params": p, "episodes_per_arm": total, "stats": stats, "metrics": metrics(stats),
                "file": out.name}
     (out.with_suffix(".summary.json")).write_text(json.dumps(summary, indent=2))
-    run.artifact(out, "episodes.jsonl")
+    res = run.artifact(out, "episodes.jsonl")
     run.artifact(out.with_suffix(".summary.json"), "summary.json")
+    if res and not res.get("spooled"):
+        # The hub confirmed this file (sha256). recover() checks it is still there on the next start.
+        out.with_suffix(".uploaded").write_text(json.dumps({"run": run.id, "sha256": res.get("sha256")}))
     run.done(message=f"{total} episodes x {len(arms)} arms", **metrics(stats))
+
+
+def recover() -> None:
+    """Outbox: re-upload results the hub confirmed earlier but no longer has (e.g. it was restored from a
+    backup taken before the upload). Episodes stay on this server's disk, so nothing has to be re-run."""
+    d = ROOT / "results" / "episodes"
+    for marker in sorted(d.glob("*.uploaded")) if d.exists() else []:
+        try:
+            info = json.loads(marker.read_text())
+            have = {a["name"]: a.get("sha256") for a in sr.get_run(info["run"])["artifacts"]}
+        except (sr.HubError, ValueError, KeyError) as e:
+            print(f"recover: skipped {marker.name} ({e})")
+            continue
+        if have.get("episodes.jsonl") != info.get("sha256"):
+            jsonl = marker.with_suffix(".jsonl")
+            sr.upload(info["run"], jsonl, "episodes.jsonl")
+            sr.upload(info["run"], marker.with_suffix(".summary.json"), "summary.json")
+            print(f"recover: re-uploaded {jsonl.name} to {info['run']}")
 
 
 def metrics(stats: dict) -> dict:
@@ -92,6 +113,7 @@ def main():
     if not os.environ.get("SWARM_SOURCE"):
         sys.exit("set SWARM_SOURCE=<you>/<tool>-<n> (e.g. vishesh/codex-1) so runs are attributed")
     exp = load_yaml(ROOT / "experiment.yaml")["id"]
+    recover()
     n = sr.work(exp, execute, stop_when_empty=not a.forever)
     print(f"worker {os.environ['SWARM_SOURCE']}: {n} run(s) for {exp}")
 
