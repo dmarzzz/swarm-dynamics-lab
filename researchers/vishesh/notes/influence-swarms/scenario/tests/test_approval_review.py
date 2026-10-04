@@ -21,7 +21,7 @@ class ApprovalReviewTests(unittest.TestCase):
    answer=reference_decision(obs);self.assertEqual(evaluate(c,answer)['acceptable_decision'],1);choices.append(answer['choice'])
    self.assertNotIn('evaluator',obs);self.assertNotIn('acceptable',json.dumps(obs))
    self.assertEqual(len(cost_worksheet(obs)),3)
-  self.assertEqual(choices[:2],['DEFER','DEFER']);self.assertNotIn('DEFER',choices[2:]);self.assertGreaterEqual(len(set(choices)),3)
+  self.assertEqual(choices[:2],['DEFER','DEFER']);self.assertNotIn('DEFER',choices[2:]);self.assertGreaterEqual(len(set(choices)),4)
  def test_wrong_action_and_blanket_deferral_rejected(self):
   specs=json.loads((BASE/'diagnostic-v3.json').read_text())['cases']
   for i,s in enumerate(specs):

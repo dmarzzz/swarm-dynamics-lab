@@ -31,7 +31,8 @@ def render(rows,path,stage='D2'):
     def text(x,y,s,n=23,c='#dce9ef'):d.text((x,y),s,font=font(n),fill=c)
     text(50,35,'HOW TO WIN AGENTS AND INFLUENCE SWARMS',37)
     text(50,94,'Does targeted approval review beat an equally budgeted second look?',27,'#7bdac5')
-    text(50,144,f'{stage} · native model decisions · {len(rows)}/30 terminal · 6 shared-prefix case clusters')
+    label='SCRIPTED — NOT MODEL EVIDENCE' if stage.startswith('SCRIPTED') else 'native model decisions'
+    text(50,144,f'{stage} · {label} · {len(rows)}/30 terminal · 6 shared-prefix case clusters')
     names=[c['id'] for c in json.loads((BASE/'diagnostic-v3.json').read_text())['cases']]
     labels=['Team + ballots','Team − ballots','Generalist','General review','Approval review']
     for j,s in enumerate(labels):text(485+j*273,235,s,23)
@@ -52,7 +53,7 @@ def collect(out,policy,config,hub=None,deadline_seconds=1500):
     manifest={'stage':'D2','parent_attempts':['native-Q4-01','native-D1-01'],'planned':30,'assignments':[[c['id'],a] for c in spec['cases'] for a in ARMS],'cases':spec,'source_signature':digest({'native':signature(config),'code':Path(__file__).read_text(),'cases':spec}),'model':policy.model,'model_config':config,'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=BASE,text=True).strip(),'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'independence':'six authored dossiers; five dependent outcomes each'}
     (out/'manifest.json').write_text(json.dumps(manifest,indent=2))
     def publish():
-        render(rows,out/'live_frame.png')
+        render(rows,out/'live_frame.png','SCRIPTED' if policy.model.startswith('SCRIPTED') else 'D2')
         if hub:
             try:hub.artifact(out/'live_frame.png','live_frame.png');hub.progress(len(rows),30,model_calls=policy.calls,actual_usd=policy.actual_usd)
             except Exception as exc:errors.append({'type':type(exc).__name__,'phase':'report'})
@@ -92,7 +93,7 @@ def collect(out,policy,config,hub=None,deadline_seconds=1500):
         pair={a:next(r for r in rows if r['case_id']==s['id'] and r['arm']==a) for a in ('general_review','approval_review')}
         pairs.append({'case_id':s['id'],'difference':pair['approval_review']['evaluation']['acceptable_decision']-pair['general_review']['evaluation']['acceptable_decision'] if all(r['valid'] for r in pair.values()) else None})
     summary={'stage':'D2','planned':30,'terminal':len(rows),'valid':len(valid),'invalid':len(rows)-len(valid),'acceptable':sum(r['evaluation']['acceptable_decision'] for r in valid),'qualified':False,'repair_screen_passed':by_arm['approval_review']['acceptable']==6 and policy.usage_missing==0,'by_arm':by_arm,'paired_differences':pairs,'calls':policy.calls,'input_tokens':policy.input_tokens,'output_tokens':policy.output_tokens,'actual_usd':policy.actual_usd,'usage_missing':policy.usage_missing,'seconds':time.monotonic()-started,'report_errors':errors,'outcomes_hash':digest(rows)}
-    (out/'summary.json').write_text(json.dumps(summary,indent=2));render(rows,out/'final_frame.png')
+    (out/'summary.json').write_text(json.dumps(summary,indent=2));render(rows,out/'final_frame.png','SCRIPTED' if policy.model.startswith('SCRIPTED') else 'D2')
     if hub:
         for p in out.iterdir():
             try:hub.artifact(p,p.name)
@@ -110,10 +111,12 @@ def main():
     import sqlite3
     with sqlite3.connect(os.environ['SWARM_BUDGET_LEDGER']) as db:cap,used=db.execute('SELECT cap,reserved FROM budget WHERE id=1').fetchone()
     if cap-used<5.972:raise ValueError('insufficient remaining conservative quota')
+    receipt={'url':url,'sha256':hashlib.sha256(published).hexdigest(),'commit':commit,'verified_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+    with Path(a.out+'.preflight.json').open('x') as f:json.dump(receipt,f)
     policy=ScenarioPolicy();import swarm_report as sr
     sr.register('influence-swarms',title='How to win agents and influence swarms',owner='vishesh',description='TLDR: Fresh procurement cases test targeted candidate approval review against an equally budgeted general second look, plus existing team and cheaper generalist baselines. Six authored cases; diagnostic, not external-influence evidence.',url=a.public_plan,params={'stage':{'type':'str'},'version':{'type':'str'}},metrics=['valid','acceptable','invalid','actual_usd'],primary_metric='acceptable')
     with sr.start('influence-swarms',params={'stage':'D2','version':commit[:12],'plan':a.public_plan}) as hub:
-        summary=collect(a.out,policy,config,hub);receipt={'url':url,'sha256':hashlib.sha256(published).hexdigest(),'commit':commit};Path(a.out,'public-plan-receipt.json').write_text(json.dumps(receipt));hub.artifact(Path(a.out,'public-plan-receipt.json'),'public-plan-receipt.json')
+        summary=collect(a.out,policy,config,hub);Path(a.out,'public-plan-receipt.json').write_text(json.dumps(receipt));hub.artifact(Path(a.out,'public-plan-receipt.json'),'public-plan-receipt.json')
         metrics={k:summary[k] for k in ('valid','acceptable','invalid','actual_usd')}
         if summary['invalid']:hub.fail('Execution invalidity; all assigned outcomes retained',**metrics)
         else:hub.done(message='Bounded architecture diagnostic complete; never S1 qualification',**metrics)

@@ -37,3 +37,9 @@ The owner retired the duplicate dossier review before launch; Dmarz's existing d
 The approved shared authority is USD 55. An atomic USD 8 lease funded this iteration; its persistent host subledger reserved USD 0.773396 across 60 calls, leaving USD 7.226604 within the lease. Actual reported usage totals USD 0.181772; reservations are not refunded or reset. Preserve the authority and subledger when reallocating machines.
 
 Raw evidence, final frames and measured HTML/GIF replays uploaded and verified: qualification has 16 hub artifacts and diagnostic has 12. Verified zero remaining native workers. Dedicated claim released through merged [agentops PR 125](https://github.com/dmarzzz/swarm-labs-agentops/pull/125). Git is authoritative; automatic release mirror lacked local sops. No cloud resource was created or destroyed.
+
+## D2 admission — 2026-10-04 UTC
+
+Fresh exclusive claim vishesh-influence-d2 on verified idle sim-test-01, merged agentops PR134, until 06:39:09Z. Zero containers and no Python/node/uv workers; only Docker daemon. Existing USD8 lease renewed in place for this claim, preserving the old receipt and all reservations; host subledger remains /srv/swarm/influence-q4-budget.sqlite. Observed reserved USD0.773396, remaining USD7.226604. No new quota, server or billing context. D2 admission requires remaining >=USD5.972 and exact immutable public-plan bytes. Single finite diagnostic worker; no S1.
+
+27 unit checks pass. Scripted-D2-02 reconciles 30 valid/acceptable terminal assignments and 108 logical calls; zero API calls. Timeout fault yields all 30 invalid terminal assignments with zero dispatch. Initial/midpoint/final grid checked, fixture-label correction retained. Public preflight receipt is written before hub run_start. Full request/event/outcome history and actual usage are required; code/source commit is frozen and recorded in runtime manifest.
