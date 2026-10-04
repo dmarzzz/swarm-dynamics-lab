@@ -3,14 +3,18 @@ id: review-fork-merge-security
 type: task
 title: 'Review: fork-and-merge security survey'
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
-for: vishesh  # any researcher other than dmarz (the survey owner); shadow also eligible
+owner: vishesh/fm-security-review
+for: vishesh
 created: 2026-10-04
 created_by: shadow/sol-fm
-depends_on: [survey-fork-merge-security]
-topics: [fork-merge-security]
+depends_on:
+- survey-fork-merge-security
+topics:
+- fork-merge-security
+claimed_at: 2026-10-04T14:39Z
+updated: 2026-10-04T14:39Z
 ---
 
 ## Goal
