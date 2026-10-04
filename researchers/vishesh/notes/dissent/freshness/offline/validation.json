@@ -1,6 +1,6 @@
 {
   "kind": "offline software evidence; synthetic transports, no native calls",
-  "tests_passed": 60,
+  "tests_passed": 61,
   "native_calls": 0,
   "requests": 48,
   "semantic_roots": 6,
@@ -11,8 +11,8 @@
   "maximum_request_bytes": 2495,
   "source_hashes": {
     "researchers/vishesh/notes/dissent/freshness/CONTRACT.json": "dcaf3e0180d690ba5a48635ff87bb3a8379993245c0ca9a61c6aba92733c9082",
-    "researchers/vishesh/notes/dissent/freshness/DIAGNOSTIC-REVIEW.json": "3abb6672a859fc183a7721679ae68515f387d00f17693bee1d4ca6527ca37cd9",
-    "researchers/vishesh/notes/dissent/freshness/PLAN.md": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299",
+    "researchers/vishesh/notes/dissent/freshness/DIAGNOSTIC-REVIEW.json": "2445ecc797296ad8d1ac635e719b73eccd2d46d7abf869c1017715fa0406720e",
+    "researchers/vishesh/notes/dissent/freshness/PLAN.md": "1673fb9cf033954446236f4585402ce5fd1a4530b824263e502932366eb0d516",
     "researchers/vishesh/notes/dissent/freshness/cases.py": "cbed278bb7d8f536a5b82919f67722624179f8fc5d799fdfa44148499302a472",
     "researchers/vishesh/notes/dissent/freshness/native.py": "46715c6fee8a1a944bfb950384dae182ab40c3e8cd00dd519e119aaf9fdaa36a",
     "researchers/vishesh/notes/dissent/freshness/native_budget.py": "f589cd0f57f2c33852dbe75c607be317a001263092740f5150126bc665119542",

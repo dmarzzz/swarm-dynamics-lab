@@ -1,6 +1,6 @@
 # Freshness diagnostic case assessment
 
-The 48-cell authored development matrix is ready for the scoped diagnostic. It cannot estimate a field error rate or qualify a broader dissent system. [Offline evidence](offline/validation.json) and [60 check results](offline/unit-tests.txt) support the following acceptance findings.
+The 48-cell authored development matrix is ready for the scoped diagnostic. It cannot estimate a field error rate or qualify a broader dissent system. [Offline evidence](offline/validation.json) and [61 check results](offline/unit-tests.txt) support the following acceptance findings.
 
 | Requirement | Evidence and boundary |
 | --- | --- |

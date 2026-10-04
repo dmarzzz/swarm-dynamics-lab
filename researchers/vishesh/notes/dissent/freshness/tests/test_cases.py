@@ -60,3 +60,9 @@ class CasesTests(unittest.TestCase):
         rows=self.rows(lambda a:a['expected']);rows[0].update(status='failed',action='DEFER')
         with self.assertRaises(ValueError):cases.score(self.m,rows)
         rows[0]['action']=None;s=cases.score(self.m,rows);self.assertEqual(sum(s['statuses'].values()),48)
+
+    def test_actual_shared_public_plan_contract(self):
+        sys.path.insert(0,str(cases.BASE.parents[1]/'experiment-documentation'))
+        import public_plan
+        result=public_plan.validate({'id':'right-dissenter-rd7','url':'https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/researchers/vishesh/notes/dissent/freshness/PLAN.md','description':'TLDR: Offline public-plan validation fixture.'},(cases.BASE/'PLAN.md').read_text(),'TLDR: F0 explicit eligibility versus raw timestamps with paired context controls.')
+        self.assertEqual(result['experiment'],'right-dissenter-rd7')

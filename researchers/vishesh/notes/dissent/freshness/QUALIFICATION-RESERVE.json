@@ -6,5 +6,7 @@
   "automated_label_checks": 54,
   "operator_individual_case_inspections": 0,
   "native_requests": 0,
-  "scope": "Generated same-grammar reserve, not independent real-world generalization; public test seed cases are separate."
+  "scope": "Generated same-grammar reserve, not independent real-world generalization; public test seed cases are separate.",
+  "current_instrument_sha256": "ffeb75b48463dbce15ed73ac538912e9db637831cbcb05bdf96ba7e88b8a3b68",
+  "format_amendment": "Plan headings/explicit prediction and reference hash updated before native dispatch; case/controller code and sealed corpus unchanged."
 }

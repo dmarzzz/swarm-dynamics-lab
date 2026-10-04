@@ -1,3 +1,4 @@
+test_actual_shared_public_plan_contract (test_cases.CasesTests.test_actual_shared_public_plan_contract) ... ok
 test_card_cannot_launder_expired_observation (test_cases.CasesTests.test_card_cannot_launder_expired_observation) ... ok
 test_exact_balance_and_reproducibility (test_cases.CasesTests.test_exact_balance_and_reproducibility) ... ok
 test_expiry_boundary_future_and_mismatch (test_cases.CasesTests.test_expiry_boundary_future_and_mismatch) ... ok
@@ -60,6 +61,6 @@ test_worker_creates_missing_parents_without_changing_requests (test_native.Nativ
 test_worker_preflight_makes_no_provider_or_ledger_access (test_native.NativeTests.test_worker_preflight_makes_no_provider_or_ledger_access) ... ok
 
 ----------------------------------------------------------------------
-Ran 60 tests in 2.462s
+Ran 61 tests in 2.188s
 
 OK

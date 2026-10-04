@@ -3925,7 +3925,7 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Whether explicit evidence eligibility repairs Jev expiry errors and changes sensitivity to opposing context is untested.",
-        "rationale": "The approved48-request matched development diagnostic and deterministic baseline pass60offline checks. Native admission is being refreshed; no RD7 responses collected. Prior RD6 failures remain separate."
+        "rationale": "The approved48-request matched development diagnostic and deterministic baseline pass61offline checks. Native admission is being refreshed; no RD7 responses collected. Prior RD6 failures remain separate."
       },
       "sample_size_summary": "Observed native: none. Planned: six authored semantic roots, 12 task/age cases \u00d7 four conditions = 48 dependent requests. Separate 54-case generated qualification reserve sealed and unrun; no field sample or independent replication.",
       "sources": [
@@ -3938,13 +3938,13 @@
         "researchers/vishesh/notes/dissent/freshness/QUALIFICATION-RESERVE.json"
       ],
       "source_sha256": {
-        "researchers/vishesh/notes/dissent/freshness/PLAN.md": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299",
+        "researchers/vishesh/notes/dissent/freshness/PLAN.md": "1673fb9cf033954446236f4585402ce5fd1a4530b824263e502932366eb0d516",
         "researchers/vishesh/notes/dissent/freshness/CONTRACT.json": "dcaf3e0180d690ba5a48635ff87bb3a8379993245c0ca9a61c6aba92733c9082",
-        "researchers/vishesh/notes/dissent/freshness/CASE-QUALITY.md": "4b2aa4a262f1705f8ca32631f1f850c8804d53c4a69f6b1eb3a7ed5c37f8e2e2",
-        "researchers/vishesh/notes/dissent/freshness/IMPLEMENTATION.md": "a37ec08cfacea4bd2e2320ddc535331b345d5e1d5aa066aa560b5918d263ccea",
-        "researchers/vishesh/notes/dissent/freshness/DIAGNOSTIC-REVIEW.json": "3abb6672a859fc183a7721679ae68515f387d00f17693bee1d4ca6527ca37cd9",
-        "researchers/vishesh/notes/dissent/freshness/offline/validation.json": "88216a90a7cd8e269f574ecbf1ebfb2c1b48436c1cd185853d10273d521d0e20",
-        "researchers/vishesh/notes/dissent/freshness/QUALIFICATION-RESERVE.json": "d0978b63381c51a97c89528d07c46441d361a7f813cc8a0921762e2aee97b87a"
+        "researchers/vishesh/notes/dissent/freshness/CASE-QUALITY.md": "c803a3474394a075afefe7663a292cf60718146f1afcccb0276e9000314e1d79",
+        "researchers/vishesh/notes/dissent/freshness/IMPLEMENTATION.md": "645f64775ee0525711a6bffc23c36b584ac4164b2579c76cb946589d8519f645",
+        "researchers/vishesh/notes/dissent/freshness/DIAGNOSTIC-REVIEW.json": "2445ecc797296ad8d1ac635e719b73eccd2d46d7abf869c1017715fa0406720e",
+        "researchers/vishesh/notes/dissent/freshness/offline/validation.json": "3e499a6fbe39d2e4a155358a8ac2542fbe5d87d87486c04d6f906ace95a36270",
+        "researchers/vishesh/notes/dissent/freshness/QUALIFICATION-RESERVE.json": "36a53b03a2375f42a52b37930040e23addcde322e0288fdabd1b29371c401382"
       },
       "status_at_assessment": "implemented_offline_passed_native_admission_pending",
       "assessor": "vishesh/codex-decision-models",
