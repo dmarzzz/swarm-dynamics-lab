@@ -7,6 +7,25 @@ program: ../overnight-program-2026-10-04/program.json
 model: qwen/qwen3.7-flash
 canonical_model: qwen/qwen3.7-flash-20260727
 provider: alibaba
+# Attempt 002 model ladder (dated addition 2026-10-04, dmarz via dmarz/fleet-monitor): the model is a launch parameter
+# (environment STUDY_MODEL, set by the launcher). Each model is its own run of the whole chain: batch names carry its
+# tag, its own ledger file, dollar cap and results directory, its own P0, Q0 and X0; models are never pooled.
+# The first entry is the program's model. An entry with status `declared` is refused at run time until a later code
+# commit pins its adapter, prices and request template (new source hash, its own pre-run review).
+models:
+  qwen/qwen3.7-flash:
+    api: openrouter
+    tag: ''
+    status: ready
+    usd_cap: 5
+    # This model's attempt 002 continues attempt 001's ledger file; its caps add attempt 001's one P0 reservation.
+    carried_from_attempt_001: {P0: 1}
+  gpt-6-luna:
+    api: openai
+    tag: gpt-6-luna
+    status: declared
+    usd_cap: 60
+    carried_from_attempt_001: {}
 request_template:
   model: qwen/qwen3.7-flash
   provider:
@@ -96,9 +115,6 @@ budget:
   # REISSUE: ledger reservations for call ids re-issued once after a lost task (the lost send may have been billed).
   max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192, REISSUE: 360}
   max_attempted_calls: 8478
-  # Attempt 002 continues attempt 001's ledger file (one ledger, one cumulative USD 5 cap). The ledger's caps are the
-  # caps above plus what attempt 001 reserved (one P0 call), see study.ledger_budget().
-  carried_from_attempt_001: {P0: 1}
   max_transport_attempts: 9800
   max_output_tokens: 1000
   max_input_tokens: 8000

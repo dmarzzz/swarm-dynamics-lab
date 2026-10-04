@@ -448,6 +448,43 @@ class Normalisation(unittest.TestCase):
         self.assertEqual((b['max_calls']['P0'], b['max_attempted_calls']), (2, 8479))
 
 
+class ModelLadder(unittest.TestCase):
+    """Attempt 002: the model is a launch parameter from a declared set of two; each model is its own chain."""
+
+    def test_default_is_the_programs_model(self):
+        with patch.dict(os.environ, {study.MODEL_ENV: ''}):
+            self.assertEqual(study.model_name(), 'qwen/qwen3.7-flash')
+            self.assertEqual(study.params('P0')['batch'], 'p0-002')
+            self.assertEqual(study.session_experiment(), study.EXPERIMENT)
+            self.assertEqual(study.ledger_budget()['aggregate_usd'], 5)
+            self.assertEqual(study.provider_config()['model'], 'qwen/qwen3.7-flash')
+
+    def test_second_model_has_own_names_cap_and_is_refused_until_pinned(self):
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-luna'}):
+            p = study.params('S1')
+            self.assertEqual((p['batch'], p['model']), ('s1-002-gpt-6-luna', 'gpt-6-luna'))
+            self.assertEqual(provider.stage_of(p['batch'] + ':x'), 'S1')
+            self.assertEqual(study.session_experiment(), study.EXPERIMENT + '-gpt-6-luna')
+            b = study.ledger_budget()
+            self.assertEqual((b['aggregate_usd'], b['max_calls']['P0'], b['max_attempted_calls']), (60, 1, 8478))
+            with self.assertRaises(ValueError):
+                study.provider_config()
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-4o'}):
+            with self.assertRaises(ValueError):
+                study.model_name()
+
+    def test_gates_never_pool_models(self):
+        with patch.dict(os.environ, {study.MODEL_ENV: ''}):
+            q = study.params('S0')
+        other = dict(q, model='gpt-6-luna', batch='s0-002-gpt-6-luna')
+        mine = {'params': q, 'status': 'done', 'metrics': {'qualification_passed': 1, 'invalid': 0}}
+        theirs = {'params': other, 'status': 'done', 'metrics': {'qualification_passed': 1, 'invalid': 0}}
+        with patch.dict(os.environ, {study.MODEL_ENV: ''}):
+            coordinator.gate([mine, theirs], 'P0', study.params('P0'))          # one S0 of this model, not two
+            with self.assertRaises(ValueError):
+                coordinator.gate([theirs], 'P0', study.params('P0'))
+
+
 class Gates(unittest.TestCase):
     def run_of(self, stage, status='done', **metrics):
         p = study.params(stage)

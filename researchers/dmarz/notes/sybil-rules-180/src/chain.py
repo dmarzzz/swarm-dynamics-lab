@@ -70,8 +70,8 @@ def read_status(root):
 
 def projection_check(mean_cost_usd, committed_usd):
     """Before S1: S1 and D1 calls x the measured mean cost of a maximum-context call must fit in the remaining cap."""
-    budget = study.design()['budget']
-    calls = budget['max_calls']['S1'] + budget['max_calls']['D1']
+    budget = study.ledger_budget()
+    calls = study.design()['budget']['max_calls']['S1'] + study.design()['budget']['max_calls']['D1']
     remaining = budget['aggregate_usd'] - committed_usd
     projected = calls * mean_cost_usd
     return {'mean_cost_usd': mean_cost_usd, 'calls': calls, 'projected_usd': projected, 'committed_usd': committed_usd,
@@ -103,7 +103,7 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, t
     ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
     previous = read_status(root) or {}
     status = {'experiment': study.EXPERIMENT, 'state': 'running', 'requested': stages, 'started': now(),
-              'source_hash': study.source_hash(), 'code': study.code_revision(),
+              'source_hash': study.source_hash(), 'code': study.code_revision(), 'model': study.model_name(),
               'stages': dict(previous.get('stages') or {}),
               'budget': {'max_calls': budget['max_calls'], 'max_calls_total': budget['max_attempted_calls'],
                          'usd_cap': budget['aggregate_usd']}}
@@ -138,7 +138,7 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, t
             runs = sr.runs(study.EXPERIMENT, limit=5000)
             coordinator.gate(runs, stage, p)
             if stage in ('S1', 'D1'):
-                x0 = coordinator.stage_runs(runs, 'X0', p['source_hash'])
+                x0 = coordinator.stage_runs(runs, 'X0', p['source_hash'], p['model'])
                 metrics = (x0[0].get('metrics') or {}) if len(x0) == 1 else {}
                 in_flight = int(metrics.get('in_flight_selected') or budget['in_flight_per_host'])
                 if not budget['in_flight_per_host'] <= in_flight <= budget['in_flight_per_host_max']:
