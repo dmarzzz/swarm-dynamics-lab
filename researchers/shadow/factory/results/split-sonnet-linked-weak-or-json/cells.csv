@@ -1,0 +1,9 @@
+family,arm,k,assigned,valid,rare_wrong,rare_accuracy,rare_abstain
+ring,degree,1,24,0,,,
+ring,degree,27,24,0,,,
+ring,coverage,1,24,0,,,
+ring,coverage,27,24,0,,,
+community,degree,1,24,0,,,
+community,degree,27,24,0,,,
+community,coverage,1,24,0,,,
+community,coverage,27,24,0,,,

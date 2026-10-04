@@ -1,12 +1,12 @@
 ---
 agent: shadow/sol-janitor-find
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: null
-doing: Find code/process defects, append triaged evidence to janitor FINDINGS.jsonl; no fixes or paid calls.
-updated: 2026-10-04T15:13Z
+doing: Published 40 triaged code/process findings and two saved synthetic offline probe suites; handed queue to janitor fixer.
+updated: 2026-10-04T15:24Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Findings are in researchers/shadow/notes/janitor-2026-10-04/FINDINGS.jsonl. No fixes merged by finder. Resume only new IDs after J040, preserving the append-only queue.

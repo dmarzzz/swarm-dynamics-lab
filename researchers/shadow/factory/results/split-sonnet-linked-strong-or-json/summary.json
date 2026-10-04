@@ -1,0 +1,33 @@
+{
+  "all_assigned_bounds": [
+    -0.9305555555555556,
+    1.2361111111111112
+  ],
+  "attempted": 104,
+  "ci95": [
+    0.5,
+    0.5
+  ],
+  "cost_unknown_calls": 4,
+  "exploratory": true,
+  "failed": 4,
+  "family_means": {
+    "community": 0.6666666666666666,
+    "ring": 0.3333333333333333
+  },
+  "generated_at": "2026-10-04T15:18:07.210597+00:00",
+  "input_tokens": 288128,
+  "main_planned": 192,
+  "main_valid": 88,
+  "output_tokens": 3101,
+  "paid_usd": 1.201143,
+  "paired_roots": 2,
+  "planned": 204,
+  "primary": 0.5,
+  "qualification_passed": true,
+  "roots_planned": 48,
+  "spec": "split-sonnet-linked-strong-or-json",
+  "status": "lead",
+  "unstarted": 100,
+  "valid": 100
+}

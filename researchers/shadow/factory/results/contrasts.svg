@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="660" viewBox="0 0 1600 660">
+<rect width="1600" height="660" fill="#11151c"/><g font-family="monospace" fill="#e6edf3">
+<text x="45" y="55" font-size="29">Identity splitting: sensitivity to attacker links and check reliability</text>
+<text x="45" y="93" font-size="20">Sonnet 4.6 | 48 paired roots per complete row | exploratory, shared synthetic worlds</text>
+<line x1="460" x2="460" y1="140" y2="570" stroke="#384353"/><text x="437" y="605" font-size="20">-100</text>
+<line x1="715.0" x2="715.0" y1="140" y2="570" stroke="#384353"/><text x="692.0" y="605" font-size="20">-50</text>
+<line x1="970" x2="970" y1="140" y2="570" stroke="#384353"/><text x="947" y="605" font-size="20">+0</text>
+<line x1="1225.0" x2="1225.0" y1="140" y2="570" stroke="#384353"/><text x="1202.0" y="605" font-size="20">+50</text>
+<line x1="1480" x2="1480" y1="140" y2="570" stroke="#384353"/><text x="1457" y="605" font-size="20">+100</text>
+<text x="45" y="187" font-size="21">Linked, reliable, 12 checks</text>
+<text x="45" y="267" font-size="21">Linked, unreliable, 12 checks</text>
+<text x="620" y="644" font-size="19">Degree-minus-coverage splitting effect (percentage points), 95% root-bootstrap CI</text>
+</g></svg>

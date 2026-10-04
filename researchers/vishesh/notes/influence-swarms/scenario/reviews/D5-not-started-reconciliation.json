@@ -1,0 +1,31 @@
+{
+  "record_type": "not_started_dispatch_request_closeout",
+  "stage": "D5",
+  "scientific_attempt_id_reserved": "native-D5-01",
+  "verified_utc": "2026-10-04T15:23:31.511400+00:00",
+  "source_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
+  "packet_hash": "d0fe44becee7386e667b84f727317d91e3cbd68be2b28a89f33d24b7419efe44",
+  "planned_decisions": 24,
+  "started_decisions": 0,
+  "terminal_native_decisions": 0,
+  "valid_native_decisions": null,
+  "reason_valid_null": "no native sample exists",
+  "new_model_calls": 0,
+  "new_actual_usd": 0,
+  "runtime_output_exists": false,
+  "runtime_start_journal_exists": false,
+  "credential_acceptance_journal_exists": false,
+  "matching_workers": 0,
+  "matching_hub_runs": 0,
+  "cumulative_subledger": {
+    "cap_usd": 8,
+    "reserved_usd": 3.17832,
+    "calls": 198
+  },
+  "blockers": [
+    "central dispatch not taken up",
+    "direct-dispatch exception unresolved",
+    "prior allocation and handoff expired"
+  ],
+  "resume": "Coordinate current authorized central dispatch, verify and allocate idle capacity, renew same lease without reset, refresh source/public-plan/runtime receipts, enable one bounded exact-alias handoff, dispatch unchanged D5 once."
+}

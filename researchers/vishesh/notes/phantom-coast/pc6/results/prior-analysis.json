@@ -1,0 +1,176 @@
+{
+  "analysis": "retrospective; no new native evidence",
+  "pc5_independent_layouts": 32,
+  "pc5_dependent_choices": 128,
+  "pc5_missing": 0,
+  "paired_strata": [
+    {
+      "reliability": 0.8,
+      "assigned_pairs": 32,
+      "improved": 0,
+      "regressed": 7,
+      "both_correct": 21,
+      "both_wrong": 4,
+      "regret_delta": 0.010937500000000001
+    },
+    {
+      "reliability": 0.2,
+      "assigned_pairs": 32,
+      "improved": 19,
+      "regressed": 0,
+      "both_correct": 5,
+      "both_wrong": 8,
+      "regret_delta": -0.32656250000000003
+    }
+  ],
+  "exploratory_feature_strata": [
+    {
+      "reliability": 0.8,
+      "feature": "report_first",
+      "value": false,
+      "n": 22,
+      "legacy_optimal": 19,
+      "explicit_optimal": 13
+    },
+    {
+      "reliability": 0.8,
+      "feature": "report_first",
+      "value": true,
+      "n": 10,
+      "legacy_optimal": 9,
+      "explicit_optimal": 8
+    },
+    {
+      "reliability": 0.8,
+      "feature": "label",
+      "value": "LAND",
+      "n": 16,
+      "legacy_optimal": 15,
+      "explicit_optimal": 10
+    },
+    {
+      "reliability": 0.8,
+      "feature": "label",
+      "value": "WATER",
+      "n": 16,
+      "legacy_optimal": 13,
+      "explicit_optimal": 11
+    },
+    {
+      "reliability": 0.2,
+      "feature": "report_first",
+      "value": false,
+      "n": 22,
+      "legacy_optimal": 3,
+      "explicit_optimal": 15
+    },
+    {
+      "reliability": 0.2,
+      "feature": "report_first",
+      "value": true,
+      "n": 10,
+      "legacy_optimal": 2,
+      "explicit_optimal": 9
+    },
+    {
+      "reliability": 0.2,
+      "feature": "label",
+      "value": "LAND",
+      "n": 16,
+      "legacy_optimal": 1,
+      "explicit_optimal": 15
+    },
+    {
+      "reliability": 0.2,
+      "feature": "label",
+      "value": "WATER",
+      "n": 16,
+      "legacy_optimal": 4,
+      "explicit_optimal": 9
+    }
+  ],
+  "policies": [
+    {
+      "reliability": 0.8,
+      "policy": "legacy",
+      "expected_regret": 0.00625,
+      "evidence": "saved native choices"
+    },
+    {
+      "reliability": 0.8,
+      "policy": "explicit",
+      "expected_regret": 0.0171875,
+      "evidence": "saved native choices"
+    },
+    {
+      "reliability": 0.8,
+      "policy": "always_check",
+      "expected_regret": 0.05,
+      "evidence": "analytic counterfactual on declared contract"
+    },
+    {
+      "reliability": 0.8,
+      "policy": "always_explore",
+      "expected_regret": 0.0,
+      "evidence": "analytic counterfactual on declared contract"
+    },
+    {
+      "reliability": 0.8,
+      "policy": "analytic",
+      "expected_regret": 0,
+      "evidence": "analytic counterfactual on declared contract"
+    },
+    {
+      "reliability": 0.2,
+      "policy": "legacy",
+      "expected_regret": 0.4640625,
+      "evidence": "saved native choices"
+    },
+    {
+      "reliability": 0.2,
+      "policy": "explicit",
+      "expected_regret": 0.1375,
+      "evidence": "saved native choices"
+    },
+    {
+      "reliability": 0.2,
+      "policy": "always_check",
+      "expected_regret": 0.0,
+      "evidence": "analytic counterfactual on declared contract"
+    },
+    {
+      "reliability": 0.2,
+      "policy": "always_explore",
+      "expected_regret": 0.55,
+      "evidence": "analytic counterfactual on declared contract"
+    },
+    {
+      "reliability": 0.2,
+      "policy": "analytic",
+      "expected_regret": 0,
+      "evidence": "analytic counterfactual on declared contract"
+    }
+  ],
+  "verify_cost_qwen_attempt002": {
+    "independent_layouts": 12,
+    "dependent_choices": 24,
+    "counts": {
+      "both_correct": 8,
+      "exact_swap": 11,
+      "swap_small_zero": 4,
+      "other": 1,
+      "chooses_own_minimum": 23,
+      "optimal": 10,
+      "misses_with_reversed_cost_order": 14
+    },
+    "pooled_with_pc5": false,
+    "source_hashes": {
+      "researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/p0-episodes.jsonl.gz": "1d5676be1b953f6ec0cf8768648be378b1d5662026072e095e09aaf70fe21100",
+      "researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/q0-episodes.jsonl.gz": "9793ba2fc6302b99cc6a42856cfba8aae96dcb3432ed0fdf0af4e7a872263ad6"
+    }
+  },
+  "known_api_usd": 0.845052138,
+  "conservative_api_exposure_usd": 0.857148138,
+  "new_native_calls": 0,
+  "new_spend_usd": 0
+}

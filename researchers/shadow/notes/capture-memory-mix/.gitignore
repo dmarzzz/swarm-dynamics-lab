@@ -3,7 +3,7 @@ results/pulled/
 results/local-*/
 results/local-*.log
 results/pilot-pred-*/
-results/pilot-mp/*.jsonl
+results/pilot-mp/calls-*.jsonl
 __pycache__/
 *.pyc
 results/spend-ledger.json

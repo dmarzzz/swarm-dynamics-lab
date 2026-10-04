@@ -18,9 +18,10 @@ from tasks import generate,qualification_manifest,evaluate,operational,digest
 from failures import SafeFailure,safe_code
 from response_contract import VERSION,LEGACY
 from stage_audit import evidence_stage_audit
+from input_binding import futile
 
 REQUIRED=('expected_served_model','expected_served_provider','stage_cap_microdollars',
-          'episode_cap_microdollars','spending_authorization','independent_review_commit',
+          'episode_cap_microdollars','spending_authorization',
           'exclusive_machine_claim','public_plan_receipt','authorized_total_microdollars')
 
 
@@ -49,10 +50,22 @@ def preflight(config,source_root):
     if subprocess.check_output(['git','status','--porcelain'],cwd=source_root,text=True).strip():
         raise ValueError('source_not_clean')
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=source_root,text=True).strip()
+    if config.get('stage')=='input-binding':
+        import time
+        from admit_input_binding import admission_errors
+        admission=json.loads(Path(config['queue_admission']).read_text())
+        errors=admission_errors(admission,commit,time.time())
+        if errors:raise ValueError('queue_admission:'+','.join(errors))
     receipt=json.loads(Path(config['public_plan_receipt']).read_text())
     if receipt.get('experiment')!=config['experiment_id'] or receipt.get('commit')!=commit:
         raise ValueError('public_registration_not_current_source')
     url=receipt['url']
+    if config.get('stage')=='input-binding':
+        expected='https://github.com/dmarzzz/swarm-lab/blob/'+commit+'/researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-input-binding-plan.md'
+        if url!=expected:raise ValueError('input_binding_plan_mismatch')
+        frozen=json.loads((Path(__file__).parent.parent/'input-binding-config.json').read_text())
+        mutable={'status','exclusive_machine_claim','public_plan_receipt'}
+        if any(config.get(k)!=v for k,v in frozen.items() if k not in mutable):raise ValueError('input_binding_config_drift')
     if not re.fullmatch(r'https://github.com/dmarzzz/swarm-lab/blob/[0-9a-f]{40}/.+\.md',url):
         raise ValueError('immutable_plan_required')
     raw=url.replace('https://github.com/','https://raw.githubusercontent.com/').replace('/blob/','/')
@@ -73,6 +86,13 @@ def assignments_for(config):
             task=generate(family,structure,0,width=2)
             identity=config['attempt_id']+'/'+task.public['id']+'/width2/n1'
             rows.append(dict(id=identity,parent_id=task.public['id'],root_id=task.public['id']+'/width2',root=0,n=1,stage='canary',family=family,structure=structure,width=2,attempt_id=config['attempt_id'],public_task_sha256=digest(task.public)))
+        return rows
+    if config.get('stage')=='input-binding':
+        if config.get('attempt_id')!='q-a7' or config.get('attempt_cap_microdollars')!=2000000 or config.get('episode_cap_microdollars')!=2000000 or config.get('response_contract')!=VERSION or config.get('slots')!=1:raise ValueError('invalid_input_binding_config')
+        rows=[]
+        for root,structure,order in [(6,'parallel',('full','bound')),(6,'chain',('bound','full')),(7,'parallel',('bound','full')),(7,'chain',('full','bound'))]:
+            task=generate('evidence',structure,root,width=16);pair=task.public['id']+'/width16'
+            for arm in order:rows.append(dict(id='q-a7/'+pair+'/n1/'+arm,parent_id=task.public['id'],root_id=pair,pair_id=pair,root=root,n=1,arm=arm,stage='input-binding',family='evidence',structure=structure,width=16,attempt_id='q-a7',public_task_sha256=digest(task.public)))
         return rows
     if config.get('stage')=='matched-roster':
         if config.get('attempt_id')!='q-a6' or config.get('attempt_cap_microdollars')!=4000000 or config.get('episode_cap_microdollars')!=2000000 or config.get('response_contract')!=VERSION:raise ValueError('invalid_matched_roster_config')
@@ -135,17 +155,19 @@ def save_json(path,data):
 
 
 def run_batch(config,commit,output,ledger,assignments):
-    states=[];bank=None;stop_reason=None;consecutive_malformed=0
+    states=[];bank=None;stop_reason=None;consecutive_malformed=0;outcomes=[]
     for row in assignments:
         target=output/hashlib.sha256(row['id'].encode()).hexdigest()[:16]
         target.mkdir(exist_ok=False)
         tldr=f"TLDR: {row.get('attempt_id','Q-A')} {row['family']} {row['structure']} root {row['root']}, width={row.get('width',16)}, N=1 under screening caps; single-agent calibration reference for later matched-N comparisons. Metrics: verified on-time success, quality, cost and latency. Exploratory synthetic tasks; not a size-effect result."
         if row.get('stage')=='matched-roster':
             tldr=f"TLDR: Q-A6 evidence {row['structure']} root {row['root']}, width=16, N={row['n']}; matched N=1 versus N=2 with required dependencies and equal caps. Metrics: verified success, quality, worker/final errors, cost and latency. Two development roots only; exploratory pilot, not optimal-N evidence."
+        if row.get('stage')=='input-binding':
+            tldr=f"TLDR: Q-A7 {row['arm']} public-input binding arm, evidence {row['structure']} root {row['root']}, width16 N1; matched full versus redundant binding under equal caps. Metrics: correctness, correct items/second, local arithmetic consistency, cost. Tiny development diagnostic with root6 futility stop; no size-effect claim."
         save_json(target/'assignment.json',row|{'commit':commit,'run_tldr':tldr,'status':'assigned'})
         states.append({'episode':row['id'],'directory':target.name,'execution':'not_started','reason':None,'exposure_microdollars':0,'publication':'not_started'})
     try:
-        bank=Budget(ledger,config['stage_cap_microdollars'],config['attempt_id'] if config.get('stage') in ('canary','full-width','evidence-audit','matched-roster') else None,config.get('attempt_cap_microdollars') if config.get('stage') in ('canary','full-width','evidence-audit','matched-roster') else None)
+        bank=Budget(ledger,config['stage_cap_microdollars'],config['attempt_id'] if config.get('stage') in ('canary','full-width','evidence-audit','matched-roster','input-binding') else None,config.get('attempt_cap_microdollars') if config.get('stage') in ('canary','full-width','evidence-audit','matched-roster','input-binding') else None)
         for row,state in zip(assignments,states):
             target=output/state['directory'];lock=threading.Lock();completed=0
             def journal(event):
@@ -178,13 +200,18 @@ def run_batch(config,commit,output,ledger,assignments):
                 if row.get('public_task_sha256') and digest(task.public)!=row['public_task_sha256']:raise ValueError('task_hash_mismatch')
                 runtime=Provider(config,bank,row['id'],journal,task.public)
                 try:
-                    record=execute(task.public,row['n'],config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event,strict_contract=config.get('stage') in ('canary','full-width','evidence-audit','matched-roster'),enforce_dependencies=config.get('stage')=='matched-roster')
+                    record=execute(task.public,row['n'],config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event,strict_contract=config.get('stage') in ('canary','full-width','evidence-audit','matched-roster','input-binding'),enforce_dependencies=config.get('stage') in ('matched-roster','input-binding'),bind_inputs=row.get('arm')=='bound')
                 finally:
                     progress_pool.shutdown(wait=True,cancel_futures=True)
                 result=evaluate(task,record['artifact'] or '{}');exposure=bank.exposure(row['id'])
                 record.update(assignment=row,commit=commit,evaluation=result,exposure_microdollars=exposure,
                               operational_success=operational(result,record['elapsed_s'],exposure,config['screening_deadline_s'],config['episode_cap_microdollars']))
-                if config.get('stage') in ('evidence-audit','matched-roster'):record['stage_diagnostics']=evidence_stage_audit(task,record)
+                if config.get('stage') in ('evidence-audit','matched-roster','input-binding'):record['stage_diagnostics']=evidence_stage_audit(task,record)
+                if config.get('stage')=='input-binding':
+                    correct=row['width']*result['quality']
+                    record['correct_items_per_second']=correct/record['elapsed_s'] if record['elapsed_s']>0 else None
+                    record['correct_items_per_usd']=correct/(exposure/1e6) if exposure>0 else None
+                outcomes.append(record)
                 save_json(target/'outcome.json',record)
                 state.update(execution='terminal',reason=record['failure'],exposure_microdollars=exposure,publication='pending')
                 save_json(target/'state.json',state)
@@ -196,12 +223,14 @@ def run_batch(config,commit,output,ledger,assignments):
                 print(json.dumps({'episode':row['id'],'terminal':True,'success':record['operational_success'],'publication':state['publication']}),flush=True)
                 if not acknowledged:stop_reason='publication_incomplete';break
                 if record.get('fatal'):stop_reason=record['failure'];break
-                if config.get('stage') in ('canary','full-width','evidence-audit','matched-roster') and (record['failure'] or record['work_failures']):
+                if config.get('stage') in ('canary','full-width','evidence-audit','matched-roster','input-binding') and (record['failure'] or record['work_failures']):
                     stop_reason=record['failure'] or 'work_contract_failed';break
                 consecutive_malformed=consecutive_malformed+1 if record['failure']=='malformed_output' else 0
                 if config.get('attempt_id') and consecutive_malformed>=2:
                     stop_reason='repeated_malformed_output';break
                 if not bank.healthy():stop_reason='budget_overrun';break
+                if config.get('stage')=='input-binding' and len(outcomes)==4 and futile(outcomes):
+                    stop_reason='input_binding_futility';break
             except Exception as exc:
                 stop_reason=safe_code(exc)
                 if state['execution']=='admission_pending':state['execution']='admission_failed'
@@ -233,7 +262,7 @@ def run_batch(config,commit,output,ledger,assignments):
                         'unstarted':sum(s['execution']=='not_started' for s in states)}
         save_json(output/'reconciliation.json',reconciliation)
     print(json.dumps({'stage':'Q-A','terminal':terminal,'assigned':len(states),'stop_reason':stop_reason}),flush=True)
-    return 0 if stop_reason is None and terminal==len(states) else 2
+    return 0 if (stop_reason is None and terminal==len(states)) or stop_reason=='input_binding_futility' else 2
 
 if __name__=='__main__':
     try:raise SystemExit(main())

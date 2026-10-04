@@ -28,7 +28,7 @@ Use the existing central queue request. Obtain an explicit coordinator acknowled
 
 Then obtain a fresh exclusive Dmarz-account allocation, reverify trusted SSH, account/resource binding, actual workload, source/runtime, public page and route, and issue fresh receipts. Keep the OpenRouter credential in its established local consumer and the original SQLite ledger as the sole authority. No secret or independent ledger is moved. A stale receipt is never made current merely by changing its timestamp. The central coordinator must confirm current checks and complete the actual launch handoff.
 
-The scientific plan permits at most 24 Q5 and 36 H5 calls, 60 RD5 calls in total, lifetime stop488 under the original500 ceiling. API authority remains USD1; infrastructure remains USD1. Retain historical unresolved API exposure and all allocation costs, including the unused first activation. A renewed allocation may last at most ninety minutes and must fit the remaining conservative infrastructure envelope. No idle allocation is held while coordinator availability is unknown.
+The scientific plan permits at most 24 Q5 and 36 H5 calls, 60 RD5 calls in total, lifetime stop 488 under the original500 ceiling. API authority remains USD 1; infrastructure remains USD 1. Retain historical unresolved API exposure and all allocation costs, including the unused first activation. A renewed allocation may last at most ninety minutes and must fit the remaining conservative infrastructure envelope. No idle allocation is held while coordinator availability is unknown.
 
 ## Records and acceptance
 
@@ -36,4 +36,4 @@ Preserve full assignment manifests, sanitized native request/response records, p
 
 After each native stage, reconcile the canonical ledger, complete the operational finalize hook and eleven-dimension scientific review, verify the saved-data visualization and uploaded bytes, and confirm remote worker shutdown before release. The expired first relay is closed as an operational non-dispatch, not a failed model qualification. It supplies no new accuracy evidence.
 
-Estimated remaining effort, excluding queue delay: 15–30 minutes for admission/deployment refresh, up to30 minutes per native stage, 20–40 minutes for analysis/figures/readback, and 5–10 minutes for closeout. These are planning estimates, not agent-hours inferred from commits. Stop this cycle after the approved result or an exact unresolved external blocker; do not open an automatic successor.
+Estimated remaining effort, excluding queue delay: 15–30 minutes for admission/deployment refresh, up to 30 minutes per native stage, 20–40 minutes for analysis/figures/readback, and 5–10 minutes for closeout. These are planning estimates, not agent-hours inferred from commits. Stop this cycle after the approved result or an exact unresolved external blocker; do not open an automatic successor.

@@ -39,27 +39,21 @@
       "captured": 12,
       "frac_T": 1.125,
       "delta": 0.125,
-      "invalid": 0,
-      "calls": 5712,
-      "usd": 0.10989600000000002
+      "invalid": 0
     },
     "A1_purge": {
       "n": 12,
       "captured": 12,
       "frac_T": 1.125,
       "delta": 0.125,
-      "invalid": 0,
-      "calls": 7466,
-      "usd": 0.14183199999999999
+      "invalid": 0
     },
     "A2_purge_wipe": {
       "n": 12,
       "captured": 12,
       "frac_T": 1.5,
       "delta": 0.5,
-      "invalid": 0,
-      "calls": 9220,
-      "usd": 0.168534
+      "invalid": 0
     }
   },
   "metrics": {
@@ -73,10 +67,19 @@
     "wipe_minus_purge": 0.0312,
     "episodes": 36,
     "invalid": 0,
-    "model_calls": 22398,
-    "cost_usd": 0.4203
+    "model_calls": 9220,
+    "cost_usd": 0.1685,
+    "model_calls_all_attempts": 12118,
+    "cost_usd_all_attempts": 0.2256,
+    "raw_records": 60,
+    "raw_invalid": 19,
+    "superseded_records": 24,
+    "episodes_rerun": 8,
+    "attempts": 20
   },
   "backend": "http:qwen/qwen3-235b-a22b-2507",
   "code": "9d82e5ab",
-  "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.5.jsonl"
+  "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.5.jsonl",
+  "selection": "lineage.select: last fully valid attempt per episode, else last attempt",
+  "corrected": "2026-10-04 shadow/sol-cm2, CORRECTIONS.md"
 }

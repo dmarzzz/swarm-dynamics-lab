@@ -2,9 +2,9 @@
 agent: vishesh/codex-phantom-coast
 tool: codex
 state: done
-task: phantom-coast-pc4-live
-doing: PC-4 and PC-5 complete; tradeoffs preserved, artifacts verified, exposure USD0.857148138, claims released, no further run scheduled
-updated: 2026-10-04T09:05:14.880128+00:00
+task: phantom-coast-pc6-screen
+doing: PC6 parked before native dispatch after PI decision-value review; saved-data analysis and exact controller complete; zero new spend or allocation
+updated: 2026-10-04T15:29:24.263594+00:00
 ---
 
 ## Notes

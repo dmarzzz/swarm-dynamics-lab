@@ -1,0 +1,12 @@
+{
+  "marker_exists": {
+    "Q5-dispatch.json": false,
+    "Q5-supervisor.json": false,
+    "H5-dispatch.json": false,
+    "H5-supervisor.json": false
+  },
+  "rd5_worker_count": 0,
+  "q5_results_exist": false,
+  "h5_results_exist": false,
+  "checked_utc": "2026-10-04T15:19:23.856377+00:00"
+}

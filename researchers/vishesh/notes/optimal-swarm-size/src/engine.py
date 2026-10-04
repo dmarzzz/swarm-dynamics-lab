@@ -7,6 +7,7 @@ import threading
 from failures import SafeFailure,safe_code
 from tasks import strict_json
 from response_contract import schema_for,validate_shape
+from input_binding import binding,serialized,receipt
 
 
 def validate_plan(plan,items,required=None):
@@ -26,7 +27,7 @@ def validate_plan(plan,items,required=None):
     return deps
 
 
-def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:None,strict_contract=False,enforce_dependencies=False):
+def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:None,strict_contract=False,enforce_dependencies=False,bind_inputs=False):
     """call(messages, absolute_deadline, actor, phase, item) -> JSON text.
 
     Receives public data ONLY. Time/usage enforcement belongs to the transport and ledger.
@@ -91,6 +92,10 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
                     actor=min(idle,key=lambda a:(work_counts[a],a));work_counts[actor]+=1;idle.remove(actor);pending.remove(item)
                     ledger={p:completed[p] for p in deps[item]}
                     prompt='Complete only item '+item+'. Return {"artifact": <your partial answer or replacement source for this item>}. Declared prerequisite ledger entries: '+json.dumps(ledger)
+                    if bind_inputs:
+                        inputs=binding(public,item,ledger)
+                        prompt+=' Explicit public input binding: '+serialized(inputs)
+                        emit('input_binding',actor=actor,item=item,**receipt(inputs))
                     emit('dispatch',actor=actor,item=item)
                     future=executor.submit(turn,actor,'work',prompt,work_deadline,item)
                     running[future]=(actor,item)

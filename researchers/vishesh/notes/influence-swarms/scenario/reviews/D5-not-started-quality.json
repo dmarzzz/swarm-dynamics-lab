@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "d5-dispatch-request-217",
+  "parent_handoff_sha256": "60a1b304c48fd088263185380b047a0535694ecda3d6972866c7c7f6fb39d0db",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T15:27:48.312100+00:00",
+  "verdict": "blocked",
+  "outcome_interpretation": "No native D5 experiment started; absence of data supports no scientific outcome. Completed operational closeout, ready scientific design, stale admission and unresolved dispatch path remain distinct.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The frozen question and 2x2 diagnostic are explicit; no scientific scope changed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-05.md",
+          "sha256": "6d1ee6690df617f6eb944f318687c7015855a84b829a8f3b3f25e56af37c0abb"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Six inspected synthetic clusters are development cases; no untouched population or realism evidence exists.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-05.md",
+          "sha256": "6d1ee6690df617f6eb944f318687c7015855a84b829a8f3b3f25e56af37c0abb"
+        }
+      ],
+      "next_action": "Keep D5 development-only; defer fresh qualification to a separately justified prospective plan.",
+      "acceptance_check": "No reused D5 cases are represented as untouched qualification or real-world generalization."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Matched controls are planned, but no native treatment or comparator was delivered.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-05.md",
+          "sha256": "6d1ee6690df617f6eb944f318687c7015855a84b829a8f3b3f25e56af37c0abb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ],
+      "next_action": "Resume only unchanged approved D5 after actual authorized dispatch and fresh admission; keep development/generalization limits explicit.",
+      "acceptance_check": "Recorded native contexts and all planned terminal outcomes support the relevant frozen checks; missing observations never become a pass. Allocation/runtime evidence is current before any model dispatch."
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "Offline contracts pass; native schema acceptance and semantic repair are unobserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-readiness.json",
+          "sha256": "f95797d0b3af7c3fc62587eddc3e9234498199042ffb6043a2a33952196f2cba"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ],
+      "next_action": "Resume only unchanged approved D5 after actual authorized dispatch and fresh admission; keep development/generalization limits explicit.",
+      "acceptance_check": "Recorded native contexts and all planned terminal outcomes support the relevant frozen checks; missing observations never become a pass. Allocation/runtime evidence is current before any model dispatch."
+    },
+    {
+      "dimension": "measurement",
+      "status": "unknown",
+      "finding": "Scoring and component telemetry are prepared, but there are no native D5 observations to score.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-05.md",
+          "sha256": "6d1ee6690df617f6eb944f318687c7015855a84b829a8f3b3f25e56af37c0abb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ],
+      "next_action": "Resume only unchanged approved D5 after actual authorized dispatch and fresh admission; keep development/generalization limits explicit.",
+      "acceptance_check": "Recorded native contexts and all planned terminal outcomes support the relevant frozen checks; missing observations never become a pass. Allocation/runtime evidence is current before any model dispatch."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six development clusters and24 dependent planned decisions remain explicit; no population precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-05.md",
+          "sha256": "6d1ee6690df617f6eb944f318687c7015855a84b829a8f3b3f25e56af37c0abb"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "unknown",
+      "finding": "No native actor context was delivered; frozen contexts remain prepared only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ],
+      "next_action": "Resume only unchanged approved D5 after actual authorized dispatch and fresh admission; keep development/generalization limits explicit.",
+      "acceptance_check": "Recorded native contexts and all planned terminal outcomes support the relevant frozen checks; missing observations never become a pass. Allocation/runtime evidence is current before any model dispatch."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "No dispatch/start/credential journals, workers, outputs or matching hub runs were found, and historical budget counters are unchanged. This is not a failed native sample.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "The handoff and allocation expired; current dispatch admission is absent. Original cumulative budget remains preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ],
+      "next_action": "Resume only unchanged approved D5 after actual authorized dispatch and fresh admission; keep development/generalization limits explicit.",
+      "acceptance_check": "Recorded native contexts and all planned terminal outcomes support the relevant frozen checks; missing observations never become a pass. Allocation/runtime evidence is current before any model dispatch."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source and packet identifiers remain bound; original evidence and not-started records are retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-readiness.json",
+          "sha256": "f95797d0b3af7c3fc62587eddc3e9234498199042ffb6043a2a33952196f2cba"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "not_applicable",
+      "finding": "No native D5 result exists to visualize. Scripted rehearsal remains labelled and cannot fill native cells.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-not-started-reconciliation.json",
+          "sha256": "f677ad243330f5a28c45397eee83371c4925aee263e5734a3ac968d759e04722"
+        }
+      ]
+    }
+  ]
+}

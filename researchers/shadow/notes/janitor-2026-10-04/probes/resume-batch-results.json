@@ -1,0 +1,7 @@
+{
+  "duplicate_replacement_crash": "'score'",
+  "resume_ignored_changed_model": true,
+  "resume_cost_usd": 0.0,
+  "saved_record_cost_usd": 0.5,
+  "duplicate_arm_skips_missing_arm": true
+}

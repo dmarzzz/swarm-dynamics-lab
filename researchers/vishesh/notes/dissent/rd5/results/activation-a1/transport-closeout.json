@@ -1,0 +1,10 @@
+{
+  "stage": "Q5",
+  "worker_dispatched_by_local_transport": false,
+  "started_utc": "2026-10-04T08:44:16.945724+00:00",
+  "stopped_utc": "2026-10-04T09:14:26.276816+00:00",
+  "local_children_stopped": true,
+  "operational_failure": null,
+  "remote_supervisor": null,
+  "packet_sha256": "681c9aea6f18c6cfb1b26d0e1a53e926179a30d56d10168a5e15e3d10c19f3f8"
+}
