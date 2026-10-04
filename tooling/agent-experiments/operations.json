@@ -33,11 +33,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/dissent",
       "setup_path": "researchers/vishesh/notes/dissent/rd5/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-POST.md",
+      "postmortem_path": "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T20:21:19.836359+00:00",
-      "checked_commit": "edcd77579cf1644864bd2cb9e6f20381e5c5a9d7",
-      "next_action": "RUN approved RD7 F0-A1 after fresh public/source/account/exclusive allocation admission:48 matched freshness/representation/context requests;60offline checks pass. Preserve RD6 failed qualification and original506-call ledger/USD2 split cap. No native qualification or main dissent stage automatically follows. See freshness/PLAN.md.",
+      "checked_at": "2026-10-04T20:35:06.468836+00:00",
+      "checked_commit": "01cd198442d0750aecd57a4b3ca06785001b3e92",
+      "next_action": "FINISH / PARK completed RD7 F0-A1: 48/48 valid, explicit eligibility24/24 versus raw12/24; all expired errors corrected, fresh decisions preserved. Operational and scientific closeout complete; workers/relay stopped and allocation released. Original ledger554calls, split cap preserved. Separate54-case sealed qualification and main dissent comparison remain unrun. Read freshness/REPORT.md and post-mortem before a distinct readiness plan; no automatic successor.",
       "next_run_approval": "owner"
     },
     {

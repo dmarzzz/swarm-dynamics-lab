@@ -3924,33 +3924,43 @@
       "experiment_ids": [],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Whether explicit evidence eligibility repairs Jev expiry errors and changes sensitivity to opposing context is untested.",
-        "rationale": "The approved48-request matched development diagnostic and deterministic baseline pass61offline checks. Native admission is being refreshed; no RD7 responses collected. Prior RD6 failures remain separate."
+        "score": 2,
+        "claim": "In this matched development diagnostic, explicit evidence eligibility corrected all12expired responses while preserving all12fresh responses; raw timestamp arms scored12/24overall.",
+        "rationale": "The prospective controlled48-request comparison has competent fresh controls, complete paired outcomes and reconciled native traces. Six authored roots in three shared grammars, one hosted pass and a composite metadata aid limit the finding to this finite contrast; no fresh qualification, field-rate or collective-benefit claim."
       },
-      "sample_size_summary": "Observed native: none. Planned: six authored semantic roots, 12 task/age cases \u00d7 four conditions = 48 dependent requests. Separate 54-case generated qualification reserve sealed and unrun; no field sample or independent replication.",
+      "sample_size_summary": "Six authored semantic roots in three shared grammars;12task/age cases,48/48valid dependent condition responses,36correct. One stateless native resolver/request;5scripted ballots in context arms. No hosted repeats or field sample;54sealed qualification cases and broader dissent comparison unrun.",
       "sources": [
+        "researchers/vishesh/notes/dissent/freshness/REPORT.md",
         "researchers/vishesh/notes/dissent/freshness/PLAN.md",
         "researchers/vishesh/notes/dissent/freshness/CONTRACT.json",
-        "researchers/vishesh/notes/dissent/freshness/CASE-QUALITY.md",
-        "researchers/vishesh/notes/dissent/freshness/IMPLEMENTATION.md",
-        "researchers/vishesh/notes/dissent/freshness/DIAGNOSTIC-REVIEW.json",
+        "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-POST.md",
+        "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-QUALITY.json",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/native/bundle.json",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/resources.json",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/closeout.json",
         "researchers/vishesh/notes/dissent/freshness/offline/validation.json",
         "researchers/vishesh/notes/dissent/freshness/QUALIFICATION-RESERVE.json"
       ],
       "source_sha256": {
+        "researchers/vishesh/notes/dissent/freshness/REPORT.md": "062f59276804e358c2c3b3bc505173860a24fcccec3b0455c6a537cc8b728dda",
         "researchers/vishesh/notes/dissent/freshness/PLAN.md": "1673fb9cf033954446236f4585402ce5fd1a4530b824263e502932366eb0d516",
         "researchers/vishesh/notes/dissent/freshness/CONTRACT.json": "dcaf3e0180d690ba5a48635ff87bb3a8379993245c0ca9a61c6aba92733c9082",
-        "researchers/vishesh/notes/dissent/freshness/CASE-QUALITY.md": "c803a3474394a075afefe7663a292cf60718146f1afcccb0276e9000314e1d79",
-        "researchers/vishesh/notes/dissent/freshness/IMPLEMENTATION.md": "645f64775ee0525711a6bffc23c36b584ac4164b2579c76cb946589d8519f645",
-        "researchers/vishesh/notes/dissent/freshness/DIAGNOSTIC-REVIEW.json": "2445ecc797296ad8d1ac635e719b73eccd2d46d7abf869c1017715fa0406720e",
+        "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-POST.md": "ef39f08811a40cb83b32f42a4b253fcc28d226070f8849f162b8c3ae976c07cc",
+        "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-QUALITY.json": "cdf5fbd707246c00654d1ee001a4d6a8266023c6ed66d94aad3c4199b538a8f3",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/native/bundle.json": "2eef08be7adb94fa1bd591f38fa409ad6609a43ee8c0649ad5fa9f211519b39e",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json": "5ba6f1b87c112b2dc1be0f480c988ea00e674db9f2a9f7926d8a5e94ac185889",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/resources.json": "177b89c874ffc11765d5e545fc866a20f9ca827ed8906b8b20afe545f11ae7aa",
+        "researchers/vishesh/notes/dissent/freshness/results/f0-a1/closeout.json": "09856bbde0978b51c368a88f06ceff213d212d928b0d97bf8148377793526da9",
         "researchers/vishesh/notes/dissent/freshness/offline/validation.json": "3e499a6fbe39d2e4a155358a8ac2542fbe5d87d87486c04d6f906ace95a36270",
         "researchers/vishesh/notes/dissent/freshness/QUALIFICATION-RESERVE.json": "36a53b03a2375f42a52b37930040e23addcde322e0288fdabd1b29371c401382"
       },
-      "status_at_assessment": "implemented_offline_passed_native_admission_pending",
+      "status_at_assessment": "diagnostic_completed_reviewed_released_fresh_qualification_unrun",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "edcd77579cf1644864bd2cb9e6f20381e5c5a9d7"
+      "source_commit": "01cd198442d0750aecd57a4b3ca06785001b3e92"
     },
     {
       "id": "theseus-sol50-qualification",
