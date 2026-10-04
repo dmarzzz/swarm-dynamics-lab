@@ -23,6 +23,18 @@ These rows are cumulative, not competing choices. A run can contain execution er
 
 A transport failure is not model incapacity. A numeric qualification pass does not override leaked labels, a broken scorer or a mismatched context. A valid negative finding is a result, not an error to fix.
 
+### When test cases are insufficient, improve them
+
+If the review finds that cases are too easy, repetitive, unrealistic, ambiguous without sufficient evidence, contaminated, or unable to distinguish the proposed explanations, improving the cases is part of the current iteration. Do not stop at recording “dataset insufficient” when useful offline case design or construction is feasible.
+
+- State the specific weakness and what an informative case must reveal. Write the prospective case changes before implementing them.
+- Construct improved or alternative development cases, including ordinary controls, meaningful challenges, answer-changing matched pairs and answer-preserving variants where applicable. Establish the target from evidence available under the declared actor contract; include justified abstention when the answer is unknowable.
+- Validate labels, actor/evaluator separation, scoring, failure handling and the strongest relevant simple baselines. Difficulty alone is not quality: do not withhold essential evidence or weaken a comparator merely to create a favorable model opportunity.
+- Preserve original cases, outcomes and their interpretation. Version the new cases and explain which defect they address. Report independent scenario/event units separately from variants and repeated calls; inspected or tuned cases remain development data, never an untouched holdout.
+- Publish the concrete case revision, validation results and remaining limitations. If construction needs unavailable data, rights or access, identify that exact dependency and do all feasible design work first. Then decide whether the revised cases justify a ready approved run, a concrete material-scope decision, further case development, or finishing the study.
+
+A case revision does not reset spending, authorize a new native scope, erase a valid negative result or require manufacturing a harder problem. Apply the existing approval and admission rules after offline improvement.
+
 ## 3. Prepare the change and push it
 
 Write the prospective change before experimental implementation. Then implement reversible offline repairs and validate them on development/fault fixtures so the proposal is concrete. Preserve frozen sources, previous outputs and inspected holdouts. Recompute reporting from saved evidence without recollecting decisions.
