@@ -16,7 +16,7 @@ Latest findings — 2026-10-04 UTC
 - Both arms ended healthy—but each proposed four unnecessary interventions.
 - The software guard blocked all four; the unguarded arm executed them. This shows guard protection, not improved agent judgment.
 - Both arms verified only 8 of 12 repairs. Looking fixed is not the same as checking the fix.
-- Next: test whether peers can correct mistaken beliefs before the guard intervenes. That study has not run yet.
+- Peer-study qualification stopped after two Opus calls: a correct first diagnosis/action exceeded the explanation-length limit. Zero worlds completed; peer effects remain untested. [Failure review and repair](peer-correction/reviews/q1-post.md).
 
 Scope: a small synthetic controller comparison—192 calls,48 episodes, six authored roots in three families—not general swarm recovery or production reliability. [Results and animation](verification-study/reviews/v1-post.md). [Reviewed peer-correction plan](peer-correction/PLAN.md) and [current readiness](peer-correction/README.md).
 

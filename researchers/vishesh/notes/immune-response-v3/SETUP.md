@@ -162,3 +162,12 @@ Next action: review the finite 40-episode/320-call Opus proposal against the ori
 ### Disabled native adapter prepared
 
 Peer-correction adapter revision2 adds transactional stage/campaign caps, duplicate-start prevention, original-ledger preservation, source/public-plan/account/allocation/runtime admission checks, per-request deadlines and an explicit saved-data finalization hook.18offline tests pass; no native calls or real-ledger mutations. Dispatch remains hard-disabled pending finite PI decision and actual live admission. The232-call scope/cost is unchanged. See [runbook](peer-correction/RUNBOOK.md). Earlier proposal/source hashes remain in Git history; native qualification has not yet used either revision.
+
+
+## Peer Q1 terminal assessment — 2026-10-04
+
+[Native post-mortem](peer-correction/reviews/q1-post.md) and [authored quality assessment](peer-correction/reviews/q1-quality.json): two Opus/Anthropic responses, correct initial diagnosis/supported wait, action reason325characters vs240maximum. Validation stopped before any action;0/4worlds complete,1partial,3unstarted. No P1 or peer-effect result. Both request/response/usage records replay exactly. Frozen sourceee13a461 and original public plan retained; raw evidence stays private.
+
+Original ledger711calls/USD15.606955conservative exposure/cap28.368215; newAPI0.017995 plus469seconds hosting0.009305742 =0.027300742. Worker/relay/tunnel stopped; claim470released; unused finite campaign12.966219258released, no new machine. Historical charges unchanged.
+
+[Prospective contract repair](peer-correction/CONTRACT-REPAIR-PLAN.md) explicitly describes existing length/order limits. Candidate not imported by launchers;24tests pass, maxwire7020/8000, saved failure still invalid. Fixed service outcomes and untouched holdouts remain. Next action: finite necessary-diagnostic reservation, distinctQ2bindings/public plan/current admission; no reuse ofQ1 or automaticP1. No new owner sign-off inferred for standing-authorized necessary diagnostics.

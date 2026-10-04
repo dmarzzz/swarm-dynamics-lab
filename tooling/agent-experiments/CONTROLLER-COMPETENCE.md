@@ -1,5 +1,7 @@
 # Qualify evidence use before measuring collaboration
 
+Response-contract lesson from [Immune Response peer Q1](../../researchers/vishesh/notes/immune-response-v3/peer-correction/reviews/q1-post.md): a hosted answer can violate a string-length constraint despite a structured-output schema. Put task-relevant output limits in the model-visible instructions as well, derive both from one contract, and validate locally. Keep schema conformance separate from semantic correctness and completed tool outcomes. Do not silently truncate an explanation, loosen a frozen limit or retry a failed call. Test boundary values and worst-case downstream payloads offline; only actual native qualification can establish adherence. This is a candidate design improvement, not proof that explicit limits eliminate failures.
+
 Prospective guidance from Immune Response A8/A9 and the [AI Village fit review](../../researchers/vishesh/notes/ai-village-replay-2026-10-04/FIT.md). Apply where relevant; do not change frozen running experiments or other owners' policies. Source records with missing historical visibility or gold labels are design inspiration, not measured agent competence.
 
 1. Define basic competence in the task's own consequences: preserve an already-good state, diagnose a visible fault, perform a necessary repair, verify the result. Include a real change-required case so “always wait” cannot pass, and a healthy case so “always intervene” cannot pass.
