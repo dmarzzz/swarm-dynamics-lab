@@ -3,15 +3,15 @@ id: influence-native-rerun
 type: task
 title: Run the revised procurement influence experiment
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-experiments
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-updated: 2026-10-04T06:28Z
+updated: 2026-10-04T07:56Z
 history:
 - '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
 - '2026-10-04T03:43Z released by vishesh/codex-experiments: Iteration 2 implemented and offline validated: 24 tests, 12/12 scripted decisions, zero paid calls. Q4 native run awaits additional authorized shared budget, review-influence-q4-dossiers and fresh exclusive fleet allocation. See scenario/ITERATION-02.md.'
@@ -19,6 +19,7 @@ history:
 - '2026-10-04T04:53Z released by vishesh/codex-experiments: Iteration 3 complete and published at d0146786: D2 30 valid decisions, 108 calls, USD0.391659. Targeted review 3/6 versus general review 4/6 and generalist 5/6; repair screen failed as valid adverse result. Source audit, paired cases, practical costs and measured PNG/GIF/HTML delivered; 24 hub artifacts verified, worker stopped, machine released PR144. S1 unqualified; no review/budget approval pending. Next distinct design: typed per-candidate model assessment with fresh cases, not a favorable reroll.'
 - '2026-10-04T05:57Z released by vishesh/codex-experiments: D3 completed and published:complete90/90 candidate checks but76 correct,all arms4/6;typed-fact policy comparison remains next prospective design. D4 and S1 unrun. Dedicated fleet PR171 released;24 hub artifacts verified;no worker running. See RESULTS-D3.md and native-D3-01-post.md.'
 - '2026-10-04T06:28Z released by vishesh/codex-experiments: D5 prepared, not launched: source 528c4f70; 59 tests and 24/24 scripted decisions pass, zero model calls. See RUN-D5.md and reviews/D5-readiness.json. No machine held; fresh preserved-budget and dedicated-host admission needed at future launch. Researcher review optional.'
+claimed_at: 2026-10-04T07:56Z
 ---
 
 ## Goal

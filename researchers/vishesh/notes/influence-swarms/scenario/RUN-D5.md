@@ -61,3 +61,11 @@ All 59 scenario tests pass, including deadline failure accounting and admission 
 The largest encoded fixture request was 28,941 bytes against the 32,768-byte input cap. The interactive report was inspected for fixture labeling, case/arm selection, raw versus authorized outcomes, and source-linked policy receipts. Provider schema acceptance remains untested by a live API call. Readiness metadata: [D5-readiness.json](reviews/D5-readiness.json). Local preview: `http://127.0.0.1:8766/D5-readiness.html`.
 
 The next run is 24 decisions / 48 nominal calls, with a conservative reservation ceiling of USD 4.669440 from the existing cumulative budget. Fresh dedicated-host, remaining-budget and secure-dispatch checks above are required immediately before launch. No researcher review is pending or required. D3 remains the latest measured model result; D4 and S1 remain unrun.
+
+## Live run requested — 2026-10-04
+
+The owner authorized live D5 execution. Current fleet policy now requires orbital-one queue dispatch, superseding the laptop-launch steps above. The frozen experiment source and packet remain unchanged. A tested central receiver and credential sender, plus the frozen packet, were merged in private agentops PR215; run request217 asks for one D5 attempt only. Three additional launcher tests and fleet CI pass. No D5 model call has started at this update.
+
+The previous host is occupied by another experiment. The central operator must allocate a different idle dedicated machine and migrate the original budget with verified single-writer fencing; never spend from duplicate ledger copies. A read-only check of the existing subledger confirmed cap USD8, reserved USD3.178320, calls198 and remaining USD4.821680. Pricing is unchanged at the pinned rates. No new grant or top-up was created.
+
+The originating session supplies the already-authorized dedicated Keychain credential only after central receiver readiness and fresh claim/source/budget/host verification. The API key remains in process memory and verified SSH stdin. Central readiness, credential acceptance, first native dispatch and terminal result must be recorded separately; queued is not running. No new researcher approval is required.

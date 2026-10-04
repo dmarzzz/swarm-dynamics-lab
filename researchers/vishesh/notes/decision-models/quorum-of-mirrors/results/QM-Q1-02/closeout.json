@@ -1,0 +1,37 @@
+{
+  "checked_at": 1791100724.2935894,
+  "hub_status": "failed",
+  "artifact_readback": {
+    "summary.json": true,
+    "accounting.jsonl": true,
+    "manifest.json": true,
+    "preflight.json": true,
+    "cases.html": true,
+    "receipts.jsonl": true
+  },
+  "receiver_alive": false,
+  "credential_socket_exists": false,
+  "user_workers": [],
+  "budget": {
+    "known_actual_usd": 0.00171696,
+    "reserved_usd": 0.065856,
+    "calls": 49,
+    "statuses": {
+      "complete": 48,
+      "failed_or_uncertain": 1
+    }
+  },
+  "parent_settlement": {
+    "id": "QM-Q1-01-006",
+    "kind": "full_reservation_upper_bound",
+    "upper_bound_usd": 0.001344,
+    "actual_usd": null,
+    "evidence_sha256": "245fffab4ddf7e9617965fab64f1d0db9247a3ba382b86b66d59737b6a79d1ca",
+    "scientific_status": "failed",
+    "reservation_retained": true
+  },
+  "worker": {
+    "exit_code": 0,
+    "credential_persisted": false
+  }
+}

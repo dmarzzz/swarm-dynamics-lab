@@ -17,17 +17,20 @@
       "evidence_confidence": {
         "score": 1,
         "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
-        "rationale": "The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy."
+        "rationale": "S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy."
       },
-      "sample_size_summary": "S0: 16 fixed configurations, 32/32 valid calls, 29 MAP-correct; not independent worlds. Q1: 16 constructed context fixtures, 1 contract-failed response, 15 unstarted, 0 valid. M1/C1 not run.",
+      "sample_size_summary": "S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.",
       "sources": [
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/audit.json"
       ],
-      "status_at_assessment": "s0_passed_q1_interface_failed_no_swarm_efficacy",
+      "status_at_assessment": "interface_repaired_q1_reasoning_failed_no_swarm_efficacy",
       "assessor": "vishesh/codex-quorum-mirrors",
-      "assessed_at": "2026-10-04"
+      "assessed_at": "2026-10-04",
+      "source_commit": "be37f8b40a5a07fba4f2b55c61766d441fba1cb8"
     },
     {
       "id": "phantom-coast",
@@ -928,17 +931,28 @@
       "assessor": "dmarz/scale-sonnet",
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Whether the Haiku sybil-scale-api budget-scaling findings hold with claude-sonnet-4-6 on identical worlds and packets.",
-        "rationale": "Unrun replication: only offline scripted S0 has executed. It does not inherit the Haiku study's score or sample count."
+        "score": 2,
+        "claim": "In the repeated-fact synthetic environment, the Haiku population-scaling result replicates with claude-sonnet-4-6 on identical assignments: proportional strong checks raise N972 specialist accuracy by +52.8 pp (Haiku +51.4 pp); Sonnet is more accurate than Haiku in 73 of 100 cells, mainly where fabrications are admitted.",
+        "rationale": "Same-owner audit of 24 paired world roots with all 2,400 outcomes valid and an exact local recomputation; assignments verified identical to the Haiku cohort. One synthetic task family and graph, scripted identities and checks, admission independent of the model, descriptive unadjusted intervals across 100 cells, and an owner waiver in place of independent review limit generalization."
       },
-      "sample_size_summary": "Observed: none (offline scripted S0 264/264 only). Planned: 24 paired worlds \u00d7 100 conditions = 2,400 S1 calls plus 64 Q0 calls; 36\u2013972 simulated identities feeding one synthesizer.",
+      "sample_size_summary": "Observed: 24 paired world roots from one synthetic task family; 2,400/2,400 S1 outcomes analyzed, zero missing; 100 conditions at 36-972 simulated identities feeding one synthesizer model. Q0 separately 64/64. Cross-model comparison pairs the same 24 roots with the separate Haiku cohort (sybil-scale-api/56defc84); cohorts not pooled.",
       "sources": [
-        "researchers/dmarz/notes/sybil-scale-sonnet/README.md",
-        "researchers/dmarz/notes/sybil-scale-sonnet/preregistration.md",
-        "researchers/dmarz/notes/sybil-scale-sonnet/experiment.yaml"
+        "researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/verification-summary.json",
+        "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json",
+        "researchers/dmarz/notes/sybil-scale-sonnet/model-comparison-cells.csv",
+        "researchers/dmarz/notes/sybil-scale-sonnet/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/design.yaml"
       ],
-      "status_at_assessment": "planned_unrun"
+      "status_at_assessment": "complete_valid_replication_result_claim_released",
+      "source_sha256": {
+        "researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md": "319f503cea4feaf401e8ee410be8a54c62a66ed173b9e7d6e1c5c1a3a6c067e7",
+        "researchers/dmarz/notes/sybil-scale-sonnet/verification-summary.json": "31f9824e0c6a82f07385049d6448086c6964aed459598b0dec18fd03b0edddc2",
+        "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json": "ecebc1b42bbf46884c8506690b78f3f3f30143d23faa0619e7b219b6a75b9eb7",
+        "researchers/dmarz/notes/sybil-scale-sonnet/model-comparison-cells.csv": "cf7224929877138cbc673480beb2013c8a98a64b9600278efd53b98e78c0be60",
+        "researchers/dmarz/notes/sybil-scale-sonnet/reviews/s1-001-post.md": "e284741a4975be8c67e576d8c4e0b667629439fba262bb4ef7f67e77eaed4b1c",
+        "researchers/dmarz/notes/sybil-scale-sonnet/design.yaml": "4429931b65ec4333069bac2d1ea3e1fbca90808158df5b82a863c6f391407278"
+      }
     },
     {
       "id": "sybil-budget-api",
@@ -1118,6 +1132,32 @@
         "researchers/dmarz/notes/market-split-haiku/NEXT-EXPERIMENT.md": "83bb3f4c2cfb6a39b53c561dde91b9ad20231e9b15f82dae3b38ac966159277c"
       },
       "assessor": "dmarz/market-split",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "market-split-opus",
+      "title": "Market splitting: Opus replication on fresh markets",
+      "documents": [
+        "researchers/dmarz/notes/market-split-opus/README.md"
+      ],
+      "experiment_ids": [
+        "market-split-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/market-split-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Claude Opus 5.5 reproduces the Sonnet pilot's firm-splitting contrast on six fresh markets.",
+        "rationale": "No model call has been made. Only a scripted rehearsal of the copied instrument is planned or run at this assessment; it is a software check and gives no evidence about model behavior."
+      },
+      "sample_size_summary": "Observed: none. Planned: 6 fresh paired market tasks, 3 regulators x 2 arms = 36 episodes / 864 calls, after a 6-call mechanics probe and a 2-market, 4-episode qualification. One model owner, two scripted rivals.",
+      "sources": [
+        "researchers/dmarz/notes/market-split-opus/README.md",
+        "researchers/dmarz/notes/market-split-opus/preregistration.md"
+      ],
+      "status_at_assessment": "planned_scripted_rehearsal_only_no_model_calls",
+      "assessor": "dmarz/market-split-opus",
       "assessed_at": "2026-10-04"
     },
     {
@@ -1397,10 +1437,36 @@
       "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
     },
     {
+      "id": "discussion-dose-v3-d2-a1",
+      "title": "Discussion v3 D2 \u2014 run plan with Opus arm (v3-d2-a1)",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested: Claude Opus 5.5 passes the canonical-decision and single-option feasibility screens on the six worlds where D1's models failed.",
+        "rationale": "Instrument built and tested with scripted controls only; no model outcome. The Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling, and packaging and contract change together against D1."
+      },
+      "sample_size_summary": "Observed: none. Planned: 6 reused development world clusters; 3 models on identical items; 72 calls (18 canonical decisions + 54 single-option checks) plus 1 uncounted Opus probe; one response per item.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md",
+        "researchers/dmarz/notes/discussion-dose/reviews/v3-d2-a1-pre.md"
+      ],
+      "status_at_assessment": "implemented_not_started",
+      "assessor": "dmarz/v3-d2-opus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "9d119dfd76dbfb4464390a7a8dec6eaefd4c7523"
+    },
+    {
       "id": "sybil-newcomer-sonnet",
       "title": "Knowledgeable newcomers versus a trusted Sybil coalition (Sonnet 4.6 replication)",
       "documents": [
-        "researchers/dmarz/notes/sybil-newcomer-sonnet/README.md"
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/README.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md"
       ],
       "experiment_ids": [
         "sybil-newcomer-sonnet"
@@ -1409,17 +1475,20 @@
         "researchers/dmarz/notes/sybil-newcomer-sonnet/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "The sybil-newcomer-api finding (no audit policy preserved specialist accuracy after a sleeper attack; renewal minus reputation below the useful marker) does not depend on the synthesizing model.",
-        "rationale": "Untested: Sonnet 4.6 replication is planned and unrun; only offline and scripted engineering checks exist."
+        "score": 2,
+        "claim": "In this synthetic newcomer task, replacing the Haiku 4.5 synthesizer with Sonnet 4.6 on identical assignments did not materially change outcomes: the sleeper attack still sharply reduced specialist accuracy, the policy ranking was unchanged, and renewal minus reputation stayed inconclusive (+11.1 pp, interval -0.0 to +22.2 pp; +2.8 pp more than Haiku, interval -2.8 to +8.3 pp).",
+        "rationale": "Same-owner assessment: twenty-four paired roots, passed qualification, 1,944/1,944 outcomes paired by assignment with the Haiku cohort and fully reconciled. One task family, two models from one provider, scripted actors and descriptive unadjusted intervals limit stronger conclusions. Independent review was waived by the owner."
       },
-      "sample_size_summary": "Observed: none. Planned: the parent's 24 paired world roots; 1,944 S1 outcomes plus 36 Q0 calls, paired by assignment ID with the Haiku cohort; 24 honest + 1/4/16 controller identities, one synthesizer.",
+      "sample_size_summary": "Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing, each paired by assignment ID with the separate Haiku cohort (not pooled); 24 honest + 1/4/16 controller identities, one synthesizer model. Q0 separately: 36/36 clean calls.",
       "sources": [
         "researchers/dmarz/notes/sybil-newcomer-sonnet/preregistration.md",
         "researchers/dmarz/notes/sybil-newcomer-sonnet/design.yaml",
-        "researchers/dmarz/notes/sybil-newcomer-sonnet/SETUP.md"
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/SETUP.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/records/s1-001-haiku-comparison.json"
       ],
-      "status_at_assessment": "planned_unrun",
+      "status_at_assessment": "complete_valid_inconclusive_primary_allocation_closed",
       "assessor": "dmarz/newcomer-sonnet",
       "assessed_at": "2026-10-04"
     },
@@ -1606,6 +1675,123 @@
       "source_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
       "assessed_at": "2026-10-04",
       "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "sybil-scale-xl",
+      "title": "Sybil resistance at 9x scale: 972 to 8,748 identities",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-xl/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-xl"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml"
+      ],
+      "assessor": "dmarz/scale-xl",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Opus 5.5 synthesis (amendment A1).",
+        "rationale": "Unrun; no stage has completed."
+      },
+      "sample_size_summary": "Observed: none for the paid design (free scripted S0 216/216 on the v1 manifest). Planned (amendment A1, Opus 5.5): 24 paired worlds \u00d7 3 sizes \u00d7 8 conditions = 576 S1 calls plus 24 Q0 calls; 972\u20138,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-xl/README.md",
+        "researchers/dmarz/notes/sybil-scale-xl/preregistration.md",
+        "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml",
+        "researchers/dmarz/notes/sybil-scale-xl/AMENDMENT-A1.md"
+      ],
+      "status_at_assessment": "planned_unrun"
+    },
+    {
+      "id": "discussion-v3-d1-opus",
+      "title": "D1 instrument on Claude Opus 5.5",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/d1-opus/README.md"
+      ],
+      "experiment_ids": [
+        "discussion-v3-d1-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/discussion-dose/d1-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "Under adaptive thinking at effort high with no temperature, Claude Opus 5.5 makes evidence-justified choices on clean full-evidence D1-style decisions where Haiku 4.5 and Sonnet 4.6 failed.",
+        "rationale": "Measured: fresh gate 12/12 evidence-justified and 12/12 valid; 6/6 on the reused worlds versus Haiku 2/6 and Sonnet 3/6 on byte-identical requests; exact-source audit recomputed all 72 outcomes. Limits: model and request configuration changed together; 12 fresh clean worlds only; report packets remain Haiku-generated; all 6 inherited false memory facts were still accepted; no swarm stage."
+      },
+      "sample_size_summary": "Observed: 72/72 assigned calls valid and analyzed, 0 refusals, 0 missing usage: 12 fresh clean worlds (gate units), 6 reused development world clusters (6 full-evidence, 18 report ballots), 36 fixed memory fixtures; not 72 independent samples. One model, one attempt.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/reviews/d1o-a1-post.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/records/d1o-a1/summary.json",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/records/d1o-a1/audit.json"
+      ],
+      "status_at_assessment": "fresh_gate_passed_model_level_only",
+      "assessor": "dmarz/d1-opus",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "phantom-coast-pc2",
+      "title": "Phantom Coast PC-2: budgeted inspection choices",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc2/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "In eight synthetic roots, learned acquisition repeatedly revisited cells; uniform acquisition supplied much broader direct coverage, and the targeted audit did not meet the planned mean benefit threshold.",
+        "rationale": "Native qualification passed and all assigned outcomes were retained and audited. Eight roots from two structural families, one model, unequal inference compute, unresolved labels and heterogeneous primary contrasts limit generalization; this is the owning operator\u2019s assessment."
+      },
+      "sample_size_summary": "Observed S1: 8 roots, 2 structural families; 96/96 complete dependent episodes, 1,791/1,792 valid calls; 1 invalid retained. Separate Q0: 4 roots, 24/24 valid. No independent replication; PC-1 is separate.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc2/README.md",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-analysis.json",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/CLOSEOUT.json"
+      ],
+      "status_at_assessment": "complete_valid_adverse_exploratory_result",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "067be3672ced752386ca51bb174ecc81a2054fd8",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc2/README.md": "250e29035b153c6b650df98f0c5b5e33d8dc6c7a8914e504a9f574f94eef1f71",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-analysis.json": "3b59a375095ddcacb5f1af31dd99ff1647fafaefd90e15e69fe276ecbd85cd4a",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-audit.json": "9fc2f62bdb1e76a6c49a9e7da1f8ea1d99c71d9e4d78e13e06ba144dbf53655c",
+        "researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md": "1f81d0694bfd5c7e25bc1728a52b3879711e4a531b4d8b26ba34f58809d92aec",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/CLOSEOUT.json": "825aae99d4904774ed5dbaf06667d8c4dcd4e19658600b18fd7bf57f83a49bf7"
+      }
+    },
+    {
+      "id": "sybil-scale-opus",
+      "title": "Sybil resistance as swarms grow (Opus 5.5 replication)",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-opus/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Proposed: the Haiku/Sonnet N972 proportional-minus-fixed coverage contrast keeps its sign with Opus 5.5 (effort low, no temperature) on identical worlds.",
+        "rationale": "No Opus outcomes yet; plan, offline selftests and local scripted S0 only."
+      },
+      "sample_size_summary": "Observed: local scripted S0 264/264, 0 model calls. Planned: Q0 64 calls on 4 qualification worlds; S1 2,400 calls on 24 paired world roots (100 conditions each), paired with the Haiku and Sonnet cohorts, never pooled.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-scale-opus/reviews/local-s0-001-post.md"
+      ],
+      "status_at_assessment": "planned_s0_local_passed",
+      "assessor": "dmarz/scale-opus",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {

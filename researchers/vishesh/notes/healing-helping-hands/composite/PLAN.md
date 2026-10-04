@@ -66,3 +66,9 @@ The C1 screen establishes previous competence, but C2 must pass fresh qualificat
 ## C3 owner-authorized continuation — prospective
 
 The owner requested transport repair and another run after closure. [C3 pre-run design](C3-PRE.md) governs this continuation, including worker-local supervised relay, single-writer budget transfer, cached completed responses without provider retries, fresh S0 fixtures and seeds 8821–8823. Previous closed-cycle restrictions remain historical; C3 requires fresh admission and does not alter C1/C2 outcomes. Actor prompts, competence thresholds, metrics and controls remain unchanged.
+
+## C3 allocation and dispatch approval update
+
+2026-10-04 UTC. Owner approved completing the published C3 repair, obtaining dedicated capacity from the established Dmarz account and running normally. This approves the named C3 S0 and, only after passing qualification and renewed admission, C3 S1 within unchanged scientific and budget bounds. The owning operator may dispatch the detached worker directly on its exclusively claimed host; no dependency on an unavailable separate coordinator remains. No authority over another experiment's claimed host is implied.
+
+Available sim-dmarz-7 has 4 CPUs/8 GiB and is in the same account identity recorded for C1. Use an exclusive three-hour allocation after checking current workloads. No new machine is created; original USD 0.10 cumulative inference ceiling and USD 1 cumulative infrastructure ceiling remain. Existing provider account status is warning, while the selected droplet is active; this allocation performs no provisioning or account changes. Stop if the host becomes unavailable. The C3 source/qualification requirements and failure policy remain unchanged.

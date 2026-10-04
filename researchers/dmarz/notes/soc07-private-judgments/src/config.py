@@ -57,9 +57,18 @@ def thinking_budget():
         if thinking['budget_tokens'] != 0:
             raise ValueError('thinking is off but a budget is set')
         return 0
-    if thinking['type'] != 'budget' or thinking['budget_tokens'] < 1024:
-        raise ValueError('thinking must be off, or a budget of at least 1024 tokens')
+    if thinking['type'] not in ('budget', 'adaptive') or thinking['budget_tokens'] < 1024:
+        raise ValueError('thinking must be off, or a budget or adaptive allowance of at least 1024 tokens')
+    if thinking['type'] == 'adaptive' and thinking.get('effort') not in ('low', 'medium', 'high', 'xhigh', 'max'):
+        raise ValueError('adaptive thinking needs an explicit effort level')
     return thinking['budget_tokens']
+
+
+def thinking_mode():
+    """'off', 'budget' (fixed reasoning budget sent to the API) or 'adaptive' (the model decides how much to
+    reason; the allowance only widens max_tokens, and the effort level is sent). Validated by thinking_budget()."""
+    thinking_budget()
+    return launch_manifest()['thinking']['type']
 
 
 def seed_stage(stage):

@@ -1,0 +1,1256 @@
+{
+  "worlds": [
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 500,
+      "family": "block",
+      "primary_upper_interaction": 0.0,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.5555555555555554
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 5
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 5
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 501,
+      "family": "scattered",
+      "primary_upper_interaction": -0.02777777777777779,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.5277777777777777
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8611111111111112
+          },
+          "upper_difference": -0.02777777777777768
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8611111111111112
+          },
+          "upper_difference": -0.02777777777777768
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6388888888888888,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.02777777777777779
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 502,
+      "family": "block",
+      "primary_upper_interaction": 0.0,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.5555555555555554
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 503,
+      "family": "scattered",
+      "primary_upper_interaction": 0.0277777777777779,
+      "primary_bounds": {
+        "lower": -1.472222222222222,
+        "upper": 1.5555555555555556
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9722222222222222,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9722222222222222,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.05555555555555547
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 1,
+          "union_cells": 1
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 2,
+          "union_cells": 2
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 11,
+          "union_cells": 11
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 1,
+          "report_gain": 1
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 1
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": -1,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": -1,
+          "report_gain": 0
+        }
+      ],
+      "seed": 504,
+      "family": "block",
+      "primary_upper_interaction": 0.0277777777777779,
+      "primary_bounds": {
+        "lower": -1.472222222222222,
+        "upper": 1.5555555555555556
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9166666666666666,
+            "upper": 0.861111111111111
+          },
+          "upper_difference": -0.02777777777777779
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9722222222222222,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.611111111111111,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.05555555555555547
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 505,
+      "family": "scattered",
+      "primary_upper_interaction": -0.05555555555555547,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.4444444444444444
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.611111111111111
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6111111111111112
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 1,
+          "overlap_cells": 0,
+          "union_cells": 8
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 7
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 6,
+          "union_cells": 6
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 5,
+          "union_cells": 7
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": -1,
+          "report_gain": 1
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        }
+      ],
+      "seed": 506,
+      "family": "block",
+      "primary_upper_interaction": 0.22222222222222232,
+      "primary_bounds": {
+        "lower": -1.2777777777777777,
+        "upper": 1.5555555555555556
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6944444444444444,
+            "upper": 0.7222222222222222
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.75,
+            "upper": 0.75
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.7222222222222222,
+            "upper": 0.7222222222222222
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6388888888888888,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6111111111111112
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 5
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 5
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 11,
+          "union_cells": 11
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": -1,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": -1,
+          "report_gain": 0
+        }
+      ],
+      "seed": 507,
+      "family": "scattered",
+      "primary_upper_interaction": 1.1102230246251565e-16,
+      "primary_bounds": {
+        "lower": -1.472222222222222,
+        "upper": 1.5
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9444444444444444,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.05555555555555558
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9166666666666666,
+            "upper": 0.7777777777777778
+          },
+          "upper_difference": -0.05555555555555547
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.611111111111111,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.02777777777777768
+        }
+      ]
+    }
+  ],
+  "overall": {
+    "roots": 8,
+    "primary_upper_interaction": 0.024305555555555622,
+    "primary_bounds": {
+      "lower": -1.4895833333333333,
+      "upper": 1.53125
+    }
+  },
+  "by_family": {
+    "block": {
+      "roots": 4,
+      "primary_upper_interaction": 0.06250000000000006,
+      "primary_bounds": {
+        "lower": -1.4652777777777777,
+        "upper": 1.5555555555555554
+      }
+    },
+    "scattered": {
+      "roots": 4,
+      "primary_upper_interaction": -0.013888888888888812,
+      "primary_bounds": {
+        "lower": -1.5138888888888888,
+        "upper": 1.5069444444444444
+      }
+    }
+  },
+  "stage": "S1",
+  "attempt": "s1-a1",
+  "assigned": 1792,
+  "started": 1792,
+  "terminal": 1792,
+  "valid": 1791,
+  "stop_reason": null,
+  "budget": {
+    "calls": 1816,
+    "prior_usd": 0.162723246,
+    "new_known_usd": 0.193984014,
+    "cumulative_exposure_usd": 0.35805126,
+    "api_cap_usd": 4,
+    "max_calls": 1816
+  },
+  "usage_by_policy": {
+    "single": {
+      "calls": 416,
+      "valid": 416,
+      "known_cost_usd": 0.03948189,
+      "input_tokens": 940045
+    },
+    "team": {
+      "calls": 1280,
+      "valid": 1279,
+      "known_cost_usd": 0.127660638,
+      "input_tokens": 3039539
+    },
+    "uniform": {
+      "calls": 96,
+      "valid": 96,
+      "known_cost_usd": 0.02161152,
+      "input_tokens": 514560
+    }
+  },
+  "instrument": {
+    "src/admission.py": "b9ee2a6124a9a03a4060e8b7188d07f4e47e5c8d470dcc6059bf2ad1d0dc4890",
+    "src/contract.py": "d96d5c86f75b8d3c9c9f207fdcd6524d2ec899a8f1afe20b5623af2123def219",
+    "src/design.py": "28125e2ac4bd84c6d93ccb9d0884e9534894b290d24e3f5904191e426c427349",
+    "src/engine.py": "923e3d66104fd8a18bc4237c65b57508ad640b57f8050f31a35f5ade24e6e031",
+    "src/ledger.py": "4a7ac0f2be9bceb2c3011bb3f19f9e3b6fcafd0f2f935a5f4f3cc089a8125896",
+    "src/replay.py": "861ef2c8577f740f82f21e01aed43859839f4d977aa6037dc29434b094e3b4a3",
+    "src/run.py": "9a9d1c02c647d749d3ad47acd6b44bbdb73c192a589c78d8f34d4c38a8d9434f",
+    "src/wire.py": "d76392addb66092691ca59fee8ef599d0292dd512f89abdedce37c63eb9b157c",
+    "PLAN.md": "23298a60adde54a63ba2231300a672dc9ad75f39b46f5a7bf7f37db7c01cef96",
+    "reviews/RUNNER-PRE.md": "4fa59451aa97247621f34b5413c65b78f76e04d4e0e68076036beb8f5ef50281",
+    "reviews/REVIEW-POLICY-AMENDMENT.md": "d3a494f1fccdc0c4047f7eeefcca2184dc0dd54d266d319ecd4ab3d81d55772d"
+  },
+  "model": "typesafe/jev-1.13-20260917",
+  "source_commit": "6b357eb5b7be8b9b789843116ff4e44043415988"
+}

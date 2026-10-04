@@ -1,0 +1,8 @@
+easyocr==1.7.2
+torch==2.6.0+cpu
+torchvision==0.21.0+cpu
+numpy==2.2.6
+opencv-python-headless==4.11.0.86
+scipy==1.15.3
+scikit-image==0.25.2
+Pillow==11.2.1

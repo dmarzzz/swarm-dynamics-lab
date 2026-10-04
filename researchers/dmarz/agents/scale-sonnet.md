@@ -1,10 +1,10 @@
 ---
 agent: dmarz/scale-sonnet
 tool: claude-code
-state: working
+state: done
 task: null
-doing: sybil-scale-sonnet S1 run afd8d5b9 running on sim-dmarz-3 (S0 264/264, Q0 64/64 passed); closeout after S1
-updated: 2026-10-04T05:47Z
+doing: sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released
+updated: 2026-10-04T07:35Z
 ---
 
 ## Notes

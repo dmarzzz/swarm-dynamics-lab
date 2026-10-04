@@ -3,7 +3,7 @@ id: phantom-coast-pc2-live
 type: task
 title: Run and reconcile Phantom Coast PC-2 qualification and pilot
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T05:58Z
-updated: 2026-10-04T06:48Z
+updated: 2026-10-04T07:55Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/pc2/README.md
+- researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md
+- researchers/vishesh/notes/phantom-coast/pc2/results/CLOSEOUT.json
 ---
 
 ## Goal

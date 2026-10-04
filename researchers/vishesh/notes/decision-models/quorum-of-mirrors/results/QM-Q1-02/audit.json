@@ -1,0 +1,165 @@
+{
+  "kind": "independent_saved_data_audit",
+  "assignments": 16,
+  "valid": 16,
+  "full_root_MAP_correct": 0,
+  "report_majority_matches": 16,
+  "repair_actual_usd": 0.00068544,
+  "output_token_range": [
+    39,
+    39
+  ],
+  "input_token_range": [
+    914,
+    1126
+  ],
+  "all_provider_request_ids_present": true,
+  "summary_exact_match": true,
+  "artifact_hashes_match": true,
+  "cells": [
+    {
+      "id": "QM-Q1-02-007",
+      "lineage": "full",
+      "context": "self",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ONE",
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    },
+    {
+      "id": "QM-Q1-02-006",
+      "lineage": "full",
+      "context": "self",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ZERO",
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-008",
+      "lineage": "partial",
+      "context": "peer",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-013",
+      "lineage": "partial",
+      "context": "self",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    },
+    {
+      "id": "QM-Q1-02-014",
+      "lineage": "partial",
+      "context": "self",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-011",
+      "lineage": "partial",
+      "context": "peer",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    },
+    {
+      "id": "QM-Q1-02-004",
+      "lineage": "full",
+      "context": "self",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ZERO",
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-015",
+      "lineage": "partial",
+      "context": "self",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    },
+    {
+      "id": "QM-Q1-02-003",
+      "lineage": "full",
+      "context": "peer",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ONE",
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    },
+    {
+      "id": "QM-Q1-02-005",
+      "lineage": "full",
+      "context": "self",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ONE",
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    },
+    {
+      "id": "QM-Q1-02-012",
+      "lineage": "partial",
+      "context": "self",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-002",
+      "lineage": "full",
+      "context": "peer",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ZERO",
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-010",
+      "lineage": "partial",
+      "context": "peer",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-009",
+      "lineage": "partial",
+      "context": "peer",
+      "distinct_visible_roots": null,
+      "recomputed_root_MAP": null,
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    },
+    {
+      "id": "QM-Q1-02-000",
+      "lineage": "full",
+      "context": "peer",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ZERO",
+      "report_majority": "ONE",
+      "choice": "ONE"
+    },
+    {
+      "id": "QM-Q1-02-001",
+      "lineage": "full",
+      "context": "peer",
+      "distinct_visible_roots": 3,
+      "recomputed_root_MAP": "ONE",
+      "report_majority": "ZERO",
+      "choice": "ZERO"
+    }
+  ]
+}

@@ -2,9 +2,9 @@
 agent: vishesh/codex-phantom-coast
 tool: codex
 state: working
-task: phantom-coast-pc2-live
-doing: Q0 passed; executing admitted S1 pilot and reconciling artifacts within original budget
-updated: 2026-10-04T06:42:12.981971+00:00
+task: phantom-coast-pc3-live
+doing: PC-3 guard implemented; 48 checks pass; preparing fresh qualification on claimed sim-dmarz-10
+updated: 2026-10-04T08:04:36.436374+00:00
 ---
 
 ## Notes

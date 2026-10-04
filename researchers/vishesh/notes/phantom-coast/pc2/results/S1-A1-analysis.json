@@ -1,0 +1,2799 @@
+{
+  "primary_sensitivity": {
+    "label": "Post-run descriptive leave-one-root-out check; primary still uses all eight roots",
+    "leave_one_out": [
+      {
+        "omitted_root": 500,
+        "upper_interaction": 0.027777777777777853
+      },
+      {
+        "omitted_root": 501,
+        "upper_interaction": 0.03174603174603182
+      },
+      {
+        "omitted_root": 502,
+        "upper_interaction": 0.027777777777777853
+      },
+      {
+        "omitted_root": 503,
+        "upper_interaction": 0.023809523809523867
+      },
+      {
+        "omitted_root": 504,
+        "upper_interaction": 0.023809523809523867
+      },
+      {
+        "omitted_root": 505,
+        "upper_interaction": 0.035714285714285775
+      },
+      {
+        "omitted_root": 506,
+        "upper_interaction": -0.0039682539682539065
+      },
+      {
+        "omitted_root": 507,
+        "upper_interaction": 0.02777777777777784
+      }
+    ]
+  },
+  "audit_on_minus_off": [
+    {
+      "policy": "team",
+      "report": "misleading",
+      "upper_error": -0.03125,
+      "wrong": -7,
+      "missing": -2,
+      "report_cells_visited": 0.875,
+      "unique_cells": 1.25,
+      "meets_practical_threshold": false
+    },
+    {
+      "policy": "team",
+      "report": "benign",
+      "upper_error": 0.0,
+      "wrong": 0,
+      "missing": 0,
+      "report_cells_visited": 0.25,
+      "unique_cells": 0.25,
+      "meets_practical_threshold": false
+    },
+    {
+      "policy": "single",
+      "report": "misleading",
+      "upper_error": -0.02430555555555558,
+      "wrong": -10,
+      "missing": 3,
+      "report_cells_visited": 1.25,
+      "unique_cells": 1.0,
+      "meets_practical_threshold": false
+    },
+    {
+      "policy": "single",
+      "report": "benign",
+      "upper_error": -0.00347222222222221,
+      "wrong": 0,
+      "missing": -1,
+      "report_cells_visited": 0.125,
+      "unique_cells": 0.25,
+      "meets_practical_threshold": false
+    },
+    {
+      "policy": "uniform",
+      "report": "misleading",
+      "upper_error": 0.00694444444444442,
+      "wrong": -2,
+      "missing": 4,
+      "report_cells_visited": 0.625,
+      "unique_cells": -0.25,
+      "meets_practical_threshold": false
+    },
+    {
+      "policy": "uniform",
+      "report": "benign",
+      "upper_error": 0.02083333333333337,
+      "wrong": 0,
+      "missing": 6,
+      "report_cells_visited": 0.625,
+      "unique_cells": -0.25,
+      "meets_practical_threshold": false
+    }
+  ],
+  "stage": "S1",
+  "independent_roots": 8,
+  "structural_families": 2,
+  "dependent_episodes": 96,
+  "assignment_status": {
+    "valid": 1791,
+    "invalid": 1
+  },
+  "conditions": [
+    {
+      "policy": "team",
+      "report": "misleading",
+      "audit": false,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 12,
+      "missing": 255,
+      "denominator": 288,
+      "lower": 0.041666666666666664,
+      "upper": 0.9270833333333333,
+      "unique_cells": 2.5,
+      "report_cells_visited": 2.5,
+      "repeated_slots": 9.5,
+      "failed_slots": 0,
+      "deterministic_upper": 0.9305555555555556,
+      "yoked_upper": 0.9270833333333333,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 20,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 12,
+          "missing": 255,
+          "denominator": 268,
+          "lower": 0.04477611940298507,
+          "upper": 0.996268656716418
+        },
+        "land": {
+          "wrong": 12,
+          "missing": 64,
+          "denominator": 96,
+          "lower": 0.125,
+          "upper": 0.7916666666666666
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 191,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.9947916666666666
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "team",
+      "report": "misleading",
+      "audit": true,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 5,
+      "missing": 253,
+      "denominator": 288,
+      "lower": 0.017361111111111112,
+      "upper": 0.8958333333333333,
+      "unique_cells": 3.75,
+      "report_cells_visited": 3.375,
+      "repeated_slots": 8.25,
+      "failed_slots": 0,
+      "deterministic_upper": 0.8958333333333333,
+      "yoked_upper": 0.8958333333333333,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 30,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 5,
+          "missing": 253,
+          "denominator": 258,
+          "lower": 0.01937984496124031,
+          "upper": 1.0
+        },
+        "land": {
+          "wrong": 5,
+          "missing": 63,
+          "denominator": 96,
+          "lower": 0.052083333333333336,
+          "upper": 0.7083333333333334
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 190,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.9895833333333334
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "team",
+      "report": "benign",
+      "audit": false,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 0,
+      "missing": 249,
+      "denominator": 288,
+      "lower": 0.0,
+      "upper": 0.8645833333333333,
+      "unique_cells": 4,
+      "report_cells_visited": 3.125,
+      "repeated_slots": 8,
+      "failed_slots": 0,
+      "deterministic_upper": 0.8645833333333333,
+      "yoked_upper": 0.8645833333333333,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 32,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 0,
+          "missing": 249,
+          "denominator": 256,
+          "lower": 0.0,
+          "upper": 0.97265625
+        },
+        "land": {
+          "wrong": 0,
+          "missing": 63,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.65625
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 186,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.96875
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": null,
+          "censored": true
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "team",
+      "report": "benign",
+      "audit": true,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 0,
+      "missing": 249,
+      "denominator": 288,
+      "lower": 0.0,
+      "upper": 0.8645833333333333,
+      "unique_cells": 4.25,
+      "report_cells_visited": 3.375,
+      "repeated_slots": 7.75,
+      "failed_slots": 0,
+      "deterministic_upper": 0.8645833333333333,
+      "yoked_upper": 0.8645833333333333,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 34,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 0,
+          "missing": 249,
+          "denominator": 254,
+          "lower": 0.0,
+          "upper": 0.9803149606299213
+        },
+        "land": {
+          "wrong": 0,
+          "missing": 63,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.65625
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 186,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.96875
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "single",
+      "report": "misleading",
+      "audit": false,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 13,
+      "missing": 248,
+      "denominator": 288,
+      "lower": 0.04513888888888889,
+      "upper": 0.90625,
+      "unique_cells": 3.25,
+      "report_cells_visited": 2.375,
+      "repeated_slots": 8.75,
+      "failed_slots": 0,
+      "deterministic_upper": 0.9097222222222222,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 26,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 13,
+          "missing": 248,
+          "denominator": 262,
+          "lower": 0.04961832061068702,
+          "upper": 0.9961832061068703
+        },
+        "land": {
+          "wrong": 13,
+          "missing": 62,
+          "denominator": 96,
+          "lower": 0.13541666666666666,
+          "upper": 0.78125
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 186,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.96875
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": null,
+          "censored": true
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "single",
+      "report": "misleading",
+      "audit": true,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 3,
+      "missing": 251,
+      "denominator": 288,
+      "lower": 0.010416666666666666,
+      "upper": 0.8819444444444444,
+      "unique_cells": 4.25,
+      "report_cells_visited": 3.625,
+      "repeated_slots": 7.75,
+      "failed_slots": 0,
+      "deterministic_upper": 0.8819444444444444,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 34,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 3,
+          "missing": 251,
+          "denominator": 254,
+          "lower": 0.011811023622047244,
+          "upper": 1.0
+        },
+        "land": {
+          "wrong": 3,
+          "missing": 62,
+          "denominator": 96,
+          "lower": 0.03125,
+          "upper": 0.6770833333333334
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 189,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.984375
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "single",
+      "report": "benign",
+      "audit": false,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 0,
+      "missing": 250,
+      "denominator": 288,
+      "lower": 0.0,
+      "upper": 0.8680555555555555,
+      "unique_cells": 4.25,
+      "report_cells_visited": 3.5,
+      "repeated_slots": 7.75,
+      "failed_slots": 0,
+      "deterministic_upper": 0.8680555555555555,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 34,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 0,
+          "missing": 250,
+          "denominator": 254,
+          "lower": 0.0,
+          "upper": 0.984251968503937
+        },
+        "land": {
+          "wrong": 0,
+          "missing": 63,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.65625
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 187,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.9739583333333334
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": null,
+          "censored": true
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "single",
+      "report": "benign",
+      "audit": true,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 0,
+      "missing": 249,
+      "denominator": 288,
+      "lower": 0.0,
+      "upper": 0.8645833333333333,
+      "unique_cells": 4.5,
+      "report_cells_visited": 3.625,
+      "repeated_slots": 7.5,
+      "failed_slots": 0,
+      "deterministic_upper": 0.8645833333333333,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 36,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 0,
+          "missing": 249,
+          "denominator": 252,
+          "lower": 0.0,
+          "upper": 0.9880952380952381
+        },
+        "land": {
+          "wrong": 0,
+          "missing": 63,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.65625
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 186,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.96875
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 1,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 1,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "uniform",
+      "report": "misleading",
+      "audit": false,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 7,
+      "missing": 185,
+      "denominator": 288,
+      "lower": 0.024305555555555552,
+      "upper": 0.6666666666666666,
+      "unique_cells": 12,
+      "report_cells_visited": 1.875,
+      "repeated_slots": 0,
+      "failed_slots": 0,
+      "deterministic_upper": 0.6666666666666666,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 7,
+          "missing": 185,
+          "denominator": 192,
+          "lower": 0.036458333333333336,
+          "upper": 1.0
+        },
+        "land": {
+          "wrong": 7,
+          "missing": 50,
+          "denominator": 96,
+          "lower": 0.07291666666666667,
+          "upper": 0.59375
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 135,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.703125
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 7,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 11,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 12,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 4,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "uniform",
+      "report": "misleading",
+      "audit": true,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 5,
+      "missing": 189,
+      "denominator": 288,
+      "lower": 0.017361111111111112,
+      "upper": 0.673611111111111,
+      "unique_cells": 11.75,
+      "report_cells_visited": 2.5,
+      "repeated_slots": 0.25,
+      "failed_slots": 0,
+      "deterministic_upper": 0.673611111111111,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 94,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 5,
+          "missing": 189,
+          "denominator": 194,
+          "lower": 0.02577319587628866,
+          "upper": 1.0
+        },
+        "land": {
+          "wrong": 5,
+          "missing": 52,
+          "denominator": 96,
+          "lower": 0.052083333333333336,
+          "upper": 0.59375
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 137,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.7135416666666666
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 4,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "uniform",
+      "report": "benign",
+      "audit": false,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 0,
+      "missing": 181,
+      "denominator": 288,
+      "lower": 0.0,
+      "upper": 0.6284722222222222,
+      "unique_cells": 12,
+      "report_cells_visited": 1.875,
+      "repeated_slots": 0,
+      "failed_slots": 0,
+      "deterministic_upper": 0.607638888888889,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 0,
+          "missing": 181,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.9427083333333334
+        },
+        "land": {
+          "wrong": 0,
+          "missing": 46,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.4791666666666667
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 135,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.703125
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 7,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 11,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 12,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 4,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    },
+    {
+      "policy": "uniform",
+      "report": "benign",
+      "audit": true,
+      "roots": 8,
+      "complete": 8,
+      "wrong": 0,
+      "missing": 187,
+      "denominator": 288,
+      "lower": 0.0,
+      "upper": 0.6493055555555556,
+      "unique_cells": 11.75,
+      "report_cells_visited": 2.5,
+      "repeated_slots": 0.25,
+      "failed_slots": 0,
+      "deterministic_upper": 0.6319444444444444,
+      "yoked_upper": null,
+      "stratified_errors": {
+        "observed": {
+          "wrong": 0,
+          "missing": 0,
+          "denominator": 94,
+          "lower": 0.0,
+          "upper": 0.0
+        },
+        "unobserved": {
+          "wrong": 0,
+          "missing": 187,
+          "denominator": 194,
+          "lower": 0.0,
+          "upper": 0.9639175257731959
+        },
+        "land": {
+          "wrong": 0,
+          "missing": 50,
+          "denominator": 96,
+          "lower": 0.0,
+          "upper": 0.5208333333333334
+        },
+        "water": {
+          "wrong": 0,
+          "missing": 137,
+          "denominator": 192,
+          "lower": 0.0,
+          "upper": 0.7135416666666666
+        }
+      },
+      "first_report_visit": [
+        {
+          "seed": 500,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 501,
+          "slot": 2,
+          "censored": false
+        },
+        {
+          "seed": 502,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 503,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 504,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 505,
+          "slot": 6,
+          "censored": false
+        },
+        {
+          "seed": 506,
+          "slot": 3,
+          "censored": false
+        },
+        {
+          "seed": 507,
+          "slot": 4,
+          "censored": false
+        }
+      ],
+      "stratum_weighting": "Pooled cell counts within condition; cells are dependent, not independent samples."
+    }
+  ],
+  "misleading_minus_benign": [
+    {
+      "policy": "team",
+      "audit": false,
+      "worlds": [
+        {
+          "seed": 500,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 501,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 502,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 503,
+          "report_visits": -3,
+          "unique_cells": -3,
+          "upper_error": 0.08333333333333337
+        },
+        {
+          "seed": 504,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.08333333333333337
+        },
+        {
+          "seed": 505,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 506,
+          "report_visits": 1,
+          "unique_cells": -6,
+          "upper_error": 0.2777777777777778
+        },
+        {
+          "seed": 507,
+          "report_visits": -3,
+          "unique_cells": -3,
+          "upper_error": 0.05555555555555558
+        }
+      ],
+      "means": {
+        "report_visits": -0.625,
+        "unique_cells": -1.5,
+        "upper_error": 0.06250000000000001
+      }
+    },
+    {
+      "policy": "team",
+      "audit": true,
+      "worlds": [
+        {
+          "seed": 500,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 501,
+          "report_visits": 0,
+          "unique_cells": -1,
+          "upper_error": 0.02777777777777768
+        },
+        {
+          "seed": 502,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 503,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 504,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555558
+        },
+        {
+          "seed": 505,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 506,
+          "report_visits": 0,
+          "unique_cells": -3,
+          "upper_error": 0.16666666666666663
+        },
+        {
+          "seed": 507,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        }
+      ],
+      "means": {
+        "report_visits": 0,
+        "unique_cells": -0.5,
+        "upper_error": 0.031249999999999986
+      }
+    },
+    {
+      "policy": "single",
+      "audit": false,
+      "worlds": [
+        {
+          "seed": 500,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 501,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 502,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 503,
+          "report_visits": -3,
+          "unique_cells": -3,
+          "upper_error": 0.08333333333333337
+        },
+        {
+          "seed": 504,
+          "report_visits": -3,
+          "unique_cells": -3,
+          "upper_error": 0.08333333333333337
+        },
+        {
+          "seed": 505,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 506,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.11111111111111116
+        },
+        {
+          "seed": 507,
+          "report_visits": -3,
+          "unique_cells": -2,
+          "upper_error": 0.02777777777777779
+        }
+      ],
+      "means": {
+        "report_visits": -1.125,
+        "unique_cells": -1,
+        "upper_error": 0.03819444444444446
+      }
+    },
+    {
+      "policy": "single",
+      "audit": true,
+      "worlds": [
+        {
+          "seed": 500,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 501,
+          "report_visits": 0,
+          "unique_cells": -1,
+          "upper_error": 0.02777777777777768
+        },
+        {
+          "seed": 502,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 503,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 504,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 505,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 506,
+          "report_visits": 0,
+          "unique_cells": -2,
+          "upper_error": 0.13888888888888895
+        },
+        {
+          "seed": 507,
+          "report_visits": 0,
+          "unique_cells": 1,
+          "upper_error": -0.02777777777777768
+        }
+      ],
+      "means": {
+        "report_visits": 0,
+        "unique_cells": -0.25,
+        "upper_error": 0.01736111111111112
+      }
+    },
+    {
+      "policy": "uniform",
+      "audit": false,
+      "worlds": [
+        {
+          "seed": 500,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 501,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.02777777777777779
+        },
+        {
+          "seed": 502,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 503,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555547
+        },
+        {
+          "seed": 504,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555547
+        },
+        {
+          "seed": 505,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555547
+        },
+        {
+          "seed": 506,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555547
+        },
+        {
+          "seed": 507,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555547
+        }
+      ],
+      "means": {
+        "report_visits": 0,
+        "unique_cells": 0,
+        "upper_error": 0.03819444444444439
+      }
+    },
+    {
+      "policy": "uniform",
+      "audit": true,
+      "worlds": [
+        {
+          "seed": 500,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 501,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 502,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 503,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.0
+        },
+        {
+          "seed": 504,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.02777777777777779
+        },
+        {
+          "seed": 505,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555547
+        },
+        {
+          "seed": 506,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555547
+        },
+        {
+          "seed": 507,
+          "report_visits": 0,
+          "unique_cells": 0,
+          "upper_error": 0.05555555555555558
+        }
+      ],
+      "means": {
+        "report_visits": 0,
+        "unique_cells": 0,
+        "upper_error": 0.02430555555555554
+      }
+    }
+  ],
+  "primary": {
+    "roots": 8,
+    "primary_upper_interaction": 0.024305555555555622,
+    "primary_bounds": {
+      "lower": -1.4895833333333333,
+      "upper": 1.53125
+    }
+  },
+  "by_family": {
+    "block": {
+      "roots": 4,
+      "primary_upper_interaction": 0.06250000000000006,
+      "primary_bounds": {
+        "lower": -1.4652777777777777,
+        "upper": 1.5555555555555554
+      }
+    },
+    "scattered": {
+      "roots": 4,
+      "primary_upper_interaction": -0.013888888888888812,
+      "primary_bounds": {
+        "lower": -1.5138888888888888,
+        "upper": 1.5069444444444444
+      }
+    }
+  },
+  "per_root_contrasts": [
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 500,
+      "family": "block",
+      "primary_upper_interaction": 0.0,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.5555555555555554
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 5
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 5
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 501,
+      "family": "scattered",
+      "primary_upper_interaction": -0.02777777777777779,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.5277777777777777
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8611111111111112
+          },
+          "upper_difference": -0.02777777777777768
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8611111111111112
+          },
+          "upper_difference": -0.02777777777777768
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6388888888888888,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.02777777777777779
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 502,
+      "family": "block",
+      "primary_upper_interaction": 0.0,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.5555555555555554
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 503,
+      "family": "scattered",
+      "primary_upper_interaction": 0.0277777777777779,
+      "primary_bounds": {
+        "lower": -1.472222222222222,
+        "upper": 1.5555555555555556
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9722222222222222,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9722222222222222,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.05555555555555547
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 1,
+          "union_cells": 1
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 2,
+          "union_cells": 2
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 11,
+          "union_cells": 11
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 1,
+          "report_gain": 1
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 1
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": -1,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": -1,
+          "report_gain": 0
+        }
+      ],
+      "seed": 504,
+      "family": "block",
+      "primary_upper_interaction": 0.0277777777777779,
+      "primary_bounds": {
+        "lower": -1.472222222222222,
+        "upper": 1.5555555555555556
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9166666666666666,
+            "upper": 0.861111111111111
+          },
+          "upper_difference": -0.02777777777777779
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9722222222222222,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.611111111111111,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6666666666666666
+          },
+          "upper_difference": 0.05555555555555547
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        }
+      ],
+      "seed": 505,
+      "family": "scattered",
+      "primary_upper_interaction": -0.05555555555555547,
+      "primary_bounds": {
+        "lower": -1.5555555555555554,
+        "upper": 1.4444444444444444
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6666666666666666,
+            "upper": 0.611111111111111
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6111111111111112
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": 1,
+          "overlap_cells": 0,
+          "union_cells": 8
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 7
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 6,
+          "union_cells": 6
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 5,
+          "union_cells": 7
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 0
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 1
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": -1,
+          "report_gain": 1
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 1,
+          "report_gain": 1
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        }
+      ],
+      "seed": 506,
+      "family": "block",
+      "primary_upper_interaction": 0.22222222222222232,
+      "primary_bounds": {
+        "lower": -1.2777777777777777,
+        "upper": 1.5555555555555556
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.08333333333333337
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6944444444444444,
+            "upper": 0.7222222222222222
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.75,
+            "upper": 0.75
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.7222222222222222,
+            "upper": 0.7222222222222222
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.6388888888888888,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6111111111111112
+          },
+          "upper_difference": 0.0
+        }
+      ]
+    },
+    {
+      "mechanism": [
+        {
+          "policy": "team",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 4
+        },
+        {
+          "policy": "team",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 4
+        },
+        {
+          "policy": "single",
+          "audit": false,
+          "report_visits_difference": -3,
+          "overlap_cells": 1,
+          "union_cells": 5
+        },
+        {
+          "policy": "single",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 4,
+          "union_cells": 5
+        },
+        {
+          "policy": "uniform",
+          "audit": false,
+          "report_visits_difference": 0,
+          "overlap_cells": 12,
+          "union_cells": 12
+        },
+        {
+          "policy": "uniform",
+          "audit": true,
+          "report_visits_difference": 0,
+          "overlap_cells": 11,
+          "union_cells": 11
+        }
+      ],
+      "audit_coverage": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "unique_gain": 3,
+          "report_gain": 3
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "unique_gain": 0,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "unique_gain": -1,
+          "report_gain": 0
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "unique_gain": -1,
+          "report_gain": 0
+        }
+      ],
+      "seed": 507,
+      "family": "scattered",
+      "primary_upper_interaction": 1.1102230246251565e-16,
+      "primary_bounds": {
+        "lower": -1.472222222222222,
+        "upper": 1.5
+      },
+      "audit": [
+        {
+          "policy": "team",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9444444444444444,
+            "upper": 0.8055555555555555
+          },
+          "upper_difference": -0.05555555555555558
+        },
+        {
+          "policy": "team",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "single",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.9166666666666666,
+            "upper": 0.7777777777777778
+          },
+          "upper_difference": -0.05555555555555547
+        },
+        {
+          "policy": "single",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.8888888888888888,
+            "upper": 0.8888888888888888
+          },
+          "upper_difference": 0.0
+        },
+        {
+          "policy": "uniform",
+          "report": "misleading",
+          "bounds": {
+            "lower": -0.611111111111111,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.02777777777777779
+        },
+        {
+          "policy": "uniform",
+          "report": "benign",
+          "bounds": {
+            "lower": -0.6111111111111112,
+            "upper": 0.6388888888888888
+          },
+          "upper_difference": 0.02777777777777768
+        }
+      ]
+    }
+  ],
+  "budget": {
+    "calls": 1816,
+    "prior_usd": 0.162723246,
+    "new_known_usd": 0.193984014,
+    "cumulative_exposure_usd": 0.35805126,
+    "api_cap_usd": 4,
+    "max_calls": 1816
+  },
+  "usage_by_policy": {
+    "single": {
+      "calls": 416,
+      "valid": 416,
+      "known_cost_usd": 0.03948189,
+      "input_tokens": 940045
+    },
+    "team": {
+      "calls": 1280,
+      "valid": 1279,
+      "known_cost_usd": 0.127660638,
+      "input_tokens": 3039539
+    },
+    "uniform": {
+      "calls": 96,
+      "valid": 96,
+      "known_cost_usd": 0.02161152,
+      "input_tokens": 514560
+    }
+  },
+  "limitations": "Eight synthetic roots from two structural families, one model snapshot, unequal inference compute. Missing labels are identification bounds, not confidence intervals. Descriptive exploratory contrasts; no independent replication.",
+  "source_sha256": {
+    "summary.json": "7ed2ed26d6b822432b9eb8ba7024f08ff9998016faa8db030c05ab13b450be05",
+    "episodes.json": "db34d6c217aa3d1e5576b95c7c4d82edf3ef87f1abee0604b9d5420ba7a84d9a",
+    "records.json": "dc02df3c3f4eef91750566f1ab9b8e705c4b9b649685421c4307c0d8c70d2b77",
+    "manifest.json": "e33a308d1fc294a471fb437b58c3e9c9166147f8a3eec34992989533f60efe13",
+    "worlds.json": "85330501f242372bc7ae8cd2a13362b265952fa140079bf2731cf62056119162"
+  }
+}

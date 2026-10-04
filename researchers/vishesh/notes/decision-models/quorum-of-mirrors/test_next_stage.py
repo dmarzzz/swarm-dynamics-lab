@@ -65,7 +65,7 @@ class NextContract(unittest.TestCase):
         rows[0].update(status='failed');s=analyze(m,rows);self.assertEqual(s['assigned'],16);self.assertEqual(s['failed'],1);self.assertFalse(s['qualified'])
         with self.assertRaises(ValueError):analyze(m,rows+[rows[0]])
     def test_scoring_and_schema_rejections(self):
-        for field,value in [('cost',float('nan')),('input_tokens',True),('output_tokens',1),('cost',.5)]:
+        for field,value in [('cost',float('nan')),('input_tokens',True),('output_tokens',-1),('cost',.5)]:
             r=response('ONE');r['usage'][field]=value
             with self.assertRaises(ValueError):checked_response(r)
         r=response('ONE');r['answers']['decision']['choice']='ZERO'

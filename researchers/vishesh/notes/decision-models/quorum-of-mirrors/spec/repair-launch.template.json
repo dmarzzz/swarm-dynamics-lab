@@ -1,0 +1,26 @@
+{
+  "status": "TEMPLATE \u2014 NOT ADMITTED",
+  "repo": null,
+  "hypothesis": null,
+  "authorization": "AUTHORIZATION.json",
+  "source_sha256": {
+    "next_stage.py": "c1958b62d28175288fdc684f1747d788467071268c0505a8ac7ae1378cb1279b",
+    "next_runtime.py": "b68a30faac82dbae25237aa15119fb2764a6481a889d9e9068d566d7f33f8180",
+    "qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "relay.py": "f600c8400243919d7fa55a35f790c3fb0e874eb15c0597da01d406071c8c41ed",
+    "public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166",
+    "OPERATOR-AUTHORIZATION.json": "9472a2df6cd2977e0b99b7f659e229954ce4eeca656f0800bcacee92d3806b98"
+  },
+  "manifest_sha256": "62ed65cb130f4f76262b91e5cbebb3f017621a0e2b6503d3ae779aa7c1ee8c82",
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/b8ee7281c5f055f7eeff94b55cb319bef50c8d3b/researchers/vishesh/notes/decision-models/quorum-of-mirrors/NEXT-RUN-PLAN.md",
+  "plan_sha256": "5fc53a6a5dbc73d501153629051069d91694f74f0a86ac6b1b9e352fddfcb4d4",
+  "public_manifest_url": "https://github.com/dmarzzz/swarm-lab/blob/b8ee7281c5f055f7eeff94b55cb319bef50c8d3b/researchers/vishesh/notes/decision-models/quorum-of-mirrors/spec/QM-Q1-02.json",
+  "run_tldr": "QM-Q1-02 interface repair: test provenance reasoning under misleading peer/self choices using documented nonnegative output-token accounting; full-lineage comparator is root-MAP, partial is interface-only; require 16 valid and >=7/8 full correct. Same finite fixtures, no swarm efficacy claim.",
+  "reporter_sha256": null,
+  "deadline": null,
+  "allocation_receipt": null,
+  "ledger": null,
+  "repair_assessment": "spec/QM-Q1-02-repair.json",
+  "research_policy": "owner-directed-exploratory"
+}

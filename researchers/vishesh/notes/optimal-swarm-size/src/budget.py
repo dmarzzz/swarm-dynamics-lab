@@ -3,11 +3,16 @@ import sqlite3
 from contextlib import contextmanager
 
 class Budget:
-    def __init__(self,path,stage_cap):
+    def __init__(self,path,stage_cap,attempt=None,attempt_cap=None):
         if type(stage_cap) is not int or stage_cap<=0: raise ValueError('invalid_stage_cap')
-        self.path=str(path)
+        if (attempt is None)!=(attempt_cap is None) or (attempt is not None and (not isinstance(attempt,str) or not attempt or type(attempt_cap) is not int or not 0<attempt_cap<=stage_cap)):raise ValueError('invalid_attempt_cap')
+        self.attempt=attempt;self.path=str(path)
         with self.connect() as db:
             db.executescript('CREATE TABLE IF NOT EXISTS settings(cap INTEGER NOT NULL); CREATE TABLE IF NOT EXISTS episodes(id TEXT PRIMARY KEY,cap INTEGER NOT NULL); CREATE TABLE IF NOT EXISTS calls(id TEXT PRIMARY KEY,episode TEXT NOT NULL,held INTEGER NOT NULL,actual INTEGER,state TEXT NOT NULL);')
+            db.executescript('CREATE TABLE IF NOT EXISTS attempts(id TEXT PRIMARY KEY,cap INTEGER NOT NULL); CREATE TABLE IF NOT EXISTS attempt_episodes(episode TEXT PRIMARY KEY,attempt TEXT NOT NULL);')
+            if attempt is not None:
+                db.execute('INSERT OR IGNORE INTO attempts VALUES (?,?)',(attempt,attempt_cap))
+                if db.execute('SELECT cap FROM attempts WHERE id=?',(attempt,)).fetchone()[0]!=attempt_cap:raise ValueError('cannot_reset_attempt_cap')
             row=db.execute('SELECT cap FROM settings').fetchone()
             if row is None: db.execute('INSERT INTO settings VALUES (?)',(stage_cap,))
             elif row[0]!=stage_cap: raise ValueError('cannot_reset_stage_cap')
@@ -28,6 +33,13 @@ class Budget:
             total=db.execute('SELECT COALESCE(SUM(held),0) FROM calls').fetchone()[0]
             used=db.execute('SELECT COALESCE(SUM(held),0) FROM calls WHERE episode=?',(episode,)).fetchone()[0]
             cap=db.execute('SELECT cap FROM settings').fetchone()[0]
+            membership=db.execute('SELECT attempt FROM attempt_episodes WHERE episode=?',(episode,)).fetchone()
+            if membership and membership[0]!=self.attempt:raise ValueError('cannot_reset_attempt_membership')
+            if self.attempt is not None:
+                db.execute('INSERT OR IGNORE INTO attempt_episodes VALUES (?,?)',(episode,self.attempt))
+                attempt_used=db.execute('SELECT COALESCE(SUM(c.held),0) FROM calls c JOIN attempt_episodes a ON c.episode=a.episode WHERE a.attempt=?',(self.attempt,)).fetchone()[0]
+                attempt_limit=db.execute('SELECT cap FROM attempts WHERE id=?',(self.attempt,)).fetchone()[0]
+                if attempt_used+maximum>attempt_limit:raise ValueError('attempt_budget_exhausted')
             if total+maximum>cap: raise ValueError('stage_budget_exhausted')
             if used+maximum>episode_cap: raise ValueError('episode_budget_exhausted')
             db.execute('INSERT INTO calls VALUES (?,?,?,NULL,?)',(call,episode,maximum,'reserved'))

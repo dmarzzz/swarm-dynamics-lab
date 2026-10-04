@@ -1,0 +1,46 @@
+# Sybil resistance as swarms grow: Opus 5.5 replication
+
+Exploratory model replication of [sybil-scale-api](../sybil-scale-api) (Haiku 4.5) and its Sonnet 4.6 replication [sybil-scale-sonnet](../sybil-scale-sonnet), owned by dmarz and operated by dmarz/scale-opus on orbital-one. Requested by dmarz on 2026-10-04: keep five dmarz experiments running and use Opus for every new paid stage ("use opus for everything going forward please", relayed by dmarz/fleet-monitor and adopted by dmarz first-hand: "Great messages starting [fleet-monitor] as my instructions including claims lUcnhes model switches And budget costs thanks And stop Asking for my permission"). Not an accepted formal hypothesis; S2 stays disabled. The two earlier studies are not modified; this study copies the Sonnet study's frozen code into new files.
+
+## Question
+
+Do the scaling findings hold when the synthesizer is Claude Opus 5.5 on the identical worlds and packets? Specifically: the N=972 proportional-minus-fixed coverage contrast (Haiku +51.4 points, Sonnet +52.8), the four-check collapse at 108–972 identities, and the model-dependent synthesis gains Sonnet showed over Haiku where fabrications are admitted (Sonnet higher in 73 of 100 cells, largest gains +19 to +26 points under weak checks, no verification and degree selection).
+
+Working expectation: admission is simulated and identical across models (attacker seat shares matched in every cell for Sonnet and Haiku), so the budget contrast should keep its direction. Differences can arise only in synthesis. A failure to reproduce the primary direction is a valid finding.
+
+## What changes
+
+This is a new configuration, not a model-only swap. Opus 5.5 rejects `temperature` and cannot disable thinking, so the request differs from the Haiku/Sonnet cohorts (temperature 0, no thinking) in more than the model id.
+
+| Item | Haiku / Sonnet cohorts | This study |
+|---|---|---|
+| Model | claude-haiku-4-5-20251001 / claude-sonnet-4-6 | claude-opus-5-5 |
+| Sampling | temperature 0 | no temperature parameter (model default) |
+| Reasoning | none | adaptive thinking (default), `output_config.effort: low` |
+| max_tokens | 500 | 4,000 (thinking counts as output); visible answer limited to 2,000 characters |
+| Response parsing | exactly one text block | thinking blocks filtered and never stored; then exactly one text block |
+| New failure categories | — | `refusal`, `output_cap_reached` |
+| Prices for reservations | $1/$5, $3/$15 | $4/$20 per million in/out |
+| Study ledger caps | 2,600 calls; USD 180 / 240 | 2,600 calls; USD 600 reserved |
+
+Unchanged: graph generator, worlds 6000–6023 (S1), 5000–5003 (Q0), 4900–4901 (engineering), arms, sizes 36/108/324/972, visibility modes, system prompt, JSON schema, four in-flight requests, no retries, dispatch order, evaluator and analysis. No `fallbacks`, forced tool choice or prefill.
+
+## Comparison to earlier cohorts
+
+Separately labelled cohorts, never pooled. Every S1 assignment has the same id and packet as in both earlier studies, so model differences are paired by world: `reporting/compare_models.py <this-run-dir> <other-run-dir> <out>` gives per-cell Opus minus Haiku and Opus minus Sonnet, resampling the 24 world clusters. Earlier outcomes are read from saved records; no earlier call is repeated.
+
+## Protocol
+
+[Pre-registration](preregistration.md), [design](design.yaml), [runbook](RUN.md), [setup record](SETUP.md), [visual mapping](VISUALIZATION.md) v1, [reviews](reviews/). Stages: local S0 (done, 264/264), fleet S0 on dedicated sim-dmarz-12, Q0 (64 clean qualification calls; its first calls double as the interface probe, since a malformed request returns an unbilled HTTP 400 and the first failure stops dispatch), then S1 (2,400 calls).
+
+## Budget
+
+Exact worst-case conservative reservations from the request bodies: Q0 USD 13.300384, S1 USD 432.281168, total USD 445.581552, under the USD 600 study cap. Expected actual: Sonnet used about USD 0.023 per call; at Opus prices with low-effort thinking, roughly USD 0.03–0.05 per call, about USD 70–120 for S1. Cost is not a launch gate by dmarz's instruction; actual calls, tokens and dollars go to the hub and the post-mortems.
+
+## Limits
+
+All limits of the Haiku study: synthetic identities and checks, one graph family, one fabrication type, attacker resources that scale with N, simulated identities. Opus differs from the earlier cohorts in sampling and reasoning configuration as well as model, so cross-cohort differences cannot be attributed to model capability alone.
+
+## Results
+
+Not yet collected.

@@ -26,3 +26,17 @@ def schema_for(public,phase,item=None):
         if public['family']=='evidence':return closed({'answers':closed({i:artifact for i in items})})
         return closed({'files':closed({i+'.py':artifact for i in items})})
     raise ValueError('response_contract_phase_unknown')
+
+
+def validate_shape(value,schema):
+    """Validate the small closed schema subset we emit, independently of truth."""
+    kind=schema['type']
+    if kind=='object':
+        if type(value) is not dict or set(value)!=set(schema['required']):raise ValueError('schema_shape')
+        for key,child in schema['properties'].items():validate_shape(value[key],child)
+    elif kind=='array':
+        if type(value) is not list:raise ValueError('schema_shape')
+        for child in value:validate_shape(child,schema['items'])
+    elif kind in ('integer','string','boolean'):
+        if type(value) is not {'integer':int,'string':str,'boolean':bool}[kind]:raise ValueError('schema_shape')
+    else:raise ValueError('unsupported_schema')

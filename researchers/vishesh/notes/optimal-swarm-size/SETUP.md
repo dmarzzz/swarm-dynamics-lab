@@ -38,3 +38,11 @@ Next action: prepare a separately identified bounded qualification of the native
 ## Proposed next-run redesign
 
 [Next-run design](reviews/next-run-design.md) synthesizes both post-mortems and the schema repair. Proposed first stage: four width-2 N=1 canaries covering both families/structures, with explicit readiness criteria and a $5 sublimit inside the original authority. Requires width-aware identities, canonical-ledger sublimit enforcement and phase-specific stopping/diagnostics before execution. It also records dependency-integrity and slot-capacity controls required before any size-effect claim. Design only; no new run launched.
+
+## Latest completed attempt: Q-A3 canary
+
+[Closeout](reviews/q-a3-canary-post.md): 4/4 end-to-end successes, 16 calls, all artifact hashes and public TLDRs verified. Exact public registration/source admission passed on research-01 under fresh PR207 claim. $0.014038 added; cumulative exposure $0.343028. Earlier pending canary/repair paragraphs are historical. This qualifies only width-2 N=1; next action is separately admitted full-width baseline preparation after correcting the width-dependent progress display. No automatic Q-B escalation.
+
+## Latest iteration: Q-A4 full-width qualification
+
+[Prospective plan](reviews/q-a4-full-width-plan.md), source 69cb6a288d2993cd231f1954519810970dbe5104, 48 passing experiment tests. Sixteen width-16 N=1 cases interleaved across four family/structure cells; strict schema contracts, corrected progress totals, $8 attempt/$2 episode sublimits within the existing original $20 ledger. Fresh claim PR212 and exact immutable public registration verified. Starting exposure $0.343028; no budget reset. Results and promotion decision pending; no automatic larger-N launch.

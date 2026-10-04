@@ -8,7 +8,7 @@ The practical decision is whether to invest in **more judgments, better source t
 
 ## What has actually run
 
-The new **Q1 context screen launched and stopped after its first response violated the frozen output-token contract: 1 failed, 15 unstarted, 0 valid/16**. It provides no new reasoning score. The [Q1 post-mortem](reviews/Q1-01-post.md) records the retained cost exposure and required interface repair; no researcher or owner approval wait remains.
+The repaired **Q1 context screen completed all 16 calls with valid responses, but got 0/8 full-lineage decisions right** (required: at least 7/8). Every choice matched report majority even when copies should count once. Partial-lineage cases were interface checks, not accuracy tests. The [Q1 repair report](reviews/Q1-02-post.md) distinguishes the fixed output-token bug from this valid negative result. The larger committee experiment remains unrun; trustworthy source deduplication in code remains the practical baseline.
 
 The earlier reader screen, **S0**, completed. One model reads each packet with full source IDs and explicit deduplication instructions. There are eight bit triples at two reliability settings, each requested twice: 16 configurations, 32 calls. No agents talk to each other in S0; the swarm comparison is still pending.
 
@@ -39,10 +39,10 @@ The next 16-call qualification instrument is now implemented and checked: [readi
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-quorum-mirrors; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-quorum-mirrors; source `be37f8b4` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy.
-- **sample_size_summary:** S0: 16 fixed configurations, 32/32 valid calls, 29 MAP-correct; not independent worlds. Q1: 16 constructed context fixtures, 1 contract-failed response, 15 unstarted, 0 valid. M1/C1 not run.
+- **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy.
+- **sample_size_summary:** S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.
 <!-- experiment-evidence:end -->
 
 ## Reproduce and inspect

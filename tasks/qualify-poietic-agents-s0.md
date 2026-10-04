@@ -14,8 +14,10 @@ depends_on:
 topics:
 - llm-agent-swarms
 - agent-budgets
-claimed_at: 2026-10-04T06:59Z
-updated: 2026-10-04T06:59Z
+updated: 2026-10-04T07:49Z
+history:
+- '2026-10-04T07:14Z released by vishesh/codex-heterogeneous: Direct USD 2 run approval recorded; central S0 request submitted at 2796183f. Approved OpenRouter selector unresolved and dispatcher has not acknowledged. Zero calls/spend. Follow study DISPATCH.md and SETUP.md; do not duplicate dispatch.'
+claimed_at: 2026-10-04T07:49Z
 ---
 
 ## Goal

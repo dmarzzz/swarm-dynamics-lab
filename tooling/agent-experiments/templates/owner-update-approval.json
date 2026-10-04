@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "study_id": "",
+  "decision": "pending",
+  "approver_role": "owner",
+  "plan_sha256": "",
+  "execution_sha256": "",
+  "authorization_ref": "",
+  "scopes": [],
+  "recorded_at": ""
+}

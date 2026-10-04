@@ -63,8 +63,7 @@ class TheseusAdapterTests(unittest.TestCase):
                  'exclusive_claim_verified': True, 'claim_id': 'unit', 'host': 'unit',
                  'verified_epoch': now, 'claim_until_epoch': now + 8000, 'reserved_usd': 15,
                  'max_calls': 660, 'authority_allocation_id': 'unit', 'owner_authorization_ref': 'unit',
-                 'approved_account_verified': True, 'researcher_review_passed': True,
-                 'researcher_review_ref': 'unit-existing-single-review',
+                 'approved_account_verified': True,
                  'native_budget_ledger': str(ledger),
                  'minimum_prior_reserved_calls': 24, 'minimum_prior_reserved_usd': .3}
         path = self.data / 'receipt.json'
@@ -240,12 +239,26 @@ class TheseusAdapterTests(unittest.TestCase):
         self.assertEqual(result['status'], 'completed')
         self.assertEqual((source / 'summary.json').read_text(), 'immutable previous summary')
 
+    def test_waived_researcher_review_does_not_erase_historical_failure(self):
+        p = self.prepared(); ledger = self.ledger(); path, receipt = self.receipt(ledger)
+        self.assertNotIn('researcher_review_passed', receipt)
+        receipt.update(researcher_review_passed=False, researcher_review_ref='retained-historical-review')
+        receipt['verified_epoch'] = time.time() - 901
+        path.write_text(json.dumps(receipt))
+        with patch.dict(os.environ, {'THESEUS_V2_LEDGER': str(ledger)}):
+            with patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')) as transport:
+                result = adapter.run(self.root, ENTRY, p, path, self.data / 'blocked-history')
+        self.assertEqual(result['status'], 'blocked')
+        self.assertEqual(result['reason'], 'stale_deployment_verification')
+        self.assertFalse(json.loads(path.read_text())['researcher_review_passed'])
+        transport.assert_not_called()
+
     def test_private_attestation_fails_before_native_dispatch(self):
         p = self.prepared(); ledger = self.ledger(); path, receipt = self.receipt(ledger)
         receipt['approved_account_verified'] = False; path.write_text(json.dumps(receipt))
         with patch.dict(os.environ, {'THESEUS_V2_LEDGER': str(ledger)}):
             with patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')):
-                with self.assertRaisesRegex(adapter.AdapterError, 'external_account_or_research_review_attestation_missing'):
+                with self.assertRaisesRegex(adapter.AdapterError, 'external_account_attestation_missing'):
                     adapter.run(self.root, ENTRY, p, path, self.data / 'new-output')
         self.assertFalse((self.data / 'new-output').exists())
 

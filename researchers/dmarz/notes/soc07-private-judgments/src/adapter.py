@@ -50,7 +50,12 @@ class AnthropicAdapter:
         body = {'model': self.model, 'max_tokens': call['max_tokens'], 'system': call['system'],
                 'messages': call['messages'],
                 'output_config': {'format': {'type': 'json_schema', 'schema': parse.SCHEMAS[call['schema']]}}}
-        if self.thinking:
+        if self.thinking and config.thinking_mode() == 'adaptive':
+            # Models that only reason adaptively (amendment A6): no budget field and no temperature are accepted;
+            # the effort level is sent and the allowance only widens max_tokens.
+            body['thinking'] = {'type': 'adaptive'}
+            body['output_config']['effort'] = self.launch['thinking']['effort']
+        elif self.thinking:
             # A bounded reasoning allowance; the API takes no temperature with thinking enabled.
             body['thinking'] = {'type': 'enabled', 'budget_tokens': self.thinking}
         else:

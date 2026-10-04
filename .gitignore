@@ -16,3 +16,6 @@ data/*
 # Flight Deck tooling (fd adopt --tooling)
 .flightdeck/session.json
 AGENTS.local.md
+
+# films served from the hub mirror / private R2 (serving.cdn: private); fetch with `fd-project pull <id>`
+artifacts/discussion-memory-v3-film/*.mp4

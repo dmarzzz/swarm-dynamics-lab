@@ -1,0 +1,52 @@
+{
+  "files": [
+    {
+      "name": "audit.json",
+      "sha256": "b14eea3cd6efe1d857aaabf383bc5ff30890ef0ea4b90c6abd12cf2dce69c491",
+      "encoding": "identity",
+      "parts": [
+        "audit.json"
+      ]
+    },
+    {
+      "name": "events.jsonl",
+      "sha256": "096758cae2b8d6f767e51a54759cef8dee8b4d34a0cdb34bb568da7e528be147",
+      "encoding": "gzip",
+      "parts": [
+        "events.jsonl.gz"
+      ]
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "8db0c348058ec1d269797e5ec829f6e0ac376e0b7f024c6be6da99278b7fad94",
+      "encoding": "identity",
+      "parts": [
+        "manifest.json"
+      ]
+    },
+    {
+      "name": "outcomes.json",
+      "sha256": "93dc49f8724a82105e9e4019febbfc9c7cca3ffaf990a6935ff126f2376d8c23",
+      "encoding": "identity",
+      "parts": [
+        "outcomes.json"
+      ]
+    },
+    {
+      "name": "reporting.json",
+      "sha256": "8ecd99135a54a772e0858fc60ad02dce69163b34a1e165be1648cc6027f6280b",
+      "encoding": "identity",
+      "parts": [
+        "reporting.json"
+      ]
+    },
+    {
+      "name": "summary.json",
+      "sha256": "e5db4d661caa83653f52edb123c96ea9d7977fa2ae998a5912f809235cd628de",
+      "encoding": "identity",
+      "parts": [
+        "summary.json"
+      ]
+    }
+  ]
+}

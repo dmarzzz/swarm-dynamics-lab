@@ -1,0 +1,50 @@
+{
+  "checked_utc": "2026-10-04T07:52:05.180430+00:00",
+  "browser_verified": true,
+  "controls": [
+    "World selection",
+    "Team/single/uniform selection",
+    "Source-audit switch",
+    "Slot slider",
+    "Play advances and stops at slot 12"
+  ],
+  "initial_state": "0 spent, 0 unique, no endpoint shown",
+  "sampled_final_states": [
+    {
+      "seed": 500,
+      "policy": "team",
+      "audit": false,
+      "slot": 12,
+      "both_arms": {
+        "unique_cells": 4,
+        "report_cells": 4,
+        "wrong": 0,
+        "unresolved": 32
+      }
+    },
+    {
+      "seed": 507,
+      "policy": "uniform",
+      "audit": true,
+      "slot": 12,
+      "misleading": {
+        "wrong": 2,
+        "unresolved": 23
+      },
+      "benign": {
+        "wrong": 0,
+        "unresolved": 23
+      }
+    }
+  ],
+  "audit_override_checked": {
+    "seed": 500,
+    "policy": "uniform",
+    "slot": 6,
+    "target": "5,2"
+  },
+  "final_png_inspected": true,
+  "compact_gif_frame12_inspected": true,
+  "interactive_replay_sha256": "5951ea120ba4297c6f877c1ff631d89a6e7bec2b2b01a28cf63797df8634dc9c",
+  "source_episode_sha256": "db34d6c217aa3d1e5576b95c7c4d82edf3ef87f1abee0604b9d5420ba7a84d9a"
+}

@@ -1,6 +1,6 @@
 # Experiment setup record: compositional-safety
 
-Current state: q0-005 is complete and failed qualification. Results and the next plan are being published; the user explicitly prohibited starting another run. No worker is running and d0-003 is not registered for execution.
+Current state (2026-10-04, dmarz/compositional-opus): d0-003 met its diagnostic acceptance on Sonnet 5 (4/4). q0-006, a fresh Q0 on Claude Opus 5.5 over roots 244/253/256 (six unseen structures, 480-call cap), is planned in [reviews/q0-006-pre.md](reviews/q0-006-pre.md) for agentops run-queue 196, launched only after its ready assessment, allocation, ledger check and public registration. Earlier sections below describe the q0-005/d0-003 state and remain the historical record.
 
 Follow the [experiment setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This record was introduced during i0-003 preparation and does not retrospectively register older attempts. The [README](README.md) preserves the separate attempt history; [preregistration amendments](preregistration.md) preserve the sequence of prior design decisions.
 

@@ -6,6 +6,7 @@ import time
 import threading
 from failures import SafeFailure,safe_code
 from tasks import strict_json
+from response_contract import schema_for,validate_shape
 
 
 def validate_plan(plan,items):
@@ -23,7 +24,7 @@ def validate_plan(plan,items):
     return deps
 
 
-def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:None):
+def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:None,strict_contract=False):
     """call(messages, absolute_deadline, actor, phase, item) -> JSON text.
 
     Receives public data ONLY. Time/usage enforcement belongs to the transport and ledger.
@@ -47,14 +48,21 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
                 answer=call(copy.deepcopy(histories[actor]),until,actor,phase,item)
             except Exception as exc:
                 failure=SafeFailure(safe_code(exc))
-                if failure.fatal:fatal_stop.set()
+                if failure.fatal or (strict_contract and failure.code in ('incomplete_response','provider_refusal')):fatal_stop.set()
                 raise failure from None
             if time.monotonic()>until:raise TimeoutError('late_response')
             try:
                 parsed=strict_json(answer)
             except ValueError:
                 emit('response_format',actor=actor,phase=phase,item=item,valid_json=False,fenced=isinstance(answer,str) and answer.strip().startswith('```'))
+                if strict_contract:raise SafeFailure('schema_output_invalid') from None
                 raise
+            if strict_contract:
+                try:validate_shape(parsed,schema_for(public,phase,item))
+                except ValueError:
+                    emit('schema_validation',actor=actor,phase=phase,item=item,valid=False)
+                    raise SafeFailure('schema_output_invalid') from None
+                emit('schema_validation',actor=actor,phase=phase,item=item,valid=True)
             emit('response_format',actor=actor,phase=phase,item=item,valid_json=True,fenced=False)
             histories[actor].append({'role':'assistant','content':answer})
             return parsed
@@ -96,7 +104,7 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
                     except Exception as exc:
                         code=safe_code(exc) if isinstance(exc,SafeFailure) else 'malformed_output'
                         completed[item]={'failure':code};failures.append({'item':item,'code':code})
-                        if isinstance(exc,SafeFailure) and exc.fatal:raise
+                        if isinstance(exc,SafeFailure) and (exc.fatal or fatal_stop.is_set()):raise
                     emit('work_complete',actor=actor,item=item)
         except TimeoutError:
             failures.append({'class':'TimeoutError','phase':'work'})

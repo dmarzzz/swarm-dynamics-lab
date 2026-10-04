@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "study_id": "",
+  "parent_handoff": {
+    "path": "",
+    "sha256": ""
+  },
+  "scientific_review": {
+    "path": "",
+    "sha256": ""
+  },
+  "question": "",
+  "changes": [],
+  "acceptance_checks": [],
+  "sample_size": {
+    "independent_unit": "",
+    "planned_units": null,
+    "rationale": "",
+    "allocation": "",
+    "analysis_plan": "",
+    "stopping_rule": ""
+  },
+  "scenarios": {
+    "families": [],
+    "construction": "",
+    "challenge": "",
+    "realism": "",
+    "controls": "",
+    "holdout_policy": ""
+  },
+  "data_collection": {
+    "records": [],
+    "missingness": "",
+    "validation": "",
+    "privacy": ""
+  },
+  "implementation": {
+    "change_summary": "",
+    "offline_validation": ""
+  },
+  "resources": {
+    "maximum_calls": null,
+    "maximum_cost_usd": null,
+    "machine_count": null,
+    "cumulative_budget_ref": "",
+    "machine_requirements": "",
+    "allocation_required": null
+  }
+}

@@ -1,6 +1,6 @@
 # Phantom Coast: PC-1
 
-**Latest design iteration:** [review and changes](ITERATION-02.md), [PC-2 prospective plan](pc2/PLAN.md), and [complete measured PC-1 replay](visualization/native-replay.html). PC-2 has 20 passing software checks and no native outcomes.
+**Latest completed iteration:** [PC-2 native results](pc2/README.md) find heavy repeat inspection: misleading/no-audit team coverage averaged 2.5 distinct cells in twelve slots versus 12 for uniform acquisition. Q0 passed; S1 completed 96 episodes with 1,791/1,792 valid requests. [Measured PC-2 replay](https://swarm-live.pages.dev/api/a/phantom-coast-pc2/s1-a1/replay-public.gif). Cumulative API exposure across PC-1/PC-2 is $0.358051260; allocation released. PC-1 results below remain a separate cohort.
 
 **Native Q0 and S0 completed.** [Results](RESULTS.md): 540 valid map requests, no final history disagreement across six pilot worlds, $0.162723246 API cost. [Public experiment and replays](https://swarm-live.pages.dev/#/x/phantom-coast). The existing Mars host was released after verified delivery. See [current status](LIVE-READINESS.md) and [setup evidence](SETUP.md). Historical offline files below remain instrument-development evidence, not native outcomes.
 

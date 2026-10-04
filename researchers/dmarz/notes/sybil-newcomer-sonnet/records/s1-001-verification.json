@@ -1,0 +1,174 @@
+{
+  "worker_active": false,
+  "budget": {
+    "attempted_calls": 1980,
+    "reserved_usd": 61.728414,
+    "actual_usd": 9.172512,
+    "usage_reported_calls": 1980
+  },
+  "runs": [
+    {
+      "run": "sybil-newcomer-sonnet/80f6df86",
+      "status": "done",
+      "attempts": 1,
+      "params": {
+        "stage": "Q0",
+        "backend": "anthropic",
+        "batch": "q0-001",
+        "source_hash": "a0fa76922ed6000bb07bca6c9d9bbae312b566f4e4cd7271e147c87f75833ed4",
+        "code": "67e6b55292eca5d7ac745de622691b70f561ea71"
+      },
+      "metrics": {
+        "episodes": 36,
+        "invalid": 0,
+        "model_calls": 36,
+        "cost_usd": 0.127203,
+        "qualification_passed": 1
+      },
+      "progress": {
+        "completed": 36,
+        "failed": 0,
+        "errors": []
+      },
+      "verified_artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "history.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "replay_start.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "verified_images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 9
+        }
+      }
+    },
+    {
+      "run": "sybil-newcomer-sonnet/b8f340a9",
+      "status": "done",
+      "attempts": 1,
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "batch": "s0-001",
+        "source_hash": "a0fa76922ed6000bb07bca6c9d9bbae312b566f4e4cd7271e147c87f75833ed4",
+        "code": "5ad4d2526eec267b8fda1acdb9f579495ef06cd0"
+      },
+      "metrics": {
+        "episodes": 198,
+        "invalid": 0,
+        "model_calls": 0,
+        "cost_usd": 0,
+        "qualification_passed": 1
+      },
+      "progress": {
+        "completed": 198,
+        "failed": 0,
+        "errors": []
+      },
+      "verified_artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "history.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "replay_start.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "verified_images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 8
+        }
+      }
+    },
+    {
+      "run": "sybil-newcomer-sonnet/50847934",
+      "status": "done",
+      "attempts": 1,
+      "params": {
+        "stage": "S1",
+        "backend": "anthropic",
+        "batch": "s1-001",
+        "source_hash": "a0fa76922ed6000bb07bca6c9d9bbae312b566f4e4cd7271e147c87f75833ed4",
+        "code": "bbd6a372ce982be4af17049262a1ba48635373e2"
+      },
+      "metrics": {
+        "episodes": 1944,
+        "invalid": 0,
+        "model_calls": 1944,
+        "cost_usd": 9.045309,
+        "qualification_passed": 0,
+        "rare_accuracy": 0.4355281207133059
+      },
+      "progress": {
+        "completed": 1944,
+        "failed": 0,
+        "errors": []
+      },
+      "verified_artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "history.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "replay_start.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "verified_images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 8
+        }
+      }
+    }
+  ]
+}

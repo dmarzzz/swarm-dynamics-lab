@@ -23,5 +23,5 @@ formats:
   film:   {ext: [mp4], video: h264, audio: aac, max_height: 1080, faststart: true}
   paper:  {ext: [pdf]}
   deck:   {ext: [pdf, html]}
-serving: {mirror: true, cdn: false}
+serving: {mirror: true, cdn: private}
 template: {name: base, version: "3", source: ~/agent-status/templates/base}

@@ -1,3 +1,5 @@
+# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `fd add`, check with
+#   python3 .flightdeck/fd.py check --strict .
 manifest: 1
 project: Swarm Lab
 summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses
@@ -1998,4 +2000,43 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/manifest.json
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/evidence-hashes.json
         commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
+  - id: vishesh-theseus-d1-interpretation
+    category: content
+    type: doc
+    title: Theseus D1 interpretation and error structure
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-d1-interpretation/vishesh-theseus-d1-interpretation-v1.md
+        built_at: '2026-10-04T08:01:54Z'
+        note: vishesh/codex-theseus; D1 saved-evidence reassessment and D2 planning only; no new model calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:03a998d5403bf6a717f695d678919a0f35bb3d4123626451a4b1de46cf5893b0
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/evidence.tar.gz
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/reassess_d1.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/D1-REASSESSMENT.json
+        commit: c12ac6af5bbc7b35e6f98868511d7d05ab174b05-dirty
+  - id: vishesh-theseus-d2-plan
+    category: content
+    type: spec
+    title: Theseus D2 held-out execution confirmation plan
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-d2-plan/vishesh-theseus-d2-plan-v1.md
+        built_at: '2026-10-04T08:01:55Z'
+        note: vishesh/codex-theseus; D1 saved-evidence reassessment and D2 planning only; no new model calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:03a998d5403bf6a717f695d678919a0f35bb3d4123626451a4b1de46cf5893b0
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN-CHECKS.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/INTERPRETATION-D1.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/closeout.json
+        commit: c12ac6af5bbc7b35e6f98868511d7d05ab174b05-dirty
 requires: '1.2'

@@ -1,0 +1,12 @@
+{
+  "host": "sim-shadow",
+  "claim_id": "vishesh-quorum-mirrors-q1-repair",
+  "status": "done",
+  "since": "2026-10-04T07:52:46Z",
+  "ended": "2026-10-04T07:59:08Z",
+  "allocated_seconds": 382,
+  "hourly_rate_usd": 0.07143,
+  "allocated_host_cost_estimate_usd": 0.007579516666666666,
+  "new_vm_created": false,
+  "note": "Existing-host allocated-time estimate, not incremental provider invoice. Previous claim627seconds retained separately."
+}

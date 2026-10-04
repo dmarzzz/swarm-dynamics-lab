@@ -41,6 +41,21 @@ def diagnostic_summary(rows,manifest,stage='I0'):
     return dict(conditions=conditions,qualification_pass=False,diagnostic_pass=ok)
 
 
+def call_cap(stage,attempt,design):
+    """Hard per-attempt request cap: a diagnostic's max_calls, or the stage's max_calls (None when unset)."""
+    if stage=='I0': return design['diagnostics'][attempt].get('max_calls')
+    return design['stages'].get(stage,{}).get('max_calls')
+
+
+def bounded(call,ledger,before,cap,started,timeout):
+    """Wrap one model call: refuse once the stage time limit or the attempt's call cap is reached."""
+    def policy(packet,call_id):
+        if time.monotonic()-started>timeout: raise CallFailure('stage_time_limit')
+        if cap is not None and ledger.transact()['attempted_calls']-before['attempted_calls']>=cap: raise CallFailure('attempt_call_cap')
+        return call(packet,call_id)
+    return policy
+
+
 def execute(stage,attempt,qualification=None):
     import swarm_report as sr
     d=common.design(); out=prepare(stage,attempt,qualification)
@@ -53,7 +68,8 @@ def execute(stage,attempt,qualification=None):
     provider=Anthropic(ledger) if manifest['backend']=='anthropic' else None
     before=ledger.transact(); started=time.monotonic(); rows=[]; runs=[]
     timeout=d['diagnostics'][attempt]['timeout_seconds'] if stage=='I0' else d['budget']['stage_timeout_seconds']
-    call_cap=d['diagnostics'][attempt].get('max_calls') if stage=='I0' else None
+    cap=call_cap(stage,attempt,d)
+    guarded=bounded(provider.call,ledger,before,cap,started,timeout) if provider else None
     def display(rr):
         return [dict(r,arm=r['arm']+' '+r['condition']) if 'condition' in r else r for r in rr]
     grouped={}
@@ -69,10 +85,7 @@ def execute(stage,attempt,qualification=None):
                 eid=f"{attempt}/{tid}/{domain}/{variant}/{a['arm']}"
                 if 'condition' in a: eid += '/'+a['condition']
                 append(out/'dispatch.jsonl',dict(episode_id=eid,event='start',time=time.time()))
-                def policy(packet,step):
-                    if time.monotonic()-started>timeout: raise CallFailure('stage_time_limit')
-                    if call_cap is not None and ledger.transact()['attempted_calls']-before['attempted_calls']>=call_cap: raise CallFailure('attempt_call_cap')
-                    return provider.call(packet,f'{eid}/{step}')
+                def policy(packet,step,eid=eid): return guarded(packet,f'{eid}/{step}')
                 def progress(trace):
                     append(out/'trace.jsonl',dict(episode_id=eid,**trace[-1]))
                     current=ledger.transact()

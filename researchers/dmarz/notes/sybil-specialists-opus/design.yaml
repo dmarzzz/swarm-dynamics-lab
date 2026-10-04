@@ -1,0 +1,114 @@
+version: 1
+experiment: sybil-specialists-opus
+status: exploratory
+questions:
+- SEC-19
+- SEC-43
+model: claude-opus-5-5
+effort: low
+arms:
+- no_verification
+- degree
+- random
+- coverage
+visibility:
+- masked
+- visible
+cfg:
+  core: 18
+  community: 9
+  trusted_seeds: 2
+  admission_seats: 18
+  pagerank_restart: 0.2
+  pagerank_iterations: 120
+  honest_check_pass: 0.9
+  skills: 6
+stages:
+  S0:
+    backend: scripted
+    qualification_tasks:
+    - 3100
+    - 3101
+    - 3102
+    - 3103
+    - 3104
+    - 3105
+    pilot_tasks:
+    - 4000
+    - 4001
+    - 4002
+    - 4003
+    - 4004
+    - 4005
+    - 4006
+    - 4007
+    - 4008
+    - 4009
+    - 4010
+    - 4011
+  Q0:
+    backend: anthropic
+    tasks:
+    - 3100
+    - 3101
+    - 3102
+    - 3103
+    - 3104
+    - 3105
+  S1:
+    backend: anthropic
+    tasks:
+    - 4000
+    - 4001
+    - 4002
+    - 4003
+    - 4004
+    - 4005
+    - 4006
+    - 4007
+    - 4008
+    - 4009
+    - 4010
+    - 4011
+  S2:
+    enabled: false
+    reserved_task_range:
+    - 10000
+    - 19999
+pilot:
+  bridges: 1
+  verification_budget: 4
+  attacker_pass:
+  - 0.1
+  - 0.9
+budget:
+  aggregate_usd: 40
+  max_attempted_calls: 300
+  max_output_tokens: 3000
+  max_input_bytes: 12000
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 3600
+  retries: 0
+  workers: 1
+  input_usd_per_million: 4
+  output_usd_per_million: 20
+qualification:
+  structural_valid_rate: 1.0
+  fact_accuracy: 0.95
+  exact_packet_rate: 0.9
+  missing_abstention: 1.0
+primary_contrast:
+  compare:
+  - coverage
+  - degree
+  attacker_pass: 0.1
+  visibility: visible
+  metric: rare_accuracy
+  status: exploratory
+secondary_contrast:
+  compare:
+  - visible
+  - masked
+  arm: coverage
+  attacker_pass: 0.9
+  metric: rare_accuracy

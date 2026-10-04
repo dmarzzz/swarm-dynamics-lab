@@ -76,6 +76,6 @@ This study inherits every limit of the Haiku pilot:
 
 A second model from the same provider is not a second model family.
 
-## Results
+## Status
 
-Not yet collected.
+**Superseded 2026-10-04 07:45 UTC, before any paid call.** dmarz instructed "use opus for everything going forward". The paid stages Q0 and S1 will not run under this name. The scripted S0 (run `sybil-specialists-sonnet/368ac432`, 216/216, 0 calls) stays as recorded. The work continues as [sybil-specialists-opus](../sybil-specialists-opus).

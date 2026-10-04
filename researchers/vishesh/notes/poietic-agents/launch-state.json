@@ -1,6 +1,6 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T07:03:34.312279+00:00",
+  "updated_utc": "2026-10-04T08:01:23.491279+00:00",
   "study": "poietic-agents",
   "design_status": "reviewed-amended-offline-tested",
   "implementation_status": "S0-launcher-and-lineage-instrument-built",
@@ -24,12 +24,13 @@
     "independent_design_review": "historical review received; P1-P3 resolved",
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
-    "exact_runtime_and_assignments": "model routes, source and assignment generator fixed; deployment freeze pending",
+    "exact_runtime_and_assignments": "frozen S0 deployment passed 54 checks; details retained privately",
     "offline_instrument_checks": "54 passed",
     "model_qualification": "not-run",
     "budget_authorization": "direct owner launch instruction accepts preceding USD 2 proposal",
-    "dedicated_machine_allocation": "central allocation required; previous candidate now occupied; none held",
-    "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending"
+    "dedicated_machine_allocation": "current verification retained in private runtime admission",
+    "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending",
+    "approved_credential": "resolved from established project access context; value never disclosed"
   },
   "review_task": "review-poietic-agents-design",
   "prior_art_task": "heterogeneous-methods-review",
@@ -37,7 +38,7 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 0,
-  "next_action": "Resolve approved OpenRouter selector through owner or authorized central runtime, then dispatch S0 through the fleet run queue with fresh allocation",
+  "next_action": "Central dispatcher starts the prepared S0 worker; no further owner credential input needed",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -49,11 +50,7 @@
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "verify approved OpenRouter credential provenance/availability without exposing or transferring it by assumption",
-    "central run-queue dispatch",
-    "fresh exclusive approved-fleet allocation and idle-workload check",
-    "deploy frozen source and dependencies; verify receipts",
-    "fresh exact public-plan/page admission",
+    "central dispatcher refreshes current admission and starts S0 once",
     "run S0 and reconcile before S1 preparation"
   ],
   "s1_not_yet_admitted": [
@@ -73,5 +70,11 @@
     "reason_not_claimed": "approved credential selector unresolved; central dispatcher must select fresh eligible capacity",
     "previous_candidate": "sim-dmarz",
     "previous_candidate_now_occupied": true
+  },
+  "central_dispatch": {
+    "status": "ready-awaiting-central-worker-start",
+    "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044",
+    "scope": "S0-01 only; private request receipt retained outside public repository",
+    "model_calls_observed": 0
   }
 }

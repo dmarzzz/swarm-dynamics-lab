@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-04T07:54:28.085721+00:00",
+  "cohort_schema_and_paths": "pass: standard validator reached registration-coverage check after validating all rows",
+  "cohort_render": "pass: standard block/update_document renderer used for the owned README; standard index renderer used",
+  "renderer_tests": "11 passed",
+  "global_metadata_check": "blocked by pre-existing concurrent registration missing its registry row",
+  "global_error": "uncovered experiment registrations: researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml",
+  "other_researcher_files_modified": false,
+  "execution_or_result_impact": false
+}

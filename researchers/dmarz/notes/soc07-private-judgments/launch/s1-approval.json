@@ -1,9 +1,9 @@
 {
   "cross_researcher_review": "waived by dmarz for this study",
-  "go": "dmarz/fleet-monitor go, 2026-10-04 ~05:05 UTC, recorded in reviews/s1-pre-review.md; conditions there apply",
+  "go": "dmarz's direct instruction in the orbital-one operator session, 2026-10-04 ~05:30 UTC, after the m1 S1-Q failure: 'Go Head and use a strong model that's great'. At ~07:20 UTC dmarz/fleet-monitor relayed further instructions dmarz gave on his Mac (dmarz's words: 'I would like to start testing with a strong model like opus or something like that'), with fleet-monitor's own direction to finish the m2 Sonnet requalification as planned and move to Opus if it fails. Manifest m2 (claude-sonnet-4-6). Not a fleet-monitor review; cross-researcher review waived by dmarz.",
   "launch_manifest": {
-    "input_usd_per_million": 1,
-    "model": "claude-haiku-4-5-20251001",
+    "input_usd_per_million": 3,
+    "model": "claude-sonnet-4-6",
     "note": "Everything a model switch would change. A switch is a dated amendment to this block (plus a budget entry for the new qualification set), then a fresh S0, a fresh reviewer approval and a fresh S1-Q on new worlds. No code changes.",
     "output_token_caps": {
       "discussion": 256,
@@ -12,32 +12,32 @@
       "initial": 256,
       "qualification": 128
     },
-    "output_usd_per_million": 5,
-    "price_note": "Claude Haiku 4.5 list price, USD 1 input and USD 5 output per million tokens; the same figures the sybil-scale-api and discussion v3 studies used on 2026-10-04",
-    "qualification_set": 0,
+    "output_usd_per_million": 15,
+    "price_note": "Claude Sonnet 4.6 list price, USD 3 input and USD 15 output per million tokens; the model the market-split study ran on 2026-10-04",
+    "qualification_set": 1,
     "temperature": 0.7,
     "thinking": {
       "budget_tokens": 0,
       "type": "off"
     },
-    "version": "m1"
+    "version": "m2"
   },
   "operator": "dmarz/orbital-orchestrator",
   "pre_run_review": {
     "path": "reviews/s1-pre.md",
-    "sha256": "b54b264024ea13f1bc132d869af3d83dd458c6ebe6219e2d5ce529c017d4e999"
+    "sha256": "de97e61d3f2bbf7c7f2225d6f72ed53c794c93bc64bf7a8cb6fa2997fd7b0e22"
   },
   "review_waiver": {
     "path": "launch/review-waiver.md",
     "sha256": "65a38647ac8c1625b004ac94cc4b1f46fda40b06d00444d75892d920111c458b"
   },
-  "reviewer": "dmarz/fleet-monitor",
-  "source_hash": "afacff913d48c50a8fb5b00efd8775454cfbc62dba841a8f6be919ea7144d9fe",
+  "reviewer": "dmarz (direct instruction to dmarz/orbital-orchestrator for manifest m2); dmarz/fleet-monitor reviewed m1 only and its review does not cover m2",
+  "source_hash": "475140d431efd134de71f71d1a043b94e14d368018f4a7ae156bc08e0226a350",
   "stages": [
     "s1q",
     "s1r",
     "s1l"
   ],
   "status": "approved",
-  "written": "2026-10-04T04:43:24Z"
+  "written": "2026-10-04T07:31:39Z"
 }

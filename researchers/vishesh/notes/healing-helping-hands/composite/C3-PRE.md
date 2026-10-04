@@ -35,3 +35,9 @@ Bind C3-S0 to measured progress and final three-arm confusion/correction plots; 
 ## Acceptance and remaining limitations
 
 Transport fixes must pass offline fault tests plus native qualification; only completed assigned worlds establish full execution. Fresh identifiers still reuse semantic templates. Three corpora do not support agent-level confidence intervals. C1/C2 history remains separate; no pooling or replacing failed attempts. The ledger and credential must reach the admitted host securely without appearing in transcripts or public artifacts.
+
+## C3 allocation and dispatch approval update
+
+2026-10-04 UTC. Owner approved completing the published C3 repair, obtaining dedicated capacity from the established Dmarz account and running normally. This approves the named C3 S0 and, only after passing qualification and renewed admission, C3 S1 within unchanged scientific and budget bounds. The owning operator may dispatch the detached worker directly on its exclusively claimed host; no dependency on an unavailable separate coordinator remains. No authority over another experiment's claimed host is implied.
+
+Available sim-dmarz-7 has 4 CPUs/8 GiB and is in the same account identity recorded for C1. Use an exclusive three-hour allocation after checking current workloads. No new machine is created; original USD 0.10 cumulative inference ceiling and USD 1 cumulative infrastructure ceiling remain. Existing provider account status is warning, while the selected droplet is active; this allocation performs no provisioning or account changes. Stop if the host becomes unavailable. The C3 source/qualification requirements and failure policy remain unchanged.

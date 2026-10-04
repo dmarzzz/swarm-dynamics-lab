@@ -1,0 +1,149 @@
+{
+  "schema": "d2-canonical-facts-v1",
+  "worlds": [
+    {
+      "facts": {
+        "A.access": 6,
+        "A.power": 18,
+        "B.access": 8,
+        "B.power": 18,
+        "C.access": 7,
+        "C.power": 13
+      },
+      "family": "capacity",
+      "instructions": "Select the only site with power >= 16 units AND access time <= 7 hours. If multiple sites qualify, maximize power. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rules": {
+        "access_max": 7,
+        "power_min": 16
+      },
+      "world": 20001
+    },
+    {
+      "facts": {
+        "A.base": 13,
+        "A.days": 7,
+        "A.freight": 66,
+        "B.base": 16,
+        "B.days": 6,
+        "B.freight": 68,
+        "C.base": 13,
+        "C.days": 8,
+        "C.freight": 5
+      },
+      "family": "total_cost",
+      "instructions": "Select the only shipment with base + freight <= 79 units AND days <= 7. If multiple shipments qualify, minimize base + freight. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rules": {
+        "budget": 79,
+        "deadline": 7
+      },
+      "world": 20002
+    },
+    {
+      "facts": {
+        "A.backup": 0,
+        "A.direct": 17,
+        "A.transfer": 1,
+        "B.backup": 1,
+        "B.direct": 16,
+        "B.transfer": 5,
+        "C.backup": 0,
+        "C.direct": 20,
+        "C.transfer": 4
+      },
+      "family": "dependency",
+      "instructions": "Select the only station with direct >= 18 OR (backup = 1 AND transfer <= 4). If multiple stations qualify, minimize transfer. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rules": {
+        "required": 18,
+        "transfer_max": 4
+      },
+      "world": 20003
+    },
+    {
+      "facts": {
+        "A.access": 4,
+        "A.power": 16,
+        "B.access": 3,
+        "B.power": 13,
+        "C.access": 2,
+        "C.power": 17
+      },
+      "family": "capacity",
+      "instructions": "Select the only site with power >= 14 units AND access time <= 3 hours. If multiple sites qualify, maximize power. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rules": {
+        "access_max": 3,
+        "power_min": 14
+      },
+      "world": 20004
+    },
+    {
+      "facts": {
+        "A.base": 20,
+        "A.days": 5,
+        "A.freight": 46,
+        "B.base": 17,
+        "B.days": 7,
+        "B.freight": 5,
+        "C.base": 17,
+        "C.days": 6,
+        "C.freight": 43
+      },
+      "family": "total_cost",
+      "instructions": "Select the only shipment with base + freight <= 62 units AND days <= 6. If multiple shipments qualify, minimize base + freight. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rules": {
+        "budget": 62,
+        "deadline": 6
+      },
+      "world": 20005
+    },
+    {
+      "facts": {
+        "A.backup": 0,
+        "A.direct": 7,
+        "A.transfer": 1,
+        "B.backup": 1,
+        "B.direct": 7,
+        "B.transfer": 2,
+        "C.backup": 1,
+        "C.direct": 6,
+        "C.transfer": 4
+      },
+      "family": "dependency",
+      "instructions": "Select the only station with direct >= 8 OR (backup = 1 AND transfer <= 2). If multiple stations qualify, minimize transfer. Break objective ties alphabetically.",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rules": {
+        "required": 8,
+        "transfer_max": 2
+      },
+      "world": 20006
+    }
+  ]
+}

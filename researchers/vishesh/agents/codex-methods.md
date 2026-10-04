@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: idle
-task: null
-doing: Antsy v8 development and design delivered; fresh checker qualification pending
-updated: 2026-10-04T07:02:35.547829+00:00
+state: working
+task: antsy-v8-native-qualification
+doing: Preparing frozen Antsy v8 Q0 runtime and orbital run request; no native calls yet
+updated: 2026-10-04T08:06:51.150479+00:00
 ---
 
 Manual validated sync after each work unit.

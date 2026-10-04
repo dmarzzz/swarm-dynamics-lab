@@ -3,8 +3,8 @@ agent: vishesh/codex-heterogeneous
 tool: codex
 state: working
 task: qualify-poietic-agents-s0
-doing: Recording direct USD 2 approval and preparing central S0 dispatch; approved OpenRouter selector unresolved
-updated: 2026-10-04T07:03Z
+doing: Existing credential resolved; 54 deployed checks pass; awaiting central S0 worker start
+updated: 2026-10-04T08:01Z
 ---
 
 ## Handoff

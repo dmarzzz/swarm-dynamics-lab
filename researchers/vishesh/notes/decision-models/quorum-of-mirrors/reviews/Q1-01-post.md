@@ -37,3 +37,7 @@ All 16 manifest IDs remain in the final case table and summary; exactly one jour
 3. Determine the supported decision output-token contract from authoritative endpoint evidence. If the zero-output assumption was invalid, amend it prospectively, bind new source hashes, and publish/register a separate QM-Q1-02 pre-assessment before the sole permitted interface-repair screen. Keep the original failed attempt and unchanged scientific thresholds. Ordinary wrong/DEFER results remain non-retryable.
 
 No extra spending approval or researcher review is needed. The remaining issue is missing per-call accounting evidence plus an interface assumption, not owner authorization. The fail-closed ledger currently refuses another native attempt; this closeout does not bypass it.
+
+## Subsequent resolution
+
+QM-Q1-02 identified the zero-output assumption as our validator bug, accepted documented output accounting, and preserved billing before answer rejection. The parent exact charge remains unknown and its full reservation is explicitly settled as an upper bound without changing this failed outcome. The repair completed 16 valid calls but failed reasoning at 0/8. See [repair post-mortem](Q1-02-post.md).

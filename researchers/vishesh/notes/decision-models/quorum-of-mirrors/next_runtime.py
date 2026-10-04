@@ -38,8 +38,14 @@ response_size decision_output_contract_changed immutable_public_plan_required ex
 public_plan_sections_missing registered_tldr_required specific_run_tldr_required manifest_mismatch'''.split())
 
 
+class ResponseRejected(ValueError):
+    def __init__(self, reason, accounting):
+        super().__init__(reason)
+        self.accounting = accounting
+
+
 def safe_reason(exc):
-    return str(exc) if type(exc) is ValueError and str(exc) in SAFE_FAILURES else type(exc).__name__
+    return str(exc) if type(exc) in (ValueError, ResponseRejected) and str(exc) in SAFE_FAILURES else type(exc).__name__
 
 
 def hashes():
@@ -69,12 +75,42 @@ class Ledger:
                     raise ValueError('historical_reservations_missing')
             if any(type(r[1]) not in (int,float) or not math.isfinite(r[1]) or r[1]<RESERVE-1e-12 for r in rows):
                 raise ValueError('reservation_invalid')
-            if any(r[2]=='complete' and (type(r[3]) not in (int,float) or not math.isfinite(r[3]) or not 0<=r[3]<=r[1]+1e-12) for r in rows):
+            if any((r[2] in {'complete','failed_accounted'} or r[3] is not None) and (type(r[3]) not in (int,float) or not math.isfinite(r[3]) or not 0<=r[3]<=r[1]+1e-12) for r in rows):
                 raise ValueError('actual_cost_invalid')
             if len(rows)>672 or sum(r[1] for r in rows)>1.+1e-12:
                 raise ValueError('budget_exhausted')
+            settled=set()
+            if db.execute("SELECT 1 FROM sqlite_master WHERE name='bounded_settlements'").fetchone():
+                settlements=db.execute('SELECT id,upper_bound,evidence_sha256 FROM bounded_settlements').fetchall()
+                for ident,upper,evidence in settlements:
+                    if (ident!='QM-Q1-01-006' or upper!=RESERVE or
+                        evidence!='245fffab4ddf7e9617965fab64f1d0db9247a3ba382b86b66d59737b6a79d1ca' or
+                        saved.get(ident)!=(ident,RESERVE,'failed_or_uncertain',None)):
+                        raise ValueError('invalid_bounded_settlement')
+                    settled.add(ident)
             return {'calls':len(rows),'reserved_usd':round(sum(r[1] for r in rows),9),
-                    'uncertain':sum(r[2] in {'reserved','failed_or_uncertain'} for r in rows)}
+                    'uncertain':sum(r[2] in {'reserved','failed_or_uncertain'} and r[0] not in settled for r in rows)}
+
+    def settle_parent_contract_failure(self, receipt_path, preflight_path):
+        """One historical bounded-liability settlement; actual remains unknown and failure intact."""
+        raw=Path(receipt_path).read_bytes()
+        evidence=hashlib.sha256(raw).hexdigest()
+        if evidence!='245fffab4ddf7e9617965fab64f1d0db9247a3ba382b86b66d59737b6a79d1ca':
+            raise ValueError('settlement_evidence_mismatch')
+        prior=json.loads(Path(preflight_path).read_text())
+        if (prior['source_sha256']['next_stage.py']!='1e355cf43c2fdb0fbce64becfdd40e7233be5165ddfb8ea0e3d0736bf3f63e60' or
+            prior['source_sha256']['qualification.py']!='a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f'):
+            raise ValueError('settlement_source_mismatch')
+        with closing(self.connect()) as db, db:
+            db.execute('BEGIN IMMEDIATE')
+            if db.execute('SELECT reserved,status,actual FROM calls WHERE id=?',('QM-Q1-01-006',)).fetchone()!=(RESERVE,'failed_or_uncertain',None):
+                raise ValueError('settlement_call_mismatch')
+            if db.execute('SELECT status FROM next_attempts WHERE attempt=?',('QM-Q1-01',)).fetchone()!=('stopped',):
+                raise ValueError('settlement_parent_not_closed')
+            db.execute('CREATE TABLE IF NOT EXISTS bounded_settlements (id TEXT PRIMARY KEY,upper_bound REAL,evidence_sha256 TEXT)')
+            db.execute('INSERT INTO bounded_settlements VALUES (?,?,?)',('QM-Q1-01-006',RESERVE,evidence))
+        return {'id':'QM-Q1-01-006','kind':'full_reservation_upper_bound','upper_bound_usd':RESERVE,
+                'actual_usd':None,'evidence_sha256':evidence,'scientific_status':'failed','reservation_retained':True}
 
     def begin_attempt(self, manifest, source_hashes):
         validate_manifest(manifest)
@@ -107,8 +143,8 @@ class Ledger:
             db.execute('INSERT INTO calls VALUES (?,?,?,NULL)',(row_id,RESERVE,'reserved'))
 
     def finish(self,row_id,status,cost=None):
-        if status not in {'complete','failed_or_uncertain'}: raise ValueError('terminal_status_invalid')
-        if status=='complete' and (type(cost) not in (int,float) or not math.isfinite(cost) or not 0<=cost<=RESERVE):
+        if status not in {'complete','failed_accounted','failed_or_uncertain'}: raise ValueError('terminal_status_invalid')
+        if (status in {'complete','failed_accounted'} or cost is not None) and (type(cost) not in (int,float) or not math.isfinite(cost) or not 0<=cost<=RESERVE):
             raise ValueError('cost_invalid')
         with closing(self.connect()) as db, db:
             changed=db.execute("UPDATE calls SET status=?,actual=? WHERE id=? AND status='reserved'",(status,cost,row_id)).rowcount
@@ -216,7 +252,20 @@ def preflight(config,manifest,now=None):
             'host':allocation['host'],'claim_id':allocation['claim_id'],'checked_at':now}
 
 
-def native_call(request,credential):
+def safe_accounting(raw):
+    if not isinstance(raw,dict): return None
+    usage=raw.get('usage')
+    if not isinstance(usage,dict): return None
+    cost,tokens,output=(usage.get(k) for k in ('cost','input_tokens','output_tokens'))
+    if (type(cost) not in (int,float) or not math.isfinite(cost) or not 0<=cost<=RESERVE
+        or type(tokens) is not int or not 0<tokens<=32000 or type(output) is not int or output<0): return None
+    result={'usage':{'cost':cost,'input_tokens':tokens,'output_tokens':output}}
+    ident=raw.get('id')
+    if isinstance(ident,str) and re.fullmatch(r'gen-dec-[A-Za-z0-9-]{1,160}',ident): result['provider_request_id']=ident
+    return result
+
+
+def native_call(request,credential,on_accounting=None):
     key=Path(credential).read_text().strip()
     try:
         req=urllib.request.Request('https://openrouter.ai/api/alpha/decisions',json.dumps(request).encode(),
@@ -224,7 +273,11 @@ def native_call(request,credential):
     finally: del key
     with urllib.request.urlopen(req,timeout=35) as reply: raw=reply.read(1_000_001)
     if len(raw)>1_000_000: raise ValueError('response_size')
-    checked=checked_response(json.loads(raw))
+    decoded=json.loads(raw)
+    accounting=safe_accounting(decoded)
+    if accounting is not None and on_accounting is not None: on_accounting(accounting)
+    try: checked=checked_response(decoded)
+    except Exception as exc: raise ResponseRejected(safe_reason(exc),accounting) from None
     return {'model':checked['model'],'provider':checked['provider'],'usage':checked['usage'],
             'answers':{'decision':{'choice':checked['choice'],'probabilities':checked['probabilities']}}}
 
@@ -260,11 +313,19 @@ def run(config,manifest,out,credential):
             record={'id':row['id'],'request_sha256':row['request_sha256'],'status':'failed'}
             start=time.monotonic()
             try:
-                response=native_call(row['request'],credential)
+                def preserve_accounting(accounting):
+                    evidence={'id':row['id'],'request_sha256':row['request_sha256'],**accounting}
+                    with (out/'accounting.jsonl').open('a') as f:
+                        f.write(json.dumps(evidence)+'\n');f.flush();os.fsync(f.fileno())
+                response=native_call(row['request'],credential,on_accounting=preserve_accounting)
                 ledger.finish(row['id'],'complete',response['usage']['cost'])
                 record.update(status='complete',response=response)
             except Exception as exc:
-                ledger.finish(row['id'],'failed_or_uncertain')
+                accounting=exc.accounting if isinstance(exc,ResponseRejected) else None
+                if accounting is not None:
+                    record['accounting']=accounting
+                    ledger.finish(row['id'],'failed_accounted',accounting['usage']['cost'])
+                else: ledger.finish(row['id'],'failed_or_uncertain')
                 record['reason']=safe_reason(exc) # Only static codes; no error bodies or headers.
             record['wall_s']=time.monotonic()-start
             with (out/'receipts.jsonl').open('a') as f:
@@ -283,8 +344,8 @@ def run(config,manifest,out,credential):
     if report is not None:
         try:
             for file in out.iterdir():report.artifact(str(file),name=file.name)
-            if summary['qualified']:report.done(message='Q1 passed; M1 not automatically admitted')
-            else:report.fail(message='Q1 stopped or failed; all assigned outcomes retained')
+            if summary['qualified']:report.done(message='Q1 passed; M1 not automatically admitted',**{k:summary[k] for k in ('valid','full_correct','failed','unstarted')})
+            else:report.fail(message='Q1 stopped or failed; all assigned outcomes retained',**{k:summary[k] for k in ('valid','full_correct','failed','unstarted')})
         except Exception as exc:
             write_json(out/'reporting-failure.json',{'status':'upload_failed','reason':type(exc).__name__})
     return summary

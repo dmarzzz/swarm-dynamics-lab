@@ -30,13 +30,17 @@ class Ledger:
             if event and event['type'] == 'reserve':
                 if any(e['call_id'] == event['call_id'] for e in reserves): raise CallFailure('duplicate_call_refused')
                 if len(reserves) >= budget['max_attempted_calls']: raise CallFailure('call_cap')
-                if sum(e['micro_usd'] for e in reserves)+event['micro_usd'] > budget['study_reserved_usd']*1e6: raise CallFailure('study_reservation_cap')
+                # Settled cost: reported actual plus the full reservation of every call without reported usage.
+                answered = {e['call_id'] for e in events if e['type']=='response'}
+                settled = sum(e.get('actual_micro_usd', 0) for e in events if e['type']=='response') + sum(e['micro_usd'] for e in reserves if e['call_id'] not in answered)
+                if settled+event['micro_usd'] > budget['study_settled_usd_cap']*1e6: raise CallFailure('study_settled_cost_cap')
             if event:
                 f.seek(0, 2); f.write(json.dumps(event, sort_keys=True)+'\n'); f.flush(); os.fsync(f.fileno()); events.append(event)
             return {'attempted_calls': sum(e['type']=='reserve' for e in events),
                     'reserved_usd': sum(e.get('micro_usd', 0) for e in events if e['type']=='reserve')/1e6,
                     'actual_usd': sum(e.get('actual_micro_usd', 0) for e in events if e['type']=='response')/1e6,
-                    'usage_reported_calls': sum(e['type']=='response' for e in events)}
+                    'usage_reported_calls': sum(e['type']=='response' for e in events),
+                    'settled_usd': (sum(e.get('actual_micro_usd', 0) for e in events if e['type']=='response') + sum(e['micro_usd'] for e in events if e['type']=='reserve' and e['call_id'] not in {r['call_id'] for r in events if r['type']=='response'}))/1e6}
 
 class Anthropic:
     def __init__(self, ledger, opener=None, key=None, workspace=None):
@@ -68,7 +72,15 @@ class Anthropic:
                 raw = response.read(2_000_001)
                 if len(raw) > 2_000_000: raise ValueError('response_size')
                 data = json.loads(raw)
-        except urllib.error.HTTPError as exc: raise CallFailure('http_'+str(exc.code), acc) from None
+        except urllib.error.HTTPError as exc:
+            # Keep the provider's error type and a bounded message; never headers or request data.
+            try:
+                error = json.loads(exc.read(20_000)).get('error', {})
+                if isinstance(error, dict):
+                    if isinstance(error.get('type'), str): acc['error_type'] = error['type'][:80]
+                    if isinstance(error.get('message'), str): acc['error_message'] = error['message'][:300]
+            except Exception: pass
+            raise CallFailure('http_'+str(exc.code), acc) from None
         except Exception as exc: raise CallFailure('transport_'+type(exc).__name__, acc) from None
         acc['latency_seconds'] = time.monotonic()-t
         if not isinstance(data, dict): raise CallFailure('invalid_provider_response', acc)
@@ -93,8 +105,14 @@ class Anthropic:
             texts = [c.get('text','') for c in content if isinstance(c,dict) and c.get('type')=='text'] if isinstance(content,list) else []
             acc['response_text'] = '\n'.join(t for t in texts if isinstance(t,str))[:8192]
             raise CallFailure('provider_refusal', acc)
-        if not isinstance(content, list) or len(content) != 1 or not isinstance(content[0],dict) or content[0].get('type') != 'text': raise CallFailure('unexpected_content', acc)
-        acc['response_text'] = str(content[0].get('text', ''))[:8192]
+        details = usage.get('output_tokens_details')
+        if isinstance(details, dict) and type(details.get('thinking_tokens')) is int: acc['thinking_tokens'] = details['thinking_tokens']
+        # Adaptive thinking may precede the answer. Count thinking blocks; never retain their content.
+        if not isinstance(content, list) or not all(isinstance(c,dict) for c in content): raise CallFailure('unexpected_content', acc)
+        texts = [c for c in content if c.get('type') == 'text']
+        acc['thinking_blocks'] = sum(c.get('type') in ('thinking','redacted_thinking') for c in content)
+        if len(texts) != 1 or content[-1] is not texts[0] or acc['thinking_blocks'] != len(content)-1: raise CallFailure('unexpected_content', acc)
+        acc['response_text'] = str(texts[0].get('text', ''))[:8192]
         if data.get('model') != self.d['model']: raise CallFailure('model_mismatch', acc)
         if data.get('stop_reason') != 'end_turn': raise CallFailure('nonterminal_output', acc)
         # Preserve task-only generated text when a response is rejected; never HTTP headers or errors.

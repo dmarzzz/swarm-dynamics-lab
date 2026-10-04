@@ -1,0 +1,44 @@
+{
+  "stage": "Q0",
+  "run_status": "done",
+  "checked_utc": "2026-10-04T06:52:09.663986+00:00",
+  "hub_artifacts": [
+    {
+      "name": "summary.json",
+      "sha256": "cd2bf66e9a45ec516a17c133210173e90c6f17ac5fa024e6d85aafca5b839a47",
+      "bytes": 1996,
+      "hash_matches": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "1c790b3e7c3ee14d6d0460466db2c494a10e72bc9f1100a34fda5bdad201832d",
+      "bytes": 2416,
+      "hash_matches": true
+    },
+    {
+      "name": "public-plan.json",
+      "sha256": "6790762c86808e4f2e46eecc417780c3cb60508dd928f4c64d8c958b9ed19527",
+      "bytes": 1155,
+      "hash_matches": true
+    },
+    {
+      "name": "worlds.json",
+      "sha256": "fa37ecd4f07a6456bc7b50aa13e53db9cf9ae6b9cd622130d7a28b28c6c7f087",
+      "bytes": 3730,
+      "hash_matches": true
+    },
+    {
+      "name": "route.json",
+      "sha256": "de458b0508ef9deab84011f4c98c9a3b4a9117c51a5d39507adaa1ca7cf7c8d1",
+      "bytes": 117,
+      "hash_matches": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "b52aecc57f6f1cf869a5e293ac84a69e6d1cb7fa365d9adf5b8940320c31f53a",
+      "bytes": 536260,
+      "hash_matches": true
+    }
+  ],
+  "all_match": true
+}

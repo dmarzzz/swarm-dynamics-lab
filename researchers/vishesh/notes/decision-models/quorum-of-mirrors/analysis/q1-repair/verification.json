@@ -1,0 +1,18 @@
+{
+  "kind": "offline_regressions_not_model_evidence",
+  "passed": 59,
+  "source_sha256": {
+    "next_stage.py": "c1958b62d28175288fdc684f1747d788467071268c0505a8ac7ae1378cb1279b",
+    "next_runtime.py": "b68a30faac82dbae25237aa15119fb2764a6481a889d9e9068d566d7f33f8180",
+    "qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "relay.py": "f600c8400243919d7fa55a35f790c3fb0e874eb15c0597da01d406071c8c41ed",
+    "public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166",
+    "OPERATOR-AUTHORIZATION.json": "9472a2df6cd2977e0b99b7f659e229954ce4eeca656f0800bcacee92d3806b98"
+  },
+  "cause": "operator_zero_output_assertion_not_provider_schema",
+  "source": "https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request",
+  "documented_example_output_tokens": 70,
+  "actor_manifest_changed": false,
+  "new_native_calls": 0
+}
