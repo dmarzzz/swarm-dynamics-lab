@@ -55,3 +55,16 @@ def development_cases():
 def empirical(history,c):return 'check' if c<=1-sum(history)/len(history) else 'trust'
 
 def oracle_cost(good,c,horizon=2):return horizon*min(c,1-(.9 if good else .3))
+
+def controller(visible,policy='bayes'):
+    if visible['remaining'] not in (1,2):raise ValueError('terminal_state')
+    q=posterior(visible['calibration'],visible['noise'],visible['shift_probability'])
+    for feedback in visible['feedback']:
+        if feedback is not None:q=update(q,feedback)
+    c=visible['check_cost']
+    if policy=='bayes':return choose(q,c,visible['remaining'])
+    if policy=='posterior_greedy':return choose(q,c,1)
+    if policy=='empirical':return empirical(visible['calibration']+[y for y in visible['feedback'] if y is not None],c)
+    if policy=='always_check':return 'check'
+    if policy=='always_trust':return 'trust'
+    raise ValueError('policy')

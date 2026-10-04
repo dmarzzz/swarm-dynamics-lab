@@ -29,6 +29,9 @@ class Tests(unittest.TestCase):
   self.assertIsNone(step('trust',False,.4)['feedback']);self.assertEqual(step('trust',False,.4)['loss'],1)
   self.assertIs(step('check',False,.4)['feedback'],False);self.assertEqual(step('check',False,.4)['loss'],.4)
   p=observable((True,True,False),.1,.4,.4);self.assertEqual(set(p),{'calibration','noise','shift_probability','check_cost','feedback','remaining','legal_actions'});self.assertNotIn('posterior',p)
+  self.assertEqual(controller(p,'bayes'),'check');self.assertEqual(controller(p,'posterior_greedy'),'trust')
+  self.assertEqual(controller(p,'always_trust'),'trust');self.assertEqual(controller(p,'always_check'),'check')
+  copied=dict(p,feedback=[False],remaining=1);self.assertEqual(controller(copied),choose(update(posterior((True,True,False),.1,.4),False),.4,1));self.assertEqual(p['feedback'],[])
  def test_development_partition(self):
   xs=development_cases();self.assertEqual(len(xs),24);self.assertEqual([x['id'] for x in xs],list(range(3000,3024)));self.assertTrue(all(len(x['visible']['calibration'])==3 for x in xs))
  def test_sanitized_response_preserves_diagnostics(self):
