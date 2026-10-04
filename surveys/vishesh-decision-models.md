@@ -3,15 +3,87 @@ id: vishesh-decision-models
 type: survey
 title: Jev decision models and collective robustness
 owner: vishesh
-agents: [vishesh/codex-decision-models]
+agents:
+- vishesh/codex-decision-models
 status: in-progress
 started: 2026-10-03
-topics: [decision-models, llm-agent-swarms]
+topics:
+- decision-models
+- llm-agent-swarms
 questions:
-  - When does communication amplify a typed decision model's errors?
-  - Which interventions preserve useful disagreement and reliable decisions?
-seminal: [guo-2017-calibration, seeley-2012-stop, berdahl-2013-emergent]
-search_log: []
+- When does communication amplify a typed decision model's errors?
+- Which interventions preserve useful disagreement and reliable decisions?
+seminal:
+- guo-2017-calibration
+- seeley-2012-stop
+- berdahl-2013-emergent
+search_log:
+- where: arxiv
+  query: site:arxiv.org repeated evidence multi agent debate correlation majority
+    vote; selected primary follow-ups Choi, Zhu, Kaesberg, Lin
+  date: '2026-10-04'
+  results: 4
+  new: 0
+- where: github
+  query: site:github.com debate-or-vote multiagent debate; official repository README
+    inspected
+  date: '2026-10-04'
+  results: 1
+  new: 1
+- where: lesswrong
+  query: site:lesswrong.com correlated evidence double counting information cascades;
+    Understanding Information Cascades inspected
+  date: '2026-10-04'
+  results: 1
+  new: 1
+- where: web
+  query: 'Primary-page follow-up: Bara epistemic, Bertalanic Ringelmann, Qian scaling,
+    Ashery conventions'
+  date: '2026-10-04'
+  results: 4
+  new: 0
+- where: openalex
+  query: data incest social learning
+  date: '2026-10-04'
+  results: 3
+  new: 2
+- where: citations-backward
+  query: 'Hamdi 2013 references: constrained DAG estimation; optimal incest removal;
+    data fusion/misinformation removal'
+  date: '2026-10-04'
+  results: 3
+  new: 3
+- where: openalex
+  query: dependent evidence opinion pooling shared information
+  date: '2026-10-04'
+  results: 5
+  new: 5
+- where: openalex
+  query: multi agent debate correlated errors majority voting
+  date: '2026-10-04'
+  results: 10
+  new: 6
+- where: openalex
+  query: provenance evidence duplication agent memory
+  date: '2026-10-04'
+  results: 10
+  new: 10
+- where: citations-forward
+  query: OpenAlex cited_by for Guo 2017, Seeley 2012, Berdahl 2013; one relevant downstream
+    lead per seed
+  date: '2026-10-04'
+  results: 3
+  new: 3
+- where: openalex
+  query: Bayesian social learning data incest
+  date: '2026-10-04'
+  results: 6
+  new: 6
+- where: openalex
+  query: multi agent evidence provenance false corroboration
+  date: '2026-10-04'
+  results: 9
+  new: 9
 ---
 
 ## Scope
@@ -20,7 +92,7 @@ Initial screening of typed text decisions, spatial evidence, dependent errors, c
 
 ## Search log
 
-See researchers/vishesh/notes/decision-models/SEARCH-LOG.md for actual search families and access limitations. Structured result counts were not retained; no invented rounds or saturation claims are inserted here.
+See researchers/vishesh/notes/decision-models/SEARCH-LOG.md for actual search families and access limitations. Earlier structured counts were not retained. The new 2026-10-04 rounds above have explicit inspected-hit counts; see [research packet](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESEARCH-GATES.md) for counting rules, reading attribution, citation trails and unresolved leads. This does not reconstruct missing historical counts.
 
 ## Landscape
 
@@ -30,9 +102,11 @@ Typed APIs define output structure [[openrouter-2026-jev]], while confidence and
 
 Adversarial decision flips already have a benchmark [[hu-2026-jevadvbench]]. Option naming can change decisions under a fixed rubric [[sun-2026-type]]. Broad evaluation reports task and threshold dependence [[deusser-2026-evaluating]]. Shared judge errors challenge simple confidence fallback [[rao-2026-jev]]. Dependent advisers complicate majority-vote arguments [[sasahara-2026-latent]]. Social influence can reduce diversity without improving accuracy [[lorenz-2011-how]]. These summaries have the reading-depth limits in SOURCES.md; no local replication.
 
+The shared catalogue already contains full-read records relevant to this question: source dependence [[bara-2026-epistemic]], quorum response mechanisms [[sumpter-2009-quorum]], compute scaling [[qian-2025-scaling]], group-size limits [[bertalanic-2026-ringelmann]], and emergent conventions [[ashery-2024-emergent]]. These are inherited team readings, not five new full reads by this updater. Together they motivate fixed-quorum failure accounting, explicit computational comparators and separating agreement from truth. A fresh full read of [[wang-2026-graphecho]] and an attributed full-read supplement on [[hamdi-2013-removal]] narrow Quorum to a controlled engineering replication.
+
 ## Open problems and disagreements
 
-Candidate openings are spatial error propagation beyond directly exposed cells; provenance-aware aggregation under fixed information budgets; evidence-triggered inhibition versus arbitrary throttling; finite-capacity reviewer queues; and typed-menu changes after collapsing synonymous actions. Novelty is provisional. Current published confidence formulas supersede the older “undocumented” description for current documentation, not necessarily the historical API [[typesafe-2026-confidence]] [[hu-2026-jevadvbench]].
+Candidate openings are spatial error propagation beyond directly exposed cells; provenance-aware aggregation under fixed information budgets; evidence-triggered inhibition versus arbitrary throttling; finite-capacity reviewer queues; and typed-menu changes after collapsing synonymous actions. Novelty is provisional. Newly catalogued [[jain-2024-interacting]] and [[jin-2026-not]] directly overlap social learning and typed provenance decisions. Abstract-level results on debate diversity disagree across settings [[ferreira-2026-beyond]] [[wu-2025-can]]; do not assume a universal committee gain. Current published confidence formulas supersede the older “undocumented” description for current documentation, not necessarily the historical API [[typesafe-2026-confidence]] [[hu-2026-jevadvbench]].
 
 ## Code, data and tools
 
@@ -48,4 +122,4 @@ The owner preferred Phantom Coast and Quorum of Mirrors. Their stronger variants
 
 ## Saturation
 
-Not established. The formal survey is in progress. Full-paper reading, structured citation trails and low-yield terminal rounds remain necessary. The completed deliverable is initial research screening and prioritization.
+Not established. The formal survey is in progress. The cited catalogue now includes six full-read records (five inherited, one newly completed), and 12 structured rounds cover the required search families. Forward trails were followed at index metadata depth; downstream full-methods verification remains incomplete. The final rounds found 6/6 and 9/9 uncatalogued relevant leads at search time. Low-yield terminal rounds, resolution of close antecedents and independent survey review remain necessary. No formal hypothesis is proposed or accepted.

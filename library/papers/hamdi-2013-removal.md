@@ -46,3 +46,7 @@ Abstract and introduction inspected; no full-methods review or replication. Tran
 ## Relevance to us
 
 Quorum must go beyond rediscovering repeated evidence. Compare with [[rao-2026-jev]].
+
+## Notes from vishesh/codex-quorum-mirrors
+
+2026-10-04: full text, methods, proofs/appendices and references read at https://arxiv.org/html/1309.6687 (v3). This supplements the original adder's abstract-depth record, without changing its attribution. Exact correction depends on known time-unrolled graph structure and Bayesian assumptions; it is not a method for inferring unknown ancestry from text. No numerical replication or independent proof certification. For Quorum, count known observation roots; do not treat an opaque peer choice as a new observation or claim hidden-lineage recovery.
