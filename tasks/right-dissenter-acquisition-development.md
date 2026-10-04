@@ -3,7 +3,7 @@ id: right-dissenter-acquisition-development
 type: task
 title: Build acquisition development cases and strong offline comparators
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,11 @@ topics:
 - dissent
 - decision-models
 claimed_at: 2026-10-04T21:39Z
-updated: 2026-10-04T21:39Z
+updated: 2026-10-04T21:40Z
+outputs:
+- researchers/vishesh/notes/dissent/acquisition-dev/README.md
+- researchers/vishesh/notes/dissent/acquisition-dev/offline/validation.json
+- researchers/vishesh/notes/dissent/acquisition-dev/PACKET-PROPOSAL.md
 ---
 
 ## Goal
