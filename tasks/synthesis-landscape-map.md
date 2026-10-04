@@ -3,9 +3,9 @@ id: synthesis-landscape-map
 type: task
 title: Draw the cross-topic landscape map
 kind: synthesis
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: shadow/sol-atlas
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on:
@@ -25,6 +25,8 @@ topics:
 - marl-emergence
 - llm-agent-swarms
 - crowds-and-traffic
+claimed_at: 2026-10-04T13:59Z
+updated: 2026-10-04T13:59Z
 ---
 
 ## Goal
