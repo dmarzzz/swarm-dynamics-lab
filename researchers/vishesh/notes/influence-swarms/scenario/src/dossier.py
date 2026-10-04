@@ -19,7 +19,10 @@ def digest(x):
 def build(family, profile=0, world='clean', seed=31, dossier_spec=None):
     if family not in FAMILIES or world not in WORLDS or profile not in range(8):
         raise ValueError('unregistered assignment')
-    names=list(NAMES); random.Random(seed+profile).shuffle(names)
+    names=list(NAMES)
+    if dossier_spec is None:random.Random(seed+profile).shuffle(names)
+    else:
+        rotation=dossier_spec['name_rotation'];names=names[rotation:]+names[:rotation]
     # Profile changes operating scale and ticket mix, not only names.
     months=12; seats=(12,24,40,18,16,28,22,20)[profile]; volume=(2400,4800,7200,3600,3100,5400,4100,3900)[profile]
     mix=(.2,.35,.5,.65,.42,.57,.47,.38)[profile]

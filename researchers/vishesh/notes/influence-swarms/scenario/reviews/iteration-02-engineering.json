@@ -1,0 +1,87 @@
+{
+  "status": "SCRIPTED / NOT MODEL EVIDENCE",
+  "commit": "4333ef1ce6d86cf50201db55cf3d5474ac7bdd3b",
+  "cases": 4,
+  "assigned": 12,
+  "valid": 12,
+  "acceptable": 12,
+  "logical_calls": 56,
+  "api_calls": 0,
+  "usd": 0,
+  "maximum_request_bytes_without_provider_envelope": 16308,
+  "qualification_file_hash": "4560d9a4aa6330f43296a321d3e1283d54279d38467259b4ede6d0d6dc8a4a4d",
+  "decisions": [
+    {
+      "case": "renewal-volume",
+      "arm": "team_ballots",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "renewal-volume",
+      "arm": "team_evidence",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "renewal-volume",
+      "arm": "solo",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "arm": "team_evidence",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "arm": "team_ballots",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "arm": "solo",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "unapproved-processing",
+      "arm": "team_ballots",
+      "choice": "DEFER",
+      "acceptable": 1
+    },
+    {
+      "case": "unapproved-processing",
+      "arm": "team_evidence",
+      "choice": "DEFER",
+      "acceptable": 1
+    },
+    {
+      "case": "unapproved-processing",
+      "arm": "solo",
+      "choice": "DEFER",
+      "acceptable": 1
+    },
+    {
+      "case": "approved-alternative",
+      "arm": "team_evidence",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "approved-alternative",
+      "arm": "team_ballots",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "approved-alternative",
+      "arm": "solo",
+      "choice": "Aster",
+      "acceptable": 1
+    }
+  ]
+}

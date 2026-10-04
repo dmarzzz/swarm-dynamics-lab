@@ -52,7 +52,8 @@
           "sso": true,
           "export": true
         }
-      ]
+      ],
+      "name_rotation": 0
     },
     {
       "id": "qualified-sponsored-upgrade",
@@ -104,7 +105,8 @@
           "sso": true,
           "export": true
         }
-      ]
+      ],
+      "name_rotation": 2
     },
     {
       "id": "unapproved-processing",
@@ -156,7 +158,8 @@
           "sso": true,
           "export": true
         }
-      ]
+      ],
+      "name_rotation": 0
     },
     {
       "id": "approved-alternative",
@@ -208,7 +211,8 @@
           "sso": true,
           "export": true
         }
-      ]
+      ],
+      "name_rotation": 1
     }
   ]
 }

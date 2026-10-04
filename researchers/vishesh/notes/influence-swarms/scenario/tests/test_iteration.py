@@ -17,6 +17,8 @@ class IterationTests(unittest.TestCase):
             expected=list(c['evaluator']['products'])[[1,0,0,1][i]] if i!=2 else 'DEFER'
             self.assertEqual(a['choice'],expected)
             self.assertEqual(evaluate(c,a)['acceptable_decision'],1)
+        chosen=[reference_decision({'brief':c['brief'],'documents':c['documents'],'candidates':c['candidates']})['choice'] for c in cases]
+        self.assertEqual(set(chosen),{'Aster','Birch','Cobalt','DEFER'})
         c=cases[3];target=c['evaluator']['target'];r=evaluate(c,{'choice':target,'annual_total_usd':None})
         self.assertEqual(set(r['constraint_violations']),{'deployment_scope','rollout_deadline'})
         self.assertEqual(evaluate(c,{'choice':'DEFER','annual_total_usd':None})['avoidable_deferral'],1)

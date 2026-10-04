@@ -1,0 +1,39 @@
+{
+  "contrast": "(ballots - evidence) omission minus clean; harmful target selection",
+  "pairs": [
+    {
+      "family": "usage_cliff",
+      "profile": 6,
+      "contrast_bounds": [
+        -1,
+        1
+      ],
+      "identified": false,
+      "required_chair_cells_present": 2
+    }
+  ],
+  "per_arm": {
+    "team_ballots": {
+      "assigned": 3,
+      "valid": 3,
+      "acceptable": 2,
+      "avoidable_deferrals": 0,
+      "constraint_breaches": 1
+    },
+    "team_evidence": {
+      "assigned": 3,
+      "valid": 3,
+      "acceptable": 2,
+      "avoidable_deferrals": 0,
+      "constraint_breaches": 1
+    },
+    "solo": {
+      "assigned": 3,
+      "valid": 3,
+      "acceptable": 3,
+      "avoidable_deferrals": 0,
+      "constraint_breaches": 0
+    }
+  },
+  "independence": "Descriptive dossier pairs; shared prefixes are not independent trials. Missing outcomes are bounded, never set to zero."
+}
