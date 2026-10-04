@@ -1,0 +1,2 @@
+{"event": "start", "id": "Q0-summary-shuffled", "request_sha256": "3c1256144c135a5d37c0b29cf697534e755cb6da259c340810311b635762a4e9", "reservation_usd": 0.05, "revision": "cf36e30fd72c53147afa37f6418b94f6870e0fb2", "stage": "S0", "time": "2026-10-04T15:50:40.163477+00:00"}
+{"error": "http_error", "event": "terminal", "http_status": 403, "id": "Q0-summary-shuffled", "stage": "S0", "time": "2026-10-04T15:50:40.393696+00:00"}
