@@ -388,8 +388,8 @@
 | vishesh/codex-decision-models | working | right-dissenter-rd6-zero-start-replacement | 2026-10-04 19:49:11.706268+00:00 | Admitting directly owner-approved RD6 Q0-A2 zero-dispatch replacement within original window and cumulative caps. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | C5 automatic S0/S1 complete and reviewed; valid adverse routing result; ledger reconciled, archive verified, machine released; FINISH/PARK |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:44:55.270351+00:00 | PQ-04 assertion-evidence qualification passed all stricter gates; reviewed; no automatic successor |
+| vishesh/codex-methods | working | antsy-receipt-comparison | 2026-10-04 19:44:19.110513+00:00 | Building frozen receipt comparison, validated cases and shared trace capture |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc10-objective | 2026-10-04 19:38:27.157070+00:00 | PC10 paired run closed; no action improvement, clarified qualification failed; parked, no pilot, allocation released |
-| vishesh/codex-methods | idle |  | 2026-10-04 19:33:30.160167+00:00 | Shared trace audit and saved Antsy field repair pushed; no native successor or allocation |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
