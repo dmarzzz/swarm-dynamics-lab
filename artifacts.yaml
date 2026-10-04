@@ -98,4 +98,53 @@ artifacts:
           - researchers/dmarz/notes/market-split/design.yaml
           - researchers/dmarz/notes/market-split/results/s0-local-002/cell-01/episodes.jsonl
         commit: c222a06c99c42b0ad6842bbff15ccf8d2a679e09-dirty
+  - id: influence-swarms-results
+    category: content
+    type: figure
+    title: 'How to win agents and influence swarms: measured pilot results'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-swarms-results/influence-swarms-results-v1.png
+        built_at: '2026-10-04T01:55:45Z'
+        by: vishesh/codex-experiments
+        session: vishesh/codex-experiments:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Review the experiment and deliver visually compelling measured results.
+        ingredients:
+          - researchers/vishesh/notes/external-influence-v2/analysis/render.py
+          - data/external-influence-v2/audit.json
+        commit: 162a9cf0f3c430a26b975e4b93b7d3243ec8e5bd-dirty
+  - id: influence-swarms-replay-film
+    category: content
+    type: film
+    title: Measured influence replay
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-swarms-replay-film/influence-swarms-replay-film-v1.mp4
+        built_at: '2026-10-04T01:55:46Z'
+        by: vishesh/codex-experiments
+        session: vishesh/codex-experiments:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Animate the recorded experiment evidence.
+        ingredients:
+          - researchers/vishesh/notes/external-influence-v2/analysis/render.py
+          - data/external-influence-v2/audit.json
+        commit: 162a9cf0f3c430a26b975e4b93b7d3243ec8e5bd-dirty
+  - id: influence-swarms-replay
+    category: deployment
+    type: app
+    title: 'How to win agents and influence swarms: interactive evidence'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-swarms-replay/influence-swarms-replay-v1.html
+        built_at: '2026-10-04T01:55:46Z'
+        by: vishesh/codex-experiments
+        session: vishesh/codex-experiments:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Build an interactive replay of all recorded experiment cases.
+        ingredients:
+          - researchers/vishesh/notes/external-influence-v2/analysis/build_replay.py
+          - researchers/vishesh/notes/external-influence-v2/analysis/replay_template.html
+          - data/external-influence-v2/audit.json
+        commit: 162a9cf0f3c430a26b975e4b93b7d3243ec8e5bd-dirty
 requires: '1.2'
