@@ -25,7 +25,7 @@ claimed_at: 2026-10-04T16:15Z
 
 ## Goal
 
-Complete the conditionally approved S0-02 interface qualification after the expired execution window is explicitly renewed and current admission evidence is verified. Follow the authoritative study SETUP.md and RUNBOOK.md. Preserve the original cumulative USD 2 cap, all S0-01 charges and failures, and historical review records. Researcher review is not a new approval gate.
+Complete the conditionally approved S0-02 interface qualification after the approved bounded replacement window is activated and current admission evidence is verified. Follow the authoritative study SETUP.md and RUNBOOK.md. Preserve the original cumulative USD 2 cap, all S0-01 charges and failures, and historical review records. Researcher review is not a new approval gate.
 
 ## Done when
 
@@ -39,3 +39,7 @@ Complete the conditionally approved S0-02 interface qualification after the expi
 ## Coverage note
 
 2026-10-04 preparation cycle: S0-01 remains 144 retained outcomes, 36 started calls, zero usable responses and 108 unstarted assignments; nine durable artifacts verified and allocation released. Conservative cumulative exposure remains USD 0.556455767. S0-02 scientific scope is conditionally authorized and has 79 passing offline checks, including 12 synthetic renewal checks. The current immutable plan and rendered public page are verified; three historical failed runs remain visible and no successor run exists. The original authority and charge history are unchanged. The distinct execution-window renewal decision is pending in PI Review; no duplicate generic plan/budget approval is needed. No new allocation, model call or charge occurred. See SETUP.md, reviews/S0-02-reassessment-2026-10-04.md and public-plan-verification-S0-02-cycle.json.
+
+## Subsequent owner-directed run loop
+
+Prepared and published source f3621c649311f4e7a6c110c1b56f97b818927f9e, retaining the scientific construction and adding two full-worker failure rehearsals. All81 offline checks pass; model catalogs, public registration, immutable plan bytes and rendered page verified. The new direct owner instruction covers one bounded S0-02 continuation under the unchanged cumulative cap. Runtime coordination is requested and the original allocation is not held; no authority transition or new native calls occurred. Operational details and current receipts remain private.

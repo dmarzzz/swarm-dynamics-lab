@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-04T16:27:13.096432+00:00",
+  "study": "poietic-agents",
+  "attempt": "S0-02",
+  "scope": "readiness only; no new native attempt",
+  "source_commit": "f3621c649311f4e7a6c110c1b56f97b818927f9e",
+  "offline_checks_passed": 81,
+  "assigned_planned": 144,
+  "started": 0,
+  "reserved_qualification_worlds_opened": false,
+  "original_authority_unchanged": true,
+  "original_charge_history_unchanged": true,
+  "current_model_catalogs_match": true,
+  "public_plan_verified": true,
+  "allocation_held": false,
+  "current_gate": "current runtime admission and dispatch coordination pending",
+  "new_api_spend_usd": 0,
+  "new_infrastructure_usd": 0,
+  "historical_cumulative_exposure_usd": 0.5564557666666666
+}
