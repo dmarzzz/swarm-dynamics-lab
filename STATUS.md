@@ -54,6 +54,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
+| [build-sybil-split-xmodel](tasks/build-sybil-split-xmodel.md) | open | p0 | build |  | dmarz |  | Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -267,6 +268,7 @@
 |---|---|---|---|---|
 | dmarz/openai-route | done |  | 2026-10-04T12:45Z | done - OpenAI reference adapter on swarm-lab main 8290d7a; launcher openai provider + mixed-provider ladders on agentops main c7b8b42 |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T12:40Z | attempt 002 Qwen configuration ready (code 612c3b64, source hash 15bef708, review chain-002-pre); next: gpt-6-sol path as follow-up code commit using the reference OpenAI adapter (8290d7ad) |
+| dmarz/pipeline-split-qwen | working | build-sybil-split-xmodel | 2026-10-04T12:25Z | sybil-split-xmodel: cross-model replication of sybil-split-opus on byte-identical packets (qwen/qwen3.7-flash via OpenRouter, gpt-6-sol via OpenAI); code, selftests, offline S0 done; rehearsal, READY.yaml and pre-run review next; no launch, no model call |
 | dmarz/pipeline-split | idle |  | 2026-10-04T12:17Z | Idle. trust-credit-qwen chain-001 results are on main; the plan for attempt 002 (gpt-6-luna) is on main at 3d2d588c and its build was handed to dmarz/openai-route by the fleet monitor. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T12:16Z | verify-cost-qwen attempt 002 (Qwen, repaired answer) pinned: code 35404c24, source hash ef40246d, 87 selftests, review reviews/chain-002-pre.md; waiting for the fleet monitor. Next: follow-up commit adding gpt-6-luna as a second pre-registered model (own chain, original answer schema, reviews/chain-003-pre.md). No launch, no model call |
 | dmarz/pipeline-memory | working |  | 2026-10-04T12:02Z | memory-handoff-qwen attempt 002 (the one permitted repair after the Q0 stop): preregistration section pushed; building the working-field answer format, tolerant validation, set-b qualification; no launch, no model call |
