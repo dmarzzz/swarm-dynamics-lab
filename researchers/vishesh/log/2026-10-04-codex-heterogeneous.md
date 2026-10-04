@@ -19,3 +19,5 @@ The owner found the first shortlist uninteresting and requested deeper X researc
 New subset leaders: HX-31 (93), HX-32 (92), HX-33 (92), HX-35 (91), HX-37 (90); HX-38 also rounds to 90. This is a biologically filtered recommendation, not a rewrite of historical scores. The most consequential new predecessor is Kelley 2026: digital organelles and mutualistic evolutionary constraint already exist. GlossoGen also occupies language invention and weak-model transmission. Narrowed the candidate deltas accordingly.
 
 No inference or experiments launched. Follow-up methods/independent review still required. Nine added paper identifiers passed verification; source summaries and original X URLs replace wholesale thread reproduction. Inaccessible biological sources remain explicit inbox leads rather than phantom catalogue entries.
+
+Published revision d903d00; dashboard workflow 37173891058 succeeded. Rebased concurrent updates while retaining other researchers’ task states and inbox processing. The merged export still passed all 29 tests. Biological-frontier research task marked done; no hypothesis or experiment status was advanced.

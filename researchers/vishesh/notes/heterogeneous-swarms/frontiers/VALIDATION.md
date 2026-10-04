@@ -12,3 +12,5 @@
 - Post-commit export contract tests: **29 passed**. New library records have Git-derived publication timestamps; no test logic was altered.
 
 No full-paper reads, formal prior-art gate, saturation, independent approval or measured biological outcomes are claimed. The five designs are prospective notes, not public-plan registrations.
+
+Publication: research revision `d903d00` reached shared main. The [dashboard workflow](https://github.com/dmarzzz/swarm-lab/actions/runs/37173891058) completed successfully, including export, contract checks, TypeScript and production build/deploy. A raw unauthenticated dashboard data request returned 403; browser verification uses the normal page. No authentication controls were bypassed.
