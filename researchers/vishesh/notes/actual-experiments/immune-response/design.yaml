@@ -1,11 +1,13 @@
 {
-  "module": "immune",
+  "module": "immune_v2",
   "arms": [
     "N",
     "Q00",
     "Q10",
     "Q01",
     "Q11",
+    "Q10F",
+    "Q11R",
     "CLEAN"
   ],
   "cfg": {
@@ -15,14 +17,15 @@
   "candidate_contrast": {
     "compare": [
       "Q11",
-      "Q10"
+      "Q10F"
     ],
-    "metric": "utility"
+    "metric": "utility",
+    "world": "shared_evidence"
   },
   "stages": {
     "S0": {
       "tasks": [
-        1000
+        1200
       ],
       "seeds": [
         1
@@ -30,7 +33,8 @@
       "worlds": [
         "accidental",
         "shared_evidence",
-        "bounded_rogue"
+        "bounded_rogue",
+        "no_incident"
       ],
       "doses": [
         1
@@ -38,8 +42,14 @@
     },
     "S1": {
       "tasks": [
-        1100,
-        1101
+        1201,
+        1202,
+        1203,
+        1204,
+        1205,
+        1206,
+        1207,
+        1208
       ],
       "seeds": [
         1
@@ -47,14 +57,15 @@
       "worlds": [
         "accidental",
         "shared_evidence",
-        "bounded_rogue"
+        "bounded_rogue",
+        "no_incident"
       ],
       "doses": [
         1
       ]
     }
   },
-  "version": 1,
+  "version": 2,
   "status": "exploratory engineering pilot",
   "live_endpoint_qualified": false,
   "holdout_reserved": [
@@ -79,7 +90,7 @@
   "live_stages": {
     "S0": {
       "tasks": [
-        6000
+        6200
       ],
       "seeds": [
         1
@@ -93,8 +104,8 @@
     },
     "S1": {
       "tasks": [
-        6100,
-        6101
+        6201,
+        6202
       ],
       "seeds": [
         1
@@ -108,5 +119,19 @@
         1
       ]
     }
-  }
+  },
+  "secondary_contrasts": [
+    [
+      "Q11",
+      "Q11R"
+    ],
+    [
+      "Q11R",
+      "Q10"
+    ],
+    [
+      "Q10F",
+      "Q10"
+    ]
+  ]
 }
