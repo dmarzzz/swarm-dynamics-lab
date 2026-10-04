@@ -2,9 +2,9 @@
 
 # Library index
 
-3300 entries.
+3303 entries.
 
-## Papers (2080)
+## Papers (2083)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -345,6 +345,7 @@
 | [wu-2025-can](papers/wu-2025-can.md) | Can LLM Agents Really Debate? A Controlled Study of Multi-Agent Debate in Logical Reasoning | 2025 | 5 | abstract | decision-models, llm-agent-swarms | vishesh/codex-quorum-mirrors |
 | [xia-2026-when](papers/xia-2026-when.md) | When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms | 2026 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [xiang-2024-certifiably](papers/xiang-2024-certifiably.md) | Certifiably Robust RAG against Retrieval Corruption | 2024 | 5 | full | fork-merge-security, collective-decision | dmarz/fm-memory-injection |
+| [xie-2020-dba](papers/xie-2020-dba.md) | DBA: Distributed Backdoor Attacks against Federated Learning | 2020 | 5 | abstract | fork-merge-security | shadow/sol-fm |
 | [xie-2026-what](papers/xie-2026-what.md) | What If Prompt Injection Never Left? Rethinking Agent Security through Cross-Session Stored Prompt Injection | 2026 | 5 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
 | [xiong-2026-can](papers/xiong-2026-can.md) | Can Trustless Agents Be Trusted? An Empirical Study of the ERC-8004 Decentralized AI Agent Ecosystem | 2026 | 5 | full | swarm-detection, sybil-resistance, llm-agent-swarms | dmarz/sd-onchain |
 | [xiong-2026-maple](papers/xiong-2026-maple.md) | MAPLE-Guard: Memory-Aware Link Enforcement Against Memory-Link Poisoning in Multi-Agent Systems | 2026 | 5 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-memory-injection |
@@ -842,6 +843,7 @@
 | [luo-2025-open](papers/luo-2025-open.md) | Open CaptchaWorld: A Comprehensive Web-based Platform for Testing and Benchmarking Multimodal LLM Agents | 2025 | 4 | abstract | swarm-detection, sybil-resistance, llm-agent-swarms | dmarz/sd-web-agents |
 | [luo-2025-toward](papers/luo-2025-toward.md) | Toward Resilient Airdrop Mechanisms: Empirical Measurement of Hunter Profits and Airdrop Game Theory Modeling | 2025 | 4 | full | swarm-detection, sybil-resistance | dmarz/sd-onchain |
 | [lynch-2026-tuning](papers/lynch-2026-tuning.md) | Tuning regimes in ant foraging dynamics depend on the existence of bistability | 2026 | 4 | abstract | criticality-measurement, collective-decision | dmarz/criticality-measurement |
+| [lyu-2023-poisoning](papers/lyu-2023-poisoning.md) | Poisoning with Cerberus: Stealthy and Colluded Backdoor Attack against Federated Learning | 2023 | 4 | abstract | fork-merge-security | shadow/sol-fm |
 | [ma-2019-policy](papers/ma-2019-policy.md) | Policy Poisoning in Batch Reinforcement Learning and Control | 2019 | 4 | skim | fork-merge-security | dmarz/fm |
 | [ma-2021-learning](papers/ma-2021-learning.md) | Learning Selective Communication for Multi-Agent Path Finding | 2021 | 4 | abstract | swarm-robotics, marl-emergence, llm-agent-swarms | vishesh/codex-methods |
 | [ma-2023-local](papers/ma-2023-local.md) | Local Environment Poisoning Attacks on Federated Reinforcement Learning | 2023 | 4 | skim | fork-merge-security | dmarz/fm |
@@ -1179,6 +1181,7 @@
 | [zatuchin-2026-system](papers/zatuchin-2026-system.md) | System Attribution in LLM Brand Recommendations: Single Responses Identify the System, Aggregated Brand Profiles Do Not Transfer | 2026 | 4 | abstract | swarm-detection | shadow/sol-g51 |
 | [zerhoudi-2026-compaction](papers/zerhoudi-2026-compaction.md) | The Compaction Cliff in Long-Running AI Agent Memory | 2026 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
 | [zha-2026-autonomous](papers/zha-2026-autonomous.md) | Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms | shadow/sol-g74 |
+| [zhai-2024-secret](papers/zhai-2024-secret.md) | Secret Multiple Leaders & Committee Election With Application to Sharding Blockchain | 2024 | 4 | abstract | fork-merge-security | shadow/sol-fm |
 | [zhan-2024-injecagent](papers/zhan-2024-injecagent.md) | InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents | 2024 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
 | [zhang-2020-adaptive](papers/zhang-2020-adaptive.md) | Adaptive Reward-Poisoning Attacks against Reinforcement Learning | 2020 | 4 | skim | fork-merge-security | dmarz/fm |
 | [zhang-2021-robust](papers/zhang-2021-robust.md) | Robust Policy Gradient against Strong Data Corruption | 2021 | 4 | skim | fork-merge-security | dmarz/fm |

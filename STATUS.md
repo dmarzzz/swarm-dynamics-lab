@@ -18,7 +18,7 @@
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
-| fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
+| fork-merge-security | 360 | 47 | 62 | 69 | 8 | 13 | 559 |
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
 | agent-budgets | 57 | 2 | 7 | 0 | 0 | 0 | 66 |
 | decision-models | 16 | 3 | 4 | 2 | 0 | 0 | 25 |
@@ -55,7 +55,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T14:27Z | Survey: agent budgets, budget visibility and self-allocation among agents |
-| [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | claimed | p1 | survey | shadow/sol-fm |  | 2026-10-04T14:21Z | Survey: corruption on reintegration in fork-and-merge agents |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -70,6 +69,7 @@
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T09:07Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
+| [review-fork-merge-security](tasks/review-fork-merge-security.md) | open | p1 | review |  | vishesh |  | Review: fork-and-merge security survey |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | open | p1 | experiment |  | vishesh | 2026-10-04T09:00Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
@@ -241,6 +241,7 @@
 | [skeptical-research-context](tasks/skeptical-research-context.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:48Z | Distill research context and critique candidate designs |
 | [specify-swarm-size-task-contracts](tasks/specify-swarm-size-task-contracts.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:56Z | Specify swarm-size task contracts and qualification gates |
 | [streamline-experiment-operations](tasks/streamline-experiment-operations.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T04:49Z | Integrate a lean experiment operations interface |
+| [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | done | p1 | survey | shadow/sol-fm |  | 2026-10-04T14:34Z | Survey: corruption on reintegration in fork-and-merge agents |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 | [swarm-of-theseus](tasks/swarm-of-theseus.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T02:45Z | Build and qualify Swarm of Theseus (SOC-24) |
 | [sybil-followups](tasks/sybil-followups.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T05:45Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
@@ -271,6 +272,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
+| shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
 | shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | vishesh/codex-pi-review | done | transfer-dmarz-market-methods | 2026-10-04T14:02Z | Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs. |
@@ -417,7 +419,7 @@
 
 | survey | owner | state | cited | gate problems |
 |---|---|---|---|---|
-| [fork-merge-security](surveys/fork-merge-security.md) | dmarz | in-progress | 280 | 1 |
+| [fork-merge-security](surveys/fork-merge-security.md) | dmarz | complete | 283 | 0 |
 | [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
 | [sim-environments](surveys/sim-environments.md) | dmarz | in-progress | 152 | 0 |
 | [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
