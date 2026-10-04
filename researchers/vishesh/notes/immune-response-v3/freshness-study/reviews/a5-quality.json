@@ -1,0 +1,140 @@
+{
+  "attempt": "freshness-a5",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "repair",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Six paired constructed-world freshness question remains explicit.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Native fresh-crash floor in both arms; diagnose catalog/liveness comprehension before expansion.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ],
+      "next_action": "Complete prospective offline contract repair and assess a separately approved native qualification plan.",
+      "acceptance_check": "Visible schema/tool contract matches simulator; future data counted separately without rewriting A5."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Only one complete pair; remaining matched comparisons absent.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ],
+      "next_action": "Complete prospective offline contract repair and assess a separately approved native qualification plan.",
+      "acceptance_check": "Visible schema/tool contract matches simulator; future data counted separately without rewriting A5."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Both crash arms failed recovery; checked healthy arm damaged service; final assertion is separately an instrument defect.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ],
+      "next_action": "Complete prospective offline contract repair and assess a separately approved native qualification plan.",
+      "acceptance_check": "Visible schema/tool contract matches simulator; future data counted separately without rewriting A5."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Replayed every applied action and state; partial denominators and invalid action retained.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Only one complete pair, not six; no general treatment estimate.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ],
+      "next_action": "Complete prospective offline contract repair and assess a separately approved native qualification plan.",
+      "acceptance_check": "Visible schema/tool contract matches simulator; future data counted separately without rewriting A5."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All17 public-fixture requests and visible outputs inspected; pinned OpenRouter Anthropic route with no operator context.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "17requests/responses/usage hashes reconciled;7hubreadbacks match;4started/3complete/1invalid/8unstarted.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "ActualAPI0.027232 and originalcap8/reservations3.309095 preserved;machine released;allocated machinecost unmeasured.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Frozen action reproduced hidden constraint not encoded in advertised schema; repair before next collection.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ],
+      "next_action": "Complete prospective offline contract repair and assess a separately approved native qualification plan.",
+      "acceptance_check": "Visible schema/tool contract matches simulator; future data counted separately without rewriting A5."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Native partial trajectories shown with missingness and denominator; invalid action explicitly outside plotted applied transitions.",
+      "evidence": [
+        {
+          "path": "a5-reconciliation.json",
+          "sha256": "1e0797ac25feb8d9afd0f698ff2609d864a230957b8a024b3283cc4bffc487dd"
+        }
+      ]
+    }
+  ]
+}

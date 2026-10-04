@@ -1,0 +1,66 @@
+{
+  "assigned": 12,
+  "recorded": 3,
+  "execution_qualified": false,
+  "qualification_passed": false,
+  "gates": {
+    "raw": {
+      "healthy_controls": false,
+      "recovery": false
+    },
+    "checked": {
+      "healthy_controls": false,
+      "recovery": false
+    }
+  },
+  "api_calls": 17,
+  "actual_usd": 0.027232,
+  "usage_missing": 0,
+  "cells": [
+    {
+      "case": "fresh_crash",
+      "arm": "raw",
+      "seed": 9401,
+      "proposal_hash": "cafd348e4d5581b2a1817fd05e3b8b889e2879ef515093c7c63c9b5cb0129aee",
+      "reviewer_epoch_errors": 0,
+      "initial_healthy": 0,
+      "healthy_ticks": 0,
+      "final_healthy": 0,
+      "deployments": 2,
+      "redundant": 0,
+      "useful_restarts": 0,
+      "lost_health": 0,
+      "rejected": 0
+    },
+    {
+      "case": "fresh_crash",
+      "arm": "checked",
+      "seed": 9401,
+      "proposal_hash": "cafd348e4d5581b2a1817fd05e3b8b889e2879ef515093c7c63c9b5cb0129aee",
+      "reviewer_epoch_errors": 0,
+      "initial_healthy": 0,
+      "healthy_ticks": 0,
+      "final_healthy": 0,
+      "deployments": 2,
+      "redundant": 0,
+      "useful_restarts": 0,
+      "lost_health": 0,
+      "rejected": 0
+    },
+    {
+      "case": "stale_false_alarm",
+      "arm": "checked",
+      "seed": 9401,
+      "proposal_hash": "6a30e3f88bf773fda010b90611f2cab7ddd5d5eeef009c0cb48b07fb268a75a2",
+      "reviewer_epoch_errors": 0,
+      "initial_healthy": 1,
+      "healthy_ticks": 3,
+      "final_healthy": 0,
+      "deployments": 1,
+      "redundant": 0,
+      "useful_restarts": 0,
+      "lost_health": 1,
+      "rejected": 0
+    }
+  ]
+}
