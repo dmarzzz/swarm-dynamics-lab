@@ -14,13 +14,13 @@
 | sync-consensus | 255 | 24 | 11 | 17 | 1 | 28 | 336 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
-| llm-agent-swarms | 553 | 118 | 106 | 197 | 47 | 14 | 1035 |
+| llm-agent-swarms | 553 | 119 | 106 | 197 | 47 | 14 | 1036 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
-| sybil-resistance | 331 | 65 | 62 | 57 | 8 | 22 | 545 |
-| fork-merge-security | 357 | 46 | 62 | 69 | 8 | 13 | 555 |
-| swarm-detection | 390 | 45 | 80 | 193 | 35 | 11 | 754 |
-| agent-budgets | 53 | 1 | 7 | 0 | 0 | 0 | 61 |
+| sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
+| fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
+| swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
+| agent-budgets | 53 | 2 | 7 | 0 | 0 | 0 | 62 |
 
 ## Tasks
 
@@ -163,9 +163,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | done |  | 2026-10-04T02:00Z | pc-H4 done (d0725be0, qualified, private_contrast -0.33); post-mortem reviews/pc-H4-a1-post.md |
+| dmarz/patchwork-hypotheses | working | add-patchwork-hypotheses | 2026-10-04T01:59Z | Add Patchwork-derived unreviewed hypotheses and publish the research-page update |
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:57Z | 450 scripted episodes verified; plan and replay filed; temporary server destroyed; finishing records. |
 | vishesh/codex-immune | blocked |  | 2026-10-04T01:57Z | V2 reported and v3 engineering passed; awaiting exclusive fleet host for fresh native repair qualification |
-| dmarz/patchwork-hypotheses | working |  | 2026-10-04T01:55Z | Add Patchwork-derived unreviewed hypotheses and publish the research-page update |
 | dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T01:55Z | Building fixed-model qualification and paired badge pilot; aggregate USD 5 cap, no API calls yet |
 | dmarz/discussion-bench-v3 | working | build-discussion-benchmark-v3 | 2026-10-04T01:49Z | Building the offline v3 benchmark, with paid runs and holdout release deferred |
 | vishesh/codex-idea-scores | working |  | 2026-10-04T01:49Z | Implement researcher rubric scores across all research ideas |
