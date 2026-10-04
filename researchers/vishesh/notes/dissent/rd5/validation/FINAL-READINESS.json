@@ -1,0 +1,25 @@
+{
+  "checked_utc": "2026-10-04T08:15:50.286063+00:00",
+  "tests_passed": 61,
+  "prepared_Q5_assignments": 24,
+  "prepared_H5_assignments": 72,
+  "new_native_calls": 0,
+  "source_commit": "27d63232559a2b6ccd9e317b1af5786b32c383bc",
+  "max_new_calls": 60,
+  "original_lifetime_calls": 428,
+  "owner_updated_plan_approval": "pending",
+  "runtime_admission": "not issued",
+  "lab_check": {
+    "errors": 0,
+    "existing_warnings": 5
+  },
+  "global_evidence_metadata": {
+    "status": "upstream coverage gap",
+    "missing_registration": "researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml"
+  },
+  "rd5_evidence_metadata": {
+    "score": 0,
+    "scoped_rendered": true
+  },
+  "preview": "browser-inspected initial/transition/final development fixture; explicitly scripted"
+}

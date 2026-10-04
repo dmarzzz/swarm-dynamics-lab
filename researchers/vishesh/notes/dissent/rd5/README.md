@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `036ef6e1` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `27d63232` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Remembering unresolved evidence and reserving a later check may improve timely correct actions under a two-check budget, with urgent-early delay costs. Basis: Successor instrument has offline development coverage only. Q5 and H5 have no native outcomes; six authored fixed-timing roots are a proposed mechanism pilot, not independent semantic or population evidence.
 - **sample_size_summary:** Observed native: none. Planned Q5: 12 authored packets in two forms (24 calls). Planned H5: 6 authored roots, 3 policies, 4 epochs (72 dependent decisions; at most 36 calls). Offline unit fixtures are software checks, not model evidence.

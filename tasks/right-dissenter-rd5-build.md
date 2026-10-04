@@ -23,7 +23,11 @@ Implement the post-mortem repair contracts, refine the prospective comparison, v
 
 ## Done when
 
-- [ ] Publish design refinements before implementation.
-- [ ] Implement and fault-test explicit uncertainty, separate resource accounting and the three allocation policies.
-- [ ] Freeze qualification/study definitions, request envelope and source-bound preparation artifacts.
-- [ ] Provide a tested launch path, visualization, honest readiness record and remaining operational steps.
+- [x] Publish design refinements before implementation.
+- [x] Implement and fault-test explicit uncertainty, separate resource accounting and the three allocation policies.
+- [x] Freeze qualification/study definitions, request envelope and source-bound preparation artifacts.
+- [x] Provide a tested launch path, visualization, honest readiness record and remaining operational steps.
+
+## Coverage note
+
+Prospective amendment published before implementation. Isolated RD5 instrument, 61 offline tests, two frozen Q5/H5 packets, 11-dimension evidence-linked RD4 review, updated next-run proposal, disabled owner/runtime admission template and inspected scripted replay are complete. No paid calls or machine allocation. Native qualification, updated-plan owner decision and fresh runtime evidence remain explicit next-run gates. One unrelated upstream evidence-registry coverage gap remains; RD5 has a rendered 0/4 untested row.

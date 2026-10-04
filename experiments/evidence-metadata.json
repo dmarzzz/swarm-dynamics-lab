@@ -1901,7 +1901,7 @@
       "status_at_assessment": "implemented_offline_native_unrun",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "036ef6e1069cd4e3507988f925285fb842158e8e",
+      "source_commit": "27d63232559a2b6ccd9e317b1af5786b32c383bc",
       "source_sha256": {
         "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa",
         "researchers/vishesh/notes/dissent/rd5/validation/VALIDATION.json": "4d659b98fa4295c387e50242b7e105eea804516c26a022a9172efa2eb0079f7f"

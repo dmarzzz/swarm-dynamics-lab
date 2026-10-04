@@ -1,4 +1,59 @@
 {
-  "status": "pending final committed-source compilation",
-  "native_calls": 0
+  "status": "prepared_for_owner_review_not_live_admission",
+  "prepared_utc": "2026-10-04T08:14:58.127534+00:00",
+  "prospective_plan_commit": "10e6b4d775c8409c1a9817ad633f0f6f84ae3c40",
+  "proposal_sha256": "90f6fb2d4a096d7144ff7e31f0a648ec3487025c76058cbec0ea6d46859e2b68",
+  "native_calls": 0,
+  "lifetime_calls": 428,
+  "future_max_calls": 60,
+  "lifetime_stop": 488,
+  "max_request_envelope_bytes": 2518,
+  "latin_order_positions": {
+    "B0": [
+      2,
+      2,
+      2
+    ],
+    "B1": [
+      2,
+      2,
+      2
+    ],
+    "B2": [
+      2,
+      2,
+      2
+    ]
+  },
+  "disjoint_qualification_and_study_roots": true,
+  "qualification_passed": null,
+  "owner_updated_plan_approval": "pending",
+  "machine_claim": null,
+  "actual_public_page_verification": "pending",
+  "stages": {
+    "Q5": {
+      "source_commit": "27d63232559a2b6ccd9e317b1af5786b32c383bc",
+      "instrument_sha256": "bbc48f9ca679397895b2c3a0def9aa9e9a969e923f31ab97341d383e261fffa4",
+      "packet_sha256": "681c9aea6f18c6cfb1b26d0e1a53e926179a30d56d10168a5e15e3d10c19f3f8",
+      "packet_file_sha256": "c2467ee81948a93525c967bc7fad328d9bb907a1ac6086ba1a4a8c51550ef466",
+      "assignment_sha256": "cbd07b3a2b376e12099425accc05a27d1aec737628d4fb2a76eac4ce0bc0a03d",
+      "definition_sha256": "d1898c8368092f57e091c8b5d61a442ad631a0dcf68c3adc82718dc32e1f9af8",
+      "allowed_sha256": "52e9e086034ed7390ddddd981d9f52243bd2f6f3293b1cf08f9643f6d49e0974",
+      "assignments": 24,
+      "request_variants": 24,
+      "max_calls": 24
+    },
+    "H5": {
+      "source_commit": "27d63232559a2b6ccd9e317b1af5786b32c383bc",
+      "instrument_sha256": "bbc48f9ca679397895b2c3a0def9aa9e9a969e923f31ab97341d383e261fffa4",
+      "packet_sha256": "8a3d632901ee1ab9f3bf5d9ac118bea66bdd28e41c30faa8dd162c3c174ad7a5",
+      "packet_file_sha256": "cbf0336de7daea59f64560ddd3167e7f0e5e223b93fd1b8256beecddca0f3f1f",
+      "assignment_sha256": "08b3922730b46b851c67113f68837a7418911bfa94f99da7b998b529896f9d4e",
+      "definition_sha256": "90b52ffce57730fc17f21eecd1539f07ec64dcf82da8b23f3ccc91b47a8ccec0",
+      "allowed_sha256": "f18af23ff5040607d573cd78c3e0a563c6af8d3df780fbb73fc7549a87eb8b0c",
+      "assignments": 72,
+      "request_variants": 72,
+      "max_calls": 36
+    }
+  }
 }
