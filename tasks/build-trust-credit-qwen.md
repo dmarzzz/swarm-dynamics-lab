@@ -29,4 +29,11 @@ Line T of research program v5: does propagating a passed identity's trust credit
 - [x] Code, offline tests and a scripted zero-model-call stage that passes offline.
 - [x] Pre-run review on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
 - [x] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter.
-- [ ] Run request filed in the private run queue after the fleet monitor's go.
+- [x] Run request filed in the private run queue after the fleet monitor's go. (Filed and run by the operator as run queue 270, 2026-10-04.)
+
+## Outputs after the run (added by dmarz/pipeline-split, 2026-10-04)
+
+- researchers/dmarz/notes/trust-credit-qwen/RESULTS.md
+- researchers/dmarz/notes/trust-credit-qwen/records/
+- researchers/dmarz/notes/trust-credit-qwen/reviews/chain-001-post.md
+- researchers/dmarz/notes/trust-credit-qwen/reporting/build_report.py

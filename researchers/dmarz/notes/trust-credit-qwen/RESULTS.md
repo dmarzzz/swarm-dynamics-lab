@@ -84,7 +84,7 @@ Computed offline from the frozen audits (no model involved). On the 24 compariso
 
 Probe (P0), as the provider returned it: response model `qwen/qwen3.7-flash`, provider `Alibaba`, finish reason `stop`, reasoning tokens 0, 3,072 input and 57 output tokens for a 5,938-byte request (0.517 tokens per byte), latency 1.31 s, provider-reported cost USD 0.00009957, equal to the snapshot-price computation.
 
-Over all 528 paid calls: every response named the model `qwen/qwen3.7-flash` and the provider `Alibaba`, ended with `stop`, reported 0 reasoning tokens and took one HTTP attempt. Input 3,033 to 3,101 tokens per call (0.514 to 0.520 tokens per byte), output 30 to 65 tokens. Latency median 1.21 s, 95th percentile 1.47 s, maximum 2.65 s. The provider reported a cost on every call: equal to the snapshot-price computation on 523 calls and lower on 5 (down to 30% of it), never higher. The cause of the 5 lower costs was not determined.
+Over all 528 paid calls: every response named the model `qwen/qwen3.7-flash` and the provider `Alibaba`, ended with `stop`, reported 0 reasoning tokens and took one HTTP attempt. Input 3,033 to 3,101 tokens per call (0.514 to 0.520 tokens per byte), output 30 to 65 tokens. Latency median 1.21 s, 95th percentile 1.47 s, maximum 2.65 s. The provider reported a cost on every call: equal to the snapshot-price computation on 523 calls and lower on 5 (30% to 32% of it), never higher. The cause of the 5 lower costs was not determined.
 
 | Stage | Hub run | Rows | Calls | Input tokens | Output tokens | Cost (USD) | Worker time | Hub start to end (UTC) |
 |---|---|---:|---:|---:|---:|---:|---:|---|

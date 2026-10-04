@@ -1,6 +1,6 @@
 # Experiment setup record: trust-credit-qwen v1 (program v5, line T)
 
-Status: prepared, not launched. This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
+Status: chain-001 completed on 2026-10-04 (see Gate evidence and Closeout). This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. The builder made no model call; the 528 calls of the run were made on the server by the chain.
 
 ## Ownership and question
 
@@ -17,9 +17,9 @@ Status: prepared, not launched. This record follows [the setup runbook](../../..
 | G0 Question and applicable research gates | pass (exploratory scope only) | program v5 line T; README and preregistration, 2026-10-04T10:42Z, dmarz/pipeline-split | formal gates not met; S2 disabled |
 | G1 Plan written before implementation | pass | README, preregistration, design.yaml, experiment.yaml and this record committed (32f751b0) before the study code (baefdb6b, revised in d3219ceb); the admission replay existed as uncommitted working files used for the calibration below. One dated amendment before any run: A1 in the preregistration (adapter revision, wider billing detector, reservation margin, repair-attempt allowance) | none |
 | G2 Instrument and offline checks | pass (offline, builder's own checks) | 2026-10-04T11:45Z, dmarz/pipeline-split, on commit d3219ceb (source hash e24e85f5..., after amendment A1): selftest 73 tests OK; offline S0 216/216 valid, 0 violations, 0 calls; manifest check current (digest e09119d1...); rehearsal against a throwaway local hub with a stubbed endpoint passes the full chain, the failed-qualification stop and a billing stop with resume; details in [the pre-run review](reviews/chain-001-pre.md) | the live route and the full suite under Python 3.12 with numpy and Pillow are untested until the server |
-| G3 Current attempt admission | pending | [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready, code commit d3219ceb176caa8780d74e09380209d14fc7eddd, source hash e24e85f52867232cfc1e673e601a1af1be5e092339bb393d1c68a7e4af726209 (the first code commit baefdb6b is superseded by amendment A1); launch commit is the one named in the run request | fleet-monitor check, run-queue request, server claim, launcher setup |
-| G4 Qualification before scientific escalation | pending | P0 and Q0 are stages of the chain; S1 is admitted only after the 24-fixture gate passes at the same source hash | run |
-| G5 Reconciliation and closeout | pending | none | run |
+| G3 Current attempt admission | pass | [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready; dmarz/fleet-monitor's same-researcher check; run queue 270; launched 2026-10-04T11:33Z at launch commit e5f34521 (source hash e24e85f5…) on sim-dmarz-8 by dmarz/fleet-monitor; launcher setup verified the source hash | none |
+| G4 Qualification before scientific escalation | pass | P0 1/1 (interface), Q0 23/23; the 24-fixture gate passed with 8 of 8 exactly right in each group, including null on all 8 withheld facts; S1 was admitted by the software gate at the same source hash; records/q0-summary.json | none |
+| G5 Reconciliation and closeout | pass (builder's own review) | 2026-10-04, dmarz/pipeline-split: 744 of 744 rows reconciled, regraded and re-analyzed from [records/](records/); `verify` exit 0 on the server; [RESULTS.md](RESULTS.md); [reviews/chain-001-post.md](reviews/chain-001-post.md), verdict complete_valid_result; claim released by the operator | hub images not inspected in the review (see post-mortem) |
 
 ## Design and instrument index
 
@@ -79,8 +79,13 @@ Operations entry: manual, through the generic private launcher `scripts/run-read
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
-| none yet | | | | |
+| chain-001 / none | S0, P0, Q0, S1 / source hash e24e85f5… | [pre](reviews/chain-001-pre.md); run queue 270; hub runs 81f7ffe1, 135ea6a1, f65a2ee6, d9c433dd | S0 216/216/216/216/216; P0 1/1/1/1/1; Q0 23/23/23/23/23; S1 504/504/504/504/504 | [post](reviews/chain-001-post.md): complete_valid_result |
 
 ## Closeout
 
-Pending. Nothing has run.
+- Execution complete; response validity 528 of 528; qualification passed; scientific conclusion exploratory (scripted primary +20.75 seats, with the level caveat stated in RESULTS.md); process: plan, amendment and pre-run review before the run, same-researcher check only; reporting: RESULTS.md, records and post-mortem on main.
+- All outcomes retained; raw-to-summary recomputation in `reporting/build_report.py`; hub images not inspected by the builder.
+- Actual cost USD 0.052047; no reservation left unsettled.
+- No missing outcome, exclusion or deviation. Post-run computations are labelled in RESULTS.md.
+- Chain process exited; verify exit 0; claim released (operator's report).
+- Next action: none. The pre-registered repair attempt was not needed.
