@@ -1,0 +1,501 @@
+{
+  "source_commit": "1d15f2a057a9e9c44f8d379263da734b1add8dcd",
+  "assessment": "targeted transfer review; not complete repository coverage",
+  "documents": [
+    {
+      "path": "researchers/dmarz/notes/compositional-safety/reviews/p1-003-post.md",
+      "sha256": "e4c969ccd790c8e1c6aa8eaaa6c8bedeaaa32f8d82c17e44671270a7993c1967",
+      "bytes": 4984,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/compositional-safety/reviews/p1-003-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/RESULTS.md",
+      "sha256": "f81f2d13f27317dd1cff0dc4f55274abf5e8cc6b147a0677510a72feaf572edc",
+      "bytes": 12426,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-opus/RESULTS.md",
+      "sha256": "0f2b160c08be657c194ff7b6238ff301394953981271ba0def43b6119df08388",
+      "bytes": 10916,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/market-split-opus/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-opus/report/s1-001/episode-results.csv",
+      "sha256": "09ff1ce7cfcff1352a35a37e8cf68996d48643940f58b59e162d395eac3c4add",
+      "bytes": 4666,
+      "scope": [
+        "saved-data arithmetic"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/market-split-opus/report/s1-001/episode-results.csv"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-opus/report/s1-001/paired-task-results.csv",
+      "sha256": "4700f8d096221d14f725f947e68e552a213b45573c25ae3a7b25a0ab3ba9b2e3",
+      "bytes": 2213,
+      "scope": [
+        "saved-data arithmetic"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/market-split-opus/report/s1-001/paired-task-results.csv"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-opus/src/sim.py",
+      "sha256": "275ed5189877755dcbfdec550bd95a303a645aba149a23675a5dc2424df1d8e2",
+      "bytes": 14444,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/market-split-opus/src/sim.py"
+    },
+    {
+      "path": "researchers/dmarz/notes/memory-handoff-qwen/README.md",
+      "sha256": "4dbaa7befdcf1bad5f93077672318711b5705c78a18356d60c65f8f1d0d558d2",
+      "bytes": 21761,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/memory-handoff-qwen/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/memory-handoff-qwen/reviews/chain-001-post.md",
+      "sha256": "d7a9e412a4026a7deb8e35cffecff1668c9d90a88bfbeea98e59974ff16e8725",
+      "bytes": 4830,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/memory-handoff-qwen/reviews/chain-001-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/pipeline/LESSONS.md",
+      "sha256": "a899dc60b2a2f76e48d4d0a05398f9ad0710eec482e77f7e45346a70d334757b",
+      "bytes": 21021,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/pipeline/LESSONS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/pipeline/reference/README.md",
+      "sha256": "a5c062c1c3751f34c183f8ef407a07cd9b94bbe54566815bfa041e8bfa58d8f5",
+      "bytes": 9422,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/pipeline/reference/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/pipeline/sybil-scale-xl.md",
+      "sha256": "fa1388b0c6dd0ec21b467f6c05d284feca0ea58868e1288a38003be2389771ed",
+      "bytes": 4978,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/pipeline/sybil-scale-xl.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/pipeline/sybil-specialists-opus.md",
+      "sha256": "3939c13ec8fb0f19a2d0627fadc63f566a9a91f997ca00a934b61d7b271a6a64",
+      "bytes": 2784,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/pipeline/sybil-specialists-opus.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/soc07-private-judgments/reviews/s1l-post.md",
+      "sha256": "152ff199cbac67bb64f1459074d5e6058e07a53de0fc1e8eea4b1fb7017d9c01",
+      "bytes": 6216,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/soc07-private-judgments/reviews/s1l-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-budget-sonnet/RESULTS.md",
+      "sha256": "92ab8da0c89ced63c46a44ea38105d50b68a24c27a36fc4ba6f8700ab713dfcf",
+      "bytes": 6463,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-budget-sonnet/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-newcomer-opus/RESULTS.md",
+      "sha256": "98cc660c9796a36cb6499c3756e8e24d0975c7fcf06d21dc7d08574a71e4c560",
+      "bytes": 12021,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-newcomer-opus/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-rules-180/README.md",
+      "sha256": "2823a7bf7034bbf351a6b52265851004b785157aab31161b79315cf28eb6945c",
+      "bytes": 15618,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-rules-180/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scale-opus/RESULTS.md",
+      "sha256": "c80e0b14db9e3c9a21ed2b0b9a17fa26d556df50e4313c87762b5d28c08733e2",
+      "bytes": 3366,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scale-opus/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md",
+      "sha256": "5f39aa1664bcb64f3b372f5728e00e6282a9b5bfc132c37dfcf2b12ccfede82f",
+      "bytes": 6076,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scarcity-opus/records/s1-episodes.jsonl.gz",
+      "sha256": "274eeea2ecb6d18c86b3bf58953fe3443001684c819bdb16866b05f08314cb58",
+      "bytes": 486530,
+      "scope": [
+        "saved-data arithmetic"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scarcity-opus/records/s1-episodes.jsonl.gz"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scarcity-xmodel/README.md",
+      "sha256": "8b841eaacc8dac6de2000ff1dc7efa30b6e6f2a26767c7b3df5e4e3bda189a67",
+      "bytes": 11129,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scarcity-xmodel/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-split-opus/RESULTS.md",
+      "sha256": "52cf1daa6bde7e7138a0487f36dac1cd160f5c0a2eb8f5de8d4a79056807797c",
+      "bytes": 6254,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-split-opus/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-split-opus/records/s1-episodes.jsonl.gz",
+      "sha256": "ddd861f700ccaf2038cd79194219f208f1a9d6530e841b908481913d51372987",
+      "bytes": 600796,
+      "scope": [
+        "saved-data arithmetic"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-split-opus/records/s1-episodes.jsonl.gz"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-split-opus/src/sim.py",
+      "sha256": "0e20bd3ef66d181ffe9b46b88a177ee8e8c56d88744d8c7109bb3d4067dd7df8",
+      "bytes": 19890,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-split-opus/src/sim.py"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-split-xmodel/README.md",
+      "sha256": "098dbcf8480da32d7b06c6d340eb3be17b223c634c55beec0e88a95a15893316",
+      "bytes": 14001,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-split-xmodel/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/trust-credit-qwen/RESULTS.md",
+      "sha256": "93084821f99c66d13de4d029155058327727156008d9f274cec5b2d70b2d0484",
+      "bytes": 12834,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/trust-credit-qwen/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/trust-credit-qwen/records/s1-episodes.jsonl.gz",
+      "sha256": "06865917b4e9a1312bb66715c0374cecb790d1e8d24bffafa8d0d69dbf544e34",
+      "bytes": 110347,
+      "scope": [
+        "saved-data arithmetic"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/trust-credit-qwen/records/s1-episodes.jsonl.gz"
+    },
+    {
+      "path": "researchers/dmarz/notes/trust-credit-qwen/reviews/chain-001-post.md",
+      "sha256": "0ae68c64ff30034405d3adca0d03f0f4f70c3a95f57cd5dca66cb1b7b4c02f2b",
+      "bytes": 12538,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/trust-credit-qwen/reviews/chain-001-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/p0-episodes.jsonl.gz",
+      "sha256": "1d5676be1b953f6ec0cf8768648be378b1d5662026072e095e09aaf70fe21100",
+      "bytes": 1037,
+      "scope": [
+        "saved-data arithmetic"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/p0-episodes.jsonl.gz"
+    },
+    {
+      "path": "researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/q0-episodes.jsonl.gz",
+      "sha256": "9793ba2fc6302b99cc6a42856cfba8aae96dcb3432ed0fdf0af4e7a872263ad6",
+      "bytes": 5852,
+      "scope": [
+        "saved-data arithmetic"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/q0-episodes.jsonl.gz"
+    },
+    {
+      "path": "researchers/dmarz/notes/verify-cost-qwen/reviews/chain-002-post.md",
+      "sha256": "40cf4d7bc4de8f4cd51dd2f1b306748cfc058d380ce5315df8c2de3837fa438a",
+      "bytes": 11696,
+      "scope": [
+        "targeted document/code reading"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/verify-cost-qwen/reviews/chain-002-post.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-targeted-v8/PLAN.md",
+      "sha256": "2d6c5e20e274ba9778c19de7487b8a529146454db336f253998f91d83a8c0701",
+      "bytes": 8235,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/antsy-targeted-v8/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-targeted-v8/README.md",
+      "sha256": "55568f19d6d0ca77abafcc5523495ac07d7c00504700061be3d5152c9179efd6",
+      "bytes": 1820,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/antsy-targeted-v8/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-targeted-v8/SETUP.md",
+      "sha256": "87ac5143fb8515d4b2096ca72548c5754da1a1cef8fb5cbe27e0e981e99587d5",
+      "bytes": 5764,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/antsy-targeted-v8/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/PLAN.md",
+      "sha256": "2d289f3546f33d720043c91f0c2ddfd2577df6bd689565404932c5395939d45d",
+      "bytes": 16640,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/decision-models/quorum-of-mirrors/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md",
+      "sha256": "0a54bf234587d5a8ccd3eb9a516c3135b7cb6ccf16066663a73ea201c4d3e245",
+      "bytes": 6592,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
+      "sha256": "3270859b52a07a8fee3f21fefad2b08d457fb5e568cc8b4ec9365481f103e0b4",
+      "bytes": 13970,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/PLAN.md",
+      "sha256": "1eb166af9e53933d0fbef714dedf08a0f83e97b18881ce0d40e0624471ab2a49",
+      "bytes": 15534,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/dissent/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/README.md",
+      "sha256": "63e5a0602796538b0a6a75206516fcaa1dc32c7d7989301dde0147858ae4738c",
+      "bytes": 5087,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/dissent/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/SETUP.md",
+      "sha256": "fd070b8ff08406d89a5c3cd966ef6ee29b8af7c21a1ec173c4a12bedd9a4a254",
+      "bytes": 3737,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/dissent/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/c4/PLAN.md",
+      "sha256": "2482e2d6fc4ddb9016f2bc2f3a80ff1d503adc36208788288b92e3fb5fb8c9dd",
+      "bytes": 9156,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/healing-helping-hands/c4/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/c4/SETUP.md",
+      "sha256": "50c68829edd491cd802b4f90a8b039fa3046a82e818b52e7283bcf1a78a9aef6",
+      "bytes": 4161,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/healing-helping-hands/c4/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "sha256": "51d166bb97dbcc419a2e503b5b9ac02b0c37284b9a7ad782c3b2a8ac3b0ca70a",
+      "bytes": 5105,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/heterogeneous-swarms/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md",
+      "sha256": "511c2dd34a464f4646314fb3f8734a3afb0304367beea02ca203d6be3984b912",
+      "bytes": 13535,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/immune-response-v3/evidence-study/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "sha256": "45d7e5949f77c1fb61646256acb1852402c217e5997ddfaa44b0c2a7215eb2ba",
+      "bytes": 10360,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/influence-swarms/scenario/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/SETUP.md",
+      "sha256": "5f991a724dd5a16cddb351ed94c8d58ce10c0512fa7066a780ce5b4b3ced5f14",
+      "bytes": 6494,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/influence-swarms/scenario/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "sha256": "8f3362fd63107aa848be13b87b64704ab520a072a2383c1cf5f352d0b9f78626",
+      "bytes": 24656,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/optimal-swarm-size/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/optimal-swarm-size/SETUP.md",
+      "sha256": "1dde290ba36f884e52b0bf6a2ca976b34b94a07e5a42cc2af002182395b3bfc2",
+      "bytes": 9849,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/optimal-swarm-size/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+      "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72",
+      "bytes": 8782,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/phantom-coast/pc5/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc5/README.md",
+      "sha256": "155db60129aed7cc617b336ff6737d397e76872dee5d242d5b7abc39c505ca6a",
+      "bytes": 2650,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/phantom-coast/pc5/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc5/SETUP.md",
+      "sha256": "a0232ed98b805117ffe8e190810f20ed8f37d8618d8546d0624342a37a702037",
+      "bytes": 1126,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/phantom-coast/pc5/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/poietic-agents/README.md",
+      "sha256": "76275469e324a58d44a7a3bc0307b6cd34ab28f6566806b5fe6f5e558913edfc",
+      "bytes": 11091,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/poietic-agents/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/poietic-agents/SETUP.md",
+      "sha256": "2cae352dcae1c0707fca7acde67f794581da98b583977102f03b8c4f9abb5817",
+      "bytes": 3272,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/poietic-agents/SETUP.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md",
+      "sha256": "7cd472518a76eb901598852847a004c23e8d39836cd9c6523f96284021af4110",
+      "bytes": 15586,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/v2/README.md",
+      "sha256": "a9198e07a85610b776cfbb3ee26550b843cb0273d25ecf74ef77ab20722730cc",
+      "bytes": 9203,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/swarm-of-theseus/v2/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/v2/SETUP.md",
+      "sha256": "fefcebf78f6e1a0f1df316906afb6b42f7b56400a9d57e3a7d37d90ebcc70df4",
+      "bytes": 3799,
+      "scope": [
+        "study context/navigation; not a full source audit"
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/vishesh/notes/swarm-of-theseus/v2/SETUP.md"
+    }
+  ]
+}

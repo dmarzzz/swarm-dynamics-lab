@@ -35,3 +35,5 @@ python3 researchers/vishesh/notes/phantom-coast/src/build_replay.py
 Both commands are offline software validation. They make zero model calls. The default generator rejects qualification and holdout seeds. The separate native worker requires explicit stage, spending, source, public-plan and fresh allocation bindings. The replay is a development fixture, not evidence that a model fails or recovers.
 
 Source layout: `instrument.py` builds actor packets, validates responses, tracks source identity, computes fixed-quorum maps and missingness bounds, schedules development assignments, and reconciles outcomes. `build_replay.py` renders saved fixtures using `replay-template.html`. Tests check semantic invariants, fault accounting and hand-calculated scoring.
+
+[Prospective lessons from Dmarz’s recent experiments](pc5/DESIGN-TRANSFER.md) inform the next design without changing this cohort or authorizing a new run.

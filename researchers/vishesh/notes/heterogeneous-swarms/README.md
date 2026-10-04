@@ -40,3 +40,7 @@ A direct September 30 Jev missing-answer study caused HX-04 to fall from the ini
 The five retained opportunities are conditional mechanism tests, not claims that nobody has studied them. The broad background scan is complete as a contribution; the lab’s formal survey gate is not passed. No full-read counts, saturation or independent approval have been invented. Before promotion, complete full-methods/citation checks and obtain a different researcher’s review.
 
 At the original publication snapshot (before the biological revision): 219 atlas + 124 contributed records = 343 question records, including these 30; concurrent DM additions are preserved. Related records are not independent research ideas. The parent task is `heterogeneous-agent-research`.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

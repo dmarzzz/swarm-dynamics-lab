@@ -52,3 +52,7 @@ Exploratory Q0/Q1/S1/D1 cycle completed. The current evidence does not establish
 ## Next design
 
 [RD5 implementation and next-run package](rd5/README.md) reconciles the observed accuracy gap and proposes explicit uncertainty memory, separate acquisition/inference accounting and a test of protected future verification. Status: implemented with offline checks; native qualification and current operational admission pending. No new native outcomes or machine allocation.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.
