@@ -3,14 +3,16 @@ id: pi-research-refresh-2026-10-04
 type: task
 title: Refresh active-study research and actionable next decisions
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-pi-review
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T16:29Z
+updated: 2026-10-04T16:29Z
 ---
 
 ## Goal
