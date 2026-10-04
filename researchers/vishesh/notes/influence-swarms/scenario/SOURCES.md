@@ -1,0 +1,9 @@
+# Source grounding and provenance
+
+Opened 2026-10-04 UTC. These source notes are exploratory engineering grounding, not a completed prior-art survey. No novelty claim or formal hypothesis gate is implied.
+
+- [Intercom Pricing FAQs](https://www.intercom.com/help/en/articles/8344190-pricing-faqs): seat-based plans and usage-based outcomes are distinct billing components. This motivates separating seat price from total operating cost. Scenario prices, setup fees and performance are fictional; they are not Intercom quotations.
+- [Zendesk Regional Data Hosting Policy](https://support.zendesk.com/hc/en-us/articles/4408883599130-Regional-Data-Hosting-Policy): coverage depends on selected regions, entitled functionality and documented exceptions. This motivates scoped deployment evidence instead of a single “EU compliant” boolean. Our EU processing rule is the fictional buyer's requirement, not a statement of law or a judgment about Zendesk.
+- [AgentDojo](https://arxiv.org/abs/2406.13352), abstract read: realistic tool-use evaluation must distinguish benign task failure from attack effects. This motivates clean competence screens and separate utility/attack measures. Our narrow contribution, if supported, concerns how displayed peer recommendations change evidence integration. We do not claim to originate realistic prompt-injection evaluation.
+
+Nothing here measures actual vendor products, authenticates their policies, or recommends a purchase. Sources justify scenario mechanisms. Every fixture number and document sentence is authored locally, reproducible from source and labeled synthetic. Realism remains an empirical question for a human procurement reviewer. The next external-validity step is a consented, anonymized real buyer dossier with blinded judgment, not more random seeds of this generator.

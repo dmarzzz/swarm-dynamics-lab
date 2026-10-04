@@ -3,7 +3,7 @@ id: score-research-ideas
 type: task
 title: Score all research ideas and expose optional researcher ratings
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-idea-scores
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T01:49Z
-updated: 2026-10-04T01:49Z
+updated: 2026-10-04T02:13Z
+outputs:
+- dashboard/IDEA-SCORES.md
+- dashboard/idea-scores/vishesh.json
 ---
 
 ## Goal

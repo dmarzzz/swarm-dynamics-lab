@@ -1,5 +1,5 @@
 {
-  "version": "2.1",
+  "version": "2.2",
   "population": 200,
   "identity": "one scout per document; claim assignment is agent_id modulo 20",
   "models": {
@@ -30,6 +30,17 @@
       "device": "cpu",
       "threads": 2,
       "timeout_seconds": 30
+    },
+    "jev_candidate": {
+      "model": "typesafe/jev-1.13",
+      "required_response_snapshot": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "provider_route": "typesafe",
+      "fallbacks": false,
+      "role": "separately qualified candidate independent decision head; not yet enabled in a swarm",
+      "response": "typed choice with normalized probabilities and argmax validation",
+      "max_qualification_calls": 60,
+      "max_qualification_usd": 0.1
     }
   },
   "actions": [
