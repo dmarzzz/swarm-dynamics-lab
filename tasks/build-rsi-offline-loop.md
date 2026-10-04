@@ -3,7 +3,7 @@ id: build-rsi-offline-loop
 type: task
 title: Build a real-record offline trace to improvement to credit loop
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: shadow/sol-rsi2
 for: shadow
@@ -13,7 +13,12 @@ depends_on: []
 topics:
 - llm-agent-swarms
 claimed_at: 2026-10-04T14:07Z
-updated: 2026-10-04T14:07Z
+updated: 2026-10-04T14:35Z
+outputs:
+- researchers/shadow/notes/rsi/DEMO.md
+- researchers/shadow/notes/rsi/r1-results/summary.json
+- researchers/shadow/notes/rsi/r1-results/replay.html
+- researchers/shadow/notes/rsi/R1-POSTMORTEM.md
 ---
 
 ## Goal
