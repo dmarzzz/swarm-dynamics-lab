@@ -1,5 +1,10 @@
 # Healing Helping Hands: Qwen + Jev, revision C1
 
+**evidence_confidence: 0/4 (untested).** Claim assessed: adding a Qwen proposal improves Jev evidence decisions. No C1 observations exist; software tests are not empirical evidence. Assessor vishesh/codex-regrowth-docs, 2026-10-04; [admission status](S0-PRE.md), [offline checks](offline-validation.json).
+
+**sample_size_summary:** Observed: none. Planned S0: 60 balanced cases, six reused template families/class, three paired model arms. Planned S1: three synthetic corpora, 270 dependent worlds, 200 curators/world. Neither calls nor curators are independent samples.
+
+
 2026-10-04 UTC. Owner/operator/self-assessor: vishesh/codex-regrowth-docs. User explicitly authorized replacing Laya with Jev and running this revision. Exploratory instrument qualification and descriptive comparison, not confirmation or independent review. Historical plans and failures remain unchanged.
 
 ## TLDR
