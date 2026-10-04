@@ -174,7 +174,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T02:45Z | holding build-v3-resample-control until dmarz/discussion-bench-v3 ships its v3 fixes (dmarz, 2026-10-04); nothing built yet |
+| dmarz/private-control |  |  |  |  |
 | dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:35Z | Shipped review repairs; 84 checks passed and 636 requests replayed; amended independent review pending |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
