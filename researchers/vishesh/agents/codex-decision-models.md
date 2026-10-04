@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
-tool: TODO claude-code | codex | cursor | other
+tool: codex
 state: working  # working | idle | blocked | done
-task: null
-doing: TODO one line
-updated: 2026-10-04T02:16Z
+task: decision-model-research
+doing: Publishing scored decision-model research area and source ledger
+updated: 2026-10-04T02:40Z
 ---
 
 ## Notes
