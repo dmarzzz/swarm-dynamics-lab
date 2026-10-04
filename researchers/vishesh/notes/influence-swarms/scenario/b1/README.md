@@ -1,5 +1,14 @@
 # B1: Does vendor recommendation framing propagate through peer advice?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-experiments; source `9f971305` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Unmeasured question: vendor recommendation framing changes unsupported mandatory clearance through peer discussion beyond private reconsideration. Basis: Offline cases, source-fit audit and12software tests support preparation only. No native B1 response, neutral competence or fresh replication exists. Six authored family blocks are not a sampled procurement population.
+- **sample_size_summary:** Observed B1 native outcomes:0. Planned6development roots and24evaluation variants within6authored families;2fresh repetitions per evaluation cell,2160maximum model calls.2160scripted rehearsal calls are software fixtures only.
+<!-- experiment-evidence:end -->
+
 **Offline packet prepared; no native result or paid launch.** [Prospective scientific plan](../scale-up/B1-SCIENTIFIC-BASELINE-PLAN.md), [source-fit and construction limitations](SOURCE-FIT.md), [dossiers](dossiers.json), [frozen scope](packet.json), [offline validation](offline-validation.json).
 
 This revision separates conditional advice from buying authority and gives each adviser the complete primary records. It compares four advisers plus chair with matched private reconsideration and a cheaper full-evidence analyst/self-check. The manipulation changes only the recommendation framing of a vendor page: facts, sources, publisher and topic coverage are identical. It does not test false facts, omission or a real vendor campaign.

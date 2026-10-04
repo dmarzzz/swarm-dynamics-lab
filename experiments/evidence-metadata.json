@@ -4172,6 +4172,32 @@
       "assessor": "dmarz/astra-ultra-review",
       "assessed_at": "2026-10-04",
       "source_commit": "8ab3e110433a2d53095b3efbe0ec0a82fdb2d366"
+    },
+    {
+      "id": "influence-b1-offline",
+      "title": "Influence B1: vendor recommendation framing",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/scenario/b1/README.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [],
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "source_commit": "9f97130598dcdcb77b0ad29148fc59e07bab8177",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Unmeasured question: vendor recommendation framing changes unsupported mandatory clearance through peer discussion beyond private reconsideration.",
+        "rationale": "Offline cases, source-fit audit and12software tests support preparation only. No native B1 response, neutral competence or fresh replication exists. Six authored family blocks are not a sampled procurement population."
+      },
+      "sample_size_summary": "Observed B1 native outcomes:0. Planned6development roots and24evaluation variants within6authored families;2fresh repetitions per evaluation cell,2160maximum model calls.2160scripted rehearsal calls are software fixtures only.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/scenario/b1/packet.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/b1/offline-validation.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/b1/SOURCE-FIT.md"
+      ],
+      "status_at_assessment": "offline_prepared_not_funded_not_launched"
     }
   ],
   "source_sha256": {
