@@ -42,6 +42,6 @@ class Tests(unittest.TestCase):
      p=json.loads(body['messages'][1]['content']);r=self.response();r['choices'][0]['message']['content']=json.dumps(dict(p=exact(p) if qualified else .5));out.append(r)
     return out
    c=dict(manifest=str(m),ledger=str(self.b/('ledger'+str(qualified))),predecessor=str(self.prior),output=str(self.b/('out'+str(qualified))),source_commit='fixture',decision='PI-FUND-20261004-02')
-   with patch.object(runner,'Admission',AdmissionStub):result=runner.run(c,transport,lambda *args:{},lambda *args:None)
+   with patch.object(runner,'Admission',AdmissionStub),patch.object(runner,'write',lambda *args:None):result=runner.run(c,transport,lambda *args:{},lambda *args:None)
    self.assertEqual(count[0],800 if qualified else 32);self.assertEqual(result['qualification']['qualification_passed'],qualified);self.assertEqual(result['analysis']['primary'],0 if qualified else None)
 if __name__=='__main__':unittest.main()
