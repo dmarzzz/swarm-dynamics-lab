@@ -1,16 +1,20 @@
 {
   "kind": "software_fixture_validation_not_native_evidence",
-  "unit_tests_passed": 9,
+  "unit_tests_passed": 11,
   "source_file_hashes": {
-    "freshness-study/freshness.py": "e67e710d9a18ac4099cbbfa76565c16559bed00f97b693675939f70e8b23ebcf",
-    "freshness-study/README.md": "dddbad2ffde3d43502a764672aff758ff23c5e3a61587830c44a2d5125cd2aeb",
+    "freshness-study/freshness.py": "7cbea369fb6e1e2652eb0f418a9a77db070d6f31c7f7ce75ebbd72c4541b2533",
+    "freshness-study/README.md": "7ceaaf92629b847edd7f254fcc2d5f3509503248598d629d0e032f43abbb9428",
     "freshness-study/render.py": "53502d9faed207cbc3d926140ffa78527f8636cc792d2f99efc985386c0531f8",
     "freshness-study/worker.py": "d001cf0835eddefa5ca50c3b5466d7011d72a5443e3ba9461c7c45e91c9692a3",
+    "freshness-study/trace_provider.py": "b1077eecdf193561238afaec7fb1ea9499cfa7d6e215f83f77d8e4aec8f35fa6",
+    "freshness-study/launch.py": "a44f30676151bcee89d44f2f810876c1a000b5ea59fb0fe207f36a0884882dbd",
+    "freshness-study/model-config.json": "9aa4854f0650b97962c4c8bc23f51f88791d56eef6225a27140e395df75ba96e",
+    "freshness-study/audit.py": "42d22da1f96ab4de2557d75b46b2f7e57beea42e753eb2d7312dde5ca175dbfe",
     "evidence-study/durable_provider.py": "294aa080a5f0f1b756a602aa3851ca32dfb8d213f98d12e2bdcda55326cfa261",
     "scenario-study/study.py": "a2556967df07da7800996a5577b9771520ebba991b0f31186cfa6eed9b141083",
     "src/provider.py": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f"
   },
-  "source_commit": "0cf8577c8d3a86b696dafc83abcab336ca23cd63",
+  "source_commit": "d6a3ce790a1eefee40d80b12b5922bc8b2ee0f53",
   "audit": {
     "assigned": 12,
     "recorded": 12,
@@ -30,5 +34,10 @@
     }
   },
   "reference_qualification_passed": true,
-  "native_calls": 0
+  "native_calls": 0,
+  "trace_fault_checks": [
+    "malformed_action_retained_before_parse",
+    "refusal_stop_reason_retained",
+    "secret_and_headers_excluded"
+  ]
 }
