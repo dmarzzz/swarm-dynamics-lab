@@ -21,7 +21,7 @@ Coordinate direct execution of existing admitted study scopes, revise stopped de
 
 ## Done when
 
-- [ ] Record direct-launch authority without exposing owner prompts or private resources.
-- [ ] Incorporate Dmarz trace-review lessons in the shared workflow.
-- [ ] Obtain evidence-based Quorum and Phantom revisions.
+- [x] Record direct-launch authority without exposing owner prompts or private resources.
+- [x] Incorporate Dmarz trace-review lessons in the shared workflow.
+- [x] Obtain evidence-based Quorum and Phantom revisions.
 - [ ] Reconcile actual launch/results or remaining admission blockers for eight prepared scopes.

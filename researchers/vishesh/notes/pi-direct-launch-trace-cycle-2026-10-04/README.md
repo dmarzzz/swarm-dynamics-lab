@@ -6,7 +6,7 @@
 
 - The exact scope is recorded in [AGENTS.md](../../../../AGENTS.md#direct-execution-for-the-current-vishesh-study-cycle). Each owning task is the sole dispatcher; old central requests are fenced first.
 - [Native trace review](../../../../tooling/agent-experiments/RUN-REVIEW.md#review-the-native-traces-before-choosing-a-repair), the quality rubric and post-mortem template now require trace coverage, every qualification miss, the first observable divergence, competing explanations and a discriminating repair. No universal new logger/service was imposed.
-- Quorum and Phantom are auditing actual saved records and preparing concrete scenario/design revisions. Existing negative findings and scientific stops are preserved until that work identifies a useful next decision.
+- Quorum and Phantom completed saved-record audits and implemented concrete scenario/baseline revisions. Neither revision yet establishes a useful role for another native model run.
 
 ## Verified source updates
 
@@ -21,11 +21,40 @@ Private operator-session transcript collection is a separate workflow. It is not
 
 ## Current coordination
 
-Antsy holds a dedicated allocation; Poietic is sequenced after its verified release because its bounded renewal retains the original-host constraint. Fresh capacity checks report the approved account at its current droplet quota. Other studies must verify eligible existing allocations or wait for capacity; do not create a resource on a different account or delete somebody else's worker. This is an operational snapshot, not admission evidence. Final native outcomes and design revisions will be added after their owning tasks report.
+Direct dispatch has been exercised. Four attempts reached native execution and stopped; none established scientific qualification. Released machines are being assigned sequentially to the remaining studies. The approved account is at its current droplet quota, so a working credential alone cannot create another machine. No other researcher's claim was released or worker deleted to make room.
+
+Snapshot: **2026-10-04 16:55 UTC**. Counts below are observed, not planned. See [structured status](status.json) for provenance and source-file hashes; an operational report can be newer than its published scientific review.
+
+| Study | Execution / sample observed | Assessment | Next action |
+|---|---|---|---|
+| Antsy | 5 valid OCR outputs, 1 timeout, 34 unstarted; 2 complete pairs | Qualification incomplete; no correction-benefit estimate | Offline timing/timeout trace repair and a concrete latency diagnostic plan |
+| Theseus | 1 HTTP429, 203 unstarted; no valid learner or executor outcome | Transport failure; cause unresolved | Finish closeout; retain unresolved reservation and repair error observability |
+| Influence | 24 failed logical requests / 48 transport attempts; no returned answers | Transport failure; exact codes lost | Offline error retention and circuit-breaker proposal; no repeat attempt |
+| Poietic | 1 returned answer rejected by parser, 143 unstarted | Action-contract failure before environment execution | Compare rendered contract with returned structure; offline parser/prompt repair |
+| Healing | No new calls; exclusively allocated | Preparing qualification | Verify runtime, plan and original ledger, then run the admitted stage |
+| Immune | No new calls; exclusively allocated | Preparing qualification | Verify runtime, plan and original ledger; stop at first transport failure |
+| Right Dissenter | No RD5 calls; transport-helper repair in progress | Waiting on an eligible released allocation | Test helper, admit Q5; H5 remains conditional |
+| Optimal Size | No Q-A7 calls or claim; ledger-transfer rehearsal passed | Capacity wait plus recent direct-provider failures | Use existing run evidence to assess route; no separate paid health probe |
+| Quorum | 48 retained valid historical answers; all 11 graded misses inspected | Old context comparison confounded; simple control solves development set | Acquire a defensible residual task before proposing native evaluation |
+| Phantom | 140 retained request/output pairs; 6 manually inspected S1 cases | Revised decision problem solved by exact Bayes | Define an application-specific model role before spending |
+
+Execution failures are not adverse scientific effects. A failed qualification does not demonstrate that a swarm idea is false, and a completed post-mortem does not turn it into a successful experiment.
+
+### What the new traces change
+
+| Observation | Supported repair | Unsupported inference |
+|---|---|---|
+| Antsy's larger third image timed out; phase timing and timeout streams were absent | Retain phases and timeout diagnostics; specify cold versus persistent-worker timing | Larger images are proven to cause the timeout; a longer limit will fix it |
+| Theseus returned HTTP429; Influence retained only `PolicyError` across failed transport attempts | Preserve allowlisted status/category/retry metadata and stop futile dispatch sooner in a prospective version | Billing exhaustion is proven; all failures had the same code |
+| Poietic got HTTP200 through OpenRouter, then failed strict parsing | Audit formatting and action-schema errors separately using the saved answer | Direct Anthropic has recovered; stripping fences alone makes the action valid |
+| Quorum changed schema, order and instructions alongside context | Separate those interventions in any future comparison | Context or priors alone caused the observed accuracy drop |
+| Phantom's exact controller solves the specified contract | Strengthen the task's application rationale and comparator | More model calls will establish a useful model contribution |
+
+Changing a model, timeout, parser tolerance, prompt, stopping rule or sample produces a new execution contract. Prepare and validate that change offline first, retain the failed cohort, and seek the applicable next-run decision rather than silently restarting it. Original ledgers retain uncertain costs even when no usage receipt was returned.
 
 ## Trace-grounded revisions delivered
 
 - [Quorum](../decision-models/quorum-of-mirrors/trace-review/RESULTS.md): full historical denominator and all graded misses reviewed; schema/instruction/order changes confound the old context comparison.24development bundles now test source resolution/common causes against four deterministic controls. Strongest template-tuned control solves the development set; an independently sourced residual task is still missing. Nine checks rerun here.
 - [Phantom](../phantom-coast/pc7/README.md):140retained pairs reconcile, with missing raw-body/confidence fields disclosed and manual inspection coverage explicitly bounded. New finite-history/shift model and information-value controller are implemented offline; exhaustive policy enumeration agrees. Eight checks and full portable readback rerun here. A native model role beyond exact Bayes is still unjustified.
 
-These are implemented scenario/baseline improvements and revised conditional plans, not additional model outcomes. [In-progress operational snapshot](status.json) separates workers, actual requests, failures and admission waits. Theseus has reached the provider and stopped on its first HTTP429: no valid acquisition response, no retry; closeout underway. Antsy is running its boundedQ0. A receiver alone is not a scientific run or evidence that a model request was sent.
+These are implemented scenario/baseline improvements and revised conditional plans, not additional model outcomes. Antsy's [native post-mortem](../antsy-targeted-v8/reviews/Q0-attempt-1-post.md) and full assignment audit have also been inspected. The other new failed attempts remain pending scientific closeout at this snapshot. A receiver, claim or successful credential handoff alone is not evidence that a model request was sent.

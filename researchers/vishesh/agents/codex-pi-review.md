@@ -3,10 +3,10 @@ agent: vishesh/codex-pi-review
 tool: codex
 state: working
 task: pi-direct-launch-trace-cycle-2026-10-04
-doing: Coordinating owner-authorized direct launches, native trace audits and concrete Quorum/Phantom revisions.
-updated: 2026-10-04T16:33Z
+doing: Reconciling four native failures, remaining direct launches and trace-grounded offline repairs; central wait removed.
+updated: 2026-10-04T16:56Z
 ---
 
 ## Notes
 
-No new run or allocation is authorized by this documentation integration.
+Owner-authorized direct scopes are recorded in AGENTS.md. This coordination record is not an admission receipt or a new budget allowance.
