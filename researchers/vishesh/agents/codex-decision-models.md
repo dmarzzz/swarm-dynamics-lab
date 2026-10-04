@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: idle
-task: ""
-doing: "RD6 Q0-A1 zero-dispatch closeout and 88-check repair published; no allocation held, explicit replacement decision pending."
-updated: 2026-10-04T19:46:09.494777+00:00
+state: working
+task: right-dissenter-rd6-zero-start-replacement
+doing: "Admitting directly owner-approved RD6 Q0-A2 zero-dispatch replacement within original window and cumulative caps."
+updated: 2026-10-04T19:49:11.706268+00:00
 ---
 
 ## Notes
