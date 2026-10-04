@@ -270,7 +270,7 @@
 | [sattari-2022-modes](papers/sattari-2022-modes.md) | Modes of information flow in collective cohesion | 2022 | 5 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
 | [sayin-2025-behavioral](papers/sayin-2025-behavioral.md) | The behavioral mechanisms governing collective motion in swarming locusts | 2025 | 5 | full | collective-motion, collective-decision | dmarz/collective-motion |
 | [schneider-2005-implementing](papers/schneider-2005-implementing.md) | Implementing Trustworthy Services Using Replicated State Machines | 2005 | 5 | full | fork-merge-security, sync-consensus, sybil-resistance | dmarz/fm-mobile-agents |
-| [seeley-2012-stop](papers/seeley-2012-stop.md) | Stop Signals Provide Cross Inhibition in Collective Decision-Making by Honeybee Swarms | 2012 | 5 | abstract | collective-decision, swarm-intelligence | dmarz/collective-decision |
+| [seeley-2012-stop](papers/seeley-2012-stop.md) | Stop Signals Provide Cross Inhibition in Collective Decision-Making by Honeybee Swarms | 2012 | 5 | abstract | dissent, collective-decision, swarm-intelligence | dmarz/collective-decision |
 | [seiden-2026-identifying](papers/seiden-2026-identifying.md) | Identifying AI Web Scrapers Using Canary Tokens | 2026 | 5 | full | swarm-detection, llm-agent-swarms | dmarz/sd-honeypots |
 | [sepulchre-2007-stabilization](papers/sepulchre-2007-stabilization.md) | Stabilization of Planar Collective Motion: All-to-All Communication | 2007 | 5 | abstract | sync-consensus, collective-motion, swarm-robotics | dmarz/sync-consensus |
 | [shalizi-2011-homophily](papers/shalizi-2011-homophily.md) | Homophily and Contagion Are Generically Confounded in Observational Social Network Studies | 2011 | 5 | skim | swarm-detection, llm-agent-swarms, criticality-measurement | dmarz/preflight |
@@ -1418,7 +1418,7 @@
 | [hanff-2025-security](papers/hanff-2025-security.md) | Security Analysis of Privately Verifiable Privacy Pass | 2025 | 3 | abstract | sybil-resistance | shadow/sol-w5 |
 | [hans-2024-spotting](papers/hans-2024-spotting.md) | Spotting LLMs With Binoculars: Zero-Shot Detection of Machine-Generated Text | 2024 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [harrison-1995-mobile](papers/harrison-1995-mobile.md) | Mobile Agents: Are they a good idea? | 1995 | 3 | skim | fork-merge-security | dmarz/fm-mobile-agents |
-| [he-2026-minority](papers/he-2026-minority.md) | Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates | 2026 | 3 | abstract | llm-agent-swarms | shadow/sol-1 |
+| [he-2026-minority](papers/he-2026-minority.md) | Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates | 2026 | 3 | abstract | dissent, llm-agent-swarms | shadow/sol-1 |
 | [he-2026-visa](papers/he-2026-visa.md) | VISA: A Structured Description Protocol for Agent-Based Simulation Models Towards Machine Reproducibility | 2026 | 3 | abstract | meta | dmarz/sim-envs |
 | [helbing-2012-crowd](papers/helbing-2012-crowd.md) | Crowd disasters as systemic failures: analysis of the Love Parade disaster | 2012 | 3 | abstract | crowds-and-traffic | dmarz/crowds-and-traffic |
 | [hepworth-2022-swarm](papers/hepworth-2022-swarm.md) | Swarm analytics: Designing information markers to characterise swarm systems in shepherding contexts | 2022 | 3 | abstract | criticality-measurement, swarm-robotics | dmarz/criticality-measurement |

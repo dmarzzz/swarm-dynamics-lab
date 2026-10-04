@@ -22,7 +22,7 @@
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
 | agent-budgets | 53 | 2 | 7 | 0 | 0 | 0 | 62 |
 | decision-models | 9 | 3 | 4 | 2 | 0 | 0 | 18 |
-| dissent | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| dissent | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 
 ## Tasks
 
@@ -40,7 +40,7 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T03:11Z | Ship the compositional safety benchmark and qualification |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:11Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
-| [heterogeneous-biological-frontiers](tasks/heterogeneous-biological-frontiers.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:47Z | Biological frontiers for heterogeneous swarms grounded in X discussions |
+| [heterogeneous-biological-frontiers](tasks/heterogeneous-biological-frontiers.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T03:13Z | Biological frontiers for heterogeneous swarms grounded in X discussions |
 | [right-dissenter-design-build](tasks/right-dissenter-design-build.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T02:58Z | Build the Right Dissenter exploratory design and scenario harness |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:11Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -60,6 +60,7 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T02:51Z | Run the revised procurement influence experiment |
+| [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | open | p1 | review |  | shadow |  | Review Right Dissenter RD-1 design and offline prototype |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -187,11 +188,11 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
+| vishesh/codex-decision-models | done | right-dissenter-design-build | 2026-10-04T03:13:14Z | Completed RD-1 design, multi-area tags, offline prototype, replay and handoffs; native launch gated |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T03:12Z | Qualifying bounded-reasoning Sonnet V5; all earlier failures retained, main cohort unopened. |
 | vishesh/codex-theseus | done | theseus-social-grounding | 2026-10-04T03:06Z | X-source grounding complete; scenario priorities revised with source-access caveats |
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T03:05Z | resample-v3-a1 running on sim-dmarz-5 (hub discussion-v3-resample/1004-030243-d6fa86), launched at 658a81a under review waiver |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
-| vishesh/codex-decision-models | working | right-dissenter-design-build | 2026-10-04T03:00:17Z | Building the dissent area, planned scenario harness and replay |
 | dmarz/discussion-bench-v3 | idle |  | 2026-10-04T02:58Z | v3-q0-a1 launched on sim-discussion-v3; bounded worker running, results and independent review pending |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:56Z | Identity scaling S1 collecting2400 API answers; scripted264/264 and clean qualification64/64 passed; preparing independent reconciliation and figures |
