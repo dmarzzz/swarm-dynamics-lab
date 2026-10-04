@@ -36,3 +36,14 @@ class Grounding(unittest.TestCase):
      replay=f.step(fixture,state,x['action'])
      for key,value in replay.items():self.assertEqual(x[key],value)
 if __name__=='__main__':unittest.main()
+
+class NativeAdmission(unittest.TestCase):
+ def test_no_admission_no_native_output_or_call(self):
+  from unittest.mock import patch
+  with tempfile.TemporaryDirectory() as td,patch.dict('os.environ',{},clear=True):
+   out=Path(td)/'out'
+   with self.assertRaises(KeyError):study.execute(out,'openrouter')
+   self.assertFalse(out.exists())
+ def test_worker_import_in_fresh_process(self):
+  import subprocess,sys
+  r=subprocess.run([sys.executable,'-c','import grounded_worker'],cwd=study.BASE,capture_output=True);self.assertEqual(r.returncode,0)
