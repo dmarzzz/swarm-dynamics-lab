@@ -48,7 +48,6 @@
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T08:38Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc4-live](tasks/phantom-coast-pc4-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:37Z | Critique and run Phantom Coast PC-4 source verification |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T08:29Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
-| [quorum-mirrors-d1-design](tasks/quorum-mirrors-d1-design.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T08:32Z | Review Quorum Q1 failure and prepare a controlled D1 diagnostic |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T08:39Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -189,6 +188,7 @@
 | [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:00Z | Plan the next discussion benchmark diagnostic and offline orchestration |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | done | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:35Z | Design Poietic Agents from the self-differentiating swarm research |
 | [publish-pi-review-2026-10-04](tasks/publish-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:50Z | Publish the PI project review and agent lifecycle guidance |
+| [quorum-mirrors-d1-design](tasks/quorum-mirrors-d1-design.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T08:45Z | Review Quorum Q1 failure and prepare a controlled D1 diagnostic |
 | [quorum-mirrors-design-v2](tasks/quorum-mirrors-design-v2.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:45Z | Refine Quorum of Mirrors design and offline contracts |
 | [quorum-mirrors-iteration-3](tasks/quorum-mirrors-iteration-3.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:28Z | Clarify Quorum utility and prepare a controlled successor |
 | [quorum-mirrors-q1-interface-repair](tasks/quorum-mirrors-q1-interface-repair.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T08:03Z | Preserve rejected-response usage and reconcile Q1 output-token contract |
