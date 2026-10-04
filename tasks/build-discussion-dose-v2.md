@@ -3,7 +3,7 @@ id: build-discussion-dose-v2
 type: task
 title: Build the harder contested-evidence version of discussion-dose (v2), ready to roll out
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/discussion-dose
 for: dmarz
@@ -12,7 +12,9 @@ created_by: dmarz/discussion-dose
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T00:33Z
-updated: 2026-10-04T00:33Z
+updated: 2026-10-04T00:38Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/V2-DESIGN.md
 ---
 
 ## Goal
