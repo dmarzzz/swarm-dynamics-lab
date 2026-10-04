@@ -86,6 +86,13 @@ class Anthropic:
                 if isinstance(details.get(key), str): acc['stop_'+key] = details[key][:160]
         if actual > reserve: raise CallFailure('reservation_bound_breached', acc)
         content = data.get('content', [])
+        acc['content_types'] = [c.get('type') if isinstance(c,dict) else 'invalid_block' for c in content] if isinstance(content,list) else []
+        # A refusal can contain no text or partial text. Retain its category and
+        # accounting before shape validation; never interpret it as an action.
+        if data.get('stop_reason') == 'refusal':
+            texts = [c.get('text','') for c in content if isinstance(c,dict) and c.get('type')=='text'] if isinstance(content,list) else []
+            acc['response_text'] = '\n'.join(t for t in texts if isinstance(t,str))[:8192]
+            raise CallFailure('provider_refusal', acc)
         if not isinstance(content, list) or len(content) != 1 or not isinstance(content[0],dict) or content[0].get('type') != 'text': raise CallFailure('unexpected_content', acc)
         acc['response_text'] = str(content[0].get('text', ''))[:8192]
         if data.get('model') != self.d['model']: raise CallFailure('model_mismatch', acc)

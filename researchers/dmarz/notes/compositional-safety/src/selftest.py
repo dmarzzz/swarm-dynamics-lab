@@ -183,6 +183,22 @@ class Accounting(unittest.TestCase):
             self.assertEqual(l.transact()['usage_reported_calls'],2)
             self.assertAlmostEqual(l.transact()['actual_usd'],.0006)
 
+    def test_empty_refusal_retains_category_and_cost(self):
+        def response(*args,**kwargs):
+            return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='refusal',
+                stop_details=dict(type='refusal',category='bio'),content=[],
+                usage=dict(input_tokens=100,output_tokens=0))).encode())
+        with tempfile.TemporaryDirectory() as td:
+            ledger=Ledger(Path(td)/'ledger.jsonl')
+            adapter=Anthropic(ledger,opener=response,key='fake',workspace='fake')
+            with self.assertRaises(CallFailure) as caught:adapter.call({'actions':['wait']},'refused')
+            self.assertEqual(caught.exception.category,'provider_refusal')
+            self.assertEqual(caught.exception.accounting['stop_category'],'bio')
+            self.assertEqual(caught.exception.accounting['content_types'],[])
+            self.assertEqual(ledger.transact()['attempted_calls'],1)
+            self.assertEqual(ledger.transact()['usage_reported_calls'],1)
+            self.assertGreater(ledger.transact()['actual_usd'],0)
+
     def test_transport_failure_consumes_reservation(self):
         def fail(*args,**kwargs): raise OSError('sensitive text must not leak')
         with tempfile.TemporaryDirectory() as td:
