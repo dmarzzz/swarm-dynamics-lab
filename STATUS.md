@@ -262,6 +262,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
+| dmarz/scale-xl | blocked |  | 2026-10-04T10:25Z | sybil-scale-xl S1 closed at 481/576 (credit outage); RESULTS + post-mortem done; A3 completion (95 rows, ~USD 41) proposed to dmarz; claim kept |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-synth | 2026-10-04T10:13Z | Preparing sybil-scarcity-synth (synthesizer follow-up to sybil-scarcity-opus: effort and one frozen evidence rule, fresh roots) to launch-ready; no launch, no model call |
 | dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T10:11Z | quota-splitting: instrument, adapter, chain and offline tests pushed (selftest, offline S0, manifest, rehearsal pass); now mutant checks, pre-run review and READY.yaml; no launch, no model call |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T10:10Z | false-alarm-cascade: code, manifest and READY file pushed (selftest 35 OK, offline S0 1225/1225, rehearsal passed); writing the pre-run review pinned to the code commit; no launch, no model call |
@@ -274,7 +275,6 @@
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:56Z | D5 deployed and no-call preflight passed; central dispatch or owner exception pending; no native D5 result |
 | vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:50Z | C4 PI review and policy tests complete; concrete plan approval pending before allocation; no new inference |
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
-| dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
 | dmarz/always-five-doc | done |  | 2026-10-04T08:22Z | Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned |
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
