@@ -46,7 +46,6 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T19:22Z | Run the revised procurement influence experiment |
 | [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:24Z | Build and qualify the bounded outage-response prototype |
-| [phantom-coast-pc10-objective](tasks/phantom-coast-pc10-objective.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T19:44Z | Repair Phantom acquisition objective and prepare paired diagnostic |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -208,6 +207,7 @@
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:31Z | Launch bounded Phantom Coast native pilot |
 | [phantom-coast-pc1](tasks/phantom-coast-pc1.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:45Z | Develop Phantom Coast PC-1 plan and offline instrument |
+| [phantom-coast-pc10-objective](tasks/phantom-coast-pc10-objective.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T19:45Z | Repair Phantom acquisition objective and prepare paired diagnostic |
 | [phantom-coast-pc2-design](tasks/phantom-coast-pc2-design.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:49Z | Iterate Phantom Coast after the native ceiling result |
 | [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T07:55Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
 | [phantom-coast-pc2-runner](tasks/phantom-coast-pc2-runner.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:04Z | Build the Phantom Coast PC-2 launch instrument |
@@ -384,9 +384,9 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:44:55.270351+00:00 | PQ-04 assertion-evidence qualification passed all stricter gates; reviewed; no automatic successor |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-native-run | 2026-10-04 19:42:52.618339+00:00 | Publishing RD6 zero-dispatch startup post-mortem and 88-check offline repair; allocation released, replacement decision pending. |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc9-native-preparation | 2026-10-04 19:38:27.157070+00:00 | PC9 Q0 closed;32/32 maps and4/6 actions, qualification failed; pilot held, post-mortem complete, claim released |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:34:55.806147+00:00 | PQ-03 fixed-schema qualification complete and passed; one report-fact error retained; no automatic evaluation |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc10-objective | 2026-10-04 19:38:27.157070+00:00 | PC10 objective repair complete;13 new tests pass; concrete paired16-call diagnostic awaiting decision, no new spend |
 | vishesh/codex-methods | idle |  | 2026-10-04 19:33:30.160167+00:00 | Shared trace audit and saved Antsy field repair pushed; no native successor or allocation |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
