@@ -1,0 +1,42 @@
+{
+  "source_sha256": {
+    "PLAN.md": "c9dcb2e8087cf7f143a3cb171ebd9ce24590d078b8253390dbe465a369e026f4",
+    "contract.py": "2e40b0a4b9adaceb7de9eafc2bccfeb403d0ecfbbb34a032e010ebc871e192c5",
+    "runtime.py": "7ee1e382160e93aea62c0d2d65523a5ae549f61337bc95e6cd73ebba97be33ec",
+    "manifest.json": "b4d3732c0289f69c0541c656b9a24d2f12d8569b1a018fcc28abb5f1a187bf86",
+    "cases.py": "33c8884144569bad9623dc756fd1fb2db1a95bc7d59394a29164f263d9163547",
+    "baseline.py": "961159c7675a6069119bde671ab81a3e3a270a00350ee38604129f4746a60c55",
+    "qualification-seal.json": "236ff97c4eb30acffd9df782e4eb9a91c9b70e458155ced296f0016cf0dd8486",
+    "AUTHORIZATION.json": "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d",
+    "../../next_runtime.py": "b68a30faac82dbae25237aa15119fb2764a6481a889d9e9068d566d7f33f8180",
+    "../../qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "../../next_stage.py": "c1958b62d28175288fdc684f1747d788467071268c0505a8ac7ae1378cb1279b",
+    "../../reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "../../public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "manifest_sha256": "9d90cf34c794b8dd91692571c7fc06b8558eabfdc43241afed8dfe9d82141695",
+  "public_plan": {
+    "experiment": "quorum-of-mirrors",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f091bc486efea93f8a7c43340181ee82f77cde1c/researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/native-v2/PLAN.md",
+    "commit": "f091bc486efea93f8a7c43340181ee82f77cde1c",
+    "plan_sha256": "c9dcb2e8087cf7f143a3cb171ebd9ce24590d078b8253390dbe465a369e026f4",
+    "registered_tldr": "TLDR: QM-PQ-02 qualifies explicit source/report fact extraction with deterministic supported/contradicted/not-established comparison on24 synthetic packets:12 roots, one/three contradiction copies. Compare to typed truth and strong parser; exact fidelity, facts, quotes, decision and cost. No swarm-efficacy claim or evaluation.",
+    "run_tldr": "TLDR: QM-PQ-02 qualifies explicit source/report fact extraction with deterministic supported/contradicted/not-established comparison on24 synthetic packets:12 roots, one/three contradiction copies. Compare to typed truth and strong parser; exact fidelity, facts, quotes, decision and cost. No swarm-efficacy claim or evaluation.",
+    "checked_utc": "2026-10-04T19:19:14.997107+00:00"
+  },
+  "route": {
+    "model": "anthropic/claude-sonnet-4.6",
+    "provider": "Anthropic",
+    "snapshot": "20260217",
+    "pricing_verified": true,
+    "checked_at": 1791141555.0429676
+  },
+  "budget": {
+    "calls": 73,
+    "reserved_usd": 0.785856,
+    "uncertain": 0
+  },
+  "checked_at": 1791141553.4083745,
+  "host": "sim-dmarz-7",
+  "claim_id": "vishesh-quorum-pq-02"
+}

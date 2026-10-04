@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-01-post.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:45:17.311481+00:00",
-      "checked_commit": "3acd305397863b49ce21f437d042fee40026a5f5",
-      "next_action": "HOLD evaluation: PQ-01 fully traced/closed, decisions24/24 correct but fidelity11/24 failed gate. Read PQ-01-post.md and fidelity-analysis.json. Possible offline explicit semantic-value comparison repair; no automatic native retry, evaluation or budget reset. Worker stopped and claim released.",
+      "checked_at": "2026-10-04T19:22:58.628207+00:00",
+      "checked_commit": "f091bc486efea93f8a7c43340181ee82f77cde1c",
+      "next_action": "HOLD native: PQ-02 stopped HTTP400 on2nd call;1 correct valid,22 unstarted. Read PQ-02-post.md. Safe telemetry patch prepared; constant-size fact schema needs new frozen admission. No auto retry or evaluation. Original75call ledger andUSD2 owner extension retained; worker exited and claim released.",
       "next_run_approval": "owner"
     },
     {

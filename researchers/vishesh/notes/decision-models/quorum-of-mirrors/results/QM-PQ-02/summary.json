@@ -1,0 +1,26 @@
+{
+  "assigned": 24,
+  "started": 2,
+  "valid": 1,
+  "unstarted": 22,
+  "known_actual_usd": 0.012552,
+  "source_facts_correct": 3,
+  "report_facts_correct": 4,
+  "reports_total": 4,
+  "labels_correct": 1,
+  "quotes_valid": 1,
+  "decision_correct": 1,
+  "source_votes_correct": 3,
+  "false_contradictions": 0,
+  "missed_contradictions": 0,
+  "unknown_errors": 0,
+  "confusion": {
+    "SUPPORTED->SUPPORTED": 2,
+    "CONTRADICTED->CONTRADICTED": 1,
+    "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+  },
+  "qualified": false,
+  "attempt": "QM-PQ-02",
+  "stop_reason": "http_400",
+  "execution_complete": false
+}

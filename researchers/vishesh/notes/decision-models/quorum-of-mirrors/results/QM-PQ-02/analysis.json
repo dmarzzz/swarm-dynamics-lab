@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "assigned": 24,
+    "started": 2,
+    "valid": 1,
+    "unstarted": 22,
+    "known_actual_usd": 0.012552,
+    "source_facts_correct": 3,
+    "report_facts_correct": 4,
+    "reports_total": 4,
+    "labels_correct": 1,
+    "quotes_valid": 1,
+    "decision_correct": 1,
+    "source_votes_correct": 3,
+    "false_contradictions": 0,
+    "missed_contradictions": 0,
+    "unknown_errors": 0,
+    "confusion": {
+      "SUPPORTED->SUPPORTED": 2,
+      "CONTRADICTED->CONTRADICTED": 1,
+      "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+    },
+    "qualified": false
+  },
+  "families": {
+    "time": {
+      "assigned": 4,
+      "valid": 1,
+      "exact_labels": 1,
+      "decisions": 1
+    },
+    "polarity": {
+      "assigned": 4,
+      "valid": 0,
+      "exact_labels": 0,
+      "decisions": 0
+    },
+    "entity": {
+      "assigned": 4,
+      "valid": 0,
+      "exact_labels": 0,
+      "decisions": 0
+    },
+    "units": {
+      "assigned": 4,
+      "valid": 0,
+      "exact_labels": 0,
+      "decisions": 0
+    },
+    "modality": {
+      "assigned": 4,
+      "valid": 0,
+      "exact_labels": 0,
+      "decisions": 0
+    },
+    "correction": {
+      "assigned": 4,
+      "valid": 0,
+      "exact_labels": 0,
+      "decisions": 0
+    }
+  },
+  "pairs": [
+    {
+      "root": "069ecfb78944",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "2abce8c8f504",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "361d9d73b2ac",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "6416e2812e25",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "641808c92236",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "666e253a5887",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "935d703369cd",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "962625ad8f94",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "bd2e0945fcd2",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "f0111f772bb0",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "f3f62799ac2c",
+      "both_valid": false,
+      "invariant": null
+    },
+    {
+      "root": "fa4c0988aec8",
+      "both_valid": false,
+      "invariant": null
+    }
+  ],
+  "roots": 12,
+  "mechanisms": 6,
+  "all_assigned_replayed": true,
+  "native_miss_packets": 0
+}

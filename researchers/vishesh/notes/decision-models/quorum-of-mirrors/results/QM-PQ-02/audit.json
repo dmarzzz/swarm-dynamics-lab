@@ -1,0 +1,4668 @@
+[
+  {
+    "assignment": {
+      "id": "QM-PQ-02-000",
+      "case_id": "666e253a5887-1",
+      "root": "666e253a5887",
+      "family": "time",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "e2277fe64496e86a4093f51780c9bc7f1a354be2520adf352a92da05ecfdae5c",
+      "input_token_upper_bound": 6329,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; time, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "666e253a5887-1",
+      "root": "666e253a5887",
+      "family": "time",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-13306",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 08:00, device-13306 was running.\nAt 11:00, device-13306 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 08:00, device-13306 was running.\nAt 11:00, device-13306 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 08:00, device-13306 was stopped.\nAt 11:00, device-13306 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rb01963",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was stopped."
+          },
+          {
+            "id": "racacfc",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was not running."
+          },
+          {
+            "id": "re91f3f",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was running."
+          },
+          {
+            "id": "r67c0d5",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306-unseen was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "s1": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "s2": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was operating."
+          }
+        },
+        "reports": {
+          "rb01963": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was stopped."
+          },
+          "racacfc": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "re91f3f": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was running."
+          },
+          "r67c0d5": {
+            "entity": "device-13306-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306-unseen was stopped."
+          }
+        },
+        "labels": {
+          "rb01963": "SUPPORTED",
+          "racacfc": "SUPPORTED",
+          "re91f3f": "CONTRADICTED",
+          "r67c0d5": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-02-000",
+      "case_id": "666e253a5887-1",
+      "condition": {
+        "copies": 1
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":{\"s0\":{\"entity\":\"device-13306\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 11:00, device-13306 was not running.\"},\"s1\":{\"entity\":\"device-13306\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 11:00, device-13306 was not running.\"},\"s2\":{\"entity\":\"device-13306\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 11:00, device-13306 was operating.\"}},\"reports\":{\"rb01963\":{\"entity\":\"device-13306\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 11:00, device-13306 was stopped.\"},\"racacfc\":{\"entity\":\"device-13306\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 11:00, device-13306 was not running.\"},\"re91f3f\":{\"entity\":\"device-13306\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 11:00, device-13306 was running.\"},\"r67c0d5\":{\"entity\":\"device-13306-unseen\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 11:00, device-13306-unseen was stopped.\"}}}",
+      "usage": {
+        "prompt_tokens": 2404,
+        "completion_tokens": 356,
+        "total_tokens": 2760,
+        "cost": 0.012552
+      },
+      "generation_id": "gen-1791141555-TbDXVxflvLsCTDC6FbAX",
+      "parsed": {
+        "sources": {
+          "s0": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "s1": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "s2": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was operating."
+          }
+        },
+        "reports": {
+          "rb01963": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was stopped."
+          },
+          "racacfc": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "re91f3f": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was running."
+          },
+          "r67c0d5": {
+            "entity": "device-13306-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306-unseen was stopped."
+          }
+        }
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "rb01963": "SUPPORTED",
+          "racacfc": "SUPPORTED",
+          "re91f3f": "CONTRADICTED",
+          "r67c0d5": "NOT_ESTABLISHED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "decision": "ZERO",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "SUPPORTED->SUPPORTED": 2,
+          "CONTRADICTED->CONTRADICTED": 1,
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+        }
+      },
+      "wall_s": 14.06479287147522
+    },
+    "request": {
+      "id": "QM-PQ-02-000",
+      "case_id": "666e253a5887-1",
+      "dispatch_intent_at": 1791141555.1264377,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here states one observation. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.\",\"query\":{\"entity\":\"device-13306\",\"time\":\"11:00\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"At 08:00, device-13306 was running.\\nAt 11:00, device-13306 was not running.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 08:00, device-13306 was running.\\nAt 11:00, device-13306 was not running.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 08:00, device-13306 was stopped.\\nAt 11:00, device-13306 was operating.\"}],\"reports\":[{\"id\":\"rb01963\",\"source_id\":\"s0\",\"text\":\"At 11:00, device-13306 was stopped.\"},{\"id\":\"racacfc\",\"source_id\":\"s0\",\"text\":\"At 11:00, device-13306 was not running.\"},{\"id\":\"re91f3f\",\"source_id\":\"s0\",\"text\":\"At 11:00, device-13306 was running.\"},{\"id\":\"r67c0d5\",\"source_id\":\"s0\",\"text\":\"At 11:00, device-13306-unseen was stopped.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "object",
+                  "properties": {
+                    "s0": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "s1": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "s2": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "s0",
+                    "s1",
+                    "s2"
+                  ],
+                  "additionalProperties": false
+                },
+                "reports": {
+                  "type": "object",
+                  "properties": {
+                    "rb01963": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "racacfc": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "re91f3f": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "r67c0d5": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "rb01963",
+                    "racacfc",
+                    "re91f3f",
+                    "r67c0d5"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "e2277fe64496e86a4093f51780c9bc7f1a354be2520adf352a92da05ecfdae5c"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-001",
+      "case_id": "361d9d73b2ac-3",
+      "root": "361d9d73b2ac",
+      "family": "polarity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "0916a09ca2e81fa50b2b47caca145f75d285e1bfeab80a410ad2118672f41f62",
+      "input_token_upper_bound": 7147,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; polarity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "361d9d73b2ac-3",
+      "root": "361d9d73b2ac",
+      "family": "polarity",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-67602",
+          "time": "14:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 14:00, device-67602 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 14:00, device-67602 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 14:00, device-67602 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r5c1704",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was running."
+          },
+          {
+            "id": "r9ca2b5",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602-unseen was stopped."
+          },
+          {
+            "id": "r9bbdd1",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was not running."
+          },
+          {
+            "id": "rf79ce7",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was stopped."
+          },
+          {
+            "id": "r2ef26c",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was running."
+          },
+          {
+            "id": "rba39d4",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was not running."
+          },
+          "s1": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was not running."
+          },
+          "s2": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was operating."
+          }
+        },
+        "reports": {
+          "rf79ce7": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was stopped."
+          },
+          "r9bbdd1": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was not running."
+          },
+          "r5c1704": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was running."
+          },
+          "r2ef26c": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was running."
+          },
+          "rba39d4": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was running."
+          },
+          "r9ca2b5": {
+            "entity": "device-67602-unseen",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602-unseen was stopped."
+          }
+        },
+        "labels": {
+          "rf79ce7": "SUPPORTED",
+          "r9bbdd1": "SUPPORTED",
+          "r5c1704": "CONTRADICTED",
+          "r2ef26c": "CONTRADICTED",
+          "rba39d4": "CONTRADICTED",
+          "r9ca2b5": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-02-001",
+      "case_id": "361d9d73b2ac-3",
+      "condition": {
+        "copies": 3
+      },
+      "valid": false,
+      "error_class": "http_400",
+      "wall_s": 0.7018370628356934
+    },
+    "request": {
+      "id": "QM-PQ-02-001",
+      "case_id": "361d9d73b2ac-3",
+      "dispatch_intent_at": 1791141569.2235522,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here states one observation. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.\",\"query\":{\"entity\":\"device-67602\",\"time\":\"14:00\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"At 14:00, device-67602 was not running.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 14:00, device-67602 was not running.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 14:00, device-67602 was operating.\"}],\"reports\":[{\"id\":\"r5c1704\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-67602 was running.\"},{\"id\":\"r9ca2b5\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-67602-unseen was stopped.\"},{\"id\":\"r9bbdd1\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-67602 was not running.\"},{\"id\":\"rf79ce7\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-67602 was stopped.\"},{\"id\":\"r2ef26c\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-67602 was running.\"},{\"id\":\"rba39d4\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-67602 was running.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "object",
+                  "properties": {
+                    "s0": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "s1": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "s2": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "s0",
+                    "s1",
+                    "s2"
+                  ],
+                  "additionalProperties": false
+                },
+                "reports": {
+                  "type": "object",
+                  "properties": {
+                    "r5c1704": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "r9ca2b5": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "r9bbdd1": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "rf79ce7": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "r2ef26c": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "rba39d4": {
+                      "type": "object",
+                      "properties": {
+                        "entity": {
+                          "type": "string"
+                        },
+                        "time": {
+                          "type": "string"
+                        },
+                        "property": {
+                          "type": "string",
+                          "enum": [
+                            "mass_g",
+                            "running"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "observed",
+                            "unknown"
+                          ]
+                        },
+                        "quote": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "entity",
+                        "time",
+                        "property",
+                        "value",
+                        "status",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "r5c1704",
+                    "r9ca2b5",
+                    "r9bbdd1",
+                    "rf79ce7",
+                    "r2ef26c",
+                    "rba39d4"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "0916a09ca2e81fa50b2b47caca145f75d285e1bfeab80a410ad2118672f41f62"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-002",
+      "case_id": "935d703369cd-1",
+      "root": "935d703369cd",
+      "family": "entity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "23517ff129999833341d6461b7edf03e3092098478492db340655c2046c259d9",
+      "input_token_upper_bound": 6347,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; entity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "935d703369cd-1",
+      "root": "935d703369cd",
+      "family": "entity",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-18712",
+          "time": "12:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 12:00, device-18712-other was running.\nAt 12:00, device-18712 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 12:00, device-18712-other was running.\nAt 12:00, device-18712 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 12:00, device-18712-other was stopped.\nAt 12:00, device-18712 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r70da6a",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was running."
+          },
+          {
+            "id": "r9bdfea",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was stopped."
+          },
+          {
+            "id": "r907c59",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was not running."
+          },
+          {
+            "id": "r2ead8b",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712-unseen was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was not running."
+          },
+          "s1": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was not running."
+          },
+          "s2": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was operating."
+          }
+        },
+        "reports": {
+          "r9bdfea": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was stopped."
+          },
+          "r907c59": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was not running."
+          },
+          "r70da6a": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was running."
+          },
+          "r2ead8b": {
+            "entity": "device-18712-unseen",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r9bdfea": "SUPPORTED",
+          "r907c59": "SUPPORTED",
+          "r70da6a": "CONTRADICTED",
+          "r2ead8b": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-003",
+      "case_id": "f0111f772bb0-1",
+      "root": "f0111f772bb0",
+      "family": "units",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "03332f1a98c9fadb49063de2e72647fa22bc01288f6329220126dc9d27197bed",
+      "input_token_upper_bound": 6263,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; units, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "f0111f772bb0-1",
+      "root": "f0111f772bb0",
+      "family": "units",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-40794",
+          "time": "17:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 17:00, device-40794 measured 7 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r9b7aae",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 4000 grams."
+          },
+          {
+            "id": "rc7c127",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794-unseen measured 3000 grams."
+          },
+          {
+            "id": "r54d7dc",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          {
+            "id": "r0a0bc3",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 3000 grams."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          "s1": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          "s2": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 7 kilograms."
+          }
+        },
+        "reports": {
+          "r0a0bc3": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3000 grams."
+          },
+          "r54d7dc": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          "r9b7aae": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 4000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 4000 grams."
+          },
+          "rc7c127": {
+            "entity": "device-40794-unseen",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794-unseen measured 3000 grams."
+          }
+        },
+        "labels": {
+          "r0a0bc3": "SUPPORTED",
+          "r54d7dc": "SUPPORTED",
+          "r9b7aae": "CONTRADICTED",
+          "rc7c127": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-004",
+      "case_id": "6416e2812e25-1",
+      "root": "6416e2812e25",
+      "family": "entity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "09c32ff01dd76a980024538c5ae8da4e0d49ca90f526f56dc63d1a257a063d4e",
+      "input_token_upper_bound": 6343,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; entity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "6416e2812e25-1",
+      "root": "6416e2812e25",
+      "family": "entity",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-82783",
+          "time": "13:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 13:00, device-82783-other was stopped.\nAt 13:00, device-82783 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 13:00, device-82783-other was stopped.\nAt 13:00, device-82783 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 13:00, device-82783-other was running.\nAt 13:00, device-82783 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r6bbbb7",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was stopped."
+          },
+          {
+            "id": "rd78eb9",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783-unseen was running."
+          },
+          {
+            "id": "rb99b58",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was running."
+          },
+          {
+            "id": "r07330c",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was operating."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was operating."
+          },
+          "s1": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was operating."
+          },
+          "s2": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was not running."
+          }
+        },
+        "reports": {
+          "rb99b58": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was running."
+          },
+          "r07330c": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was operating."
+          },
+          "r6bbbb7": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was stopped."
+          },
+          "rd78eb9": {
+            "entity": "device-82783-unseen",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783-unseen was running."
+          }
+        },
+        "labels": {
+          "rb99b58": "SUPPORTED",
+          "r07330c": "SUPPORTED",
+          "r6bbbb7": "CONTRADICTED",
+          "rd78eb9": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-005",
+      "case_id": "641808c92236-1",
+      "root": "641808c92236",
+      "family": "units",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "38b8cf6bc1d0fa99e0f89174ecff6287d16a4dcf39db8e3a66fe26cbb9ce0d12",
+      "input_token_upper_bound": 6263,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; units, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "641808c92236-1",
+      "root": "641808c92236",
+      "family": "units",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-23586",
+          "time": "10:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 10:00, device-23586 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rbd45e6",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 7000 grams."
+          },
+          {
+            "id": "ref77bb",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586-unseen measured 6000 grams."
+          },
+          {
+            "id": "r4ddbc8",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 6000 grams."
+          },
+          {
+            "id": "r331127",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 6 kilograms."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          "s1": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          "s2": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 2 kilograms."
+          }
+        },
+        "reports": {
+          "r4ddbc8": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6000 grams."
+          },
+          "r331127": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          "rbd45e6": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 7000 grams."
+          },
+          "ref77bb": {
+            "entity": "device-23586-unseen",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586-unseen measured 6000 grams."
+          }
+        },
+        "labels": {
+          "r4ddbc8": "SUPPORTED",
+          "r331127": "SUPPORTED",
+          "rbd45e6": "CONTRADICTED",
+          "ref77bb": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-006",
+      "case_id": "962625ad8f94-1",
+      "root": "962625ad8f94",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "7875b3373b121bca7cb29e8e3336ed51d3e962eaa21f40746210db71073b36a8",
+      "input_token_upper_bound": 6398,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; modality, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "962625ad8f94-1",
+      "root": "962625ad8f94",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-49010",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 11:00, device-49010 will be running.\nObservation: At 11:00, device-49010 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Plan: at 11:00, device-49010 will be running.\nObservation: At 11:00, device-49010 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Plan: at 11:00, device-49010 will be stopped.\nObservation: At 11:00, device-49010 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r2942f8",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was stopped."
+          },
+          {
+            "id": "rc236ff",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was running."
+          },
+          {
+            "id": "r452609",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010-unseen was stopped."
+          },
+          {
+            "id": "re146b0",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was not running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was not running."
+          },
+          "s1": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was not running."
+          },
+          "s2": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was operating."
+          }
+        },
+        "reports": {
+          "r2942f8": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was stopped."
+          },
+          "re146b0": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was not running."
+          },
+          "rc236ff": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was running."
+          },
+          "r452609": {
+            "entity": "device-49010-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r2942f8": "SUPPORTED",
+          "re146b0": "SUPPORTED",
+          "rc236ff": "CONTRADICTED",
+          "r452609": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-007",
+      "case_id": "962625ad8f94-3",
+      "root": "962625ad8f94",
+      "family": "modality",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "4dd3cc66252e6a19a861979eeacc20e3952b9ec1195a897dd54f0a32d467b25d",
+      "input_token_upper_bound": 7330,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; modality, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "962625ad8f94-3",
+      "root": "962625ad8f94",
+      "family": "modality",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-49010",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 11:00, device-49010 will be running.\nObservation: At 11:00, device-49010 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Plan: at 11:00, device-49010 will be running.\nObservation: At 11:00, device-49010 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Plan: at 11:00, device-49010 will be stopped.\nObservation: At 11:00, device-49010 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r8dc1fc",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was stopped."
+          },
+          {
+            "id": "r512f26",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was running."
+          },
+          {
+            "id": "r56d2c8",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was running."
+          },
+          {
+            "id": "r653d22",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was running."
+          },
+          {
+            "id": "r271a20",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010-unseen was stopped."
+          },
+          {
+            "id": "r3691b6",
+            "source_id": "s0",
+            "text": "At 11:00, device-49010 was not running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was not running."
+          },
+          "s1": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was not running."
+          },
+          "s2": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was operating."
+          }
+        },
+        "reports": {
+          "r8dc1fc": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was stopped."
+          },
+          "r3691b6": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was not running."
+          },
+          "r512f26": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was running."
+          },
+          "r56d2c8": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was running."
+          },
+          "r653d22": {
+            "entity": "device-49010",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-49010 was running."
+          },
+          "r271a20": {
+            "entity": "device-49010-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-49010-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r8dc1fc": "SUPPORTED",
+          "r3691b6": "SUPPORTED",
+          "r512f26": "CONTRADICTED",
+          "r56d2c8": "CONTRADICTED",
+          "r653d22": "CONTRADICTED",
+          "r271a20": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-008",
+      "case_id": "fa4c0988aec8-3",
+      "root": "fa4c0988aec8",
+      "family": "correction",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "6f1360ef1c523bed7c911c02b16becc3bc0e2abde3ceb1a6102a958d287e0363",
+      "input_token_upper_bound": 7320,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; correction, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "fa4c0988aec8-3",
+      "root": "fa4c0988aec8",
+      "family": "correction",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-89956",
+          "time": "15:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Initial: At 15:00, device-89956 was stopped.\nCorrection: At 15:00, device-89956 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Initial: At 15:00, device-89956 was stopped.\nCorrection: At 15:00, device-89956 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Initial: At 15:00, device-89956 was running.\nCorrection: At 15:00, device-89956 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r318bb6",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was stopped."
+          },
+          {
+            "id": "re610a7",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was stopped."
+          },
+          {
+            "id": "r319ae3",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was stopped."
+          },
+          {
+            "id": "r3d6f8b",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was running."
+          },
+          {
+            "id": "r70333d",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956-unseen was running."
+          },
+          {
+            "id": "r19f900",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was operating."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was operating."
+          },
+          "s1": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was operating."
+          },
+          "s2": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was not running."
+          }
+        },
+        "reports": {
+          "r3d6f8b": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was running."
+          },
+          "r19f900": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was operating."
+          },
+          "re610a7": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was stopped."
+          },
+          "r318bb6": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was stopped."
+          },
+          "r319ae3": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was stopped."
+          },
+          "r70333d": {
+            "entity": "device-89956-unseen",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956-unseen was running."
+          }
+        },
+        "labels": {
+          "r3d6f8b": "SUPPORTED",
+          "r19f900": "SUPPORTED",
+          "re610a7": "CONTRADICTED",
+          "r318bb6": "CONTRADICTED",
+          "r319ae3": "CONTRADICTED",
+          "r70333d": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-009",
+      "case_id": "f3f62799ac2c-3",
+      "root": "f3f62799ac2c",
+      "family": "time",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "950333181a26be9e3b50ea379328a8680006a7f6b13e1ee7996d66d4202752e8",
+      "input_token_upper_bound": 7257,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; time, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "f3f62799ac2c-3",
+      "root": "f3f62799ac2c",
+      "family": "time",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-50535",
+          "time": "10:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 08:00, device-50535 was stopped.\nAt 10:00, device-50535 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 08:00, device-50535 was stopped.\nAt 10:00, device-50535 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 08:00, device-50535 was running.\nAt 10:00, device-50535 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r6e0962",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was running."
+          },
+          {
+            "id": "r2a7237",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was stopped."
+          },
+          {
+            "id": "r465efe",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was stopped."
+          },
+          {
+            "id": "ra382d8",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was operating."
+          },
+          {
+            "id": "r02eea8",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535-unseen was running."
+          },
+          {
+            "id": "r571a27",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was operating."
+          },
+          "s1": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was operating."
+          },
+          "s2": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was not running."
+          }
+        },
+        "reports": {
+          "r6e0962": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was running."
+          },
+          "ra382d8": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was operating."
+          },
+          "r2a7237": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was stopped."
+          },
+          "r571a27": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was stopped."
+          },
+          "r465efe": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was stopped."
+          },
+          "r02eea8": {
+            "entity": "device-50535-unseen",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535-unseen was running."
+          }
+        },
+        "labels": {
+          "r6e0962": "SUPPORTED",
+          "ra382d8": "SUPPORTED",
+          "r2a7237": "CONTRADICTED",
+          "r571a27": "CONTRADICTED",
+          "r465efe": "CONTRADICTED",
+          "r02eea8": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-010",
+      "case_id": "361d9d73b2ac-1",
+      "root": "361d9d73b2ac",
+      "family": "polarity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "46bdd4780882ca2aaeef684d3edaa978f43e2fcfdbf89d87a1cc2aa63a25bd00",
+      "input_token_upper_bound": 6215,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; polarity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "361d9d73b2ac-1",
+      "root": "361d9d73b2ac",
+      "family": "polarity",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-67602",
+          "time": "14:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 14:00, device-67602 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 14:00, device-67602 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 14:00, device-67602 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r6fcddc",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602-unseen was stopped."
+          },
+          {
+            "id": "r487c41",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was running."
+          },
+          {
+            "id": "rf3b41d",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was stopped."
+          },
+          {
+            "id": "r4164d1",
+            "source_id": "s0",
+            "text": "At 14:00, device-67602 was not running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was not running."
+          },
+          "s1": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was not running."
+          },
+          "s2": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was operating."
+          }
+        },
+        "reports": {
+          "rf3b41d": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was stopped."
+          },
+          "r4164d1": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was not running."
+          },
+          "r487c41": {
+            "entity": "device-67602",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-67602 was running."
+          },
+          "r6fcddc": {
+            "entity": "device-67602-unseen",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-67602-unseen was stopped."
+          }
+        },
+        "labels": {
+          "rf3b41d": "SUPPORTED",
+          "r4164d1": "SUPPORTED",
+          "r487c41": "CONTRADICTED",
+          "r6fcddc": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-011",
+      "case_id": "666e253a5887-3",
+      "root": "666e253a5887",
+      "family": "time",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "154e813fac62fe673230ea8ec6ce2c5787ace6525dff8e9dabfe8c3ddc5e5df2",
+      "input_token_upper_bound": 7261,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; time, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "666e253a5887-3",
+      "root": "666e253a5887",
+      "family": "time",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-13306",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 08:00, device-13306 was running.\nAt 11:00, device-13306 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 08:00, device-13306 was running.\nAt 11:00, device-13306 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 08:00, device-13306 was stopped.\nAt 11:00, device-13306 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rd9edeb",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was running."
+          },
+          {
+            "id": "r60dc98",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was running."
+          },
+          {
+            "id": "r03a92d",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was running."
+          },
+          {
+            "id": "r3b5e6f",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306-unseen was stopped."
+          },
+          {
+            "id": "r969c4f",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was stopped."
+          },
+          {
+            "id": "rd11b2f",
+            "source_id": "s0",
+            "text": "At 11:00, device-13306 was not running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "s1": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "s2": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was operating."
+          }
+        },
+        "reports": {
+          "r969c4f": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was stopped."
+          },
+          "rd11b2f": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was not running."
+          },
+          "r60dc98": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was running."
+          },
+          "r03a92d": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was running."
+          },
+          "rd9edeb": {
+            "entity": "device-13306",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-13306 was running."
+          },
+          "r3b5e6f": {
+            "entity": "device-13306-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-13306-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r969c4f": "SUPPORTED",
+          "rd11b2f": "SUPPORTED",
+          "r60dc98": "CONTRADICTED",
+          "r03a92d": "CONTRADICTED",
+          "rd9edeb": "CONTRADICTED",
+          "r3b5e6f": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-012",
+      "case_id": "2abce8c8f504-3",
+      "root": "2abce8c8f504",
+      "family": "polarity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "6c1bb9b14bc4fdc416f78c168aa5e4830e44011de4dc24361ea2beb6abbe543c",
+      "input_token_upper_bound": 7143,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; polarity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "2abce8c8f504-3",
+      "root": "2abce8c8f504",
+      "family": "polarity",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-62114",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 11:00, device-62114 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 11:00, device-62114 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 11:00, device-62114 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r2d15d7",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was stopped."
+          },
+          {
+            "id": "re85e8f",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was stopped."
+          },
+          {
+            "id": "r3f42fe",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was operating."
+          },
+          {
+            "id": "r8b55c3",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was stopped."
+          },
+          {
+            "id": "rd1cb2b",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114-unseen was running."
+          },
+          {
+            "id": "r66f899",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was operating."
+          },
+          "s1": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was operating."
+          },
+          "s2": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was not running."
+          }
+        },
+        "reports": {
+          "r66f899": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was running."
+          },
+          "r3f42fe": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was operating."
+          },
+          "r8b55c3": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was stopped."
+          },
+          "re85e8f": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was stopped."
+          },
+          "r2d15d7": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was stopped."
+          },
+          "rd1cb2b": {
+            "entity": "device-62114-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114-unseen was running."
+          }
+        },
+        "labels": {
+          "r66f899": "SUPPORTED",
+          "r3f42fe": "SUPPORTED",
+          "r8b55c3": "CONTRADICTED",
+          "re85e8f": "CONTRADICTED",
+          "r2d15d7": "CONTRADICTED",
+          "rd1cb2b": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-013",
+      "case_id": "bd2e0945fcd2-1",
+      "root": "bd2e0945fcd2",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "aec70f98bd8e0b7a41d85dc561767424301b49cd871a3ddee9fc21e1abd1ddff",
+      "input_token_upper_bound": 6332,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; modality, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "bd2e0945fcd2-1",
+      "root": "bd2e0945fcd2",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-79935",
+          "time": "15:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 15:00, device-79935 will be stopped.\nObservation: At 15:00, device-79935 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Plan: at 15:00, device-79935 will be stopped.\nObservation: At 15:00, device-79935 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Plan: at 15:00, device-79935 will be running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r8f4450",
+            "source_id": "s2",
+            "text": "At 15:00, device-79935 was stopped."
+          },
+          {
+            "id": "r9d0b0e",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was operating."
+          },
+          {
+            "id": "r3a1707",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was stopped."
+          },
+          {
+            "id": "rb9687e",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was operating."
+          },
+          "s1": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was operating."
+          },
+          "s2": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 15:00, device-79935 will be running."
+          }
+        },
+        "reports": {
+          "rb9687e": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was running."
+          },
+          "r9d0b0e": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was operating."
+          },
+          "r3a1707": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was stopped."
+          },
+          "r8f4450": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was stopped."
+          }
+        },
+        "labels": {
+          "rb9687e": "SUPPORTED",
+          "r9d0b0e": "SUPPORTED",
+          "r3a1707": "CONTRADICTED",
+          "r8f4450": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-014",
+      "case_id": "6416e2812e25-3",
+      "root": "6416e2812e25",
+      "family": "entity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "cdf63095ef65d7b23d130b2777648524d4787f441c0887904b151fd65becf54f",
+      "input_token_upper_bound": 7275,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; entity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "6416e2812e25-3",
+      "root": "6416e2812e25",
+      "family": "entity",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-82783",
+          "time": "13:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 13:00, device-82783-other was stopped.\nAt 13:00, device-82783 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 13:00, device-82783-other was stopped.\nAt 13:00, device-82783 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 13:00, device-82783-other was running.\nAt 13:00, device-82783 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r087fcb",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783-unseen was running."
+          },
+          {
+            "id": "rdcbd57",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was operating."
+          },
+          {
+            "id": "rc9fba4",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was stopped."
+          },
+          {
+            "id": "r9de43b",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was stopped."
+          },
+          {
+            "id": "rb0772b",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was running."
+          },
+          {
+            "id": "r4acdf5",
+            "source_id": "s0",
+            "text": "At 13:00, device-82783 was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was operating."
+          },
+          "s1": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was operating."
+          },
+          "s2": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was not running."
+          }
+        },
+        "reports": {
+          "rb0772b": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was running."
+          },
+          "rdcbd57": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was operating."
+          },
+          "r4acdf5": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was stopped."
+          },
+          "r9de43b": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was stopped."
+          },
+          "rc9fba4": {
+            "entity": "device-82783",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-82783 was stopped."
+          },
+          "r087fcb": {
+            "entity": "device-82783-unseen",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-82783-unseen was running."
+          }
+        },
+        "labels": {
+          "rb0772b": "SUPPORTED",
+          "rdcbd57": "SUPPORTED",
+          "r4acdf5": "CONTRADICTED",
+          "r9de43b": "CONTRADICTED",
+          "rc9fba4": "CONTRADICTED",
+          "r087fcb": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-015",
+      "case_id": "069ecfb78944-1",
+      "root": "069ecfb78944",
+      "family": "correction",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "108907316f4a98ad58bdc8b83a42c0b128c95201e71c284f973611edcbc5d84c",
+      "input_token_upper_bound": 6392,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; correction, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "069ecfb78944-1",
+      "root": "069ecfb78944",
+      "family": "correction",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-19154",
+          "time": "13:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Initial: At 13:00, device-19154 was running.\nCorrection: At 13:00, device-19154 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Initial: At 13:00, device-19154 was running.\nCorrection: At 13:00, device-19154 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Initial: At 13:00, device-19154 was stopped.\nCorrection: At 13:00, device-19154 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r4a5df8",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was stopped."
+          },
+          {
+            "id": "rc9a144",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was not running."
+          },
+          {
+            "id": "r81da89",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was running."
+          },
+          {
+            "id": "r804392",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154-unseen was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was not running."
+          },
+          "s1": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was not running."
+          },
+          "s2": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was operating."
+          }
+        },
+        "reports": {
+          "r4a5df8": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was stopped."
+          },
+          "rc9a144": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was not running."
+          },
+          "r81da89": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was running."
+          },
+          "r804392": {
+            "entity": "device-19154-unseen",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r4a5df8": "SUPPORTED",
+          "rc9a144": "SUPPORTED",
+          "r81da89": "CONTRADICTED",
+          "r804392": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-016",
+      "case_id": "935d703369cd-3",
+      "root": "935d703369cd",
+      "family": "entity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "ccea121c3c1095a8a12371719ef8591a41e5924c8d2f6706987c25366137c1d4",
+      "input_token_upper_bound": 7279,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; entity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "935d703369cd-3",
+      "root": "935d703369cd",
+      "family": "entity",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-18712",
+          "time": "12:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 12:00, device-18712-other was running.\nAt 12:00, device-18712 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 12:00, device-18712-other was running.\nAt 12:00, device-18712 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 12:00, device-18712-other was stopped.\nAt 12:00, device-18712 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r6efa91",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was running."
+          },
+          {
+            "id": "r5a6431",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was not running."
+          },
+          {
+            "id": "rcac3e8",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was running."
+          },
+          {
+            "id": "r9f8b6d",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was stopped."
+          },
+          {
+            "id": "r3da961",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712-unseen was stopped."
+          },
+          {
+            "id": "r239d12",
+            "source_id": "s0",
+            "text": "At 12:00, device-18712 was running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was not running."
+          },
+          "s1": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was not running."
+          },
+          "s2": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was operating."
+          }
+        },
+        "reports": {
+          "r9f8b6d": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was stopped."
+          },
+          "r5a6431": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was not running."
+          },
+          "r239d12": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was running."
+          },
+          "r6efa91": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was running."
+          },
+          "rcac3e8": {
+            "entity": "device-18712",
+            "time": "12:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 12:00, device-18712 was running."
+          },
+          "r3da961": {
+            "entity": "device-18712-unseen",
+            "time": "12:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 12:00, device-18712-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r9f8b6d": "SUPPORTED",
+          "r5a6431": "SUPPORTED",
+          "r239d12": "CONTRADICTED",
+          "r6efa91": "CONTRADICTED",
+          "rcac3e8": "CONTRADICTED",
+          "r3da961": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-017",
+      "case_id": "f3f62799ac2c-1",
+      "root": "f3f62799ac2c",
+      "family": "time",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "5982c81a28e3c80a2d168d76aad73051bd23b335b1475042067f735d35648655",
+      "input_token_upper_bound": 6325,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; time, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "f3f62799ac2c-1",
+      "root": "f3f62799ac2c",
+      "family": "time",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-50535",
+          "time": "10:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 08:00, device-50535 was stopped.\nAt 10:00, device-50535 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 08:00, device-50535 was stopped.\nAt 10:00, device-50535 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 08:00, device-50535 was running.\nAt 10:00, device-50535 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r80d9e7",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535-unseen was running."
+          },
+          {
+            "id": "rdc259e",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was running."
+          },
+          {
+            "id": "refe58a",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was operating."
+          },
+          {
+            "id": "rcbfc58",
+            "source_id": "s0",
+            "text": "At 10:00, device-50535 was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was operating."
+          },
+          "s1": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was operating."
+          },
+          "s2": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was not running."
+          }
+        },
+        "reports": {
+          "rdc259e": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was running."
+          },
+          "refe58a": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was operating."
+          },
+          "rcbfc58": {
+            "entity": "device-50535",
+            "time": "10:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 10:00, device-50535 was stopped."
+          },
+          "r80d9e7": {
+            "entity": "device-50535-unseen",
+            "time": "10:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 10:00, device-50535-unseen was running."
+          }
+        },
+        "labels": {
+          "rdc259e": "SUPPORTED",
+          "refe58a": "SUPPORTED",
+          "rcbfc58": "CONTRADICTED",
+          "r80d9e7": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-018",
+      "case_id": "069ecfb78944-3",
+      "root": "069ecfb78944",
+      "family": "correction",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "bd81616af732eeaf0c69874d2e8026945aee40a9d5a8faf0892a18e268b973f5",
+      "input_token_upper_bound": 7324,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; correction, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "069ecfb78944-3",
+      "root": "069ecfb78944",
+      "family": "correction",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-19154",
+          "time": "13:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Initial: At 13:00, device-19154 was running.\nCorrection: At 13:00, device-19154 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Initial: At 13:00, device-19154 was running.\nCorrection: At 13:00, device-19154 was not running."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Initial: At 13:00, device-19154 was stopped.\nCorrection: At 13:00, device-19154 was operating."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rfc2652",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was running."
+          },
+          {
+            "id": "r24189a",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was running."
+          },
+          {
+            "id": "r899f53",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was stopped."
+          },
+          {
+            "id": "r839bd7",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was running."
+          },
+          {
+            "id": "r8151b2",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154-unseen was stopped."
+          },
+          {
+            "id": "r4c3b4c",
+            "source_id": "s0",
+            "text": "At 13:00, device-19154 was not running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was not running."
+          },
+          "s1": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was not running."
+          },
+          "s2": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was operating."
+          }
+        },
+        "reports": {
+          "r899f53": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was stopped."
+          },
+          "r4c3b4c": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was not running."
+          },
+          "r24189a": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was running."
+          },
+          "rfc2652": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was running."
+          },
+          "r839bd7": {
+            "entity": "device-19154",
+            "time": "13:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 13:00, device-19154 was running."
+          },
+          "r8151b2": {
+            "entity": "device-19154-unseen",
+            "time": "13:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 13:00, device-19154-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r899f53": "SUPPORTED",
+          "r4c3b4c": "SUPPORTED",
+          "r24189a": "CONTRADICTED",
+          "rfc2652": "CONTRADICTED",
+          "r839bd7": "CONTRADICTED",
+          "r8151b2": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-019",
+      "case_id": "fa4c0988aec8-1",
+      "root": "fa4c0988aec8",
+      "family": "correction",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "266d0d720db3a9c6efe1a9e4a55b3c34fbe216ca44891f20cb80a2900dc79ddb",
+      "input_token_upper_bound": 6388,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; correction, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "fa4c0988aec8-1",
+      "root": "fa4c0988aec8",
+      "family": "correction",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-89956",
+          "time": "15:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Initial: At 15:00, device-89956 was stopped.\nCorrection: At 15:00, device-89956 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Initial: At 15:00, device-89956 was stopped.\nCorrection: At 15:00, device-89956 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Initial: At 15:00, device-89956 was running.\nCorrection: At 15:00, device-89956 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r8b4b72",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was running."
+          },
+          {
+            "id": "r9d1c1a",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was stopped."
+          },
+          {
+            "id": "recaf84",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956 was operating."
+          },
+          {
+            "id": "r4c4e77",
+            "source_id": "s0",
+            "text": "At 15:00, device-89956-unseen was running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was operating."
+          },
+          "s1": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was operating."
+          },
+          "s2": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was not running."
+          }
+        },
+        "reports": {
+          "r8b4b72": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was running."
+          },
+          "recaf84": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was operating."
+          },
+          "r9d1c1a": {
+            "entity": "device-89956",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-89956 was stopped."
+          },
+          "r4c4e77": {
+            "entity": "device-89956-unseen",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-89956-unseen was running."
+          }
+        },
+        "labels": {
+          "r8b4b72": "SUPPORTED",
+          "recaf84": "SUPPORTED",
+          "r9d1c1a": "CONTRADICTED",
+          "r4c4e77": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-020",
+      "case_id": "2abce8c8f504-1",
+      "root": "2abce8c8f504",
+      "family": "polarity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "08e882e3fd4dd222fda2c2ca0582cc9e5397bb942bcd524d0b480c54c68c0a2b",
+      "input_token_upper_bound": 6211,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; polarity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "2abce8c8f504-1",
+      "root": "2abce8c8f504",
+      "family": "polarity",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-62114",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 11:00, device-62114 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 11:00, device-62114 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 11:00, device-62114 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r3a2686",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114-unseen was running."
+          },
+          {
+            "id": "rfc9f7a",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was stopped."
+          },
+          {
+            "id": "r031ba2",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was running."
+          },
+          {
+            "id": "r33ad8e",
+            "source_id": "s0",
+            "text": "At 11:00, device-62114 was operating."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was operating."
+          },
+          "s1": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was operating."
+          },
+          "s2": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was not running."
+          }
+        },
+        "reports": {
+          "r031ba2": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was running."
+          },
+          "r33ad8e": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was operating."
+          },
+          "rfc9f7a": {
+            "entity": "device-62114",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, device-62114 was stopped."
+          },
+          "r3a2686": {
+            "entity": "device-62114-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, device-62114-unseen was running."
+          }
+        },
+        "labels": {
+          "r031ba2": "SUPPORTED",
+          "r33ad8e": "SUPPORTED",
+          "rfc9f7a": "CONTRADICTED",
+          "r3a2686": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-021",
+      "case_id": "641808c92236-3",
+      "root": "641808c92236",
+      "family": "units",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "3b2d15fbaf737786532ffb10e15af1e20854b06d13ca99b5bd0334fdb9ce5781",
+      "input_token_upper_bound": 7211,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; units, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "641808c92236-3",
+      "root": "641808c92236",
+      "family": "units",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-23586",
+          "time": "10:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 10:00, device-23586 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rc39725",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 6000 grams."
+          },
+          {
+            "id": "r81d9c4",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 7000 grams."
+          },
+          {
+            "id": "r6df330",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 7000 grams."
+          },
+          {
+            "id": "r62d229",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586-unseen measured 6000 grams."
+          },
+          {
+            "id": "red19d8",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          {
+            "id": "rbfec2c",
+            "source_id": "s0",
+            "text": "At 10:00, device-23586 measured 7000 grams."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          "s1": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          "s2": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 2 kilograms."
+          }
+        },
+        "reports": {
+          "rc39725": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6000 grams."
+          },
+          "red19d8": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 6 kilograms."
+          },
+          "rbfec2c": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 7000 grams."
+          },
+          "r81d9c4": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 7000 grams."
+          },
+          "r6df330": {
+            "entity": "device-23586",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586 measured 7000 grams."
+          },
+          "r62d229": {
+            "entity": "device-23586-unseen",
+            "time": "10:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 10:00, device-23586-unseen measured 6000 grams."
+          }
+        },
+        "labels": {
+          "rc39725": "SUPPORTED",
+          "red19d8": "SUPPORTED",
+          "rbfec2c": "CONTRADICTED",
+          "r81d9c4": "CONTRADICTED",
+          "r6df330": "CONTRADICTED",
+          "r62d229": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-022",
+      "case_id": "bd2e0945fcd2-3",
+      "root": "bd2e0945fcd2",
+      "family": "modality",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "85ae9a48dec73d41ac2b9a442e53bab178af294d3a488b80233fda4def09cb1c",
+      "input_token_upper_bound": 7264,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; modality, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "bd2e0945fcd2-3",
+      "root": "bd2e0945fcd2",
+      "family": "modality",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-79935",
+          "time": "15:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 15:00, device-79935 will be stopped.\nObservation: At 15:00, device-79935 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Plan: at 15:00, device-79935 will be stopped.\nObservation: At 15:00, device-79935 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Plan: at 15:00, device-79935 will be running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r4d6f53",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was stopped."
+          },
+          {
+            "id": "rf2e1b4",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was stopped."
+          },
+          {
+            "id": "rc89688",
+            "source_id": "s2",
+            "text": "At 15:00, device-79935 was stopped."
+          },
+          {
+            "id": "r17a4a6",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was stopped."
+          },
+          {
+            "id": "raf2dba",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was operating."
+          },
+          {
+            "id": "r88dd07",
+            "source_id": "s0",
+            "text": "At 15:00, device-79935 was running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was operating."
+          },
+          "s1": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was operating."
+          },
+          "s2": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 15:00, device-79935 will be running."
+          }
+        },
+        "reports": {
+          "r88dd07": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was running."
+          },
+          "raf2dba": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was operating."
+          },
+          "rf2e1b4": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was stopped."
+          },
+          "r17a4a6": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was stopped."
+          },
+          "r4d6f53": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was stopped."
+          },
+          "rc89688": {
+            "entity": "device-79935",
+            "time": "15:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 15:00, device-79935 was stopped."
+          }
+        },
+        "labels": {
+          "r88dd07": "SUPPORTED",
+          "raf2dba": "SUPPORTED",
+          "rf2e1b4": "CONTRADICTED",
+          "r17a4a6": "CONTRADICTED",
+          "r4d6f53": "CONTRADICTED",
+          "rc89688": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": null
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-02-023",
+      "case_id": "f0111f772bb0-3",
+      "root": "f0111f772bb0",
+      "family": "units",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "8c55f0a6d409d9a3c1e426359786098928e4d12cd6ac26629936179661e54e2b",
+      "input_token_upper_bound": 7211,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-02 explicit fact extraction; units, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "f0111f772bb0-3",
+      "root": "f0111f772bb0",
+      "family": "units",
+      "condition": {
+        "copies": 3
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-40794",
+          "time": "17:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 17:00, device-40794 measured 7 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r7a7886",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 4000 grams."
+          },
+          {
+            "id": "ra2ac22",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          {
+            "id": "r6b978b",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 4000 grams."
+          },
+          {
+            "id": "r517784",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 4000 grams."
+          },
+          {
+            "id": "r2f91c8",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794 measured 3000 grams."
+          },
+          {
+            "id": "rb89fc4",
+            "source_id": "s0",
+            "text": "At 17:00, device-40794-unseen measured 3000 grams."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          "s1": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          "s2": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 7 kilograms."
+          }
+        },
+        "reports": {
+          "r2f91c8": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3000 grams."
+          },
+          "ra2ac22": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 3 kilograms."
+          },
+          "r6b978b": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 4000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 4000 grams."
+          },
+          "r517784": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 4000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 4000 grams."
+          },
+          "r7a7886": {
+            "entity": "device-40794",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 4000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794 measured 4000 grams."
+          },
+          "rb89fc4": {
+            "entity": "device-40794-unseen",
+            "time": "17:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 17:00, device-40794-unseen measured 3000 grams."
+          }
+        },
+        "labels": {
+          "r2f91c8": "SUPPORTED",
+          "ra2ac22": "SUPPORTED",
+          "r6b978b": "CONTRADICTED",
+          "r517784": "CONTRADICTED",
+          "r7a7886": "CONTRADICTED",
+          "rb89fc4": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": null
+  }
+]

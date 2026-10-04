@@ -1,3 +1,7 @@
+## Latest: PQ-02 stopped and reviewed
+
+**HOLD native qualification/evaluation.** Owner-approved semantic repair was implemented and launched;24 assigned,2 started,1 fully correct valid response,HTTP400 on request2,22 unstarted. [Post-mortem](reviews/PQ-02-post.md), [audit](results/QM-PQ-02/audit.json), [cost reconciliation](results/QM-PQ-02/closeout.json). Qualification is inconclusive; no retry. Worker exited; exclusive claim released. Original ledger preserved/migrated with previous path fenced. CumulativeAPIcapUSD3 plus infrastructureUSD1 after owner'sUSD2 addition;75calls,USD0.905856 reservations,USD0.15611496 knownactual andUSD0.061344 combined unknown bounds retained. Prepared offline safe-error telemetry patch; future constant-size schema needs fresh admission. Researcher review waived; old evaluation untouched.
+
 ## Current iteration: PQ-02 prepared, owner-approved
 
 Explicit source/report fact extraction and deterministic supported/contradicted/not-established comparison are implemented and validated offline. [Plan](packet-study/native-v2/PLAN.md), [pre-run assessment](reviews/PQ-02-pre.md), [budget extension](packet-study/native-v2/AUTHORIZATION.json). Twelve fresh authored roots ×two repetition conditions;24-call qualification only, maxUSD1.44 reservation. Owner approved this repair/follow-up and addedUSD2; cumulative capUSD4, original ledger/history retained. Next: RUN after current exclusive approved-account allocation and public-plan/runtime admission. PQ-01 remains failed; old evaluation remains sealed and unused.

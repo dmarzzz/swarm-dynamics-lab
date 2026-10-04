@@ -1,0 +1,23 @@
+{
+  "attempt": "QM-PQ-02",
+  "execution": "stopped_http_400",
+  "qualification": "not_passed_inconclusive_transport",
+  "scientific_interpretation": "One correct native response does not establish qualification; no complete paired roots.",
+  "reporting": "7 remote artifacts hash-verified; all24 assignments replayable; HTTP error body absent; GitHub verification pending; hub not independently read back",
+  "cost": "known actual0.012552 plus new uncertain bound0.06 retained",
+  "reviewer": "owning agent; independent researcher review waived",
+  "dimensions": {
+    "question": "pass scoped",
+    "scenarios": "limited controlled grammar",
+    "controls": "limited schema size also changes",
+    "capability": "unestablished",
+    "measurement": "pass saved-data replay",
+    "sample_size": "insufficient realized sample",
+    "agent_context": "pass observed request and response",
+    "data_integrity": "limited missing HTTP error body",
+    "resources": "pass original ledger and extension preserved",
+    "reproducibility": "limited exact failure reason unavailable",
+    "visualization": "all assigned cases represented; structural counts verified"
+  },
+  "decision": "HOLD native; finish stopped attempt"
+}

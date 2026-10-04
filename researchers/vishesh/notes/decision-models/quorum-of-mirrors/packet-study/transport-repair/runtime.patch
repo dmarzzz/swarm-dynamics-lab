@@ -1,0 +1,20 @@
+--- a/researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/native-v2/runtime.py
++++ b/researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/native-v2/runtime.py
+@@ -4,6 +4,7 @@
+ HERE=Path(__file__).resolve().parent;STUDY=HERE.parent.parent
+ sys.path.insert(0,str(STUDY));import next_runtime as legacy
+ import public_plan
++from diagnostics import classify_http
+ from contract import ATTEMPT,MODEL,RESERVE,request,digest,bound,score,summarize
+ FILES=['PLAN.md','contract.py','runtime.py','manifest.json','cases.py','baseline.py','qualification-seal.json','AUTHORIZATION.json','../../next_runtime.py','../../qualification.py','../../next_stage.py','../../reference.py','../../public_plan.py']
+ def hashes():return {n:hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in FILES}
+@@ -83,6 +84,9 @@
+   except Exception as exc:
+    reason='http_'+str(exc.code) if isinstance(exc,urllib.error.HTTPError) else type(exc).__name__
+    record['error_class']=reason
++   if isinstance(exc,urllib.error.HTTPError):
++    try:record['http_diagnostic']=classify_http(exc)
++    except Exception:record['http_diagnostic']={'category':'diagnostic_read_failed'}
+    if not charged:
+     with db:db.execute('update calls set status=? where id=?',('failed_or_uncertain',rid))
+   record['wall_s']=time.time()-started;records.append(record);append(out/'receipts.jsonl',record)
