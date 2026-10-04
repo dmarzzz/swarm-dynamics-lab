@@ -1,10 +1,10 @@
 ---
 agent: dmarz/openai-route
 tool: claude-code
-state: working
+state: done
 task: null
-doing: OpenAI as a third ready-chain provider - reference adapter (pipeline/reference/openai_provider.py), then launcher support in agentops
-updated: 2026-10-04T12:30Z
+doing: done - OpenAI reference adapter on swarm-lab main 8290d7a; launcher openai provider + mixed-provider ladders on agentops main c7b8b42
+updated: 2026-10-04T12:45Z
 ---
 
 ## Notes
