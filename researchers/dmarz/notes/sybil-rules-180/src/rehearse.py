@@ -42,6 +42,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import chain
 import coordinator
+import openai_provider
 import provider
 import study
 import transport
@@ -103,8 +104,9 @@ class Stub:
     `billing`      (first_call, count): calls from `first_call` on get HTTP 402 `count` times (None = for ever)
     `garbage`      a function of the observation; where true the answer is text that is not JSON
     """
-    def __init__(self, mode='mixed', billing=None, garbage=None, kill=None):
+    def __init__(self, mode='mixed', billing=None, garbage=None, kill=None, api='openrouter'):
         self.mode, self.billing, self.garbage = mode, billing, garbage
+        self.api = api                    # 'openai': the OpenAI Chat Completions shape (no cost, no provider field)
         self.kill = kill                  # (worker index, predicate on the observation): from then on that worker hangs
         self.killed = threading.Event()
         self.release = threading.Event()
@@ -123,13 +125,14 @@ class Stub:
                 self.killed.set()
                 self.release.wait()        # a hung process: no answer until the scenario ends
                 raise urllib.error.URLError('rehearsal worker killed')
-        if request.full_url != provider.URL:
+        mod = openai_provider if self.api == 'openai' else provider
+        if request.full_url != mod.URL:
             raise AssertionError('stub_unexpected_url')
         headers = {k.lower(): v for k, v in request.header_items()}
         if not headers.get('authorization', '').startswith('Bearer '):
             raise AssertionError('stub_missing_headers')
         body = json.loads(request.data)
-        if tuple(body) != provider.BODY_KEYS:
+        if tuple(body) != mod.BODY_KEYS:
             raise AssertionError('stub_body_keys')
         with self.lock:
             self.in_flight += 1
@@ -142,13 +145,22 @@ class Stub:
                 self.calls = n
         try:
             if blocked:
-                raise urllib.error.HTTPError(provider.URL, 402, 'Payment Required', {'x-request-id': 'stub'},
+                raise urllib.error.HTTPError(mod.URL, 402, 'Payment Required', {'x-request-id': 'stub'},
                                              io.BytesIO(b'{"error":{"code":402,"message":"Insufficient credits"}}'))
             obs = json.loads(body['messages'][1]['content'])
             text = json.dumps(stub_action(obs, self.mode))
             if self.garbage and self.garbage(obs):
                 text = 'I cannot answer in the requested format'
             tokens_in, tokens_out = len(request.data) // 4, len(text) // 4
+            if self.api == 'openai':
+                if body['reasoning_effort'] != 'low' or 'json' not in body['messages'][0]['content'].lower():
+                    raise AssertionError('stub_openai_request')
+                return _Response(json.dumps({
+                    'id': f'chatcmpl-stub-{n:06d}', 'object': 'chat.completion', 'model': 'gpt-6-sol-2026-09-30',
+                    'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': text, 'refusal': None}}],
+                    'usage': {'prompt_tokens': tokens_in, 'completion_tokens': tokens_out + 40, 'total_tokens': tokens_in + tokens_out + 40,
+                              'prompt_tokens_details': {'cached_tokens': 0},
+                              'completion_tokens_details': {'reasoning_tokens': 40}}}).encode())
             return _Response(json.dumps({
                 'id': f'gen-stub-{n:06d}', 'model': study.design()['canonical_model'], 'provider': 'Alibaba',
                 'choices': [{'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': text}}],
@@ -304,6 +316,7 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
                 t.join(timeout=30)
             status = chain.read_status(base / 'results')
             runs = {(r.get('params') or {}).get('stage') or r['run']: r for r in sr.runs(study.EXPERIMENT, limit=5000)}
+            session_runs = sr.runs(study.session_experiment(), limit=100) if study.session_experiment() != study.EXPERIMENT else []
             report, replay = None, None
             if verify:
                 t0 = time.monotonic()
@@ -317,7 +330,7 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
             totals = transport.FastLedger(ledger, study.design()['budget']).transact() if ledger.exists() else None
             return {'exit': code, 'seconds': elapsed, 'status': status, 'runs': runs, 'verify': report, 'replay_refused': replay,
                     'ledger': totals, 'stub_calls': stub.calls, 'stub_billing_responses': stub.billing_responses,
-                    'max_in_flight': stub.max_in_flight, 'worker_exits': exits,
+                    'max_in_flight': stub.max_in_flight, 'worker_exits': exits, 'session_runs': session_runs,
                     'spooled': list((tmp / 'spool').glob('*.json')) if (tmp / 'spool').exists() else []}
         finally:
             stub.release.set()
@@ -344,7 +357,7 @@ def brief(run):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--hub-dir', required=True, help='directory with hub.py and swarm_report.py (not part of this repo)')
-    ap.add_argument('--only', default='a,b,c,d,e,f,g')
+    ap.add_argument('--only', default='a,b,c,d,e,f,g,h')
     ap.add_argument('--keep', action='store_true', help='keep the temporary directory and print its path')
     a = ap.parse_args(argv)
     hub_dir = Path(a.hub_dir).resolve()
@@ -355,7 +368,7 @@ def main(argv=None):
         raise SystemExit('rehearse: temporary directory is inside the study tree')
     os.environ.update(SWARM_HUB_URL=f'http://{LOCAL}:1', SWARM_HUB_TOKEN='unset-until-hub-starts',
                       SWARM_SOURCE='rehearsal/local', SWARM_SPOOL=str(tmp / 'spool'), SWARM_NO_AUTO_REFRESH='1',
-                      SWARM_OPENROUTER_API_KEY='rehearsal-stub-not-a-key')
+                      SWARM_OPENROUTER_API_KEY='rehearsal-stub-not-a-key', SWARM_OPENAI_API_KEY='rehearsal-stub-not-a-key')
     os.environ.pop(provider.LEDGER_ENV, None)
     os.environ.pop('STUDY_RESULTS_DIR', None)
     block_network()
@@ -374,7 +387,8 @@ def main(argv=None):
             checks['a_exit_zero'] = run['exit'] == 0
             checks['a_state_completed'] = status.get('state') == 'completed'
             checks['a_all_stages_done'] = all(runs.get(s, {}).get('status') == 'done' for s in all_stages)
-            checks['a_metrics_reported'] = all(required <= set(runs.get(s, {}).get('metrics') or {}) for s in all_stages)
+            checks['a_metrics_reported'] = all(required | {'dropped_zero_orders', 'normalizations'} <= set(runs.get(s, {}).get('metrics') or {})
+                                               and (runs[s]['metrics'].get('normalizations') is not None) for s in all_stages)
             checks['a_calls_per_stage'] = all((runs.get(s, {}).get('metrics') or {}).get('model_calls') == budget['max_calls'][s] for s in all_stages)
             checks['a_ledger_total_calls'] = run['ledger']['attempted_calls'] == sum(budget['max_calls'][s] for s in all_stages) == run['stub_calls']
             checks['a_no_reissue'] = run['ledger']['calls_by_stage'].get('REISSUE', 0) == 0
@@ -479,6 +493,27 @@ def main(argv=None):
             checks['g_valid_actions_120'] = x0.get('valid_actions') == 120 and x0.get('accepted') == 120
             checks['g_no_main_stage'] = not any(s in runs for s in ('S1', 'D1'))
             result['x0_valid_action_gate_chain'] = brief(run)
+        if 'h' in only:
+            # The OpenAI configuration: the whole chain with STUDY_MODEL=gpt-6-sol against an OpenAI-shaped stub.
+            os.environ[study.MODEL_ENV] = 'gpt-6-sol'
+            try:
+                stub = Stub('mixed', api='openai')
+                run = scenario(sr, hub_dir, tmp, 'h', stub, all_stages, verify=True)
+                gb = study.design()['budget']
+                sessions = run['session_runs']
+                own = [r for r in run['runs'].values() if (r.get('params') or {}).get('role') == transport.SESSION_ROLE]
+            finally:
+                os.environ.pop(study.MODEL_ENV, None)
+            runs, status = run['runs'], run['status'] or {}
+            checks['h_exit_zero'] = run['exit'] == 0 and status.get('state') == 'completed'
+            checks['h_batches_tagged'] = all(str((runs.get(s, {}).get('params') or {}).get('batch', '')).endswith('-002-gpt-6-sol') for s in all_stages)
+            checks['h_model_in_params'] = all((runs.get(s, {}).get('params') or {}).get('model') == 'gpt-6-sol' for s in all_stages)
+            checks['h_calls_per_stage'] = all((runs.get(s, {}).get('metrics') or {}).get('model_calls') == gb['max_calls'][s] for s in all_stages)
+            checks['h_sessions_in_own_experiment'] = len(sessions) == 3 and not own
+            checks['h_three_in_flight_per_host'] = (status.get('stages') or {}).get('S1', {}).get('in_flight_per_host') == 3
+            checks['h_cap_150'] = gb['aggregate_usd'] == 150 and run['ledger']['cap_usd'] == 150
+            checks['h_verify_ok'] = bool(run['verify'] and run['verify']['ok'])
+            result['openai_chain'] = brief(run)
         checks['committed_tree_untouched'] = not (study.ROOT / 'results').exists() or not any((study.ROOT / 'results').iterdir())
     finally:
         if a.keep:

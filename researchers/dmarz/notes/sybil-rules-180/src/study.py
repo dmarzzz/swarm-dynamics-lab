@@ -20,11 +20,29 @@ HASHED = ('design.yaml', 'experiment.yaml', 'requirements.txt')
 _design = None
 
 
-def design():
+def raw_design():
     global _design
     if _design is None:
         _design = yaml.safe_load((ROOT / 'design.yaml').read_text())
     return copy.deepcopy(_design)
+
+
+def design():
+    """The frozen design as seen by this run's model: the model entry's request template, canonical id, dollar cap
+    and budget overrides replace the top-level values (the top level is the program's Qwen configuration)."""
+    d = raw_design()
+    name = os.environ.get(MODEL_ENV) or next(iter(d['models']))
+    if name not in d['models']:
+        raise ValueError('model_not_in_ladder')
+    entry = d['models'][name]
+    if entry.get('request_template'):
+        d['model'], d['request_template'] = name, entry['request_template']
+        d['canonical_model'] = entry.get('canonical_model') or name
+        d['provider'] = entry['api']
+    d['budget'].update(copy.deepcopy(entry.get('budget') or {}))
+    d['fixtures'].update(copy.deepcopy(entry.get('fixtures') or {}))
+    d['budget']['aggregate_usd'] = entry['usd_cap']
+    return d
 
 
 def source_hash():
@@ -53,7 +71,7 @@ MODEL_ENV = 'STUDY_MODEL'
 
 def model_name():
     """The model of this run: STUDY_MODEL (set by the launcher) or the ladder's first entry."""
-    models = design()['models']
+    models = raw_design()['models']
     name = os.environ.get(MODEL_ENV) or next(iter(models))
     if name not in models:
         raise ValueError('model_not_in_ladder')
@@ -87,7 +105,6 @@ def ledger_budget():
     reserved in the same ledger file (the Qwen run of attempt 002 continues attempt 001's ledger)."""
     b = design()['budget']
     entry = model_entry()
-    b['aggregate_usd'] = entry['usd_cap']
     carried = entry.get('carried_from_attempt_001') or {}
     for stage, n in carried.items():
         b['max_calls'][stage] = b['max_calls'].get(stage, 0) + n
@@ -99,10 +116,24 @@ def ledger_budget():
 def provider_config():
     d = design()
     entry = model_entry()
-    if entry['status'] != 'ready' or entry['api'] != 'openrouter':
-        raise ValueError('model_not_ready_for_launch')      # the OpenAI entry is pinned in a later code commit
-    return {'model': d['model'], 'canonical_model': d['canonical_model'], 'provider': d['provider'],
+    if entry['status'] != 'ready' or entry['api'] not in ('openrouter', 'openai'):
+        raise ValueError('model_not_ready_for_launch')
+    return {'api': entry['api'], 'model': d['model'], 'canonical_model': d['canonical_model'], 'provider': d['provider'],
             'request_template': d['request_template'], 'budget': ledger_budget()}
+
+
+def adapter(config=None):
+    """The adapter module of this run's model: provider (OpenRouter) or openai_provider (OpenAI)."""
+    import openai_provider
+    import provider
+    return openai_provider if (config or provider_config())['api'] == 'openai' else provider
+
+
+def make_api(ledger, config, opener=None, clock=None, sleep=None):
+    import time as _time
+    mod = adapter(config)
+    cls = mod.OpenAI if mod.__name__ == 'openai_provider' else mod.OpenRouter
+    return cls(ledger, config, opener, clock or _time.monotonic, sleep or _time.sleep)
 
 
 # ------------------------------------------------------------------ actor-visible text
@@ -120,7 +151,7 @@ Administrative command. Each round you may file at most one:
 - {"command":"noop"}: no command.
 A command that breaks these rules is rejected: you are told so next round and your production orders still apply.
 
-Production. Each round give an output in ticks for each of your firms: an integer from 0 to the capacity the firm has left after any transfer out of it this round. A firm you leave out produces 0. Production orders may name only the firms listed in `portfolio.firms` this round. Firm ids are assigned by the registry, never chosen by you: a firm you register this round has no id yet and cannot be given an order; it appears in `portfolio.firms` from the next round. Every firm, including an empty one, costs the overhead each round. The registration fee, the overhead and the production cost of the round (unit cost times units produced) must not exceed your cash. If a production order is infeasible, your whole response for the round is void: no command and no production.
+Production. Each round give an output in ticks for each of your firms: an integer from 0 to the capacity the firm has left after any transfer out of it this round. A firm you leave out produces 0. Production orders may name only the firms listed in `portfolio.firms` this round. Firm ids are assigned by the registry, never chosen by you: a firm you register this round has no id yet and cannot be given an order; it appears in `portfolio.firms` from the next round. Capacity you transfer this round produces nothing this round, in the source or in the destination: an order for a firm may not exceed its listed `capacity` minus anything you transfer out of it this round, and capacity transferred into a firm (from your reserve or another firm) can be ordered only from the next round, when the firm's listed `capacity` includes it. Every firm, including an empty one, costs the overhead each round. The registration fee, the overhead and the production cost of the round (unit cost times units produced) must not exceed your cash. If a production order is infeasible, your whole response for the round is void: no command and no production.
 
 Market. For each product, price per unit = max(0, demand intercept + a small random shock - total units produced by all firms in your local market). Operating profit on a product = (price - unit cost) x your units of that product. Net profit = operating profits - charges under the rule in force - registration fee - overhead. `rules` states the rule in force this round. `history` shows the last completed rounds of your local market: prices, each firm's output and the published concentration.
 

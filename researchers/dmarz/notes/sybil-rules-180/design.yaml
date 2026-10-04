@@ -10,22 +10,50 @@ provider: alibaba
 # Attempt 002 model ladder (dated addition 2026-10-04, dmarz via dmarz/fleet-monitor): the model is a launch parameter
 # (environment STUDY_MODEL, set by the launcher). Each model is its own run of the whole chain: batch names carry its
 # tag, its own ledger file, dollar cap and results directory, its own P0, Q0 and X0; models are never pooled.
-# The first entry is the program's model. An entry with status `declared` is refused at run time until a later code
-# commit pins its adapter, prices and request template (new source hash, its own pre-run review).
+# The first entry is the program's model. The second is an OpenAI model on its own server triple and claim.
 models:
   qwen/qwen3.7-flash:
     api: openrouter
     tag: ''
     status: ready
     usd_cap: 5
+    # Its request template, prices and budget are the top-level ones below.
     # This model's attempt 002 continues attempt 001's ledger file; its caps add attempt 001's one P0 reservation.
     carried_from_attempt_001: {P0: 1}
-  gpt-6-luna:
+  # Pinned 2026-10-04 by dmarz/fleet-monitor's decision (replaces the declared gpt-6-luna entry): OpenAI Chat
+  # Completions via the reference adapter (src/openai_provider.py, from swarm-lab 8290d7ad). Prices are the adapter's
+  # PRICES row (standard tier, retrieved 2026-10-04T12:10Z). reasoning_effort low; max_completion_tokens covers
+  # visible plus reasoning tokens. reservation_margin 1: the byte bound is already an upper bound on every call.
+  gpt-6-sol:
     api: openai
-    tag: gpt-6-luna
-    status: declared
-    usd_cap: 60
+    tag: gpt-6-sol
+    status: ready
+    usd_cap: 150
     carried_from_attempt_001: {}
+    canonical_model: gpt-6-sol
+    # Its own fresh probe and qualification fixtures, from the unused part of the reserved range 318600-318699
+    # (the Qwen configuration of attempt 002 used 318600-318617, 318620-318625, 318630-318635).
+    fixtures:
+      probe_first_market_id: 318640
+      ordinary_markets: [318660, 318661, 318662, 318663, 318664, 318665]
+      smoke_markets: [318670, 318671, 318672, 318673, 318674, 318675]
+    request_template:
+      model: gpt-6-sol
+      reasoning_effort: low
+      max_completion_tokens: 2000
+      response_format:
+        type: json_object
+    budget:
+      max_output_tokens: 2000
+      in_flight_per_host: 3
+      in_flight_per_host_max: 3
+      reservation_margin: 1
+      prices: {input: 2.0, cached_input: 0.2, cache_write: 2.5, output: 10.0}
+      retry:
+        transport_retries: 2
+        retryable_http_status: [429, 500, 502, 503, 504]
+        backoff_seconds: [2, 6]
+        retry_after_cap_seconds: 20
 request_template:
   model: qwen/qwen3.7-flash
   provider:

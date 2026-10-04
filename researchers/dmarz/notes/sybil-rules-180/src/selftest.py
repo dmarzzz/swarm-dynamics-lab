@@ -26,6 +26,10 @@ import study
 import transport
 import worker
 from test_provider import Answers, Billing, Request, Transport  # noqa: F401  (the adapter tests run here too)
+import openai_provider
+import test_openai_provider as _toap
+OpenAIRequest, OpenAICost, OpenAIAnswers, OpenAITransport, OpenAIBilling, OpenAIStubServer, OpenAILedgerRules = (
+    _toap.Request, _toap.Cost, _toap.Answers, _toap.Transport, _toap.Billing, _toap.StubServer, _toap.LedgerRules)
 
 
 def world():
@@ -459,19 +463,54 @@ class ModelLadder(unittest.TestCase):
             self.assertEqual(study.ledger_budget()['aggregate_usd'], 5)
             self.assertEqual(study.provider_config()['model'], 'qwen/qwen3.7-flash')
 
-    def test_second_model_has_own_names_cap_and_is_refused_until_pinned(self):
-        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-luna'}):
+    def test_second_model_has_own_names_cap_and_adapter(self):
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-sol'}):
             p = study.params('S1')
-            self.assertEqual((p['batch'], p['model']), ('s1-002-gpt-6-luna', 'gpt-6-luna'))
+            self.assertEqual((p['batch'], p['model']), ('s1-002-gpt-6-sol', 'gpt-6-sol'))
             self.assertEqual(provider.stage_of(p['batch'] + ':x'), 'S1')
-            self.assertEqual(study.session_experiment(), study.EXPERIMENT + '-gpt-6-luna')
+            self.assertEqual(study.session_experiment(), study.EXPERIMENT + '-gpt-6-sol')
             b = study.ledger_budget()
-            self.assertEqual((b['aggregate_usd'], b['max_calls']['P0'], b['max_attempted_calls']), (60, 1, 8478))
-            with self.assertRaises(ValueError):
-                study.provider_config()
-        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-4o'}):
+            self.assertEqual((b['aggregate_usd'], b['max_calls']['P0'], b['max_attempted_calls']), (150, 1, 8478))
+            self.assertEqual((b['in_flight_per_host'], b['in_flight_per_host_max'], b['max_output_tokens']), (3, 3, 2000))
+            config = study.provider_config()
+            self.assertIs(study.adapter(config), openai_provider)
+            openai_provider.check_config(config)                                  # template keys, effort, prices row
+            self.assertEqual(config['request_template']['reasoning_effort'], 'low')
+            self.assertEqual(config['budget']['prices'], openai_provider.PRICES['gpt-6-sol'])
+            self.assertEqual(config['budget']['retry']['retryable_http_status'], [429, 500, 502, 503, 504])
+            for k in ('messages', 'plain', 'cued'):
+                self.assertIn('json', study.SYSTEMS[k].lower())                    # JSON mode needs the word
+                self.assertIn('capacity transferred into a firm (from your reserve or another firm) can be ordered only from the next round',
+                              study.SYSTEMS[k])
+            f = study.design()['fixtures']
+            mine = set(range(f['probe_first_market_id'], f['probe_first_market_id'] + 18)) | set(f['ordinary_markets']) | set(f['smoke_markets'])
+            used = (set(range(318600, 318618)) | set(range(318620, 318626)) | set(range(318630, 318636))
+                    | set(range(318400, 318418)) | set(range(318200, 318206)) | set(range(318100, 318106)))
+            self.assertEqual(len(mine), 30)
+            self.assertFalse(mine & used)
+            self.assertTrue(all(318640 <= m <= 318699 for m in mine))
+            self.assertTrue(study.witnesses()['passed'])
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-luna'}):
             with self.assertRaises(ValueError):
                 study.model_name()
+
+    def test_openai_reservation_equals_adapter_permit_and_cap_arithmetic(self):
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-sol', openai_provider.KEY_ENV: 'test-not-a-key'}), \
+                tempfile.TemporaryDirectory() as tmp:
+            config = study.provider_config()
+            clock = rehearse.JumpClock()
+            stub = rehearse.Stub('mixed', api='openai')
+            led = transport.FastLedger(Path(tmp) / 'l.jsonl', config['budget'])
+            d = transport.LocalDispatcher(led, config, 3, stub, clock.now, clock.sleep, lose={(1, 1)})
+            rows = d.dispatch('s1-002-gpt-6-sol', calls_for(), 3)
+            self.assertTrue(all(r['ok'] for r in rows.values()), {u: r['category'] for u, r in rows.items()})
+            self.assertEqual(d.transport['reissued_calls'], 4)
+            self.assertTrue(all(r['accounting']['cost_source'] == 'computed_from_pinned_prices' for r in rows.values()))
+            # Worst case per call at the largest request (X0, about 10.5 KB): bytes x 2.50 + 2,000 x 10.00 per million.
+            micro, n = transport.reservation(config, study.SYSTEMS['messages'], 'x' * 7000)
+            self.assertLess(micro, 50_000)                                        # under USD 0.05 per call
+            self.assertGreater(micro, 20_000)
+
 
     def test_gates_never_pool_models(self):
         with patch.dict(os.environ, {study.MODEL_ENV: ''}):

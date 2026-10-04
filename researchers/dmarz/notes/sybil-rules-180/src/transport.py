@@ -43,8 +43,11 @@ import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+import openai_provider
 import provider
 import study
+
+CALL_FAILURES = (provider.CallFailure, openai_provider.CallFailure)
 
 SESSION_ROLE = 'model-worker'
 TASK_VERSION = 1
@@ -80,15 +83,20 @@ def host_name():
 
 
 def request_bytes(config, system, user):
-    """The exact encoded request body the adapter will send (no credential involved)."""
+    """The exact encoded request body the run's adapter will send (no credential involved)."""
     shell = types.SimpleNamespace(c=config, b=config['budget'])
-    return json.dumps(provider.OpenRouter.body(shell, system, user)).encode()
+    cls = openai_provider.OpenAI if config.get('api') == 'openai' else provider.OpenRouter
+    return json.dumps(cls.body(shell, system, user)).encode()
 
 
 def reservation(config, system, user):
-    """Micro-dollars, the adapter's own formula: request bytes as the input bound plus the full output limit."""
+    """Micro-dollars, the adapter's own formula (so a worker's permit equals what its adapter reserves)."""
     b = config['budget']
     n = len(request_bytes(config, system, user))
+    if config.get('api') == 'openai':
+        p = b['prices']
+        bound = n * max(p['input'], p['cache_write']) + b['max_output_tokens'] * p['output']
+        return int(bound * b.get('reservation_margin', 10) + 0.999999), n
     return int(n * b['input_usd_per_million'] + b['max_output_tokens'] * b['output_usd_per_million'] + 0.999999), n
 
 
@@ -185,8 +193,9 @@ class FastLedger(provider.Ledger):
 class PermitLedger:
     """The adapter's ledger on a worker: accepts only the permitted call ids, each once, at the permitted amount."""
 
-    def __init__(self, permits, max_attempts_per_call):
+    def __init__(self, permits, max_attempts_per_call, failure=provider.CallFailure):
         self.permits, self.max = dict(permits), max_attempts_per_call
+        self.failure = failure          # the adapter's own CallFailure class, so its handlers catch refusals
         self.used, self.attempts = set(), {}
         self._lock = threading.Lock()
 
@@ -196,16 +205,16 @@ class PermitLedger:
                 return {}
             call, kind = event['call_id'], event['type']
             if kind == 'reserve':
-                if call not in self.permits: raise provider.CallFailure('no_permit')
-                if call in self.used: raise provider.CallFailure('duplicate_call_refused')
-                if event['micro_usd'] != self.permits[call]: raise provider.CallFailure('permit_reservation_mismatch')
+                if call not in self.permits: raise self.failure('no_permit')
+                if call in self.used: raise self.failure('duplicate_call_refused')
+                if event['micro_usd'] != self.permits[call]: raise self.failure('permit_reservation_mismatch')
                 self.used.add(call)
             elif kind == 'attempt':
-                if call not in self.used: raise provider.CallFailure('attempt_without_reservation')
+                if call not in self.used: raise self.failure('attempt_without_reservation')
                 self.attempts[call] = self.attempts.get(call, 0) + 1
-                if self.attempts[call] > self.max: raise provider.CallFailure('transport_attempt_cap_reached')
-            elif kind != 'response':
-                raise provider.CallFailure('unknown_ledger_event')
+                if self.attempts[call] > self.max: raise self.failure('transport_attempt_cap_reached')
+            elif kind not in ('response', 'void'):     # void: the OpenAI adapter releases a call no model ran
+                raise self.failure('unknown_ledger_event')
             return {}
 
 
@@ -216,7 +225,8 @@ def max_attempts_per_call(budget):
 
 # ------------------------------------------------------------------ worker side
 
-STOPPING = tuple(provider.INTEGRITY) + (provider.BILLING_STOP, 'no_permit', 'permit_reservation_mismatch')
+STOPPING = tuple(provider.INTEGRITY) + tuple(openai_provider.INTEGRITY) + (provider.BILLING_STOP, openai_provider.BILLING_STOP,
+                                                                             'no_permit', 'permit_reservation_mismatch')
 
 
 def _object(obj):
@@ -232,7 +242,8 @@ def run_task(task, api, sent=None, clock=time.time):
     again. A call is not sent after the task's `expires` time."""
     budget = api.b
     sent = set() if sent is None else sent
-    api.ledger = PermitLedger({c['call_id']: c['micro_usd'] for c in task['calls']}, max_attempts_per_call(budget))
+    api.ledger = PermitLedger({c['call_id']: c['micro_usd'] for c in task['calls']}, max_attempts_per_call(budget),
+                              type(api).__module__ == 'openai_provider' and openai_provider.CallFailure or provider.CallFailure)
     before = dict(api.billing)
     stop = threading.Event()
     guard = threading.Lock()
@@ -255,7 +266,7 @@ def run_task(task, api, sent=None, clock=time.time):
         try:
             answer, account = api.call(task['systems'][c['system']], c['user'], c['call_id'], _object)
             row.update(ok=True, answer=answer, accounting=account)
-        except provider.CallFailure as exc:
+        except CALL_FAILURES as exc:
             row.update(category=exc.category, accounting=exc.accounting)
             if exc.category in STOPPING:
                 stop.set()
@@ -340,8 +351,9 @@ def serve(sr, work_dir, opener=None, poll=None, attach_seconds=None, idle_second
         run.fail('worker refused this run: not a worker session at this source hash and model', model_calls=0)
         return 4
     try:
-        api = provider.OpenRouter(PermitLedger({}, 0), study.provider_config(), opener, api_clock, api_sleep)
-    except (provider.CallFailure, ValueError) as exc:
+        config = study.provider_config()
+        api = study.make_api(PermitLedger({}, 0, study.adapter(config).CallFailure), config, opener, api_clock, api_sleep)
+    except CALL_FAILURES + (ValueError,) as exc:
         exc.category = getattr(exc, 'category', str(exc))
         run.fail('worker cannot start: ' + exc.category, model_calls=0)
         return 4
@@ -589,7 +601,8 @@ class LocalDispatcher(Dispatcher):
 
     def __init__(self, ledger, config, slots, opener, clock=time.monotonic, sleep=time.sleep, lose=()):
         super().__init__(ledger, config, slots)
-        self.apis = [provider.OpenRouter(PermitLedger({}, 0), config, opener, clock, sleep) for _ in range(slots)]
+        self.apis = [study.make_api(PermitLedger({}, 0, study.adapter(config).CallFailure), config, opener, clock, sleep)
+                     for _ in range(slots)]
         self.sent = [set() for _ in range(slots)]
         self.lose = set(lose)
 
