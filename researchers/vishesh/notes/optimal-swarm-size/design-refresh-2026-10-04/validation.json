@@ -1,0 +1,18 @@
+{
+  "kind": "offline document/evidence checks; not model validation",
+  "date": "2026-10-04",
+  "local_links_passed": true,
+  "planned_episode_arithmetic_passed": true,
+  "paired_precision_arithmetic_passed": true,
+  "paper_metadata_verification": {
+    "checked": 2,
+    "problems": 0
+  },
+  "model_calls": 0,
+  "new_spend_microdollars": 0,
+  "documents": {
+    "CASES.md": "eb054825c4d5c63c037c84136be7d5b224809979693834043968e38f9de5cfb3",
+    "README.md": "d4c3f075b1a72297b7aec0cda7b15f8e944471c5792959025ad963f7f1a66f96",
+    "SOURCES.md": "b0242b291aed9a7df3e719b0e233bfc1b27114281b550f435b21bfb034ec49fc"
+  }
+}

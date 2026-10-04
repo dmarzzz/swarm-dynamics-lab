@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: blocked
-task: build-swarm-size-qualification
-doing: Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved
-updated: 2026-10-04T15:25Z
+state: done
+task: refine-swarm-size-question
+doing: Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged.
+updated: 2026-10-04T18:11Z
 ---
 
 ## Notes
