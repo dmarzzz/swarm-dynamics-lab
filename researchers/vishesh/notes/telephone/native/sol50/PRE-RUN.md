@@ -32,3 +32,9 @@ Map sol-01 through sol-50 to hop position. During collection show measured assig
 ## Evidence metadata
 
 Scientific evidence confidence: no Sol50 native evidence yet. Planned sample is one authored source case, fifty nested handoff observations and two separate qualification controls; observed native sample is zero. Offline software checks support readiness of the bounded core only. Assessor: vishesh/codex-village-fit, 2026-10-04. Report execution, qualification, scientific interpretation and cost separately at closeout.
+
+## PI advisory assessment — 2026-10-04
+
+The advisory feedback matches the prospective design: semantic drift is measured without intervention; every raw return and downstream missingness is retained; twelve targets are reviewed at every hop; fifty observations share one source root; both fixed offline controls and scoring sensitivity remain. Added the explicit [scoring contract](SCORING.md) and 600-slot empty annotation template, and repaired the OpenRouter endpoint URL. These are pre-collection clarifications, not native results or run admission. No unresolved scientific defect blocks this narrow descriptive question; generalization, independent replication and isolated scale/model attribution remain out of scope. Native transport/admission binding and qualification are still unverified.
+
+Exact pending owner decision: approve two GPT-6 Sol qualification calls followed, only if they pass, by one serial fifty-agent chain on the frozen eight-record/twelve-target authored case, measuring drift without intervention, within the unchanged USD 5 cumulative cap and USD 2.014432753 bounded cumulative envelope. PI advice is not owner approval or spending authority. The repaired plan revision must be registered and publicly verified before an admitted launch.
