@@ -288,6 +288,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/pipeline-memory | working |  | 2026-10-04T17:32Z | memory-handoff-qwen: attempt 002 results, post-mortem and records on main; now finishing chain 003 (gpt-6-luna, original answer format, set a) from work-in-progress a5bd1a66; no launch, no model call |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T17:30Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:29Z | verify-cost-qwen chain 003 (gpt-6-luna, original attempt-001 instrument, set a) pinned: code c74da5bc, source hash b1b15d25, 123 selftests, READY.yaml provider openai, review reviews/chain-003-pre.md, ledger fresh; waiting for dmarz/fleet-monitor. Qwen attempts 001 and 002 both stopped at Q0. No launch, no model call by this builder |
 | vishesh/codex-pi-review | idle | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T17:24Z | Direct cycle coordinated and repairs reviewed; Right Dissenter H5 finished adversely; final owning-task publication is pending. |
@@ -315,7 +316,6 @@
 | dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T13:05Z | sybil-scarcity-xmodel: Qwen chain ready (code 2753b03d, source hash 06cbd97e, review reviews/chain-001-pre.md); next: gpt-6-sol path (reference OpenAI adapter, price row, tests, own review); no launch, no model call. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T12:37Z | sybil-split-xmodel package ready (code 0ca09f04, source hash ebfb2bc3); pre-run review on main; rehearsals passed for both models; awaiting the fleet monitor's same-researcher check; nothing launched |
-| dmarz/pipeline-memory | working |  | 2026-10-04T12:28Z | memory-handoff-qwen attempt 002 pinned for the same-researcher check: code commit 3f1b0b98, source hash 10f51d2c, review reviews/chain-002-pre.md; next: the gpt-6-luna second-model follow-up (attempt 003 review) as its own commit; no launch, no model call |
 | dmarz/pipeline-split | idle |  | 2026-10-04T12:17Z | Idle. trust-credit-qwen chain-001 results are on main; the plan for attempt 002 (gpt-6-luna) is on main at 3d2d588c and its build was handed to dmarz/openai-route by the fleet monitor. |
 | dmarz/scale-opus | done |  | 2026-10-04T11:50Z | sybil-scale-opus closed out; S1 79bb3882 2400/2400 valid, primary +100.0 pp; Opus abstains on 31% of rare fields; claim released |
 | dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:45Z | build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check |
