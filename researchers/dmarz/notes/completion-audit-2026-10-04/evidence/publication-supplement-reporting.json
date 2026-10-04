@@ -1,0 +1,529 @@
+{
+  "audit_type": "bounded publication supplement; independent review of existing reporting metadata, not a metadata implementation",
+  "source_commit": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+  "assessor": "dmarz/pi-completion-audit independent reporting cross-check",
+  "assessed_at": "2026-10-04",
+  "scope": "Read-only original source, existing local production-JavaScript capture and retained results. No experiment, model call, server access, network refresh, registration or launch. Only this supplement is newly written.",
+  "verdict": "The existing metadata system materially improves repository interpretation of evidence, but does not repair the external dashboard, mechanically verify scientific judgments, or guarantee up-to-date and exhaustive coverage.",
+  "existing_metadata": {
+    "author": "vishesh/codex-pi-review",
+    "registry_source_snapshot": "9781739cd06e0c9606ed0ed053bf91b5e2a42b57",
+    "cohorts": 45,
+    "rendered_documents": 41,
+    "score_distribution": {
+      "0_untested": 11,
+      "1_exploratory": 31,
+      "2_limited": 3,
+      "3_moderate": 0,
+      "4_strong": 0
+    },
+    "interpretation": "These are 45 editorial cohort rows, not 45 executed experiments or independent findings. Scores apply to scoped claims; do not average them or translate them into probabilities.",
+    "validation": {
+      "metadata_check": "pass: 45 cohorts, 41 documents; valid and current",
+      "offline_tests": "9 passed",
+      "meaning_of_current": "Generated blocks match registry text, not necessarily the newest observed outcomes."
+    },
+    "sources": [
+      {
+        "path": "experiments/EVIDENCE.md",
+        "lines": [
+          1,
+          10
+        ],
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L1-L10"
+      },
+      {
+        "path": "experiments/EVIDENCE-METADATA.md",
+        "lines": [
+          9,
+          22
+        ],
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE-METADATA.md#L9-L22"
+      },
+      {
+        "path": "scripts/experiment_evidence.py",
+        "lines": [
+          172,
+          195
+        ],
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L172-L195"
+      },
+      {
+        "path": ".github/workflows/lab.yml",
+        "lines": [
+          22,
+          27
+        ],
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/.github/workflows/lab.yml#L22-L27"
+      }
+    ]
+  },
+  "interpretation_repairs": [
+    {
+      "finding": "Explicitly separates operational completion, schema validity, clean competence, treatment evidence and formal launch approval. Failed qualification can support a diagnostic claim without supporting the intended treatment effect; adverse results need not be bugs.",
+      "sources": [
+        {
+          "path": "experiments/EVIDENCE-METADATA.md",
+          "lines": [
+            9,
+            22
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE-METADATA.md#L9-L22"
+        },
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            17,
+            17
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L17"
+        },
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            53,
+            53
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L53"
+        }
+      ]
+    },
+    {
+      "finding": "Requires independent units and assigned/completed/failed/partial/unstarted denominators, separates planned from observed, and prohibits treating calls, identities, reused controls and descendants as independent samples.",
+      "sources": [
+        {
+          "path": "experiments/EVIDENCE-METADATA.md",
+          "lines": [
+            24,
+            45
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE-METADATA.md#L24-L45"
+        },
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            34,
+            38
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L34-L38"
+        },
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            46,
+            54
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L46-L54"
+        }
+      ]
+    },
+    {
+      "finding": "Healing rows now distinguish 72 completed versus 108 unrun pilot03 worlds and identify practical01/02 as 360 dependent replay worlds with zero new model calls; this helps correct a misleading inference from large dashboard done counts. It does not provide the earlier missing raw traces or repair archive integrity.",
+      "sources": [
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            28,
+            30
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L28-L30"
+        }
+      ]
+    },
+    {
+      "finding": "Capture-memory and collective sensing explicitly disclose zero model calls; capture task IDs are reused across regimes. Sybil scale discloses simulated identities, avoiding an inference of hundreds of independently acting model agents.",
+      "sources": [
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            38,
+            38
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L38"
+        },
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            46,
+            47
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L46-L47"
+        },
+        {
+          "path": "experiments/EVIDENCE.md",
+          "lines": [
+            54,
+            54
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L54"
+        }
+      ]
+    }
+  ],
+  "remaining_limits": [
+    {
+      "id": "dashboard-unmodified",
+      "severity": "material interpretation limit",
+      "finding": "This repository metadata renderer writes Markdown blocks and an index only. The saved deployed app still computes means from done numeric rows and sample standard deviation. Nothing here reconciles failed/omitted jobs, the 200-row fresh-payload slice, or qualification with operational status in the external dashboard.",
+      "production_evidence": {
+        "captured_path": "data/completion-audit-2026-10-04/live-app.js",
+        "sha256": "361cf517ca4cbb68b54c2653ceaf2236278f39f57d2a7e376c965e9a5f071daa",
+        "agentops_origin_main_checked": "c857af3ecdba619c7f9aae9bdb278341feae6177",
+        "origin_main_app_byte_identical_to_capture": true,
+        "limit": "No fresh production fetch in this supplement; deployment of other modules and hub runtime version remains unattested. Use reporting-check.json for original snapshot counts and limits."
+      },
+      "sources": [
+        {
+          "path": "experiments/EVIDENCE-METADATA.md",
+          "lines": [
+            5,
+            5
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE-METADATA.md#L5"
+        },
+        {
+          "path": "scripts/experiment_evidence.py",
+          "lines": [
+            155,
+            169
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L155-L169"
+        },
+        {
+          "path": "scripts/experiment_evidence.py",
+          "lines": [
+            183,
+            189
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L183-L189"
+        },
+        {
+          "path": "site/public/js/app.js",
+          "lines": [
+            498,
+            518
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/c857af3ecdba619c7f9aae9bdb278341feae6177/site/public/js/app.js#L498-L518"
+        }
+      ]
+    },
+    {
+      "id": "registration-discovery-gap",
+      "severity": "concrete coverage defect",
+      "finding": "Validator discovery covers experiment.yaml and experiment.json under researcher notes plus formal experiments/*/README.md. Poietic uses registration.json, has no registry row or rendered metadata, and is omitted without failing --check. Code-registered or differently named studies need explicit inventory coverage; the check is not repositorywide completeness proof.",
+      "smallest_repair": "Owner should add Poietic metadata with zero observed outcomes and extend supported registration discovery or maintain an explicit exhaustive inventory without mutating frozen execution inputs.",
+      "sources": [
+        {
+          "path": "scripts/experiment_evidence.py",
+          "lines": [
+            63,
+            87
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L63-L87"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/registration.json",
+          "lines": [
+            1,
+            7
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/registration.json#L1-L7"
+        },
+        {
+          "path": "AGENTS.md",
+          "lines": [
+            279,
+            281
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/AGENTS.md#L279-L281"
+        }
+      ]
+    },
+    {
+      "id": "snapshot-not-live",
+      "severity": "material freshness limit",
+      "finding": "The registry explicitly dates and pins assessments, which preserves provenance. However generated blocks saying current can remain synchronized to old counts while new results exist at this publication commit. This is stale reporting when read as current status, not evidence that the original dated assessment was dishonest.",
+      "examples": [
+        {
+          "cohort": "right-dissenter",
+          "registry": "No native results; planned Q0 18 decisions.",
+          "new_retained_result": "Q0 has 18 assigned/terminal/valid native requests, 12 correct, qualification false, zero missing.",
+          "sources": [
+            {
+              "path": "experiments/EVIDENCE.md",
+              "lines": [
+                13,
+                13
+              ],
+              "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L13"
+            },
+            {
+              "path": "researchers/vishesh/notes/dissent/results/q0-a1/summary.json",
+              "lines": [
+                2,
+                32
+              ],
+              "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/dissent/results/q0-a1/summary.json#L2-L32"
+            }
+          ]
+        },
+        {
+          "cohort": "theseus-v2",
+          "registry": "Initial S0: 12 runs, 24 calls; qualification failed.",
+          "new_retained_result": "Initial plus one planned repair: 24 terminal runs, 48 calls, joint qualification still failed and no turnover pilot. Preserve separate attempts rather than pooling them as a causal formatting comparison.",
+          "sources": [
+            {
+              "path": "experiments/EVIDENCE.md",
+              "lines": [
+                17,
+                17
+              ],
+              "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L17"
+            },
+            {
+              "path": "researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md",
+              "lines": [
+                3,
+                20
+              ],
+              "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md#L3-L20"
+            },
+            {
+              "path": "researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md",
+              "lines": [
+                35,
+                51
+              ],
+              "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md#L35-L51"
+            }
+          ]
+        },
+        {
+          "cohort": "antsy-v6",
+          "registry": "Observed none; 20 train receipts proposed.",
+          "new_retained_result": "E0-attempt-1 retained outputs show 20 assigned receipts, all 20 unscorable; no effectiveness estimate follows. This is an executed instrument attempt, not an unrun proposal. Native model study remains separate.",
+          "sources": [
+            {
+              "path": "experiments/EVIDENCE.md",
+              "lines": [
+                55,
+                55
+              ],
+              "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE.md#L55"
+            },
+            {
+              "path": "researchers/vishesh/notes/antsy-receipt-v6/results/E0-attempt-1/summary.json",
+              "lines": [
+                1,
+                5
+              ],
+              "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/antsy-receipt-v6/results/E0-attempt-1/summary.json#L1-L5"
+            }
+          ]
+        }
+      ],
+      "smallest_repair": "Append/update coherent attempt/cohort assessments from latest closeouts, keeping the older snapshot traceable. Do not promote evidence confidence automatically merely because more outputs exist.",
+      "sources": [
+        {
+          "path": "experiments/EVIDENCE-METADATA.md",
+          "lines": [
+            22,
+            22
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE-METADATA.md#L22"
+        },
+        {
+          "path": "experiments/EVIDENCE-METADATA.md",
+          "lines": [
+            43,
+            56
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE-METADATA.md#L43-L56"
+        },
+        {
+          "path": "scripts/experiment_evidence.py",
+          "lines": [
+            183,
+            191
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L183-L191"
+        }
+      ]
+    },
+    {
+      "id": "semantic-validation-not-implemented",
+      "severity": "limit of automation",
+      "finding": "Validation checks IDs, fields, allowed score range, source path existence, registration coverage and rendered consistency. It does not calculate independent sample size, verify count arithmetic, qualification decisions, source hashes, source-commit existence or scientific adequacy. Optional source_sha256 fields are not read by the validator; code accepts source commits on their 40-hex format. A passing check is a document/schema check, not an independent scientific audit.",
+      "sources": [
+        {
+          "path": "scripts/experiment_evidence.py",
+          "lines": [
+            40,
+            87
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L40-L87"
+        }
+      ]
+    },
+    {
+      "id": "index-omits-claim-rationale",
+      "severity": "reader interpretation limit",
+      "finding": "The summary table displays study/cohort, score and sample summary but omits the scored claim and rationale. Those are present in document blocks and registry. Read them before comparing scores; a zero for intended efficacy can coexist with observed diagnostic runs.",
+      "sources": [
+        {
+          "path": "scripts/experiment_evidence.py",
+          "lines": [
+            103,
+            115
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L103-L115"
+        },
+        {
+          "path": "scripts/experiment_evidence.py",
+          "lines": [
+            139,
+            152
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/scripts/experiment_evidence.py#L139-L152"
+        },
+        {
+          "path": "experiments/EVIDENCE-METADATA.md",
+          "lines": [
+            9,
+            22
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/experiments/EVIDENCE-METADATA.md#L9-L22"
+        }
+      ]
+    }
+  ],
+  "new_attempts": [
+    {
+      "family": "Poietic Agents",
+      "id": "poietic-agents",
+      "attempt": "prospective-v0.1 / S0-01 assessment (unrun)",
+      "kind": "unrun exploratory model-study proposal",
+      "model_backend": "Unpinned intended capable generalist, cheaper generative executor (Haiku or Qwen suggested), optional separately qualified Jev typed-choice component; no served model or provider response evidence.",
+      "evidence_coverage": {
+        "level": "Local design, registration document, contracts, author pre-run assessment and explicit launch state; no implementation or run outputs in this study directory.",
+        "provider_wire_proof": false,
+        "observed_model_calls": 0,
+        "public_hub_registration_verified": false,
+        "limits": "registration.json is a local registration document. launch-state.json says public registration pending; no new hub refresh was performed. Absence of outputs plus explicit not-launched state supports zero observed Poietic execution within this bounded corpus."
+      },
+      "unit": "Frozen/queued experimental run (not proposed logical request, job, identity or workload root)",
+      "counts": {
+        "planned": 0,
+        "started": 0,
+        "terminal": 0,
+        "valid": 0,
+        "completed": 0,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "launch-state has planned_run_count=0 and started_run_count=0. Proposed S0 allocation is 48 probes per 3 contracts = 144 logical / up to 288 physical requests. Proposed S1 is 4 workload roots paired over 4 arms = 16 lineages, 768 dependent jobs, 6 identities per world. None is an assigned or observed execution denominator; no lost or stalled outcomes are inferred.",
+      "qualification": "Not run. Design review pending, exact runtime unresolved, offline checks unimplemented, prior-art survey incomplete, no accepted hypothesis, no spend authorization or machine allocation.",
+      "stalling_behavior": "Not assessable: no execution or model behavior. Pending launch gates are not agent stalling.",
+      "causes": [
+        {
+          "explanation": "Study remains prospective and launchable:false with explicit zero authorization.",
+          "confidence": "high",
+          "basis": "launch-state and design metadata, not inferred model behavior"
+        }
+      ],
+      "smallest_diagnostic": "Complete offline instrument and exact executor contracts, then after documented launch gates use the predeclared fresh S0 probes before considering swarm efficacy.",
+      "falsifier": "A retained launched-run manifest and provider responses would falsify the unrun classification for a later cutoff; a proposed count or registration alone would not.",
+      "acceptance": "Per candidate contract, at least 44/48 correct and 48/48 schema-valid outputs with zero protected-access violations. Transport retry stays attached to its original probe. These are qualification criteria, not proof of treatment efficacy.",
+      "scientific_conclusions": "No empirical Poietic model, specialization, cost-saving or recovery result. Exclude from model-executed family prevalence; retain in proposal inventory.",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Poietic differentiation improves quality-constrained lifetime cost or recovery.",
+        "rationale": "No observed evaluation; design and intended counters are prospective."
+      },
+      "sample_size_summary": "Observed: zero runs and model calls. Proposed S0: 144 requests across three contracts; S1: four workload roots, 16 arm lineages, 768 dependent jobs. No frozen/queued runs.",
+      "sources": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/README.md",
+          "lines": [
+            3,
+            7
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/README.md#L3-L7"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/README.md",
+          "lines": [
+            22,
+            26
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/README.md#L22-L26"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/launch-state.json",
+          "lines": [
+            3,
+            33
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/launch-state.json#L3-L33"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/design.yaml",
+          "lines": [
+            92,
+            135
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/design.yaml#L92-L135"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/registration.json",
+          "lines": [
+            1,
+            7
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/registration.json#L1-L7"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/reviews/S0-01-pre.md",
+          "lines": [
+            5,
+            17
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/reviews/S0-01-pre.md#L5-L17"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/reviews/S0-01-pre.md",
+          "lines": [
+            27,
+            37
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/poietic-agents/reviews/S0-01-pre.md#L27-L37"
+        }
+      ]
+    }
+  ],
+  "instructions_for_audit_output": {
+    "finding": "AGENTS.md now requires evidence_confidence and sample_size_summary for experiment entries, including exploratory researcher-note studies. This completion audit is a retrospective evidence-review deliverable, not a new experiment entry, so it does not need a new experiment registration, SETUP.md, launch gate or registry cohort merely to exist. Its included prospective Poietic record has scoped fields for clarity; updating the owning study registry is separate work.",
+    "scope_conflict": "No sync, claims or original-file edits performed under the parent’s bounded read-only-originals instruction.",
+    "sources": [
+      {
+        "path": "AGENTS.md",
+        "lines": [
+          24,
+          39
+        ],
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/AGENTS.md#L24-L39"
+      },
+      {
+        "path": "AGENTS.md",
+        "lines": [
+          279,
+          281
+        ],
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/AGENTS.md#L279-L281"
+      }
+    ]
+  },
+  "report_ready": "The team has added a useful evidence-confidence and sample-size registry: it explicitly separates scripted tests, qualification, unrun plans and independent task units. This repairs several repository-level interpretation problems, but is editorial metadata, not new experimental evidence or a dashboard fix. At the final source snapshot it covers 45 cohorts and passes its formatting checks, while some rows lag newer attempts and the new Poietic proposal escapes automatic registration discovery. Poietic remains unrun, with no model evidence."
+}

@@ -21,6 +21,8 @@ Assign the highest level whose requirements are supported, then explain the main
 
 Record the assessor, date, source commit and supporting paths. These are source-reported assessments unless an independent audit is explicitly linked. Reassess after a new cohort, model/measurement change or completed analysis; retain historical records in Git. An earlier assessment must not be silently treated as a live run status.
 
+A study row may override `assessor` and `assessed_at` when its owner updates the evidence. Otherwise it inherits the registry defaults. The renderer shows each cohort's actual assessor and date, so a later operational assessment is not attributed to the original reviewer.
+
 ## Short sample-size field
 
 Write one compact sentence, preferably under 300 characters and never over 500, in this order:

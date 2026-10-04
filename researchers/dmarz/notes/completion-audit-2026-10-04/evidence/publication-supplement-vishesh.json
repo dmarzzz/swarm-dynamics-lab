@@ -1,0 +1,1358 @@
+{
+  "audit": "Bounded publication supplement: new native families and expanded Theseus evidence",
+  "publication_source_commit": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+  "replaces_frozen_snapshot": false,
+  "integration_rule": "Apply replacement records to the existing matching attempt IDs for current coverage; retain original frozen evidence file unchanged. New attempts add observations; plan records must not be pooled as trials.",
+  "attempts": [
+    {
+      "family": "swarm-of-theseus-v2",
+      "id": "swarm-of-theseus-v2/S0",
+      "attempt": "S0",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001 (saved request configuration; returned model identity not retained separately)",
+      "backend": "Anthropic",
+      "evidence_coverage": "Newly published archive directly inspected: all 24 dispatch-start records,24 durable parsed results with stop reasons and usage,24 event records,12 episode outcomes and manifest. Repaired requests additionally preserve exact user text. The old hub catalogue was empty; this supplement closes that request/result gap through the separate archive. Records do not retain complete HTTP envelopes or independently returned model identity.",
+      "unit": "world-arm episode (12 episodes, six paired scenario/seed worlds; two calls and six decisions per call)",
+      "counts": {
+        "planned": 12,
+        "started": 12,
+        "terminal": 12,
+        "valid": 12,
+        "completed": 12,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "count_overlap": "Terminal, valid, completed and errored may overlap; these are not a partition. Incomplete means started without terminal disposition; unstarted is separate. Completed means protocol endpoint, not scientific success. Do not pool calls, policy rows, paired worlds or replayed prefixes.",
+      "qualification": "FAILED joint competence gate, unchanged: explicit-rule accuracy>=0.90 in each scenario/checkpoint and stable learner>=0.75 in every scenario. All schemas valid; no turnover pilot dispatched.",
+      "stalling_behavior": "Every call ended with end_turn and a valid six-decision answer. No explicit refusal is recorded. Wrong HOLD/none classifications occur, but these are two-checkpoint batch decisions rather than demonstrated prolonged action loops.",
+      "causes": {
+        "confirmed": [
+          "Direct packet/answer mismatch: some notebooks misstate visible booleans or add irrelevant criteria despite an explicit governing rule.",
+          "Both qualification cohorts produce complete valid outputs but fail action correctness."
+        ],
+        "plausible": [
+          "Row/column binding, applying conjunctions, and interference from notebook writing; compound repair did not isolate these."
+        ],
+        "unknown": [
+          "Returned model ID is not independently preserved; causality of particular prompt components remains untested."
+        ]
+      },
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz#L1",
+          "sha256": "45ff0337c6aec2114890281e058674fdc363180aabe64f25d96a7d590a36d8e6"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md#L3",
+          "sha256": "405d7e0788300fb538a16372dccf42bf97a72cc2117819b24a22728a0f0a0d45"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-post.md",
+          "line": 7,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-post.md#L7",
+          "sha256": "d6ae2ddf66a272c7660cc457da48a8a85640f85b7c0eaf08fb48fda9dee3abf0"
+        }
+      ],
+      "smallest_diagnostic": {
+        "test": "Offline compare each wrong decision with its row values and governing rule; a separately authorized diagnostic can cross decision-only versus notebook output and atomic versus six-case batches on fresh tasks.",
+        "falsifier": "Correct actions rejected by an independent scorer would falsify model-application attribution; the present independent replay found zero disagreements.",
+        "acceptance": "Retain the unchanged all-scenario competence gate; any narrower incident-only study needs its own prospective scope and untouched evaluation."
+      },
+      "conclusion_validity": "The original failed qualification conclusion is confirmed by complete archived decisions and independent scoring. Initial-versus-repair changes are not a causal formatting estimate because fresh worlds and multiple interface changes differ. No turnover/culture-preservation effect is measured.",
+      "unstarted": 0,
+      "checkpoint_means": {
+        "incident": {
+          "ceiling": {
+            "stable": 0.75,
+            "changed": 0.9166666666666667
+          },
+          "learner": {
+            "stable": 0.5833333333333333,
+            "changed": 0.6666666666666667
+          }
+        },
+        "migration": {
+          "ceiling": {
+            "stable": 1.0,
+            "changed": 0.8333333333333334
+          },
+          "learner": {
+            "stable": 0.75,
+            "changed": 0.8333333333333334
+          }
+        },
+        "release": {
+          "ceiling": {
+            "stable": 0.8333333333333333,
+            "changed": 0.5
+          },
+          "learner": {
+            "stable": 0.5833333333333334,
+            "changed": 0.6666666666666666
+          }
+        }
+      },
+      "model_calls": 24,
+      "reported_model_calls": 24,
+      "update_type": "replacement",
+      "replaces_attempt_id": "swarm-of-theseus-v2/S0",
+      "publication_source_commit": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "execution_source_commit": "3aead11342b0097ce098bf40f1e69e6f40b3b001",
+      "call_audit": {
+        "starts": 24,
+        "durable_results": 24,
+        "matched_call_ids": true,
+        "events": 24,
+        "world_arm_outcomes": 12,
+        "case_decisions": 144,
+        "stop_reasons": {
+          "end_turn": 24
+        },
+        "errors": 0,
+        "usage_missing": 0,
+        "max_recorded_input_bytes": 11395,
+        "max_output_tokens": 365,
+        "configured_max_input_bytes": 18000,
+        "configured_max_output_tokens": 900,
+        "provider_refusals_observed": 0,
+        "refusal_phrase_candidates": 0,
+        "independent_scorer_mismatches": [],
+        "correct_cases": 107,
+        "incorrect_action_to_truth": [
+          {
+            "action": "hold",
+            "truth": "ship",
+            "count": 18
+          },
+          {
+            "action": "ledger",
+            "truth": "none",
+            "count": 4
+          },
+          {
+            "action": "probe",
+            "truth": "none",
+            "count": 3
+          },
+          {
+            "action": "none",
+            "truth": "canary",
+            "count": 2
+          },
+          {
+            "action": "none",
+            "truth": "probe",
+            "count": 1
+          },
+          {
+            "action": "canary",
+            "truth": "none",
+            "count": 1
+          },
+          {
+            "action": "none",
+            "truth": "ledger",
+            "count": 1
+          },
+          {
+            "action": "ship",
+            "truth": "hold",
+            "count": 6
+          },
+          {
+            "action": "canary",
+            "truth": "probe",
+            "count": 1
+          }
+        ],
+        "metrics": [
+          {
+            "scenario": "incident",
+            "arm": "ceiling",
+            "step": 0,
+            "assigned": 12,
+            "correct": 9
+          },
+          {
+            "scenario": "incident",
+            "arm": "ceiling",
+            "step": 5,
+            "assigned": 12,
+            "correct": 11
+          },
+          {
+            "scenario": "incident",
+            "arm": "learner",
+            "step": 0,
+            "assigned": 12,
+            "correct": 7
+          },
+          {
+            "scenario": "incident",
+            "arm": "learner",
+            "step": 5,
+            "assigned": 12,
+            "correct": 8
+          },
+          {
+            "scenario": "migration",
+            "arm": "ceiling",
+            "step": 0,
+            "assigned": 12,
+            "correct": 12
+          },
+          {
+            "scenario": "migration",
+            "arm": "ceiling",
+            "step": 5,
+            "assigned": 12,
+            "correct": 10
+          },
+          {
+            "scenario": "migration",
+            "arm": "learner",
+            "step": 0,
+            "assigned": 12,
+            "correct": 9
+          },
+          {
+            "scenario": "migration",
+            "arm": "learner",
+            "step": 5,
+            "assigned": 12,
+            "correct": 10
+          },
+          {
+            "scenario": "release",
+            "arm": "ceiling",
+            "step": 0,
+            "assigned": 12,
+            "correct": 10
+          },
+          {
+            "scenario": "release",
+            "arm": "ceiling",
+            "step": 5,
+            "assigned": 12,
+            "correct": 6
+          },
+          {
+            "scenario": "release",
+            "arm": "learner",
+            "step": 0,
+            "assigned": 12,
+            "correct": 7
+          },
+          {
+            "scenario": "release",
+            "arm": "learner",
+            "step": 5,
+            "assigned": 12,
+            "correct": 8
+          }
+        ],
+        "event_inventory": [
+          {
+            "archive_member": "S0/events/S0-release-301-ceiling-00.json",
+            "run": "S0-release-301-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 301,
+            "step": 0,
+            "call": 18,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-300-learner-00.json",
+            "run": "S0-incident-300-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 300,
+            "step": 0,
+            "call": 6,
+            "correct": 3,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-301-ceiling-05.json",
+            "run": "S0-migration-301-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 301,
+            "step": 5,
+            "call": 11,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-release-301-ceiling-05.json",
+            "run": "S0-release-301-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 301,
+            "step": 5,
+            "call": 20,
+            "correct": 1,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-301-learner-00.json",
+            "run": "S0-migration-301-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 301,
+            "step": 0,
+            "call": 13,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-301-learner-05.json",
+            "run": "S0-incident-301-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 301,
+            "step": 5,
+            "call": 8,
+            "correct": 3,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-release-300-ceiling-00.json",
+            "run": "S0-release-300-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 300,
+            "step": 0,
+            "call": 17,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-300-ceiling-05.json",
+            "run": "S0-incident-300-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 300,
+            "step": 5,
+            "call": 4,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-301-ceiling-00.json",
+            "run": "S0-incident-301-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 301,
+            "step": 0,
+            "call": 2,
+            "correct": 3,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-301-learner-05.json",
+            "run": "S0-migration-301-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 301,
+            "step": 5,
+            "call": 15,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-300-ceiling-05.json",
+            "run": "S0-migration-300-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 300,
+            "step": 5,
+            "call": 12,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-300-learner-05.json",
+            "run": "S0-migration-300-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 300,
+            "step": 5,
+            "call": 16,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-300-learner-00.json",
+            "run": "S0-migration-300-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 300,
+            "step": 0,
+            "call": 14,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-release-300-learner-05.json",
+            "run": "S0-release-300-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 300,
+            "step": 5,
+            "call": 23,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-release-300-ceiling-05.json",
+            "run": "S0-release-300-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 300,
+            "step": 5,
+            "call": 19,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-301-ceiling-05.json",
+            "run": "S0-incident-301-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 301,
+            "step": 5,
+            "call": 3,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-301-learner-00.json",
+            "run": "S0-incident-301-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 301,
+            "step": 0,
+            "call": 5,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-300-ceiling-00.json",
+            "run": "S0-incident-300-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 300,
+            "step": 0,
+            "call": 1,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-release-301-learner-05.json",
+            "run": "S0-release-301-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 301,
+            "step": 5,
+            "call": 24,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-301-ceiling-00.json",
+            "run": "S0-migration-301-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 301,
+            "step": 0,
+            "call": 10,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-migration-300-ceiling-00.json",
+            "run": "S0-migration-300-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 300,
+            "step": 0,
+            "call": 9,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-release-300-learner-00.json",
+            "run": "S0-release-300-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 300,
+            "step": 0,
+            "call": 21,
+            "correct": 2,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-release-301-learner-00.json",
+            "run": "S0-release-301-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 301,
+            "step": 0,
+            "call": 22,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0/events/S0-incident-300-learner-05.json",
+            "run": "S0-incident-300-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 300,
+            "step": 5,
+            "call": 7,
+            "correct": 5,
+            "assigned": 6
+          }
+        ],
+        "actual_api_usd_from_saved_usage": 0.10325500000000001
+      }
+    },
+    {
+      "family": "swarm-of-theseus-v2",
+      "id": "swarm-of-theseus-v2/S0-repair",
+      "attempt": "S0-repair",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001 (saved request configuration; returned model identity not retained separately)",
+      "backend": "Anthropic",
+      "evidence_coverage": "Newly published archive directly inspected: all 24 dispatch-start records,24 durable parsed results with stop reasons and usage,24 event records,12 episode outcomes and manifest. Repaired requests additionally preserve exact user text. The old hub catalogue was empty; this supplement closes that request/result gap through the separate archive. Records do not retain complete HTTP envelopes or independently returned model identity.",
+      "unit": "world-arm episode (12 episodes, six paired scenario/seed worlds; two calls and six decisions per call)",
+      "counts": {
+        "planned": 12,
+        "started": 12,
+        "terminal": 12,
+        "valid": 12,
+        "completed": 12,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "count_overlap": "Terminal, valid, completed and errored may overlap; these are not a partition. Incomplete means started without terminal disposition; unstarted is separate. Completed means protocol endpoint, not scientific success. Do not pool calls, policy rows, paired worlds or replayed prefixes.",
+      "qualification": "FAILED joint competence gate, unchanged: explicit-rule accuracy>=0.90 in each scenario/checkpoint and stable learner>=0.75 in every scenario. All schemas valid; no turnover pilot dispatched.",
+      "stalling_behavior": "Every call ended with end_turn and a valid six-decision answer. No explicit refusal is recorded. Wrong HOLD/none classifications occur, but these are two-checkpoint batch decisions rather than demonstrated prolonged action loops.",
+      "causes": {
+        "confirmed": [
+          "Direct packet/answer mismatch: some notebooks misstate visible booleans or add irrelevant criteria despite an explicit governing rule.",
+          "Both qualification cohorts produce complete valid outputs but fail action correctness."
+        ],
+        "plausible": [
+          "Row/column binding, applying conjunctions, and interference from notebook writing; compound repair did not isolate these."
+        ],
+        "unknown": [
+          "Returned model ID is not independently preserved; causality of particular prompt components remains untested."
+        ]
+      },
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz#L1",
+          "sha256": "c96cd6876c1f9e1826be5b1a33953f64f4830365d4bc5a0247b3a2d45022dcf0"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md#L3",
+          "sha256": "405d7e0788300fb538a16372dccf42bf97a72cc2117819b24a22728a0f0a0d45"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-repair-post.md",
+          "line": 7,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-repair-post.md#L7",
+          "sha256": "f6d3ef9fdb575a55a3d9b74f6b8f317d8d11892d756637ff8acfd5c49984258f"
+        }
+      ],
+      "smallest_diagnostic": {
+        "test": "Offline compare each wrong decision with its row values and governing rule; a separately authorized diagnostic can cross decision-only versus notebook output and atomic versus six-case batches on fresh tasks.",
+        "falsifier": "Correct actions rejected by an independent scorer would falsify model-application attribution; the present independent replay found zero disagreements.",
+        "acceptance": "Retain the unchanged all-scenario competence gate; any narrower incident-only study needs its own prospective scope and untouched evaluation."
+      },
+      "conclusion_validity": "The original failed qualification conclusion is confirmed by complete archived decisions and independent scoring. Initial-versus-repair changes are not a causal formatting estimate because fresh worlds and multiple interface changes differ. No turnover/culture-preservation effect is measured.",
+      "unstarted": 0,
+      "checkpoint_means": {
+        "incident": {
+          "ceiling": {
+            "stable": 0.9166666666666667,
+            "changed": 0.9166666666666667
+          },
+          "learner": {
+            "stable": 1.0,
+            "changed": 0.5833333333333333
+          }
+        },
+        "migration": {
+          "ceiling": {
+            "stable": 0.6666666666666667,
+            "changed": 0.75
+          },
+          "learner": {
+            "stable": 0.75,
+            "changed": 0.8333333333333333
+          }
+        },
+        "release": {
+          "ceiling": {
+            "stable": 0.75,
+            "changed": 0.9166666666666667
+          },
+          "learner": {
+            "stable": 0.6666666666666667,
+            "changed": 0.5
+          }
+        }
+      },
+      "model_calls": 24,
+      "reported_model_calls": 24,
+      "update_type": "replacement",
+      "replaces_attempt_id": "swarm-of-theseus-v2/S0-repair",
+      "publication_source_commit": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "execution_source_commit": "095534bfab16085ac6f4032cd5137cf1e2c7b875",
+      "call_audit": {
+        "starts": 24,
+        "durable_results": 24,
+        "matched_call_ids": true,
+        "events": 24,
+        "world_arm_outcomes": 12,
+        "case_decisions": 144,
+        "stop_reasons": {
+          "end_turn": 24
+        },
+        "errors": 0,
+        "usage_missing": 0,
+        "max_recorded_input_bytes": 5608,
+        "max_output_tokens": 390,
+        "configured_max_input_bytes": 18000,
+        "configured_max_output_tokens": 900,
+        "provider_refusals_observed": 0,
+        "refusal_phrase_candidates": 0,
+        "independent_scorer_mismatches": [],
+        "correct_cases": 111,
+        "incorrect_action_to_truth": [
+          {
+            "action": "hold",
+            "truth": "ship",
+            "count": 20
+          },
+          {
+            "action": "ship",
+            "truth": "hold",
+            "count": 6
+          },
+          {
+            "action": "canary",
+            "truth": "none",
+            "count": 1
+          },
+          {
+            "action": "none",
+            "truth": "probe",
+            "count": 1
+          },
+          {
+            "action": "none",
+            "truth": "canary",
+            "count": 1
+          },
+          {
+            "action": "probe",
+            "truth": "ledger",
+            "count": 1
+          },
+          {
+            "action": "probe",
+            "truth": "none",
+            "count": 2
+          },
+          {
+            "action": "ledger",
+            "truth": "none",
+            "count": 1
+          }
+        ],
+        "metrics": [
+          {
+            "scenario": "incident",
+            "arm": "ceiling",
+            "step": 0,
+            "assigned": 12,
+            "correct": 11
+          },
+          {
+            "scenario": "incident",
+            "arm": "ceiling",
+            "step": 5,
+            "assigned": 12,
+            "correct": 11
+          },
+          {
+            "scenario": "incident",
+            "arm": "learner",
+            "step": 0,
+            "assigned": 12,
+            "correct": 12
+          },
+          {
+            "scenario": "incident",
+            "arm": "learner",
+            "step": 5,
+            "assigned": 12,
+            "correct": 7
+          },
+          {
+            "scenario": "migration",
+            "arm": "ceiling",
+            "step": 0,
+            "assigned": 12,
+            "correct": 8
+          },
+          {
+            "scenario": "migration",
+            "arm": "ceiling",
+            "step": 5,
+            "assigned": 12,
+            "correct": 9
+          },
+          {
+            "scenario": "migration",
+            "arm": "learner",
+            "step": 0,
+            "assigned": 12,
+            "correct": 9
+          },
+          {
+            "scenario": "migration",
+            "arm": "learner",
+            "step": 5,
+            "assigned": 12,
+            "correct": 10
+          },
+          {
+            "scenario": "release",
+            "arm": "ceiling",
+            "step": 0,
+            "assigned": 12,
+            "correct": 9
+          },
+          {
+            "scenario": "release",
+            "arm": "ceiling",
+            "step": 5,
+            "assigned": 12,
+            "correct": 11
+          },
+          {
+            "scenario": "release",
+            "arm": "learner",
+            "step": 0,
+            "assigned": 12,
+            "correct": 8
+          },
+          {
+            "scenario": "release",
+            "arm": "learner",
+            "step": 5,
+            "assigned": 12,
+            "correct": 6
+          }
+        ],
+        "event_inventory": [
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-303-ceiling-00.json",
+            "run": "S0-repair-migration-303-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 303,
+            "step": 0,
+            "call": 34,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-302-learner-00.json",
+            "run": "S0-repair-incident-302-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 302,
+            "step": 0,
+            "call": 29,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-302-ceiling-00.json",
+            "run": "S0-repair-migration-302-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 302,
+            "step": 0,
+            "call": 33,
+            "correct": 3,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-303-learner-00.json",
+            "run": "S0-repair-incident-303-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 303,
+            "step": 0,
+            "call": 30,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-302-ceiling-05.json",
+            "run": "S0-repair-migration-302-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 302,
+            "step": 5,
+            "call": 35,
+            "correct": 3,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-302-learner-05.json",
+            "run": "S0-repair-release-302-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 302,
+            "step": 5,
+            "call": 48,
+            "correct": 2,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-303-ceiling-00.json",
+            "run": "S0-repair-release-303-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 303,
+            "step": 0,
+            "call": 42,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-303-learner-05.json",
+            "run": "S0-repair-migration-303-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 303,
+            "step": 5,
+            "call": 39,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-302-learner-05.json",
+            "run": "S0-repair-incident-302-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 302,
+            "step": 5,
+            "call": 31,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-303-ceiling-05.json",
+            "run": "S0-repair-incident-303-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 303,
+            "step": 5,
+            "call": 27,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-303-ceiling-05.json",
+            "run": "S0-repair-migration-303-ceiling",
+            "scenario": "migration",
+            "arm": "ceiling",
+            "seed": 303,
+            "step": 5,
+            "call": 36,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-302-ceiling-00.json",
+            "run": "S0-repair-release-302-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 302,
+            "step": 0,
+            "call": 41,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-303-learner-00.json",
+            "run": "S0-repair-migration-303-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 303,
+            "step": 0,
+            "call": 38,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-302-ceiling-00.json",
+            "run": "S0-repair-incident-302-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 302,
+            "step": 0,
+            "call": 26,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-303-learner-05.json",
+            "run": "S0-repair-incident-303-learner",
+            "scenario": "incident",
+            "arm": "learner",
+            "seed": 303,
+            "step": 5,
+            "call": 32,
+            "correct": 3,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-303-ceiling-00.json",
+            "run": "S0-repair-incident-303-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 303,
+            "step": 0,
+            "call": 25,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-302-learner-00.json",
+            "run": "S0-repair-migration-302-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 302,
+            "step": 0,
+            "call": 37,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-303-ceiling-05.json",
+            "run": "S0-repair-release-303-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 303,
+            "step": 5,
+            "call": 44,
+            "correct": 6,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-303-learner-00.json",
+            "run": "S0-repair-release-303-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 303,
+            "step": 0,
+            "call": 45,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-migration-302-learner-05.json",
+            "run": "S0-repair-migration-302-learner",
+            "scenario": "migration",
+            "arm": "learner",
+            "seed": 302,
+            "step": 5,
+            "call": 40,
+            "correct": 4,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-incident-302-ceiling-05.json",
+            "run": "S0-repair-incident-302-ceiling",
+            "scenario": "incident",
+            "arm": "ceiling",
+            "seed": 302,
+            "step": 5,
+            "call": 28,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-302-learner-00.json",
+            "run": "S0-repair-release-302-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 302,
+            "step": 0,
+            "call": 46,
+            "correct": 3,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-302-ceiling-05.json",
+            "run": "S0-repair-release-302-ceiling",
+            "scenario": "release",
+            "arm": "ceiling",
+            "seed": 302,
+            "step": 5,
+            "call": 43,
+            "correct": 5,
+            "assigned": 6
+          },
+          {
+            "archive_member": "S0-repair/events/S0-repair-release-303-learner-05.json",
+            "run": "S0-repair-release-303-learner",
+            "scenario": "release",
+            "arm": "learner",
+            "seed": 303,
+            "step": 5,
+            "call": 47,
+            "correct": 4,
+            "assigned": 6
+          }
+        ],
+        "actual_api_usd_from_saved_usage": 0.06195600000000001
+      },
+      "representative_failure": {
+        "archive_member": "S0-repair/calls/0041-c6874172-finished.json",
+        "line": 1,
+        "observation": "Class B governing ledger signal/freshness are YES/YES; explicit rule says ship exactly on both true.",
+        "returned_command": "console1/hold",
+        "short_model_note_excerpt": "B:0 (ledger YES/YES but class B uses ledger, not canary)\u2192hold",
+        "interpretation": "The recorded answer itself acknowledges the sufficient condition but takes the opposite action. This supports task-application failure, not missing evidence."
+      }
+    },
+    {
+      "family": "phantom-coast",
+      "id": "phantom-coast/q0-a1",
+      "attempt": "Q0-A1",
+      "update_type": "new executed attempt",
+      "publication_source_commit": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "execution_source_commit": "1ba879ac84a54b82f21c0f597760cfebaf43f3bf",
+      "kind": "model",
+      "model": "typesafe/jev-1.13-20260917",
+      "backend": "OpenRouter Decisions API / TypeSafe, no fallback",
+      "evidence_coverage": "All 18 saved actual requests and checked provider response maps, probability vectors, returned model/provider and usage directly inspected from authenticated read-only hub records.json. No complete HTTP envelope retained in this journal. Summary, manifest and post-mortem corroborate.",
+      "unit": "one complete-map response; six independent synthetic map roots, three private reset observers each",
+      "counts": {
+        "planned": 18,
+        "started": 18,
+        "terminal": 18,
+        "valid": 18,
+        "completed": 18,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "unstarted": 0,
+      "count_overlap": "All 18 response endpoints are also valid and correct. The648 cell labels are nested in18 responses and six roots, not648 independent tasks.",
+      "qualification": "PASS all declared clean mapping thresholds:18/18 valid,648/648 cells correct,216 land and432 water,zero missing.",
+      "stalling_behavior": "All 18 one-shot map responses complete correctly. UNKNOWN is allowed but none selected. This is neither prolonged action stalling nor refusal.",
+      "causes": {
+        "confirmed": [
+          "The clean actor receives an explicit observation for every cell and correctly maps all supplied labels."
+        ],
+        "plausible": [],
+        "unknown": [
+          "No history-persistence or exploration effect has been measured by this qualification."
+        ]
+      },
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/phantom-coast/reviews/Q0-A1-POST.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/phantom-coast/reviews/Q0-A1-POST.md#L3",
+          "sha256": "503758852288a40d5bdf4f9581687d74d33665b5fe46b237dd00b6d898cba307"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/phantom-coast/results/Q0-A1-summary.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/phantom-coast/results/Q0-A1-summary.json#L1",
+          "sha256": "ad5b9ace75770dedd56236ce0fb91bdc7baa40ebb9e2b1cb6e42eeeef9272219"
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/phantom-coast__q0-a1/records.json",
+          "line": 1,
+          "sha256": "d083d360abb31637dc0a1e3b56049803ea2c2d22216a0765d329f2bcd6b0e3b4",
+          "availability": "Private local audit cache; retrieved read-only from run phantom-coast/q0-a1, artifact records.json."
+        }
+      ],
+      "smallest_diagnostic": {
+        "test": "Preserve this passing baseline and audit the separately launched S0 under its fixed assigned-map denominator before interpreting history divergence.",
+        "falsifier": "Failure to recover a complete clean map would undermine a history-effect interpretation; Q0 does not exhibit that failure.",
+        "acceptance": "Keep the existing per-label and whole-map qualification gates; require complete paired-history accounting for S0."
+      },
+      "conclusion_validity": "This is a new genuine native family with a passed clean mapping gate. It is a limited transcription/integration contract on fully visible synthetic maps, not evidence of retained-history effects. S0-A1 launch/preassessment plans 522 maps; no S0 outcome summary is in this bounded publication supplement.",
+      "call_audit": {
+        "calls": 18,
+        "distinct_request_hashes": 18,
+        "status_counts": {
+          "valid": 18
+        },
+        "returned_models": {
+          "typesafe/jev-1.13-20260917": 18
+        },
+        "cell_predictions": 648,
+        "independent_label_check_mismatches": 0,
+        "labels": {
+          "LAND": 216,
+          "WATER": 432
+        },
+        "map_roots": 6,
+        "unknown_predictions": 0,
+        "actual_usd": 0.0059262839999999995
+      },
+      "family_status_addendum": {
+        "model_executed": true,
+        "any_historical_clean_baseline_gate_failure": false,
+        "prolonged_task_nonprogress_confirmed": false,
+        "explicit_provider_refusal_confirmed": false,
+        "scope": "Q0-A1 only; no claim about later S0 execution."
+      }
+    },
+    {
+      "family": "right-dissenter",
+      "id": "right-dissenter/q0-a1",
+      "attempt": "Q0-A1",
+      "update_type": "new executed attempt",
+      "publication_source_commit": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "execution_source_commit": "16a22642691cf071db476211012ab0bf3ba50888",
+      "kind": "model",
+      "model": "typesafe/jev-1.13-20260917",
+      "backend": "OpenRouter Decisions API / TypeSafe, no fallback",
+      "evidence_coverage": "All 18 actual saved request packets and checked responses inspected in committed calls.json; records.json and summary.json independently counted. Checked responses preserve served model, probabilities, tokens and cost, but not full HTTP envelopes.",
+      "unit": "one single-observation qualification decision;18 packet IDs in three scenario templates",
+      "counts": {
+        "planned": 18,
+        "started": 18,
+        "terminal": 18,
+        "valid": 18,
+        "completed": 18,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "unstarted": 0,
+      "count_overlap": "All 18 response endpoints are also valid and correct. The648 cell labels are nested in18 responses and six roots, not648 independent tasks.",
+      "qualification": "FAILED:12/18 correct versus16/18 required. Bridge 6/6; build 3/6; alarm 3/6. All 18 valid and complete. S1 remains blocked.",
+      "stalling_behavior": "Six positive build/alarm observations yield DEFER. These are one-shot task abstentions, not explicit provider refusals or repeated-action stalls. All nine HOLD answers are correct; three bridge PROCEED answers are correct.",
+      "causes": {
+        "confirmed": [
+          "All18 requests receive valid decisions; six positive build/alarm cases are scored wrong because the returned action is DEFER."
+        ],
+        "plausible": [
+          "The generic prompt states a necessary condition without explicitly saying the observation is sufficient; qualification may contain an instrument ambiguity."
+        ],
+        "unknown": [
+          "Whether failures arise from that ambiguity or model action competence; the planned Q1 contrast is not yet evidence."
+        ]
+      },
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/dissent/reviews/Q0-A1-POST.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/dissent/reviews/Q0-A1-POST.md#L3",
+          "sha256": "3d1d6307bd07db707fba55dde41abb1f439f4b31a3835c50c0bf9f447cdee012"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/dissent/results/q0-a1/calls.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/dissent/results/q0-a1/calls.json#L1",
+          "sha256": "25d24c18e13c7a2b4fbedb46e90b91b6988c97ad8182df3fdfc95e561cf76f10"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/dissent/results/q0-a1/records.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/dissent/results/q0-a1/records.json#L1",
+          "sha256": "99aced866d39bb328cc432c2278a4b5bb054f4700cee76ed93c3587124e808fd"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/dissent/results/q0-a1/summary.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/dissent/results/q0-a1/summary.json#L1",
+          "sha256": "8b233796994ba7f62f32085c1b20d7e4a6f31526432ff80ffe24775272327a8d"
+        }
+      ],
+      "smallest_diagnostic": {
+        "test": "Compare the retained generic necessary-condition packet with a separately authorized, prospectively specified sufficient-condition packet on fresh cases; keep uncertainty controls and criterion order equal.",
+        "falsifier": "If DEFER persists when sufficiency is explicit, that wording alone is not sufficient to explain the failure.",
+        "acceptance": "Keep the unchanged clean gate and uncertainty controls. Do not advance S1 or count an isolated compatibility success as qualification."
+      },
+      "conclusion_validity": "A new genuinely model-executed family with a failed ordinary-task qualification. Complete/schema-valid execution does not qualify the policy comparison. The report candidly identifies plausible task ambiguity rather than treating DEFER as provider refusal.",
+      "call_audit": {
+        "calls": 18,
+        "distinct_request_hashes": 18,
+        "status_counts": {
+          "completed": 18
+        },
+        "served_models": {
+          "typesafe/jev-1.13-20260917": 18
+        },
+        "actions": {
+          "PROCEED": 3,
+          "HOLD": 9,
+          "DEFER": 6
+        },
+        "recorded_correct": 12,
+        "expected_vs_returned_consistent": true,
+        "actual_usd": 0.00042966000000000006,
+        "input_tokens": 10230
+      },
+      "family_status_addendum": {
+        "model_executed": true,
+        "any_historical_clean_baseline_gate_failure": true,
+        "prolonged_task_nonprogress_confirmed": false,
+        "explicit_provider_refusal_confirmed": false,
+        "scope": "Q0-A1 only; DEFER is an allowed task decision."
+      }
+    },
+    {
+      "family": "antsy-receipt-v6",
+      "id": "antsy-receipt-v6/E0-attempt-1",
+      "attempt": "E0-attempt-1",
+      "update_type": "new non-native measurement attempt",
+      "publication_source_commit": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "scripted",
+      "model": null,
+      "backend": "Tesseract OCR plus deterministic policies and evaluator; zero decision-model/API calls",
+      "evidence_coverage": "Committed post-mortem, summary and reconciliation audit inspected; retained public records are numeric. Underlying private images/TSV were not independently reopened.",
+      "unit": "development receipt (20 receipts,100 OCR subprocess calls,100 deterministic policy outcomes)",
+      "counts": {
+        "planned": 20,
+        "started": 20,
+        "terminal": 20,
+        "valid": 20,
+        "completed": 20,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": 0
+      },
+      "unstarted": 0,
+      "count_overlap": "Valid counts completed process records, not valid reference scoring. All 20 references are unscorable; scientific accuracy denominator is zero. The 100 OCR calls and 100 policy outcomes are different units even though the totals coincide.",
+      "validity_scope": "Process complete and ordinary reconciliation passed; instrument qualification failed.",
+      "scorable_references": 0,
+      "unscorable_references": 20,
+      "model_calls": 0,
+      "ocr_calls": 100,
+      "policy_outcomes": 100,
+      "qualification": "FAILED instrument qualification: all 20 reference totals were read from the wrong CORD field; no usable accuracy endpoint.",
+      "stalling_behavior": "All OCR subprocesses completed. This is an evaluator/parser defect, not a model refusal or action stall. No native agent was evaluated.",
+      "causes": {
+        "confirmed": [
+          "Reference reader used valid_line.total.total_price containing label words rather than gt_parse.total.total_price.",
+          "Default CSV quoting swallowed later TSV rows after a literal quote in OCR text.",
+          "Ordinary reconciliation checked internal consistency and therefore passed despite zero correct reference parsing."
+        ],
+        "plausible": [],
+        "unknown": [
+          "Raw image/TSV-level reproduction was not performed in this audit."
+        ]
+      },
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-receipt-v6/reviews/E0-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/antsy-receipt-v6/reviews/E0-post.md#L3",
+          "sha256": "f909fdbf1d81a4581e00c03ca9a7df51f6c55ccb48922aae130cb3c5a9bfc980"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-receipt-v6/results/E0-attempt-1/summary.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/antsy-receipt-v6/results/E0-attempt-1/summary.json#L1",
+          "sha256": "8d4b2a816fb8420b079544a721e14c4ec0e0b63f3f87a69a83369d5f5917e8a0"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-receipt-v6/results/E0-attempt-1/audit.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/antsy-receipt-v6/results/E0-attempt-1/audit.json#L1",
+          "sha256": "27049c526680950f48a2ca12aebcf1edd0bb876ed232d010e991d479f86b2fa0"
+        }
+      ],
+      "smallest_diagnostic": {
+        "test": "Offline validate actual CORD schema fields and literal-quote TSV parsing; fail before OCR when a development stage has zero scorable references.",
+        "falsifier": "Correctly parsed real reference totals and independently counted TSV rows would falsify these parser diagnoses; current audit consistency alone does not.",
+        "acceptance": "Repaired reference/TSV fixtures, zero-scorable preflight and independent scoring review must pass before using accuracy or opening held-out receipts. Preserve this failed attempt."
+      },
+      "conclusion_validity": "All 20 development receipts complete, but none is scorable. No efficacy conclusion, model qualification or additional native family is added. A planned repair of the same development receipts is not a completed independent experiment."
+    },
+    {
+      "family": "phantom-coast",
+      "id": "phantom-coast/s0-a1-plan",
+      "attempt": "S0-A1-plan",
+      "kind": "unrun",
+      "model": "typesafe/jev-1.13-20260917 planned",
+      "backend": "OpenRouter Decisions/TypeSafe",
+      "unit": "planned model map request",
+      "counts": {
+        "planned": 522,
+        "started": null,
+        "terminal": null,
+        "valid": null,
+        "completed": null,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null
+      },
+      "qualification": "Q0 passed; S0 launch receipt exists but no S0 outcome record at publication cutoff",
+      "evidence_coverage": "Published pre-run/launch record; no terminal summary. No inference from launch receipt to observed execution.",
+      "endpoint_definition": "Unknown current execution;522 is a planned request denominator, not completed maps or independent worlds.",
+      "count_overlap": "Six new paired world roots; request counts are dependent; stage may progress outside this evidence window.",
+      "stalling_behavior": "No S0 behavior available for classification.",
+      "sources": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/reviews/S0-A1-PRE.md",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/vishesh/notes/phantom-coast/reviews/S0-A1-PRE.md"
+        }
+      ]
+    }
+  ],
+  "family_denominator_addendum": {
+    "prior_vishesh_broad_native_families": 7,
+    "new_native_families": [
+      "Phantom Coast",
+      "Right Dissenter"
+    ],
+    "publication_vishesh_broad_native_families": 9,
+    "prior_confirmed_historical_clean_gate_failures": 5,
+    "new_confirmed_historical_clean_gate_failures": 1,
+    "publication_confirmed_historical_clean_gate_failures": 6,
+    "publication_observed_no_failed_gate": 2,
+    "publication_historical_gate_unknown": 1,
+    "portfolio_implication_if_other_inventories_unchanged": "Original8/11 frozen portfolio remains unchanged. Bounded publication census becomes9/13 historical failed-gate families:9confirmed failures,3with no observed failed gate,1unknown. This is not a simultaneous live snapshot or an episode failure rate.",
+    "theseus_change": "No family or failure-count increment; two existing cohorts gain complete call/event archive coverage. Older v1 four unmatched responses remain unclassified.",
+    "Antsy_v6": "Measurement-only E0 adds no native family or model baseline-failure count; it is a confirmed evaluator qualification failure."
+  }
+}

@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/sybil-specialists; source `59822556` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — The 36-packet qualification passed; the newcomer-trust main study has launched but no final comparison is reported at this cutoff. Basis: Qualification is complete and the tracked deployment record now confirms S1 launch. The audit-policy comparison has no reconciled final counts here. Reports, attacks and trust remain simulated and the model only synthesizes selected packets; dispatch does not establish a treatment effect.
-- **sample_size_summary:** Q0: 6 worlds, 36/36 valid packets. S1 launched: 24 paired worlds × 81 cells = 1,944 assigned answers across 3 sampled rounds; completed count not reconciled in repo.
+- **evidence_confidence:** **2/4** — In this synthetic task, sleeper attacks sharply reduced specialist accuracy; renewal checking did not establish its planned improvement over reputation or an advantage over equal-cost random checking. Basis: Same-owner assessment: twenty-four paired roots, passed qualification and fully reconciled outcomes support this narrow result. The primary interval spans zero and useful effects; one task family, one model, scripted actors and only twelve warm-up audits limit stronger conclusions. Independent review was waived.
+- **sample_size_summary:** Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing; 24 honest + 1/4/16 controller identities, three model snapshots. Q0 separately: 36/36 clean calls on six roots.
 <!-- experiment-evidence:end -->
 
 Exploratory follow-up to [the scaling study](../sybil-scale-api/RESULTS.md). The previous study achieved 98.6% specialist accuracy while rejecting 62.8% of honest specialists because specialist facts were repeated. This study makes each attacked specialist fact available from exactly one honest newcomer and asks whether continued verification preserves that scarce information after a previously useful coalition starts lying.

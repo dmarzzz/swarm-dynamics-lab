@@ -945,27 +945,31 @@
         "researchers/dmarz/notes/sybil-newcomer-api/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 1,
-        "claim": "The 36-packet qualification passed; the newcomer-trust main study has launched but no final comparison is reported at this cutoff.",
-        "rationale": "Qualification is complete and the tracked deployment record now confirms S1 launch. The audit-policy comparison has no reconciled final counts here. Reports, attacks and trust remain simulated and the model only synthesizes selected packets; dispatch does not establish a treatment effect."
+        "score": 2,
+        "claim": "In this synthetic task, sleeper attacks sharply reduced specialist accuracy; renewal checking did not establish its planned improvement over reputation or an advantage over equal-cost random checking.",
+        "rationale": "Same-owner assessment: twenty-four paired roots, passed qualification and fully reconciled outcomes support this narrow result. The primary interval spans zero and useful effects; one task family, one model, scripted actors and only twelve warm-up audits limit stronger conclusions. Independent review was waived."
       },
-      "sample_size_summary": "Q0: 6 worlds, 36/36 valid packets. S1 launched: 24 paired worlds \u00d7 81 cells = 1,944 assigned answers across 3 sampled rounds; completed count not reconciled in repo.",
+      "sample_size_summary": "Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing; 24 honest + 1/4/16 controller identities, three model snapshots. Q0 separately: 36/36 clean calls on six roots.",
       "sources": [
-        "researchers/dmarz/notes/sybil-newcomer-api/README.md",
-        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml",
-        "researchers/dmarz/notes/sybil-newcomer-api/records/q0-001-summary.json",
-        "researchers/dmarz/notes/sybil-newcomer-api/DEPLOYMENT.md",
-        "researchers/dmarz/notes/sybil-newcomer-api/experiment.yaml"
+        "researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md",
+        "researchers/dmarz/notes/sybil-newcomer-api/verification-summary.json",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-summary.json",
+        "researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/closeout.json",
+        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml"
       ],
-      "status_at_assessment": "qualification_passed_main_collecting_no_reconciled_counts",
-      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "status_at_assessment": "complete_valid_inconclusive_primary_allocation_closed",
+      "source_commit": "59822556c5ee3eac62fc9d9ee08bd1f26cc20c19",
       "source_sha256": {
-        "researchers/dmarz/notes/sybil-newcomer-api/README.md": "24322d6bb8116bae089c304228d2ed6ba82b8adb4bd5af2c3b2d0e5c603b51f3",
-        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2",
-        "researchers/dmarz/notes/sybil-newcomer-api/records/q0-001-summary.json": "8ce77b6197a4a983c2b4156d3ca0139b6991da716eec081cf7b4c6126c24f465",
-        "researchers/dmarz/notes/sybil-newcomer-api/DEPLOYMENT.md": "a43d9712853dd9ffb5d77d5270297bc23d432e942b9c994465e5766dce175588",
-        "researchers/dmarz/notes/sybil-newcomer-api/experiment.yaml": "ee39d775caa31d6e9844524b347ff97bfe563253479710b6b4471d18893c910c"
-      }
+        "researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md": "006b480f464096789141805bb4b8bc2ecef7a65097c3d4ede3663ee051eb9667",
+        "researchers/dmarz/notes/sybil-newcomer-api/verification-summary.json": "b00067bbac418b4355e04179bcc436930447f4854137a088418969f5253927e9",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-summary.json": "1efb7499d707b4c624fe40a411500a35b1f9b52f9fa1e6f034b9f92d9157f2e5",
+        "researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md": "a0272119b2aec5ca03efe9777169c25672bd1ce7a81fcc59f5deed834f934446",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/closeout.json": "32a3a125e7c8d18c9c4ff05c771d43781b50d5859b5134ee1bb909ec05cb04ed",
+        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2"
+      },
+      "assessor": "dmarz/sybil-specialists",
+      "assessed_at": "2026-10-04"
     },
     {
       "id": "market-split",

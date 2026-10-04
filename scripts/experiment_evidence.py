@@ -60,6 +60,12 @@ def validate(root, data):
         if "source_commit" in row:
             require(isinstance(row["source_commit"], str) and re.fullmatch(r"[0-9a-f]{40}", row["source_commit"]),
                     f"{ident}: invalid source_commit")
+        if "assessor" in row:
+            require(text(row["assessor"]), f"{ident}: invalid assessor")
+        if "assessed_at" in row:
+            require(text(row["assessed_at"]), f"{ident}: invalid assessed_at")
+            require(date.fromisoformat(row["assessed_at"]).isoformat() == row["assessed_at"],
+                    f"{ident}: invalid assessed_at")
         for field in ("documents", "registration_paths", "sources", "experiment_ids"):
             values = row.get(field)
             require(isinstance(values, list) and all(text(x) for x in values)
@@ -98,10 +104,17 @@ def relative(document, target):
 
 def block(document, rows, data):
     commits = {row.get("source_commit", data["source_commit"]) for row in rows}
+    assessments = {(row.get("assessed_at", data["assessed_at"]),
+                    row.get("assessor", data["assessor"])) for row in rows}
+    if len(assessments) == 1:
+        assessed_at, assessor = next(iter(assessments))
+        assessment_note = f"Assessed {assessed_at} by {assessor}"
+    else:
+        assessment_note = "Assessment dates and assessors shown per cohort"
     source_note = (f"source `{next(iter(commits))[:8]}`" if len(commits) == 1
                    else "source snapshots shown per cohort")
     lines = [START, "## Evidence metadata", "",
-             f"Assessed {data['assessed_at']} by {data['assessor']}; {source_note} "
+             f"{assessment_note}; {source_note} "
              f"([registry]({relative(document, REGISTRY)}), [rubric]({relative(document, RUBRIC)})). "
              "Scores describe evidence for the stated claim, not a probability of truth."]
     for row in rows:
@@ -110,6 +123,9 @@ def block(document, rows, data):
             lines += ["", f"**{row['title']}** (`{row['id']}`)"]
         if len(commits) > 1:
             lines += [f"Source: `{row.get('source_commit', data['source_commit'])[:8]}`."]
+        if len(assessments) > 1:
+            lines += [f"Assessed {row.get('assessed_at', data['assessed_at'])} "
+                      f"by {row.get('assessor', data['assessor'])}."]
         lines += ["", f"- **evidence_confidence:** **{score_label(row)}** — {confidence['claim']} "
                   f"Basis: {confidence['rationale']}",
                   f"- **sample_size_summary:** {row['sample_size_summary']}"]
@@ -139,7 +155,8 @@ def update_document(original, rendered):
 def index_text(data):
     def cell(value):
         return str(value).replace("|", "\\|").replace("\n", " ")
-    lines = ["# Experiment evidence index", "", f"Assessed {data['assessed_at']} by {data['assessor']}.", "",
+    lines = ["# Experiment evidence index", "", f"Registry initiated {data['assessed_at']} by {data['assessor']}. "
+             "Current cohort assessors and dates are shown in the linked study documents.", "",
              f"[Rubric](EVIDENCE-METADATA.md) · [Machine-readable registry](evidence-metadata.json)", "",
              f"Source snapshot: `{data['source_commit']}`; individual rows may pin another source commit. "
              "Scores are scoped editorial assessments, not probabilities or launch approval. "
