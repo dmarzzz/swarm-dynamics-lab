@@ -85,12 +85,13 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/immune-response-v3",
       "setup_path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
+      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a3-post.md",
       "adapter": null,
       "checked_at": "2026-10-04T14:31:29.036365+00:00",
       "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "Reconcile existing A3 scope; defer architecture expansion. Read researchers/vishesh/notes/immune-response-v3/evidence-study/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
-      "next_run_approval": "owner"
+      "next_action": "A3 completed and scientifically reviewed. A4 freshness diagnostic prepared: one60-call attempt, nine tests and12 scripted episodes pass. Account full; sim-vishesh verified idle but exact-host approval review blocks claim. Obtain explicit sim-vishesh approval or eligible allocation via private issue241; no native A4 dispatch yet.",
+      "next_run_approval": "owner",
+      "operational_state": "A4 prepared; blocked on exact-host authorization, not researcher review or budget"
     },
     {
       "id": "influence-swarms",

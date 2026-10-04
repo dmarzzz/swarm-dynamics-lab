@@ -26,3 +26,7 @@ Source evidence: [D2](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | For a future team comparison use solo, solo with matched call budget, and team with matched evidence; qualify all. Three aliased seeds of the same incident are not three independent incident mechanisms. |
 | What the collective contributes | Advice is the collective intervention. Separate evidence reading, advice, commander action and enforced safety; a content-valid receipt is not proof a repair is safe. |
 | Boundaries and stopping | Do not replace currently approved A3 with the older PI’s 36-episode proposal. New architecture or incident/topology changes need a new plan and owner decision; no blanket reset-memory remedy. |
+
+## Owning-task reconciliation with newer evidence
+
+The older PI table is superseded operationally by [A3 post-mortem](reviews/receipt-a3-post.md):16 valid episodes/120 calls; narrow null contrast and failed healthy restraint, not an interrupted A3. [A4 plan](../freshness-study/README.md) is an authorized, prepared metadata-freshness diagnostic with a distinct runtime-liveness model. It does not test team-versus-solo value, unseen topologies or production reliability. Current cycle permits one60-call attempt only; native collection is blocked on exact-host authorization, not on an additional researcher review. See current SETUP for timestamped admission evidence.

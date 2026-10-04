@@ -2,15 +2,15 @@
   "kind": "software_fixture_validation_not_native_evidence",
   "unit_tests_passed": 9,
   "source_file_hashes": {
-    "freshness-study/freshness.py": "78777a76bc4e706bb26ceed97e992dadea66bbf6a2890c110cb6a7095780f1e8",
-    "freshness-study/README.md": "48928fd34ba664a765c743aa962a365e1b79907c16eed6abbbcce1c361483d30",
+    "freshness-study/freshness.py": "e67e710d9a18ac4099cbbfa76565c16559bed00f97b693675939f70e8b23ebcf",
+    "freshness-study/README.md": "dddbad2ffde3d43502a764672aff758ff23c5e3a61587830c44a2d5125cd2aeb",
     "freshness-study/render.py": "53502d9faed207cbc3d926140ffa78527f8636cc792d2f99efc985386c0531f8",
-    "freshness-study/worker.py": "3066777d83243ffecf5dc78658da608109010ddaada2a303b67b626c09ce82b5",
+    "freshness-study/worker.py": "d001cf0835eddefa5ca50c3b5466d7011d72a5443e3ba9461c7c45e91c9692a3",
     "evidence-study/durable_provider.py": "294aa080a5f0f1b756a602aa3851ca32dfb8d213f98d12e2bdcda55326cfa261",
     "scenario-study/study.py": "a2556967df07da7800996a5577b9771520ebba991b0f31186cfa6eed9b141083",
     "src/provider.py": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f"
   },
-  "source_commit": "776004e672e35ecc00370f7057e48992e6d5db57",
+  "source_commit": "0cf8577c8d3a86b696dafc83abcab336ca23cd63",
   "audit": {
     "assigned": 12,
     "recorded": 12,
