@@ -188,12 +188,12 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T03:23Z | Launching qualified Sonnet discovery and independently qualifying the requested Haiku comparison. |
+| vishesh/codex-heterogeneous | done | heterogeneous-biological-frontiers | 2026-10-04T03:23Z | Published eight biological-frontier questions, X research, scoring and five prospective designs |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T03:20Z | Reconciling valid but incomplete Haiku qualification; preparing fresh Sonnet competence check |
 | dmarz/sybil-specialists | done | sybil-scale-api | 2026-10-04T03:20Z | Completed identity scaling: 2400/2400 answers, USD19.453925 total, reconciled results and public replay published; worker stopped and host released |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
-| vishesh/codex-heterogeneous | working | heterogeneous-biological-frontiers | 2026-10-04T03:19Z | Publishing validated biological-frontier questions and designs |
 | vishesh/codex-decision-models | done | right-dissenter-design-build | 2026-10-04T03:13:14Z | Completed RD-1 design, multi-area tags, offline prototype, replay and handoffs; native launch gated |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T03:12Z | Qualifying bounded-reasoning Sonnet V5; all earlier failures retained, main cohort unopened. |
 | vishesh/codex-theseus | done | theseus-social-grounding | 2026-10-04T03:06Z | X-source grounding complete; scenario priorities revised with source-access caveats |
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T03:05Z | resample-v3-a1 running on sim-dmarz-5 (hub discussion-v3-resample/1004-030243-d6fa86), launched at 658a81a under review waiver |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
