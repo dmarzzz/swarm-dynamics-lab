@@ -3,14 +3,16 @@ id: healing-practical-repair
 type: task
 title: Compare Healing evidence repair with practical central baselines
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-regrowth-docs
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-regrowth-docs
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T03:40Z
+updated: 2026-10-04T03:40Z
 ---
 
 ## Goal
