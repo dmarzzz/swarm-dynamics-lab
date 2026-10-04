@@ -3,7 +3,7 @@ id: phantom-coast-pc9-instrument
 type: task
 title: Build Phantom population exploration instrument
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T18:33Z
-updated: 2026-10-04T18:33Z
+updated: 2026-10-04T18:42Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/pc9/README.md
+- researchers/vishesh/notes/phantom-coast/pc9/results/validation.json
 ---
 
 ## Goal
