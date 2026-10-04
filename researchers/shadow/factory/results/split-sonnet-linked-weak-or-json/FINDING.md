@@ -1,0 +1,36 @@
+# Does unreliable verification reverse the Sonnet identity-splitting contrast?
+
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by shadow/sol-factory; source `666aa2f4` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — anthropic/claude-sonnet-4.6, ring2 internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes. Basis: Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained.
+- **sample_size_summary:** Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.
+<!-- experiment-evidence:end -->
+
+Status: **lead**, exploratory, not independently reviewed. No accepted hypothesis or multiplicity-adjusted inference.
+
+## Question
+
+Does unreliable verification reverse the Sonnet identity-splitting contrast?
+
+## Method and results
+
+Frozen one-file [spec](../../specs/split-sonnet-linked-weak-or-json.json), parent simulator and prompt from [Dmarz's split study](../../../../dmarz/notes/sybil-split-opus/README.md). Model: `anthropic/claude-sonnet-4.6`, temperature 0, OpenRouter, Anthropic-only provider, reasoning disabled; separately preregistered paid attempt. Internal links: `ring2`; attacker pass probability 0.9; 12 checks.
+
+Primary: (k=27 minus k=1 rare-skill wrong fraction under degree) minus the same under coverage. **unavailable**. Complete paired roots: 0/48, equally weighted graph-family means. All-assigned worst-case bounds: [-2.0, 2.0]. Bounds cover missing calls, not sampling uncertainty.
+
+Calls: 4/204 attempted; 0 valid; 4 failed; 200 unstarted. Main: 0/192 valid. Qualification: 0/12 exact, gate not passed. No retries or outcome replacements. External paid spend/accounted reservations $0.327576 (4 unknown-cost calls conservatively reserved); pool usage 0 input / 0 output tokens (not a claim of zero compute cost).
+
+[Cell table](cells.csv), [summary](summary.json), [all outcomes](records.jsonl), [execution provenance](provenance.json).
+
+## Interpretation and limits
+
+A directional replication strengthens only the scoped synthetic mechanism; reversal or nonreplication is reported equally. No universal superiority of coverage is implied.
+
+The 48 synthetic roots are reused from the parent, not new independent evidence about real swarms. Four calls within a root are paired; skills and identities are not sample units. The five queue specs share roots and are not five independent replications. The 12 clean fixtures are a reduced capability screen, not the parent's 60-fixture qualification. This changes the model and request configuration together: Sonnet uses temperature 0 and temperature-0 schema-constrained output instead of Opus effort-low schema-constrained output. All comparisons remain exploratory. A negative label means the prespecified directional/useful-size criterion was not met, not equivalence or absence of an effect. No published Sybil defense or in-the-wild claim is tested.
+
+## Attempt lineage
+
+The original pool attempt returned four HTTP429 errors. The first OpenRouter attempt returned four schema-invalid prose/code-fenced answers. Both attempts stopped before main comparisons and remain saved separately. This repair prospectively adds strict JSON-schema output, uses fresh clean qualification roots, and reruns the entire fixed screen. No outcomes from prior attempts enter this cohort. See [structured-output amendment](../../AMENDMENT-STRUCTURED.md).

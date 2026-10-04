@@ -1,0 +1,12 @@
+{
+  "hard_paid_cap_usd": 20,
+  "new_cohort_paid_usd": 0,
+  "specs": [
+    "split-sonnet-no-links-strong-native-json",
+    "split-sonnet-linked-strong-native-json",
+    "split-sonnet-no-links-weak-native-json",
+    "split-sonnet-linked-weak-native-json",
+    "split-sonnet-four-checks-native-json"
+  ],
+  "stops_on_failed_qualification": true
+}
