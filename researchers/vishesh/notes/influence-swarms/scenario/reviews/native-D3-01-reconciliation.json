@@ -1,0 +1,252 @@
+{
+  "source_grades_agree": true,
+  "matched_observations": true,
+  "usage_reconciles": true,
+  "reported_cost": 0.20566999999999996,
+  "calls": 30,
+  "cases": [
+    {
+      "case_id": "regional-no-approval",
+      "source_acceptable": [
+        "DEFER"
+      ],
+      "matrix_correct": 13,
+      "choices": {
+        "narrative_standard": "DEFER",
+        "matrix_standard": "DEFER",
+        "matrix_consistent": "DEFER"
+      },
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7024,
+          "software": 45013.3408,
+          "total": 190718.3008,
+          "days": 38,
+          "feasible": false
+        },
+        "Birch": {
+          "automation": 0.7455,
+          "software": 45239.904,
+          "total": 169843.104,
+          "days": 43,
+          "feasible": false
+        },
+        "Cobalt": {
+          "automation": 0.5261,
+          "software": 8635.9196,
+          "total": 240657.3596,
+          "days": 27,
+          "feasible": false
+        }
+      }
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "source_acceptable": [
+        "DEFER"
+      ],
+      "matrix_correct": 14,
+      "choices": {
+        "narrative_standard": "DEFER",
+        "matrix_consistent": "DEFER",
+        "matrix_standard": "DEFER"
+      },
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.5107,
+          "software": 11785.0228,
+          "total": 286575.9028,
+          "days": 28,
+          "feasible": false
+        },
+        "Birch": {
+          "automation": 0.6688,
+          "software": 43601.8944,
+          "total": 229603.8144,
+          "days": 39,
+          "feasible": false
+        },
+        "Cobalt": {
+          "automation": 0.7385,
+          "software": 55222.832,
+          "total": 202081.232,
+          "days": 44,
+          "feasible": false
+        }
+      }
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "source_acceptable": [
+        "Aster"
+      ],
+      "matrix_correct": 12,
+      "choices": {
+        "narrative_standard": "DEFER",
+        "matrix_standard": "DEFER",
+        "matrix_consistent": "DEFER"
+      },
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7492,
+          "software": 35319.856,
+          "total": 121996.336,
+          "days": 39,
+          "feasible": true
+        },
+        "Birch": {
+          "automation": 0.4937,
+          "software": 7454.7424,
+          "total": 182432.0224,
+          "days": 25,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.8741,
+          "software": 13746.1984,
+          "total": 57257.2384,
+          "days": 72,
+          "feasible": false
+        }
+      }
+    },
+    {
+      "case_id": "export-approved-option",
+      "source_acceptable": [
+        "Birch"
+      ],
+      "matrix_correct": 13,
+      "choices": {
+        "narrative_standard": "DEFER",
+        "matrix_consistent": "DEFER",
+        "matrix_standard": "DEFER"
+      },
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.8849,
+          "software": 18366.6924,
+          "total": 83697.4524,
+          "days": 32,
+          "feasible": false
+        },
+        "Birch": {
+          "automation": 0.7588,
+          "software": 46062.816,
+          "total": 182967.936,
+          "days": 40,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.5093,
+          "software": 10100.3964,
+          "total": 288621.7164,
+          "days": 26,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "source_acceptable": [
+        "Cobalt"
+      ],
+      "matrix_correct": 11,
+      "choices": {
+        "narrative_standard": "Cobalt",
+        "matrix_standard": "Cobalt",
+        "matrix_consistent": "Cobalt"
+      },
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7064,
+          "software": 37514.3968,
+          "total": 119252.6368,
+          "days": 35,
+          "feasible": true
+        },
+        "Birch": {
+          "automation": 0.534,
+          "software": 8191.496,
+          "total": 137925.896,
+          "days": 22,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.8404,
+          "software": 15587.9696,
+          "total": 60020.6096,
+          "days": 28,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "source_acceptable": [
+        "Aster"
+      ],
+      "matrix_correct": 13,
+      "choices": {
+        "narrative_standard": "Aster",
+        "matrix_consistent": "Aster",
+        "matrix_standard": "Aster"
+      },
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7173,
+          "software": 68901.0712,
+          "total": 309761.4712,
+          "days": 46,
+          "feasible": true
+        },
+        "Birch": {
+          "automation": 0.4568,
+          "software": 17211.5808,
+          "total": 480017.9808,
+          "days": 30,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.5384,
+          "software": 136322.7488,
+          "total": 529605.9488,
+          "days": 43,
+          "feasible": false
+        }
+      }
+    }
+  ],
+  "paired_differences": [
+    {
+      "case_id": "regional-no-approval",
+      "matrix_standard minus narrative_standard": 0,
+      "matrix_consistent minus matrix_standard": 0
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "matrix_standard minus narrative_standard": 0,
+      "matrix_consistent minus matrix_standard": 0
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "matrix_standard minus narrative_standard": 0,
+      "matrix_consistent minus matrix_standard": 0
+    },
+    {
+      "case_id": "export-approved-option",
+      "matrix_standard minus narrative_standard": 0,
+      "matrix_consistent minus matrix_standard": 0
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "matrix_standard minus narrative_standard": 0,
+      "matrix_consistent minus matrix_standard": 0
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "matrix_standard minus narrative_standard": 0,
+      "matrix_consistent minus matrix_standard": 0
+    }
+  ],
+  "limits": "Owner-authored saved-data audit using Decimal source arithmetic; not independent researcher certification."
+}

@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Make every candidate check and actual decision auditable in a measured replay."
+   },
+   "internalParameters": {
+    "commit": "8087faf9fd3399c30774ad71e8f95dcdaa576215-dirty",
+    "session": "codex:01a1041f-9bfc-7891-be03-69925e274e9f"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "4540a590c85d9267185dc02b1887170da9484aa417310a5f3b3cf7f52f57cfd7"
+     },
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/render_checks.py"
+    },
+    {
+     "digest": {
+      "sha256": "a9189bb76c611cc29e42254a8909a3f3f1eda066fb227ad93c9094adcff97fd4"
+     },
+     "uri": "data/influence-native/native-D3-01/audit.json"
+    },
+    {
+     "digest": {
+      "sha256": "ccd407f8223dfc11e381dfd2f58d147e1853b080f8cc41d55da8ba3f86914fec"
+     },
+     "uri": "data/influence-native/native-D3-01/outcomes.json"
+    },
+    {
+     "digest": {
+      "sha256": "61300acb5c3864cac9d5737015f217735b876778f814b97624717436dc4fa9c1"
+     },
+     "uri": "data/influence-native/native-D3-01/summary.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "8087faf9fd3399c30774ad71e8f95dcdaa576215"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T05:54:11Z",
+    "invocationId": "codex:01a1041f-9bfc-7891-be03-69925e274e9f",
+    "startedOn": "2026-10-04T05:54:11Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "a49c74a740b8e70e06baf2ee383969295616f06bf3c05b781f26713aeea1a489"
+   },
+   "name": "artifacts/influence-candidate-checks-replay/influence-candidate-checks-replay-v1.html"
+  }
+ ]
+}
