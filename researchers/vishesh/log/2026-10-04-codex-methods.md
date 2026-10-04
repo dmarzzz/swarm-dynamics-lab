@@ -19,3 +19,7 @@ Selective9 correct/1 wrong/37 refer among47, matching always-check with80 versus
 Completion: final hub run verified done with16 artifacts; exclusive allocation released in merged agentops PR140. No active Antsy workers.
 
 Antsy v7 diversity iteration: published prospective plan, five-worker/two-engine profiles, shared measurement guide and24 tests. Initial native attempt missing libGL preserved; bounded repair100/100 valid OCR calls on20 receipts,19 scorable. R0 11 correct, best Tesseract1: per-family competence failed, S1 unrun. Audited220 policies/10 pair statistics,14 original hub artifacts hash-verified, charts/GIF decoded; source/result commit5114250e. No hosted-model calls or new machines.
+
+## Antsy v8 development and successor design
+
+Replayed retained v7 OCR; preserved the rejected parser prototype and corrected dotted-subtotal/unreadable-final-total handling. R0 improves 11 to 13 correct of 19 scorable used receipts with zero observed wrong acceptances. Tesseract fallback still adds an error without a correct recovery, so rejected it. Published stricter fresh qualification and targeted-verification design with an unqualified EasyOCR candidate; 18 offline tests and two replay reproductions pass. No new native calls. Next: pin/stage checker runtime and models, bounded development admission, then frozen fresh Q0.
