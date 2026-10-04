@@ -1,6 +1,6 @@
 # Market splitting: Haiku with reasoning
 
-**Current status (2026-10-04 04:15 UTC): discovery stopped.** S1-001 failed on two truncated dynamic responses. V3 is a bounded repair with8192 total output tokens, unchanged2048 requested thinking, fresh mechanics/competence and a new full-length regulated reliability gate. Read the dated V3 amendment in preregistration.md and s1-001-post.md. Earlier readiness statements below are historical. Main requires every fresh gate; one active assignment on dedicated sim-dmarz-market-haiku. Lifetime1200 attempts and the single owner$500 pool apply.
+**Current status (2026-10-04): discovery stopped.** S1-001 failed on two truncated dynamic responses. V3 is a bounded repair with8192 total output tokens, unchanged2048 requested thinking, fresh mechanics/competence and a new full-length regulated reliability gate. Read the dated V3 amendment in preregistration.md and s1-001-post.md. Earlier readiness statements below are historical. Main requires every fresh gate; one active assignment on dedicated sim-dmarz-market-haiku. Lifetime1200 attempts and the single owner$500 pool apply.
 
 Conditional parallel comparison requested by the owner on2026-10-04. Sonnet V5 Q0-005 passed;this model is now gated by its own independent qualification. This exploratory study follows the experiment-worker template and the [shared comparison plan](../market-split-api/parallel-plan.md). No accepted hypothesis exists; S2 is disabled.
 

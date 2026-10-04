@@ -14,6 +14,6 @@ Primary outcomes retain the original sustained-fragmentation definition. Report 
 
 Visuals: same measured firm-output and HHI animation for each run;experiment titles and run metadata identify the model and attempt. Separate summaries plus one side-by-side table only after complete audited cohorts exist. Partial or failed cohorts cannot be silently pooled. Every launch still requires its own committed pre-run assessment and previous post-mortem. This document alone does not bypass gates or dispatch a paid run.
 
-## Operational and qualification amendment, 2026-10-04 04:25 UTC
+## Operational and qualification amendment, 2026-10-04
 
 The owner now requires one experiment and one active assignment per server. Sonnet stays on sim-dmarz-2 under dmarz-market-split-api; Haiku repair uses newly provisioned sim-dmarz-market-haiku under dmarz-market-split-haiku. Both claims are exclusive. Sonnet source, output ceiling and main assignments remain unchanged. Haiku S1-001 failed at its output ceiling; V3 raises total allowance to8192 while keeping2048 requested thinking and adds full-length regulated reliability qualification. Read its dated preregistration amendment; all prior attempts are preserved. Future cross-model results are a model-configuration comparison, not a model-only contrast. Haiku lifetime cap1200 includes its complete migrated100-call ledger. Conservative combined study reservations become$267.456 within the single owner$500pool. No main Haiku run until every fresh gate passes.
