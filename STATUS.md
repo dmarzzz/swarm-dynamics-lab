@@ -38,6 +38,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [analyze-discussion-v3-q0](tasks/analyze-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:37Z | Audit and publish the completed discussion v3 qualification |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T03:32Z | Ship the compositional safety benchmark and qualification |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:29Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
@@ -308,7 +309,11 @@
 
 ## Hypotheses
 
-None yet.
+| hypothesis | owner | status | surveys | title |
+|---|---|---|---|---|
+| [shadow-board-nsweep](hypotheses/shadow-board-nsweep.md) | shadow | proposed | llm-agent-swarms | A persistent shared board moves the wrong-consensus to polarisation crossover to larger N than pairwise exchange |
+| [shadow-capture-memory](hypotheses/shadow-capture-memory.md) | shadow | proposed | llm-agent-swarms | Memory length decides whether committed-minority capture reverses after the minority leaves |
+| [shadow-neff-evidence-board](hypotheses/shadow-neff-evidence-board.md) | shadow | proposed | llm-agent-swarms | Splitting evidence across agents lifts the N_eff ceiling only when peers carry evidence, not just answers |
 
 ## Experiments
 
