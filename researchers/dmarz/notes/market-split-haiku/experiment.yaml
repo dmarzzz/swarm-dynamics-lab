@@ -1,10 +1,9 @@
-id: market-split-api
+id: market-split-haiku
 owner: dmarz
-title: Market splitting — Sonnet with reasoning
-description: MKT-03 + MKT-11 exploratory neutral-model discovery pilot. Same owner
-  resources, optional registration, firm versus beneficial-owner regulation. Scripted
-  qualification and model results are labeled separately.
-url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split-api
+title: 'Market splitting: Haiku with reasoning'
+description: Independent model comparison to Sonnet. Identical neutral market and
+  action budgets; gates before discovery; all earlier Haiku failures retained in market-split-api.
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split-haiku
 params:
   stage:
     type: str
@@ -38,13 +37,8 @@ params:
     role: condition
     label: Version / attempt
     value_labels:
-      s1-001: V2 — stopped after invalid allocation
-      s1-002: V5 — Sonnet 4.6 with reasoning
-      q0-001: Q0 v1 — failed notes
-      q0-002: Q0 v2 — passed
-      q0-003: Q0 Haiku v3 — profit floor failed
-      q0-004: Q0 Sonnet v4 — profit floor failed
-      q0-005: Q0 Sonnet v5 — reasoning qualification
+      q0-001: Haiku reasoning qualification
+      s1-001: Haiku reasoning discovery pilot
   code:
     role: fixed
   engine_sha256:
