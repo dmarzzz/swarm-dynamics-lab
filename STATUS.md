@@ -40,7 +40,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-trace-receipts](tasks/antsy-trace-receipts.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T19:27Z | Audit Antsy field rejection and share trace receipt checks |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:04Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -58,6 +57,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [telephone-native-both](tasks/telephone-native-both.md) | claimed | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
+| [theseus-t1-q0](tasks/theseus-t1-q0.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T19:33Z | Theseus approved apprenticeship qualification and collective study design |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -150,6 +150,7 @@
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
 | [antsy-targeted-v8](tasks/antsy-targeted-v8.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T07:03Z | Repair Antsy extraction and design targeted verification |
+| [antsy-trace-receipts](tasks/antsy-trace-receipts.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T19:33Z | Audit Antsy field rejection and share trace receipt checks |
 | [antsy-v8-d1-latency](tasks/antsy-v8-d1-latency.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T18:17Z | Run approved Antsy D1 latency diagnostic and close out |
 | [antsy-v8-execution-repair](tasks/antsy-v8-execution-repair.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T17:01Z | Prepare trace-preserving Antsy execution repair and bounded D1 proposal |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T16:53Z | Prepare and launch fresh Antsy v8 OCR qualification |
@@ -312,6 +313,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
 | vishesh/codex-theseus | idle |  | 2026-10-04T19:28Z | institutional-transmission prototype published; concrete T1-Q0 decision pending |
 | vishesh/codex-pi-review | done | launch-ready-studies-2026-10-04 | 2026-10-04T19:26Z | Published actual native starts, terminal outcomes and exact remaining startup/capacity blockers; owning tasks retain closeout. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
@@ -345,7 +347,6 @@
 | dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:45Z | build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check |
 | dmarz/pipeline | working |  | 2026-10-04T11:38Z | Pipeline lead: six packages filed as ready run requests so far (run queue 248, 252, 268, 270, 272, 275); two more handed to orbital-one builders; now results write-ups for the program v5 lines and review of the flagship launcher change; launches nothing and makes no model calls |
 | dmarz/pipeline-scarcity | done |  | 2026-10-04T11:19Z | sybil-scarcity-synth package finished and filed as a ready run request (run queue 268) after the fleet monitor's same-researcher check; earlier package sybil-scarcity-opus ran as run queue 248; nothing launched by this agent |
-| dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
 | dmarz/pipeline-alarm | idle | build-false-alarm-cascade | 2026-10-04T10:32Z | PAUSED by dmarz/pipeline: false-alarm-cascade WIP pushed at source hash 0c639128 (failure-handling rule parts 1-4 in code and tests; selftest 38 OK; manifest check OK; rehearsal 51/51 passed just before two last small fixes and was not re-run after them). Remaining: re-run offline S0 and rehearsal at this hash, documents (README, preregistration amendment, RUN, SETUP, VISUALIZATION), new pre-run review naming the new code commit. Nothing launched, no model call. |
 | dmarz/pipeline-quota | idle | build-quota-splitting | 2026-10-04T10:28Z | PAUSED by dmarz/pipeline (priority change) at pause commit 6b9adefa (source hash 978e7a58...): code for all four failure-handling parts is in and selftest passes (71 tests). Remaining: documents and dated amendment for the rule, mutants and clean-export rerun of all offline checks, READY.yaml, pre-run review. No launch, no model call. |
 | dmarz/program-filer | done |  | 2026-10-04T10:28Z | carried the Codex-authored overnight research program (v1-v5), its four sibling documents, their notes folders, attestations and registry entries onto main; nothing launched |
@@ -381,11 +382,11 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-methods | idle |  | 2026-10-04 19:33:30.160167+00:00 | Shared trace audit and saved Antsy field repair pushed; no native successor or allocation |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:22:58.628494+00:00 | PQ-02 launched then stopped HTTP400; reviewed, no retry, qualification inconclusive |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-native-run | 2026-10-04 19:07:36.227052+00:00 | Preparing current admission for owner-approved RD6 Q0 and conditional D0; original ledger and caps retained. |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc9-native-preparation | 2026-10-04 18:42:42.878610+00:00 | PC9 native Q0 preparation complete;47 tests and three added scenarios pass; concrete native decision next, no new spend |
 | vishesh/codex-heterogeneous | idle |  | 2026-10-04 18:32:55.072393+00:00 | D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated |
-| vishesh/codex-methods | idle |  | 2026-10-04 18:18:22.325483+00:00 | D1 diagnostic reviewed and published; three valid calls, slow-call stop, host released; qualification closed; no successor |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
