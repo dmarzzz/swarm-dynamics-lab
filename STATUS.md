@@ -41,6 +41,7 @@
 | [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:12Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:05Z | Qualify the repaired immune-response contract on a dedicated host |
 | [influence-quality-review](tasks/influence-quality-review.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:11Z | Audit and improve How to win agents and influence swarms |
+| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:08Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -164,14 +165,14 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:16Z | Building Antsy from real receipt OCR and budgeted verification |
 | vishesh/codex-idea-scores | done | score-research-ideas | 2026-10-04T02:15Z | Published 297 scored ideas and nullable optional reviewer fields |
+| dmarz/sybil-specialists | done | sybil-specialists-api | 2026-10-04T02:14Z | API follow-up complete: 24/24 qualification and 192/192 pilot, USD 0.309802, measured UI analysis/replay verified, claim released |
+| vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:14Z | Building Antsy from real receipt OCR and budgeted verification |
 | vishesh/codex-heterogeneous | working |  | 2026-10-04T02:11Z | Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions |
 | dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:10Z | Shipped v3; 74 checks passed and 636 saved requests replayed; independent review and model launch pending |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:06Z | Exclusive sim-dmarz-3 allocated; native launch awaits approval for USD 8 budget increase |
-| dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T02:04Z | API qualification passed 24/24; deploying the fixed 192-call pilot; aggregate USD 5 cap and same persistent ledger |
 | dmarz/patchwork-hypotheses | done | add-patchwork-hypotheses | 2026-10-04T02:03Z | Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests |
-| dmarz/market-split | done | build-market-split | 2026-10-04T02:02Z | Completed 450 valid scripted episodes and verified replay; plan filed, claim released, temporary server destroyed. API remains disabled. |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:02Z | Implementing neutral-model discovery pilot under the standing shared API budget. |
 | dmarz/private-control | done |  | 2026-10-04T02:00Z | pc-H4 done (d0725be0, qualified, private_contrast -0.33); post-mortem reviews/pc-H4-a1-post.md |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
