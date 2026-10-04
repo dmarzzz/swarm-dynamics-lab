@@ -38,7 +38,6 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:22Z | Audit and repair Antsy experiment quality and reproducibility |
 | [build-market-split](tasks/build-market-split.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T01:27Z | Build and deploy an exploratory owner-splitting market pilot |
-| [build-sybil-specialists](tasks/build-sybil-specialists.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:28Z | Plan and deploy a scripted Sybil admission and specialist preservation study |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:26Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:25Z | Refine and run the exploratory immune-response instrument |
 | [influence-quality-review](tasks/influence-quality-review.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T01:25Z | Audit and improve How to win agents and influence swarms |
@@ -109,6 +108,7 @@
 | [build-dashboard-questions](tasks/build-dashboard-questions.md) | done | p1 | build | dmarz/dashboard-questions |  | 2026-10-03T21:56Z | Add question atlas and review tools to the research dashboard |
 | [build-discussion-dose](tasks/build-discussion-dose.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-03T23:39Z | Build and deploy the SEC-47 discussion dose exploratory study |
 | [build-discussion-dose-v2](tasks/build-discussion-dose-v2.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:38Z | Build the harder contested-evidence version of discussion-dose (v2), ready to roll out |
+| [build-sybil-specialists](tasks/build-sybil-specialists.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:46Z | Plan and deploy a scripted Sybil admission and specialist preservation study |
 | [contribution-new-badges](tasks/contribution-new-badges.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T23:40Z | Show recent contributions and added project tags |
 | [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | done | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:06Z | Plan five shared-environment distributed-evidence studies |
 | [design-soc07-private-commitment](tasks/design-soc07-private-commitment.md) | done | p1 | question | dmarz/soc07-plan | dmarz | 2026-10-03T22:35Z | Draft a concrete SOC-07 private-judgment experiment plan |
