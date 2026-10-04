@@ -47,7 +47,7 @@
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T06:51Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T07:56Z | Run the revised procurement influence experiment |
-| [phantom-coast-pc3-live](tasks/phantom-coast-pc3-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:00Z | Build and run Phantom Coast PC-3 coverage guard |
+| [phantom-coast-pc3-live](tasks/phantom-coast-pc3-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:10Z | Build and run Phantom Coast PC-3 coverage guard |
 | [right-dissenter-rd5-build](tasks/right-dissenter-rd5-build.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T07:53Z | Build and prepare Right Dissenter RD5 |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -260,6 +260,7 @@
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:07Z | owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:07Z | Credential resolved and deployed checks passed; awaiting existing central S0 dispatch, no owner input needed |
+| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T08:07Z | C3-S0 passed; owner-approved C3-S1 running on exclusive sim-dmarz-7 with supervised local transport |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T08:06Z | Preparing false-alarm-cascade (honeypot-vigilance hunch V4, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
@@ -273,7 +274,6 @@
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
 | dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-008 -> p1-002 (Opus 5.5, design v9) on sim-dmarz-5; q0-007 passed 24/24 |
-| vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/budget-sonnet | working |  | 2026-10-04T05:30Z | Preparing sybil-budget-sonnet (Sonnet 4.6 replication of sybil-budget-api, N972 half); offline checks and plan before any run |
@@ -295,7 +295,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-methods | working | antsy-v8-native-qualification | 2026-10-04 08:06:51.150479+00:00 | Preparing frozen Antsy v8 Q0 runtime and orbital run request; no native calls yet |
+| vishesh/codex-methods | working | antsy-v8-native-qualification | 2026-10-04 08:09:38.852838+00:00 | Antsy v8 Q0 submitted to orbital run queue; awaiting native start/result |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc3-live | 2026-10-04 08:04:36.436374+00:00 | PC-3 guard implemented; 48 checks pass; preparing fresh qualification on claimed sim-dmarz-10 |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 08:03:32.905543+00:00 | Contract fixed and Q1-02 complete; valid negative result preserved; machine released |
 | vishesh/codex-decision-models | working | right-dissenter-rd5-build | 2026-10-04 07:59:48.671019+00:00 | Implementing RD5 repairs and offline fault checks; preparing bounded Q5/H5 packets without native dispatch. |
