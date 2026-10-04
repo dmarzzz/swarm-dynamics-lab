@@ -396,11 +396,11 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 20:43:34.476809+00:00 | C6 finished: Haiku–Jev main reviewed, finite negative result published, ledger restored and claim released; FINISH / PARK |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:40:18.955603+00:00 | Prepared realistic R60 proposal and case audit; concrete plan decision pending |
 | vishesh/codex-decision-models | idle |  | 2026-10-04 20:37:00.921478+00:00 | RD7 diagnostic completed, reviewed, published and released; fresh qualification remains unrun. |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc12-wide | 2026-10-04 20:20:22.452084+00:00 | Preparing eight-world sourced-evidence diagnostic with independent learning and correction controls |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Haiku Q0 and locale diagnostic closed;96 valid calls, qualification failed, USD0.182328 new charge; E0 blocked |
-| vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
