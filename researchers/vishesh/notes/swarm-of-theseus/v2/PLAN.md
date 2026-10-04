@@ -1,6 +1,6 @@
 # Swarm of Theseus v2 — procedures, exceptions and portability
 
-Prospective implementation plan, 2026-10-04 UTC. Exploratory S0/S1 instrument under an unreviewed hunch; no accepted novelty or culture claim. Owner vishesh/codex-theseus. This plan is written before v2 implementation. Model execution remains blocked until a new API allocation is approved and reserved; the shared USD 45 cap has only USD 0.097684 unreserved. Prior results and failed qualifications remain separate.
+Prospective implementation plan, 2026-10-04 UTC. Exploratory S0/S1 instrument under an unreviewed hunch; no accepted novelty or culture claim. Owner vishesh/codex-theseus. This plan is written before v2 implementation. Owner explicitly approved an additional USD 15 on 2026-10-04 UTC; it is now separately reserved for this study as theseus-v2-additional-15-20261004. The earlier USD 45 snapshot remains historical; other studies' later authority changes are not this allocation. Prior results and failed qualifications remain separate.
 
 ## TLDR
 
@@ -38,7 +38,7 @@ Arms: `rolling`, `evidence`, `frozen`, `none`. A fresh member inherits the autho
 
 S0 qualification: two fresh worlds per scenario, seeds 300/301, one-reader control supplied with an explicit current rule (competence ceiling) and a learner supplied only historical cases; 2 checkpoints (stable and changed/interface) with six cases each, 24 calls total. Ceiling must achieve at least 0.90 action accuracy in every scenario; learner must achieve at least 0.75 stable accuracy in every scenario. Valid syntax/schema required throughout. Changed-rule learner performance is descriptive, not a gate forcing adaptation success. Failure triggers one prospectively documented repair on 302/303; no threshold lowering.
 
-S1 pilot, only after qualification: two worlds per scenario, seeds 400/401. Six shared acquisitions × 6 calls = 36; six worlds × four arms × eight continuation steps × three members = 576; total 612 calls. At most 660 calls across initial qualification, one repair and pilot. Hard API allocation requested: USD 15; no launch without explicit reservation. One model: pinned Haiku used in v1, pricing reverified before dispatch. Two worker threads maximum, two-hour wall ceiling, zero semantic/transport retries. Model-family comparison and S2 disabled.
+S1 pilot, only after qualification: two worlds per scenario, seeds 400/401. Six shared acquisitions × 6 calls = 36; six worlds × four arms × eight continuation steps × three members = 576; total 612 calls. At most 660 calls across initial qualification, one repair and pilot. Hard approved API allocation: USD 15, reserved centrally and enforced by one local ledger; no launch without the reservation receipt. One model: pinned Haiku used in v1, pricing reverified before dispatch. Two worker threads maximum, two-hour wall ceiling, zero semantic/transport retries. Model-family comparison and S2 disabled.
 
 ## Metrics
 
@@ -67,3 +67,7 @@ Offline unit tests are permitted locally and are not empirical trials. Any scrip
 No v2 model calls preceded this amendment. Continuous endpoint feedback could make reacquisition dominate the inheritance comparison. Add the common feedback interruption above, keep all assignment counts and thresholds unchanged, and test its exact boundary. This strengthens transmission measurement but narrows inference to a feedback interruption; an uninterrupted-feedback replication is a future sensitivity analysis. The incident implementation uses balanced diagnostic hazards and has no real-time rare-event interval or economic cost calibration. Do not present those unimplemented features as measured. Migration reports intended semantic action separately from current-command validity, counting understandable old tokens as invalid commands without erasing that distinction.
 
 Qualification clarification before execution: the explicit-rule ceiling threshold applies separately at the stable and changed/interface checkpoint for each scenario, rather than averaging a good old-interface score with a failing new-interface score. All 24 outputs must validate. The two-hour deadline is shared across stages and stored in the quota ledger; a stage may not be invisibly relaunched under a fresh output name.
+
+## Launch authorization — 2026-10-04 UTC
+
+Owner approved the requested additional USD15. Fresh exclusive fleet claim `vishesh-theseus-v2` uses verified-idle existing `sim-shadow` (Dmarz fleet), merged in agentops PR99, expiring 2026-10-04T08:05:38Z. No machine purchase. Before dispatch, reverify the merged exclusive claim and source; the manifest records the exact allocation, source and public receipts. Artifact schema metadata from the prior build is corrected without changing artifact bytes or ingredient hashes. Qualification condition TLDRs now name the actual explicit-rule versus historical-learner comparator. Neither change alters tasks, treatment, thresholds or endpoints.

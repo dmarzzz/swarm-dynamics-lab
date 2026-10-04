@@ -52,10 +52,10 @@ For recorded model outputs, use `src/analyze.py OUTPUT_DIRECTORY` and `src/rende
 
 ## Launch status and concrete next action
 
-The existing central USD 45 authority had reserved USD 44.902316 when checked on 2026-10-04 UTC. Its remaining USD 0.097684 is insufficient. Another experiment's approved additive funds are not ours. **No extra spending has been authorized for v2.**
+The existing central USD 45 authority had reserved USD 44.902316 when checked on 2026-10-04 UTC. Its remaining USD 0.097684 is insufficient. Another experiment's approved additive funds are not ours. **Update: the owner has now explicitly approved a separate additional USD15 for v2; it is reserved as theseus-v2-additional-15-20261004.**
 
-Requested new allocation: at most **USD 15**, **660 calls**, **two hours total**, **two concurrent worlds**, pinned Haiku, no new server purchase. Initial qualification uses 24 calls; one documented repair may use 24; gated S1 uses 612. No S2. The quota ledger persists both call count and the shared deadline across stages. Repeated stage IDs are rejected.
+Approved new allocation: at most **USD 15**, **660 calls**, **two hours total**, **two concurrent worlds**, pinned Haiku, no new server purchase. Initial qualification uses 24 calls; one documented repair may use 24; gated S1 uses 612. No S2. The quota ledger persists both call count and the shared deadline across stages. Repeated stage IDs are rejected.
 
 After owner approval: reserve the additional authority transactionally, refresh private fleet inventory and claims, obtain a fresh exclusive eligible idle host, deploy a clean published source and verify dependencies, amend the blocked pre-run review with allocation metadata, publish and register immutable plan/review, visually verify the public page, execute qualification, review its outputs, and only then publish the S1 assessment and run the pilot. The worker's deployment receipt records experiment, host, exclusive claim, expiry, authority allocation, owner authorization, source and verification time; it expires after 15 minutes for dispatch. A local ledger by itself is never authorization.
 
-The public hub supports measured progress and images. Standalone replay HTML must be delivered as a file/artifact; no unsupported hub HTML embedding is claimed. No fleet is occupied while awaiting the resource decision.
+The public hub supports measured progress and images. Standalone replay HTML must be delivered as a file/artifact; no unsupported hub HTML embedding is claimed. Fresh dedicated sim-shadow claim vishesh-theseus-v2 is now held for qualification and pilot (expiry 2026-10-04T08:05:38Z).
