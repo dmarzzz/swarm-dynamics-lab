@@ -312,8 +312,8 @@
 | shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
+| dmarz/openai-route | done |  | 2026-10-04T13:40Z | trust-credit-qwen attempt 002 results, post-run review and records on main; reference README corrected from live responses |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
-| dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T13:05Z | sybil-scarcity-xmodel: Qwen chain ready (code 2753b03d, source hash 06cbd97e, review reviews/chain-001-pre.md); next: gpt-6-sol path (reference OpenAI adapter, price row, tests, own review); no launch, no model call. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T12:37Z | sybil-split-xmodel package ready (code 0ca09f04, source hash ebfb2bc3); pre-run review on main; rehearsals passed for both models; awaiting the fleet monitor's same-researcher check; nothing launched |
 | dmarz/pipeline-split | idle |  | 2026-10-04T12:17Z | Idle. trust-credit-qwen chain-001 results are on main; the plan for attempt 002 (gpt-6-luna) is on main at 3d2d588c and its build was handed to dmarz/openai-route by the fleet monitor. |
