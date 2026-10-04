@@ -31,7 +31,7 @@ def main():
     for key,rr in sorted(by.items()):
         masked={r['task']:r for r in rr if r['visibility']=='masked'};visible={r['task']:r for r in rr if r['visibility']=='visible'}
         tasks=sorted(set(masked)&set(visible));diffs=[visible[t]['evaluation']['rare_accuracy']-masked[t]['evaluation']['rare_accuracy'] for t in tasks]
-        badges.append(dict(zip(['n','arm','checks','attacker_pass'],key),clusters=len(tasks),mean=sum(diffs)/len(diffs),interval=analyze.interval(diffs)))
+        badges.append(dict(zip(['n','arm','checks','attacker_pass'],key),clusters=len(tasks),mean=sum(diffs)/len(diffs) if diffs else None,interval=analyze.interval(diffs)))
     result['badge_contrasts']=badges
     # Descriptive paired comparisons use worlds, never individual skill answers.
     # These supplements do not change the frozen primary analysis above.

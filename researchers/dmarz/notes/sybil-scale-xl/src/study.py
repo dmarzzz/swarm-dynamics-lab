@@ -29,7 +29,7 @@ def params(stage):
     if stage not in ('S0', 'Q0', 'S1'):
         raise ValueError('Formal S2 disabled')
     return dict(stage=stage, backend='scripted' if stage == 'S0' else 'anthropic',
-                batch=f'{stage.lower()}-001', source_hash=source_hash(),
+                batch=f'{stage.lower()}-'+design().get('amendment','001').lower(), source_hash=source_hash(),
                 code=subprocess.check_output(['git','rev-parse','HEAD'], cwd=ROOT, text=True).strip())
 
 
@@ -145,7 +145,7 @@ def qualification(rows):
     cells=[];d=design()
     for n in d['sizes']:
         good=[r for r in rows if r['kind']=='qualification' and r['n']==n and r['status']=='completed']
-        expected=len(d['qualification_worlds'])*4
+        expected=len(d['qualification_worlds'])*2*len(d['visibility'])
         fields=sum(r['evaluation']['missing_fields'] for r in good)
         m={'n':n,'count':len(good),'expected':expected,
            'fact_accuracy':sum(r['evaluation']['qualification_accuracy'] for r in good)/len(good) if good else 0,

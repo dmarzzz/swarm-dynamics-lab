@@ -5,8 +5,8 @@
 
 Assessed 2026-10-04 by dmarz/scale-xl ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Haiku 4.5 synthesis. Basis: unrun; no stage has completed.
-- **sample_size_summary:** Observed: none. Planned: 24 paired worlds × 3 sizes × 28 conditions = 2,016 S1 calls plus 48 Q0 calls; 972–8,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports.
+- **evidence_confidence:** **0/4** — Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Opus 5.5 synthesis (amendment A1). Basis: unrun; no stage has completed.
+- **sample_size_summary:** Observed: none. Planned (amendment A1, Opus 5.5): 24 paired worlds × 3 sizes × 8 conditions = 576 S1 calls plus 24 Q0 calls; 972–8,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports. Free scripted S0 216/216 on the v1 manifest.
 <!-- experiment-evidence:end -->
 
 Exploratory scale-up of [sybil-scale-api](../sybil-scale-api), owned by dmarz and operated by dmarz/scale-xl on orbital-one. Requested by dmarz on 2026-10-04: "Find one of our experiences which would benefit the most from trying it at a much larger scale and ship it and don't worry about the budget". This is not an accepted formal hypothesis; S2 stays disabled. The files are copied from [sybil-scale-sonnet](../sybil-scale-sonnet), itself a byte-identical copy of the parent's instrument; neither earlier study, its records nor its launcher is modified.
@@ -34,6 +34,10 @@ The other dmarz experiments were weaker candidates for scale-up: the discussion 
 | Simulator speed | serial; every candidate's tie value drawn | worlds prepared in parallel; tie values drawn only among candidates tied on the primary key |
 
 The speed changes are output-identical. A selftest recomputes the parent's frozen simulator for every arm at N = 36, 108, 324 and 972 on four world/attacker combinations and requires identical worlds, admissions, checks and metrics. Model, prompt, schema, temperature, output limit, arms, worlds 6000–6023 (S1), 5000–5003 (Q0), 4900–4901 (engineering), evaluator and analysis are unchanged. At N=972 the S1 assignment ids and packets equal the parent's, so the 972 cells are a paired test–retest anchor.
+
+## Amendment A1: Opus 5.5, trimmed
+
+On 2026-10-04 dmarz directed that paid stages use Opus and chose a trimmed design to fit the remaining allowance. Paid stages now run claude-opus-5-5 (effort low) on the random and coverage arms with visible badges only: 24 Q0 and 576 S1 calls, estimated USD 186–270. Details and what the trim drops are in [AMENDMENT-A1.md](AMENDMENT-A1.md). The Haiku rows in the tables above describe the v1 manifest; it ran only its free S0.
 
 ## Protocol
 

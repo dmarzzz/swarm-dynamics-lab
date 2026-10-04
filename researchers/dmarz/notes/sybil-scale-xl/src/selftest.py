@@ -86,4 +86,29 @@ class Tests(unittest.TestCase):
      self.assertEqual([len(x) for _,x in recs],[n//2,n//2])
      self.assertEqual({world['public']['nodes'][x]['skill'] for x in recs[1][1]},{0,1,2})
      self.assertEqual({world['public']['nodes'][x]['skill'] for x in recs[0][1]},set(range(6)))
+ def test_opus_request_and_settled_ledger(self):
+    import io
+    from unittest.mock import patch
+    sent=[]
+    class Resp(io.BytesIO):
+     def __enter__(self):return self
+     def __exit__(self,*a):return False
+    def opener(request,timeout):
+     body=json.loads(request.data);sent.append((request.full_url,body))
+     if request.full_url.endswith('count_tokens'):return Resp(json.dumps({'input_tokens':1000}).encode())
+     return Resp(json.dumps({'model':study.design()['model'],'stop_reason':'end_turn','usage':{'input_tokens':1000,'output_tokens':300},
+       'content':[{'type':'thinking','thinking':'','signature':'x'},{'type':'text','text':json.dumps({'values':{str(i):None for i in range(6)}})}]}).encode())
+    with tempfile.TemporaryDirectory() as td,patch.dict(os.environ,{'SWARM_MODEL_API_KEY':'k','SWARM_MODEL_WORKSPACE_ID':'w'}):
+     ledger=provider.Ledger(Path(td)/'ledger');api=provider.Anthropic(ledger,opener)
+     answer,acct=api.call({'skills':list(range(6)),'reports':[]},'c1')
+     self.assertEqual(answer['values']['0'],None)
+     msg=sent[-1][1];self.assertNotIn('temperature',msg);self.assertNotIn('thinking',msg)
+     self.assertEqual(msg['model'],'claude-opus-5-5');self.assertEqual(msg['output_config']['effort'],'low')
+     self.assertNotIn('max_tokens',sent[0][1])
+     b=study.design()['budget'];self.assertEqual(acct['actual_usd'],(1000*b['input_usd_per_million']+300*b['output_usd_per_million'])/1e6)
+     # Settled calls count actual cost, open reservations their full amount.
+     ledger.transact({'type':'reserve','call_id':'open','micro_usd':5})
+     total=int(b['aggregate_usd']*1e6)-int(acct['actual_usd']*1e6)-5
+     ledger.transact({'type':'reserve','call_id':'fits','micro_usd':total})
+     with self.assertRaises(provider.CallFailure):ledger.transact({'type':'reserve','call_id':'over','micro_usd':1})
 if __name__=='__main__':unittest.main()

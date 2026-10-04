@@ -28,7 +28,7 @@ Status: exploratory scale-up; setup record maintained per [the setup runbook](..
 - Sample size: fixed to the parent's 24 worlds so every cell pairs by world with the parent; not powered for small differences.
 - Splits: engineering 4900–4901, qualification 5000–5003, S1 6000–6023, holdout 10000–19999 unopened.
 - Agent definition: one stateless synthesizer call per assignment; prompt and schema in src/provider.py, identical to the parent.
-- Versions: model claude-haiku-4-5-20251001; requirements.txt pinned; runtime source hash recorded per run.
+- Versions: model claude-opus-5-5, effort low (amendment A1; v1 was claude-haiku-4-5-20251001); requirements.txt pinned; runtime source hash recorded per run.
 - Offline checks: selftest (anchor equality with sybil-specialists, parent-simulator equality for the faster selection, graph scaling, Q0 packet size, blind packets, ledger cap/duplicates, render failure states, principal-blind checks, splits, invalid answers, concurrent failure denominators).
 - Launcher gate integration: coordinator refuses duplicate batches and requires exactly one passed prerequisite stage at the same source hash; private launcher refuses without an exclusive merged claim.
 - Visualization: [VISUALIZATION.md](VISUALIZATION.md) v1 plus the combined parent+XL figure.
@@ -47,7 +47,7 @@ Operations entry: manual (private launcher). [Operations guide](../../../../tool
 | Stop this study and close out | stop worker, verify uploads, `agentops.py release dmarz-sybil-scale-xl --status done` | — |
 
 - Credentials: dmarz model-key aliases from agentops SOPS, memory-only via SSH stdin; never in argv or on disk.
-- Budget: USD 500 study reservation cap, 2,100 calls. dmarz waived the shared USD 500 allowance for this run ("don't worry about the budget").
+- Budget (A1): dmarz chose the trimmed Opus design, estimated USD 186–270, within the shared USD 500 allowance (about USD 340 left). Ledger cap USD 330 on settled cost plus open reservations, 700 calls. See AMENDMENT-A1.md.
 - Allocation: sim-dmarz (idle, no active claim, no worker at 06:02Z), exclusive claim dmarz-sybil-scale-xl.
 
 ## Attempt and repair history
@@ -56,6 +56,7 @@ Operations entry: manual (private launcher). [Operations guide](../../../../tool
 |---|---|---|---|---|
 | local-s0-001 / — | S0 offline / v1 | (offline engineering check) | 216 assigned / 0 recorded (host out of memory) | [interrupted; repaired pool cap](reviews/local-s0-001-post.md) |
 | fleet-s0-001 (33d602fe) / local-s0-001 | S0 fleet / v1 | [pre](reviews/fleet-s0-001-pre.md) | 216/216/216/216/216 | [pass](reviews/fleet-s0-001-post.md); Haiku Q0/S1 not launched (Opus directive) |
+| s0-a1 / fleet-s0-001 | S0 fleet / A1 (Opus manifest) | [pre](reviews/s0-a1-pre.md) | pending | pending |
 
 ## Closeout
 

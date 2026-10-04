@@ -52,7 +52,10 @@ class Ledger:
             events = [json.loads(line) for line in f if line.strip()]
             reserves = [e for e in events if e['type']=='reserve']
             budget = study.design()['budget']
-            total = sum(e['micro_usd'] for e in reserves)
+            # Amendment A1: a call with reported usage counts its actual cost; a call without
+            # (in flight, or failed before usage) keeps its full reservation.
+            settled = {e['call_id']:e['actual_micro_usd'] for e in events if e['type']=='response'}
+            total = sum(settled.get(e['call_id'], e['micro_usd']) for e in reserves)
             if event and event['type']=='reserve':
                 if any(e['call_id']==event['call_id'] for e in reserves):
                     raise CallFailure('duplicate_call_refused')
@@ -76,22 +79,41 @@ class Anthropic:
         if not self.key or not self.workspace:
             raise CallFailure('missing_credential_alias')
 
+    def headers(self):
+        return {'Content-Type':'application/json','x-api-key':self.key,
+                'anthropic-version':'2023-06-01','anthropic-workspace-id':self.workspace}
+
+    def count(self, body):
+        request = urllib.request.Request('https://api.anthropic.com/v1/messages/count_tokens',
+                                         data=json.dumps(body).encode(), headers=self.headers(), method='POST')
+        try:
+            with self.opener(request, timeout=self.b['request_timeout_seconds']) as response:
+                tokens = json.loads(response.read()).get('input_tokens')
+        except urllib.error.HTTPError as exc:
+            raise CallFailure('count_http_'+str(exc.code)) from None
+        except Exception as exc:
+            raise CallFailure('count_transport_'+type(exc).__name__) from None
+        if type(tokens) is not int or tokens<=0:
+            raise CallFailure('count_missing')
+        return tokens
+
     def call(self, packet, call_id):
-        body = {'model':self.d['model'],'max_tokens':self.b['max_output_tokens'],
-                'temperature':0,'system':SYSTEM,
+        # Amendment A1 (claude-opus-5-5): no temperature (rejected by the model); thinking is
+        # always on, so effort is set explicitly and the output limit covers thinking tokens.
+        body = {'model':self.d['model'],'max_tokens':self.b['max_output_tokens'],'system':SYSTEM,
                 'messages':[{'role':'user','content':json.dumps(packet, sort_keys=True)}],
-                'output_config':{'format':{'type':'json_schema','schema':SCHEMA}}}
+                'output_config':{'effort':self.d['effort'],'format':{'type':'json_schema','schema':SCHEMA}}}
         encoded = json.dumps(body).encode()
         if len(encoded)>self.b['max_input_bytes']:
             raise CallFailure('input_size_limit')
-        # ASCII bytes upper-bound input tokens; 4096-token envelope covers protocol/schema.
-        reserve = (len(encoded)+4096)*self.b['input_usd_per_million'] + self.b['max_output_tokens']*self.b['output_usd_per_million']
-        account = {'reserved_usd':reserve/1e6, 'usage_reported':False, 'attempted':False}
+        # Exact input tokens from the free counting endpoint; max output priced in full.
+        counted = self.count({k:v for k,v in body.items() if k!='max_tokens'})
+        # 2% + 64-token margin in case billed input differs slightly from the count.
+        reserve = (int(counted*1.02)+64)*self.b['input_usd_per_million'] + self.b['max_output_tokens']*self.b['output_usd_per_million']
+        account = {'reserved_usd':reserve/1e6, 'counted_input_tokens':counted, 'usage_reported':False, 'attempted':False}
         self.ledger.transact({'type':'reserve','call_id':call_id,'micro_usd':reserve,'time':time.time()})
         account['attempted'] = True
-        headers = {'Content-Type':'application/json','x-api-key':self.key,
-                   'anthropic-version':'2023-06-01','anthropic-workspace-id':self.workspace}
-        request = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=headers, method='POST')
+        request = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=self.headers(), method='POST')
         started = time.monotonic()
         try:
             with self.opener(request, timeout=self.b['request_timeout_seconds']) as response:
@@ -117,7 +139,8 @@ class Anthropic:
             raise CallFailure('model_mismatch', account)
         if data.get('stop_reason') != 'end_turn':
             raise CallFailure('nonterminal_output', account)
-        content = data.get('content', [])
+        # Thinking blocks (empty text by default) may precede the single answer block.
+        content = [b for b in data.get('content', []) if b.get('type')!='thinking']
         try:
             if len(content)!=1 or content[0].get('type')!='text':
                 raise ValueError('text_block')

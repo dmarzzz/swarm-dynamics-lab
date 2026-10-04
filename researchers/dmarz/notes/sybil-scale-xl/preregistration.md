@@ -12,3 +12,7 @@
    d. Coverage versus random at equal budget, weak-check (pass 0.90) security cost, and visible minus hidden badges, as in the parent.
 5. Stop rules: no retries; the first failed call stops new dispatch and the remaining assignments are recorded as not started. A new attempt needs a new pre-run assessment and attempt id. Cohorts (this study, the parent and the Sonnet replication) are never pooled. No condition is dropped or added after seeing results. Null and adverse findings complete the study. S2 and the holdout range 10000–19999 stay closed.
 6. Budget: the study ledger caps conservative byte-based reservations at USD 500 and 2,100 attempted calls. Reservations are an upper bound (one token per request byte); expected actual spend is in the README. dmarz authorized spending beyond the earlier shared USD 500 allowance for this run ("don't worry about the budget", 2026-10-04).
+
+## Amendment A1 (2026-10-04, before any paid call)
+
+See [AMENDMENT-A1.md](AMENDMENT-A1.md). Model claude-opus-5-5 at effort low with no temperature; arms random and coverage only; visible badges only; 24 Q0 and 576 S1 calls; ledger cap USD 330 on settled cost plus open reservations. Item 4b (model versus plurality) and 4d (coverage versus random) apply unchanged within the kept arms. Item 4c becomes a paired Opus-minus-Haiku model comparison at N=972, not a test–retest anchor. Hidden-badge, degree and no-check contrasts are not collected. Q0 thresholds are unchanged and evaluated per size over the 8 kept packets.

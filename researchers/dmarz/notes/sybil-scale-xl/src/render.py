@@ -4,6 +4,7 @@ import math
 import study
 COLORS={'coverage':'#5fd7d0','random':'#f4c777','degree':'#bb9df6','no_verification':'#8796aa'}
 INK='#edf3fb';MUTED='#a7b5c7'
+def ARMS_SHOWN():return [(a,c) for a,c in COLORS.items() if a in study.design()['arms']]
 def SPAN():return max(1,len(study.design()['sizes'])-1)
 def font(size):
     for path in ('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf','/System/Library/Fonts/Supplemental/Arial.ttf'):
@@ -24,7 +25,7 @@ def frame(rows,total,stage,elapsed=0,accounting=None,visibility='visible'):
     def text(x,y,t,size=23,fill=INK):d.text((x,y),str(t),font=font(size),fill=fill)
     good=[r for r in rows if r['status']=='completed'];failed=sum(r['status']=='failed' for r in rows)
     text(62,30,'Can Sybil defenses scale with the swarm?',42)
-    text(62,92,f'{stage} | '+('SCRIPTED' if stage=='S0' else 'HAIKU 4.5')+f' | badges {visibility} | exploratory',25,COLORS['coverage'])
+    text(62,92,f'{stage} | '+('SCRIPTED' if stage=='S0' else 'OPUS 5.5')+f' | badges {visibility} | exploratory',25,COLORS['coverage'])
     text(62,137,f'Completed {len(good)}/{total} | failed {failed} | not started {sum(r["status"]=="not_started" for r in rows)} | elapsed {elapsed:.0f}s',24)
     if stage=='Q0':
         q=study.qualification(rows)
@@ -32,9 +33,9 @@ def frame(rows,total,stage,elapsed=0,accounting=None,visibility='visible'):
             y=240+i*150;text(95,y,f'{c["n"]} identities: {c["count"]}/{c["expected"]} clean packets',29)
             text(95,y+48,f'Fields {c["fact_accuracy"]:.1%} | exact packets {c["exact_packet_rate"]:.1%} | missing-fact abstention {c["missing_abstention"]:.1%}',26)
     else:
-        for i,(arm,color) in enumerate(COLORS.items()):
+        for i,(arm,color) in enumerate(ARMS_SHOWN()):
             x=62+i*310;d.line((x,203,x+36,203),fill=color,width=4);text(x+45,185,arm.replace('_',' '),22,color)
-        text(62,227,'Solid: 4 checks   Dashed: N/9 checks   White squares: coverage proportional, simple voting',22,MUTED)
+        text(62,227,'Solid: 4 checks   Dashed: N/9 checks   White squares: coverage proportional, simple voting   OPUS 5.5, effort low',22,MUTED)
         for col,rate in enumerate((.1,.9)):
             for row,metric in enumerate(('rare_accuracy','bad_seat_share')):
                 x=120+col*860;y=342+row*365;w=650;h=220
@@ -42,7 +43,7 @@ def frame(rows,total,stage,elapsed=0,accounting=None,visibility='visible'):
                 for tick in (0,.25,.5,.75,1):
                     yy=y+h*(1-tick);d.line((x,yy,x+w,yy),fill='#324153',width=1);text(x-63,yy-12,f'{tick:.0%}',18,MUTED)
                 for j,n in enumerate(study.design()['sizes']):text(x+j*w/SPAN()-16,y+h+12,n,20)
-                for arm,color in COLORS.items():
+                for arm,color in ARMS_SHOWN():
                     for mode in ('fixed','proportional') if arm!='no_verification' else ('fixed',):
                         points=series(rows,rate,arm,mode,visibility,metric)
                         coords=[(x+j*w/SPAN(),y+h*(1-v)) if v is not None else None for j,(_,v,_) in enumerate(points)]
@@ -58,8 +59,10 @@ def frame(rows,total,stage,elapsed=0,accounting=None,visibility='visible'):
                     points=series(rows,rate,'coverage','proportional',visibility,metric,True)
                     for j,(_,v,_) in enumerate(points):
                         if v is not None:d.rectangle((x+j*w/SPAN()-4,y+h*(1-v)-4,x+j*w/SPAN()+4,y+h*(1-v)+4),outline='white',width=2)
-                counts=[p[2] for arm in COLORS for mode in ('fixed','proportional') for p in series(rows,rate,arm,mode,visibility,metric)]
+                counts=[p[2] for arm,_ in ARMS_SHOWN() for mode in ('fixed','proportional') for p in series(rows,rate,arm,mode,visibility,metric)]
                 text(x,y+h+44,f'Identities (log scale) | observed cell counts {min(counts)}–{max(counts)}',18,MUTED)
+    if visibility not in study.design()['visibility']:
+        text(62,300,'Hidden-badge conditions are not part of amendment A1 (visible badges only).',30,MUTED)
     a=accounting or {};stagecost=sum(r.get('accounting',{}).get('actual_usd',0) for r in rows)
     text(62,1060,f'Stage cost ${stagecost:.4f} | study cost ${a.get("actual_usd",0):.4f} | reserved ${a.get("reserved_usd",0):.2f}',23,COLORS['coverage'])
     text(62,1103,'No-check points are shared observations. Missing cells are pending, never zero.',22,MUTED)

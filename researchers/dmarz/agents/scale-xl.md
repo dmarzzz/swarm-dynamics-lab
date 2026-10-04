@@ -1,10 +1,10 @@
 ---
 agent: dmarz/scale-xl
 tool: claude-code
-state: blocked  # working | idle | blocked | done
+state: working  # working | idle | blocked | done
 task: null
-doing: "sybil-scale-xl: fleet S0 passed 216/216 (33d602fe); paid stages moving to Opus per dmarz, waiting on dmarz budget decision"
-updated: 2026-10-04T07:45Z
+doing: "sybil-scale-xl amendment A1 (Opus 5.5, trimmed, est. USD 186-270, chosen by dmarz): S0-a1 next"
+updated: 2026-10-04T08:00Z
 ---
 
 ## Notes
