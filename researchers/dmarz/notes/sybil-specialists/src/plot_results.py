@@ -30,7 +30,7 @@ def plot(directory, output):
                 xs=[m['malicious_admission'] for m in ms]; ys=[m['rare_accuracy'] for m in ms]
                 ax.plot(xs,ys,'o-',color=color,lw=2,ms=6,label=LABELS[arm],alpha=.95)
                 if arm=='coverage':
-                    for x,y,k in zip(xs,ys,[2,4,8]): ax.annotate(str(k),(x,y),xytext=(5,7),textcoords='offset points',color=color,fontsize=11)
+                    for x,y,k in zip(xs,ys,[2,4,8]): ax.annotate(str(k),(x,y),xytext=(5,-17) if k==4 else (5,7),textcoords='offset points',color=color,fontsize=11)
             ax.set_title(f'{bridges} bridge swap'+('' if bridges==1 else 's')+f' | attacker pass {rate:.0%}',pad=14,fontsize=14)
             ax.set_xlim(-.035,1.055); ax.set_ylim(-.04,1.08)
             ax.xaxis.set_major_formatter(PercentFormatter(1)); ax.yaxis.set_major_formatter(PercentFormatter(1))
