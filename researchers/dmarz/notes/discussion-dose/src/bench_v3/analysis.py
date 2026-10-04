@@ -2,12 +2,23 @@
 from collections import defaultdict
 
 
-def reconcile(manifest, rows, events):
-    assigned = [r['id'] for r in manifest['assignments']]
+def reconcile_assignments(assignments, rows):
+    """Check identities AND treatment labels; missing observations stay assigned."""
+    assigned = [r['id'] for r in assignments]
     ids = [r['id'] for r in rows]
     if len(set(assigned)) != len(assigned) or len(set(ids)) != len(ids):
         raise ValueError('duplicate episode identifiers')
     if set(ids) - set(assigned): raise ValueError('unassigned episode')
+    by_id = {a['id']: a for a in assignments}
+    for row in rows:
+        for field, value in by_id[row['id']].items():
+            if field not in row or type(row[field]) is not type(value) or row[field] != value:
+                raise ValueError(f'episode {row["id"]} differs from assignment field {field}')
+    return sorted(set(assigned) - set(ids))
+
+
+def reconcile(manifest, rows, events):
+    missing = reconcile_assignments(manifest['assignments'], rows)
     starts = [e for e in events if e['kind'] == 'call_start']
     terminals = [e for e in events if e['kind'] in ('call_response', 'provider_failure')]
     call_ids = [e['call_id'] for e in starts]; completed_ids = [e['call_id'] for e in terminals]
@@ -15,7 +26,7 @@ def reconcile(manifest, rows, events):
         raise ValueError('duplicate call identifiers')
     if set(completed_ids) - set(call_ids): raise ValueError('unstarted response')
     missing_usage = [e['call_id'] for e in terminals if not all(type(e.get('usage', {}).get(k)) is int for k in ('input_tokens', 'output_tokens'))]
-    return {'assigned': len(assigned), 'terminal': len(rows), 'missing': sorted(set(assigned) - set(ids)),
+    return {'assigned': len(manifest['assignments']), 'terminal': len(rows), 'missing': missing,
             'planned_calls': manifest['planned_calls'], 'started_calls': len(starts), 'terminal_calls': len(terminals),
             'physical_model_calls': sum(bool(e.get('dispatched')) for e in terminals),
             'unresolved_calls': sorted(set(call_ids) - set(completed_ids)),
@@ -27,14 +38,22 @@ def reconcile(manifest, rows, events):
 
 
 def contrast(assignments, rows, metric, stratum):
+    reconcile_assignments(assignments, rows)
     by_id = {r['id']: r for r in rows}
-    worlds = sorted({a['world'] for a in assignments if a['kind'] == 'swarm' and a['stratum'] == stratum})
+    planned = [a for a in assignments if a['kind'] == 'swarm' and a['stratum'] == stratum]
+    cells = {(a['world'], a['attack'], a['arm']): a['id'] for a in planned}
+    if len(cells) != len(planned): raise ValueError('duplicate contrast assignment cells')
+    worlds = sorted({a['world'] for a in planned})
     pairs = []
     for world in worlds:
         lower = upper = 0; missing = 0; values = {}
         for attack, arm, sign in ((True, 'board', 1), (False, 'board', -1), (True, 'private', -1), (False, 'private', 1)):
-            ident = f'{world}:{int(attack)}:{arm}'
+            if (world, attack, arm) not in cells:
+                raise ValueError('incomplete planned contrast; expected clean/attack board/private assignments')
+            ident = cells[world, attack, arm]
             value = by_id.get(ident, {}).get('evaluation', {}).get(metric)
+            if value is not None and (type(value) is not int or value not in (0, 1)):
+                raise ValueError('contrast requires a binary outcome or null')
             values[ident] = value
             if value is None:
                 missing += 1; lower += min(0, sign); upper += max(0, sign)
@@ -51,6 +70,8 @@ def contrast(assignments, rows, metric, stratum):
 
 
 def summarize(manifest, rows, events):
+    # Reconcile before any aggregation, including calls made directly by an analyst.
+    accounting = reconcile(manifest, rows, events)
     groups = defaultdict(list)
     assigned_groups = defaultdict(int)
     def key(a):
@@ -84,7 +105,6 @@ def summarize(manifest, rows, events):
             group['estimated_cost_usd'] = (group['input_tokens'] * rates['input_usd_per_million'] + group['output_tokens'] * rates['output_usd_per_million']) / 1e6
             if group['missing_usage']:
                 group['observed_usage_cost_usd'] = group['estimated_cost_usd']; group['estimated_cost_usd'] = None
-    accounting = reconcile(manifest, rows, events)
     clean_full = [r for r in rows if r['kind'] == 'diagnostic' and not r['attack']]
     clean_reports = [r for r in rows if r['kind'] == 'swarm' and r['arm'] == 'reports' and not r['attack']]
     diagnostic_pass = sum(r['evaluation']['justified'] for r in clean_full)

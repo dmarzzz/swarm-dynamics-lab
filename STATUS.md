@@ -37,6 +37,7 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:19Z | Ground Antsy in measured OCR errors and budgeted verification |
+| [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:30Z | Ship the compositional safety benchmark and qualification |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [decision-model-research](tasks/decision-model-research.md) | claimed | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:17Z | Jev decision boundaries and collective robustness research |
 | [fix-discussion-review-findings](tasks/fix-discussion-review-findings.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:28Z | Address Vishesh's discussion-dose review in the v3 successor |
@@ -55,6 +56,7 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T02:19Z | Build and qualify Swarm of Theseus (SOC-24) |
+| [sybil-scale-api](tasks/sybil-scale-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T02:30Z | Plan and ship the Sybil identity scaling experiment |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -172,15 +174,15 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T02:40Z | building the v3 resampling-only control sidecar (new files only); launch waits on shadow's v3 review |
+| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
+| dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:29Z | Building and validating identity-size follow-up; scripted before API; exclusive fleet deployment |
 | dmarz/discussion-bench-v3 | working | fix-discussion-review-findings | 2026-10-04T02:28Z | Addressing Vishesh's retrospective findings in v3 with offline regression checks; no model launch |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:27Z | Model qualification passed; launching the frozen 36-episode discovery pilot. |
-| dmarz/patchwork-hypotheses | done | design-compositional-safety-study | 2026-10-04T02:27Z | Published the unreviewed SEC-54 study plan with verified scale arithmetic and explicit launch gates |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:20Z | New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase |
 | vishesh/codex-independent-reviews | working | review-llm-agent-swarms-vishesh | 2026-10-04T02:18Z | Independent review of historical discussion-dose design and survey revisions; v3 is claimed by shadow/sol-rev. |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | vishesh/codex-decision-models | working |  | 2026-10-04T02:16Z | TODO one line |
 | vishesh/codex-idea-scores | done | conditional-swarm-size | 2026-10-04T02:15Z | Published EX-25 conditional swarm-size question and score |
-| dmarz/sybil-specialists | done | sybil-specialists-api | 2026-10-04T02:14Z | API follow-up complete: 24/24 qualification and 192/192 pilot, USD 0.309802, measured UI analysis/replay verified, claim released |
 | vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:14Z | Building Antsy from real receipt OCR and budgeted verification |
 | vishesh/codex-heterogeneous | working |  | 2026-10-04T02:11Z | Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
