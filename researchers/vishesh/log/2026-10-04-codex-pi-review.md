@@ -173,3 +173,9 @@ Owner raised the generic cumulative experiment default fromUSD2 toUSD10 and auth
 ## Revised full-review incorporation
 
 The supplied HTML changed from2a059924 to530258ee: same229ranked items,10edited paragraphs,85changed/new extracted prose blocks including duplicate synthesis and source fact-check footer. Preserved stable IDs/previous hashes, updated all15study proposals, and added shared count/contract/baseline-fitting checks. Saved-data audit reproduces Quorum8peer fixtures, ExternalInfluence50-row denominators, Phantom call/cost ratios and D2standalone counts. Confirmed Poietic declared/generated S0range mismatch; successor contract needs reconciliation, frozen history unchanged. Incorporated completedD0-02readiness failure. No model calls or launch.
+
+## Review freshness pass
+
+Both supplied HTML source hashes unchanged. Checked current evidence at 3a7895ff; refreshed eleven of fifteen study entries and Telephone navigation. New closeouts supersede pending R1/PC10/T1/A8/Antsy-panel/V0 guidance; C6 and Sol/Luna conditional next stages remain subject to their existing admission. Retained all 229 source dispositions and historical scopes; no model calls or allocations. Freshness manifest records source/evidence hashes and concrete next actions.
+
+Final freshness fetch included the completed RD7 diagnostic and newly approved PC12/A10 plans; current guidance now reflects those, preserving prior failures and conditional launch gates.

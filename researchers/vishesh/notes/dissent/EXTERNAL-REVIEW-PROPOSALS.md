@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** RD6 Q0-A1 stopped before any model dispatch. A zero-start replacement contract is published and the owning task has subsequently recorded approval; verify current admission there. This review must not change that frozen packet in place.
+**Current evidence:** RD7 F0-A1 completed all 48 native requests: explicit eligibility was correct 24/24 versus raw timestamps 12/24. All twelve expired cases were repaired; all twelve fresh decisions remained correct. Opposing context changed no observed decisions in this matrix. RD6 qualification remains failed and D0 unrun.
 
-**Sample and confidence:** RD5: six roots, 72 dependent decisions. RD6 A1: zero dispatched, 18 unstarted. Historical fields are not independent samples. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Six authored semantic roots across three grammars, twelve task/age cases and four dependent condition exposures. One native resolver per request; ballots scripted. The 54-case qualification reserve remains sealed and unrun. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [STARTUP-REPAIR.md](reopening/STARTUP-REPAIR.md) · [REPORT.md](rd5/REPORT.md)
+**Evidence:** [F0-A1-POST.md](freshness/reviews/F0-A1-POST.md) · [REPORT.md](freshness/REPORT.md) · [PLAN.md](freshness/PLAN.md)
 
-**Recommended next step:** Complete the currently scoped RD6 attempt in its owning task. Prepare a separately named lexical/context factorial if RD5 mechanism identification remains useful; do not insert new wording levels into an approved run.
+**Recommended next step:** FINISH / PARK RD7. Freeze the composite eligibility repair and qualify it on the sealed reserve after current admission. A broader dissenter study must acquire useful fresh evidence beyond an eligibility gate, scheduled refresh and an equal-budget checker; do not expand the solved expiry matrix.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

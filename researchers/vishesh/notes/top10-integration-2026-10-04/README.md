@@ -1,5 +1,7 @@
 # Top-10 review: integrated decisions
 
+**Current experiment actions:** [latest evidence and next steps](../external-study-review-2026-10-04/README.md#study-decisions). The table below records the earlier top-10 response at its stated cutoff; it must not be used as a live launch/status board.
+
 **Keep the useful scaling/evaluation advice; correct the stale run statuses.** All **24 source entries** are covered below: 14 full pages and 10 shorter entries, despite the document’s “top10” name. Concrete additions live beside the corresponding study proposals, with links to current plans and acceptance evidence. This is integration into designs and reporting, not a claim that the proposed experiments have already run.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review · Evidence cutoff: repository `d2b33c0c`. This snapshot is not a live monitor. The earlier [229-item study review](../external-study-review-2026-10-04/README.md) remains complementary.

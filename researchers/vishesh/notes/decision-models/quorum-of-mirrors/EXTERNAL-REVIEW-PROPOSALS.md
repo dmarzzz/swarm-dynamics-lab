@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** PQ-04 passed its eight-call targeted assertion/evidence repair. A broader R1 robustness plan is now prepared: five authored families, ten qualification calls and conditional forty evaluation calls; this is not committee-efficacy evidence.
+**Current evidence:** SP-02 quote-only repair qualification passed: 40/40 valid calls, 120/120 source and 280/280 report selections, 40/40 decisions and 20/20 exact paired roots. SP-01 remains failed; no main evaluation or interacting-swarm result.
 
-**Sample and confidence:** PQ-04: four authored paired roots, eight dependent calls; not eight independent replications. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Twenty authored paired roots in five grammar families; 40 dependent native calls. Not field reliability or 400 independent facts. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [PQ-04-post.md](reviews/PQ-04-post.md) · [REVIEW-RESPONSE.md](REVIEW-RESPONSE.md) · [PLAN.md](packet-study/robustness-v1/PLAN.md)
+**Evidence:** [SP-02-post.md](reviews/SP-02-post.md) · [SP-01-post.md](reviews/SP-01-post.md)
 
-**Recommended next step:** Use the existing R1 plan rather than creating a duplicate multi-claim casebook. Its mode/exact-fact/quote gates address several review concerns; field transfer, authenticated ancestry and actual committee behavior remain separate questions.
+**Recommended next step:** FINISH this repair cycle. Prepare a free-form evidence-selection corpus with independently justified labels, conflicting/unsupported updates and strong parser/retrieval baselines; do not open the old 96-packet cohort or repeat grammar aliases.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

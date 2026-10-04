@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** A2 is complete and parked: 6/12 learned policies qualified; 67/88 observed executor actions were correct, and all 21 errors followed a wrong supplied policy. There was no additional observed executor error.
+**Current evidence:** T1-Q0 closed at 21/72 calls with 1/18 complete founder passes and no qualified observed successor. Separately, SOL50 qualification completed 17 calls in a five-member world; a scorer-order defect and address mismatch blocked coordination. Only 2/10 intended consultation edges arrived. No 50-member pilot or native handover ran in SOL50.
 
-**Sample and confidence:** A2: six fixed roots, twelve learners; 196 terminal of 204 assigned calls, eight actions unstarted. V1 has six designed worlds with complementary pairs, not broad independent scenario coverage. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** T1: six synthetic roots, eighteen founders, one observed successor; 51 unstarted calls. SOL50: one five-member qualification world, seventeen calls, ten downstream calls unstarted. No pooling between instruments. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [RESULTS-A2.md](execution-diagnostic/RESULTS-A2.md) · [SELECTIVE-PRESERVATION.md](execution-diagnostic/SELECTIVE-PRESERVATION.md)
+**Evidence:** [RESULTS-Q0-A1.md](execution-diagnostic/transmission/RESULTS-Q0-A1.md) · [RESULTS-SOL50.md](execution-diagnostic/sol50/RESULTS-SOL50.md) · [PLAN.md](execution-diagnostic/sol50/address-repair/PLAN.md)
 
-**Recommended next step:** Prioritize evidence admission before inheritance: compare exact consistency checking with retain/revise/quarantine policies on incomplete or changing evidence. Do not relaunch the completed acquisition lane for a favorable pass.
+**Recommended next step:** Use the existing typed T1 repair and SOL50 address-repair plans, preserving original grades and exact-response replay history. Complete end-to-end context/address/scoring checks and resolve the next named qualification scope/admission in the owning task. Do not claim model incapacity from rejected correct addresses or launch the main pilot from budget alone.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

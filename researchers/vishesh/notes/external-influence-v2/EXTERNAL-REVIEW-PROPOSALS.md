@@ -6,11 +6,13 @@
 
 **Current evidence:** This historical lane is distinct from the current procurement D9/D10 pipeline. The review identifies dose saturation, duplicated actor-visible stimuli and a potentially useful saved peer-vote analysis; those derived counts need reproducible audit before becoming revised results.
 
-**Sample and confidence:** Hosted and local cohorts each assigned 50 episodes; domains, repeated stimuli, actors and calls are nested. Review-reported 38 distinct stimuli is not 38 independent task roots. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Hosted and local cohorts each assigned 50 episodes; domains, repeated stimuli, actors and calls are nested. Review-reported 38 distinct stimuli is not 38 independent task roots. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
 **Evidence:** [README.md](README.md) · [RESULTS.md](local-agents/RESULTS.md)
 
 **Recommended next step:** First reproduce stimulus hashes, before/after votes, no-peer controls and matched scripted outputs from saved data. Choose a reduced-dose lineage factorial only if these analyses leave a useful open question.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

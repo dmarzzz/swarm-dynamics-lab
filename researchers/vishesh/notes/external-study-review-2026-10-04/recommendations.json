@@ -2,95 +2,97 @@
   "source_file": "swarm-lab-experiment-review-2026-10-04.html",
   "source_sha256": "530258eeb80d5119c13ec808e46f7a83977bb2ffb1b14bd3bc2b5df2cdccde7f",
   "source_repo_cutoff": "ef269aa9",
-  "reviewed_repo_baseline": "089802a3",
+  "reviewed_repo_baseline": "3a7895ff9dd96bd2651622cc03b4374301e4ee13",
   "method": "Reconcile every numbered section-15 recommendation, section-6 gaps and portfolio proposals with current owned-study records. Source assessments are allegations/recommendations, not independent reproductions performed by this incorporation. Preserve scope of current native results. Source file is owner-supplied and retained locally; no raw corpus, owner prompt or private access context published.",
   "studies": [
     {
       "id": "quorum-of-mirrors",
       "title": "Quorum of Mirrors",
       "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "PQ-04 passed its eight-call targeted assertion/evidence repair. A broader R1 robustness plan is now prepared: five authored families, ten qualification calls and conditional forty evaluation calls; this is not committee-efficacy evidence.",
-      "sample": "PQ-04: four authored paired roots, eight dependent calls; not eight independent replications.",
+      "current": "SP-02 quote-only repair qualification passed: 40/40 valid calls, 120/120 source and 280/280 report selections, 40/40 decisions and 20/20 exact paired roots. SP-01 remains failed; no main evaluation or interacting-swarm result.",
+      "sample": "Twenty authored paired roots in five grammar families; 40 dependent native calls. Not field reliability or 400 independent facts.",
       "evidence": [
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-04-post.md",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/REVIEW-RESPONSE.md",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/robustness-v1/PLAN.md"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/SP-02-post.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/SP-01-post.md"
       ],
-      "next": "Use the existing R1 plan rather than creating a duplicate multi-claim casebook. Its mode/exact-fact/quote gates address several review concerns; field transfer, authenticated ancestry and actual committee behavior remain separate questions."
+      "next": "FINISH this repair cycle. Prepare a free-form evidence-selection corpus with independently justified labels, conflicting/unsupported updates and strong parser/retrieval baselines; do not open the old 96-packet cohort or repeat grammar aliases."
     },
     {
       "id": "phantom-coast",
       "title": "Phantom Coast",
       "path": "researchers/vishesh/notes/phantom-coast/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "PC10 Q1-A1 is complete: 16/16 valid calls, 32/32 map labels per wording, 4/6 optimal actions per wording and no paired action changes. The clarified gate failed; FINISH / PARK this qualification path.",
-      "sample": "Eight authored paired templates, six action pairs and two final-map pairs; one response per condition. No broad wording-equivalence claim.",
+      "current": "PC11 completed 128 valid calls in one ten-agent world; all nine unseeded agents stayed UNKNOWN at the target and no target correction was delivered. The owner-approved PC12 successor now crosses report sign, source reliability, single/triple delivery and correction context; offline implementation is prepared, with no native PC12 outcomes at this cutoff.",
+      "sample": "PC11: one world, four conditions, ten agents, three rounds. Planned PC12: sixteen qualification cases, then eight independent roots with ten dependent receivers per arm and before/after correction (640 conditional decisions). Eight roots are diagnostic breadth, not population precision.",
       "evidence": [
-        "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
-        "researchers/vishesh/notes/phantom-coast/pc10/README.md",
-        "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md"
+        "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc12/PLAN.md",
+        "researchers/vishesh/notes/phantom-coast/pc12/OFFLINE.json"
       ],
-      "next": "Retain the negative PC10 outcome and park prompt polishing. A population-misinformation successor must choose descriptive behavior versus exact-controller evidence interpretation as a new scientific objective."
+      "next": "Use the existing PC12 plan and current admission rather than duplicating a successor. Qualify useful source learning without gating on the repeated-copy target; compare erroneous-claim probability by root and direct correction. Preserve PC11 and distinguish controlled reception from autonomous diffusion or population calibration."
     },
     {
       "id": "right-dissenter",
       "title": "Right Dissenter",
       "path": "researchers/vishesh/notes/dissent/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "RD6 Q0-A1 stopped before any model dispatch. A zero-start replacement contract is published and the owning task has subsequently recorded approval; verify current admission there. This review must not change that frozen packet.",
-      "sample": "RD5: six roots, 72 dependent decisions. RD6 A1: zero dispatched, 18 unstarted. Historical fields are not independent samples.",
+      "current": "RD7 F0-A1 completed all 48 native requests: explicit eligibility was correct 24/24 versus raw timestamps 12/24. All twelve expired cases were repaired; all twelve fresh decisions remained correct. Opposing context changed no observed decisions in this matrix. RD6 qualification remains failed and D0 unrun.",
+      "sample": "Six authored semantic roots across three grammars, twelve task/age cases and four dependent condition exposures. One native resolver per request; ballots scripted. The 54-case qualification reserve remains sealed and unrun.",
       "evidence": [
-        "researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md",
-        "researchers/vishesh/notes/dissent/rd5/REPORT.md"
+        "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-POST.md",
+        "researchers/vishesh/notes/dissent/freshness/REPORT.md",
+        "researchers/vishesh/notes/dissent/freshness/PLAN.md"
       ],
-      "next": "Complete the currently scoped RD6 attempt in its owning task. Prepare a separately named lexical/context factorial if RD5 mechanism identification remains useful; do not insert new wording levels into an approved run."
+      "next": "FINISH / PARK RD7. Freeze the composite eligibility repair and qualify it on the sealed reserve after current admission. A broader dissenter study must acquire useful fresh evidence beyond an eligibility gate, scheduled refresh and an equal-budget checker; do not expand the solved expiry matrix."
     },
     {
       "id": "optimal-swarm-size",
       "title": "Optimal Swarm Size",
       "path": "researchers/vishesh/notes/optimal-swarm-size/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "Q-A7 and outage O1 are complete. Q-A7 input binding improved arithmetic but failed joint provenance reliability; no larger-N promotion is supported. O1 also exposed duplicate ownership and contraction in its stable control.",
-      "sample": "Q-A7: two roots \u00d7 two structures \u00d7 two input conditions = eight episodes/144 calls. O1 is a separate one-template qualification/demo.",
+      "current": "O1 remains a bounded outage demonstration; O2 is the explicit-ownership repair plan. A newer incident-investigation prototype now supplies nine offline cases, eighteen deterministic reference runs and twelve tests; no model calls or native size result in that prototype.",
+      "sample": "Nine authored development cases from three templates; eighteen reference executions are software evidence, not eighteen independent incidents. Earlier Q-A7 has two roots/eight episodes.",
       "evidence": [
-        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-post.md",
-        "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o1-post.md"
+        "researchers/vishesh/notes/optimal-swarm-size/incident-investigation/README.md",
+        "researchers/vishesh/notes/optimal-swarm-size/incident-investigation/PLAN.md",
+        "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/O2-PLAN.md"
       ],
-      "next": "Use saved Q-A7 traces to specify explicit leaf-source semantics, and O1 traces to repair fixed-team ownership before any claimed contraction advantage. These are separate diagnostics, not an optimal-N finding."
+      "next": "Carry the incident prototype into prospective native preparation: qualify a competent batching singleton, separate fixed from added tool capacity, add independent incident cases for broader claims, and price a finite schedule. Do not read deterministic capacity gains as an agent-count effect."
     },
     {
       "id": "swarm-of-theseus",
       "title": "Swarm of Theseus",
       "path": "researchers/vishesh/notes/swarm-of-theseus/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "A2 is complete and parked: 6/12 learned policies qualified; 67/88 observed executor actions were correct, and all 21 errors followed a wrong supplied policy. There was no additional observed executor error.",
-      "sample": "A2: six fixed roots, twelve learners; 196 terminal of 204 assigned calls, eight actions unstarted. V1 has six designed worlds with complementary pairs, not broad independent scenario coverage.",
+      "current": "T1-Q0 closed at 21/72 calls with 1/18 complete founder passes and no qualified observed successor. Separately, SOL50 qualification completed 17 calls in a five-member world; a scorer-order defect and address mismatch blocked coordination. Only 2/10 intended consultation edges arrived. No 50-member pilot or native handover ran in SOL50.",
+      "sample": "T1: six synthetic roots, eighteen founders, one observed successor; 51 unstarted calls. SOL50: one five-member qualification world, seventeen calls, ten downstream calls unstarted. No pooling between instruments.",
       "evidence": [
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A2.md",
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/SELECTIVE-PRESERVATION.md"
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/RESULTS-Q0-A1.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/RESULTS-SOL50.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/address-repair/PLAN.md"
       ],
-      "next": "Prioritize evidence admission before inheritance: compare exact consistency checking with retain/revise/quarantine policies on incomplete or changing evidence. Do not relaunch the completed acquisition lane for a favorable pass."
+      "next": "Use the existing typed T1 repair and SOL50 address-repair plans, preserving original grades and exact-response replay history. Complete end-to-end context/address/scoring checks and resolve the next named qualification scope/admission in the owning task. Do not claim model incapacity from rejected correct addresses or launch the main pilot from budget alone."
     },
     {
       "id": "immune-response",
       "title": "Immune Response",
       "path": "researchers/vishesh/notes/immune-response-v3/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "A7 identified schema-specific rejection; the legal-action-ID repair is now implemented offline with 34 passing tests and six scripted scenario replays. Hosted acceptance and native repair qualification remain untested.",
-      "sample": "A7: three distinct preassigned requests, two failures and one response; no simulator actions. A6: zero complete episodes.",
+      "current": "A9 completed 24 responses: each solo condition passed 2/3 gates, each selected-advice condition 0/3, and no condition repaired the crash. A new owner-authorized A10 plan separates diagnosis and action, qualifies a stronger controller and uses sealed holdouts before controlled advice; no A10 native outcomes at this cutoff.",
+      "sample": "A9: three inspected roots crossed with four conditions. Planned A10 core: four development roots and four sealed holdouts, two ticks and two calls per tick; advice arms reuse development roots. Optional Opus uses a separate sealed holdout set; no pooling as independent replications.",
       "evidence": [
-        "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a7-post.md",
-        "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a6-post.md",
-        "researchers/vishesh/notes/immune-response-v3/freshness-study/CONTROLLER-SCHEMA-REPAIR.md"
+        "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a9-post.md",
+        "researchers/vishesh/notes/immune-response-v3/controller-study/PLAN.md"
       ],
-      "next": "Use the prepared flat action-ID contract for the smallest bounded native qualification under current diagnostic authority and admission; preserve advisor factual errors as a separate capability concern."
+      "next": "Use the existing staged A10 controller qualification with unchanged outcome thresholds and current admission. Controlled advice opens only after core competence; stronger-model fallback is limited to the named behavioral-failure path. Model and architecture both change, so do not attribute any gain to the model alone or launch a larger swarm comparison."
     },
     {
       "id": "influence-scenario",
       "title": "Influence Scenario",
       "path": "researchers/vishesh/notes/influence-swarms/scenario/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "D9 recovered typed acquisition. Five valid cases had 180/180 correct raw values but only 98/180 excerpt-supported values and 41/75 correct policy checks. A source-bound saved-data repair gives 75/75 checks; it is not a native chair result.",
-      "sample": "D9: nine physical requests over five attempts; original screen 5/6 valid. The five cases contain dependent facts/checks. D10 proposes ten chair calls on five paired saved cases.",
+      "current": "Sol and low-reasoning Luna chairs each passed their three-case decision-table diagnostic (18/18 fields, 3/3 raw choices). Earlier Luna failures remain distinct. The paired ten-Sol/fifty-Luna pilot is prepared but has no main outcomes at this cutoff.",
+      "sample": "Three inspected development cases per chair diagnostic, not holdouts. The planned main pilot is one authored world crossed with clean/advocacy in two model/size configurations.",
       "evidence": [
-        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D9.md",
-        "researchers/vishesh/notes/influence-swarms/scenario/NEXT-RUN-D10.md"
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-SOL-post.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/scale-up/PILOT.md"
       ],
-      "next": "Use the prepared D10 paired chair test to assess use of repaired evidence within its current authority/admission. A broader influence experiment needs fresh dossiers, neutral exposure controls and calibrated challenge."
+      "next": "Use the existing qualified shared-chair contract and scale pilot after exact configuration, remaining-budget and other admission checks. Model and size change together; measure raw versus guarded actions and source ancestry without claiming a pure N effect or population influence resistance."
     },
     {
       "id": "external-influence-v2",
@@ -108,13 +110,14 @@
       "id": "healing-helping-hands",
       "title": "Healing Helping Hands",
       "path": "researchers/vishesh/notes/healing-helping-hands/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "C5 finished after the review cutoff. Main agreement routing scored 198/432 versus Jev 432/432 and matched random 193/432. It accepted 234 wrong agreements and referred only 23 cases; the safety criterion failed. FINISH / PARK the current rule.",
-      "sample": "C5 S1: 12 authored semantic families \u00d7 36 nested instances, 432 cases/1,296 calls. S0: 60 cases/180 calls, separate qualification. These are not 432 independent language populations.",
+      "current": "C5 remains a valid adverse routing result. New C6R2 qualification completed 180/180 calls on 60 reports: Haiku A 60/60, B 57/60, Jev 60/60; all frozen overall/per-class floors passed. The 432-case main stage is conditionally authorized, not a demonstrated routing benefit.",
+      "sample": "Sixty nested qualification reports from four forms per class; planned main 432 cases across twelve authored semantic families. Qualification and main outcomes remain separate.",
       "evidence": [
-        "researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md",
-        "researchers/vishesh/notes/healing-helping-hands/c5/PLAN.md"
+        "researchers/vishesh/notes/healing-helping-hands/c6/C6R2-S0-POST.md",
+        "researchers/vishesh/notes/healing-helping-hands/c6/PLAN.md",
+        "researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md"
       ],
-      "next": "Publish and retain the adverse C5 result. An optional development-only investigation of missing SUPPORT outputs is a distinct configuration diagnosis; a new routing study needs a defensible task population and useful cost/safety target."
+      "next": "The owning task can run the fixed C6 main after fresh operational admission under the existing conditional authority. Keep the same policy/scorer and strongest checker baseline; report wrong agreement, referral coverage and full cost. Do not reopen leaked C4 or pool C5/C6 as a model-only causal comparison."
     },
     {
       "id": "antsy-v1-v5",
@@ -132,26 +135,25 @@
       "id": "antsy-v6-v8",
       "title": "Antsy v6\u2013v8",
       "path": "researchers/vishesh/notes/antsy-targeted-v8/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "Trace-repair-v2 reproduced eight saved outputs across three receipts and repaired one primary quantity-label exclusion; the checker still abstained on the same difficult receipt. This supports parser diagnosis, not another reader deployment.",
-      "sample": "V6: 50 receipts, 47 scorable. V7: 20 qualification receipts, 19 scorable. V8 Q0/D1 are interrupted tool attempts; repeated outputs are not new receipt samples.",
+      "current": "The 40-Haiku panel completed 80 valid qualification calls: 40/40 correct on one receipt, 0/40 on the grouping challenge. D1 added sixteen valid calls; locale guidance did not repair the error. Main evaluation stays closed. An offline normalization guard refers wrong-case outputs without silently correcting them.",
+      "sample": "Two inspected receipt units; 96 dependent calls across qualification and D1. The eighteen evaluation images remain uncollected; no panel efficacy or population correlation estimate.",
       "evidence": [
-        "researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2/README.md",
-        "researchers/vishesh/notes/antsy-targeted-v8/README.md",
-        "researchers/vishesh/notes/antsy-diversity-v7/RESULTS.md"
+        "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/Q0-POST.md"
       ],
-      "next": "Finish saved-data extraction and detector analyses first. Propose a fresh qualification only after reference labels, parser behavior and checker latency have a useful validated contract."
+      "next": "FINISH the panel/locale diagnostic. Develop literal-token extraction, explicit locale/currency normalization and verified image/span grounding with ambiguous controls; qualify the changed instrument on fresh inputs before another panel. Unanimity is not calibrated confidence."
     },
     {
       "id": "poietic-agents",
       "title": "Poietic Agents",
       "path": "researchers/vishesh/notes/poietic-agents/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "D0-02 is an approved 36-call interface diagnostic after the fence repair, with infrastructure admission handled by the owning task. It is not a full differentiation efficacy study.",
-      "sample": "D0-02 proposes three roots \u00d7 three interfaces \u00d7 four dependent actions; the mixed Jev/chat interfaces cannot support a fair model ranking. Historical 40 calls and original cumulative cap remain.",
+      "current": "D0-02 closed with 14/36 decisions dispatched and no executor qualified. P30 is now a written owner-scoped thirty-member feasibility plan, with fresh Q30 qualification and an unchanged USD10 cumulative ceiling. It has no Q30/P30 native calls or claimed allocation at the recorded cutoff.",
+      "sample": "Planned Q30: 96 fresh lifecycle decisions across two candidate interfaces. Planned P30: four paired workload roots \u00d7 two arms \u00d7 six epochs \u00d7 thirty jobs = 1,440 jobs; thirty members are dependent components.",
       "evidence": [
-        "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
-        "researchers/vishesh/notes/poietic-agents/AMENDMENTS.md"
+        "researchers/vishesh/notes/poietic-agents/P30-PLAN.md",
+        "researchers/vishesh/notes/poietic-agents/reviews/D0-02-post.md"
       ],
-      "next": "Keep the named interface diagnostic unchanged. Before a broad S1, run the zero-model economics/operation audit and determine whether services offer anything beyond caching and cheaper-model substitution."
+      "next": "Implement and validate the existing P30 plan, including nested action/value contracts, declared/generated split agreement, true structural changes and the fixed shared-cache comparator. Qualify candidate routes on fresh inputs before conditional main admission; no duplicate owner/researcher request for unchanged approved scope."
     },
     {
       "id": "heterogeneous",
@@ -181,15 +183,13 @@
       "id": "village",
       "title": "AI Village replay and Telephone transfer",
       "path": "researchers/vishesh/notes/ai-village-replay-2026-10-04/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "Telephone A0 and real-data V0 now have separate plans. V0 has eight inspected goal-window statements and 25 meaning targets from complete pinned tables; this supersedes the review\u2019s prefix-only acquisition status but is not a historical visibility audit.",
-      "sample": "V0: eight inspected development windows, not a sealed 24-cluster evaluation. No native V0 result is asserted here; authored A0 and real-source V0 remain separate cohorts.",
+      "current": "Telephone A1 completed 72/72 schema-valid, semantically reviewed outputs. Hop-three retention was prose 91.67%, structured 95.83%, source lookup 100%; unsupported critical commitment failed clean-fidelity qualification. AI Village V0 was not dispatched.",
+      "sample": "Eight authored development roots \u00d7 three arms \u00d7 three hops; three meaning targets per root. All native A1 outputs are authored-case evidence, not historical AI Village propagation.",
       "evidence": [
-        "researchers/vishesh/notes/ai-village-replay-2026-10-04/README.md",
-        "researchers/vishesh/notes/telephone/native/a0/PLAN.md",
-        "researchers/vishesh/notes/telephone/native/v0/PLAN.md",
-        "researchers/vishesh/notes/telephone/native/v0/PRE-RUN.md"
+        "researchers/vishesh/notes/telephone/native/a1/POST-MORTEM.md",
+        "researchers/vishesh/notes/telephone/native/a1/RESULTS.json"
       ],
-      "next": "Keep the approved A0/V0 scopes distinct and use the current V0 yield/transfer assessment. Propose a zero-model closure casefile as an additional analysis, not a silent replacement of the owner\u2019s handoff study."
+      "next": "FINISH / PARK this approved handoff sequence; do not launch V0 from parser success. A new design must choose descriptive drift versus a clean-fidelity prerequisite, specify status/scope scoring prospectively and improve scenario diversity. Reuse saved evidence first."
     }
   ],
   "recommendations": [
@@ -2749,5 +2749,7 @@
       "count_checks": "revised-counts.json",
       "reconciled_repo_cutoff": "2c79e74b"
     }
-  ]
+  ],
+  "original_reviewed_repo_baseline": "089802a3",
+  "freshness_checked_at": "2026-10-04T20:37:54Z"
 }

@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** PC10 Q1-A1 is complete: 16/16 valid calls, 32/32 map labels per wording, 4/6 optimal actions per wording and no paired action changes. The clarified gate failed; FINISH / PARK this qualification path.
+**Current evidence:** PC11 completed 128 valid calls in one ten-agent world; all nine unseeded agents stayed UNKNOWN at the target and no target correction was delivered. The owner-approved PC12 successor now crosses report sign, source reliability, single/triple delivery and correction context; offline implementation is prepared, with no native PC12 outcomes at this cutoff.
 
-**Sample and confidence:** Eight authored paired templates, six action pairs and two final-map pairs; one response per condition. No broad wording-equivalence claim. New proposed effects remain 0/4; no confidence upgrade.
+**Sample and confidence:** PC11: one world, four conditions, ten agents, three rounds. Planned PC12: sixteen qualification cases, then eight independent roots with ten dependent receivers per arm and before/after correction (640 conditional decisions). Eight roots are diagnostic breadth, not population precision. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [Q0-A1-POST.md](pc9/reviews/Q0-A1-POST.md) · [README.md](pc10/README.md) · [Q1-A1-POST.md](pc10/Q1-A1-POST.md)
+**Evidence:** [S1-A1-POST.md](pc11/S1-A1-POST.md) · [PLAN.md](pc12/PLAN.md) · [OFFLINE.json](pc12/OFFLINE.json)
 
-**Recommended next step:** Retain the negative PC10 outcome and park prompt polishing. A population-misinformation successor must choose descriptive behavior versus exact-controller evidence interpretation as a new scientific objective.
+**Recommended next step:** Use the existing PC12 plan and current admission rather than duplicating a successor. Qualify useful source learning without gating on the repeated-copy target; compare erroneous-claim probability by root and direct correction. Preserve PC11 and distinguish controlled reception from autonomous diffusion or population calibration.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

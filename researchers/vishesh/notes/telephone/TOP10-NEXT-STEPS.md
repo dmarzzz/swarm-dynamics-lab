@@ -1,5 +1,7 @@
 # Telephone: carry provenance without changing the question
 
+**Latest state:** A1 completed all 72 authored-case outputs but failed the clean-fidelity gate; V0 was not launched. [A1 post-mortem](native/a1/POST-MORTEM.md) supersedes the pending A0/V0 wording below. Finish/park this sequence; a descriptive-drift successor is a new design, not a silent gate waiver.
+
 2026-10-04 · [Portfolio dispositions](../top10-integration-2026-10-04/README.md).
 
 **Keep the current A0 authored handoffs and V0 AI Village transfer scopes distinct.** The top-10 review’s sparse 10→300-node gossip network is a possible new protocol, not an amendment to the handoff studies. Check the latest [A0 plan](native/a0/PLAN.md) and [V0 plan](native/v0/PLAN.md) before treating the older T1 hold as current.

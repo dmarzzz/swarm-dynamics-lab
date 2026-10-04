@@ -6,11 +6,13 @@
 
 **Current evidence:** V5 D0 is a fixed-history estimator reanalysis; Laya’s corrected 57.78% exceeds the no-check 56.78% on that saved tape. It is not a fresh committee evaluation. V5 D1’s planner also changes the check menu.
 
-**Sample and confidence:** V4/V5 use 70 previously evaluated receipts, nested policy histories and unknown vendor/layout dependence. V5’s 1,400 condition rows are not independent observations. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** V4/V5 use 70 previously evaluated receipts, nested policy histories and unknown vendor/layout dependence. V5’s 1,400 condition rows are not independent observations. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
 **Evidence:** [RESULTS.md](../antsy-verification-v4/RESULTS.md) · [RESULTS.md](RESULTS.md)
 
 **Recommended next step:** Add a dated estimator-conditional interpretation to v4 and a concise lineage closeout. Preserve v5’s stronger planner as a comparator, without reopening a broad model committee sweep.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** Trace-repair-v2 reproduced eight saved outputs across three receipts and repaired one primary quantity-label exclusion; the checker still abstained on the same difficult receipt. This supports parser diagnosis, not another reader deployment.
+**Current evidence:** The 40-Haiku panel completed 80 valid qualification calls: 40/40 correct on one receipt, 0/40 on the grouping challenge. D1 added sixteen valid calls; locale guidance did not repair the error. Main evaluation stays closed. An offline normalization guard refers wrong-case outputs without silently correcting them.
 
-**Sample and confidence:** V6: 50 receipts, 47 scorable. V7: 20 qualification receipts, 19 scorable. V8 Q0/D1 are interrupted tool attempts; repeated outputs are not new receipt samples. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Two inspected receipt units; 96 dependent calls across qualification and D1. The eighteen evaluation images remain uncollected; no panel efficacy or population correlation estimate. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [README.md](trace-repair-v2/README.md) · [README.md](README.md) · [RESULTS.md](../antsy-diversity-v7/RESULTS.md)
+**Evidence:** [POST-MORTEM.md](haiku-normalization-d1/POST-MORTEM.md) · [Q0-POST.md](haiku-panel-v1/Q0-POST.md)
 
-**Recommended next step:** Finish saved-data extraction and detector analyses first. Propose a fresh qualification only after reference labels, parser behavior and checker latency have a useful validated contract.
+**Recommended next step:** FINISH the panel/locale diagnostic. Develop literal-token extraction, explicit locale/currency normalization and verified image/span grounding with ambiguous controls; qualify the changed instrument on fresh inputs before another panel. Unanimity is not calibrated confidence.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

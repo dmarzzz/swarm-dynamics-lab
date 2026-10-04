@@ -6,11 +6,13 @@
 
 **Current evidence:** This is a research/design bank, not an empirical result. Poietic is a descendant with its own current plan; the appeal ranking does not provide evidence for its mechanism.
 
-**Sample and confidence:** 38 design questions at the review cutoff; zero independent empirical samples in this bank. Interest scores and confidence scores must remain separate. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** 38 design questions at the review cutoff; zero independent empirical samples in this bank. Interest scores and confidence scores must remain separate. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
 **Evidence:** [README.md](README.md) · [README.md](frontiers/README.md)
 
 **Recommended next step:** Use a short decision table for shortlist selection and measure complementary errors before building a diversity-dependent experiment. Preserve the current Poietic work rather than silently reprioritizing its owner-approved diagnostic.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

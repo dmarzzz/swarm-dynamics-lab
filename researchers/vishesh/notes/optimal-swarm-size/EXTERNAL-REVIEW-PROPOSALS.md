@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** Q-A7 and outage O1 are complete. Q-A7 input binding improved arithmetic but failed joint provenance reliability; no larger-N promotion is supported. O1 also exposed duplicate ownership and contraction in its stable control.
+**Current evidence:** O1 remains a bounded outage demonstration; O2 is the explicit-ownership repair plan. A newer incident-investigation prototype now supplies nine offline cases, eighteen deterministic reference runs and twelve tests; no model calls or native size result in that prototype.
 
-**Sample and confidence:** Q-A7: two roots × two structures × two input conditions = eight episodes/144 calls. O1 is a separate one-template qualification/demo. New proposed effects remain 0/4; this review does not raise evidence confidence.
+**Sample and confidence:** Nine authored development cases from three templates; eighteen reference executions are software evidence, not eighteen independent incidents. Earlier Q-A7 has two roots/eight episodes. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [q-a7-post.md](reviews/q-a7-post.md) · [outage-o1-post.md](reviews/outage-o1-post.md)
+**Evidence:** [README.md](incident-investigation/README.md) · [PLAN.md](incident-investigation/PLAN.md) · [O2-PLAN.md](outage-prototype/O2-PLAN.md)
 
-**Recommended next step:** Use saved Q-A7 traces to specify explicit leaf-source semantics, and O1 traces to repair fixed-team ownership before any claimed contraction advantage. These are separate diagnostics, not an optimal-N finding.
+**Recommended next step:** Carry the incident prototype into prospective native preparation: qualify a competent batching singleton, separate fixed from added tool capacity, add independent incident cases for broader claims, and price a finite schedule. Do not read deterministic capacity gains as an agent-count effect.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

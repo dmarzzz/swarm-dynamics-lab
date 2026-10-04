@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** A7 identified schema-specific rejection; the legal-action-ID repair is now implemented offline with 34 passing tests and six scripted scenario replays. Hosted acceptance and native repair qualification remain untested.
+**Current evidence:** A9 completed 24 responses: each solo condition passed 2/3 gates, each selected-advice condition 0/3, and no condition repaired the crash. A new owner-authorized A10 plan separates diagnosis and action, qualifies a stronger controller and uses sealed holdouts before controlled advice; no A10 native outcomes at this cutoff.
 
-**Sample and confidence:** A7: three distinct preassigned requests, two failures and one response; no simulator actions. A6: zero complete episodes. New proposed effects remain 0/4; this review does not raise evidence confidence.
+**Sample and confidence:** A9: three inspected roots crossed with four conditions. Planned A10 core: four development roots and four sealed holdouts, two ticks and two calls per tick; advice arms reuse development roots. Optional Opus uses a separate sealed holdout set; no pooling as independent replications. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [a7-post.md](freshness-study/reviews/a7-post.md) · [a6-post.md](freshness-study/reviews/a6-post.md) · [CONTROLLER-SCHEMA-REPAIR.md](freshness-study/CONTROLLER-SCHEMA-REPAIR.md)
+**Evidence:** [a9-post.md](freshness-study/reviews/a9-post.md) · [PLAN.md](controller-study/PLAN.md)
 
-**Recommended next step:** Use the prepared flat action-ID contract for the smallest bounded native qualification under current diagnostic authority and admission; preserve advisor factual errors as a separate capability concern.
+**Recommended next step:** Use the existing staged A10 controller qualification with unchanged outcome thresholds and current admission. Controlled advice opens only after core competence; stronger-model fallback is limited to the named behavioral-failure path. Model and architecture both change, so do not attribute any gain to the model alone or launch a larger swarm comparison.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

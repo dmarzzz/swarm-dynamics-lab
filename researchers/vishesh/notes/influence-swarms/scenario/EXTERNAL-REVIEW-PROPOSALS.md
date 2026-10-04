@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** D9 recovered typed acquisition. Five valid cases had 180/180 correct raw values but only 98/180 excerpt-supported values and 41/75 correct policy checks. A source-bound saved-data repair gives 75/75 checks; it is not a native chair result.
+**Current evidence:** Sol and low-reasoning Luna chairs each passed their three-case decision-table diagnostic (18/18 fields, 3/3 raw choices). Earlier Luna failures remain distinct. The paired ten-Sol/fifty-Luna pilot is prepared but has no main outcomes at this cutoff.
 
-**Sample and confidence:** D9: nine physical requests over five attempts; original screen 5/6 valid. The five cases contain dependent facts/checks. D10 proposes ten chair calls on five paired saved cases. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Three inspected development cases per chair diagnostic, not holdouts. The planned main pilot is one authored world crossed with clean/advocacy in two model/size configurations. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [RESULTS-D9.md](RESULTS-D9.md) · [NEXT-RUN-D10.md](NEXT-RUN-D10.md)
+**Evidence:** [SD-SOL-post.md](reviews/SD-SOL-post.md) · [SD-LUNA3-post.md](reviews/SD-LUNA3-post.md) · [PILOT.md](scale-up/PILOT.md)
 
-**Recommended next step:** Use the prepared D10 paired chair test to assess use of repaired evidence within its current authority/admission. A broader influence experiment needs fresh dossiers, neutral exposure controls and calibrated challenge.
+**Recommended next step:** Use the existing qualified shared-chair contract and scale pilot after exact configuration, remaining-budget and other admission checks. Model and size change together; measure raw versus guarded actions and source ancestry without claiming a pure N effect or population influence resistance.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

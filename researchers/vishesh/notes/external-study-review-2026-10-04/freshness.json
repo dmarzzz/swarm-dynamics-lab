@@ -1,0 +1,275 @@
+{
+  "checked_at": "2026-10-04T20:37:54Z",
+  "repo_cutoff": "3a7895ff9dd96bd2651622cc03b4374301e4ee13",
+  "source_hashes": {
+    "swarm-lab-experiment-review-2026-10-04.html": "530258eeb80d5119c13ec808e46f7a83977bb2ffb1b14bd3bc2b5df2cdccde7f",
+    "swarm-lab-top10-2026-10-04.html": "8a9c11253f8f74487d289b1b9eabff0ba3b1378ab965ccdc4962a4281deafc81"
+  },
+  "scope": "Current action guidance for all 15 registered study documents and Telephone; original source recommendations and frozen attempts preserved. Point-in-time assessment, not launch admission or live monitoring.",
+  "studies": [
+    {
+      "id": "quorum-of-mirrors",
+      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "FINISH this repair cycle. Prepare a free-form evidence-selection corpus with independently justified labels, conflicting/unsupported updates and strong parser/retrieval baselines; do not open the old 96-packet cohort or repeat grammar aliases.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/SP-02-post.md",
+          "sha256": "2c23adb9fd30a304e44f7f1211a3f4e63b295a1744bc26d4ff038ba8c87cede2"
+        },
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/SP-01-post.md",
+          "sha256": "c7349b630c507a37d07ebf78ecb8b0527e7deb15f644a60c8de67060f55f013d"
+        }
+      ]
+    },
+    {
+      "id": "phantom-coast",
+      "document": "researchers/vishesh/notes/phantom-coast/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "Use the existing PC12 plan and current admission rather than duplicating a successor. Qualify useful source learning without gating on the repeated-copy target; compare erroneous-claim probability by root and direct correction. Preserve PC11 and distinguish controlled reception from autonomous diffusion or population calibration.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+          "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/PLAN.md",
+          "sha256": "232616f77502b57901e8c8101d76f19b7c93fb9f82286475dea3eb917ae407d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/OFFLINE.json",
+          "sha256": "683a6a896c7c230d0cfe7998cc14a2d37a866b1af50a35c0021109c90214feb4"
+        }
+      ]
+    },
+    {
+      "id": "right-dissenter",
+      "document": "researchers/vishesh/notes/dissent/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "FINISH / PARK RD7. Freeze the composite eligibility repair and qualify it on the sealed reserve after current admission. A broader dissenter study must acquire useful fresh evidence beyond an eligibility gate, scheduled refresh and an equal-budget checker; do not expand the solved expiry matrix.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-POST.md",
+          "sha256": "ef39f08811a40cb83b32f42a4b253fcc28d226070f8849f162b8c3ae976c07cc"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/REPORT.md",
+          "sha256": "062f59276804e358c2c3b3bc505173860a24fcccec3b0455c6a537cc8b728dda"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "1673fb9cf033954446236f4585402ce5fd1a4530b824263e502932366eb0d516"
+        }
+      ]
+    },
+    {
+      "id": "optimal-swarm-size",
+      "document": "researchers/vishesh/notes/optimal-swarm-size/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "Carry the incident prototype into prospective native preparation: qualify a competent batching singleton, separate fixed from added tool capacity, add independent incident cases for broader claims, and price a finite schedule. Do not read deterministic capacity gains as an agent-count effect.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/incident-investigation/README.md",
+          "sha256": "7a82f248cb5c9876e626d20921a16997cf6f55bd80e87886b7545895dcf85589"
+        },
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/incident-investigation/PLAN.md",
+          "sha256": "0d6f02059696052ca40aea3fdb7cf280619a333928f47b68a108aad127131cf0"
+        },
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/O2-PLAN.md",
+          "sha256": "16593d07c7e255012e16232f7d2f9e4012dae2589316ef05a5f985afa4fbe8f3"
+        }
+      ]
+    },
+    {
+      "id": "swarm-of-theseus",
+      "document": "researchers/vishesh/notes/swarm-of-theseus/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "Use the existing typed T1 repair and SOL50 address-repair plans, preserving original grades and exact-response replay history. Complete end-to-end context/address/scoring checks and resolve the next named qualification scope/admission in the owning task. Do not claim model incapacity from rejected correct addresses or launch the main pilot from budget alone.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/RESULTS-Q0-A1.md",
+          "sha256": "145ed88df3fa5d1b2b118b8a04cd5c60c6651b7f513da05f2e3b5d7e0978d328"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/RESULTS-SOL50.md",
+          "sha256": "48781720e732ac2b3f8b4fcd8bf64ca21be5af2184c4ec069671b691f8db8288"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/address-repair/PLAN.md",
+          "sha256": "20555f8052f935331526087c7a6346990b8bdf3f3c4d3f2d93108df6a46580a1"
+        }
+      ]
+    },
+    {
+      "id": "immune-response",
+      "document": "researchers/vishesh/notes/immune-response-v3/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "Use the existing staged A10 controller qualification with unchanged outcome thresholds and current admission. Controlled advice opens only after core competence; stronger-model fallback is limited to the named behavioral-failure path. Model and architecture both change, so do not attribute any gain to the model alone or launch a larger swarm comparison.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "researchers/vishesh/notes/immune-response-v3/controller-study/PLAN.md",
+          "sha256": "6177aaef53ef50ba8dcbf93aa869ad45058d1a65ea10f1ee5776dd90c4713e67"
+        }
+      ]
+    },
+    {
+      "id": "influence-scenario",
+      "document": "researchers/vishesh/notes/influence-swarms/scenario/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "Use the existing qualified shared-chair contract and scale pilot after exact configuration, remaining-budget and other admission checks. Model and size change together; measure raw versus guarded actions and source ancestry without claiming a pure N effect or population influence resistance.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-SOL-post.md",
+          "sha256": "b62db97c49799251a43e6a6688c12dadf1a6a76bd57302ec5aa3eb903ef1b2aa"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/scale-up/PILOT.md",
+          "sha256": "fb04ce11aebd359574e44aa0734a412d908a1f1df16e67b0224b1733b7ac3203"
+        }
+      ]
+    },
+    {
+      "id": "external-influence-v2",
+      "document": "researchers/vishesh/notes/external-influence-v2/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "existing interpretation retained; no newer owned native result identified in repository changes",
+      "next": "First reproduce stimulus hashes, before/after votes, no-peer controls and matched scripted outputs from saved data. Choose a reduced-dose lineage factorial only if these analyses leave a useful open question.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/external-influence-v2/README.md",
+          "sha256": "77d41cfc5fc63df562da4dbdc96c489adda0463e703bcf3569297dc4a6693b99"
+        },
+        {
+          "path": "researchers/vishesh/notes/external-influence-v2/local-agents/RESULTS.md",
+          "sha256": "e029eb9772c05e3e39bfccb8af8599ffc7b2ed4dd093cbe8d26b510cd09dd8af"
+        }
+      ]
+    },
+    {
+      "id": "healing-helping-hands",
+      "document": "researchers/vishesh/notes/healing-helping-hands/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "The owning task can run the fixed C6 main after fresh operational admission under the existing conditional authority. Keep the same policy/scorer and strongest checker baseline; report wrong agreement, referral coverage and full cost. Do not reopen leaked C4 or pool C5/C6 as a model-only causal comparison.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c6/C6R2-S0-POST.md",
+          "sha256": "ab8f18455f2b3ffa721e004af09213fc9b7d5cfd83ca3de9cc3ebb81ec6bf96c"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c6/PLAN.md",
+          "sha256": "1fadf965f6e8928f88a9e0ba78c9a073f12aa54ae1cab9b24938f87d6b96ed54"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md",
+          "sha256": "42e44baa84858375c7e96fa76cd78247e083e6b788875419b91d6c295a633534"
+        }
+      ]
+    },
+    {
+      "id": "antsy-v1-v5",
+      "document": "researchers/vishesh/notes/antsy-verification-v5/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "existing interpretation retained; no newer owned native result identified in repository changes",
+      "next": "Add a dated estimator-conditional interpretation to v4 and a concise lineage closeout. Preserve v5\u2019s stronger planner as a comparator, without reopening a broad model committee sweep.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+          "sha256": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-verification-v5/RESULTS.md",
+          "sha256": "06d2512c8a31cadddb11c24f04ca65f6fe7d7792fc4590915fe89590a7d43f48"
+        }
+      ]
+    },
+    {
+      "id": "antsy-v6-v8",
+      "document": "researchers/vishesh/notes/antsy-targeted-v8/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "FINISH the panel/locale diagnostic. Develop literal-token extraction, explicit locale/currency normalization and verified image/span grounding with ambiguous controls; qualify the changed instrument on fresh inputs before another panel. Unanimity is not calibrated confidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/Q0-POST.md",
+          "sha256": "a07b399869df82db4f1feb30305e8f10ec446d8fd1c71ecbc642cad5ac4cfd98"
+        }
+      ]
+    },
+    {
+      "id": "poietic-agents",
+      "document": "researchers/vishesh/notes/poietic-agents/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "Implement and validate the existing P30 plan, including nested action/value contracts, declared/generated split agreement, true structural changes and the fixed shared-cache comparator. Qualify candidate routes on fresh inputs before conditional main admission; no duplicate owner/researcher request for unchanged approved scope.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/P30-PLAN.md",
+          "sha256": "2ba65c47c2fd552f60aa9a2d3cef3c969a1a74cb79d67beebed47e8ee76bc486"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/reviews/D0-02-post.md",
+          "sha256": "9fcbbfb985faa0c235f52561d58e72713d4de08afdba6ea2edfd98abb39a3d31"
+        }
+      ]
+    },
+    {
+      "id": "heterogeneous",
+      "document": "researchers/vishesh/notes/heterogeneous-swarms/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "existing interpretation retained; no newer owned native result identified in repository changes",
+      "next": "Use a short decision table for shortlist selection and measure complementary errors before building a diversity-dependent experiment. Preserve the current Poietic work rather than silently reprioritizing its owner-approved diagnostic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/heterogeneous-swarms/README.md",
+          "sha256": "ee6a2c550c44c1f5e95693b87f5ad75261182c5acf668783d845b34d76438aa1"
+        },
+        {
+          "path": "researchers/vishesh/notes/heterogeneous-swarms/frontiers/README.md",
+          "sha256": "96de56ad349d2e5471d8354ab5752f2f36afa837ccb3c3764324c8bff4a1c329"
+        }
+      ]
+    },
+    {
+      "id": "regrowth",
+      "document": "researchers/vishesh/notes/regrowth-200/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "existing interpretation retained; no newer owned native result identified in repository changes",
+      "next": "Finish the metric/source audit before buying new inference. A useful successor is an offline matched-error propagation study with paired maps, one damage type and equal pre-damage routing state.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/regrowth-200/README.md",
+          "sha256": "bcb5dbe206c34f5714c3d3048c3d37051a9be77572b7844ca0ebca5fd5ebfbae"
+        },
+        {
+          "path": "researchers/vishesh/notes/regrowth-200/DESIGN-TRANSFER.md",
+          "sha256": "c0d1d5e4ba9cf5aa8f1683d232e34a6b3f4da2faff5969f89ebfff637bccb8f1"
+        }
+      ]
+    },
+    {
+      "id": "village",
+      "document": "researchers/vishesh/notes/ai-village-replay-2026-10-04/EXTERNAL-REVIEW-PROPOSALS.md",
+      "assessment": "refreshed from newer native/design evidence",
+      "next": "FINISH / PARK this approved handoff sequence; do not launch V0 from parser success. A new design must choose descriptive drift versus a clean-fidelity prerequisite, specify status/scope scoring prospectively and improve scenario diversity. Reuse saved evidence first.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/a1/POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/native/a1/RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        }
+      ]
+    }
+  ]
+}

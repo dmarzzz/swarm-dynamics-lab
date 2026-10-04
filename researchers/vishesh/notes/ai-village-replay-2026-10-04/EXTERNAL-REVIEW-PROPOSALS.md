@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** Telephone A0 and real-data V0 now have separate plans. V0 has eight inspected goal-window statements and 25 meaning targets from complete pinned tables; this supersedes the review’s prefix-only acquisition status but is not a historical visibility audit.
+**Current evidence:** Telephone A1 completed 72/72 schema-valid, semantically reviewed outputs. Hop-three retention was prose 91.67%, structured 95.83%, source lookup 100%; unsupported critical commitment failed clean-fidelity qualification. AI Village V0 was not dispatched.
 
-**Sample and confidence:** V0: eight inspected development windows, not a sealed 24-cluster evaluation. No native V0 result is asserted here; authored A0 and real-source V0 remain separate cohorts. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Eight authored development roots × three arms × three hops; three meaning targets per root. All native A1 outputs are authored-case evidence, not historical AI Village propagation. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [README.md](README.md) · [PLAN.md](../telephone/native/a0/PLAN.md) · [PLAN.md](../telephone/native/v0/PLAN.md) · [PRE-RUN.md](../telephone/native/v0/PRE-RUN.md)
+**Evidence:** [POST-MORTEM.md](../telephone/native/a1/POST-MORTEM.md) · [RESULTS.json](../telephone/native/a1/RESULTS.json)
 
-**Recommended next step:** Keep the approved A0/V0 scopes distinct and use the current V0 yield/transfer assessment. Propose a zero-model closure casefile as an additional analysis, not a silent replacement of the owner’s handoff study.
+**Recommended next step:** FINISH / PARK this approved handoff sequence; do not launch V0 from parser success. A new design must choose descriptive drift versus a clean-fidelity prerequisite, specify status/scope scoring prospectively and improve scenario diversity. Reuse saved evidence first.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

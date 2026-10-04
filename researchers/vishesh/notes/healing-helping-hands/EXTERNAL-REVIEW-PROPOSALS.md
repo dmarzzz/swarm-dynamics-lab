@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** C5 finished after the review cutoff. Main agreement routing scored 198/432 versus Jev 432/432 and matched random 193/432. It accepted 234 wrong agreements and referred only 23 cases; the safety criterion failed. FINISH / PARK the current rule.
+**Current evidence:** C5 remains a valid adverse routing result. New C6R2 qualification completed 180/180 calls on 60 reports: Haiku A 60/60, B 57/60, Jev 60/60; all frozen overall/per-class floors passed. The 432-case main stage is conditionally authorized, not a demonstrated routing benefit.
 
-**Sample and confidence:** C5 S1: 12 authored semantic families × 36 nested instances, 432 cases/1,296 calls. S0: 60 cases/180 calls, separate qualification. These are not 432 independent language populations. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Sixty nested qualification reports from four forms per class; planned main 432 cases across twelve authored semantic families. Qualification and main outcomes remain separate. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [S1-POST.md](c5/S1-POST.md) · [PLAN.md](c5/PLAN.md)
+**Evidence:** [C6R2-S0-POST.md](c6/C6R2-S0-POST.md) · [PLAN.md](c6/PLAN.md) · [S1-POST.md](c5/S1-POST.md)
 
-**Recommended next step:** Publish and retain the adverse C5 result. An optional development-only investigation of missing SUPPORT outputs is a distinct configuration diagnosis; a new routing study needs a defensible task population and useful cost/safety target.
+**Recommended next step:** The owning task can run the fixed C6 main after fresh operational admission under the existing conditional authority. Keep the same policy/scorer and strongest checker baseline; report wrong agreement, referral coverage and full cost. Do not reopen leaked C4 or pool C5/C6 as a model-only causal comparison.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

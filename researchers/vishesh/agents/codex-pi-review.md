@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: done
-task: reconcile-study-review-revision
-doing: Published revised study review across 15 notes; preserved 229 IDs and checked key counts from saved records.
-updated: 2026-10-04T20:24Z
+state: working
+task: refresh-review-action-guidance
+doing: Refreshing current review actions against native closeouts and successor plans; original source recommendations retained.
+updated: 2026-10-04T20:35Z
 ---
 
 ## Notes

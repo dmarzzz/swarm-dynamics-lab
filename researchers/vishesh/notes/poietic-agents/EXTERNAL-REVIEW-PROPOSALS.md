@@ -4,13 +4,15 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** D0-02 is an approved 36-call interface diagnostic after the fence repair, with infrastructure admission handled by the owning task. It is not a full differentiation efficacy study.
+**Current evidence:** D0-02 closed with 14/36 decisions dispatched and no executor qualified. P30 is now a written owner-scoped thirty-member feasibility plan, with fresh Q30 qualification and an unchanged USD10 cumulative ceiling. It has no Q30/P30 native calls or claimed allocation at the recorded cutoff.
 
-**Sample and confidence:** D0-02 proposes three roots × three interfaces × four dependent actions; the mixed Jev/chat interfaces cannot support a fair model ranking. Historical 40 calls and original cumulative cap remain. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
+**Sample and confidence:** Planned Q30: 96 fresh lifecycle decisions across two candidate interfaces. Planned P30: four paired workload roots × two arms × six epochs × thirty jobs = 1,440 jobs; thirty members are dependent components. No evidence-confidence score is upgraded by this documentation refresh. Refer to the owning cohort assessment.
 
-**Evidence:** [D0-02-PLAN.md](D0-02-PLAN.md) · [AMENDMENTS.md](AMENDMENTS.md)
+**Evidence:** [P30-PLAN.md](P30-PLAN.md) · [D0-02-post.md](reviews/D0-02-post.md)
 
-**Recommended next step:** Keep the named interface diagnostic unchanged. Before a broad S1, run the zero-model economics/operation audit and determine whether services offer anything beyond caching and cheaper-model substitution.
+**Recommended next step:** Implement and validate the existing P30 plan, including nested action/value contracts, declared/generated split agreement, true structural changes and the fixed shared-cache comparator. Qualify candidate routes on fresh inputs before conditional main admission; no duplicate owner/researcher request for unchanged approved scope.
+
+**Freshness:** assessed 2026-10-04T20:37:54Z against `3a7895ff`. The current evidence and next step above supersede dated proposal/addendum statuses below; those remain historical review responses, not live admission records.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 
