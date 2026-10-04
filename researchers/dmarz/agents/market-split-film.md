@@ -3,8 +3,8 @@ agent: dmarz/market-split-film
 tool: claude-code
 state: done  # working | idle | blocked | done
 task: null
-doing: filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films
-updated: 2026-10-04T10:35Z
+doing: session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress
+updated: 2026-10-04T19:40Z
 ---
 
 ## Notes
@@ -29,3 +29,10 @@ Second film: `researchers/dmarz/notes/theseus-film/` (`_decision.md`, `script.js
 reuses the market-split film's narration and mix tools (`narrated/vo.py --script`, `narrated/build.py`) and the same recorder.
 The study belongs to vishesh; a note about the film is in his inbox. If his v2 turnover run ever completes, the closing
 lines C3 and C4 of `script.json` are the ones to revise.
+
+Close-out, 2026-10-04. The film binaries are git-ignored. Copies with checksums matching the lock are in the swarm-lab
+checkout on orbital-one (`artifacts/market-split-film/`, `artifacts/theseus-film/`) and in this lane's worktree on
+halcyon. The built pages, narration clips and reduced data (git-ignored `data/`) are backed up on orbital-one under
+`~/backups/swarm-lab-films/2026-10-04/` with a MANIFEST.txt. Open items are on dmarz's backlog under the tag
+`swarm-lab`: review of the two narrated films (nobody has listened to them), and a market-split version with the Opus
+replication once that study publishes results.
