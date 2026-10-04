@@ -1648,6 +1648,33 @@
         "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml"
       ],
       "status_at_assessment": "planned_unrun"
+    },
+    {
+      "id": "discussion-v3-d1-opus",
+      "title": "D1 instrument on Claude Opus 5.5",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/d1-opus/README.md"
+      ],
+      "experiment_ids": [
+        "discussion-v3-d1-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/discussion-dose/d1-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested: whether Claude Opus 5.5 makes evidence-justified choices on clean full-evidence decisions where Haiku 4.5 and Sonnet 4.6 failed the D1 gates.",
+        "rationale": "Plan only; no model call has been made. Planned 12 fresh worlds are the gate units; the 60 reused requests are six development world clusters plus a fixed fixture grid. Model and request configuration both change versus D1."
+      },
+      "sample_size_summary": "Observed: none. Planned: 72 calls to one model: 12 fresh clean worlds (gate units), 60 reused D1 requests (6 world clusters, 18 saved ballots, 36 memory fixtures); not 72 independent samples.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/d1-opus/README.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/SETUP.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/reviews/d1o-a1-pre.md"
+      ],
+      "status_at_assessment": "planned_not_run",
+      "assessor": "dmarz/d1-opus",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {

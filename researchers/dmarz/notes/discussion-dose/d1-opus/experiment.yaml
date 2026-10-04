@@ -1,0 +1,28 @@
+id: discussion-v3-d1-opus
+title: D1 instrument on Claude Opus 5.5
+description: 'TLDR: Does Opus 5.5 apply stated constraints to evidence it extracts correctly, where
+  Haiku 4.5 and Sonnet 4.6 failed the D1 clean gates? 60 retained Q0 requests plus 12 fresh clean
+  full-evidence decisions (worlds 52001-52012), 72 calls, no retries; primary is fresh evidence-justified
+  choices (gate 10/12); new configuration (no temperature, adaptive thinking, effort high), never pooled with D1.'
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  batch:
+    type: str
+    role: replicate
+  manifest_sha256:
+    type: str
+    role: fixed
+  source_commit:
+    type: str
+    role: fixed
+metrics:
+- assigned_calls
+- terminal_calls
+- invalid_calls
+- observed_usage_cost_usd
+- fresh_justified
+- qualification_passed
+primary_metric: fresh_justified
