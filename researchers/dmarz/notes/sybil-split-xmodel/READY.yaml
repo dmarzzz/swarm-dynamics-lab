@@ -1,0 +1,15 @@
+contract: ready-chain-v1
+study: sybil-split-xmodel
+experiment: sybil-split-xmodel
+stages: [S0, P0, Q0, S1]
+provider: openrouter
+model: qwen/qwen3.7-flash
+model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]
+providers: {qwen/qwen3.7-flash: openrouter, gpt-6-sol: openai}
+effort: low
+max_calls: {S0: 0, P0: 1, Q0: 60, S1: 2688}
+max_calls_total: 2749
+usd_cap: 90
+chain_timeout_seconds: 14400
+selftests: 97
+source_hash: ebfb2bc3703cbb5ac882641ca0f71dfb9dfda0ee5436dd1a8b4879dcef97c2cd

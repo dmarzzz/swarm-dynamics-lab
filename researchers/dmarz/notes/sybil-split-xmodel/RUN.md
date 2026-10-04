@@ -43,7 +43,7 @@ The hub hands out the next planned run of an experiment, and the two chains shar
 |---|---|---|---|
 | S0 | 0 | 1,853 scripted rows valid; the parent's invariants hold; scripted qualification and probe pass; grid not degenerate; packets byte-identical to the parent's code and to the parent's recorded S1 run; system prompt starts with the parent's | the chain stops; nothing paid has happened |
 | P0 | 1 | probe fixture (engineering root 4919, `multirow1`): adapter checks pass and the answer equals the expected values | the chain stops after one call |
-| Q0 | 60 | before queueing: P0's tokens per message byte × 13,746 bytes ≤ 31,000 tokens; then per shape: 10 of 10 valid, field accuracy ≥ 0.95, exact ≥ 0.90, null on every withheld field | `input_ceiling_projection` or `gate_failed`; S1 is never queued; a Q0 stop is the result, with no repair |
+| Q0 | 60 | before queueing: P0's tokens per message byte × 13,515 bytes ≤ 31,000 tokens; then per shape: 10 of 10 valid, field accuracy ≥ 0.95, exact ≥ 0.90, null on every withheld field | `input_ceiling_projection` or `gate_failed`; S1 is never queued; a Q0 stop is the result, with no repair |
 | S1 | 2,688 | before queueing: the input ceiling as above, and 2,688 × Q0's cost per call fits in the remaining cap (`projection_exceeds_cap`); then at most 27 failed calls and no integrity failure | S1 ends `failed` with the reason; rows preserved |
 
 **Exit codes.** 0 means every requested stage is done. 3 means the chain stopped at a failed stage or a refused gate (`chain-status.json` has `state: stopped_at_gate`, the stage and the reason). Any other non-zero code is an internal error.
