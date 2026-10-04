@@ -112,7 +112,7 @@ class Session:
         approved={'openai/gpt-6-sol':(2.,10.),'openai/gpt-6-luna':(.1,.5)}
         if approved.get(body.get('model'))!=(input_rate,output_rate):raise AcquisitionStopped('unapproved_rate')
         output_bound=body.get('max_tokens')
-        if output_bound not in (768,3072) or len(encoded)>(9216 if output_bound==768 else 32768):raise AcquisitionStopped('role_bound')
+        if output_bound not in (768,3072) or len(encoded)>(10240 if output_bound==768 else 32768):raise AcquisitionStopped('role_bound')
         expected_provider={'only':['openai'],'order':['openai'],'allow_fallbacks':False,'require_parameters':True,'max_price':{'prompt':input_rate,'completion':output_rate}}
         if body.get('provider')!=expected_provider or body.get('reasoning')!={'effort':'none'} or body.get('stream') is not False or 'temperature' in body or 'tools' in body:raise AcquisitionStopped('route_settings')
         minimum=((len(encoded)+512)*input_rate+output_bound*output_rate)/1e6

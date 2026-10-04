@@ -1,0 +1,48 @@
+{
+  "stage": "SD-LUNA",
+  "attempt": "native-SD-LUNA-01",
+  "planned": 3,
+  "started": 1,
+  "terminal": 1,
+  "valid": 0,
+  "failed": 1,
+  "unstarted": 2,
+  "calls": 1,
+  "usage_missing": 0,
+  "observed_usage_cost_usd": 0.00039555,
+  "actual_usd": 0.00039555,
+  "new_reserved_usd": 0.0013568000000000002,
+  "qualified": false,
+  "failures": [
+    {
+      "kind": "failure",
+      "attempt": 1,
+      "category": "contract",
+      "usage_known": true,
+      "actual_usd": 0.00039555,
+      "retry_permitted": false
+    }
+  ],
+  "assignments": [
+    {
+      "condition": "sd-luna",
+      "case_id": "regional-no-approval",
+      "status": "failed",
+      "category": "contract"
+    },
+    {
+      "condition": "sd-luna",
+      "case_id": "renewal-approved-option",
+      "status": "unstarted"
+    },
+    {
+      "condition": "sd-luna",
+      "case_id": "sponsored-service-value",
+      "status": "unstarted"
+    }
+  ],
+  "run": "influence-swarms/1004-201812-ad471f",
+  "source_commit": "49fbe2f09be4c38691d822d785eff49f28086478",
+  "packet_sha256": "85531b909d8a4f558dc39ed340d3f2add0b1533e1e8c8e771f5bc19b8e4beca4",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/49fbe2f09be4c38691d822d785eff49f28086478/researchers/vishesh/notes/influence-swarms/scenario/scale-up/DECISION-DIAGNOSTIC.md"
+}

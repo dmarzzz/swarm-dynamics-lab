@@ -1,0 +1,6 @@
+{"kind": "session", "maximum_attempts": 3, "retries": 0}
+{"kind": "request_artifact", "attempt": 1, "name": "01-request.bin", "bytes": 8411, "sha256": "a0773f3e0b28a852565b14a8e0a6218cbcc790457d075d0bff0adfd8e1fd9386"}
+{"kind": "attempt_start", "attempt": 1, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "01-request.bin", "bytes": 8411, "sha256": "a0773f3e0b28a852565b14a8e0a6218cbcc790457d075d0bff0adfd8e1fd9386"}}
+{"kind": "response_artifact", "attempt": 1, "name": "01-response.bin", "bytes": 2402, "sha256": "73689f81521dc3fee6b1a01d21580ac3617bc4f12f0f4c803031bc2ccd627eab"}
+{"kind": "usage", "attempt": 1, "usage_known": true, "tokens": {"input_tokens": 1693, "output_tokens": 368}, "reported_usd": 0.00039555}
+{"kind": "failure", "attempt": 1, "category": "contract", "usage_known": true, "actual_usd": 0.00039555, "retry_permitted": false}

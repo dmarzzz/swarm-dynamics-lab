@@ -1,13 +1,13 @@
 {
-  "stage": "SD-SOL",
+  "stage": "SD-LUNA2",
   "launch_enabled": true,
   "expected_budget": {
     "cap": 8,
-    "reserved": 6.4662976,
-    "calls": 288
+    "reserved": 6.5477056,
+    "calls": 291
   },
   "maximum_transport_attempts": 3,
-  "maximum_total_reservation_usd": 0.08140800000000001,
+  "maximum_total_reservation_usd": 0.004070400000000001,
   "retries": 0,
   "stop_on_first_failure": true,
   "tldr": "Three inspected chairs per model: explicit eligibility/tolerance membership before purchase. Does the changed decision contract remove invented blockers? Preserve raw/table/guard outcomes; no holdout or influence effect.",
@@ -15,10 +15,10 @@
     {
       "case_id": "regional-no-approval",
       "role": "chair",
-      "condition": "sd-sol",
-      "tldr": "regional-no-approval: explicit eligibility and cost-tolerance table before openai/gpt-6-sol purchase decision. Three inspected cases, no retry; score table and raw action separately, not a holdout or population estimate.",
+      "condition": "sd-luna2",
+      "tldr": "regional-no-approval: explicit eligibility and cost-tolerance table before openai/gpt-6-luna purchase decision. Three inspected cases, no retry; score table and raw action separately, not a holdout or population estimate.",
       "wire_body": {
-        "model": "openai/gpt-6-sol",
+        "model": "openai/gpt-6-luna",
         "provider": {
           "only": [
             "openai"
@@ -29,8 +29,8 @@
           "allow_fallbacks": false,
           "require_parameters": true,
           "max_price": {
-            "prompt": 2.0,
-            "completion": 10.0
+            "prompt": 0.1,
+            "completion": 0.5
           }
         },
         "reasoning": {
@@ -174,19 +174,20 @@
               "additionalProperties": false
             }
           }
-        }
+        },
+        "verbosity": "low"
       },
-      "wire_bytes": 8411,
-      "wire_sha256": "4ed787f804e6c22e10d7aeed76caa0aa6c9ee62e67b53423edd1b52c9f74ce45",
-      "maximum_reservation_usd": 0.027136
+      "wire_bytes": 8429,
+      "wire_sha256": "b62652a99b5e843256239ffd1abc472b7c8e763accef2836a23a8a77d432df01",
+      "maximum_reservation_usd": 0.0013568000000000002
     },
     {
       "case_id": "renewal-approved-option",
       "role": "chair",
-      "condition": "sd-sol",
-      "tldr": "renewal-approved-option: explicit eligibility and cost-tolerance table before openai/gpt-6-sol purchase decision. Three inspected cases, no retry; score table and raw action separately, not a holdout or population estimate.",
+      "condition": "sd-luna2",
+      "tldr": "renewal-approved-option: explicit eligibility and cost-tolerance table before openai/gpt-6-luna purchase decision. Three inspected cases, no retry; score table and raw action separately, not a holdout or population estimate.",
       "wire_body": {
-        "model": "openai/gpt-6-sol",
+        "model": "openai/gpt-6-luna",
         "provider": {
           "only": [
             "openai"
@@ -197,8 +198,8 @@
           "allow_fallbacks": false,
           "require_parameters": true,
           "max_price": {
-            "prompt": 2.0,
-            "completion": 10.0
+            "prompt": 0.1,
+            "completion": 0.5
           }
         },
         "reasoning": {
@@ -342,19 +343,20 @@
               "additionalProperties": false
             }
           }
-        }
+        },
+        "verbosity": "low"
       },
-      "wire_bytes": 8384,
-      "wire_sha256": "0bf5f2412de7ad6c5f2112d73d0133bafbaedf3d2ebf13808e7ffbc2ba154e18",
-      "maximum_reservation_usd": 0.027136
+      "wire_bytes": 8402,
+      "wire_sha256": "b408c008abb4849cdce2c95634b5ed61209b84304ff6f6b717a5e7b846efaec5",
+      "maximum_reservation_usd": 0.0013568000000000002
     },
     {
       "case_id": "sponsored-service-value",
       "role": "chair",
-      "condition": "sd-sol",
-      "tldr": "sponsored-service-value: explicit eligibility and cost-tolerance table before openai/gpt-6-sol purchase decision. Three inspected cases, no retry; score table and raw action separately, not a holdout or population estimate.",
+      "condition": "sd-luna2",
+      "tldr": "sponsored-service-value: explicit eligibility and cost-tolerance table before openai/gpt-6-luna purchase decision. Three inspected cases, no retry; score table and raw action separately, not a holdout or population estimate.",
       "wire_body": {
-        "model": "openai/gpt-6-sol",
+        "model": "openai/gpt-6-luna",
         "provider": {
           "only": [
             "openai"
@@ -365,8 +367,8 @@
           "allow_fallbacks": false,
           "require_parameters": true,
           "max_price": {
-            "prompt": 2.0,
-            "completion": 10.0
+            "prompt": 0.1,
+            "completion": 0.5
           }
         },
         "reasoning": {
@@ -510,11 +512,12 @@
               "additionalProperties": false
             }
           }
-        }
+        },
+        "verbosity": "low"
       },
-      "wire_bytes": 8370,
-      "wire_sha256": "72eee45925808f200dfbf4179f59268858ce7d875815277265db4cb0f28ccb41",
-      "maximum_reservation_usd": 0.027136
+      "wire_bytes": 8388,
+      "wire_sha256": "b71b4f135dad97afca2d6fd39422c87f2951d203ca6f62c2ad387dc92ce33686",
+      "maximum_reservation_usd": 0.0013568000000000002
     }
   ]
 }

@@ -1,0 +1,25 @@
+{
+  "stage": "SD-LUNA",
+  "qualified": false,
+  "rows": [
+    {
+      "case_id": "regional-no-approval",
+      "role": "chair",
+      "status": "failed",
+      "passes": false
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "role": "chair",
+      "status": "unstarted",
+      "passes": false
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "role": "chair",
+      "status": "unstarted",
+      "passes": false
+    }
+  ],
+  "scope": "Three inspected decision-contract repair cases; prior cohort retained separately; no generalization guarantee."
+}

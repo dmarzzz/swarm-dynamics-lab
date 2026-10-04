@@ -27,3 +27,7 @@ Acquisition completion,9candidate eligibility judgments,9tolerance judgments,3ra
 ## Budget and admission
 
 Ordinary maximum9216wirebytes/768outputtokens. Three Luna calls reserve0.0040704USD, three Sol0.081408USD, total0.0854784. Combined with original staged envelope2.353920, this remains within the prior2.498848unreserved, leaving0.0594496for any incremental infrastructure/unresolved overhead. Preserve all original reservations; no implicit refund or new budget. Exact frozen packet, public registration/readback, current exclusive approved-account allocation, source/runtime and offline checks are mandatory. If the bounded interface does not fit or any cost is unfunded, stop and prepare a concrete decision.
+
+## Acquisition repair before further calls
+
+SD-LUNA stopped after one response contained duplicate JSON plus extraneous text. Its reservation0.0013568remains; no retry or salvage. Two assignments did not start. Run the already planned three Sol chairs next against the refreshed original ledger, then SD-LUNA2: the same three Luna wires with supported `verbosity: low` added. All strict local schema/one-JSON requirements remain unchanged. This tests a concrete format-control change, not a repeat for a favorable answer. Additional reservation versus the original staged plan is0.0013568(the preserved failed call); updated total diagnostics/qualification/pilot reservation2.4407552before any separate pilot wire-bound amendment. Failure of this repair stops this candidate’s scale admission.

@@ -18,3 +18,6 @@ class DecisionTests(unittest.TestCase):
    p=sd.build(stage);self.assertEqual(p,json.loads((BASE/f'reviews/{stage}-packet.json').read_text()))
    for i in p['requests']:
     self.assertLessEqual(i['wire_bytes'],9216);obs=json.loads(i['wire_body']['messages'][1]['content']);self.assertNotIn('decision_table',obs);self.assertNotIn('evaluator',obs)
+ def test_duplicate_json_never_salvaged(self):
+  p=sd.build('SD-LUNA');s=self.fixtures(p);i=p['requests'][0];a=s['assignments'][0]['answer'];r={'route':{'provider':'OpenAI','model':i['wire_body']['model']},'tool_calls':None,'content':[{'type':'text','text':json.dumps(a)+'garbage'+json.dumps(a)}]}
+  with self.assertRaises(ValueError):sd.validator(i)(r)

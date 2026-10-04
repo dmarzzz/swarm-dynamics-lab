@@ -39,13 +39,13 @@ def prepare(admission_path,out):
     assert not subprocess.check_output(['docker','ps','-q'],text=True).strip()
     with closing(sqlite3.connect('file:'+a['ledger']+'?mode=ro',uri=True)) as db:budget=db.execute('SELECT cap,reserved,calls FROM budget WHERE id=1').fetchone()
     expected=p['expected_budget'];assert budget[0]==8 and abs(budget[1]-expected['reserved'])<1e-8 and budget[2]==expected['calls']
-    assert budget[1]>=5.501152-1e-9 and budget[2]>=259 and budget[2]+len(p['requests'])<=293
-    assert budget[1]+p['maximum_total_reservation_usd']<=6.5504192+1e-9
+    assert budget[1]>=5.501152-1e-9 and budget[2]>=259 and budget[2]+len(p['requests'])<=294
+    assert budget[1]+p['maximum_total_reservation_usd']<=6.551776+1e-9
     return a,p,budget
 
 
 def collect(packet,out,ledger,transport):
-    session=Session(out,ledger,maximum_requests=len(packet['requests']),reserved_ceiling=6.5504192,calls_ceiling=293,http_error_adapter=safe_relay_error);rows=[{'condition':i['condition'],'case_id':i['case_id'],'status':'unstarted'} for i in packet['requests']]
+    session=Session(out,ledger,maximum_requests=len(packet['requests']),reserved_ceiling=6.551776,calls_ceiling=294,http_error_adapter=safe_relay_error);rows=[{'condition':i['condition'],'case_id':i['case_id'],'status':'unstarted'} for i in packet['requests']]
     try:
         for n,item in enumerate(packet['requests']):
             rows[n]['status']='started'
