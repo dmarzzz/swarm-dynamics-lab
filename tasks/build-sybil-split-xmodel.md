@@ -23,6 +23,6 @@ Cross-model replication of sybil-split-opus (finished 2026-10-04, primary +0.41 
 
 ## Done when
 
-- [ ] Plan and frozen design committed.
-- [ ] Code, selftests, offline S0 (byte identity with the parent proven), manifest and rehearsal (full chain; failed Q0 stops with no S1) for both models.
-- [ ] README, preregistration, pre-run review and READY.yaml on main with the pinned commit and source hash.
+- [x] Plan and frozen design committed.
+- [x] Code, selftests, offline S0 (byte identity with the parent proven), manifest and rehearsal (full chain; failed Q0 stops with no S1) for both models.
+- [x] README, preregistration, pre-run review and READY.yaml on main with the pinned commit and source hash.
