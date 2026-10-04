@@ -1,0 +1,9 @@
+{
+  "scientific_offline_checks": 61,
+  "scientific_offline_failures": 0,
+  "activation_fault_checks": 5,
+  "activation_fault_failures": 0,
+  "prepared_packets_valid": true,
+  "source_unchanged": true,
+  "native_evidence": false
+}

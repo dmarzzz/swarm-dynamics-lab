@@ -4,11 +4,11 @@
 
 ## Reconciliation and interpretation
 
-Eight planned episodes on two fresh independent root seeds; **0 assigned to a native worker, 0 started, 0 valid, 0 native outcomes analyzed, 0 new calls, $0 new spend**. Offline scripted fixtures are not experimental samples. The original ledger was read without mutation: 631 calls, $1.810840 settled + $0.220480 unresolved historical hold = $2.031320 exposure, leaving $17.968680 of the original $20. No current worker or allocation was created for this attempt. Q-A6 remains the latest native result.
+Eight planned episodes on two fresh constructed root seeds; these are generator-level units, not independent population replications; **0 assigned to a native worker, 0 started, 0 valid, 0 native outcomes analyzed, 0 new calls, $0 new spend**. Offline scripted fixtures are not experimental samples. The original ledger was read without mutation: 631 calls, $1.810840 settled + $0.220480 unresolved historical hold = $2.031320 exposure, leaving $17.968680 of the original $20. No current worker or allocation was created for this attempt. Q-A6 remains the latest native result.
 
 Saved Q-A6 data show opposite N2 correct-throughput changes on the two parallel roots. This rejects treating raw speed alone as the target. Worker errors remain unresolved; integration-only repair and wider deadlines lack supporting evidence. The selected minimal diagnostic repeats relevant public operands at fixed N1 instead of changing model or buying a broad size sweep. It retains full history, so it tests redundant binding rather than pretending to isolate context pruning. No empirical benefit is claimed.
 
-The shared offline finalize bridge recorded q-a6 historical evidence and q-a7-preparation as blocked. Its generated handoff flags scientific review required; this document and structured review complete the owning-session assessment without altering the generated facts. Preparation took approximatelyapproximately10–15minutes including reading, implementation and checks; execution and native reporting time are zero. No requested infrastructure was created or charged.
+The shared offline finalize bridge recorded q-a6 historical evidence and q-a7-preparation as blocked. Its generated handoff flags scientific review required; this document and structured review complete the owning-session assessment without altering the generated facts. Preparation took approximately 10–15 minutes including reading, implementation and checks; execution and native reporting time are zero. No requested infrastructure was created or charged.
 
 ## Quality rubric
 

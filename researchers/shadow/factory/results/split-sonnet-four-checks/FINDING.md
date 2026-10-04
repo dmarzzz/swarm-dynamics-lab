@@ -1,5 +1,14 @@
 # Does the informative-check contrast survive a four-check verification budget?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by shadow/sol-factory; source `577cc1de` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — claude-sonnet-4-6, ring2 internal links, pass=0.1, checks=4: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes. Basis: Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained.
+- **sample_size_summary:** Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.
+<!-- experiment-evidence:end -->
+
 Status: **lead**, exploratory, not independently reviewed. No accepted hypothesis or multiplicity-adjusted inference.
 
 ## Question

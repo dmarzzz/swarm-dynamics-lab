@@ -21,6 +21,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from common import ROOT, load  # noqa: E402
+import lineage  # noqa: E402
 
 
 def mean(xs):
@@ -64,23 +65,20 @@ def main():
     ap.add_argument("--name", help="output name (default = stage), e.g. MP2 for the second-model pilot")
     a = ap.parse_args()
     d = load("design.yaml")
-    eps = [e for e in read_local(Path(a.local)) if e.get("stage") == a.stage]
-    if not eps:
+    raw = [e for e in read_local(Path(a.local)) if e.get("stage") == a.stage]
+    if not raw:
         sys.exit(f"no {a.stage} episodes")
-    # Resumed pilot runs redo episodes whose arms were invalid (provider errors), so a (memory, task, seed, arm) can
-    # appear twice: keep the valid record if any, else the last invalid one. Redone-invalid counts are reported.
-    by_key = {}
-    redone = 0
-    for e in eps:
-        k = (e["world"], e["dose"], e["memory"], e["task_id"], e["seed"], e["arm"])
-        if k in by_key:
-            redone += 1
-            if by_key[k]["validity"]["ok"] and not e["validity"]["ok"]:
-                continue
-        by_key[k] = e
-    eps = list(by_key.values())
-    if redone:
-        print(f"note: {redone} records superseded by a resumed rerun of the same (cell, task, arm); valid record kept")
+    # Attempt lineage (CORRECTIONS.md C1/C2). A resumed pilot worker re-runs every episode that does not already have
+    # all arms valid, so an episode can have several attempts in the append-only file. Selection is per EPISODE: the
+    # last attempt with every arm valid, else the last attempt (its invalid arms count as invalid). Outcome-blind, arms
+    # stay paired. On the saved MP/MP2/MP3 records it selects the same records as the older per-arm dedup.
+    eps, lin = lineage.select(raw)
+    n_raw, n_raw_inv = len(raw), sum(not e["validity"]["ok"] for e in raw)
+    n_super = n_raw - len(eps)
+    T_eval = sorted({e["cfg"]["eval_round"] for e in raw})
+    T_txt = "/".join(str(t) for t in T_eval)
+    if n_super:
+        print(f"note: {n_super} of {n_raw} raw records superseded by a later attempt of the same episode")
     arms = sorted({e["arm"] for e in eps}, key=d["arms"].index)
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
@@ -88,6 +86,8 @@ def main():
     # Spend: the locked ledger is authoritative (per-record cost_usd was a cumulative session figure in the first pilot
     # run and is cumulative over an episode's arms since). Calls: last arm of each episode carries the episode total.
     ledger = ROOT / "results" / "spend-ledger.json"
+    if not ledger.exists():   # the live ledger is git-ignored; the committed snapshot is the same file at pilot end
+        ledger = ROOT / "results" / "spend-ledger.snapshot.json"
     led = json.loads(ledger.read_text()) if ledger.exists() else {}
     spend = sum(v["usd"] for v in led.get("by_model", {}).values()) if led else 0.0
     calls = sum(e["cost_actual"].get("model_calls", 0) for e in eps if e["arm"] == arms[-1])
@@ -135,11 +135,12 @@ def main():
         w.writerows(rows)
 
     L = [f"# capture-memory-mix: {a.name or a.stage} results", "",
-         f"{len(eps)} episode records, backends {backends}, about {calls} model calls in these records; provider-reported spend on the shared ledger (all models, all pilot work) {spend:.4f} USD. "
+         f"{len(eps)} selected arm records ({n_raw} raw records in the files, {n_raw_inv} of them invalid, {n_super} superseded by a later "
+         f"attempt of the same episode; see 'Attempt lineage' below), backends {backends}, about {calls} model calls in the selected records; provider-reported spend on the shared ledger (all models, all pilot work, including superseded attempts) {spend:.4f} USD. "
          + ("Scripted policy: these numbers describe the tanh rule in sim.py, not LLM agents. " if backends == ["scripted"] else "")
          + f"Code commits: {sorted({str(e.get('code')) for e in eps})}.", "",
          "Columns: captured = capture rate (shared by arms); frac@rem / frac_T = honest fraction on the original at removal "
-         "and 50 rounds later (captured episodes); delta = frac_T minus frac@rem (0 = frozen, > 0 = returning); short_T / long_T = "
+         f"and {T_txt} rounds later (eval_round in the records' cfg; captured episodes); delta = frac_T minus frac@rem (0 = frozen, > 0 = returning); short_T / long_T = "
          "the same at round T split by memory kind; delta_long = return among the long-memory agents only.", "",
          "## Cells (captured episodes unless noted)", "",
          "| world | dose | memory | arm | n | inv | captured | lat | frac@rem | frac_T | delta | short_T | long_T | delta_long | recovered | half-time |",
@@ -213,8 +214,11 @@ def main():
                  f"{mean([B[k]['frac_original_T'] for k in common]):.3f} | {mean(list(by_task.values())):+.3f} | [{lo:+.3f}, {hi:+.3f}] | {len(by_task)} |")
 
     # ---- mean post-removal traces per cell (A1), coarse
-    L += ["", "## Mean honest fraction on the original after removal, A1_purge, captured episodes (rounds 1, 5, 10, 20, 30, 50, 80 after removal)", "",
-          "| world | dose | memory | r1 | r5 | r10 | r20 | r30 | r50 | r80 | long r50 | short r50 |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    R_all = sorted({e["cfg"]["recovery_rounds"] for e in eps})
+    pts_all = [i for i in (1, 5, 10, 20, 30, 50, 80) if i <= max(R_all)]
+    Tk = min(T_eval[0], max(R_all))
+    L += ["", f"## Mean honest fraction on the original after removal, A1_purge, captured episodes (rounds {', '.join(map(str, pts_all))} after removal; recovery phase {'/'.join(map(str, R_all))} rounds)", "",
+          "| world | dose | memory | " + " | ".join(f"r{i}" for i in pts_all) + f" | long r{Tk} | short r{Tk} |", "|---|---|---|" + "---|" * (len(pts_all) + 2)]
     for (world, dose, mem), by_arm in sorted(cells.items(), key=lambda kv: (kv[0][0], kv[0][1], family(kv[0][2]), fkey(kv[0][2]))):
         xs = [x for x in by_arm.get("A1_purge", []) if x["evaluation"]["captured"]]
         if not xs:
@@ -222,12 +226,19 @@ def main():
         def at(i, key="series_original"):
             return mean([x["trajectory"][key][x["trajectory"]["removal_round"] + i - 1]
                          for x in xs if len(x["trajectory"][key]) >= x["trajectory"]["removal_round"] + i])
-        R = sorted({x["cfg"]["recovery_rounds"] for x in xs})[0]
-        pts = [i for i in (1, 5, 10, 20, 30, 50, 80) if i <= R]
-        L.append(f"| {world} | {dose} | {mem} | " + " | ".join(f"{at(i):.3f}" for i in pts) + " |" * (7 - len(pts))
-                 + f" | {at(min(50, R), 'series_long'):.3f} | {at(min(50, R), 'series_short'):.3f} |")
+        L.append(f"| {world} | {dose} | {mem} | " + " | ".join(f"{at(i):.3f}" for i in pts_all)
+                 + f" | {at(Tk, 'series_long'):.3f} | {at(Tk, 'series_short'):.3f} |")
 
-    L += ["", "Invalid episodes per cell and arm are in the CSV; none are dropped or retried. Capture is decided before removal and shared by the arms."]
+    L += ["", "## Attempt lineage (raw records vs selected records)", "",
+          "An attempt = one run of an episode's arms in the append-only file. Resumed workers re-ran every episode that did not "
+          "already have all arms valid. Selection: last attempt with all arms valid, else last attempt. 'episodes multi valid' "
+          "counts episodes with more than one fully valid attempt (selection then takes the last one; see CORRECTIONS.md for "
+          "the first-attempt sensitivity check).", ""]
+    L += lineage.lineage_table(lin)
+    L += ["", (f"Retry accounting: {n_super} of {n_raw} raw records were superseded by a later attempt (resume re-runs after "
+                "provider errors or interrupted runs); " if n_super else "Retry accounting: no episode was re-run; ")
+          + f"{sum(not e['validity']['ok'] for e in eps)} selected records are invalid and are counted in the 'inv' column, "
+          "not dropped silently. Capture is decided before removal and shared by the arms."]
     (out / f"{a.name or a.stage}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))
 

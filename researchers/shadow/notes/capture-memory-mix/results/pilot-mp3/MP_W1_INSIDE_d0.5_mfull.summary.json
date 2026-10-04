@@ -39,31 +39,25 @@
       "captured": 12,
       "frac_T": 0.25,
       "delta": -0.375,
-      "invalid": 0,
-      "calls": 5968,
-      "usd": 0.15889299999999998
+      "invalid": 0
     },
     "A1_purge": {
       "n": 12,
       "captured": 12,
       "frac_T": 0.125,
       "delta": -0.5,
-      "invalid": 0,
-      "calls": 7734,
-      "usd": 0.20362400000000003
+      "invalid": 0
     },
     "A2_purge_wipe": {
       "n": 11,
       "captured": 11,
       "frac_T": 0.0,
       "delta": -0.375,
-      "invalid": 1,
-      "calls": 9472,
-      "usd": 0.23249899999999996
+      "invalid": 1
     }
   },
   "metrics": {
-    "captured": 0.9722,
+    "captured": 1.0,
     "frac_T_A0_no_purge": 0.0208,
     "delta_A0_no_purge": -0.0312,
     "frac_T_A1_purge": 0.0104,
@@ -73,10 +67,19 @@
     "wipe_minus_purge": -0.0104,
     "episodes": 35,
     "invalid": 1,
-    "model_calls": 23174,
-    "cost_usd": 0.595
+    "model_calls": 9472,
+    "cost_usd": 0.2325,
+    "model_calls_all_attempts": 12320,
+    "cost_usd_all_attempts": 0.303,
+    "raw_records": 63,
+    "raw_invalid": 23,
+    "superseded_records": 27,
+    "episodes_rerun": 9,
+    "attempts": 21
   },
   "backend": "http:qwen/qwen3-235b-a22b-2507",
   "code": "9d82e5ab",
-  "file": "MP_W1_INSIDE_d0.5_mfull.jsonl"
+  "file": "MP_W1_INSIDE_d0.5_mfull.jsonl",
+  "selection": "lineage.select: last fully valid attempt per episode, else last attempt",
+  "corrected": "2026-10-04 shadow/sol-cm2, CORRECTIONS.md"
 }

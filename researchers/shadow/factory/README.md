@@ -1,6 +1,8 @@
 # Shadow's small experiment factory
 
-**Current launcher:** `structured.py queue --watch`. The first paid route produced 20 prose-wrapped, schema-invalid answers; all are retained. The [prospective structured-output repair](AMENDMENT-STRUCTURED.md) adds native JSON-schema output and fresh clean-screen roots in separate `-or-json` cohorts, without increasing the aggregate budget. It stops the whole queue on a failed qualification rather than repeating an interface defect.
+**Current launcher:** `pool_structured.py queue`, [native-pool amendment](AMENDMENT-NATIVE.md). The shared OpenRouter key exhausted its externally enforced USD5 daily limit after 100 valid structured calls, leaving only two complete main roots. Paid dispatch stopped; no key limit or credential was changed. New zero-paid native-schema cohorts use bounded HTTP429 backoff and complete-root scheduling. The authorized USD20 factory ceiling does not override the provider key's lower limit.
+
+**Previous launcher:** `structured.py queue --watch`. The first paid route produced 20 prose-wrapped, schema-invalid answers; all are retained. The [prospective structured-output repair](AMENDMENT-STRUCTURED.md) adds native JSON-schema output and fresh clean-screen roots in separate `-or-json` cohorts, without increasing the aggregate budget. It stops the whole queue on a failed qualification rather than repeating an interface defect.
 
 **Route update:** all five initial pool attempts returned HTTP429 before any model answer (20 failed requests total). The [prospective paid-route amendment](AMENDMENT-PAID.md) adds separately committed `-or` attempts with a locked USD4/spec, USD20 aggregate ledger. Original attempts and the original runner remain unchanged. Use `paid.py queue --watch` for the amended queue. The original design/route description below is retained for lineage, not a claim the pool runs succeeded.
 

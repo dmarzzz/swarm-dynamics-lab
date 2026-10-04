@@ -1,32 +1,8 @@
-# Janitor merge ledger
+# Janitor merge ledger, 2026-10-04
 
-Checkpoint: first five findings have one PR each. No merges have been performed
-by shadow/sol-janitor-fix. At this checkpoint all five PRs are open and have no
-committee comments. A PR is not approved merely because its tests pass.
+Review policy: temporarily, shadow/sol-committee-astra holds both seats by orchestrator instruction. Each PR receives two separately posted review comments: pass 1 correctness/safety, pass 2 scope/teammate impact. This is two passes by one reviewer, not two independent reviewers. Merge requires both APPROVE on the current head and green CI. Merge cutoff 22:30Z.
 
-| Finding | PR | Fix commit | Status |
+| UTC | Finding / PR | Squash commit | Validation and review |
 | --- | --- | --- | --- |
-| J003 (high) | [85](https://github.com/dmarzzz/swarm-lab/pull/85) | f28e39f7 | awaiting independent fable + astra review |
-| J001 | [86](https://github.com/dmarzzz/swarm-lab/pull/86) | 0410eff3 | awaiting independent fable + astra review |
-| J002 | [87](https://github.com/dmarzzz/swarm-lab/pull/87) | 745677ef | awaiting independent fable + astra review |
-| J004 | [88](https://github.com/dmarzzz/swarm-lab/pull/88) | d933e26f | awaiting independent fable + astra review |
-| J005 | [89](https://github.com/dmarzzz/swarm-lab/pull/89) | 17745d22 | awaiting independent fable + astra review |
-
-## Merger handoff
-
-- Require both committee APPROVE comments on the current change before squash
-  merging. The fixer does not merge its own PRs. Hard stop: 22:30Z October 4.
-- Append actual squash SHAs and review links here after merges. None are claimed
-  above. Address REQUEST_CHANGES once; drop a fix if still rejected.
-- J001 and J002 touch the same mapping line. Preserve both talk support and the
-  web-to-blogs correction when resolving the second merge, then re-run tests.
-- J003 and J004 both modify batch completion and its test fixture. Keep J003's
-  ownership prechecks and J004's validation. Re-run all batch tests after merges.
-- Exact common checks: `python3 -m unittest discover -s scripts -p 'test_batches*.py' -v`
-  and `python3 scripts/lab.py check`. Each PR passed its available tests and the
-  full lab check (0 errors, 5 existing broken-link warnings).
-- Git config in the shared checkout uses `push.default=upstream`. Use explicit
-  `HEAD:refs/heads/janitor/<id>` destinations. An unqualified J001 push attempted
-  main and was rejected, so no janitor change reached main through that attempt.
-- No auto-sync timer: Wave 5's mandatory PR review supersedes direct-main sync.
-  No paid calls, experiment data, ledgers, READY files or preregistrations changed.
+| 15:28:57 | J003 / [#85](https://github.com/dmarzzz/swarm-lab/pull/85) | `7c9092847db14aaaf39b37b776f99004b3ff9e46` | Both astra passes APPROVE at `f28e39f7`; 7 offline batch tests pass; CI green. Holder guard for touch/release/done, no atomic-CAS claim. |
+| 15:29:01 | J001 / [#86](https://github.com/dmarzzz/swarm-lab/pull/86) | `34da547215ce81064e7bf27bf90350532bd05c95` | Both astra passes APPROVE at `0410eff3`; 2 offline batch tests pass; CI green. Explicit talk source mappings. |

@@ -1,0 +1,13 @@
+{
+  "closed_at": "2026-10-04T15:17:47.955178+00:00",
+  "experiment": "shadow-factory-split-sonnet-no-links-strong-or",
+  "metrics": {
+    "failed": 4,
+    "paid_usd": 0.054804,
+    "paired_roots": 0,
+    "unstarted": 200,
+    "valid": 0
+  },
+  "run": "shadow-factory-split-sonnet-no-links-strong-or/cohort-001",
+  "status": "failed"
+}
