@@ -1,6 +1,6 @@
 # Native integration and offline verification
 
-The prospective RD6 native path is implemented in this owned subtree. **Offline integration passes; no native qualification, admission, dispatch or allocation has occurred.** The [operator handoff](OPERATOR.md) defines the private receipt contract and exact lifecycle. Completed RD5 source, results, qualification and ledger rows remain unchanged.
+The prospective RD6 native path is implemented in this owned subtree. **Offline integration and startup repairs pass. Q0-A1 subsequently stopped before any model dispatch; see RUN-STATUS.md for its complete closeout.** The [operator handoff](OPERATOR.md) defines the private receipt contract and exact lifecycle. Completed RD5 source, results, qualification and ledger rows remain unchanged.
 
 | Component | Implemented behavior | Offline acceptance evidence |
 | --- | --- | --- |
@@ -15,14 +15,16 @@ The prospective RD6 native path is implemented in this owned subtree. **Offline 
 
 ## Verification and repairs
 
-[73 checks](offline/validation.json) pass: 23 case/scoring checks and 50 native integration checks. The [complete test output](offline/unit-tests.txt) and source hashes are retained. The suite denies socket connections and uses disposable synthetic ledger contents. The 162 authored requests still reproduce the same fixture manifest and all 162 literal-reference labels; no native evidence is inferred.
+[88 checks](offline/validation.json) pass: 23 case/scoring checks and 65 native integration checks. The [complete test output](offline/unit-tests.txt) and source hashes are retained. The suite denies socket connections and uses disposable synthetic ledger contents. The 162 authored requests still reproduce the same fixture manifest and all 162 literal-reference labels; no native evidence is inferred.
 
 Testing found a macOS interaction between a file lock on the database itself and SQLite's own locks. The implementation now locks an adjacent sidecar and verifies that another RD6 writer is rejected. Provider-invalid outcomes are also explicitly separated from unknown transport failures while preserving any known charge. Neither repair changes experimental inputs or past outcomes.
 
-The [resource readback](offline/resource-check.json) still shows488historical calls, USD 0.022699069 committed API exposure, zero new calls and no new allocation. The original ledger was read only for this final status check; synthetic tests never open it.
+The historical [resource readback](offline/resource-check.json) showed488calls and USD0.022699069 committed API. The latest [startup closeout accounting](results/q0-a1-startup/resources.json) preserves those API counts and adds the released allocation estimate. The original ledger was read only for this final status check; synthetic tests never open it.
 
-## Boundary before a real run
+## Startup repair and boundary
 
-This is a manual native runner; no shared operations dispatch adapter has been added. Real SSH/host lifecycle, current model route and prices, public registration and native qualification remain untested here. Operator evidence is a bound attestation, not an independent account audit. Hard-kill/storage failures may leave partial bundles; preserve them and use the shared manual ambiguous closeout rather than pretending reconstruction succeeded.
+Q0-A1 exposed a missing-parent directory defect that the first73checks did not cover. Fifteen added checks cover nested output parents, refused reuse, safe retained startup failure categories, no-provider readiness, admission-byte mutation, exact remote acknowledgment, preserved predecessor fences, all nonzero/ambiguous reservation statuses, orphan responses, duplicate replacement and original infrastructure/window limits. Source/reference hash reads are atomic at the file-byte level. The supervisor verifies the remote startup path before relay creation and records a safe failing phase.
 
-The proposed scientific scope still requires the owner's concrete decision:18 Q0 then conditional 144 D0, lifetime 650, unchanged USD 2 split cap. After that decision, verify a dedicated approved-account allocation, publish/register the immutable stage plan and condition TLDRs, pin source/runtime/ledger evidence and admit only that scope. No new spending authority, machine, automatic retry or larger policy/swarm study is created by this integration.
+The append-only replacement path is deliberately narrow: only explicitly approved Q0-A2 may replace zero-dispatch Q0-A1, with the actual latest handoff and owning review. The original ledger checks zero requests again under its transaction. A stopped stage with even one reserved or completed request cannot be replaced. This offline implementation is not approval, allocation or native qualification.
+
+The [post-mortem](reviews/Q0-A1-POST.md) records the verified directory defect and uncertainty about the original exit. No fabricated native bundle, accuracy estimate or cause claim is supplied. This remains a manual native entrypoint, not a new shared dispatch adapter. Updated source/runtime/public registration, actual scope approval and fresh approved-account exclusive allocation remain required for any replacement. Original RD5 scientific evidence and historical ledger rows are preserved.

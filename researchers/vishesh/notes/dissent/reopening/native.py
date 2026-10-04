@@ -15,6 +15,7 @@ from pathlib import Path
 import signal
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.request
 import urllib.error
@@ -93,10 +94,11 @@ class RelayEngine:
         self.now = now or (lambda: dt.datetime.now(dt.timezone.utc))
         self.monotonic = monotonic or time.monotonic
         self.started=self.monotonic(); self.stopped=False; self.index=0
-        self.out=Path(directory); self.out.mkdir(exist_ok=False)
+        self.out=Path(directory); self.out.mkdir(parents=True,exist_ok=False)
         self.events=Events(self.out/'relay-events.jsonl')
         self.events.add('relay_start',packet_sha256=digest(packet),stage=packet['stage'])
-        try: self.ledger.begin(packet,receipt['attempt'])
+        try: self.ledger.begin(packet,receipt['attempt'],
+            evidence(receipt['zero_dispatch_replacement']) if 'zero_dispatch_replacement' in receipt else None)
         except BaseException:
             self.events.close(); raise
 
@@ -179,7 +181,7 @@ def run_worker(packet, receipt, out, transport, *, mode='native', monotonic=None
     """Transport-injected worker. Production caller must pass live_preflight first."""
     clock=monotonic or time.monotonic
     utc=now or (lambda:dt.datetime.now(dt.timezone.utc))
-    out=Path(out); out.mkdir(exist_ok=False)
+    out=Path(out); out.mkdir(parents=True,exist_ok=False)
     save(out/'packet.json',packet)
     rows=[{'id':a['id'],'request_sha256':a['request_sha256'],
            'ordered_request_sha256':a['ordered_request_sha256'],'status':'unstarted','action':None,
@@ -229,8 +231,49 @@ def run_worker(packet, receipt, out, transport, *, mode='native', monotonic=None
         events.close()
         finish_bundle(out,packet,rows,{'status':'stopped' if failure else 'completed',
             'attempt':receipt['attempt'],'allocation_lineage_sha256':receipt.get('allocation_lineage_sha256'),
+            'zero_dispatch_predecessor':'rd6-q0-a1' if 'zero_dispatch_replacement' in receipt else None,
             'worker_loop_ended':True,'elapsed_seconds':clock()-started},mode=mode)
     return not failure
+
+
+def bound_admission(path, expected):
+    data=Path(path).read_bytes()
+    require(hashlib.sha256(data).hexdigest()==expected,'admission_bytes_changed')
+    return json.loads(data)
+
+
+def worker_preflight(packet, receipt, out):
+    """No provider, credential or ledger access; test exact remote startup inputs."""
+    live_preflight(packet,receipt,worker=True)
+    out=Path(out)
+    require(not out.exists(),'worker_output_exists')
+    out.parent.mkdir(parents=True,exist_ok=True)
+    # Exercise actual parent write access without creating/reusing the run output.
+    with tempfile.TemporaryFile(dir=out.parent) as probe:
+        probe.write(b'rd6-startup');probe.flush();os.fsync(probe.fileno())
+
+
+def admitted_worker(packet, receipt, out, *, transport_factory=Transport):
+    """Safe startup telemetry even if admission fails before the response bundle."""
+    out=Path(out);out.parent.mkdir(parents=True,exist_ok=True)
+    diagnostic=out.with_name(out.name+'.startup.json')
+    # Do not overwrite evidence from a previous invocation.
+    with diagnostic.open('x') as f:f.write('{}\n')
+    status={'schema':'rd6-startup-v1','packet_sha256':digest(packet),
+            'phase':'admission','state':'starting','native_dispatch':'not_started'}
+    save(diagnostic,status)
+    try:
+        worker_preflight(packet,receipt,out)
+        status.update(phase='worker_loop',state='running',native_dispatch='inspect_original_ledger')
+        save(diagnostic,status)
+        okay=run_worker(packet,receipt,out,transport_factory(packet))
+        status.update(phase='finished',state='completed' if okay else 'stopped')
+        return okay
+    except BaseException:
+        status.update(state='failed',error_category='startup_check_failed' if status['phase']=='admission' else 'worker_loop_failed')
+        raise
+    finally:
+        save(diagnostic,status)
 
 
 def relay(packet, receipt, credential, ledger_path, out):
@@ -284,10 +327,12 @@ def stop_child(child):
             os.killpg(child.pid,signal.SIGKILL);child.wait(timeout=5)
 
 
-def supervise(relay_argv, worker_argv, transport, *, timeout=1800, popen=subprocess.Popen):
+def supervise(relay_argv, worker_argv, transport, *, timeout=1800, popen=subprocess.Popen, diagnostics=None):
     """Own both local process groups; never treats SSH exit as remote stop proof."""
     children=[]
+    state=diagnostics if diagnostics is not None else {}
     try:
+        state['phase']='relay_start'
         children.append(popen(relay_argv,start_new_session=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL))
         ready=False
         for _ in range(100):
@@ -295,13 +340,17 @@ def supervise(relay_argv, worker_argv, transport, *, timeout=1800, popen=subproc
             try: transport.health(); ready=True; break
             except Exception: time.sleep(.1)
         require(ready,'relay_ready_timeout')
+        state['phase']='worker_start'
         children.append(popen(worker_argv,start_new_session=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL))
+        state['phase']='worker_wait'
         start=time.monotonic()
         while children[1].poll() is None:
             require(children[0].poll() is None,'relay_exited')
             require(time.monotonic()-start < timeout,'supervisor_timeout')
             time.sleep(.1)
+        state['worker_exit_code']=children[1].returncode
         require(children[1].returncode==0,'worker_exit')
+        state['phase']='completed'
     finally:
         for child in reversed(children): stop_child(child)
 
@@ -328,8 +377,9 @@ def finalize(out, stop_receipt, *, command=subprocess.run):
 def main():
     p=argparse.ArgumentParser(description=__doc__); sub=p.add_subparsers(dest='cmd',required=True)
     prep=sub.add_parser('prepare');prep.add_argument('--stage',choices=('Q0','D0'),required=True);prep.add_argument('--out',required=True)
-    for name in ('relay','worker'):
+    for name in ('relay','worker','check-worker'):
         c=sub.add_parser(name);c.add_argument('--packet',required=True);c.add_argument('--admission',required=True);c.add_argument('--out',required=True)
+        c.add_argument('--admission-sha256',required=True)
         if name=='relay':c.add_argument('--credential',required=True);c.add_argument('--ledger',required=True)
     r=sub.add_parser('report');r.add_argument('--out',required=True);r.add_argument('--bundle-sha256',required=True)
     f=sub.add_parser('finalize');f.add_argument('--out',required=True);f.add_argument('--stop-receipt',required=True)
@@ -343,13 +393,15 @@ def main():
             print(json.dumps({'stage':packet['stage'],'assignments':len(rows),'integrity':'verified','provider_authenticity':'requires_relay_review'}))
         elif a.cmd=='finalize': print(json.dumps(finalize(a.out,read(a.stop_receipt))))
         else:
-            packet=read(a.packet);receipt=read(a.admission)
+            packet=read(a.packet);receipt=bound_admission(a.admission,a.admission_sha256)
             if a.cmd=='relay': relay(packet,receipt,a.credential,a.ledger,a.out)
+            elif a.cmd=='check-worker':
+                worker_preflight(packet,receipt,a.out)
+                print(json.dumps({'worker_preflight':'ready','packet_sha256':digest(packet),'admission_sha256':a.admission_sha256}))
             else:
-                live_preflight(packet,receipt,worker=True)
                 def interrupted(*args): raise TimeoutError('worker_stop_signal')
                 signal.signal(signal.SIGTERM,interrupted);signal.signal(signal.SIGINT,interrupted)
-                okay=run_worker(packet,receipt,a.out,Transport(packet))
+                okay=admitted_worker(packet,receipt,a.out)
                 raise SystemExit(0 if okay else 1)
     except Exception:
         # Do not print arbitrary exception/provider/config contents or tracebacks.

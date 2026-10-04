@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "attempt": "rd6-q0-a1",
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_utc": "2026-10-04T19:40:02.178540+00:00",
+  "verdict": "repair",
+  "scientific_result": "not_tested",
+  "execution": "blocked_before_native_dispatch",
+  "qualification": "not_run",
+  "operational_closeout_sha256": "c4763ff165d85ecd6be08cb33f79e0dd829a8283c77d1de1f2cf51b9816ee68f",
+  "scientific_parent_handoff_sha256": "66775acf7ab12f7434f979685899a636da1f5b24701aeff093e3fed0712c5752",
+  "zero_dispatch_proof_sha256": "56a1650e0c8c1101900c8f6a5d505fb803010d2175efa95cd89b8e6508ae0139",
+  "researcher_review": "not_required_by_owner_direction",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Frozen contextual diagnostic and outcome-dependent component decision remain explicit; no empirical result collected.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/PLAN.md",
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Inspected authored development fixtures retain162 labels,12 diagnostic cases and six shared families; no holdout/field claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/offline/manifest.json",
+          "sha256": "b9f26a311391a5f11ca42756d2aa8d6a035591a04cdfa90015c854e28eb81b9f"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "No controls reached the native actor.",
+      "evidence": [],
+      "next_action": "Apply the prospective startup repair; do not infer native capability or a causal model effect from this attempt.",
+      "acceptance_check": "Repaired offline fault checks pass; only separately admitted native Q0 with complete traces can establish model qualification."
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "Zero responses; required18/18 native qualification was not run.",
+      "evidence": [],
+      "next_action": "Apply the prospective startup repair; do not infer native capability or a causal model effect from this attempt.",
+      "acceptance_check": "Repaired offline fault checks pass; only separately admitted native Q0 with complete traces can establish model qualification."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Every assigned request is accounted as unstarted; accuracy is undefined, not zero percent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json",
+          "sha256": "56a1650e0c8c1101900c8f6a5d505fb803010d2175efa95cd89b8e6508ae0139"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "No empirical sample collected; planned dependent counts are explicit and unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/PLAN.md",
+          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json",
+          "sha256": "56a1650e0c8c1101900c8f6a5d505fb803010d2175efa95cd89b8e6508ae0139"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "unknown",
+      "finding": "Frozen actor payloads exist but no native context was delivered.",
+      "evidence": [],
+      "next_action": "Apply the prospective startup repair; do not infer native capability or a causal model effect from this attempt.",
+      "acceptance_check": "Repaired offline fault checks pass; only separately admitted native Q0 with complete traces can establish model qualification."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "gap",
+      "finding": "Original worker stderr absent; zero dispatch proven by original ledger and retained relay/accounting evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json",
+          "sha256": "56a1650e0c8c1101900c8f6a5d505fb803010d2175efa95cd89b8e6508ae0139"
+        }
+      ],
+      "next_action": "Apply the prospective startup repair; do not infer native capability or a causal model effect from this attempt.",
+      "acceptance_check": "Repaired offline fault checks pass; only separately admitted native Q0 with complete traces can establish model qualification."
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "488calls retained, no new API exposure, historical unknown costs retained and exclusive allocations released; infrastructure is estimated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json",
+          "sha256": "ef94c4bf2388704cd5ab43d2fdf80dab15e0962e0926dda5b7a5fbdba9660a93"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Directory failure reproduced; original sole cause remains unresolved because original worker error was not retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md",
+          "sha256": "4089b1e8a34d55d81f04f55930c6e175884af5dad281eee9b1d02807cd24a7fa"
+        }
+      ],
+      "next_action": "Apply the prospective startup repair; do not infer native capability or a causal model effect from this attempt.",
+      "acceptance_check": "Repaired offline fault checks pass; only separately admitted native Q0 with complete traces can establish model qualification."
+    },
+    {
+      "dimension": "visualization",
+      "status": "not_applicable",
+      "finding": "No native observations to plot; scripted fixture preview remains explicitly synthetic.",
+      "evidence": []
+    }
+  ]
+}

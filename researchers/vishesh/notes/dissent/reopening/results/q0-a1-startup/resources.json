@@ -1,0 +1,32 @@
+{
+  "attempt": "rd6-q0-a1",
+  "new_model_calls": 0,
+  "lifetime_calls": 488,
+  "api_committed_nano": 22699069,
+  "api_actual_known_nano": 18667069,
+  "api_unknown_retained_nano": 4032000,
+  "api_cap_nano": 1000000000,
+  "infrastructure_cap_nano": 1000000000,
+  "historical_infra_estimate_nano": 720248442,
+  "allocation_intervals_utc": [
+    {
+      "start": "2026-10-04T19:10:02Z",
+      "released": "2026-10-04T19:13:41Z",
+      "seconds": 219
+    },
+    {
+      "start": "2026-10-04T19:14:02Z",
+      "released": "2026-10-04T19:33:00Z",
+      "seconds": 1138
+    }
+  ],
+  "hourly_rate_ceiling_nano": 71430000,
+  "new_infra_estimate_nano": 26925142,
+  "cumulative_infra_estimate_nano": 747173584,
+  "remaining_original_infra_envelope_nano": 80219858,
+  "original_allocation_window_ends": "2026-10-04T20:40:02Z",
+  "worker_stopped_verified": true,
+  "relay_stopped_verified": true,
+  "allocation_released_verified": true,
+  "invoice_status": "unavailable; conservative allocation-time estimates, not provider invoice settlement"
+}

@@ -1,0 +1,16 @@
+{
+  "owned_workers": [],
+  "results_parent_exists": false,
+  "q0_directory_exists": false,
+  "mkdir_reproduction": "missing_parent_directory_before_provider_access",
+  "operator_receipt_exists": true,
+  "rd6_calls": 0,
+  "rd6_attempts": [
+    {
+      "stage": "Q0",
+      "attempt": "rd6-q0-a1",
+      "status": "stopped"
+    }
+  ],
+  "checked_utc": "2026-10-04T19:25:24.102328+00:00"
+}

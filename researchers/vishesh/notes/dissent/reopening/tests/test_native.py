@@ -395,5 +395,168 @@ class NativeTests(unittest.TestCase):
         r['allocation_lineage_sha256']=cases.digest({k:a[k] for k in ('claim_id','host','claim_started_utc','claim_until','resource_plan_sha256')})
         with self.assertRaises(ValueError):self.check_admission(r)
 
+    def test_worker_creates_missing_parents_without_changing_requests(self):
+        e=self.engine();out=self.root/'missing'/'nested'/'attempt'
+        self.assertTrue(native.run_worker(e.packet,e.receipt,out,EngineTransport(e),mode='synthetic-offline',now=lambda:NOW))
+        self.assertEqual(len(e.provider.requests),18)
+        self.assertEqual(e.provider.requests,[gates.wire(a['request']) for a in e.packet['assignments']])
+
+    def test_existing_worker_output_is_never_reused(self):
+        transport=Mock();out=self.root/'retained';out.mkdir();(out/'evidence').write_text('original')
+        with self.assertRaises(FileExistsError):native.run_worker(self.packet,self.receipt,out,transport)
+        transport.health.assert_not_called();transport.send.assert_not_called()
+        self.assertEqual((out/'evidence').read_text(),'original')
+
+    def test_startup_failure_has_safe_diagnostics_and_no_transport(self):
+        out=self.root/'missing'/'worker';factory=Mock()
+        with patch.object(native,'live_preflight',side_effect=ValueError('SENSITIVE_SENTINEL_MUST_NOT_ESCAPE')):
+            with self.assertRaises(ValueError):native.admitted_worker(self.packet,self.receipt,out,transport_factory=factory)
+        diagnostic=out.with_name(out.name+'.startup.json').read_text()
+        self.assertNotIn('SENSITIVE_SENTINEL',diagnostic)
+        self.assertEqual(json.loads(diagnostic)['error_category'],'startup_check_failed')
+        self.assertFalse(out.exists());factory.assert_not_called()
+        with self.assertRaises(FileExistsError):native.admitted_worker(self.packet,self.receipt,out,transport_factory=factory)
+        self.assertEqual(out.with_name(out.name+'.startup.json').read_text(),diagnostic)
+
+    def test_worker_preflight_makes_no_provider_or_ledger_access(self):
+        out=self.root/'nested'/'worker'
+        with patch.object(native,'live_preflight'),patch.object(native,'Provider') as p,patch.object(native,'Ledger') as ledger:
+            native.worker_preflight(self.packet,self.receipt,out)
+        self.assertTrue(out.parent.exists());self.assertFalse(out.exists())
+        p.assert_not_called();ledger.assert_not_called()
+
+    def test_admission_changed_after_staging_fails(self):
+        p=self.root/'admission.json';save(p,self.receipt);expected=gates.sha(p)
+        self.assertEqual(native.bound_admission(p,expected),self.receipt)
+        save(p,dict(self.receipt,attempt='rd6-q0-changed'))
+        with self.assertRaises(ValueError):native.bound_admission(p,expected)
+
+    def test_remote_preflight_requires_exact_acknowledgment(self):
+        from native_operator import remote_preflight
+        from types import SimpleNamespace
+        a=SimpleNamespace(remote_checkout='/synthetic/checkout',remote_packet='packet',remote_admission='receipt',remote_out='results/new',ssh_config='synthetic.conf',host_alias='synthetic')
+        expected={'worker_preflight':'ready','packet_sha256':cases.digest(self.packet),'admission_sha256':'a'*64}
+        command=Mock(return_value=Mock(returncode=0,stdout=json.dumps(expected)))
+        self.assertEqual(remote_preflight(a,self.packet,'a'*64,command=command),expected)
+        self.assertIn('check-worker',command.call_args.args[0][-1])
+        for result in (Mock(returncode=1,stdout='SENSITIVE_SENTINEL'),Mock(returncode=0,stdout='{}'),Mock(returncode=0,stdout='not json')):
+            command.return_value=result
+            with self.assertRaises(ValueError):remote_preflight(a,self.packet,'a'*64,command=command)
+
+    def replacement(self,ledger):
+        old=deepcopy(self.packet);old['historical_fixture']=True
+        ledger.begin(old,'rd6-q0-a1');ledger.finish('Q0','stopped')
+        return {'attempt':'rd6-q0-a2','previous_attempt':'rd6-q0-a1',
+                'previous_packet_sha256':cases.digest(old),'packet_sha256':cases.digest(self.packet),
+                'owner_approval_sha256':'f'*64}
+
+    def test_zero_dispatch_replacement_preserves_old_attempt_and_limits(self):
+        l=self.ledger();r=self.replacement(l);before=l.db.execute('SELECT * FROM rd6_attempts').fetchall()
+        l.begin(self.packet,'rd6-q0-a2',r)
+        for a in self.packet['assignments']:
+            key=l.reserve(self.packet,a);l.settle(key,response(a['request']),a['request'])
+        l.finish('Q0','completed')
+        self.assertEqual(l.db.execute('SELECT * FROM rd6_attempts').fetchall(),before)
+        self.assertEqual(l.db.execute('SELECT attempt,status FROM rd6_zero_replacements').fetchall(),[('rd6-q0-a2','completed')])
+        self.assertEqual(snapshot(l.db)['lifetime_calls'],506)
+        with self.assertRaises(ValueError):l.reserve(self.packet,self.packet['assignments'][0])
+
+    def test_zero_dispatch_replacement_rejects_any_rd6_reservation(self):
+        l=self.ledger();r=self.replacement(l)
+        for status in ('dispatch_unknown','completed','invalid_response','failed'):
+            l.db.execute('INSERT INTO calls VALUES(?,?,?,?)',('RD6:Q0:sent',status,1344000,None));l.db.commit()
+            with self.assertRaises(ValueError):l.begin(self.packet,'rd6-q0-a2',r)
+            self.assertEqual(l.db.execute('SELECT count(*) FROM rd6_zero_replacements').fetchone()[0],0)
+            l.db.execute("DELETE FROM calls WHERE key='RD6:Q0:sent'");l.db.commit()
+
+    def test_zero_dispatch_replacement_rejects_active_or_wrong_predecessor(self):
+        l=self.ledger();r=self.replacement(l)
+        for change in ({'previous_attempt':'rd6-q0-other'},{'previous_packet_sha256':'b'*64},{'attempt':'rd6-q0-a3'},{'packet_sha256':'c'*64},{'owner_approval_sha256':None}):
+            with self.assertRaises(ValueError):l.begin(self.packet,'rd6-q0-a2',dict(r,**change))
+        l.db.execute("UPDATE rd6_attempts SET status='started'");l.db.commit()
+        with self.assertRaises(ValueError):l.begin(self.packet,'rd6-q0-a2',r)
+
+    def test_zero_dispatch_replacement_cannot_be_repeated_or_used_for_d0(self):
+        l=self.ledger();r=self.replacement(l);l.begin(self.packet,'rd6-q0-a2',r);l.finish('Q0','stopped')
+        with self.assertRaises(sqlite3.IntegrityError):l.begin(self.packet,'rd6-q0-a2',r)
+        with self.assertRaises(ValueError):l.begin(gates.prepare('D0'),'rd6-d0-a2',r)
+
+    def test_replacement_requires_explicit_bound_approval_and_review(self):
+        receipt=self.admission();receipt['attempt']='rd6-q0-a2'
+        approval=read(receipt['owner_approval']['path'])
+        approval.update(replacement_attempt='rd6-q0-a2',previous_attempt='rd6-q0-a1',replacement_contract_sha256=gates.sha(gates.BASE/'STARTUP-REPAIR.md'))
+        receipt['owner_approval']=self.ref('approval',approval)
+        closeout=self.ref('zero-closeout',{'study_id':'right-dissenter','attempt':'rd6-q0-a1'})
+        receipt['latest_closeout']=closeout
+        proof=self.ref('zero-proof',{'attempt':'rd6-q0-a1','dispatched':0,'provider_responses':0,'native_calls':0,'lifetime_calls':488,'committed_api_nano':22699069,'worker_stopped_verified':True,'relay_stopped_verified':True})
+        review=self.ref('zero-review',{'attempt':'rd6-q0-a1','verdict':'repair','operational_closeout_sha256':closeout['sha256'],'scientific_result':'not_tested','zero_dispatch_proof_sha256':proof['sha256'],
+            'assessments':[{'dimension':d,'status':'unknown','finding':'SYNTHETIC TEST ONLY','next_action':'test','acceptance_check':'test'} for d in gates.DIMENSIONS]})
+        r={'attempt':'rd6-q0-a2','previous_attempt':'rd6-q0-a1','previous_packet_sha256':gates.ZERO_PACKET,'packet_sha256':cases.digest(self.packet),'owner_approval_sha256':receipt['owner_approval']['sha256'],
+           'previous_closeout_sha256':closeout['sha256'],'zero_dispatch_proof':proof,'owning_review':review}
+        receipt['zero_dispatch_replacement']=self.ref('replacement',r)
+        with patch.object(gates,'ZERO_PARENT',closeout['sha256']):
+            gates.validate_replacement(self.packet,receipt,approval)
+            for field in ('replacement_attempt','previous_attempt','replacement_contract_sha256'):
+                changed=deepcopy(approval);del changed[field]
+                with self.assertRaises(ValueError):gates.validate_replacement(self.packet,receipt,changed)
+            changed=read(proof['path']);changed['native_calls']=1
+            r['zero_dispatch_proof']=self.ref('zero-proof',changed);receipt['zero_dispatch_replacement']=self.ref('replacement',r)
+            with self.assertRaises(ValueError):gates.validate_replacement(self.packet,receipt,approval)
+
+    def test_replacement_cannot_extend_window_or_reset_infrastructure(self):
+        # Scope evidence has separate tests; isolate cumulative resource arithmetic.
+        def receipt():
+            r=self.admission();r['zero_dispatch_replacement']={}
+            a=read(r['allocation']['path']);a['claim_until']=(NOW+dt.timedelta(minutes=40)).isoformat()
+            r['allocation']=self.ref('allocation',a)
+            r['allocation_lineage_sha256']=cases.digest({k:a[k] for k in ('claim_id','host','claim_started_utc','claim_until','resource_plan_sha256')})
+            b=read(r['budget']['path']);b.update(infra_committed_nano=gates.ZERO_INFRA_COMMITTED,infra_reserved_nano=47_620_000)
+            r['budget']=self.ref('budget',b);return r
+        with patch.object(gates,'validate_replacement'):
+            self.check_admission(receipt())
+            for key,value in [('infra_committed_nano',720_248_442),('infra_reserved_nano',47_619_999),('infra_reserved_nano',80_219_859)]:
+                r=receipt();b=read(r['budget']['path']);b[key]=value;r['budget']=self.ref('budget',b)
+                with self.assertRaises(ValueError):self.check_admission(r)
+            r=receipt();a=read(r['allocation']['path']);a['claim_until']=(NOW+dt.timedelta(minutes=41)).isoformat()
+            r['allocation']=self.ref('allocation',a)
+            r['allocation_lineage_sha256']=cases.digest({k:a[k] for k in ('claim_id','host','claim_started_utc','claim_until','resource_plan_sha256')})
+            with self.assertRaises(ValueError):self.check_admission(r)
+
+    def test_zero_dispatch_replacement_rejects_orphan_response(self):
+        l=self.ledger();r=self.replacement(l)
+        l.db.execute('INSERT INTO rd6_responses VALUES(?,?)',('RD6:Q0:orphan','{}'));l.db.commit()
+        with self.assertRaises(ValueError):l.begin(self.packet,'rd6-q0-a2',r)
+
+    def test_failed_remote_startup_does_not_create_relay(self):
+        import native_operator as op
+        from types import SimpleNamespace
+        p=self.root/'packet.json';save(p,self.packet)
+        r=self.root/'receipt.json';save(r,self.receipt)
+        config=self.root/'ssh.conf';config.write_text('synthetic')
+        a=SimpleNamespace(packet=str(p),admission=str(r),ssh_config=str(config),host_alias='synthetic',
+             remote_checkout='/synthetic/repo',remote_packet='packet',remote_admission='receipt',remote_out='results/new',
+             out=str(self.root/'nested'/'supervisor'),credential='MUST_NOT_READ',ledger='MUST_NOT_OPEN')
+        runtime={'ssh_config_sha256':gates.sha(config),'host_alias':a.host_alias,'remote_checkout':a.remote_checkout,'gnu_timeout_verified':True}
+        self.receipt['runtime']={};save(r,self.receipt)
+        with patch.object(op,'live_preflight'),patch.object(op,'evidence',return_value=runtime),patch.object(op,'remote_preflight',side_effect=ValueError('SENSITIVE_SENTINEL')),patch.object(op,'supervise') as supervisor:
+            with self.assertRaises(ValueError):op.launch(a)
+        supervisor.assert_not_called()
+        status=(Path(a.out)/'supervisor.json').read_text()
+        self.assertNotIn('SENSITIVE_SENTINEL',status)
+        self.assertEqual(json.loads(status)['phase'],'remote_startup_check')
+
+    def test_conditional_d0_retains_replacement_resource_window(self):
+        self.packet=gates.prepare('D0');r=self.admission();r['attempt']='rd6-d0-offline'
+        a=read(r['allocation']['path']);a['claim_until']=(NOW+dt.timedelta(minutes=40)).isoformat()
+        r['allocation']=self.ref('allocation',a)
+        r['allocation_lineage_sha256']=cases.digest({k:a[k] for k in ('claim_id','host','claim_started_utc','claim_until','resource_plan_sha256')})
+        b=read(r['budget']['path']);b.update(infra_committed_nano=gates.ZERO_INFRA_COMMITTED,infra_reserved_nano=47_620_000);r['budget']=self.ref('budget',b)
+        public=read(r['public_plan']['path']);public['run_tldr']='D0 SYNTHETIC TEST ONLY';public['condition_tldrs']={c:'SYNTHETIC TEST ONLY. Question treatment comparator metrics and limitations; not real registration. '+c for c in ('C00','C10','C01','C11','CT','CA')};r['public_plan']=self.ref('public',public)
+        q=self.root/'qualification';q.mkdir();save(q/'execution.json',{'zero_dispatch_predecessor':'rd6-q0-a1'})
+        r['qualification_directory']=str(q)
+        self.check_admission(r)  # Pure resource check, not native qualification.
+        b['infra_reserved_nano']=80_219_859;r['budget']=self.ref('budget',b)
+        with self.assertRaises(ValueError):self.check_admission(r)
+
 
 if __name__=='__main__':unittest.main()

@@ -136,7 +136,3 @@ Budget/lease limits dominate timing: at most 60 seconds per request and 30 minut
 Disposition: **DECISION NEEDED after the offline draft is validated**, with native integration still required before admission. The concrete decision is whether this component diagnostic is worth up to 162 new calls and the revised lifetime call ceiling of 650 under the unchanged USD 2 cumulative cap. It is not approval for another reserve-policy study, held-out generalization study or model comparison.
 
 The [owner-update rule](../../../../../tooling/agent-experiments/RUN-REVIEW.md) requires the updated plan decision before allocation or launch. The current request authorizes improving and drafting the design; no native approval receipt is created from it. Do not hold a machine while this proposal is under consideration. Existing reviewer waiver remains in force.
-
-## Startup execution amendment
-
-Q0-A1 stopped before any provider request; all18assignments remain unstarted and D0 is unrun. The [post-mortem](reviews/Q0-A1-POST.md) and [execution repair](STARTUP-REPAIR.md) preserve its original immutable plan and failed record. The scientific requests, labels, conditions, ordering,18/18qualification and analysis are unchanged. A proposed explicitly approved, append-only zero-dispatch Q0-A2 replacement is a new execution contract, not an automatic retry. It must preserve the actual latest closeout, original ledger/caps and original allocation window. The repair is prepared offline; no replacement has been approved or admitted.

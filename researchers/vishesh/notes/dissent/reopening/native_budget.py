@@ -40,7 +40,9 @@ class Ledger:
             require(authority['baseline_calls'] == 488 and authority['baseline_committed_nano'] == 22_699_069, 'historical_budget_required')
             self.db.execute('CREATE TABLE IF NOT EXISTS rd6_attempts(stage TEXT PRIMARY KEY,attempt TEXT UNIQUE,packet TEXT,status TEXT)')
             self.db.execute('CREATE TABLE IF NOT EXISTS rd6_responses(key TEXT PRIMARY KEY,data TEXT)')
+            self.db.execute('CREATE TABLE IF NOT EXISTS rd6_zero_replacements(stage TEXT PRIMARY KEY,previous_attempt TEXT,previous_packet TEXT,attempt TEXT UNIQUE,packet TEXT,status TEXT,authorization TEXT)')
             self.db.commit()
+            self.active = {}
         except BaseException:
             if hasattr(self, 'db'): self.db.close()
             self.lock.close()
@@ -50,16 +52,39 @@ class Ledger:
         self.db.close()
         self.lock.close()
 
-    def begin(self, packet, attempt):
-        self.db.execute('INSERT INTO rd6_attempts VALUES(?,?,?,?)', (packet['stage'],attempt,digest(packet),'started'))
-        self.db.commit()
+    def begin(self, packet, attempt, replacement=None):
+        """One explicit zero-dispatch Q0 replacement; never erase the old fence."""
+        stage=packet['stage']; db=self.db
+        db.execute('BEGIN IMMEDIATE')
+        try:
+            if replacement is None:
+                db.execute('INSERT INTO rd6_attempts VALUES(?,?,?,?)', (stage,attempt,digest(packet),'started'))
+                table='rd6_attempts'
+            else:
+                require(stage=='Q0' and attempt=='rd6-q0-a2'
+                        and replacement.get('attempt')==attempt
+                        and replacement.get('previous_attempt')=='rd6-q0-a1'
+                        and replacement.get('packet_sha256')==digest(packet)
+                        and replacement.get('owner_approval_sha256'), 'replacement_scope')
+                previous=db.execute('SELECT attempt,packet,status FROM rd6_attempts WHERE stage=?',(stage,)).fetchone()
+                require(previous==('rd6-q0-a1',replacement.get('previous_packet_sha256'),'stopped'), 'replacement_predecessor')
+                require(db.execute("SELECT count(*) FROM calls WHERE key LIKE 'RD6:%'").fetchone()[0]==0
+                        and db.execute('SELECT count(*) FROM rd6_responses').fetchone()[0]==0,
+                        'replacement_requires_zero_dispatch')
+                db.execute('INSERT INTO rd6_zero_replacements VALUES(?,?,?,?,?,?,?)',
+                    (stage,previous[0],previous[1],attempt,digest(packet),'started',digest(replacement)))
+                table='rd6_zero_replacements'
+            db.commit(); self.active[stage]=(table,attempt)
+        except BaseException:
+            db.rollback(); raise
 
     def reserve(self, packet, assignment):
         db = self.db
         db.execute('BEGIN IMMEDIATE')
         try:
             stage = packet['stage']
-            row = db.execute('SELECT packet,status FROM rd6_attempts WHERE stage=?',(stage,)).fetchone()
+            table,attempt=self.active.get(stage,('rd6_attempts',''))
+            row = db.execute('SELECT packet,status FROM '+table+' WHERE stage=? AND attempt=?',(stage,attempt)).fetchone()
             require(row == (digest(packet),'started'), 'inactive_attempt')
             prior = snapshot(db)
             used = db.execute("SELECT count(*) FROM calls WHERE key LIKE 'RD6:%'").fetchone()[0]
@@ -121,5 +146,7 @@ class Ledger:
 
     def finish(self, stage, status):
         require(status in ('completed','stopped'), 'terminal_attempt_status')
-        self.db.execute('UPDATE rd6_attempts SET status=? WHERE stage=?',(status,stage))
+        require(stage in self.active,'inactive_attempt')
+        table,attempt=self.active[stage]
+        self.db.execute('UPDATE '+table+' SET status=? WHERE stage=? AND attempt=?',(status,stage,attempt))
         self.db.commit()

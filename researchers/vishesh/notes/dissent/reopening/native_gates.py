@@ -6,6 +6,7 @@ budgets. All paths in an admission receipt are private operator inputs.
 import datetime as dt
 import hashlib
 import json
+import math
 import platform
 import re
 import subprocess
@@ -19,6 +20,10 @@ RESERVE = 1_344_000
 CAP = 1_000_000_000
 STAGES = {'Q0': 18, 'D0': 144}
 PARENT = '66775acf7ab12f7434f979685899a636da1f5b24701aeff093e3fed0712c5752'
+ZERO_PARENT = 'c4763ff165d85ecd6be08cb33f79e0dd829a8283c77d1de1f2cf51b9816ee68f'
+ZERO_PACKET = '8036f2cbf64dd855b6635eee7615691ad3ed41bfadea7b120fb6047bb9aebb7c'
+ZERO_ALLOCATION_END = '2026-10-04T20:40:02+00:00'
+ZERO_INFRA_COMMITTED = 747_173_584
 DIMENSIONS = {'question','scenarios','controls','capability','measurement','sample_size',
               'agent_context','data_integrity','resources','reproducibility','visualization'}
 
@@ -42,7 +47,7 @@ def read(path):
 
 def sources():
     paths = list(BASE.glob('native*.py')) + [BASE/'cases.py', BASE/'PLAN.md',
-        BASE/'next-run-plan.json', BASE/'DIAGNOSTIC-REVIEW.json',
+        BASE/'next-run-plan.json', BASE/'DIAGNOSTIC-REVIEW.json', BASE/'STARTUP-REPAIR.md',
         BASE.parent/'rd5/src/rd5_core.py', BASE.parent/'rd5/src/common.py',
         BASE.parent/'src/jev.py']
     return {str(p.relative_to(ROOT)): sha(p) for p in sorted(paths)}
@@ -72,8 +77,9 @@ def validate_packet(packet):
 
 def evidence(ref):
     require(isinstance(ref, dict) and set(ref) == {'path', 'sha256'}, 'evidence_reference')
-    require(sha(ref['path']) == ref['sha256'], 'evidence_hash')
-    return read(ref['path'])
+    data=Path(ref['path']).read_bytes()
+    require(hashlib.sha256(data).hexdigest() == ref['sha256'], 'evidence_hash')
+    return json.loads(data)
 
 
 def instant(value):
@@ -122,6 +128,8 @@ def validate_admission(packet, receipt, *, now=None, host=None):
             and approval.get('max_lifetime_calls') == 650 and approval.get('max_new_calls') == 162
             and approval.get('api_cap_nano') == CAP and approval.get('infra_cap_nano') == CAP,
             'updated_owner_scope_required')
+    if 'zero_dispatch_replacement' in receipt:
+        validate_replacement(packet, receipt, approval)
     parent = evidence(receipt['parent_handoff'])
     require(receipt['parent_handoff']['sha256'] == PARENT and parent.get('study_id') == 'right-dissenter'
             and parent.get('attempt') == 'rd5-h5-a1', 'actual_parent_handoff_required')
@@ -151,10 +159,25 @@ def validate_admission(packet, receipt, *, now=None, host=None):
             and budget.get('infra_committed_nano', -1) >= 720_248_442
             and 0 < budget.get('infra_reserved_nano', 0) <= 107_145_000,
             'cumulative_budget_required')
+    replacement='zero_dispatch_replacement' in receipt
+    if packet['stage']=='D0' and receipt.get('qualification_directory'):
+        # live_preflight subsequently audits this complete native Q0 bundle and
+        # binds its actual latest closeout and identical allocation lineage.
+        qualified=read(Path(receipt['qualification_directory'])/'execution.json')
+        replacement=qualified.get('zero_dispatch_predecessor')=='rd6-q0-a1'
+    rate=allocation.get('hourly_rate_nano')
+    require(type(rate) is int and 0 <= rate <= 71_430_000,'infrastructure_rate')
+    reserve_required=(rate*3+1)//2
+    if replacement:
+        require(instant(allocation['claim_until'])<=instant(ZERO_ALLOCATION_END)
+                and budget['infra_committed_nano']>=ZERO_INFRA_COMMITTED
+                and budget['infra_committed_nano']+budget['infra_reserved_nano']<=827_393_442,
+                'replacement_original_infrastructure_envelope')
+        reserve_required=math.ceil(rate*(instant(allocation['claim_until'])-instant(allocation['claim_started_utc'])).total_seconds()/3600)
     require(type(allocation.get('hourly_rate_nano')) is int
             and 0 <= allocation['hourly_rate_nano'] <= 71_430_000
             and allocation.get('maximum_minutes') == 90
-            and budget['infra_reserved_nano'] >= (allocation['hourly_rate_nano']*3+1)//2,
+            and budget['infra_reserved_nano'] >= reserve_required,
             'infrastructure_envelope_required')
     fresh(budget['verified_utc'], now)
     runtime = evidence(receipt['runtime'])
@@ -176,6 +199,48 @@ def validate_admission(packet, receipt, *, now=None, host=None):
     require(set(tldrs) == conditions and all(isinstance(v,str) and len(v) >= 80 for v in tldrs.values())
             and packet['stage'] in public.get('run_tldr',''), 'condition_tldrs_required')
     return budget
+
+
+def validate_replacement(packet, receipt, approval):
+    """Evidence gate only. The original ledger checks zero dispatch atomically too."""
+    r=evidence(receipt['zero_dispatch_replacement'])
+    require(packet['stage']=='Q0' and receipt['attempt']=='rd6-q0-a2'
+            and r.get('attempt')==receipt['attempt'] and r.get('previous_attempt')=='rd6-q0-a1'
+            and r.get('previous_packet_sha256')==ZERO_PACKET
+            and r.get('packet_sha256')==digest(packet)
+            and r.get('owner_approval_sha256')==receipt['owner_approval']['sha256'], 'replacement_scope')
+    require(approval.get('replacement_attempt')=='rd6-q0-a2'
+            and approval.get('previous_attempt')=='rd6-q0-a1'
+            and approval.get('replacement_contract_sha256')==sha(BASE/'STARTUP-REPAIR.md'),
+            'explicit_replacement_approval_required')
+    latest=receipt.get('latest_closeout',{})
+    require(latest.get('sha256')==ZERO_PARENT and r.get('previous_closeout_sha256')==ZERO_PARENT,
+            'replacement_closeout_required')
+    previous=evidence(latest)
+    require(previous.get('attempt')=='rd6-q0-a1' and previous.get('study_id')=='right-dissenter',
+            'replacement_predecessor')
+    proof=evidence(r['zero_dispatch_proof'])
+    require(proof.get('attempt')=='rd6-q0-a1' and proof.get('dispatched')==0
+            and proof.get('provider_responses')==0 and proof.get('native_calls')==0
+            and proof.get('lifetime_calls')==488 and proof.get('committed_api_nano')==22_699_069
+            and proof.get('worker_stopped_verified') is True
+            and proof.get('relay_stopped_verified') is True,'zero_dispatch_proof_required')
+    review=evidence(r['owning_review'])
+    require(review.get('attempt')=='rd6-q0-a1' and review.get('verdict')=='repair'
+            and review.get('operational_closeout_sha256')==ZERO_PARENT
+            and review.get('scientific_result')=='not_tested'
+            and review.get('zero_dispatch_proof_sha256')==r['zero_dispatch_proof']['sha256'],
+            'replacement_postreview_required')
+    rows=review.get('assessments',[])
+    require(len(rows)==11 and {v.get('dimension') for v in rows}==DIMENSIONS,'review_dimensions')
+    for row in rows:
+        require(row.get('status') in ('pass','gap','unknown','not_applicable') and row.get('finding'),'review_status')
+        if row['status']=='pass':require(row.get('evidence'),'review_evidence')
+        if row['status'] in ('gap','unknown'):
+            require(row.get('next_action') and row.get('acceptance_check'),'review_followup')
+        for ref in row.get('evidence',[]):
+            require(sha(ROOT/ref['path'])==ref['sha256'],'review_evidence_changed')
+    return r
 
 
 def live_preflight(packet, receipt, *, worker=False):
@@ -200,7 +265,8 @@ def live_preflight(packet, receipt, *, worker=False):
                     and qreview.get('operational_closeout_sha256') == latest_ref['sha256']
                     and latest and latest['attempt'] == qexecution['attempt'], 'latest_qualification_closeout_required')
         else:
-            require(latest_ref['sha256'] == PARENT, 'unexpected_parent_attempt')
+            expected=ZERO_PARENT if 'zero_dispatch_replacement' in receipt else PARENT
+            require(latest_ref['sha256'] == expected, 'unexpected_parent_attempt')
         require(latest and latest.get('handoff_sha256') == latest_ref['sha256']
                 and (ROOT/latest['handoff_path']).resolve() == Path(latest_ref['path']).resolve(), 'latest_private_closeout_required')
         sys.path.insert(0, str(BASE.parents[1]/'experiment-documentation'))

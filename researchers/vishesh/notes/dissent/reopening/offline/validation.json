@@ -1,7 +1,7 @@
 {
   "kind": "offline known-answer and fault fixtures; no native execution",
   "native_calls": 0,
-  "tests_passed": 73,
+  "tests_passed": 88,
   "assignments": 162,
   "Q0_requests": 18,
   "D0_requests": 144,
@@ -12,21 +12,22 @@
   "maximum_ordered_request_bytes": 2712,
   "manifest_sha256": "b9f26a311391a5f11ca42756d2aa8d6a035591a04cdfa90015c854e28eb81b9f",
   "dependencies": {
-    "researchers/vishesh/notes/dissent/reopening/PLAN.md": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04",
+    "researchers/vishesh/notes/dissent/reopening/PLAN.md": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed",
     "researchers/vishesh/notes/dissent/reopening/cases.py": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8",
-    "researchers/vishesh/notes/dissent/reopening/prepare_offline.py": "1752b8e5e590a8341dae7af9f6d7b06345b2f2c85ac1e2b8f256690f00ca4739",
-    "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "8ea72a423f863dc53ab199daba9b9148e923ace666c8a8139722499b9d27bf1b",
-    "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "cf067328a2c52bf462018ddbb037d210adb85648ce7b122744d829f19304979e",
+    "researchers/vishesh/notes/dissent/reopening/prepare_offline.py": "1cd3b4515305fd6680dfc99f06a0ac0be3769f16fa86fc4a902156bf4879fb67",
+    "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "bd030126cd1a021674facfc9b9e1be7ebd8ab9538d6dc6e78b45f1bdc875429d",
+    "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "615132a91be6c25ed5258625ad0508b34d6058760d3a447bf0e7d8ea1425faf6",
+    "researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md": "2d4843c9cb1e38a883b7cfaee7b281d8beb0b6108daa05775f18058761be63a5",
     "researchers/vishesh/notes/dissent/rd5/src/rd5_core.py": "aebd8afb934d3bbeac376d338e7987d7bbc73f0d38947d7592b0907339c75af6",
     "researchers/vishesh/notes/dissent/rd5/src/common.py": "13580885955a4eb290553b0ceec9c65624411d76ab1c5bca8581ef55b5885248",
     "researchers/vishesh/notes/dissent/src/jev.py": "d288f630c2241ef0062886fc66b87c31d834ca9f52b744e0cd3bdd9aad89e9dc",
-    "researchers/vishesh/notes/dissent/reopening/native.py": "79f7b51e35e11beb58d81b32001806e15c0ee609810afbb55f343d170a17b366",
-    "researchers/vishesh/notes/dissent/reopening/native_budget.py": "8c51dcc75eb42925757882d16f641a58e8444bf792df0826f402ebc261de9cd7",
-    "researchers/vishesh/notes/dissent/reopening/native_gates.py": "9770aff443b5b1cff10537d6a46e7db9d60e9abff2daa42a3b9e429c215f7cc6",
-    "researchers/vishesh/notes/dissent/reopening/native_operator.py": "2d71b02a724adf9e3dfee2b04eb32ff1ed02637213b6a6dc58f64b544207350c",
+    "researchers/vishesh/notes/dissent/reopening/native.py": "1f3c63d2590c526ea9a15ad6a962f4fe1ce7dafdea0279c4c85f54fb4b4f3c6f",
+    "researchers/vishesh/notes/dissent/reopening/native_budget.py": "a54033c936b95378aedd1ea6c2c2232b17810e328d975114750b2fb2d4734309",
+    "researchers/vishesh/notes/dissent/reopening/native_gates.py": "b96fef6a922edf7cf006209849a17574778f70c7c548e399b525747c789ec1b8",
+    "researchers/vishesh/notes/dissent/reopening/native_operator.py": "a13e7fe2944955c769a069c9b5be9617121b950235e89dcb28d0087c40bd3fb2",
     "researchers/vishesh/notes/dissent/reopening/native_report.py": "9ff74206876a2b2b606fb57bab0fba4ef9dabdb0d0f1f5cbac3f7e15cf56e965",
     "researchers/vishesh/notes/dissent/reopening/tests/test_cases.py": "51356e1dcd6ec8b404f66f11ec784263936552c252c440de5b52743c41edab81",
-    "researchers/vishesh/notes/dissent/reopening/tests/test_native.py": "a626005285fd30ba10b708010b4b0ed52eaf780fb3feee1e966276240004c1dc"
+    "researchers/vishesh/notes/dissent/reopening/tests/test_native.py": "88a8577252b139d15a0c1e2e89975de4ab446d79490047af6ff6d67c5e78f2ca"
   },
   "review_boundary": "Owning-agent label/fixture checks; no independent audit, native qualification or untouched holdout.",
   "native_integration": "implemented and tested with synthetic ledgers/fake transports only; native admission pending",
@@ -47,7 +48,11 @@
     "artifact collection failure",
     "saved arithmetic and all-cell grid",
     "relay accounting",
-    "offline finalize hook"
+    "offline finalize hook",
+    "nested startup output and safe failures",
+    "exact remote admission acknowledgment",
+    "explicit zero-dispatch replacement preserves prior fence",
+    "replacement original resource and time envelope"
   ],
   "rendering": "HTML data/structure verified for initial, transition, failure and final fixtures; browser layout remains unverified",
   "repairs_found_offline": [

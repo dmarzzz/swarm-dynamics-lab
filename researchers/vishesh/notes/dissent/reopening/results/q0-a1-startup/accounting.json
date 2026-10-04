@@ -1,0 +1,14 @@
+{
+  "packet_sha256": "8036f2cbf64dd855b6635eee7615691ad3ed41bfadea7b120fb6047bb9aebb7c",
+  "calls": [],
+  "cumulative": {
+    "lifetime_calls": 488,
+    "api_committed_nano": 22699069
+  },
+  "baseline": {
+    "baseline_calls": 488,
+    "baseline_committed_nano": 22699069,
+    "baseline_sha256": "36e3ee8229263a121d5b5ace1e225ccc85be0aaf69f7cdc1a94a4de342c236da"
+  },
+  "authority": "operator-export-from-original-ledger"
+}

@@ -7,7 +7,7 @@
   },
   "scientific_review": {
     "path": "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json",
-    "sha256": "cf067328a2c52bf462018ddbb037d210adb85648ce7b122744d829f19304979e"
+    "sha256": "615132a91be6c25ed5258625ad0508b34d6058760d3a447bf0e7d8ea1425faf6"
   },
   "question": "Does historical action and opposing ballot context reduce correct interpretation of current evidence, separately from absolute clock, evidence age and repeated-answer variability?",
   "changes": [
@@ -64,13 +64,15 @@
     "maximum_cost_usd": 2,
     "machine_count": 1,
     "cumulative_budget_ref": "Original USD1 API/USD1 infrastructure cap, existing488calls and USD0.022699069 committed API. Proposed lifetime ceiling650 exceeds original500 by150; defined scope/lifetime ceiling now owner-approved; original cap retained.",
-    "machine_requirements": "One exclusive approved-account CPU host, no GPU, one inflight call, 90min<=USD0.107145; admission/route/cost/source/ledger verified after approval.",
+    "machine_requirements": "No allocation held. After explicit replacement approval, one exclusive approved-account CPU host ending no later than2026-10-04T20:40:02Z;31minutes must remain per stage. Carry released costs forward and reserve the whole new claimed interval within original USD0.827393442 cumulative infrastructure estimate ceiling.",
     "allocation_required": true,
     "maximum_new_api_reservation_usd": 0.217728,
     "maximum_proposed_cumulative_api_usd": 0.240427069,
     "maximum_proposed_cumulative_infrastructure_estimate_usd": 0.827393442,
     "maximum_proposed_combined_exposure_usd": 1.067820511,
-    "proposed_lifetime_call_stop": 650
+    "proposed_lifetime_call_stop": 650,
+    "current_cumulative_infrastructure_estimate_usd": 0.747173584,
+    "remaining_original_infrastructure_envelope_usd": 0.080219858
   },
   "research_value": {
     "empirically_unknown": "Actual Jev responses to matched context/clock/age counterfactuals and identical-input repeats; RD5 traces did not collect them.",
@@ -89,10 +91,21 @@
     "operator": 1,
     "assumptions": "Conservative planning upper estimates; no new service and no experiment infrastructure allocated."
   },
-  "approval_state": "approved_defined_scope",
+  "approval_state": "original_scope_approved_zero_dispatch_replacement_pending",
   "native_dispatch_available": true,
   "plan_publication_before_implementation": "0c00781507b9477bfa2347504ed0bade43a7ae4b",
   "operations_binding": "Prospective scientific review is separate from the completed historical assessment. Manual admission requires the actual private RD5 H5 handoff and latest operational closeout, owner scope decision, original ledger identity, approved exclusive allocation and immutable public registration. This public proposal itself is not an admission receipt.",
   "native_launch_admitted": false,
-  "authorization_note": "Owner go-ahead relayed by the coordinating task covers exactly18Q0 then conditional144D0, lifetime650, unchanged USD2 split cap; no broader study, retries or new allowance."
+  "authorization_note": "Original18Q0/conditional144D0 scope and lifetime650 were approved. Q0-A1 stopped with zero calls. The concrete one-time Q0-A2 execution-replacement contract requires its corresponding owner decision; no retry, window extension or top-up is inferred.",
+  "execution_repair": {
+    "plan": "researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md",
+    "plan_sha256": "2d4843c9cb1e38a883b7cfaee7b281d8beb0b6108daa05775f18058761be63a5",
+    "previous_attempt": "rd6-q0-a1",
+    "proposed_attempt": "rd6-q0-a2",
+    "previous_closeout_sha256": "c4763ff165d85ecd6be08cb33f79e0dd829a8283c77d1de1f2cf51b9816ee68f",
+    "owner_approval": "pending",
+    "native_calls_to_date": 0,
+    "original_stage_fence": "retained",
+    "automatic_retry": false
+  }
 }

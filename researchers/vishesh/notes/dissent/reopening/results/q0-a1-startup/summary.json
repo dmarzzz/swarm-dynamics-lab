@@ -1,0 +1,30 @@
+{
+  "attempt": "rd6-q0-a1",
+  "phase": "startup",
+  "execution": "blocked_before_native_dispatch",
+  "qualification": "not_run",
+  "scientific_result": "not_tested",
+  "assigned": 18,
+  "dispatched": 0,
+  "provider_responses": 0,
+  "planned_unstarted": 18,
+  "native_calls": 0,
+  "lifetime_calls": 488,
+  "committed_api_nano": 22699069,
+  "original_stage_fence": [
+    [
+      "Q0",
+      "rd6-q0-a1",
+      "8036f2cbf64dd855b6635eee7615691ad3ed41bfadea7b120fb6047bb9aebb7c",
+      "stopped"
+    ]
+  ],
+  "local_relay_port_closed": true,
+  "local_owned_processes": [],
+  "remote_owned_processes": [],
+  "worker_stopped_verified": true,
+  "relay_stopped_verified": true,
+  "reviewed_at": "2026-10-04T19:27:53.812008+00:00",
+  "cause_assessment": "Missing output-parent directory independently reproduced from deployed source and actual host state. Original stderr was suppressed; admission-restaging race remains an alternative, not a verified cause.",
+  "operator_record": "This is startup/accounting evidence, not a fabricated native response bundle or model qualification result."
+}

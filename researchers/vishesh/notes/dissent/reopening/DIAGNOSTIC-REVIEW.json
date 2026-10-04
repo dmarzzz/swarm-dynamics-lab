@@ -15,7 +15,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         },
         {
           "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
@@ -30,7 +30,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
@@ -45,7 +45,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
@@ -73,7 +73,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
@@ -88,7 +88,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         }
       ]
     },
@@ -110,7 +110,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         }
       ],
       "next_action": "Reconcile every assigned outcome against original relay reservations and append-only events before scientific review.",
@@ -123,7 +123,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         }
       ],
       "next_action": "Bind the actual authorization and refresh the original ledger plus approved-account exclusive allocation; do not reset or top up.",
@@ -140,7 +140,7 @@
         },
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         }
       ]
     },
@@ -151,7 +151,7 @@
       "evidence": [
         {
           "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
-          "sha256": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04"
+          "sha256": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed"
         }
       ],
       "next_action": "Check all native cells, transitions and failure states against saved evidence, and verify rendering through an allowed interface.",

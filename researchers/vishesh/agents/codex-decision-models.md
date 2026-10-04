@@ -3,8 +3,8 @@ agent: vishesh/codex-decision-models
 tool: codex
 state: working
 task: right-dissenter-reopening-native-run
-doing: "Preparing current admission for owner-approved RD6 Q0 and conditional D0; original ledger and caps retained."
-updated: 2026-10-04T19:07:36.227052+00:00
+doing: "Publishing RD6 zero-dispatch startup post-mortem and 88-check offline repair; allocation released, replacement decision pending."
+updated: 2026-10-04T19:42:52.618339+00:00
 ---
 
 ## Notes

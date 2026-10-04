@@ -21,6 +21,7 @@ test_one_missed_repeat_is_one_error_not_four_epochs (test_cases.ScoringChecks.te
 test_qualification_counts_all_controls (test_cases.ScoringChecks.test_qualification_counts_all_controls) ... ok
 test_reference_has_zero_paired_effect (test_cases.ScoringChecks.test_reference_has_zero_paired_effect) ... ok
 test_wrong_simple_policies_are_detectable (test_cases.ScoringChecks.test_wrong_simple_policies_are_detectable) ... ok
+test_admission_changed_after_staging_fails (test_native.NativeTests.test_admission_changed_after_staging_fails) ... ok
 test_admission_denies_missing_condition_tldr (test_native.NativeTests.test_admission_denies_missing_condition_tldr) ... ok
 test_admission_denies_missing_or_changed_evidence (test_native.NativeTests.test_admission_denies_missing_or_changed_evidence) ... ok
 test_admission_denies_old_cap_missing_approval_or_wrong_source (test_native.NativeTests.test_admission_denies_old_cap_missing_approval_or_wrong_source) ... ok
@@ -32,12 +33,15 @@ test_api_cap_reserve_before_dispatch (test_native.NativeTests.test_api_cap_reser
 test_bad_provider_schema_stops_and_accounts_cost (test_native.NativeTests.test_bad_provider_schema_stops_and_accounts_cost) ... ok
 test_bundle_tamper_rejected (test_native.NativeTests.test_bundle_tamper_rejected) ... ok
 test_collect_failure_preserves_source_and_never_reexecutes (test_native.NativeTests.test_collect_failure_preserves_source_and_never_reexecutes) ... ok
+test_conditional_d0_retains_replacement_resource_window (test_native.NativeTests.test_conditional_d0_retains_replacement_resource_window) ... ok
 test_copy_reset_and_missing_ledger_denied (test_native.NativeTests.test_copy_reset_and_missing_ledger_denied) ... ok
 test_criteria_order_change_rejected (test_native.NativeTests.test_criteria_order_change_rejected) ... ok
 test_duplicate_assignment_denied (test_native.NativeTests.test_duplicate_assignment_denied) ... ok
 test_duplicate_attempt_denied (test_native.NativeTests.test_duplicate_attempt_denied) ... ok
 test_event_tamper_rejected (test_native.NativeTests.test_event_tamper_rejected) ... ok
+test_existing_worker_output_is_never_reused (test_native.NativeTests.test_existing_worker_output_is_never_reused) ... ok
 test_expired_lease_never_dispatches (test_native.NativeTests.test_expired_lease_never_dispatches) ... ok
+test_failed_remote_startup_does_not_create_relay (test_native.NativeTests.test_failed_remote_startup_does_not_create_relay) ... ok
 test_finalization_hook_runs_only_after_verified_stop (test_native.NativeTests.test_finalization_hook_runs_only_after_verified_stop) ... ok
 test_finalize_rejects_synthetic_and_unverified_stop (test_native.NativeTests.test_finalize_rejects_synthetic_and_unverified_stop) ... ok
 test_grid_has_every_cell_and_input_link (test_native.NativeTests.test_grid_has_every_cell_and_input_link) ... ok
@@ -59,11 +63,15 @@ test_redirects_are_never_followed (test_native.NativeTests.test_redirects_are_ne
 test_relay_accounting_reconciles_all_charges_and_events (test_native.NativeTests.test_relay_accounting_reconciles_all_charges_and_events) ... ok
 test_relay_admission_failure_reads_no_credential_and_changes_no_ledger (test_native.NativeTests.test_relay_admission_failure_reads_no_credential_and_changes_no_ledger) ... ok
 test_relay_only_answer_is_reported_without_overwriting_worker (test_native.NativeTests.test_relay_only_answer_is_reported_without_overwriting_worker) ... ok
+test_remote_preflight_requires_exact_acknowledgment (test_native.NativeTests.test_remote_preflight_requires_exact_acknowledgment) ... ok
 test_repeats_are_new_calls_with_identical_inputs (test_native.NativeTests.test_repeats_are_new_calls_with_identical_inputs) ... ok
+test_replacement_cannot_extend_window_or_reset_infrastructure (test_native.NativeTests.test_replacement_cannot_extend_window_or_reset_infrastructure) ... ok
+test_replacement_requires_explicit_bound_approval_and_review (test_native.NativeTests.test_replacement_requires_explicit_bound_approval_and_review) ... ok
 test_route_mismatch_fails_before_credential_read (test_native.NativeTests.test_route_mismatch_fails_before_credential_read) ... ok
 test_second_writer_denied (test_native.NativeTests.test_second_writer_denied) ... ok
 test_self_consistent_manifest_mutation_rejected (test_native.NativeTests.test_self_consistent_manifest_mutation_rejected) ... ok
 test_stable_degradation_requires_two_distinct_families (test_native.NativeTests.test_stable_degradation_requires_two_distinct_families) ... ok
+test_startup_failure_has_safe_diagnostics_and_no_transport (test_native.NativeTests.test_startup_failure_has_safe_diagnostics_and_no_transport) ... ok
 test_supervisor_cleans_both_children_when_relay_dies (test_native.NativeTests.test_supervisor_cleans_both_children_when_relay_dies) ... ok
 test_supervisor_cleans_relay_on_worker_creation_failure (test_native.NativeTests.test_supervisor_cleans_relay_on_worker_creation_failure) ... ok
 test_synthetic_complete_admission (test_native.NativeTests.test_synthetic_complete_admission) ... ok
@@ -71,8 +79,15 @@ test_synthetic_q0_cannot_admit_native_d0 (test_native.NativeTests.test_synthetic
 test_unknown_id_duplicate_and_changed_hash_rejected (test_native.NativeTests.test_unknown_id_duplicate_and_changed_hash_rejected) ... ok
 test_unknown_missingness_is_bounded_not_zero (test_native.NativeTests.test_unknown_missingness_is_bounded_not_zero) ... ok
 test_wall_deadline_stops_trickling_or_stalled_transport (test_native.NativeTests.test_wall_deadline_stops_trickling_or_stalled_transport) ... ok
+test_worker_creates_missing_parents_without_changing_requests (test_native.NativeTests.test_worker_creates_missing_parents_without_changing_requests) ... ok
+test_worker_preflight_makes_no_provider_or_ledger_access (test_native.NativeTests.test_worker_preflight_makes_no_provider_or_ledger_access) ... ok
+test_zero_dispatch_replacement_cannot_be_repeated_or_used_for_d0 (test_native.NativeTests.test_zero_dispatch_replacement_cannot_be_repeated_or_used_for_d0) ... ok
+test_zero_dispatch_replacement_preserves_old_attempt_and_limits (test_native.NativeTests.test_zero_dispatch_replacement_preserves_old_attempt_and_limits) ... ok
+test_zero_dispatch_replacement_rejects_active_or_wrong_predecessor (test_native.NativeTests.test_zero_dispatch_replacement_rejects_active_or_wrong_predecessor) ... ok
+test_zero_dispatch_replacement_rejects_any_rd6_reservation (test_native.NativeTests.test_zero_dispatch_replacement_rejects_any_rd6_reservation) ... ok
+test_zero_dispatch_replacement_rejects_orphan_response (test_native.NativeTests.test_zero_dispatch_replacement_rejects_orphan_response) ... ok
 
 ----------------------------------------------------------------------
-Ran 73 tests in 4.238s
+Ran 88 tests in 4.899s
 
 OK

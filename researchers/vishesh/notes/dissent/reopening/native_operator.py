@@ -11,8 +11,9 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from native import Transport, supervise, live_preflight
+from native import Transport, supervise, live_preflight, bound_admission
 from native_gates import BASE, read, evidence, require, sha
+from cases import digest
 from native_report import save, audit_bundle, reconcile_accounting
 
 
@@ -29,28 +30,50 @@ def collect(source, destination, expected, *, copier=shutil.copytree):
     return {'artifact_delivery':'verified','model_calls':0,'bundle_sha256':expected}
 
 
+def remote_preflight(a, packet, admission_sha, *, command=subprocess.run):
+    remote='cd '+shlex.quote(a.remote_checkout)+' && exec '+shlex.join([
+        'timeout','--signal=TERM','--kill-after=5','30','python3',
+        'researchers/vishesh/notes/dissent/reopening/native.py','check-worker',
+        '--packet',a.remote_packet,'--admission',a.remote_admission,
+        '--admission-sha256',admission_sha,'--out',a.remote_out])
+    result=command(['ssh','-F',a.ssh_config,'-o','BatchMode=yes','-o','StrictHostKeyChecking=yes',
+                    '-o','ConnectTimeout=8',a.host_alias,remote],capture_output=True,text=True,timeout=40)
+    require(result.returncode==0,'remote_startup_check_failed')
+    try: acknowledgment=json.loads(result.stdout)
+    except Exception: acknowledgment=None
+    expected={'worker_preflight':'ready','packet_sha256':digest(packet),'admission_sha256':admission_sha}
+    require(acknowledgment==expected,'remote_startup_acknowledgment')
+    return expected
+
+
 def launch(a):
-    packet=read(a.packet);receipt=read(a.admission)
+    packet=read(a.packet);admission_sha=sha(a.admission)
+    receipt=bound_admission(a.admission,admission_sha)
     live_preflight(packet,receipt)
     runtime=evidence(receipt['runtime'])
     require(runtime.get('ssh_config_sha256')==sha(a.ssh_config)
             and runtime.get('host_alias')==a.host_alias
             and runtime.get('remote_checkout')==a.remote_checkout
             and runtime.get('gnu_timeout_verified') is True,'supervisor_runtime_binding')
-    out=Path(a.out);out.mkdir(exist_ok=False)
+    out=Path(a.out);out.mkdir(parents=True,exist_ok=False)
     relay=[sys.executable,str(BASE/'native.py'),'relay','--packet',a.packet,'--admission',a.admission,
+           '--admission-sha256',admission_sha,
            '--credential',a.credential,'--ledger',a.ledger,'--out',str(out/'relay')]
     # SSH receives paths/aliases only; no credential value or owner conversation.
     remote='cd '+shlex.quote(a.remote_checkout)+' && exec '+shlex.join([
         'timeout','--signal=TERM','--kill-after=10','1800','python3',
         'researchers/vishesh/notes/dissent/reopening/native.py','worker',
-        '--packet',a.remote_packet,'--admission',a.remote_admission,'--out',a.remote_out])
+        '--packet',a.remote_packet,'--admission',a.remote_admission,
+        '--admission-sha256',admission_sha,'--out',a.remote_out])
     worker=['ssh','-F',a.ssh_config,'-o','BatchMode=yes','-o','StrictHostKeyChecking=yes',
             '-o','ConnectTimeout=8','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2',
             '-o','ExitOnForwardFailure=yes','-R','127.0.0.1:18469:127.0.0.1:18469',a.host_alias,remote]
     status={'attempt':receipt['attempt'],'execution':'starting','remote_worker_stop':'unverified'}
     try:
-        supervise(relay,worker,Transport(packet))
+        status['phase']='remote_startup_check'
+        acknowledgment=remote_preflight(a,packet,admission_sha)
+        save(out/'remote-startup-check.json',acknowledgment)
+        supervise(relay,worker,Transport(packet),diagnostics=status)
         status['execution']='worker_returned_success'
     except Exception:
         status['execution']='stopped_or_ambiguous'
