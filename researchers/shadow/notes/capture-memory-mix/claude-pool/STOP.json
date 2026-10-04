@@ -1,0 +1,6 @@
+{
+ "halted": "blocked: >50% of first 20 attempts 429/503",
+ "reason": "qualification failed or blocked",
+ "requests": 20,
+ "time": "2026-10-04T22:51:10.611119+00:00"
+}

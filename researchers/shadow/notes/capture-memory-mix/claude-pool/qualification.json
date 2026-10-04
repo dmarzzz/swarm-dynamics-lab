@@ -1,0 +1,261 @@
+{
+ "n": 12,
+ "passed": false,
+ "results": [
+  {
+   "choice": null,
+   "error": "retries exhausted",
+   "history": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "k": 0
+  },
+  {
+   "choice": null,
+   "error": "retries exhausted",
+   "history": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   "k": 1
+  },
+  {
+   "choice": null,
+   "error": "retries exhausted",
+   "history": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1
+   ],
+   "k": 2
+  },
+  {
+   "choice": null,
+   "error": "retries exhausted",
+   "history": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    1
+   ],
+   "k": 3
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    1,
+    1,
+    1,
+    -1,
+    1,
+    1,
+    1,
+    -1
+   ],
+   "k": 4
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    -1,
+    -1,
+    1
+   ],
+   "k": 5
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1
+   ],
+   "k": 6
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    1
+   ],
+   "k": 7
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    1
+   ],
+   "k": 8
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    -1
+   ],
+   "k": 9
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "k": 10
+  },
+  {
+   "choice": null,
+   "error": "blocked: >50% of first 20 attempts 429/503",
+   "history": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   "k": 11
+  }
+ ],
+ "valid": 0
+}
