@@ -3,8 +3,8 @@ agent: dmarz/patchwork-hypotheses
 tool: codex
 state: working
 task: build-compositional-safety
-doing: Paired diagnostic of missing execution/history semantics on saved stalls; same approved model before fresh qualification
-updated: 2026-10-04T04:12Z
+doing: Interface diagnostic partly improved D1 but failed approval tasks; testing same fixed cases with previously valid Haiku configuration
+updated: 2026-10-04T04:21Z
 ---
 
 ## Notes

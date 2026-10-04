@@ -8,7 +8,7 @@ Exploratory instrument repair, not the scaled study. Follow the [setup runbook](
 - Diagnostic question: does explicitly stating the existing host execution/history contract improve productive action selection on retained failed states, with model and task unchanged?
 - Main research question and prior work: [SEC-54 plan](../compositional-safety-plan/README.md). Formal survey/hypothesis acceptance and S1/S2 remain closed; this is bounded engineering diagnosis under the user's shipping/repair instruction.
 - Previous evidence: [q0-004 post-mortem](reviews/q0-004-post.md), all previous reviews and immutable result summaries. Twelve stalls and two refusals remain failed outcomes.
-- Current stage: i0-003, sixteen paired atomic diagnostic requests. Next action: finish current-source public registration and launch only after all runtime checks pass.
+- Current stage: i0-004, sixteen paired atomic diagnostic requests after the reconciled i0-003 failure. Next action: finish current-source public registration and launch only after all runtime checks pass.
 
 ## Gate evidence
 
@@ -54,10 +54,15 @@ Exploratory instrument repair, not the scaled study. Follow the [setup runbook](
 | q0-003 | 16/24 safe; eight nonterminal outputs |
 | i0-001 / i0-002 | Refusal reproduction / one-call fallback compatibility; not qualification |
 | q0-004 | 10/24 safe; twelve incomplete and two refusals; fully reconciled |
-| i0-003 | Prepared interface diagnostic, not yet launched at record creation |
+| i0-003 | 16/16 reconciled; original 0/8 and clarified 3/8 advancing, diagnostic failed; post-mortem published |
+| i0-004 | Prepared model/configuration diagnostic using the same fixed states |
 
 The interface hypothesis is open until observed diagnostic evidence and a fresh full qualification support it. Provider refusals remain a separate unresolved suitability issue. Earlier valid negative outcomes and thresholds remain unchanged.
 
 ## Closeout and handoff
 
 After i0-003, reconcile sixteen assignments, exact request bodies, answers/failures, costs, hashes and every visual cell/frame. Save the post-mortem before choosing the next run. If the clarified condition is clean, apply the same static contract consistently, run offline regression and fresh disjoint Q0. If it fails, diagnose its actual failure before any new amendment. P1 and formal S1/S2 remain blocked until their own gates pass. Keep the claim only through active repair/execution and verified uploads; release it while blocked.
+
+## i0-004 admission update
+
+Read i0-003-post.md and i0-004-pre.md. The latter is the current prospective plan, bound to the deployed immutable revision and verified again by the same runtime admission gate. Use registration/i0-004.json and run compositional-safety/i0-004-diagnostic. The prior run had 24 verified hub artifacts, 23 checked file hashes, sixteen exact request/response pairs, 17 decoded GIF frames, an empty spool and an exited worker. Remaining study ceilings before this follow-up: 7,590 calls and $156.606526 reserved. This attempt adds at most sixteen calls/$0.349536 reserved. Same exclusive server claim and expiry; no new infrastructure. A read-only hub snapshot around 04:17 UTC summed $42.221204 across recognized cost fields in 1,220 runs; it can double-count stage summaries and omit unreported costs, so it is not an account balance. The standing shared $500 authority and cumulative local guard remain unchanged.

@@ -15,9 +15,11 @@ Deployed on sim-dmarz. [Live dashboard](https://swarm-live.pages.dev/#/x/composi
 | i0-001 | One failure reproduced as provider cyber refusal | [Diagnostic](reviews/i0-001-post.md) |
 | i0-002 | One-call fallback compatibility check passed | [Diagnostic](reviews/i0-002-post.md) |
 | q0-004 | Failed qualification: 10/24 safe, twelve incomplete, two provider refusals | [Post-mortem](reviews/q0-004-post.md) |
+| i0-003 | Contract clarification: 3/8 advancing versus 0/8 original; diagnostic failed | [Post-mortem](reviews/i0-003-post.md) |
+| i0-004 | Prepared paired model/configuration diagnostic on the same states | [Assessment](reviews/i0-004-pre.md) |
 | P1 | Closed until the current-source qualification passes | 168-episode descriptive pilot |
 
-All attempts have terminated and their artifacts are reconciled. Qualification is blocked on baseline competence and provider suitability; the next approved model connection has been requested. Total reported study usage is 1,610 calls and $5.340097, with $28.033098 retained reservations. The larger study has not started.
+All completed attempts are reconciled. The user requested immediate repair; controlled diagnostics are testing the interface hypothesis on the existing approved connection before assuming a new provider is necessary. Through i0-003, study usage is 1,626 calls and $5.406371, with $28.393474 retained reservations. The larger study has not started.
 
 ## Question
 
