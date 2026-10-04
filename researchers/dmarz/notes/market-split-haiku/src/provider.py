@@ -111,10 +111,12 @@ class Anthropic:
         if usage.get('cache_creation_input_tokens',0) or usage.get('cache_read_input_tokens',0):
             raise CallFailure('unexpected_cache_usage', account)
         actual = usage['input_tokens']*self.b['input_usd_per_million']+usage['output_tokens']*self.b['output_usd_per_million']
-        self.ledger.transact({'type':'response','call_id':call_id,'actual_micro_usd':actual,
+        reason = data.get('stop_reason')
+        reason = reason if reason in ('end_turn','max_tokens','stop_sequence','tool_use','pause_turn','refusal','model_context_window_exceeded') else 'unknown'
+        self.ledger.transact({'type':'response','call_id':call_id,'actual_micro_usd':actual,'stop_reason':reason,
                               'input_tokens':usage['input_tokens'],'output_tokens':usage['output_tokens']})
         account.update(usage_reported=True, actual_usd=actual/1e6,
-                       input_tokens=usage['input_tokens'], output_tokens=usage['output_tokens'])
+                       input_tokens=usage['input_tokens'], output_tokens=usage['output_tokens'],stop_reason=reason)
         if actual>reserve:
             raise CallFailure('reservation_bound_breached', account)
         if data.get('model') != self.d['model']:

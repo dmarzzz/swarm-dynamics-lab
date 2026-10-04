@@ -90,7 +90,11 @@ class Checks(unittest.TestCase):
         for name,edit in [('stop',lambda x:x.update(stop_reason='max_tokens')),('usage',lambda x:x.pop('usage'))]:
             def malformed(req,timeout):
                 x=mock_opener(req,timeout).data;edit(x);return MockResponse(x)
-            with self.assertRaises(provider.CallFailure):self.client(malformed).call(observation(),name)
+            with self.assertRaises(provider.CallFailure) as failure:self.client(malformed).call(observation(),name)
+            if name=='stop':
+                self.assertEqual(failure.exception.category,'nonterminal_output')
+                self.assertEqual(failure.exception.accounting['stop_reason'],'max_tokens')
+                self.assertIn('"stop_reason": "max_tokens"',(self.path/'ledger.jsonl').read_text())
         self.assertEqual(self.ledger.transact()['attempted_calls'],2)
     def test_invalid_actions_preserved(self):
         def invalid(req,timeout):
@@ -147,6 +151,15 @@ class Checks(unittest.TestCase):
         rows=[json.loads(s) for s in (self.path/'bundle/episodes.jsonl').read_text().splitlines()]
         self.assertEqual(rows[0]['draws_sha256'],rows[1]['draws_sha256'])
         locked=next(r for r in rows if r['arm']=='neutral_locked');self.assertEqual(locked['evaluation']['final_firm_count'],1)
+    def test_long_reliability_gate_is_required(self):
+        def complete(stage):
+            return [{'params':p,'status':'done','metrics':{'invalid':0,'visual_ok':1,'qualification_pass':1,'unpriced_calls':0},'artifacts':[{'name':n} for n in ('final_frame.png','replay.gif','episodes.jsonl','calls.jsonl')]} for p in coordinator.plans(stage,'offline')]
+        runs=[{'params':{'stage':'I0',**common.hashes()},'status':'done','metrics':{'qualification_pass':1}}]+complete('Q0')
+        coordinator.gate('R0',runs)
+        with self.assertRaises(ValueError):coordinator.gate('S1',runs)
+        runs+=complete('R0');coordinator.gate('S1',runs)
+        runs[-1]['metrics']['unpriced_calls']=1
+        with self.assertRaises(ValueError):coordinator.gate('S1',runs)
 if __name__=='__main__':
     with patch.object(socket.socket,'connect',side_effect=AssertionError('network disabled')):
         unittest.main(verbosity=2)

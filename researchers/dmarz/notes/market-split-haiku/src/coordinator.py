@@ -6,7 +6,7 @@ import common
 
 def plans(stage,attempt):
     d=common.design()
-    if stage not in ('S0','Q0','S1'):raise ValueError('S2_blocked')
+    if stage not in ('S0','Q0','R0','S1'):raise ValueError('S2_blocked')
     st=d['stages'][stage];ps=[]
     for task in st['tasks']:
         for seed in st['seeds']:
@@ -20,7 +20,7 @@ def plans(stage,attempt):
 
 def gate(stage,runs):
     if stage=='S0':return
-    parent='S0' if stage=='Q0' else 'Q0';d=common.design();st=d['stages'][parent]
+    parent={'Q0':'S0','R0':'Q0','S1':'R0'}[stage];d=common.design();st=d['stages'][parent]
     expected={(t,s,r) for t in st['tasks'] for s in st['seeds'] for r in st['regulators']}
     probes=[r for r in runs if r['params'].get('stage')=='I0' and all(r['params'].get(k)==v for k,v in common.hashes().items()) and r['status']=='done' and r.get('metrics',{}).get('qualification_pass')==1]
     if not probes:raise ValueError('matching_interface_probes_incomplete')
@@ -28,13 +28,13 @@ def gate(stage,runs):
     for r in runs:
         p=r['params'];m=r.get('metrics',{})
         if p.get('stage')!=parent or any(p.get(k)!=v for k,v in common.hashes().items()):continue
-        if r['status']=='done' and m.get('invalid')==0 and m.get('visual_ok')==1 and m.get('qualification_pass')==1:
+        if r['status']=='done' and m.get('invalid')==0 and m.get('visual_ok')==1 and m.get('qualification_pass')==1 and m.get('unpriced_calls',0)==0:
             names={a['name'] for a in r.get('artifacts',[])}
             if {'final_frame.png','replay.gif','episodes.jsonl','calls.jsonl'}<=names:found.add((p['task_id'],p['seed'],p['regulator']))
     if found!=expected:raise ValueError('matching_parent_qualification_incomplete')
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('command',choices=['register','stage']);ap.add_argument('stage',nargs='?',choices=['S0','Q0','S1']);ap.add_argument('--attempt');ap.add_argument('--dry-run',action='store_true');a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('command',choices=['register','stage']);ap.add_argument('stage',nargs='?',choices=['S0','Q0','R0','S1']);ap.add_argument('--attempt');ap.add_argument('--dry-run',action='store_true');a=ap.parse_args()
     if a.command=='stage':
         if not a.attempt or not a.stage:ap.error('stage and attempt required')
         common.frozen(a.attempt)

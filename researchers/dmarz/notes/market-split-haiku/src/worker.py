@@ -56,7 +56,8 @@ def execute_bundle(p,out,ledger_path=None,run=None):
         metrics['profit_'+name]=rec['evaluation']['profit']
         metrics['firms_'+name]=rec['evaluation']['final_firm_count']
     qualified=all(r['validity']['ok'] and r['evaluation']['profit']>0 and r['competence_profit_ratio'] is not None and r['competence_profit_ratio']>=d['qualification']['min_profit_ratio'] for r in records)
-    if p['stage'] in ('S0','Q0'):metrics['qualification_pass']=int(qualified)
+    if p['stage']=='R0':qualified=all(r['validity']['ok'] and r['evaluation']['profit']>0 for r in records) and not metrics['unpriced_calls']
+    if p['stage'] in ('S0','Q0','R0'):metrics['qualification_pass']=int(qualified)
     names=[]
     try:names=render.save_bundle(records,out)
     except Exception as e:visual_errors.append({'phase':'final','type':type(e).__name__})
@@ -71,7 +72,7 @@ def execute_bundle(p,out,ledger_path=None,run=None):
             if not receipt or receipt.get('spooled'):raise RuntimeError('unconfirmed_upload')
             receipts[name]=receipt['sha256']
         common.dump(out/'upload-receipts.json',receipts)
-        if metrics['invalid'] or not metrics['visual_ok'] or (p['stage']=='Q0' and not qualified):
+        if metrics['invalid'] or not metrics['visual_ok'] or (p['stage'] in ('Q0','R0') and not qualified):
             run.fail(message='Qualification or execution failed; all traces retained; advancement blocked.',**metrics)
             raise RuntimeError('qualification_failed')
         run.done(message='Neutral model outcomes retained; exploratory evidence only.' if p['backend']=='anthropic' else 'Offline API rehearsal; zero model calls.',**metrics)

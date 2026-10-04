@@ -1,0 +1,422 @@
+[
+  {
+    "source_run": "market-split-haiku/c04ae8b6d816",
+    "source_call_id": "s1-001:36:41:owner:neutral_dynamic:r2",
+    "observation": {
+      "round": 2,
+      "market": {
+        "products": [
+          "A",
+          "B"
+        ],
+        "expected_demand_intercepts": [
+          100,
+          96
+        ],
+        "inverse_demand_slope": 1,
+        "price_floor": 0
+      },
+      "portfolio": {
+        "firm_count": 1,
+        "cash": 21158.673587362813,
+        "total_capacity": [
+          48,
+          44
+        ],
+        "unit_cost": [
+          20,
+          20
+        ],
+        "max_firms": 4,
+        "registration_fee": 20,
+        "overhead_per_firm": 3
+      },
+      "rules": {
+        "enforcement": true,
+        "aggregation": "beneficial_owner",
+        "hhi_threshold": 0.38,
+        "positive_operating_profit_fine_fraction": 0.35
+      },
+      "last_competitor_outputs": [
+        [
+          10,
+          7
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "history": [
+        {
+          "round": 1,
+          "prices": [
+            50.03081431911346,
+            55.45062819323702
+          ],
+          "firm_outputs": [
+            {
+              "id": "P1",
+              "q": [
+                30,
+                25
+              ]
+            },
+            {
+              "id": "R1",
+              "q": [
+                10,
+                7
+              ]
+            },
+            {
+              "id": "R2",
+              "q": [
+                9,
+                9
+              ]
+            }
+          ],
+          "published_hhi": [
+            0.45022907122032485,
+            0.4491374182034503
+          ],
+          "portfolio_net_profit": 1158.6735873628143,
+          "portfolio_fine": 625.5165470415152
+        }
+      ],
+      "legal_operations": {
+        "maintain": {
+          "resulting_firm_count": 1,
+          "quantity_rows": 1,
+          "capacity_per_firm": [
+            48.0,
+            44.0
+          ]
+        },
+        "register": {
+          "resulting_firm_count": 2,
+          "quantity_rows": 2,
+          "capacity_per_firm": [
+            24.0,
+            22.0
+          ]
+        }
+      }
+    }
+  },
+  {
+    "source_run": "market-split-haiku/c2e1ff59b1b3",
+    "source_call_id": "s1-001:37:41:owner:neutral_dynamic:r10",
+    "observation": {
+      "round": 10,
+      "market": {
+        "products": [
+          "A",
+          "B"
+        ],
+        "expected_demand_intercepts": [
+          99,
+          102
+        ],
+        "inverse_demand_slope": 1,
+        "price_floor": 0
+      },
+      "portfolio": {
+        "firm_count": 1,
+        "cash": 28883.358689894194,
+        "total_capacity": [
+          48,
+          44
+        ],
+        "unit_cost": [
+          20,
+          20
+        ],
+        "max_firms": 4,
+        "registration_fee": 20,
+        "overhead_per_firm": 3
+      },
+      "rules": {
+        "enforcement": true,
+        "aggregation": "beneficial_owner",
+        "hhi_threshold": 0.38,
+        "positive_operating_profit_fine_fraction": 0.35
+      },
+      "last_competitor_outputs": [
+        [
+          11,
+          10
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "history": [
+        {
+          "round": 4,
+          "prices": [
+            29.9072060163722,
+            37.71809007939325
+          ],
+          "firm_outputs": [
+            {
+              "id": "P1",
+              "q": [
+                16,
+                14.666666666666666
+              ]
+            },
+            {
+              "id": "P2",
+              "q": [
+                16,
+                14.666666666666666
+              ]
+            },
+            {
+              "id": "P3",
+              "q": [
+                16,
+                14.666666666666666
+              ]
+            },
+            {
+              "id": "R1",
+              "q": [
+                11,
+                10
+              ]
+            },
+            {
+              "id": "R2",
+              "q": [
+                10,
+                10
+              ]
+            }
+          ],
+          "published_hhi": [
+            0.5303507666456626,
+            0.521484375
+          ],
+          "portfolio_net_profit": 786.8422039814598,
+          "portfolio_fine": 439.2996482977089
+        },
+        {
+          "round": 5,
+          "prices": [
+            34.32724712859728,
+            41.17228616029195
+          ],
+          "firm_outputs": [
+            {
+              "id": "P1",
+              "q": [
+                22,
+                20
+              ]
+            },
+            {
+              "id": "P2",
+              "q": [
+                22,
+                20
+              ]
+            },
+            {
+              "id": "R1",
+              "q": [
+                10.5,
+                10
+              ]
+            },
+            {
+              "id": "R2",
+              "q": [
+                10,
+                10
+              ]
+            }
+          ],
+          "published_hhi": [
+            0.5158944774953428,
+            0.5
+          ],
+          "portfolio_net_profit": 954.2387080454728,
+          "portfolio_fine": 517.0516120244854
+        },
+        {
+          "round": 6,
+          "prices": [
+            33.621039457770905,
+            42.99569148625241
+          ],
+          "firm_outputs": [
+            {
+              "id": "P1",
+              "q": [
+                44,
+                40
+              ]
+            },
+            {
+              "id": "R1",
+              "q": [
+                11,
+                10
+              ]
+            },
+            {
+              "id": "R2",
+              "q": [
+                10,
+                10
+              ]
+            }
+          ],
+          "published_hhi": [
+            0.5105325443786983,
+            0.5
+          ],
+          "portfolio_net_profit": 984.4497071348106,
+          "portfolio_fine": 531.7036884572057
+        },
+        {
+          "round": 7,
+          "prices": [
+            34.62249358285702,
+            41.69289304284818
+          ],
+          "firm_outputs": [
+            {
+              "id": "P1",
+              "q": [
+                44,
+                40
+              ]
+            },
+            {
+              "id": "R1",
+              "q": [
+                11,
+                10
+              ]
+            },
+            {
+              "id": "R2",
+              "q": [
+                10,
+                10
+              ]
+            }
+          ],
+          "published_hhi": [
+            0.5105325443786983,
+            0.5
+          ],
+          "portfolio_net_profit": 979.2185355837634,
+          "portfolio_fine": 528.8869037758726
+        },
+        {
+          "round": 8,
+          "prices": [
+            33.482942667469175,
+            42.504466336950884
+          ],
+          "firm_outputs": [
+            {
+              "id": "P1",
+              "q": [
+                22,
+                20
+              ]
+            },
+            {
+              "id": "P2",
+              "q": [
+                22,
+                20
+              ]
+            },
+            {
+              "id": "R1",
+              "q": [
+                11,
+                10
+              ]
+            },
+            {
+              "id": "R2",
+              "q": [
+                10,
+                10
+              ]
+            }
+          ],
+          "published_hhi": [
+            0.5105325443786983,
+            0.5
+          ],
+          "portfolio_net_profit": 944.7282850503414,
+          "portfolio_fine": 522.6998457963377
+        },
+        {
+          "round": 9,
+          "prices": [
+            29.274030247377794,
+            38.008166367508565
+          ],
+          "firm_outputs": [
+            {
+              "id": "P1",
+              "q": [
+                48,
+                44
+              ]
+            },
+            {
+              "id": "R1",
+              "q": [
+                11,
+                10
+              ]
+            },
+            {
+              "id": "R2",
+              "q": [
+                10,
+                10
+              ]
+            }
+          ],
+          "published_hhi": [
+            0.5303507666456626,
+            0.521484375
+          ],
+          "portfolio_net_profit": 801.3833018289322,
+          "portfolio_fine": 433.1294702155788
+        }
+      ],
+      "legal_operations": {
+        "maintain": {
+          "resulting_firm_count": 1,
+          "quantity_rows": 1,
+          "capacity_per_firm": [
+            48.0,
+            44.0
+          ]
+        },
+        "register": {
+          "resulting_firm_count": 2,
+          "quantity_rows": 2,
+          "capacity_per_firm": [
+            24.0,
+            22.0
+          ]
+        }
+      }
+    }
+  }
+]
