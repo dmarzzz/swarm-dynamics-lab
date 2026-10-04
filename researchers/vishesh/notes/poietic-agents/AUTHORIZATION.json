@@ -1,0 +1,20 @@
+{
+  "study": "poietic-agents",
+  "authority": null,
+  "recorded_utc": "2026-10-04T06:24:29.734608+00:00",
+  "owner_approved": false,
+  "total_cumulative_cap_usd": 0,
+  "api_allocation_usd": 0,
+  "infrastructure_allocation_usd": 0,
+  "cumulative_scope": "All stages, attempts, retries, model/tool/coordinator charges and incremental infrastructure. No new allowance on restart, stage or machine change.",
+  "actual_api_spend_usd": 0,
+  "unresolved_reservations_usd": 0,
+  "actual_infrastructure_spend_usd": 0,
+  "S0_physical_call_limit": 288,
+  "S0_maximum_requests_usd_at_pinned_tariffs": 1.447723008,
+  "larger_budget_request": "The earlier $7 proposal is unnecessary for the initial screen. The new $2 proposal still requires explicit confirmation; no increase or standing permission is presumed.",
+  "status": "explicit-user-confirmation-pending",
+  "proposed_total_usd": 2,
+  "proposed_api_usd": 1.5,
+  "proposed_infrastructure_usd": 0.5
+}

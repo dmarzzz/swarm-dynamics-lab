@@ -210,7 +210,7 @@ class AdmissionTests(unittest.TestCase):
     def setUp(self):
         self.now=time.time();self.c={'experiment':'poietic-agents','stage':'S0','attempt':'S0-01','file_hashes':inventory(),
           'assignment_sha256':digest(assignments()),'review_resolution':'P1-P3-v0.2-tested','source_commit':'a'*40,
-          'authorization':{'study':'poietic-agents','stage':'S0','owner_approved':True,'reference':'unit-fixture-only','api_cap_usd':5,'infrastructure_cap_usd':2,'physical_call_cap':288,'deadline':self.now+3600},
+          'authorization':{'study':'poietic-agents','stage':'S0','owner_approved':True,'reference':'unit-fixture-only','api_cap_usd':1.5,'infrastructure_cap_usd':0.5,'total_cumulative_cap_usd':2,'physical_call_cap':288,'deadline':self.now+3600},
           'allocation':{'experiment':'poietic-agents','operator':'vishesh/codex-heterogeneous','host':'fixture','claim_id':'fixture','merged_claim_revision':'a'*40,'exclusive':True,'registered_fleet_destination':True,'workload_idle':True,'approved_account_verified':True,'checked_at':self.now,'expires_at':self.now+4000,'allocated_usd_per_hour':.1,'charge_started_at':self.now},
           'credential':{'alias':'swarm-lab-openrouter','study_authorized':True},'worker_count':1,'concurrency':1,
           'public_plan':{'url':'https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/README.md','sha256':'b'*64},
@@ -279,3 +279,30 @@ class MechanismRuntimeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/'frame.png';qualification_png(analyze([]),p,True)
             with Image.open(p) as im:self.assertEqual(im.size,(1600,720))
+
+class RelayTests(unittest.TestCase):
+    def setUp(self):
+        self.models=json.loads((BASE/'models.json').read_text())['models']
+        state=make_case(0,development=True);packet=probe(state,0,'generalist')
+        self.data={'id':'S0-01:generalist:0:0:physical-0','role':'generalist','request':request(self.models['generalist'],packet['sections'])}
+    def test_assigned_native_envelope(self):
+        from relay import validate_payload
+        self.assertEqual(validate_payload(self.data,self.models)['provider_tag'],'anthropic')
+    def test_unassigned_and_wrong_role(self):
+        from relay import validate_payload
+        for field,value in [('id','other-study:physical-0'),('role','cheap_generative')]:
+            data=copy.deepcopy(self.data);data[field]=value
+            with self.assertRaises(ValueError):validate_payload(data,self.models)
+    def test_no_provider_fallback_or_oversized_generation(self):
+        from relay import validate_payload
+        for key,value in [('provider',{'allow_fallbacks':True}),('max_tokens',2000),('stream',True)]:
+            data=copy.deepcopy(self.data);data['request'][key]=value
+            with self.assertRaises(ValueError):validate_payload(data,self.models)
+    def test_credential_remains_local_to_relay(self):
+        import inspect,launch
+        source=inspect.getsource(launch.run)
+        self.assertNotIn('Bearer ',source);self.assertNotIn('POIETIC_OPENROUTER_KEY',source)
+        self.assertIn('loopback_credential_relay_required',source)
+    def test_review_resolution_evidence_is_required(self):
+        case=AdmissionTests();case.setUp();case.c.pop('review_resolution',None)
+        with self.assertRaisesRegex(ValueError,'review_resolution_missing'):verify(case.c,case.now,actual_host='fixture')

@@ -96,8 +96,8 @@ stages:
     status: blocked
     logical_requests: 144
     max_physical_requests: 288
-    proposed_api_usd: 5
-    proposed_infrastructure_usd: 2
+    proposed_api_usd: 1.5
+    proposed_infrastructure_usd: 0.5
     max_wall_hours: 2
     worker_count: 1
     qualification:
@@ -140,7 +140,7 @@ primary_estimand:
   s2_proposed_absolute_quality_min: 0.95
   s2_joint_rule: all_three_one_sided_95_percent_bounds_pass
 budget:
-  authorization_status: not-recorded
+  authorization_status: explicit-user-confirmation-pending
   authorized_api_usd: 0
   authorized_infrastructure_usd: 0
   independent_ledgers:
@@ -148,6 +148,9 @@ budget:
   - physical_usage
   - synthetic_toll_sensitivity
   shared_budget_must_not_reset: true
+  authorized_total_cumulative_usd: 0
+  authority: AUTHORIZATION.json
+  proposed_total_usd: 2
 future_cells:
 - stable_high_overlap
 - stable_low_overlap
