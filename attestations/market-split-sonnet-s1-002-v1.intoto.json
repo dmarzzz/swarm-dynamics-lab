@@ -1,0 +1,56 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "when ur done with a run please push the results to github and a postmoterm and include analysis with the results and let me know when u have also pushed another wxperiment plan but dont start"
+   },
+   "internalParameters": {
+    "commit": "4d735ecae0e67403274ed0af682a0ebd609828a3-dirty",
+    "session": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "3903a2af617a814826c645bf9fb274750993f4cafd4cf8463b406e0bb40d77ba"
+     },
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/plot.py"
+    },
+    {
+     "digest": {
+      "sha256": "4bc13ac7419b0c7a4ca568c50715a9614809348d0236907413bb4f091d7b8971"
+     },
+     "uri": "researchers/dmarz/notes/market-split-api/results/s1-002-collected/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "gitCommit": "4d735ecae0e67403274ed0af682a0ebd609828a3"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T06:42:26Z",
+    "invocationId": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4",
+    "startedOn": "2026-10-04T06:42:26Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "c7470d3bce6e8112b530f00792de18726d5b2d6d5b928cf92a324e9246d56293"
+   },
+   "name": "artifacts/market-split-sonnet-s1-002/market-split-sonnet-s1-002-v1.png"
+  }
+ ]
+}

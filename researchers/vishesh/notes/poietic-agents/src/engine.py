@@ -3,7 +3,9 @@
 No evaluator import. Only this module's dispatched JSON actions reach the fictional APIs.
 """
 import copy
+import json
 import time
+from pathlib import Path
 from functools import wraps
 from dataclasses import dataclass, field
 from common import canonical, digest, stream_seed
@@ -72,6 +74,8 @@ class Engine:
                                                      proposals=0, rejected=0, cpu_ns=0), None
         self.proposal_slots = set()
         self.job_operations = {}
+        contracts=json.loads((Path(__file__).resolve().parents[1]/'models.json').read_text())['models']
+        self.cost_menu={role:{k:c[k] for k in ('kind','input_usd_per_token','output_usd_per_token')} for role,c in contracts.items()}
 
     def _footprint(self):
         return len(canonical(dict(cache=self.cache, service_cache=self.service_cache, services=self.services,
@@ -87,7 +91,8 @@ class Engine:
     def context(self, actor_id, job):
         actor = self.actors[actor_id]
         # The fixed ordered list is the exact delivered input, with no global/private observer state.
-        sections = [dict(policy=POLICY), dict(tools=sorted(actor.tools),
+        sections = [dict(policy=POLICY,current_model_role=actor.model,public_model_tariffs=self.cost_menu,
+                         fixture_api_vendor_toll_usd=0), dict(tools=sorted(actor.tools),
                     skills={s:SKILL_TEXT[s] for s in sorted(actor.skills)}),
                     dict(job=job, notices=self.world.notices(job['epoch'])),
                     dict(own_observations=copy.deepcopy(actor.memory[-8:])),

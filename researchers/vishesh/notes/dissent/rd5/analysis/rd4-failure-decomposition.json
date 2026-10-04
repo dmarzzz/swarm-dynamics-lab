@@ -1,0 +1,584 @@
+{
+  "kind": "retrospective_saved_data_decomposition",
+  "new_native_calls": 0,
+  "source_sha256": {
+    "records.json": "c8de96c7d64572b4fd603caa04bef39cbf86b52b5ec531806da9e93382ec4ed0",
+    "calls.json": "4a48c555925bc5bc2eee789e4c3ec6b0129ab3ea80ae007811d30de65b174e78",
+    "summary.json": "15af5ce2916e5a7f3c9a8adb314db1070399cf1a12d7fe58497d9a5a81ef4ef9"
+  },
+  "classification_note": "Descriptive root groups from the published post-mortem. Not counterfactual repair effects. No outcome is replaced or imputed.",
+  "by_arm": {
+    "original-gate": {
+      "assigned": 96,
+      "correct": 87,
+      "noncorrect": 9,
+      "noncorrect_groups": {
+        "recovery_not_admitted": 1,
+        "transport_and_downstream_budget": 4,
+        "unresolved_interpretation_and_downstream_budget": 4
+      }
+    },
+    "symmetric-gate": {
+      "assigned": 96,
+      "correct": 87,
+      "noncorrect": 9,
+      "noncorrect_groups": {
+        "initial_build_admission_deferred": 1,
+        "recovery_not_admitted": 1,
+        "transport_and_downstream_budget": 4,
+        "unresolved_interpretation_and_downstream_budget": 3
+      }
+    },
+    "always-check": {
+      "assigned": 96,
+      "correct": 88,
+      "noncorrect": 8,
+      "noncorrect_groups": {
+        "transport_and_downstream_budget": 4,
+        "unresolved_interpretation_and_downstream_budget": 4
+      }
+    }
+  },
+  "paired_accuracy_differences": {
+    "original-gate_minus_always-check": [
+      {
+        "case_id": "294ed0f1b3dc",
+        "epoch": 3,
+        "difference": -1,
+        "left_action": "HOLD",
+        "right_action": "PROCEED",
+        "left_reason": "challenge_not_admitted",
+        "right_reason": "checked"
+      }
+    ],
+    "symmetric-gate_minus_always-check": [
+      {
+        "case_id": "294ed0f1b3dc",
+        "epoch": 3,
+        "difference": -1,
+        "left_action": "HOLD",
+        "right_action": "PROCEED",
+        "left_reason": "challenge_not_admitted",
+        "right_reason": "checked"
+      },
+      {
+        "case_id": "6dd7a1db979b",
+        "epoch": 2,
+        "difference": 1,
+        "left_action": "HOLD",
+        "right_action": "DEFER",
+        "left_reason": "challenge_not_admitted",
+        "right_reason": "check_budget_exhausted"
+      },
+      {
+        "case_id": "a1424d89c5a1",
+        "epoch": 0,
+        "difference": -1,
+        "left_action": "DEFER",
+        "right_action": "HOLD",
+        "left_reason": "admission_deferred",
+        "right_reason": "checked"
+      }
+    ],
+    "symmetric-gate_minus_original-gate": [
+      {
+        "case_id": "6dd7a1db979b",
+        "epoch": 2,
+        "difference": 1,
+        "left_action": "HOLD",
+        "right_action": "DEFER",
+        "left_reason": "challenge_not_admitted",
+        "right_reason": "admission_deferred"
+      },
+      {
+        "case_id": "a1424d89c5a1",
+        "epoch": 0,
+        "difference": -1,
+        "left_action": "DEFER",
+        "right_action": "HOLD",
+        "left_reason": "admission_deferred",
+        "right_reason": "checked"
+      }
+    ]
+  },
+  "all_noncorrect_checking_rows": [
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 3,
+      "final": "HOLD",
+      "reason": "challenge_not_admitted",
+      "status": "completed",
+      "checks": 0,
+      "group": "recovery_not_admitted",
+      "gold": "PROCEED",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "818bb6747fc35a6792b1fd0ddb1e13ba9440f53b61d01e0ad49740f2be2e4348"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 0,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "1b973b9052801174c4fd335b6606d319da770ebe0722bea538f901a15aa8b896"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 1,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "8bc2c2aea1712e6e9b390675338af8dc9be54996be42de14bf910469f82ffec7"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 2,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "bae3629a0b3af8490f5f7d7370fe331903265a513e583409c8c1d25bc0b91837"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 3,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "fe20ae8f2b980d3fe0a46fd12e66c45332371c949f28aff3672720cfba17414d"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 0,
+      "final": "DEFER",
+      "reason": "checked",
+      "status": "unresolved",
+      "checks": 1,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "cfe59218d1fd89c685889a9abc8c5ca1c085f6cb4d8d838aca2407dec2031009",
+        "d58713527229f2de559b5e8129a066b0f6f984da78ba1d3aec7433f41f5f4bbb"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 1,
+      "final": "DEFER",
+      "reason": "checked",
+      "status": "unresolved",
+      "checks": 1,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "b57e3f9a3e06cf07e890ab340512e6aa7efbd7ab1e332a953ff5a84856779793",
+        "15c02c4a2f94726e6bc61fd1cb5394f62ad77b8ffc39a1219a1271b66b73e6bc"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 2,
+      "final": "DEFER",
+      "reason": "admission_deferred",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "852aad37fa876f32025b0f3f618015e4f5e1425c3ca26abb9a41e859a12d9ef7"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "epoch": 3,
+      "final": "DEFER",
+      "reason": "check_budget_exhausted",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "195832eb27e2a84e86dc41d24a6128356b5afc5bc5ad7881ab4635571c2b339a"
+      ]
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "epoch": 0,
+      "final": "DEFER",
+      "reason": "admission_deferred",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "initial_build_admission_deferred",
+      "gold": "HOLD",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "90094b844800973019bbdca1533288415f1db4013d98901bdc337ba13c3a26b3"
+      ]
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 3,
+      "final": "HOLD",
+      "reason": "challenge_not_admitted",
+      "status": "completed",
+      "checks": 0,
+      "group": "recovery_not_admitted",
+      "gold": "PROCEED",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "255cf75ab7356f66a9f6e95fad4240fa8f93867bd748ea8b435e39425d88fe0d"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 0,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "139fb3c2851ff8034cd11d66c2ba7c2e5daf94fd336568375d0765689dc31cd0"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 1,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "f4c92e7f27d8be53f788347e45ec1d46f90231c21f1a1fb8f8b6f23abb0de62f"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 2,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "ed0db3a05f728878107bdae32c3fbc8aa4d885d44351da3fc48e632517764d22"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 3,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "3c728e5fcb536fed119f580c25f8cd4eac225eac3a81499936384ed891ee4482"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 0,
+      "final": "DEFER",
+      "reason": "checked",
+      "status": "unresolved",
+      "checks": 1,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "bf6d17ddda561acd192fd8e901b1f34dc000fd7dd81098fe482104542b7d1e49",
+        "d58713527229f2de559b5e8129a066b0f6f984da78ba1d3aec7433f41f5f4bbb"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 1,
+      "final": "DEFER",
+      "reason": "checked",
+      "status": "unresolved",
+      "checks": 1,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "483d51c03a60324964c69b9fe144c4f6399ca351ff65f1dfef6617f2db798993",
+        "15c02c4a2f94726e6bc61fd1cb5394f62ad77b8ffc39a1219a1271b66b73e6bc"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "epoch": 3,
+      "final": "DEFER",
+      "reason": "check_budget_exhausted",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "e2531090215b65453ccc481e1278320db8f8edd941423c3b81b7b90d654fe793"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 0,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 1,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "64706e93220baaaf6ed78f14221a1cdd354fe903f3b86d3c3dd92a98ebb20df0"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 1,
+      "final": "DEFER",
+      "reason": "TransportFailure",
+      "status": "failed",
+      "checks": 1,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": [
+        "e6dab863d8cab28c893ce6492b122a6f0c1265881d0fd2c4d62f8185df0da223"
+      ]
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 2,
+      "final": "DEFER",
+      "reason": "check_budget_exhausted",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "PROCEED",
+      "request_hashes": []
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 3,
+      "final": "DEFER",
+      "reason": "check_budget_exhausted",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "transport_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "PROCEED",
+      "request_hashes": []
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 0,
+      "final": "DEFER",
+      "reason": "checked",
+      "status": "unresolved",
+      "checks": 1,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "d58713527229f2de559b5e8129a066b0f6f984da78ba1d3aec7433f41f5f4bbb"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 1,
+      "final": "DEFER",
+      "reason": "checked",
+      "status": "unresolved",
+      "checks": 1,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": [
+        "15c02c4a2f94726e6bc61fd1cb5394f62ad77b8ffc39a1219a1271b66b73e6bc"
+      ]
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 2,
+      "final": "DEFER",
+      "reason": "check_budget_exhausted",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "HOLD",
+      "current_before": "HOLD",
+      "request_hashes": []
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "epoch": 3,
+      "final": "DEFER",
+      "reason": "check_budget_exhausted",
+      "status": "unresolved",
+      "checks": 0,
+      "group": "unresolved_interpretation_and_downstream_budget",
+      "gold": "PROCEED",
+      "current_before": "HOLD",
+      "request_hashes": []
+    }
+  ],
+  "selected_native_decisions": [
+    {
+      "case_id": "294ed0f1b3dc",
+      "epoch": 3,
+      "arm": "original-gate",
+      "request_sha256": "818bb6747fc35a6792b1fd0ddb1e13ba9440f53b61d01e0ad49740f2be2e4348",
+      "action": "KEEP",
+      "probabilities": {
+        "CHECK": 0.42,
+        "KEEP": 0.54,
+        "DEFER": 0.04
+      },
+      "check_record": null
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "epoch": 3,
+      "arm": "symmetric-gate",
+      "request_sha256": "255cf75ab7356f66a9f6e95fad4240fa8f93867bd748ea8b435e39425d88fe0d",
+      "action": "KEEP",
+      "probabilities": {
+        "KEEP": 0.61,
+        "CHECK": 0.35,
+        "DEFER": 0.04
+      },
+      "check_record": null
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "epoch": 0,
+      "arm": "always-check",
+      "request_sha256": "d58713527229f2de559b5e8129a066b0f6f984da78ba1d3aec7433f41f5f4bbb",
+      "action": "DEFER",
+      "probabilities": {
+        "HOLD": 0.39,
+        "PROCEED": 0.05,
+        "DEFER": 0.56
+      },
+      "check_record": {
+        "id": "check",
+        "root": "verifier",
+        "scope": "unit-4311",
+        "revision": "v1",
+        "observed_at": 1,
+        "text": "The reading is not inside the allowed interval: it is 40."
+      }
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "epoch": 0,
+      "arm": "symmetric-gate",
+      "request_sha256": "90094b844800973019bbdca1533288415f1db4013d98901bdc337ba13c3a26b3",
+      "action": "DEFER",
+      "probabilities": {
+        "DEFER": 0.41,
+        "KEEP": 0.28,
+        "CHECK": 0.31
+      },
+      "check_record": null
+    }
+  ],
+  "assertions": {
+    "all_288_checking_rows_accounted": true,
+    "all_26_noncorrect_rows_classified": true,
+    "paired_differences_match_summaries": true
+  }
+}

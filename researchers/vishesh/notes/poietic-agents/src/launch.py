@@ -13,7 +13,7 @@ import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 from pathlib import Path
-from admission import BASE, inventory, verify, verify_public
+from admission import BASE, inventory, verify, verify_public, verify_relay_health
 from budget import Budget
 from common import append, canonical, digest, save
 from native import request, response, reserve_nano, verify_catalog
@@ -57,6 +57,8 @@ def run(config_path,out):
     parsed=urlparse(relay)
     if parsed.scheme!='http' or parsed.hostname!='127.0.0.1' or parsed.path!='/invoke' or not parsed.port or parsed.username or parsed.password:
         raise ValueError('loopback_credential_relay_required')
+    # A known sibling-study tunnel failure must fail before creating a hub run or reservation.
+    verify_relay_health(read_json(opener,relay.rsplit('/',1)[0]+'/health'),config)
     out.mkdir(parents=True,exist_ok=False)
     save(out/'admission.json',config);save(out/'public-plan.json',plan_receipt);save(out/'route-check.json',routes)
     save(out/'assignments.json',assignments())

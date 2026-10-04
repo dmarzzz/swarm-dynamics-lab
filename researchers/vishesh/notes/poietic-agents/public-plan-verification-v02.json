@@ -1,0 +1,11 @@
+{
+  "experiment": "poietic-agents",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/aaf8e8c6f69bb7fd88c94714e7550ea66d15d5a5/researchers/vishesh/notes/poietic-agents/README.md",
+  "commit": "aaf8e8c6f69bb7fd88c94714e7550ea66d15d5a5",
+  "plan_sha256": "8a19e477a418c35a9fa79ebe9bd4382953aecfad17706cc3168cc4ab65e1418b",
+  "registered_tldr": "TLDR: Can identical agents discover and revise shared data services, shed redundant tools and skills, and use cheaper execution while preserving correct, fresh, on-time answers? Compare generalists, coherent raw/derived caching and static specialists; charge learning, communication and adaptation delays against fixed arrivals. Reviewed exploratory instrument; 54 offline checks pass. Next is bounded Haiku/Qwen/Jev qualification. No runs yet; explicit budget confirmation, approved credential and dedicated allocation remain launch gates.",
+  "run_tldr": "TLDR: Qualify Haiku, Qwen and Jev tool/action interfaces on 48 probes each; compare protected expected actions, requiring 44 correct, 48 valid and zero protected access. Engineering qualification only, no swarm efficacy claim.",
+  "checked_utc": "2026-10-04T06:46:28.712995+00:00",
+  "scope": "design-publication verification; native admission still blocked",
+  "model_calls": 0
+}

@@ -63,6 +63,13 @@ def serve(config_path,credential_file,ledger,port_file):
     budget=Budget(ledger,digest(auth),config['allocation']['host'],1_500_000_000,288,auth['deadline'])
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
+        def do_GET(self):
+            if self.path!='/health':self.send_error(404);return
+            summary=budget.summary()
+            payload=canonical(dict(experiment='poietic-agents',attempt=config['attempt'],source_commit=config['source_commit'],
+                assignment_sha256=config['assignment_sha256'],credential_ready=bool(key),deadline=auth['deadline'],
+                api_cap_usd=1.5,physical_calls=summary['physical_calls'])).encode()
+            self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(payload)));self.end_headers();self.wfile.write(payload)
         def do_POST(self):
             status=400;result={'error_type':'request_refused'};reserved=False;physical_id=None
             try:

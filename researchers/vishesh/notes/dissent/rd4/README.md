@@ -14,3 +14,7 @@ RD-4 is a separate exploratory cohort. It repairs the reviewed identity/closure 
 **Completed:** qualification 24/24; fixed S4 cohort 576/576 decisions. Original and symmetric gates both score 87/96; always-check scores 88/96 with 36 logical model calls versus 73–74. Failure sensitivity overlaps, so the one-point gap does not establish a winner. Resolved repeats preserve decisions without spending another check; unresolved alarm judgments can exhaust the budget before recovery.
 
 [Read the measured result](REPORT.md), [inspect the complete saved data](results/combined/summary.json), or review [plan coverage](PLAN-COVERAGE.md) and [closeout](CLOSEOUT.md). The 69 core and eight continuation checks passed. All failed segments are preserved; no independent semantic corpus or formal S2 claim. The borrowed Dmarz fleet host is released.
+
+## Next design
+
+[RD5 planning package](../rd5/README.md) reconciles the observed accuracy gap and proposes explicit uncertainty memory, separate acquisition/inference accounting and a test of protected future verification. Status: design only; no new native outcomes or machine allocation.

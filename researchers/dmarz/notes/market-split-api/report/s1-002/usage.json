@@ -1,0 +1,25 @@
+{
+  "attempt": "s1-002",
+  "model": "claude-sonnet-4-6",
+  "engine_sha256": "657a77e7c1101c1bd2b6b2ea752f0407b2fc4b690988144711cbe7c727f79b58",
+  "design_sha256": "230ef6ac07afc36dd5142155ab826452f21ce836d3f5d0919c69292a676f26e5",
+  "terminal_bundles_in_input": 18,
+  "attempted_calls": 864,
+  "priced_calls": 864,
+  "unpriced_calls": 0,
+  "input_tokens": 1508141,
+  "output_tokens": 640091,
+  "maximum_output_tokens_per_call": 1998,
+  "median_output_tokens_per_call": 632.0,
+  "calls_with_output_above_3072": 0,
+  "api_cost_usd": 14.125788,
+  "median_reported_request_seconds": 12.548575838999568,
+  "request_latency_observations": 864,
+  "call_statuses": {
+    "ok": 864
+  },
+  "recorded_stop_reasons": {
+    "not_recorded": 864
+  },
+  "scope": "Input bundles only; this summary does not assert cohort completeness. Billed token counts include thinking; no reasoning content is read or retained."
+}

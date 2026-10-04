@@ -33,7 +33,7 @@ def plot(records,out):
     ax=axes[0];ax.set_title('Registration by regulatory rule',loc='left',fontsize=14,pad=20)
     for i,reg in enumerate(REGS):
         group=[r for r in dynamic if r['world']==reg];count=sum(r['evaluation']['first_registration_round'] is not None for r in group)
-        if group:ax.barh(i,count/len(group),height=.35,color=COLORS[reg]);ax.text(.04,i+.16,f'{count}/{len(group)} portfolios',color=COLORS[reg],fontsize=12)
+        if group:ax.barh(i,count/len(group),height=.35,color=COLORS[reg]);ax.text(.04,i,f'{count}/{len(group)} portfolios',color=BG if count else COLORS[reg],fontsize=12,va='center')
         else:ax.text(.04,i,'No completed observations',color=MUTED)
     ax.set_yticks(range(3),[LABELS[r] for r in REGS]);ax.invert_yaxis();ax.set_xlim(0,1);ax.set_xticks([0,.5,1],['0%','50%','100%']);ax.set_xlabel('Flexible arm only',labelpad=14);ax.grid(axis='x',color=GRID,alpha=.7);ax.set_axisbelow(True)
     ax=axes[1];ax.set_title('Paired profit difference',loc='left',fontsize=14,pad=20)
@@ -47,7 +47,7 @@ def plot(records,out):
         if vals:
             ax.scatter(vals,[i]*len(vals),s=65,color=COLORS[reg],alpha=.7,zorder=3)
             ax.text(.98,1-(i+.5)/3-.085,f'mean {mean(vals):+,.0f}',transform=ax.transAxes,ha='right',va='center',color=COLORS[reg])
-    spread=max([100]+[abs(x)*1.2 for x in all_diffs]);ax.set_xlim(-spread,spread);ax.set_ylim(-.5,2.5);ax.invert_yaxis();ax.set_yticks(range(3),['None','Firm','Owner']);ax.axvline(0,color=MUTED,lw=1,linestyle=':');ax.grid(axis='x',color=GRID,alpha=.7);ax.set_xlabel('Flexible minus one-firm profit (credits)',labelpad=14)
+    spread=max([100]+[abs(x)*1.2 for x in all_diffs]);ax.set_xlim(-spread,spread);ax.set_xticks([-8000,-4000,0,4000,8000],['−8,000','−4,000','0','4,000','8,000']);ax.tick_params(axis='x',labelsize=10);ax.set_ylim(-.5,2.5);ax.invert_yaxis();ax.set_yticks(range(3),['None','Firm','Owner']);ax.axvline(0,color=MUTED,lw=1,linestyle=':');ax.grid(axis='x',color=GRID,alpha=.7);ax.set_xlabel('Flexible minus one-firm profit (credits)',labelpad=14)
     ax=axes[2];ax.set_title('Owned firms through time',loc='left',fontsize=14,pad=20)
     for reg in REGS:
         group=[r for r in dynamic if r['world']==reg]

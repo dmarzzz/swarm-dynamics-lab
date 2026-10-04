@@ -48,3 +48,7 @@ These briefs are ready for the owner to open in separate tasks. No new Codex tas
 ## Status
 
 Exploratory Q0/Q1/S1/D1 cycle completed. The current evidence does not establish a benefit for the gate. Original idea ratings remain historical; the evidence block now reflects this cohort. Formal research review and confirmatory S2 remain closed; a redesigned protocol needs a new prospective assessment.
+
+## Next design
+
+[RD5 planning package](rd5/README.md) reconciles the observed accuracy gap and proposes explicit uncertainty memory, separate acquisition/inference accounting and a test of protected future verification. Status: design only; no new native outcomes or machine allocation.

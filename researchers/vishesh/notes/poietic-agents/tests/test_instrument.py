@@ -97,7 +97,10 @@ class InstrumentTests(unittest.TestCase):
         self.assertEqual(first,self.w.fetch('inventory','sku-x',3))
     def test_context_leakage(self):
         self.e.actors['agent-1'].memory.append({'secret_observation':'PRIVATE_MARKER'})
-        text=json.dumps(self.e.context('agent-0',self.j))
+        context=self.e.context('agent-0',self.j)
+        self.assertEqual(context['sections'][0]['public_model_tariffs']['generalist']['input_usd_per_token'],.000001)
+        self.assertEqual(context['sections'][0]['current_model_role'],'generalist')
+        text=json.dumps(context)
         for forbidden in ('PRIVATE_MARKER','expected_answer','shock_schedule','future_jobs'):self.assertNotIn(forbidden,text)
     def test_generic_join_and_parameter_independence(self):
         e=Engine(self.w,'A1');packets=[]
@@ -266,6 +269,7 @@ class MechanismRuntimeTests(unittest.TestCase):
         self.assertEqual(result['summary']['assigned'],2)
         self.assertEqual(result['outcomes'][1]['release_s'],120)
         self.assertGreaterEqual(result['outcomes'][1]['finish_s'],126)
+        self.assertTrue(any('metered_model_call' in observation for a in e.actors.values() for observation in a.memory))
     def test_static_configuration_rejects_missing_construction(self):
         from lineage import static_configuration
         with self.assertRaises(ValueError):static_configuration(Engine(KnownWorld(0),'A2'),{})
@@ -306,3 +310,17 @@ class RelayTests(unittest.TestCase):
     def test_review_resolution_evidence_is_required(self):
         case=AdmissionTests();case.setUp();case.c.pop('review_resolution',None)
         with self.assertRaisesRegex(ValueError,'review_resolution_missing'):verify(case.c,case.now,actual_host='fixture')
+
+class RelayHealthTests(unittest.TestCase):
+    def test_mismatched_or_used_relay_blocks_before_dispatch(self):
+        from admission import verify_relay_health
+        now=time.time();c={'attempt':'S0-01','source_commit':'a'*40,'assignment_sha256':'b'*64}
+        health=dict(c,experiment='poietic-agents',credential_ready=True,deadline=now+600,api_cap_usd=1.5,physical_calls=0)
+        self.assertTrue(verify_relay_health(health,c,now))
+        for k,v in [('source_commit','old'),('physical_calls',1),('credential_ready',False),('deadline',now)]:
+            h=dict(health);h[k]=v
+            with self.assertRaises(ValueError):verify_relay_health(h,c,now)
+    def test_health_precedes_hub_start(self):
+        import inspect,launch
+        source=inspect.getsource(launch.run)
+        self.assertLess(source.index('verify_relay_health('),source.index("quiet(sr.report,'start'"))

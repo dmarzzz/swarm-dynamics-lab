@@ -1057,17 +1057,22 @@
         "researchers/dmarz/notes/market-split-api/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 1,
-        "claim": "The current Sonnet configuration passes a small unregulated profitability screen; the new discovery comparison is unreported at this cutoff.",
-        "rationale": "Sonnet reasoning configuration passed bounded unregulated profit qualification; main discovery results are pending in the tracked record. Earlier invalid and failed qualifications stay separate and cannot be pooled. Six related markets, one model-controlled owner and scripted rivals would remain exploratory."
+        "score": 2,
+        "claim": "In the completed six-market Sonnet pilot, the neutral flexible agent selected sustained firm splitting in 6/6 firm-regulated markets and 0/6 owner-regulated or unregulated markets.",
+        "rationale": "A qualified model, paired regulatory controls, all36 valid outcomes, 864 priced calls and exact trace replay support this narrow comparison. Six related tasks, one model realization, prior configuration selection, no independent replication and a missing historical immutable-plan preflight receipt limit the claim."
       },
-      "sample_size_summary": "Current Sonnet Q0: 2 markets, 4/4 episodes; S1 planned: 6 markets, 36 episodes/864 calls. Earlier Haiku S1: 17 valid, 1 invalid, 18 unstarted.",
+      "sample_size_summary": "Observed: 6 related paired market tasks; 36/36 episodes valid, 0 missing/replaced; one Sonnet owner and two scripted rivals, 864 calls. Separate Q0: 2 markets/4 episodes. Earlier Haiku S1:17valid,1invalid,18unstarted; not pooled.",
       "sources": [
-        "researchers/dmarz/notes/market-split-api/README.md",
-        "researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md",
-        "researchers/dmarz/notes/market-split-api/experiment.yaml"
+        "researchers/dmarz/notes/market-split-api/RESULTS.md",
+        "researchers/dmarz/notes/market-split-api/reviews/s1-002-post.md",
+        "researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json",
+        "researchers/dmarz/notes/market-split-api/report/s1-002/replay-audit.json",
+        "researchers/dmarz/notes/market-split-api/report/s1-002/lifetime-accounting.json"
       ],
-      "status_at_assessment": "current_qualification_passed_main_not_reconciled"
+      "status_at_assessment": "complete_valid_exploratory_result",
+      "assessor": "dmarz/market-split",
+      "assessed_at": "2026-10-04",
+      "source_commit": "e84428d59d278ce9837d9111f2b9047cf53a0fbb"
     },
     {
       "id": "market-split-haiku",

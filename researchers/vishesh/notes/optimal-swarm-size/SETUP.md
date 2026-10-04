@@ -34,3 +34,7 @@ Next action: prepare a separately identified bounded qualification of the native
 ## Current engineering repair
 
 [Investigation and prospective amendment](reviews/structured-output-repair.md) identify prompt-only transport as the interface mismatch. Native phase-specific JSON Schema replaces formatting by prose; local strict parsing/evaluation remains unchanged. Repair feedback identifies parse versus dependency-map failures. No paid requests during this repair; 41 offline experiment checks and 5 credential checks pass. Canonical exposure remains $0.328990. Historical admission paragraphs above describe Q-A2, not current machine authority. No live hosted verification or successful qualification is claimed.
+
+## Proposed next-run redesign
+
+[Next-run design](reviews/next-run-design.md) synthesizes both post-mortems and the schema repair. Proposed first stage: four width-2 N=1 canaries covering both families/structures, with explicit readiness criteria and a $5 sublimit inside the original authority. Requires width-aware identities, canonical-ledger sublimit enforcement and phase-specific stopping/diagnostics before execution. It also records dependency-integrity and slot-capacity controls required before any size-effect claim. Design only; no new run launched.

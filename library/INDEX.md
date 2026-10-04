@@ -2,9 +2,9 @@
 
 # Library index
 
-3298 entries.
+3300 entries.
 
-## Papers (2078)
+## Papers (2080)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -137,6 +137,7 @@
 | [hamdi-2013-removal](papers/hamdi-2013-removal.md) | Removal of Data Incest in Multi-agent Social Learning in Social Networks | 2013 | 5 | abstract | decision-models, collective-decision | vishesh/codex-decision-models |
 | [hang-2026-self](papers/hang-2026-self.md) | Self-reorganization and information transfer in large-scale models of fish schools | 2026 | 5 | full | collective-motion, criticality-measurement, active-matter | dmarz/collective-motion-recent |
 | [hao-2025-do](papers/hao-2025-do.md) | Do Spammers Dream of Electric Sheep? Characterizing the Prevalence of LLM-Generated Malicious Emails | 2025 | 5 | full | swarm-detection | dmarz/sd-ai-content |
+| [hay-2012-selecting](papers/hay-2012-selecting.md) | Selecting Computations: Theory and Applications | 2012 | 5 | skim | dissent, decision-models, collective-decision | vishesh/codex-decision-models |
 | [hays-2023-simplistic](papers/hays-2023-simplistic.md) | Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection | 2023 | 5 | full | swarm-detection | dmarz/sd-bots |
 | [heilman-2015-eclipse](papers/heilman-2015-eclipse.md) | Eclipse Attacks on Bitcoin's Peer-to-Peer Network | 2015 | 5 | full | sybil-resistance, sync-consensus | dmarz/sybil-foundations |
 | [hein-2015-evolution](papers/hein-2015-evolution.md) | The evolution of distributed sensing and collective computation in animal populations | 2015 | 5 | full | collective-decision, collective-motion, criticality-measurement, active-matter | dmarz/collective-decision |
@@ -1061,6 +1062,7 @@
 | [tadaki-2013-phase](papers/tadaki-2013-phase.md) | Phase transition in traffic jam experiment on a circuit | 2013 | 4 | skim | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
 | [tailleur-2008-statistical](papers/tailleur-2008-statistical.md) | Statistical Mechanics of Interacting Run-and-Tumble Bacteria | 2008 | 4 | abstract | active-matter | dmarz/active-matter |
 | [tambe-2011-security](papers/tambe-2011-security.md) | Security and Game Theory | 2011 | 4 | abstract | fork-merge-security, collective-decision | dmarz/fm |
+| [tan-2016-honey](papers/tan-2016-honey.md) | Honey Bee Inhibitory Signaling Is Tuned to Threat Severity and Can Act as a Colony Alarm Signal | 2016 | 4 | abstract | dissent, decision-models, collective-decision | vishesh/codex-decision-models |
 | [tan-2023-botpercent](papers/tan-2023-botpercent.md) | BotPercent: Estimating Bot Populations in Twitter Communities | 2023 | 4 | abstract | swarm-detection | dmarz/sd-bots |
 | [tanner-2007-flocking](papers/tanner-2007-flocking.md) | Flocking in Fixed and Switching Networks | 2007 | 4 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [tao-2026-wormguard](papers/tao-2026-wormguard.md) | WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms | shadow/sol-g74 |
