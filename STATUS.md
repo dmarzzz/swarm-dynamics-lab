@@ -224,6 +224,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
+| vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:30Z | Q4 and D1 executed and published; valid approval failures preserved; comparison ineligible after failed qualification; dedicated machine released |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:29Z | Preparing a paired closed-loop diagnostic to distinguish initial inspection from persistent stalls |
 | vishesh/codex-theseus | done | theseus-v2-iteration | 2026-10-04T04:29Z | Bounded iteration complete; joint qualification failed, S1 blocked |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T04:25Z | Running Sonnet serially; Haiku passed fresh mechanics/profit gates and now starts full-length regulated reliability on its dedicated host. |
@@ -241,7 +242,6 @@
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
-| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T03:43Z | Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; Single researcher review satisfied; duplicate dossier gate retired; qualification launch preparation remains |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
