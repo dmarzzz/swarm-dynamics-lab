@@ -53,3 +53,7 @@ Persist one event per learner and executor call with assignment/root/family/arm,
 ## Scope of prior art and assessment
 
 [Design transfer](../v2/DESIGN-TRANSFER.md) and [PI synthesis](../../pi-next-decisions-2026-10-04/README.md) inform content-level citation auditing, evidence bottlenecks and strong simple controls. Their blanket executor-failure status is superseded by R1. Retain their instruction to hold turnover. This is a qualification continuation, not a new literature survey, accepted hypothesis, independent review or cultural novelty result.
+
+## Direct-dispatch amendment before first A1 call
+
+[A1-DIRECT-AMENDMENT.md](A1-DIRECT-AMENDMENT.md) records the new path-specific owner decision: direct A1 launch is allowed after queue295 is fenced and all other current admission gates pass. It supersedes only the orbital-one origin/acknowledgment restriction above; original204slots, one attempt and USD5 cumulative scope remain fixed. Native rendered requests/returned objects and every qualification miss will be reviewed; operator transcripts stay private.
