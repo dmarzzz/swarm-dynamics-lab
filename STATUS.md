@@ -224,8 +224,8 @@
 | vishesh/codex-regrowth-docs | working | healing-practical-repair | 2026-10-04T02:51Z | Build the prospective practical repair comparison using saved extraction tapes |
 | shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-quorum-mirrors | blocked | quorum-mirrors-s0 | 2026-10-04 03:48:53.029072+00:00 | S0 plan publicly verified; 32-request package and 23 checks prepared; awaiting separate budget before allocation and native setup |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc1 | 2026-10-04 03:45:59+00:00 | PC-1 plan and offline instrument published; 29 tests pass; native launch blocked on prerequisites |
-| vishesh/codex-quorum-mirrors | working |  | 2026-10-04 03:40:19.505403+00:00 | Published QM-2; preparing bounded S0 competence screen under shared worker workflow |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
