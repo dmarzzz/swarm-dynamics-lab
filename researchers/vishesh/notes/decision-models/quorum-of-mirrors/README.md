@@ -36,12 +36,18 @@ For this grammar, source deduplication followed by exact arithmetic already dete
 
 **The prepared D1 diagnostic is parked, with zero new calls.** Whether deduplication helps the model, priors harm it, or qualification fails, the practical choice remains exact source arithmetic. D1 would add explanation without changing that decision. No M1/C1 or replacement qualification is launched. Unknown/false provenance, semantic matching and real-world generalization remain outside the evidence; native swarm-efficacy confidence remains 1/4.
 
+## Robustness improvement: verify the source mapping
+
+[The new provenance gate](provenance/RESULTS.md) closes an important engineering assumption: claimed labels can split one observation into several apparent sources or merge distinct acquisitions. It checks each observation against an externally authenticated receipt registry, counts actual acquisition IDs, and abstains on missing or conflicting evidence. **23 relevant software tests pass; this is not additional native model evidence.** [Inspect the six constructed cases](provenance/examples.html).
+
+A useful future native task is matching ambiguous natural-language reports to authenticated receipts. It needs a validated corpus, held-out acquisition families and strong exact-lookup/string-matching controls before model qualification. Those requirements are not met yet, so no machine or new model run was launched. The gate does not itself authenticate the registry or establish statistical independence.
+
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
 Assessed 2026-10-04 by vishesh/codex-quorum-mirrors; source `be37f8b4` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy. Saved-data audit confirms report/prior-majority confounding in all eight graded cases. Exact-rule software verification is not native evidence; D1 is parked because its outcomes do not change the current engineering decision.
+- **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy. Saved-data audit confirms report/prior-majority confounding in all eight graded cases. Exact-rule software verification is not native evidence; D1 is parked because its outcomes do not change the current engineering decision. A receipt-grounded gate now has adversarial software checks; this neither authenticates provenance nor adds native evidence.
 - **sample_size_summary:** S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.
 <!-- experiment-evidence:end -->
 

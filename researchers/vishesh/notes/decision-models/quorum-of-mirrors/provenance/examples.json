@@ -1,0 +1,73 @@
+{
+  "evidence_type": "SOFTWARE FIXTURES \u2014 NOT MODEL OR REAL-WORLD EVIDENCE",
+  "native_calls": 0,
+  "cases": [
+    {
+      "case": "Complete consistent receipts",
+      "evidence_type": "constructed developer fixture",
+      "declared_label_choice": "ZERO",
+      "gate": {
+        "decision": "ZERO",
+        "reason": "verified_exact_map",
+        "missing_receipts": [],
+        "verified_acquisitions": 3,
+        "admitted_reports": 3
+      }
+    },
+    {
+      "case": "Split one acquisition; merge two other labels",
+      "evidence_type": "constructed developer fixture",
+      "declared_label_choice": "ONE",
+      "gate": {
+        "decision": "ZERO",
+        "reason": "verified_exact_map",
+        "missing_receipts": [],
+        "verified_acquisitions": 3,
+        "admitted_reports": 9
+      }
+    },
+    {
+      "case": "Observation altered after acquisition",
+      "evidence_type": "constructed developer fixture",
+      "declared_label_choice": "ZERO",
+      "gate": {
+        "decision": "DEFER",
+        "reason": "observation_mismatch",
+        "missing_receipts": []
+      }
+    },
+    {
+      "case": "Missing receipt despite three valid sources",
+      "evidence_type": "constructed developer fixture",
+      "declared_label_choice": "ZERO",
+      "gate": {
+        "decision": "DEFER",
+        "reason": "missing_receipt",
+        "missing_receipts": [
+          "not-supplied"
+        ]
+      }
+    },
+    {
+      "case": "Conflicting authoritative receipt entries",
+      "evidence_type": "constructed developer fixture",
+      "declared_label_choice": "ZERO",
+      "gate": {
+        "decision": "DEFER",
+        "reason": "inconsistent_registry",
+        "missing_receipts": []
+      }
+    },
+    {
+      "case": "Registry authentication not established",
+      "evidence_type": "constructed developer fixture",
+      "declared_label_choice": "ZERO",
+      "gate": {
+        "decision": "DEFER",
+        "reason": "registry_not_verified",
+        "missing_receipts": []
+      }
+    }
+  ],
+  "scope": "Authentication and statistical independence are external preconditions; this gate checks mappings and observation integrity only."
+}

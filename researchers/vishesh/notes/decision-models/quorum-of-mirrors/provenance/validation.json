@@ -1,0 +1,23 @@
+{
+  "status": "offline_passed",
+  "new_tests": 14,
+  "retained_audit_tests": 9,
+  "developer_cases": 6,
+  "new_native_calls": 0,
+  "allocation_created": false,
+  "credentials_accessed": false,
+  "ledger_mutated": false,
+  "browser_readback": "Six labelled developer rows rendered correctly; split/merge example ONE versus ZERO and four explicit DEFER reasons verified.",
+  "metadata_check": "121 cohorts / 120 documents valid/current",
+  "repository_check": "0 errors, 5 pre-existing missing-citation warnings",
+  "native_readiness": "not_ready: adjudicated semantic mapping corpus, held-out acquisition families, lookup-baseline headroom and native qualification absent",
+  "files": {
+    "PLAN.md": "3fe072d8025ad1a41a1d0cd559f98127d91b075fcbc4386e08be689a67c6549a",
+    "gate.py": "94f76dd7344b2e71c0f53f5a6c3f26867e18de0f4892a56c39c5628334a203e8",
+    "test_gate.py": "aebf9e4d78472e16ae7158128eb71fa40ea3b91c6cb74221aec136e55dcf9faf",
+    "examples.py": "05940ada953cea07a288298d710c7a0b8b61c9e8f6d18a1dae0b9e7504b28fb9",
+    "examples.json": "5317ea2adcab3ea7dc46c2c38ae8424a21563ba108212e9afca2b7321a0122be",
+    "examples.html": "1be3500fd1d49049b3756f8beccd13841322146f8b511a635300f9b6d9f6d7f1",
+    "RESULTS.md": "37b155dd72d5dcdbad813226e896448016c9f9acbbc46783497c306202df0177"
+  }
+}
