@@ -46,7 +46,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T17:31Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [phantom-coast-pc8-live](tasks/phantom-coast-pc8-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:03Z | Run PC8 report interpretation qualification and conditional pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -209,6 +208,7 @@
 | [phantom-coast-pc4-live](tasks/phantom-coast-pc4-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T09:07Z | Run Phantom Coast PC-4 and PC-5 design-review cycles |
 | [phantom-coast-pc6-screen](tasks/phantom-coast-pc6-screen.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T15:29Z | Qualify Phantom Coast action-consequence interface |
 | [phantom-coast-pc7-traces](tasks/phantom-coast-pc7-traces.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T16:44Z | Audit Phantom native traces and revise finite-history scenario |
+| [phantom-coast-pc8-live](tasks/phantom-coast-pc8-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:13Z | Run PC8 report interpretation qualification and conditional pilot |
 | [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:51Z | Remove mandatory researcher review from owner experiment process |
 | [pi-cycle-2026-10-04](tasks/pi-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T15:37Z | Coordinate one evidence-led iteration across ten active studies |
 | [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T17:18Z | Apply direct-launch authorization and review native traces |
@@ -368,10 +368,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc8-live | 2026-10-04 18:12:29.707680+00:00 | PC8 Q0 closed and reviewed; failed qualification, S1 unrun; parser defect repaired retrospectively; allocation released; FINISH / PARK |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:08:12.715614+00:00 | Claim-fidelity case design complete; native progression needs strong baseline and varied corpus |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-run | 2026-10-04 17:41:06.299361+00:00 | RD5 complete and published: Q5 24/24; H5 6/8/6 across 72 decisions. Adverse result and context-transfer limitation retained, public evidence verified, allocation released. No next run scheduled. |
 | vishesh/codex-methods | idle |  | 2026-10-04 17:01:34.898350+00:00 | Offline Antsy repair published with13passing tests; D1 concrete plan awaits owner approval; no additional native calls |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc7-traces | 2026-10-04 16:43:52.083647+00:00 | PC7 trace audit and offline finite-history controller complete; 140 pairs verified, 8 checks passed; no native successor admitted |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
