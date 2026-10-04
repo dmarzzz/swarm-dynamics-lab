@@ -3624,7 +3624,7 @@
     },
     {
       "id": "right-dissenter-rd6",
-      "title": "Right Dissenter RD6 reliable reopening diagnostic draft",
+      "title": "Right Dissenter RD6 reliable reopening diagnostic",
       "documents": [
         "researchers/vishesh/notes/dissent/reopening/README.md"
       ],
@@ -3633,7 +3633,7 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Effects of history, opposing ballots, clock translation and evidence age on Jev interpretation remain untested in this new controlled matrix.",
-        "rationale": "Prospective plan, concrete cases and the native manual runner pass 73 offline checks. There are no RD6 native outcomes, model qualification or untouched evaluation set. Synthetic transports/ledgers do not establish the context effect. The completed RD5 adverse result remains a separate cohort."
+        "rationale": "Q0-A1 stopped during startup with zero provider requests; all18qualification assignments remain unstarted and D0 is unrun. The original ledger, failed attempt, operational finalize and eleven-dimension owning review are retained. Startup repairs pass88offline checks with the162request manifest unchanged. No native effect or qualification is established."
       },
       "sample_size_summary": "Observed native: none. Planned D0: 12 authored cases in six shared families/three grammars x six conditions x two repeats = 144 dependent requests; separate Q0 has 18 requests. No independent field sample or held-out generalization evaluation.",
       "sources": [
@@ -3644,22 +3644,32 @@
         "researchers/vishesh/notes/dissent/reopening/next-run-plan.json",
         "researchers/vishesh/notes/dissent/reopening/OPERATOR.md",
         "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json",
-        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md"
+        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md",
+        "researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-QUALITY.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json"
       ],
       "source_sha256": {
-        "researchers/vishesh/notes/dissent/reopening/PLAN.md": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04",
+        "researchers/vishesh/notes/dissent/reopening/PLAN.md": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed",
         "researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md": "29c9ef1f1c7c85b64631305913331933b7b4e764abc6c977de97528ffd0b4e64",
-        "researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md": "69704bd74250ddb02ab3a96b0389b27bbe11ac55ebdd5cd84d61943c54b7334e",
-        "researchers/vishesh/notes/dissent/reopening/offline/validation.json": "05830d4afd878822c0190d8a486133d3f74e0f9e4517482d908931f7a416f6b4",
-        "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "8ea72a423f863dc53ab199daba9b9148e923ace666c8a8139722499b9d27bf1b",
-        "researchers/vishesh/notes/dissent/reopening/OPERATOR.md": "bab0b4a7aa3347efcad344552332a3f0335aef889f5484c83d077411497a4c1f",
-        "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "cf067328a2c52bf462018ddbb037d210adb85648ce7b122744d829f19304979e",
-        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md": "ffe90cc83d44b51615edad10aded05f6ff3f94c3edce6852f5e55f09131cbc2b"
+        "researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md": "f97b90df9651d0f0b47fbbca0bf0f8f8e55c4503452f53ce283549f671f13e77",
+        "researchers/vishesh/notes/dissent/reopening/offline/validation.json": "1c9781f0029bbe9bff12a38a5387117bee9353ac492bb8400b75b41f20f79162",
+        "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "bd030126cd1a021674facfc9b9e1be7ebd8ab9538d6dc6e78b45f1bdc875429d",
+        "researchers/vishesh/notes/dissent/reopening/OPERATOR.md": "e44f3b5164dec4e0eae6b96826faf2560ff18ca5bbf4a655f22c8bfa81beade6",
+        "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "615132a91be6c25ed5258625ad0508b34d6058760d3a447bf0e7d8ea1425faf6",
+        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md": "1ee069429bacfd50b96d5bb4c34caac69b56916a6c5c590e44d11db48a1054bf",
+        "researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md": "2d4843c9cb1e38a883b7cfaee7b281d8beb0b6108daa05775f18058761be63a5",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md": "4089b1e8a34d55d81f04f55930c6e175884af5dad281eee9b1d02807cd24a7fa",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-QUALITY.json": "0e23f666619584e63ad1bba2f99ad9f916a8ec97f88b6497b1b9e55f85da36e6",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json": "56a1650e0c8c1101900c8f6a5d505fb803010d2175efa95cd89b8e6508ae0139",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json": "ef94c4bf2388704cd5ab43d2fdf80dab15e0962e0926dda5b7a5fbdba9660a93"
       },
-      "status_at_assessment": "approved_scope_current_admission_in_preparation",
+      "status_at_assessment": "q0_a1_zero_dispatch_closed_offline_repair_ready_replacement_decision_pending",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "c71249c4f981c817813b9716fa72c39d51e12907"
+      "source_commit": "94e8e39f33324b5e18211115097b4f06aa9e2c3f"
     },
     {
       "id": "phantom-coast-pc9",
