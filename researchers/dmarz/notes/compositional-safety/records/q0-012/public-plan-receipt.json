@@ -1,0 +1,12 @@
+{
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/e82617090e20508596b252219d190d6f2a56c41e/researchers/dmarz/notes/compositional-safety/reviews/q0-012-pre.md",
+  "plan_sha256": "ebc7497f89e83c1603f2247cb8dedff8b83fcd3912c5e966304cf5fa0e615376",
+  "source_hashes": {
+    "engine_sha256": "e1ee96d06a3cf8383d3ac1161a429c17b9b88add0f71ec9726ee9fa2d88cb988",
+    "design_sha256": "2137681f38f30f574c076fdabc69f586bfb2a604c7cf582b62a053fc91231e03"
+  },
+  "registered_tldr": "TLDR: Requalify the Opus 5.5 configuration under design v11, which adds bounded waiting and resending on HTTP 429/529 (requests the API rejected before inference) so organisation-wide rate limiting cannot turn assignments into invalid episodes. 24 episodes on roots 247, 248 and 249, never sent to a model. Same thresholds. At most 480 calls. A pass starts P1 p1-004 in the same process.",
+  "page_verified_at": 1791108691.6645083,
+  "verification": "Fetched the raw GitHub file at this revision (byte-identical to the checkout) and the rendered blob page (HTTP 200; headings TLDR, Question and prediction, Setup, Protocol, Metrics, Visualization mapping present) immediately before registration. Not a visual inspection.",
+  "launch_verified_at": 1791108698.148771
+}
