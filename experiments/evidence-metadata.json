@@ -17,7 +17,7 @@
       "evidence_confidence": {
         "score": 1,
         "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
-        "rationale": "S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy."
+        "rationale": "S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy. Saved-data audit confirms report/prior-majority confounding in all eight graded cases. Exact-rule software verification is not native evidence; D1 is parked because its outcomes do not change the current engineering decision."
       },
       "sample_size_summary": "S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.",
       "sources": [
@@ -25,9 +25,11 @@
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/audit.json"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/audit.json",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/pi-cycle/RESULTS.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/pi-cycle/audit.json"
       ],
-      "status_at_assessment": "interface_repaired_q1_reasoning_failed_no_swarm_efficacy",
+      "status_at_assessment": "valid_negative_q1_saved_audit_complete_d1_parked",
       "assessor": "vishesh/codex-quorum-mirrors",
       "assessed_at": "2026-10-04",
       "source_commit": "be37f8b40a5a07fba4f2b55c61766d441fba1cb8"

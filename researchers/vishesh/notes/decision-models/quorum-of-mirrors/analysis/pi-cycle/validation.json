@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "new_native_attempt": null,
+  "new_assigned": 0,
+  "new_started": 0,
+  "new_valid": 0,
+  "new_model_cost_usd": 0,
+  "allocation_created": false,
+  "model_credentials_accessed": false,
+  "tests": 9,
+  "software_configurations": 5488,
+  "software_mismatches": 0,
+  "browser_readback": "All eight graded rows rendered; both context polarities and q values, explicit 16-valid/8-graded denominator, confounding and software-only boundaries verified.",
+  "operational_finalize": "Idempotent QM-Q1-02 closeout; zero model calls; scientific assessment in scientific-review.json.",
+  "evidence_metadata_check": "93 cohorts and 92 documents valid/current",
+  "repository_check": "0 errors; 5 pre-existing missing-citation warnings",
+  "file_sha256": {
+    "PLAN.md": "511353997ff3742d4706b24c2f9d3e0f11cba4fb1d14cb656b99dee0003d4b03",
+    "audit.py": "b97991e2fe1f483296097aa5aac332e58449c2aeeb6c03cf41108a4f0073349c",
+    "test_audit.py": "d7113e2a5bbc9034c81523dcb3e9e9a122047c357dfabcc788c008a9eb67c3ad",
+    "audit.json": "44135cfa5d85355c3069bbf8f2df296375757d748613776c9a39928bc61bd793",
+    "cases.html": "8723dabed1f2f80bdc557e2d98423153ce80448ac4d094a6a0a05bfe4657e92b",
+    "RESULTS.md": "2caf5091d1acdf3680e40d8c9223f95c8ef7a3b85b80ca3c4331efd4aa898327",
+    "scientific-review.json": "f4948084be3ffc55bb0f931a4906bf05685aef8280f60fddab3b8fc9b75338d6"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "analysis": "retrospective; no new native run",
+  "native_attempt": "QM-Q1-02",
+  "assigned": 16,
+  "started": 16,
+  "valid": 16,
+  "graded": 8,
+  "ungraded_partial": 8,
+  "correct": 0,
+  "confounded_cases": 8,
+  "known_attempt_actual_usd": 0.00068544,
+  "rows": [
+    {
+      "id": "QM-Q1-02-007",
+      "context": "self",
+      "q": 0.8,
+      "target": "ONE",
+      "native_choice": "ZERO",
+      "report_majority": "ZERO",
+      "prior_majority": "ZERO",
+      "prior_choice_counts": {
+        "ZERO": 1
+      },
+      "correct": false,
+      "signals_confounded": true
+    },
+    {
+      "id": "QM-Q1-02-006",
+      "context": "self",
+      "q": 0.8,
+      "target": "ZERO",
+      "native_choice": "ONE",
+      "report_majority": "ONE",
+      "prior_majority": "ONE",
+      "prior_choice_counts": {
+        "ONE": 1
+      },
+      "correct": false,
+      "signals_confounded": true
+    },
+    {
+      "id": "QM-Q1-02-004",
+      "context": "self",
+      "q": 0.65,
+      "target": "ZERO",
+      "native_choice": "ONE",
+      "report_majority": "ONE",
+      "prior_majority": "ONE",
+      "prior_choice_counts": {
+        "ONE": 1
+      },
+      "correct": false,
+      "signals_confounded": true
+    },
+    {
+      "id": "QM-Q1-02-003",
+      "context": "peer",
+      "q": 0.8,
+      "target": "ONE",
+      "native_choice": "ZERO",
+      "report_majority": "ZERO",
+      "prior_majority": "ZERO",
+      "prior_choice_counts": {
+        "ONE": 1,
+        "ZERO": 3
+      },
+      "correct": false,
+      "signals_confounded": true
+    },
+    {
+      "id": "QM-Q1-02-005",
+      "context": "self",
+      "q": 0.65,
+      "target": "ONE",
+      "native_choice": "ZERO",
+      "report_majority": "ZERO",
+      "prior_majority": "ZERO",
+      "prior_choice_counts": {
+        "ZERO": 1
+      },
+      "correct": false,
+      "signals_confounded": true
+    },
+    {
+      "id": "QM-Q1-02-002",
+      "context": "peer",
+      "q": 0.8,
+      "target": "ZERO",
+      "native_choice": "ONE",
+      "report_majority": "ONE",
+      "prior_majority": "ONE",
+      "prior_choice_counts": {
+        "ZERO": 1,
+        "ONE": 3
+      },
+      "correct": false,
+      "signals_confounded": true
+    },
+    {
+      "id": "QM-Q1-02-000",
+      "context": "peer",
+      "q": 0.65,
+      "target": "ZERO",
+      "native_choice": "ONE",
+      "report_majority": "ONE",
+      "prior_majority": "ONE",
+      "prior_choice_counts": {
+        "ZERO": 1,
+        "ONE": 3
+      },
+      "correct": false,
+      "signals_confounded": true
+    },
+    {
+      "id": "QM-Q1-02-001",
+      "context": "peer",
+      "q": 0.65,
+      "target": "ONE",
+      "native_choice": "ZERO",
+      "report_majority": "ZERO",
+      "prior_majority": "ZERO",
+      "prior_choice_counts": {
+        "ONE": 1,
+        "ZERO": 3
+      },
+      "correct": false,
+      "signals_confounded": true
+    }
+  ],
+  "source_sha256": {
+    "results/QM-Q1-02/manifest.json": "169896813f58e266dcc3847ceb6841139be4a57299a3e1d43913cba8c2f40eb4",
+    "results/QM-Q1-02/receipts.jsonl": "0220dabf39949dc92695dc135dfcfeab64d7fc3ec42a856472bb04908d0c0975",
+    "results/QM-Q1-02/accounting.jsonl": "36c87c7003f97e178e9d9896f4ea88e0f597f3086a3823100dc1be9d7ed644df",
+    "results/QM-Q1-02/summary.json": "407c98c8046fc7944905d15b582091bc3870c637ff2e2dc06f398f0ab93c5ea8"
+  },
+  "software_verification": {
+    "configurations": 5488,
+    "mismatches": 0,
+    "evidence_type": "exhaustive software verification; not model observations or population n"
+  },
+  "disposition": "complete_valid_result; park D1; no M1/C1",
+  "mechanism_identified": false,
+  "reason": "Every D1 result retains exact source-aware arithmetic as the practical choice on this complete trusted-lineage grammar."
+}
