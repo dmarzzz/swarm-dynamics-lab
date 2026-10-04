@@ -3,9 +3,9 @@ id: factory-provenance-invariance
 type: task
 title: Run Shadow's bounded provenance duplication-invariance diagnostic
 kind: experiment
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: shadow/sol-factory
 for: shadow
 created: 2026-10-04
 created_by: shadow/sol-factory
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - sybil-resistance
 - decision-models
+claimed_at: 2026-10-04T17:13Z
+updated: 2026-10-04T17:13Z
 ---
 
 ## Goal
