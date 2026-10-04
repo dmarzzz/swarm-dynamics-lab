@@ -8,7 +8,7 @@ PIPELINES={'A':(3,False),'B':(6,False),'C':(11,False),'D':(6,True),'E':(11,True)
 
 def lines_from_tsv(raw):
     words=[]
-    for w in csv.DictReader(io.StringIO(raw),delimiter='\t'):
+    for w in csv.DictReader(io.StringIO(raw),delimiter='\t',quoting=csv.QUOTE_NONE):
         if w.get('text','').strip() and float(w['conf'])>=0:
             words.append({'text':w['text'],'confidence':float(w['conf'])/100,'x':int(w['left']),'y':int(w['top'])+int(w['height'])/2,'h':int(w['height'])})
     groups=[]

@@ -7,6 +7,11 @@ from audit import audit
 from analyze import analyze
 
 class InstrumentTests(unittest.TestCase):
+ def test_tsv_quotes_are_literal_not_multiline_csv(self):
+  raw='left\ttop\theight\tconf\ttext\n0\t0\t10\t80\t"\n0\t30\t10\t90\tTOTAL\n60\t30\t10\t90\t100\n'
+  rows=lines_from_tsv(raw)
+  self.assertEqual([r['text'] for r in rows],['"','TOTAL 100'])
+
  def fixture(self):
   p=Path(tempfile.mkdtemp(prefix='antsy6-eval-test-'));records=[record(0),record(1,'2.00'),record(2,None)]
   for r in records:r['image_sha256']=str(r['id'])

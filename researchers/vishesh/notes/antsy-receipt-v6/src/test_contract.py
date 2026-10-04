@@ -26,8 +26,15 @@ class ContractTests(unittest.TestCase):
    self.assertEqual(c.extract(lines(text))['status'],'missing')
  def test_reference_missing_unscorable(self):self.assertFalse(c.grade({'action':'refer','value':None},c.reference({'valid_line':[]}))['scorable'])
  def test_reference_conflict_unscorable(self):
-  gt={'valid_line':[{'category':'total.total_price','words':[{'text':x}]} for x in ['100','200']]};self.assertEqual(c.reference(gt)['status'],'ambiguous')
+  gt={'gt_parse':{'total':{'total_price':['100','200']}}};self.assertEqual(c.reference(gt)['status'],'ambiguous')
  def test_subtotal_not_gold(self):self.assertEqual(c.reference({'valid_line':[{'category':'sub_total.subtotal_price','words':[{'text':'100'}]}]})['status'],'missing')
+ def test_real_cord_schema(self):
+  gt={'gt_parse':{'total':{'total_price':'1,591,600','cashprice':'2,000,000'}},'valid_line':[{'category':'total.total_price','words':[{'text':'Grand'},{'text':'Total'},{'text':'1,591,600'}]}]}
+  self.assertEqual(c.reference(gt),{'status':'ok','value':'1591600.00'})
+ def test_reference_cannot_fall_back_to_cash(self):
+  self.assertEqual(c.reference({'gt_parse':{'total':{'cashprice':'100'}}})['status'],'missing')
+ def test_reference_malformed_structure(self):
+  self.assertEqual(c.reference({'gt_parse':{'total':[{'total_price':'100'}]}})['status'],'ambiguous')
  def test_agreement_requires_distinct_sources(self):self.assertIsNone(c.consensus({'A':cand('1.00')}))
  def test_tied_agreement_abstains(self):self.assertIsNone(c.consensus({k:cand(v) for k,v in zip('ABCD',['1','1','2','2'])}))
  def test_null_cannot_add_support(self):

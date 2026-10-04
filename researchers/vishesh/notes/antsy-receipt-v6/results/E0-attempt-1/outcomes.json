@@ -1,0 +1,3659 @@
+[
+  {
+    "id": 0,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 0,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 0,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 0,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.737655318998804,
+    "execution_valid": true
+  },
+  {
+    "id": 0,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.737655318998804,
+    "execution_valid": true
+  },
+  {
+    "id": 1,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 1,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 1,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 1,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 6.12083007199908,
+    "execution_valid": true
+  },
+  {
+    "id": 1,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 6.12083007199908,
+    "execution_valid": true
+  },
+  {
+    "id": 2,
+    "arm": "fixed-B",
+    "value": "334000.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 2,
+    "arm": "confidence",
+    "value": "334000.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 2,
+    "arm": "agreement",
+    "value": "334000.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 2,
+    "arm": "always-check",
+    "value": "334000.00",
+    "action": "accept",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "334000.00",
+            "confidence": 0.96794548
+          },
+          "B": {
+            "status": "ok",
+            "value": "334000.00",
+            "confidence": 0.9654792750000001
+          },
+          "C": {
+            "status": "ok",
+            "value": "334000.00",
+            "confidence": 0.9621063999999999
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "334000.00",
+          "confidence": 0.9607684350000001
+        },
+        "after_value": "334000.00"
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "334000.00",
+            "confidence": 0.96794548
+          },
+          "B": {
+            "status": "ok",
+            "value": "334000.00",
+            "confidence": 0.9654792750000001
+          },
+          "C": {
+            "status": "ok",
+            "value": "334000.00",
+            "confidence": 0.9621063999999999
+          },
+          "D": {
+            "status": "ok",
+            "value": "334000.00",
+            "confidence": 0.9607684350000001
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "334000.00",
+          "confidence": 0.96132393
+        },
+        "after_value": "334000.00"
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 3.106594994000261,
+    "execution_valid": true
+  },
+  {
+    "id": 2,
+    "arm": "selective-check",
+    "value": "334000.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 3,
+    "arm": "fixed-B",
+    "value": "302016.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 3,
+    "arm": "confidence",
+    "value": "302016.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 3,
+    "arm": "agreement",
+    "value": "302016.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 3,
+    "arm": "always-check",
+    "value": "302016.00",
+    "action": "accept",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "ok",
+            "value": "302016.00",
+            "confidence": 0.961393925
+          },
+          "C": {
+            "status": "ok",
+            "value": "302016.00",
+            "confidence": 0.9637817799999999
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "302016.00",
+          "confidence": 0.9599522
+        },
+        "after_value": "302016.00"
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "ok",
+            "value": "302016.00",
+            "confidence": 0.961393925
+          },
+          "C": {
+            "status": "ok",
+            "value": "302016.00",
+            "confidence": 0.9637817799999999
+          },
+          "D": {
+            "status": "ok",
+            "value": "302016.00",
+            "confidence": 0.9599522
+          }
+        },
+        "response": {
+          "status": "ambiguous",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": "302016.00"
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 7.729900927999552,
+    "execution_valid": true
+  },
+  {
+    "id": 3,
+    "arm": "selective-check",
+    "value": "302016.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 4,
+    "arm": "fixed-B",
+    "value": "38.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 4,
+    "arm": "confidence",
+    "value": "38.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 4,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 4,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "43634.00",
+            "confidence": 0.6798280699999999
+          },
+          "B": {
+            "status": "ok",
+            "value": "38.00",
+            "confidence": 0.74195201
+          },
+          "C": {
+            "status": "ambiguous",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "23635.00",
+          "confidence": 0.53721325
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "43634.00",
+            "confidence": 0.6798280699999999
+          },
+          "B": {
+            "status": "ok",
+            "value": "38.00",
+            "confidence": 0.74195201
+          },
+          "C": {
+            "status": "ambiguous",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "ok",
+            "value": "23635.00",
+            "confidence": 0.53721325
+          }
+        },
+        "response": {
+          "status": "ambiguous",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.767372451000483,
+    "execution_valid": true
+  },
+  {
+    "id": 4,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "43634.00",
+            "confidence": 0.6798280699999999
+          },
+          "B": {
+            "status": "ok",
+            "value": "38.00",
+            "confidence": 0.74195201
+          },
+          "C": {
+            "status": "ambiguous",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "23635.00",
+          "confidence": 0.53721325
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "43634.00",
+            "confidence": 0.6798280699999999
+          },
+          "B": {
+            "status": "ok",
+            "value": "38.00",
+            "confidence": 0.74195201
+          },
+          "C": {
+            "status": "ambiguous",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "ok",
+            "value": "23635.00",
+            "confidence": 0.53721325
+          }
+        },
+        "response": {
+          "status": "ambiguous",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.767372451000483,
+    "execution_valid": true
+  },
+  {
+    "id": 5,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 5,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 5,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 5,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 36.93582713000069,
+    "execution_valid": true
+  },
+  {
+    "id": 5,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 36.93582713000069,
+    "execution_valid": true
+  },
+  {
+    "id": 6,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 6,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 6,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 6,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.086820929001988,
+    "execution_valid": true
+  },
+  {
+    "id": 6,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.086820929001988,
+    "execution_valid": true
+  },
+  {
+    "id": 7,
+    "arm": "fixed-B",
+    "value": "36300.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 7,
+    "arm": "confidence",
+    "value": "36300.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 7,
+    "arm": "agreement",
+    "value": "36300.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 7,
+    "arm": "always-check",
+    "value": "36300.00",
+    "action": "accept",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "ok",
+            "value": "36300.00",
+            "confidence": 0.859010045
+          },
+          "C": {
+            "status": "ok",
+            "value": "36300.00",
+            "confidence": 0.926652755
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": "36300.00"
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "ok",
+            "value": "36300.00",
+            "confidence": 0.859010045
+          },
+          "C": {
+            "status": "ok",
+            "value": "36300.00",
+            "confidence": 0.926652755
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": "36300.00"
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 4.339952185999209,
+    "execution_valid": true
+  },
+  {
+    "id": 7,
+    "arm": "selective-check",
+    "value": "36300.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 8,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 8,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 8,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 8,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "3.00",
+          "confidence": 0.6386927400000001
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "ok",
+            "value": "3.00",
+            "confidence": 0.6386927400000001
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 8.75581644599879,
+    "execution_valid": true
+  },
+  {
+    "id": 8,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "3.00",
+          "confidence": 0.6386927400000001
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "ok",
+            "value": "3.00",
+            "confidence": 0.6386927400000001
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 8.75581644599879,
+    "execution_valid": true
+  },
+  {
+    "id": 9,
+    "arm": "fixed-B",
+    "value": "40000.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 9,
+    "arm": "confidence",
+    "value": "40000.00",
+    "action": "accept",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 9,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 9,
+    "arm": "always-check",
+    "value": "40000.00",
+    "action": "accept",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "40.00",
+            "confidence": 0.610233825
+          },
+          "B": {
+            "status": "ok",
+            "value": "40000.00",
+            "confidence": 0.8783584950000001
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "40.00",
+            "confidence": 0.610233825
+          },
+          "B": {
+            "status": "ok",
+            "value": "40000.00",
+            "confidence": 0.8783584950000001
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "40000.00",
+          "confidence": 0.94226219
+        },
+        "after_value": "40000.00"
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 9.026247501000398,
+    "execution_valid": true
+  },
+  {
+    "id": 9,
+    "arm": "selective-check",
+    "value": "40000.00",
+    "action": "accept",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "40.00",
+            "confidence": 0.610233825
+          },
+          "B": {
+            "status": "ok",
+            "value": "40000.00",
+            "confidence": 0.8783584950000001
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "ok",
+            "value": "40.00",
+            "confidence": 0.610233825
+          },
+          "B": {
+            "status": "ok",
+            "value": "40000.00",
+            "confidence": 0.8783584950000001
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "ok",
+          "value": "40000.00",
+          "confidence": 0.94226219
+        },
+        "after_value": "40000.00"
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": false,
+    "checker_wall_s": 9.026247501000398,
+    "execution_valid": true
+  },
+  {
+    "id": 10,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 10,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 10,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 10,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 1.9645666479973443,
+    "execution_valid": true
+  },
+  {
+    "id": 10,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 1.9645666479973443,
+    "execution_valid": true
+  },
+  {
+    "id": 11,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 11,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 11,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 11,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.424684647001413,
+    "execution_valid": true
+  },
+  {
+    "id": 11,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.424684647001413,
+    "execution_valid": true
+  },
+  {
+    "id": 12,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 12,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 12,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 12,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.483482124998773,
+    "execution_valid": true
+  },
+  {
+    "id": 12,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.483482124998773,
+    "execution_valid": true
+  },
+  {
+    "id": 13,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 13,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 13,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 13,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 34.381526641000164,
+    "execution_valid": true
+  },
+  {
+    "id": 13,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 34.381526641000164,
+    "execution_valid": true
+  },
+  {
+    "id": 14,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 14,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 14,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 14,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 2.9121618420012965,
+    "execution_valid": true
+  },
+  {
+    "id": 14,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 2.9121618420012965,
+    "execution_valid": true
+  },
+  {
+    "id": 15,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 15,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 15,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 15,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 16.26366677900114,
+    "execution_valid": true
+  },
+  {
+    "id": 15,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 16.26366677900114,
+    "execution_valid": true
+  },
+  {
+    "id": 16,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 16,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 16,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 16,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.607792228998733,
+    "execution_valid": true
+  },
+  {
+    "id": 16,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.607792228998733,
+    "execution_valid": true
+  },
+  {
+    "id": 17,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 17,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 17,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 17,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.470110487000056,
+    "execution_valid": true
+  },
+  {
+    "id": 17,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 4.470110487000056,
+    "execution_valid": true
+  },
+  {
+    "id": 18,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 18,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 18,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 18,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 5.575465896001333,
+    "execution_valid": true
+  },
+  {
+    "id": 18,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 5.575465896001333,
+    "execution_valid": true
+  },
+  {
+    "id": 19,
+    "arm": "fixed-B",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 19,
+    "arm": "confidence",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 19,
+    "arm": "agreement",
+    "value": null,
+    "action": "refer",
+    "checks": [],
+    "events": [],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 0,
+    "execution_valid": true
+  },
+  {
+    "id": 19,
+    "arm": "always-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 16.183529123998596,
+    "execution_valid": true
+  },
+  {
+    "id": 19,
+    "arm": "selective-check",
+    "value": null,
+    "action": "refer",
+    "checks": [
+      "D",
+      "E"
+    ],
+    "events": [
+      {
+        "tool": "D",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      },
+      {
+        "tool": "E",
+        "before": {
+          "A": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "B": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "C": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          },
+          "D": {
+            "status": "missing",
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "response": {
+          "status": "missing",
+          "value": null,
+          "confidence": 0.0
+        },
+        "after_value": null
+      }
+    ],
+    "scorable": false,
+    "correct": false,
+    "wrong": false,
+    "refer": true,
+    "checker_wall_s": 16.183529123998596,
+    "execution_valid": true
+  }
+]

@@ -9,7 +9,15 @@ def audit(root):
  assert m['complete'] and [r['id'] for r in records]==m['ids']
  assert len({r['image_sha256'] for r in records})==len(records)
  assert len(out)==len(records)*len(ARMS) and len({(r['id'],r['arm']) for r in out})==len(out)
- expected,es=evaluate(records);assert out==expected
+ expected,es=evaluate(records)
+ # E0 frozen before additive cost-accounting fields; compare fields actually recorded.
+ optional={'initial_ocr_calls','initial_wall_s'}
+ assert all(set(expected[i])-optional <= set(row) and all(expected[i][k]==v for k,v in row.items()) for i,row in enumerate(out))
+ for key,value in summary.items():
+  if key=='arms':
+   for arm,fields in value.items():
+    assert all(es['arms'][arm][k]==v for k,v in fields.items())
+  elif key in es:assert es[key]==value
  for arm in ARMS:
   selected=[r for r in out if r['arm']==arm];counts={'correct':0,'wrong':0,'refer':0};scorable=0
   for r in selected:

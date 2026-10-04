@@ -21,7 +21,7 @@ Assignment completeness and uniqueness, exact count reconciliation, independent 
 
 A separate harness temporarily injects six defects into the live functions, runs focused regressions, and requires each mutant to fail: subtotal accepted, arbitrary string stripped into a number, referral counted correct, truth leaked to actor, STOP ignored, one source counted as consensus. It restores code after each mutation. These six mutants are a targeted adequacy check, not an exhaustive mutation score.
 
-Current local result:36 tests pass and6/6 mutants killed. A renderer fixture produces a PNG and3 GIFs; every frame decodes and is at least1600px wide. Deployed E0 source passed its then-frozen30 tests; additional accounting/analysis tests were added during E0 and do not change the running extraction or policy code.
+Current local result:41 tests pass and6/6 mutants killed. A renderer fixture produces a PNG and3 GIFs; every frame decodes and is at least1600px wide. Deployed E0 source passed its then-frozen30 tests; additional accounting/analysis tests were added during E0 and do not change the running extraction or policy code.
 
 ## Post-run audit and review
 
