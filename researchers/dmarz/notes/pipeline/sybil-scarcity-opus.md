@@ -1,16 +1,16 @@
 # sybil-scarcity-opus: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/orchestrator-2 (orbital-one), package by dmarz/pipeline-scarcity, server sim-dmarz-2, run-queue 248. Not a review. Last updated 2026-10-04T09:20Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/orchestrator-2 (orbital-one), package by dmarz/pipeline-scarcity, server sim-dmarz-2, run-queue 248. Not a review. Last updated 2026-10-04T09:22Z.
 
 ## 1. Results so far
 
 - Launch-ready package on main 08:44Z; reviewer's go 08:49Z with two workers instead of four; claimed 09:12Z.
-- Chain started about 09:17Z: S0 (scripted) done, probe `p0-001` 1 of 1 valid (23,537 input tokens, 38 output tokens, USD 0.095), Q0 `q0-001` running (1 of 48 at 09:18:46Z).
+- Chain started about 09:17Z: S0 (scripted) done, probe `p0-001` 1 of 1 valid (23,537 input tokens, 38 output tokens, USD 0.095), Q0 `q0-001` **passed**: 48 of 48 valid, 1,129,722 input tokens, 1,824 output tokens, USD 4.56, 80 seconds (09:18:46Z to 09:20:06Z). S1 `s1-001` (run ba41e101) started preparing inputs at 09:21Z.
 - Each call reads a packet of 486 reports, the same size as sybil-scale-xl's N=972 packets. Opus at effort low answered the probe in 38 output tokens with no thinking tokens.
 
 ## 2. Gate forecast
 
-- Q0: 48 clean packets (8 roots x carrier profile 1, 9, 81 x all facts present or one rare fact withheld). Forecast: pass on validity; the open part is abstention on the withheld fact and accuracy when a rare fact has a single truthful carrier among 486 reports. sybil-scale-xl's Q0 at this packet size was 8 of 8 valid.
+- Q0 is done and passed, including the single-carrier packets, so the instrument can find one truthful report among 486 when nothing is fabricated.
 - S1: 1,440 calls, two in flight, about 2.5 to 3 s per call: about 30 to 35 minutes and USD 137. A 429 or 529 is retried twice; any other failed call stops dispatch.
 - Rate: about 0.9 to 1.1M input tokens per minute during S1. This overlaps sybil-scale-xl's S1 (about 6 to 7M per minute, starting about 09:45Z).
 
