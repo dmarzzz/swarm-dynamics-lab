@@ -1,0 +1,79 @@
+{
+  "_comment": "JSON inside .yaml (same convention as capture-memory). Frozen 2026-10-04 04:xx UTC before any M1 run. Extends researchers/shadow/notes/capture-memory: the memory axis becomes a MIX of short- and long-memory honest agents. Exploratory hunch under researcher notes; no accepted hypothesis; stages M0/M1/M2 are scripted, MP is the real-model pilot (goal GOAL-12H.md, USD 5 hard cap in src/model.py).",
+  "version": "capture-memory-mix-v1",
+  "status": "exploratory-unreviewed hunch",
+
+  "arms": ["A0_no_purge", "A1_purge", "A2_purge_wipe"],
+
+  "cfg": {
+    "n_agents": 24,
+    "beta": 2.5,
+    "h_inside": 0.1,
+    "h_outside": 0.5,
+    "entrench_rounds": 20,
+    "takeover_max_rounds": 400,
+    "clean_takeover_rounds": 20,
+    "recovery_rounds": 80,
+    "capture_frac": 0.75,
+    "capture_streak": 3,
+    "recover_frac": 0.75,
+    "recover_streak": 10,
+    "eval_round": 50
+  },
+
+  "block": 50,
+  "splits": {"dev": [0, 199], "holdout": [1000, 1999]},
+
+  "fractions": [0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0],
+
+  "stages": {
+    "M0": {
+      "purpose": "homogeneous anchors: reproduce capture-memory S1b at the per-memory doses with the forked-prefix simulator (must match the old simulator exactly, selftest checks it)",
+      "split": "dev", "tasks": 100, "seeds": [1, 2], "worlds": ["W1_INSIDE"],
+      "cells": [
+        {"memory": 1, "dose": 0.42}, {"memory": 20, "dose": 0.42}, {"memory": "full", "dose": 0.54},
+        {"memory": 20, "dose": 0.54}, {"memory": 1, "dose": 0.54}
+      ]
+    },
+    "M1": {
+      "purpose": "the mix sweep: fraction f of short-memory (L=1) agents among honest agents whose other members hold L=20 or L=full; dose fixed per long-memory type at the capture-memory dose rule (0.42 for 20, 0.54 for full) so capture happens; also at the common dose 0.54 for the 20-mix",
+      "split": "dev", "tasks": 100, "seeds": [1, 2], "worlds": ["W1_INSIDE"],
+      "mixes": [
+        {"short": 1, "long": 20, "dose": 0.42},
+        {"short": 1, "long": 20, "dose": 0.54},
+        {"short": 1, "long": "full", "dose": 0.54}
+      ]
+    },
+    "M2": {
+      "purpose": "regime control and a second short window: W2_OUTSIDE mixes at the dose where long memory captures there (0.54 for 20), and short = 5 mixed with full inside",
+      "split": "dev", "tasks": 100, "seeds": [1, 2], "worlds": ["W1_INSIDE", "W2_OUTSIDE"],
+      "mixes": [
+        {"short": 1, "long": 20, "dose": 0.54, "worlds": ["W2_OUTSIDE"]},
+        {"short": 5, "long": "full", "dose": 0.54, "worlds": ["W1_INSIDE"]}
+      ]
+    }
+  },
+
+  "primary_contrast": {
+    "_comment": "Declared before M1 ran. Scripted M1 is a lead, not a finding (GOAL-12H.md rule).",
+    "stage": "M1", "world": "W1_INSIDE", "arm": "A1_purge", "metric": "delta_original",
+    "mix": {"short": 1, "long": "full", "dose": 0.54},
+    "compare_f": [0.5, 0.0],
+    "population": "episodes captured under both fractions (capture is decided before removal and shared by all arms)",
+    "question": "Does adding short-memory agents to a frozen (full-memory) swarm restart the return to the original convention after a perfect purge? delta_original = frac_original_T minus frac_original_at_removal, so a frozen population scores 0 and a returning one scores > 0.",
+    "secondary": ["frac_original_T", "long_T", "delta_long", "short_T", "half_time"],
+    "rescue_threshold": "smallest f on the grid at which delta_original under A1_purge exceeds +0.10 with the 95% cluster-bootstrap CI above 0",
+    "wipe_bridge": {"arms": ["A2_purge_wipe", "A1_purge"], "metric": "frac_original_T", "per": "f",
+                     "question": "Is wipe-harm at full memory removed by a short-memory fraction, and at what f does the wipe sign flip?"}
+  },
+
+  "pilot_MP": {
+    "_comment": "Real-model pilot under the GOAL-12H USD 5 cap, enforced in src/model.py (HARD_CAP_USD, shared disk ledger). Run only after M1 scripted says there is a mix effect worth checking. First a (beta, h) calibration pass (src/calibrate.py) decides the model's inside/outside word pairs; then the smallest grid that can show the regimes.",
+    "backend": "http",
+    "model": "meta-llama/llama-3.1-8b-instruct via OpenRouter (Novita provider returns first-token logprobs; the same model as magistrali-2026-aligned)",
+    "cfg_overrides": {"n_agents": 12, "entrench_rounds": 10, "takeover_max_rounds": 60, "recovery_rounds": 40, "eval_round": 30},
+    "cells": "memory in {1, full, mix:1/full@0.5}, arms {A1_purge, A2_purge_wipe} (+A0 if budget allows), 4 to 6 tasks x 1 seed",
+    "max_cost_usd": 5.0,
+    "decision": "a reproduction is any of: (a) full memory shows |delta_original| < 0.1 while memory 1 shows > +0.1 (freeze vs return), (b) wipe minus purge < -0.1 at full memory (wipe harm), (c) mix@0.5 delta_original > full-only delta_original by > 0.1 (rescue). Each is reported with its paired CI over tasks even at n = 4 to 6, labelled as a pilot."
+  }
+}
