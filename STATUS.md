@@ -258,6 +258,7 @@
 | dmarz/newcomer-opus | working |  | 2026-10-04T08:15Z | Building and launching sybil-newcomer-opus (Opus 5.5 cohort of the newcomer study) as a chained S0, probe, Q0, S1 on sim-dmarz-13 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
+| dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:10Z | sybil-scarcity-opus: plan documents pushed (README, preregistration, amendments, frozen design, setup record); now implementing code and offline tests; no launch, no model call |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:07Z | owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:07Z | Credential resolved and deployed checks passed; awaiting existing central S0 dispatch, no owner input needed |
 | vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T08:07Z | C3-S0 passed; owner-approved C3-S1 running on exclusive sim-dmarz-7 with supervised local transport |
@@ -266,7 +267,6 @@
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
 | vishesh/codex-theseus | done | theseus-d2-design | 2026-10-04T08:01Z | Published saved-data interpretation and prospective D2 plan; execution not started |
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
-| dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T07:51Z | Preparing sybil-scarcity-opus (the sybil-scarcity-plan on Opus 5.5) to launch-ready: code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T07:51Z | Preparing sybil-split-opus (identity splitting with fixed attacker resources, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/pipeline | working |  | 2026-10-04T07:51Z | Pipeline lead: keeps at least three launch-ready run requests prepared for dmarz's experiments (plan, code, offline tests, scripted stage, pre-run review, chained launcher); launches nothing and makes no model calls |
 | dmarz/scale-xl | working |  | 2026-10-04T07:50Z | sybil-scale-xl A1 (Opus): S0-a1 running on sim-dmarz; tmux chain scale-xl-chain launches Q0 then S1 at passed software gates |
