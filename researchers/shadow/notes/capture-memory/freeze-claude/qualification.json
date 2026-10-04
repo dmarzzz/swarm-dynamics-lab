@@ -1,0 +1,106 @@
+{
+  "assigned": 12,
+  "cause": "infrastructure",
+  "gate_evaluable": false,
+  "passed": false,
+  "results": [
+    {
+      "id": "q-sonnet-0",
+      "model": "sonnet",
+      "request_ids": [
+        1,
+        2
+      ],
+      "status": "failed_transport",
+      "valid": false
+    },
+    {
+      "id": "q-sonnet-1",
+      "model": "sonnet",
+      "request_ids": [
+        3,
+        4
+      ],
+      "status": "failed_transport",
+      "valid": false
+    },
+    {
+      "id": "q-sonnet-2",
+      "model": "sonnet",
+      "request_ids": [
+        5,
+        6
+      ],
+      "status": "failed_transport",
+      "valid": false
+    },
+    {
+      "id": "q-sonnet-3",
+      "model": "sonnet",
+      "request_ids": [
+        7,
+        8
+      ],
+      "status": "failed_transport",
+      "valid": false
+    },
+    {
+      "id": "q-sonnet-4",
+      "model": "sonnet",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    },
+    {
+      "id": "q-sonnet-5",
+      "model": "sonnet",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    },
+    {
+      "id": "q-sonnet-6",
+      "model": "sonnet",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    },
+    {
+      "id": "q-sonnet-7",
+      "model": "sonnet",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    },
+    {
+      "id": "q-opus-0",
+      "model": "opus",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    },
+    {
+      "id": "q-opus-1",
+      "model": "opus",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    },
+    {
+      "id": "q-opus-2",
+      "model": "opus",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    },
+    {
+      "id": "q-opus-3",
+      "model": "opus",
+      "request_ids": [],
+      "status": "not_started",
+      "valid": false
+    }
+  ],
+  "started": 4,
+  "valid": 0
+}

@@ -1,0 +1,14 @@
+{
+  "status": "stopped_before_qualification",
+  "reason": "Repeated Claude-pool overload/broker failures; manually terminated during cooldown after eight completed HTTP attempts. No scientific model response was obtained.",
+  "request_count": 8,
+  "valid_model_responses": 0,
+  "http_429": 2,
+  "http_503": 6,
+  "last_response_time": "2026-10-04T20:28:45.422860+00:00",
+  "qualification_assignments_started": 4,
+  "qualification_assignments_planned": 12,
+  "scientific_assignments_started": 0,
+  "unmatched_requests": 0,
+  "further_model_calls_authorized_by_this_run": false
+}
