@@ -17,7 +17,7 @@ from tasks import generate,qualification_manifest,evaluate,operational
 
 REQUIRED=('expected_served_model','expected_served_provider','stage_cap_microdollars',
           'episode_cap_microdollars','spending_authorization','independent_review_commit',
-          'exclusive_machine_claim','public_plan_receipt')
+          'exclusive_machine_claim','public_plan_receipt','authorized_total_microdollars')
 
 
 def launch_errors(config):
@@ -26,6 +26,15 @@ def launch_errors(config):
     for k in ('stage_cap_microdollars','episode_cap_microdollars'):
         v=config.get(k)
         if v is not None and (type(v) is not int or v<=0):errors.append('invalid:'+k)
+    authorization=json.loads((Path(__file__).parent.parent/'SPENDING-AUTHORIZATION.json').read_text())
+    if config.get('spending_authorization')!=authorization['authorization_id'] or config.get('authorized_total_microdollars')!=authorization['authorized_total_microdollars']:
+        errors.append('authorization_record_mismatch')
+    allowed=authorization['authorized_total_microdollars']
+    stage=config.get('stage_cap_microdollars')
+    episode=config.get('episode_cap_microdollars')
+    if type(allowed) is not int or allowed<=0: errors.append('invalid:authorized_total_microdollars')
+    elif type(stage) is int and stage>allowed: errors.append('stage_exceeds_authorization')
+    if type(stage) is int and type(episode) is int and episode>stage: errors.append('episode_exceeds_stage')
     return errors
 
 

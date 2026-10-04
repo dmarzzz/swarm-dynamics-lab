@@ -40,6 +40,7 @@ class LiveTests(unittest.TestCase):
         db.execute("UPDATE calls SET status='failed'");db.commit();reserve(db,'b',RESERVE*2,2)
         with self.assertRaises(ValueError):reserve(db,'c',RESERVE*2,2)
         self.assertEqual(db.execute('SELECT sum(reserved_nano) FROM calls').fetchone()[0],RESERVE*2)
+        db.close()
     def test_temporal_recovery_exact_reference(self):
         for c in development():
             if c['scenario']=='alarm':

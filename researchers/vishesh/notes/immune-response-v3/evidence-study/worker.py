@@ -8,13 +8,13 @@ sys.path.insert(0,str(study.ROOT.parent.parent/'experiment-documentation'))
 from public_plan import check
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);p.add_argument('--solo',action='store_true');a=p.parse_args();out=Path(a.out)
+ p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);a=p.parse_args();out=Path(a.out)
  if out.exists():raise ValueError('output_exists')
  receipt=allocation(a.receipt);expected=16
  tldr='Paired evidence receipt diagnostic: 16 deployment episodes, identical shared reviewer advice, clean and stale memory, raw versus checked probe claims; maximum 120 calls.'
  public=check('immune-response-v3',tldr)
  import swarm_report as sr
- job=sr.start('immune-response-v3',params={'stage':'receipt-native-a1','backend':'anthropic','episodes':expected,'max_calls':120,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
+ job=sr.start('immune-response-v3',params={'stage':'receipt-native-a2','backend':'anthropic','episodes':expected,'max_calls':120,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
  print(json.dumps({'run':job.id}),flush=True)
  try:
   p=subprocess.Popen([sys.executable,str(study.ROOT/'study_receipts.py'),'--backend','anthropic','--out',str(out)],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)

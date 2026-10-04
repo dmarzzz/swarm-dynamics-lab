@@ -1,18 +1,22 @@
 # Immune Response
 
+## TLDR
+
 Can a recovery team use a bad recommendation without adopting its false account of the evidence? The previous team left obvious incidents unresolved, sometimes describing a failing live probe as passing. A solo commander repaired incidents but also damaged a healthy deployment. Neither result justifies adding more agents.
 
 This iteration tests a small, practical boundary: **check what reviewers say they observed before the commander uses their advice**. A receipt checks four explicit claims against the same initial telemetry already visible to every agent. It supplies no repair, searches no configuration space and certifies no recommendation as safe. A faithful description can still lead to a bad action.
 
 This is an exploratory diagnostic of a constructed three-service deployment. It is not a formal accepted hypothesis, independent review, production validation or evidence about a population of incidents. Existing research gates remain closed. Display name: **Immune Response**; existing registry ID: `immune-response-v3`.
 
-## Why this iteration is needed
+## Question and prediction
 
 [Previous assessment](../scenario-study/ASSESSMENT.md) identified three different failures: false readings of current evidence, unsafe intervention on healthy service, and a qualification rule that passed teams which could not recover incidents. The [fresh PI synthesis](../../../../dmarz/notes/next-experiments-2026-10-04/README.md) calls for competence and evidence checking before scaling. Repository feedback was refreshed before planning; unrelated benchmark review comments are not claimed as reviews of this instrument.
 
 The previous memory reset erased once and later admitted a delayed obsolete handoff. It was not a fully clean competence control. Here `clean` has no handoffs at any tick, while `stale` retains current and obsolete advice and receives the delayed obsolete handoff at tick 4. This changes a control, not the historical findings.
 
-## Frozen protocol: receipt-a1, 2026-10-04
+## Protocol
+
+Frozen receipt-a1 protocol, 2026-10-04.
 
 Keep the A2 catalog, initial configurations and customer checks. Four cases: unreadable legacy data, already migrated data, healthy false alarm, and temporary operator-registry failure. These are three incident cases and one healthy control, not four independent incident samples. The registry case shares the initial deployment with the first case and differs only if agents query the registry.
 
@@ -22,7 +26,7 @@ Commanders also state the current four probe booleans. Score their claims after 
 
 Native development seed 9300; scripted development seed 9290. Shuffle eight case/memory worlds deterministically, alternate which receipt arm executes first. No retries and no adaptive extra episodes. Each world costs three shared review calls plus twelve commander calls: **120 maximum calls**, 24 reviewer and 96 commander. Sharing reviewer generation is a paired diagnostic design, not a claim about production compute savings. Provider nondeterminism and fixed within-world dependencies remain. The old reserved seeds 9200–9215 stay unopened. Seed changes only service aliases; no claim of new topology or out-of-distribution qualification.
 
-## Measurements and decisions
+## Metrics
 
 Primary comparison: checked minus raw **healthy ticks out of six**, reported separately for each case and memory condition. Do not pool healthy restraint with incident recovery into one favorable average. Secondary measurements: commander false probe claims / 24 declared booleans per episode, reviewer false claims / 12 shared booleans per world, rejected unsafe attempts, new probe regressions (any previously passing check becomes false), actual customer damage (a fully healthy state becomes unhealthy), deployment attempts, final health, latency and cost. Report receipt mismatches as a manipulation check. If no reviewer makes a false structured claim, this run cannot estimate correction of false claims; a null receipt contrast is then uninformative about that mechanism.
 
@@ -30,7 +34,7 @@ Execution acceptance: all 16 assignments terminal, no malformed/missing response
 
 A receipt benefit must coexist with healthy preservation and recovery competence. A match means faithful transcription only. Even if all gates pass, this tiny familiar graph does not demonstrate robust swarm immunity. No selection of successful episodes, repeated native draws until passing, or pooling with A1/A2 is permitted.
 
-## Execution and reproducibility
+## Setup
 
 `python -m unittest discover -s researchers/vishesh/notes/immune-response-v3/evidence-study -p 'test_*.py' -v`
 
@@ -51,3 +55,5 @@ The interactive replay includes the initial deployment, all four health checks, 
 No independent scenario author or held-out service graph. No partial telemetry, real network/service processes, autonomous fault detection, topology diversity or strong causal population estimate. Initial reviewer snapshots may go stale after actions; receipts deliberately retain their tick. Recommendation semantics remain model-generated and are not certified. Future realism must introduce separately reviewed scenarios and partial evidence with a useful deterministic baseline, not just longer prompts or more agents. These are prerequisites for expansion, not completed work.
 
 Pre-native engineering correction: the first offline audit exposed that migrated-data repair necessarily introduces a temporary RPC failure while service is already unavailable. The prior count-based unsafe metric concealed this exchange of failing checks. The new metric records every new probe regression, and separately gates losses of fully healthy service. The first offline record is retained as an evaluator diagnostic; no native outcome was inspected to choose this amendment.
+
+Setup amendment, 2026-10-04: first native launch failed the public-plan heading contract before creating a run or spending. Required headings are now explicit and covered by a local public-plan validation regression. `receipt-native-a2` executes the unchanged scientific protocol; a1 is preserved as a setup failure.
