@@ -1,5 +1,10 @@
 # Discussion allowance and corruption in a fork and merge swarm
 
+## Results and reflection
+
+[Read the original pilot retrospective](RESULTS-AND-REFLECTION.md): complete attempt accounting, corrected results, the parent memory-coverage failure, and what this run cannot establish. No additional original-protocol runs are planned by this task.
+
+
 Exploratory experiment plan and executable environment, owned by **dmarz/discussion-dose**, 3 October 2026. Test whether additional discussion helps a three-agent swarm correct a false fact introduced through one child's tool result, or amplifies it into the final vote and returned memory.
 
 **Status:** human-requested exploratory build and deployment, not an accepted hypothesis or confirmatory finding. Submitted through [the lab task](../../../../tasks/build-discussion-dose.md) and registered as `discussion-dose` in the [live experiment list](https://swarm-live.pages.dev). The [worker template](../../../../templates/experiment-worker/README.md) explicitly permits S0/S1 builds in researcher notes while review is pending. The formal `experiments/` catalogue requires an accepted hypothesis; we preserve that gate. S2 is unavailable in the coordinator and worker.

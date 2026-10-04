@@ -9,3 +9,7 @@ The authoritative records remain in the [question atlas](../question-atlas/candi
 | SEC-52 | Do small per-merge failures accumulate across generations? | Related extension. One restart detects immediate inheritance. Multiple generations, regrowth and long-run accumulation remain future work. |
 
 Working hunch: discussion duration changes the probability and timing of correction versus amplification of a false fact introduced through one child. This fits SEC-47 without another near-duplicate atlas entry. Formal promotion requires the existing survey and independent hypothesis-review gates; the present submission is an exploratory environment and plan.
+
+## Original pilot evidence
+
+The [results and reflection](RESULTS-AND-REFLECTION.md) localize two SEC-47 stages: four of six attacked acquisitions initially adopted and returned the false value, but contamination was absent before discussion; separately, one parent answered incorrectly after the required fact was omitted from an otherwise true merged memory. The six-world pilot does not isolate a causal discussion effect, directly test SOC-07, or test the cross-generation accumulation in SEC-52. No formal hypothesis status changes.
