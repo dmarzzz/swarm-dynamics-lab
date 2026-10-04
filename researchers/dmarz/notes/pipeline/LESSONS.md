@@ -123,7 +123,7 @@ sybil-rules-180's first probe stopped the chain: the model filed the instructed 
 
 ### With reasoning disabled, a model answers multi-step rules in one step and slips.
 
-qwen/qwen3.7-flash with reasoning disabled passed the extraction-style qualification of trust-credit-qwen (24 of 24 packets of 162 rows) but failed both judgment-style qualifications: verify-cost-qwen 18 of 24 optimal on choices with a margin of at least 0.60 in expected cost, and memory-handoff-qwen 19 of 24 on a five-rule source policy, every answer structurally valid. Post-mortems: `verify-cost-qwen/reviews/chain-001-post.md`, `memory-handoff-qwen/reviews/chain-001-post.md`. The pre-registered repair in both lines lets the model write its intermediate values inside the answer object before the graded field; whether that rescues the failure is what attempt 002 tests.
+qwen/qwen3.7-flash with reasoning disabled passed the extraction-style qualification of trust-credit-qwen (packets of 162 rows; gate: at least 7 of 8 exact per answerable group and null on every withheld fact) but failed both judgment-style qualifications: verify-cost-qwen 18 of 24 optimal on choices with a margin of at least 0.60 in expected cost, and memory-handoff-qwen 19 of 24 on a five-rule source policy, every answer structurally valid. Post-mortems: `verify-cost-qwen/reviews/chain-001-post.md`, `memory-handoff-qwen/reviews/chain-001-post.md`. The pre-registered repair in both lines lets the model write its intermediate values inside the answer object before the graded field; whether that rescues the failure is what attempt 002 tests.
 
 ### A provider-side limit is not a model failure, and its wording is not predictable.
 
