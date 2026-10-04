@@ -1,0 +1,29 @@
+# Verification v1 — offline instrument and proposed admission
+
+## Current state
+
+The packet is frozen for a funding decision, not for paid execution. The offline command is `python instrument.py --out <new-directory> --backend offline`. It executes the deterministic public-observation rule through all 48 assigned episodes/192 scripted responses. It never accesses credentials, reserves money or calls a model. The new native runner, worker, relay and watchdog fail closed without a funded receipt; C1's dispatcher, receipt and 32-call relay must not be reused.
+
+Run `python -m unittest discover -s . -p 'test_*.py'` with the documented pinned Python dependencies, then `python freeze.py` and the replay command. Re-freezing changes the packet digest and invalidates any decision bound to the former packet.
+
+## Frozen execution contract
+
+The packet has six roots, two branches, two arms and two fresh repeats, 48 two-tick episodes. The schedule seed is fixed; the four branch/arm combinations are shuffled within each root/repeat block. Every episode resets simulator, history and model context. The model sees only public observation and current uncorrected diagnosis; no root/branch/arm/repeat label or operator conversation. The guard is an explicit intervention in the experiment, with its reason visible following a denial; it is not an extra prompt hint before the initial decision. Initial observation and diagnosis-wire hashes must match across arms and repeats. Later requests are action-dependent and must be archived and hashed at dispatch.
+
+Each tick calls diagnosis then action. Schema-valid wrong diagnoses remain untouched and scored. Action output order is reason then action_id. A wrong action is an outcome, not a transport retry. All original health/preservation/repair thresholds remain fixed. Actual post-repair verification requires an accepted useful repair and a later inspect returning a current healthy probe. Inspect-before-repair, registry refresh, stale or unhealthy probes, rejected deployment and guard rejection cannot earn that endpoint. A healthy episode with no useful repair is not applicable. The two-tick horizon allows repair then inspect, but no extra free verification tick.
+
+## Analysis and visualization contract
+
+Analyze all assigned IDs, preserving missingness. Report guarded-minus-unguarded paired differences for each root, branch and repeat; show per-root and per-family means with contributing pair counts. Branches remain separate, so protection is not averaged together with repair. Fresh-repeat disagreement is reported per root/branch/arm for each outcome and action sequence; compare selected actions without reason text. Two repeats measure observed repeatability only. Six authored roots within three families do not support broad population confidence intervals. No tick or model call is an independent sample unit. A missing pair contributes no fabricated zero.
+
+Show all 48 rows, including missing attempts. The replay view should align older report, fresh report, proposed action, guard disposition, executed action, served opportunity and actual verification by tick; use one panel per paired root with repeat toggles. Guard-protected health and model proposal-contract qualification must use different visual markers. Native results and scripted rule feasibility must have different labels. Rendering must use saved events and make no model calls.
+
+## Required funding and native wiring before launch
+
+Obtain a named decision bound to the immutable source and packet SHA-256 before allocating or dispatching. Proposed model maximum is USD10.629120 for 192 calls, with USD0.15 separately reconciled infrastructure; all-in USD10.779120. Existing v3 budget exposure is USD6.248035 across 517 calls. The unchanged USD8 cap is insufficient; the proposed cumulative model cap is at least USD16.877155. Historical rows, reservations, unknown charges and portfolio infrastructure remain. These proposal rates are not a fresh provider pricing observation.
+
+The stage-scoped native adapter uses the existing ledger and a persistent 192-request stage cap; it reserves before dispatch and enforces 8000 serialized bytes and 512 output tokens, enforces the exact Opus/Anthropic route with no fallback, retains raw responses and usage, and stops on the first transport/schema/usage/route/order failure without retry. The inherited legacy adapter has a 120-request hard limit; native.py overrides reservation with a tested persistent192request stage cap without changing old code. The one-use stage must reject duplicate request IDs, interrupted reruns, absent/changed funding receipts and stale ledger lineage. A new ledger must never be initialized. Calls that may have reached a provider retain their reservation.
+
+Also require current approved-account verification, exclusive allocation without borrowing another researcher's claim, verified source/runtime and pinned dependencies, immutable public registration with condition-specific TLDR/readback, actual rate/route checks, and a bounded credential relay/worker watchdog. No new machine is proposed. Native qualification evidence and this scripted replay must be distinguished. A funding decision alone is not admission. Partial execution must retain per-assignment start/completion status, every emitted request/response/frame and costs. Finish with exact-resource cleanup, offline finalize and authored scientific post-mortem. No automatic successor is authorized.
+
+Native launch command after admission: `python launch.py --out <new-directory> --admission <private-receipt>`. Sequential192calls on one host are proposed. C1 saved32provider timings: mean5.476s, median4.919s, maximum11.915s, total175.247s. At that observed mean collection projects17.52minutes; this is a forecast, not a latency guarantee. The60minute watchdog bounds stalled execution; no parallel-host allocation is required.

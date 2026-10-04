@@ -11,3 +11,7 @@ The offline candidate clarifies existing diagnosis labels and offers justificati
 ## C1 superseding handoff
 
 C1 executed under PI-FUND-20261004-04. Read [C1 post-mortem](c1/reviews/c1-post.md):32calls,8trajectories; botharms fail fixed qualification. No worker/allocation remains. Originalledger517calls/USD6.248035reserved/cap8; newactualUSD0.329025. Ordering compliance16/16did not establish healthy restraint. Q/A remain unfunded and blocked by their predecessor gate. PI now requests offline paired fresh-evidence confirmation/contradiction cases, a public-observation rule comparator and explicit guard treatment; any paid successor needs a named PI decision and revised finite study slice insideUSD200.
+
+## Verification v1 frozen instrument
+
+See ../verification-study/PLAN.md and RUNBOOK.md.16offline tests and192scripted responses pass; paid native admission absent. Native packet includes the scoped192request ledger adapter, fixed route relay, sequential worker, watchdog, saved-data replay and paired/missingness analysis. Frozen manifests bind source and initial context. Proposed10.779120all-in envelope needs named PI funding; original6.248035model exposure preserved. No resources claimed.

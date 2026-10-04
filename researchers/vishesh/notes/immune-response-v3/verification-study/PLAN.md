@@ -36,10 +36,14 @@ Cases where always-wait misses a confirmed repair and always-restart harms a rec
 
 At USD0.055360 per bounded Opus request, maximum new model reservation is **USD10.629120**. Propose a separately verified infrastructure ceiling USD0.15 on an existing exclusively claimed approved-account machine; proposed all-in ceiling **USD10.779120**. This is not a grant or pricing observation. Current v3 ledger517calls/USD6.248035reserved/cap8 would need an explicitly amended model slice of at least **USD16.877155**, while retaining historicalv2/infrastructure in theUSD200portfolio. No reset or newVM is implied.
 
-A funded executable packet must still pin native runtime, source, current route/rates, maximum serialized payloads and randomized assignments; publish/register its immutable condition-specific plan; reserve costs before calls; verify the account/claim and original ledger; and bind a named PI decision. This offline construction contains no dispatcher. No C1 approval or necessary-diagnostic permission is being reused to launch this changed design.
+A funded executable packet must still pin native runtime, source, current route/rates, maximum serialized payloads and randomized assignments; publish/register its immutable condition-specific plan; reserve costs before calls; verify the account/claim and original ledger; and bind a named PI decision. The native dispatcher is installed but rejects absent or stale funded admission. No C1 approval or necessary-diagnostic permission is being reused to launch this changed design.
 
 ## Visualization and scientific acceptance
 
 Show each paired incident's older report, fresh confirmation/contradiction, proposal, guard decision, executed action, service opportunities and verification across both fresh repeats. Keep rule/scripted and native results distinct. Plot all roots including negative/missing cases. Review every native action/diagnosis, retain complete cost/assignment accounting and finish the authored post-mortem.
 
 A credible result must demonstrate valid cases/labels and competent rule feasibility, effective guard manipulation, complete paired repeated execution and an interpretable recovery/preservation tradeoff. Positive results are not required; useful stable negatives count. It still would not establish the original full swarm/advice mechanism or justify scaling roster size by itself.
+
+## Frozen analysis details
+
+The offline native instrument and assignment packet are in `instrument.py`, `packet.json` and `RUNBOOK.md`. Native dispatch remains disabled without funded admission. Report root/branch/repeat paired guarded-minus-unguarded differences, family summaries with pair counts and fresh-repeat outcome/action disagreement, preserving missingness. No confidence interval treats ticks or calls as independent samples. Actual post-repair verification is defined only after an accepted useful repair that restores health; unnecessary deployment followed by inspect cannot earn a repair-verification success. Initial actor inputs exclude arm/branch/repeat labels and are hash-matched across arms and fresh repeats.
