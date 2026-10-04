@@ -4,7 +4,7 @@ Status: proposed only; not approved, allocated, registered for execution or run.
 
 ## TLDR
 
-Qualify Qwen and Jev on 60 fresh synthetic reports whose method names cannot reveal evaluator labels or scenario families. Preserve C4's evidence and the original ledger. Run only this qualification, then review all misses and decide whether any main experiment is worthwhile. No automatic S1, repeated qualification, prompt tuning or broader swarm claim.
+Qualify Qwen and Jev on 60 new synthetic instances drawn from 12 authored class/form templates (not 60 new semantic problems or independent families) whose method names cannot reveal evaluator labels or scenario families. Preserve C4's evidence and the original ledger. Run only this qualification, then review all misses and decide whether any main experiment is worthwhile. No automatic S1, repeated qualification, prompt tuning or broader swarm claim.
 
 ## Question and prediction
 
@@ -12,7 +12,7 @@ Does the corrected metadata-blind instrument produce complete valid responses an
 
 ## Setup
 
-One S0: 60 new balanced reports, 20 each SUPPORT/REFUTE/UNCERTAIN, four authored surface forms per class. The independent evidence is a finite synthetic fixture screen, not 60 sampled real-world domains. No powered safety claim. This allocation preserves the original qualification scope while removing the defect; it is not a larger search for a favorable result.
+One S0: 60 new balanced instances of 12 authored class/form templates, 20 each SUPPORT/REFUTE/UNCERTAIN, four authored surface forms per class. The independent evidence is a finite synthetic fixture screen, not 60 sampled real-world domains. No powered safety claim. This allocation preserves the original qualification scope while removing the defect; it is not a larger search for a favorable result.
 
 The new opaque method identifier is a hash of split and index only; label/family are not inputs. Label allocation and call order use distinct fixed seeds. Method/test identifiers contain no evaluator metadata. Reports explicitly compare against baseline; correct-answer counts refer to the same questions. Truth/family/IDs remain evaluator-only fields. C5 assignments are generated only after prospective registration and admission; offline tests use development indices only.
 
