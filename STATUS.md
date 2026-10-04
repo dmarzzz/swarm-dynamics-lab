@@ -40,17 +40,18 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:29Z | Build and evaluate real receipt-total checking with fresh data |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T04:29Z | Ship the compositional safety benchmark and qualification |
-| [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T04:15Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
+| [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T04:37Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [deploy-discussion-v3-d1](tasks/deploy-discussion-v3-d1.md) | claimed | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:18Z | Deploy and preserve the bounded discussion v3 D1 diagnostic |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:29Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:17Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:35Z | Run the revised procurement influence experiment |
+| [phantom-coast-pc2-design](tasks/phantom-coast-pc2-design.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:38Z | Iterate Phantom Coast after the native ceiling result |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | claimed | p1 | survey | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:32Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-quorum-mirrors-qm3](tasks/review-quorum-mirrors-qm3.md) | claimed | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:36Z | Review Quorum of Mirrors practical value and S1 feasibility design |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:27Z | Deploy and assess the Right Dissenter exploratory live study |
-| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:15Z | Ship the neutral-agent market-splitting pilot |
+| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:37Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -60,7 +61,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:15Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
+| [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:37Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -249,7 +250,7 @@
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-phantom-coast | done | phantom-coast-live | 2026-10-04 04:29:32+00:00 | Q0 and S0 complete; valid null, USD0.162723246; results published and host released |
+| vishesh/codex-phantom-coast | working | phantom-coast-pc2-design | 2026-10-04 04:29:32+00:00 | Reviewing native ceiling and preparing prospective adaptive observation contract |
 | vishesh/codex-quorum-mirrors | done |  | 2026-10-04 04:28:00.449691+00:00 | Iteration 3 published; S1 pending research gates and review-quorum-mirrors-qm3 |
 | vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04 04:27:46.239298+00:00 | Recovered verified idle Dmarz fleet host sim-shadow, exclusive claim through 05:30Z; deploying Q1 under original approved cap. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
