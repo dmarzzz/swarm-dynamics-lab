@@ -78,3 +78,7 @@ Q30-01 reviewed:25native starts,96terminal, both roles failed. [Post-mortem](rev
 ## Q30-04 closed — paced provider refusal, baseline still GAP
 
 [Post-mortem](reviews/Q30-04-post.md), [scientific review](reviews/Q30-04-scientific.json) and [cost](results/Q30-04/cost-closeout.json):4 starts,3 valid/correct, one DeepInfra429,44 unstarted. All physical intervals at least5.000042 seconds; full trace replay and three artifact hashes verified. Original148 calls,40 uncertain, conservative totalUSD0.630273610. Worker/relay stopped; claim438released439. The cheap route is parked without another paid repair. Native collective n=0; no efficacy or fresh-run reproducibility. [P30-B](NEXT-P30-PLAN.md) is a prospective, unimplemented and unfunded design with stronger fixed-capability controls and independent worlds plus distinct execution repeats.
+
+## Offline successor preparation
+
+[Q30-05 proposal](route-repair/PLAN.md), [provider review](route-repair/PROVIDER-REVIEW.md) and [177-test validation](route-repair/VALIDATION.md) prepare a pinned DekaLLM route with bounded no-output429 retries. Terms/data eligibility and named funding remain unresolved. [Development witnesses](interpretation-dev/REPORT.md) cover16 fixtures from4 authored roots; fixed code solves all, so comparative scientific readiness remains GAP. [P30-C staging](NEXT-P30-STAGED.md) reduces the proposed call envelope and repeats every included world. No paid calls, new claim or original-ledger mutation occurred; historical148 calls and USD0.630273610 conservative exposure remain unchanged.

@@ -1,0 +1,130 @@
+{
+  "dispatch-base": {
+    "status": "answer",
+    "value": "C",
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "dispatch-changed": {
+    "status": "answer",
+    "value": "A",
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "dispatch-invariant": {
+    "status": "answer",
+    "value": "C",
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "dispatch-missing": {
+    "status": "insufficient_evidence",
+    "value": null,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "returns-base": {
+    "status": "answer",
+    "value": false,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "returns-changed": {
+    "status": "answer",
+    "value": true,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "returns-invariant": {
+    "status": "answer",
+    "value": false,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "returns-missing": {
+    "status": "insufficient_evidence",
+    "value": null,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "temperature-base": {
+    "status": "answer",
+    "value": false,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "temperature-changed": {
+    "status": "answer",
+    "value": true,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "temperature-invariant": {
+    "status": "answer",
+    "value": false,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "temperature-missing": {
+    "status": "insufficient_evidence",
+    "value": null,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "capacity-base": {
+    "status": "answer",
+    "value": "wait",
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "capacity-changed": {
+    "status": "answer",
+    "value": "reserve",
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "capacity-invariant": {
+    "status": "answer",
+    "value": "wait",
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  },
+  "capacity-missing": {
+    "status": "insufficient_evidence",
+    "value": null,
+    "citations": [
+      "facts",
+      "policy"
+    ]
+  }
+}

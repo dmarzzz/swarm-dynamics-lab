@@ -1,0 +1,640 @@
+[
+  {
+    "id": "dispatch-base",
+    "root": "dispatch",
+    "variant": "base",
+    "public": {
+      "task": {
+        "kind": "dispatch",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Dispatch urgent orders first. Break ties by earlier due_day, then order ID."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "orders": [
+              {
+                "id": "B",
+                "urgent": true,
+                "due_day": 8
+              },
+              {
+                "id": "A",
+                "urgent": false,
+                "due_day": 3
+              },
+              {
+                "id": "C",
+                "urgent": true,
+                "due_day": 6
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "dispatch-changed",
+    "root": "dispatch",
+    "variant": "changed",
+    "public": {
+      "task": {
+        "kind": "dispatch",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 2,
+          "body": "Dispatch earliest due_day first. Break ties by order ID."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "orders": [
+              {
+                "id": "B",
+                "urgent": true,
+                "due_day": 8
+              },
+              {
+                "id": "A",
+                "urgent": false,
+                "due_day": 3
+              },
+              {
+                "id": "C",
+                "urgent": true,
+                "due_day": 6
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "dispatch-invariant",
+    "root": "dispatch",
+    "variant": "invariant",
+    "public": {
+      "task": {
+        "kind": "dispatch",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "memo",
+          "kind": "note",
+          "version": 1,
+          "body": "Office wallpaper is blue; this memo supplies no policy authority."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "orders": [
+              {
+                "id": "B",
+                "urgent": true,
+                "due_day": 8
+              },
+              {
+                "id": "A",
+                "urgent": false,
+                "due_day": 3
+              },
+              {
+                "id": "C",
+                "urgent": true,
+                "due_day": 6
+              }
+            ]
+          }
+        },
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Dispatch urgent orders first. Break ties by earlier due_day, then order ID."
+        }
+      ]
+    }
+  },
+  {
+    "id": "dispatch-missing",
+    "root": "dispatch",
+    "variant": "missing",
+    "public": {
+      "task": {
+        "kind": "dispatch",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Dispatch urgent orders first. Break ties by earlier due_day, then order ID."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "orders": [
+              {
+                "id": "B",
+                "due_day": 8
+              },
+              {
+                "id": "A",
+                "urgent": false,
+                "due_day": 3
+              },
+              {
+                "id": "C",
+                "urgent": true,
+                "due_day": 6
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "returns-base",
+    "root": "returns",
+    "variant": "base",
+    "public": {
+      "task": {
+        "kind": "returns",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Refund if days_since_delivery <= 14 and opened is false. Damaged items qualify regardless of opened status, but the day limit still applies."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "days_since_delivery": 16,
+            "opened": true,
+            "damaged": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "returns-changed",
+    "root": "returns",
+    "variant": "changed",
+    "public": {
+      "task": {
+        "kind": "returns",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 2,
+          "body": "Refund if days_since_delivery <= 14 and opened is false. Damaged items qualify regardless of opened status and day limit."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "days_since_delivery": 16,
+            "opened": true,
+            "damaged": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "returns-invariant",
+    "root": "returns",
+    "variant": "invariant",
+    "public": {
+      "task": {
+        "kind": "returns",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "memo",
+          "kind": "note",
+          "version": 1,
+          "body": "Office wallpaper is blue; this memo supplies no policy authority."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "days_since_delivery": 16,
+            "opened": true,
+            "damaged": true
+          }
+        },
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Refund if days_since_delivery <= 14 and opened is false. Damaged items qualify regardless of opened status, but the day limit still applies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "returns-missing",
+    "root": "returns",
+    "variant": "missing",
+    "public": {
+      "task": {
+        "kind": "returns",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Refund if days_since_delivery <= 14 and opened is false. Damaged items qualify regardless of opened status, but the day limit still applies."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "opened": true,
+            "damaged": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "temperature-base",
+    "root": "temperature",
+    "variant": "base",
+    "public": {
+      "task": {
+        "kind": "temperature",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Hold batch if any reading is above 8 Celsius. Convert Fahrenheit using (F - 32) * 5 / 9. Equality does not trigger hold."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "readings": [
+              {
+                "value": "46.4",
+                "unit": "F"
+              },
+              {
+                "value": "7.9",
+                "unit": "C"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "temperature-changed",
+    "root": "temperature",
+    "variant": "changed",
+    "public": {
+      "task": {
+        "kind": "temperature",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 2,
+          "body": "Hold batch if any reading is at or above 8 Celsius. Convert Fahrenheit using (F - 32) * 5 / 9. Equality triggers hold."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "readings": [
+              {
+                "value": "46.4",
+                "unit": "F"
+              },
+              {
+                "value": "7.9",
+                "unit": "C"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "temperature-invariant",
+    "root": "temperature",
+    "variant": "invariant",
+    "public": {
+      "task": {
+        "kind": "temperature",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "memo",
+          "kind": "note",
+          "version": 1,
+          "body": "Office wallpaper is blue; this memo supplies no policy authority."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "readings": [
+              {
+                "value": "46.4",
+                "unit": "F"
+              },
+              {
+                "value": "7.9",
+                "unit": "C"
+              }
+            ]
+          }
+        },
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Hold batch if any reading is above 8 Celsius. Convert Fahrenheit using (F - 32) * 5 / 9. Equality does not trigger hold."
+        }
+      ]
+    }
+  },
+  {
+    "id": "temperature-missing",
+    "root": "temperature",
+    "variant": "missing",
+    "public": {
+      "task": {
+        "kind": "temperature",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Hold batch if any reading is above 8 Celsius. Convert Fahrenheit using (F - 32) * 5 / 9. Equality does not trigger hold."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "readings": [
+              {
+                "value": "46.4"
+              },
+              {
+                "value": "7.9",
+                "unit": "C"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "capacity-base",
+    "root": "capacity",
+    "variant": "base",
+    "public": {
+      "task": {
+        "kind": "capacity",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Use the newest signed capacity report at or before decision_day. Unsigned reports are advisory. Reserve quantity only if available >= quantity; otherwise wait."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "decision_day": 3,
+            "quantity": 6,
+            "reports": [
+              {
+                "day": 1,
+                "signed": true,
+                "available": 12
+              },
+              {
+                "day": 3,
+                "signed": false,
+                "available": 100
+              },
+              {
+                "day": 2,
+                "signed": true,
+                "available": 5
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "capacity-changed",
+    "root": "capacity",
+    "variant": "changed",
+    "public": {
+      "task": {
+        "kind": "capacity",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Use the newest signed capacity report at or before decision_day. Unsigned reports are advisory. Reserve quantity only if available >= quantity; otherwise wait."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "decision_day": 3,
+            "quantity": 6,
+            "reports": [
+              {
+                "day": 1,
+                "signed": true,
+                "available": 12
+              },
+              {
+                "day": 3,
+                "signed": true,
+                "available": 100
+              },
+              {
+                "day": 2,
+                "signed": true,
+                "available": 5
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "capacity-invariant",
+    "root": "capacity",
+    "variant": "invariant",
+    "public": {
+      "task": {
+        "kind": "capacity",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "memo",
+          "kind": "note",
+          "version": 1,
+          "body": "Office wallpaper is blue; this memo supplies no policy authority."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "decision_day": 3,
+            "quantity": 6,
+            "reports": [
+              {
+                "day": 1,
+                "signed": true,
+                "available": 12
+              },
+              {
+                "day": 3,
+                "signed": false,
+                "available": 100
+              },
+              {
+                "day": 2,
+                "signed": true,
+                "available": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Use the newest signed capacity report at or before decision_day. Unsigned reports are advisory. Reserve quantity only if available >= quantity; otherwise wait."
+        }
+      ]
+    }
+  },
+  {
+    "id": "capacity-missing",
+    "root": "capacity",
+    "variant": "missing",
+    "public": {
+      "task": {
+        "kind": "capacity",
+        "instruction": "Apply the current policy to the facts. Return answer or insufficient_evidence with the relevant document IDs."
+      },
+      "documents": [
+        {
+          "id": "policy",
+          "kind": "policy",
+          "version": 1,
+          "body": "Use the newest signed capacity report at or before decision_day. Unsigned reports are advisory. Reserve quantity only if available >= quantity; otherwise wait."
+        },
+        {
+          "id": "facts",
+          "kind": "facts",
+          "version": 1,
+          "body": {
+            "decision_day": 3,
+            "quantity": 6,
+            "reports": [
+              {
+                "day": 1,
+                "signed": true,
+                "available": 12
+              },
+              {
+                "day": 3,
+                "signed": false,
+                "available": 100
+              },
+              {
+                "day": 2,
+                "signed": true,
+                "available": 5
+              },
+              {
+                "day": 2,
+                "signed": true,
+                "available": 30
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

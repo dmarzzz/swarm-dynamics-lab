@@ -1,0 +1,9 @@
+# Candidate provider review — incomplete admission
+
+The [public endpoint catalog](https://openrouter.ai/api/v1/models/openai/gpt-oss-20b/endpoints), retained with retrieval timestamp in [catalog.json](catalog.json), lists DekaLLM `dekallm/bf16` for GPT-OSS20B at USD0.029/M input and USD0.14/M output, BF16 precision, and the requested JSON, reasoning, temperature and token-limit parameters. Listing does not establish available capacity or correct behavior.
+
+The prepared request pins that endpoint, disables fallback, requires parameter support and sets `data_collection=deny`, following [OpenRouter provider routing](https://openrouter.ai/docs/guides/routing/provider-selection). This does not establish zero retention or prove endpoint eligibility. [Provider logging guidance](https://openrouter.ai/docs/guides/privacy/provider-logging) distinguishes provider policies. The [DekaLLM page](https://openrouter.ai/provider/dekallm) links [provider terms](https://docs.cloudeka.ai/service-portal-ai/end-user-license-agreement); retrieval failed during preparation. Terms and applicable data handling remain unresolved before admission. Only synthetic experiment documents are contemplated.
+
+[OpenRouter limits documentation](https://openrouter.ai/docs/api_reference/limits) supports honoring Retry-After and bounded backoff for rate limits. The proposed adapter makes no claim about the earlier refusal's quota cause: observed and expected providers remain distinct, and absent evidence stays unknown. Parsed shared-pool hints are diagnostic classifications, not proof that switching routes resolves the problem.
+
+No authenticated request, model invocation, credential transfer or allocation occurred in this preparation. No account privacy setting changed. Native qualification, fresh compatible catalog evidence, terms/data eligibility and a named funded decision are still required.

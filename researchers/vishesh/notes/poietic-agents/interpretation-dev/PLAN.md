@@ -1,0 +1,13 @@
+# Representative interpretation cases: offline construction plan
+
+Status: development fixtures only, no model calls, deployment, public run or efficacy claim. This narrows the next work in NEXT-P30-PLAN.md before implementing a changed native instrument.
+
+Author four fictional operational source bundles: dispatch priority, return eligibility, temperature/units and evidence freshness/capacity. For each, construct a base case, a meaning-changing matched variant, an irrelevant-change invariant and a missing-evidence or conflicting-authority control. Total16 fixtures, grouped into four authored roots. These are inspected development data, not16 independent worlds and not a held-out corpus. No real business rules, customer records or safety advice are represented.
+
+Keep public policy/fact documents separate from evaluator labels. Each policy has source identity, version and an explicit authority statement. Every target must be derivable from delivered documents; missing/contradictory controls require an explicit `insufficient_evidence` result. Reference labels are hand-calculated in a separate file and checked by a hand-authored fixed router reading only public fields. Independent implementation is useful but both are by the same author; do not call this independent annotation.
+
+The fixed router may exploit the known policy grammar and use exact code whenever possible; it gets all the evidence that an adaptive system would get. Unrecognized policy semantics must abstain, not silently reuse a compiled rule. Do not remove a successful static rule to make adaptation look better. If it solves this finite fixture suite, report that as a case witness and a warning against native advantage claims on these same fixtures.
+
+Validate answer-changing and invariant pairs, missing/conflicting evidence, document reorder/duplication, opaque case-ID renaming, strict output shapes and label isolation. Retain unsupported-wording behavior as a parser limitation, not evidence that an LLM would be better. The allowed public context must fit the pinned request-byte bound with room for action schemas; full native prompt qualification remains outstanding.
+
+Produce a per-case witness/acceptance report, a rubric assessment and a staged proposal. Compare the old15300-call/24h bound with a smaller packet that retains three arms and repeats every included mechanism in fresh executions. Count worlds separately from repeats/jobs and charge discovery, coordination, procedure verification and recovery. No scientific quality badge, spending authorization or cheap-role substitution follows from passing these checks.

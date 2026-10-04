@@ -1,0 +1,238 @@
+{
+  "scope": "offline inspected development; no native calls or holdouts",
+  "authored_roots": 4,
+  "fixtures": 16,
+  "matched": 16,
+  "hashes": {
+    "PLAN.md": "636487aeef51dfaf3e2427d9cf7e146213195b75123c37eaceef2dbf9225d4b1",
+    "cases.json": "829c5e9fb804e6eabc5a5f0420d3390f993e5ad4a91fa314395414c5444d3e94",
+    "labels.json": "55e932ab820262cf5dc0ce46afa040658d27f93ac8640e55ab0317a2db4b5288",
+    "fixed_baseline.py": "81430113118f6e7b6889ffad49069efac529caa56d567711aa1dd66abf577401"
+  },
+  "witnesses": [
+    {
+      "case": "dispatch-base",
+      "root": "dispatch",
+      "actual": {
+        "status": "answer",
+        "value": "C",
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 510
+    },
+    {
+      "case": "dispatch-changed",
+      "root": "dispatch",
+      "actual": {
+        "status": "answer",
+        "value": "A",
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 491
+    },
+    {
+      "case": "dispatch-invariant",
+      "root": "dispatch",
+      "actual": {
+        "status": "answer",
+        "value": "C",
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 633
+    },
+    {
+      "case": "dispatch-missing",
+      "root": "dispatch",
+      "actual": {
+        "status": "insufficient_evidence",
+        "value": null,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 494
+    },
+    {
+      "case": "returns-base",
+      "root": "returns",
+      "actual": {
+        "status": "answer",
+        "value": false,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 492
+    },
+    {
+      "case": "returns-changed",
+      "root": "returns",
+      "actual": {
+        "status": "answer",
+        "value": true,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 473
+    },
+    {
+      "case": "returns-invariant",
+      "root": "returns",
+      "actual": {
+        "status": "answer",
+        "value": false,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 615
+    },
+    {
+      "case": "returns-missing",
+      "root": "returns",
+      "actual": {
+        "status": "insufficient_evidence",
+        "value": null,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 465
+    },
+    {
+      "case": "temperature-base",
+      "root": "temperature",
+      "actual": {
+        "status": "answer",
+        "value": false,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 493
+    },
+    {
+      "case": "temperature-changed",
+      "root": "temperature",
+      "actual": {
+        "status": "answer",
+        "value": true,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 491
+    },
+    {
+      "case": "temperature-invariant",
+      "root": "temperature",
+      "actual": {
+        "status": "answer",
+        "value": false,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 616
+    },
+    {
+      "case": "temperature-missing",
+      "root": "temperature",
+      "actual": {
+        "status": "insufficient_evidence",
+        "value": null,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 480
+    },
+    {
+      "case": "capacity-base",
+      "root": "capacity",
+      "actual": {
+        "status": "answer",
+        "value": "wait",
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 635
+    },
+    {
+      "case": "capacity-changed",
+      "root": "capacity",
+      "actual": {
+        "status": "answer",
+        "value": "reserve",
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 634
+    },
+    {
+      "case": "capacity-invariant",
+      "root": "capacity",
+      "actual": {
+        "status": "answer",
+        "value": "wait",
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 758
+    },
+    {
+      "case": "capacity-missing",
+      "root": "capacity",
+      "actual": {
+        "status": "insufficient_evidence",
+        "value": null,
+        "citations": [
+          "facts",
+          "policy"
+        ]
+      },
+      "matches_label": true,
+      "public_context_bytes": 680
+    }
+  ]
+}

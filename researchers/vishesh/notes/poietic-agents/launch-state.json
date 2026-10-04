@@ -1,9 +1,9 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T21:19:14.952836+00:00",
+  "updated_utc": "2026-10-04T21:35:23.427520+00:00",
   "study": "poietic-agents",
-  "design_status": "Q30-04 reviewed; P30-B prospective redesign only",
-  "implementation_status": "163 local and runtime checks passed for Q30-04; redesigned semantic cases not implemented",
+  "design_status": "Q30-04 reviewed; Q30-05 route repair and staged P30-C proposed offline",
+  "implementation_status": "177 offline checks passed; 16 development fixtures and injected route lifecycle; no native successor",
   "execution_status": "Q30-04 closed after repeated DeepInfra429",
   "qualification_status": "Q30-03 120B passed; cheap20B incomplete in Q30-03 and Q30-04",
   "scientific_conclusion": "No collective comparison or fresh replication; baseline GAP",
@@ -22,7 +22,7 @@
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
     "exact_runtime_and_assignments": "Q30-04 source f751ca8 passed163 runtime checks",
-    "offline_instrument_checks": "163 passed",
+    "offline_instrument_checks": "177 passed offline; no successor runtime qualification",
     "model_qualification": "120B passed earlier; cheap role incomplete after repeated429",
     "budget_authorization": "Owner cumulative USD10; current ledger retains tighter original caps until explicit audited amendment",
     "dedicated_machine_allocation": "claim438released439; none active",
@@ -36,7 +36,7 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 9,
-  "next_action": "Park failed route; prepare useful cases and fixed comparator offline; no paid main or retry",
+  "next_action": "Resolve candidate-provider terms/data eligibility and named Q30-05 decision; refine strong comparative worlds offline",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -82,7 +82,7 @@
   "scientific_review_complete": true,
   "D0_deadline_renewal_applied": false,
   "operational_finalize": "completed offline; immutable handoff retained privately; separate authored scientific review complete",
-  "latest_preparation": "NEXT-P30-PLAN.md",
+  "latest_preparation": "route-repair/PLAN.md",
   "baseline_status": "GAP: no native collective comparison and no fresh-execution replication; qualification/replay is not a scientific baseline",
   "latest_attempt": "Q30-04"
 }
