@@ -3,7 +3,7 @@ id: antsy-haiku-panel
 type: task
 title: Improve and run the forty-member Haiku receipt panel
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T20:03Z
-updated: 2026-10-04T20:24Z
+updated: 2026-10-04T20:32Z
+outputs:
+- researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md
 ---
 
 ## Goal
