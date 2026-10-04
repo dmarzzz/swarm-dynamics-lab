@@ -1,7 +1,8 @@
 {
-  "CASE-QUALITY.md": "329b9b8843fed80e8682d22ca291b40ed72f2041474eade265ed40ed02415bea",
+  "CASE-QUALITY.md": "3f8166b54dcfc208dfa15059743177819e567cfca80d3dfe876ffef6fdfca4c3",
   "CASE-SPECS.json": "304bff6c38c91e27c450fd8f658d120b38b98ba9d20cc4be60d37f5ecce34762",
-  "PLAN.md": "80dcc00f1004d439f3da5c0434e381f1673f3ef8c2ddff82914b12e210458c62",
+  "NATIVE-READY.md": "a75b2cc02ca8b5be3ed6c182cdf8c5d08d06b93553c3214bd0ab8f2902d92a3b",
+  "PLAN.md": "c20560f2d9f9daa961f5937de1f509c8ef1adb0a33c8efb4b6b4d50214bde372",
   "SCORING.md": "539b39491d8a6fc92014c5183189bd5c4dafdcff5ea700a5a460c2fc014b4bae",
   "prepared/actor-packets.json": "f3e742e11587b045cba877a569635b9f5b89bf148e6f77cfbe87e482298459e2",
   "prepared/assignments.json": "baec916af0fdbfa3f79359a7246971d7deb02704b3258d9e7ed6772142ae7ef0",
@@ -9,8 +10,13 @@
   "prepared/gold.json": "498ef24cea2d7c74cc914bff26a726d12c449153ddbcf9661e6fb2df34f4cac6",
   "prepared/mutation-gold.json": "8216c751f0e577d622a920053dc2e72657c72f8812330862e2ee3582ebd2cea5",
   "prepared/mutation-packets.json": "4768b923241c4c75dd1166d8fa86bbc0c84b58a592bc562098dddd76d4b1f246",
+  "prepared/qualification-actor.json": "9a7656501872ce15840521931b42f151cffbe7b59d99dcf4e015cd0e9115aee4",
+  "prepared/qualification-gold.json": "a3bfbe30f947fbbe91a3ccc9cf497ff1bee0756ec056669ddef23886cec48904",
   "prepared/validation.json": "3f72f96a41440160c1fadd753892df4a741518473dd8bfc51354933b91ea9dc6",
   "src/corpus.py": "3683272b364fb39ad593c86142b3a6a2c3a80f1667025729d859a19ceea383e9",
-  "src/prepare.py": "d8a3f9a9bb1cd08d5cbe1aaa5ce16625841427cb0de7f3056524ca60c4b97752",
+  "src/native.py": "f70fbf3c63e29425f43d5d1739b472699596df945ee97de2334f80859db2f9ea",
+  "src/prepare.py": "37a20126dec12f74f78d8534521875d0939569fcea61fb105164d9fdb1ceca7a",
+  "src/report.py": "f906163af02f1d887fa4c0d3112a389c8b4bfc2a17bc4f286a4e3a774c99c0f1",
+  "tests/test_native.py": "bfa3619384a474f67f2f3c6607d1de6150171833c116dbaf02641957f6a41fbd",
   "tests/test_packets.py": "22cb7774d0864d027a46d8e7f4a66fdfee0f0387d84364afb2bfeb34aa12d552"
 }

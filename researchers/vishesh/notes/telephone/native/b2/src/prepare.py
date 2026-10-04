@@ -49,6 +49,10 @@ def validate():
 def build():
     dest=ROOT/'prepared';dest.mkdir(exist_ok=True)
     artifacts={'actor-packets.json':{c['id']:actor(c) for c in CASES},
+      'qualification-actor.json':{
+        'q01':{'records':[{'id':'q1','time':'09:00','text':'GO requires latency at most 120 ms, rollback tested and recorded approval; otherwise HOLD. Latency is 100 ms, rollback is tested and approval is recorded.'}]},
+        'q02':{'records':[{'id':'q2','time':'09:00','text':'GO requires latency at most 120 ms, rollback tested and recorded approval; otherwise HOLD. Latency is 100 ms and rollback is tested. Approval was requested, but the receipt is unavailable and approval remains unknown.'}]}},
+      'qualification-gold.json':{'q01':'GO','q02':'HOLD'},
       'gold.json':{c['id']:gold(c) for c in CASES},
       'mutation-packets.json':{c['id']:actor(mutated(c)) for c in CASES},
       'mutation-gold.json':{c['id']:gold(mutated(c)) for c in CASES},

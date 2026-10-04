@@ -1,0 +1,20 @@
+{
+  "q01": {
+    "records": [
+      {
+        "id": "q1",
+        "time": "09:00",
+        "text": "GO requires latency at most 120 ms, rollback tested and recorded approval; otherwise HOLD. Latency is 100 ms, rollback is tested and approval is recorded."
+      }
+    ]
+  },
+  "q02": {
+    "records": [
+      {
+        "id": "q2",
+        "time": "09:00",
+        "text": "GO requires latency at most 120 ms, rollback tested and recorded approval; otherwise HOLD. Latency is 100 ms and rollback is tested. Approval was requested, but the receipt is unavailable and approval remains unknown."
+      }
+    ]
+  }
+}

@@ -55,3 +55,7 @@ Publish a twelve-root × two-block × two-arm terminal table plus hop-target tra
 ## Offline packet revision — 2026-10-04
 
 Twelve concrete roots and twelve appended answer-changing controls now have source-visible decision witnesses, two rule implementations and an actor-source controller. [Case acceptance](CASE-QUALITY.md) records thirteen passing tests, the same-operator two-pass source/label audit and limitations. [Semantic scoring](SCORING.md) is frozen before outputs, separates first-hop competence from terminal harm, retains ambiguity and both sensitivity views, and requires per-root fresh-block disagreement reporting. No paid B2 call, source substitution or funding grant occurred.
+
+## Native implementation contract before implementation
+
+B2 implementation scope: freeze two compact qualification requests, atomically reserve 146 calls in the original ledger, save every exact request/return and parent hash, require hash-bound human qualification before main, execute the fixed 144-row manifest with no retries, and offline replay decision outcomes. Native transport is injected from the admitted private bridge; launch CLI must hash-bind transport/source/public-plan/allocation and finite PI allocation evidence. No native calls during preparation.

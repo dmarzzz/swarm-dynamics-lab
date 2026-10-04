@@ -98,3 +98,7 @@ The owner requested fifty GPT-6 Sol agents and a more challenging case. [Sol50 p
 ## B2 concrete offline packet acceptance — 2026-10-04
 
 [B2 case acceptance](native/b2/CASE-QUALITY.md) now links twelve source packets, twelve counterfactual packets, 84 source targets, two agreeing rule implementations, a narrow source-text controller and thirteen passing offline tests. [Scoring guidance](native/b2/SCORING.md) is prospective and frozen before outputs. Case readiness passes for the selected synthetic benchmark only; native qualification and fresh-run reproducibility remain absent, and the B2 dispatcher/admission binding still needs verification. **BASELINE GAP / DECISION NEEDED:** return the concrete source revision to delegated PI for the named B2 allocation; no paid grant or launch has occurred.
+
+## B2 native packet implementation — 2026-10-04
+
+[B2 native readiness](native/b2/NATIVE-READY.md) records the implemented two-phase dispatcher, atomic original-ledger reservation, hash-bound qualification, no-retry stopping and saved-output analysis. Twenty-one offline tests pass, including a simulated 146-call packet and failure/replay paths. **Ready for delegated PI funding and live admission**, not native-qualified or BASELINE MET. Exact maximum additional USD 4.884624146; cumulative upper USD 4.998368847 including historical costs, under unchanged USD 5 slice and subject to the aggregate USD 200 reservation. No paid calls or allocation.
