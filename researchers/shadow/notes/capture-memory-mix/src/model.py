@@ -30,7 +30,7 @@ import time
 import urllib.error
 import urllib.request
 import uuid
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait
 from pathlib import Path
 
 import sim
@@ -310,9 +310,35 @@ class HTTPPolicy:
         if not batch:
             return []
         rnd = ctx.get("round", 0)
-        futs = [self.pool.submit(self.one, ag, words, ctx, (rnd + i) % 2 == 1) for i, ag in enumerate(batch)]
-        out = [f.result() for f in futs]           # raises the first ModelFailure: the episode is recorded invalid
-        ctx["calls"] = ctx.get("calls", 0) + len(batch)
+        futs, out, first_error = [], [None] * len(batch), None
+        with self._lock:
+            before_calls = self.calls
+        try:
+            for i, ag in enumerate(batch):
+                futs.append(self.pool.submit(self.one, ag, words, ctx, (rnd + i) % 2 == 1))
+            positions = {future: i for i, future in enumerate(futs)}
+            for future in as_completed(futs):
+                if future.cancelled():
+                    continue
+                try:
+                    out[positions[future]] = future.result()
+                except Exception as exc:
+                    ctx.setdefault("round_failures", []).append({"index": positions[future],
+                                                                 "type": type(exc).__name__})
+                    if first_error is None:
+                        first_error = exc
+                        for pending in futs:
+                            pending.cancel()  # running requests still need to finish
+        finally:
+            # Also drain after a submit error or interruption. The worker must not
+            # write a terminal episode while submitted requests still mutate ctx.
+            for pending in futs:
+                pending.cancel()
+            wait(futs)
+            with self._lock:
+                ctx["calls"] = ctx.get("calls", 0) + self.calls - before_calls
+        if first_error is not None:
+            raise first_error
         return out
 
 
