@@ -1,0 +1,45 @@
+{
+  "kind": "presentation-only repair from saved Q-A6 traces; zero new model calls; originals preserved",
+  "results": [
+    {
+      "run": "optimal-swarm-size-q1/3e7979f7b2f4bb68",
+      "sha256": "63320ae79e42d3ac2e65bbd529e075dca9c12b24e579506dda94afd173cf8ece",
+      "readback_passed": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/7e5e06c13b609610",
+      "sha256": "8b3a3fbe3a3205f6bb900d74c373f8e790c4790f72edfc1e6c4c9a34766e172e",
+      "readback_passed": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/02b708e40b901df8",
+      "sha256": "35150ae2c8ec43157835d7b379f47e92ddefe218fad98c8125e40c97c8806c3e",
+      "readback_passed": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/b5680a8f80e1ceb6",
+      "sha256": "c7b55713597ed422206a3aeeb5f789891556a6a6b04953ec65c6c99ff57304c8",
+      "readback_passed": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/5bacfa9e9d0f833b",
+      "sha256": "6f1b8af74301ea6d4b08805776dd71ed8fd4198ff6eb7585a9f1ee2b7a8c9b48",
+      "readback_passed": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/5d6d86912fc0ec4f",
+      "sha256": "6f789c750dd2cd6fd8390d519fb5a8bfc214feb93b5da95d19ee3d0b54a64c3f",
+      "readback_passed": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/7cdc83a1503e33b6",
+      "sha256": "0b7253c93918c9cbf973e7c6a459d5d1af2e756e56f8a9a156e552b7b9d16afe",
+      "readback_passed": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/0ca4694cfc9ac4a4",
+      "sha256": "0537877673ade9d07f38c9adf2b7b60bd729a58b93d96ded9ce047351831b492",
+      "readback_passed": true
+    }
+  ]
+}
