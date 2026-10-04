@@ -3,14 +3,16 @@ id: launch-ready-studies-2026-10-04
 type: task
 title: Launch the prepared waiting experiments within existing budgets
 kind: admin
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-pi-review
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T19:05Z
+updated: 2026-10-04T19:05Z
 ---
 
 ## Goal
