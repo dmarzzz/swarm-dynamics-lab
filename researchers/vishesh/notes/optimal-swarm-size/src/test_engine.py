@@ -34,10 +34,10 @@ class Engine(unittest.TestCase):
         task=generate('evidence','parallel',0);calls=[]
         def broken(*args):calls.append(1);raise ValueError('route_changed')
         r=execute(task.public,1,1,10,2,broken)
-        self.assertEqual(r['failure'],'RuntimeError');self.assertEqual(len(calls),1)
+        self.assertEqual(r['failure'],'route_changed');self.assertTrue(r['fatal']);self.assertEqual(len(calls),1)
     def test_provider_error_preserved(self):
         task=generate('evidence','parallel',0)
         def broken(*args):raise RuntimeError('synthetic provider failure')
         r=execute(task.public,1,1,10,2,broken)
-        self.assertEqual(r['failure'],'RuntimeError');self.assertIsNone(r['artifact'])
+        self.assertEqual(r['failure'],'transport_failed');self.assertTrue(r['fatal']);self.assertIsNone(r['artifact'])
 if __name__=='__main__':unittest.main()

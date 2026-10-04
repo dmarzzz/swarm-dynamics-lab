@@ -8,6 +8,8 @@ import multiprocessing
 import os
 import time
 import urllib.request
+import urllib.error
+from failures import SafeFailure, safe_code
 from decimal import Decimal, ROUND_CEILING
 
 
@@ -32,8 +34,11 @@ def request_child(connection,payload,timeout):
         connection.send({'ok':True,'text':choice['message']['content'],
                          'finish_reason':choice['finish_reason'],'model':data.get('model'),
                          'provider':data.get('provider'),'usage':data.get('usage',{})})
+    except urllib.error.HTTPError as exc:
+        code=exc.code;exc.close()
+        connection.send({'ok':False,'failure':'http_'+str(code)})
     except Exception as exc:
-        connection.send({'ok':False,'failure':type(exc).__name__})
+        connection.send({'ok':False,'failure':safe_code(exc)})
     finally:connection.close()
 
 
@@ -48,7 +53,9 @@ class Provider:
         call_id=f'{self.episode}/{actor}/{phase}/{item or "-"}'
         bound=microdollars(Decimal(str(cfg['input_usd_per_token']))*cfg['provider_context_tokens']+
                            Decimal(str(cfg['output_usd_per_token']))*cfg['max_output_tokens'])
-        self.bank.reserve(call_id,self.episode,bound,cfg['episode_cap_microdollars'])
+        try:
+            self.bank.reserve(call_id,self.episode,bound,cfg['episode_cap_microdollars'])
+        except Exception as exc: raise SafeFailure(safe_code(exc)) from None
         self.journal({'kind':'reservation','call':call_id,'maximum_microdollars':bound})
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('deadline_before_dispatch')
@@ -65,9 +72,11 @@ class Provider:
             proc.start();child.close()
             if not parent.poll(max(0,deadline-time.monotonic())):raise TimeoutError('provider_deadline')
             response=parent.recv()
-            if not response['ok']:raise RuntimeError('provider_failed')
+            if not response['ok']:raise SafeFailure(response['failure'])
             usage=response['usage']
-            charge=microdollars(usage['cost'])
+            if not isinstance(usage,dict) or 'cost' not in usage:raise SafeFailure('usage_missing')
+            try:charge=microdollars(usage['cost'])
+            except Exception:raise SafeFailure('invalid_cost') from None
             self.bank.settle(call_id,charge)
             self.journal({'kind':'charge','call':call_id,'microdollars':charge,
                           'prompt_tokens':usage.get('prompt_tokens'),'completion_tokens':usage.get('completion_tokens'),
