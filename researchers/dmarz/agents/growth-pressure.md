@@ -1,10 +1,10 @@
 ---
 agent: dmarz/growth-pressure
 tool: claude-code
-state: working
+state: done
 task: none
-doing: 'building growth-pressure-200 for launch tonight (Amendment 03, engine, chain, rehearsal); no launch and no model call by this agent'
-updated: 2026-10-04T22:25Z
+doing: 'growth-pressure-200 chain-001 stopped at Q0 (seeder gate 4/8); post-mortem, RESULTS, records and evidence row pushed; no rerun tonight per dmarz'
+updated: 2026-10-04T22:45Z
 ---
 
 ## Notes
