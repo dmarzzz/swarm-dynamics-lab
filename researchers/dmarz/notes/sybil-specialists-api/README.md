@@ -28,7 +28,7 @@ The [mapping](VISUALIZATION.md) defines live measured progress, a final comparis
 
 ## Results
 
-The model-backed qualification and pilot completed on 2026-10-04 UTC. Q0 passed 24/24 exact packets, including 36/36 missing-evidence abstentions. S1 completed 192/192 valid calls across 12 paired worlds; no missing or repeated observations. Total 216 API calls, 266,342 input tokens and 8,692 output tokens: **USD0.309802** computed from reported usage, within the USD 5 aggregate cap. No automatic retries. Scripted S0 adds 216 engineering observations with zero API calls.
+The model-backed qualification and pilot completed on 2026-10-04 UTC. Q0 passed 24/24 exact packets, including 36/36 missing-evidence abstentions. S1 completed 192/192 valid calls across 12 paired worlds; no missing or repeated observations. Total 216 API calls, 266,342 input tokens and 8,692 output tokens: **USD 0.309802** computed from reported usage, within the USD 5 aggregate cap. No automatic retries. Scripted S0 adds 216 engineering observations with zero API calls.
 
 With informative checks (attackers pass 10%), coverage verification yielded **94.4% rare-skill accuracy**, versus 8.3% for degree, 47.2% for random and 0% with no checks. Coverage-minus-degree is +86.1 percentage points; the 12-world descriptive bootstrap interval is [72.2,97.2]. Coverage admitted 7.4% of attacker identities versus 3.7% for degree: useful recovery still has a security cost.
 

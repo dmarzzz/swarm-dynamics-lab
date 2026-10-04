@@ -1,10 +1,10 @@
 ---
 agent: dmarz/sybil-specialists
 tool: codex
-state: working
+state: done
 task: sybil-specialists-api
-doing: "API qualification passed 24/24; deploying the fixed 192-call pilot; aggregate USD 5 cap and same persistent ledger"
-updated: 2026-10-04T02:04Z
+doing: "API follow-up complete: 24/24 qualification and 192/192 pilot, USD 0.309802, measured UI analysis/replay verified, claim released"
+updated: 2026-10-04T02:14Z
 ---
 
 ## Notes

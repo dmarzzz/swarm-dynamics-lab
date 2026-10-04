@@ -24,4 +24,4 @@ Instrument qualification passed. Clean competence of the LLM remains unknown. Th
 
 ## Next run
 
-fleet-s0-001 repeats the full 216-packet rehearsal on freshly exclusively claimed sim-dmarz-4. Claim dmarz-sybil-specialists-api merged via agentops PR44; expiry recorded in deployment record. One worker, zero calls/spend, 30-minute deadline, same runtime fingerprint. If all records, uploads and visuals reconcile, proceed to Q0's 24 fresh paid calls; the aggregate USD5 cap covers all paid stages and repairs. Formal S2 stays blocked.
+fleet-s0-001 repeats the full 216-packet rehearsal on freshly exclusively claimed sim-dmarz-4. Claim dmarz-sybil-specialists-api merged via agentops PR44; expiry recorded in deployment record. One worker, zero calls/spend, 30-minute deadline, same runtime fingerprint. If all records, uploads and visuals reconcile, proceed to Q0's 24 fresh paid calls; the aggregate USD 5 cap covers all paid stages and repairs. Formal S2 stays blocked.

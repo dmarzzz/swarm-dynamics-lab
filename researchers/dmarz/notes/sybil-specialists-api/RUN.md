@@ -12,7 +12,7 @@ Use the private agentops launcher in PR47. Obtain and verify a fresh exclusive c
 
 The launcher obtains credentials from the existing encrypted private alias only for Q0/S1. Values travel through SSH stdin into the detached worker environment, never arguments, tracked files, logs or public reports. No model SDK or automatic retries. The finite worker takes exactly one hub assignment and rejects a second attempt. The launcher refuses an existing batch or worker and preserves outputs on failure.
 
-The budget ledger is outside the checkout on the claimed host. It has one fixed identity for this whole study: do not delete it, reset it, change its cap, or copy it to create capacity on another host. Fsync before POST, nonrefundable conservative reservations, aggregate USD5 and 300-call ceilings. Observed token usage is priced at the frozen documented rates; the displayed cost is computed from reported usage, not independently reconciled to an invoice. Any uncertain response retains its full reservation.
+The budget ledger is outside the checkout on the claimed host. It has one fixed identity for this whole study: do not delete it, reset it, change its cap, or copy it to create capacity on another host. Fsync before POST, nonrefundable conservative reservations, aggregate USD 5 and 300-call ceilings. Observed token usage is priced at the frozen documented rates; the displayed cost is computed from reported usage, not independently reconciled to an invoice. Any uncertain response retains its full reservation.
 
 ## Reconcile and finish
 
