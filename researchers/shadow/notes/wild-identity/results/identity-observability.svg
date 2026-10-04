@@ -63,7 +63,7 @@
 <rect x="990" y="490" width="25" height="8" fill="#15776b"/><text x="1028" y="504" class="small">collusion.wiki labels</text>
 <rect x="1345" y="490" width="25" height="8" fill="#ad493a"/><text x="1383" y="504" class="small">swarm-lab commit ids</text>
 <text x="990" y="570" class="title">SwarmTraces: not identifiable</text>
-<text x="990" y="620" font-size="24">189,579 records; zero structured timestamps.</text>
+<text x="990" y="620" font-size="24">189,579 records; 0 structured timestamps.</text>
 <text x="990" y="660" font-size="24">No author field in the redacted export.</text>
 <text x="990" y="700" class="small">Payload/recovery rows and parent links are not agents.</text>
 <text x="990" y="750" class="small">A third lifetime, Gini or coordination curve would invent data.</text>

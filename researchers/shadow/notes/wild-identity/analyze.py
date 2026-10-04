@@ -14,7 +14,7 @@ import re
 import statistics
 import subprocess
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 AGENT = re.compile(r'^\[(?P<id>[a-z][a-z0-9_-]*/[a-zA-Z0-9][a-zA-Z0-9_.-]*)\]')
 SIGNOFF = re.compile(r'(?m)^\s*[-\u2014\u2013]{1,2}\s+([A-Za-z][A-Za-z0-9_. -]{1,59})\s*$')
 EXPLICIT_SIGNOFF = re.compile(r'(?im)^\s*(?:signed(?: by)?|sign[- ]?off)\s*:\s*([A-Za-z][A-Za-z0-9_. -]{1,59})\s*$')
@@ -267,13 +267,14 @@ def git_analysis(args):
 
 
 def swarmtraces_analysis(root):
-    counts = collections.Counter(); fields = collections.Counter(); timed = 0; parents = 0
+    counts = collections.Counter(); fields = collections.Counter(); timed = 0; parents = 0; null_times = 0
     candidates = collections.Counter(); runtime_records = 0; unique_runtime_markers = set()
     with gzip.open(root/'swarmtraces/redacted.jsonl.gz', 'rt') as f:
         for ln in f:
             r = json.loads(ln)
             counts[r.get('kind')] += 1; fields.update(r.keys())
             timed += timestamp(r.get('time_utc')) is not None
+            null_times += r.get('time_utc') is None
             parents += bool(r.get('parent_id'))
             text = r.get('text', '')
             candidates['standalone_dash_candidate_records'] += bool(SIGNOFF.search(text))
@@ -281,6 +282,7 @@ def swarmtraces_analysis(root):
             markers = re.findall(r'\[REDACTED:runtime_identifier(?::\d+)?\]', text)
             runtime_records += bool(markers); unique_runtime_markers.update(markers)
     return {'records': sum(counts.values()), 'by_kind': dict(counts), 'timestamped_records': timed,
+            'null_time_records': null_times,
             'records_with_parent_id': parents, 'field_presence': dict(fields),
             'records_with_runtime_identifier_redaction': runtime_records,
             'distinct_runtime_redaction_placeholders': len(unique_runtime_markers),
@@ -294,7 +296,7 @@ def write_csv(path, fields, rows_):
         w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(rows_)
 
 
-def curves(populations, out):
+def curves(populations, out, swarm_result):
     curve_rows, stats_rows, degrees = [], [], []
     for pop in populations:
         ids = pop.ids
@@ -325,10 +327,10 @@ def curves(populations, out):
     write_csv(out/'curves.csv', ['swarm', 'curve', 'x', 'y'], curve_rows)
     write_csv(out/'identity-aggregates.csv', ['swarm', 'identity_digest', 'events', 'observed_span_hours', 'fresh_reference_events'], stats_rows)
     write_csv(out/'degree-histograms.csv', ['swarm', 'graph', 'indegree', 'outdegree', 'identities'], degrees)
-    make_svg(curve_rows, out/'identity-observability.svg')
+    make_svg(curve_rows, out/'identity-observability.svg', swarm_result)
 
 
-def make_svg(curve_rows, path):
+def make_svg(curve_rows, path, swarm_result):
     """Dependency-free vector figure. A missing third curve is intentional."""
     parts = ['<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="960" viewBox="0 0 1800 960">',
              '<rect width="1800" height="960" fill="#faf9f6"/>',
@@ -369,7 +371,7 @@ def make_svg(curve_rows, path):
     for i, (label, color) in enumerate([('collusion.wiki labels', colors['wiki']), ('swarm-lab commit ids', colors['swarm_lab'])]):
         parts.append(f'<rect x="{990+i*355}" y="490" width="25" height="8" fill="{color}"/><text x="{1028+i*355}" y="504" class="small">{label}</text>')
     parts += ['<text x="990" y="570" class="title">SwarmTraces: not identifiable</text>',
-              '<text x="990" y="620" font-size="24">189,579 records; zero structured timestamps.</text>',
+              f'<text x="990" y="620" font-size="24">{swarm_result["records"]:,} records; {swarm_result["timestamped_records"]:,} structured timestamps.</text>',
               '<text x="990" y="660" font-size="24">No author field in the redacted export.</text>',
               '<text x="990" y="700" class="small">Payload/recovery rows and parent links are not agents.</text>',
               '<text x="990" y="750" class="small">A third lifetime, Gini or coordination curve would invent data.</text>',
@@ -395,7 +397,7 @@ def main():
     result = {'analysis_version': VERSION, 'design': 'Descriptive, post-hoc census; not a causal experiment',
               'input_sha256': hashes, 'wiki': wiki_result, 'swarm_lab': lab_result, 'swarmtraces': swarm}
     (args.out/'summary.json').write_text(json.dumps(result, indent=2, sort_keys=True)+'\n')
-    curves([wiki, lab], args.out)
+    curves([wiki, lab], args.out, swarm)
     print(json.dumps({'wiki': {'events': wiki.total, 'identities': len(wiki.ids)}, 'swarm_lab': {'events': lab.total, 'identities': len(lab.ids)}, 'swarmtraces': {'records': swarm['records'], 'timestamps': swarm['timestamped_records']}}))
 
 

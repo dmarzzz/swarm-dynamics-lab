@@ -1,5 +1,5 @@
 {
-  "analysis_version": "1.0.0",
+  "analysis_version": "1.0.1",
   "design": "Descriptive, post-hoc census; not a causal experiment",
   "input_sha256": {
     "collusion-wiki/labels.jsonl.gz": "c1cd171f4794ea3e59803c92aba9dc552587db984dc43c7939338d5845c59860",
@@ -91,6 +91,7 @@
     },
     "identity_lifetime_gini_graph": null,
     "not_identifiable_reason": "No structured actor field or timestamps; code/file-list sign-off candidates and redaction placeholders are not authors. Parent links are decoding provenance, not agent communication.",
+    "null_time_records": 189579,
     "records": 189579,
     "records_with_parent_id": 61125,
     "records_with_runtime_identifier_redaction": 16012,

@@ -1,5 +1,8 @@
+import gzip
 import importlib.util
+import json
 from pathlib import Path
+import tempfile
 import unittest
 
 spec = importlib.util.spec_from_file_location('analyze', Path(__file__).with_name('analyze.py'))
@@ -64,6 +67,23 @@ class AnalysisTests(unittest.TestCase):
         self.assertIsNone(m.timestamp('R12345'))
         self.assertIsNone(m.timestamp('2026-01-01T00:00:00'))
         self.assertEqual(m.timestamp('1970-01-01T01:00:00Z'), 3600)
+
+    def test_swarmtraces_missingness_fixture(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); (root/'swarmtraces').mkdir()
+            with gzip.open(root/'swarmtraces/redacted.jsonl.gz', 'wt') as f:
+                for row in [
+                    {'kind': 'payload', 'time_utc': None, 'text': 'Signed: AgentOne', 'parent_id': None},
+                    {'kind': 'recovered_text', 'time_utc': 'bad clock', 'text': '[REDACTED:runtime_identifier:000001]', 'parent_id': 'R1'},
+                ]:
+                    f.write(json.dumps(row)+'\n')
+            result = m.swarmtraces_analysis(root)
+            self.assertEqual(result['records'], 2)
+            self.assertEqual(result['null_time_records'], 1)
+            self.assertEqual(result['timestamped_records'], 0)
+            self.assertEqual(result['records_with_parent_id'], 1)
+            self.assertEqual(result['signoff_probe']['explicit_signoff_candidate_records'], 1)
+            self.assertIsNone(result['identity_lifetime_gini_graph'])
 
     def test_agent_prefix(self):
         self.assertEqual(m.AGENT.match('[shadow/sol-identity] notes: x').group('id'), 'shadow/sol-identity')
