@@ -3,7 +3,7 @@ id: analyze-discussion-v3-q0
 type: task
 title: Audit and publish the completed discussion v3 qualification
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: dmarz/discussion-bench-v3
 for: dmarz
@@ -12,7 +12,10 @@ created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T03:37Z
-updated: 2026-10-04T03:37Z
+updated: 2026-10-04T03:50Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md
+- researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md
 ---
 
 ## Goal
