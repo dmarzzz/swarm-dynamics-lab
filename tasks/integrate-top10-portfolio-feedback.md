@@ -3,14 +3,16 @@ id: integrate-top10-portfolio-feedback
 type: task
 title: Integrate top-ten portfolio feedback into owned experimental plans
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-pi-review
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T20:05Z
+updated: 2026-10-04T20:05Z
 ---
 
 ## Goal
