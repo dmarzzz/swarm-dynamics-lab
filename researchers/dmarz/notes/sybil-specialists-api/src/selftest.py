@@ -132,5 +132,31 @@ class Checks(unittest.TestCase):
             def runs(self,*a,**k): return []
         with self.assertRaisesRegex(ValueError,'qualification'): coordinator.enqueue(Hub(),'S1')
 
+    def test_stage_usage_and_carried_budget_are_distinct(self):
+        class HubRun:
+            id='offline-scope-test'
+            updates=[]
+            result=None
+            def artifact(self,*args): return {'stored':True}
+            def progress(self,*args,**kwargs): self.updates.append(kwargs)
+            def done(self,**kwargs): self.result=kwargs
+        def respond(request,**kwargs):
+            body=json.loads(request.data)
+            packet=json.loads(body['messages'][0]['content'])
+            return self.response(answer=study.scripted(packet))
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/'ledger'; ledger=provider.Ledger(path)
+            ledger.transact({'type':'reserve','call_id':'previous-stage','micro_usd':1_000_000})
+            ledger.transact({'type':'response','call_id':'previous-stage','actual_micro_usd':100_000})
+            backend=self.backend(path,respond); run=HubRun(); out=Path(d)/'out'
+            with patch.dict(os.environ,{'SYBIL_API_BUDGET_LEDGER':str(path)}):
+                summary=worker.execute(study.params('Q0'),out,run,backend)
+            self.assertEqual(run.updates[0]['model_calls'],1)
+            self.assertEqual(run.updates[0]['cost_usd'],.00075)
+            self.assertEqual(run.result['model_calls'],24)
+            self.assertEqual(summary['initial_study_accounting']['actual_usd'],.1)
+            self.assertEqual(summary['study_accounting']['attempted_calls'],25)
+            self.assertNotIn('rare_accuracy',run.result)
+
 
 if __name__=='__main__': unittest.main()

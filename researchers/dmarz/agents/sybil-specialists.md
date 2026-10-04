@@ -3,8 +3,8 @@ agent: dmarz/sybil-specialists
 tool: codex
 state: working
 task: sybil-specialists-api
-doing: "Building fixed-model qualification and paired badge pilot; aggregate USD 5 cap, no API calls yet"
-updated: 2026-10-04T01:55Z
+doing: "API qualification passed 24/24; deploying the fixed 192-call pilot; aggregate USD 5 cap and same persistent ledger"
+updated: 2026-10-04T02:04Z
 ---
 
 ## Notes
