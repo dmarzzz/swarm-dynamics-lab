@@ -3,7 +3,7 @@ id: review-fork-merge-security
 type: task
 title: 'Review: fork-and-merge security survey'
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: vishesh/fm-security-review
 for: vishesh
@@ -14,7 +14,9 @@ depends_on:
 topics:
 - fork-merge-security
 claimed_at: 2026-10-04T14:39Z
-updated: 2026-10-04T14:39Z
+updated: 2026-10-04T14:42Z
+outputs:
+- reviews/fork-merge-security--vishesh.md
 ---
 
 ## Goal
