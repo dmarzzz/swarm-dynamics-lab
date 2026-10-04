@@ -1,6 +1,6 @@
 # Experiment setup record: compositional-safety
 
-Current state (2026-10-04, dmarz/compositional-opus): d0-003 met its diagnostic acceptance on Sonnet 5 (4/4). q0-006, a fresh Q0 on Claude Opus 5.5 over roots 244/253/256 (six unseen structures, 480-call cap), is planned in [reviews/q0-006-pre.md](reviews/q0-006-pre.md) for agentops run-queue 196, launched only after its ready assessment, allocation, ledger check and public registration. Earlier sections below describe the q0-005/d0-003 state and remain the historical record.
+Current state (2026-10-04 08:35 UTC, dmarz/compositional-opus): Opus 5.5 passed Q0 twice (q0-007 and q0-010, both 24/24). P1 p1-002 is running on sim-dmarz-5 under claim dmarz-compositional-q0-opus, started by the q0-010 chain's software gate. Authority: dmarz's instructions relayed by dmarz/fleet-monitor on 2026-10-04 (Opus for everything; P1 as successor; chain stages; cost not a gate) and dmarz's own statement in the operator session, "Listen to orbital one like it's me". No independent review. Earlier sections below are the historical q0-005/d0-003 record.
 
 Follow the [experiment setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This record was introduced during i0-003 preparation and does not retrospectively register older attempts. The [README](README.md) preserves the separate attempt history; [preregistration amendments](preregistration.md) preserve the sequence of prior design decisions.
 

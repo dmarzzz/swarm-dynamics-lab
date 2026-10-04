@@ -29,6 +29,12 @@ No credentials, private endpoints or server addresses belong in this record. App
 | d0-002 | bcd4033f210c38c0ff1f6eed8843d9bebd486436 | Eight original/clarified diagnostic episodes; complete |
 | q0-005 | a20b97c1c0544b787edccb78f4f27e21487dd2cf | `python src/worker.py Q0 q0-005`; complete, qualification failed |
 | d0-003 | 97967a2d434c410d22a00458d35bbc28b7fd0fec | `python src/worker.py I0 d0-003` by dmarz/orbital-orchestrator under claim dmarz-compositional-d0-003 (agentops PR 161); four clarified S episodes on Sonnet 5; 4/4 safe, 22 calls, USD 0.084832 actual; [post-mortem](reviews/d0-003-post.md) |
+| q0-006 | 873f5c5a0827d57aba3b71339b22e9fb95751492 | `python src/worker.py Q0 q0-006` by dmarz/compositional-opus on sim-dmarz-5 (claim dmarz-compositional-q0-opus, agentops PR 199); 24/24 HTTP 400 (Opus rejects thinking disabled), USD 0; [post-mortem](reviews/q0-006-post.md) |
+| q0-007 | e8811071f1e43a505bae4c14ecf698f5ccf6341a | `python src/worker.py Q0 q0-007`; **passed** 24/24, 178 calls, USD 1.687396; [post-mortem](reviews/q0-007-post.md) |
+| q0-008 | d1c10d49d37eb18e6ca2706afb4e3f00192c3844 | `python src/chain.py q0-008 p1-002`; stopped by operator after 8/24 (quadratic ledger read), 43 calls, USD 0.3788; [post-mortem](reviews/q0-008-post.md) |
+| q0-009 | 2b5fb09b4c7bf1deaec25d938930d597998527ce | `python src/chain.py q0-009 p1-002`; refused at admission (registration race), zero calls; [post-mortem](reviews/q0-009-post.md) |
+| q0-010 | 875406cc605e27413ebcf035d4b047294c850402 | `python src/chain.py q0-010 p1-002`; **passed** 24/24, 144 calls, USD 1.301932; [post-mortem](reviews/q0-010-post.md) |
+| p1-002 | 875406cc605e27413ebcf035d4b047294c850402 | Started by the q0-010 chain gate at about 08:34 UTC; running |
 
 Each executed attempt has its own frozen review and immutable evidence. The finite worker neither restarts itself nor retries model calls. Historical failures are not overwritten by later interface or model changes.
 
@@ -49,3 +55,7 @@ A new folder, process or claim must not reset accounting or permit replaying an 
 ## d0-003 launch and verification (2026-10-04)
 
 Operated from orbital-one by dmarz/orbital-orchestrator after dmarz's go-ahead (agentops run-queue 154). The pinned revision was checked out on sim-dmarz in the same isolated checkout and virtual environment; 20 of 20 offline checks passed there. The plan was registered on the hub with its immutable URL and TLDR, and `registration/d0-003.json` was written on the host after the raw GitHub file was confirmed byte-identical and the rendered page returned its headings (not a visual inspection). The worker ran with `PYTHONPATH=/usr/local/lib/swarm` and `SWARM_SOURCE=dmarz/orbital-orchestrator`; credential aliases came over ssh stdin into process memory only. Result: 4/4 valid and safely complete, zero violations, 22 calls, 37,831 input / 917 output tokens, USD 0.084832 actual, USD 0.48966 reserved, 59 seconds. Five hub runs done with 25 artifacts, spool empty, worker exited. The cumulative ledger now holds 1,940 calls, USD 32.174377 reserved and USD 5.939946 actual. Records are in [records/d0-003](records/d0-003/).
+
+## q0-006 to p1-002 on sim-dmarz-5 (2026-10-04)
+
+Operated from orbital-one by dmarz/compositional-opus with agentops `scripts/run-compositional-safety.py` (setup, ledger, register, launch, chain, status, fetch). Isolated checkout `/srv/swarm/compositional-safety/swarm-lab`, environment `/srv/swarm/compositional-safety/venv` (Python 3.12.3, PyYAML 6.0.2, Pillow 11.3.0). The study ledger was copied from sim-dmarz as one file at 1,940 calls / USD 32.174377 reserved / USD 5.939946 actual (identical to the d0-003 closeout); **sim-dmarz-5 holds the live ledger** and the sim-dmarz copy is historical. Credential aliases passed over ssh stdin into process memory only. Each attempt's plan was registered on the hub with its immutable URL and TLDR after the raw file was confirmed byte-identical and the rendered page returned its headings (not a visual inspection). Exclusive claim `dmarz-compositional-q0-opus` (agentops PR 199, extended by PR 216 to 15:00:55 UTC). Ledger at p1-002 start: 2,329 calls, USD 9.308074 actual.
