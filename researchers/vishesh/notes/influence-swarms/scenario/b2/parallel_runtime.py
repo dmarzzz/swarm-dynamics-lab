@@ -1,5 +1,5 @@
-"""E0-only operational amendment. Independent cells; original within-cell protocol.
-No credential lookup, retries, funding or launch authority. D0 remains serial.
+"""B2 independent-cell acquisition for both diagnostic and evaluation stages.
+No credential lookup, retries, funding or launch authority. Within-cell dialogue stays sequential.
 """
 import concurrent.futures as cf,datetime as dt,json,math,threading,time
 from pathlib import Path
