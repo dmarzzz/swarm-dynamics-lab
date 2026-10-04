@@ -88,3 +88,7 @@ Read the [full local results and limitations](local-agents/RESULTS.md), [origina
 ## External study-review proposals — 2026-10-04
 
 [Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.
+
+## Redesign proposal for the lineage — 2026-10-04
+
+The procurement scenario that succeeded this cohort now carries a redesign proposal that folds this study's lessons in (dose saturation at 92.15 vs a true best near 70, the private-review control, the local Qwen harness at USD 0, the unreported vote-movement endpoint): [influence-swarms/scenario/redesign-v2/](../influence-swarms/scenario/redesign-v2/README.md). Proposal only; no model call, no launch.

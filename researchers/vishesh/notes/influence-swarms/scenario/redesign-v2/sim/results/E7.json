@@ -1,0 +1,313 @@
+{
+  "design": {
+    "H_multipliers": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "difficulty_chair": "summary_only",
+    "difficulty_roots_per_family_per_g": 60,
+    "difficulty_world": "omission_full",
+    "gap_curve_families": [
+      "residency_scope",
+      "usage_cliff",
+      "migration_deadline",
+      "genuine_value",
+      "composite_two_record",
+      "ambiguous_tbc"
+    ],
+    "independent_unit": "root",
+    "min_reliable_roots_per_gap_cell": 100,
+    "roots_per_family": 400,
+    "sensitivity_cells_per_root": 9,
+    "taus": [
+      0.0,
+      0.03,
+      0.1
+    ]
+  },
+  "experiment": "E7 label stability",
+  "gap_curve": [
+    {
+      "difficulty_acceptable": 0.819444,
+      "difficulty_harmful_target": 0.15,
+      "min_gap_g": 0.0,
+      "n_difficulty_decisions": 360,
+      "reliable": true,
+      "retention_fraction": 1.0,
+      "roots_retained": 2400,
+      "stable_H": 0.142917,
+      "stable_joint": 0.006667,
+      "stable_tau": 0.58875
+    },
+    {
+      "difficulty_acceptable": 0.819444,
+      "difficulty_harmful_target": 0.15,
+      "min_gap_g": 0.02,
+      "n_difficulty_decisions": 360,
+      "reliable": true,
+      "retention_fraction": 0.932917,
+      "roots_retained": 2239,
+      "stable_H": 0.153193,
+      "stable_joint": 0.007146,
+      "stable_tau": 0.631085
+    },
+    {
+      "difficulty_acceptable": 0.825,
+      "difficulty_harmful_target": 0.141667,
+      "min_gap_g": 0.05,
+      "n_difficulty_decisions": 360,
+      "reliable": true,
+      "retention_fraction": 0.817917,
+      "roots_retained": 1963,
+      "stable_H": 0.174733,
+      "stable_joint": 0.008151,
+      "stable_tau": 0.719817
+    },
+    {
+      "difficulty_acceptable": 0.819444,
+      "difficulty_harmful_target": 0.122222,
+      "min_gap_g": 0.1,
+      "n_difficulty_decisions": 360,
+      "reliable": true,
+      "retention_fraction": 0.58875,
+      "roots_retained": 1413,
+      "stable_H": 0.232838,
+      "stable_joint": 0.011323,
+      "stable_tau": 1.0
+    },
+    {
+      "difficulty_acceptable": 0.819079,
+      "difficulty_harmful_target": 0.125,
+      "min_gap_g": 0.15,
+      "n_difficulty_decisions": 304,
+      "reliable": true,
+      "retention_fraction": 0.273333,
+      "roots_retained": 656,
+      "stable_H": 0.253049,
+      "stable_joint": 0.022866,
+      "stable_tau": 1.0
+    },
+    {
+      "difficulty_acceptable": 0.767327,
+      "difficulty_harmful_target": 0.188119,
+      "min_gap_g": 0.2,
+      "n_difficulty_decisions": 202,
+      "reliable": true,
+      "retention_fraction": 0.09625,
+      "roots_retained": 231,
+      "stable_H": 0.649351,
+      "stable_joint": 0.064935,
+      "stable_tau": 1.0
+    },
+    {
+      "difficulty_acceptable": 0.75,
+      "difficulty_harmful_target": 0.25,
+      "min_gap_g": 0.3,
+      "n_difficulty_decisions": 8,
+      "reliable": false,
+      "retention_fraction": 0.003333,
+      "roots_retained": 8,
+      "stable_H": 1.0,
+      "stable_joint": 1.0,
+      "stable_tau": 1.0
+    }
+  ],
+  "label": "SCRIPTED SIMULATION \u2014 NOT MODEL EVIDENCE",
+  "min_gap_for_90pct_stability": {
+    "H": null,
+    "joint": null,
+    "tau": 0.1
+  },
+  "overall_stable_fraction": {
+    "H": {
+      "ci_hi": 0.276429,
+      "ci_lo": 0.254991,
+      "mean": 0.265357,
+      "n_roots": 400
+    },
+    "joint": {
+      "ci_hi": 0.151429,
+      "ci_lo": 0.146071,
+      "mean": 0.148571,
+      "n_roots": 400
+    },
+    "tau": {
+      "ci_hi": 0.663571,
+      "ci_lo": 0.631786,
+      "mean": 0.6475,
+      "n_roots": 400
+    }
+  },
+  "per_family": [
+    {
+      "family": "residency_scope",
+      "gap_defined_fraction": 1.0,
+      "median_gap": 0.104817,
+      "n_roots": 400,
+      "stable_H": {
+        "ci_hi": 0.0475,
+        "ci_lo": 0.015,
+        "mean": 0.03,
+        "n_roots": 400
+      },
+      "stable_joint": {
+        "ci_hi": 0.0075,
+        "ci_lo": 0.0,
+        "mean": 0.0025,
+        "n_roots": 400
+      },
+      "stable_tau": {
+        "ci_hi": 0.575,
+        "ci_lo": 0.475,
+        "mean": 0.525,
+        "n_roots": 400
+      }
+    },
+    {
+      "family": "usage_cliff",
+      "gap_defined_fraction": 1.0,
+      "median_gap": 0.140784,
+      "n_roots": 400,
+      "stable_H": {
+        "ci_hi": 0.1775,
+        "ci_lo": 0.11,
+        "mean": 0.1425,
+        "n_roots": 400
+      },
+      "stable_joint": {
+        "ci_hi": 0.0325,
+        "ci_lo": 0.005,
+        "mean": 0.0175,
+        "n_roots": 400
+      },
+      "stable_tau": {
+        "ci_hi": 0.7225,
+        "ci_lo": 0.6325,
+        "mean": 0.6775,
+        "n_roots": 400
+      }
+    },
+    {
+      "family": "migration_deadline",
+      "gap_defined_fraction": 1.0,
+      "median_gap": 0.098416,
+      "n_roots": 400,
+      "stable_H": {
+        "ci_hi": 0.0825,
+        "ci_lo": 0.035,
+        "mean": 0.0575,
+        "n_roots": 400
+      },
+      "stable_joint": {
+        "ci_hi": 0.0,
+        "ci_lo": 0.0,
+        "mean": 0.0,
+        "n_roots": 400
+      },
+      "stable_tau": {
+        "ci_hi": 0.54,
+        "ci_lo": 0.44,
+        "mean": 0.49,
+        "n_roots": 400
+      }
+    },
+    {
+      "family": "genuine_value",
+      "gap_defined_fraction": 1.0,
+      "median_gap": 0.111111,
+      "n_roots": 400,
+      "stable_H": {
+        "ci_hi": 0.4975,
+        "ci_lo": 0.4,
+        "mean": 0.4475,
+        "n_roots": 400
+      },
+      "stable_joint": {
+        "ci_hi": 0.0075,
+        "ci_lo": 0.0,
+        "mean": 0.0025,
+        "n_roots": 400
+      },
+      "stable_tau": {
+        "ci_hi": 0.725,
+        "ci_lo": 0.635,
+        "mean": 0.68,
+        "n_roots": 400
+      }
+    },
+    {
+      "family": "evidence_gap",
+      "gap_defined_fraction": 0.0,
+      "median_gap": null,
+      "n_roots": 400,
+      "stable_H": {
+        "ci_hi": 1.0,
+        "ci_lo": 1.0,
+        "mean": 1.0,
+        "n_roots": 400
+      },
+      "stable_joint": {
+        "ci_hi": 1.0,
+        "ci_lo": 1.0,
+        "mean": 1.0,
+        "n_roots": 400
+      },
+      "stable_tau": {
+        "ci_hi": 1.0,
+        "ci_lo": 1.0,
+        "mean": 1.0,
+        "n_roots": 400
+      }
+    },
+    {
+      "family": "composite_two_record",
+      "gap_defined_fraction": 1.0,
+      "median_gap": 0.132225,
+      "n_roots": 400,
+      "stable_H": {
+        "ci_hi": 0.175,
+        "ci_lo": 0.1075,
+        "mean": 0.14,
+        "n_roots": 400
+      },
+      "stable_joint": {
+        "ci_hi": 0.0275,
+        "ci_lo": 0.005,
+        "mean": 0.015,
+        "n_roots": 400
+      },
+      "stable_tau": {
+        "ci_hi": 0.6975,
+        "ci_lo": 0.6025,
+        "mean": 0.65,
+        "n_roots": 400
+      }
+    },
+    {
+      "family": "ambiguous_tbc",
+      "gap_defined_fraction": 1.0,
+      "median_gap": 0.101023,
+      "n_roots": 400,
+      "stable_H": {
+        "ci_hi": 0.06,
+        "ci_lo": 0.0225,
+        "mean": 0.04,
+        "n_roots": 400
+      },
+      "stable_joint": {
+        "ci_hi": 0.0075,
+        "ci_lo": 0.0,
+        "mean": 0.0025,
+        "n_roots": 400
+      },
+      "stable_tau": {
+        "ci_hi": 0.56,
+        "ci_lo": 0.46,
+        "mean": 0.51,
+        "n_roots": 400
+      }
+    }
+  ],
+  "seed": 20261004
+}

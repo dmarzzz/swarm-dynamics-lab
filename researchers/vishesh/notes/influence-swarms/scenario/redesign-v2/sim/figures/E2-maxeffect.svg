@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="860" viewBox="0 0 1600 860">
+<rect x="0" y="0" width="1600" height="860" fill="#05090b" />
+<text x="28.00" y="34.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">E2  Max-effect check - can the contrast move at all?</text>
+<text x="28.00" y="56.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">n = 32 ROOTS x 7 families x 2 worlds = 448 decisions per arm per regime  |  independent unit = ROOT</text>
+<rect x="28.00" y="70.00" width="1544.00" height="600.00" fill="#0a1115" stroke="#152026" stroke-width="1.0" />
+<text x="40.00" y="92.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">Maximum |effect| the arm pair can show, on the acceptable rate</text>
+<text x="1560.00" y="92.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">bar = max |effect| over the regime's cells</text>
+<line x1="392.00" y1="114.00" x2="392.00" y2="634.00" stroke="#16242b" stroke-width="1" />
+<text x="392.00" y="650.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">0.00</text>
+<line x1="604.00" y1="114.00" x2="604.00" y2="634.00" stroke="#16242b" stroke-width="1" />
+<text x="604.00" y="650.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">0.05</text>
+<line x1="816.00" y1="114.00" x2="816.00" y2="634.00" stroke="#16242b" stroke-width="1" />
+<text x="816.00" y="650.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">0.10</text>
+<line x1="1028.00" y1="114.00" x2="1028.00" y2="634.00" stroke="#16242b" stroke-width="1" />
+<text x="1028.00" y="650.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">0.15</text>
+<line x1="1240.00" y1="114.00" x2="1240.00" y2="634.00" stroke="#16242b" stroke-width="1" />
+<text x="1240.00" y="650.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">0.20</text>
+<line x1="1452.00" y1="114.00" x2="1452.00" y2="634.00" stroke="#16242b" stroke-width="1" />
+<text x="1452.00" y="650.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">0.25</text>
+<text x="380.00" y="144.58" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">ballots - evidence  [full_records]</text>
+<rect x="392.00" y="122.00" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="141.85" width="1.50" height="17.02" fill="#f2635c" rx="2" />
+<text x="401.50" y="154.04" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.000</text>
+<text x="692.00" y="144.58" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#f2635c" text-anchor="start" font-weight="bold" xml:space="preserve">PROVABLE ZERO - this contrast cannot move under this chair</text>
+<text x="380.00" y="191.85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">team - generalist  [full_records]</text>
+<rect x="392.00" y="169.27" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="189.13" width="1.50" height="17.02" fill="#f2635c" rx="2" />
+<text x="401.50" y="201.31" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.000</text>
+<text x="692.00" y="191.85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#f2635c" text-anchor="start" font-weight="bold" xml:space="preserve">PROVABLE ZERO - this contrast cannot move under this chair</text>
+<text x="380.00" y="239.13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">targeted - random checks  [full_records]</text>
+<rect x="392.00" y="216.55" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="236.40" width="1.50" height="17.02" fill="#f2635c" rx="2" />
+<text x="401.50" y="248.58" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.000</text>
+<text x="692.00" y="239.13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#f2635c" text-anchor="start" font-weight="bold" xml:space="preserve">PROVABLE ZERO - this contrast cannot move under this chair</text>
+<text x="380.00" y="286.40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">ballots - evidence  [summary_only]</text>
+<rect x="392.00" y="263.82" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="283.67" width="151.43" height="17.02" fill="#5ad1b4" rx="2" />
+<text x="551.43" y="295.85" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.036</text>
+<text x="380.00" y="333.67" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">team - generalist  [summary_only]</text>
+<rect x="392.00" y="311.09" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="330.95" width="520.54" height="17.02" fill="#5ad1b4" rx="2" />
+<text x="920.54" y="343.13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.123</text>
+<text x="380.00" y="380.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">targeted - random checks  [summary_only]</text>
+<rect x="392.00" y="358.36" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="378.22" width="511.07" height="17.02" fill="#5ad1b4" rx="2" />
+<text x="911.07" y="390.40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.121</text>
+<text x="380.00" y="428.22" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">ballots - evidence  [verified_ledger]</text>
+<rect x="392.00" y="405.64" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="425.49" width="1.50" height="17.02" fill="#f2635c" rx="2" />
+<text x="401.50" y="437.67" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.000</text>
+<text x="692.00" y="428.22" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#f2635c" text-anchor="start" font-weight="bold" xml:space="preserve">PROVABLE ZERO - this contrast cannot move under this chair</text>
+<text x="380.00" y="475.49" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">team - generalist  [verified_ledger]</text>
+<rect x="392.00" y="452.91" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="472.76" width="321.79" height="17.02" fill="#5ad1b4" rx="2" />
+<text x="721.79" y="484.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.076</text>
+<text x="380.00" y="522.76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">targeted - random checks  [verified_ledger]</text>
+<rect x="392.00" y="500.18" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="520.04" width="501.61" height="17.02" fill="#5ad1b4" rx="2" />
+<text x="901.61" y="532.22" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.118</text>
+<text x="380.00" y="570.04" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">summary_only - full_records  [(both)]</text>
+<rect x="392.00" y="547.45" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="567.31" width="653.04" height="17.02" fill="#5ad1b4" rx="2" />
+<text x="1053.04" y="579.49" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.154</text>
+<text x="380.00" y="617.31" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="end" font-weight="normal" xml:space="preserve">verified_ledger - full_records  [(both)]</text>
+<rect x="392.00" y="594.73" width="1.50" height="17.02" fill="#6aa9e0" rx="2" />
+<rect x="392.00" y="614.58" width="861.25" height="17.02" fill="#5ad1b4" rx="2" />
+<text x="1261.25" y="626.76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">0.203</text>
+<rect x="40.00" y="673.00" width="10.00" height="10.00" fill="#6aa9e0" rx="2" />
+<text x="56.00" y="682.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">perfect play (p_detect=1, eps=0, q_trust=0) - 0.000 for EVERY pair</text>
+<rect x="40.00" y="689.00" width="10.00" height="10.00" fill="#5ad1b4" rx="2" />
+<text x="56.00" y="698.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">competence grid (max |effect| over the 12 cells)</text>
+<text x="40.00" y="720.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#f2635c" text-anchor="start" font-weight="bold" xml:space="preserve">Provable zeros found: 4 of 11 pair x chair combinations (zero under perfect play AND in all 12 competence cells)</text>
+<text x="56.00" y="744.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">- ballots - evidence  under chair full_records</text>
+<text x="56.00" y="761.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">- team - generalist  under chair full_records</text>
+<text x="56.00" y="778.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">- targeted - random checks  under chair full_records</text>
+<text x="56.00" y="795.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">- ballots - evidence  under chair verified_ledger</text>
+<rect x="0.00" y="826.00" width="1600.00" height="34.00" fill="#0b1418" />
+<text x="28.00" y="847.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e8a33d" text-anchor="start" font-weight="bold" xml:space="preserve">SCRIPTED SIMULATION — NOT MODEL EVIDENCE</text>
+<text x="1572.00" y="847.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">unit: difference in acceptable rate (0-1)</text>
+</svg>

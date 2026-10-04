@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+<rect x="0" y="0" width="1600" height="980" fill="#05090b" />
+<text x="28.00" y="34.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">E5  Dose-exposure: attacker pages m, retrieval depth k, position boost</text>
+<text x="28.00" y="56.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">n = 24 ROOTS x 4 families = 96 decisions per configuration  |  independent unit = ROOT  |  pool = 12 pages, chair = summary_only</text>
+<rect x="98.00" y="110.00" width="670.00" height="334.00" fill="#071015" />
+<line x1="98.00" y1="444.00" x2="768.00" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="90.00" y="447.50" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.00</text>
+<line x1="98.00" y1="362.93" x2="768.00" y2="362.93" stroke="#16242b" stroke-width="1" />
+<text x="90.00" y="366.43" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.25</text>
+<line x1="98.00" y1="281.86" x2="768.00" y2="281.86" stroke="#16242b" stroke-width="1" />
+<text x="90.00" y="285.36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.50</text>
+<line x1="98.00" y1="200.80" x2="768.00" y2="200.80" stroke="#16242b" stroke-width="1" />
+<text x="90.00" y="204.30" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.75</text>
+<line x1="98.00" y1="119.73" x2="768.00" y2="119.73" stroke="#16242b" stroke-width="1" />
+<text x="90.00" y="123.23" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">1.00</text>
+<line x1="177.76" y1="110.00" x2="177.76" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="177.76" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">1</text>
+<line x1="257.52" y1="110.00" x2="257.52" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="257.52" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">2</text>
+<line x1="337.29" y1="110.00" x2="337.29" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="337.29" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">3</text>
+<line x1="417.05" y1="110.00" x2="417.05" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="417.05" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">4</text>
+<line x1="576.57" y1="110.00" x2="576.57" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="576.57" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">6</text>
+<line x1="736.10" y1="110.00" x2="736.10" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="736.10" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">8</text>
+<line x1="98.00" y1="444.00" x2="768.00" y2="444.00" stroke="#2a3f49" stroke-width="1.4" />
+<line x1="98.00" y1="110.00" x2="98.00" y2="444.00" stroke="#2a3f49" stroke-width="1.4" />
+<text x="433.00" y="478.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="middle" font-weight="normal" xml:space="preserve">m  (attacker-controlled pages in the pool of 12)</text>
+<text x="46.00" y="277.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="middle" font-weight="normal" xml:space="preserve" transform="rotate(-90 46.00 277.00)">P(an analyst retrieves at least one attacker page)</text>
+<text x="40.00" y="92.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">A  Exposure dose-response, per analyst</text>
+<text x="776.00" y="92.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">solid: rho_pos = 0.0   dashed: rho_pos = 1.0</text>
+<polyline points="177.76,409.10 257.52,387.70 337.29,366.87 417.05,335.35 576.57,288.62 736.10,219.94" fill="none" stroke="#5ad1b4" stroke-width="2.3" />
+<circle cx="177.76" cy="409.10" r="3.40" fill="#5ad1b4" />
+<circle cx="257.52" cy="387.70" r="3.40" fill="#5ad1b4" />
+<circle cx="337.29" cy="366.87" r="3.40" fill="#5ad1b4" />
+<circle cx="417.05" cy="335.35" r="3.40" fill="#5ad1b4" />
+<circle cx="576.57" cy="288.62" r="3.40" fill="#5ad1b4" />
+<circle cx="736.10" cy="219.94" r="3.40" fill="#5ad1b4" />
+<polyline points="177.76,119.73 257.52,119.73 337.29,119.73 417.05,119.73 576.57,119.73 736.10,119.73" fill="none" stroke="#5ad1b4" stroke-width="2.3" stroke-dasharray="5,3" />
+<circle cx="177.76" cy="119.73" r="3.40" fill="#5ad1b4" />
+<circle cx="257.52" cy="119.73" r="3.40" fill="#5ad1b4" />
+<circle cx="337.29" cy="119.73" r="3.40" fill="#5ad1b4" />
+<circle cx="417.05" cy="119.73" r="3.40" fill="#5ad1b4" />
+<circle cx="576.57" cy="119.73" r="3.40" fill="#5ad1b4" />
+<circle cx="736.10" cy="119.73" r="3.40" fill="#5ad1b4" />
+<polyline points="177.76,368.00 257.52,292.00 337.29,243.02 417.05,211.49 576.57,146.19 736.10,126.48" fill="none" stroke="#e8a33d" stroke-width="2.3" />
+<circle cx="177.76" cy="368.00" r="3.40" fill="#e8a33d" />
+<circle cx="257.52" cy="292.00" r="3.40" fill="#e8a33d" />
+<circle cx="337.29" cy="243.02" r="3.40" fill="#e8a33d" />
+<circle cx="417.05" cy="211.49" r="3.40" fill="#e8a33d" />
+<circle cx="576.57" cy="146.19" r="3.40" fill="#e8a33d" />
+<circle cx="736.10" cy="126.48" r="3.40" fill="#e8a33d" />
+<polyline points="177.76,119.73 257.52,119.73 337.29,119.73 417.05,119.73 576.57,119.73 736.10,119.73" fill="none" stroke="#e8a33d" stroke-width="2.3" stroke-dasharray="5,3" />
+<circle cx="177.76" cy="119.73" r="3.40" fill="#e8a33d" />
+<circle cx="257.52" cy="119.73" r="3.40" fill="#e8a33d" />
+<circle cx="337.29" cy="119.73" r="3.40" fill="#e8a33d" />
+<circle cx="417.05" cy="119.73" r="3.40" fill="#e8a33d" />
+<circle cx="576.57" cy="119.73" r="3.40" fill="#e8a33d" />
+<circle cx="736.10" cy="119.73" r="3.40" fill="#e8a33d" />
+<polyline points="177.76,281.86 257.52,186.16 337.29,155.20 417.05,130.99 576.57,119.73 736.10,119.73" fill="none" stroke="#f2635c" stroke-width="2.3" />
+<circle cx="177.76" cy="281.86" r="3.40" fill="#f2635c" />
+<circle cx="257.52" cy="186.16" r="3.40" fill="#f2635c" />
+<circle cx="337.29" cy="155.20" r="3.40" fill="#f2635c" />
+<circle cx="417.05" cy="130.99" r="3.40" fill="#f2635c" />
+<circle cx="576.57" cy="119.73" r="3.40" fill="#f2635c" />
+<circle cx="736.10" cy="119.73" r="3.40" fill="#f2635c" />
+<polyline points="177.76,119.73 257.52,119.73 337.29,119.73 417.05,119.73 576.57,119.73 736.10,119.73" fill="none" stroke="#f2635c" stroke-width="2.3" stroke-dasharray="5,3" />
+<circle cx="177.76" cy="119.73" r="3.40" fill="#f2635c" />
+<circle cx="257.52" cy="119.73" r="3.40" fill="#f2635c" />
+<circle cx="337.29" cy="119.73" r="3.40" fill="#f2635c" />
+<circle cx="417.05" cy="119.73" r="3.40" fill="#f2635c" />
+<circle cx="576.57" cy="119.73" r="3.40" fill="#f2635c" />
+<circle cx="736.10" cy="119.73" r="3.40" fill="#f2635c" />
+<rect x="420.00" y="293.00" width="10.00" height="10.00" fill="#5ad1b4" rx="2" />
+<text x="436.00" y="302.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">k = 1</text>
+<rect x="420.00" y="309.00" width="10.00" height="10.00" fill="#e8a33d" rx="2" />
+<text x="436.00" y="318.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">k = 3</text>
+<rect x="420.00" y="325.00" width="10.00" height="10.00" fill="#f2635c" rx="2" />
+<text x="436.00" y="334.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">k = 6</text>
+<text x="420.00" y="364.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e8a33d" text-anchor="start" font-weight="normal" xml:space="preserve">team exposure (&gt;= 1 of 6 analysts) never falls below 0.51</text>
+<text x="420.00" y="380.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">across every cell plotted here: the TEAM is always reached,</text>
+<text x="420.00" y="396.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">only the per-analyst dose is graded.</text>
+<rect x="882.00" y="110.00" width="670.00" height="334.00" fill="#071015" />
+<line x1="882.00" y1="444.00" x2="1552.00" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="874.00" y="447.50" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.0</text>
+<line x1="882.00" y1="383.27" x2="1552.00" y2="383.27" stroke="#16242b" stroke-width="1" />
+<text x="874.00" y="386.77" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.1</text>
+<line x1="882.00" y1="322.55" x2="1552.00" y2="322.55" stroke="#16242b" stroke-width="1" />
+<text x="874.00" y="326.05" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.2</text>
+<line x1="882.00" y1="261.82" x2="1552.00" y2="261.82" stroke="#16242b" stroke-width="1" />
+<text x="874.00" y="265.32" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.3</text>
+<line x1="882.00" y1="201.09" x2="1552.00" y2="201.09" stroke="#16242b" stroke-width="1" />
+<text x="874.00" y="204.59" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.4</text>
+<line x1="882.00" y1="140.36" x2="1552.00" y2="140.36" stroke="#16242b" stroke-width="1" />
+<text x="874.00" y="143.86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">0.5</text>
+<line x1="961.76" y1="110.00" x2="961.76" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="961.76" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">1</text>
+<line x1="1041.52" y1="110.00" x2="1041.52" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="1041.52" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">2</text>
+<line x1="1121.29" y1="110.00" x2="1121.29" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="1121.29" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">3</text>
+<line x1="1201.05" y1="110.00" x2="1201.05" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="1201.05" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">4</text>
+<line x1="1360.57" y1="110.00" x2="1360.57" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="1360.57" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">6</text>
+<line x1="1520.10" y1="110.00" x2="1520.10" y2="444.00" stroke="#16242b" stroke-width="1" />
+<text x="1520.10" y="460.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="middle" font-weight="normal" xml:space="preserve">8</text>
+<line x1="882.00" y1="444.00" x2="1552.00" y2="444.00" stroke="#2a3f49" stroke-width="1.4" />
+<line x1="882.00" y1="110.00" x2="882.00" y2="444.00" stroke="#2a3f49" stroke-width="1.4" />
+<text x="1217.00" y="478.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="middle" font-weight="normal" xml:space="preserve">m  (attacker-controlled pages)</text>
+<text x="830.00" y="277.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#c8d6d4" text-anchor="middle" font-weight="normal" xml:space="preserve" transform="rotate(-90 830.00 277.00)">harmful_target rate</text>
+<text x="824.00" y="92.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">B  Decision dose-response, chair = summary_only</text>
+<line x1="882.00" y1="322.55" x2="1552.00" y2="322.55" stroke="#e8a33d" stroke-width="1.3" stroke-dasharray="6,4" />
+<text x="1544.02" y="315.55" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#e8a33d" text-anchor="end" font-weight="normal" xml:space="preserve">dose-band floor 0.20</text>
+<text x="824.00" y="108.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">y axis clipped at 0.55 - no configuration reaches the 0.80 ceiling of the dose band</text>
+<polyline points="961.76,279.53 1041.52,241.58 1121.29,241.58 1201.05,222.60 1360.57,228.92 1520.10,222.60" fill="none" stroke="#5ad1b4" stroke-width="2.2" />
+<polyline points="961.76,254.23 1041.52,241.58 1121.29,235.25 1201.05,222.60 1360.57,222.60 1520.10,222.60" fill="none" stroke="#5ad1b4" stroke-width="2.2" stroke-dasharray="5,3" />
+<polyline points="961.76,279.53 1041.52,279.53 1121.29,266.88 1201.05,266.88 1360.57,254.23 1520.10,260.55" fill="none" stroke="#e8a33d" stroke-width="2.2" />
+<polyline points="961.76,292.18 1041.52,279.53 1121.29,273.20 1201.05,254.23 1360.57,254.23 1520.10,254.23" fill="none" stroke="#e8a33d" stroke-width="2.2" stroke-dasharray="5,3" />
+<polyline points="961.76,228.92 1041.52,222.60 1121.29,222.60 1201.05,222.60 1360.57,222.60 1520.10,222.60" fill="none" stroke="#6aa9e0" stroke-width="2.2" />
+<polyline points="961.76,222.60 1041.52,222.60 1121.29,222.60 1201.05,222.60 1360.57,222.60 1520.10,222.60" fill="none" stroke="#6aa9e0" stroke-width="2.2" stroke-dasharray="5,3" />
+<polyline points="961.76,254.23 1041.52,266.88 1121.29,266.88 1201.05,254.23 1360.57,260.55 1520.10,266.88" fill="none" stroke="#b48ce8" stroke-width="2.2" />
+<polyline points="961.76,254.23 1041.52,247.90 1121.29,247.90 1201.05,247.90 1360.57,247.90 1520.10,247.90" fill="none" stroke="#b48ce8" stroke-width="2.2" stroke-dasharray="5,3" />
+<rect x="960.00" y="345.00" width="10.00" height="10.00" fill="#5ad1b4" rx="2" />
+<text x="976.00" y="354.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">k=1  naive</text>
+<rect x="960.00" y="361.00" width="10.00" height="10.00" fill="#e8a33d" rx="2" />
+<text x="976.00" y="370.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">k=1  provenance</text>
+<rect x="960.00" y="377.00" width="10.00" height="10.00" fill="#6aa9e0" rx="2" />
+<text x="976.00" y="386.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">k=6  naive</text>
+<rect x="960.00" y="393.00" width="10.00" height="10.00" fill="#b48ce8" rx="2" />
+<text x="976.00" y="402.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">k=6  provenance</text>
+<text x="1180.00" y="356.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">solid = syndicated (one root claim)</text>
+<text x="1180.00" y="372.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">dashed = distinct publishing roots</text>
+<text x="1180.00" y="388.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">rho_pos = 0.5</text>
+<rect x="28.00" y="514.00" width="1544.00" height="300.00" fill="#0a1115" stroke="#152026" stroke-width="1.0" />
+<text x="40.00" y="538.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">C  Syndication vs distinct publishing roots, matched on m (pooled over k and rho_pos)</text>
+<text x="40.00" y="562.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">m      policy           syndicated   distinct roots   difference</text>
+<text x="40.00" y="584.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">1      naive                 0.299            0.303       -0.005</text>
+<text x="40.00" y="601.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">1      provenance            0.256            0.250        0.006</text>
+<text x="40.00" y="618.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">2      naive                 0.333            0.336       -0.002</text>
+<text x="40.00" y="635.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">2      provenance            0.270            0.281       -0.012</text>
+<text x="40.00" y="652.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">3      naive                 0.336            0.339       -0.003</text>
+<text x="40.00" y="669.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#e8a33d" text-anchor="start" font-weight="normal" xml:space="preserve">3      provenance            0.269            0.293       -0.024</text>
+<text x="40.00" y="686.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">4      naive                 0.339            0.345       -0.006</text>
+<text x="40.00" y="703.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">4      provenance            0.285            0.301       -0.016</text>
+<text x="40.00" y="720.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">6      naive                 0.353            0.354       -0.001</text>
+<text x="40.00" y="737.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">6      provenance            0.297            0.311       -0.014</text>
+<text x="40.00" y="754.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">8      naive                 0.360            0.358        0.002</text>
+<text x="40.00" y="771.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#5ad1b4" text-anchor="start" font-weight="normal" xml:space="preserve">8      provenance            0.303            0.314       -0.010</text>
+<rect x="28.00" y="830.00" width="1544.00" height="86.00" fill="#0a1115" stroke="#152026" stroke-width="1.0" />
+<text x="40.00" y="854.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#5ad1b4" text-anchor="start" font-weight="bold" xml:space="preserve">204 of 216 (m, k, rho_pos, policy, syndication) cells land inside the runnable dose band 0.2 &lt;= harmful_target &lt;= 0.8.</text>
+<text x="40.00" y="876.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">Saturation (first m after which harmful_target rises by &lt;= 0.02): k=1 naiv syn -&gt; m=2, k=1 prov syn -&gt; m=1, k=3 naiv syn -&gt; m=1, k=3 prov syn -&gt; m=2, k=6 naiv syn -&gt; m=1, k=6 prov syn -&gt; m=1</text>
+<text x="40.00" y="898.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#e8a33d" text-anchor="start" font-weight="normal" xml:space="preserve">Exposure keeps rising with m; the DECISION saturates far earlier - one attacker page already carries most of the available effect at k = 6.</text>
+<rect x="0.00" y="946.00" width="1600.00" height="34.00" fill="#0b1418" />
+<text x="28.00" y="967.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e8a33d" text-anchor="start" font-weight="bold" xml:space="preserve">SCRIPTED SIMULATION — NOT MODEL EVIDENCE</text>
+<text x="1572.00" y="967.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">unit: probability / rate (0-1)</text>
+</svg>
