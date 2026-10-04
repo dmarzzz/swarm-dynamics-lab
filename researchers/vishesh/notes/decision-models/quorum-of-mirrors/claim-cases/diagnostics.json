@@ -1,0 +1,930 @@
+{
+  "cases": 32,
+  "authored_scenario_units": 8,
+  "scope": "Limited lexical diagnostics; no strong semantic baseline, no model effectiveness or headroom inference.",
+  "summary": {
+    "abstain_all": {
+      "correct": 8,
+      "false_support": 0,
+      "missed_support": 16,
+      "by_gold": {
+        "SUPPORTED": {
+          "n": 16,
+          "correct": 0
+        },
+        "CONTRADICTED": {
+          "n": 8,
+          "correct": 0
+        },
+        "NOT_ESTABLISHED": {
+          "n": 8,
+          "correct": 8
+        }
+      }
+    },
+    "literal_clause": {
+      "correct": 16,
+      "false_support": 0,
+      "missed_support": 8,
+      "by_gold": {
+        "SUPPORTED": {
+          "n": 16,
+          "correct": 8
+        },
+        "CONTRADICTED": {
+          "n": 8,
+          "correct": 0
+        },
+        "NOT_ESTABLISHED": {
+          "n": 8,
+          "correct": 8
+        }
+      }
+    },
+    "overlap_diagnostic": {
+      "correct": 16,
+      "false_support": 7,
+      "missed_support": 6,
+      "by_gold": {
+        "SUPPORTED": {
+          "n": 16,
+          "correct": 10
+        },
+        "CONTRADICTED": {
+          "n": 8,
+          "correct": 0
+        },
+        "NOT_ESTABLISHED": {
+          "n": 8,
+          "correct": 6
+        }
+      }
+    }
+  },
+  "outcomes": [
+    {
+      "id": "CF-00-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-00-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-00-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-01-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-01-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-02-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-02-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-03-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-03-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-04-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-04-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-05-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-05-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-06-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-06-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-0",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-07-1",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-07-2",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-3",
+      "policy": "abstain_all",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-00-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-01-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-02-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-03-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-04-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-05-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-06-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-0",
+      "policy": "literal_clause",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-1",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-07-2",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-3",
+      "policy": "literal_clause",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": true,
+      "missed_support": false
+    },
+    {
+      "id": "CF-00-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": false,
+      "false_support": true,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": true,
+      "missed_support": false
+    },
+    {
+      "id": "CF-01-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-02-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": true,
+      "missed_support": false
+    },
+    {
+      "id": "CF-02-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": false,
+      "false_support": true,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-03-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": true,
+      "missed_support": false
+    },
+    {
+      "id": "CF-03-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-04-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-04-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-05-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": true,
+      "missed_support": false
+    },
+    {
+      "id": "CF-05-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-06-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-06-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-0",
+      "policy": "overlap_diagnostic",
+      "predicted": "SUPPORTED",
+      "gold": "SUPPORTED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-1",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "SUPPORTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": true
+    },
+    {
+      "id": "CF-07-2",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "CONTRADICTED",
+      "correct": false,
+      "false_support": false,
+      "missed_support": false
+    },
+    {
+      "id": "CF-07-3",
+      "policy": "overlap_diagnostic",
+      "predicted": "NOT_ESTABLISHED",
+      "gold": "NOT_ESTABLISHED",
+      "correct": true,
+      "false_support": false,
+      "missed_support": false
+    }
+  ]
+}

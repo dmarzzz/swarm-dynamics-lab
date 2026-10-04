@@ -50,3 +50,7 @@ Trace audit reconciles all 96 assigned slots: 49 started, 48 retained answers, o
 ## Case quality and standing process
 
 Completed 24 paired development cases across 12 authored roots; nine checks pass. The revised contract separates authenticated origin from untrusted text/reference claims and dependency admission. Exact graph traversal solves all 24; frozen legacy failures reflect changed trust assumptions, not model headroom. No new native calls, allocation or budget mutation. Published a good/bad case rubric, hand-labelled matched casebook, graph baseline and mutation checks. Updated shared ITERATION.md and local mirror/standing instructions so insufficient cases trigger feasible offline improvement in the same iteration. No new scientific launch requested or performed.
+
+## Claim-fidelity cases
+
+Added 32 claim-fidelity development cases across eight authored source scenarios, separating SUPPORTED, CONTRADICTED and NOT_ESTABLISHED while holding source binding fixed. Eight checks pass. Literal matching and lexical overlap both score 16/32, but overlap falsely supports seven claims. Limited lexical diagnostics do not establish semantic model headroom; a capable compositional baseline and independently varied cases remain necessary. Prospective plan 5b8e0504311c59e433cbc0b8459b7147332be307. Preserved original suite/ledgers; no native calls or allocation. Next preparation is a strong semantic rule/parser control, not a favorable model retry.

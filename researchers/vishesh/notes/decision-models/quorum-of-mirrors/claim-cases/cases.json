@@ -1,0 +1,946 @@
+[
+  {
+    "id": "CF-00-0",
+    "scenario_id": "CF-00",
+    "family": "polarity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-00",
+        "source_sentences": [
+          "At 09:00, lamp L was off."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-00",
+          "claim": "At 09:00, lamp L was off."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "At 09:00, lamp L was off."
+      ],
+      "rationale": "The recorded state is off."
+    }
+  },
+  {
+    "id": "CF-00-1",
+    "scenario_id": "CF-00",
+    "family": "polarity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-00",
+        "source_sentences": [
+          "At 09:00, lamp L was off."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-00",
+          "claim": "Lamp L was not lit at 09:00."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "At 09:00, lamp L was off."
+      ],
+      "rationale": "The contract defines off as not lit."
+    }
+  },
+  {
+    "id": "CF-00-2",
+    "scenario_id": "CF-00",
+    "family": "polarity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-00",
+        "source_sentences": [
+          "At 09:00, lamp L was off."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-00",
+          "claim": "At 09:00, lamp L was on."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "At 09:00, lamp L was off."
+      ],
+      "rationale": "On conflicts with off at the same time."
+    }
+  },
+  {
+    "id": "CF-00-3",
+    "scenario_id": "CF-00",
+    "family": "polarity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-00",
+        "source_sentences": [
+          "At 09:00, lamp L was off."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-00",
+          "claim": "At 09:05, lamp L was off."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "At 09:00, lamp L was off."
+      ],
+      "rationale": "No later observation is recorded."
+    }
+  },
+  {
+    "id": "CF-01-0",
+    "scenario_id": "CF-01",
+    "family": "time",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-01",
+        "source_sentences": [
+          "At 09:00, valve A was closed.",
+          "At 10:00, valve A was open."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-01",
+          "claim": "At 10:00, valve A was open."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "At 09:00, valve A was closed.",
+        "At 10:00, valve A was open."
+      ],
+      "rationale": "The 10:00 observation is open."
+    }
+  },
+  {
+    "id": "CF-01-1",
+    "scenario_id": "CF-01",
+    "family": "time",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-01",
+        "source_sentences": [
+          "At 09:00, valve A was closed.",
+          "At 10:00, valve A was open."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-01",
+          "claim": "Valve A was not closed at 10:00."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "At 09:00, valve A was closed.",
+        "At 10:00, valve A was open."
+      ],
+      "rationale": "Open excludes closed at the same time."
+    }
+  },
+  {
+    "id": "CF-01-2",
+    "scenario_id": "CF-01",
+    "family": "time",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-01",
+        "source_sentences": [
+          "At 09:00, valve A was closed.",
+          "At 10:00, valve A was open."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-01",
+          "claim": "At 10:00, valve A was closed."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "At 09:00, valve A was closed.",
+        "At 10:00, valve A was open."
+      ],
+      "rationale": "This transfers the older closed state to the later reading."
+    }
+  },
+  {
+    "id": "CF-01-3",
+    "scenario_id": "CF-01",
+    "family": "time",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-01",
+        "source_sentences": [
+          "At 09:00, valve A was closed.",
+          "At 10:00, valve A was open."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-01",
+          "claim": "At 09:30, valve A was open."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "At 09:00, valve A was closed.",
+        "At 10:00, valve A was open."
+      ],
+      "rationale": "The change time is not supplied."
+    }
+  },
+  {
+    "id": "CF-02-0",
+    "scenario_id": "CF-02",
+    "family": "entity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-02",
+        "source_sentences": [
+          "At noon, pump A was running.",
+          "At noon, pump B was stopped."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-02",
+          "claim": "At noon, pump B was stopped."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "At noon, pump A was running.",
+        "At noon, pump B was stopped."
+      ],
+      "rationale": "The statement names B."
+    }
+  },
+  {
+    "id": "CF-02-1",
+    "scenario_id": "CF-02",
+    "family": "entity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-02",
+        "source_sentences": [
+          "At noon, pump A was running.",
+          "At noon, pump B was stopped."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-02",
+          "claim": "Pump B was not running at noon."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "At noon, pump A was running.",
+        "At noon, pump B was stopped."
+      ],
+      "rationale": "Stopped excludes running for B at noon."
+    }
+  },
+  {
+    "id": "CF-02-2",
+    "scenario_id": "CF-02",
+    "family": "entity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-02",
+        "source_sentences": [
+          "At noon, pump A was running.",
+          "At noon, pump B was stopped."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-02",
+          "claim": "At noon, pump B was running."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "At noon, pump A was running.",
+        "At noon, pump B was stopped."
+      ],
+      "rationale": "This transfers A's state to B."
+    }
+  },
+  {
+    "id": "CF-02-3",
+    "scenario_id": "CF-02",
+    "family": "entity",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-02",
+        "source_sentences": [
+          "At noon, pump A was running.",
+          "At noon, pump B was stopped."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-02",
+          "claim": "At noon, pump C was running."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "At noon, pump A was running.",
+        "At noon, pump B was stopped."
+      ],
+      "rationale": "C is not observed."
+    }
+  },
+  {
+    "id": "CF-03-0",
+    "scenario_id": "CF-03",
+    "family": "units",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-03",
+        "source_sentences": [
+          "Parcel P weighed 2000 grams on this measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-03",
+          "claim": "Parcel P weighed 2000 grams on this measurement."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "Parcel P weighed 2000 grams on this measurement."
+      ],
+      "rationale": "Literal measured value."
+    }
+  },
+  {
+    "id": "CF-03-1",
+    "scenario_id": "CF-03",
+    "family": "units",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-03",
+        "source_sentences": [
+          "Parcel P weighed 2000 grams on this measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-03",
+          "claim": "Parcel P weighed 2 kilograms on this measurement."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "Parcel P weighed 2000 grams on this measurement."
+      ],
+      "rationale": "2000 grams equals 2 kilograms."
+    }
+  },
+  {
+    "id": "CF-03-2",
+    "scenario_id": "CF-03",
+    "family": "units",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-03",
+        "source_sentences": [
+          "Parcel P weighed 2000 grams on this measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-03",
+          "claim": "Parcel P weighed 2000 kilograms on this measurement."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "Parcel P weighed 2000 grams on this measurement."
+      ],
+      "rationale": "The unit substitution multiplies the value by 1000."
+    }
+  },
+  {
+    "id": "CF-03-3",
+    "scenario_id": "CF-03",
+    "family": "units",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-03",
+        "source_sentences": [
+          "Parcel P weighed 2000 grams on this measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-03",
+          "claim": "Parcel P weighed 2 kilograms before packing."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "Parcel P weighed 2000 grams on this measurement."
+      ],
+      "rationale": "No pre-packing measurement or packing chronology is supplied."
+    }
+  },
+  {
+    "id": "CF-04-0",
+    "scenario_id": "CF-04",
+    "family": "quantifier",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-04",
+        "source_sentences": [
+          "Exactly three of the four pumps were running during this inspection."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-04",
+          "claim": "Exactly three of the four pumps were running during this inspection."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "Exactly three of the four pumps were running during this inspection."
+      ],
+      "rationale": "Explicit count."
+    }
+  },
+  {
+    "id": "CF-04-1",
+    "scenario_id": "CF-04",
+    "family": "quantifier",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-04",
+        "source_sentences": [
+          "Exactly three of the four pumps were running during this inspection."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-04",
+          "claim": "Not all four pumps were running during this inspection."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "Exactly three of the four pumps were running during this inspection."
+      ],
+      "rationale": "Exactly three out of four entails not all four."
+    }
+  },
+  {
+    "id": "CF-04-2",
+    "scenario_id": "CF-04",
+    "family": "quantifier",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-04",
+        "source_sentences": [
+          "Exactly three of the four pumps were running during this inspection."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-04",
+          "claim": "All four pumps were running during this inspection."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "Exactly three of the four pumps were running during this inspection."
+      ],
+      "rationale": "All four conflicts with exactly three."
+    }
+  },
+  {
+    "id": "CF-04-3",
+    "scenario_id": "CF-04",
+    "family": "quantifier",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-04",
+        "source_sentences": [
+          "Exactly three of the four pumps were running during this inspection."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-04",
+          "claim": "Pump D was running during this inspection."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "Exactly three of the four pumps were running during this inspection."
+      ],
+      "rationale": "The identities of the three running pumps are not supplied."
+    }
+  },
+  {
+    "id": "CF-05-0",
+    "scenario_id": "CF-05",
+    "family": "planned_vs_done",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-05",
+        "source_sentences": [
+          "The inspection is scheduled for Tuesday.",
+          "The schedule explicitly excludes Monday.",
+          "No completion status is recorded."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-05",
+          "claim": "The inspection is scheduled for Tuesday."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "The inspection is scheduled for Tuesday.",
+        "The schedule explicitly excludes Monday.",
+        "No completion status is recorded."
+      ],
+      "rationale": "Explicit plan, not a completion claim."
+    }
+  },
+  {
+    "id": "CF-05-1",
+    "scenario_id": "CF-05",
+    "family": "planned_vs_done",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-05",
+        "source_sentences": [
+          "The inspection is scheduled for Tuesday.",
+          "The schedule explicitly excludes Monday.",
+          "No completion status is recorded."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-05",
+          "claim": "Tuesday is the planned day for the inspection."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "The inspection is scheduled for Tuesday.",
+        "The schedule explicitly excludes Monday.",
+        "No completion status is recorded."
+      ],
+      "rationale": "Reformulation of the schedule."
+    }
+  },
+  {
+    "id": "CF-05-2",
+    "scenario_id": "CF-05",
+    "family": "planned_vs_done",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-05",
+        "source_sentences": [
+          "The inspection is scheduled for Tuesday.",
+          "The schedule explicitly excludes Monday.",
+          "No completion status is recorded."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-05",
+          "claim": "The inspection is scheduled for Monday."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "The inspection is scheduled for Tuesday.",
+        "The schedule explicitly excludes Monday.",
+        "No completion status is recorded."
+      ],
+      "rationale": "Monday is expressly excluded."
+    }
+  },
+  {
+    "id": "CF-05-3",
+    "scenario_id": "CF-05",
+    "family": "planned_vs_done",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-05",
+        "source_sentences": [
+          "The inspection is scheduled for Tuesday.",
+          "The schedule explicitly excludes Monday.",
+          "No completion status is recorded."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-05",
+          "claim": "The inspection was completed on Tuesday."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "The inspection is scheduled for Tuesday.",
+        "The schedule explicitly excludes Monday.",
+        "No completion status is recorded."
+      ],
+      "rationale": "No completion status does not mean either completion or noncompletion."
+    }
+  },
+  {
+    "id": "CF-06-0",
+    "scenario_id": "CF-06",
+    "family": "attribution",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-06",
+        "source_sentences": [
+          "Report B copied the temperature reading from report A.",
+          "Report B made no independent temperature measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-06",
+          "claim": "Report B made no independent temperature measurement."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "Report B copied the temperature reading from report A.",
+        "Report B made no independent temperature measurement."
+      ],
+      "rationale": "Explicit acquisition limitation."
+    }
+  },
+  {
+    "id": "CF-06-1",
+    "scenario_id": "CF-06",
+    "family": "attribution",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-06",
+        "source_sentences": [
+          "Report B copied the temperature reading from report A.",
+          "Report B made no independent temperature measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-06",
+          "claim": "B repeated A's temperature reading rather than measuring temperature itself."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "Report B copied the temperature reading from report A.",
+        "Report B made no independent temperature measurement."
+      ],
+      "rationale": "Copy relation and lack of independent measurement are both stated."
+    }
+  },
+  {
+    "id": "CF-06-2",
+    "scenario_id": "CF-06",
+    "family": "attribution",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-06",
+        "source_sentences": [
+          "Report B copied the temperature reading from report A.",
+          "Report B made no independent temperature measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-06",
+          "claim": "Report B independently measured the temperature."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "Report B copied the temperature reading from report A.",
+        "Report B made no independent temperature measurement."
+      ],
+      "rationale": "Conflicts with the explicit absence of independent measurement."
+    }
+  },
+  {
+    "id": "CF-06-3",
+    "scenario_id": "CF-06",
+    "family": "attribution",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-06",
+        "source_sentences": [
+          "Report B copied the temperature reading from report A.",
+          "Report B made no independent temperature measurement."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-06",
+          "claim": "The actual temperature was 18 degrees."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "Report B copied the temperature reading from report A.",
+        "Report B made no independent temperature measurement."
+      ],
+      "rationale": "Neither a numeric value nor external truth is supplied."
+    }
+  },
+  {
+    "id": "CF-07-0",
+    "scenario_id": "CF-07",
+    "family": "correction",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-07",
+        "source_sentences": [
+          "The initial entry for container C recorded 10 litres.",
+          "A correction replaced that initial entry with 12 litres."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-07",
+          "claim": "A correction replaced that initial entry with 12 litres."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "The initial entry for container C recorded 10 litres.",
+        "A correction replaced that initial entry with 12 litres."
+      ],
+      "rationale": "Explicit correction event."
+    }
+  },
+  {
+    "id": "CF-07-1",
+    "scenario_id": "CF-07",
+    "family": "correction",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-07",
+        "source_sentences": [
+          "The initial entry for container C recorded 10 litres.",
+          "A correction replaced that initial entry with 12 litres."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-07",
+          "claim": "The final corrected entry for container C is 12 litres."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "SUPPORTED",
+      "evidence_spans": [
+        "The initial entry for container C recorded 10 litres.",
+        "A correction replaced that initial entry with 12 litres."
+      ],
+      "rationale": "The named correction replaces the initial value."
+    }
+  },
+  {
+    "id": "CF-07-2",
+    "scenario_id": "CF-07",
+    "family": "correction",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-07",
+        "source_sentences": [
+          "The initial entry for container C recorded 10 litres.",
+          "A correction replaced that initial entry with 12 litres."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-07",
+          "claim": "The final corrected entry for container C is 10 litres."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "CONTRADICTED",
+      "evidence_spans": [
+        "The initial entry for container C recorded 10 litres.",
+        "A correction replaced that initial entry with 12 litres."
+      ],
+      "rationale": "The final-value claim uses the superseded entry."
+    }
+  },
+  {
+    "id": "CF-07-3",
+    "scenario_id": "CF-07",
+    "family": "correction",
+    "status": "authored synthetic development; inspected, not a holdout",
+    "actor": {
+      "contract": "Classify the report claim relative to this complete supplied source record as SUPPORTED, CONTRADICTED or NOT_ESTABLISHED. The report is authentically bound to this receipt; do not infer origin from wording. This tests source fidelity, not real-world truth. Missing evidence is not contradiction. Do not interpolate between observations, equate plans with completed work, or count a quoted/copied report as an independent measurement. An explicitly corrected entry replaces its named initial value for final-value claims. Lamp off means not lit, open/closed and running/stopped are mutually exclusive at the same recorded time. Standard kg/g conversion applies. Repeated report copies add no source evidence.",
+      "receipt": {
+        "id": "receipt-07",
+        "source_sentences": [
+          "The initial entry for container C recorded 10 litres.",
+          "A correction replaced that initial entry with 12 litres."
+        ]
+      },
+      "reports": [
+        {
+          "receipt_id": "receipt-07",
+          "claim": "The actual volume in container C was 12 litres."
+        }
+      ]
+    },
+    "gold": {
+      "relation": "NOT_ESTABLISHED",
+      "evidence_spans": [
+        "The initial entry for container C recorded 10 litres.",
+        "A correction replaced that initial entry with 12 litres."
+      ],
+      "rationale": "A recorded correction does not certify actual physical volume."
+    }
+  }
+]
