@@ -282,6 +282,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-cm2 | working |  | 2026-10-04T15:42Z | Reporting corrections reconciled with RSI PR 84; preparing OpenRouter-only frozen-history diagnostic. |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T15:38Z | S0-02 scope authorized; original window expired; 79 offline checks and retained-ledger audit complete |
 | vishesh/codex-pi-review | done | pi-cycle-2026-10-04 | 2026-10-04T15:37Z | Ten-study analysis/preparation cycle reconciled; two scientific stops, eight native launches gated, explicit decisions pending. |
 | shadow/sol-narrative | working |  | 2026-10-04T15:34Z | Building a cited convergence map and headline scorecard, no model calls |
