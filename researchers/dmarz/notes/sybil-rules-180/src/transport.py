@@ -328,7 +328,7 @@ def serve(sr, work_dir, opener=None, poll=None, attach_seconds=None, idle_second
             return 5
         trouble = False
         try:
-            run = sr.next_run(study.EXPERIMENT)
+            run = sr.next_run(study.session_experiment())
         except Exception:
             run, trouble = None, True
         if run is None:
@@ -336,12 +336,13 @@ def serve(sr, work_dir, opener=None, poll=None, attach_seconds=None, idle_second
                 return 5
             waited += poller.wait(trouble)
     p = run.params or {}
-    if p.get('role') != SESSION_ROLE or p.get('source_hash') != study.source_hash():
-        run.fail('worker refused this run: not a worker session at this source hash', model_calls=0)
+    if p.get('role') != SESSION_ROLE or p.get('source_hash') != study.source_hash() or p.get('model') != study.model_name():
+        run.fail('worker refused this run: not a worker session at this source hash and model', model_calls=0)
         return 4
     try:
         api = provider.OpenRouter(PermitLedger({}, 0), study.provider_config(), opener, api_clock, api_sleep)
-    except provider.CallFailure as exc:
+    except (provider.CallFailure, ValueError) as exc:
+        exc.category = getattr(exc, 'category', str(exc))
         run.fail('worker cannot start: ' + exc.category, model_calls=0)
         return 4
     journal = work_dir / (run.id.replace('/', '__') + '.journal.jsonl')
@@ -617,7 +618,7 @@ class HubDispatcher(Dispatcher):
         self.silent = b['worker_silent_seconds'] if silent_seconds is None else silent_seconds
         self.live_every = b['liveness_check_seconds'] if live_every is None else live_every
         self.work.mkdir(parents=True, exist_ok=True)
-        self.sessions = [f'{study.EXPERIMENT}/workers-{chain_id}-w{k}' for k in range(slots)]
+        self.sessions = [f'{study.session_experiment()}/workers-{chain_id}-w{k}' for k in range(slots)]
         self.allow_shared_host = allow_shared_host
         self.attached = False
         self.queued = False
@@ -629,9 +630,10 @@ class HubDispatcher(Dispatcher):
 
     def attach(self, timeout):
         """Queue the worker sessions and wait until three workers on three different hosts hold them."""
-        params = [{'role': SESSION_ROLE, 'slot': k, 'source_hash': study.source_hash(), 'code': study.code_revision()}
+        params = [{'role': SESSION_ROLE, 'slot': k, 'source_hash': study.source_hash(), 'code': study.code_revision(),
+                   'model': study.model_name()}
                   for k in range(self.slots)]
-        self.sr.enqueue(study.EXPERIMENT, params, tags=['worker-session'], run_ids=self.sessions)
+        self.sr.enqueue(study.session_experiment(), params, tags=['worker-session'], run_ids=self.sessions)
         self.queued = True
         poller = Poller(self.poll, self.backoff_max, self.sleep)
         waited = 0.0

@@ -8,9 +8,11 @@ PREREQUISITE = {'P0': 'S0', 'Q0': 'P0', 'X0': 'Q0', 'S1': 'X0', 'D1': 'S1'}
 STRICT_VALID = ('S0', 'P0', 'Q0')        # every assigned unit must be valid; X0 has its own tolerance inside its gate
 
 
-def stage_runs(runs, stage, source_hash):
+def stage_runs(runs, stage, source_hash, model=None):
+    """Runs of `stage` at this source hash and, given a model, of that model's chain only (models are never pooled)."""
     return [r for r in runs if (r.get('params') or {}).get('stage') == stage
-            and (r.get('params') or {}).get('source_hash') == source_hash]
+            and (r.get('params') or {}).get('source_hash') == source_hash
+            and (model is None or (r.get('params') or {}).get('model') == model)]
 
 
 def gate(runs, stage, p):
@@ -20,7 +22,7 @@ def gate(runs, stage, p):
     previous = PREREQUISITE.get(stage)
     if not previous:
         return None
-    same = stage_runs(runs, previous, p['source_hash'])
+    same = stage_runs(runs, previous, p['source_hash'], p.get('model'))
     if len(same) != 1:
         raise ValueError(f'exact_runtime_qualification_required:{previous}')
     run = same[0]

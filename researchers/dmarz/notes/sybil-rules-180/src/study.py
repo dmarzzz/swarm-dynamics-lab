@@ -48,16 +48,47 @@ def results_root():
     return Path(os.environ.get('STUDY_RESULTS_DIR') or ROOT / 'results')
 
 
+MODEL_ENV = 'STUDY_MODEL'
+
+
+def model_name():
+    """The model of this run: STUDY_MODEL (set by the launcher) or the ladder's first entry."""
+    models = design()['models']
+    name = os.environ.get(MODEL_ENV) or next(iter(models))
+    if name not in models:
+        raise ValueError('model_not_in_ladder')
+    return name
+
+
+def model_entry():
+    return design()['models'][model_name()]
+
+
+def model_tag():
+    return model_entry()['tag'] or ''
+
+
+def session_experiment():
+    """Hub experiment that holds this run's worker sessions. The program's model uses the study's own; another model's
+    sessions live under their own name so that its workers never take a session of a parallel run of another model."""
+    tag = model_tag()
+    return EXPERIMENT + ('-' + tag if tag else '')
+
+
 def params(stage):
     s = design()['stages'][stage]
-    return {'stage': stage, 'backend': s['backend'], 'batch': s['batch'], 'source_hash': source_hash(), 'code': code_revision()}
+    tag = model_tag()
+    return {'stage': stage, 'backend': s['backend'], 'batch': s['batch'] + ('-' + tag if tag else ''), 'model': model_name(),
+            'source_hash': source_hash(), 'code': code_revision()}
 
 
 def ledger_budget():
-    """The budget the study's ledger enforces: this attempt's caps plus what earlier attempts reserved in the same
-    ledger file (attempt 002 continues attempt 001's ledger; one cumulative dollar cap)."""
+    """The budget the run's ledger enforces: this model's dollar cap; this attempt's caps plus what earlier attempts
+    reserved in the same ledger file (the Qwen run of attempt 002 continues attempt 001's ledger)."""
     b = design()['budget']
-    carried = b.get('carried_from_attempt_001') or {}
+    entry = model_entry()
+    b['aggregate_usd'] = entry['usd_cap']
+    carried = entry.get('carried_from_attempt_001') or {}
     for stage, n in carried.items():
         b['max_calls'][stage] = b['max_calls'].get(stage, 0) + n
     b['max_attempted_calls'] += sum(carried.values())
@@ -67,8 +98,11 @@ def ledger_budget():
 
 def provider_config():
     d = design()
+    entry = model_entry()
+    if entry['status'] != 'ready' or entry['api'] != 'openrouter':
+        raise ValueError('model_not_ready_for_launch')      # the OpenAI entry is pinned in a later code commit
     return {'model': d['model'], 'canonical_model': d['canonical_model'], 'provider': d['provider'],
-            'request_template': d['request_template'], 'budget': d['budget']}
+            'request_template': d['request_template'], 'budget': ledger_budget()}
 
 
 # ------------------------------------------------------------------ actor-visible text
