@@ -86,3 +86,7 @@ Workers/tunnel/local relay stopped; claim349 released. Original USD8ledger:405ca
 ## A6 small qualification — owner-approved and prepared
 
 [Prospective plan](freshness-study/QUALIFICATION-A6.md):three familiar development worlds,raw/checked,2ticks,6episodes,18calls maxUSD0.343296additional reservation within originalUSD8. Same model/provider,corrected visible action schema,full trace/cost retention. [Offline evidence](freshness-study/reviews/a6-offline.json):23tests pass and visible-reference6/6capability gates. Owner explicitly approved this small qualification; no automatic full comparison or successor. Case-scope/quality assessed in plan. Pending fresh exclusive researcher-host availability/public-registration/runtime admission; native calls0. After-A5 ledger retained405calls/USD3.309095reserved.
+
+### A6 allocation capacity update
+
+Owner authorized a dedicated new machine when shared hosts are busy. The exact2hour compute envelopeUSD0.07142 plus A6USD0.343296 fits the originalUSD8cap; no amount was added to that cap. Fresh correct-account inventory remains25/25, so no create occurred. Allocation-only request is with the established private provisioner; authoritative state/project/one-resource plan and quota resolution remain mandatory. No other machine may be deleted or commandeered by this request. Public prospective resource amendment is in QUALIFICATION-A6.md. Current native A6 calls0, infrastructure created0.
