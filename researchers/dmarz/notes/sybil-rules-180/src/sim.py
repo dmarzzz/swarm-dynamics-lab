@@ -185,7 +185,10 @@ def observation(state, oid, rules, interface_check=None):
                                    for f in o['firms'].values()],
                          'reserve': {PRODUCTS[g]: o['reserve'][g] for g in range(2)},
                          'production_orders_rule': ('Production orders may name only the firm ids listed in portfolio.firms. '
-                                                    'A firm registered this round has no id yet and cannot be ordered.'),
+                                                    'A firm registered this round has no id yet and cannot be ordered. '
+                                                    'Each order is at most the firm capacity listed here minus what you '
+                                                    'transfer out of that firm this round; capacity transferred in this '
+                                                    'round cannot be used until next round.'),
                          'max_firms': o['max_firms'], 'registration_fee': cfg['registration_fee'],
                          'overhead_per_active_firm_per_round': cfg['overhead']},
            'last_round_result': o['last_result'],

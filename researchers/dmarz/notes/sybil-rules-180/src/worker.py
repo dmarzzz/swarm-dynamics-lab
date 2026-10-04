@@ -573,7 +573,8 @@ def _finish(ctx, detail):
     m = ctx.metrics()
     gate_passed = bool(detail and detail.get('passed') and not ctx.failure)
     summary = {'params': ctx.p, 'planned': ctx.planned, 'asked': ctx.asked, 'accepted': ctx.accepted, 'void': ctx.void,
-               'rejected_commands': ctx.rejected, 'normalized': dict(ctx.normalized), 'not_started': max(0, ctx.planned - ctx.asked), 'failed_calls': ctx.failed_calls,
+               'rejected_commands': ctx.rejected, 'normalized': dict(ctx.normalized),
+               'dropped_zero_orders': m['dropped_zero_orders'], 'normalizations': m['normalizations'], 'not_started': max(0, ctx.planned - ctx.asked), 'failed_calls': ctx.failed_calls,
                'model_calls': m['model_calls'], 'input_tokens': m['input_tokens'], 'output_tokens': m['output_tokens'],
                'cost_usd': m['cost_usd'], 'transport_attempts': m['transport_attempts'],
                'max_prompt_tokens': ctx.max_prompt_tokens, 'elapsed_seconds': time.monotonic() - ctx.started,

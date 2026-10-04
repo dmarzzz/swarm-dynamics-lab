@@ -209,7 +209,8 @@ def _usage(summary):
     out = {'calls': summary['model_calls'], 'transport_attempts': summary['transport_attempts'],
            'input_tokens': summary['input_tokens'], 'output_tokens': summary['output_tokens'], 'cost_usd': summary['cost_usd'],
            'planned': summary['planned'], 'asked': summary['asked'], 'accepted': summary['accepted'], 'void': summary['void'],
-           'rejected_commands': summary['rejected_commands'], 'normalized': summary.get('normalized'), 'gate_passed': summary['gate']['passed'],
+           'rejected_commands': summary['rejected_commands'], 'normalized': summary.get('normalized'),
+           'dropped_zero_orders': summary.get('dropped_zero_orders'), 'normalizations': summary.get('normalizations'), 'gate_passed': summary['gate']['passed'],
            'elapsed_seconds': summary['elapsed_seconds'], 'hosts': summary.get('hosts'), 'billing': summary.get('billing'),
            'transport': {k: v for k, v in (summary.get('transport') or {}).items() if k != 'events'} or None}
     detail = summary.get('detail') or {}
