@@ -17,4 +17,4 @@ RD-4 is a separate exploratory cohort. It repairs the reviewed identity/closure 
 
 ## Next design
 
-[RD5 planning package](../rd5/README.md) reconciles the observed accuracy gap and proposes explicit uncertainty memory, separate acquisition/inference accounting and a test of protected future verification. Status: design only; no new native outcomes or machine allocation.
+[RD5 implementation and next-run package](../rd5/README.md) reconciles the observed accuracy gap and proposes explicit uncertainty memory, separate acquisition/inference accounting and a test of protected future verification. Status: implemented with offline checks; native qualification and current operational admission pending. No new native outcomes or machine allocation.

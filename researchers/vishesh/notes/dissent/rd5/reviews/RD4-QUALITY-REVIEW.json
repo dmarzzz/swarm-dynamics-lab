@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "parent_handoff_sha256": "1f3f0f08215fc6ae7bbd9e8106f7f807f9a214d31d941e1baa471eef14a518fb",
+  "verdict": "repair",
+  "outcome_interpretation": "RD4 is a completed adverse comparison with preserved operational failures. RD5 is a new finite mechanism pilot, not a rerun to obtain a favorable score.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "RD4 explicitly compared learned admission with always-check; the observed one-point gap is a missed recovery, not evidence that a gate improves accuracy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/REPORT.md",
+          "sha256": "b219d62664be1a65d398c566781cbb6c8abfc0476f8404c7217fe9cc521414cc"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Authored repeated grammar and supplied ballots limit realism and independence; do not claim field efficacy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/PLAN.md",
+          "sha256": "1dc78d048283a50c50ee711a50be068deabb0be2c10cdf29a8be10a4da1b129b"
+        }
+      ],
+      "next_action": "Use same-domain mechanisms in RD5; defer independent multi-domain timing study.",
+      "acceptance_check": "All six roots use one process rule with urgent-early falsifier; state six-root feasibility limit."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact finite grammar reached 96/96; original and symmetric gates reached 87/96 versus always-check 88/96, exposing the adverse comparison.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/results/combined/summary.json",
+          "sha256": "15af5ce2916e5a7f3c9a8adb314db1070399cf1a12d7fe58497d9a5a81ef4ef9"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Q4 passed 24/24, but later negated-reading interpretation and recovery admission failed. Clean competence is not robust temporal competence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/FAILURE-ANALYSIS.md",
+          "sha256": "70b6da371fdb82664cfdd87f3c60322639963c50d5b969ca64124c862174bcb9"
+        }
+      ],
+      "next_action": "Qualify the fixed structured card on disjoint explicit/uncertain packets before H5.",
+      "acceptance_check": "12/12 card answers correct and all 24 requests valid/complete; no threshold change or retry."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All-assigned replay reproduces 576 rows; direct transport and dependent missing-answer bounds remain separate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/results/combined/audit.json",
+          "sha256": "f3a57a48934e9c6252f3bf715521d56678c5cf97f870fc56be3ed3ec9643e705"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "24 fixed authored roots and 576 dependent decisions support a descriptive mechanism result, not population precision or independent replication.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/REPORT.md",
+          "sha256": "b219d62664be1a65d398c566781cbb6c8abfc0476f8404c7217fe9cc521414cc"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Delivered request hashes, frozen source and closure state are retained. RD5 removes the learned veto and separates raw/card interpretation prospectively.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/PLAN-COVERAGE.md",
+          "sha256": "d2a20ef99b39916154cd5005b4ef228196412ad87504a2dd3136c3b32643fe04"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "416+8+152 decisions reconcile to 576; failed attempts retained, later continuations only never-started trajectories.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md",
+          "sha256": "f4868138155e76292a974fead01eba9d2d66b006206485b74ec9dce39343c110"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "unknown",
+      "finding": "428 calls and API exposure reconcile; old fleet invoice is unavailable. No fresh allocation or incremental resource bound has been verified for RD5.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md",
+          "sha256": "f4868138155e76292a974fead01eba9d2d66b006206485b74ec9dce39343c110"
+        }
+      ],
+      "next_action": "Reconcile current ledger and approved dedicated fleet cost before admission.",
+      "acceptance_check": "Preserve 428 prior calls/reservations; maximum 60 new; enforce original $1 API/$1 infrastructure and current exclusive allocation."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Exact saved-data replay and public hashes support arithmetic reproduction; hosted model reruns are not deterministic replication.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/DELIVERY-VALIDATION.json",
+          "sha256": "1ac0189d39eaba3ba6709f852030759370c8c783ec5d4bae269b2e28584a0a9f"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Measured RD4 artifacts and corrected retrospective report caption were audited against retained records; RD5 preview is explicitly scripted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md",
+          "sha256": "f4868138155e76292a974fead01eba9d2d66b006206485b74ec9dce39343c110"
+        }
+      ]
+    }
+  ],
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_at": "2026-10-04T08:12:43.980110+00:00",
+  "attempt": "rd4-s4-combined"
+}

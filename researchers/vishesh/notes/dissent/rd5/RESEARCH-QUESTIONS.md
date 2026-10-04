@@ -16,7 +16,7 @@ The first comparison is small and operational: bounded always-check versus remem
 
 **The inspection stream with little information.** Reports are genuinely new, but early inspections cannot settle the relevant requirement. Deduplicating messages is insufficient. A later decisive observation competes with the temptation to exhaust the budget now. This exposes whether a protected check adds anything beyond sensible caching.
 
-**The decisive rerun before the deadline.** The second early build check can resolve the task, while late evidence adds nothing. A rigid reserve withholds useful effort and misses an otherwise achievable deadline. This is the crucial falsifier: a design that only contains late changes gives the treatment its preferred world.
+**The decisive rerun before the deadline.** The second early check can resolve the task, while late evidence adds nothing. A rigid reserve withholds useful effort and misses an otherwise achievable deadline. This is the crucial falsifier: a design that only contains late changes gives the treatment its preferred world.
 
 These are mechanisms with practical stories, not three independent populations. A later study must cross mechanisms with domains and vary change timing; the six-stream pilot cannot establish that breadth.
 
@@ -50,3 +50,15 @@ The practical deliverable could be a reusable decision record: what is resolved,
 ## Priority after the bounded pilot
 
 First, isolate clear interpretation from allocation and retain negative results. Second, cross scenario mechanism with domain, urgency, event timing and no-change controls on independently authored tasks. Third, test a queue of competing dissenters, where there is a real reason for learned prioritization. Only then investigate endogenous minority formation or source-reputation learning. These extensions are research ideas, not runs scheduled under the current cap.
+
+## The next question after RD5: spend or wait under uncertain arrivals?
+
+RD5 fixes the reserve release at tick 4 and deliberately chooses informative arrivals before or at that boundary. Its useful outcome is a mechanistic tradeoff, not proof of a robust scheduling rule. The next research question is: **Can a group allocate its final verification opportunity from observable urgency and evidence quality when it does not know whether better evidence will arrive?**
+
+A stronger follow-up would independently vary arrival time (early, late, never), true urgency (reversible delay versus missed deadline), inspection reliability (incomplete, conflicting, accurate), and source novelty (alias, genuinely new but correlated, independent). Cross these mechanisms with process, build and bridge tasks using independently authored cases. Keep evaluator urgency out of the actor; give actors a declared deadline and consequence schedule that is valid task information, and separately test false urgency claims.
+
+Compare B1 attempt memory, the fixed RD5 reserve, a transparent deadline rule, and a Jev allocator choosing among multiple eligible objections. Match total physical checks, account for the allocator's extra inference cost and latency, and include a strong rule that spends when the next check is the last opportunity before an irreversible deadline. An oracle with future arrival knowledge may be a labelled ceiling, never an actor input or deployable baseline.
+
+The primary decision would be whether learned prioritization improves correct actions before deadlines over the strongest affordable simple rule. Report harmful action, needless delay, unused capacity and inspection/model costs as a frontier before choosing explicit utility weights. A learned allocator that merely learns the fixed tick-4 schedule has failed the question. A simple rule matching it is a practical success for the simpler system.
+
+This broader design is unfunded and unrun. RD5's remaining 12-call margin is not a budget for it. Use the pilot's failure strata to select the scope and independent unit; do not claim that six authored streams supply a power estimate or calibrate Jev's choice scores as probabilities of truth.

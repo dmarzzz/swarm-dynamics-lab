@@ -1,0 +1,37 @@
+[
+  {
+    "id": "preview-0",
+    "root": "development-51901",
+    "arm": "B2",
+    "epoch": 0,
+    "status": "terminal"
+  },
+  {
+    "id": "preview-1",
+    "root": "development-51901",
+    "arm": "B2",
+    "epoch": 1,
+    "status": "terminal"
+  },
+  {
+    "id": "preview-2",
+    "root": "development-51901",
+    "arm": "B2",
+    "epoch": 2,
+    "status": "terminal"
+  },
+  {
+    "id": "preview-3",
+    "root": "development-51901",
+    "arm": "B2",
+    "epoch": 3,
+    "status": "terminal"
+  },
+  {
+    "id": "preview-missing",
+    "root": "missing-display-control",
+    "arm": "B2",
+    "epoch": 3,
+    "status": "planned"
+  }
+]

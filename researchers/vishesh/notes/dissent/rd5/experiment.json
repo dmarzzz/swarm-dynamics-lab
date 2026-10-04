@@ -1,0 +1,15 @@
+{
+  "id": "right-dissenter-rd5",
+  "title": "The right to reopen under scarce verification",
+  "owner": "vishesh",
+  "description": "TLDR: Test whether remembering unresolved inspections and reserving one future check improve timely correct decisions under two checks. Primary reserve versus memory; secondary memory versus always-check. Six authored process streams yield 72 dependent decisions after a separate 24-call interpretation screen. Known timing, scripted ballots and one domain limit generalization; no native results yet.",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/10e6b4d775c8409c1a9817ad633f0f6f84ae3c40/researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
+  "params": {
+    "stage": {"type": "str", "role": "stage"},
+    "design": {"type": "str", "role": "fixed"},
+    "source": {"type": "str", "role": "fixed"},
+    "scripted_votes": {"type": "bool", "role": "fixed"}
+  },
+  "metrics": ["correct_all_assigned", "terminal", "cost_usd"],
+  "primary_metric": "correct_all_assigned"
+}

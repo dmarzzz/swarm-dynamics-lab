@@ -1,6 +1,7 @@
 """Development unit/fault fixtures only. No reserved Q5/H5 construction."""
 from copy import deepcopy
 import datetime as dt
+import hashlib
 import json
 from pathlib import Path
 import sqlite3
@@ -14,7 +15,7 @@ sys.path.insert(0,str(BASE/'src'))
 from common import digest, save
 from rd5_core import ARMS, initial_state, step, frontier, evidence_card, request, SNAPSHOT
 from rd5_design import development_stream, task, record
-from rd5_runtime import reserve, settle, budget_snapshot, verify_receipt, Native
+from rd5_runtime import reserve, settle, budget_snapshot, verify_receipt, validate_packet, Native
 from rd5_cli import execute, summarize, score_row
 
 
@@ -67,6 +68,10 @@ class StateTests(unittest.TestCase):
     def test_modified_receipt_rejected(self):
         f=deepcopy(self.f);next(iter(f['registry'].values()))['observed_at']=1
         self.assertIsNone(frontier(f))
+    def test_acquired_receipt_must_match_authorized_source(self):
+        f=deepcopy(self.f);f['inspection']['records'][0]['acquisition_id']='forged'
+        b=Fake([]);s,r=step(f,self.s,'B1',b,'a')
+        self.assertEqual(r['reason'],'invalid_acquisition_receipt');self.assertFalse(b.calls);self.assertEqual(s['checks'],1)
     def test_scope_rejected(self):
         f=deepcopy(self.f);f['task']['scope']='another';self.assertIsNone(frontier(f))
     def test_version_rejected(self):
@@ -167,23 +172,38 @@ class LedgerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'budget_exhausted'):reserve(self.db,'Q5','a')
     def test_usage_recorded_even_on_invalid_response(self):
         key=reserve(self.db,'Q5','a')
-        with self.assertRaisesRegex(ValueError,'invalid_response'):settle(self.db,key,{'usage':{'cost':0.00002}}, {})
+        req=request(task('alarm','dev'),[])
+        with self.assertRaisesRegex(ValueError,'invalid_response'):settle(self.db,key,{'usage':{'cost':0.00002}}, req)
         self.assertEqual(self.db.execute('SELECT status,actual_nano FROM calls WHERE key=?',(key,)).fetchone(),('invalid_response',20000))
+        self.assertIsNotNone(self.db.execute('SELECT data FROM rd5_responses WHERE key=?',(key,)).fetchone())
     def test_unknown_charge_retains_reservation(self):
         key=reserve(self.db,'Q5','a')
-        with self.assertRaises(ValueError):settle(self.db,key,{}, {})
+        with self.assertRaises(ValueError):settle(self.db,key,{}, request(task('alarm','dev'),[]))
+        self.assertIsNone(self.db.execute('SELECT actual_nano FROM calls WHERE key=?',(key,)).fetchone()[0])
+    def test_success_is_durable_before_relay_reply(self):
+        key=reserve(self.db,'Q5','a');req=request(task('alarm','dev'),[])
+        response={'model':SNAPSHOT,'provider':'TypeSafe','answers':{'action':{'choice':'DEFER',
+                  'probabilities':{'PROCEED':0.1,'HOLD':0.1,'DEFER':0.8},'confidence':0.8}},'usage':{'cost':0.00003,'input_tokens':600}}
+        checked=settle(self.db,key,response,req)
+        saved=json.loads(self.db.execute('SELECT data FROM rd5_responses WHERE key=?',(key,)).fetchone()[0])
+        self.assertEqual(saved['checked'],checked)
+    def test_malformed_usage_is_unknown_not_free(self):
+        key=reserve(self.db,'Q5','a')
+        with self.assertRaises(ValueError):settle(self.db,key,{'usage':None},request(task('alarm','dev'),[]))
         self.assertIsNone(self.db.execute('SELECT actual_nano FROM calls WHERE key=?',(key,)).fetchone()[0])
 
 
 class AdmissionTests(unittest.TestCase):
     def setUp(self):
-        self.now=dt.datetime(2026,10,4,tzinfo=dt.timezone.utc);self.p={'stage':'Q5'}
+        self.now=dt.datetime(2026,10,4,tzinfo=dt.timezone.utc);self.p={'stage':'Q5','proposal_sha256':'a'*64,'instrument_sha256':'b'*64}
         self.r={'packet_sha256':digest(self.p),'stage':'Q5','verified_utc':self.now.isoformat(),
                 'claim_until':(self.now+dt.timedelta(hours=1)).isoformat(),'host':'unit-host','claim_id':'dev-claim',
                 'run_id':'dev-run','run_tldr':'A development-only admission receipt for offline gate tests. It is never used for a real model call.',
                 'api_cap_usd':1,'infrastructure_cap_usd':1,'max_lifetime_calls':500}
         for f in ('exclusive_claim_verified','approved_fleet_account_verified','public_page_verified','original_budget_verified','single_ledger_authority_verified','supervised_transport_verified'):self.r[f]=True
         for f in ('allocation_receipt_sha256','public_page_receipt_sha256','budget_receipt_sha256'):self.r[f]='a'*64
+        self.r['owner_plan_approval']={'decision':'approved','approver_role':'owner','plan_sha256':'a'*64,
+            'execution_sha256':'b'*64,'scopes':['launch'],'stages':['Q5','H5'],'authorization_ref':'DEVELOPMENT FIXTURE ONLY, NOT REAL APPROVAL'}
     def check(self):return verify_receipt(self.p,self.r,check_host=False,now=self.now)
     def test_valid_offline_receipt(self):self.check()
     def test_stale_receipt(self):
@@ -206,9 +226,64 @@ class AdmissionTests(unittest.TestCase):
     def test_caps_cannot_reset(self):
         self.r['api_cap_usd']=2
         with self.assertRaises(ValueError):self.check()
+    def test_budget_approval_does_not_substitute_for_updated_plan(self):
+        del self.r['owner_plan_approval']
+        with self.assertRaisesRegex(ValueError,'owner_updated_plan_approval_required'):self.check()
+
+
+class PacketTests(unittest.TestCase):
+    def setUp(self):
+        hashes={'development-only.py':'a'*64}
+        self.p={'schema':'rd5-prepared-v1','stage':'Q5','source_hashes':hashes,'instrument_sha256':digest(hashes),
+                'assignments':[{'id':str(i)} for i in range(24)],'allowed':{},'definition':[],
+                'proposal_sha256':hashlib.sha256((BASE/'spec/next-run-plan.json').read_bytes()).hexdigest()}
+        for a,b in (('assignment_sha256','assignments'),('allowed_sha256','allowed'),('definition_sha256','definition')):self.p[a]=digest(self.p[b])
+    def check(self):
+        with patch('rd5_runtime.source_hashes',return_value={'development-only.py':'a'*64}):validate_packet(self.p)
+    def test_source_mismatch_blocks(self):
+        self.p['source_hashes']={}
+        with self.assertRaisesRegex(ValueError,'instrument_mismatch'):self.check()
+    def test_changed_assignment_blocks(self):
+        self.p['assignments'][0]['id']='changed'
+        with self.assertRaisesRegex(ValueError,'packet_integrity'):self.check()
+    def test_changed_request_blocks(self):
+        self.p['allowed']['a']={}
+        with self.assertRaisesRegex(ValueError,'packet_integrity'):self.check()
+    def test_changed_world_blocks(self):
+        self.p['definition'].append('unplanned world')
+        with self.assertRaisesRegex(ValueError,'definition_mismatch'):self.check()
+    def test_duplicate_slot_blocks(self):
+        self.p['assignments'][0]=self.p['assignments'][1];self.p['assignment_sha256']=digest(self.p['assignments'])
+        with self.assertRaisesRegex(ValueError,'duplicate_assignment'):self.check()
 
 
 class TransportTests(unittest.TestCase):
+    def test_all_reachable_development_requests_are_frozen(self):
+        from rd5_design import enumerate_requests
+        c=development_stream('novel')
+        data={'roots':[c],'trajectories':[{'id':'dev-B2','root':c['id'],'arm':'B2'}]}
+        allowed=enumerate_requests(data)
+        class Frozen(Fake):
+            def resolve(self,identity,req):
+                if req != allowed[identity][digest(req)]:raise AssertionError('request_changed')
+                return 'DEFER'
+        s=initial_state(c['initial'],c['frames'][0]['task'])
+        for i,f in enumerate(c['frames']):s,r=step(f,s,'B2',Frozen(),'dev-B2-'+str(i))
+        self.assertEqual(s['checks'],2)
+    def test_remote_command_quotes_operator_paths(self):
+        from rd5_supervise import remote_command
+        command=remote_command('/tmp/path with spaces', ['run','--packet','/tmp/a;$(b)'])
+        self.assertIn("cd '/tmp/path with spaces'",command)
+        self.assertIn("'/tmp/a;$(b)'",command)
+    def test_supervisor_stops_all_children(self):
+        from rd5_supervise import stop_children
+        class Child:
+            def __init__(self):self.done=False
+            def poll(self):return 0 if self.done else None
+            def terminate(self):self.done=True
+            def wait(self,timeout):return 0
+        children=[Child(),Child(),Child()];stop_children(children)
+        self.assertTrue(all(c.done for c in children))
     def test_wrong_relay_identity_is_not_healthy(self):
         with tempfile.TemporaryDirectory() as d:
             n=Native({'allowed':{}},d)

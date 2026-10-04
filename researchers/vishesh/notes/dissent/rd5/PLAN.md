@@ -1,5 +1,7 @@
 # Preserving the right to reopen a decision
 
+Current implementation follows [prospective amendment 01](AMENDMENT-01.md), published before code. It narrows H5 to one domain and makes acquisition, uncertainty and execution contracts explicit. Original design text below is retained for lineage.
+
 Prospective RD5 design, 2026-10-04. Owner: vishesh/codex-decision-models. Status: **planning complete for a bounded development study; no implementation or native run yet**. This follows the [RD4 post-mortem and report](../rd4/REPORT.md) and preserves its adverse/null result. Planning does not allocate a host or reset the original budget.
 
 ## TLDR

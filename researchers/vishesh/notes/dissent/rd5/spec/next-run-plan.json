@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "parent_handoff": {
+    "path": "researchers/vishesh/notes/dissent/rd5/reviews/RD4-HANDOFF.json",
+    "sha256": "1f3f0f08215fc6ae7bbd9e8106f7f807f9a214d31d941e1baa471eef14a518fb"
+  },
+  "scientific_review": {
+    "path": "researchers/vishesh/notes/dissent/rd5/reviews/RD4-QUALITY-REVIEW.json",
+    "sha256": "c32aed21d882ee0407ed13c311d39ae0f4935341a4517276145526ac0bbb78c8"
+  },
+  "question": "When does remembering unresolved evidence and reserving a future check improve timely correct decisions, and when does it delay an urgent one?",
+  "changes": [
+    "Mechanical eligibility replaces learned admission veto.",
+    "Separate historical/current/pending state and physical/inference ledgers.",
+    "B0/B1/B2 isolate memory from reservation; all mechanisms share process domain.",
+    "Exact remote health, durable budget fence, stop on ambiguous dispatch, full manifests."
+  ],
+  "acceptance_checks": [
+    "All offline development/fault checks pass.",
+    "Q5: 12/12 valid correct cards including six DEFER controls; all 24 requests valid.",
+    "H5: all 72 assignments reconciled; compare B2-B1 and B1-B0 by root and urgent-early stratum.",
+    "Further development screen: B2 gains at least 2/24 with no extra wrong PROCEED and all state/lineage invariants. Adverse/null result is valid."
+  ],
+  "sample_size": {
+    "independent_unit": "Authored stream root; six fixed roots reuse one semantic domain and are not a population sample.",
+    "planned_units": 6,
+    "rationale": "Bounded feasibility/mechanism screen under 72 remaining lifetime calls; no power or population precision claim.",
+    "allocation": "Q5 12 disjoint authored packets \u00d7 raw/card = 24 calls; H5 6 roots \u00d7 3 policies \u00d7 4 epochs = 72 dependent decisions, maximum 36 calls.",
+    "analysis_plan": "Paired root contrasts, 24 assigned per arm, early/late/critical-event counts; missing-outcome bounds and resource vector.",
+    "stopping_rule": "No retries; stop ambiguous dispatch; Q5 failure blocks H5; maximum 60 new calls and 30 minutes per stage."
+  },
+  "scenarios": {
+    "families": [
+      "repeated unresolved inspection then change",
+      "new inconclusive inspections then change",
+      "urgent early decisive inspection"
+    ],
+    "construction": "Stop/resume pair per mechanism, common 10\u201330 process interval, ticks 0/2/4/6; future inspection not visible before acquisition.",
+    "challenge": "A two-check budget makes unresolved ambiguity compete with fresh evidence; urgent early scenario falsifies universal reservation benefit.",
+    "realism": "Authored source receipts and scripted 4:1 ballots; no field authentication or endogenous dissent claim.",
+    "controls": "Raw/card interpretation pairs; missing/conflicting controls; offline alias, wrong scope/version, expiry, forged acquisition, late/missing inspection and transport faults.",
+    "holdout_policy": "Development IDs separate from explicitly prepared Q5 and H5. Q5 is fixed before native answers; no held-out generalization claim or post-hoc representation selection."
+  },
+  "data_collection": {
+    "records": [
+      "full assignment manifest",
+      "frozen requests and sanitized validated responses",
+      "physical attempt and acquired receipt events",
+      "current/historical decision trace",
+      "shared provider reservations and actual usage",
+      "live progress/replay",
+      "operational and scientific post-mortems"
+    ],
+    "missingness": "Retain failed/unstarted separately in original denominator; never silently replay ambiguity.",
+    "validation": "Offline tests, source/request hashes, qualification bundle audit, all-assigned analysis, artifact readback.",
+    "privacy": "Local approved credential consumed by loopback relay; no values, headers, private account identifiers or inventory in artifacts."
+  },
+  "implementation": {
+    "change_summary": "Isolated RD5 modules; historical RD4 source and outputs unchanged.",
+    "offline_validation": "researchers/vishesh/notes/dissent/rd5/validation/VALIDATION.json"
+  },
+  "resources": {
+    "maximum_calls": 60,
+    "maximum_cost_usd": 2,
+    "machine_count": 1,
+    "cumulative_budget_ref": "Original 500-call, $1 API + $1 infrastructure authority; 428 calls and $0.02065245 committed API already used. Maximum cost is cumulative, not a new allowance.",
+    "machine_requirements": "Fresh dedicated approved private Dmarz fleet claim; one CPU worker, local credential relay, exact source/runtime and real forward health; bound all incremental costs.",
+    "allocation_required": true
+  }
+}

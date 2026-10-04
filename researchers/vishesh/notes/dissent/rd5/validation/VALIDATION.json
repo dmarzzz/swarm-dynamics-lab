@@ -1,0 +1,68 @@
+{
+  "checked_utc": "2026-10-04T08:13:26.488663+00:00",
+  "kind": "offline-development-validation",
+  "tests": 61,
+  "passed": 61,
+  "failed": 0,
+  "native_calls": 0,
+  "machine_allocated": false,
+  "qualification_constructed_by_tests": false,
+  "qualification_status": "not_run",
+  "scope": "Same-author unit/fault fixtures; no native accuracy or population claim.",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "researchers/vishesh/notes/dissent/rd5/tests",
+    "-q"
+  ],
+  "file_sha256": {
+    "researchers/vishesh/notes/dissent/rd5/src/common.py": "13580885955a4eb290553b0ceec9c65624411d76ab1c5bca8581ef55b5885248",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_cli.py": "f0ac39d29e4e7441a5b1a6237a857a1ddd8102f13a0567cb9cd835f0584ad166",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_core.py": "aebd8afb934d3bbeac376d338e7987d7bbc73f0d38947d7592b0907339c75af6",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_design.py": "9d549062ed52b0ea6efdada64a2462977c17de2c9b0ffeb1d36f520bfe9e7eae",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_render.py": "edbc1c68b06df7d16a59e3dceb2e090009f9debc570ef6a05cab66bf15761cb4",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_runtime.py": "0501d2a8965609fada58e8187274dd44148a0233fe55475a2c36100343578f00",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_supervise.py": "0e4cfe61e4cac6a9665d5bf17aadcbf0ac883172eb54b20d5ac90027df52dbb8",
+    "researchers/vishesh/notes/dissent/rd5/tests/render_fixture.py": "78da943a5950167ac51cab6e73704860721cbeb6e28d390f7cc06249f01e08cd",
+    "researchers/vishesh/notes/dissent/rd5/tests/test_rd5.py": "d662cd19c899e734a76569d335d341d060661270373411ce72f47eb22e9ae3b5"
+  },
+  "visual_inspection": {
+    "page": "validation/scripted-preview/replay.html",
+    "method": "in-app browser screenshot and accessibility checks",
+    "positions": [
+      0,
+      4,
+      6
+    ],
+    "checks": [
+      "SCRIPTED label",
+      "current/history/truth separation",
+      "reserve delays urgent HOLD until tick 4",
+      "resolved reuse at tick 6",
+      "explicit UNSTARTED slot"
+    ]
+  },
+  "budget": {
+    "original_calls": 428,
+    "remaining_calls": 72,
+    "rd5_calls": 0,
+    "settled_api_usd": 0.01662045,
+    "committed_api_usd": 0.02065245,
+    "planned_new_max_calls": 60,
+    "lifetime_stop": 488,
+    "unallocated_margin": 12
+  },
+  "live_admission": "not issued; current fleet/public page/runtime receipts required",
+  "owner_updated_plan_approval": "pending; no allocation or launch",
+  "shared_evidence_registry_check": {
+    "status": "blocked_by_unrelated_missing_registrations",
+    "paths": [
+      "researchers/dmarz/notes/sybil-newcomer-opus/experiment.yaml",
+      "researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml"
+    ],
+    "rd5_row": "scoped fields rendered with official renderer; no claim of a passing global check"
+  }
+}

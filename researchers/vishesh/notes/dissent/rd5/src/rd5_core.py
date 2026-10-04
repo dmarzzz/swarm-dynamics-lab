@@ -106,7 +106,8 @@ def step(frame, state, arm, backend, identity, persist=lambda s: None):
               'unresolved_repeat' if arm != 'B0' and f in s['attempted'] else
               'reserved_until_4' if arm == 'B2' and task['now'] < 4 and s['checks'] >= 1 else 'check')
     row = {'identity': identity, 'tick': task['now'], 'status': 'completed', 'reason': reason,
-           'frontier': f, 'checks_before': s['checks'], 'acquired': False, 'inference_attempted': False}
+           'frontier': f, 'checks_before': s['checks'], 'acquired': False, 'inference_attempted': False,
+           'pending_action':s['current'],'decision_at':task['now']}
     if reason == 'check':
         if not backend.healthy():
             return state, row | {'status': 'unstarted', 'reason': 'transport_precheck', 'action': None}
@@ -123,8 +124,19 @@ def step(frame, state, arm, backend, identity, persist=lambda s: None):
             row['reason'] = 'acquisition_missing' if not acquisition['available'] else 'acquisition_late'
         else:
             records = acquisition['records']
+            cited = {r.get('acquisition_id') for r in frame['reports']
+                     if r.get('receipt_sha256') == digest(frame['registry'].get(r.get('acquisition_id')))}
+            if any({k:r[k] for k in ('acquisition_id','root','scope','revision','observed_at')}
+                   != frame['registry'].get(r['acquisition_id']) or r['acquisition_id'] not in cited for r in records):
+                s['current'] = 'DEFER'
+                row.update(status='failed',reason='invalid_acquisition_receipt',action='DEFER',checks_after=s['checks'],
+                           inference_attempts=s['inference_attempts'],receipts=len(s['receipts']),
+                           historical_action=s['last_verified']['action'],justified=False,available_checks=2-s['checks'])
+                s['events'].append({'kind':'receipt_rejected','identity':identity}); persist(s)
+                return s,row
             s['receipts'].append({'identity': identity, 'frontier': f, 'received_at': event['return_tick'], 'records': records})
             row['acquired'] = True
+            row['decision_at'] = event['return_tick']
             s['events'].append({'kind': 'receipt', 'identity': identity, 'tick': event['return_tick'], 'records': records})
             # Persist successful acquisition independently from any interpreter result.
             persist(s)

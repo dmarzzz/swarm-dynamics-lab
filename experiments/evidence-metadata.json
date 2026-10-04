@@ -1875,6 +1875,37 @@
       "status_at_assessment": "planned",
       "assessor": "dmarz/v3-q0-opus",
       "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "right-dissenter-rd5",
+      "title": "Right Dissenter RD5: the right to reopen",
+      "documents": [
+        "researchers/vishesh/notes/dissent/rd5/README.md"
+      ],
+      "experiment_ids": [
+        "right-dissenter-rd5"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/dissent/rd5/experiment.json"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Remembering unresolved evidence and reserving a later check may improve timely correct actions under a two-check budget, with urgent-early delay costs.",
+        "rationale": "Successor instrument has offline development coverage only. Q5 and H5 have no native outcomes; six authored fixed-timing roots are a proposed mechanism pilot, not independent semantic or population evidence."
+      },
+      "sample_size_summary": "Observed native: none. Planned Q5: 12 authored packets in two forms (24 calls). Planned H5: 6 authored roots, 3 policies, 4 epochs (72 dependent decisions; at most 36 calls). Offline unit fixtures are software checks, not model evidence.",
+      "sources": [
+        "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
+        "researchers/vishesh/notes/dissent/rd5/validation/VALIDATION.json"
+      ],
+      "status_at_assessment": "implemented_offline_native_unrun",
+      "assessor": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04",
+      "source_commit": "036ef6e1069cd4e3507988f925285fb842158e8e",
+      "source_sha256": {
+        "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa",
+        "researchers/vishesh/notes/dissent/rd5/validation/VALIDATION.json": "4d659b98fa4295c387e50242b7e105eea804516c26a022a9172efa2eb0079f7f"
+      }
     }
   ],
   "source_sha256": {

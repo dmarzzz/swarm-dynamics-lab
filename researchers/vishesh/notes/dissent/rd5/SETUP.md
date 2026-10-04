@@ -1,41 +1,37 @@
 # Right Dissenter RD5 setup record
 
-Status: design only, no admitted attempt. Owner/operator/assessor: vishesh/codex-decision-models. Research status: exploratory proposal. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
+**Implemented and checked offline; next-run preparation complete; no native stage admitted or started.** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
 
-Question: can memory of unresolved evidence and protected later verification improve timely correct decisions within a two-check budget? Primary proposed contrast B2 reserve versus B1 deduplication; secondary B1 versus B0 bounded always-check. [Prospective plan](PLAN.md), [repair contracts](IMPROVEMENTS.md), [research agenda](RESEARCH-QUESTIONS.md), [previous completed cohort](../rd4/REPORT.md).
+Question: when does remembering unresolved evidence and protecting a future check help, and when does it delay an urgent decision? Primary B2 reserve versus B1 memory; secondary B1 versus B0 bounded always-check. [Plan](PLAN.md), [amendment](AMENDMENT-01.md), [ready package](READY.md), [previous cohort](../rd4/REPORT.md).
 
 | Gate | Status | Evidence and next action |
 | --- | --- | --- |
-| G0 scoped question and prior art | scoped exploratory | RD4 saved records/post-mortems; existing source map; focused new primary reading. No accepted hypothesis or complete novelty survey claimed. Researcher approval is optional under owner direction. |
-| G1 design before implementation | written | PLAN.md specifies contrasts, metrics, scenarios, thresholds and bounded stages; commit before experimental code. |
-| G2 instrument | pending | Implement P0 contracts, separate development/qualification/main manifests, treatment-diff checks and measured replay. No successor source or input hashes yet. |
-| G3 admission | not prepared | No registered native attempt, immutable attempt URL, public preflight receipt, live route check, current machine claim or dispatch command. |
-| G4 qualification | not run | Proposed Q5 maximum 24 calls; fixed structured-card criterion 12/12 valid and correct. Old Q4 pass does not qualify the new instrument. |
-| G5 closeout | not applicable | No new experiment execution; RD4 resources already released. |
+| G0 question/prior art | scoped exploratory | RD4 post-mortems, failure decomposition, existing source/Twitter map, Hay/Tan primary references. No completed novelty survey or accepted hypothesis claimed. |
+| G1 design before code | complete | Amendment published at `10e6b4d775c8409c1a9817ad633f0f6f84ae3c40` before code. All H5 mechanisms now share one domain. |
+| G2 instrument | offline checks passed | 61 development tests; state/resource separation, frozen input adapter, policies, transport and replay. [Validation](validation/VALIDATION.json). |
+| G3 admission | prepared; runtime evidence pending | Frozen packet manifest, registration file and pre-assessments. Fresh public hub/page verification, exclusive approved fleet/account claim, route, source/runtime and original budget receipts required immediately before dispatch. |
+| G4 qualification | not run | Q5 maximum 24 calls; 12/12 valid/correct cards and 24/24 valid completed requests required. Old Q4 does not qualify this source. |
+| G5 closeout | no new run | Zero native calls; no fleet host or worker allocated. |
 
-## Design and instrument index
+## Definitions and access
 
-Six proposed authored streams across three mechanisms and both change directions, three policies and four epochs: 72 dependent action outcomes. Q5 has 12 fresh interpretation packets in two representations. Exact texts, assignment seed, input hashes, qualified model snapshot and source are deliberately pending construction; do not describe this planning record as a completed preregistration or a ready launch.
+H5: six authored roots (three mechanisms × stop/resume), three policies, four epochs: 72 dependent outcomes, 24 per arm. Q5: 12 disjoint authored packets in two representations. Development ID 51901; Q5 52000-series; H5 53000-series; ordering seed 51004. IDs do not establish semantic independence. Ordinary tests never construct Q5; explicit preparation does.
 
-Actor access is limited to task requirements, supplied current observations, acquisition/provenance metadata, own decision state, public horizon and own remaining budget. Evaluator truth, future events and other policies' answers stay inaccessible. Exact finite extraction preserves raw text and unknown fields; no free semantic oracle. Reset each arm's decision and budget state at a shared root, never copy the operating assistant's conversation. Shared responses require identical full request hashes and remain dependent.
+Actors receive only current task, supplied ballots, own historical/current state and acquired source text/card. No evaluator truth, arm, mechanism, future frames, peer results or operating-assistant context enters the request. Each arm starts fresh; no cross-arm answer cache. The finite parser preserves text, matched spans and unknown/conflicting fields. Jev resolves actions; no oracle substitute.
 
-The original ledger remains authoritative: 428/500 calls used, 72 left, $0.02065245 committed API under $1 API/$1 infrastructure. Proposed Q5+H5 limit 60 new calls; 12 remain unallocated. No budget reset, additional model judge or automatic repair allowance. The route reservation and current dollar balance must be recomputed before any dispatch. User's current request is planning; no native execution is initiated here.
+The original ledger remains 428/500 calls, $0.01662045 settled plus $0.004032 historically unresolved, $0.02065245 committed API. Q5+H5 allow at most 60 new calls, lifetime stop 488; 12 remain unallocated. Preserve $1 API/$1 infrastructure, including historical estimated compute $0.011643. Prior existing-fleet invoice is unavailable; bound incremental infrastructure before launch. No budget reset or redundant approval.
 
-## Supported operations
+## Operations
 
-| Operation | Current support |
-| --- | --- |
-| Inspect design | Read PLAN.md, IMPROVEMENTS.md and this record. |
-| Analyze historical evidence | `python3 researchers/vishesh/notes/dissent/rd5/analysis/decompose_rd4.py`; reads saved RD4 data only and produces a retrospective audit. |
-| Validate successor instrument | Pending implementation; historical 69 core/eight continuation checks do not count as successor acceptance. |
-| Prepare or dispatch Q5/H5 | Unsupported until G2/G3 receipts and exact immutable plan are bound. |
-| Resume | No pending/ambiguous successor attempt exists. |
-| Close resources | No worker or host allocated for this planning task. |
+- Offline: `python3 -m unittest discover -s researchers/vishesh/notes/dissent/rd5/tests -v`.
+- Prepare: `src/rd5_cli.py prepare`; committed source only, no dispatch. Public hashes in [preparation manifest](spec/preparation-manifest.json).
+- Run: `src/rd5_supervise.py`; strict native admission in both relay and worker, actual remote health probe, supervised transport. See READY.md.
+- Report: `src/rd5_cli.py report --results <saved directory>`; no model calls.
+- Resume: deliberately unsupported. Preserve partials/reservations; separately assess any never-started trajectory continuation. Never delete identities to retry.
+- Shared operations CLI: this study uses its documented manual workflow; no new `scripts/experiment.py` adapter is claimed.
 
-Before a future run obtain a fresh exclusive allocation from Dmarz's authorized fleet, verify actual account/workload/claim, preserve secure local credential consumption and record source/runtime/resource receipts. No secrets belong in the public plan. There is no need to hold idle infrastructure during design.
+Next authorized execution sequence: register/verify immutable plan and Q5 TLDR; obtain a fresh dedicated allocation from Dmarz's authorized private fleet; verify actual workload/account, source, original ledger, route and runtime; issue fresh private receipts; run Q5 once and assess it before H5. No idle host is held. Researcher sign-off is not required by owner direction. Better native semantic accuracy, independent semantics and adaptive arrival timing remain untested.
 
-## Issue disposition and next action
+Owner decision boundary: the refreshed [agent protocol](../../../../../AGENTS.md) requires approval of the updated next-run plan before allocation or launch. The concrete [proposal](spec/next-run-plan.json) and [evidence-linked RD4 quality review](reviews/RD4-QUALITY-REVIEW.json) are ready for that decision. Existing budget approval remains valid; the disabled template does not invent plan approval.
 
-RD4 alias and resolved-memory repairs are retained; its failed transport segments and adverse gate result stay historical. C2's successful end-to-end probe is an implementation basis, not proof against all future network races. New transport-accounting, uncertainty, representation and allocation changes are all **proposed/unverified**; acceptance criteria are in IMPROVEMENTS.md.
-
-Current action: publish the planning package and saved-data decomposition. Next implementation action: build the observation/interpretation/authorization ledger and offline transition/fault checks before qualification construction. Broader native robustness and independent semantic evaluation remain future work; no such result is reported.
+Operator closeout hook after each stopped native attempt: `python3 scripts/experiment.py finalize right-dissenter --attempt <unique-rd5-attempt> --results <saved-results> --outcome <completed|failed|ambiguous> --worker-stopped`. This generates an operational handoff only; complete the scientific review separately and retain reporting/cost status.

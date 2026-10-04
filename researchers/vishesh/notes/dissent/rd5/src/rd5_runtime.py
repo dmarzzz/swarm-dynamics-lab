@@ -68,11 +68,15 @@ def reserve(db, stage, identity):
 
 def settle(db, key, response, req):
     """Record reliable usage even if semantic/route validation fails."""
-    cost = response.get('usage', {}).get('cost') if isinstance(response, dict) else None
+    usage = response.get('usage', {}) if isinstance(response, dict) else {}
+    cost = usage.get('cost') if isinstance(usage, dict) else None
     nano = math.ceil(cost*1e9) if type(cost) in (int,float) and math.isfinite(cost) and 0 <= cost <= 1 else None
     if nano is not None:
         db.execute('UPDATE calls SET actual_nano=? WHERE key=?', (nano, key))
         db.commit()
+    db.execute('CREATE TABLE IF NOT EXISTS rd5_responses(key TEXT PRIMARY KEY,data TEXT)')
+    diagnostic = response_fingerprint(response,req,SNAPSHOT)
+    db.execute('INSERT INTO rd5_responses VALUES(?,?)',(key,json.dumps({'diagnostic':diagnostic},allow_nan=False))); db.commit()
     try:
         checked = validate(response, req, SNAPSHOT)
         if nano is None or nano > RESERVE:
@@ -81,11 +85,12 @@ def settle(db, key, response, req):
         db.execute('UPDATE calls SET status=? WHERE key=?', ('invalid_response',key)); db.commit()
         raise ValueError('invalid_response') from None
     db.execute('UPDATE calls SET status=? WHERE key=?', ('completed',key)); db.commit()
+    db.execute('UPDATE rd5_responses SET data=? WHERE key=?',(json.dumps({'checked':checked,'diagnostic':diagnostic}),key)); db.commit()
     return checked
 
 
 def source_hashes():
-    paths = sorted((BASE/'src').glob('*.py')) + [BASE/'PLAN.md', BASE/'AMENDMENT-01.md', OLD/'jev.py', OLD/'cases.py']
+    paths = sorted((BASE/'src').glob('*.py')) + [BASE/'PLAN.md', BASE/'AMENDMENT-01.md', BASE/'spec/next-run-plan.json', OLD/'jev.py', OLD/'cases.py']
     root = Path(subprocess.check_output(['git','rev-parse','--show-toplevel'], cwd=BASE, text=True).strip())
     return {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
 
@@ -99,6 +104,8 @@ def validate_packet(packet):
         raise ValueError('packet_integrity')
     if packet['definition_sha256'] != digest(packet['definition']):
         raise ValueError('definition_mismatch')
+    if packet.get('proposal_sha256') != hashlib.sha256((BASE/'spec/next-run-plan.json').read_bytes()).hexdigest():
+        raise ValueError('proposal_mismatch')
     if len(packet['assignments']) != (24 if packet['stage']=='Q5' else 72):
         raise ValueError('assignment_count')
     if len({a['id'] for a in packet['assignments']}) != len(packet['assignments']):
@@ -131,7 +138,14 @@ def verify_receipt(packet, receipt, *, check_host=True, now=None):
         raise ValueError('missing_run_identity')
     if receipt.get('api_cap_usd') != 1 or receipt.get('infrastructure_cap_usd') != 1 or receipt.get('max_lifetime_calls') != 500:
         raise ValueError('original_cap_required')
-    if packet['stage'] == 'H5' and not receipt.get('qualification_directory'):
+    approval=receipt.get('owner_plan_approval',{})
+    if (approval.get('decision')!='approved' or approval.get('approver_role')!='owner'
+        or approval.get('plan_sha256')!=packet['proposal_sha256']
+        or approval.get('execution_sha256')!=packet['instrument_sha256']
+        or 'launch' not in approval.get('scopes',[]) or packet['stage'] not in approval.get('stages',[])
+        or not approval.get('authorization_ref')):
+        raise ValueError('owner_updated_plan_approval_required')
+    if packet['stage'] == 'H5' and (not receipt.get('qualification_directory') or not re.fullmatch('[0-9a-f]{64}',receipt.get('qualification_bundle_sha256',''))):
         raise ValueError('qualification_required')
 
 
@@ -149,7 +163,7 @@ def verify_native(packet, receipt, *, check_host=True):
         raise ValueError('public_plan_binding')
     if packet['stage'] == 'H5':
         from rd5_cli import audit_qualification
-        audit_qualification(Path(receipt['qualification_directory']), packet['instrument_sha256'])
+        audit_qualification(Path(receipt['qualification_directory']), packet['instrument_sha256'],receipt['qualification_bundle_sha256'])
     return public
 
 
