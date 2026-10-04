@@ -1,0 +1,363 @@
+{
+  "analyzed": 192,
+  "answered_calls": 0,
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0,
+  "continuation": null,
+  "cost_per_call_usd": null,
+  "cost_usd": 0.0,
+  "elapsed_seconds": 4.274080153001705,
+  "episodes": 192,
+  "errors": [],
+  "experiment": "memory-handoff-qwen",
+  "failed": 0,
+  "failed_in_stage": 0,
+  "gate": {
+    "qualification_a": {
+      "fixtures": 24,
+      "misses": [],
+      "passed": true,
+      "supported": 24,
+      "valid": 24
+    },
+    "qualification_b": {
+      "fixtures": 24,
+      "misses": [],
+      "passed": true,
+      "supported": 24,
+      "valid": 24
+    }
+  },
+  "graded": 192,
+  "headline": {},
+  "initial_study_accounting": {},
+  "input_tokens": 0,
+  "invalid": 0,
+  "invariants": {
+    "checks": {
+      "controls_score_as_designed": true,
+      "counts": true,
+      "false_original_is_retrieved_as_it_is": true,
+      "families_balanced": true,
+      "full_grid_per_root": true,
+      "ids_carry_no_digits": true,
+      "ids_unique": true,
+      "no_label_in_any_message": true,
+      "no_truth_where_no_genuine_record_carries_it": true,
+      "only_the_policy_changes_within_a_state": true,
+      "only_the_target_note_changes_within_a_root": true,
+      "packet_keys_fixed": true,
+      "primary_not_fixed_by_construction": true,
+      "qualification_a_shape": true,
+      "qualification_b_shape": true,
+      "qualification_sets_pair_states_differently": true,
+      "raw_hides_the_state": true,
+      "reference_equals_hand_table": true,
+      "reference_is_supported_everywhere": true,
+      "registry_is_exactly_the_cited_records": true,
+      "requests_under_size_limit": true,
+      "retrieval_log_regenerates": true,
+      "retrieval_only_where_the_policy_retrieves": true,
+      "retrieved_is_exactly_cited_records_plus_current_versions_from_the_store": true,
+      "root_sets_disjoint": true
+    },
+    "control_table": {
+      "abstain": {
+        "clean_correct": {
+          "content": 0.0,
+          "metadata": 0.0,
+          "raw": 0.0,
+          "reset": 0.0
+        },
+        "inherited_error": {
+          "clean": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "contradiction": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "copies": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "false_original": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "misquote": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "stale": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          }
+        },
+        "primary": 0.0,
+        "primary_max": 0.0,
+        "primary_min": 0.0,
+        "supported": 0.5
+      },
+      "reference": {
+        "clean_correct": {
+          "content": 1.0,
+          "metadata": 1.0,
+          "raw": 1.0,
+          "reset": 0.0
+        },
+        "inherited_error": {
+          "clean": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "contradiction": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "copies": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "false_original": {
+            "content": 1.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "misquote": {
+            "content": 0.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "stale": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 1.0,
+            "reset": 0.0
+          }
+        },
+        "primary": -0.5,
+        "primary_max": -0.5,
+        "primary_min": -0.5,
+        "supported": 1.0
+      },
+      "trust_memory": {
+        "clean_correct": {
+          "content": 1.0,
+          "metadata": 1.0,
+          "raw": 1.0,
+          "reset": 0.0
+        },
+        "inherited_error": {
+          "clean": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "contradiction": {
+            "content": 0.5,
+            "metadata": 0.5,
+            "raw": 0.5,
+            "reset": 0.0
+          },
+          "copies": {
+            "content": 1.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "false_original": {
+            "content": 1.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "misquote": {
+            "content": 1.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "stale": {
+            "content": 1.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          }
+        },
+        "primary": 0.0,
+        "primary_max": 0.0,
+        "primary_min": 0.0,
+        "supported": 0.6666666666666666
+      },
+      "version_blind": {
+        "clean_correct": {
+          "content": 1.0,
+          "metadata": 1.0,
+          "raw": 1.0,
+          "reset": 0.0
+        },
+        "inherited_error": {
+          "clean": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "contradiction": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "copies": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "false_original": {
+            "content": 1.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "misquote": {
+            "content": 0.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "stale": {
+            "content": 0.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          }
+        },
+        "primary": -1.0,
+        "primary_max": -1.0,
+        "primary_min": -1.0,
+        "supported": 0.9583333333333334
+      },
+      "wrong_entity": {
+        "clean_correct": {
+          "content": 0.0,
+          "metadata": 0.0,
+          "raw": 0.0,
+          "reset": 0.0
+        },
+        "inherited_error": {
+          "clean": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "contradiction": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "copies": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "false_original": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "misquote": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          },
+          "stale": {
+            "content": 0.0,
+            "metadata": 0.0,
+            "raw": 0.0,
+            "reset": 0.0
+          }
+        },
+        "primary": 0.0,
+        "primary_max": 0.0,
+        "primary_min": 0.0,
+        "supported": 0.25
+      }
+    },
+    "passed": true,
+    "sizes": {
+      "distinct_s1_packets": 394,
+      "max_request_bytes": 5068,
+      "max_s1_request_bytes": 5064,
+      "min_request_bytes": 3148
+    }
+  },
+  "max_failed": null,
+  "max_output_tokens_per_call": 0,
+  "model_calls": 0,
+  "not_started": 0,
+  "output_tokens": 0,
+  "params": {
+    "backend": "scripted",
+    "batch": "s0-001",
+    "code": "0d54225c23238cf17022d9859da93c05ef2854ea",
+    "source_hash": "b4ab9025e2288c7c7f652e7d210371ab7818022acc1ee155801e4300b5044ba3",
+    "stage": "S0"
+  },
+  "passed": true,
+  "planned": 192,
+  "qualification_passed": 1,
+  "reason": null,
+  "reporting_errors": [],
+  "request_bytes_max": 5068,
+  "resumable": false,
+  "retrieval_bytes": 73558,
+  "retrieval_count": 656,
+  "stage_units": {
+    "assigned": 192,
+    "completed": 192,
+    "failed": 0,
+    "not_started": 0
+  },
+  "started": 192,
+  "stop_reason": null,
+  "study_accounting": {},
+  "terminal": 192,
+  "tokens_per_byte_max": null,
+  "transport_attempts": 0,
+  "visualization": {
+    "mapping": "v1",
+    "replay_frames": 25
+  },
+  "voided_calls": 0
+}
