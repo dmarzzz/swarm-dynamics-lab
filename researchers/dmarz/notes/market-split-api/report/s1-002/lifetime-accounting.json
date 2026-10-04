@@ -1,0 +1,59 @@
+{
+  "lifetime_calls": 1408,
+  "lifetime_priced_calls": 1408,
+  "lifetime_cost_usd": 15.563113,
+  "max_attempted_calls": 1600,
+  "ledger_sha256": "1534e8198b7648028e732c77d9567fc35afdfe25aaf826a131d7d6315443cc1c",
+  "attempts": {
+    "q0-001": {
+      "attempted_calls": 4,
+      "priced_calls": 4,
+      "api_cost_usd": 0.004958
+    },
+    "q0-002": {
+      "attempted_calls": 32,
+      "priced_calls": 32,
+      "api_cost_usd": 0.045908
+    },
+    "s1-001": {
+      "attempted_calls": 410,
+      "priced_calls": 410,
+      "api_cost_usd": 0.704418
+    },
+    "i0-001": {
+      "attempted_calls": 6,
+      "priced_calls": 6,
+      "api_cost_usd": 0.00788
+    },
+    "q0-003": {
+      "attempted_calls": 16,
+      "priced_calls": 16,
+      "api_cost_usd": 0.026128
+    },
+    "i0-002": {
+      "attempted_calls": 6,
+      "priced_calls": 6,
+      "api_cost_usd": 0.023478
+    },
+    "q0-004": {
+      "attempted_calls": 32,
+      "priced_calls": 32,
+      "api_cost_usd": 0.152448
+    },
+    "i0-003": {
+      "attempted_calls": 6,
+      "priced_calls": 6,
+      "api_cost_usd": 0.07128
+    },
+    "q0-005": {
+      "attempted_calls": 32,
+      "priced_calls": 32,
+      "api_cost_usd": 0.400827
+    },
+    "s1-002": {
+      "attempted_calls": 864,
+      "priced_calls": 864,
+      "api_cost_usd": 14.125788
+    }
+  }
+}

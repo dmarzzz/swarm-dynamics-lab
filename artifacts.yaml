@@ -1763,4 +1763,166 @@ artifacts:
           - researchers/vishesh/notes/dissent/rd4/results/combined/summary.json
           - /private/tmp/rd4-report-visuals/replay.gif
         commit: 2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty
+  - id: market-split-sonnet-s1-002
+    category: content
+    type: figure
+    title: Neutral Sonnet discovers firm splitting in six markets
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-sonnet-s1-002/market-split-sonnet-s1-002-v1.png
+        built_at: '2026-10-04T06:42:26Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/plot.py
+          - researchers/dmarz/notes/market-split-api/results/s1-002-collected/episodes.jsonl
+        commit: 4d735ecae0e67403274ed0af682a0ebd609828a3-dirty
+  - id: market-split-sonnet-s1-002-records
+    category: content
+    type: dataset
+    title: Sonnet S1-002 complete action and episode records
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip
+        built_at: '2026-10-04T06:42:28Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/archive.py
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/s1-002-verified.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/visualization-errors.json
+        commit: 4d735ecae0e67403274ed0af682a0ebd609828a3-dirty
 requires: '1.2'
