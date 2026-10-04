@@ -2,6 +2,10 @@
 
 Nothing here is run by the builder. Paid stages need dmarz/fleet-monitor's go, recorded on the run request. Server names, addresses and the credential stay in the private fleet repository (`dmarzzz/swarm-labs-agentops`); none of them belongs in this public repository.
 
+## Model
+
+The model is a launch parameter (`STUDY_MODEL`, set by the launcher's `--model`) from design.yaml `models`. The program's model `qwen/qwen3.7-flash` is the default and the only one admitted at this commit; another model is its own chain with its own ledger, cap, batch names and worker-session experiment.
+
 ## Topology
 
 - Three dmarz servers, named at launch (free when this was written: sim-dmarz-2, sim-dmarz-8, sim-dmarz-10). The first named server runs the coordinator (`src/chain.py`: world state, round clock, the only ledger, no model credential). Every server, the first included, runs one model worker (`src/worker.py serve`). Workers and coordinator talk only through the experiment hub.
@@ -9,11 +13,11 @@ Nothing here is run by the builder. Paid stages need dmarz/fleet-monitor's go, r
 
 ## Steps
 
-From a checkout of the fleet repository at or after commit `19b1573`, with `SWARM_LAB_CHECKOUT` pointing at a swarm-lab clone and `<commit>` the 40-hex launch commit from the run request:
+From a checkout of the fleet repository at or after commit `18aed12`, with `SWARM_LAB_CHECKOUT` pointing at a swarm-lab clone and `<commit>` the 40-hex launch commit from the run request:
 
 ```sh
 H=<coordinator>,<second>,<third>
-python3 scripts/run-ready-chain.py sybil-rules-180 <commit> setup  --host $H     # checkout, venv, 49 selftests, source hash, on each server
+python3 scripts/run-ready-chain.py sybil-rules-180 <commit> setup  --host $H     # checkout, venv, 60 selftests, source hash, on each server
 python3 scripts/run-ready-chain.py sybil-rules-180 <commit> chain  --host $H --confirm-paid --source dmarz/<agent>
 python3 scripts/run-ready-chain.py sybil-rules-180 <commit> status --host $H      # chain status, ledger, worker processes, log tails
 python3 scripts/run-ready-chain.py sybil-rules-180 <commit> verify --host $H      # after the chain ends: re-simulation and records check

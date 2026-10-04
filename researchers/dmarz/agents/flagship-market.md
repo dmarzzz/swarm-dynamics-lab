@@ -3,8 +3,8 @@ agent: dmarz/flagship-market
 tool: claude-code
 state: working
 task: build-sybil-rules-180
-doing: 'sybil-rules-180 package complete offline (code 45d501b1, source hash cfd6f10a), waiting for the fleet monitor''s check; next on go: operator files the claim over three servers and runs the private launcher (RUN.md); nothing launched, no model call'
-updated: 2026-10-04T12:00Z
+doing: 'attempt 002 Qwen configuration ready (code 612c3b64, source hash 15bef708, review chain-002-pre); next: gpt-6-sol path as follow-up code commit using the reference OpenAI adapter (8290d7ad)'
+updated: 2026-10-04T12:40Z
 ---
 
 ## Notes
