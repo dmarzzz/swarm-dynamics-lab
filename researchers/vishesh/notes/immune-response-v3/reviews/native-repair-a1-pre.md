@@ -4,7 +4,7 @@ Run plan: frozen native-repair, task 6700, shared_evidence, arms Q10F/Q11/CLEAN.
 
 ## Allocation
 
-Exclusive host sim-dmarz-3; claim vishesh-immune-native-v3, merged agentops PR 48, expires 2026-10-04T08:03:51Z. The former holder dmarz/discussion-dose completed H5 calibration and released the host. SSH, Python 3.12.3 and reporter presence verified. Verify workload and merged exclusivity again immediately before launch. No machine was newly provisioned or displaced.
+Owner clarification supersedes the original allocation: sim-dmarz-3 was released unused in agentops PR 50. A new vishesh-owned sim-immune-response was created with 2 vCPU, 4 GB RAM, standard sim blueprint, SSH-only cloud firewall and expiry 2026-10-05. Fleet registration PR 52 and exclusive claim PR 53 merged. Claim ID vishesh-immune-dedicated-v3; no other host was changed or used for experiment execution. Standard provisioning and exact-runtime checks must pass before launch.
 
 ## Budget blocker
 

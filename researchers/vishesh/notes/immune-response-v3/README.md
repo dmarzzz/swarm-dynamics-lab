@@ -37,7 +37,7 @@ Use a fresh output path; the runner refuses overwrite. Paid execution requires t
 
 [Engineering results](ENGINEERING-RESULTS.json): 720/720 outcomes recorded, zero invalid, all clean controls passed. [Post-mortem](reviews/engineering-a1-post.md) separates mechanism findings from model evidence. Broad rollback loses newly learned legitimate information in the stress fixture; selective repair preserves it. Missing lineage defeats the known-lineage filter. These are scripted findings.
 
-The fresh native schema-repair qualification is blocked on a dedicated available fleet machine. Earlier native v2 remains one invalid primary-control outcome out of eight; see REVIEW.md. Do not describe the offline schema fix as already verified against the model.
+A new purpose-specific `sim-immune-response` machine is allocated exclusively. The fresh native schema-repair qualification is now blocked on additional API budget approval; the existing shared cap has only USD 1.50 unreserved versus an USD 8 required grant. Earlier native v2 remains one invalid primary-control outcome out of eight; see REVIEW.md. Do not describe the offline schema fix as already verified against the model.
 
 Public evidence: [engineering run and embedded animation](https://swarm-live.pages.dev/#/r/immune-response-v3%2Fengineering-a1-5409a091), [historical native v2 run](https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2). The engineering run is an import of the original local execution, not a second execution on its upload host. Full replay and raw traces are stored as indexed gzip parts; `artifact-index.json` records hashes and part order.
 

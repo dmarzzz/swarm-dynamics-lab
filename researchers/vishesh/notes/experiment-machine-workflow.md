@@ -1,3 +1,5 @@
+> Owner clarification, 2026-10-04 UTC: create a new, explicitly experiment-named machine for Immune Response (sim-immune-response), owned by vishesh. Do not borrow a dmarz-owned or dmarz-named host merely because it is unclaimed. The unused sim-dmarz-3 allocation was released before any experiment started.
+
 # Dedicated machines for experiment launches
 
 Owner instruction recorded 2026-10-04 UTC. Every new experiment receives a fresh exclusive allocation from Dmarz's machine list before deployment or execution. This is the standard for vishesh's agents, including exploratory S0/S1, model qualification, and a new version launched as a separate study. Stages and replicate batches of the same experiment may retain its dedicated host. Local offline unit tests remain local.
