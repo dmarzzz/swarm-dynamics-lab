@@ -171,3 +171,12 @@ Peer-correction adapter revision2 adds transactional stage/campaign caps, duplic
 Original ledger711calls/USD15.606955conservative exposure/cap28.368215; newAPI0.017995 plus469seconds hosting0.009305742 =0.027300742. Worker/relay/tunnel stopped; claim470released; unused finite campaign12.901954258released against conservative carry-forward, no new machine. Historical charges unchanged.
 
 [Prospective contract repair](peer-correction/CONTRACT-REPAIR-PLAN.md) explicitly describes existing length/order limits. Candidate not imported by launchers;24tests pass, maxwire7020/8000, saved failure still invalid. Fixed service outcomes and untouched holdouts remain. Next action: finite necessary-diagnostic reservation, distinctQ2bindings/public plan/current admission; no reuse ofQ1 or automaticP1. No new owner sign-off inferred for standing-authorized necessary diagnostics.
+
+
+## Q2 terminal closeout and deliberate park — 2026-10-04
+
+[Q2post-mortem](peer-correction/reviews/q2-post.md) and [authored11dimensionreview](peer-correction/reviews/q2-quality.json):12native requests/responses replay exactly, six correct diagnoses/supportedwaitproposals, fivehealthyexecutedsteps, finalreason247vs240invalid.0/4worldscomplete (onepartial/threeunstarted), no repair/peer-effect result. Source24e889c5, publicplan preserved; rawprivate. Operationalfinalizehandoff069ef2e58ac3fdb93d67dfd6015cd403bd95b2b69f2075dfa0eb267f3adb6532 and authoredreview bothcomplete.
+
+Original723calls/16.118715conservative/cap28.368215; newAPIactual.109390/requestreserved.511760 plus386sec hosting.0076588833. Conservativecarry.5194188833; finitegrantunused2.1678611167released. Worker/relay/tunnel stopped, claim475released, originalledgerbackup retained; no newVM.
+
+FINISH / PARK by latest owner stop relayed through PI. No further paid Immune diagnostic, allocation or automatic continuation. [Bounded-interface proposal](peer-correction/BOUNDED-INTERFACE-NEXT.md) retained offline and unfunded; do not turn it into another approval request. Exact historical plans/scores and unopenedholdouts remain.

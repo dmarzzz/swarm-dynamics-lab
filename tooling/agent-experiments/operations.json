@@ -85,13 +85,13 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/immune-response-v3",
       "setup_path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/verification-study/reviews/v1-post.md",
+      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/peer-correction/reviews/q2-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T22:37:08.661245+00:00",
-      "checked_commit": "06fc3a20824ba33a0483397ae012be2af78d23a7",
-      "next_action": "Verification v1 complete and scientifically reviewed:48episodes/192calls; guard blocked4unnecessary executions, botharms20/24joint and8/12repairverification. Scoped repeated native result; larger controller qualification gap.709calls/USD15.524695conservative/cap16.877155; actual new2.253050; resources released. Prepare a verification-required loop with real repair success/failure; no successor dispatch authorized.",
+      "checked_at": "2026-10-04T23:46:11.912441+00:00",
+      "checked_commit": "24e889c5f83bd5fd79cea3a69a7193f6c233b0b3",
+      "next_action": "FINISH / PARK by owner stop relayed through PI. Q2 reviewed:12calls/six correct diagnoses and wait proposals, fifth executed healthy step then sixth reason247vs240 invalid;0/4worlds complete. No repair/peer effect. Original723calls/16.118715conservative/cap28.368215; claim released and worker/relay/tunnel stopped. Bounded-interface idea retained offline and unfunded; no further launch or approval request.",
       "next_run_approval": "owner",
-      "operational_state": "FINISH scoped verification result; authored11dimensionreview complete; no active allocation; larger collaboration HOLD"
+      "operational_state": "FINISH / PARK; Q2 operational and authored scientific closeout complete; no active allocation or paid successor"
     },
     {
       "id": "influence-swarms",

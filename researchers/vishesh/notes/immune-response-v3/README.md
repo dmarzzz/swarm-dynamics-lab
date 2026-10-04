@@ -9,16 +9,16 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](..
 - **sample_size_summary:** Engineering:16 task roots × 5 strata × 9 arms =720 outcomes; native task6700 was not run.
 <!-- experiment-evidence:end -->
 
-## A healthy system can hide a confused agent.
+## Correct choices still need a reliable controller.
 
 Latest findings — 2026-10-04 UTC
 
-- Both arms ended healthy—but each proposed four unnecessary interventions.
-- The software guard blocked all four; the unguarded arm executed them. This shows guard protection, not improved agent judgment.
-- Both arms verified only 8 of 12 repairs. Looking fixed is not the same as checking the fix.
-- Peer-study qualification stopped after two Opus calls: a correct first diagnosis/action exceeded the explanation-length limit. Zero worlds completed; peer effects remain untested. [Failure review and repair](peer-correction/reviews/q1-post.md).
+- Stronger Opus made six correct diagnoses and six supported wait proposals in the observed healthy case.
+- The sixth explanation exceeded the240-character interface limit, even after explicit instructions. The run stopped after12calls; none of four worlds completed.
+- Earlier, the software guard blocked four unnecessary interventions, but both arms verified only8of12repairs. Protection and agent competence remain different results.
+- No robust repair or peer-correction benefit is established. Paid iteration is stopped; the next interface proposal is documented offline.
 
-Scope: a small synthetic controller comparison—192 calls,48 episodes, six authored roots in three families—not general swarm recovery or production reliability. [Results and animation](verification-study/reviews/v1-post.md). [Reviewed peer-correction plan](peer-correction/PLAN.md) and [current readiness](peer-correction/README.md).
+Scope: Q2 observed one partial healthy development world, not production reliability or a completed repair. [Latest post-mortem and figure](peer-correction/reviews/q2-post.md), [earlier guard results and animation](verification-study/reviews/v1-post.md), [peer design/current disposition](peer-correction/README.md), [parked bounded-interface proposal](peer-correction/BOUNDED-INTERFACE-NEXT.md).
 
 The older interrupted receipt study and its account incident remain in the [historical post-mortem](evidence-study/reviews/receipt-a2-post.md); they are not the latest run. Historical setup and scoring sections below retain their original scope.
 
