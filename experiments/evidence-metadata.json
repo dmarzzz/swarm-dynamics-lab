@@ -2598,17 +2598,18 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "On packets byte-identical to sybil-scarcity-opus, a synthesizer other than Opus 5.5 (qwen3.7-flash without reasoning; gpt-6-sol at reasoning effort low) also loses specialist accuracy when each rare fact has one truthful carrier instead of 81.",
-        "rationale": "Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made. Each model is a separate chain; results will never be pooled."
+        "rationale": "No S1 outcome exists for either model. The Qwen chain ended at the pre-registered clean qualification (no comparison possible for Qwen); the gpt-6-sol chain is running. Each model is a separate chain; results will never be pooled."
       },
-      "sample_size_summary": "Observed: none. Planned per model: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls on the parent's identical packets, after P0 (1 call) and Q0 (48 calls); roots are the independent units; calls, identities and skills are not.",
+      "sample_size_summary": "Observed: qwen/qwen3.7-flash chain stopped at its Q0 gate (48/48 valid answers on the parent's 48 clean packets; 1-carrier profile below threshold), so 0 S1 outcomes; gpt-6-sol chain launched, no outcome yet. Planned per model: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls; roots are the independent units.",
       "sources": [
         "researchers/dmarz/notes/sybil-scarcity-xmodel/README.md",
-        "researchers/dmarz/notes/sybil-scarcity-xmodel/preregistration.md",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/SETUP.md",
         "researchers/dmarz/notes/sybil-scarcity-xmodel/design.yaml",
         "researchers/dmarz/notes/sybil-scarcity-xmodel/experiment.yaml",
-        "researchers/dmarz/notes/sybil-scarcity-xmodel/SETUP.md"
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/preregistration.md",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/reviews/chain-001-post.md"
       ],
-      "status_at_assessment": "prepared_not_launched"
+      "status_at_assessment": "qwen_stopped_at_q0_sol_running"
     },
     {
       "id": "wild-evidence-depth",

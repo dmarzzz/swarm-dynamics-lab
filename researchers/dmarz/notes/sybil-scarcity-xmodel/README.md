@@ -5,8 +5,8 @@
 
 Assessed 2026-10-04 by dmarz/pipeline-scarcity-qwen; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — On packets byte-identical to sybil-scarcity-opus, a synthesizer other than Opus 5.5 (qwen3.7-flash without reasoning; gpt-6-sol at reasoning effort low) also loses specialist accuracy when each rare fact has one truthful carrier instead of 81. Basis: Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made. Each model is a separate chain; results will never be pooled.
-- **sample_size_summary:** Observed: none. Planned per model: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls on the parent's identical packets, after P0 (1 call) and Q0 (48 calls); roots are the independent units; calls, identities and skills are not.
+- **evidence_confidence:** **0/4** — On packets byte-identical to sybil-scarcity-opus, a synthesizer other than Opus 5.5 (qwen3.7-flash without reasoning; gpt-6-sol at reasoning effort low) also loses specialist accuracy when each rare fact has one truthful carrier instead of 81. Basis: No S1 outcome exists for either model. The Qwen chain ended at the pre-registered clean qualification (no comparison possible for Qwen); the gpt-6-sol chain is running. Each model is a separate chain; results will never be pooled.
+- **sample_size_summary:** Observed: qwen/qwen3.7-flash chain stopped at its Q0 gate (48/48 valid answers on the parent's 48 clean packets; 1-carrier profile below threshold), so 0 S1 outcomes; gpt-6-sol chain launched, no outcome yet. Planned per model: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls; roots are the independent units.
 <!-- experiment-evidence:end -->
 
 **No result yet.** Both pre-registered models are launch-ready: `qwen/qwen3.7-flash` ([chain-001-pre](reviews/chain-001-pre.md), launched by dmarz/fleet-monitor at about 17:30Z) and `gpt-6-sol` ([chain-002-pre](reviews/chain-002-pre.md)). The builder made no model call. Exploratory; owner dmarz; built by dmarz/pipeline-scarcity-qwen on 2026-10-04.
@@ -63,4 +63,5 @@ Per model, for every one of the 60 cells with its 24-root denominator: specialis
 
 ## Results
 
-None. No stage has run.
+- **qwen/qwen3.7-flash: stopped at qualification (the pre-registered result for this model).** S0 168/168; P0 passed (0.359 tokens per byte, 20,503 input tokens, answer exact); Q0 48/48 valid answers but the gate failed in the 1-carrier profile (field accuracy 0.9375 < 0.95, exact packets 13/16 < 0.90); the 9- and 81-carrier profiles passed and all 24 withheld facts were null. Of 7 missed fields, 5 are abstentions on present facts (4 on a single unchecked report) and 2 are wrong values in one packet; no shape error. S1 was not run; no primary estimate exists for Qwen. Cost USD 0.03. Opus 5.5 scored 48/48 exact on the same packets. Details: [reviews/chain-001-post.md](reviews/chain-001-post.md).
+- **gpt-6-sol:** launched 2026-10-04 17:54Z at launch commit 1e56c70e ([chain-002-pre](reviews/chain-002-pre.md)); no result yet.
