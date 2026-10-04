@@ -3,14 +3,18 @@ id: quorum-mirrors-design-v2
 type: task
 title: Refine Quorum of Mirrors design and offline contracts
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-quorum-mirrors
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-quorum-mirrors
 depends_on: []
-topics: [decision-models, collective-decision]
+topics:
+- decision-models
+- collective-decision
+claimed_at: 2026-10-04T03:31Z
+updated: 2026-10-04T03:31Z
 ---
 
 ## Goal
