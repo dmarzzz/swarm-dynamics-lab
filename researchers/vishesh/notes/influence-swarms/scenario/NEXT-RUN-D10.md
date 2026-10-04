@@ -2,13 +2,17 @@
 
 **Prepared under standing necessary-diagnostic authority; not launched.** The owner’s later 2026-10-04 directive authorizes necessary bounded post-mortem diagnostics without another approval, including diagnostic changes to evidence handling. This ten-call discriminator is covered by that purpose within the original budget; current admission and a bound runner remain required. Researcher sign-off is not required. See [the standing workflow](../../../../../tooling/agent-experiments/RUN-REVIEW.md#standing-authorization-for-necessary-post-mortem-diagnostics). Historical requests for a separate diagnostic-plan decision are superseded.
 
-## Why this experiment is needed
+## TLDR
+
+Question: does a chair use a report with corrected source-policy checks? Treatment: cited-document verification; comparator: original exact-excerpt verification on the same saved five reviewer responses. Measure raw acceptable choices, blocker handling and separate guarded actions. Ten frozen chair calls, no retries, USD0.486400maximum reservation inside the original budget. This is inspected development data, not a holdout or team-size claim.
+
+## Question and prediction
 
 D9 separates three failures that should not be confused. The model extracted all 180 fact values correctly on five valid development responses, but fabricated or spliced quotations caused the existing verifier to admit only 98 values and produce 41 correct checks out of 75. Citation-bound verification produces 75/75 correct checks on those same saved responses, while refusing unsupported values and retaining quotation defects separately. This offline result answers the mechanical question already; spending money to repeat it would add little.
 
 The remaining empirical question is whether a chair actually uses that improved report when the inherited team advice contains mistakes. Better intermediate checks need not produce a better decision: a chair may follow earlier advice, invent a blocker, or endorse an ineligible option. The next comparison measures this downstream behavior.
 
-## Exact design and limits
+## Setup
 
 Use the **five contract-valid, saved D9 responses**, each with two chair continuations: the original exact-excerpt verifier and the proposed cited-document verifier. Ten physical calls, zero retries, maximum reservation USD 0.486400. Do not recollect the reviewer responses. Retain the sixth first-attempt contract failure in the cohort accounting; do not silently replace it with a later repair response.
 
@@ -18,7 +22,11 @@ Hold fixed the original dossier, buyer policy, six inherited reports, model/prov
 
 The proposed verifier checks a declared value only against the model-selected candidate/group source. It does not search other sources, fill missing values, select a different candidate, treat unknown as approval or use evaluator labels. Keep the raw quote and its exactness score in the audit; do not manufacture a corrected quote. The current parser understands the labelled synthetic record grammar. General document understanding and malicious primary-source authenticity are explicitly untested.
 
-## Measurements and decisions
+## Protocol
+
+Admit the exact frozen ten-request packet and verify its immutable public plan before dispatch. Execute each request once in the preregistered alternating order. Stop on the first acquisition or contract failure; keep all remaining assignments unstarted. Recompute scores from source records and review the paired visible answers before further scale-up. No reviewer is recollected.
+
+## Metrics
 
 Primary endpoint: source-policy-acceptable **raw chair choice**, paired by case. Also report raw ineligible purchases, necessary and unnecessary deferrals, cost-acceptable choices, acknowledgement of source blockers, and the first visible divergence from the verified report. Grade the separate action guard independently; a safe guard must not turn a mistaken raw choice into a claim of model competence. Show absolute success, wrong-choice and abstention counts, not only a treatment difference.
 
