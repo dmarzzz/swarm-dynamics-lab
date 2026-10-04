@@ -19,7 +19,7 @@
       "freshness-study/grounding.py": "5ee9fdfb3baf8b93d3d192c56a05887120ab53281780b27f3db7a39493e071cc",
       "freshness-study/openrouter_provider.py": "16f711ec5bed135305955c3d0a191e47bc48789823ef3b46700b5461f2ef3386",
       "freshness-study/trace_provider.py": "c831bc97c88add3fa9a9e508b9703055d1304db4c561fc3c010a9a521a8c0c26",
-      "peer-correction/peer_admission.py": "7f6a64ae61afd2cb2d1a78143001f753c1941803373b35c6ed0b152b5afb854f",
+      "peer-correction/peer_admission.py": "48729ee11cda1baebb2a5b6d74389c3c246af42d6df054490236dd11296fc0b3",
       "peer-correction/peer_closeout.py": "2ec0300c2b1d705fa77cbf0522976806fcbc030be3b4a4fa476b5b4fe44ba5a6",
       "peer-correction/peer_collection.py": "7d3a6b14374cf4402982b1c1472e5b975aa57899921665574dd7032a8d402b0a",
       "peer-correction/peer_instrument.py": "ab3a00319a19b4f8bf4adf0fc87b6b516870ab2187a2a9d117f67fc3dbf600a9",
@@ -28,7 +28,7 @@
       "peer-correction/peer_run.py": "1c216c997e6620f5180305b39f503d207ae37660d8d079c9761dd68beeacbd74",
       "peer-correction/prepare.py": "8f1f5de108b012add1127934e7a94a0b8bd8a126f3acabfacda90cf112d09075",
       "peer-correction/test_instrument.py": "93498adc6f7df9420529da9d98603b0a8b47040dcd637bbcc458085a749e15ce",
-      "peer-correction/test_native.py": "f25a29fa744a8e252a4ae40b34ea9f5b2245d8aa7174a10382378e086d65aed5",
+      "peer-correction/test_native.py": "aa4760c2f0ecafff64b2c1347ac6e9e4dd683b642b45eb2d80a9f1fcdf1d17a3",
       "scenario-study/study.py": "a2556967df07da7800996a5577b9771520ebba991b0f31186cfa6eed9b141083",
       "src/provider.py": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f",
       "verification-loop/loop_instrument.py": "2dd20baaf49074358a61b57faa8b9cc4288756367d4dbdea0d14fe344d25f12f",
@@ -41,7 +41,7 @@
     "output_tokens": 512,
     "reason_max_characters": 240
   },
-  "contract_sha256": "69ad68ed95bd85729dd41e51371d726937300fd3b87180c62ef09b3d8d50a3c5",
+  "contract_sha256": "4536141b210b3881d2541e92d8387abe8159f14b040fb2921682bddaccaaa90e",
   "worlds": [
     {
       "id": "runbook-False-22001",

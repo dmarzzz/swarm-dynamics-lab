@@ -45,6 +45,27 @@ def validate_contract(r,packet,now,host):
     return True
 
 
+def verify_qualification_binding(receipt,packet,scientific,q_admission,claimed_packet_sha,trace_bytes):
+    """Bind contents, not merely the existence/hash of an unrelated passing file."""
+    if scientific!=receipt['qualification']:
+        raise ValueError('qualification_scientific_receipt_mismatch')
+    prepare.verify_qualification(scientific,packet)
+    if (q_admission.get('stage')!='peer-correction-q1' or q_admission.get('funded') is not True
+        or q_admission.get('packet_sha256')!=receipt['packet_sha256']
+        or claimed_packet_sha!=receipt['packet_sha256']
+        or q_admission.get('contract_sha256')!=packet['contract_sha256']
+        or q_admission.get('commit')!=receipt['commit']
+        or q_admission.get('model')!=receipt['model']):
+        raise ValueError('qualification_origin_mismatch')
+    if scientific.get('trace_sha256')!=hashlib.sha256(trace_bytes).hexdigest():
+        raise ValueError('qualification_trace_binding_mismatch')
+    episodes=json.loads(trace_bytes)
+    if (len(episodes)!=4 or {e['case'] for e in episodes}!={c['id'] for c in iroots()}
+        or not all(e.get('automated_pass') is True and len(e.get('trace',[]))==6 for e in episodes)):
+        raise ValueError('qualification_saved_outcomes_failed')
+    return True
+
+
 def verify(path,ledger):
     r=json.loads(Path(path).read_text());p=json.loads((ROOT/'packet.json').read_text())
     now=datetime.datetime.now(datetime.timezone.utc)
@@ -76,8 +97,17 @@ def verify(path,ledger):
         if r['stage']=='peer-correction-p1':
             n,unknown=db.execute("select count(*),coalesce(sum(actual_usd is null or state!='response_received'),0) from immune_requests where run_id='peer-correction-q1'").fetchone()
             if n!=48 or unknown:raise ValueError('qualification_usage_incomplete')
-            if sha(r['qualification_evidence']['path'])!=r['qualification_evidence']['sha256']:
-                raise ValueError('qualification_evidence_mismatch')
+            evidence={}
+            for key in ('qualification_evidence','qualification_admission_evidence','qualification_trace_evidence'):
+                item=r[key]
+                data=Path(item['path']).read_bytes()
+                if hashlib.sha256(data).hexdigest()!=item['sha256']:
+                    raise ValueError('qualification_evidence_mismatch')
+                evidence[key]=data
+            claim=db.execute("select packet_sha256 from immune_peer_claims where run_id='peer-correction-q1'").fetchone()
+            if not claim:raise ValueError('qualification_ledger_claim_missing')
+            verify_qualification_binding(r,p,json.loads(evidence['qualification_evidence']),
+                json.loads(evidence['qualification_admission_evidence']),claim[0],evidence['qualification_trace_evidence'])
     pubspec=importlib.util.spec_from_file_location('peer_public_plan',ROOT.parent.parent/'experiment-documentation/public_plan.py')
     module=importlib.util.module_from_spec(pubspec);pubspec.loader.exec_module(module)
     public=module.check('immune-response-v3',r['condition_tldr'])

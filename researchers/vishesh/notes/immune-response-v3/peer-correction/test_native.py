@@ -107,4 +107,29 @@ class CloseoutHook(unittest.TestCase):
             with self.assertRaises(ValueError):peer_closeout.command(root,saved,'peer-correction-q1','failed',False)
             with self.assertRaises(ValueError):peer_closeout.command(root,root/'elsewhere','peer-correction-q1','failed',True)
 
+class QualificationEvidenceBinding(unittest.TestCase):
+    def fixture(self):
+        import hashlib
+        trace=json.dumps([{'case':c['id'],'automated_pass':True,'trace':[{}]*6} for c in a.iroots()]).encode()
+        science={'contract_sha256':'contract','completed_worlds':4,'api_calls':48,'native':True,'all_automated_pass':True,'manual_reason_review_pass':True,'usage_reconciled':True,'trace_sha256':hashlib.sha256(trace).hexdigest()}
+        r={'qualification':science,'packet_sha256':'packet','commit':'source','model':'anthropic/claude-opus-4.6'}
+        q={'stage':'peer-correction-q1','funded':True,'packet_sha256':'packet','contract_sha256':'contract','commit':'source','model':r['model']}
+        return r,{'contract_sha256':'contract'},science,q,trace
+    def test_unrelated_or_stale_hashed_evidence_cannot_unlock_comparison(self):
+        r,p,science,q,trace=self.fixture()
+        self.assertTrue(a.verify_qualification_binding(r,p,science,q,'packet',trace))
+        unrelated=dict(science,contract_sha256='old-contract')
+        with self.assertRaisesRegex(ValueError,'scientific_receipt'):a.verify_qualification_binding(r,p,unrelated,q,'packet',trace)
+        for key,value in (('packet_sha256','other-packet'),('commit','other-source'),('stage','other-stage')):
+            bad=dict(q);bad[key]=value
+            with self.assertRaisesRegex(ValueError,'origin'):a.verify_qualification_binding(r,p,science,bad,'packet',trace)
+        with self.assertRaisesRegex(ValueError,'origin'):a.verify_qualification_binding(r,p,science,q,'unrelated-ledger-claim',trace)
+        with self.assertRaisesRegex(ValueError,'trace_binding'):a.verify_qualification_binding(r,p,science,q,'packet',b'[]')
+    def test_saved_failed_outcome_cannot_be_relabelled_passing(self):
+        import hashlib
+        r,p,science,q,trace=self.fixture()
+        episodes=json.loads(trace);episodes[0]['automated_pass']=False;bad=json.dumps(episodes).encode()
+        science['trace_sha256']=hashlib.sha256(bad).hexdigest()
+        with self.assertRaisesRegex(ValueError,'outcomes_failed'):a.verify_qualification_binding(r,p,science,q,'packet',bad)
+
 if __name__=='__main__':unittest.main()

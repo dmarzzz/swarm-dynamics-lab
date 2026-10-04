@@ -1,5 +1,5 @@
 {
-  "tests_passed": 18,
+  "tests_passed": 20,
   "native_calls": 0,
   "varied_scripted_cases": 80,
   "main_reference_branches": [
@@ -12,7 +12,7 @@
   ],
   "qualification_reference_calls": 48,
   "maximum_tested_wire_bytes": 7020,
-  "packet_sha256": "ce7d9c0ddf45d6338d960bcea231eed125c95c5be808f84e157dfbc7907dbb42",
+  "packet_sha256": "52be5aa8dbf37555610ad229ea1b77ea460b627efdc9247ec776540f2e434382",
   "native_qualified": false,
   "manual_reason_review": "requires_native_responses",
   "native_dispatch_enabled": false,
