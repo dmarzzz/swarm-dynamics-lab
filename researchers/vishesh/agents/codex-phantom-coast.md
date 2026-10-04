@@ -3,8 +3,8 @@ agent: vishesh/codex-phantom-coast
 tool: codex
 state: working
 task: phantom-coast-pc2-live
-doing: Q0 passed; executing admitted S1 pilot and reconciling artifacts within original budget
-updated: 2026-10-04T06:42:12.981971+00:00
+doing: Native PC-2 complete and audited; allocation released; publishing results and evidence metadata
+updated: 2026-10-04T07:51:01.469582+00:00
 ---
 
 ## Notes

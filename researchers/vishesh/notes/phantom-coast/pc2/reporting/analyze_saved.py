@@ -28,6 +28,16 @@ for policy in ('team','single','uniform'):
    def mean(k):return statistics.mean(e['endpoint']['metrics'][k] for e in items)
    whole=[e['endpoint']['metrics']['whole'] for e in items]
    conditions.append(dict(policy=policy,report=report,audit=audit,roots=len(items),complete=sum(e['status']=='complete' for e in items),wrong=sum(x['wrong'] for x in whole),missing=sum(x['missing'] for x in whole),denominator=36*len(items),lower=statistics.mean(x['lower'] for x in whole),upper=statistics.mean(x['upper'] for x in whole),unique_cells=mean('unique_cells'),report_cells_visited=mean('report_cells_visited'),repeated_slots=mean('repeated_slots'),failed_slots=mean('failed_slots'),deterministic_upper=statistics.mean(e['endpoint']['deterministic']['upper'] for e in items),yoked_upper=statistics.mean(e['endpoint']['yoked']['upper'] for e in items) if policy=='team' else None))
+for condition in conditions:
+ items=[e for e in es if (e['policy'],e['report'],e['audit'])==(condition['policy'],condition['report'],condition['audit'])]
+ condition['stratified_errors']={}
+ for stratum in ('observed','unobserved','land','water'):
+  cells=[e['endpoint']['metrics'][stratum] for e in items]
+  totals={k:sum(x[k] for x in cells) for k in ('wrong','missing','denominator')}
+  totals.update(lower=totals['wrong']/totals['denominator'] if totals['denominator'] else None,upper=(totals['wrong']+totals['missing'])/totals['denominator'] if totals['denominator'] else None)
+  condition['stratified_errors'][stratum]=totals
+ condition['first_report_visit']=[dict(seed=e['seed'],slot=e['endpoint']['metrics']['first_report_visit'],censored=e['endpoint']['metrics']['first_visit_censored']) for e in items]
+ condition['stratum_weighting']='Pooled cell counts within condition; cells are dependent, not independent samples.'
 paired=[]
 for policy in ('team','single','uniform'):
  for audit in (False,True):
@@ -46,6 +56,7 @@ for policy in ('team','single','uniform'):
   on=next(x for x in conditions if (x['policy'],x['report'],x['audit'])==(policy,report,True))
   off=next(x for x in conditions if (x['policy'],x['report'],x['audit'])==(policy,report,False))
   audit_differences.append(dict(policy=policy,report=report,upper_error=on['upper']-off['upper'],wrong=on['wrong']-off['wrong'],missing=on['missing']-off['missing'],report_cells_visited=on['report_cells_visited']-off['report_cells_visited'],unique_cells=on['unique_cells']-off['unique_cells'],meets_practical_threshold=on['upper']-off['upper']<=-2/36+1e-12))
-result=dict(audit_on_minus_off=audit_differences,stage=s['stage'],independent_roots=8,structural_families=2,dependent_episodes=96,assignment_status=dict(groups),conditions=conditions,misleading_minus_benign=paired,primary=s['overall'],by_family=s['by_family'],per_root_contrasts=s['worlds'],budget=s['budget'],usage_by_policy=s['usage_by_policy'],limitations='Eight synthetic roots from two structural families, one model snapshot, unequal inference compute. Missing labels are identification bounds, not confidence intervals. Descriptive exploratory contrasts; no independent replication.',source_sha256={n:hashlib.sha256((r/n).read_bytes()).hexdigest() for n in ('summary.json','episodes.json','records.json','manifest.json','worlds.json')})
+sensitivity={'label':'Post-run descriptive leave-one-root-out check; primary still uses all eight roots','leave_one_out':[{'omitted_root':x['seed'],'upper_interaction':statistics.mean(y['primary_upper_interaction'] for y in s['worlds'] if y['seed']!=x['seed'])} for x in s['worlds']]}
+result=dict(primary_sensitivity=sensitivity,audit_on_minus_off=audit_differences,stage=s['stage'],independent_roots=8,structural_families=2,dependent_episodes=96,assignment_status=dict(groups),conditions=conditions,misleading_minus_benign=paired,primary=s['overall'],by_family=s['by_family'],per_root_contrasts=s['worlds'],budget=s['budget'],usage_by_policy=s['usage_by_policy'],limitations='Eight synthetic roots from two structural families, one model snapshot, unequal inference compute. Missing labels are identification bounds, not confidence intervals. Descriptive exploratory contrasts; no independent replication.',source_sha256={n:hashlib.sha256((r/n).read_bytes()).hexdigest() for n in ('summary.json','episodes.json','records.json','manifest.json','worlds.json')})
 a.output.write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps({'assignment_status':dict(groups),'primary':s['overall'],'conditions':conditions,'paired_means':[{'policy':x['policy'],'audit':x['audit'],**x['means']} for x in paired]}))

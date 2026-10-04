@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-04T07:42:25.492889+00:00",
+  "worker_stopped": true,
+  "credential_removed": true,
+  "calls": 1816,
+  "known_api_usd": 0.35670726,
+  "api_exposure_usd": 0.35805126,
+  "unresolved_calls": 1,
+  "incremental_infrastructure_usd": 0,
+  "new_machine_created": false,
+  "api_cap_usd": 4,
+  "total_cap_usd": 5,
+  "budget_backup_sha256": "96eecfa8c38d177e3b5e35c10fdfb8b72bc4b72c4f087ebd6e1465f61684d014",
+  "attempts": [
+    [
+      "Q0-prelaunch-credential-missing",
+      "q0-prelaunch-credential-missing"
+    ],
+    [
+      "Q0",
+      "q0-a1"
+    ],
+    [
+      "S1",
+      "s1-a1"
+    ]
+  ],
+  "allocation_release": "merged",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/205",
+  "public_delivery": "Verified final_frame.png and replay-public.gif; original 13.9 MB replay.gif is retained on authenticated hub but returns public 404.",
+  "operator_audit": "S1-A1-audit.json",
+  "public_replay": "https://swarm-live.pages.dev/api/a/phantom-coast-pc2/s1-a1/replay-public.gif"
+}

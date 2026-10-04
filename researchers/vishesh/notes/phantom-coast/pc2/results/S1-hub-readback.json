@@ -1,0 +1,68 @@
+{
+  "stage": "S1",
+  "run_status": "done",
+  "checked_utc": "2026-10-04T07:42:42.000794+00:00",
+  "hub_artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "77a661ec37dd42f204e725cb110fffc647fb861b4f67872d8d1f283e6c3716c6",
+      "bytes": 93318,
+      "hash_matches": true
+    },
+    {
+      "name": "replay.gif",
+      "sha256": "4564af96aa57c7894731bc914c5c331d3fcc8cb42d59c48fb0f99a879d7eb0aa",
+      "bytes": 13898708,
+      "hash_matches": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "7ed2ed26d6b822432b9eb8ba7024f08ff9998016faa8db030c05ab13b450be05",
+      "bytes": 31418,
+      "hash_matches": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "e33a308d1fc294a471fb437b58c3e9c9166147f8a3eec34992989533f60efe13",
+      "bytes": 462880,
+      "hash_matches": true
+    },
+    {
+      "name": "episodes.json",
+      "sha256": "db34d6c217aa3d1e5576b95c7c4d82edf3ef87f1abee0604b9d5420ba7a84d9a",
+      "bytes": 1445422,
+      "hash_matches": true
+    },
+    {
+      "name": "replay-manifest.json",
+      "sha256": "85e938d1b55b5175b1e729281df98997fe487063a85e344b3b3041fd28dfd9e1",
+      "bytes": 59568,
+      "hash_matches": true
+    },
+    {
+      "name": "public-plan.json",
+      "sha256": "08945a64c070193ba8ccd6ab6562ed79e452567ed21a2a58a980c279ef1aadda",
+      "bytes": 1202,
+      "hash_matches": true
+    },
+    {
+      "name": "worlds.json",
+      "sha256": "85330501f242372bc7ae8cd2a13362b265952fa140079bf2731cf62056119162",
+      "bytes": 7458,
+      "hash_matches": true
+    },
+    {
+      "name": "route.json",
+      "sha256": "de458b0508ef9deab84011f4c98c9a3b4a9117c51a5d39507adaa1ca7cf7c8d1",
+      "bytes": 117,
+      "hash_matches": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "dc02df3c3f4eef91750566f1ab9b8e705c4b9b649685421c4307c0d8c70d2b77",
+      "bytes": 18200744,
+      "hash_matches": true
+    }
+  ],
+  "all_match": true
+}

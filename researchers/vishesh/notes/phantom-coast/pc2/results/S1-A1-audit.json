@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "native_requests_verified": 1792,
+  "acquisition_events_verified": 1152,
+  "endpoints_verified": 96,
+  "source_bound": true,
+  "checks": [
+    "Reconstructed packets match saved requests and hashes",
+    "No current-round peer proposals or future sensor observations enter reconstructed actor packets",
+    "Executed sensing events match frozen policy/audit/tie rules",
+    "All native endpoints and root-level contrasts recompute exactly"
+  ],
+  "scope": "Operator saved-data audit, not independent researcher review. Provider raw responses were not retained, so response-body validation cannot be independently replayed.",
+  "source_sha256": {
+    "records.json": "dc02df3c3f4eef91750566f1ab9b8e705c4b9b649685421c4307c0d8c70d2b77",
+    "episodes.json": "db34d6c217aa3d1e5576b95c7c4d82edf3ef87f1abee0604b9d5420ba7a84d9a",
+    "summary.json": "7ed2ed26d6b822432b9eb8ba7024f08ff9998016faa8db030c05ab13b450be05",
+    "worlds.json": "85330501f242372bc7ae8cd2a13362b265952fa140079bf2731cf62056119162"
+  }
+}

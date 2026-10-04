@@ -1,0 +1,26 @@
+{
+  "stage": "S1",
+  "run_status": "done",
+  "checked_utc": "2026-10-04T07:46:20.502455+00:00",
+  "public_artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "77a661ec37dd42f204e725cb110fffc647fb861b4f67872d8d1f283e6c3716c6",
+      "bytes": 93318,
+      "hash_matches": true
+    },
+    {
+      "name": "replay.gif",
+      "hash_matches": false,
+      "error": "HTTPError",
+      "code": 404
+    },
+    {
+      "name": "replay-public.gif",
+      "sha256": "4617e0bd43cc8069420bb3ea4d14a2444581225fc3468f289ac21212a320124a",
+      "bytes": 7143448,
+      "hash_matches": true
+    }
+  ],
+  "all_match": false
+}
