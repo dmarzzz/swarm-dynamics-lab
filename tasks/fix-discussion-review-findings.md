@@ -21,8 +21,8 @@ Implement the user-requested repairs from Vishesh's [retrospective review](../re
 
 ## Done when
 
-- [ ] Validate every observed row against its assignment before analysis; preserve wholly absent worlds and bounds.
-- [ ] Validate the full allocation before dispatch and reject changes to the frozen evidence partition.
-- [ ] Expose correct-but-unsupported, wrong-but-unsupported, grounded inherited errors and required-key coverage separately.
-- [ ] Verify matched private work, exact starting checkpoints, initial contamination and clean diagnostics.
-- [ ] Run regression/mutation checks and saved-response replay; publish a finding-to-evidence response without claiming independent approval.
+- [x] Validate every observed row against its assignment before analysis; preserve wholly absent worlds and bounds.
+- [x] Validate the full allocation before dispatch and reject changes to the frozen evidence partition.
+- [x] Expose correct-but-unsupported, wrong-but-unsupported, grounded inherited errors and required-key coverage separately.
+- [x] Verify matched private work, exact starting checkpoints, initial contamination and clean diagnostics.
+- [x] Run regression/mutation checks and saved-response replay; publish a finding-to-evidence response without claiming independent approval.

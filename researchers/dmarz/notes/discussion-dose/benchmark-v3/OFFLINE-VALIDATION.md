@@ -1,5 +1,7 @@
 # Offline release validation
 
+This is the preserved `0f5044a` release report. The subsequent [review repair response](VISHESH-REVIEW-RESPONSE.md) and [validation record](review-fixes-validation.json) cover the current source (84 distinct passing checks); the original 74-check evidence below is not overwritten.
+
 **Result: software qualification passed. Independent researcher review and model qualification are pending. No v3 model calls, credits, fleet jobs or deployments were used.**
 
 Release source: `0f5044a` (with implementation commits `4cdf7d2`, `421d4e5` and the earlier shared-clone sync `e3a1903`). Exact source hashes, runtime and output digests are in [validation.json](validation.json). The original [pre-run assessment](../reviews/v3-offline-pre.md) records the 708→636-call amendment after the final v2 private-control findings.
