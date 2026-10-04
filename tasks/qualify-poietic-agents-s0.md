@@ -3,9 +3,9 @@ id: qualify-poietic-agents-s0
 type: task
 title: Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-heterogeneous
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-heterogeneous
@@ -14,9 +14,10 @@ depends_on:
 topics:
 - llm-agent-swarms
 - agent-budgets
-updated: 2026-10-04T07:14Z
+updated: 2026-10-04T07:49Z
 history:
 - '2026-10-04T07:14Z released by vishesh/codex-heterogeneous: Direct USD 2 run approval recorded; central S0 request submitted at 2796183f. Approved OpenRouter selector unresolved and dispatcher has not acknowledged. Zero calls/spend. Follow study DISPATCH.md and SETUP.md; do not duplicate dispatch.'
+claimed_at: 2026-10-04T07:49Z
 ---
 
 ## Goal
