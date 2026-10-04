@@ -44,6 +44,7 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T18:42Z | Run the revised procurement influence experiment |
+| [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T18:41Z | Build and qualify the bounded outage-response prototype |
 | [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T18:35Z | Integrate and fault-test the Right Dissenter reopening runner |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -310,7 +311,7 @@
 | dmarz/pipeline-split-qwen | working | build-sybil-split-xmodel | 2026-10-04T18:24Z | sybil-split-xmodel amendment A1 (gpt-6-sol reasoning effort none): code 52139693, source hash 5ce08e7d; rehearsal finishing, then READY.yaml and review on main; nothing launched by this agent |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:22Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
-| vishesh/codex-idea-scores | done | refine-swarm-size-question | 2026-10-04T18:11Z | Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged. |
+| vishesh/codex-idea-scores | working | outage-size-prototype | 2026-10-04T18:11Z | Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration. |
 | vishesh/codex-theseus | blocked | theseus-a2-acquisition | 2026-10-04T18:10Z | Approved A2 prepared; provider recovery unresolved; temporary claim released |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
