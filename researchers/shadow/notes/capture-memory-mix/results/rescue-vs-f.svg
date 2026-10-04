@@ -40,23 +40,23 @@
 <circle cx="542.5" cy="291.9" r="4" fill="#d62728"/>
 <circle cx="610.0" cy="275.2" r="4" fill="#d62728"/>
 <rect x="80" y="48" width="12" height="3" fill="#d62728"/><text x="98" y="54">scripted, A2 purge + wipe</text>
-<path d="M70.0,263.9 L340.0,304.8 L407.5,251.4 L475.0,243.4 L542.5,230.5 L576.2,340.3 L610.0,340.3" fill="none" stroke="#2ca02c" stroke-width="2" />
-<circle cx="70.0" cy="263.9" r="4" fill="#2ca02c"/>
-<circle cx="340.0" cy="304.8" r="4" fill="#2ca02c"/>
-<circle cx="407.5" cy="251.4" r="4" fill="#2ca02c"/>
-<circle cx="475.0" cy="243.4" r="4" fill="#2ca02c"/>
-<circle cx="542.5" cy="230.5" r="4" fill="#2ca02c"/>
+<path d="M70.0,280.7 L340.0,298.3 L407.5,253.1 L475.0,245.1 L542.5,228.9 L576.2,340.3 L610.0,335.5" fill="none" stroke="#2ca02c" stroke-width="2" />
+<circle cx="70.0" cy="280.7" r="4" fill="#2ca02c"/>
+<circle cx="340.0" cy="298.3" r="4" fill="#2ca02c"/>
+<circle cx="407.5" cy="253.1" r="4" fill="#2ca02c"/>
+<circle cx="475.0" cy="245.1" r="4" fill="#2ca02c"/>
+<circle cx="542.5" cy="228.9" r="4" fill="#2ca02c"/>
 <circle cx="576.2" cy="340.3" r="4" fill="#2ca02c"/>
-<circle cx="610.0" cy="340.3" r="4" fill="#2ca02c"/>
+<circle cx="610.0" cy="335.5" r="4" fill="#2ca02c"/>
 <rect x="80" y="64" width="12" height="3" fill="#2ca02c"/><text x="98" y="70">gpt-4o-mini, N=16, dose 0.5, round 30, A1 purge</text>
-<path d="M70.0,350.0 L340.0,350.0 L407.5,350.0 L475.0,346.8 L542.5,346.8 L576.2,340.3 L610.0,340.3" fill="none" stroke="#9467bd" stroke-width="2" />
-<circle cx="70.0" cy="350.0" r="4" fill="#9467bd"/>
+<path d="M70.0,343.9 L340.0,350.0 L407.5,350.0 L475.0,345.2 L542.5,345.2 L576.2,340.3 L610.0,335.5" fill="none" stroke="#9467bd" stroke-width="2" />
+<circle cx="70.0" cy="343.9" r="4" fill="#9467bd"/>
 <circle cx="340.0" cy="350.0" r="4" fill="#9467bd"/>
 <circle cx="407.5" cy="350.0" r="4" fill="#9467bd"/>
-<circle cx="475.0" cy="346.8" r="4" fill="#9467bd"/>
-<circle cx="542.5" cy="346.8" r="4" fill="#9467bd"/>
+<circle cx="475.0" cy="345.2" r="4" fill="#9467bd"/>
+<circle cx="542.5" cy="345.2" r="4" fill="#9467bd"/>
 <circle cx="576.2" cy="340.3" r="4" fill="#9467bd"/>
-<circle cx="610.0" cy="340.3" r="4" fill="#9467bd"/>
+<circle cx="610.0" cy="335.5" r="4" fill="#9467bd"/>
 <rect x="80" y="80" width="12" height="3" fill="#9467bd"/><text x="98" y="86">gpt-4o-mini, A2 purge + wipe</text>
 <path d="M70.0,350.0 L340.0,350.0 L475.0,337.1 L542.5,311.2 L610.0,350.0" fill="none" stroke="#ff7f0e" stroke-width="2" />
 <circle cx="70.0" cy="350.0" r="4" fill="#ff7f0e"/>
@@ -65,4 +65,11 @@
 <circle cx="542.5" cy="311.2" r="4" fill="#ff7f0e"/>
 <circle cx="610.0" cy="350.0" r="4" fill="#ff7f0e"/>
 <rect x="80" y="96" width="12" height="3" fill="#ff7f0e"/><text x="98" y="102">gemma-3-27b-it (sample mode), A1 purge</text>
+<path d="M70.0,350.0 L340.0,303.5 L475.0,288.0 L542.5,233.8 L610.0,169.2" fill="none" stroke="#8c564b" stroke-width="2" />
+<circle cx="70.0" cy="350.0" r="4" fill="#8c564b"/>
+<circle cx="340.0" cy="303.5" r="4" fill="#8c564b"/>
+<circle cx="475.0" cy="288.0" r="4" fill="#8c564b"/>
+<circle cx="542.5" cy="233.8" r="4" fill="#8c564b"/>
+<circle cx="610.0" cy="169.2" r="4" fill="#8c564b"/>
+<rect x="80" y="112" width="12" height="3" fill="#8c564b"/><text x="98" y="118">qwen3-235b-a22b, A1 purge</text>
 </svg>

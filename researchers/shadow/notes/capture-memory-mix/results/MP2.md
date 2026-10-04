@@ -1,6 +1,6 @@
 # capture-memory-mix: MP2 results
 
-90 episode records, backends ['http:google/gemma-3-27b-it:sample'], about 12170 model calls in these records; provider-reported spend on the shared ledger (all models, all pilot work) 1.6232 USD. Code commits: ['016104d9', '3ffb56b6'].
+90 episode records, backends ['http:google/gemma-3-27b-it:sample'], about 12170 model calls in these records; provider-reported spend on the shared ledger (all models, all pilot work) 3.3729 USD. Code commits: ['016104d9', '3ffb56b6'].
 
 Columns: captured = capture rate (shared by arms); frac@rem / frac_T = honest fraction on the original at removal and 50 rounds later (captured episodes); delta = frac_T minus frac@rem (0 = frozen, > 0 = returning); short_T / long_T = the same at round T split by memory kind; delta_long = return among the long-memory agents only.
 
