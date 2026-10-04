@@ -38,6 +38,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [antsy-diversity-v7](tasks/antsy-diversity-v7.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T05:58Z | Measure worker diversity and correlated errors in Antsy |
 | [build-poietic-agents-instrument](tasks/build-poietic-agents-instrument.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T05:53Z | Build the Poietic Agents offline instrument and qualification package |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T05:46Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
@@ -238,7 +239,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-methods | working | antsy-diversity-v7 | 2026-10-04T06:30Z | Developing provenance and behavioral diversity measurements for Antsy v7 |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T05:57Z | Final three original Sonnet S1 assignments running serially after 30 valid episodes and 720-call exact replay; reporting next. Haiku closed, next plan unstarted. |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T05:55Z | D3 complete;90 populated checks but76 correct,all arms4/6;false blockers cause deferral,D4 and S1 unrun;artifacts verified and worker stopped |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T05:54Z | Building and launching sybil-specialists-sonnet (Sonnet 4.6 replication of sybil-specialists-api) on sim-dmarz-4 |
 | vishesh/codex-pi-review | done | clarify-pi-review-visual-guide | 2026-10-04T05:53Z | Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked. |
@@ -246,7 +249,6 @@
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/budget-sonnet | working |  | 2026-10-04T05:30Z | Preparing sybil-budget-sonnet (Sonnet 4.6 replication of sybil-budget-api, N972 half); offline checks and plan before any run |
 | dmarz/discussion-bench-v3 | done | deploy-discussion-v3-d1 | 2026-10-04T05:18Z | D1 complete and analyzed; results and post-mortem published; server retired; D2 plan only, unstarted |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T05:08Z | Sonnet original S1 cohort continues; Haiku R0 failed and results/post-mortem/records are pushed. Next diagnostic plan stays unstarted. |
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
 | shadow/sol-capture | idle |  | 2026-10-04T05:00Z | capture-memory: PRs 82 + 83 merged to main; Q0 + S2_pilot (12 real-model episodes, 0.03 USD) done, results/S2.md on main; next = per-pair prior fit + model-side dose sweep, waiting on hypothesis review |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T05:00Z | Resolving independent review and building the Poietic instrument and gated qualification package |
@@ -256,7 +258,6 @@
 | shadow/sol-goal | working |  | 2026-10-04T04:55Z | GOAL-12H lane, capture-memory-mix (heterogeneous memory rescue); scripted M0/M1/M2 on main, gpt-4o-mini pilot running under the USD 5 cap. |
 | vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:54Z | Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification |
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
-| vishesh/codex-methods | idle | antsy-receipt-v6 | 2026-10-04T04:48Z | Antsy v6 results and post-mortem published; host released; no active runs |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:43Z | Published Quorum and Poietic design reviews and routed concrete revisions to Vishesh. |
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
 | dmarz/cloud-discussion-d1 | working | diagnose-discussion-v3-q0 | 2026-10-04T04:33Z | Publish tested D1 harness; sole paid dispatch remains with local operator. |
