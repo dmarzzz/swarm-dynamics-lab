@@ -76,7 +76,7 @@ class Anthropic:
         headers = {'Content-Type': 'application/json', 'x-api-key': self.key, 'anthropic-version': '2023-06-01', 'anthropic-workspace-id': self.workspace}
         req = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=headers, method='POST')
         retries, wait_cap = self.b.get('capacity_retries', 0), self.b.get('capacity_wait_seconds', 0)
-        acc['capacity_retries'] = 0; acc['capacity_wait_seconds'] = 0.0
+        acc['capacity_retries'] = 0; acc['capacity_wait_seconds'] = 0.0; acc['billing_wait_seconds'] = 0.0
         while True:
             t = time.monotonic()
             try:
@@ -101,6 +101,13 @@ class Anthropic:
                     if acc['capacity_wait_seconds']+delay <= wait_cap:
                         self.sleep(delay); acc['capacity_retries'] += 1; acc['capacity_wait_seconds'] += delay
                         continue
+                # A credit-balance 400 is a billing outage before inference, not an outcome: wait and resend.
+                if exc.code == 400 and 'credit balance' in acc.get('error_message', '').lower():
+                    acc['billing_outage'] = True
+                    if acc['billing_wait_seconds']+60 <= self.b.get('billing_wait_seconds', 0):
+                        self.sleep(60); acc['billing_wait_seconds'] += 60
+                        continue
+                    raise CallFailure('billing_outage', acc) from None
                 raise CallFailure('http_'+str(exc.code), acc) from None
             except Exception as exc: raise CallFailure('transport_'+type(exc).__name__, acc) from None
         acc['latency_seconds'] = time.monotonic()-t
