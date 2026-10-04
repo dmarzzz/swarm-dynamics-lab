@@ -95,7 +95,8 @@ def main(config_path,private,check_only=False):
   path.unlink(missing_ok=True)
   ledger=Ledger(private/'budget.sqlite',config['cap_nano'],config['authority_ref'])
   if ledger.summary()['total_upper_nano']+len(packet['assignments'])*10752001+config['allocation']['infrastructure_reserve_nano']>config['cap_nano']:raise ValueError('whole_stage_budget')
-  if not ledger.db.execute("SELECT 1 FROM charges WHERE id='claim-infrastructure'").fetchone():ledger.reserve('claim-infrastructure','claim','infrastructure',config['allocation']['infrastructure_reserve_nano'],sha(config['allocation']))
+  infrastructure_id='claim-infrastructure:'+sha({'claim':config['allocation']['claim'],'expires_at':config['allocation']['expires_at']})
+  if not ledger.db.execute("SELECT 1 FROM charges WHERE id=?",(infrastructure_id,)).fetchone():ledger.reserve(infrastructure_id,'claim','infrastructure',config['allocation']['infrastructure_reserve_nano'],sha(config['allocation']))
   from openrouter_provider import generate,count_tokens
   wire_count=0
   def post_json(req):

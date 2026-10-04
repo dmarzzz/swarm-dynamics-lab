@@ -1,0 +1,138 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "attempt": "a0-openrouter-20261004",
+  "evidence_revision": "0919ed057026899ba66cdc173726e30cdd41aa6d",
+  "decision": "repair",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Authored fidelity question and claim boundary fixed; native comparison not established.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Eight same-author simple development roots repeat two background obligations; no representative or held-out claim.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ],
+      "next_action": "Owner-decided A1 repair with unchanged scientific scope; no broader claim.",
+      "acceptance_check": "Test wrapper handling, complete assigned native cohort and full semantic screen; limits on cases retained."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Three arms assigned but only one S response returned; no manipulation comparison observed.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ],
+      "next_action": "Owner-decided A1 repair with unchanged scientific scope; no broader claim.",
+      "acceptance_check": "Test wrapper handling, complete assigned native cohort and full semantic screen; limits on cases retained."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "JSON fence caused declared schema gate failure; semantic screen unavailable.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ],
+      "next_action": "Owner-decided A1 repair with unchanged scientific scope; no broader claim.",
+      "acceptance_check": "Test wrapper handling, complete assigned native cohort and full semantic screen; limits on cases retained."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Zero schema-valid/scored outputs; do not impute missing retention or compute arm superiority.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ],
+      "next_action": "Owner-decided A1 repair with unchanged scientific scope; no broader claim.",
+      "acceptance_check": "Test wrapper handling, complete assigned native cohort and full semantic screen; limits on cases retained."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Eight planned roots,72 nested requests;1 returned,71 unstarted explicitly retained; feasibility scope only.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact fresh request, pinned Haiku/provider, no gold/operator history/tools/reasoning; no fallback.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "One request and raw response preserved with all assigned statuses; no retry; full trace inspected.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD5 cumulative authority; APIUSD0.001054 plus elapsed infrastructureUSD0.048532717, totalUSD0.049586717,0 unknown; worker stopped, claim released.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned0919ed source and request/response; observed schema failure replays offline; hosted outputs not deterministic.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "not_applicable",
+      "finding": "No effect plot appropriate for one failed response; count table is sufficient.",
+      "evidence": [
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "8b5e9779628f6521df8051fb2f9fc648a7342caa2ef4fe2ecf3021fcc90ec04f"
+        }
+      ]
+    }
+  ]
+}

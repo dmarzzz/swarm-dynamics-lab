@@ -1,0 +1,23 @@
+{
+  "execution": "failed",
+  "qualification": "not established",
+  "scientific_interpretation": "interface failure; no comparative outcome",
+  "independent_units": {
+    "planned_authored_roots": 8,
+    "roots_with_returned_output": 1,
+    "completed_paired_roots": 0,
+    "native_calls": 1,
+    "schema_valid": 0,
+    "unstarted": 71
+  },
+  "confidence": "No evidence for an arm effect. Mechanistic parser failure reproduced on retained response.",
+  "cost_usd": {
+    "model": 0.001054,
+    "infrastructure_estimate": 0.048532717,
+    "cumulative": 0.049586717,
+    "cap": 5,
+    "unknown": 0
+  },
+  "resource_state": "worker exited; claim released",
+  "decision": "repair prepared; owner execution-contract decision pending"
+}

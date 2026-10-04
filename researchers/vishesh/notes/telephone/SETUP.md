@@ -74,3 +74,9 @@ Owner approved authored A0 and real-source V0. A0 is frozen at `8c2350b4c1916611
 [V0 preparation](native/v0/PLAN.md) now contains eight privately reviewed source-meaning cases with 25 critical obligations. Complete source projections match manifest counts. All 51 goal windows have prior prefix exposure, so this is a development pilot, not the original held-out evaluation. No world-truth/historical-transmission claim. Updated native preparation tests: 24 pass; A0 retains its immutable 23-test deployed version. V0 awaits actual A0 semantic qualification and its own admission.
 
 Both stages retain Telephone's existing USD2 cumulative authority while an exact higher cap remains unresolved. Never reset the ledger or infer a numerical cap from an unspecified increase. Keep actual infrastructure allocation costs in the same accounting. This is a queued/prepared status, not a completed attempt or scientific closeout.
+
+## Native A0 direct outcome — 2026-10-04
+
+Owner superseded central dispatch and authorized OpenRouter with a cumulative USD5 cap. The central request was fenced; approved-account exclusive capacity, source/runtime, public immutable plan and condition registration verified before collection. A0 made1 call/1 response,0 schema-valid,71 unstarted: a single JSON code fence caused the strict parser to stop. See [native post-mortem](native/a0/POST-MORTEM.md). API chargeUSD0.001054 reconciled,0 unknown model calls, full claim reserveUSD0.142860001. Worker exited. No semantic qualification or real-source native result.
+
+The prospective [A1 repair](native/a1/PLAN.md) is implemented and tested (35 native tests, actual saved-response replay), awaiting the concrete execution-contract decision. V0 remains conditional on A1 semantic qualification and current admission. Preserve the sole cumulative ledger and source-specific evidence; do not restart A0 or silently change its parser retroactively.

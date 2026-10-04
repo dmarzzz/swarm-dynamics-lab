@@ -176,11 +176,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/telephone",
       "setup_path": "researchers/vishesh/notes/telephone/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/telephone/t1/POST-MORTEM.md",
+      "postmortem_path": "researchers/vishesh/notes/telephone/native/a0/POST-MORTEM.md",
       "adapter": null,
       "checked_at": "2026-10-04T19:47:25.079176+00:00",
       "checked_commit": "9f4ede00d1cf2e76580e31d9690339dd5434b651",
-      "next_action": "A0 owner-approved, deployed/tested and publicly registered; central launch pending, zero native calls. V0 has eight real-source development cases and 25 critical targets; awaits A0 semantic qualification and fresh admission. Existing cumulative USD2; exact increase unresolved.",
+      "next_action": "A0 direct OpenRouter1 returned/0 schema-valid,71 unstarted; APIUSD0.001054 reconciled under cumulativeUSD5. Tested A1 wrapper repair needs concrete owner contract approval, then fresh admission and qualification before V0. Idle claim released; retain original ledger.",
       "next_run_approval": "owner"
     }
   ]
