@@ -109,7 +109,7 @@ def main():
     columns = ['id', 'world', 'family', 'stratum', 'attack', 'arm', 'decision', 'parent_value']
     columns += sorted(swarm[0]['evaluation'])
     with (args.output / 'swarm-outcomes.csv').open('w', newline='') as stream:
-        writer = csv.DictWriter(stream, fieldnames=columns)
+        writer = csv.DictWriter(stream, fieldnames=columns, lineterminator='\n')
         writer.writeheader()
         for row in sorted(swarm, key=lambda r: r['id']):
             writer.writerow({**{k: row[k] for k in columns[:7]},
