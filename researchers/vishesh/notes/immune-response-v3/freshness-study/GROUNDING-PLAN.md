@@ -39,3 +39,7 @@ For each world, four synchronized lanes display service health over initial stat
 ## Offline implementation evidence
 
 [Validation](reviews/grounding-offline.json):39tests pass, all12scripted trajectories satisfy unchanged capability gates and replay. Tests cover each visible catalog relation, stale liveness, internally contradictory probes, factorial input isolation, unchanged ten-action space and request-size bounds. The prepared runner is offline-only and cannot call a provider or allocate a host. No native improvement is claimed. The next owner decision is whether to run the specified24-call diagnostic under the unchangedUSD8lineage.
+
+## A9 owner approval and implementation admission
+
+Owner approved this exact changed design and requested the native comparison. Execute it once as freshness-a9:24controller calls,12trajectories,originalUSD8ledger unchanged. Implement a dedicated source-pinned native entrypoint, durable partial records, allowlisted failure diagnostics and four-condition saved-data visualization; retain the tested offline mode. This supersedes the earlier pending-approval/offline-only status, without changing scenarios, conditions, metrics or resource envelope. No repeated owner/researcher approval is needed for this named scope. After completion, perform operational and scientific closeout before any successor.
