@@ -45,9 +45,11 @@ class Actor:
   except Exception:responses=[dict(transport_error=True) for _ in jobs]
   if not isinstance(responses,list) or len(responses)!=len(jobs):responses=[dict(transport_error=True) for _ in jobs]
   for r,raw in zip(rows,responses):
+   r['response_sha256']=digest(raw)
    try:
     d,cost,safe=decode(raw,r['packet']);self.ledger.finish(r['assignment'],cost);r.update(status='valid',decision=d,response=safe,response_sha256=digest(raw),actual_nano=cost)
-   except Exception as e:r.update(status='failed',error_type=type(e).__name__);self.stop='response_or_transport_failure'
+   except Exception as e:
+    r.update(status='failed',error_type=type(e).__name__,failed_response=raw);self.stop='response_or_transport_failure'
    r['terminal_utc']=utc().isoformat();self.save()
   return rows
  def collect(self,jobs):
