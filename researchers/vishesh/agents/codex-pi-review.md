@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: incorporate-external-study-review
-doing: Reconciling all ranked external review recommendations with current native evidence; preparing per-study proposals, no launches.
-updated: 2026-10-04T20:00Z
+doing: Published229 traceable review dispositions across15 study proposals and strengthened existing run-quality checks; no new runs.
+updated: 2026-10-04T20:01Z
 ---
 
 ## Notes

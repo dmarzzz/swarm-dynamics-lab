@@ -2,20 +2,21 @@
   "source_file": "swarm-lab-experiment-review-2026-10-04.html",
   "source_sha256": "2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5",
   "source_repo_cutoff": "ef269aa9",
-  "reviewed_repo_baseline": "29bddcb2",
+  "reviewed_repo_baseline": "089802a3",
   "method": "Reconcile every numbered section-15 recommendation, section-6 gaps and portfolio proposals with current owned-study records. Source assessments are allegations/recommendations, not independent reproductions performed by this incorporation. Preserve scope of current native results. Source file is owner-supplied and retained locally; no raw corpus, owner prompt or private access context published.",
   "studies": [
     {
       "id": "quorum-of-mirrors",
       "title": "Quorum of Mirrors",
       "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "PQ-04 completed: eight valid calls; all exact source facts, report assertions, classifications, decisions and quote gates passed. This repairs the targeted assertion/evidence confusion; it does not establish committee benefit.",
+      "current": "PQ-04 passed its eight-call targeted assertion/evidence repair. A broader R1 robustness plan is now prepared: five authored families, ten qualification calls and conditional forty evaluation calls; this is not committee-efficacy evidence.",
       "sample": "PQ-04: four authored paired roots, eight dependent calls; not eight independent replications.",
       "evidence": [
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-04-post.md",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/REVIEW-RESPONSE.md"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/REVIEW-RESPONSE.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/robustness-v1/PLAN.md"
       ],
-      "next": "Finish the PQ-04 repair. Build an offline multi-claim/explicit-uncertainty casebook before proposing a native successor. Choose a provenance-reader question or a genuine committee question explicitly; do not revive the old 544-call stage automatically."
+      "next": "Use the existing R1 plan rather than creating a duplicate multi-claim casebook. Its mode/exact-fact/quote gates address several review concerns; field transfer, authenticated ancestry and actual committee behavior remain separate questions."
     },
     {
       "id": "phantom-coast",
@@ -70,13 +71,14 @@
       "id": "immune-response",
       "title": "Immune Response",
       "path": "researchers/vishesh/notes/immune-response-v3/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "A7 completed: exact A6 schema and completed-branch variant each returned schema-invalid/unsupported HTTP400; the matched flat control succeeded. Scientific repair qualification remains on hold.",
+      "current": "A7 identified schema-specific rejection; the legal-action-ID repair is now implemented offline with 34 passing tests and six scripted scenario replays. Hosted acceptance and native repair qualification remain untested.",
       "sample": "A7: three distinct preassigned requests, two failures and one response; no simulator actions. A6: zero complete episodes.",
       "evidence": [
         "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a7-post.md",
-        "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a6-post.md"
+        "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a6-post.md",
+        "researchers/vishesh/notes/immune-response-v3/freshness-study/CONTROLLER-SCHEMA-REPAIR.md"
       ],
-      "next": "Build a lossless flat action-ID contract with exhaustive legal-action decoding and bounded native qualification. Do not infer that all anyOf schemas are unsupported or that transport success establishes repair competence."
+      "next": "Use the prepared flat action-ID contract for the smallest bounded native qualification under current diagnostic authority and admission; preserve advisor factual errors as a separate capability concern."
     },
     {
       "id": "influence-scenario",

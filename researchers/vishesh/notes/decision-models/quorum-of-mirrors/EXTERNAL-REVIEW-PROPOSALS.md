@@ -2,13 +2,13 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** PQ-04 completed: eight valid calls; all exact source facts, report assertions, classifications, decisions and quote gates passed. This repairs the targeted assertion/evidence confusion; it does not establish committee benefit.
+**Current evidence:** PQ-04 passed its eight-call targeted assertion/evidence repair. A broader R1 robustness plan is now prepared: five authored families, ten qualification calls and conditional forty evaluation calls; this is not committee-efficacy evidence.
 
 **Sample and confidence:** PQ-04: four authored paired roots, eight dependent calls; not eight independent replications. No confidence upgrade is made by this review. New proposed effects are **0/4, untested**. Existing cohort scores remain in the evidence registry.
 
-**Evidence:** [PQ-04-post.md](reviews/PQ-04-post.md) · [REVIEW-RESPONSE.md](REVIEW-RESPONSE.md)
+**Evidence:** [PQ-04-post.md](reviews/PQ-04-post.md) · [REVIEW-RESPONSE.md](REVIEW-RESPONSE.md) · [PLAN.md](packet-study/robustness-v1/PLAN.md)
 
-**Recommended next step:** Finish the PQ-04 repair. Build an offline multi-claim/explicit-uncertainty casebook before proposing a native successor. Choose a provenance-reader question or a genuine committee question explicitly; do not revive the old 544-call stage automatically.
+**Recommended next step:** Use the existing R1 plan rather than creating a duplicate multi-claim casebook. Its mode/exact-fact/quote gates address several review concerns; field transfer, authenticated ancestry and actual committee behavior remain separate questions.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 

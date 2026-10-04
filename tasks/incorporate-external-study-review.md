@@ -21,6 +21,6 @@ Reconcile the dated external HTML assessment with newer evidence and propose tra
 
 ## Done when
 
-- Every ranked recommendation has a disposition and concrete acceptance criterion.
-- Each study has an evidence-linked proposal and navigation from its entry point.
-- Shared recommendations identify appropriate adaptations and limits; checks pass and changes are pushed.
+- [x] Every ranked recommendation has a disposition and concrete acceptance criterion.
+- [x] Each study has an evidence-linked proposal and navigation from its entry point.
+- [x] Shared recommendations identify appropriate adaptations and limits; checks pass and changes are pushed.

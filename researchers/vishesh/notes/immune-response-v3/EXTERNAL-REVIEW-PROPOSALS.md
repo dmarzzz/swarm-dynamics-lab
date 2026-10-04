@@ -2,13 +2,13 @@
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
-**Current evidence:** A7 completed: exact A6 schema and completed-branch variant each returned schema-invalid/unsupported HTTP400; the matched flat control succeeded. Scientific repair qualification remains on hold.
+**Current evidence:** A7 identified schema-specific rejection; the legal-action-ID repair is now implemented offline with 34 passing tests and six scripted scenario replays. Hosted acceptance and native repair qualification remain untested.
 
 **Sample and confidence:** A7: three distinct preassigned requests, two failures and one response; no simulator actions. A6: zero complete episodes. New proposed effects remain 0/4; this review does not raise evidence confidence.
 
-**Evidence:** [a7-post.md](freshness-study/reviews/a7-post.md) · [a6-post.md](freshness-study/reviews/a6-post.md)
+**Evidence:** [a7-post.md](freshness-study/reviews/a7-post.md) · [a6-post.md](freshness-study/reviews/a6-post.md) · [CONTROLLER-SCHEMA-REPAIR.md](freshness-study/CONTROLLER-SCHEMA-REPAIR.md)
 
-**Recommended next step:** Build a lossless flat action-ID contract with exhaustive legal-action decoding and bounded native qualification. Do not infer that all anyOf schemas are unsupported or that transport success establishes repair competence.
+**Recommended next step:** Use the prepared flat action-ID contract for the smallest bounded native qualification under current diagnostic authority and admission; preserve advisor factual errors as a separate capability concern.
 
 These are proposed changes, not implementation receipts, preregistration or launch approval. Preserve existing attempts and their scoring. Apply corrections as separately versioned reanalyses. Current owning-task approvals remain scoped to their named plans; do not modify a running or approved packet from this note.
 
