@@ -1467,16 +1467,16 @@
       "registration_paths": [],
       "evidence_confidence": {
         "score": 0,
-        "claim": "Prospective tool-worker diversity comparison; no native v7 results yet.",
-        "rationale": "Offline checks establish instrument behavior only. Second-engine competence and efficacy await qualification."
+        "claim": "No qualified diversity result yet; bounded dependency repair is running.",
+        "rationale": "Initial qualification failed native imports. Preserved attempt and unchanged thresholds;24 offline tests pass after dependency repair."
       },
-      "sample_size_summary": "Planned:20 S0 and50 S1 receipts, five OCR workers and11 paired policies per receipt. Observed: none. Receipt is the paired unit.",
+      "sample_size_summary": "Initial S0 interrupted:10 fully recorded receipts,30 valid and20 invalid worker calls; partial start count unknown. Reserved20-receipt qualification running; S1 unrun.",
       "sources": [
         "researchers/vishesh/notes/antsy-diversity-v7/PLAN.md",
         "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md"
       ],
-      "status_at_assessment": "planned_unmeasured",
-      "source_commit": "3c1dbf14741e843c6ed336a2d7d6aa59717cd0ff",
+      "status_at_assessment": "qualification_repair_running",
+      "source_commit": "f0be4c82149c5c986d56cf19cd23afa4f8ef2646",
       "assessed_at": "2026-10-04",
       "assessor": "vishesh/codex-methods"
     },

@@ -48,3 +48,11 @@ Each attempt records exact immutable source/PLAN URL and hash, verified time, so
 ## Attempt history and closeout
 
 No native v7 measurements at implementation freeze. S0 pre-review: the second engine's actual total-extraction competence is unknown. Proceed only after G3; retain failures and apply qualification thresholds without relaxation. Record assigned/started/terminal/graded/analyzed counts, software defects separately from wrong answers, costs, deviations, readback and post-mortem after each attempt. Allocation release follows uploads and worker termination. S1 remains blocked until G4 passes.
+
+## 2026-10-04 qualification update
+
+S0-attempt-1 at source8112123d was interrupted for missing host `libGL.so.1`. Ten complete receipt records preserve30 valid Tesseract and20 invalid RapidOCR calls; exact total started is unknown due to an unjournaled partial receipt. See [post-mortem](reviews/S0-post.md). This did not qualify the experiment.
+
+The single bounded repair uses sourcef0be4c82, train40–59, unchanged policies/thresholds, installed official system dependencies, import-only preflight and immediate call journals. Host offline checks:24 passing. [Prospective repair assessment](reviews/S0-repair-pre.md). Public immutable GitHub PLAN was browser-verified at both source revisions, and the hub confirmed planned status. Local live-dashboard DNS resolution failed; no dashboard-view success is claimed. Runtime separately matched public plan bytes before measurement.
+
+S0-repair-1 is running. G3 passes for this named repair only; G4 remains pending. The original attempt is retained, not overwritten. System dependency repair and journal code are included in the qualified source fingerprint if this attempt passes. The [reusable diversity protocol](DIVERSITY-PROTOCOL.md) explains how these measurements extend to later LLM workflows without claiming an LLM result here.
