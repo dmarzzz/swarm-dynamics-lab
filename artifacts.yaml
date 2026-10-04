@@ -638,7 +638,6 @@ artifacts:
           - data/influence-native/native-Q2-01/case-2.json
           - data/influence-native/native-Q2-01/events-2.jsonl
         commit: 4fcf12c4ca2beba0e4f4ea50309f5053ff36d406-dirty
-requires: '1.2'
   - id: healing-helping-hands-outcomes
     category: content
     type: figure
@@ -678,4 +677,5 @@ requires: '1.2'
           - researchers/vishesh/notes/healing-helping-hands/visualization/render.py
           - data/healing-helping-hands/render-inputs.tar.gz
         commit: 3e242058d727b50d6bdcaedf3cd457a5554c6b2b-dirty
+requires: '1.2'
 requires: '1.2'
