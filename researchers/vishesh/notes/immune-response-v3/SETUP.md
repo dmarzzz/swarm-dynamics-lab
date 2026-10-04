@@ -108,3 +108,7 @@ Owner-requested failure diagnostics completed3/3fixed variants after a preserved
 ## A8 reviewed — interface passes, capability fails
 
 [Post-mortem](freshness-study/reviews/a8-post.md), [rubric](freshness-study/reviews/a8-quality.json), [reconciliation](freshness-study/reviews/a8-reconciliation.json).18/18responses,6/6episodes,12valid decoded actions,1/6capability gates. Bothcrash arms fail useful restart;3of4healthy episodes damaged. All18visibleanswers inspected,allstatesreplayed,9hubhashesverified. NativeGIF/frame/replay retained. Executioncompleted;capabilityfailed;scientificowningreviewcomplete. Original8cap:429calls/USD3.492196reserved,knownnewactualUSD0.030345. Workers/relay/tunnelclosed,claimreleased,noautonextattempt. Nextoffline evidence-grounding andadvisor-isolation design before owner-admitted nativecollection;largercomparison HOLD.
+
+## Post-A8 grounding and advice-isolation preparation
+
+[Prospective plan](freshness-study/GROUNDING-PLAN.md) and offline implementation now ready: visible-only compatibility table, stale-liveness unknown, unchanged legal actions,2×2grounding/advice conditions using exact retainedA8advice.39tests pass;12/12scripted reference trajectories pass and replay. No newnativecalls/spend/allocation. Proposed24calls/maxUSD0.457728additional withinoriginal8cap require approval of this changed design before nativeadmission. A8negative outcomes remain unchanged;this preparation does not demonstrate improved modelbehavior.

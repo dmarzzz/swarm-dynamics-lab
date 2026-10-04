@@ -1,0 +1,19 @@
+{
+  "backend": "scripted",
+  "assigned": 12,
+  "completed": 12,
+  "capability_passes": 12,
+  "model_calls": 0,
+  "native_admitted": false,
+  "advice_sha256": "9eb1b78ba27398eb6c77a08c22ae2ca2f730952d8b02a8f7cce5563103f5e737",
+  "contract": "legal-action-id-v1",
+  "grounding": "visible-evidence-v1",
+  "tests_passed": 39,
+  "files": {
+    "grounding.py": "5ee9fdfb3baf8b93d3d192c56a05887120ab53281780b27f3db7a39493e071cc",
+    "grounded_study.py": "baa831bac1cc4e1f4d656cdd2181aa7f07a339232f18f5d5cd9d472137dd22ac",
+    "grounding-advice.json": "9eb1b78ba27398eb6c77a08c22ae2ca2f730952d8b02a8f7cce5563103f5e737",
+    "test_grounding.py": "16d6833f1ed0e1d3e51922da8bcb549089a495b81031063bb3793ed462f17a6f"
+  },
+  "interpretation": "Offline instrument feasibility only; no measured model improvement."
+}

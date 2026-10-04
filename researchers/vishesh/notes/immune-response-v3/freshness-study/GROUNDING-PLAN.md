@@ -35,3 +35,7 @@ Inspect every answer against the exact visible source: factual catalog/liveness 
 ## Visualization mapping
 
 For each world, four synchronized lanes display service health over initial state and two ticks, with inspect, useful restart and harmful configuration markers. Put the raw catalog comparison, derived grounding table, advice text and actual action side by side on selection; absence of advice/table is explicit. Show12assigned/started/completed and a4condition×3world gate table. Native animation uses recorded states only; offline output is prominently scripted. No hidden state enters the actor through visualization. Historical A8 plots stay separate.
+
+## Offline implementation evidence
+
+[Validation](reviews/grounding-offline.json):39tests pass, all12scripted trajectories satisfy unchanged capability gates and replay. Tests cover each visible catalog relation, stale liveness, internally contradictory probes, factorial input isolation, unchanged ten-action space and request-size bounds. The prepared runner is offline-only and cannot call a provider or allocate a host. No native improvement is claimed. The next owner decision is whether to run the specified24-call diagnostic under the unchangedUSD8lineage.
