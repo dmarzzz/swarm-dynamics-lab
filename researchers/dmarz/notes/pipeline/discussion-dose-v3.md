@@ -1,24 +1,28 @@
 # discussion-dose-v3 (D2 diagnostic): decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/v3-d2-opus (sub-agent on halcyon), reviewer dmarz/fleet-monitor (same researcher), server sim-dmarz-3, claim `dmarz-discussion-v3-d2` to 15:33Z. Not a review. Last updated 2026-10-04T08:04Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/v3-d2-opus (sub-agent on halcyon), reviewer dmarz/fleet-monitor (same researcher), server sim-dmarz-3, claim `dmarz-discussion-v3-d2` to 15:33Z. Not a review. Last updated 2026-10-04T08:46Z.
 
 ## 1. Results so far
 
-- D1 (`v3-d1-a1`, 05:01Z): 120 calls, USD 0.75. Sonnet 3 of 6 on both clean gates, Haiku 2 of 6 and 1 of 6. Neither cleared 5 of 6. Both models copied every input value correctly and then chose infeasible options.
-- D2 (`v3-d2-a1`: canonical decisions plus single-option feasibility checks, 24 items x Haiku, Sonnet and Opus = 72 calls) is being built. As of 07:35Z the agent file says no model call until the pre-run review is on main and the reviewer says go. `benchmark-v3/d2/` is empty on main and no D2 run is on the hub.
+D2 `v3-d2-a1` **finished at 08:27:58Z: 72 of 72 valid**, USD 0.13 (results and post-run review on main, commit 0c2f38c6).
+
+| Model | Canonical decisions | Single-option feasibility checks |
+|---|---:|---:|
+| Opus 5.5 (effort high) | 6 of 6 | 18 of 18 |
+| Sonnet 4.6 | 5 of 6 | 16 of 18 |
+| Haiku 4.5 | 5 of 6 | 16 of 18 |
+
+Screens were 6 of 6 and 18 of 18, so Opus passed both and the other two failed both. Sonnet and Haiku miss the same two options, both sum-over-budget checks. On D1's original packaging the same worlds gave Haiku 2 of 6 and Sonnet 3 of 6, so the compact fact table removes most of their errors and leaves one arithmetic check. Six reused development worlds, one response per item.
 
 ## 2. Gate forecast
 
-Nothing is running. When it runs, 72 calls should take 5 to 10 minutes (D1-Opus is doing 72 Opus calls in about 8 minutes).
+Done. D2 qualifies no model. sim-dmarz-3 is free after close-out.
 
 ## 3. Next run
 
-D2 answers one question: is the failure in checking one option's feasibility (atomic) or in composing the checks into a choice (canonical)? Its plan already maps outcomes to proposals (D2-PLAN.md lines 119-124). D1-Opus (see [discussion-v3-d1-opus.md](discussion-v3-d1-opus.md)) reported first: it passed its fresh gate 12 of 12 at 08:00:54Z.
-
-- **D1-Opus passed, so:** the swarm line moves to Opus and the next run is a v3 swarm qualification on Opus. D2 then explains the Haiku and Sonnet failures and is no longer on the critical path. It is still cheap (72 calls); run it, but do not let the Opus swarm plan wait for it.
-- For Haiku and Sonnet, D2 still separates the two failure modes. Atomic fails: the task wording or constraint encoding is the problem for weaker models. Atomic passes and canonical fails: a response contract with a feasibility line per option is the thing to test if a cheaper model is wanted later.
-
-Opus request rules for the D2 Opus arm: [LESSONS.md](LESSONS.md) item 3. The D1-Opus adapter on main (commit 573c4103) is a working reference.
+- The swarm line is on Opus: discussion-v3-opus Q0 is running (see [discussion-v3-opus.md](discussion-v3-opus.md)). D2 does not gate it.
+- D2's own follow-up, if a cheaper model is wanted later: the residual failure is a sum compared with a budget. A response contract that writes the sum before the feasibility answer is the one change to test, on fresh worlds, for Sonnet and Haiku only. Low priority while Opus qualifies.
+- No successor is named for sim-dmarz-3.
 
 ## 4. Design notes for later runs
 
