@@ -22,7 +22,7 @@ Every answer was the bare JSON object and nothing else (8 to 12 output tokens). 
 | `qa-2801-e95-u15-table` | 0.95 | 0.15 | check | explore | first listed |
 | `qa-2804-e99-u05-table` | 0.99 | 0.05 | check | explore | second listed |
 
-The other 18 choices were optimal (prose: 4 of 6 explore cases and 6 of 6 check cases; table: 5 of 6 explore cases and 3 of 6 check cases). The same layouts were answered correctly in the other representation in 5 of the 6 missed fixtures (2809 was right in prose, 2800/2801/2804 right in prose, 2808 and 2810 right in the table), so no layout is unreadable.
+The other 18 choices were optimal (prose: 4 of 6 explore cases and 6 of 6 check cases; table: 5 of 6 explore cases and 3 of 6 check cases). Each of the 6 missed fixtures was answered correctly in the other representation of the same layout and case (2808 and 2810 in the table; 2809, 2800, 2801 and 2804 in prose), so no layout is unreadable.
 
 ## Classification
 

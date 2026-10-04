@@ -21,7 +21,7 @@ Every answer was a valid JSON object with `value` and `sources`. T, F are the hi
 | `qa10-r5505-contradiction-metadata` | contradiction, metadata | null | 73, cites one of the two records | Picked the first of two equal-authority records that disagree (70 and 61) instead of reporting the fact unresolved. Under raw inheritance of the same fixture it abstained correctly. |
 | `qa04-r5505-contradiction-content` | contradiction, content | null | 73, cites both records | Same, and cited a record that states the other value. |
 
-The other 19 answers equal the reference with valid citations, including all four reset fixtures (null), all four false-original fixtures (the false original is followed, as the policy requires), stale under metadata (null) and misquote under content (the record's value).
+The other 19 answers equal the reference with valid citations, including all six reset fixtures (null), the three false-original fixtures that carry notes (the false original is followed, as the policy requires), stale under metadata (null) and misquote under content (the record's value).
 
 ## Classification
 
