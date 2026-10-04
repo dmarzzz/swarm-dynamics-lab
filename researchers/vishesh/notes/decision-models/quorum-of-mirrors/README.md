@@ -87,3 +87,8 @@ From this directory, `python3 reassess_s0.py` regenerates the retrospective data
 ## External study-review proposals — 2026-10-04
 
 [Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.
+
+
+## Proposed realistic60-agent successor
+
+[Concrete R60 plan](realistic-sol60/PLAN.md), [case-quality audit](realistic-sol60/CASE-AUDIT.md), [cost envelope](realistic-sol60/budget-envelope.json). Independently published human labels replace self-generated verdicts; one/six/sixty-agent controls separate scale from peer influence. Prepared, not launched; no new native evidence.

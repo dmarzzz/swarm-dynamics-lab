@@ -1,0 +1,263 @@
+{
+  "status": "development_candidates_not_run_ready",
+  "source_repository": "https://github.com/MichSchli/AVeriTeC",
+  "source_revision": "7c62d1ec8df3fb560d6efe2b85fa191135636f81",
+  "source_split": "train",
+  "source_sha256": "ae5eda7c42ddf1695ef185a7ba1bc716928f5adf57103e4f78aae5f9afe00f9c",
+  "license": "CC-BY-NC-4.0",
+  "attribution": "Michael Schlichtkrull, Zhijiang Guo, Andreas Vlachos (2023), AVeriTeC",
+  "rows_examined": 3068,
+  "eligible_by_label": {
+    "Supported": 103,
+    "Refuted": 304,
+    "Not Enough Evidence": 15,
+    "Conflicting Evidence/Cherrypicking": 53
+  },
+  "excluded_counts": {
+    "fewer_than_three_evidence_records": 488,
+    "non_text_or_unspecified_medium": 1274,
+    "fewer_than_two_questions": 753,
+    "duplicate_claim_or_article": 75,
+    "fact_check_article_in_evidence": 3
+  },
+  "selected_count": 24,
+  "selected": [
+    {
+      "source_index": 3058,
+      "case_id": "av-6a6408e6702b",
+      "label": "Supported",
+      "questions": 2,
+      "evidence_records": 4,
+      "unique_urls": 3,
+      "actor_sha256": "94ca2adf5af0e5bd5a3cfe6b8b346e11279bc9079e2b588dcf60e1923a6cff46"
+    },
+    {
+      "source_index": 1359,
+      "case_id": "av-80b6b4d27012",
+      "label": "Supported",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 3,
+      "actor_sha256": "96b62c74324c6f95c8fba803891692f592e83f25ef3ce5708ecda448fdba4c19"
+    },
+    {
+      "source_index": 814,
+      "case_id": "av-76ba652cbd2e",
+      "label": "Supported",
+      "questions": 2,
+      "evidence_records": 3,
+      "unique_urls": 3,
+      "actor_sha256": "5e52a2d4605312a1bf723111f0e50aeaae0e9c60d1f11ff250d8b79139636e7f"
+    },
+    {
+      "source_index": 2809,
+      "case_id": "av-2d87bf8c9d80",
+      "label": "Supported",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 1,
+      "actor_sha256": "6ac2e0c479098a660af8bf1fb37c6932b14cfcdd0a19a7b448ab183ab0d64998"
+    },
+    {
+      "source_index": 592,
+      "case_id": "av-793733573a1d",
+      "label": "Supported",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 2,
+      "actor_sha256": "0644215eb3de432673ce39468f5208a42711e4aa8062178e73aa27f45b6f1bfb"
+    },
+    {
+      "source_index": 477,
+      "case_id": "av-6e82b8197ce2",
+      "label": "Supported",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 4,
+      "actor_sha256": "924c0e4ff4a4b73196333d640f24c84f53835260769886dfa5945edc7b270a8f"
+    },
+    {
+      "source_index": 896,
+      "case_id": "av-62f6d46c48c7",
+      "label": "Refuted",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 1,
+      "actor_sha256": "b3726e69b85de1f2e5074c1a37cfc73e6a9935c8a958e09934ffc34d0553e1dd"
+    },
+    {
+      "source_index": 387,
+      "case_id": "av-25dac95b8f59",
+      "label": "Refuted",
+      "questions": 5,
+      "evidence_records": 6,
+      "unique_urls": 3,
+      "actor_sha256": "b7ff70cf5c98d25ddc3d0f1a193fffb3e6a93c931d100c4ceddbcdbfbe7b5f51"
+    },
+    {
+      "source_index": 1932,
+      "case_id": "av-01a0123885eb",
+      "label": "Refuted",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 3,
+      "actor_sha256": "a6da1d2a33d80bd4b03226b110e8b8c1477874c24d8f9d2626ffcc2f5b726f00"
+    },
+    {
+      "source_index": 1479,
+      "case_id": "av-8c40a6d264e5",
+      "label": "Refuted",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 2,
+      "actor_sha256": "0b3af19d8e71746c87fffb0f47e4ba713e04cc1fcd2dfb8e0bd9f93d11536b05"
+    },
+    {
+      "source_index": 1180,
+      "case_id": "av-2c58b3a68ac9",
+      "label": "Refuted",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 4,
+      "actor_sha256": "29a7176a4ae1a10558cd7329fb40e467dce40016d714a2dca5e71242dcc08337"
+    },
+    {
+      "source_index": 1758,
+      "case_id": "av-3404e567432e",
+      "label": "Refuted",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 3,
+      "actor_sha256": "d999aa63c871a4437f53b9fdc330f0e1e96c916bafe2e2d3d934c55a29740d96"
+    },
+    {
+      "source_index": 2885,
+      "case_id": "av-10817df0e157",
+      "label": "Not Enough Evidence",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 2,
+      "actor_sha256": "c8f2dcf07b024771ee993f901eb106f016a312db61036c69052ad9d18ba7745f"
+    },
+    {
+      "source_index": 2944,
+      "case_id": "av-2f99e0fa3453",
+      "label": "Not Enough Evidence",
+      "questions": 2,
+      "evidence_records": 3,
+      "unique_urls": 3,
+      "actor_sha256": "36ddc9fde4c4e78e186ec40ec742198ced67513bbc9dbf65eb2c5f0487cbefb3"
+    },
+    {
+      "source_index": 2784,
+      "case_id": "av-4d51741118d9",
+      "label": "Not Enough Evidence",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 1,
+      "actor_sha256": "a424c162337930962f398b4f9e64ccda23f8b80168182aa4b4cff442a99526cd"
+    },
+    {
+      "source_index": 714,
+      "case_id": "av-c66bbe9d118f",
+      "label": "Not Enough Evidence",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 4,
+      "actor_sha256": "3fe3a715a88d57b7707ffe3820840a292d8bd5bf4814f2d9e43f2aaa9b56983a"
+    },
+    {
+      "source_index": 1244,
+      "case_id": "av-aedec0d0ca66",
+      "label": "Not Enough Evidence",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 2,
+      "actor_sha256": "09430376f4fdfd289a622f810b57936a2e953ebbd7b106e79f4422872e35ea31"
+    },
+    {
+      "source_index": 438,
+      "case_id": "av-18d37c950a3e",
+      "label": "Not Enough Evidence",
+      "questions": 5,
+      "evidence_records": 5,
+      "unique_urls": 4,
+      "actor_sha256": "7530ed4653dee00d34e7316b651324c55765fc8ab2d68cb8fc01f82d82b0db59"
+    },
+    {
+      "source_index": 1955,
+      "case_id": "av-b53a7292b38e",
+      "label": "Conflicting Evidence/Cherrypicking",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 3,
+      "actor_sha256": "fe32e817fea5615eb86465bbb5c07379de0efa10bbd7f8b33cf0f933d2b68b6a"
+    },
+    {
+      "source_index": 1626,
+      "case_id": "av-22fc91dc876c",
+      "label": "Conflicting Evidence/Cherrypicking",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 3,
+      "actor_sha256": "933eb9e6625509af5c69dc7e8a1824040dc2c74849d751280a7b66604579f182"
+    },
+    {
+      "source_index": 3051,
+      "case_id": "av-9532f197bbc8",
+      "label": "Conflicting Evidence/Cherrypicking",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 3,
+      "actor_sha256": "4ff3143190259ae55ed02f30c17e24575172ce44536654a3003fbe2ba761e057"
+    },
+    {
+      "source_index": 1209,
+      "case_id": "av-fd68fcf88c30",
+      "label": "Conflicting Evidence/Cherrypicking",
+      "questions": 3,
+      "evidence_records": 3,
+      "unique_urls": 2,
+      "actor_sha256": "8fb079997b53517b7a54571d6574ccc229b5c00cfdecc278d0cbecef20a64668"
+    },
+    {
+      "source_index": 19,
+      "case_id": "av-9400f1b21cb5",
+      "label": "Conflicting Evidence/Cherrypicking",
+      "questions": 3,
+      "evidence_records": 4,
+      "unique_urls": 4,
+      "actor_sha256": "99d5fadbe031365a00d8c73cc27e4a6c2fbfbb612dca779800242c16072b7f13"
+    },
+    {
+      "source_index": 2161,
+      "case_id": "av-f2bdda2192b2",
+      "label": "Conflicting Evidence/Cherrypicking",
+      "questions": 4,
+      "evidence_records": 4,
+      "unique_urls": 3,
+      "actor_sha256": "961ec5e39caaf0b9b1999e944a425ff697a45099a299e43aff67775654123941"
+    }
+  ],
+  "actor_fields": [
+    "case_id",
+    "claim",
+    "claim_date",
+    "evidence"
+  ],
+  "gold_fields_removed": [
+    "label",
+    "justification",
+    "fact_checking_article",
+    "claim_types",
+    "fact_checking_strategies",
+    "required_reannotation"
+  ],
+  "limitations": [
+    "QA evidence is annotation-guided and may reveal verdicts semantically.",
+    "URL identity does not establish independent acquisition.",
+    "Manual answerability, leakage and event-group audit pending.",
+    "Development source selection inspected; no untouched qualification/evaluation claimed."
+  ],
+  "native_calls": 0
+}

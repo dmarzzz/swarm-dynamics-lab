@@ -1,0 +1,15 @@
+{
+  "qualification_calls": 42,
+  "pilot_calls": 1552,
+  "max_calls": 1594,
+  "input_limit": 4000,
+  "output_including_reasoning_limit": 2048,
+  "per_call_usd": "0.028480",
+  "new_api_max_usd": "45.397120",
+  "prior_api_exposure_usd": "1.61753496",
+  "historical_infra_upper_bound_usd": "1",
+  "new_infra_max_usd": "0.50",
+  "cumulative_upper_bound_usd": "48.51465496",
+  "ceiling_usd": "50",
+  "native_calls": 0
+}

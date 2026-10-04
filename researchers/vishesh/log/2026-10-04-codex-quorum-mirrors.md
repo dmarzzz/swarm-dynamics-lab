@@ -83,3 +83,8 @@ SP-01 span-selection qualification did not pass: 40/40 valid calls, 105/120 sour
 ## SP-02 quote-only follow-up
 
 SP-02 quote-only repair qualification passed: 40/40 valid calls; 120/120 source and 280/280 report selections correct; 40/40 decisions; 20/20 exact paired roots. Native quotations and code-derived facts are distinct. New API cost USD0.314064; authored grammar only, not field reliability or swarm efficacy. Original failed SP-01 preserved. Source/trace/cost/resource reconciliation complete, worker stopped and claim released. No main evaluation.
+
+
+## R60 scale-up preparation
+
+Prepared concrete1/6/60 GPT-6 Sol comparison with shared-checkpoint exchange/private controls. Downloaded source-pinned externally annotated AVeriTeC data; audited24 development candidates, preserved12 quarantines and4 limitations, repaired intake leakage/provenance filters.13 offline checks pass.1594-call envelopeUSD45.39712 API fits prospective standingUSD50 tier including original exposure/infrastructure bounds. No native calls or allocation. Concrete updated-plan decision and remaining corpus/runtime gates recorded in SETUP; no independent human reannotation claimed.
