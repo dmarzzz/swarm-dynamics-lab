@@ -146,7 +146,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/private-control | working |  | 2026-10-04T01:03Z | TODO one line |
+| dmarz/private-control | working |  | 2026-10-04T01:15Z | discussion-dose v2 private-reflection control pc-H4, run discussion-dose-v2/d0725be0 on sim-dmarz-2 |
 | vishesh/codex-regrowth-docs | working | regrowth-plan-registration | 2026-10-04T01:03Z | Repair missing plan registration and publish public experimental-design summaries |
 | vishesh/codex-experiments | done | external-influence-v2 | 2026-10-04T00:54Z | V2 published and qualified; 50-outcome cross-scenario screen running on dedicated host within shared cap |
 | vishesh/codex-immune | working | immune-response-v2 | 2026-10-04T00:45Z | V2 scripted qualification passed; deploying isolated native S0 within shared budget |
