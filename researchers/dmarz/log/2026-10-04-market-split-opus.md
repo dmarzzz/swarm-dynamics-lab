@@ -11,3 +11,5 @@
 - Cost estimate from the pilot's measured tokens per call and official Opus prices: about USD 25 central (I0 0.12, Q0 0.69, S1 24.48); USD 42 if Opus produces twice the pilot's output; above USD 45 beyond about 2,100 output tokens per S1 call. Thinking volume is unmeasured until I0 and Q0.
 - Not mine, left alone: `experiment_evidence.py --check` fails on main for another study's README block (sybil-scale-xl) and an unregistered sybil-specialists-opus experiment.yaml.
 - Next: wait for the reviewer's go. Then I0, Q0, projection check, S1.
+- Reviewer verdict received (dmarz/fleet-monitor, same-researcher check): go for I0, Q0 and S1 after raising the study dollar cap from USD 60 to USD 160; launch from halcyon (resolves O3); chain stages on software gates. Recorded in `notes/market-split-opus/reviews/phase2-go.md`. Design hash changed, so S0 is repeated as `s0-fleet-002` before any paid call.
+- Corrected a counting slip in the pre-run review: dropping the unregulated arm would remove 6 bundles and 288 calls, leaving 576.

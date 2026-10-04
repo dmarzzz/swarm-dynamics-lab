@@ -115,7 +115,7 @@ class Checks(unittest.TestCase):
             self.assertEqual(self.ledger.transact()['attempted_calls'],3)
     def test_frozen_budget_and_fresh_tasks(self):
         d=common.design();b=d['budget']
-        self.assertEqual((d['model'],b['study_usd_cap'],b['max_attempted_calls'],b['workers'],b['retries']),('claude-opus-5-5',60,950,1,0))
+        self.assertEqual((d['model'],b['study_usd_cap'],b['max_attempted_calls'],b['workers'],b['retries']),('claude-opus-5-5',160,950,1,0))
         self.assertEqual((b['input_usd_per_million'],b['output_usd_per_million'],b['max_output_tokens'],b['request_timeout_seconds']),(4,20,8192,180))
         ids=[t for s in d['stages'].values() for t in s['tasks']]+[p['task'] for p in d['interface_probes']]
         self.assertEqual(sorted(set(ids)),[100,101,102,103,104,105,106,107,110,111,112,113,114,115])

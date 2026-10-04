@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split-opus
 tool: claude-code
-state: blocked
+state: working
 task: null
-doing: market-split-opus Phase 1 done (plan, 18/18 offline tests on sim-test-01, scripted S0 6/6, pre-run review for I0/Q0/S1); waiting for the reviewer's go, no model call made
-updated: 2026-10-04T07:55Z
+doing: market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates
+updated: 2026-10-04T08:10Z
 ---
 
 ## Notes

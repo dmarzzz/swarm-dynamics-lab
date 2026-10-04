@@ -65,8 +65,9 @@ qualification:
   positive_profit_all: true
 budget:
   authorization: 'researchers/dmarz/README.md shared USD 500; this study is capped at
-    USD 60 and 950 attempted calls by the reviewer brief of 2026-10-04'
-  study_usd_cap: 60
+    USD 160 and 950 attempted calls. Amended 2026-10-04 before any model call: the
+    reviewer dmarz/fleet-monitor raised the dollar cap from USD 60 (reviews/phase2-go.md)'
+  study_usd_cap: 160
   max_attempted_calls: 950
   max_output_tokens: 8192
   max_input_bytes: 20000

@@ -1,6 +1,6 @@
 # Experiment setup record: market-split-opus v1
 
-Status: Phase 1 complete, paid stages not started. This record is not launch authorization for a paid stage. It follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [the operations guide](../../../../tooling/agent-experiments/OPERATIONS.md). Written before implementation was run on the server and updated as gates produce evidence.
+Status: Phase 1 complete; paid stages admitted by the reviewer on 2026-10-04 and chained on their software gates. This record is not launch authorization for a paid stage. It follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [the operations guide](../../../../tooling/agent-experiments/OPERATIONS.md). Written before implementation was run on the server and updated as gates produce evidence.
 
 ## Ownership and question
 
@@ -19,7 +19,8 @@ Status: Phase 1 complete, paid stages not started. This record is not launch aut
 | G1 Plan before implementation | pass | [README](README.md), [preregistration.md](preregistration.md), `design.yaml` committed before any run on the server | None |
 | G2 Instrument and offline checks | pass | 18/18 offline tests on `sim-test-01` in the pinned runtime and 18/18 locally, 2026-10-04 07:47, dmarz/market-split-opus. Real provider path not exercised | First real check is I0 |
 | G3 Admission, s0-fleet-001 | pass | [s0-fleet-001-pre](reviews/s0-fleet-001-pre.md); claim merged 07:46; public plan at `8c27b690` checked by the launcher (bytes equal, sections present) before `run_start` | None |
-| G3 Admission, i0-001 / q0-001 / s1-001 | blocked | [phase2-pre](reviews/phase2-pre.md) and the three per-attempt files are committed; source deployed at the commit that contains them | Reviewer's explicit go; reviewer's decision on issue O3 |
+| G3 Admission, s0-fleet-002 | pending | [s0-fleet-002-pre](reviews/s0-fleet-002-pre.md): repeat at the amended design hash | Run |
+| G3 Admission, i0-001 / q0-001 / s1-001 | pass, subject to each software gate | [phase2-pre](reviews/phase2-pre.md), per-attempt files, and the reviewer's go in [phase2-go](reviews/phase2-go.md) (same-researcher check, not independent review). Issue O3 resolved there | Chain I0, Q0, S1 |
 | G4 Qualification | pending | I0 then Q0, unchanged thresholds | After the go |
 | G5 Reconciliation, s0-fleet-001 | pass | [s0-fleet-001-post](reviews/s0-fleet-001-post.md): 6 assigned, 6 done, 12 valid episodes, 42 artifacts hash-verified, 0 calls | None |
 | G5 Closeout of the study | pending | | After the last stage |
@@ -47,14 +48,15 @@ Status: Phase 1 complete, paid stages not started. This record is not launch aut
 | Stop | `swarm-report pause -e market-split-opus`, or create `results/<attempt>-STOP` on the server | none yet |
 
 - Credentials: aliases `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID` from the encrypted agentops store, passed over ssh stdin into the worker's environment only.
-- Budget: 950 attempted calls and USD 60 for the study, enforced by the ledger; one worker; no retries.
+- Budget: 950 attempted calls and USD 160 for the study (raised from USD 60 by the reviewer before any model call), enforced by the ledger; one worker; no retries.
 
 ## Attempt and repair history
 
 | Attempt / parent | Stage | Pre-review | Assigned / started / terminal | Post-mortem |
 |---|---|---|---|---|
 | s0-fleet-001 / none | S0 scripted | [pre](reviews/s0-fleet-001-pre.md) | 6 / 6 / 6 done; 12 episodes valid | [post](reviews/s0-fleet-001-post.md): advance to paid-stage review |
-| i0-001 / s0-fleet-001 | I0 | [pre](reviews/i0-001-pre.md), [phase2-pre](reviews/phase2-pre.md) | not started | |
+| s0-fleet-002 / s0-fleet-001 | S0 scripted, amended design | [pre](reviews/s0-fleet-002-pre.md) | pending | |
+| i0-001 / s0-fleet-002 | I0 | [pre](reviews/i0-001-pre.md), [phase2-pre](reviews/phase2-pre.md) | not started | |
 | q0-001 / i0-001 | Q0 | [pre](reviews/q0-001-pre.md) | not started | |
 | s1-001 / q0-001 | S1 | [pre](reviews/s1-001-pre.md) | not started | |
 
