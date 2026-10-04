@@ -8285,6 +8285,35 @@
    "sha256": "ac13714b53235666946f092873910ef679cfed231ebc9ab466b88ab804b47907",
    "size_bytes": 129283
   },
+  "right-dissenter-rd6-qualification@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791143953,
+     "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e",
+     "size": 15752,
+     "uri": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json"
+    },
+    {
+     "mtime": 1791144190,
+     "sha256": "c237b3b3f407040d164d47db8a1baec434cb42c746ea03b0898cdee6e42cef50",
+     "size": 338,
+     "uri": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/figure-data.json"
+    },
+    {
+     "mtime": 1791144182,
+     "sha256": "aad5e5820c3684a6c0a38188feb2a7cb3a8afc1d1dbd3bf117cd6c84f3e649ba",
+     "size": 3195,
+     "uri": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/plot.py"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791144190,
+   "path": "artifacts/right-dissenter-rd6-qualification/right-dissenter-rd6-qualification-v1.png",
+   "prompt_sha256": "25d8809f99538d797cbb614bd0ac810c805f8a41128acb42123d261819bcc37f",
+   "sha256": "947099de5b6743a4ea0badfd13a714402e966c883216d44686446e010bafca16",
+   "size_bytes": 156759
+  },
   "right-dissenter-s1@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

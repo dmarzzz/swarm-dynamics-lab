@@ -1,0 +1,9 @@
+{
+  "attempt": "rd6-q0-a2",
+  "execution": "worker_returned_success",
+  "remote_worker_stop": "unverified",
+  "phase": "completed",
+  "worker_exit_code": 0,
+  "local_process_groups": "cleanup_attempted",
+  "next": "Verify remote worker and relay stopped, collect/reconcile artifacts, finalize and complete scientific post-mortem before release."
+}

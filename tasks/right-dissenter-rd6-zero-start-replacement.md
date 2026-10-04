@@ -23,6 +23,10 @@ Execute the directly owner-approved explicit zero-dispatch Q0-A1 to Q0-A2 replac
 
 ## Done when
 
-- [ ] Record bound direct owner decision and fresh public/source/runtime/account/allocation admission.
-- [ ] Run Q0-A2 once; D0 only after18/18 valid correct native responses and owning postreview.
-- [ ] Preserve actual outcomes, complete operational and scientific closeout, reconcile cost and release allocation.
+- [x] Record bound direct owner decision and fresh public/source/runtime/account/allocation admission.
+- [x] Run Q0-A2 once; D0 only after18/18 valid correct native responses and owning postreview.
+- [x] Preserve actual outcomes, complete operational and scientific closeout, reconcile cost and release allocation.
+
+## Outcome
+
+Q0-A2 completed 18/18 valid native responses but failed qualification at 15/18: clean 12/12, current conflicts 3/3, expired evidence 0/3. D0 was correctly left unrun under its 18/18 gate. All traces and charges reconcile; operational and eleven-dimension scientific closeouts are complete, workers/relay stopped and allocation released. The original 506-call ledger and cumulative split cap remain. See researchers/vishesh/notes/dissent/reopening/REPORT.md. No automatic successor.

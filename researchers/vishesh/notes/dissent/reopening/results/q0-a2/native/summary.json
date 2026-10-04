@@ -1,0 +1,41 @@
+{
+  "stage": "Q0",
+  "assigned": 18,
+  "provided_outcomes": 18,
+  "statuses": {
+    "completed": 18
+  },
+  "by_condition": {
+    "C00": {
+      "assigned": 12,
+      "valid": 12,
+      "correct": 12,
+      "wrong_PROCEED": 0,
+      "needless_HOLD": 0,
+      "unsupported_HOLD": 0,
+      "unexpected_DEFER": 0,
+      "actions": {
+        "PROCEED": 6,
+        "HOLD": 6,
+        "DEFER": 0
+      }
+    },
+    "C11": {
+      "assigned": 6,
+      "valid": 6,
+      "correct": 3,
+      "wrong_PROCEED": 3,
+      "needless_HOLD": 0,
+      "unsupported_HOLD": 0,
+      "unexpected_DEFER": 0,
+      "actions": {
+        "PROCEED": 3,
+        "HOLD": 0,
+        "DEFER": 3
+      }
+    }
+  },
+  "native_evidence": false,
+  "note": "Scorer does not establish native provenance; caller must bind provider evidence separately.",
+  "qualification_passed": false
+}

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="532.8pt" viewBox="0 0 864 532.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-04T13:03:10.293150</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 532.8 
+L 864 532.8 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f5f7fa"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 233.28 303.696 
+L 743.04 303.696 
+L 743.04 149.184 
+L 233.28 149.184 
+z
+" style="fill: #f5f7fa"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 233.28 303.696 
+L 233.28 149.184 
+" clip-path="url(#p460d582dfb)" style="fill: none; stroke: #dce3e9; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #4b6272" x="233.28" y="316.313188" transform="rotate(-0 233.28 316.313188)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 469.28 303.696 
+L 469.28 149.184 
+" clip-path="url(#p460d582dfb)" style="fill: none; stroke: #dce3e9; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #4b6272" x="469.28" y="316.313188" transform="rotate(-0 469.28 316.313188)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 705.28 303.696 
+L 705.28 149.184 
+" clip-path="url(#p460d582dfb)" style="fill: none; stroke: #dce3e9; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #4b6272" x="705.28" y="316.313188" transform="rotate(-0 705.28 316.313188)">100%</text>
+     </g>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #4b6272" x="488.16" y="337.314125" transform="rotate(-0 488.16 337.314125)">Correct decisions within each control group</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7"/>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="220.28" y="182.714062" transform="rotate(-0 220.28 182.714062)">Clear current evidence</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8"/>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="220.28" y="230.999062" transform="rotate(-0 220.28 230.999062)">Conflicting current evidence</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9"/>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="220.28" y="279.284063" transform="rotate(-0 220.28 279.284063)">Expired evidence</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 233.28 190.22625 
+L 705.28 190.22625 
+L 705.28 166.08375 
+L 233.28 166.08375 
+z
+" clip-path="url(#p460d582dfb)" style="fill: #e1e7ed"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 233.28 190.22625 
+L 705.28 190.22625 
+L 705.28 166.08375 
+L 233.28 166.08375 
+z
+" clip-path="url(#p460d582dfb)" style="fill: #197565"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 233.28 238.51125 
+L 705.28 238.51125 
+L 705.28 214.36875 
+L 233.28 214.36875 
+z
+" clip-path="url(#p460d582dfb)" style="fill: #e1e7ed"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 233.28 238.51125 
+L 705.28 238.51125 
+L 705.28 214.36875 
+L 233.28 214.36875 
+z
+" clip-path="url(#p460d582dfb)" style="fill: #197565"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 233.28 286.79625 
+L 705.28 286.79625 
+L 705.28 262.65375 
+L 233.28 262.65375 
+z
+" clip-path="url(#p460d582dfb)" style="fill: #e1e7ed"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 233.28 286.79625 
+L 233.28 286.79625 
+L 233.28 262.65375 
+L 233.28 262.65375 
+z
+" clip-path="url(#p460d582dfb)" style="fill: #197565"/>
+   </g>
+   <g id="line2d_10">
+    <defs>
+     <path id="m158c725e98" d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" style="stroke: #c55435"/>
+    </defs>
+    <g>
+     <use xlink:href="#m158c725e98" x="233.28" y="274.725" style="fill: #c55435; stroke: #c55435"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="721.8" y="182.31125" transform="rotate(-0 721.8 182.31125)">12/12</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="721.8" y="230.59625" transform="rotate(-0 721.8 230.59625)">3/3</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="721.8" y="278.88125" transform="rotate(-0 721.8 278.88125)">0/3</text>
+   </g>
+  </g>
+  <g id="patch_9">
+   <path d="M 60.48 458.208 
+L 292.032 458.208 
+Q 300.672 458.208 300.672 452.88 
+L 300.672 390.0096 
+Q 300.672 384.6816 292.032 384.6816 
+L 60.48 384.6816 
+Q 51.84 384.6816 51.84 390.0096 
+L 51.84 452.88 
+Q 51.84 458.208 60.48 458.208 
+z
+" style="fill: #fff0e9"/>
+  </g>
+  <g id="patch_10">
+   <path d="M 315.36 458.208 
+L 546.912 458.208 
+Q 555.552 458.208 555.552 452.88 
+L 555.552 390.0096 
+Q 555.552 384.6816 546.912 384.6816 
+L 315.36 384.6816 
+Q 306.72 384.6816 306.72 390.0096 
+L 306.72 452.88 
+Q 306.72 458.208 315.36 458.208 
+z
+" style="fill: #fff0e9"/>
+  </g>
+  <g id="patch_11">
+   <path d="M 570.24 458.208 
+L 801.792 458.208 
+Q 810.432 458.208 810.432 452.88 
+L 810.432 390.0096 
+Q 810.432 384.6816 801.792 384.6816 
+L 570.24 384.6816 
+Q 561.6 384.6816 561.6 390.0096 
+L 561.6 452.88 
+Q 561.6 458.208 570.24 458.208 
+z
+" style="fill: #fff0e9"/>
+  </g>
+  <g id="text_11">
+   <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="60.48" y="42.624" transform="rotate(-0 60.48 42.624)">Expired evidence passed through the decision gate</text>
+  </g>
+  <g id="text_12">
+   <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b6272" x="60.48" y="71.3952" transform="rotate(-0 60.48 71.3952)">RD6 Q0-A2  |  18 valid native responses  |  15 correct  |  Qualification failed</text>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="60.48" y="367.632" transform="rotate(-0 60.48 367.632)">The same observable failure in three domains</text>
+  </g>
+  <g id="text_14">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #c55435" x="72.576" y="407.592" transform="rotate(-0 72.576 407.592)">PROCESS</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="72.576" y="427.3056" transform="rotate(-0 72.576 427.3056)">Reading 23; allowed 10–30</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="72.576" y="445.9536" transform="rotate(-0 72.576 445.9536)">Age 9 &gt; TTL 7: chose PROCEED</text>
+  </g>
+  <g id="text_17">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #c55435" x="327.456" y="407.592" transform="rotate(-0 327.456 407.592)">BRIDGE</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="327.456" y="427.3056" transform="rotate(-0 327.456 427.3056)">Capacity 26; required 20</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="327.456" y="445.9536" transform="rotate(-0 327.456 445.9536)">Age 9 &gt; TTL 7: chose PROCEED</text>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #c55435" x="582.336" y="407.592" transform="rotate(-0 582.336 407.592)">REQUIRED TEST</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="582.336" y="427.3056" transform="rotate(-0 582.336 427.3056)">Compatibility test passed</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152938" x="582.336" y="445.9536" transform="rotate(-0 582.336 445.9536)">Age 9 &gt; TTL 7: chose PROCEED</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b6272" x="60.48" y="485.3808" transform="rotate(-0 60.48 485.3808)">Required action for expired evidence: DEFER. All three current-conflict controls correctly deferred.</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b6272" x="60.48" y="507.7584" transform="rotate(-0 60.48 507.7584)">Authored development controls; no field-rate estimate or causal context ablation. D0 was not run.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p460d582dfb">
+   <rect x="233.28" y="149.184" width="509.76" height="154.512"/>
+  </clipPath>
+ </defs>
+</svg>

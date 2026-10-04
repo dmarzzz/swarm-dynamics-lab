@@ -1,0 +1,12 @@
+{
+  "schema": "rd6-bundle-v1",
+  "files": {
+    "events.jsonl": "2127b68fe9af232f37db3064aeaf37ddd6966cc28cdc43ddc234945417d2c19b",
+    "execution.json": "e2a84aca31593552261b7da343d025930ae8a39a5ce1417b983bf48e8a3652e8",
+    "outcomes.json": "c02f7a77e5f7f939fe38fa75e9919d285b015400997453ed1b676568427192e0",
+    "packet.json": "e915b617d6f64a6c911cff0fff2bb617b10e06cfd4718d67a21c87e4c86d83cf",
+    "replay.html": "c087a71d7ef8a1d2eea159605a6cda3190def00155354276ddad7acb42b47176",
+    "summary.json": "5cf492f18d905f3244368ea745e3c75544bd6999229c18132596a2edb258485e"
+  },
+  "sha256": "7e8c3df8fa7f0b5c6d2b3e6fc91237e5ce62b30fc35b3a59de1d65fa86777f2b"
+}

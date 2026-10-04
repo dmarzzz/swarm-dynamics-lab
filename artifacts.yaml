@@ -3754,4 +3754,22 @@ artifacts:
           - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json
           - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json
         commit: ab7580b56f38e96ed04f9f4ff789d2a29e2d7ef9-dirty
+  - id: right-dissenter-rd6-qualification
+    category: content
+    type: figure
+    title: Jev qualification by evidence eligibility
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/right-dissenter-rd6-qualification/right-dissenter-rd6-qualification-v1.png
+        built_at: '2026-10-04T20:05:38Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: sha256:25d8809f99538d797cbb614bd0ac810c805f8a41128acb42123d261819bcc37f
+        ingredients:
+          - researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json
+          - researchers/vishesh/notes/dissent/reopening/results/q0-a2/figure-data.json
+          - researchers/vishesh/notes/dissent/reopening/results/q0-a2/plot.py
+        commit: ab7a92c944f882e85c70abd28feea87602bbd324-dirty
 requires: '1.2'

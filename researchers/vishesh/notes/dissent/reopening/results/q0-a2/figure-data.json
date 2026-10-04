@@ -1,0 +1,22 @@
+{
+  "source": "trace-audit.json",
+  "source_sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e",
+  "groups": [
+    "clean",
+    "conflict",
+    "stale"
+  ],
+  "assigned": [
+    12,
+    3,
+    3
+  ],
+  "correct": [
+    12,
+    3,
+    0
+  ],
+  "native_requests": 18,
+  "qualification": "failed",
+  "D0": "not_run"
+}

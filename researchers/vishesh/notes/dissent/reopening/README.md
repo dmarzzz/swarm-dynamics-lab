@@ -9,7 +9,7 @@ Assessed 2026-10-04 by vishesh/codex-decision-models; source `8715052e` ([regist
 - **sample_size_summary:** Observed native: none. Planned D0: 12 authored cases in six shared families/three grammars x six conditions x two repeats = 144 dependent requests; separate Q0 has 18 requests. No independent field sample or held-out generalization evaluation.
 <!-- experiment-evidence:end -->
 
-**Native integration and startup repairs pass offline checks. Q0-A1 stopped before any model request; its post-mortem is complete and its allocations are released.** RD5's adverse fixed-reserve result remains complete. The proposed next study asks whether history, opposing ballots, clock or evidence age can disrupt otherwise correct use of fresh evidence.
+**The approved Q0-A2 replacement completed with 18 valid responses but failed qualification at 15/18.** All 12 clean and three current-conflict controls were correct; all three expired favorable observations incorrectly produced PROCEED. D0 was not run. The [result](REPORT.md), [post-mortem](reviews/Q0-A2-POST.md) and [owning quality review](reviews/Q0-A2-QUALITY.json) are complete; workers, relay and allocation are released. RD5's adverse fixed-reserve result and Q0-A1's zero-dispatch failure remain preserved.
 
 [Prospective plan](PLAN.md) · [Structured proposal](next-run-plan.json) · [Concrete case preview](offline/preview.html) · [Validation](offline/validation.json) · [Draft quality review](DRAFT-REVIEW.md) · [Native integration](IMPLEMENTATION.md) · [Operator handoff](OPERATOR.md) · [Parent result](../rd5/REPORT.md) · [Authoritative study setup](../rd5/SETUP.md).
 
@@ -29,9 +29,9 @@ The plan was published at `0c00781507b9477bfa2347504ed0bade43a7ae4b` before the 
 
 The proposed sequence is 18 Q0 calls and, only after a correct valid Q0, 144 D0 calls. There are 12 authored diagnostic cases, six shared families and three reused grammars; these are not 144 independent tasks. There is no untouched or independently sourced holdout. This small stage diagnoses a component and cannot establish a robust field policy or emergent swarm behavior.
 
-The manual native runner is implemented and offline-tested. The approved scope reached a coordinated startup attempt, which stopped with zero provider calls. [Current status](RUN-STATUS.md) separates execution, qualification, science and cost. The original ledger remains488calls and USD0.022699069 committed API; all historical unknown reservations remain.
+The manual native runner completed the approved replacement once. [Current status](RUN-STATUS.md) separates completed execution, failed qualification, reviewed science and costs. The original ledger now contains 506 calls and USD 0.023434447 committed API, including historical unknown reservations. Q0-A2 added USD 0.000735378 in settled API cost.
 
-Disposition: **HOLD — concrete startup replacement awaits its owner decision.** The [post-mortem](reviews/Q0-A1-POST.md) and [prospective repair](STARTUP-REPAIR.md) preserve the unsuccessful attempt and unchanged scientific design. A narrow append-only Q0-A2 replacement rejects any prior RD6 model reservation, duplicate replacement, missing approval or expired original window. No worker or allocation is held. If Jev is no longer needed as a component, the literal baseline already supplies the practical answer and this diagnostic can be parked.
+Disposition: **FINISH / PARK — retain the valid negative qualification and leave D0 unrun.** The fixed 18/18 qualification gate was not softened. The three stale misses do not isolate history, ballots or time, and the unrun matrix supplies no causal context estimate. The literal baseline already supplies a correct practical answer for this finite task. A further model comparison needs a demonstrated unresolved use case, not another favorable-outcome attempt.
 
 ## Reproduce the offline preparation
 
@@ -39,6 +39,6 @@ Disposition: **HOLD — concrete startup replacement awaits its owner decision.*
 python3 researchers/vishesh/notes/dissent/reopening/prepare_offline.py
 ```
 
-This runs known-answer/fault checks and exports the authored fixtures. It never starts an experimental worker. The preserved RD5 source, results, qualification and approved stop of 488 are unchanged.
+This runs known-answer/fault checks and exports the authored fixtures. It never starts an experimental worker. The preserved RD5 source, results and qualification are unchanged; 488 is its historical call-count boundary, while the cumulative ledger now has 506 calls.
 
 The HTML fixture viewer was generated and its input data were checked, but browser rendering is unverified: the browser URL policy blocked opening the local file. See [preview status](offline/preview-status.json). This does not affect the Python case/scoring checks.

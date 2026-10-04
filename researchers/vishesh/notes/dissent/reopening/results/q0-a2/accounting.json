@@ -1,0 +1,1023 @@
+{
+  "packet_sha256": "44c8fc3a9bbac4a6d4463d130fb37d6c1b0deca2ae3ce0e26c8fbf7371faac39",
+  "calls": [
+    {
+      "id": "Q0-case-367c64447c5266f1-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 38220,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "HOLD": 0,
+            "PROCEED": 0.93,
+            "DEFER": 0.07
+          },
+          "confidence": 0.89,
+          "request_sha256": "15ec073898cc8b671c67a2b8040e95831c5665d2065ec405639b366eef32b685",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.822e-05,
+          "input_tokens": 910
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "HOLD": 0,
+                "PROCEED": 0.93,
+                "DEFER": 0.07
+              },
+              "confidence": 0.89
+            }
+          },
+          "usage": {
+            "input_tokens": 910,
+            "cost": 3.822e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "HOLD": 0,
+            "DEFER": 0.07,
+            "PROCEED": 0.93
+          },
+          "confidence": 0.89,
+          "input_tokens": 910,
+          "cost_usd": 3.822e-05
+        },
+        "settled_nano": 38220
+      }
+    },
+    {
+      "id": "Q0-case-ab38ef9aae6ba20c-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 36246,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "HOLD": 0.01,
+            "PROCEED": 0.86,
+            "DEFER": 0.13
+          },
+          "confidence": 0.79,
+          "request_sha256": "661abc55b72a35fab85a727bba291a8feecd41faa0fa806850d1a310724aca2f",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.6246e-05,
+          "input_tokens": 863
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "HOLD": 0.01,
+                "PROCEED": 0.86,
+                "DEFER": 0.13
+              },
+              "confidence": 0.79
+            }
+          },
+          "usage": {
+            "input_tokens": 863,
+            "cost": 3.6246e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "PROCEED": 0.86,
+            "HOLD": 0.01,
+            "DEFER": 0.13
+          },
+          "confidence": 0.79,
+          "input_tokens": 863,
+          "cost_usd": 3.6246e-05
+        },
+        "settled_nano": 36246
+      }
+    },
+    {
+      "id": "Q0-case-aac4df6326e00056-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 37338,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "HOLD": 0,
+            "DEFER": 0.13,
+            "PROCEED": 0.87
+          },
+          "confidence": 0.8,
+          "request_sha256": "b4d1b86246a6d30b4f50d606a5f49e78640a5913fc3100a957d4bd5174853cc5",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.7338e-05,
+          "input_tokens": 889
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "HOLD": 0,
+                "DEFER": 0.13,
+                "PROCEED": 0.87
+              },
+              "confidence": 0.8
+            }
+          },
+          "usage": {
+            "input_tokens": 889,
+            "cost": 3.7338e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "DEFER": 0.13,
+            "PROCEED": 0.87,
+            "HOLD": 0
+          },
+          "confidence": 0.8,
+          "input_tokens": 889,
+          "cost_usd": 3.7338e-05
+        },
+        "settled_nano": 37338
+      }
+    },
+    {
+      "id": "Q0-case-764a0c0a049c167a-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 37842,
+      "response": {
+        "checked": {
+          "action": "HOLD",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.76,
+            "DEFER": 0.24
+          },
+          "confidence": 0.63,
+          "request_sha256": "3b92683e0c75ea9808d3dfbbbb812e6ccb4e85d42899633bc4370364f79315fc",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.7842e-05,
+          "input_tokens": 901
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "HOLD",
+              "probabilities": {
+                "PROCEED": 0,
+                "HOLD": 0.76,
+                "DEFER": 0.24
+              },
+              "confidence": 0.63
+            }
+          },
+          "usage": {
+            "input_tokens": 901,
+            "cost": 3.7842e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "HOLD",
+          "probability_keys_match": true,
+          "probabilities": {
+            "DEFER": 0.24,
+            "PROCEED": 0,
+            "HOLD": 0.76
+          },
+          "confidence": 0.63,
+          "input_tokens": 901,
+          "cost_usd": 3.7842e-05
+        },
+        "settled_nano": 37842
+      }
+    },
+    {
+      "id": "Q0-case-d66f03e0de2140e1-C11-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 41832,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "PROCEED": 0.86,
+            "DEFER": 0.12,
+            "HOLD": 0.02
+          },
+          "confidence": 0.79,
+          "request_sha256": "f590810482a85f64d84b0091829db9dd6a1bbffd04c934ca8d0357180e3d756a",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 4.1832e-05,
+          "input_tokens": 996
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "PROCEED": 0.86,
+                "DEFER": 0.12,
+                "HOLD": 0.02
+              },
+              "confidence": 0.79
+            }
+          },
+          "usage": {
+            "input_tokens": 996,
+            "cost": 4.1832e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "PROCEED": 0.86,
+            "HOLD": 0.02,
+            "DEFER": 0.12
+          },
+          "confidence": 0.79,
+          "input_tokens": 996,
+          "cost_usd": 4.1832e-05
+        },
+        "settled_nano": 41832
+      }
+    },
+    {
+      "id": "Q0-case-3e9276ebbeb470ea-C11-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 52290,
+      "response": {
+        "checked": {
+          "action": "DEFER",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0,
+            "DEFER": 1
+          },
+          "confidence": 1,
+          "request_sha256": "2a06fd63ea195ff905ea938a6d856ddf250a3a2e03f759bd59f2db1c52c78e8a",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 5.229e-05,
+          "input_tokens": 1245
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "DEFER",
+              "probabilities": {
+                "PROCEED": 0,
+                "HOLD": 0,
+                "DEFER": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 1245,
+            "cost": 5.229e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "DEFER",
+          "probability_keys_match": true,
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0,
+            "DEFER": 1
+          },
+          "confidence": 1,
+          "input_tokens": 1245,
+          "cost_usd": 5.229e-05
+        },
+        "settled_nano": 52290
+      }
+    },
+    {
+      "id": "Q0-case-6e346519165b3645-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 38220,
+      "response": {
+        "checked": {
+          "action": "HOLD",
+          "probabilities": {
+            "HOLD": 0.87,
+            "DEFER": 0.13,
+            "PROCEED": 0
+          },
+          "confidence": 0.8,
+          "request_sha256": "f9b6b585775bd4d11c56c8048ae1e8bd4ec64f781962b32ef6eaea792cc18418",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.822e-05,
+          "input_tokens": 910
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "HOLD",
+              "probabilities": {
+                "HOLD": 0.87,
+                "DEFER": 0.13,
+                "PROCEED": 0
+              },
+              "confidence": 0.8
+            }
+          },
+          "usage": {
+            "input_tokens": 910,
+            "cost": 3.822e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "HOLD",
+          "probability_keys_match": true,
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.87,
+            "DEFER": 0.13
+          },
+          "confidence": 0.8,
+          "input_tokens": 910,
+          "cost_usd": 3.822e-05
+        },
+        "settled_nano": 38220
+      }
+    },
+    {
+      "id": "Q0-case-fea064e6cee6c325-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 36750,
+      "response": {
+        "checked": {
+          "action": "HOLD",
+          "probabilities": {
+            "DEFER": 0.1,
+            "HOLD": 0.9,
+            "PROCEED": 0
+          },
+          "confidence": 0.85,
+          "request_sha256": "1a0503dcd8a9631a4b86e34c9564dd4a0285c977a87cd04bb61d12740df5459e",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.675e-05,
+          "input_tokens": 875
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "HOLD",
+              "probabilities": {
+                "DEFER": 0.1,
+                "HOLD": 0.9,
+                "PROCEED": 0
+              },
+              "confidence": 0.85
+            }
+          },
+          "usage": {
+            "input_tokens": 875,
+            "cost": 3.675e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "HOLD",
+          "probability_keys_match": true,
+          "probabilities": {
+            "DEFER": 0.1,
+            "PROCEED": 0,
+            "HOLD": 0.9
+          },
+          "confidence": 0.85,
+          "input_tokens": 875,
+          "cost_usd": 3.675e-05
+        },
+        "settled_nano": 36750
+      }
+    },
+    {
+      "id": "Q0-case-d738b99a6dd0ae56-C11-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 52836,
+      "response": {
+        "checked": {
+          "action": "DEFER",
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0,
+            "DEFER": 1
+          },
+          "confidence": 1,
+          "request_sha256": "0a9bebfa297c75846cd7befbde31b57310d6d32859da46973811033e30442e1a",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 5.2836e-05,
+          "input_tokens": 1258
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "DEFER",
+              "probabilities": {
+                "PROCEED": 0,
+                "HOLD": 0,
+                "DEFER": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 1258,
+            "cost": 5.2836e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "DEFER",
+          "probability_keys_match": true,
+          "probabilities": {
+            "DEFER": 1,
+            "PROCEED": 0,
+            "HOLD": 0
+          },
+          "confidence": 1,
+          "input_tokens": 1258,
+          "cost_usd": 5.2836e-05
+        },
+        "settled_nano": 52836
+      }
+    },
+    {
+      "id": "Q0-case-659eb576b408c936-C11-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 41832,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "HOLD": 0.01,
+            "DEFER": 0.09,
+            "PROCEED": 0.9
+          },
+          "confidence": 0.86,
+          "request_sha256": "91120724025eaa009a7c861dff8a20f357efc658e7900f9461d9223283c7da2b",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 4.1832e-05,
+          "input_tokens": 996
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "HOLD": 0.01,
+                "DEFER": 0.09,
+                "PROCEED": 0.9
+              },
+              "confidence": 0.86
+            }
+          },
+          "usage": {
+            "input_tokens": 996,
+            "cost": 4.1832e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "HOLD": 0.01,
+            "DEFER": 0.09,
+            "PROCEED": 0.9
+          },
+          "confidence": 0.86,
+          "input_tokens": 996,
+          "cost_usd": 4.1832e-05
+        },
+        "settled_nano": 41832
+      }
+    },
+    {
+      "id": "Q0-case-00fd53e9704d1216-C11-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 53718,
+      "response": {
+        "checked": {
+          "action": "DEFER",
+          "probabilities": {
+            "HOLD": 0,
+            "PROCEED": 0,
+            "DEFER": 1
+          },
+          "confidence": 1,
+          "request_sha256": "159fc4354289c4c16f5e7e5942daa85c5cc8500e972d37b81c072baa7d18e56a",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 5.3718e-05,
+          "input_tokens": 1279
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "DEFER",
+              "probabilities": {
+                "HOLD": 0,
+                "PROCEED": 0,
+                "DEFER": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 1279,
+            "cost": 5.3718e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "DEFER",
+          "probability_keys_match": true,
+          "probabilities": {
+            "HOLD": 0,
+            "DEFER": 1,
+            "PROCEED": 0
+          },
+          "confidence": 1,
+          "input_tokens": 1279,
+          "cost_usd": 5.3718e-05
+        },
+        "settled_nano": 53718
+      }
+    },
+    {
+      "id": "Q0-case-12afc35364e0307a-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 37632,
+      "response": {
+        "checked": {
+          "action": "HOLD",
+          "probabilities": {
+            "HOLD": 0.91,
+            "PROCEED": 0,
+            "DEFER": 0.09
+          },
+          "confidence": 0.86,
+          "request_sha256": "bfa771ee3ca359d179785adaa3d1691943cae54eacde06ffb79ebe85fc5646c1",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.7632e-05,
+          "input_tokens": 896
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "HOLD",
+              "probabilities": {
+                "HOLD": 0.91,
+                "PROCEED": 0,
+                "DEFER": 0.09
+              },
+              "confidence": 0.86
+            }
+          },
+          "usage": {
+            "input_tokens": 896,
+            "cost": 3.7632e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "HOLD",
+          "probability_keys_match": true,
+          "probabilities": {
+            "HOLD": 0.91,
+            "DEFER": 0.09,
+            "PROCEED": 0
+          },
+          "confidence": 0.86,
+          "input_tokens": 896,
+          "cost_usd": 3.7632e-05
+        },
+        "settled_nano": 37632
+      }
+    },
+    {
+      "id": "Q0-case-c6631c36ff0f2c7d-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 37506,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.06,
+            "PROCEED": 0.94,
+            "HOLD": 0
+          },
+          "confidence": 0.9,
+          "request_sha256": "9a6a02950e7d8a94acd6c0c5ff02fd3dffd2293c1e3bdd8f16edcde20f708638",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.7506e-05,
+          "input_tokens": 893
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "DEFER": 0.06,
+                "PROCEED": 0.94,
+                "HOLD": 0
+              },
+              "confidence": 0.9
+            }
+          },
+          "usage": {
+            "input_tokens": 893,
+            "cost": 3.7506e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "DEFER": 0.06,
+            "PROCEED": 0.94,
+            "HOLD": 0
+          },
+          "confidence": 0.9,
+          "input_tokens": 893,
+          "cost_usd": 3.7506e-05
+        },
+        "settled_nano": 37506
+      }
+    },
+    {
+      "id": "Q0-case-32d8008d2958948c-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 38094,
+      "response": {
+        "checked": {
+          "action": "HOLD",
+          "probabilities": {
+            "HOLD": 0.8200000000000001,
+            "DEFER": 0.18,
+            "PROCEED": 0
+          },
+          "confidence": 0.72,
+          "request_sha256": "a643a4506808f1bf33026b603993db6a2af6ba0e54a6e0640d6f46d0afb381d6",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.8094e-05,
+          "input_tokens": 907
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "HOLD",
+              "probabilities": {
+                "HOLD": 0.8200000000000001,
+                "DEFER": 0.18,
+                "PROCEED": 0
+              },
+              "confidence": 0.72
+            }
+          },
+          "usage": {
+            "input_tokens": 907,
+            "cost": 3.8094e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "HOLD",
+          "probability_keys_match": true,
+          "probabilities": {
+            "PROCEED": 0,
+            "HOLD": 0.8200000000000001,
+            "DEFER": 0.18
+          },
+          "confidence": 0.72,
+          "input_tokens": 907,
+          "cost_usd": 3.8094e-05
+        },
+        "settled_nano": 38094
+      }
+    },
+    {
+      "id": "Q0-case-78a1b4e56e88d287-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 38220,
+      "response": {
+        "checked": {
+          "action": "HOLD",
+          "probabilities": {
+            "DEFER": 0.08,
+            "PROCEED": 0,
+            "HOLD": 0.92
+          },
+          "confidence": 0.88,
+          "request_sha256": "0e8a33e5b2a193279f9a99520738f0d47282b9639fcb66a687ed5b3ebeeb90e3",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.822e-05,
+          "input_tokens": 910
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "HOLD",
+              "probabilities": {
+                "DEFER": 0.08,
+                "PROCEED": 0,
+                "HOLD": 0.92
+              },
+              "confidence": 0.88
+            }
+          },
+          "usage": {
+            "input_tokens": 910,
+            "cost": 3.822e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "HOLD",
+          "probability_keys_match": true,
+          "probabilities": {
+            "HOLD": 0.92,
+            "DEFER": 0.08,
+            "PROCEED": 0
+          },
+          "confidence": 0.88,
+          "input_tokens": 910,
+          "cost_usd": 3.822e-05
+        },
+        "settled_nano": 38220
+      }
+    },
+    {
+      "id": "Q0-case-39e9539a0cb1e0f3-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 37632,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "PROCEED": 0.92,
+            "HOLD": 0,
+            "DEFER": 0.08
+          },
+          "confidence": 0.88,
+          "request_sha256": "98d1d6428cbf588feae147466fa3a72836ea1bac8252a6c67480128f5c8b8cf2",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.7632e-05,
+          "input_tokens": 896
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "PROCEED": 0.92,
+                "HOLD": 0,
+                "DEFER": 0.08
+              },
+              "confidence": 0.88
+            }
+          },
+          "usage": {
+            "input_tokens": 896,
+            "cost": 3.7632e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "PROCEED": 0.92,
+            "HOLD": 0,
+            "DEFER": 0.08
+          },
+          "confidence": 0.88,
+          "input_tokens": 896,
+          "cost_usd": 3.7632e-05
+        },
+        "settled_nano": 37632
+      }
+    },
+    {
+      "id": "Q0-case-696d801c012ffd74-C11-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 41790,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.14,
+            "PROCEED": 0.86,
+            "HOLD": 0
+          },
+          "confidence": 0.79,
+          "request_sha256": "078b24aff37ae93f28caa35aec5b88c9b46c7f26ecd6f319f09d4e2b661d45d8",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 4.179e-05,
+          "input_tokens": 995
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "DEFER": 0.14,
+                "PROCEED": 0.86,
+                "HOLD": 0
+              },
+              "confidence": 0.79
+            }
+          },
+          "usage": {
+            "input_tokens": 995,
+            "cost": 4.179e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "DEFER": 0.14,
+            "PROCEED": 0.86,
+            "HOLD": 0
+          },
+          "confidence": 0.79,
+          "input_tokens": 995,
+          "cost_usd": 4.179e-05
+        },
+        "settled_nano": 41790
+      }
+    },
+    {
+      "id": "Q0-case-f05e78699e21aadd-C00-0",
+      "status": "completed",
+      "reserved_nano": 1344000,
+      "actual_nano": 37380,
+      "response": {
+        "checked": {
+          "action": "PROCEED",
+          "probabilities": {
+            "DEFER": 0.1,
+            "HOLD": 0.01,
+            "PROCEED": 0.89
+          },
+          "confidence": 0.83,
+          "request_sha256": "a064e823b564dde587b45a1b0237a5c340ab3fc2b5d073eb29d7ed65a47e1787",
+          "served_model": "typesafe/jev-1.13-20260917",
+          "cost_usd": 3.738e-05,
+          "input_tokens": 890
+        },
+        "visible_response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "provider": "TypeSafe",
+          "answers": {
+            "action": {
+              "choice": "PROCEED",
+              "probabilities": {
+                "DEFER": 0.1,
+                "HOLD": 0.01,
+                "PROCEED": 0.89
+              },
+              "confidence": 0.83
+            }
+          },
+          "usage": {
+            "input_tokens": 890,
+            "cost": 3.738e-05
+          }
+        },
+        "diagnostic": {
+          "response_object": true,
+          "model_matches": true,
+          "provider_matches": true,
+          "choice": "PROCEED",
+          "probability_keys_match": true,
+          "probabilities": {
+            "HOLD": 0.01,
+            "DEFER": 0.1,
+            "PROCEED": 0.89
+          },
+          "confidence": 0.83,
+          "input_tokens": 890,
+          "cost_usd": 3.738e-05
+        },
+        "settled_nano": 37380
+      }
+    }
+  ],
+  "cumulative": {
+    "lifetime_calls": 506,
+    "api_committed_nano": 23434447
+  },
+  "baseline": {
+    "baseline_calls": 488,
+    "baseline_committed_nano": 22699069,
+    "baseline_sha256": "36e3ee8229263a121d5b5ace1e225ccc85be0aaf69f7cdc1a94a4de342c236da"
+  },
+  "authority": "operator-export-from-original-ledger"
+}

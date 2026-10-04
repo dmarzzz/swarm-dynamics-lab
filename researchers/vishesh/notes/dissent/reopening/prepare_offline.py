@@ -27,7 +27,7 @@ def main():
             'manifest_sha256':hashlib.sha256((output/'manifest.json').read_bytes()).hexdigest(),
             'dependencies':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in dependencies},
             'review_boundary':'Owning-agent label/fixture checks; no independent audit, native qualification or untouched holdout.',
-            'native_integration':'implemented and tested with synthetic ledgers/fake transports only; native admission pending',
+            'native_integration':'this offline suite uses synthetic ledgers/fake transports only; see RUN-STATUS.md for separate native execution evidence',
             'network_policy':'Native integration tests deny socket connections; no provider or SSH calls.',
             'ledger_policy':'Tests use disposable synthetic databases only; original authority never opened for writes.',
             'coverage':['exact ordered wire bytes','source/approval/account/lease/plan gates','original-ledger identity and historical floor','duplicate assignment and stage fences','separate identical-input calls','Q0-to-D0 qualification barrier','pre/post dispatch disconnects','unknown reservations','invalid route/schema and over-reservation charges','wall-clock timeout','supervisor child cleanup','artifact collection failure','saved arithmetic and all-cell grid','relay accounting','offline finalize hook','nested startup output and safe failures','exact remote admission acknowledgment','explicit zero-dispatch replacement preserves prior fence','replacement original resource and time envelope'],

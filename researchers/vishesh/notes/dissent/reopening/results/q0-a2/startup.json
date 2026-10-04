@@ -1,0 +1,7 @@
+{
+  "schema": "rd6-startup-v1",
+  "packet_sha256": "44c8fc3a9bbac4a6d4463d130fb37d6c1b0deca2ae3ce0e26c8fbf7371faac39",
+  "phase": "finished",
+  "state": "completed",
+  "native_dispatch": "inspect_original_ledger"
+}

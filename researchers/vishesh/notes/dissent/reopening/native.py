@@ -363,9 +363,11 @@ def finalize(out, stop_receipt, *, command=subprocess.run):
     require(execution['mode']=='native' and stop.get('attempt')==execution['attempt']
             and stop.get('bundle_sha256')==bundle['sha256'] and stop.get('worker_stopped_verified') is True
             and stop.get('relay_stopped_verified') is True and stop.get('verifier'), 'verified_stop_required')
+    require(out.is_relative_to(ROOT.resolve()) and out != ROOT.resolve(), 'results_outside_repository')
+    relative_out=out.relative_to(ROOT.resolve()).as_posix()
     outcome='completed' if execution['status']=='completed' else ('ambiguous' if any(r.get('reservation')=='unknown' for r in read(out/'outcomes.json')) else 'failed')
     result=command([sys.executable,str(ROOT/'scripts/experiment.py'),'finalize','right-dissenter',
-        '--attempt',execution['attempt'],'--results',str(out),'--outcome',outcome,'--worker-stopped'],
+        '--attempt',execution['attempt'],'--results',relative_out,'--outcome',outcome,'--worker-stopped'],
         cwd=ROOT,capture_output=True,text=True)
     require(result.returncode==0,'shared_finalize_failed')
     try: closeout=json.loads(result.stdout)

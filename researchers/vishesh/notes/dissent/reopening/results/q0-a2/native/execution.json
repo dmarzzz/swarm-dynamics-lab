@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "attempt": "rd6-q0-a2",
+  "allocation_lineage_sha256": "0e8ae5c817aec89b31b46e6ef3af265b6f4944e1db54af32a08fbfc5d702108c",
+  "zero_dispatch_predecessor": "rd6-q0-a1",
+  "worker_loop_ended": true,
+  "elapsed_seconds": 10.48715083800198,
+  "mode": "native",
+  "scientific_review": "required",
+  "qualification": "unreviewed",
+  "cost_status": "relay_reconciliation_required",
+  "allocation_release": "not_verified"
+}

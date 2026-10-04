@@ -1,0 +1,13 @@
+{
+  "ledger_calls": 18,
+  "assigned": 18,
+  "stage_committed_nano": 735378,
+  "unresolved_reservations": [],
+  "relay_response_missing_from_worker": [],
+  "cumulative": {
+    "lifetime_calls": 506,
+    "api_committed_nano": 23434447
+  },
+  "model_calls": 0,
+  "note": "Known relay-only answers remain separate from worker scoring; no replayed answer is a new request."
+}

@@ -1,0 +1,570 @@
+{
+  "attempt": "rd6-q0-a2",
+  "coverage": {
+    "assigned": 18,
+    "requests_reviewed": 18,
+    "responses_reviewed": 18,
+    "qualification_misses_reviewed": 3
+  },
+  "rows": [
+    {
+      "id": "Q0-case-367c64447c5266f1-C00-0",
+      "domain": "bridge",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The certified load limit is 16 tonnes.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "HOLD",
+        "DEFER",
+        "PROCEED"
+      ],
+      "expected": "PROCEED",
+      "observed": "PROCEED",
+      "correct": true,
+      "confidence": 0.89,
+      "request_sha256": "15ec073898cc8b671c67a2b8040e95831c5665d2065ec405639b366eef32b685",
+      "ordered_request_sha256": "7ee599d4c6b03c49f40b4acccf39911c78750864b01e0b26799f819864b4e90b",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-ab38ef9aae6ba20c-C00-0",
+      "domain": "alarm",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The current process reading is 0.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "PROCEED",
+        "HOLD",
+        "DEFER"
+      ],
+      "expected": "PROCEED",
+      "observed": "PROCEED",
+      "correct": true,
+      "confidence": 0.79,
+      "request_sha256": "661abc55b72a35fab85a727bba291a8feecd41faa0fa806850d1a310724aca2f",
+      "ordered_request_sha256": "d98c27bdd5c9563dbeb4bb795f8c550c601af6c5852690f039293f258c955d92",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-aac4df6326e00056-C00-0",
+      "domain": "bridge",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The certified load limit is 26 tonnes.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "DEFER",
+        "PROCEED",
+        "HOLD"
+      ],
+      "expected": "PROCEED",
+      "observed": "PROCEED",
+      "correct": true,
+      "confidence": 0.8,
+      "request_sha256": "b4d1b86246a6d30b4f50d606a5f49e78640a5913fc3100a957d4bd5174853cc5",
+      "ordered_request_sha256": "c3cb0f19e579f5ca6ed1f6336b7852223ddfd4106cf9772356d7d49dc487635c",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-764a0c0a049c167a-C00-0",
+      "domain": "alarm",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The current process reading is 8.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "DEFER",
+        "PROCEED",
+        "HOLD"
+      ],
+      "expected": "HOLD",
+      "observed": "HOLD",
+      "correct": true,
+      "confidence": 0.63,
+      "request_sha256": "3b92683e0c75ea9808d3dfbbbb812e6ccb4e85d42899633bc4370364f79315fc",
+      "ordered_request_sha256": "286e9fc0626ca6ce308e33c2fa855cd1f5f3b6058b204ea3fb1742b1193fd093",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-d66f03e0de2140e1-C11-0",
+      "domain": "alarm",
+      "group": "stale",
+      "observations": [
+        {
+          "text": "The current process reading is 23.",
+          "age": 9,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": "HOLD",
+      "ballots": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "PROCEED"
+      ],
+      "criterion_order": [
+        "PROCEED",
+        "HOLD",
+        "DEFER"
+      ],
+      "expected": "DEFER",
+      "observed": "PROCEED",
+      "correct": false,
+      "confidence": 0.79,
+      "request_sha256": "f590810482a85f64d84b0091829db9dd6a1bbffd04c934ca8d0357180e3d756a",
+      "ordered_request_sha256": "0b13a55b7902ffc730907d4c93767cf0c909d2cc56e4d248af63ed2fde563c52",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-3e9276ebbeb470ea-C11-0",
+      "domain": "bridge",
+      "group": "conflict",
+      "observations": [
+        {
+          "text": "The certified load limit is 26 tonnes.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        },
+        {
+          "text": "The certified load limit is 19 tonnes.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": "HOLD",
+      "ballots": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "PROCEED"
+      ],
+      "criterion_order": [
+        "PROCEED",
+        "HOLD",
+        "DEFER"
+      ],
+      "expected": "DEFER",
+      "observed": "DEFER",
+      "correct": true,
+      "confidence": 1,
+      "request_sha256": "2a06fd63ea195ff905ea938a6d856ddf250a3a2e03f759bd59f2db1c52c78e8a",
+      "ordered_request_sha256": "66c835d5d3ac4ac775ead1fa056f50c00aabc77cb8deaec3b53c514c8aabcada",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-6e346519165b3645-C00-0",
+      "domain": "bridge",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The certified load limit is 10 tonnes.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "PROCEED",
+        "HOLD",
+        "DEFER"
+      ],
+      "expected": "HOLD",
+      "observed": "HOLD",
+      "correct": true,
+      "confidence": 0.8,
+      "request_sha256": "f9b6b585775bd4d11c56c8048ae1e8bd4ec64f781962b32ef6eaea792cc18418",
+      "ordered_request_sha256": "b5b2b6a42a749c0f8399cbcbeaf7813fcabed0975b9d179ed88331e2e49c1e3c",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-fea064e6cee6c325-C00-0",
+      "domain": "build",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The required compatibility test failed; optional telemetry passed.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "DEFER",
+        "PROCEED",
+        "HOLD"
+      ],
+      "expected": "HOLD",
+      "observed": "HOLD",
+      "correct": true,
+      "confidence": 0.85,
+      "request_sha256": "1a0503dcd8a9631a4b86e34c9564dd4a0285c977a87cd04bb61d12740df5459e",
+      "ordered_request_sha256": "7c7d7e5f2c6b435785b3518ddb46197fbc4ca10d32bd817c0a7334a0341e2911",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-d738b99a6dd0ae56-C11-0",
+      "domain": "build",
+      "group": "conflict",
+      "observations": [
+        {
+          "text": "The required compatibility test passed; optional telemetry failed.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        },
+        {
+          "text": "The required compatibility test failed; optional telemetry passed.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": "HOLD",
+      "ballots": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "PROCEED"
+      ],
+      "criterion_order": [
+        "DEFER",
+        "PROCEED",
+        "HOLD"
+      ],
+      "expected": "DEFER",
+      "observed": "DEFER",
+      "correct": true,
+      "confidence": 1,
+      "request_sha256": "0a9bebfa297c75846cd7befbde31b57310d6d32859da46973811033e30442e1a",
+      "ordered_request_sha256": "d748c7ccd2fafc70226a57c9cb570af7753412431bd7d31ada3afa29c2e7e94c",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-659eb576b408c936-C11-0",
+      "domain": "build",
+      "group": "stale",
+      "observations": [
+        {
+          "text": "The required compatibility test passed; optional telemetry failed.",
+          "age": 9,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": "HOLD",
+      "ballots": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "PROCEED"
+      ],
+      "criterion_order": [
+        "HOLD",
+        "DEFER",
+        "PROCEED"
+      ],
+      "expected": "DEFER",
+      "observed": "PROCEED",
+      "correct": false,
+      "confidence": 0.86,
+      "request_sha256": "91120724025eaa009a7c861dff8a20f357efc658e7900f9461d9223283c7da2b",
+      "ordered_request_sha256": "4e74e85100c451ea07466a806c560674567172ce6b34c0de8329202dbb3b2878",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-00fd53e9704d1216-C11-0",
+      "domain": "alarm",
+      "group": "conflict",
+      "observations": [
+        {
+          "text": "The current process reading is 23.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        },
+        {
+          "text": "The current process reading is 35.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": "HOLD",
+      "ballots": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "PROCEED"
+      ],
+      "criterion_order": [
+        "HOLD",
+        "DEFER",
+        "PROCEED"
+      ],
+      "expected": "DEFER",
+      "observed": "DEFER",
+      "correct": true,
+      "confidence": 1,
+      "request_sha256": "159fc4354289c4c16f5e7e5942daa85c5cc8500e972d37b81c072baa7d18e56a",
+      "ordered_request_sha256": "78887f03f758e2ab8252fbc339695ad64ec2158bb7768bd2a3e2ae2f0f7f6cf0",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-12afc35364e0307a-C00-0",
+      "domain": "build",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The required compatibility test failed; optional telemetry failed.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "HOLD",
+        "DEFER",
+        "PROCEED"
+      ],
+      "expected": "HOLD",
+      "observed": "HOLD",
+      "correct": true,
+      "confidence": 0.86,
+      "request_sha256": "bfa771ee3ca359d179785adaa3d1691943cae54eacde06ffb79ebe85fc5646c1",
+      "ordered_request_sha256": "d0008c93106891e277a2ba5ac7d6b2cf7cd316f29e4d354e864f40b2dded5934",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-c6631c36ff0f2c7d-C00-0",
+      "domain": "build",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The required compatibility test passed; optional telemetry passed.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "DEFER",
+        "PROCEED",
+        "HOLD"
+      ],
+      "expected": "PROCEED",
+      "observed": "PROCEED",
+      "correct": true,
+      "confidence": 0.9,
+      "request_sha256": "9a6a02950e7d8a94acd6c0c5ff02fd3dffd2293c1e3bdd8f16edcde20f708638",
+      "ordered_request_sha256": "1a68bb83c6bb90d426786ff26d775fd5b734c4f3f064e4e466fb9d75406bf653",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-32d8008d2958948c-C00-0",
+      "domain": "alarm",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The current process reading is 35.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "PROCEED",
+        "HOLD",
+        "DEFER"
+      ],
+      "expected": "HOLD",
+      "observed": "HOLD",
+      "correct": true,
+      "confidence": 0.72,
+      "request_sha256": "a643a4506808f1bf33026b603993db6a2af6ba0e54a6e0640d6f46d0afb381d6",
+      "ordered_request_sha256": "c52e9b3347f760c489da30549c94252def89b9bbbbedecdfc5321a961b3a8671",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-78a1b4e56e88d287-C00-0",
+      "domain": "bridge",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The certified load limit is 19 tonnes.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "HOLD",
+        "DEFER",
+        "PROCEED"
+      ],
+      "expected": "HOLD",
+      "observed": "HOLD",
+      "correct": true,
+      "confidence": 0.88,
+      "request_sha256": "0e8a33e5b2a193279f9a99520738f0d47282b9639fcb66a687ed5b3ebeeb90e3",
+      "ordered_request_sha256": "887c2797842bc8e560ef22b60d031112341b0ae35dede83033edd55221f5084b",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-39e9539a0cb1e0f3-C00-0",
+      "domain": "build",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The required compatibility test passed; optional telemetry failed.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "PROCEED",
+        "HOLD",
+        "DEFER"
+      ],
+      "expected": "PROCEED",
+      "observed": "PROCEED",
+      "correct": true,
+      "confidence": 0.88,
+      "request_sha256": "98d1d6428cbf588feae147466fa3a72836ea1bac8252a6c67480128f5c8b8cf2",
+      "ordered_request_sha256": "3f25aca2ccd96811d80f85b0b9d8d31e664c1e7831bbf24df1989b758c0bf29a",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-696d801c012ffd74-C11-0",
+      "domain": "bridge",
+      "group": "stale",
+      "observations": [
+        {
+          "text": "The certified load limit is 26 tonnes.",
+          "age": 9,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": "HOLD",
+      "ballots": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "PROCEED"
+      ],
+      "criterion_order": [
+        "DEFER",
+        "PROCEED",
+        "HOLD"
+      ],
+      "expected": "DEFER",
+      "observed": "PROCEED",
+      "correct": false,
+      "confidence": 0.79,
+      "request_sha256": "078b24aff37ae93f28caa35aec5b88c9b46c7f26ecd6f319f09d4e2b661d45d8",
+      "ordered_request_sha256": "472cd2ea17a771b05bf02fa337dcf1830bc7e83c0bfe1b19491de073261dd9bd",
+      "status": "completed"
+    },
+    {
+      "id": "Q0-case-f05e78699e21aadd-C00-0",
+      "domain": "alarm",
+      "group": "clean",
+      "observations": [
+        {
+          "text": "The current process reading is 23.",
+          "age": 1,
+          "scope_matches": true,
+          "revision_matches": true
+        }
+      ],
+      "ttl": 7,
+      "history_action": null,
+      "ballots": [],
+      "criterion_order": [
+        "HOLD",
+        "DEFER",
+        "PROCEED"
+      ],
+      "expected": "PROCEED",
+      "observed": "PROCEED",
+      "correct": true,
+      "confidence": 0.83,
+      "request_sha256": "a064e823b564dde587b45a1b0237a5c340ab3fc2b5d073eb29d7ed65a47e1787",
+      "ordered_request_sha256": "bf4332cb44484408035d9b50cb178150875bed1465c4dda7b385c2950167bbd4",
+      "status": "completed"
+    }
+  ],
+  "cause_scope": "Observed choice and eligibility-rule violations verified; hidden reasoning and causal contribution of history versus ballots versus age are not established."
+}

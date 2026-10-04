@@ -88,6 +88,6 @@ test_zero_dispatch_replacement_rejects_any_rd6_reservation (test_native.NativeTe
 test_zero_dispatch_replacement_rejects_orphan_response (test_native.NativeTests.test_zero_dispatch_replacement_rejects_orphan_response) ... ok
 
 ----------------------------------------------------------------------
-Ran 88 tests in 4.899s
+Ran 88 tests in 4.582s
 
 OK

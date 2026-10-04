@@ -316,10 +316,22 @@ class NativeTests(unittest.TestCase):
         stop=self.ref('stop',{'attempt':execution['attempt'],'bundle_sha256':cases.digest(files),
             'worker_stopped_verified':True,'relay_stopped_verified':True,'verifier':'SYNTHETIC TEST ONLY'})
         command=Mock(return_value=Mock(returncode=0,stdout=json.dumps({'closeout_status':'written_review_required'})))
-        result=native.finalize(out,stop,command=command)
+        with patch.object(native,'ROOT',self.root):
+            result=native.finalize(out,stop,command=command)
         self.assertIn('--worker-stopped',command.call_args.args[0]);self.assertEqual(result['scientific_review'],'required')
+        # Exercise the real shared CLI path contract, not just a fake success.
+        sys.path.insert(0,str(gates.ROOT/'scripts'))
+        from experiment_ops.core import safe_path
+        args=command.call_args.args[0];submitted=args[args.index('--results')+1]
+        self.assertEqual(safe_path(self.root,submitted,exists=True),out)
+        self.assertFalse(Path(submitted).is_absolute())
         command.return_value.stdout=json.dumps({'closeout_status':'failed'})
-        with self.assertRaises(ValueError):native.finalize(out,stop,command=command)
+        with patch.object(native,'ROOT',self.root):
+            with self.assertRaises(ValueError):native.finalize(out,stop,command=command)
+        command.reset_mock()
+        with patch.object(native,'ROOT',self.root/'another-repository'):
+            with self.assertRaises(ValueError):native.finalize(out,stop,command=command)
+        command.assert_not_called()
     def test_grid_initial_transition_failure_final_statuses(self):
         from native_report import render
         e=self.engine('D0');out,complete=self.run_engine(e)

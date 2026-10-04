@@ -1,6 +1,6 @@
 # RD6 manual native operator handoff
 
-**Q0-A1 stopped before model dispatch; its operational and owning scientific closeouts are complete. No allocation is held.** Native integration and the startup repair are checked offline. The original defined18Q0/conditional144D0 scope was approved; the proposed explicit zero-dispatch replacement requires the separate concrete decision described in [STARTUP-REPAIR.md](STARTUP-REPAIR.md). The original USD1 API/USD1 infrastructure cap,488historical calls and unresolved reservations remain binding.
+**Q0-A2 completed and failed qualification at 15/18; D0 was not run. Operational and owning scientific closeout are complete, and no allocation is held.** The owner-approved zero-dispatch replacement was consumed. Read [RUN-STATUS.md](RUN-STATUS.md) and [the post-mortem](reviews/Q0-A2-POST.md) before using the historical procedure below. The original USD 1 API / USD 1 infrastructure cap remains; the cumulative ledger now has 506 calls, including all 488 historical rows and their unresolved reservations.
 
 Use the [authoritative setup](../rd5/SETUP.md), [runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [implementation evidence](IMPLEMENTATION.md) and [new diagnostic assessment](DIAGNOSTIC-REVIEW.json). Historical RD5 completion stays unchanged. No independent researcher sign-off is required. Read local access/account policies before remote access; this public document deliberately contains no private account identity, host allocation or credential path.
 
@@ -65,3 +65,7 @@ The single-writer lock is an adjacent `.rd6.lock` file: locking the SQLite datab
 6. Complete the scientific post-mortem against all 11 dimensions, trace coverage, cumulative costs, artifact readback and any release receipt. Operational finalize alone is not scientific review. Qualification pass needs its own postreview and fresh D0 admission. Failed, interrupted and valid-negative attempts receive closeout too. If a hard kill or storage failure prevented a complete bundle, preserve partial artifacts and use the shared manual finalize hook with `ambiguous`; document unresolved reconstruction instead of manufacturing terminal evidence or retrying.
 
 The saved scorer retains `native_evidence: false` because arithmetic alone cannot authenticate provider provenance. Native mode, original-relay reconciliation, source binding and the owning trace review provide separate evidence. Initial/transition/failure/final synthetic grid fixtures were structurally checked; native delivery, remote lifecycle and browser rendering remain to be verified on the actual admitted attempt.
+
+## Latest saved-data closeout
+
+The actual latest operational handoff is Q0-A2, SHA-256 `a5493a765b57b14270a6e3a4ea893162fe5809e5cbcf6f12bc79fbf4c90316a9`. The separate [quality assessment](reviews/Q0-A2-QUALITY.json) completes its scientific review. The finalize wrapper now passes a canonical repository-relative path to the shared CLI and rejects outside directories. This saved-data correction was verified without recollection. It does not create another zero-dispatch replacement or permit D0 after failed qualification.

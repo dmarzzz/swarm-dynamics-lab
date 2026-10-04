@@ -1,0 +1,31 @@
+{
+  "attempt": "rd6-q0-a2",
+  "execution": "completed",
+  "qualification": "failed",
+  "correct": 15,
+  "assigned": 18,
+  "valid": 18,
+  "clean_correct": 12,
+  "clean_assigned": 12,
+  "conflict_correct": 3,
+  "conflict_assigned": 3,
+  "stale_correct": 0,
+  "stale_assigned": 3,
+  "new_native_calls": 18,
+  "D0": "not_run_qualification_failed",
+  "source_commit": "ab7a92c944f882e85c70abd28feea87602bbd324",
+  "bundle_sha256": "7e8c3df8fa7f0b5c6d2b3e6fc91237e5ce62b30fc35b3a59de1d65fa86777f2b",
+  "operational_closeout_sha256": "a5493a765b57b14270a6e3a4ea893162fe5809e5cbcf6f12bc79fbf4c90316a9",
+  "scientific_decision": "complete_valid_result",
+  "trace_coverage": {
+    "requests": 18,
+    "visible_responses": 18,
+    "all_qualification_misses": 3
+  },
+  "boundaries": [
+    "Qualification result on inspected authored controls; no field failure-rate estimate.",
+    "The planned D0 matched context/clock/age matrix and repeated-response variability remain unmeasured.",
+    "Observed stale eligibility violations do not identify hidden reasoning or isolate history/ballot effects."
+  ],
+  "reviewer": "owning agent; no independent audit claimed"
+}

@@ -1,0 +1,41 @@
+{
+  "attempt": "rd6-q0-a2",
+  "original_api_cap_nano": 1000000000,
+  "original_infrastructure_cap_nano": 1000000000,
+  "lifetime_call_ceiling": 650,
+  "lifetime_calls": 506,
+  "new_native_calls": 18,
+  "stage_actual_api_nano": 735378,
+  "api_committed_nano": 23434447,
+  "historical_unknown_api_nano": 4032000,
+  "new_unknown_reservations": 0,
+  "prior_infrastructure_estimate_nano": 747173584,
+  "allocation_started_utc": "2026-10-04T19:50:25Z",
+  "allocation_released_utc": "2026-10-04T19:57:04Z",
+  "allocation_seconds": 399,
+  "hourly_rate_ceiling_nano": 71430000,
+  "new_infrastructure_estimate_nano": 7916825,
+  "cumulative_infrastructure_estimate_nano": 755090409,
+  "combined_committed_and_estimated_nano": 778524856,
+  "infrastructure_invoice_status": "unavailable; allocation estimate, not invoice settlement",
+  "worker_stopped_verified": true,
+  "relay_stopped_verified": true,
+  "allocation_released_verified": true,
+  "original_attempt_rows": [
+    [
+      "Q0",
+      "rd6-q0-a1",
+      "stopped"
+    ]
+  ],
+  "replacement_rows": [
+    [
+      "Q0",
+      "rd6-q0-a1",
+      "rd6-q0-a2",
+      "completed"
+    ]
+  ],
+  "D0_calls": 0,
+  "automatic_retry": false
+}

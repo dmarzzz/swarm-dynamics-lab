@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "attempt": "rd6-q0-a2",
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_utc": "2026-10-04T19:59:53.432168+00:00",
+  "verdict": "complete_valid_result",
+  "execution": "completed",
+  "qualification": "failed",
+  "scientific_result": "valid_negative_qualification",
+  "next_stage": "D0_not_run",
+  "operational_closeout_sha256": "a5493a765b57b14270a6e3a4ea893162fe5809e5cbcf6f12bc79fbf4c90316a9",
+  "source_commit": "ab7a92c944f882e85c70abd28feea87602bbd324",
+  "researcher_review": "not_required_by_owner_direction",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Qualification decision and 18/18 threshold were prospective. This attempt supports a component qualification failure, not the unrun D0 causal contrast.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/packet.json",
+          "sha256": "e915b617d6f64a6c911cff0fff2bb617b10e06cfd4718d67a21c87e4c86d83cf"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/assessment.json",
+          "sha256": "9677240a159abb8cdca6bfc58e656a3accc338a4d20828954fd585c15a46633b"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Eighteen inspected authored controls cover clean rules and conflict/expiry cases across three domains. Finite development scope and lack of holdout remain explicit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/packet.json",
+          "sha256": "e915b617d6f64a6c911cff0fff2bb617b10e06cfd4718d67a21c87e4c86d83cf"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "All intended requests delivered: clean 12/12 and conflict 3/3 correct; stale 0/3. Negative controls detected an actionable qualification failure; no threshold was softened.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/summary.json",
+          "sha256": "5cf492f18d905f3244368ea745e3c75544bd6999229c18132596a2edb258485e"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Three expired-evidence controls chose PROCEED rather than required DEFER. Complete valid transport is not semantic qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ],
+      "next_action": "Finish this failed qualification and leave D0 unrun. Any new freshness interface must be proposed prospectively as a separate design.",
+      "acceptance_check": "Do not advance on15/18; no retry or new model collection under this completed attempt."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All 18 assigned outcomes scored; independent actor-visible literal rule and direct age arithmetic agree on targets. No missing rows or invalid-as-wrong conflation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/summary.json",
+          "sha256": "5cf492f18d905f3244368ea745e3c75544bd6999229c18132596a2edb258485e"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/reconciliation.json",
+          "sha256": "bf4043125f63719f9a85baa0873776c7592086a181b2813acfcb4cebbcf4a9bd"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Counts describe 18 authored qualification requests with shared grammars; no independent field sample, confidence interval or D0 repeat estimate is asserted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/packet.json",
+          "sha256": "e915b617d6f64a6c911cff0fff2bb617b10e06cfd4718d67a21c87e4c86d83cf"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/assessment.json",
+          "sha256": "9677240a159abb8cdca6bfc58e656a3accc338a4d20828954fd585c15a46633b"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All 18 ordered request hashes and visible served snapshot/provider match. No owner/operator context, label or fallback entered actor requests; programmed ballots are disclosed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/packet.json",
+          "sha256": "e915b617d6f64a6c911cff0fff2bb617b10e06cfd4718d67a21c87e4c86d83cf"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Native bundle/hash chain, every worker answer and original-ledger reservation reconcile.18 settled calls; zero newunknowns; A1 and replacement fences remain.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/reconciliation.json",
+          "sha256": "bf4043125f63719f9a85baa0873776c7592086a181b2813acfcb4cebbcf4a9bd"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/resources.json",
+          "sha256": "3084ce4787bbe9a2a2ab60fc469e9bf691efeddb580ad28c4d3bc1129aafa496"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "506 lifetime calls, original caps, all historical unknown exposure and failed-start allocation estimates retained. Worker/relay stopped and claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/resources.json",
+          "sha256": "3084ce4787bbe9a2a2ab60fc469e9bf691efeddb580ad28c4d3bc1129aafa496"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Native evidence replays; startup repair worked. Convenience finalize used an absolute path rejected by the shared CLI; explicit offline finalize completed, with a subsequent isolated tooling fix.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/remote-startup-check.json",
+          "sha256": "e910fa13075fd33d73c644777f87808c15dfa8ebe3499fdfb4b6b737f603a95d"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/assessment.json",
+          "sha256": "9677240a159abb8cdca6bfc58e656a3accc338a4d20828954fd585c15a46633b"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/offline/validation.json",
+          "sha256": "7c4b1fd962af35c169822df6d008828d5ebe36e356d17d8855e85aa042329c24"
+        }
+      ],
+      "next_action": "Offline wrapper correction completed; retain frozen execution source and original operational handoff.",
+      "acceptance_check": "Canonical repository-relative path accepted by real shared validator, foreign path rejected, tests pass and saved-data hook completes without new model calls."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Native replay has 18 input-linked cells and 18 visible responses; HTML browser layout remains unverified. The static qualification PNG was visually inspected after correcting its first draft; plotted denominators and counts match all 18 traces.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/replay.html",
+          "sha256": "c087a71d7ef8a1d2eea159605a6cda3190def00155354276ddad7acb42b47176"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/qualification.png",
+          "sha256": "947099de5b6743a4ea0badfd13a714402e966c883216d44686446e010bafca16"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/figure-data.json",
+          "sha256": "c237b3b3f407040d164d47db8a1baec434cb42c746ea03b0898cdee6e42cef50"
+        }
+      ]
+    }
+  ]
+}
