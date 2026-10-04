@@ -21,7 +21,7 @@ params:
     type: float
     role: condition
   tasks:
-    type: str
+    type: list
     role: replicate
   seeds:
     type: list
@@ -50,5 +50,8 @@ metrics:
 - profit_lift_split_control
 - invalid
 - episodes
+- fragmentation_merged
+- fragmentation_split_control
+- fragmentation_profit_search
 primary_metric: profit_lift_split_control
 url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split
