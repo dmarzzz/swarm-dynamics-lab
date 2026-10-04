@@ -1,0 +1,24 @@
+{
+  "id": "external-influence",
+  "title": "External influence: evidence, discussion and independent checking",
+  "description": "Exploratory instrument; scripted engineering deployment, not a live LLM finding or accepted hypothesis. Protocol and limitations in linked source.",
+  "owner": "vishesh",
+  "params": {
+    "stage": {
+      "type": "str"
+    },
+    "backend": {
+      "type": "str"
+    },
+    "design_hash": {
+      "type": "str"
+    }
+  },
+  "metrics": [
+    "episodes",
+    "invalid",
+    "model_backed"
+  ],
+  "primary_metric": "invalid",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/actual-experiments/external-influence"
+}

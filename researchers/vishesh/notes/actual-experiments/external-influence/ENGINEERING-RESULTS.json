@@ -1,0 +1,4951 @@
+{
+  "scientific_claim": "exploratory only; scripted results describe programmed policies",
+  "cells": [
+    {
+      "world": "W0_CLEAN",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W0_CLEAN",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W1_PROMOTION",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W2_PERS",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.3333333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 48.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.3333333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.6666666666666666,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 14.666666666666663,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.3333333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.6666666666666666,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 14.666666666666663,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.5416666666666666,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.4583333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 10.08333333333333,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W3_FALSE",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.3333333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 48.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W4_OMIT",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.20000000000000004,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.3333333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 48.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.3333333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.6666666666666666,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 14.666666666666663,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.3333333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.6666666666666666,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 14.666666666666663,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 0.5416666666666666,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.4583333333333333,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 10.08333333333333,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.19999999999999998,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W5_PROV",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W6_INSTR",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W7_SUPERIOR",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 2,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 2,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 2,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 2,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 2,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 2,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 2,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 4,
+      "arm": "P0_single",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 4,
+      "arm": "P1_independent",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 4,
+      "arm": "P2_discussion",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 4,
+      "arm": "P3_same_source",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 4,
+      "arm": "P4_random_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 4,
+      "arm": "P5_focused_check",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    },
+    {
+      "world": "W8_NEWCOMER",
+      "dose": 4,
+      "arm": "P6_roots",
+      "assigned": 24,
+      "invalid": 0,
+      "metrics": {
+        "abstained": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "changed_votes": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "correct": {
+          "mean_observed": 1.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "harmful_target": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "ineligible": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        },
+        "regret": {
+          "mean_observed": 0.0,
+          "observed": 24,
+          "assigned": 24
+        }
+      }
+    }
+  ],
+  "candidate_contrast": {
+    "compare": [
+      "P5_focused_check",
+      "P4_random_check"
+    ],
+    "metric": "harmful_target",
+    "world": "W3_FALSE",
+    "dose": 2,
+    "strata": {
+      "W3_FALSE": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "tasks": 12
+      }
+    },
+    "equal_stratum_estimate": 0.0,
+    "missing_or_invalid_pairs": 0,
+    "interpretation": "complete-pair estimates are selection-sensitive; no safety certification or confirmatory p-values"
+  },
+  "episodes": 3024,
+  "assigned": 3024,
+  "invalid": 0,
+  "model_backed": false,
+  "seconds": 2.244,
+  "api_calls": 0,
+  "source_hash": "b5e095bf7e188dcbfdac9b75452489572b2ff72b365719cdaf9c2a672b9eac93",
+  "git_commit": "940a7ee9f361adb39860643726ec25f53f8fad08",
+  "estimated_actual_usd": 0,
+  "usage_missing": 0
+}

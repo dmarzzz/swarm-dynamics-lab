@@ -1,0 +1,112 @@
+{
+  "module": "immune",
+  "arms": [
+    "N",
+    "Q00",
+    "Q10",
+    "Q01",
+    "Q11",
+    "CLEAN"
+  ],
+  "cfg": {
+    "n_agents": 8,
+    "rounds": 24
+  },
+  "candidate_contrast": {
+    "compare": [
+      "Q11",
+      "Q10"
+    ],
+    "metric": "utility"
+  },
+  "stages": {
+    "S0": {
+      "tasks": [
+        1000
+      ],
+      "seeds": [
+        1
+      ],
+      "worlds": [
+        "accidental",
+        "shared_evidence",
+        "bounded_rogue"
+      ],
+      "doses": [
+        1
+      ]
+    },
+    "S1": {
+      "tasks": [
+        1100,
+        1101
+      ],
+      "seeds": [
+        1
+      ],
+      "worlds": [
+        "accidental",
+        "shared_evidence",
+        "bounded_rogue"
+      ],
+      "doses": [
+        1
+      ]
+    }
+  },
+  "version": 1,
+  "status": "exploratory engineering pilot",
+  "live_endpoint_qualified": false,
+  "holdout_reserved": [
+    2100,
+    2101,
+    2102,
+    2103,
+    2104,
+    2105,
+    2106,
+    2107,
+    2108,
+    2109,
+    2110,
+    2111,
+    2112,
+    2113,
+    2114,
+    2115
+  ],
+  "total_batch_cap_usd": 50,
+  "live_stages": {
+    "S0": {
+      "tasks": [
+        6000
+      ],
+      "seeds": [
+        1
+      ],
+      "worlds": [
+        "shared_evidence"
+      ],
+      "doses": [
+        1
+      ]
+    },
+    "S1": {
+      "tasks": [
+        6100,
+        6101
+      ],
+      "seeds": [
+        1
+      ],
+      "worlds": [
+        "accidental",
+        "shared_evidence",
+        "bounded_rogue"
+      ],
+      "doses": [
+        1
+      ]
+    }
+  }
+}

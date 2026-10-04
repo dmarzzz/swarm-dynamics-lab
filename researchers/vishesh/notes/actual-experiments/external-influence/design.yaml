@@ -1,0 +1,135 @@
+{
+  "module": "influence",
+  "arms": [
+    "P0_single",
+    "P1_independent",
+    "P2_discussion",
+    "P3_same_source",
+    "P4_random_check",
+    "P5_focused_check",
+    "P6_roots"
+  ],
+  "cfg": {
+    "n_agents": 5
+  },
+  "candidate_contrast": {
+    "compare": [
+      "P5_focused_check",
+      "P4_random_check"
+    ],
+    "metric": "harmful_target",
+    "world": "W3_FALSE",
+    "dose": 2
+  },
+  "stages": {
+    "S0": {
+      "tasks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds": [
+        1
+      ],
+      "worlds": [
+        "W0_CLEAN",
+        "W7_SUPERIOR"
+      ],
+      "doses": [
+        0
+      ]
+    },
+    "S1": {
+      "tasks": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "seeds": [
+        11,
+        12
+      ],
+      "worlds": [
+        "W0_CLEAN",
+        "W1_PROMOTION",
+        "W2_PERS",
+        "W3_FALSE",
+        "W4_OMIT",
+        "W5_PROV",
+        "W6_INSTR",
+        "W7_SUPERIOR",
+        "W8_NEWCOMER"
+      ],
+      "doses": [
+        2,
+        4
+      ]
+    }
+  },
+  "version": 1,
+  "status": "exploratory engineering pilot",
+  "live_endpoint_qualified": false,
+  "holdout_reserved": [
+    2100,
+    2101,
+    2102,
+    2103,
+    2104,
+    2105,
+    2106,
+    2107,
+    2108,
+    2109,
+    2110,
+    2111,
+    2112,
+    2113,
+    2114,
+    2115
+  ],
+  "total_batch_cap_usd": 50,
+  "live_stages": {
+    "S0": {
+      "tasks": [
+        6000
+      ],
+      "seeds": [
+        1
+      ],
+      "worlds": [
+        "W0_CLEAN"
+      ],
+      "doses": [
+        0
+      ]
+    },
+    "S1": {
+      "tasks": [
+        6100,
+        6101
+      ],
+      "seeds": [
+        1
+      ],
+      "worlds": [
+        "W0_CLEAN",
+        "W3_FALSE"
+      ],
+      "doses": [
+        2
+      ]
+    }
+  }
+}
