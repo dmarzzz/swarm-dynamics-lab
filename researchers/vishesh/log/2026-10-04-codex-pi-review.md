@@ -19,3 +19,5 @@ Material findings: Discussion V3 completed but failed clean competence; Theseus 
 Next scientific work belongs to the existing owners: close incomplete attempt ledgers, resolve competence and independent-review gates, and freeze only the justified successor contrasts on fresh task roots.
 
 Pre-publication pull at d2fee7c8 added the completed but competence-failed resampling sidecar, a structural proof of conflict loss in the majority merge, and an existing next diagnostic. Added a pinned, explicitly scoped refresh and corrected the two current Discussion documents accordingly. Other review items retain the original evidence cutoff.
+
+Published substantive incorporation commit 1f51de2d after preserving concurrent main updates. Final scoped validation: 27 source items, 44 source hashes, 67 new local links/anchors, zero secret-scan findings; repository check zero errors and five existing citation warnings.

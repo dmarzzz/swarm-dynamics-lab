@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: reconcile-dmarz-pi-review-2026-10-04
-doing: Incorporate Dmarz PI review in study documents and shared methods; validate and publish.
-updated: 2026-10-04T03:54Z
+doing: Published Dmarz PI incorporation across 17 study and methods documents; all 27 items reconciled.
+updated: 2026-10-04T04:05Z
 ---
 
 ## Notes
