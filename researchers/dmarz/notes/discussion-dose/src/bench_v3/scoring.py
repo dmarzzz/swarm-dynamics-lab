@@ -63,11 +63,14 @@ def parent_context(case, memory):
 def parent_score(context, answer, truth_answer):
     expected = supported_parent(context)
     possibilities = resolve(context['key'], reported_records(context), context['task']['policy'])
+    coverage = int(any(r['key'] == context['key'] for r in context['memory']))
     if answer is None:
         return {'parent_invalid': 1, 'parent_correct': 0, 'parent_groundtruth_wrong': None,
                 'parent_unsupported': None, 'parent_justified': 0, 'parent_abstain': 0,
                 'parent_correct_abstain': 0, 'parent_unnecessary_abstain': 0, 'parent_inherited_error': 0,
-                'parent_citation_valid': 0, 'parent_answerable': int(expected['value'] is not None)}
+                'parent_citation_valid': 0, 'parent_answerable': int(expected['value'] is not None),
+                'parent_required_coverage': coverage, 'parent_supported': None,
+                'parent_unsupported_correct': None, 'parent_unsupported_wrong': None}
     value = answer['value']; justified = value == expected['value']
     # A numerical coincidence without the required evidence is unsupported. A
     # false but locally supported inherited value is a distinct downstream harm.
@@ -76,9 +79,14 @@ def parent_score(context, answer, truth_answer):
     origins = {d['id']: d['origin'] for d in context['task']['catalog']}
     citation_valid = (not cited if value is None else bool(cited) and cited <= support_ids and
                       len({origins[s] for s in cited}) >= context['task']['policy'].get('min_origins', 1))
+    unsupported = value is not None and (not justified or not citation_valid)
     return {'parent_invalid': 0, 'parent_correct': int(value == truth_answer),
             'parent_groundtruth_wrong': int(value is not None and value != truth_answer),
-            'parent_unsupported': int(value is not None and (not justified or not citation_valid)),
+            'parent_unsupported': int(unsupported),
+            'parent_unsupported_correct': int(unsupported and value == truth_answer),
+            'parent_unsupported_wrong': int(unsupported and value != truth_answer),
+            'parent_supported': int(value is not None and justified and citation_valid),
+            'parent_required_coverage': coverage,
             'parent_justified': int(justified and citation_valid), 'parent_abstain': int(value is None),
             'parent_correct_abstain': int(value is None and len(possibilities) != 1),
             'parent_unnecessary_abstain': int(value is None and len(possibilities) == 1),
