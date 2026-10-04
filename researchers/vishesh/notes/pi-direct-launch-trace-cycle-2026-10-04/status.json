@@ -1,0 +1,97 @@
+{
+  "assessed_at": "2026-10-04T16:48:46.776327+00:00",
+  "status_kind": "in-progress snapshot; not a terminal cycle verdict",
+  "sources": "Owning-task observed reports plus pinned public scientific records; source revisions are not live admission receipts.",
+  "studies": [
+    {
+      "study": "Quorum",
+      "status": "revised_offline_no_native",
+      "scientific_evidence": "decision-models/quorum-of-mirrors/trace-review/RESULTS.md",
+      "reported_source_commit": "27e05565f5b36985f1ee56a9d9ca568d751a6aa8",
+      "evidence_sha256_at_snapshot": "43e26176aeb32726c3f06b5bf1f50f4b3d963418dc44bf76f74c530857510b77",
+      "observed_or_last_reported": "96 assigned historical slots;49starts;48valid retained;1discarded response;47unstarted. All11graded misses inspected.",
+      "next_action": "24 synthetic bundles/four baselines; strongest hybrid resolves15/15 and abstains on9. Corpus/headroom gap remains;9tests independently rerun."
+    },
+    {
+      "study": "Phantom",
+      "status": "revised_offline_no_native",
+      "scientific_evidence": "phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+      "reported_source_commit": "31f4d543",
+      "evidence_sha256_at_snapshot": "d665ad4a6d5aed94a1b7c212a1488acd660ae595e836174a513143e3f151f8ea",
+      "observed_or_last_reported": "140 historical request/checked-output pairs reconciled;128scientific outcomes include50suboptimal. Manual close reading covers6deterministic S1 excerpts, not all50misses.",
+      "next_action": "Finite calibration/shift and two-step acquisition implemented offline; exact Bayes verified by policy enumeration. No useful native model role yet;8tests and140pairreadback rerun."
+    },
+    {
+      "study": "Antsy",
+      "status": "native_worker_running",
+      "scientific_evidence": "antsy-targeted-v8/DISPATCH.md",
+      "reported_source_commit": "a3919814c9b6ed6cec4b7d4b6fb801d190620ba1",
+      "evidence_sha256_at_snapshot": "e9c4809f2eb4bb077b02aec0dff4189f3727dd8214c66ed152ea5408ea27be38",
+      "observed_or_last_reported": "Owning operator confirms admitted Q0-attempt-1 worker; latest reported phase dataset preparation.",
+      "next_action": "20receipts/40OCRcalls, no automaticS1; scope unchanged."
+    },
+    {
+      "study": "Theseus",
+      "status": "native_stopped_transport",
+      "scientific_evidence": "swarm-of-theseus/execution-diagnostic/A1-STATUS.md",
+      "reported_source_commit": "dd09575d050e54fd8e4202d05cf1cc4aaa38033c",
+      "evidence_sha256_at_snapshot": "330eefe9899a196e4d81f00410e9daf3ad686fcf07e5d8cf3ea161064f45a1e7",
+      "observed_or_last_reported": "204assigned;1started/terminal HTTP429;0valid;203unstarted;0executor decisions;no retry.",
+      "next_action": "USD0.010452 unresolved exposure; no acquisition inference. Owning operator completing scientific closeout and release."
+    },
+    {
+      "study": "Influence",
+      "status": "receiver_started_admission_in_progress",
+      "scientific_evidence": "influence-swarms/scenario/RUN-HANDOFF.md",
+      "reported_source_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
+      "evidence_sha256_at_snapshot": "723703a14e8ef2f467f601d2198c0dbde4c3611586c00f9484690d0e1bbfbca4",
+      "observed_or_last_reported": "Receiver started; credential-free handoff probe exposed interpreter dependency mismatch before credential access. Original198call ledger unchanged at that observation.",
+      "next_action": "Scoped private direct-launch patch independently reviewed,5tests+CI passed,PR304merged. Owning operator repairs probe interpreter before admitted handoff."
+    },
+    {
+      "study": "Poietic",
+      "status": "waiting_exclusive_host",
+      "scientific_evidence": "poietic-agents/reviews/S0-02-launch-loop.md",
+      "reported_source_commit": "f3621c649311f4e7a6c110c1b56f97b818927f9e",
+      "evidence_sha256_at_snapshot": "28daedb361c0841a6e1a9095603a2beacea05503d89d32b4100ada2b0bece3e9",
+      "observed_or_last_reported": "No new request reported; bounded renewal authorized but original host occupied by Antsy.",
+      "next_action": "Sequential exclusive handoff after Antsy; actual decision-time activation deadline17:35:19.725UTC."
+    },
+    {
+      "study": "Right Dissenter",
+      "status": "route_review_and_allocation_pending",
+      "scientific_evidence": "dissent/rd5/RUN-STATUS.md",
+      "reported_source_commit": "15c018083951d07c6eb3a0c478a59a2c4e59e016",
+      "evidence_sha256_at_snapshot": "d706f80d56378c72b1c3b22347efb01e02ead6114cb7293d18a2f7757a376252",
+      "observed_or_last_reported": "Q5:24unstarted;0RD5calls,428historicalcalls and original exposure preserved.",
+      "next_action": "Central wait superseded; task platform review rejected queue fence. Root will review same necessary action with direct owner context; fresh allocation still needed."
+    },
+    {
+      "study": "Optimal Size",
+      "status": "waiting_exclusive_host_and_ledger_migration",
+      "scientific_evidence": "optimal-swarm-size/reviews/q-a7-preparation-post.md",
+      "reported_source_commit": "85ebf2f5",
+      "evidence_sha256_at_snapshot": "8fd45c33532d40010361464e11846926c74e11858a6dfdcd98a2e1d4b0b13650",
+      "observed_or_last_reported": "No Q-A7calls; original631calls and USD2.031320exposure retained.",
+      "next_action": "64offlinechecks; direct gate and exact trace retention prepared. Next suitable released host; verify one authoritative ledger on migration."
+    },
+    {
+      "study": "Healing",
+      "status": "preparing_direct_path_and_allocation",
+      "scientific_evidence": "healing-helping-hands/c4/ADMISSION-POST.md",
+      "reported_source_commit": "1adeb586",
+      "evidence_sha256_at_snapshot": "a5f7570ab6bf37e11fa58fe157c9f6c1c341091aa9ad571e90d9ae351524024e",
+      "observed_or_last_reported": "No new calls reported; malformed-response evidence retention repaired,22checks pass.",
+      "next_action": "Queue fence completed by root; fresh suitable4CPU/8GBallocation under review, bounded dispatcher amendment in preparation."
+    },
+    {
+      "study": "Immune",
+      "status": "waiting_permitted_exclusive_host",
+      "scientific_evidence": "immune-response-v3/freshness-study/README.md",
+      "reported_source_commit": "396cc93c",
+      "evidence_sha256_at_snapshot": "7ceaaf92629b847edd7f254fcc2d5f3509503248598d629d0e032f43abbb9428",
+      "observed_or_last_reported": "No new calls;387historicalcalls/USD3.179489reserved under originalUSD8.",
+      "next_action": "11tests/12scriptedepisodes pass for pre-parse request/response retention. Available trusted host excluded by earlier Immune directive; no capacity creation at25/25 quota."
+    }
+  ]
+}
