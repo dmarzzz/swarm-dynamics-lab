@@ -328,6 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/growth-pressure | working | none | 2026-10-04T22:25Z | building growth-pressure-200 for launch tonight (Amendment 03, engine, chain, rehearsal); no launch and no model call by this agent |
 | vishesh/codex-village-fit | active |  | 2026-10-04T22:20Z | Telephone B2 reviewed; B3 downstream-reader packet prepared offline for PI decision; separate Sol50 topology pending. |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T22:16Z | B1 complete with instrument ambiguity; preparing funded B2 clarification and conditional evaluation |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T22:12Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
