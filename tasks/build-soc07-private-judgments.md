@@ -3,9 +3,9 @@ id: build-soc07-private-judgments
 type: task
 title: Build and run the SOC-07 private-judgments development study (S0, S1)
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: dmarz/soc07-private
+owner: null
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/soc07-private
@@ -14,8 +14,9 @@ depends_on:
 topics:
 - llm-agent-swarms
 - collective-decision
-claimed_at: 2026-10-04T03:29Z
-updated: 2026-10-04T04:37Z
+updated: 2026-10-04T04:41Z
+history:
+- '2026-10-04T04:41Z released by dmarz/soc07-private: Phase 1 done (build, 58 tests, scripted S0 69/69 on sim-dmarz-3, pre-run assessment). Builder machine shutting down; Phase 2 (S1-Q, S1-R, S1-L after reviewer go) is for dmarz/orbital-orchestrator: start at researchers/dmarz/notes/soc07-private-judgments/DEPLOYMENT.md, Handoff.'
 ---
 
 ## Goal
