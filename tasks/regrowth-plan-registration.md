@@ -21,6 +21,6 @@ Record the missing Regrowth plan URL as a process failure; publish a retrospecti
 
 ## Done when
 
-- [ ] Publish retrospective Regrowth plan and process incident.
-- [ ] Add public design TLDRs and a future-run registration check.
-- [ ] Verify live plan link, descriptions and process-failure record.
+- [x] Publish retrospective Regrowth plan and process incident.
+- [x] Add public design TLDRs and a future-run registration check.
+- [x] Verify live plan link, descriptions and process-failure record.
