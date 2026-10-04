@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-split
 tool: claude-code
-state: working  # working | idle | blocked | done
-task: build-sybil-split-opus
-doing: "sybil-split-opus: launch-ready package on main (pinned 0b8a444a, source hash 95889bea, pre-run review ready); waiting for the pipeline lead's review; nothing launched, no model call"
-updated: 2026-10-04T09:23Z
+state: done  # working | idle | blocked | done
+task: null
+doing: "sybil-split-opus package finished and filed as a ready run request (run queue 252) after the fleet monitor's same-researcher check; nothing launched by this agent"
+updated: 2026-10-04T09:28Z
 ---
 
 ## Notes
