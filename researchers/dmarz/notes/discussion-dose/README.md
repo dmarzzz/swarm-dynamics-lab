@@ -99,7 +99,7 @@ Use a new output directory every time; existing runs cannot be overwritten. Flee
 
 ## Results
 
-No LLM behavioral result has been collected. [VALIDATION.md](VALIDATION.md) records 56 valid scripted episodes, exact revisions, hub run IDs, artifact read-back checks and the recovered upload failure. These outputs cannot establish resistance to persuasion, a discussion-dose effect, or real-world task validity.
+Real-model qualification is running on pinned Claude Haiku 4.5. The eight-episode preflight passed; the first completed S0 attempt exposed a claim-format issue and is preserved as failed. A full rerun uses a versioned native-schema correction. [VALIDATION.md](VALIDATION.md) records the real-model attempts, costs, replay checks, exact revisions, and the earlier scripted checks. This remains engineering qualification; it does not establish a discussion-dose effect or broad resistance to corruption.
 
 ## Analysis
 
