@@ -6,6 +6,10 @@
 
 **sample_size_summary:** Observed: 0 evaluated episodes, 0 model calls. Planned, conditional on usable clusters: 8 development, 8 qualification and 24 evaluation episodes; four paired decision arms. Messages and turns are not independent samples.
 
+## Integration update, 2026-10-04
+
+[Ranked experiment fit and new-study assessment](FIT.md), [implemented offline preparation](IMPLEMENTATION.md), [Telephone development plan](TELEPHONE.md), and [new closure-rule hunch](ACKNOWLEDGMENT.md). The historical metadata-only review below is preserved. The later integration parsed 8,000 private development-prefix rows, normalized 6,000 unreviewed drafts, and passed 21 software tests; zero real episodes are labeled or evaluated. Seven study-local contracts now link the shared builder. No native attempt changed or launched.
+
 ## What we verified
 
 Source: [[data-ai-village-2026]], pinned to [`838b4150303ca8228e8edb432d8b8ccae353d258`](https://huggingface.co/datasets/aidigestorg/ai-village/tree/838b4150303ca8228e8edb432d8b8ccae353d258). Export timestamp: 2026-09-20T13:05:12.097Z. Read the card, schema and scaffolding changelog; authenticated downloads and parsing succeeded for four small metadata tables. No chat, memory text, computer-turn corpus or screenshots were inspected. Raw gated files remain private.

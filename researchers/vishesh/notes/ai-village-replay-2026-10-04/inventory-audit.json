@@ -1,0 +1,40 @@
+{
+  "scope": "structural audit of convenience development prefixes; absent joins mean NOT LOADED, not missing in source",
+  "chat_event_links": 896,
+  "chat_event_links_loaded": 7,
+  "consolidation_events": 283,
+  "consolidation_session_links": 283,
+  "consolidation_sessions_loaded": 7,
+  "tables": {
+    "events": {
+      "rows": 2000,
+      "duplicate_ids": 0,
+      "backward_timestamp_steps": 996,
+      "rows_modified_after_creation": 2000,
+      "prefix_projection_sha256": "216612af23eeca655495094775543a3574b9371cebd4515f8586206ed7ddda9a"
+    },
+    "chat_messages": {
+      "rows": 2000,
+      "duplicate_ids": 0,
+      "backward_timestamp_steps": 1021,
+      "rows_modified_after_creation": 2000,
+      "prefix_projection_sha256": "3b8f1e7478d20e84d98aefaa700f155eb72d206f8649ab9a4716f30db973b165"
+    },
+    "agent_memories": {
+      "rows": 2000,
+      "duplicate_ids": 0,
+      "backward_timestamp_steps": 997,
+      "rows_modified_after_creation": 2000,
+      "prefix_projection_sha256": "0016fec164a7231c74ac92dfc5339c29d40a8cf41c0dfa204fa45e63837f58f4"
+    },
+    "computer_use_sessions": {
+      "rows": 2000,
+      "duplicate_ids": 0,
+      "backward_timestamp_steps": 989,
+      "rows_modified_after_creation": 2000,
+      "prefix_projection_sha256": "66b77c223b7af2be994cc0d5512256cc388dc506f4016854f57910b30478eac4"
+    }
+  },
+  "validated_episodes": 0,
+  "model_calls": 0
+}

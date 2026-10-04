@@ -85,3 +85,7 @@ If the simple baseline explains the result, or the necessary evidence cannot be 
 - [AI Village dataset card](https://huggingface.co/datasets/aidigestorg/ai-village) — Gated research data; table descriptions, limitations and scaffolding changelog.
 
 [All project briefs](README.md) · [Research updates](../background-readings-2026-10-03.md)
+
+## AI Village integration update, 2026-10-04
+
+[Dataset-backed preparation and fit](../ai-village-replay-2026-10-04/PLAN.md) now supplies concrete next steps. The [shared builder](../ai-village-replay-2026-10-04/IMPLEMENTATION.md) is validated offline; no real episode labels or native outcomes are claimed. This brief remains an unrun hunch.

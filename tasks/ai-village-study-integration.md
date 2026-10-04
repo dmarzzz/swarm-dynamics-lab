@@ -21,4 +21,8 @@ Build offline dataset preparation and study-specific contracts from PI review; r
 
 ## Done when
 
-- [ ] Publish prospective scope, tested preparation tools, study integrations and fit assessment.
+- [x] Publish prospective scope, tested preparation tools, study integrations and fit assessment.
+
+## Coverage note
+
+Built and tested bounded private inventory, source normalization, conservative packet preparation, two selection baselines and seven study evidence profiles. Parsed 8,000 private development-prefix rows; zero labeled real episodes or native outcomes. Twenty-one tests and repository check pass. Telephone identified as strongest unrun fit; closure-rule hunch scoped honestly. Existing native budgets, runs and approvals unchanged.

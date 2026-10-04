@@ -1,0 +1,151 @@
+{
+  "theseus": {
+    "path": "swarm-of-theseus",
+    "name": "Swarm of Theseus",
+    "roles": [
+      "pre_reset_fact",
+      "handoff_memory",
+      "observable_receipt"
+    ],
+    "question": "Can a fresh successor recover supported task state across a real memory boundary?",
+    "contrast": "Structured versus prose handoff from the same eligible archive; recent history and BM25 are mandatory practical baselines.",
+    "metric": "Critical task-state recovery, stale commitments, citations and total writer plus decision cost.",
+    "controls": [
+      "older fact outside recent window",
+      "accurate handoff",
+      "stale or uncertain handoff",
+      "same-archive retrieval"
+    ],
+    "prior": "execution-diagnostic/RESULTS-A1.md",
+    "reason": "Natural handoffs address the gap between Boolean instruction following and preserving useful acquired task state. A1 transport failure supplies no learning result.",
+    "limit": "This tests handoff recovery, not emergent culture or exact historical agent reconstruction."
+  },
+  "dissenter": {
+    "path": "dissent",
+    "name": "Right Dissenter",
+    "roles": [
+      "prior_claim",
+      "new_observation",
+      "decision_rule"
+    ],
+    "question": "Does fresh sufficient evidence reopen a previously stopped decision in full historical context?",
+    "contrast": "Source-only versus full history; separate history, peer stance and clock overlays only in a new controlled design.",
+    "metric": "Evidence-justified reopening, unsafe resumption and unnecessary deferral.",
+    "controls": [
+      "stop and resume symmetry",
+      "stale evidence",
+      "inconclusive evidence",
+      "unchanged state",
+      "matched repeat variability"
+    ],
+    "prior": "rd5/REPORT.md",
+    "reason": "RD5 lost four late resumptions despite decisive evidence. Real correction records may supply semantic variation beyond the finite interval parser.",
+    "limit": "Do not score the eventual historical winner as correct or infer that a fixed reserve now works."
+  },
+  "quorum": {
+    "path": "decision-models/quorum-of-mirrors",
+    "name": "Quorum of Mirrors",
+    "roles": [
+      "source_receipt",
+      "retold_claim",
+      "reviewed_lineage"
+    ],
+    "question": "Does a retold claim preserve entity, quantity, time, negation, uncertainty and attribution?",
+    "contrast": "Same source binding in every arm; literal/structured parser and BM25 baselines versus semantic extraction.",
+    "metric": "Claim fidelity and unsupported evidence admission, separately from source-origin resolution.",
+    "controls": [
+      "identical text independent acquisitions",
+      "paraphrase same source",
+      "correct origin wrong content",
+      "missing lineage abstention"
+    ],
+    "prior": "case-design/RESULTS.md",
+    "reason": "Authenticated graph traversal already solves the revised provenance task. The remaining candidate need is faithful semantic extraction, not guessing ancestry from similarity.",
+    "limit": "A citation is not entailment; different speakers are not independent evidence. Reviewed lineage does not certify statistical independence."
+  },
+  "healing": {
+    "path": "healing-helping-hands",
+    "name": "Healing Helping Hands",
+    "roles": [
+      "target_claim",
+      "observable_receipt"
+    ],
+    "question": "Can selective stronger-model referral repair evidence-reading errors on natural reports?",
+    "contrast": "Always-cheap, always-strong, selective referral and equal-count random referral; count both cheap passes.",
+    "metric": "Accepted-wrong rate, correction and false correction, referral count and end-to-end cost.",
+    "controls": [
+      "supported",
+      "refuted",
+      "unknown",
+      "correct cheap answer harmed by help",
+      "opaque metadata"
+    ],
+    "prior": "c5/PLAN.md",
+    "reason": "C5 addresses metadata leakage while retaining 12 authored templates. A separate external corpus can test transfer beyond those templates.",
+    "limit": "Do not replace the approved C5 qualification or main assignments. Two order variants are dependent re-evaluations."
+  },
+  "influence": {
+    "path": "influence-swarms/scenario",
+    "name": "How to win agents and influence swarms",
+    "roles": [
+      "primary_evidence",
+      "peer_claim",
+      "decision_rule"
+    ],
+    "question": "Does peer advice change decisions beyond private reconsideration under matched evidence?",
+    "contrast": "Records only, private reconsideration, stance only and evidence-bearing advice; manipulate attribution separately.",
+    "metric": "Wrong-to-correct repair, correct-to-wrong corruption, deferral and evidence uptake.",
+    "controls": [
+      "accurate advice",
+      "inaccurate advice",
+      "same content different identity",
+      "same identity different evidence"
+    ],
+    "prior": "DESIGN-TRANSFER.md",
+    "reason": "Village supplies natural peer statements and possible source access; it can diversify the reused development dossiers after labels and transfer terms are established.",
+    "limit": "Observed agreement or persuasion is confounded. This does not authorize attacks or establish external influence propagation."
+  },
+  "immune": {
+    "path": "immune-response-v3",
+    "name": "Immune Response",
+    "roles": [
+      "stale_claim",
+      "new_observation",
+      "state_rule"
+    ],
+    "question": "Does explicit supersession prevent acting on stale remembered state?",
+    "contrast": "Append-only correction versus explicit supersession with identical underlying observations and simple freshness baseline.",
+    "metric": "Stale action admissions, unnecessary repair and useful repair separately.",
+    "controls": [
+      "true state changed",
+      "old receipt repeated",
+      "fresh confirming receipt",
+      "unavailable state"
+    ],
+    "prior": "freshness-study/reviews/a4-post.md",
+    "reason": "Memory and update records could extend observation-freshness cases. A4 has no valid native responses; a data revision cannot repair transport readiness.",
+    "limit": "Secondary fit only. Natural mistakes are not adversarial compromise, and logs do not create an action-dependent repair simulator."
+  },
+  "phantom": {
+    "path": "phantom-coast",
+    "name": "Phantom Coast",
+    "roles": [
+      "source_receipt",
+      "claim_under_review",
+      "admission_rule"
+    ],
+    "question": "Can natural reports be normalized into admissible evidence without dropping reliable corrections or counting copied claims twice?",
+    "contrast": "Natural prose versus an independently checked structured representation of exactly the same available evidence; frozen parser and graph baselines.",
+    "metric": "Evidence-label error, false exclusion of reliable evidence and unsupported admission. Downstream regret only in a separately declared calibrated sandbox.",
+    "controls": [
+      "verified correction",
+      "unsupported challenge",
+      "duplicate report",
+      "stale observation",
+      "missing ground truth"
+    ],
+    "prior": "pc8/PLAN.md",
+    "reason": "PC8 tests prose normalization in four authored families. The corpus offers an external semantic-transfer lane after complete receipt chains are verified.",
+    "limit": "Do not replace approved PC8 assignments or pretend historical logs supply calibrated source reliability, counterfactual verification cost or optimal policy."
+  }
+}

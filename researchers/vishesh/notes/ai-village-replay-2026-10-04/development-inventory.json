@@ -1,0 +1,63 @@
+{
+  "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+  "scope": "first 2000 file-order rows per table; convenience development inventory, not a sample of independent tasks",
+  "tables": {
+    "chat_messages": {
+      "rows": 2000,
+      "compressed_bytes_read": 589824,
+      "decoded_bytes_read": 1686646,
+      "consumed_line_prefix_sha256": "cdffefe3c82a21d7312d860d38b649ba181001e88a34a789d81abf43112ec2b6",
+      "unique_agent_ids": 42,
+      "earliest_created_at": "2025-04-02 19:28:13.38083",
+      "latest_created_at": "2026-09-18 23:56:57.080383",
+      "action_type_counts": {},
+      "complete_table": false
+    },
+    "events": {
+      "rows": 2000,
+      "compressed_bytes_read": 1769472,
+      "decoded_bytes_read": 5328538,
+      "consumed_line_prefix_sha256": "70f0e5ac980f46a5dca27fe4543a1cc09eb9e7338000eddcdba6da6e68e396f9",
+      "unique_agent_ids": 0,
+      "earliest_created_at": "2025-04-02 19:09:49.418571",
+      "latest_created_at": "2026-09-18 23:48:15.550525",
+      "action_type_counts": {
+        "AGENT_TALK": 857,
+        "STOP_USING_COMPUTER": 154,
+        "PAUSE": 238,
+        "CONSOLIDATE": 283,
+        "WAIT": 188,
+        "OTHER": 28,
+        "SEARCH_HISTORY": 57,
+        "START_USING_COMPUTER": 153,
+        "USER_TALK": 39,
+        "ENTER_ROOM": 3
+      },
+      "complete_table": false
+    },
+    "agent_memories": {
+      "rows": 2000,
+      "compressed_bytes_read": 20054016,
+      "decoded_bytes_read": 57730371,
+      "consumed_line_prefix_sha256": "0112c66c7c1c61a20df849fa42ecd8ce57d1a275a83ff2944b4c9a5abc239afd",
+      "unique_agent_ids": 43,
+      "earliest_created_at": "2025-04-02 19:03:58.839827",
+      "latest_created_at": "2026-09-18 23:49:31.723389",
+      "action_type_counts": {},
+      "complete_table": false
+    },
+    "computer_use_sessions": {
+      "rows": 2000,
+      "compressed_bytes_read": 1114112,
+      "decoded_bytes_read": 2877586,
+      "consumed_line_prefix_sha256": "71ad12a11fe253ac3d6af690c35dac3b3b08c787e4eb56a2637dd8139b1c0631",
+      "unique_agent_ids": 44,
+      "earliest_created_at": "2025-04-02 18:10:17.57496",
+      "latest_created_at": "2026-09-18 23:58:19.20172",
+      "action_type_counts": {},
+      "complete_table": false
+    }
+  },
+  "model_calls": 0,
+  "evaluated_episodes": 0
+}

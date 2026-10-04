@@ -1,0 +1,19 @@
+{
+  "assessed_at": "2026-10-04T18:15:58.496248+00:00",
+  "assessor": "vishesh/codex-village-fit",
+  "scope": "same-author offline instrument validation; no native outcomes",
+  "tests_passed": 21,
+  "original_synthetic_cases": 18,
+  "semantic_families": 6,
+  "real_labeled_episodes": 0,
+  "model_calls": 0,
+  "source_hashes": {
+    "src/audit_inventory.py": "2a39feebae8e28c0f35fc24a7dbe5d8c1eaa89dac9139859114cb3aaf963eeb8",
+    "src/inventory.py": "f37e26d4b07cf0b1e3d8b277e3eb9e84b8f4e48cd2010c4a580e319f84634f80",
+    "src/normalize.py": "48711487182e499726a4e9be41e5e09587ac7fab34ddee2c21515d982058e719",
+    "src/replay.py": "916d9c136a036150aedca71ee8248cec850aacb431ce56664c7a7227804f48a5",
+    "tests/semantic-fixtures.json": "c696ae2d447d1b65b4f2dbe0d159c2744fc6d7481afdd2ad998cfd82db38a512",
+    "tests/test_replay.py": "b07f72640409032d63771241bad0bb3f7959ec007c0cf4079e5badc8b970437d"
+  },
+  "profile_sha256": "1bec2727de37ab1342e3b0b603d1759be89f790a28f6571b1a0b05946f7c71bd"
+}

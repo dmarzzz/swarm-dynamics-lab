@@ -1,0 +1,968 @@
+[
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "negation",
+    "records": [
+      {
+        "id": "fixture-01",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The archive upload completed.",
+        "source_sha256": "51cc1c2eefbb6e42436f0bf95119927b6334f3ff8838a975992d4b7e114cf4f6"
+      }
+    ],
+    "episode": {
+      "id": "dev-01",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The archive upload completed.",
+      "allowed_records": {
+        "fixture-01": "01fa9846ab1f1fd3fb0f791cf18239e88ffa9d9b4afbca7e77d586a2b28e4c3e"
+      },
+      "component_id": "negation",
+      "dependency_keys": [
+        "negation"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-01"
+        ],
+        "observable_receipt": [
+          "fixture-01"
+        ]
+      }
+    },
+    "gold": {
+      "label": "supported",
+      "sufficient_citation_sets": [
+        [
+          "r_15c490f5cc213d597592"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "negation",
+    "records": [
+      {
+        "id": "fixture-02",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The archive upload did not complete.",
+        "source_sha256": "3861075f96eeaf1210f6c7479b108d3b0b4161a80c331fff5a413e93bef653d4"
+      }
+    ],
+    "episode": {
+      "id": "dev-02",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The archive upload completed.",
+      "allowed_records": {
+        "fixture-02": "37867fcdfdeefcca79ca0aefd3a8d381b84cde33d0db51ece8d2693b848c751f"
+      },
+      "component_id": "negation",
+      "dependency_keys": [
+        "negation"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-02"
+        ],
+        "observable_receipt": [
+          "fixture-02"
+        ]
+      }
+    },
+    "gold": {
+      "label": "refuted",
+      "sufficient_citation_sets": [
+        [
+          "r_d8ef0ffced406c36cbfd"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "negation",
+    "records": [
+      {
+        "id": "fixture-03",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The upload was attempted; no completion receipt is available.",
+        "source_sha256": "b3b76b7814a44d6535ee46a3aa8a0bfc6612f08afb980585032a6bbc1f9950aa"
+      }
+    ],
+    "episode": {
+      "id": "dev-03",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The archive upload completed.",
+      "allowed_records": {
+        "fixture-03": "21ea34f808c16c2923d2517b883955862a8a554de2b56adcf5d44ddda2839ed9"
+      },
+      "component_id": "negation",
+      "dependency_keys": [
+        "negation"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-03"
+        ],
+        "observable_receipt": [
+          "fixture-03"
+        ]
+      }
+    },
+    "gold": {
+      "label": "unknown",
+      "sufficient_citation_sets": []
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "quantity",
+    "records": [
+      {
+        "id": "fixture-04",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "Exactly twelve of twenty records passed the audit.",
+        "source_sha256": "fcc4bdcf3633e103b8436608b34d510f2414ab2ffe60db8873fd578f42130b74"
+      }
+    ],
+    "episode": {
+      "id": "dev-04",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? Exactly twelve records passed the audit.",
+      "allowed_records": {
+        "fixture-04": "62491dae2e8f90989346741d36e6b85bccc0849777cb4c1f7596e8f3ac402051"
+      },
+      "component_id": "quantity",
+      "dependency_keys": [
+        "quantity"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-04"
+        ],
+        "observable_receipt": [
+          "fixture-04"
+        ]
+      }
+    },
+    "gold": {
+      "label": "supported",
+      "sufficient_citation_sets": [
+        [
+          "r_18c97307439dbae382f5"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "quantity",
+    "records": [
+      {
+        "id": "fixture-05",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "Exactly ten of twenty records passed the audit.",
+        "source_sha256": "e1e4c4690f1cf1072280e6f56515d00d2864065f77cd7ae1ba050cc3106fc289"
+      }
+    ],
+    "episode": {
+      "id": "dev-05",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? Exactly twelve records passed the audit.",
+      "allowed_records": {
+        "fixture-05": "71416d44113647c480194f8036c21a14c6da08d395927f861b395760d19e0ade"
+      },
+      "component_id": "quantity",
+      "dependency_keys": [
+        "quantity"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-05"
+        ],
+        "observable_receipt": [
+          "fixture-05"
+        ]
+      }
+    },
+    "gold": {
+      "label": "refuted",
+      "sufficient_citation_sets": [
+        [
+          "r_a1cc24aec5d437f63e46"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "quantity",
+    "records": [
+      {
+        "id": "fixture-06",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The audit ran, but no result count was retained.",
+        "source_sha256": "ffd69f0e0fd85f3504cadd27ab7e3178a8fa69fa011d3b029297321862788175"
+      }
+    ],
+    "episode": {
+      "id": "dev-06",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? Exactly twelve records passed the audit.",
+      "allowed_records": {
+        "fixture-06": "ff0a300f719fdf89258cfb55721ea6749245c3a222f2c1544b740d2a68b2c2d1"
+      },
+      "component_id": "quantity",
+      "dependency_keys": [
+        "quantity"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-06"
+        ],
+        "observable_receipt": [
+          "fixture-06"
+        ]
+      }
+    },
+    "gold": {
+      "label": "unknown",
+      "sufficient_citation_sets": []
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "time",
+    "records": [
+      {
+        "id": "fixture-07",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "At 14:00 the gate sensor recorded OPEN.",
+        "source_sha256": "6aad8d294075086b02c1cd1763dc665aed8ec0608b65f2ea9a44539b0a8e13ab"
+      }
+    ],
+    "episode": {
+      "id": "dev-07",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The gate was open at 14:00.",
+      "allowed_records": {
+        "fixture-07": "77b01e68b8219cbb9fd1d1c2a001c3bc5d3801b15bdab1add7140d06dc4df39f"
+      },
+      "component_id": "time",
+      "dependency_keys": [
+        "time"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-07"
+        ],
+        "observable_receipt": [
+          "fixture-07"
+        ]
+      }
+    },
+    "gold": {
+      "label": "supported",
+      "sufficient_citation_sets": [
+        [
+          "r_7d280a2e159529ee14cd"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "time",
+    "records": [
+      {
+        "id": "fixture-08",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "At 14:00 the gate sensor recorded CLOSED.",
+        "source_sha256": "106164f77e734f15d6d0e9f7efeb98d0d0312943ff5c5fe7d961e1dc61885f91"
+      }
+    ],
+    "episode": {
+      "id": "dev-08",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The gate was open at 14:00.",
+      "allowed_records": {
+        "fixture-08": "bc282857be4e7f1fca95d6e9ca71fc279f2eb549c20e16894c9a8a880d8a8905"
+      },
+      "component_id": "time",
+      "dependency_keys": [
+        "time"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-08"
+        ],
+        "observable_receipt": [
+          "fixture-08"
+        ]
+      }
+    },
+    "gold": {
+      "label": "refuted",
+      "sufficient_citation_sets": [
+        [
+          "r_7807c8b36056281a598a"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "time",
+    "records": [
+      {
+        "id": "fixture-09",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "At 13:00 the gate sensor recorded OPEN. There is no later reading.",
+        "source_sha256": "0e395d3cc32ccdf746684b9fc230f4669a05a2b63200ee9e9ff9717e28ee7000"
+      }
+    ],
+    "episode": {
+      "id": "dev-09",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The gate was open at 14:00.",
+      "allowed_records": {
+        "fixture-09": "7d23fcdff2a6ba1fcc4d1bed7f7ddd3430567b91a6bb7dea3dd97bc30c9da004"
+      },
+      "component_id": "time",
+      "dependency_keys": [
+        "time"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-09"
+        ],
+        "observable_receipt": [
+          "fixture-09"
+        ]
+      }
+    },
+    "gold": {
+      "label": "unknown",
+      "sufficient_citation_sets": []
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "scope",
+    "records": [
+      {
+        "id": "fixture-10",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "Partitions A and B both passed validation.",
+        "source_sha256": "057827f9dc219b46d73c495ccd65e1392909bde86900bcd63092215b3cf396c7"
+      }
+    ],
+    "episode": {
+      "id": "dev-10",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? Both partitions passed validation.",
+      "allowed_records": {
+        "fixture-10": "2e257ceb624f4d10f1e9494f978d7781e625ebef5d63728a93f85d9607cf90ef"
+      },
+      "component_id": "scope",
+      "dependency_keys": [
+        "scope"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-10"
+        ],
+        "observable_receipt": [
+          "fixture-10"
+        ]
+      }
+    },
+    "gold": {
+      "label": "supported",
+      "sufficient_citation_sets": [
+        [
+          "r_4e90553f9801bdb5a4ff"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "scope",
+    "records": [
+      {
+        "id": "fixture-11",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "Partition A passed; partition B failed validation.",
+        "source_sha256": "cce3ebd6d89950fac059c3b6041f16c97c7d4034f8e1fdd5068113747c8dbc02"
+      }
+    ],
+    "episode": {
+      "id": "dev-11",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? Both partitions passed validation.",
+      "allowed_records": {
+        "fixture-11": "5e98603588a7b332b4c2b19216e00ce1c5cba5c3a02b711be8418a2b96882c36"
+      },
+      "component_id": "scope",
+      "dependency_keys": [
+        "scope"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-11"
+        ],
+        "observable_receipt": [
+          "fixture-11"
+        ]
+      }
+    },
+    "gold": {
+      "label": "refuted",
+      "sufficient_citation_sets": [
+        [
+          "r_8d26d2f8b050c0dab9a4"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "scope",
+    "records": [
+      {
+        "id": "fixture-12",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "Partition A passed. Partition B was not tested.",
+        "source_sha256": "943127c22f4ff8fb78621530ab2d3932b87ec898ad6f91842595c08477320589"
+      }
+    ],
+    "episode": {
+      "id": "dev-12",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? Both partitions passed validation.",
+      "allowed_records": {
+        "fixture-12": "9b796201e7dad498c1225ea3e3739dad2fd9f1bfa0a0a5967f01531f3e1dad8d"
+      },
+      "component_id": "scope",
+      "dependency_keys": [
+        "scope"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-12"
+        ],
+        "observable_receipt": [
+          "fixture-12"
+        ]
+      }
+    },
+    "gold": {
+      "label": "unknown",
+      "sufficient_citation_sets": []
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "uncertainty",
+    "records": [
+      {
+        "id": "fixture-13",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The report states that every required index entry was verified present.",
+        "source_sha256": "e172db0a5be2ef8f2c14ebe48ad8520090c108a86014853e529166909f742b03"
+      }
+    ],
+    "episode": {
+      "id": "dev-13",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The report establishes that the index is complete.",
+      "allowed_records": {
+        "fixture-13": "063aa0f75e4abc8550365b43cf051e94e8b1de5af6ab9a53931513e6d1f54479"
+      },
+      "component_id": "uncertainty",
+      "dependency_keys": [
+        "uncertainty"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-13"
+        ],
+        "observable_receipt": [
+          "fixture-13"
+        ]
+      }
+    },
+    "gold": {
+      "label": "supported",
+      "sufficient_citation_sets": [
+        [
+          "r_959b91529855d314ebd7"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "uncertainty",
+    "records": [
+      {
+        "id": "fixture-14",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The report states that three required index entries are missing.",
+        "source_sha256": "b5b9fb16f10aa80f3807676368b14d27f6c0bfe1ac81885ccac59333a2b03a30"
+      }
+    ],
+    "episode": {
+      "id": "dev-14",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The report establishes that the index is complete.",
+      "allowed_records": {
+        "fixture-14": "c10b24bd65d5190d8fa1896d3104ea6f5b1a4cc8a94a92f6ad90ae1ff96522bd"
+      },
+      "component_id": "uncertainty",
+      "dependency_keys": [
+        "uncertainty"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-14"
+        ],
+        "observable_receipt": [
+          "fixture-14"
+        ]
+      }
+    },
+    "gold": {
+      "label": "refuted",
+      "sufficient_citation_sets": [
+        [
+          "r_877b597a012475756e14"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "uncertainty",
+    "records": [
+      {
+        "id": "fixture-15",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The report says the index is probably complete but no coverage check was run.",
+        "source_sha256": "6ed2582d5a95c50710f95a4b640a8da2dccf189446bd5b9e2b45efd8b42610b4"
+      }
+    ],
+    "episode": {
+      "id": "dev-15",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The report establishes that the index is complete.",
+      "allowed_records": {
+        "fixture-15": "3887332e1f3dda353e2212d6895790e43a76de8c62731bc9f738f3e4379dceb9"
+      },
+      "component_id": "uncertainty",
+      "dependency_keys": [
+        "uncertainty"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-15"
+        ],
+        "observable_receipt": [
+          "fixture-15"
+        ]
+      }
+    },
+    "gold": {
+      "label": "unknown",
+      "sufficient_citation_sets": []
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "attribution",
+    "records": [
+      {
+        "id": "fixture-16",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The report identifies sensor B as the measurement source.",
+        "source_sha256": "884f93366df8e1f6c8e9480e7f5d6c56eb2944d1d057ec3e0e2e8748b09b3fa6"
+      }
+    ],
+    "episode": {
+      "id": "dev-16",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The report attributes the measurement to sensor B.",
+      "allowed_records": {
+        "fixture-16": "cf367207cbfc799f17b2073b5aec6c86596355863412838a61b2d1845584a7bd"
+      },
+      "component_id": "attribution",
+      "dependency_keys": [
+        "attribution"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-16"
+        ],
+        "observable_receipt": [
+          "fixture-16"
+        ]
+      }
+    },
+    "gold": {
+      "label": "supported",
+      "sufficient_citation_sets": [
+        [
+          "r_cb51c275c76049a11484"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "attribution",
+    "records": [
+      {
+        "id": "fixture-17",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The report identifies sensor A as the measurement source, and explicitly excludes sensor B.",
+        "source_sha256": "5f765e0378ef215c70e87fbb9f5c7cd0b84bbc7a19aaa26d5a7be892771c0734"
+      }
+    ],
+    "episode": {
+      "id": "dev-17",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The report attributes the measurement to sensor B.",
+      "allowed_records": {
+        "fixture-17": "092f183f2f76237f1951915162b70da18c13e8f87373532b069cce682cdc4a09"
+      },
+      "component_id": "attribution",
+      "dependency_keys": [
+        "attribution"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-17"
+        ],
+        "observable_receipt": [
+          "fixture-17"
+        ]
+      }
+    },
+    "gold": {
+      "label": "refuted",
+      "sufficient_citation_sets": [
+        [
+          "r_569c0a2338d8af933afe"
+        ]
+      ]
+    }
+  },
+  {
+    "notice": "SCRIPTED SOFTWARE FIXTURE \u2014 NOT VILLAGE OR MODEL EVIDENCE",
+    "family": "attribution",
+    "records": [
+      {
+        "id": "fixture-18",
+        "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+        "kind": "tool_evidence",
+        "created_at": "2026-01-01T00:00:00Z",
+        "updated_at": "2026-01-01T00:00:00Z",
+        "available_at": "2026-01-01T00:00:00Z",
+        "availability_status": "reviewed",
+        "visible_to": [
+          "fixture-reader"
+        ],
+        "redacted": false,
+        "content": "The report does not name the measurement source.",
+        "source_sha256": "689664fe43a117e6fb2944ca6a4a76d136f8edfb63534ca0f5fbf1890400c02a"
+      }
+    ],
+    "episode": {
+      "id": "dev-18",
+      "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+      "agent": "fixture-reader",
+      "mode": "constructed_information",
+      "visibility_review_id": "synthetic-fixture",
+      "privacy_review_id": "original-authored-text",
+      "cutoff": "2026-01-02T00:00:00Z",
+      "question": "Is this claim supported, refuted, or unknown from the record? The report attributes the measurement to sensor B.",
+      "allowed_records": {
+        "fixture-18": "08baffa42fe813a15f7bf4cc85a3bd4e77019f98317fd8c428e88c20362c5af4"
+      },
+      "component_id": "attribution",
+      "dependency_keys": [
+        "attribution"
+      ],
+      "split": "development",
+      "evidence_roles": {
+        "target_claim": [
+          "fixture-18"
+        ],
+        "observable_receipt": [
+          "fixture-18"
+        ]
+      }
+    },
+    "gold": {
+      "label": "unknown",
+      "sufficient_citation_sets": []
+    }
+  }
+]
