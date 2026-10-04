@@ -11,7 +11,7 @@ def write(path,data):
 def execute(packet,out,ledger,count_tokens,generate,deadline,report=lambda x:None):
  if out.exists():raise ValueError('attempt_exists')
  expected=assignments([x['id'] for x in packet['cases']])
- if packet['assignments']!=expected or len(expected)>72 or packet['stage'] not in ('A0','V0'):raise ValueError('packet_scope')
+ if packet['assignments']!=expected or len(expected)>72 or packet['stage'] not in ('A0','A1','V0'):raise ValueError('packet_scope')
  out.mkdir(mode=0o700,parents=True);write(out/'packet.json',packet)
  byid={x['id']:x for x in packet['cases']};parents={};rows=[];stopped=False
  for a in expected:

@@ -74,6 +74,10 @@ def run(stage,out,admission,ledger=None,parent=None):
   key=sys.stdin.readline().strip()
   if not key:raise ValueError('credential_missing')
  out.mkdir(parents=True,exist_ok=False);rows=cases(stage);write(out/'observations.json',rows)
+ sys.path.insert(0,str(BASE/'practical'));from reporting import Reporter
+ import swarm_report as sdk
+ reporter=Reporter(sdk,'healing-helping-hands','healing-helping-hands/C6-'+stage,out/'reporting.jsonl')
+ reporter.emit('start',url=receipt['url'],params={'attempt_id':'C6','stage':stage,'arm':'haiku+jev'},message=f'TLDR: C6-{stage} uses Haiku4.5 and Jev; '+('60 balanced competence cases before automatic evaluation.' if stage=='S0' else '432 synthetic cases: agreement referral versus single Haiku, always-Jev and same-count random, measuring absolute error and actual total cost.'))
  m={'attempt':'C6-'+stage,'stage':stage,'status':'running','calls':0,'source_commit':a['source_commit'],'source_hashes':hashes,'plan':receipt,'host':a['host'],'claim':a['claim_id'],'started_epoch':time.time()};write(out/'manifest.json',m)
  opener=urllib.request.build_opener(NoRedirect());deadline=time.monotonic()+(900 if stage=='D0' else 3600)
  try:
@@ -107,6 +111,7 @@ def run(stage,out,admission,ledger=None,parent=None):
     except BaseException as e:
      append(out/'calls.jsonl',{'type':'failed','id':h,'error_type':type(e).__name__,**({'http_status':e.code} if hasattr(e,'code') else {})});raise
    r['status']='completed';write(out/'observations.json',rows)
+   if (i+1)%10==0 or i+1==len(rows):reporter.emit('metric',step=i+1,metrics={'completed_cases':i+1,'assigned_cases':len(rows),'model_calls':m['calls']})
   m['status']='completed'
  except BaseException as e:m.update(status='failed',error_type=type(e).__name__)
  finally:
@@ -117,6 +122,7 @@ def run(stage,out,admission,ledger=None,parent=None):
   if stage=='S0':write(out/'qualification.json',qualification(rows))
   if stage=='S1':write(out/'summary.json',score(rows))
   if db:db.close();lock.close()
+ reporter.emit('metric' if m['status']=='completed' else 'fail',metrics={'completed_cases':sum(r['status']=='completed' for r in rows),'assigned_cases':len(rows),'model_calls':m['calls']},message='Native collection terminal; scientific review and cost reconciliation follow.')
  print(json.dumps({'status':m['status'],'stage':stage,'calls':m['calls']}))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--stage',choices=['S0','S1'],required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--admission',type=Path,required=True);p.add_argument('--ledger',type=Path);p.add_argument('--parent',type=Path);a=p.parse_args()

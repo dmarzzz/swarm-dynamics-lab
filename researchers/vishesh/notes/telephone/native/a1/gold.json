@@ -1,0 +1,442 @@
+{
+  "dev-00": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "prototype",
+              "predicate": "works",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "unverified",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  },
+  "dev-01": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "measurement",
+              "predicate": "performed",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": "sensor A"
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  },
+  "dev-02": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "audit",
+              "predicate": "passed",
+              "value_unit": null,
+              "time": null,
+              "scope": "two checked records",
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  },
+  "dev-03": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "gate",
+              "predicate": "open",
+              "value_unit": null,
+              "time": "14:00",
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  },
+  "dev-04": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "count",
+              "predicate": "equals",
+              "value_unit": "9 items",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  },
+  "dev-05": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "reports",
+              "predicate": "derive from",
+              "value_unit": "one acquisition",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  },
+  "dev-06": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "approval",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "unverified",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  },
+  "dev-07": {
+    "obligations": [
+      {
+        "id": "o0",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "deployment",
+              "predicate": "failed",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "archive",
+              "predicate": "contains",
+              "value_unit": "3 records",
+              "time": null,
+              "scope": null,
+              "modality": null,
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      },
+      {
+        "id": "o2",
+        "acceptable": [
+          {
+            "fact": {
+              "entity": "review",
+              "predicate": "status",
+              "value_unit": null,
+              "time": null,
+              "scope": null,
+              "modality": "pending",
+              "attribution": null
+            },
+            "support": "supported"
+          }
+        ]
+      }
+    ]
+  }
+}
