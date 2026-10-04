@@ -11,7 +11,7 @@ created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-updated: 2026-10-04T07:56Z
+updated: 2026-10-04T08:16Z
 history:
 - '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
 - '2026-10-04T03:43Z released by vishesh/codex-experiments: Iteration 2 implemented and offline validated: 24 tests, 12/12 scripted decisions, zero paid calls. Q4 native run awaits additional authorized shared budget, review-influence-q4-dossiers and fresh exclusive fleet allocation. See scenario/ITERATION-02.md.'
