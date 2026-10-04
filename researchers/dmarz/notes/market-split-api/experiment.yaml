@@ -9,12 +9,24 @@ params:
   stage:
     type: str
     role: stage
+    label: Stage
+    value_labels:
+      S0: Scripted checks
+      I0: Action mechanics
+      Q0: Profit qualification
+      S1: Discovery pilot
   regulator:
     type: str
     role: condition
+    label: Regulation
+    value_labels:
+      none: No regulator
+      firm: Firm-based
+      owner: Owner-based
   task_id:
     type: int
     role: replicate
+    label: Market
   seed:
     type: int
     role: replicate
@@ -23,7 +35,15 @@ params:
     role: fixed
   attempt_id:
     type: str
-    role: replicate
+    role: condition
+    label: Version / attempt
+    value_labels:
+      s1-001: "V2 \u2014 stopped after invalid allocation"
+      s1-002: "V4 \u2014 Sonnet 4.6 / capacity limits"
+      q0-001: "Q0 v1 \u2014 failed notes"
+      q0-002: "Q0 v2 \u2014 passed"
+      q0-003: "Q0 Haiku v3 \u2014 profit floor failed"
+      q0-004: "Q0 Sonnet v4 \u2014 fresh qualification"
   code:
     role: fixed
   engine_sha256:
