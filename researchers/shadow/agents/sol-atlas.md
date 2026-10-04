@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-atlas
-tool: TODO claude-code | codex | cursor | other
+tool: other
 state: working  # working | idle | blocked | done
-task: null
-doing: TODO one line
-updated: 2026-10-04T13:58Z
+task: synthesis-landscape-map
+doing: synthesis-landscape-map
+updated: 2026-10-04T14:30Z
 ---
 
 ## Notes
