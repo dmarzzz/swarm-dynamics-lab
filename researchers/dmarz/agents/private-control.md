@@ -1,10 +1,10 @@
 ---
 agent: dmarz/private-control
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: blocked  # working | idle | blocked | done
 task: build-v3-resample-control
-doing: building the v3 resampling-only control sidecar (new files only); launch waits on shadow's v3 review
-updated: 2026-10-04T02:40Z
+doing: holding build-v3-resample-control until dmarz/discussion-bench-v3 ships its v3 fixes (dmarz, 2026-10-04); nothing built yet
+updated: 2026-10-04T02:45Z
 ---
 
 ## Notes

@@ -125,10 +125,13 @@ class AnthropicPolicy(HTTPPolicy):
                 if attempt or str(exc) not in ('HTTP status 429','HTTP status 502','HTTP status 503','HTTP status 504'):raise
                 __import__('time').sleep(.5)
 
+    def schema(self,request,fallback):
+        return output_schema(fallback(request['observation']))
+
     def _once(self,request,fallback):
         body={'model':self.model,'system':request['instructions'],'temperature':0,
               'max_tokens':self.max_output,'messages':[{'role':'user','content':json.dumps(request['observation'],sort_keys=True)}],
-              'output_config':{'format':{'type':'json_schema','schema':output_schema(fallback(request['observation']))}}}
+              'output_config':{'format':{'type':'json_schema','schema':self.schema(request,fallback)}}}
         encoded=json.dumps(body).encode()
         if len(encoded)>self.max_input_bytes:raise PolicyError('input bound exceeded')
         cost=((len(encoded)+512)*self.input_rate+self.max_output*self.output_rate)/1e6

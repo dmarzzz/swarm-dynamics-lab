@@ -1,0 +1,24 @@
+{
+  "assigned": 12,
+  "checked": 12,
+  "frames": 61,
+  "issues": [
+    [
+      "observatory-verbatim-102",
+      "failed_outcome"
+    ],
+    [
+      "observatory-founders-102",
+      "failed_outcome"
+    ],
+    [
+      "observatory-verbatim-103",
+      "failed_outcome"
+    ],
+    [
+      "observatory-founders-103",
+      "failed_outcome"
+    ]
+  ],
+  "passed": false
+}

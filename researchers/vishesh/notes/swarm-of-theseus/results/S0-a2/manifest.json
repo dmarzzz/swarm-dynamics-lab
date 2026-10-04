@@ -1,0 +1,89 @@
+{
+  "attempt": "S0-a2",
+  "stage": "S0",
+  "source": "4c1272651eecf4d2ceef3dd6ebd4e473c08be066",
+  "assignments": [
+    {
+      "scenario": "observatory",
+      "seed": 102,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 103,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 102,
+      "arm": "founders"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 102,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 102,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 102,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 103,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 102,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 103,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 103,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 103,
+      "arm": "founders"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 103,
+      "arm": "founders"
+    }
+  ],
+  "source_hashes": {
+    "design.yaml": "eab8fc65cddc563cf7d7da665f5ea77e6b2ca3084cf9514656de7f4f974a9f04",
+    "README.md": "d5c425c36096fcdb3480b6b6c7a97f939b14472d947c156f42d9aaf8fe1534b9",
+    "experiment.yaml": "6144b32a8c4657f6e77e4ec77fb264737900645f123c30eb95b020c1435d5edb",
+    "model-config.json": "daa9ec0155e90852e4996530af91ad151d206749cf729e809ac3db0454f91db1",
+    "reviews/S0-a1-pre.md": "6e75ac9f6655cd526fa6ffb89741a35909a71de02b6212797c1708fb82449c57",
+    "reviews/S0-a1-post.md": "bc8c03db97927a886c84fb57c4d81c3922aa17e98be4d4b23b0c71d02e01c39f",
+    "reviews/S0-a2-pre.md": "8ed197b5770e5dfb99ea621c98333550e15ba6f3888cc33e46baf40f58315a20",
+    "src/study.py": "6b9f10f413b5f112f19a9c0a59451ee1f6f4f4b08b34c64eded69e75a445fd28",
+    "src/provider.py": "17610c4000fe6cca7ded9d3f2c75df9aed91f9f4149e9b7fdca01d8996b500de",
+    "src/public_plan.py": "12ec7225603e928124e4c7f2db94fe923852d41ccebbf4512985de18313a7934",
+    "src/analyze.py": "88cc2bd4fd7b932c815fbd1672ea50e8efb364071d34e58664889eb1d68132de",
+    "src/render.py": "99b011d9b47104010e5f0ae2f93d2d317d2153638829cb9c6c728bc0a82c8460",
+    "src/runner.py": "98f70515719669e772e080a3e8f88e7597cb74f81cbf2f78929f991d1907e5c3",
+    "tests/test_study.py": "dacb5941809c2146f59d0171a9d8e4494b4f4d35822ebdb1b4db4501e3ba2976"
+  },
+  "created_utc": "2026-10-04T01:45:56.724799+00:00",
+  "allocation": "swarm-of-theseus-v1",
+  "claim": "vishesh-swarm-theseus",
+  "host": "sim-shadow",
+  "model": "claude-haiku-4-5-20251001",
+  "process_compliance": "preflight-passed"
+}

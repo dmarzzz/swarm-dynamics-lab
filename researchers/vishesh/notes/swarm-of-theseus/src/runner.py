@@ -46,7 +46,7 @@ def run(a):
         receipt=receipts[f'{spec["scenario"]}-{spec["arm"]}'];save(dest/'public-plan-receipt.json',receipt)
         params={**spec,'stage':a.stage,'backend':'anthropic','source_commit':revision,'attempt':a.attempt}
         hub=sr.start('swarm-of-theseus',run=rid,params=params,message=tldr(a.stage,spec['scenario'],spec['arm']))
-        sr.report('log','swarm-of-theseus',rid,url=receipt['url'],message='Immutable pre-run plan for this attempt; later experiment-level plans do not replace it.')
+        sr.report('log','swarm-of-theseus',rid,url=receipt['url'],message=tldr(a.stage,spec['scenario'],spec['arm'])+' Immutable pre-run plan pinned for this attempt.')
         history=[];policy=None;started=time.time()
         with (dest/'events.jsonl').open('x') as journal:
             def emit(event):
@@ -67,7 +67,7 @@ def run(a):
         row['process_compliance']='preflight-passed';save(dest/'outcome.json',row);image(row,dest/'final_frame.png');replay([row],dest/'replay.html')
         for p in [dest/'public-plan-receipt.json',dest/'outcome.json',dest/'events.jsonl',dest/'final_frame.png',dest/'replay.html',out/'manifest.json']:
             hub.artifact(p,p.name)
-        if row['status']=='completed':hub.done(message='Execution complete; qualification and scientific interpretation require stage review.',accuracy=row['final_accuracy'],convention=row['final_convention'],calls=row['usage']['calls'],invalid=0)
+        if row['status']=='completed':hub.done(message=tldr(a.stage,spec['scenario'],spec['arm'])+' Execution complete; consult the stage review for qualification and interpretation.',accuracy=row['final_accuracy'],convention=row['final_convention'],calls=row['usage']['calls'],invalid=0)
         else:hub.fail(message='Recorded execution failure: '+row['error_type'])
         return row
     rows=[]
