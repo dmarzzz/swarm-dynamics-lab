@@ -56,7 +56,10 @@ Operations entry: manual (private launcher). [Operations guide](../../../../tool
 |---|---|---|---|---|
 | local-s0-001 / — | S0 offline / v1 | (offline engineering check) | 216 assigned / 0 recorded (host out of memory) | [interrupted; repaired pool cap](reviews/local-s0-001-post.md) |
 | fleet-s0-001 (33d602fe) / local-s0-001 | S0 fleet / v1 | [pre](reviews/fleet-s0-001-pre.md) | 216/216/216/216/216 | [pass](reviews/fleet-s0-001-post.md); Haiku Q0/S1 not launched (Opus directive) |
-| s0-a1 / fleet-s0-001 | S0 fleet / A1 (Opus manifest) | [pre](reviews/s0-a1-pre.md) | pending | pending |
+| s0-a1 (4673b7bd) / fleet-s0-001 | S0 fleet / A1 | [pre](reviews/s0-a1-pre.md) | 72/72/72/72/72 | pass (chain gate) |
+| q0-a1 (a6b2a7b3) / s0-a1 | Q0 Opus / A1 | [pre](reviews/q0-a1-pre.md) | 24/24/24/24/24 | [pass, USD 9.85](reviews/q0-a1-post.md) |
+| s1-a1 (7a32ec63) / q0-a1 | S1 Opus / A1 | [pre](reviews/s1-a1-pre.md) | 576 assigned / 0 started | [stopped in preparation for A2](reviews/s1-a1-post.md) |
+| s0-a2, q0-a2, s1-a2 / q0-a1 | A2 (overload retry) | [pre](reviews/s0-a2-pre.md) | chained | pending |
 
 ## Closeout
 

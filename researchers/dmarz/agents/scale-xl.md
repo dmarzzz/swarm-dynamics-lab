@@ -3,8 +3,8 @@ agent: dmarz/scale-xl
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: null
-doing: "sybil-scale-xl A1 (Opus): S0-a1 running on sim-dmarz; tmux chain scale-xl-chain launches Q0 then S1 at passed software gates"
-updated: 2026-10-04T07:50Z
+doing: "sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz"
+updated: 2026-10-04T08:25Z
 ---
 
 ## Notes

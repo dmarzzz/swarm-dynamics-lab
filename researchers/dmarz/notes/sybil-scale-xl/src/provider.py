@@ -28,6 +28,9 @@ SCHEMA = {'type':'object','properties':{'values':{'type':'object',
     'required':['values'],'additionalProperties':False}
 
 
+RETRY_WAITS = (20, 60)  # seconds before retry 1 and 2
+
+
 class CallFailure(Exception):
     def __init__(self, category, accounting=None):
         super().__init__(category)
@@ -86,13 +89,17 @@ class Anthropic:
     def count(self, body):
         request = urllib.request.Request('https://api.anthropic.com/v1/messages/count_tokens',
                                          data=json.dumps(body).encode(), headers=self.headers(), method='POST')
-        try:
-            with self.opener(request, timeout=self.b['request_timeout_seconds']) as response:
-                tokens = json.loads(response.read()).get('input_tokens')
-        except urllib.error.HTTPError as exc:
-            raise CallFailure('count_http_'+str(exc.code)) from None
-        except Exception as exc:
-            raise CallFailure('count_transport_'+type(exc).__name__) from None
+        for attempt in range(len(RETRY_WAITS)+1):
+            try:
+                with self.opener(request, timeout=self.b['request_timeout_seconds']) as response:
+                    tokens = json.loads(response.read()).get('input_tokens')
+                break
+            except urllib.error.HTTPError as exc:
+                if exc.code in (429,529) and attempt<len(RETRY_WAITS):
+                    time.sleep(RETRY_WAITS[attempt]); continue
+                raise CallFailure('count_http_'+str(exc.code)) from None
+            except Exception as exc:
+                raise CallFailure('count_transport_'+type(exc).__name__) from None
         if type(tokens) is not int or tokens<=0:
             raise CallFailure('count_missing')
         return tokens
@@ -111,17 +118,28 @@ class Anthropic:
         # 2% + 64-token margin in case billed input differs slightly from the count.
         reserve = (int(counted*1.02)+64)*self.b['input_usd_per_million'] + self.b['max_output_tokens']*self.b['output_usd_per_million']
         account = {'reserved_usd':reserve/1e6, 'counted_input_tokens':counted, 'usage_reported':False, 'attempted':False}
-        self.ledger.transact({'type':'reserve','call_id':call_id,'micro_usd':reserve,'time':time.time()})
-        account['attempted'] = True
-        request = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=self.headers(), method='POST')
-        started = time.monotonic()
-        try:
-            with self.opener(request, timeout=self.b['request_timeout_seconds']) as response:
-                data = json.loads(response.read())
-        except urllib.error.HTTPError as exc:
-            raise CallFailure('http_'+str(exc.code), account) from None
-        except Exception as exc:
-            raise CallFailure('transport_'+type(exc).__name__, account) from None
+        # Amendment A2: at most two retries, only for HTTP 429/529 (the provider did not run
+        # the model). Each attempt is reserved under its own id and counts against the call cap;
+        # a not-run attempt settles at zero. Answers and every other failure are never retried.
+        started = time.monotonic(); account['attempted'] = True; account['retries'] = 0
+        for attempt in range(len(RETRY_WAITS)+1):
+            attempt_id = call_id if attempt==0 else f'{call_id}:retry{attempt}'
+            self.ledger.transact({'type':'reserve','call_id':attempt_id,'micro_usd':reserve,'time':time.time()})
+            request = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=self.headers(), method='POST')
+            try:
+                with self.opener(request, timeout=self.b['request_timeout_seconds']) as response:
+                    data = json.loads(response.read())
+                break
+            except urllib.error.HTTPError as exc:
+                if exc.code in (429,529) and attempt<len(RETRY_WAITS):
+                    self.ledger.transact({'type':'response','call_id':attempt_id,'actual_micro_usd':0,
+                                          'input_tokens':0,'output_tokens':0,'not_run':exc.code})
+                    account['retries'] = attempt+1
+                    time.sleep(RETRY_WAITS[attempt]); continue
+                raise CallFailure('http_'+str(exc.code), account) from None
+            except Exception as exc:
+                raise CallFailure('transport_'+type(exc).__name__, account) from None
+        call_id = attempt_id
         account['latency_seconds'] = time.monotonic()-started
         usage = data.get('usage', {})
         if not all(type(usage.get(k)) is int and usage[k]>=0 for k in ('input_tokens','output_tokens')):

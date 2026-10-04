@@ -111,4 +111,29 @@ class Tests(unittest.TestCase):
      total=int(b['aggregate_usd']*1e6)-int(acct['actual_usd']*1e6)-5
      ledger.transact({'type':'reserve','call_id':'fits','micro_usd':total})
      with self.assertRaises(provider.CallFailure):ledger.transact({'type':'reserve','call_id':'over','micro_usd':1})
+ def test_retry_only_not_run_overload(self):
+    import io,urllib.error
+    from unittest.mock import patch
+    class Resp(io.BytesIO):
+     def __enter__(self):return self
+     def __exit__(self,*a):return False
+    def make(codes):
+     seq=list(codes)
+     def opener(request,timeout):
+      if request.full_url.endswith('count_tokens'):return Resp(json.dumps({'input_tokens':100}).encode())
+      code=seq.pop(0)
+      if code:raise urllib.error.HTTPError(request.full_url,code,'x',{},None)
+      return Resp(json.dumps({'model':study.design()['model'],'stop_reason':'end_turn','usage':{'input_tokens':100,'output_tokens':10},
+        'content':[{'type':'text','text':json.dumps({'values':{str(i):None for i in range(6)}})}]}).encode())
+     return opener
+    with tempfile.TemporaryDirectory() as td,patch.dict(os.environ,{'SWARM_MODEL_API_KEY':'k','SWARM_MODEL_WORKSPACE_ID':'w'}),patch.object(provider,'RETRY_WAITS',(0,0)):
+     ledger=provider.Ledger(Path(td)/'l1')
+     _,acct=provider.Anthropic(ledger,make([429,529,0])).call({'skills':list(range(6)),'reports':[]},'a')
+     state=ledger.transact();self.assertEqual(acct['retries'],2);self.assertEqual(state['attempted_calls'],3)
+     self.assertAlmostEqual(state['actual_usd'],acct['actual_usd'])
+     with self.assertRaises(provider.CallFailure) as e:provider.Anthropic(provider.Ledger(Path(td)/'l2'),make([429,429,429])).call({'skills':[],'reports':[]},'b')
+     self.assertEqual(e.exception.category,'http_429')
+     ledger3=provider.Ledger(Path(td)/'l3')
+     with self.assertRaises(provider.CallFailure) as e:provider.Anthropic(ledger3,make([400,0])).call({'skills':[],'reports':[]},'c')
+     self.assertEqual(e.exception.category,'http_400');self.assertEqual(ledger3.transact()['attempted_calls'],1)
 if __name__=='__main__':unittest.main()

@@ -16,3 +16,7 @@
 ## Amendment A1 (2026-10-04, before any paid call)
 
 See [AMENDMENT-A1.md](AMENDMENT-A1.md). Model claude-opus-5-5 at effort low with no temperature; arms random and coverage only; visible badges only; 24 Q0 and 576 S1 calls; ledger cap USD 330 on settled cost plus open reservations. Item 4b (model versus plurality) and 4d (coverage versus random) apply unchanged within the kept arms. Item 4c becomes a paired Opus-minus-Haiku model comparison at N=972, not a test–retest anchor. Hidden-badge, degree and no-check contrasts are not collected. Q0 thresholds are unchanged and evaluated per size over the 8 kept packets.
+
+## Amendment A2 (2026-10-04, before any S1 call)
+
+See [AMENDMENT-A2.md](AMENDMENT-A2.md): at most two retries for HTTP 429/529 only, each attempt reserved and capped (760). No scientific change.
