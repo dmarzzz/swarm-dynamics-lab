@@ -1,0 +1,366 @@
+{
+ "model": "http:openai/gpt-4o-mini",
+ "tasks": {
+  "0": {
+   "orig": "ruvo",
+   "atk": "brisk",
+   "p_orig_empty": 0.491,
+   "per_order": [
+    0.0,
+    0.982
+   ]
+  },
+  "1": {
+   "orig": "teru",
+   "atk": "quon",
+   "p_orig_empty": 0.5041,
+   "per_order": [
+    0.0086,
+    0.9997
+   ]
+  },
+  "2": {
+   "orig": "pira",
+   "atk": "brisk",
+   "p_orig_empty": 0.5007,
+   "per_order": [
+    0.0015,
+    1.0
+   ]
+  },
+  "3": {
+   "orig": "sello",
+   "atk": "pira",
+   "p_orig_empty": 0.5042,
+   "per_order": [
+    0.0086,
+    0.9999
+   ]
+  },
+  "4": {
+   "orig": "olam",
+   "atk": "quon",
+   "p_orig_empty": 0.4995,
+   "per_order": [
+    0.9988,
+    0.0002
+   ]
+  },
+  "5": {
+   "orig": "ruvo",
+   "atk": "olam",
+   "p_orig_empty": 0.498,
+   "per_order": [
+    0.0002,
+    0.9959
+   ]
+  },
+  "6": {
+   "orig": "vand",
+   "atk": "brisk",
+   "p_orig_empty": 0.5,
+   "per_order": [
+    0.0007,
+    0.9993
+   ]
+  },
+  "7": {
+   "orig": "teru",
+   "atk": "kade",
+   "p_orig_empty": 0.4977,
+   "per_order": [
+    0.0007,
+    0.9948
+   ]
+  },
+  "8": {
+   "orig": "vand",
+   "atk": "ruvo",
+   "p_orig_empty": 0.507,
+   "per_order": [
+    0.0141,
+    1.0
+   ]
+  },
+  "9": {
+   "orig": "zuli",
+   "atk": "pira",
+   "p_orig_empty": 0.4974,
+   "per_order": [
+    0.0001,
+    0.9948
+   ]
+  },
+  "10": {
+   "orig": "brisk",
+   "atk": "teru",
+   "p_orig_empty": 0.4999,
+   "per_order": [
+    0.9993,
+    0.0006
+   ]
+  },
+  "11": {
+   "orig": "zuli",
+   "atk": "brisk",
+   "p_orig_empty": 0.4996,
+   "per_order": [
+    0.0012,
+    0.9981
+   ]
+  },
+  "12": {
+   "orig": "teru",
+   "atk": "vand",
+   "p_orig_empty": 0.4988,
+   "per_order": [
+    0.9975,
+    0.0001
+   ]
+  },
+  "13": {
+   "orig": "teru",
+   "atk": "olam",
+   "p_orig_empty": 0.5477,
+   "per_order": [
+    0.0954,
+    1.0
+   ]
+  },
+  "14": {
+   "orig": "quon",
+   "atk": "kade",
+   "p_orig_empty": 0.4763,
+   "per_order": [
+    0.0,
+    0.9526
+   ]
+  },
+  "15": {
+   "orig": "sello",
+   "atk": "teru",
+   "p_orig_empty": 0.4999,
+   "per_order": [
+    0.9993,
+    0.0004
+   ]
+  },
+  "16": {
+   "orig": "quon",
+   "atk": "ruvo",
+   "p_orig_empty": 0.5185,
+   "per_order": [
+    0.9997,
+    0.0373
+   ]
+  },
+  "17": {
+   "orig": "sello",
+   "atk": "teru",
+   "p_orig_empty": 0.4998,
+   "per_order": [
+    0.9994,
+    0.0002
+   ]
+  },
+  "18": {
+   "orig": "mako",
+   "atk": "teru",
+   "p_orig_empty": 0.5089,
+   "per_order": [
+    0.9999,
+    0.018
+   ]
+  },
+  "19": {
+   "orig": "brisk",
+   "atk": "kade",
+   "p_orig_empty": 0.4763,
+   "per_order": [
+    0.9526,
+    0.0
+   ]
+  },
+  "20": {
+   "orig": "kade",
+   "atk": "zuli",
+   "p_orig_empty": 0.574,
+   "per_order": [
+    0.9999,
+    0.148
+   ]
+  },
+  "21": {
+   "orig": "fenn",
+   "atk": "olam",
+   "p_orig_empty": 0.5147,
+   "per_order": [
+    1.0,
+    0.0293
+   ]
+  },
+  "22": {
+   "orig": "ruvo",
+   "atk": "teru",
+   "p_orig_empty": 0.47,
+   "per_order": [
+    0.9399,
+    0.0
+   ]
+  },
+  "23": {
+   "orig": "vand",
+   "atk": "brisk",
+   "p_orig_empty": 0.5001,
+   "per_order": [
+    0.0007,
+    0.9994
+   ]
+  },
+  "24": {
+   "orig": "zuli",
+   "atk": "sello",
+   "p_orig_empty": 0.4945,
+   "per_order": [
+    0.0,
+    0.989
+   ]
+  },
+  "25": {
+   "orig": "vand",
+   "atk": "teru",
+   "p_orig_empty": 0.5009,
+   "per_order": [
+    0.0019,
+    0.9999
+   ]
+  },
+  "26": {
+   "orig": "quon",
+   "atk": "vand",
+   "p_orig_empty": 0.5,
+   "per_order": [
+    0.9999,
+    0.0001
+   ]
+  },
+  "27": {
+   "orig": "olam",
+   "atk": "teru",
+   "p_orig_empty": 0.4523,
+   "per_order": [
+    0.9046,
+    0.0
+   ]
+  },
+  "28": {
+   "orig": "fenn",
+   "atk": "mako",
+   "p_orig_empty": 0.4986,
+   "per_order": [
+    0.9968,
+    0.0004
+   ]
+  },
+  "29": {
+   "orig": "mako",
+   "atk": "ruvo",
+   "p_orig_empty": 0.5187,
+   "per_order": [
+    1.0,
+    0.0373
+   ]
+  },
+  "30": {
+   "orig": "vand",
+   "atk": "teru",
+   "p_orig_empty": 0.5012,
+   "per_order": [
+    0.0025,
+    0.9999
+   ]
+  },
+  "31": {
+   "orig": "brisk",
+   "atk": "vand",
+   "p_orig_empty": 0.4999,
+   "per_order": [
+    0.9993,
+    0.0006
+   ]
+  },
+  "32": {
+   "orig": "vand",
+   "atk": "quon",
+   "p_orig_empty": 0.5,
+   "per_order": [
+    0.0001,
+    1.0
+   ]
+  },
+  "33": {
+   "orig": "pira",
+   "atk": "olam",
+   "p_orig_empty": 0.5011,
+   "per_order": [
+    0.0025,
+    0.9997
+   ]
+  },
+  "34": {
+   "orig": "mako",
+   "atk": "pira",
+   "p_orig_empty": 0.5186,
+   "per_order": [
+    1.0,
+    0.0373
+   ]
+  },
+  "35": {
+   "orig": "pira",
+   "atk": "vand",
+   "p_orig_empty": 0.4974,
+   "per_order": [
+    0.9947,
+    0.0002
+   ]
+  },
+  "36": {
+   "orig": "fenn",
+   "atk": "pira",
+   "p_orig_empty": 0.5114,
+   "per_order": [
+    0.9998,
+    0.023
+   ]
+  },
+  "37": {
+   "orig": "mako",
+   "atk": "ruvo",
+   "p_orig_empty": 0.5187,
+   "per_order": [
+    1.0,
+    0.0373
+   ]
+  },
+  "38": {
+   "orig": "sello",
+   "atk": "kade",
+   "p_orig_empty": 0.4967,
+   "per_order": [
+    0.0002,
+    0.9933
+   ]
+  },
+  "39": {
+   "orig": "ruvo",
+   "atk": "olam",
+   "p_orig_empty": 0.4982,
+   "per_order": [
+    0.0004,
+    0.9959
+   ]
+  }
+ },
+ "spend_usd": 0.00137
+}

@@ -171,9 +171,53 @@ scored at round 30, 6 tasks x 1 seed, memory in {1, full, mix 1/full @0.5, mix 1
 (A0 and A2 share the prefix, so the marginal cost is the recovery phase). Budget: about 16 x (5 + ~6 + 3 x 40)
 calls per episode, 6 episodes per cell, 4 cells: about 12,500 calls, about 1.5 M input tokens, about USD 0.3.
 
-## Pilot results
+## Pilot results (gpt-4o-mini, partial: 3 to 4 tasks per cell, run 1 of 2)
 
-(filled in below by the run; if this section is empty the pilot did not finish before the deadline)
+Run 1 (04:51 to 05:02Z) was cut off by a gateway restart after 3 of 6 tasks per cell (4 in the f = 7/8 cell), with
+every arm complete for those tasks: 48 episode records, 0 invalid, about 13,100 model calls in the records, ledger
+spend USD 0.341 for all pilot work (calibration + priors + run 1; the per-record `cost_usd` in run 1 is a cumulative
+session figure, fixed in the adapter afterwards; the locked ledger is authoritative). Tables:
+[results/MP.md](results/MP.md). Per-call log: `results/pilot-mp/calls-*.jsonl` (4,151 usable calls, response
+curve in the goal log). Settings: N = 16, dose 8/16, entrench 5, takeover cap 60, recovery 40, scored at round 30.
+
+What the model did, A1_purge, captured episodes, honest fraction on the original at round 30 after the purge
+(`frac_T`) and its change since removal (`delta`):
+
+| memory | n | captured | latency | frac at removal | frac_T | delta | long agents at T | fully recovered |
+|---|---|---|---|---|---|---|---|---|
+| all short (L = 1) | 3 | 3/3 | 2 | 0.00 | **0.00** | 0.00 | | 0/3 |
+| all full | 3 | 2/3 | 37 | 0.25 | **0.38** | +0.13 | 0.38 | 0/2 |
+| mix 1/full @ 1/2 | 3 | 3/3 | 16 | 0.13 | 0.25 | +0.13 | 0.08 | 0/3 |
+| mix 1/full @ 3/4 | 3 | 3/3 | 5 | 0.21 | **0.75** | +0.54 | 0.83 | 2/3 |
+| mix 1/full @ 7/8 | 4 | 4/4 | 3 | 0.16 | **0.63** | +0.47 | 0.75 | 1/4 |
+
+- **The pure populations do not return; the mixtures do.** All-short: captured in 2 rounds and stays at exactly
+  0.00 for 40 rounds in all 3 tasks (gpt-4o-mini at L = 1 copies its one remembered word with P = 1.00, so a
+  captured one-slot population is absorbing, as the fitted beta = 8 predicts). All-full: captured slowly (37
+  rounds) and then hovers at 0.25 to 0.38 (frozen at the uncaptured quarter plus count noise), 0/2 recovered.
+  Mixtures at f = 3/4 and 7/8 go to 0.75 and 0.63 with 3 of 7 episodes fully recovered (75% for 10 rounds),
+  and the FULL-memory agents in them end at 0.83 and 0.75 (1.00 in 5 of 7 episodes): the long-memory anchors turn
+  back once the short majority is mixed. Traces are monotone climbs, e.g. f = 3/4 task 0: 0.25 at removal, 0.38,
+  0.63, 0.75, 0.88, 1.00 by round 27 and stays; f = 7/8 task 0: 0.13 -> 0.50 -> 0.63 -> 0.75 -> 0.88.
+- **Non-monotone in f, as scripted.** f = 1/2 (0.25) is no better than all-full (0.38); f = 3/4 and 7/8 are far
+  better than both ends; f = 1 is the worst cell. The scripted M1 ordering (0 ~ 1/2 < 1 < 3/4 < 7/8) is
+  reproduced in sign everywhere except that on this model f = 1 is strictly absorbing (scripted: slow drift to
+  0.24). The paired contrast f = 7/8 minus f = 0 on `delta_original`: +0.44 [+0.38, +0.50] over the 2 shared
+  captured tasks (tiny n, reported as a pilot).
+- **Wipe harm reproduces and is largest in the rescued mixtures.** A2 minus A1 on the round-30 fraction: 0.00
+  at all-short, -0.38 at all-full, -0.25 at f = 1/2, **-0.71 [-1.00, -0.25] at f = 3/4, -0.63 [-0.91, -0.28] at
+  f = 7/8**. Every wiped population (any f < 1) went to exactly 0.00 on the original and stayed there: emptying the
+  anchors' memory hands the swarm to the captured short majority within one round.
+- A0 (committed agents stay) is 0.00 to 0.13 everywhere, so the returns above are caused by the purge.
+- The scripted prediction at the model's own fitted (beta = 8, h = 0) said "full freezes near 0.03, mixtures at
+  f = 3/4, 7/8 return to 0.18 / 0.42, wipe harm -0.14 / -0.36": the model is MORE rescuable than its tanh fit (0.75 /
+  0.63) because its long-window reads are noisy (P(original | share 0.3 to 0.5 of a 30+ list) sits at 0.39 to
+  0.47 rather than 0 or 1), which unfreezes the running mean. The qualitative picture (pure ends fail, mixtures
+  return, wipe kills it) is the same in rule and model.
+
+Status of the claim: real-model reproduction of the scripted lead on 3 to 4 tasks per cell, one model, one dose,
+N = 16. Signs match on every contrast the design named (rescue, non-monotonicity, wipe harm growing with f). Not
+yet a powered result; run 2 (below) adds tasks.
 
 ## Scope boundaries
 

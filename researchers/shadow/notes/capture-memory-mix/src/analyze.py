@@ -70,8 +70,12 @@ def main():
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
     backends = sorted({e.get("backend") for e in eps})
-    spend = sum(e["cost_actual"].get("cost_usd", 0.0) for e in eps if e["arm"] == arms[-1])
-    calls = sum(e["cost_actual"].get("model_calls", 0) for e in eps)
+    # Spend: the locked ledger is authoritative (per-record cost_usd was a cumulative session figure in the first pilot
+    # run and is cumulative over an episode's arms since). Calls: last arm of each episode carries the episode total.
+    ledger = ROOT / "results" / "spend-ledger.json"
+    led = json.loads(ledger.read_text()) if ledger.exists() else {}
+    spend = sum(v["usd"] for v in led.get("by_model", {}).values()) if led else 0.0
+    calls = sum(e["cost_actual"].get("model_calls", 0) for e in eps if e["arm"] == arms[-1])
 
     cells = defaultdict(lambda: defaultdict(list))
     invalid = defaultdict(int)
@@ -81,6 +85,15 @@ def main():
             cells[key][e["arm"]].append(e)
         else:
             invalid[(key, e["arm"])] += 1
+    # Homogeneous cells are the f = 0 (all long) and f = 1 (all short) ends of a mix family (selftest: identical
+    # trajectories). Alias them so the contrasts over f can use them when a stage ran homogeneous cells by name.
+    for (world, dose, mem) in list(cells):
+        if mem.startswith("mix:"):
+            short, long = mem[4:].split("@")[0].split("/")
+            for hom, f in ((long, "0"), (short, "1")):
+                alias = (world, dose, f"mix:{short}/{long}@{f}")
+                if (world, dose, hom) in cells and alias not in cells:
+                    cells[alias] = cells[(world, dose, hom)]
 
     rows = []
     for (world, dose, mem), by_arm in sorted(cells.items(), key=lambda kv: (kv[0][0], kv[0][1], family(kv[0][2]), fkey(kv[0][2]))):
@@ -107,7 +120,7 @@ def main():
         w.writerows(rows)
 
     L = [f"# capture-memory-mix: {a.stage} results", "",
-         f"{len(eps)} episode records, backends {backends}, {calls} model calls, provider-reported spend {spend:.4f} USD. "
+         f"{len(eps)} episode records, backends {backends}, about {calls} model calls in these records; provider-reported spend on the shared ledger (all models, all pilot work) {spend:.4f} USD. "
          + ("Scripted policy: these numbers describe the tanh rule in sim.py, not LLM agents. " if backends == ["scripted"] else "")
          + f"Code commits: {sorted({str(e.get('code')) for e in eps})}.", "",
          "Columns: captured = capture rate (shared by arms); frac@rem / frac_T = honest fraction on the original at removal "

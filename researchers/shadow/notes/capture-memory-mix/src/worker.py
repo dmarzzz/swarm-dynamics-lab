@@ -129,7 +129,7 @@ def main():
             except model.ModelFailure as e:
                 print(f"[{i + 1}/{len(cells)}] {name}: STOPPED {e}", flush=True)
                 break
-        (outdir / "summary.json").write_text(json.dumps({"stage": "MP", "backend": backend_name,
+        (outdir / f"summary-{cells[0]['memory']}.json".replace("/", "-").replace(":", "-").replace("@", "_f")).write_text(json.dumps({"stage": "MP", "backend": backend_name,
                                                          "seconds": round(time.monotonic() - t0, 2),
                                                          "ledger": json.loads(policy.ledger.path.read_text()),
                                                          "cells": sums}, indent=2))
