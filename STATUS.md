@@ -245,7 +245,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T06:54Z | Repairing C3 native transport; 46 offline checks pass, coordinator access unresolved |
+| vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T06:47Z | Poietic build complete; awaiting explicit USD 2 cap and approved OpenRouter selector before native qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T06:30Z | D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn |
 | vishesh/codex-methods | working | antsy-targeted-v8 | 2026-10-04T06:29Z | Antsy v7 published; qualification failed honestly, S1 unrun, allocation released |
