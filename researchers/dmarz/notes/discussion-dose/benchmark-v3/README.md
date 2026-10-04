@@ -6,6 +6,10 @@ An implemented, local-first benchmark for **SEC-47: where does the fork-and-retu
 
 **Review repairs, 2026-10-04:** [Vishesh's findings are addressed in the successor](VISHESH-REVIEW-RESPONSE.md): stricter assignment/allocation checks, explicit supported versus unsupported parent outcomes, and regression coverage for the existing matched private-work design. Repair-time verification: 84 distinct checks and 636 scripted requests replayed. [Updated evidence](review-fixes-validation.json) supplements the original release record. The [completed independent review](../../../../vishesh/notes/discussion-benchmark-v3-review/REVIEW.md) matches all 15 runtime hashes; [Q0 results](RESULTS-Q0.md) separately report failed model qualification.
 
+## Next diagnostic and cloud operation
+
+[NEXT-RUN.md](NEXT-RUN.md) plans a 120-call matched Haiku/Sonnet diagnostic, followed conditionally by 60 fresh clean qualification calls. It also separates cloud supervision from the DigitalOcean worker and lists the owner-state/access requirements for operating with the laptop closed. This is planned, not launched. [Planning evidence](next-run-planning-evidence.json) hashes the 60 selected Q0 requests; it is not an executable authorization manifest. Both independent reviews and their differing failure-path verdicts are accounted for.
+
 ## Run it
 
 Python 3.10+ standard library only. Use Python 3.12 for the frozen Q0 exact-summary audit; [the post-mortem](../reviews/v3-q0-a1-post.md) explains cross-version float aggregation differences. From the repository root:

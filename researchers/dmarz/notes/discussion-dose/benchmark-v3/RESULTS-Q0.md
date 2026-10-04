@@ -98,3 +98,9 @@ The full local replay contains all 96 cases. The saved swarm replay retains 252 
 ## Decision before another batch
 
 Keep the present result as **execution complete / model qualification failed / further work diagnostic-only**. Next, isolate claim-to-decision arithmetic from extraction and evidence-policy handling on these now-open development examples. Compare a stronger permitted model on those probes before freezing fresh disjoint qualification worlds with the same 5/6 gates. Change one factor at a time; predeclare the model, source hashes, token limits, cost ceiling and stopping rule. Preserve this run and keep confirmation closed. No successor was launched as part of this analysis.
+
+## Dated review clarification, 2026-10-04 UTC
+
+Next-run planning incorporated [Shadow's independent pass-with-fixes review](../../../../shadow/notes/review-discussion-benchmark-v3.md), alongside Vishesh's pass. Shadow identified invalid-ballot vote scoring and omitted provider failure reasons in the same frozen source. Q0 had zero invalid/provider-failed calls, so neither failure path changes its observed counts or contrasts. Both require repair before the next paid run; independent reviews were not unanimous on readiness of those paths. The original frozen source, summaries and audit receipts remain unchanged.
+
+Shadow also proved that this N=3 majority merge, with one value per key per agent, cannot retain two conflicting values for a key. The observed loss of all ambiguous target conflicts is therefore a structural merge property, not an empirical LLM tendency to suppress conflict. The [next-run plan](NEXT-RUN.md) incorporates this interpretation and the failure-path checks.

@@ -21,7 +21,11 @@ Verify Q0 results are on main, write a bounded next-run diagnostic plan linked t
 
 ## Done when
 
-- [ ] Verify the Q0 report and safe outcome tables exist on remote main.
-- [ ] Commit a concrete diagnostic design, measurements, call counts, gates and follow-up qualification criteria.
-- [ ] Document cloud versus local execution, credential/access readiness, crash handling and owner-state cleanup requirements.
-- [ ] Link the plan from the benchmark and existing diagnostic task and report the actual launch status.
+- [x] Verify the Q0 report and safe outcome tables exist on remote main.
+- [x] Commit a concrete diagnostic design, measurements, call counts, gates and follow-up qualification criteria.
+- [x] Document cloud versus local execution, credential/access readiness, crash handling and owner-state cleanup requirements.
+- [x] Link the plan from the benchmark and existing diagnostic task and report the actual launch status.
+
+## Output
+
+[Next-run plan](../researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md), [planning evidence](../researchers/dmarz/notes/discussion-dose/benchmark-v3/next-run-planning-evidence.json). Planning complete; paid launch and cloud access remain unconfigured. Implementation belongs to diagnose-discussion-v3-q0.

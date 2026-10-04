@@ -19,6 +19,8 @@ Follow the Q0 post-mortem without changing its outcomes. The user authorized try
 
 Read [Q0 results](../researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md) and [repair ledger](../researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md).
 
+Planning handoff: [NEXT-RUN.md](../researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md) specifies D1/Q1 and cloud readiness. Include Shadow F1/F2 regression repairs before any paid launch; do not interpret the completed planning task as completed implementation.
+
 ## Done when
 
 - [ ] Freeze a bounded diagnostic pre-run plan, provider model ID, source hashes, budget and zero/explicit retry policy; parent attempt v3-q0-a1.
