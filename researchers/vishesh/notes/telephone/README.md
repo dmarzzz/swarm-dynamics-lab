@@ -1,5 +1,21 @@
 # Telephone: where evidence changes in an agent swarm
 
+## Results TLDR — 2026-10-04 UTC
+
+- **Progression:** B2 hit a copied-answer ceiling; B4R1 tested fresh-reader deployment decisions after three handoffs: 9 authored worlds, 3 recipes, 2 blocks.
+- **Finding:** Original source restored to the same handoff yielded **18/18 correct**, versus **7/18** with the handoff alone.
+- **Consequence:** Handoff-only readers withheld all 6 legitimate releases and turned 5 explicit denials into unknowns; **no unsafe authorization** occurred.
+- **Limit:** Synthetic, nested cases in one model; no error-recovery experiment, real AI Village evaluation, or single-phrase causal proof.
+- **Status:** **FINISH bounded diagnostic.** The 50-agent chain remains unrun; no automatic successor.
+
+[Reviewed results and limitations](native/b4r1/results/POST-MORTEM.md) · [Earlier B2 results](native/b2/results/POST-MORTEM.md) · [Authoritative setup and run history](SETUP.md)
+
+Key learning: supporting facts can survive a handoff while the governing rule, evidential threshold or downstream interpretation changes. Source restoration helped on these selected cases; the study does not isolate policy omission, distrust of inherited evidence and added prerequisites as separate causes. These results describe decision answers, not actual deployment actions.
+
+## Original T0 design and historical preparation
+
+The following records describe earlier stages. Their readiness and sample counts are historical; the dated results above are the current summary. Immutable prospective plans and condition registrations remain unchanged.
+
 **Exploratory experimental idea, version T0, 2026-10-04.** Owner: Vishesh. Design author: vishesh/codex-village-fit. No experimental runs, accepted hypothesis, measured benefit or novelty certification. Researcher review is not required by owner direction.
 
 **Question:** when agents relay a claim through conversation and compressed memory, what happens to its evidence, attribution and uncertainty—and can a source-linked handoff preserve meaning better than ordinary prose?
@@ -43,12 +59,12 @@ Telephone measures claim fidelity and its change across hops. Quorum measures so
 
 **Current disposition: PREPARE OFFLINE.** Complete the development casebook, annotation agreement and baseline audit before freezing a costed native packet. This design request did not launch a study or allocate resources.
 
-## Latest iteration: T1 offline preparation
+## Historical T1 offline preparation
 
 [Implementation, cases and closeout](t1/README.md): 24 Telephone tests and 21 shared checks pass. Eight authored roots produce 72 scripted hop outputs. Fourteen private source joins yield zero validated complete episodes. Copy and exact lookup reach the fixture ceiling; model efficacy remains untested. **HOLD native collection** pending coherent development cases and a useful residual task. T0 remains the original prospective design, not a runnable admission packet.
 
 [Top-10 design additions](TOP10-NEXT-STEPS.md) distinguish current A0/V0 handoffs from a possible future sparse-network study.
 
-## Latest native result
+## Historical A1 native result
 
 [A1 completed all72 native calls](native/a1/POST-MORTEM.md): JSON fence repair succeeded, but conservative semantic qualification failed on unsupported scope/status additions. Conditional AI Village V0 did not run. This authored development result is not natural transmission evidence. Full traces, annotations and saved-data replay are linked in the post-mortem; cumulative costUSD0.113744701, allocation released. Current disposition: FINISH / PARK.
