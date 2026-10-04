@@ -51,7 +51,8 @@ Use pending, pass, fail or blocked. Record reviewer and timestamp beside evidenc
 - Dedicated exclusive allocation, claim/expiry and workload verification: [approved public metadata only]
 - If provisioning: approved-account match, intended state/project and exact plan verification: [status and private receipt reference only; no account IDs]
 - Deployment/source/dependency/output-destination verification: [receipt]
-- Credentials: [approved alias and availability status only, never values]
+- Credentials: [exact project-specific store alias/account and availability status only, never values]
+- Credential transfer: [Swarm Lab credential policy version, registered destination/access and exclusive claim verified, SSH host identity checked, single-key payload validated, memory-only lifetime/core dumps disabled; no general-key fallback]
 - Frozen assigned manifest and exact execution command: [no secrets in arguments]
 - Go/no-go decision, decision-maker, time and unresolved blockers: [fill]
 
