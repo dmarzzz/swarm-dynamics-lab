@@ -1,0 +1,25 @@
+---
+id: pi-direct-launch-trace-cycle-2026-10-04
+type: task
+title: Apply direct-launch authorization and review native traces
+kind: review
+status: open
+priority: p1
+owner: null
+for: vishesh
+created: 2026-10-04
+created_by: vishesh/codex-pi-review
+depends_on: []
+topics: []
+---
+
+## Goal
+
+Coordinate direct execution of existing admitted study scopes, revise stopped designs from native traces, and integrate trace-grounded post-mortem guidance.
+
+## Done when
+
+- [ ] Record direct-launch authority without exposing owner prompts or private resources.
+- [ ] Incorporate Dmarz trace-review lessons in the shared workflow.
+- [ ] Obtain evidence-based Quorum and Phantom revisions.
+- [ ] Reconcile actual launch/results or remaining admission blockers for eight prepared scopes.
