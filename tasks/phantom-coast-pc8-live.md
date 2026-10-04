@@ -3,7 +3,7 @@ id: phantom-coast-pc8-live
 type: task
 title: Run PC8 report interpretation qualification and conditional pilot
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T18:03Z
-updated: 2026-10-04T18:03Z
+updated: 2026-10-04T18:13Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/pc8/README.md
+- researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md
 ---
 
 ## Goal
