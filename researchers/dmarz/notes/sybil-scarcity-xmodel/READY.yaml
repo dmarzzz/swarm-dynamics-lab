@@ -12,5 +12,5 @@ max_calls_total: 1489
 usd_cap: 150
 chain_timeout_seconds: 18000
 selftests: 96
-source_hash: f3ffc908cfb96205a4abbbd3c1594de54eec133ec3313c380475e82972b369b7
-review: reviews/chain-002-pre.md
+source_hash: 51ffa0b009afd76bc989be5ffab4f9b6ef35d12fd020e10a4c9576f065a8868e
+review: reviews/chain-003-pre.md
