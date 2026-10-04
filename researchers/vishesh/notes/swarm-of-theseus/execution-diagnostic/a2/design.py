@@ -65,7 +65,7 @@ def assignments(start=7300):
 
 def execution_request(a, mapping): return r1.request(a['cases'][0],mapping,a['context'],'F')
 def source_hash():
-    paths=[ROOT/'A2-PLAN.md',ROOT/'r1/design.py',ROOT/'d2/design.py',ROOT/'src/instrument.py',ROOT/'src/legacy-instructions.json',ROOT/'r1/scoring.py']+sorted((ROOT/'a2').glob('*.py'))
+    paths=[ROOT/'A2-OPENROUTER-AMENDMENT.md',ROOT/'A2-PLAN.md',ROOT/'r1/design.py',ROOT/'d2/design.py',ROOT/'src/instrument.py',ROOT/'src/legacy-instructions.json',ROOT/'r1/scoring.py']+sorted((ROOT/'a2').glob('*.py'))
     return hashlib.sha256(b''.join(str(p.relative_to(ROOT)).encode()+p.read_bytes() for p in paths)).hexdigest()
 
 def check(start=7300):

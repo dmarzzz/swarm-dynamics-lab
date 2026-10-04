@@ -19,9 +19,9 @@ class ContinuationTests(unittest.TestCase):
                 value=http_failure(response,0)
             self.assertEqual(value['provider_error_code'],'enforced_spend_limit_reached' if code=='enforced_spend_limit_reached' else 'unknown')
             self.assertNotIn('SECRET_MARKER',json.dumps(value))
-    def test_provider_health_cannot_be_metadata_or_stale(self):
-        for field,value in [('model','different'),('route_verified',False),('restriction_resolved',False),('evidence_kind','model_metadata'),('evidence_ref',''),('verified_epoch',0),('last_rejection_epoch',10**12)]:
-            r=receipt();r['provider_health'][field]=value
+    def test_provider_route_and_authority_fail_closed(self):
+        for field,value in [('model','different'),('provider','other'),('fallbacks',True),('credential_on_host',True),('first_assignment_qualification',False)]:
+            r=receipt();r['provider_route'][field]=value
             with self.assertRaises(GateError):validate(r,r['source_commit'],assignments())
     def test_prior_reservation_and_old_authority_rejected(self):
         for field,value in [('prior_unresolved_usd',0),('prior_spend_usd',.8122310437),('authority_allocation_id','theseus-a1-7300-7305-v1'),('attempt','A1')]:

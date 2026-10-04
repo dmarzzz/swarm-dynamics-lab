@@ -19,28 +19,13 @@ def reserve(ledger,cost,now):
     return calls+1
 
 def invoke(body,key,timeout):
-    headers={'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-workspace-id':os.environ['SWARM_MODEL_WORKSPACE_ID']}
-    req=urllib.request.Request('https://api.anthropic.com/v1/messages',data=json.dumps(body).encode(),headers=headers)
-    result={'value':None,'raw_text':None,'error':None,'actual_usd':None,'usage':None,'response_received':False,'started_epoch':time.time()}
+    # key is an attempt-specific relay capability, never a provider credential.
+    req=urllib.request.Request('http://127.0.0.1:18462/a2',data=json.dumps({'assignment':os.environ['THESEUS_ASSIGNMENT'],'request':body}).encode(),headers={'Content-Type':'application/json','Authorization':'Bearer '+key})
+    result={'value':None,'raw_text':None,'error':'relay_unavailable','actual_usd':None,'usage':None,'response_received':False,'started_epoch':time.time()}
     try:
-        with urllib.request.urlopen(req,timeout=timeout) as response:raw=response.read(1_000_001)
-        if len(raw)>1_000_000:raise GateError('response_bound')
-        data=json.loads(raw);result['response_received']=True;result['served_model']=data.get('model');u=data.get('usage',{})
-        result['raw_text']=''.join(x['text'] for x in data.get('content',[]) if x.get('type')=='text')
-        if all(type(u.get(k)) is int for k in ('input_tokens','output_tokens')):
-            result['usage']={k:u[k] for k in ('input_tokens','output_tokens')};result['actual_usd']=(u['input_tokens']+5*u['output_tokens'])/1e6
-        result['stop_reason']=data.get('stop_reason') if data.get('stop_reason') in ('end_turn','max_tokens','refusal') else 'other'
-        if result['stop_reason']!='end_turn':result['error']='incomplete_output'
-        else:
-            try:result['value']=json.loads(result['raw_text'])
-            except (ValueError,TypeError):result['value']=None # contract failure, not a hidden retry/transport error
-        if result.get('served_model')!=MODEL:result['error']='served_model_mismatch'
-        if result['usage'] is None:result['error']='usage_missing'
-    except urllib.error.HTTPError as e:
-        result.update(http_failure(e,time.time()))
-        result['error']='http_'+str(result['http_status'])
-        e.close()
-    except Exception as e:result['error']='provider_'+type(e).__name__
+        with urllib.request.urlopen(req,timeout=timeout) as response:data=json.loads(response.read(1_000_001))
+        result.update(data)
+    except Exception as e:result['error']='relay_'+type(e).__name__
     result['finished_epoch']=time.time();return result
 
 def prepare(output):
@@ -61,8 +46,8 @@ def run(receipt_path,output):
     pub=public_check(receipt)
     if receipt.get('status')!='diagnostic-only':raise GateError('operator_not_admitted')
     if not ALLOCATION_LEDGER.exists():raise GateError('original_allocation_ledger_missing')
-    if not os.environ.get('SWARM_MODEL_API_KEY') or not os.environ.get('SWARM_MODEL_WORKSPACE_ID'):raise GateError('authorized_credential_or_route_missing')
-    resource.setrlimit(resource.RLIMIT_CORE,(0,0));key=os.environ['SWARM_MODEL_API_KEY']
+    if not os.environ.get('THESEUS_RELAY_CAPABILITY'):raise GateError('authorized_credential_or_route_missing')
+    resource.setrlimit(resource.RLIMIT_CORE,(0,0));key=os.environ['THESEUS_RELAY_CAPABILITY']
     sys.path.insert(0,'/usr/local/lib/swarm');import swarm_report as sr
     # The queue operator reconciles/retire-transfers the original ledger, never creates a new authority.
     with closing(sqlite3.connect(ALLOCATION_LEDGER,timeout=30)) as db, db:
@@ -84,9 +69,11 @@ def run(receipt_path,output):
             if len(encoded)>(8000 if a['kind']=='learn' else 2500):raise GateError('input_bound')
             if time.time()>=deadline:raise GateError('deadline_or_claim_expired')
             report('plan',a,message=a['tldr'],url=receipt['plan_url'],params={'arm':a['arm'],'seed':a['seed'],'context':a['context'],'tldr':a['tldr']});report('start',a,message=a['tldr']);pending.add(a['id'])
-            cost=(len(encoded)+512+6000)/1e6;call=reserve(ledger,cost,time.time())
-            write_new(root/'calls'/(a['id']+'-started.json'),{'request':body,'request_sha256':digest(body),'checkpoint_sha256':digest(mapping),'reserved_usd':cost,'call':call,'started_epoch':time.time()})
-            result=invoke(body,key,max(.1,min(45,deadline-time.time())));write_new(root/'calls'/(a['id']+'-finished.json'),result)
+            from openrouter import wire
+            wire_body=wire(body);cost=(len(json.dumps(wire_body).encode())+512+6000)/1e6;call=reserve(ledger,cost,time.time())
+            write_new(root/'calls'/(a['id']+'-started.json'),{'provider_wire_request':wire_body,'provider_wire_sha256':digest(wire_body),'request':body,'request_sha256':digest(body),'checkpoint_sha256':digest(mapping),'reserved_usd':cost,'call':call,'started_epoch':time.time()})
+            os.environ['THESEUS_ASSIGNMENT']=a['id']
+            result=invoke(body,key,max(.1,min(60,deadline-time.time())));write_new(root/'calls'/(a['id']+'-finished.json'),result)
             if a['kind']=='learn':policies[a['id']]=policy_score(a,result)
             write_new(root/'outcomes'/(a['id']+'.json'),{'status':'provider_failed' if result['error'] else 'complete'})
             report('progress',a,message=a['tldr'],metrics={'completed_calls':call});report('fail' if result['error'] else 'done',a,message=a['tldr']);pending.discard(a['id'])

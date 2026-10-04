@@ -62,15 +62,5 @@ class DiagnosticsTests(unittest.TestCase):
         for value in ('-1','nan','Infinity','DO_NOT_RETAIN','9'*150,'604801',None):
             self.assertIsNone(retry_seconds(value,10))
 
-    def test_invoke_single_dispatch_no_response_no_cost(self):
-        e=self.make_error({'error':{'type':'rate_limit_error','message':'DO_NOT_RETAIN'},'usage':{'input_tokens':3}})
-        with patch.dict('os.environ',{'SWARM_MODEL_WORKSPACE_ID':'fixture'}), patch('urllib.request.urlopen',side_effect=e) as request:
-            value=invoke({},'DO_NOT_RETAIN',1)
-        request.assert_called_once()
-        self.assertEqual(value['error'],'http_429')
-        self.assertEqual(value['error_usage'],{'input_tokens':3})
-        for key in ('value','raw_text','usage','actual_usd'):self.assertIsNone(value[key])
-        self.assertFalse(value['response_received'])
-        self.assertNotIn('DO_NOT_RETAIN',json.dumps(value))
 
 if __name__=='__main__':unittest.main()

@@ -1,6 +1,6 @@
 # A2 owning-agent pre-run assessment
 
-Status: blocked
+Status: diagnostic-only
 
 Owner approved one acquisition continuation in the owning task on 2026-10-04. Approval is retained, not a new budget. [Plan](A2-PLAN.md), [selective-preservation development](SELECTIVE-PRESERVATION.md), [previous native post-mortem](RESULTS-A1.md). Same actor inputs and fixed cases; new attempt IDs; no execution-benchmark polishing. Thirty offline checks pass, including byte-equivalent actor inputs, retained unresolved costs, safe error codes, provider gate rejection, and selective retain/revise/quarantine/provisional fixtures. This is same-agent validation, not independent review.
 
@@ -9,3 +9,7 @@ Native admission is HOLD. Read-only pinned-model metadata returned HTTP200; conf
 Resume only when recent pinned-model successful inference or authorized account evidence establishes that the restriction is resolved for this route after the latest rejection. Then refresh exclusive allocation, source/runtime, public immutable-plan registration and actual page, pricing and ledger before first call. The current blocked assessment must be prospectively refreshed to diagnostic-only; it cannot satisfy the public preflight. The existing approval covers unchanged A2 and will not be requested again.
 
 Scientific scope: six designed roots with nested learners/actions, exact enumerator baseline and true-policy F ceiling. These are inspected synthetic engineering cases, not independent population samples or native selective-preservation results. Original joint acquisition gate retained. Selective-preservation fixtures and comparator contract are development preparation only; no turnover successor is launched.
+
+## Superseding approved route, before first call
+
+The owner explicitly approved OpenRouter migration of this unchanged acquisition scope. A2-OPENROUTER-AMENDMENT.md supersedes the direct-route HOLD above; historical rejection remains preserved. Native approval is conditional on fresh verified claim, approved-account/runtime/source, original ledger and public preflight.36offline checks pass. The route is anthropic/claude-haiku-4.5 through Anthropic only, no fallbacks, same actor content/schema, credential local via authenticated loopback/SSH relay. First assigned learner qualifies actual model/provider/finish/usage within204calls; failures stop without retry. Serving snapshot identity is limited to the returned route identifier; do not pool with direct R1 serving as identical.

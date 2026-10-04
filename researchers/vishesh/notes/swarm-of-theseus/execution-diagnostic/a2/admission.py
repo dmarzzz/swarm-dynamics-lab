@@ -44,10 +44,9 @@ def validate(receipt,revision,assignments,now=None):
  for k in ('queue_issue','original_ledger_ref','budget_retirement_ref','credential_policy_ref','runtime_sha256'):
   if not receipt.get(k):raise GateError('missing_'+k)
  if receipt.get('allocation_reserved_usd')!=2.6:raise GateError('allocation_envelope_mismatch')
- health=receipt.get('provider_health',{})
- if not isinstance(health,dict) or health.get('model')!=MODEL or health.get('route_verified') is not True or health.get('restriction_resolved') is not True:raise GateError('provider_health_unverified')
- if health.get('evidence_kind') not in ('successful_inference','authorized_account_resolution') or not health.get('evidence_ref'):raise GateError('provider_health_evidence_missing')
- if not 0<=now-health.get('verified_epoch',0)<=900 or health.get('verified_epoch',0)<=health.get('last_rejection_epoch',now):raise GateError('provider_health_stale')
+ route=receipt.get('provider_route',{})
+ if route!={'service':'openrouter','model':'anthropic/claude-haiku-4.5','provider':'anthropic','fallbacks':False,'credential_on_host':False,'first_assignment_qualification':True}:raise GateError('provider_route_mismatch')
+ if receipt.get('provider_migration_authorized') is not True or not receipt.get('provider_migration_ref'):raise GateError('migration_authority_missing')
  return receipt
 
 def public_check(receipt,read=fetch):

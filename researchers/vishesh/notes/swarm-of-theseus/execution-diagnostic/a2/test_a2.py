@@ -20,6 +20,8 @@ def receipt():
     r['authority_allocation_id']='theseus-a2-7300-7305-v1'
     r.update(queue_closed_verified=True,central_dispatch_absent=True,queue_fence_ref='SCRIPTED')
     r['direct_dispatch_authorization']={'attempt':'A2','max_attempts':1,'max_calls':204,'original_cap_usd':5,'assignments_sha256':digest(assignments()),'plan_sha256':sha,'no_central_dispatch':True,'decision_ref':'SCRIPTED','decision_record_sha256':'f'*64}
+    r['provider_route']={'service':'openrouter','model':'anthropic/claude-haiku-4.5','provider':'anthropic','fallbacks':False,'credential_on_host':False,'first_assignment_qualification':True}
+    r.update(provider_migration_authorized=True,provider_migration_ref='SCRIPTED')
     r['provider_health']={'model':MODEL,'route_verified':True,'restriction_resolved':True,'evidence_kind':'successful_inference','evidence_ref':'SCRIPTED','verified_epoch':now,'last_rejection_epoch':now-1}
     return r
 
@@ -65,7 +67,7 @@ class A2Tests(unittest.TestCase):
     def test_all_gate_fields_fail_closed(self):
         r=receipt();validate(r,r['source_commit'],assignments())
         for k in r:
-            if k in ('status','queue_dispatch_authorized'):continue
+            if k in ('status','queue_dispatch_authorized','provider_health'):continue
             broken=copy.deepcopy(r);broken.pop(k)
             with self.subTest(k=k),self.assertRaises(GateError):validate(broken,r['source_commit'],assignments())
     def test_expired_changed_scope_and_wrong_origin_block(self):
@@ -129,7 +131,7 @@ class A2Tests(unittest.TestCase):
             r=receipt();r['status']='diagnostic-only';rp=root/'receipt.json';rp.write_text(json.dumps(r))
             def git(cmd,**kw):
                 return '/private/tmp/swarm-theseus' if '--show-toplevel' in cmd else '' if 'status' in cmd else 'a'*40
-            with patch.object(runner,'ALLOCATION_LEDGER',ledger),patch.object(runner,'invoke',fake_invoke),patch.object(runner,'public_check',return_value={'fixture':True}),patch.object(runner.socket,'gethostname',return_value='SCRIPTED'),patch.object(runner.subprocess,'check_output',side_effect=git),patch.object(runner.resource,'setrlimit'),patch.dict(sys.modules,{'swarm_report':types.SimpleNamespace(report=lambda *a,**k:True)}),patch.dict(runner.os.environ,{'SWARM_MODEL_API_KEY':'SCRIPTED-NOT-A-KEY','SWARM_MODEL_WORKSPACE_ID':'SCRIPTED-NOT-A-ROUTE'}):
+            with patch.object(runner,'ALLOCATION_LEDGER',ledger),patch.object(runner,'invoke',fake_invoke),patch.object(runner,'public_check',return_value={'fixture':True}),patch.object(runner.socket,'gethostname',return_value='SCRIPTED'),patch.object(runner.subprocess,'check_output',side_effect=git),patch.object(runner.resource,'setrlimit'),patch.dict(sys.modules,{'swarm_report':types.SimpleNamespace(report=lambda *a,**k:True)}),patch.dict(runner.os.environ,{'THESEUS_RELAY_CAPABILITY':'SCRIPTED-NOT-A-CREDENTIAL'}):
                 runner.run(rp,root/'run')
                 summary=json.loads((root/'run/summary.json').read_text());self.assertEqual(summary['started_calls'],196);self.assertEqual(summary['observed_decisions'],184);self.assertFalse(summary['qualification_passed']);self.assertEqual(summary['arms']['learned']['correct'],88)
                 with self.assertRaises(sqlite3.IntegrityError):runner.run(rp,root/'duplicate')
