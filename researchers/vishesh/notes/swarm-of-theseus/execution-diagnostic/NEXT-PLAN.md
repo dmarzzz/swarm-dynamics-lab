@@ -41,7 +41,3 @@ A2 completed through the owner-approved OpenRouter route: acquisition6/12; true-
 ## Owner-requested transmission development
 
 The next revision is [T1 institutional apprenticeship](transmission/PLAN.md), built and validated offline. Direct teaching replaces agent-readable shared storage as the treatment. T1-Q0 is a new concrete native scope, not an A2 retry. It would qualify18 founder/successor pairs over six roots,<=72calls/<=USD1.80.31 software checks pass. No native run or allocation yet; material-scope decision required.
-
-## Owner-requested transmission development
-
-The next revision is [T1 institutional apprenticeship](transmission/PLAN.md), built and validated offline. Direct teaching replaces agent-readable shared storage as the treatment. T1-Q0 is a new concrete native scope, not an A2 retry. It would qualify18 founder/successor pairs over six roots,<=72calls/<=USD1.80.31 software checks pass. No native run or allocation yet; material-scope decision required.

@@ -102,7 +102,3 @@ Current continuation: [A2 approved acquisition](A2-STATUS.md), prepared offline 
 ## Institutional memory revision
 
 [Direct apprenticeship prototype and T1 plan](transmission/README.md):31 offline checks, actual context retirement and evidence-gated note scoring. No new native results; A2 remains negative.
-
-## Institutional memory revision
-
-[Direct apprenticeship prototype and T1 plan](transmission/README.md):31 offline checks, actual context retirement and evidence-gated note scoring. No new native results; A2 remains negative.

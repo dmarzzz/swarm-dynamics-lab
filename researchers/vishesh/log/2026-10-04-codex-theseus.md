@@ -75,7 +75,3 @@ Completed owner-approved acquisition through OpenRouter:196 terminal calls,8 dep
 ## Institutional transmission preparation
 
 Owner-directed revision now models predecessor-to-successor apprenticeship without a shared archive. Prospective plan committed before implementation;31 offline checks and18 scripted development roots validate ancestry, two replacement cycles, unseen behavior cases and evidence-scoped retention/revision/quarantine. Added strict semantic scoring and strong exact baseline. Agent-to-agent chains are existing prior art, not a novelty claim. Q0 is proposed six roots/72calls/<=USD1.80 within originalUSD5, no live calls or allocation. Need concrete new-scope decision and native admission wiring before launch.
-
-## Institutional transmission preparation
-
-Owner-directed revision now models predecessor-to-successor apprenticeship without a shared archive. Prospective plan committed before implementation;31 offline checks and18 scripted development roots validate ancestry, two replacement cycles, unseen behavior cases and evidence-scoped retention/revision/quarantine. Added strict semantic scoring and strong exact baseline. Agent-to-agent chains are existing prior art, not a novelty claim. Q0 is proposed six roots/72calls/<=USD1.80 within originalUSD5, no live calls or allocation. Need concrete new-scope decision and native admission wiring before launch.
