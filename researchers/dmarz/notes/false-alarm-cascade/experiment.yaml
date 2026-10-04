@@ -23,6 +23,9 @@ params:
   code:
     type: str
     role: fixed
+  model:
+    type: str
+    role: fixed
 metrics:
 - episodes
 - invalid

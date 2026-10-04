@@ -1,10 +1,10 @@
 ---
 agent: dmarz/scale-xl
 tool: claude-code
-state: done  # working | idle | blocked | done
-task: null
-doing: "sybil-scale-xl closed at 481/576 (credit outage); A3 resume refused by permission guard on a relayed instruction; claim released"
-updated: 2026-10-04T10:50Z
+state: working  # working | idle | blocked | done
+task: build-false-alarm-cascade
+doing: "build-false-alarm-cascade: finishing the paused package (model ladder, reruns, documents, pre-run review); prep only, no launch"
+updated: 2026-10-04T11:00Z
 ---
 
 ## Notes

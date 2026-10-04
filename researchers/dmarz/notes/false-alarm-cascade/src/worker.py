@@ -171,7 +171,7 @@ def _execute(p, out, run, backend, ledger_path, opener, deadline, rows, prior, s
     def base(unit, slot):
         r = study.row_base(unit, slot)
         r.update(run=run.id if run else out.name, stage=stage, backend=p['backend'], batch=p['batch'], code=p['code'],
-                 source_hash=p['source_hash'])
+                 source_hash=p['source_hash'], model=p['model'])
         return r
 
     def record(r):

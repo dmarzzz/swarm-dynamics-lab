@@ -60,6 +60,26 @@ def design():
     return yaml.safe_load((ROOT / 'design.yaml').read_text())
 
 
+def model():
+    """The model of this attempt: STUDY_MODEL (set by the launcher's --model), else the first rung."""
+    d = design()
+    m = os.environ.get('STUDY_MODEL') or d['model_ladder'][0]
+    if m not in d['model_ladder']:
+        raise ValueError('model_not_in_ladder')
+    return m
+
+
+def model_tag(m=None):
+    """'' for the first rung; '-<id without claude->' for any other, appended to batch names."""
+    m = m or model()
+    return '' if m == design()['model_ladder'][0] else '-' + m[len('claude-'):] if m.startswith('claude-') else '-' + m
+
+
+def prices(m=None):
+    """Per-million input and output prices of a model in the ladder."""
+    return design()['models'][m or model()]
+
+
 def world_cfg():
     return design()['world']
 
@@ -116,8 +136,11 @@ def params(stage, continuation=0):
         raise ValueError('unknown_stage')
     if continuation and stage != 'S1':
         raise ValueError('continuation_only_for_S1')
-    batch = f'{stage.lower()}-{design()["attempt"]}' + (f'-r{continuation}' if continuation else '')
-    return dict(stage=stage, backend='scripted' if stage == 'S0' else 'anthropic',
+    # S0 is scripted and serves every model; paid stages carry the model and its batch tag.
+    m = 'scripted' if stage == 'S0' else model()
+    tag = '' if stage == 'S0' else model_tag(m)
+    batch = f'{stage.lower()}-{design()["attempt"]}{tag}' + (f'-r{continuation}' if continuation else '')
+    return dict(stage=stage, backend='scripted' if stage == 'S0' else 'anthropic', model=m,
                 batch=batch, source_hash=source_hash(), code=code_revision())
 
 

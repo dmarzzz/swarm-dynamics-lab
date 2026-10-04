@@ -1,7 +1,7 @@
 {
  "digest": "6f126bb55492a8a35c38db5d55a8f80c2b1976277cff6e7e922a82574c65abf1",
  "format": "one \"<unit id> <sha256>\" per line in dispatch order: packet hash for a fixture, fixed-inputs hash for an episode",
- "source_hash": "0c6391286fc0a95cc1d4d753cc23eaca0da80d38294094958dd610ade23c4352",
+ "source_hash": "7803e3b8b8cbf93ddf99cdd7151e49ead8d440d0fba8b69f663e9f6d429ac599",
  "stages": {
   "P0": {
    "digest": "d73df156bfdb5b110f4ad939ad9fdaf52b3c4bf91bb8e15026765c5f0ac3ef94",

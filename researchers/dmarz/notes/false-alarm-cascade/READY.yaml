@@ -3,10 +3,11 @@ study: false-alarm-cascade
 experiment: false-alarm-cascade
 stages: [S0, P0, Q0, S1]
 model: claude-opus-5-5
+model_ladder: [claude-opus-5-5, claude-opus-5]
 effort: medium
 max_calls: {S0: 0, P0: 1, Q0: 24, S1: 3600}
 max_calls_total: 3625
-usd_cap: 360
+usd_cap: 450
 chain_timeout_seconds: 32400
-selftests: 38
-source_hash: 0c6391286fc0a95cc1d4d753cc23eaca0da80d38294094958dd610ade23c4352
+selftests: 41
+source_hash: 7803e3b8b8cbf93ddf99cdd7151e49ead8d440d0fba8b69f663e9f6d429ac599
