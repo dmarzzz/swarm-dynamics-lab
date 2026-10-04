@@ -1,11 +1,11 @@
 {
   "kind": "offline software checks; not an experimental run",
-  "test_methods": 48,
+  "test_methods": 52,
   "passed": true,
   "model_calls": 0,
   "files": {
     "src/budget.py": "b916d8656178d10af02858185083f36d6356d6e07ebbc2e15cf5fe6fbdc2f17a",
-    "src/engine.py": "8dd72f30e9a2186b484fe34164dffea32f814a596b1440f42f3539f0f74e7138",
+    "src/engine.py": "399ed079df4a571a540c474ff59d092555be5ce2b5929eb2189776529c13240b",
     "src/failures.py": "e49e106568eefdbd084be47c921d80474fa24ea392cfd628e95194310dae0b90",
     "src/manifest.py": "f744a392e1cdb9cf4d73fa54d87402900f815028727a85f426bcd094d28bf627",
     "src/provider.py": "874861a2f51cd4c317885e5b2a8194057236dc71a64cf74707033254f30c97b7",
@@ -14,7 +14,8 @@
     "src/reporting.py": "1649ec5d4a6964f2d5c6db574b942aa6c8d88ab927ee970cb216b25d8be2849f",
     "src/reporting_diagnostic.py": "d4039b4c19d80c75c22d7d9c230e6dc40657b4a547b97d8950cb11dbe56025bb",
     "src/response_contract.py": "a4b7c5d11ffab073de1d5a370126a1db0b16846d02a2344c82a153958c6b5c04",
-    "src/run_qualification.py": "1e9f9e37814610ce1252e4f77ae729655e95403107c2e440cd1c0c6d3254a0ca",
+    "src/run_qualification.py": "809e11e8553c04f89c384b9003a6c010eec2fa11d5147b2c5b6fb24e2c205796",
+    "src/stage_audit.py": "e1ba32c2aa436f996087314bd98c7314cd23692b24b62a8d1d0cec7594ab4da7",
     "src/tasks.py": "aebcc37c36af3cfa4f38b2a58ba3808145475d7047e85c5c81eed8f57fddc14a",
     "src/test_budget.py": "405be35713f879ecf9f9cacef012d7598c0f741ef4559a8317bdc59398dc099f",
     "src/test_canary.py": "f1f5e5ece29c7e8b1b7c6b3620013a54e4de2453ed92783c0124063100009212",
@@ -25,11 +26,12 @@
     "src/test_replay.py": "f2581e553095420d4a72874406ff5ce4eff3c537c5916adbd78474727f315b37",
     "src/test_reporting.py": "a19a9f353b30608a96c9f08f84df93ae11e87838776e299cce54771d51f57fbb",
     "src/test_response_contract.py": "f890accbbae2f2080f60dd898c5507c62a069765d058bc11242182f5e0209433",
+    "src/test_stage_audit.py": "6f41827c848293ed91e3fc30dfb2898e766f7009b8070024962576d143544237",
     "src/test_tasks.py": "c28dbd1b1a3cd8a2daab8e009b49bc69844c3f09ce3501d202475fe2ff70af49",
     "src/transport_diagnostic.py": "840e0664027fded89132a0b3747773dcbc0371beb148d9e04f09dbbc8cea6f78"
   },
   "unverified": [
-    "Q-A4 full-width live qualification",
-    "Fresh source/claim/public admission for Q-A4"
+    "Q-A5 stage-localization diagnostic",
+    "Fresh exact source/public admission"
   ]
 }
