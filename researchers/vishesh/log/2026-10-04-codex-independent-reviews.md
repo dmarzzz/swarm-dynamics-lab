@@ -23,3 +23,7 @@ Full reviewer-owned verdict and evidence: [REVIEW.md](../notes/discussion-benchm
 ## Optimal swarm size engineering review
 
 After direct user approval, reviewed source ae7563d and pinned file hashes under notes/optimal-swarm-size-engineering-review. Prospective offline plan published and verified; 23 existing tests pass. Additional reviewer checks demonstrate failure-category collapse, reporting exceptions interrupting useful work, ignored upload return values and incomplete batch reconciliation. Verdict REVISE before Q-A; minimal repairs E1–E3 are documented. Empty-edge plans for public chains additionally require scoping before Q-B. No paid calls, secrets, fleet actions or author source edits. Formal non-vishesh review remains open for dmarz. Continue explicit-path commits instead of lab sync because its all-agent heartbeat updates previously conflicted with concurrent work.
+
+## Optimal swarm size repair amendment
+
+Published AMENDMENT-1.md under the engineering review directory. Exact repair hashes match author validation; 31 tests and reviewer-owned mocked regressions pass. E1–E3 closed offline: safe failure codes, independent reporting failures, acknowledged publication and complete handled-exit reconciliation. No new concrete Q-A code blocker found; live synthetic reporting, provider/credential/price verification, exclusive allocation, refreshed public receipts and formal non-vishesh approval remain outstanding. No paid calls or author source changes. Chain prerequisite issue remains scoped before Q-B.
