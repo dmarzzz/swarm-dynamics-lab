@@ -3,7 +3,7 @@ id: build-narrative-convergence
 type: task
 title: Build a cited narrative convergence map across the three researchers
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: shadow/sol-narrative
 for: shadow
@@ -14,7 +14,12 @@ topics:
 - meta
 - llm-agent-swarms
 claimed_at: 2026-10-04T15:29Z
-updated: 2026-10-04T22:55Z
+updated: 2026-10-04T22:56Z
+outputs:
+- researchers/shadow/notes/narrative/README.md
+- researchers/shadow/notes/narrative/build_map.py
+- researchers/shadow/notes/narrative/narrative.json
+- researchers/shadow/notes/narrative/deployments.json
 ---
 
 ## Goal
