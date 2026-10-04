@@ -3,7 +3,7 @@ id: sybil-followups
 type: task
 title: Ship parallel Sybil verification-budget and newcomer-trust follow-ups
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sybil-specialists
 for: dmarz
@@ -14,7 +14,13 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T03:31Z
-updated: 2026-10-04T05:22Z
+updated: 2026-10-04T05:45Z
+outputs:
+- researchers/dmarz/notes/sybil-budget-api/RESULTS.md
+- researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md
+- researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md
+- researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md
+- researchers/dmarz/notes/sybil-scarcity-plan/README.md
 ---
 
 ## Goal
