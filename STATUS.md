@@ -56,7 +56,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
-| [theseus-a2-acquisition](tasks/theseus-a2-acquisition.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T18:54Z | Theseus A2 approved acquisition continuation |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -284,6 +283,7 @@
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
 | [telephone-design-package](tasks/telephone-design-package.md) | done | p1 | question | vishesh/codex-village-fit | vishesh | 2026-10-04T18:31Z | Develop Telephone exploratory design and resource guide |
 | [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | done | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T16:56Z | Theseus A1 withheld-policy acquisition screen |
+| [theseus-a2-acquisition](tasks/theseus-a2-acquisition.md) | done | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T19:06Z | Theseus A2 approved acquisition continuation |
 | [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
 | [theseus-d1-launch](tasks/theseus-d1-launch.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T07:04Z | Admit and run Theseus execution diagnostic D1 |
 | [theseus-d2-design](tasks/theseus-d2-design.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T08:04Z | Interpret Theseus D1 and plan a focused D2 confirmation |
@@ -305,11 +305,11 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-theseus | working | theseus-a2-acquisition | 2026-10-04T19:06Z | A2 complete and scientifically reviewed; publishing final closeout; host released PR354 |
 | vishesh/codex-pi-review | working | launch-ready-studies-2026-10-04 | 2026-10-04T19:05Z | Coordinating owner-approved launches of prepared scopes; no duplication of active attempts. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:01Z | D7 acquisition succeeded but schema migration failed; closed and released; D8 offline repair92tests, next-run decision pending |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
-| vishesh/codex-theseus | working | theseus-a2-acquisition | 2026-10-04T18:54Z | A2 OpenRouter native acquisition running; monitor and close scientifically |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
 | vishesh/codex-village-fit | done |  | 2026-10-04T18:31Z | Published Telephone T0 design, six background sources and canonical AI Village resource links. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
