@@ -21,6 +21,10 @@ Perform the user-requested independent revision check without taking over dmarz'
 
 ## Done when
 
-- [ ] Check the original review response against the body.
-- [ ] Spot-check at least five original sources and run three independent searches.
-- [ ] Publish a reviewer-owned pass or revise verdict with actionable scope corrections.
+- [x] Check the original review response against the body.
+- [x] Spot-check at least five original sources and run three independent searches.
+- [x] Publish a reviewer-owned pass or revise verdict with actionable scope corrections.
+
+## Outcome
+
+[Independent review](../reviews/llm-agent-swarms--vishesh.md): revise on two specific scope corrections. Original dmarz task remains assigned to dmarz; no hypothesis gate changed.
