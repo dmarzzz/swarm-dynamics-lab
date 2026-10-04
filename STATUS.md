@@ -303,8 +303,8 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc4-live | 2026-10-04 09:05:14.880128+00:00 | PC-4 and PC-5 complete; tradeoffs preserved, artifacts verified, exposure USD0.857148138, claims released, no further run scheduled |
 | vishesh/codex-decision-models | blocked | right-dissenter-rd5-run | 2026-10-04 09:00:28.465298+00:00 | RD5 deployed and relay ready; central queue request unacknowledged; explicit direct-launch exception pending. Zero new model calls; original cap unchanged. |
-| vishesh/codex-phantom-coast | working | phantom-coast-pc4-live | 2026-10-04 08:46:58.840350+00:00 | PC-4 qualification passed; running 32-root source-verification diagnostic on exclusive sim-dmarz-10; cumulative budget retained |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 08:46:07.368149+00:00 | D1 preparation published; concrete material-design decision pending; no allocation |
 | vishesh/codex-methods | working | antsy-v8-native-qualification | 2026-10-04 08:09:38.852838+00:00 | Antsy v8 Q0 submitted to orbital run queue; awaiting native start/result |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
