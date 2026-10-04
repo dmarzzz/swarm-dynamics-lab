@@ -1,0 +1,7 @@
+# S4 C2 pre-run assessment
+
+Read S4-C1-POST.md. Status: ready only after successful end-to-end HTTP health verification, current public-plan/claim/source checks, exact parent hashes and unchanged qualified core. Eight continuation tests pass, including healthy-501-only admission and connection-loss rejection. The original 69 decision-instrument checks and Q4 competence pass remain applicable because no core source, model input or evaluator changes.
+
+Exactly 38 planned trajectories remain after 106 terminal trajectories. Validate a combined parent manifest derived from both immutable source segments; no outcome-based selection. Inherit all saved successes and failures without retry. Before each trajectory, the default non-inference GET endpoint must return 501; otherwise stop with the assignment still planned. All original spend and 481-call stricter ceiling persist. Up to 109 new provider reservations remain, no additional budget. Report three segments and their combined denominator separately; prior connection failures never become model successes through resumption. No automatic new attempt after C2.
+
+RD-V4 visual mapping remains measured; combined figures/replay visibly label S4-A1, S4-C1 and S4-C2. Audit prefix identity, no duplicate requests, all 576 decisions and infrastructure-failure bounds. The precise SSH-exit cause remains unknown. Native version changes and independent semantic generalization remain outside this cohort.

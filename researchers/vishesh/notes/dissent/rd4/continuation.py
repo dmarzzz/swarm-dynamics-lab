@@ -1,5 +1,5 @@
 """Unstarted-only continuation. Never retries or rewrites terminal parent outcomes."""
-import argparse,hashlib,json,os,sys,time
+import argparse,hashlib,json,os,sys,time,urllib.request,urllib.error
 from pathlib import Path
 BASE=Path(__file__).resolve().parent
 sys.path.insert(0,str(BASE.parent/'src'))
@@ -9,6 +9,13 @@ from rd4_worker import verify,analyze,EXPERIMENT
 from live_worker import NativePolicy,save,quiet
 
 PARENT_FILES=('configuration.json','manifest.json','records.json','calls.json','summary.json')
+def transport_healthy():
+    try:
+        with urllib.request.urlopen('http://127.0.0.1:18449/',timeout=3):return False
+    except urllib.error.HTTPError as e:
+        healthy=e.code==501;e.close();return healthy
+    except (OSError,ValueError):return False
+
 def partition(manifest,records):
     original=assignments('S4');expected=[(a['case_id'],a['arm']) for a in original]
     actual=[(a['case_id'],a['arm']) for a in manifest['assignments']]
@@ -36,10 +43,10 @@ def combine(parent,added):
     if set(by)-set(order):raise ValueError('unknown_terminal_row')
     return [by[k] for k in order if k in by]
 
-def annotate(out):
+def annotate(out,segments):
     from PIL import Image,ImageDraw
     from live_render import font,MUTED
-    label='Combined cohort: S4-A1 prefix + S4-C1 continuation; prior failures retained.'
+    label='Combined cohort: '+' + '.join(segments)+'; prior failures retained.'
     p=out/'final_frame.png';im=Image.open(p).convert('RGB');ImageDraw.Draw(im).text((70,175),label,font=font(22),fill=MUTED);im.save(p)
     p=out/'measured_replay.gif'
     if p.exists():
@@ -57,32 +64,38 @@ def main(a):
         if hashlib.sha256(Path(file).read_bytes()).hexdigest()!=h:raise ValueError('continuation_source_mismatch')
     previous={name:json.loads((parent/name).read_text()) for name in PARENT_FILES}
     pending=partition(previous['manifest.json'],previous['records.json'])
-    if digest(pending)!=config['continuation_assignment_sha256'] or len(pending)!=40:raise ValueError('continuation_assignment_mismatch')
+    if digest(pending)!=config['continuation_assignment_sha256'] or len(pending)!=config.get('expected_pending_trajectories',40):raise ValueError('continuation_assignment_mismatch')
+    total=len(pending)*4;segment=config.get('continuation_stage','S4-C1');segments=config.get('execution_segments',['S4-A1','S4-C1'])
     receipt=verify(config,'S4');a.out.mkdir(parents=True,exist_ok=False)
-    for name,data in [('configuration.json',config),('public-plan-receipt.json',receipt),('manifest.json',{'stage':'S4-C1','assignments':pending,'assigned':160,'parent_sha256':config['parent_sha256']})]:save(a.out/name,data)
+    for name,data in [('configuration.json',config),('public-plan-receipt.json',receipt),('manifest.json',{'stage':segment,'assignments':pending,'assigned':total,'parent_sha256':config['parent_sha256']})]:save(a.out/name,data)
     native=NativePolicy(a.out,frozen_requests('S4'),request_builder=wire)
     inherited={c['request_sha256']:c for c in previous['calls.json']};native.cache.update(inherited)
     save(a.out/'inherited-calls.json',previous['calls.json']);save(a.out/'records.json',[]);rows=[]
     os.environ.update(SWARM_SOURCE='vishesh/codex-decision-models',SWARM_HOST=config['host'])
     import swarm_report as sr
-    run=quiet(sr.start,EXPERIMENT,run=config['run_id'],params={'stage':'S4-C1','design':'RD-4','source':config['source_commit'],'plan_url':config['plan_url'],'scripted_votes':True},message=config['run_tldr']);quiet(run.__enter__)
+    run=quiet(sr.start,EXPERIMENT,run=config['run_id'],params={'stage':segment,'design':'RD-4','source':config['source_commit'],'plan_url':config['plan_url'],'scripted_votes':True},message=config['run_tldr']);quiet(run.__enter__)
     quiet(sr.report,'log',experiment=EXPERIMENT,run=config['run_id'],url=config['plan_url'],message='Prospective unstarted-only continuation; no prior answer replaced.')
     cases={c['case_id']:c for c in trajectories()}
+    health_stopped=False
     for item in pending:
+        if not transport_healthy():health_stopped=True;break
         if native.consecutive>=5 or time.monotonic()-native.started>2700:break
-        item['status']='started';save(a.out/'manifest.json',{'stage':'S4-C1','assignments':pending,'assigned':160,'parent_sha256':config['parent_sha256']})
+        item['status']='started';save(a.out/'manifest.json',{'stage':segment,'assignments':pending,'assigned':total,'parent_sha256':config['parent_sha256']})
         rows.extend(execute(cases[item['case_id']],item['arm'],native));item['status']='terminal'
-        save(a.out/'records.json',rows);save(a.out/'manifest.json',{'stage':'S4-C1','assignments':pending,'assigned':160,'parent_sha256':config['parent_sha256']})
-        quiet(run.progress,len(rows),160,terminal=len(rows))
+        save(a.out/'records.json',rows);save(a.out/'manifest.json',{'stage':segment,'assignments':pending,'assigned':total,'parent_sha256':config['parent_sha256']})
+        quiet(run.progress,len(rows),total,terminal=len(rows))
     if any(c['request_sha256'] in inherited for c in native.calls):raise ValueError('parent_request_retried')
-    continuation={'stage':'S4-C1','assigned':160,'terminal':len(rows),'missing':160-len(rows),'new_requests':len(native.calls),'valid_new_requests':sum(c['status']=='completed' for c in native.calls),'inherited_logical_uses':sum(h in inherited for h in native.request_history),'logical_calls':native.logical_calls,'cost_usd':sum(c.get('checked',{}).get('cost_usd',0) for c in native.calls),'elapsed_seconds':time.monotonic()-native.started,'parent_unchanged':True}
+    continuation={'stage':segment,'assigned':total,'terminal':len(rows),'missing':total-len(rows),'new_requests':len(native.calls),'valid_new_requests':sum(c['status']=='completed' for c in native.calls),'inherited_logical_uses':sum(h in inherited for h in native.request_history),'logical_calls':native.logical_calls,'cost_usd':sum(c.get('checked',{}).get('cost_usd',0) for c in native.calls),'elapsed_seconds':time.monotonic()-native.started,'parent_unchanged':True,'health_stopped':health_stopped}
     save(a.out/'summary.json',continuation)
     combined=a.out/'combined';combined.mkdir()
     allrows=combine(previous['records.json'],rows);allcalls=previous['calls.json']+native.calls
-    report=analyze('S4',allrows,allcalls,previous['summary.json']['logical_calls']+native.logical_calls,config,previous['summary.json']['elapsed_seconds']+continuation['elapsed_seconds']);report['execution_segments']=['S4-A1','S4-C1'];report['provider_reservations_not_worker_attempts']=True
+    report=analyze('S4',allrows,allcalls,previous['summary.json']['logical_calls']+native.logical_calls,config,previous['summary.json']['elapsed_seconds']+continuation['elapsed_seconds']);report['execution_segments']=segments;report['provider_reservations_not_worker_attempts']=True
+    merged_manifest=previous['manifest.json'];changed={(x['case_id'],x['arm']):x for x in pending}
+    merged_manifest['assignments']=[changed.get((x['case_id'],x['arm']),x) for x in merged_manifest['assignments']]
+    merged_manifest['execution_segments']=segments;save(combined/'manifest.json',merged_manifest)
     save(combined/'records.json',allrows);save(combined/'calls.json',allcalls);save(combined/'summary.json',report);save(combined/'configuration.json',config)
     from rd4_render import render
-    render(combined);annotate(combined)
+    render(combined);annotate(combined,segments)
     for f in a.out.iterdir():
         if f.suffix=='.json':quiet(run.artifact,str(f),f.name)
     for f in combined.iterdir():
