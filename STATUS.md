@@ -28,9 +28,9 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [None](tasks/build-trust-credit-qwen.md) | claimed | None | None | dmarz/pipeline-split |  | 2026-10-04T10:30Z |  |
 | [build-memory-handoff-qwen](tasks/build-memory-handoff-qwen.md) | claimed | p0 | build | dmarz/pipeline-memory | dmarz | 2026-10-04T10:30Z | Prepare program v5 line M (can successors repair inherited false memory) to launch-ready |
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
+| [build-trust-credit-qwen](tasks/build-trust-credit-qwen.md) | claimed | p0 | build | dmarz/pipeline-split | dmarz | 2026-10-04T10:30Z | Prepare program v5 line T (trust credit, when verification amplifies capture) to launch-ready |
 | [build-verify-cost-qwen](tasks/build-verify-cost-qwen.md) | claimed | p0 | build | dmarz/pipeline-verify | dmarz | 2026-10-04T10:30Z | Prepare program v5 line V (when is verification worth its cost) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
