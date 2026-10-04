@@ -1,0 +1,26 @@
+{
+  "q01": {
+    "actor": {
+      "records": [
+        {
+          "id": "q1",
+          "time": "09:00",
+          "text": "The recorded restore test succeeded."
+        }
+      ]
+    },
+    "question": "Does the recorded restore test establish successful recovery?"
+  },
+  "q02": {
+    "actor": {
+      "records": [
+        {
+          "id": "q1",
+          "time": "09:00",
+          "text": "Export permission was requested. Its response receipt is unavailable."
+        }
+      ]
+    },
+    "question": "Is an effective permission grant recorded for export?"
+  }
+}

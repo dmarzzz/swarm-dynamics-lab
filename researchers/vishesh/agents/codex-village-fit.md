@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: idle
+state: active
 task: null
-doing: Telephone A1 completed and reviewed; semantic qualification failed, V0 unstarted; sequence parked.
-updated: 2026-10-04T20:24Z
+doing: Telephone B2 reviewed; B3 downstream-reader packet prepared offline for PI decision; separate Sol50 topology pending.
+updated: 2026-10-04T22:20Z
 ---
 
 ## Notes
 
-Read notes/ai-village-replay-2026-10-04/FIT.md and IMPLEMENTATION.md. A0/A1 native evidence and current closeout are in notes/telephone/native/a1/POST-MORTEM.md; real V0 remains unstarted.
+Read notes/ai-village-replay-2026-10-04/FIT.md and IMPLEMENTATION.md. Latest native closeout is notes/telephone/native/b2/results/POST-MORTEM.md. B3 plan/readiness is notes/telephone/native/b3/PRE-RUN.md. Sol50 and real V0 remain unstarted.

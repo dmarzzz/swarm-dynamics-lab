@@ -1,0 +1,146 @@
+{
+  "restore-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Recovery probe: succeeded.",
+    "initial_decision": "GO"
+  },
+  "restore-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Recovery probe: failed.",
+    "initial_decision": "HOLD"
+  },
+  "restore-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Recovery probe: no result available.",
+    "initial_decision": "GO"
+  },
+  "version-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Deployment at 10:20: v3.",
+    "initial_decision": "HOLD"
+  },
+  "version-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Deployment at 10:20: v2; v3 is proposed only.",
+    "initial_decision": "GO"
+  },
+  "version-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Deployment at 10:20: revision unrecorded; v3 is proposed.",
+    "initial_decision": "HOLD"
+  },
+  "provenance-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Report A acquisition: alpha; report B acquisition: beta; these are distinct collections.",
+    "initial_decision": "GO"
+  },
+  "provenance-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Report A acquisition: alpha; report B acquisition: alpha; the same collection is reused.",
+    "initial_decision": "HOLD"
+  },
+  "provenance-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Report A acquisition: alpha; report B acquisition: identifier unavailable; independence unresolved.",
+    "initial_decision": "GO"
+  },
+  "check-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Integrity check outcome: passed.",
+    "initial_decision": "HOLD"
+  },
+  "check-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Integrity check outcome: failed.",
+    "initial_decision": "GO"
+  },
+  "check-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Integrity check outcome: not recorded; it was performed.",
+    "initial_decision": "HOLD"
+  },
+  "rollback-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Rollback coverage: Ember13-east and Ember13-west tested.",
+    "initial_decision": "GO"
+  },
+  "rollback-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Rollback coverage: Ember14-east tested; Ember14-west explicitly untested.",
+    "initial_decision": "HOLD"
+  },
+  "rollback-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Rollback coverage: Ember15-east tested; Ember15-west status not recorded.",
+    "initial_decision": "GO"
+  },
+  "consent-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Effective consent scope: operations and analytics.",
+    "initial_decision": "HOLD"
+  },
+  "consent-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Effective consent scope: operations only; analytics excluded.",
+    "initial_decision": "GO"
+  },
+  "consent-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Effective consent scope: receipt unavailable; analytics was suggested.",
+    "initial_decision": "HOLD"
+  },
+  "permission-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Export authorization: granted, receipt E7 recorded; its scope explicitly includes analytics.",
+    "initial_decision": "GO"
+  },
+  "permission-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Export authorization: granted, receipt E7 recorded; operations only, analytics excluded.",
+    "initial_decision": "HOLD"
+  },
+  "permission-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Export authorization: granted, receipt E7 recorded; scope receipt unavailable.",
+    "initial_decision": "GO"
+  },
+  "exception-yes": {
+    "answer": "YES",
+    "witness_id": "e4",
+    "witness": "Exception coverage: all deployment sites.",
+    "initial_decision": "HOLD"
+  },
+  "exception-no": {
+    "answer": "NO",
+    "witness_id": "e4",
+    "witness": "Exception coverage: Harbor23-east only; other deployment sites excluded.",
+    "initial_decision": "GO"
+  },
+  "exception-unknown": {
+    "answer": "UNKNOWN",
+    "witness_id": "e4",
+    "witness": "Exception coverage: signed scope unavailable; universal coverage not established.",
+    "initial_decision": "HOLD"
+  }
+}

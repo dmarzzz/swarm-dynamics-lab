@@ -1,0 +1,1250 @@
+{
+  "restore-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Aster1: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Recovery probe: failed."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Aster1 has two deployment sites, Aster1-east and Aster1-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Recovery probe: failed.",
+      "initial_decision": "GO"
+    }
+  },
+  "restore-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Aster2: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Recovery probe: no result available."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Aster2 has two deployment sites, Aster2-east and Aster2-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Recovery probe: no result available.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "restore-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Aster3: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Recovery probe: succeeded."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Aster3 has two deployment sites, Aster3-east and Aster3-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Recovery probe: succeeded.",
+      "initial_decision": "GO"
+    }
+  },
+  "version-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Deployment at 10:20: v2; v3 is proposed only."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Birch4 has two deployment sites, Birch4-east and Birch4-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Birch4: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Deployment at 10:20: v2; v3 is proposed only.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "version-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Birch5 has two deployment sites, Birch5-east and Birch5-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Birch5: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Deployment at 10:20: revision unrecorded; v3 is proposed."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Deployment at 10:20: revision unrecorded; v3 is proposed.",
+      "initial_decision": "GO"
+    }
+  },
+  "version-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Birch6: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Deployment at 10:20: v3."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Birch6 has two deployment sites, Birch6-east and Birch6-west. The next handover is 11:00."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Deployment at 10:20: v3.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "provenance-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Coral7: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Report A acquisition: alpha; report B acquisition: alpha; the same collection is reused."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Coral7 has two deployment sites, Coral7-east and Coral7-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Report A acquisition: alpha; report B acquisition: alpha; the same collection is reused.",
+      "initial_decision": "GO"
+    }
+  },
+  "provenance-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Coral8: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Report A acquisition: alpha; report B acquisition: identifier unavailable; independence unresolved."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Coral8 has two deployment sites, Coral8-east and Coral8-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Report A acquisition: alpha; report B acquisition: identifier unavailable; independence unresolved.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "provenance-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Coral9: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Report A acquisition: alpha; report B acquisition: beta; these are distinct collections."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Coral9 has two deployment sites, Coral9-east and Coral9-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Report A acquisition: alpha; report B acquisition: beta; these are distinct collections.",
+      "initial_decision": "GO"
+    }
+  },
+  "check-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Dune10: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Integrity check outcome: failed."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Dune10 has two deployment sites, Dune10-east and Dune10-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Integrity check outcome: failed.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "check-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Dune11: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Integrity check outcome: not recorded; it was performed."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Dune11 has two deployment sites, Dune11-east and Dune11-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Integrity check outcome: not recorded; it was performed.",
+      "initial_decision": "GO"
+    }
+  },
+  "check-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Integrity check outcome: passed."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Dune12 has two deployment sites, Dune12-east and Dune12-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Dune12: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Integrity check outcome: passed.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "rollback-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Ember13 has two deployment sites, Ember13-east and Ember13-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Ember13: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Rollback coverage: Ember13-east tested; Ember13-west explicitly untested."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Rollback coverage: Ember13-east tested; Ember13-west explicitly untested.",
+      "initial_decision": "GO"
+    }
+  },
+  "rollback-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Ember14: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Rollback coverage: Ember14-east tested; Ember14-west status not recorded."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Ember14 has two deployment sites, Ember14-east and Ember14-west. The next handover is 11:00."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Rollback coverage: Ember14-east tested; Ember14-west status not recorded.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "rollback-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Ember15: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Rollback coverage: Ember15-east and Ember15-west tested."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Ember15 has two deployment sites, Ember15-east and Ember15-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Rollback coverage: Ember15-east and Ember15-west tested.",
+      "initial_decision": "GO"
+    }
+  },
+  "consent-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Fjord16: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Effective consent scope: operations only; analytics excluded."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Fjord16 has two deployment sites, Fjord16-east and Fjord16-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Effective consent scope: operations only; analytics excluded.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "consent-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Fjord17: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Effective consent scope: receipt unavailable; analytics was suggested."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Fjord17 has two deployment sites, Fjord17-east and Fjord17-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Effective consent scope: receipt unavailable; analytics was suggested.",
+      "initial_decision": "GO"
+    }
+  },
+  "consent-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Fjord18: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Effective consent scope: operations and analytics."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Fjord18 has two deployment sites, Fjord18-east and Fjord18-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Effective consent scope: operations and analytics.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "permission-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Grove19: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Export authorization: granted, receipt E7 recorded; operations only, analytics excluded."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Grove19 has two deployment sites, Grove19-east and Grove19-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Export requires both a recorded grant and scope explicitly covering analytics. A request alone or an operations-only grant is insufficient."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Export authorization: granted, receipt E7 recorded; operations only, analytics excluded.",
+      "initial_decision": "GO"
+    }
+  },
+  "permission-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Export authorization: granted, receipt E7 recorded; scope receipt unavailable."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Grove20 has two deployment sites, Grove20-east and Grove20-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Export requires both a recorded grant and scope explicitly covering analytics. A request alone or an operations-only grant is insufficient."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Grove20: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Export authorization: granted, receipt E7 recorded; scope receipt unavailable.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "permission-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Grove21 has two deployment sites, Grove21-east and Grove21-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Export requires both a recorded grant and scope explicitly covering analytics. A request alone or an operations-only grant is insufficient."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Grove21: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Export authorization: granted, receipt E7 recorded; its scope explicitly includes analytics."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Export authorization: granted, receipt E7 recorded; its scope explicitly includes analytics.",
+      "initial_decision": "GO"
+    }
+  },
+  "exception-yes": {
+    "actor": {
+      "records": [
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Harbor22: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Exception coverage: Harbor22-east only; other deployment sites excluded."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Harbor22 has two deployment sites, Harbor22-east and Harbor22-west. The next handover is 11:00."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "NO",
+      "witness_id": "e4",
+      "witness": "Exception coverage: Harbor22-east only; other deployment sites excluded.",
+      "initial_decision": "HOLD"
+    }
+  },
+  "exception-no": {
+    "actor": {
+      "records": [
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        },
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Harbor23: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Exception coverage: signed scope unavailable; universal coverage not established."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Harbor23 has two deployment sites, Harbor23-east and Harbor23-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "UNKNOWN",
+      "witness_id": "e4",
+      "witness": "Exception coverage: signed scope unavailable; universal coverage not established.",
+      "initial_decision": "GO"
+    }
+  },
+  "exception-unknown": {
+    "actor": {
+      "records": [
+        {
+          "id": "e8",
+          "time": "07:00",
+          "text": "Preserve the distinction between an explicitly negative result and unavailable evidence. Do not infer a later action from an earlier proposal."
+        },
+        {
+          "id": "e1",
+          "time": "00:00",
+          "text": "The handoff release decision concerns only whether the current staging slot is ready: GO if ready, otherwise HOLD. Other observations must still be preserved for later colleagues."
+        },
+        {
+          "id": "e2",
+          "time": "01:00",
+          "text": "Current staging slot: not ready."
+        },
+        {
+          "id": "e3",
+          "time": "02:00",
+          "text": "09:00 preliminary note for Harbor24: recovery unassessed, deployment v1, analytics suggested, and permission requested. Later entries supersede preliminary entries for their named fields only."
+        },
+        {
+          "id": "e4",
+          "time": "03:00",
+          "text": "10:20 authoritative observation: Exception coverage: all deployment sites."
+        },
+        {
+          "id": "e5",
+          "time": "04:00",
+          "text": "Harbor24 has two deployment sites, Harbor24-east and Harbor24-west. The next handover is 11:00."
+        },
+        {
+          "id": "e6",
+          "time": "05:00",
+          "text": "The latency threshold was corrected from 80 to 120 ms. A 100 ms read-only probe passed; no write-path measurement is supplied."
+        },
+        {
+          "id": "e7",
+          "time": "06:00",
+          "text": "A monitor is proposed for the next shift; it has not been started. Suggestions and requests are not evidence of completed actions."
+        }
+      ]
+    },
+    "gold": {
+      "answer": "YES",
+      "witness_id": "e4",
+      "witness": "Exception coverage: all deployment sites.",
+      "initial_decision": "HOLD"
+    }
+  }
+}

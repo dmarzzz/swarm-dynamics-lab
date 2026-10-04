@@ -1,0 +1,13 @@
+{
+  "main_calls": 384,
+  "qualification_calls": 2,
+  "max_calls": 386,
+  "per_call_nano": 31744001,
+  "model_max_nano": 12253184386,
+  "infrastructure_max_nano": 250000000,
+  "prior_nano": 450886510,
+  "additional_max_nano": 12503184386,
+  "cumulative_max_nano": 12954070896,
+  "proposed_study_cap_nano": 50000000000,
+  "funded": false
+}

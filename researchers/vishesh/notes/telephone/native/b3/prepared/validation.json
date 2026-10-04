@@ -1,0 +1,202 @@
+{
+  "native_calls": 0,
+  "source_worlds": 24,
+  "shared_families": 8,
+  "blocks": 2,
+  "assignments": 384,
+  "reader_endpoints": 96,
+  "checks": [
+    {
+      "id": "restore-yes",
+      "family": "restore",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 987,
+      "max_input_bound": 4335
+    },
+    {
+      "id": "restore-no",
+      "family": "restore",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 990,
+      "max_input_bound": 4339
+    },
+    {
+      "id": "restore-unknown",
+      "family": "restore",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 997,
+      "max_input_bound": 4355
+    },
+    {
+      "id": "version-yes",
+      "family": "version",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 991,
+      "max_input_bound": 4341
+    },
+    {
+      "id": "version-no",
+      "family": "version",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 1006,
+      "max_input_bound": 4373
+    },
+    {
+      "id": "version-unknown",
+      "family": "version",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 1024,
+      "max_input_bound": 4407
+    },
+    {
+      "id": "provenance-yes",
+      "family": "provenance",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 1049,
+      "max_input_bound": 4459
+    },
+    {
+      "id": "provenance-no",
+      "family": "provenance",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 1055,
+      "max_input_bound": 4469
+    },
+    {
+      "id": "provenance-unknown",
+      "family": "provenance",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 1060,
+      "max_input_bound": 4481
+    },
+    {
+      "id": "check-yes",
+      "family": "check",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 999,
+      "max_input_bound": 4357
+    },
+    {
+      "id": "check-no",
+      "family": "check",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 993,
+      "max_input_bound": 4347
+    },
+    {
+      "id": "check-unknown",
+      "family": "check",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 1023,
+      "max_input_bound": 4405
+    },
+    {
+      "id": "rollback-yes",
+      "family": "rollback",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 1021,
+      "max_input_bound": 4403
+    },
+    {
+      "id": "rollback-no",
+      "family": "rollback",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 1044,
+      "max_input_bound": 4447
+    },
+    {
+      "id": "rollback-unknown",
+      "family": "rollback",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 1038,
+      "max_input_bound": 4437
+    },
+    {
+      "id": "consent-yes",
+      "family": "consent",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 1021,
+      "max_input_bound": 4401
+    },
+    {
+      "id": "consent-no",
+      "family": "consent",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 1026,
+      "max_input_bound": 4413
+    },
+    {
+      "id": "consent-unknown",
+      "family": "consent",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 1041,
+      "max_input_bound": 4441
+    },
+    {
+      "id": "permission-yes",
+      "family": "permission",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 1054,
+      "max_input_bound": 4469
+    },
+    {
+      "id": "permission-no",
+      "family": "permission",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 1056,
+      "max_input_bound": 4471
+    },
+    {
+      "id": "permission-unknown",
+      "family": "permission",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 1040,
+      "max_input_bound": 4441
+    },
+    {
+      "id": "exception-yes",
+      "family": "exception",
+      "label": "YES",
+      "mutated_label": "NO",
+      "copy_json_bytes": 1016,
+      "max_input_bound": 4391
+    },
+    {
+      "id": "exception-no",
+      "family": "exception",
+      "label": "NO",
+      "mutated_label": "UNKNOWN",
+      "copy_json_bytes": 1041,
+      "max_input_bound": 4443
+    },
+    {
+      "id": "exception-unknown",
+      "family": "exception",
+      "label": "UNKNOWN",
+      "mutated_label": "YES",
+      "copy_json_bytes": 1056,
+      "max_input_bound": 4471
+    }
+  ]
+}
