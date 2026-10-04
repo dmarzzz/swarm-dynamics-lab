@@ -1,0 +1,22 @@
+{
+  "run": "antsy-diversity-v7/S0-repair-1",
+  "hub_status": "failed",
+  "verified_count": 14,
+  "verified_artifacts": [
+    "arm-key.json",
+    "audit.json",
+    "admission-public.json",
+    "outcomes.png",
+    "records.jsonl",
+    "summary.json",
+    "same-wrong.png",
+    "manifest.json",
+    "observed-traces.gif",
+    "uncertainty.json",
+    "outcomes.json",
+    "calls.jsonl",
+    "decision-map.png",
+    "diversity.json"
+  ],
+  "method": "Authenticated hub download, SHA256 matched against local originals; credentials consumed locally."
+}

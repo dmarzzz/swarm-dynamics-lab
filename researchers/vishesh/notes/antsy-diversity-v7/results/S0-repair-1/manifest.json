@@ -1,0 +1,78 @@
+{
+  "stage": "S0-repair",
+  "split": "train",
+  "ids": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "dataset_revision": "7f0115a4b758a71d6473b8d085751692da2fef98",
+  "complete": true,
+  "qualified": false,
+  "model_calls": 0,
+  "assigned": 20,
+  "utc_start": "2026-10-04T06:15:04.240414+00:00",
+  "source": "f0be4c82149c5c986d56cf19cd23afa4f8ef2646",
+  "instrument_sha256": "6353f58510dd4e9cf1b6496eece4a455a1a5fd4dcf199c1d99637ed0cbaad3c8",
+  "runtime": {
+    "system_packages": [
+      "libgl1=1.7.0-1build1",
+      "libglib2.0-0t64=2.80.0-6ubuntu3.9"
+    ],
+    "tesseract_model_hashes": {
+      "eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "ind": "69786901da87ab8766c1ea7fbb10b28f2110c14da3f6c8f2735df131fba95d88"
+    },
+    "python": "3.12.3",
+    "packages": {
+      "rapidocr": "3.9.2",
+      "onnxruntime": "1.30.0",
+      "pillow": "12.3.0",
+      "pyarrow": "25.0.1",
+      "numpy": "2.5.3",
+      "opencv-python": "5.0.0.93"
+    },
+    "model_hashes": {
+      "PP-OCRv6_det_small.onnx": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+      "PP-OCRv6_rec_small.onnx": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+      "ch_ppocr_mobile_v2.0_cls_mobile.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+    },
+    "rapid_config_sha256": "06623941e188461a0bc263fe16175cb5e5f6f6b01f4387e546d3a741569fc021",
+    "tesseract": "tesseract 5.3.4"
+  },
+  "dataset_file": {
+    "file": "data/train-00000-of-00004-b4aaeceff1d90ecb.parquet",
+    "sha256": "da3994eee1bf9bd3c57f0d53a72c3a6812c8696c5ba26245987949ddf73483cc"
+  },
+  "checks": {
+    "complete": true,
+    "no_execution_errors": true,
+    "reference_coverage": true,
+    "best_worker_competence": true,
+    "both_families_useful": false
+  },
+  "ocr_calls": 100,
+  "invalid": 0,
+  "size_thresholds": [
+    497664,
+    1119744
+  ],
+  "wall_s": 501.02373394299866
+}

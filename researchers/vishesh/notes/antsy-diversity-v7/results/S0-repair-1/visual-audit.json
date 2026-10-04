@@ -1,0 +1,34 @@
+{
+  "outcomes.png": {
+    "size": [
+      1800,
+      1060
+    ],
+    "frames": 1,
+    "decoded": true
+  },
+  "same-wrong.png": {
+    "size": [
+      1800,
+      1060
+    ],
+    "frames": 1,
+    "decoded": true
+  },
+  "decision-map.png": {
+    "size": [
+      1800,
+      710
+    ],
+    "frames": 1,
+    "decoded": true
+  },
+  "observed-traces.gif": {
+    "size": [
+      1800,
+      720
+    ],
+    "frames": 18,
+    "decoded": true
+  }
+}

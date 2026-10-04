@@ -1,0 +1,200 @@
+{"receipt": 40, "worker": "T0", "status": "started", "utc": "2026-10-04T06:15:12.419114+00:00"}
+{"receipt": 40, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:15:13.059243+00:00", "error": null}
+{"receipt": 40, "worker": "T1", "status": "started", "utc": "2026-10-04T06:15:13.071796+00:00"}
+{"receipt": 40, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:15:13.846530+00:00", "error": null}
+{"receipt": 40, "worker": "T2", "status": "started", "utc": "2026-10-04T06:15:13.854757+00:00"}
+{"receipt": 40, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:15:14.421770+00:00", "error": null}
+{"receipt": 40, "worker": "R0", "status": "started", "utc": "2026-10-04T06:15:14.430330+00:00"}
+{"receipt": 40, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:15:20.242674+00:00", "error": null}
+{"receipt": 40, "worker": "R1", "status": "started", "utc": "2026-10-04T06:15:20.712954+00:00"}
+{"receipt": 40, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:15:30.308615+00:00", "error": null}
+{"receipt": 41, "worker": "T0", "status": "started", "utc": "2026-10-04T06:15:30.374080+00:00"}
+{"receipt": 41, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:15:30.827194+00:00", "error": null}
+{"receipt": 41, "worker": "T1", "status": "started", "utc": "2026-10-04T06:15:30.834296+00:00"}
+{"receipt": 41, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:15:31.594725+00:00", "error": null}
+{"receipt": 41, "worker": "T2", "status": "started", "utc": "2026-10-04T06:15:31.603418+00:00"}
+{"receipt": 41, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:15:32.206661+00:00", "error": null}
+{"receipt": 41, "worker": "R0", "status": "started", "utc": "2026-10-04T06:15:32.215998+00:00"}
+{"receipt": 41, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:15:37.513492+00:00", "error": null}
+{"receipt": 41, "worker": "R1", "status": "started", "utc": "2026-10-04T06:15:37.973156+00:00"}
+{"receipt": 41, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:15:47.379506+00:00", "error": null}
+{"receipt": 42, "worker": "T0", "status": "started", "utc": "2026-10-04T06:15:47.425366+00:00"}
+{"receipt": 42, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:15:48.135043+00:00", "error": null}
+{"receipt": 42, "worker": "T1", "status": "started", "utc": "2026-10-04T06:15:48.142086+00:00"}
+{"receipt": 42, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:15:49.091137+00:00", "error": null}
+{"receipt": 42, "worker": "T2", "status": "started", "utc": "2026-10-04T06:15:49.098072+00:00"}
+{"receipt": 42, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:15:49.761768+00:00", "error": null}
+{"receipt": 42, "worker": "R0", "status": "started", "utc": "2026-10-04T06:15:49.767765+00:00"}
+{"receipt": 42, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:15:54.792995+00:00", "error": null}
+{"receipt": 42, "worker": "R1", "status": "started", "utc": "2026-10-04T06:15:55.223494+00:00"}
+{"receipt": 42, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:16:04.859845+00:00", "error": null}
+{"receipt": 43, "worker": "T0", "status": "started", "utc": "2026-10-04T06:16:04.957999+00:00"}
+{"receipt": 43, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:16:05.698649+00:00", "error": null}
+{"receipt": 43, "worker": "T1", "status": "started", "utc": "2026-10-04T06:16:05.714623+00:00"}
+{"receipt": 43, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:16:06.924453+00:00", "error": null}
+{"receipt": 43, "worker": "T2", "status": "started", "utc": "2026-10-04T06:16:06.942193+00:00"}
+{"receipt": 43, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:16:08.116439+00:00", "error": null}
+{"receipt": 43, "worker": "R0", "status": "started", "utc": "2026-10-04T06:16:08.131186+00:00"}
+{"receipt": 43, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:16:14.694035+00:00", "error": null}
+{"receipt": 43, "worker": "R1", "status": "started", "utc": "2026-10-04T06:16:15.688590+00:00"}
+{"receipt": 43, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:16:27.280349+00:00", "error": null}
+{"receipt": 44, "worker": "T0", "status": "started", "utc": "2026-10-04T06:16:27.303542+00:00"}
+{"receipt": 44, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:16:27.645485+00:00", "error": null}
+{"receipt": 44, "worker": "T1", "status": "started", "utc": "2026-10-04T06:16:27.649227+00:00"}
+{"receipt": 44, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:16:28.728190+00:00", "error": null}
+{"receipt": 44, "worker": "T2", "status": "started", "utc": "2026-10-04T06:16:28.731494+00:00"}
+{"receipt": 44, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:16:29.245483+00:00", "error": null}
+{"receipt": 44, "worker": "R0", "status": "started", "utc": "2026-10-04T06:16:29.248931+00:00"}
+{"receipt": 44, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:16:34.279969+00:00", "error": null}
+{"receipt": 44, "worker": "R1", "status": "started", "utc": "2026-10-04T06:16:34.517342+00:00"}
+{"receipt": 44, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:16:40.159152+00:00", "error": null}
+{"receipt": 45, "worker": "T0", "status": "started", "utc": "2026-10-04T06:16:40.284600+00:00"}
+{"receipt": 45, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:16:42.850772+00:00", "error": null}
+{"receipt": 45, "worker": "T1", "status": "started", "utc": "2026-10-04T06:16:42.915109+00:00"}
+{"receipt": 45, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:17:07.346282+00:00", "error": null}
+{"receipt": 45, "worker": "T2", "status": "started", "utc": "2026-10-04T06:17:07.434900+00:00"}
+{"receipt": 45, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:17:16.210975+00:00", "error": null}
+{"receipt": 45, "worker": "R0", "status": "started", "utc": "2026-10-04T06:17:16.288439+00:00"}
+{"receipt": 45, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:17:28.422076+00:00", "error": null}
+{"receipt": 45, "worker": "R1", "status": "started", "utc": "2026-10-04T06:17:33.701065+00:00"}
+{"receipt": 45, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:17:44.655080+00:00", "error": null}
+{"receipt": 46, "worker": "T0", "status": "started", "utc": "2026-10-04T06:17:44.714165+00:00"}
+{"receipt": 46, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:17:45.348784+00:00", "error": null}
+{"receipt": 46, "worker": "T1", "status": "started", "utc": "2026-10-04T06:17:45.359959+00:00"}
+{"receipt": 46, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:17:46.692759+00:00", "error": null}
+{"receipt": 46, "worker": "T2", "status": "started", "utc": "2026-10-04T06:17:46.704298+00:00"}
+{"receipt": 46, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:17:47.496649+00:00", "error": null}
+{"receipt": 46, "worker": "R0", "status": "started", "utc": "2026-10-04T06:17:47.507758+00:00"}
+{"receipt": 46, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:17:54.122757+00:00", "error": null}
+{"receipt": 46, "worker": "R1", "status": "started", "utc": "2026-10-04T06:17:55.206374+00:00"}
+{"receipt": 46, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:18:08.639808+00:00", "error": null}
+{"receipt": 47, "worker": "T0", "status": "started", "utc": "2026-10-04T06:18:08.702592+00:00"}
+{"receipt": 47, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:18:09.432349+00:00", "error": null}
+{"receipt": 47, "worker": "T1", "status": "started", "utc": "2026-10-04T06:18:09.442732+00:00"}
+{"receipt": 47, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:18:10.436045+00:00", "error": null}
+{"receipt": 47, "worker": "T2", "status": "started", "utc": "2026-10-04T06:18:10.451529+00:00"}
+{"receipt": 47, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:18:11.363485+00:00", "error": null}
+{"receipt": 47, "worker": "R0", "status": "started", "utc": "2026-10-04T06:18:11.375735+00:00"}
+{"receipt": 47, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:18:17.431250+00:00", "error": null}
+{"receipt": 47, "worker": "R1", "status": "started", "utc": "2026-10-04T06:18:18.339275+00:00"}
+{"receipt": 47, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:18:30.600496+00:00", "error": null}
+{"receipt": 48, "worker": "T0", "status": "started", "utc": "2026-10-04T06:18:30.634625+00:00"}
+{"receipt": 48, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:18:31.527957+00:00", "error": null}
+{"receipt": 48, "worker": "T1", "status": "started", "utc": "2026-10-04T06:18:31.535787+00:00"}
+{"receipt": 48, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:18:33.614721+00:00", "error": null}
+{"receipt": 48, "worker": "T2", "status": "started", "utc": "2026-10-04T06:18:33.620660+00:00"}
+{"receipt": 48, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:18:34.559275+00:00", "error": null}
+{"receipt": 48, "worker": "R0", "status": "started", "utc": "2026-10-04T06:18:34.566059+00:00"}
+{"receipt": 48, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:18:41.668550+00:00", "error": null}
+{"receipt": 48, "worker": "R1", "status": "started", "utc": "2026-10-04T06:18:42.025353+00:00"}
+{"receipt": 48, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:18:51.551840+00:00", "error": null}
+{"receipt": 49, "worker": "T0", "status": "started", "utc": "2026-10-04T06:18:51.594852+00:00"}
+{"receipt": 49, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:18:52.152772+00:00", "error": null}
+{"receipt": 49, "worker": "T1", "status": "started", "utc": "2026-10-04T06:18:52.159138+00:00"}
+{"receipt": 49, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:18:53.043448+00:00", "error": null}
+{"receipt": 49, "worker": "T2", "status": "started", "utc": "2026-10-04T06:18:53.049707+00:00"}
+{"receipt": 49, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:18:53.683901+00:00", "error": null}
+{"receipt": 49, "worker": "R0", "status": "started", "utc": "2026-10-04T06:18:53.692267+00:00"}
+{"receipt": 49, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:18:58.019062+00:00", "error": null}
+{"receipt": 49, "worker": "R1", "status": "started", "utc": "2026-10-04T06:18:58.429619+00:00"}
+{"receipt": 49, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:19:07.488550+00:00", "error": null}
+{"receipt": 50, "worker": "T0", "status": "started", "utc": "2026-10-04T06:19:07.543082+00:00"}
+{"receipt": 50, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:19:08.333134+00:00", "error": null}
+{"receipt": 50, "worker": "T1", "status": "started", "utc": "2026-10-04T06:19:08.344437+00:00"}
+{"receipt": 50, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:19:10.016429+00:00", "error": null}
+{"receipt": 50, "worker": "T2", "status": "started", "utc": "2026-10-04T06:19:10.036303+00:00"}
+{"receipt": 50, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:19:11.158709+00:00", "error": null}
+{"receipt": 50, "worker": "R0", "status": "started", "utc": "2026-10-04T06:19:11.179531+00:00"}
+{"receipt": 50, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:19:17.632328+00:00", "error": null}
+{"receipt": 50, "worker": "R1", "status": "started", "utc": "2026-10-04T06:19:18.653381+00:00"}
+{"receipt": 50, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:19:30.824714+00:00", "error": null}
+{"receipt": 51, "worker": "T0", "status": "started", "utc": "2026-10-04T06:19:30.867306+00:00"}
+{"receipt": 51, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:19:31.770332+00:00", "error": null}
+{"receipt": 51, "worker": "T1", "status": "started", "utc": "2026-10-04T06:19:31.784818+00:00"}
+{"receipt": 51, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:19:36.656235+00:00", "error": null}
+{"receipt": 51, "worker": "T2", "status": "started", "utc": "2026-10-04T06:19:36.678165+00:00"}
+{"receipt": 51, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:19:38.866455+00:00", "error": null}
+{"receipt": 51, "worker": "R0", "status": "started", "utc": "2026-10-04T06:19:38.881294+00:00"}
+{"receipt": 51, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:19:46.337193+00:00", "error": null}
+{"receipt": 51, "worker": "R1", "status": "started", "utc": "2026-10-04T06:19:47.401224+00:00"}
+{"receipt": 51, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:20:00.090537+00:00", "error": null}
+{"receipt": 52, "worker": "T0", "status": "started", "utc": "2026-10-04T06:20:00.140284+00:00"}
+{"receipt": 52, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:20:00.942283+00:00", "error": null}
+{"receipt": 52, "worker": "T1", "status": "started", "utc": "2026-10-04T06:20:00.948781+00:00"}
+{"receipt": 52, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:20:02.572595+00:00", "error": null}
+{"receipt": 52, "worker": "T2", "status": "started", "utc": "2026-10-04T06:20:02.580659+00:00"}
+{"receipt": 52, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:20:04.048795+00:00", "error": null}
+{"receipt": 52, "worker": "R0", "status": "started", "utc": "2026-10-04T06:20:04.059636+00:00"}
+{"receipt": 52, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:20:09.726750+00:00", "error": null}
+{"receipt": 52, "worker": "R1", "status": "started", "utc": "2026-10-04T06:20:10.228475+00:00"}
+{"receipt": 52, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:20:19.812586+00:00", "error": null}
+{"receipt": 53, "worker": "T0", "status": "started", "utc": "2026-10-04T06:20:19.883817+00:00"}
+{"receipt": 53, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:20:20.844204+00:00", "error": null}
+{"receipt": 53, "worker": "T1", "status": "started", "utc": "2026-10-04T06:20:20.855721+00:00"}
+{"receipt": 53, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:20:24.859375+00:00", "error": null}
+{"receipt": 53, "worker": "T2", "status": "started", "utc": "2026-10-04T06:20:24.869510+00:00"}
+{"receipt": 53, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:20:26.200023+00:00", "error": null}
+{"receipt": 53, "worker": "R0", "status": "started", "utc": "2026-10-04T06:20:26.210232+00:00"}
+{"receipt": 53, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:20:34.074500+00:00", "error": null}
+{"receipt": 53, "worker": "R1", "status": "started", "utc": "2026-10-04T06:20:34.832871+00:00"}
+{"receipt": 53, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:20:47.579385+00:00", "error": null}
+{"receipt": 54, "worker": "T0", "status": "started", "utc": "2026-10-04T06:20:47.615574+00:00"}
+{"receipt": 54, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:20:48.126303+00:00", "error": null}
+{"receipt": 54, "worker": "T1", "status": "started", "utc": "2026-10-04T06:20:48.134743+00:00"}
+{"receipt": 54, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:20:48.872765+00:00", "error": null}
+{"receipt": 54, "worker": "T2", "status": "started", "utc": "2026-10-04T06:20:48.879230+00:00"}
+{"receipt": 54, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:20:49.718497+00:00", "error": null}
+{"receipt": 54, "worker": "R0", "status": "started", "utc": "2026-10-04T06:20:49.724577+00:00"}
+{"receipt": 54, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:20:54.394331+00:00", "error": null}
+{"receipt": 54, "worker": "R1", "status": "started", "utc": "2026-10-04T06:20:54.776888+00:00"}
+{"receipt": 54, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:21:03.623056+00:00", "error": null}
+{"receipt": 55, "worker": "T0", "status": "started", "utc": "2026-10-04T06:21:03.808287+00:00"}
+{"receipt": 55, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:21:07.423497+00:00", "error": null}
+{"receipt": 55, "worker": "T1", "status": "started", "utc": "2026-10-04T06:21:07.492056+00:00"}
+{"receipt": 55, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:21:24.273894+00:00", "error": null}
+{"receipt": 55, "worker": "T2", "status": "started", "utc": "2026-10-04T06:21:24.357858+00:00"}
+{"receipt": 55, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:21:31.379911+00:00", "error": null}
+{"receipt": 55, "worker": "R0", "status": "started", "utc": "2026-10-04T06:21:31.461053+00:00"}
+{"receipt": 55, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:21:40.101796+00:00", "error": null}
+{"receipt": 55, "worker": "R1", "status": "started", "utc": "2026-10-04T06:21:45.467907+00:00"}
+{"receipt": 55, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:21:54.575335+00:00", "error": null}
+{"receipt": 56, "worker": "T0", "status": "started", "utc": "2026-10-04T06:21:54.656178+00:00"}
+{"receipt": 56, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:21:56.727303+00:00", "error": null}
+{"receipt": 56, "worker": "T1", "status": "started", "utc": "2026-10-04T06:21:56.757439+00:00"}
+{"receipt": 56, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:22:00.347364+00:00", "error": null}
+{"receipt": 56, "worker": "T2", "status": "started", "utc": "2026-10-04T06:22:00.380981+00:00"}
+{"receipt": 56, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:22:04.512945+00:00", "error": null}
+{"receipt": 56, "worker": "R0", "status": "started", "utc": "2026-10-04T06:22:04.550762+00:00"}
+{"receipt": 56, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:22:15.058479+00:00", "error": null}
+{"receipt": 56, "worker": "R1", "status": "started", "utc": "2026-10-04T06:22:16.853383+00:00"}
+{"receipt": 56, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:22:26.182172+00:00", "error": null}
+{"receipt": 57, "worker": "T0", "status": "started", "utc": "2026-10-04T06:22:26.222784+00:00"}
+{"receipt": 57, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:22:26.904952+00:00", "error": null}
+{"receipt": 57, "worker": "T1", "status": "started", "utc": "2026-10-04T06:22:26.911530+00:00"}
+{"receipt": 57, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:22:27.762576+00:00", "error": null}
+{"receipt": 57, "worker": "T2", "status": "started", "utc": "2026-10-04T06:22:27.768104+00:00"}
+{"receipt": 57, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:22:28.885635+00:00", "error": null}
+{"receipt": 57, "worker": "R0", "status": "started", "utc": "2026-10-04T06:22:28.890531+00:00"}
+{"receipt": 57, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:22:33.474178+00:00", "error": null}
+{"receipt": 57, "worker": "R1", "status": "started", "utc": "2026-10-04T06:22:33.849251+00:00"}
+{"receipt": 57, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:22:42.090956+00:00", "error": null}
+{"receipt": 58, "worker": "T0", "status": "started", "utc": "2026-10-04T06:22:42.123863+00:00"}
+{"receipt": 58, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:22:42.668452+00:00", "error": null}
+{"receipt": 58, "worker": "T1", "status": "started", "utc": "2026-10-04T06:22:42.679209+00:00"}
+{"receipt": 58, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:22:43.529431+00:00", "error": null}
+{"receipt": 58, "worker": "T2", "status": "started", "utc": "2026-10-04T06:22:43.539743+00:00"}
+{"receipt": 58, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:22:44.635662+00:00", "error": null}
+{"receipt": 58, "worker": "R0", "status": "started", "utc": "2026-10-04T06:22:44.646975+00:00"}
+{"receipt": 58, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:22:50.736065+00:00", "error": null}
+{"receipt": 58, "worker": "R1", "status": "started", "utc": "2026-10-04T06:22:51.615503+00:00"}
+{"receipt": 58, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:23:03.144231+00:00", "error": null}
+{"receipt": 59, "worker": "T0", "status": "started", "utc": "2026-10-04T06:23:03.212923+00:00"}
+{"receipt": 59, "worker": "T0", "status": "valid", "utc": "2026-10-04T06:23:03.854436+00:00", "error": null}
+{"receipt": 59, "worker": "T1", "status": "started", "utc": "2026-10-04T06:23:03.868708+00:00"}
+{"receipt": 59, "worker": "T1", "status": "valid", "utc": "2026-10-04T06:23:05.619120+00:00", "error": null}
+{"receipt": 59, "worker": "T2", "status": "started", "utc": "2026-10-04T06:23:05.632355+00:00"}
+{"receipt": 59, "worker": "T2", "status": "valid", "utc": "2026-10-04T06:23:07.021710+00:00", "error": null}
+{"receipt": 59, "worker": "R0", "status": "started", "utc": "2026-10-04T06:23:07.040302+00:00"}
+{"receipt": 59, "worker": "R0", "status": "valid", "utc": "2026-10-04T06:23:13.143308+00:00", "error": null}
+{"receipt": 59, "worker": "R1", "status": "started", "utc": "2026-10-04T06:23:14.105852+00:00"}
+{"receipt": 59, "worker": "R1", "status": "valid", "utc": "2026-10-04T06:23:25.227923+00:00", "error": null}

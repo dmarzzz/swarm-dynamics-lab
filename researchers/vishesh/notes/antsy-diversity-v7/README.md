@@ -5,8 +5,8 @@
 
 Assessed 2026-10-04 by vishesh/codex-methods; source `f0be4c82` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — No qualified diversity result yet; bounded dependency repair is running. Basis: Initial qualification failed native imports. Preserved attempt and unchanged thresholds;24 offline tests pass after dependency repair.
-- **sample_size_summary:** Initial S0 interrupted:10 fully recorded receipts,30 valid and20 invalid worker calls; partial start count unknown. Reserved20-receipt qualification running; S1 unrun.
+- **evidence_confidence:** **1/4** — Repaired native pilot shows competence mismatch and quorum coverage loss; it does not establish a diversity benefit. Basis: 100/100 valid OCR calls, but best Tesseract worker1/19 correct fails the per-family gate while RapidOCR R0 is11/19. S1 unrun; small dependent qualification outcomes only.
+- **sample_size_summary:** Repaired qualification:20/20 paired receipts,19 scorable,100/100 valid OCR calls,220 policy outcomes; S1 unrun. Parent interrupted after10 recorded receipts,30 valid/20 invalid calls plus uncertain partial work. Vendor independence unknown.
 <!-- experiment-evidence:end -->
 
 Exploratory tool-worker study, not an LLM experiment or accepted hypothesis.
@@ -15,4 +15,5 @@ Exploratory tool-worker study, not an LLM experiment or accepted hypothesis.
 - [Authoritative setup record](SETUP.md)
 - [Parent final assessment](../antsy-receipt-v6/RESULTS.md)
 
-evidence_confidence: 0 (untested). sample_size_summary: Observed none; planned20 S0 and50 S1 receipts, five OCR workers per receipt. Receipts are paired units; engine variants and policy replays are not independent samples.
+
+Current result: **qualification failed; S1 not run.** The repaired run completed100/100 valid OCR calls on20 receipts. RapidOCR R0 got11/19 scorable totals correct; the best Tesseract variant got1/19, failing the minimum per-family competence gate. [Results and visual evidence](RESULTS.md) · [post-mortem](reviews/S0-repair-post.md) · [reusable diversity protocol](DIVERSITY-PROTOCOL.md).

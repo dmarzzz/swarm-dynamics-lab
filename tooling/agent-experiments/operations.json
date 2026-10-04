@@ -127,11 +127,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/antsy-diversity-v7",
       "setup_path": "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md",
-      "postmortem_path": null,
+      "postmortem_path": "researchers/vishesh/notes/antsy-diversity-v7/reviews/S0-repair-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T06:07:47.983737+00:00",
-      "checked_commit": "3c1dbf14741e843c6ed336a2d7d6aa59717cd0ff",
-      "next_action": "Admit native S0 with fresh dedicated allocation and immutable public plan; S1 requires competence pass."
+      "checked_at": "2026-10-04T06:27:00.898397+00:00",
+      "checked_commit": "f0be4c82149c5c986d56cf19cd23afa4f8ef2646",
+      "next_action": "Qualification failed despite100 valid calls. Read the competence/cost audit; a successor needs competent perception controls, a prospective amendment and fresh qualification. S1 unrun."
     }
   ]
 }

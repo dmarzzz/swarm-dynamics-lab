@@ -1482,16 +1482,17 @@
       ],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "No qualified diversity result yet; bounded dependency repair is running.",
-        "rationale": "Initial qualification failed native imports. Preserved attempt and unchanged thresholds;24 offline tests pass after dependency repair."
+        "score": 1,
+        "claim": "Repaired native pilot shows competence mismatch and quorum coverage loss; it does not establish a diversity benefit.",
+        "rationale": "100/100 valid OCR calls, but best Tesseract worker1/19 correct fails the per-family gate while RapidOCR R0 is11/19. S1 unrun; small dependent qualification outcomes only."
       },
-      "sample_size_summary": "Initial S0 interrupted:10 fully recorded receipts,30 valid and20 invalid worker calls; partial start count unknown. Reserved20-receipt qualification running; S1 unrun.",
+      "sample_size_summary": "Repaired qualification:20/20 paired receipts,19 scorable,100/100 valid OCR calls,220 policy outcomes; S1 unrun. Parent interrupted after10 recorded receipts,30 valid/20 invalid calls plus uncertain partial work. Vendor independence unknown.",
       "sources": [
         "researchers/vishesh/notes/antsy-diversity-v7/PLAN.md",
-        "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md"
+        "researchers/vishesh/notes/antsy-diversity-v7/RESULTS.md",
+        "researchers/vishesh/notes/antsy-diversity-v7/reviews/S0-repair-post.md"
       ],
-      "status_at_assessment": "qualification_repair_running",
+      "status_at_assessment": "execution_repaired_qualification_failed_s1_unrun",
       "source_commit": "f0be4c82149c5c986d56cf19cd23afa4f8ef2646",
       "assessed_at": "2026-10-04",
       "assessor": "vishesh/codex-methods"

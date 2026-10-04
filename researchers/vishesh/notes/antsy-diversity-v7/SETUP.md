@@ -55,4 +55,23 @@ S0-attempt-1 at source8112123d was interrupted for missing host `libGL.so.1`. Te
 
 The single bounded repair uses sourcef0be4c82, train40–59, unchanged policies/thresholds, installed official system dependencies, import-only preflight and immediate call journals. Host offline checks:24 passing. [Prospective repair assessment](reviews/S0-repair-pre.md). Public immutable GitHub PLAN was browser-verified at both source revisions, and the hub confirmed planned status. Local live-dashboard DNS resolution failed; no dashboard-view success is claimed. Runtime separately matched public plan bytes before measurement.
 
-S0-repair-1 is running. G3 passes for this named repair only; G4 remains pending. The original attempt is retained, not overwritten. System dependency repair and journal code are included in the qualified source fingerprint if this attempt passes. The [reusable diversity protocol](DIVERSITY-PROTOCOL.md) explains how these measurements extend to later LLM workflows without claiming an LLM result here.
+At this intermediate checkpoint S0-repair-1 was running; the terminal disposition below supersedes its pending status. The original attempt is retained, not overwritten. System dependency repair and journal code are included in the qualified source fingerprint if this attempt passes. The [reusable diversity protocol](DIVERSITY-PROTOCOL.md) explains how these measurements extend to later LLM workflows without claiming an LLM result here.
+
+
+## Terminal disposition — S0-repair-1
+
+G3 passed for the named repair at sourcef0be4c82; G4 **failed** the unchanged per-family competence threshold. No S1 was launched. G5 arithmetic, call and visual reconciliation pass; all14 original public artifacts were downloaded from the hub and SHA256-matched. [Readback receipt](results/S0-repair-1/readback.json). Hub status is failed, correctly reflecting qualification failure, despite successful execution.
+
+| Field | Terminal assessment |
+|---|---|
+| Execution / response validity |100 started /100 valid /0 invalid native OCR invocations |
+| Assigned / terminal / graded / analyzed |20/20/19/20 receipts;1 unknown reference retained;220 policy outcomes |
+| Qualification |Failed: best Tesseract variant1 correct, below2 required per family; RapidOCR R0 11/19 |
+| Scientific conclusion |Competence mismatch and conservative quorum dominate; no established diversity benefit |
+| Tests and audit |24 offline tests; all220 policies and10 pair counts independently reconstructed in a separate same-author script |
+| Runtime and cost |501.0s;0 hosted-LLM/API calls or new provisioning; measured worker costs include cold starts |
+| Public artifacts |14 original files hash-verified through hub readback; charts and18 GIF frames decoded |
+| Missingness and deviation |1 unknown reference; interrupted initial attempt preserved with uncertain partial-call count; local dashboard DNS failure documented |
+| Next action |Develop/qualify competent perception controls under a new plan; leave test50–99 unopened |
+
+[Final assessment](RESULTS.md) and [post-mortem](reviews/S0-repair-post.md) distinguish repaired execution from failed competence. Raw OCR and receipt images remain private. No credential values were read or published. Fleet release is recorded below after final upload.

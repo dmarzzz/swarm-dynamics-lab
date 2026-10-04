@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "records": 20,
+  "started_and_valid_calls": 100,
+  "policy_outcomes": 220,
+  "pair_checks": 10,
+  "implementation": "Separate reconstruction from saved candidates and gold; same-author review, no new inference."
+}
