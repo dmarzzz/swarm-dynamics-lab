@@ -1,0 +1,17 @@
+contract: ready-chain-v1
+study: sybil-rules-180
+experiment: sybil-rules-180
+topology: coordinator-workers
+hosts: 3
+stages: [S0, P0, Q0, X0, S1, D1]
+provider: openrouter
+model: qwen/qwen3.7-flash
+# The launcher requires an effort field; the frozen request disables reasoning (design.yaml request_template).
+effort: low
+max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192}
+max_reissued_calls: 360
+max_calls_total: 8478
+usd_cap: 5
+chain_timeout_seconds: 32400
+selftests: 49
+source_hash: cfd6f10a89b063f591ee549204bd3d9645707b2ce25c4f4c5d0a01dbb47eb157

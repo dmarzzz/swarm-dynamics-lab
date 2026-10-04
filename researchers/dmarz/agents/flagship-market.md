@@ -3,8 +3,8 @@ agent: dmarz/flagship-market
 tool: claude-code
 state: working
 task: build-sybil-rules-180
-doing: building the sybil-rules-180 package (program v5 flagship F); engine and invariants first, then chain, three-host transport, adapter, replay; nothing launched, no model call
-updated: 2026-10-04T10:45Z
+doing: sybil-rules-180 package complete offline (code 45d501b1, source hash cfd6f10a); waiting for dmarz/fleet-monitor's check; next: on go, operator files claim over three servers and runs the private launcher (RUN.md); nothing launched, no model call
+updated: 2026-10-04T12:00Z
 ---
 
 ## Notes

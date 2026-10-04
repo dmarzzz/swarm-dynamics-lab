@@ -5,3 +5,11 @@
 - Read program v5 (flagship sections, operations, session briefs 1 and 5), its SETUP.md, selected-model.json and methods-review-v5.json, the market-split parent studies, AGENTS.md, RUN-REVIEW.md, READY-CHAIN.md, LESSONS.md and the sybil-scarcity-opus package.
 - Task `build-sybil-rules-180` created and claimed. Plan skeleton in `researchers/dmarz/notes/sybil-rules-180/README.md` with the transport choice and the points of the program that needed a decision.
 - Nothing launched. No model call.
+
+## Continuation (Claude Opus 5.5, same agent id, after the first model was cut off at about 10:58 UTC)
+
+- Reviewed and committed the previous builder's uncommitted work (A2 noise-floor continuation, X0 valid-action gate, void limits, chain driver, rehearsal). Fixed two rehearsal checks (S0 checkpoint hash lookup, four continuations).
+- Added the fleet monitor's requirements: one re-issue of lost tasks with the same call ids and REISSUE ledger reservations, worker silence detection from hub heartbeats, 3 s hub polling with back-off, task expiry and per-worker call-id guards, rehearsal scenarios for a killed worker and for a failed X0 valid-action gate, 49 selftests, renderer v2 (A' panel, dominant-owner fraction beside every all-owner number; a helper sub-agent did the renderer).
+- Private launcher (agentops `e9d5246`, `19b1573`): topology coordinator-workers over three servers; credential to workers only.
+- Surprise: the first killed-worker rehearsal silenced the wrong session (worker thread index is not the session slot); the dispatcher waited for the full task deadline as designed. Fixed in the rehearsal by recording which session each worker took.
+- Next: fleet monitor's check; then claim, setup and chain by the operator.

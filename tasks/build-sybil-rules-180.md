@@ -23,8 +23,8 @@ Build the flagship line "F · Will they Sybil under rules?" of [research program
 
 ## Done when
 
-- [ ] Deterministic economy engine with offline tests: conservation of cash and of capacity in production, reserve and transit; no cross-product transfers; activation and transfer delays; overhead on empty active firms; exact checkpoint save and restore; the focal-owner recombination counterfactual; development fixtures showing affordable other-product expansion and profitable same-product fragmentation.
-- [ ] Chain S0, P0, Q0, X0, S1, D1 under software gates with hard call caps (main 5,952; qualification at most 552), one coordinator and three workers, an OpenRouter adapter with the frozen request template, and the failure handling of the ready-chain contract.
-- [ ] Offline rehearsal against a throwaway local hub with a stub model: three workers, the checkpoint fork, a gate failure that stops the chain, the credit-pause path.
-- [ ] Plan, pre-registration and pre-run review (`reviews/chain-001-pre.md`) on main with the pinned commit and source hash.
+- [x] Deterministic economy engine with offline tests: conservation of cash and of capacity in production, reserve and transit; no cross-product transfers; activation and transfer delays; overhead on empty active firms; exact checkpoint save and restore; the focal-owner recombination counterfactual; development fixtures showing affordable other-product expansion and profitable same-product fragmentation.
+- [x] Chain S0, P0, Q0, X0, S1, D1 under software gates with hard call caps (main 5,952; qualification at most 552), one coordinator and three workers, an OpenRouter adapter with the frozen request template, and the failure handling of the ready-chain contract.
+- [x] Offline rehearsal against a throwaway local hub with a stub model: three workers, the checkpoint fork, a gate failure that stops the chain, the credit-pause path.
+- [x] Plan, pre-registration and pre-run review (`reviews/chain-001-pre.md`) on main with the pinned commit and source hash.
 - [ ] Run request filed in the private run queue after the fleet monitor's go.
