@@ -1,0 +1,27 @@
+# Qualification passed; fresh-world temporal error stopped turnover
+
+Q3-A3 passed103native requests across release,failover and delegation:18/18founders,108/108initial and36/36terminal decisions,zero harmful approvals. All three direct handovers and selective updates passed. The selector-v2 repair therefore generalized beyond its inspected D1 contexts within this bounded qualification.
+
+P1 then started all six executions across three fresh roots, each with two repeats. All36founders acquired correct pairs and all216initial decisions were observed.215were correct;one harmful approval in failover-r0 failed the unchanged initial competence gate. The common stop censored turnover in the other five executions. Four question/teacher pairs had been collected, but no P1 successor committed a note and no terminal arm outcome was measured. Report6assigned/6started/0complete, not a six-trajectory preservation result.
+
+## First divergence and checks
+
+The failed actor correctly learned and selected its authoritative pair. All intended witness records arrived unchanged. At now10, one required positive record had observed_at11, outside the explicitly inclusive freshness interval[8,10]. The model returned allow; the correct action was defer because that required source had no eligible record. The other required record was current and positive; irrelevant dissent from another source neither authorized nor vetoed. The same world/case in repeat1 correctly deferred. This is an observed native temporal-rule error, not wrong memory, failed inheritance, delivery loss, label mismatch or demonstrated hidden reasoning.
+
+All255requests and derived results reconstruct exactly. Full-cohort checks cover all36P1founders and216initial decisions; manual review covers the sole wrong action, the corresponding correct repeat, all three Q3teach/commit pairs and all six Q3terminal selectors. One Q3teacher explanation incorrectly claimed its sources were unavailable despite returning the correct structured note; the successor copied the correct note. Narrative fluency is not a reliable substitute for action/state evidence.
+
+The exact public controller defers on the failed record without using hidden routes or gold. Offline current/lower-bound/future/stale/missing/wrong-pair contrasts pass. A hypothetical public executor would change215/216raw native actions to216/216correct software actions. That is a counterfactual calculation, not a repaired native score. Wrong pairs remain missing/incorrect service under the controller. Raw harmful approval remains in the evidence.
+
+## PI critique and next design
+
+The shared stop enforced the approved contract, but it prevented measurement of independently eligible turnover trajectories. Initial assessments were not missing: all six completed before the stop. A blind seed retry would conceal a real execution weakness. A deterministic eligibility/action wrapper would answer a different question about institutional routing with software enforcement; it must not be called native competence. Keep that architectural proposal separate.
+
+The preferred immediate continuation is specified prospectively in CONTINUATION-PLAN.md:reuse the exact128native prefix calls from the five initial-pass executions and collect only their untouched next requests. Preserve the failed sixth execution and all original255calls; no new founders,seeds,retries,prompts,labels or executor. The original attempt remains failed. This is adaptive selection after initial results, with3roots/5eligible executions and only one eligible failover repeat. Paired four-arm effects within these selected executions can be useful, but they do not establish population robustness or the original all-six completion claim. The strong controller remains perfect; structured notes may leave interactive versus static inheritance at ceiling. A valid null can finish this cohort.
+
+## Process and resources
+
+Immutable plan/sourcefb0e058e and both condition TLDRs were public and visually verified before22:41:19dispatch. Original ledger, D1native evidence, scientific source, approved-account exclusive allocation and exact model/provider bounds passed admission. Seven local and independent PI replay tests and six targeted remote runtime tests passed;648controller actions passed. The automatic feasibility gate used measuredQ3p902.7128seconds and projected467.96seconds against1202.22remaining. This was adequate timing, not the reason for termination. No retry,fallback,P2 or new VM.
+
+APIUSD0.5371185(Q3.2069325,P1.330186),214124input/17416output tokens; no new uncertain usage.466seconds allocated hostingUSD0.009246216666666666; all-inUSD0.5463647166666666. Original cumulativeUSD1.9348455770333333 includes unchanged prior uncertaintyUSD0.033102. UnusedUSD20.734035283333334 released. Worker and identity-checked transport stopped; claim461released464. Historical blocked publication and old remote grant are untouched. Operational finalize and authored quality review are separate; raw evidence is privately archived with the hash inQ3-A3-P1-CLOSEOUT.json.
+
+**Disposition: repair/conditional-continuation proposal.** Exact prefix and no-duplicate offline checks plus a named finite allocation are required before C2. No additional native call has occurred under this proposal at authorship. No full-turnover animation is appropriate for this failed attempt; use the completed-stage/initial-outcome table and preserve missing endpoints.

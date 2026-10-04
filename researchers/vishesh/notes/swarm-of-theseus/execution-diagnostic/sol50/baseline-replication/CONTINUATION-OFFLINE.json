@@ -1,0 +1,41 @@
+{
+  "trajectories": [
+    {
+      "trajectory": "P1-release-r0",
+      "cached": 26,
+      "new_calls": 112,
+      "complete": true
+    },
+    {
+      "trajectory": "P1-release-r1",
+      "cached": 24,
+      "new_calls": 114,
+      "complete": true
+    },
+    {
+      "trajectory": "P1-failover-r1",
+      "cached": 26,
+      "new_calls": 112,
+      "complete": true
+    },
+    {
+      "trajectory": "P1-delegation-r0",
+      "cached": 26,
+      "new_calls": 112,
+      "complete": true
+    },
+    {
+      "trajectory": "P1-delegation-r1",
+      "cached": 26,
+      "new_calls": 112,
+      "complete": true
+    }
+  ],
+  "preserved_original_P1_calls": 152,
+  "old_calls_dispatched": 0,
+  "max_new_calls": 562,
+  "scripted_new_calls": 562,
+  "native_calls": 0,
+  "five_independent_continuations_complete": true,
+  "wire_and_grade_dependencies_unchanged": true
+}

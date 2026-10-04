@@ -1,0 +1,268 @@
+{
+  "attempt": "Q3-A3/P1-v2",
+  "assessor": "vishesh/codex-theseus;owningagent",
+  "date": "2026-10-04",
+  "evidence_revision": "fb0e058e1a8e007116ba3266a7faefdba1ad22ef",
+  "decision": "repair",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Initial competence and turnover comparison kept separate; no broad cultural claim.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Future timestamp is a meaningful public eligibility violation; samecase repeat and boundary controls verify target. Synthetic2authority templates remain narrow.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Four-arm terminal contrast unobserved because globalstop censored allturnover.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ],
+      "next_action": "Prospective conditional continuation of five exact initial-eligible prefixes;failedsixth retained, no newfounders orpromptchange.",
+      "acceptance_check": "No oldcallredispatch; unchangedscientificdependencies,complete all4arms ineligiblecells,report6assigned5eligible andpostselection limits."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Q3allpass butfresh P1one harmfulfuturetimestamp action; sameworldrepeatcorrect.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ],
+      "next_action": "Prospective conditional continuation of five exact initial-eligible prefixes;failedsixth retained, no newfounders orpromptchange.",
+      "acceptance_check": "No oldcallredispatch; unchangedscientificdependencies,complete all4arms ineligiblecells,report6assigned5eligible andpostselection limits."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "255exactrequest/result replays;216P1initial decisions fullyobserved; solemiss independently traced to11>10.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Threefresh roots/sixexecutions observedinitially;zero complete pairedturnover outcomes.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ],
+      "next_action": "Prospective conditional continuation of five exact initial-eligible prefixes;failedsixth retained, no newfounders orpromptchange.",
+      "acceptance_check": "No oldcallredispatch; unchangedscientificdependencies,complete all4arms ineligiblecells,report6assigned5eligible andpostselection limits."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Singlechosenpair persisted; correctnotes/records atfailure; one narrative contradiction noted separately.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All255calls known;6started/0completeturnover,4questionteacherpairs/0commits; oldfailure preserved.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Newallin.5463647166666666,cumulative1.9348455770333333,oldunknownretained,unusedreleased andclaimclosed.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Exactsource/manifest/runtime andallrequests reconstruct; hostedanswers are not guaranteed repeatable.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "No fabricatedturnover animation; missingterminal arms explicitlyunobserved.",
+      "evidence": [
+        {
+          "path": "Q3-A3-P1-AUDIT.json",
+          "sha256": "3425b25572bb2c15b0c3f3510df6a472fedb75bdae43e77ae0934943d98dd3ba"
+        },
+        {
+          "path": "Q3-A3-P1-CLOSEOUT.json",
+          "sha256": "7a4b595dfea44d5a1558730560dcc66c84f54b379d1a88abd46f8eacc7dca838"
+        },
+        {
+          "path": "ELIGIBILITY-CONTRAST.json",
+          "sha256": "359148cad73a45aa103b33b806ac61402bb83e14b7d1f2ab3c588ccfa93fda02"
+        },
+        {
+          "path": "Q3-A3-P1-POST-MORTEM.md",
+          "sha256": "3bbb8a026408acd22b973476acdd3f7851a5176799f58d7fb5e292fe57ac16fb"
+        }
+      ]
+    }
+  ]
+}

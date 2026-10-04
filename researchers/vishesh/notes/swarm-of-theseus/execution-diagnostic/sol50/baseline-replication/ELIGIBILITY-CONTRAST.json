@@ -1,0 +1,22 @@
+{
+  "software_counterfactual_only": true,
+  "raw_native_error_retained": true,
+  "observed_native_action": "allow",
+  "public_rule_action": "defer",
+  "wrong_pair_not_corrected": true,
+  "boundaries": {
+    "current": "allow",
+    "lower-bound": "allow",
+    "future": "defer",
+    "stale": "defer",
+    "missing": "defer",
+    "wrong-pair-missing": "defer",
+    "wrong-pair-present": "hold"
+  },
+  "effect_on_observed_P1_initial_decisions": {
+    "raw_native_correct": 215,
+    "counterfactual_public_executor_correct": 216,
+    "assigned": 216
+  },
+  "not_new_native_evidence": true
+}
