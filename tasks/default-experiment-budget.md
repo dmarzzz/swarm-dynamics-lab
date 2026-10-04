@@ -3,7 +3,7 @@ id: default-experiment-budget
 type: task
 title: Record standing default experiment budget
 kind: admin
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -13,6 +13,10 @@ depends_on: []
 topics: []
 claimed_at: 2026-10-04T05:52Z
 updated: 2026-10-04T05:52Z
+outputs:
+- AGENTS.md
+- tooling/agent-experiments/EXPERIMENT-SETUP.md
+- tooling/agent-experiments/OPERATIONS.md
 ---
 
 ## Goal
