@@ -72,7 +72,7 @@ def totals(rows, planned):
 
 def row_base(a, p, run_name):
     r = {key: a[key] for key in study.ROW_FIELDS}
-    r.update(run=run_name, stage=p['stage'], batch=p['batch'], backend=p['backend'], code=p['code'], source_hash=p['source_hash'],
+    r.update(run=run_name, stage=p['stage'], batch=p['batch'], backend=p['backend'], model=p['model'], code=p['code'], source_hash=p['source_hash'],
              status='failed', turns=[])
     return r
 

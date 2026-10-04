@@ -17,6 +17,9 @@ params:
   batch:
     type: str
     role: replicate
+  model:
+    type: str
+    role: fixed
   source_hash:
     type: str
     role: fixed

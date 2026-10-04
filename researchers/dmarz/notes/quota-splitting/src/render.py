@@ -39,7 +39,7 @@ def writer(d):
 
 
 def label(stage):
-    return 'SCRIPTED REFERENCE PLANNER (maximising) - NOT MODEL EVIDENCE' if stage == 'S0' else 'claude-opus-5-5, effort medium'
+    return 'SCRIPTED REFERENCE PLANNER (maximising) - NOT MODEL EVIDENCE' if stage == 'S0' else f'{study.model()}, effort {study.design()["effort"]}'
 
 
 def header(d, rows, total, stage, elapsed):

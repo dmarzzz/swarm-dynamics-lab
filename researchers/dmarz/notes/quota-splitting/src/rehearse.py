@@ -18,7 +18,11 @@ each in fresh temporary result and ledger directories and on its own hub:
       S1 ends failed;
   (e) from some point in S1 every request returns a credit-balance error: the stage stops with
       provider_credit_balance_low and nothing failed; `chain resume` with a healthy stub then
-      completes the stage; every episode is counted exactly once; `chain verify`.
+      completes the stage; every episode is counted exactly once; `chain verify`;
+  (f) model ladder: on one hub and source hash, the default model stops S1 on a billing outage (no
+      resume); then the second model of the ladder (STUDY_MODEL, its own ledger and results directory)
+      runs P0 -> Q0 -> S1 behind the same scripted S0, with its own batch names, its own prices and
+      every row naming it; `chain verify` on the second model's chain.
 It refuses to run unless the hub URL host is 127.0.0.1.
 """
 import argparse
@@ -142,7 +146,7 @@ def start_hub(hub_dir, data_dir, token):
     return proc, f'http://127.0.0.1:{port}'
 
 
-def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
+def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False, second_with=None):
     work = Path(base) / label; work.mkdir()
     token = 'rehearsal-' + secrets.token_hex(12)
     proc, url = start_hub(hub_dir, work, token)
@@ -155,7 +159,7 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
     def snapshot():
         status = chain.read_status(); runs = sr.runs(study.EXPERIMENT, limit=5000); s1 = status['stages'].get('S1') or {}
         keys = ('status', 'calls', 'planned', 'valid', 'invalid', 'failed', 'not_started', 'cost_usd', 'qualification_passed',
-                'billing_pauses', 'billing_pause_seconds', 'count_fallbacks', 'resumable')
+                'billing_pauses', 'billing_pause_seconds', 'count_fallbacks', 'resumable', 'input_tokens', 'output_tokens')
         out = dict(state=status['state'], stopped_stage=status.get('stopped_stage'), reason=status.get('reason'),
                    stages={s: {k: e.get(k) for k in keys} for s, e in status['stages'].items()},
                    continuations=[{k: e.get(k) for k in keys + ('batch', 'units')} for e in s1.get('continuations') or []],
@@ -172,7 +176,23 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
             result['first_stop'] = {k: result[k] for k in ('exit', 'state', 'stopped_stage', 'reason', 'stages', 's1_units')}
             result['resume_exit'] = chain.resume(sr=sr, opener=resume_with)
             result.update(snapshot(), resume_stub_messages=resume_with.messages)
-        if verify: result['verify_exit'] = chain.verify(sr)
+        if second_with is not None:
+            result['first_stop'] = {k: result[k] for k in ('exit', 'state', 'stopped_stage', 'reason', 'stages', 's1_units', 'ledger')}
+            second = study.model_ladder()[1]; tag = second.removeprefix('claude-')
+            os.environ.update(STUDY_MODEL=second, STUDY_RESULTS_DIR=str(work / f'results-{tag}'),
+                              STUDY_BUDGET_LEDGER=str(work / 'ledger' / f'ledger-{tag}.jsonl'))
+            try:
+                result['second_model'] = second
+                result['second_exit'] = chain.run_chain(['P0', 'Q0', 'S1'], sr=sr, opener=second_with)
+                result['second'] = snapshot(); result['second_stub_messages'] = second_with.messages
+                rows = chain.stage_rows(chain.read_status()['stages']['S1'])
+                result['second_row_models'] = sorted({r.get('model') for r in rows})
+                runs = sr.runs(study.EXPERIMENT, limit=5000)
+                result['hub_models'] = sorted({((r.get('params') or {}).get('batch'), (r.get('params') or {}).get('model')) for r in runs})
+                if verify: result['second_verify_exit'] = chain.verify(sr)
+            finally:
+                os.environ.pop('STUDY_MODEL', None)
+        elif verify: result['verify_exit'] = chain.verify(sr)
         result['spool_empty'] = not list((work / 'spool').glob('*.json')) if (work / 'spool').exists() else True
     finally:
         proc.terminate()
@@ -180,6 +200,15 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
         except subprocess.TimeoutExpired: proc.kill()
     result['seconds'] = round(time.monotonic() - started, 1)
     return result
+
+
+def ladder_probe_cost(result):
+    """What the second model's one probe call must cost at its own prices: the stub reports 120 output
+    tokens and input tokens from the request size, so this is recomputed from the stage's usage."""
+    p0 = ((result.get('second') or {}).get('stages') or {}).get('P0') or {}
+    if not p0.get('output_tokens') or result.get('second_model') not in study.design()['models']: return None
+    m = study.design()['models'][result['second_model']]
+    return (p0['input_tokens'] * m['input_usd_per_million'] + p0['output_tokens'] * m['output_usd_per_million']) / 1e6
 
 
 def main():
@@ -205,6 +234,8 @@ def main():
         many = chain_once('d-failed-episodes-over-the-limit', Stub('parallel', fail_from=first_s1), hub_dir, base, sr)
         bill = chain_once('e-billing-stop-and-resume', Stub('parallel', credit_from=first_s1 + 40), hub_dir, base, sr,
                           resume_with=Stub('parallel'), verify=True)
+        ladder = chain_once('f-model-ladder-after-billing-stop', Stub('parallel', credit_from=first_s1 + 40), hub_dir, base, sr,
+                            second_with=Stub('parallel'), verify=True)
     finally:
         if not a.keep: shutil.rmtree(base, ignore_errors=True)
     calls = full.get('stages', {}); made = sum((e.get('calls') or 0) for e in calls.values())
@@ -253,11 +284,24 @@ def main():
         'e_same_ledger_within_caps': ((bill.get('ledger') or {}).get('calls_by_stage') or {}).get('S1', 10 ** 9) <= budget['max_calls']['S1']
                                      and (bill.get('ledger') or {}).get('transport_attempts', 10 ** 9) <= budget['max_transport_attempts'],
         'e_verify_exit_0': bill.get('verify_exit') == 0,
+        'f_first_model_billing_stop': (ladder.get('first_stop') or {}).get('reason') == provider.CREDIT
+                                      and (ladder.get('first_stop') or {}).get('stopped_stage') == 'S1',
+        'f_second_model_chain_completes': ladder.get('second_exit') == 0 and (ladder.get('second') or {}).get('state') == 'completed'
+                                          and ladder.get('second_model') == 'claude-opus-5',
+        'f_batches_per_model': ladder.get('hub_models') == sorted([('s0-001', 'none'), ('p0-001', 'claude-opus-5-5'), ('q0-001', 'claude-opus-5-5'),
+                                                                   ('s1-001', 'claude-opus-5-5'), ('p0-001-opus-5', 'claude-opus-5'),
+                                                                   ('q0-001-opus-5', 'claude-opus-5'), ('s1-001-opus-5', 'claude-opus-5')]),
+        'f_second_rows_name_their_model': ladder.get('second_row_models') == ['claude-opus-5'],
+        'f_separate_ledgers': ((ladder.get('second') or {}).get('ledger') or {}).get('attempted_calls') == ladder.get('second_stub_messages')
+                              and ((ladder.get('first_stop') or {}).get('ledger') or {}).get('attempted_calls', 0) > 0,
+        'f_second_model_prices': abs(((ladder.get('second') or {}).get('stages') or {}).get('P0', {}).get('cost_usd', -1)
+                                     - (ladder_probe_cost(ladder) or -2)) < 1e-9,
+        'f_verify_exit_0': ladder.get('second_verify_exit') == 0,
         'no_real_wait': time.monotonic() - started < 600 and len(waits) > 0,
     }
     ok = all(checks.values())
     print(json.dumps({'ok': ok, 'checks': checks, 'full_chain': full, 'failed_qualification': gate, 'one_failed_episode': one,
-                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'waits_replaced': len(waits),
+                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'model_ladder': ladder, 'waits_replaced': len(waits),
                       'seconds': round(time.monotonic() - started, 1),
                       'note': 'stub answers only; nothing here is a sample and nothing left this machine'}, sort_keys=True))
     return 0 if ok else 1
