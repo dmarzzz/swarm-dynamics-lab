@@ -1,0 +1,176 @@
+{
+  "source_file": "swarm-lab-top10-2026-10-04.html",
+  "source_sha256": "8a9c11253f8f74487d289b1b9eabff0ba3b1378ab965ccdc4962a4281deafc81",
+  "reconciliation_commit": "d2b33c0c",
+  "coverage": "14 full-page and 10 short-entry records; recommendations grouped in README and linked study additions; not a claim of implementation or independent replication",
+  "records": [
+    {
+      "source_section": "full",
+      "source_id": "rules-180",
+      "source_name": "Sybil rules 180",
+      "source_record_sha256": "266b2a819a6fea9070e24c0afa05f13a2ea5f6ab2ab28897b7ad24d7c575b3af",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "scale",
+      "source_name": "Sybil resistance as swarms grow",
+      "source_record_sha256": "e14c902284c858b8cc4d3abd4fb36dfd9f742fd6bd5dd47c3d2c79f1aecb2e9a",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "healing",
+      "source_name": "Healing Helping Hands",
+      "source_record_sha256": "226df6d1def6efc045a83fde47c2d0acf9b09b335b05ea26397b4e2feadf9cfe",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "theseus",
+      "source_name": "Swarm of Theseus",
+      "source_record_sha256": "933592825cbe9c6a1578cb985bd24215f2c75a25ec95b003a2d4a17caa4a23b1",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "budget",
+      "source_name": "Verification budget + trust credit",
+      "source_record_sha256": "70e28bbac557c1369924df4ce6936eedf2599db1064191f367df7a8c6bf260b5",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "influence",
+      "source_name": "External influence \u2192 procurement scenario",
+      "source_record_sha256": "9f7d1d59781607918a7c7239da4634642463c44db09d9033493fee488fbc3027",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "capture",
+      "source_name": "Capture and memory (+ memory mix)",
+      "source_record_sha256": "4efcf61d77b90bbb5a79acd4409ff321a74073beeccc4576d001baf8523083ec",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "phantom",
+      "source_name": "Phantom Coast",
+      "source_record_sha256": "a0bd4c2e174bf1a2fe3976d83430ed54227345956b5a421af13505c488cfcaf5",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "quorum",
+      "source_name": "Quorum of Mirrors \u2192 Telephone",
+      "source_record_sha256": "f2a73b9d4ebea4a6b810f684930932d2b5ae04c0c243a5e8df7b0a6d1ec802dc",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "discussion",
+      "source_name": "Discussion dose (fork-merge corruption)",
+      "source_record_sha256": "b93fc411ca0d60628c8fa9f75366c5ee89fdb00e86cb8042a67decfbf6dc9589",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "scarcity",
+      "source_name": "Truth scarcity and the knowledgeable newcomer",
+      "source_record_sha256": "7933317476cce42bbc6b221b4d0d1ed9191aec33bd164be709e953eef398dcc3",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "handoff",
+      "source_name": "Memory handoff: successors repairing inherited false memory",
+      "source_record_sha256": "5b252369aba1986a6ccc7533447693e77d70f8c4652710a7fbc387ef3ea970dc",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "split",
+      "source_name": "Identity splitting with fixed attacker resources",
+      "source_record_sha256": "ad71cc0a60b801db3e74c7590c4f72c07c5c46974187719bcbdec8468c95ecd3",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "full",
+      "source_id": "avalon",
+      "source_name": "Avalon Swarm",
+      "source_record_sha256": "65c3509557ccc1bde542b1044c9c14ea4bcc929c8bca87f04a9dc40a593f14d1",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "antsy-v1-v8-adaptive-quorum-receipt-verification",
+      "source_name": "Antsy v1\u2013v8 (adaptive quorum \u2192 receipt verification)",
+      "source_record_sha256": "1cb7179f13392694eedc7c00d2b12766a08ef73323e2d36cf9f87d7d47dd2560",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "the-right-dissenter-rd1-rd6",
+      "source_name": "The Right Dissenter (RD1\u2013RD6)",
+      "source_record_sha256": "dcb4557528dfa4430edc87a5be8aee2b4fae83f375a7f4a3c16f4d6097672cea",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "immune-response-v1-v3-scenario-receipts",
+      "source_name": "Immune Response (v1\u2013v3, scenario, receipts)",
+      "source_record_sha256": "ec86554018bec7fdb1d015ae7b8af23d4f2ef9d7490ef745afcd2c16f0094e7f",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "wild-lane-askswarm-halflife-identity-timeline",
+      "source_name": "Wild lane (askswarm \u00b7 halflife \u00b7 identity \u00b7 timeline)",
+      "source_record_sha256": "d88629228fb553a25c11449b38262d5f127c245724c10c55a91e97bbddb7b24e",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "regrowth-200",
+      "source_name": "Regrowth 200",
+      "source_record_sha256": "8e0e2c39abcfbe5df18de0c9c26396b3f5f6f0f28f2e5b77a708dcbf847ec766",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "optimal-swarm-size",
+      "source_name": "Optimal swarm size",
+      "source_record_sha256": "bae35b92b2cb3afd8fc3bc33c0a79dfc9723c4362a6b97f738045aa9391a4301",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "false-alarm-cascade",
+      "source_name": "False-alarm cascade",
+      "source_record_sha256": "f9edcc67e8cba539665497a0a555595b7558ddaf222d0b0773fffdc1a07252f7",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "poietic-agents",
+      "source_name": "Poietic Agents",
+      "source_record_sha256": "11e9510f318b3c25c3d1c44b4513f009fe4b91c7084ecc307a5ded695df552f3",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "compositional-safety",
+      "source_name": "Compositional safety",
+      "source_record_sha256": "f1a5345ed72a356fd13135ec681acf207b3ec9e2fca517b207b040a823d5cb96",
+      "disposition_location": "README.md"
+    },
+    {
+      "source_section": "short",
+      "source_id": "quota-splitting",
+      "source_name": "Quota splitting",
+      "source_record_sha256": "b508acf6aa8098422f64de5ae9743d53fae75d4df203c867daf83c7a65a62da0",
+      "disposition_location": "README.md"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # External Influence v2: external-review proposals
 
+**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
 **Current evidence:** This historical lane is distinct from the current procurement D9/D10 pipeline. The review identifies dose saturation, duplicated actor-visible stimuli and a potentially useful saved peer-vote analysis; those derived counts need reproducible audit before becoming revised results.
@@ -38,3 +40,18 @@ Perfect arithmetic on false inputs explains some harmful choices; it does not pr
 ## Next-run construction
 
 Before implementing a material successor, the owning task writes the prospective plan with independent sampling units, development/qualification/evaluation separation, a smallest useful effect or precision rationale, the exact crossed factors, baseline access and budget matching, all-assigned missingness, per-agent initial context and memory/update rules, scored outputs and safe trace retention. Root count must follow the estimand; neither 24 roots nor a baseline success band is a universal rule. If the available budget only buys a diagnostic, label it a diagnostic. Specify forecast and enforceable maximum costs separately, carrying the original ledger. Necessary bounded post-mortem diagnostics use the current standing owner authority after a concrete prospective plan and ordinary admission checks; do not request a redundant per-diagnostic approval. A broader main study, new question, increased budget or unauthorized access still needs the corresponding decision. No new reviewer gate is added.
+
+## Top-10 review: scale and evaluation
+
+2026-10-04 · [Portfolio integration](../top10-integration-2026-10-04/README.md).
+
+**Keep this lineage separate from the procurement scenario’s 10/50-agent plan.** The top-10 entry spans both and contains stale local-call/diagnostic counts. Use the [existing results](README.md), native cohort records and current evidence registry rather than its aggregate narrative.
+
+| Improvement | Acceptance / claim boundary |
+|---|---|
+| Many-team evaluation | If pursued, sample independent dossier/source roots, then nest teams within exposure roots. Shared poisoned sources do not create independent replications merely by adding teams. |
+| Peer influence | Retain matched no-peer and repeated-private-judgment controls with the same allowed source material and inference budget. Separate source poisoning from social persuasion. |
+| Scale and model | Native actors per team, total teams, programmed sources, independent assignments and model calls are separate counts. Do not conflate a cheaper backend with a larger-N treatment. |
+| Presentation | Use observed before/after votes and source hashes from each cohort. Show paired hosted/local outcomes, missingness and common fixture support; do not splice procurement or illustrative guide percentages into a v2 result. |
+
+This adds future design/reporting constraints, not new evidence, pooled results or a dispatch instruction. Current approval for the [procurement scale-up](../influence-swarms/scenario/scale-up/PLAN.md) remains scoped there.

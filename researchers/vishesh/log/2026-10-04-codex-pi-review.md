@@ -159,3 +159,9 @@ RD6 admission and73checks passed. Root independently verified12 anonymously publ
 Published the dated wave status and handed ongoing native monitoring, scientific closeout and conditional stages to their existing owning tasks. No root background worker remains. Source links resolve, diff whitespace is clean, repository check has0errors and5pre-existing citation warnings.
 
 - 2026-10-04T20:01Z: Incorporated the external experiment review as229 item-level dispositions across15 owned study proposal documents, plus10 portfolio recommendations and13 recurring issues. Source fingerprint and full numbered-item coverage verified; newer PQ04/R1, PC10, Q-A7, D9, C5 and A7/schema-repair evidence retained. Added navigation and five mechanism checks to RUN-QUALITY. Proposed work is not claimed implemented; no calls or allocations. Rejected mean-only cost bounds, universal sample floors, a guaranteed-zero HHH assertion and reinstated reviewer gates. Local package checks pass; lab check has0errors and5pre-existing citation warnings.
+
+## Top-ten portfolio incorporation
+
+Reconciled all24 source entries (14full pages plus10short entries) against d2b33c0c. Added concrete scale/evaluation/reporting constraints to13 existing study proposal documents plus Telephone; linked current R1, T1, D10/scale-up, O2, Antsy panel and D0-02 plans. Preserved frozen scopes and other researchers’ files. New A8 and RD6 evidence separates repaired execution from failed capability; source Antsy numbers were actually Healing qualification scores. Added compact shared scale/claim guidance without new infrastructure or reviewer gates. Source hash and per-record coverage retained; no runs or allocations.
+
+Validation: checked local links and prior229-item coverage; lab.py check has0errors and5pre-existing bibliography warnings. Next: owning tasks consume these additions alongside the latest post-mortems; proposed broader network/population changes remain prospective.

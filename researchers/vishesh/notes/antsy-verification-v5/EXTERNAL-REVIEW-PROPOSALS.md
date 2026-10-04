@@ -1,5 +1,7 @@
 # Antsy v1–v5: external-review proposals
 
+**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
 **Current evidence:** V5 D0 is a fixed-history estimator reanalysis; Laya’s corrected 57.78% exceeds the no-check 56.78% on that saved tape. It is not a fresh committee evaluation. V5 D1’s planner also changes the check menu.
@@ -38,3 +40,19 @@ Current v6–v8 inherits practical field scoring, fallible checkers, fresh-split
 ## Next-run construction
 
 Before implementing a material successor, the owning task writes the prospective plan with independent sampling units, development/qualification/evaluation separation, a smallest useful effect or precision rationale, the exact crossed factors, baseline access and budget matching, all-assigned missingness, per-agent initial context and memory/update rules, scored outputs and safe trace retention. Root count must follow the estimand; neither 24 roots nor a baseline success band is a universal rule. If the available budget only buys a diagnostic, label it a diagnostic. Specify forecast and enforceable maximum costs separately, carrying the original ledger. Necessary bounded post-mortem diagnostics use the current standing owner authority after a concrete prospective plan and ordinary admission checks; do not request a redundant per-diagnostic approval. A broader main study, new question, increased budget or unauthorized access still needs the corresponding decision. No new reviewer gate is added.
+
+## Top-10 review: scale and evaluation
+
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+
+**Correct the source attribution.** Qwen 37/60 and Jev 60/60 are Healing C5 qualification numbers, not Antsy v4 receipt results. Do not propagate the top-10 row into Antsy’s evidence metadata.
+
+| Item | Integrated improvement |
+|---|---|
+| Saved-data improvement | Retain v5’s null-neutral estimator repair and cost-aware deterministic policy. Report receipt-level harms, check use and net utility separately; assumed check prices are not measured monetary costs. |
+| Scale decision | A larger panel does not validate the old estimator. The current 40-Haiku panel belongs to the v8 successor and tests a different instrument; do not pool its outcomes with v4/v5. |
+| Acceptance / visual | Use the actual 70 reused receipts as development support. State that fixed-history reanalysis does not show how agents would choose new checks; keep calibration receipts and evaluation reuse explicit. |
+
+Evidence / current plans: [v5 actual results](RESULTS.md) · [current native panel](../antsy-targeted-v8/haiku-panel-v1/PLAN.md).
+
+These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.

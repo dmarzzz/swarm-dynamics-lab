@@ -46,3 +46,5 @@ Telephone measures claim fidelity and its change across hops. Quorum measures so
 ## Latest iteration: T1 offline preparation
 
 [Implementation, cases and closeout](t1/README.md): 24 Telephone tests and 21 shared checks pass. Eight authored roots produce 72 scripted hop outputs. Fourteen private source joins yield zero validated complete episodes. Copy and exact lookup reach the fixture ceiling; model efficacy remains untested. **HOLD native collection** pending coherent development cases and a useful residual task. T0 remains the original prospective design, not a runnable admission packet.
+
+[Top-10 design additions](TOP10-NEXT-STEPS.md) distinguish current A0/V0 handoffs from a possible future sparse-network study.

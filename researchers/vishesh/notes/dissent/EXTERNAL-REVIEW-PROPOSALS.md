@@ -1,5 +1,7 @@
 # Right Dissenter: external-review proposals
 
+**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
 **Current evidence:** RD6 Q0-A1 stopped before any model dispatch. A zero-start replacement contract is published and the owning task has subsequently recorded approval; verify current admission there. This review must not change that frozen packet in place.
@@ -37,3 +39,20 @@ The exact rule and instruction may conflict at pre-critical ticks; establish whi
 ## Next-run construction
 
 Before implementing a material successor, the owning task writes the prospective plan with independent sampling units, development/qualification/evaluation separation, a smallest useful effect or precision rationale, the exact crossed factors, baseline access and budget matching, all-assigned missingness, per-agent initial context and memory/update rules, scored outputs and safe trace retention. Root count must follow the estimand; neither 24 roots nor a baseline success band is a universal rule. If the available budget only buys a diagnostic, label it a diagnostic. Specify forecast and enforceable maximum costs separately, carrying the original ledger. Necessary bounded post-mortem diagnostics use the current standing owner authority after a concrete prospective plan and ordinary admission checks; do not request a redundant per-diagnostic approval. A broader main study, new question, increased budget or unauthorized access still needs the corresponding decision. No new reviewer gate is added.
+
+## Top-10 review: scale and evaluation
+
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+
+**Superseded: RD6 Q0-A2 finished, 15/18 correct; D0 remains unrun.** All 12 source-only and three current-conflict controls passed; all three stale controls wrongly selected PROCEED. This is a capability failure, not an access blocker.
+
+| Item | Integrated improvement |
+|---|---|
+| Offline improvement | Make evidence eligibility explicit: independently recompute age versus TTL and conflicting-current-source status. Retain the observed failures; do not silently replace historical labels or lower the 18/18 gate. |
+| Small useful contrast | If a bounded diagnostic is needed, separate factual temporal interpretation from history/ballots/copied cards on matched cases. A deterministic eligibility controller is the strong comparator; an output-format pass is insufficient. |
+| Acceptance / scale | Require correct stale abstention and retained clean decisions on prospective controls. Evaluate correct/wrong/defer against checks spent and coverage; count independent roots, not scripted ballots. More votes do not fix freshness interpretation. |
+| Visual | Use the complete 12/12, 3/3, 0/3 qualification table before any dissent-saves-checks headline. Report modeled probabilities as uncalibrated outputs. |
+
+Evidence / current plans: [RD6 post-mortem](reopening/reviews/Q0-A2-POST.md) · [RD6 figure/report](reopening/REPORT.md).
+
+These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.

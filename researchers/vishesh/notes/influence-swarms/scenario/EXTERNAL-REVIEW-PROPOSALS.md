@@ -1,5 +1,7 @@
 # Influence Scenario: external-review proposals
 
+**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../../external-study-review-2026-10-04/README.md).
 
 **Current evidence:** D9 recovered typed acquisition. Five valid cases had 180/180 correct raw values but only 98/180 excerpt-supported values and 41/75 correct policy checks. A source-bound saved-data repair gives 75/75 checks; it is not a native chair result.
@@ -37,3 +39,20 @@ D9 shows quotation fidelity, extracted fact correctness, evidence admission and 
 ## Next-run construction
 
 Before implementing a material successor, the owning task writes the prospective plan with independent sampling units, development/qualification/evaluation separation, a smallest useful effect or precision rationale, the exact crossed factors, baseline access and budget matching, all-assigned missingness, per-agent initial context and memory/update rules, scored outputs and safe trace retention. Root count must follow the estimand; neither 24 roots nor a baseline success band is a universal rule. If the available budget only buys a diagnostic, label it a diagnostic. Specify forecast and enforceable maximum costs separately, carrying the original ledger. Necessary bounded post-mortem diagnostics use the current standing owner authority after a concrete prospective plan and ordinary admission checks; do not request a redundant per-diagnostic approval. A broader main study, new question, increased budget or unauthorized access still needs the corresponding decision. No new reviewer gate is added.
+
+## Top-10 review: scale and evaluation
+
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+
+**Already incorporated in the staged scale-up plan; do not replace it with the source’s many-team suggestion.** D10 first tests ten chair decisions over five saved cases. The existing plan then qualifies models before paired 10-Sol/50-cheaper-agent configurations within the original USD8 ledger.
+
+| Item | Integrated improvement |
+|---|---|
+| Existing next step | Keep exactly 10 or 50 native roles including auditor and chair, matched unique dossier evidence, sparse communication, two opinion rounds and pinned fresh context. Read D10 before any conditional next stage. |
+| Causal limit | The two sizes also use different model configurations. Report a configuration comparison, not a causal N effect. A same-model size contrast would be a separately specified future question. |
+| Next design improvement | For a broader influence claim, independently sample dossier/source roots and distinguish role opinion, extraction, auditor provenance and chair behavior. Reusing one poisoned source across many teams creates clustered exposure, not independent social replication. |
+| Acceptance / visual | Carry source ancestry to every quoted claim; include neutral exposure and same-evidence noninteractive baselines when claiming peer influence. Demo panels must display observed stage-specific outcomes and denominators, never a hand-authored 92–95% success guide. |
+
+Evidence / current plans: [D10 plan](NEXT-RUN-D10.md) · [staged 10/50 plan](scale-up/PLAN.md) · [D9 evidence](RESULTS-D9.md).
+
+These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.

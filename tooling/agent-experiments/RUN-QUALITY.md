@@ -75,3 +75,5 @@ The [2026-10-04 recommendation dispositions](../../researchers/vishesh/notes/ext
 - **What is the strongest fair comparator?** Use the same available evidence and account for construction, selection, checking and coordination. Keep privileged truth as an oracle; do not handicap a deterministic baseline to create model headroom.
 - **What is actually replicated?** Count roots or independent episodes first, with families, actors, repeated calls and fields nested. Use matched differences, missingness and an uncertainty method justified by the sampling design. Do not turn a small negative finding into equivalence.
 - **Does a successor change a decision?** Diagnose from saved traces first. Preserve valid adverse results and completed gates; avoid collecting a larger version of an uninformative contrast. Use standing authority for necessary bounded diagnostics, and ordinary authority for broader studies or increased spending.
+
+Use [Scale and claims](SCALE-AND-CLAIMS.md) when increasing N or preparing a demo: distinguish native actors, programmed identities, teams, generations and independent roots; keep editorial rank separate from evidence confidence.

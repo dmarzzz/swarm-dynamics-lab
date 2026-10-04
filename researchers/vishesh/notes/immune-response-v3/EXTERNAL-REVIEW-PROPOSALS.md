@@ -1,5 +1,7 @@
 # Immune Response: external-review proposals
 
+**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
 **Current evidence:** A7 identified schema-specific rejection; the legal-action-ID repair is now implemented offline with 34 passing tests and six scripted scenario replays. Hosted acceptance and native repair qualification remain untested.
@@ -37,3 +39,20 @@ Information-equivalent advice can affect a bounded model through salience; it is
 ## Next-run construction
 
 Before implementing a material successor, the owning task writes the prospective plan with independent sampling units, development/qualification/evaluation separation, a smallest useful effect or precision rationale, the exact crossed factors, baseline access and budget matching, all-assigned missingness, per-agent initial context and memory/update rules, scored outputs and safe trace retention. Root count must follow the estimand; neither 24 roots nor a baseline success band is a universal rule. If the available budget only buys a diagnostic, label it a diagnostic. Specify forecast and enforceable maximum costs separately, carrying the original ledger. Necessary bounded post-mortem diagnostics use the current standing owner authority after a concrete prospective plan and ordinary admission checks; do not request a redundant per-diagnostic approval. A broader main study, new question, increased budget or unauthorized access still needs the corresponding decision. No new reviewer gate is added.
+
+## Top-10 review: scale and evaluation
+
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+
+**Superseded: A8 fixes the interface but fails capability.** All 18 responses, six episodes and 12 decoded actions completed; only one of six capability checks passed, neither crash arm restarted the worker, and three of four initially healthy episodes were damaged.
+
+| Item | Integrated improvement |
+|---|---|
+| Offline improvement | Ground compatibility and liveness in visible catalog fields. Check whether a deterministic factual verifier can reject unsupported advice, retaining the controller’s allowed actions and the original trace for comparison. |
+| Small useful contrast | Prepare advisor-free versus advisor-present controllers with matched state, action budget and evidence. Include correct and incorrect advice plus refreshed stale evidence. A8 traces motivate this contrast but do not prove advice caused the errors. |
+| Acceptance / scale | Show both repair and healthy restraint on the existing clean controls before a larger freshness/population comparison. Score factual extraction, advice validity, action and service health separately. More agents cannot substitute for a competent repair controller. |
+| Visual | Use the actual A8 six-episode replay; label its two-tick horizon. Keep operational success green and capability red in separate fields rather than one overall success badge. |
+
+Evidence / current plans: [A8 post-mortem](freshness-study/reviews/a8-post.md) · [A8 native replay](freshness-study/reviews/a8-replay.gif).
+
+These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.

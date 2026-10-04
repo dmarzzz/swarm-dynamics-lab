@@ -94,3 +94,5 @@ Source: owner-supplied `swarm-lab-experiment-review-2026-10-04.html`, built 2026
 Reconciliation baseline: `089802a3`; each study links the newer native or design evidence used. This is a timestamped assessment, not a live run monitor. The 13 source sections map to 15 study files; both Antsy eras and both influence lineages remain distinct. The source’s ambiguous owner naming is not adopted; these are Vishesh-owned studies.
 
 Coverage: all 229 numbered §15 recommendations have source paragraph hashes and dispositions; §6 gaps and the 13 patterns/10 portfolio fixes are handled in the linked notes and tables above. This is an owning interpretive review, not independent reproduction of every calculation in the source, a fresh literature survey, or implementation of all proposals. Any unverified allegation is written as a check with acceptance evidence. No raw source corpus, credential location, exact owner prompt or private infrastructure identifier is published.
+
+[Top-10 portfolio integration](../top10-integration-2026-10-04/README.md) adds scale, evaluation and presentation decisions and reconciles newer A8/RD6/O2 and approved panel plans.
