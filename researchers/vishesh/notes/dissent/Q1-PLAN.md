@@ -33,3 +33,7 @@ The Q1 PNG shows generic/clarified correct out of six in each scenario, uncertai
 ## References and limitations
 
 [SOURCES.md](SOURCES.md) links the canonical papers and map-demo X threads already in the hub. The diagnostic adds no new source claim. Direct X refresh was restricted; archived entries remain explicitly partial. Scripted initial votes, fixed ancestry and exact grammar constrain eventual S1 claims. Independent research review and confirmatory S2 remain closed; owner-authorized exploratory instrument work only.
+
+## Replacement allocation amendment before Q1 dispatch
+
+The initially provisioned host failed the account boundary and was deleted. [Q1-ALLOCATION.md](Q1-ALLOCATION.md) authorizes resuming on the freshly released, idle, existing Dmarz fleet host sim-shadow after exclusive claim and actual-host verification. Preserve Q0 and the cumulative ledger. No decision-design factor changes; Q1 remains prospective.
