@@ -27,6 +27,11 @@ PARENT = REPO / 'researchers/dmarz/notes/sybil-split-opus'
 DEADLINE = datetime.fromisoformat('2026-10-04T22:00:00+00:00').timestamp()
 TOTAL_PAID_CAP_USD = 20
 
+def require(condition, message="validation failed"):
+    """Operational guard that remains active under python -O/PYTHONOPTIMIZE."""
+    if not condition:
+        raise AssertionError(message)
+
 def now():
     return datetime.now(timezone.utc).isoformat()
 
@@ -52,16 +57,16 @@ def load_parent():
 def read_spec(name, frozen=True):
     p = ROOT / 'specs' / (name if name.endswith('.json') else name + '.json')
     s = json.loads(p.read_text())
-    assert s['route'] == 'anthropic-pool', 'Paid routes disabled, no automatic fallback'
-    assert s['max_paid_usd'] == 0 and s['max_calls'] == 204
-    assert s['model'] == 'claude-sonnet-4-6'
-    assert 1 <= s['concurrency'] <= 4
+    require(s['route'] == 'anthropic-pool', 'Paid routes disabled, no automatic fallback')
+    require(s['max_paid_usd'] == 0 and s['max_calls'] == 204, 'validation failed')
+    require(s['model'] == 'claude-sonnet-4-6', 'validation failed')
+    require(1 <= s['concurrency'] <= 4, 'validation failed')
     if frozen:
         relative = str(p.relative_to(REPO))
         committed = subprocess.check_output(['git', 'show', 'HEAD:' + relative], cwd=REPO)
-        assert committed == p.read_bytes(), 'Spec must be committed before dispatch'
+        require(committed == p.read_bytes(), 'Spec must be committed before dispatch')
         for path, digest in s['source_sha256'].items():
-            assert sha(REPO / path) == digest, 'Pinned source changed: ' + path
+            require(sha(REPO / path) == digest, 'Pinned source changed: ' + path)
     return s
 
 def assignments(s):
@@ -90,7 +95,7 @@ def assignments(s):
                         answers=w['answers'], fabricated=w['fabricated'], admission=rec['admission']))
     random.Random(s['dispatch_seed']).shuffle(mains)
     out.extend(mains)
-    assert len(out) == s['max_calls'] and len({a['id'] for a in out}) == len(out)
+    require(len(out) == s['max_calls'] and len({a['id'] for a in out}) == len(out), 'validation failed')
     for a in out:
         a['packet_hash'] = study.digest(a['packet'])
     return out
@@ -99,10 +104,10 @@ def parse_answer(text):
     # Exact schema; no fences/answer salvage. Permit JSON-schema integer 12.0,
     # reject booleans, missing/extra fields, nonfinite values and strings.
     d = json.loads(text)
-    assert isinstance(d, dict) and set(d) == {'values'}
-    v = d['values']; assert isinstance(v, dict) and set(v) == {str(i) for i in range(6)}
+    require(isinstance(d, dict) and set(d) == {'values'}, 'validation failed')
+    v = d['values']; require(isinstance(v, dict) and set(v) == {str(i) for i in range(6)}, 'validation failed')
     for k, x in v.items():
-        assert x is None or (type(x) in (int, float) and float(x).is_integer())
+        require(x is None or (type(x) in (int, float) and float(x).is_integer()), 'validation failed')
         if x is not None: v[k] = int(x)
     return d
 
@@ -131,10 +136,10 @@ def call(s, a, key):
                    response_id=data.get('id'))
         texts = [b['text'] for b in data.get('content', []) if b.get('type') == 'text']
         row['raw_text'] = '\n'.join(texts)
-        assert data.get('model') == s['model'], 'model_mismatch'
-        assert isinstance(data.get('usage'), dict), 'missing_usage'
-        assert data.get('stop_reason') == 'end_turn', 'stop_reason'
-        assert len(texts) == 1, 'text_blocks'
+        require(data.get('model') == s['model'], 'model_mismatch')
+        require(isinstance(data.get('usage'), dict), 'missing_usage')
+        require(data.get('stop_reason') == 'end_turn', 'stop_reason')
+        require(len(texts) == 1, 'text_blocks')
         ans = parse_answer(texts[0]); row['answer'] = ans
         row['metrics'] = sim.grade(ans['values'], a['answers'], a['fabricated'])
         if a['stage'] == 'Q': row['exact'] = ans['values'] == a['expected']
@@ -157,7 +162,7 @@ def bootstrap(values_by_family, draws=10000):
 
 def analyze(s, aa, rows, out):
     byid = {r['id']: r for r in rows}
-    assert len(byid) == len(rows), 'duplicate terminal outcome'
+    require(len(byid) == len(rows), 'duplicate terminal outcome')
     q = [byid.get(a['id']) for a in aa if a['stage'] == 'Q']
     gate = len(q) == 12 and all(r and r['status'] == 'completed' and r.get('exact') for r in q)
     main = [a for a in aa if a['stage'] == 'M']
@@ -239,7 +244,7 @@ def run(s):
                           assignment_digest=hashlib.sha256(json.dumps(aa,sort_keys=True).encode()).hexdigest())
         if (out/'provenance.json').exists():
             old = json.loads((out/'provenance.json').read_text())
-            for k in ('spec_sha256','source_sha256','assignment_digest'): assert old[k] == provenance[k], 'resume pin mismatch'
+            for k in ('spec_sha256','source_sha256','assignment_digest'): require(old[k] == provenance[k], 'resume pin mismatch')
         else: dump(out/'provenance.json', provenance)
         record = out/'records.jsonl'; journal = out/'dispatch.jsonl'
         rows = [json.loads(l) for l in record.read_text().splitlines()] if record.exists() else []
@@ -264,7 +269,7 @@ def run(s):
                 if key is None: key = pool_key()
                 batch = pending[i:i+s['concurrency']]
                 for a in batch:
-                    assert len(dispatched)<s['max_calls'], 'call_cap'
+                    require(len(dispatched)<s['max_calls'], 'call_cap')
                     append(journal,dict(id=a['id'], time=now(), reserved_paid_usd=0)); dispatched.add(a['id'])
                 with concurrent.futures.ThreadPoolExecutor(max_workers=s['concurrency']) as pool:
                     futures = [pool.submit(call,s,a,key) for a in batch]
