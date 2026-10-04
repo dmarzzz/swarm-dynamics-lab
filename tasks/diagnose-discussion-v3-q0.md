@@ -3,14 +3,17 @@ id: diagnose-discussion-v3-q0
 type: task
 title: Diagnose v3 Q0 constraint failures before fresh model qualification
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/cloud-discussion-d1
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-bench-v3
-depends_on: [analyze-discussion-v3-q0]
+depends_on:
+- analyze-discussion-v3-q0
 topics: []
+claimed_at: 2026-10-04T04:08Z
+updated: 2026-10-04T04:08Z
 ---
 
 ## Goal

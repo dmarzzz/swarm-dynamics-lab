@@ -26,7 +26,7 @@ def assignments(stage):
             for arm in (('ceiling', 'learner') if stage.startswith('S0') else ('acquisition',) + ARMS):
                 steps = [0, 5] if stage.startswith('S0') else [0, 1] if arm == 'acquisition' else list(range(2, 10))
                 result.append({'run': f'{stage}-{scenario}-{seed}-{arm}', 'scenario': scenario, 'seed': seed, 'arm': arm, 'steps': steps,
-                               'tldr': f'TLDR: {stage} {scenario}, world {seed}, {arm}. Test learned procedure continuity and selective correction; compare rolling, evidence-tagged, frozen and absent inheritance. Score correct actions, missing votes and command validity. Six stratified synthetic cases per step; no emergent culture claim. See immutable plan for gates and limits.'})
+                               'tldr': (f'TLDR: {stage} {scenario}, world {seed}, {arm}. Qualify action competence: explicit-current-rule ceiling versus historical-example learner, stable and changed/interface checkpoints. Score correct commands and schema/missingness; ceiling >=0.90 per checkpoint, stable learner >=0.75. Synthetic diagnostic, not a continuity effect.' if stage.startswith('S0') else f'TLDR: {stage} {scenario}, world {seed}, {arm}. Test learned procedure continuity over two full replacements and a common feedback interruption; compare evidence-tagged, rolling, frozen and absent inheritance. Score correct actions, selective correction, command validity and missingness. Synthetic pilot, no emergent culture claim.')})
     return result
 
 

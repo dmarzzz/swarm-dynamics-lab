@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: blocked
+state: working
 task: theseus-v2-iteration
-doing: V2 built and validated; awaiting explicit additional USD15 API authorization before allocation and qualification
+doing: Execute approved v2 qualification and gated pilot on dedicated sim-shadow
 updated: 2026-10-04T03:56Z
 ---
 

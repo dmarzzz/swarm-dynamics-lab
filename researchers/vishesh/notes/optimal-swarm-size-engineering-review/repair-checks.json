@@ -1,0 +1,71 @@
+{
+  "provider_deadline": {
+    "preserved": true,
+    "fatal": false
+  },
+  "http_429": {
+    "preserved": true,
+    "fatal": false
+  },
+  "usage_missing": {
+    "preserved": true,
+    "fatal": true
+  },
+  "route_changed": {
+    "preserved": true,
+    "fatal": true
+  },
+  "credential_unavailable": {
+    "preserved": true,
+    "fatal": true
+  },
+  "stage_budget_exhausted": {
+    "preserved": true,
+    "fatal": true
+  },
+  "episode_budget_exhausted": {
+    "preserved": true,
+    "fatal": false
+  },
+  "progress_throws": {
+    "exit": 0,
+    "terminal": 16,
+    "stop_reason": null,
+    "not_started": 0,
+    "successful_records": 16,
+    "calls": 288,
+    "reporting_fault_recorded": true
+  },
+  "upload_fails": {
+    "exit": 2,
+    "terminal": 1,
+    "stop_reason": "publication_incomplete",
+    "not_started": 15,
+    "successful_records": 1,
+    "calls": 18,
+    "reporting_fault_recorded": false
+  },
+  "admission_fails": {
+    "exit": 2,
+    "terminal": 0,
+    "stop_reason": "public_run_preflight_failed",
+    "not_started": 15,
+    "successful_records": 0,
+    "calls": 0,
+    "reporting_fault_recorded": false
+  },
+  "fatal_route": {
+    "exit": 2,
+    "terminal": 1,
+    "stop_reason": "route_changed",
+    "not_started": 15,
+    "successful_records": 0,
+    "calls": 1,
+    "reporting_fault_recorded": false
+  },
+  "spooled_publication": {
+    "complete": false,
+    "persisted": true,
+    "artifacts": 4
+  }
+}

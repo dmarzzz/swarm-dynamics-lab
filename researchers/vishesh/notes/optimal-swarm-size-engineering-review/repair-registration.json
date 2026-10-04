@@ -1,0 +1,7 @@
+{
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/ad47e1fa0ea98e27c6264c9885dc36e718d37895/researchers/vishesh/notes/optimal-swarm-size-engineering-review/REPAIR-PLAN.md",
+  "sha256": "4d702f67a0350dce027dc7b37d1c6bb4723a194d0bd5550b016835f5a6fb4cc8",
+  "http_status": 200,
+  "verified_utc": "2026-10-04T04:07:22.795209+00:00",
+  "tldr": "TLDR: Offline repaired-source tests and mocked failure regression checks; no model capability claims or spending."
+}

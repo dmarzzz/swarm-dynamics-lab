@@ -917,7 +917,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/vishesh-theseus-v2-assessment/vishesh-theseus-v2-assessment-v1.md
         built_at: '2026-10-04T03:54:58Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: Evaluate each one. Improve the design. Evaluate against the plan. Resolve any gaps or failures identified
           in previous runs.
@@ -926,6 +926,7 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
           - researchers/vishesh/notes/swarm-of-theseus/redesign/SOCIAL-GROUNDING.md
         commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+        note: Authored by vishesh/codex-theseus; harness metadata corrected to schema enum codex.
   - id: vishesh-theseus-v2-unit-replay
     category: content
     type: doc
@@ -935,7 +936,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/vishesh-theseus-v2-unit-replay/vishesh-theseus-v2-unit-replay-v1.html
         built_at: '2026-10-04T03:54:59Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: Build the improved three scenarios and show more animations, with evaluation quality preserved.
         ingredients:
@@ -944,6 +945,7 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
         commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+        note: Authored by vishesh/codex-theseus; harness metadata corrected to schema enum codex.
   - id: vishesh-theseus-v2-unit-frame
     category: content
     type: figure
@@ -953,8 +955,9 @@ artifacts:
         date: 2026-10-03
         path: artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v2.png
         built_at: '2026-10-04T03:56:52Z'
-        note: Use a portable separator and distinguish incorrect actions from missing outcomes.
-        by: vishesh/codex-theseus
+        note: Use a portable separator and distinguish incorrect actions from missing outcomes. Authored by vishesh/codex-theseus;
+          harness metadata corrected to schema enum codex.
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: Verify and correct the visual fixture frame, preserving its explicit non-model provenance.
         ingredients:
@@ -967,7 +970,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v1.png
         built_at: '2026-10-04T03:54:59Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: Build and verify a clear visual explanation of the improved experiment.
         ingredients:
@@ -976,6 +979,7 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
         commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+        note: Authored by vishesh/codex-theseus; harness metadata corrected to schema enum codex.
   - id: healing-practical-capacity-results
     category: content
     type: figure

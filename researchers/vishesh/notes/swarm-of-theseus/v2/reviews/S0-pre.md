@@ -2,8 +2,8 @@
 
 - Experiment / owner / stage: swarm-of-theseus-v2 / vishesh/codex-theseus / exploratory S0.
 - Parent: v1 S1, reviewed in ../redesign/REVIEW.md and ../redesign/structural-audit.json; no v2 attempt yet.
-- Status: blocked
-- Blocker: new USD 15 API authority and reservation are not approved; the existing USD 45 authority has USD 0.097684 unreserved. No host is held while blocked. A new exclusive allocation, deployment verification and public registration remain launch gates.
+- Status: diagnostic-only
+- Authorization: owner approved the additional USD15; reserved as theseus-v2-additional-15-20261004, exclusively for sim-shadow. Fresh dedicated claim vishesh-theseus-v2 merged in private fleet PR99; expiry 2026-10-04T08:05:38Z. Idle-host inspection passed. Exact-source deployment, public revision/hash and claim checks must pass immediately before dispatch.
 - Practical question: can a reader infer these bounded procedures from historical outcomes, and can the model execute each clean current rule before a turnover experiment is attempted?
 - Expected finding: competence ceiling passes and historical acquisition is possible. A low learner score is a qualification failure requiring a documented repair, not evidence against cultural continuity. Ceiling or missing-output failure also blocks S1.
 
@@ -24,7 +24,7 @@ Gate: ceiling >=0.90 action accuracy in each scenario at each checkpoint; learne
 | Supplied founding rules | Historical labeled cases | No rule in learner/crew payload; ceiling explicitly separated | Offline passed; model competence untested |
 | Founder-only inheritance | Two complete waves | Generation 1 only by step 4, generation 2 only by step 7 | Offline passed |
 | Instant relearning could dominate | Common interruption after step-5 outcome | No feedback in step 7-9 actor inputs | Offline passed; effect unmeasured |
-| Old plan cache accepted | Exact uncached URL/revision/hash | Wrong revision and hash rejected | Offline passed; public registration pending |
+| Old plan cache accepted | Exact uncached URL/revision/hash | Wrong revision and hash rejected | Offline passed; prior public registration verified; updated revision will be verified before dispatch |
 | Provider failures lost | Durable call-start/result files with safe reason | HTTP/type reasons, no secrets, conservative denominator and bounds | Adapter not paid-qualified |
 | Copying versus applying tool instructions conflated | Current command validity and intended semantics separate | Old tokens invalid but interpretable | Offline mutation passed |
 | Missing swarm-specific comparator | Explicitly defer single-controller replication | No claim of swarm advantage | Open research limitation |
@@ -40,9 +40,9 @@ S0: 24 calls. One repair: another 24. S1 after qualification: 612. Total maximum
 
 Stop on process/resource gate failure. Preserve assigned manifests and partial outputs; do not count missing comparisons as known zero effects. Provider/semantic failures remain in the qualification denominator. Any repair needs a prospective revised review, fresh reserved qualification seeds, and the same remaining allocation. No S2.
 
-Credentials: existing local Keychain alias `swarm-lab-anthropic`, consumed only by an authorized local process and passed securely into worker memory. No value in arguments, reports or logs. Dedicated host/claim: pending, cannot borrow another experiment's active machine. Artifact destination: public Git/Flight Deck for replay and report; hub progress/final PNG where supported.
+Credentials: existing local Keychain alias `swarm-lab-anthropic`, consumed only by an authorized local process and passed securely into worker memory. No value in arguments, reports or logs. Dedicated host: sim-shadow, exclusive claim vishesh-theseus-v2; no new infrastructure purchase. Artifact destination: public Git/Flight Deck for replay and report; hub progress/final PNG where supported.
 
-Gate decision: blocked, not attempted. After explicit budget approval, reserve it in the central authority, obtain a fresh dedicated fleet claim, update this assessment with exact deployment, publish/register immutable plan and review, verify the page, then execute S0. S1 gets a separate pre-run assessment after qualification is reviewed.
+Gate decision: diagnostic-only, not yet attempted. Fourteen local tests pass. Deploy the clean published commit, verify server dependencies/tests and exact public plan/review, refresh exclusive-claim receipt, then execute S0 within the reserved quota. S1 gets a separate pre-run assessment after qualification is reviewed.
 
 ## Visualization mapping
 

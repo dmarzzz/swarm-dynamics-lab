@@ -4,7 +4,7 @@
   "buildDefinition": {
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
-    "harness": "vishesh/codex-theseus",
+    "harness": "codex",
     "prompt": "Build and verify a clear visual explanation of the improved experiment."
    },
    "internalParameters": {
@@ -46,7 +46,7 @@
   },
   "runDetails": {
    "builder": {
-    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/vishesh/codex-theseus"
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
    },
    "metadata": {
     "finishedOn": "2026-10-04T03:54:59Z",
