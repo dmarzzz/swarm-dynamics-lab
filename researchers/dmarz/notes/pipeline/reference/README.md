@@ -9,7 +9,7 @@ source hash); studies never import it from this folder.
   response; model and provider checked; distinct failure categories; transport retry on 429 and overload
   statuses only; billing-outage pause and stop category `provider_credit_balance_low`; HTTP status and
   response body kept on every failure; byte-based reservation (there is no token-counting endpoint).
-- `test_openrouter_provider.py`: 30 offline tests (`python3 test_openrouter_provider.py`), no network and
+- `test_openrouter_provider.py`: 31 offline tests (`python3 test_openrouter_provider.py`), no network and
   no model call. Copy the ones that apply into the study's selftest.
 
 Use: `ledger = Ledger(path, design['budget'])`, `api = OpenRouter(ledger, config)` with `config` holding
@@ -25,6 +25,10 @@ must name its provider and it must be the pinned one (`provider_missing` otherwi
 the snapshot-price bound (`budget.reservation_margin`); a call left unanswered by a billing stop has its reservation
 voided so a continuation batch can run it within the exact call caps; duplicate keys in the answer are rejected.
 Studies that copied the first version (main f2d7517e) take this one.
+
+Billing detector widened at 11:25Z at the fleet monitor's request: HTTP 402, or a 400/403/429 whose body names
+credit, balance, billing, a usage or spend limit, an exceeded limit or insufficient funds; such a refusal pauses and
+re-sends instead of failing the call. 31 tests.
 
 Not verified against the live service (no call was made while writing it): the exact wording of
 OpenRouter's credit error, whether `usage.cost` is present without asking for it, and the `provider`

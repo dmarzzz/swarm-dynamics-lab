@@ -271,7 +271,12 @@ class Billing(Base):
         self.assertTrue(orp.is_billing_error(402, ''))
         self.assertTrue(orp.is_billing_error(400, 'Your credit balance is too low'))
         self.assertTrue(orp.is_billing_error(403, 'Key limit exceeded: insufficient Balance'))
-        self.assertFalse(orp.is_billing_error(400, 'invalid request')); self.assertFalse(orp.is_billing_error(429, 'credit'))
+        for status, body in ((400, 'This request would exceed your usage limits'), (429, 'You have reached your spend limit'),
+                             (429, 'Rate limit exceeded: free-models-per-day'), (403, 'Billing is not enabled'),
+                             (400, 'Insufficient funds'), (429, "You're out of usage credits")):
+            self.assertTrue(orp.is_billing_error(status, body), body)
+        self.assertFalse(orp.is_billing_error(400, 'invalid request')); self.assertFalse(orp.is_billing_error(429, 'Too many requests'))
+        self.assertFalse(orp.is_billing_error(500, 'credit')); self.assertFalse(orp.is_billing_error(429, ''))
 
     def test_outage_then_success_is_one_pause_and_no_failed_call(self):
         api = self.adapter([http(402, self.CREDIT)] * 3 + [ok()])
@@ -306,6 +311,13 @@ class Billing(Base):
         with self.assertRaises(orp.CallFailure) as cm: self.ledger.transact({'type': 'reserve', 'call_id': 's1-001:a', 'micro_usd': 1})
         self.assertEqual(cm.exception.category, 'duplicate_call_refused')       # the same call id is never reused
         self.ledger.transact({'type': 'reserve', 'call_id': 's1-001-r1:a', 'micro_usd': 1})   # its continuation is admitted
+
+    def test_a_limit_refusal_on_429_pauses_instead_of_failing_the_call(self):
+        limit = '{"error":{"message":"This request would exceed your usage limits"}}'
+        api = self.adapter([http(429, limit), http(429, limit), http(429, limit), http(429, limit), ok()])
+        _, acct = api.call('SYS', 'USER', 's1-001:a', validate)
+        self.assertEqual(acct['attempts'], 5); self.assertEqual(self.clock.sleeps, [60, 60, 60, 60])
+        self.assertEqual(api.billing['billing_pauses'], 1)
 
     def test_retry_rule_applies_again_after_the_outage(self):
         api = self.adapter([http(402, self.CREDIT), http(429), ok()])
