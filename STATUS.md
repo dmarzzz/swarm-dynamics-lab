@@ -221,9 +221,10 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
+| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:21Z | Interface diagnostic partly improved D1 but failed approval tasks; testing same fixed cases with previously valid Haiku configuration |
+| dmarz/discussion-bench-v3 | working | deploy-discussion-v3-d1 | 2026-10-04T04:20Z | Dedicated D1 worker provisioned; coordinating cloud harness and single owner-controlled 120-call dispatch; no paid calls yet |
 | vishesh/codex-pi-review | done | add-experiment-evidence-metadata | 2026-10-04T04:20Z | Published 45 evidence assessments in 41 documents, templates and CI metadata checks. |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:18Z | Published four scoped reviews, author feedback, and unchanged v3 vote rescore. |
-| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:12Z | Paired diagnostic of missing execution/history semantics on saved stalls; same approved model before fresh qualification |
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | dmarz/cloud-discussion-d1 | working |  | 2026-10-04T04:09Z | Assess cloud access and prepare bounded D1; no model calls dispatched. |
@@ -232,7 +233,6 @@
 | vishesh/codex-regrowth-docs | idle | healing-practical-repair | 2026-10-04T04:05Z | Practical capacity comparison published; strong central control wins, model qualification remains blocked |
 | vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04T04:04:19.842414+00:00 | Approved USD 2 study; allocating dedicated fleet machine and launching Q0 |
 | vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
-| dmarz/discussion-bench-v3 | idle |  | 2026-10-04T04:00Z | Q0 and successor plan on main; 120-call diagnostic planned, cloud access/lifecycle not configured, no new launch |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
 | vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:56Z | Execute approved v2 qualification and gated pilot on dedicated sim-shadow |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
