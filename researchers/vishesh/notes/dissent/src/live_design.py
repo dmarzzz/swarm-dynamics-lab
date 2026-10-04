@@ -75,6 +75,25 @@ def development():
     assert len(rows)==52 and seed==1158
     return rows
 
+
+def validation_diagnostic():
+    import json
+    from pathlib import Path
+    prior=json.loads((Path(__file__).resolve().parents[1]/'results/s1-a1/calls.json').read_text())
+    rows=[]
+    for x in prior:
+        if x['status']=='completed':continue
+        req=x['request'];packet=req['state'];phase='admission' if 'CHECK' in req['questions']['action']['criteria'] else 'resolve'
+        assert request(phase,packet)==req
+        rows.append({'case_id':'repro-'+x['request_sha256'][:12],'phase':phase,'packet':packet,'arm':'reproduction','expected':None})
+    assert len(rows)==3
+    for si,scenario in enumerate(SCENARIOS):
+        for j,truth in enumerate(('PROCEED','HOLD')):
+            seed=2160+si*2+j;c=make_case(scenario,seed,truth=truth,majority='HOLD' if truth=='PROCEED' else 'PROCEED',stage='qualification')
+            packet=actor_packet(c);clarify(packet['task'],scenario);packet.update(records=[record('q','source-q',c['task']['scope'],'v1',0,truth,scenario)],votes=[],challenge=None)
+            rows.append({'case_id':'control-'+str(seed),'phase':'private','packet':packet,'arm':'fresh-control','scenario':scenario,'expected':truth,'seed':seed})
+    return rows
+
 def frozen_requests(stage):
     """Enumerate possible actor payloads without selecting by evaluator truth."""
     requests={}
@@ -84,6 +103,8 @@ def frozen_requests(stage):
         for row in qualification():add('private',row['packet'])
     elif stage=='Q1':
         for row in diagnostic():add('private',row['packet'])
+    elif stage=='D1':
+        for row in validation_diagnostic():add(row['phase'],row['packet'])
     elif stage=='S1':
         for i,c in enumerate(development()):
             for gate in ('CHECK','KEEP','DEFER'):
@@ -98,6 +119,7 @@ def frozen_requests(stage):
 def assignments(stage):
     if stage=='Q0':return [{'case_id':x['case_id'],'scenario':x['scenario'],'seed':x['seed'],'arm':'private','opportunities':1} for x in qualification()]
     if stage=='Q1':return [{k:x[k] for k in ('case_id','scenario','seed','arm')}|{'opportunities':1} for x in diagnostic()]
+    if stage=='D1':return [{'case_id':x['case_id'],'arm':x['arm'],'opportunities':1} for x in validation_diagnostic()]
     if stage!='S1':raise ValueError('unsupported_stage')
     out=[]
     for i,c in enumerate(development()):

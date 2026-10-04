@@ -42,3 +42,19 @@ def validate(data, req, snapshot):
     if not _number(usage.get('cost'),0,1):raise ValueError('invalid_cost')
     return {'action':action,'probabilities':p,'confidence':answer['confidence'],
         'request_sha256':digest(req),'served_model':snapshot,'cost_usd':usage['cost'],'input_tokens':usage['input_tokens']}
+
+
+VALIDATION_CODES=frozenset(('route_or_snapshot_mismatch','invalid_choice_shape','invalid_probability_mass','choice_confidence_mismatch','invalid_usage','invalid_cost','cost_above_reservation'))
+def response_fingerprint(data,req,snapshot):
+    """Allowlisted numeric/shape diagnostics only; arbitrary provider strings excluded."""
+    if not isinstance(data,dict):return {'response_object':False}
+    answers=data.get('answers');answer=answers.get('action',{}) if isinstance(answers,dict) else {}
+    if not isinstance(answer,dict):answer={}
+    probs=answer.get('probabilities');usage=data.get('usage');usage=usage if isinstance(usage,dict) else {}
+    number=lambda x:x if type(x) in (int,float) and math.isfinite(x) else None
+    allowed=req['questions']['action']['criteria']
+    return {'response_object':True,'model_matches':data.get('model')==snapshot,'provider_matches':data.get('provider')=='TypeSafe',
+        'choice':answer.get('choice') if answer.get('choice') in allowed else 'unsupported',
+        'probability_keys_match':isinstance(probs,dict) and set(probs)==set(allowed),
+        'probabilities':{k:number(probs.get(k)) for k in allowed} if isinstance(probs,dict) else None,
+        'confidence':number(answer.get('confidence')),'input_tokens':number(usage.get('input_tokens')),'cost_usd':number(usage.get('cost'))}

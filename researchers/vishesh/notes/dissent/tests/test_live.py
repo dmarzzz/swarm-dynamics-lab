@@ -30,6 +30,16 @@ class LiveTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'allocation_identity_mismatch'):
             live_worker.verify_config({'stage':'Q1','budget_approved':True,'host':'sim-shadow'},'Q1')
 
+    def test_validation_diagnostic_is_fixed_and_does_not_leak_strings(self):
+        from live_design import validation_diagnostic
+        from jev import response_fingerprint,request
+        from live_design import SNAPSHOT
+        rows=validation_diagnostic();self.assertEqual(len(rows),9);self.assertEqual(len(frozen_requests('D1')),9)
+        self.assertEqual(sum(x['arm']=='reproduction' for x in rows),3)
+        for row in rows[3:]:self.assertEqual(ExactReference()(row['phase'],row['packet']),row['expected'])
+        req=request('private',rows[3]['packet']);raw={'model':'sensitive-canary','provider':'sensitive-canary','answers':{'action':{'choice':'sensitive-canary','probabilities':{'sensitive-canary':1},'confidence':'sensitive-canary'}},'usage':{'cost':'sensitive-canary'}}
+        self.assertNotIn('sensitive-canary',json.dumps(response_fingerprint(raw,req,SNAPSHOT)))
+
     def test_assignment_denominators(self):
         self.assertEqual(len(qualification()),18)
         self.assertEqual(len(development()),52)
