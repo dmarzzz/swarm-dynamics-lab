@@ -1,0 +1,38 @@
+{
+  "version": "S50-v1",
+  "model": "openai/gpt-6-sol",
+  "family": "failover",
+  "members": 50,
+  "stages": {
+    "Q50": {
+      "seed": 90501,
+      "max_calls": 60
+    },
+    "S50": {
+      "seed": 90502,
+      "max_calls": 1150
+    }
+  },
+  "arms": [
+    "interactive",
+    "static",
+    "broken",
+    "retained"
+  ],
+  "generations": 1,
+  "checkpoint_indices": [
+    0,
+    1
+  ],
+  "max_input_bytes": 12000,
+  "max_output_tokens": 512,
+  "retry_count": 0,
+  "max_in_flight": 1,
+  "main_eligibility": "Q50 pass; no main semantic selection",
+  "prior_exposure_usd": "1.9468005437",
+  "historical_unknown_usd": "0.033102",
+  "study_cap_usd": "60",
+  "model_cap_usd": "44.044",
+  "hosting_cap_usd": "0.30",
+  "all_in_cap_usd": "44.344"
+}

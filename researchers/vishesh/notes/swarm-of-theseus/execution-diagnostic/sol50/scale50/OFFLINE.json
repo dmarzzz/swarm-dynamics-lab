@@ -1,0 +1,69 @@
+{
+  "evidence_type": "offline scripted instrument validation; zero native calls",
+  "tests": 11,
+  "history_equivalence_instances": 1200,
+  "independent_main_worlds": 1,
+  "stages": {
+    "Q50": {
+      "scripted_calls": 60,
+      "phase_counts": {
+        "learn": 6,
+        "select": 10,
+        "attest": 20,
+        "decide": 10,
+        "question": 4,
+        "teach": 4,
+        "commit": 6
+      },
+      "max_bytes_by_phase": {
+        "learn": 7719,
+        "select": 7737,
+        "attest": 5673,
+        "decide": 5768,
+        "question": 1172,
+        "teach": 4512,
+        "commit": 4645
+      },
+      "completed": true,
+      "call_cap": 60
+    },
+    "S50": {
+      "scripted_calls": 1113,
+      "phase_counts": {
+        "learn": 50,
+        "select": 250,
+        "attest": 213,
+        "decide": 250,
+        "question": 100,
+        "teach": 100,
+        "commit": 150
+      },
+      "max_bytes_by_phase": {
+        "learn": 7719,
+        "select": 7737,
+        "attest": 6922,
+        "decide": 5769,
+        "question": 1172,
+        "teach": 4512,
+        "commit": 4645
+      },
+      "completed": true,
+      "call_cap": 1150,
+      "replacement_counts": {
+        "interactive": 50,
+        "static": 50,
+        "broken": 50,
+        "retained": 0
+      },
+      "terminal_decisions": {
+        "interactive": 300,
+        "static": 300,
+        "broken": 300,
+        "retained": 300
+      }
+    }
+  },
+  "packet_sha256": "f06af92bb7f1767ffbe09d76a038153da299f27a4c691fe2d8c8aca3d376be9d",
+  "source_sha256": "84423a431d6758606c61938f475f7a8b0ecc22112126c4d426fef8ff35aed8d3",
+  "native_calls": 0
+}

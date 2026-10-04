@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: idle
+state: working
 task: null
-doing: Q2 completed and qualified; main50-member study not dispatched
-updated: 2026-10-04T20:42Z
+doing: Preparing actual fifty-member turnover; offline validated, native qualification allocation pending
+updated: 2026-10-04T23:38Z
 ---
 
-27native calls,all gates pass,one direct handover;39offline checks. Aggregate artifacts verified, machine released. CumulativeUSD1.1637270437/60. Main requires its distinct current admission and provider-capacity envelope.
+Current cumulative exposure USD1.9468005437/60; historical uncertainty USD0.033102 unchanged. C2 closed with no full turnover. New scale50 packet separates Q50<=60 calls from conditional S50<=1150; n=1 connected fifty-seat institution, four paired controls. No native scale result or new grant claimed.
