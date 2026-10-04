@@ -68,6 +68,15 @@ metrics the dashboard shows.
 stages, seed lists, and the one `primary_contrast`. `preregistration.md`: every section. Then run
 `python3 src/selftest.py` until it passes, and adapt its checks to your simulator.
 
+**4b. Design the run visualization.** Complete the **Visualization mapping** in the pre-run assessment,
+using [the visualization guide](../../tooling/agent-experiments/RUN-VISUALIZATION.md) and
+[mapping template](../../tooling/agent-experiments/templates/visualization-mapping.md). Bind recorded
+signals to a view that fits this experiment, with time/event semantics, live frames or progress images,
+retained replay history, a final frame and an animation when temporal behavior matters. Record a reason
+and supported fallback where animation is unsuitable or unsupported. Test the renderer against a
+synthetic trace before launch and verify artifacts in the post-mortem. The template worker does not
+implement a renderer automatically; implement or explicitly account for it in the mapping.
+
 **5. Allocate and exclusively claim servers** (swarm-labs-agentops). Refresh the fleet and active
 claims before selecting hosts; do not treat an existing checkout as permission to use its machine.
 For vishesh's experiments, follow the root AGENTS.md dedicated-machine directive and

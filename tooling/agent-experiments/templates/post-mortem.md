@@ -13,6 +13,13 @@
 - Clean competence, controls, manipulation strength and evaluator checks:
 - Expected versus observed behavior:
 
+## Visualization review
+
+- Mapping version and delivered live/final/animation artifacts:
+- Time coverage, sampling/downsampling and missing/failed observations:
+- Initial/event/final frame agreement with saved metrics; playback/embedding check:
+- Behavior revealed, interpretation limits, rendering failures and next-run improvements:
+
 ## Experiment-quality assessment
 
 - Did this run meaningfully test the question? Why or why not?

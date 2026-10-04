@@ -9,6 +9,7 @@ This collection documents candidate work on swarm evidence, communication, share
 | Reader’s task | Read | What to expect |
 | --- | --- | --- |
 | Launch an experiment on its own machine | [Dedicated-machine workflow](experiment-machine-workflow.md) | Select from Dmarz's fleet, claim exclusively, verify the deployment and shared budget, and release after artifact upload. |
+| Design a run visualization | [Run visualization workflow](../../../tooling/agent-experiments/RUN-VISUALIZATION.md) | Per-run signal-to-view mapping, live frames, dynamic time-series replay, event markers and validation. |
 | Choose a direction | [Project briefs](project-briefs/README.md) | All sixteen questions, design sketches, measures, controls, scope, and risks. |
 | Connect our briefs to the team question atlas | [Atlas review and project connections](atlas-review/README.md) | Review of all 214 candidates, 40 exploratory extensions, a 16-brief crosswalk, design findings, primary-source checks and importable review JSON. |
 | Expand the priority research questions | [Priority references and new comparisons](priority-research-expansion/README.md) | Twenty new sources, twenty selected candidates, fourteen additional comparisons and a full sixteen-brief coverage map. |

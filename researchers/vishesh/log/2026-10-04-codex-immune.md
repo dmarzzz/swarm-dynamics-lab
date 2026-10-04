@@ -9,3 +9,7 @@ Owner explicitly approved publication to main and dashboard execution after auto
 ## Machine workflow amendment
 
 At the owner's explicit request, added a standing requirement for fresh exclusive allocations from Dmarz's machine list for each new experiment, including exploratory qualification and separately launched versions. Linked it from the common worker template and researcher navigation, and replaced the obsolete shared-test-server recommendation. No machine was created and no active job was moved. Cross-host launches must preserve shared budget enforcement rather than cloning per-host ledgers.
+
+## Visualization workflow preference
+
+Recorded the owner's preference for live frames and dynamic time-series animations as a standard per-run visualization-mapping process. Added a mapping template, pre/post-run sections, experiment-specific examples and worker launch guidance. Documented the current spatial frame/image contract and fallback for unsupported replay surfaces. This is workflow documentation; no existing worker or active run was changed or claimed to have new visual artifacts.

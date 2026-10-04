@@ -272,6 +272,26 @@ never rerun merely to obtain a favorable scientific result. If access, budget or
 repair, record that blocker and the exact next step. Valid null or adverse findings are results, not bugs.
 Use the linked pre-run and post-mortem templates; existing survey/hypothesis gates remain in force.
 
+### Run visualization mapping
+
+Owner preference recorded 2026-10-04 UTC: use frames to make run performance visible, and prefer
+an embedded time-series animation/replay that shows how the run evolves. Before each run, define
+its **Visualization mapping** in the pre-run assessment using
+[the mapping template](tooling/agent-experiments/templates/visualization-mapping.md).
+Tailor the signals and visual encodings to the experiment (for example convergence, damage and
+repair, or consensus); do not force every study into the same graphic. Resolve the mapping for each
+run ID/arm/seed, version it with the source/configuration, and retain the time history needed for replay.
+An unchanged experiment-level mapping may be referenced by version, with run-specific bindings.
+
+The normal run deliverables include live frames or an appropriate live progress view, a final frame,
+and a time-series animation/replay when temporal behavior is meaningful. A static or unsupported view
+needs a stated reason and a supported fallback in the mapping. Check visual artifacts against recorded
+metrics and report their availability in the post-mortem. Visualization must use measured events,
+show missing/failed observations honestly, keep evaluator-only truth out of actor inputs, and never
+expose secrets. Follow [RUN-VISUALIZATION.md](tooling/agent-experiments/RUN-VISUALIZATION.md).
+This is a required planning/reporting practice; existing workers do not acquire rendering support
+merely because this instruction was added.
+
 ## Machine allocation for vishesh's experiments
 
 Owner directive, 2026-10-04 UTC: before every new experiment launch, obtain a fresh, dedicated

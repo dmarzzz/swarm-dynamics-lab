@@ -30,3 +30,13 @@
 - Regression/competence checks with results:
 - Server claim / local runtime; credential alias only; public-safe artifact destination:
 - Gate decision and next action if this attempt fails:
+
+## Visualization mapping
+
+Use the repository template `tooling/agent-experiments/templates/visualization-mapping.md` or link a completed, versioned mapping.
+
+- Mapping version and run/task/seed/arm bindings:
+- Behavior to visualize; recorded signals → visual encodings:
+- Time axis, cadence, event markers and missing/failure states:
+- Live frame/progress view, retained time history, final frame and animation/replay:
+- Supported embedding destination, fallback, rendering bounds and validation evidence:

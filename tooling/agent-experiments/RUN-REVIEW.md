@@ -14,6 +14,7 @@ Copy [pre-run.md](templates/pre-run.md) into the experiment's `reviews/<attempt>
 - The precise change since the previous attempt, unresolved issues and their acceptance checks.
 - Design quality: independent units, task/label coverage, evidence and resource matching, evaluator validity, leakage, timing semantics, and positive/negative controls.
 - Frozen protocol/config/model/prompt/evaluator versions, assignments, seeds, stage and untouched holdout.
+- A completed [visualization mapping](RUN-VISUALIZATION.md): run-specific signals, encodings, time/event semantics, live frames, retained history, animation/replay, fallback and validation.
 - Maximum calls, time, spend and worker count; retry policy, safe stopping, credentials by alias only, server claim and artifact destination.
 - Evidence that regression checks and required competence screens passed, or why the run is specifically a bounded diagnostic to repair a failed screen.
 
@@ -22,6 +23,8 @@ Commit the completed assessment and protocol changes before model execution. Use
 ## After each attempt
 
 Copy [post-mortem.md](templates/post-mortem.md) to `reviews/<attempt>-post.md`. Setup failures and interrupted runs need a short post-mortem too. Reconcile every assigned episode against started, terminal, graded and analyzed records. Report failures, duplicate attempts, missing data and actual resource use. An exit code of zero or green hub status does not establish experiment quality.
+
+Review the visual artifacts against the mapping and saved traces: initial/event/final states, numerical agreement, missing/failure display, playback, coverage and limitations. A latest-frame upload alone does not preserve run history.
 
 Digest both results and experiment quality: did the manipulation occur, did controls discriminate, could the model do the clean task, did the evaluator measure the intended outcome, and do the data support the proposed interpretation? Compare against the pre-run assessment. Separate observed facts, suspected causes and verified causes. Include next-run changes, predicted consequences and tests that could falsify the diagnosis.
 
