@@ -17,6 +17,9 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+# The launcher's setup runs these tests with STUDY_MODEL set to the launched model. The tests fix the model they
+# test themselves, so the ambient choice is removed here (it never reaches the source hash).
+os.environ.pop('STUDY_MODEL', None)
 
 import coordinator
 import provider
