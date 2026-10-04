@@ -1,0 +1,1 @@
+Completed deployed S0/S1: 450 valid scripted episodes, zero model calls, 90 verified uploads. Neutral discovery plan and visual filed; temporary host released and destroyed. High fees reduce short-horizon search splitting but do not eliminate forced splitting’s 24-round mean payoff. Next: separately budgeted neutral-model competence checks, then discovery S1.
