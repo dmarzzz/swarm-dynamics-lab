@@ -3,14 +3,19 @@ id: qualify-poietic-agents-s0
 type: task
 title: Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-heterogeneous
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-heterogeneous
-depends_on: [build-poietic-agents-instrument]
-topics: [llm-agent-swarms, agent-budgets]
+depends_on:
+- build-poietic-agents-instrument
+topics:
+- llm-agent-swarms
+- agent-budgets
+claimed_at: 2026-10-04T06:59Z
+updated: 2026-10-04T06:59Z
 ---
 
 ## Goal
