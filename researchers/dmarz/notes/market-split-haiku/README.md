@@ -1,5 +1,14 @@
 # Market splitting: Haiku with reasoning
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Haiku V2 passed its short profitability screen but failed execution in the longer discovery cohort; V3 has only scripted rehearsal evidence. Basis: Two dynamic episodes returned nonterminal outputs at the 3,072-token ceiling; the original stop reason was not retained, so exhaustion is inferred. The incomplete cohort supports no discovery estimate. Increased V3 output headroom requires fresh native gates and makes future Sonnet comparisons configuration comparisons, not model-only effects.
+- **sample_size_summary:** V2 Q0: 2 markets,4/4 qualified. S1: 6 assigned markets/36 episodes; 2 complete, 2 failed partial, 32 unstarted, 60 calls. V3: 12/12 mock episodes, 0 model calls; fresh native gates pending.
+<!-- experiment-evidence:end -->
+
 This exploratory comparison asks whether a neutral agent discovers that registering several firms can reduce measured firm concentration while the same owner keeps control. It follows the [shared comparison plan](../market-split-api/parallel-plan.md) and experiment-worker workflow. No accepted formal hypothesis exists; S2 and holdout markets remain closed.
 
 **Current status, 2026-10-04:** V3 has passed scripted checks, fresh action mechanics and fresh clean-market profit qualification. Full-length regulated reliability is running on its dedicated server. Main discovery remains blocked until that gate passes. The earlier V2 discovery attempt failed on two truncated responses and remains separately reported in [its post-mortem](reviews/s1-001-post.md).

@@ -96,6 +96,25 @@ class EvidenceTests(unittest.TestCase):
         self.assertIn("Source: `aaaaaaaa`.", rendered)
         self.assertIn("Source: `bbbbbbbb`.", rendered)
 
+    def test_reassessment_keeps_original_and_new_assessors_distinct(self):
+        other = copy.deepcopy(self.data["studies"][0])
+        other.update(id="study-v2", title="Reassessment", assessor="bob/operator", assessed_at="2026-10-05")
+        self.data["studies"].append(other)
+        rendered = evidence.outputs(self.root, self.data)[self.document]
+        self.assertIn("Assessed 2026-10-04 by alice/review.", rendered)
+        self.assertIn("Assessed 2026-10-05 by bob/operator.", rendered)
+        self.data["studies"] = [other]
+        rendered = evidence.outputs(self.root, self.data)[self.document]
+        self.assertIn("Assessed 2026-10-05 by bob/operator;", rendered)
+        self.assertNotIn("by alice/review", rendered)
+
+    def test_invalid_reassessment_metadata(self):
+        for fields in ({"assessor": ""}, {"assessed_at": "2026-13-01"}):
+            data = copy.deepcopy(self.data)
+            data["studies"][0].update(fields)
+            with self.subTest(fields=fields), self.assertRaises(ValueError):
+                evidence.validate(self.root, data)
+
     def test_frontmatter_title_without_h1_preserves_formal_template(self):
         original = "---\ntitle: Formal study\n---\n\n## Setup\n\nKeep this protocol.\n"
         self.put(self.document, original)

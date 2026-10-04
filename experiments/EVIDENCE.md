@@ -1,6 +1,6 @@
 # Experiment evidence index
 
-Assessed 2026-10-04 by vishesh/codex-pi-review.
+Registry initiated 2026-10-04 by vishesh/codex-pi-review. Current cohort assessors and dates are shown in the linked study documents.
 
 [Rubric](EVIDENCE-METADATA.md) · [Machine-readable registry](evidence-metadata.json)
 
@@ -46,7 +46,7 @@ Source snapshot: `9781739cd06e0c9606ed0ed053bf91b5e2a42b57`; individual rows may
 | [Sybil resistance: model synthesis and verification badges](../researchers/dmarz/notes/sybil-specialists-api/README.md) (`sybil-specialists-api`) | 2/4 | 12 paired worlds × 16 conditions = 192 valid S1 answers; 24 Q0 packets; 36 simulated identities and 1 model synthesizer. |
 | [Sybil resistance as swarms grow](../researchers/dmarz/notes/sybil-scale-api/README.md) (`sybil-scale-api`) | 2/4 | 24 paired worlds × 100 deduplicated conditions = 2,400 valid S1 answers; 64 Q0 calls; 36–972 simulated identities. |
 | [Verification budget and verifier reliability](../researchers/dmarz/notes/sybil-budget-api/README.md) (`sybil-budget-api`) | 1/4 | Q0: 4 worlds, 16/16 valid packets. S1 launched: 24 paired worlds × 120 cells = 2,880 assigned answers, N=324/972; completed count not reconciled in repo. |
-| [Knowledgeable newcomers versus a trusted Sybil coalition](../researchers/dmarz/notes/sybil-newcomer-api/README.md) (`sybil-newcomer-api`) | 1/4 | Q0: 6 worlds, 36/36 valid packets. S1 launched: 24 paired worlds × 81 cells = 1,944 assigned answers across 3 sampled rounds; completed count not reconciled in repo. |
+| [Knowledgeable newcomers versus a trusted Sybil coalition](../researchers/dmarz/notes/sybil-newcomer-api/README.md) (`sybil-newcomer-api`) | 2/4 | Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing; 24 honest + 1/4/16 controller identities, three model snapshots. Q0 separately: 36/36 clean calls on six roots. |
 | [Can one owner’s many firms defeat a concentration-based regulator?](../researchers/dmarz/notes/market-split/README.md) (`market-split`) | 1/4 | 6 S1 market clusters × 2 seeds × 12 conditions × 3 policies = 432 scripted episodes; 18 S0; 0 model calls. |
 | [Will a neutral agent create firms to evade concentration rules?](../researchers/dmarz/notes/market-split-api/README.md) (`market-split-api`) | 1/4 | Current Sonnet Q0: 2 markets, 4/4 episodes; S1 planned: 6 markets, 36 episodes/864 calls. Earlier Haiku S1: 17 valid, 1 invalid, 18 unstarted. |
 | [Market splitting: Haiku with reasoning](../researchers/dmarz/notes/market-split-haiku/README.md) (`market-split-haiku`) | 1/4 | V2 Q0: 2 markets,4/4 qualified. S1: 6 assigned markets/36 episodes; 2 complete, 2 failed partial, 32 unstarted, 60 calls. V3: 12/12 mock episodes, 0 model calls; fresh native gates pending. |
