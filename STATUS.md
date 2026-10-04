@@ -57,8 +57,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [telephone-native-both](tasks/telephone-native-both.md) | claimed | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
-| [theseus-t1-q0](tasks/theseus-t1-q0.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T19:55Z | Theseus approved apprenticeship qualification and collective study design |
-| [update-experiment-budget-defaults](tasks/update-experiment-budget-defaults.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T20:15Z | Update default and promising-study budget tiers |
+| [theseus-t1-q0](tasks/theseus-t1-q0.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T20:16Z | Theseus approved apprenticeship qualification and collective study design |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -310,6 +309,7 @@
 | [theseus-targeted-repairs](tasks/theseus-targeted-repairs.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:55Z | Build targeted Theseus execution diagnostic repairs |
 | [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:27Z | Build and qualify a practical Theseus continuity iteration |
 | [transfer-dmarz-market-methods](tasks/transfer-dmarz-market-methods.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T14:03Z | Transfer useful methods from recent Dmarz market and pipeline studies |
+| [update-experiment-budget-defaults](tasks/update-experiment-budget-defaults.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T20:16Z | Update default and promising-study budget tiers |
 | [wild-identity](tasks/wild-identity.md) | done | p1 | build | shadow/sol-identity | shadow | 2026-10-04T15:23Z | Identity churn and observable coordination across three swarms |
 | [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | done | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:28Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 
@@ -322,7 +322,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-pi-review | done | integrate-top10-portfolio-feedback | 2026-10-04T20:13Z | Published24 top-ten review dispositions and14 study additions; current plans preserved, no runs launched. |
+| vishesh/codex-pi-review | done | update-experiment-budget-defaults | 2026-10-04T20:16Z | Published USD10 default and USD50 promising-study budget tiers; all nine local/shared policy copies agree. |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
@@ -331,7 +331,7 @@
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
-| vishesh/codex-village-fit | blocked |  | 2026-10-04T18:31Z | Telephone A0 ready and queued; central start pending. V0 source pilot prepared; no native outputs yet. |
+| vishesh/codex-village-fit | blocked |  | 2026-10-04T18:31Z | Telephone A0 stopped on JSON fence; cost reconciled. Tested A1 repair awaits owner decision; V0 unstarted. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T18:11Z | O1 and Q-A7 complete with scientific post-mortems; worker released. Broad size sweep parked. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
