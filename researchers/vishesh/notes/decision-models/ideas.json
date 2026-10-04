@@ -120,21 +120,25 @@
       "question": "Can a minority earn a bounded independent check that repairs wrong consensus without causing harmful reversals or repeated interruption?",
       "comparison": "Compare evidence-gated checks with majority, unconditional veto, always-check, quota-matched random checking, pooled evidence and an exact synthetic reference across provenance, applicability and temporal-change scenarios.",
       "metrics": [
-        "Incorrect cascade size",
-        "Correct-minority survival",
-        "Decision latency",
-        "Useful completion",
-        "False inhibition"
+        "Correct on-time decisions over all assignments",
+        "Wrong-majority corrections",
+        "Harmful reversals",
+        "Verification cost and failures",
+        "Withdrawal and valid reopening",
+        "Repeated interruptions and deadline misses"
       ],
-      "prediction": "Targeted inhibition may contain bad cascades, but excessive inhibition may suppress valid new information.",
-      "falsifier": "Drop the biological-mechanism claim if random throttling or simple rate limits achieve the same tradeoff.",
+      "prediction": "A bounded evidence challenge may recover wrong consensus with fewer harmful reversals than unconditional dissent and less checking than always-check.",
+      "falsifier": "Narrow or reject the proposed gate if always-check or a deterministic rule dominates its useful-completion versus cost frontier, or if apparent gains depend on truth leakage or omitted failures.",
       "confounds": "A guaranteed-correct dissenter, oracle verification, unequal new evidence, stale-record persistence, uncounted deferrals and selection of only wrong-majority episodes can all manufacture improvement.",
-      "decision_value": "Determines whether to implement a distinct evidence-backed stop channel rather than merely slowing communication.",
+      "decision_value": "Determines when a minority should trigger an independent check, when it should withdraw, and what new evidence can reopen a resolved challenge.",
       "feasibility": "RD-1 plan and offline implementation under dissent/. Native execution remains gated; no measured Jev result.",
       "sources": [
         "seeley-2012-stop",
         "hu-2026-jevadvbench",
-        "lorenz-2011-how"
+        "lorenz-2011-how",
+        "he-2026-minority",
+        "mansuri-2026-multi",
+        "hamdi-2013-removal"
       ],
       "atlas": [
         "SOC-10"
@@ -144,7 +148,7 @@
         "dissent"
       ],
       "scenario": "Typed decisions",
-      "delta": "Honeybee cross-inhibition is direct biological prior. The Jev test concerns model-generated contradiction judgments with non-oracle evidence, beyond generic dissent.",
+      "delta": "RD-1 develops three practical scenarios and a bounded evidence acquisition/closure protocol. Native semantic competence, formal novelty and comparative benefit remain unestablished.",
       "source_note": "RD-1 at researchers/vishesh/notes/dissent/PLAN.md. Earlier score is historical and becomes stale after this content revision.",
       "activity": {
         "added_at": "2026-10-04T02:29:37Z",

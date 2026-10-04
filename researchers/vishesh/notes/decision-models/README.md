@@ -28,3 +28,7 @@ Current confidence documentation now publishes its formulas [[typesafe-2026-conf
 Completed: initial source scan, social review, 15-question brainstorm, rubric scoring, overlap assessment and five design sketches. Added 15 canonical source entries; reused five existing sources with fresh-access limits recorded. These are assistant assessments, not independent peer ratings. The formal survey remains in progress: full-methods depth, citation chasing and saturation have not been established. No hypothesis accepted, no experiment implemented, no paid API calls made.
 
 Second-pass review added two foundational resources on repeated evidence and self-confirming learning, bringing this area to 17 new entries and five reused entries. No formal survey completion is claimed.
+
+## Dissent implementation and separate handoffs
+
+The [Right Dissenter area](../dissent/README.md) now develops DM-03 across decision-models and dissent. Its [RD-1 plan](../dissent/PLAN.md) precedes the offline implementation. [Phantom Coast](handoffs/PHANTOM-COAST.md) and [Quorum of Mirrors](handoffs/QUORUM-OF-MIRRORS.md) have separate copy-ready context briefs for the owner to open in new tasks.

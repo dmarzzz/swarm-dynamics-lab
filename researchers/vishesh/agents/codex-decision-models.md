@@ -1,10 +1,11 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: right-dissenter-design-build
-doing: Building the dissent area, planned scenario harness and replay
-updated: '2026-10-04T03:00:17Z'
+doing: Completed RD-1 design, multi-area tags, offline prototype, replay and handoffs;
+  native launch gated
+updated: '2026-10-04T03:13:14Z'
 ---
 
 ## Notes

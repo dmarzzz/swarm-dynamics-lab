@@ -1,0 +1,24 @@
+{
+  "design": "RD-1",
+  "plan_commit": "5fd034c9af6613a9e8180874ab559312186b465c",
+  "mode": "offline-prototype",
+  "sha256": {
+    "PARAMETERS.md": "cc8c1bc68254b56059826099102c0ae400854a14c0907d5009c96e1d6af1b763",
+    "PLAN.md": "1eb166af9e53933d0fbef714dedf08a0f83e97b18881ce0d40e0624471ab2a49",
+    "src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "src/jev.py": "71208260cd66fbaf7c23b60a1eb10fb550f0026ad2ba8e58a5c5dce4f6b001c5",
+    "src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "src/protocol.py": "637559e808c22c269ee2727069b629b47ad5f49fd8a2dd5f8309e2fe0419d195",
+    "src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
+    "tests/test_protocol.py": "662a1efadeeb851055677b796b3d32afec4ed80fcf43cdd0826d8ce2bd20c2b8",
+    "tests/test_study.py": "f6f68d08f4aa1d8042b702567fccce8ac5f30ab167cc89503e5ebf69d3240f5b",
+    "visualization/build_preview.py": "4ed7efdb2210661ee557df8b7a9f5c5be8e60da045b2e8d29d2d96ff08eaed6e",
+    "visualization/replay.html": "6629b578f52e5a508fc58a1c4777c3aada87459ec0aca4434927944a43253b74"
+  },
+  "software_checks": 41,
+  "dashboard_export_checks": 29,
+  "native_calls": 0,
+  "registered_runs": 0
+}

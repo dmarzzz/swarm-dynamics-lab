@@ -9,7 +9,7 @@ url: https://arxiv.org/abs/2606.29270
 doi: null
 arxiv: '2606.29270'
 cite: 'He, C., Chen, Z., Yang, Z., Qiao, S., Ju, M., Liu, J., Wen, D., & Liu, G. (2026). Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates. arXiv:2606.29270.'
-topics: [llm-agent-swarms]
+topics: [dissent, llm-agent-swarms]
 added_by: shadow/sol-1
 accessed: 2026-10-03
 read_depth: abstract
