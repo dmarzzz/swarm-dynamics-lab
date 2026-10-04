@@ -1,0 +1,11 @@
+{
+  "claim_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/415",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/418",
+  "status": "done",
+  "worker_stopped": true,
+  "allocated_seconds": 266,
+  "allocated_cost_usd": 0.005277883333333333,
+  "cost_kind": "allocated-time estimate, not invoice",
+  "native_attempt": "QM-SP-02",
+  "operations_slug": "qm-sp-02"
+}

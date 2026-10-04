@@ -1,0 +1,53 @@
+{
+  "calls": 222,
+  "reserved_usd": 8.345856,
+  "known_actual_usd": 1.55619096,
+  "prior_unknown_upper_bound_usd": 0.061344,
+  "new_known_actual_usd": 0.314064,
+  "execution_ledger_status": "complete",
+  "worker_processes": 0,
+  "reconciled": true,
+  "new_unknown_upper_bound_usd": 0,
+  "api_cap_usd": 8,
+  "total_cap_usd": 9,
+  "effective_exposure_usd": 1.61753496,
+  "extension_rows": [
+    [
+      "PQ-02-owner-2026-10-04",
+      2.0,
+      "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d"
+    ],
+    [
+      "R1-owner-2026-10-04",
+      5.0,
+      "2ec11da60347bfb8fca9413a6c6db82f6353953f3a78e3633de495cdd4ff407a"
+    ]
+  ],
+  "artifacts_sha256": {
+    "summary.json": "b6934fbc09da32d3987d4e7c155f628485375ed04dfdbfaa6a8fe4159c062460",
+    "accounting.jsonl": "9d6c13ce10f856030334e037cd9a2e47b3b409dfba2c1c36598139b94e7720c7",
+    "manifest.json": "8334747a171fc4cf71b4fa45cabe191845f6effb09acf210ed5ceff6f22c46d4",
+    "preflight.json": "9afcd5241df4431b855fd18b73b1edd05e0e16c656299e948f2d59b69678ba15",
+    "responses.jsonl": "1858acdc7a17565c532fa6dcedf3d9ffb47b05c850b436720234f48484df4bc0",
+    "requests.jsonl": "63bc9138ee742e1a43499feaef9f1092fabefaeeb756999256f8a05efca9b84f",
+    "receipts.jsonl": "7c2f013af6ae8e540ee0d3435f8529aa2e1ca120994ad67853b5041c0cf9ef8d"
+  },
+  "settlement_audit": {
+    "historical_rows_unchanged": true,
+    "prior_calls_sha256": "637fa0df690c0b2b72d8ef8b8f4f824c13a414c7f9cba9b8aa54ead580981ca1",
+    "settlement_rows": 220,
+    "settlements_sha256": "dfd173ba593ffaa9ca1f380623bfe7d6732a07d2263193c801e5bf258ef1a19d",
+    "unknown_holds": [
+      [
+        "QM-PQ-02-001",
+        0.06,
+        "failed_or_uncertain"
+      ],
+      [
+        "QM-Q1-01-006",
+        0.001344,
+        "failed_or_uncertain"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "derived_decisions": {
+    "DEFER": 20,
+    "ZERO": 10,
+    "ONE": 10
+  },
+  "source_plan_clauses": 20,
+  "source_observed_clauses": 100,
+  "all_source_plans_unknown": true,
+  "false_source_observation_promotions": 0,
+  "false_source_abstentions": 0,
+  "families": {
+    "corrections": {
+      "calls": 8,
+      "fully_exact": 8
+    },
+    "decimal_units": {
+      "calls": 8,
+      "fully_exact": 8
+    },
+    "entities": {
+      "calls": 8,
+      "fully_exact": 8
+    },
+    "plans": {
+      "calls": 8,
+      "fully_exact": 8
+    },
+    "timelines": {
+      "calls": 8,
+      "fully_exact": 8
+    }
+  }
+}

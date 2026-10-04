@@ -1,6 +1,6 @@
-## Current: SP-02 quote-only diagnostic prepared
+## Latest: SP-02 quote-only repair closed
 
-**RUN after fresh admission.** SP-01 remains failed at its null-selection gate despite40 correct decoded outcomes. [SP-02 plan](packet-study/span-v2/PLAN.md), [pre-assessment](reviews/SP-02-pre.md): require literal source clauses, with plans decoded as unknown; preserve exact grounding. Forty fresh balanced qualification calls, maximumUSD1.92, no evaluation.22 offline checks pass. Existing ledger andUSD9 cumulative cap retained.
+**FINISH bounded repair cycle.** SP-02 quote-only repair qualification passed: 40/40 valid calls; 120/120 source and 280/280 report selections correct; 40/40 decisions; 20/20 exact paired roots. Native quotations and code-derived facts are distinct. New API cost USD0.314064; authored grammar only, not field reliability or swarm efficacy. [Post-mortem](reviews/SP-02-post.md), [scientific review](results/QM-SP-02/scientific-review.json). SP-01 remains failed under its original null-selection rule. Both attempts reconciled and claims released; no main evaluation. Preserve original ledger and USD9 cumulative cap; next useful work is offline naturalistic annotation/design.
 
 ## Latest: SP-01 repair qualification closed
 
@@ -20,7 +20,7 @@
 
 ## Latest: PQ-02 stopped and reviewed
 
-**HOLD native qualification/evaluation.** Owner-approved semantic repair was implemented and launched;24 assigned,2 started,1 fully correct valid response,HTTP400 on request2,22 unstarted. [Post-mortem](reviews/PQ-02-post.md), [audit](results/QM-PQ-02/audit.json), [cost reconciliation](results/QM-PQ-02/closeout.json). Qualification is inconclusive; no retry. Worker exited; exclusive claim released. Original ledger preserved/migrated with previous path fenced. CumulativeAPIcapUSD3 plus infrastructureUSD1 after owner'sUSD2 addition;75calls,USD0.905856 reservations,USD0.15611496 knownactual andUSD0.061344 combined unknown bounds retained. Prepared offline safe-error telemetry patch; future constant-size schema needs fresh admission. Researcher review waived; old evaluation untouched.
+**HOLD native qualification/evaluation.** Owner-approved semantic repair was implemented and launched;24 assigned,2 started,1 fully correct valid response,HTTP400 on request2,22 unstarted. [Post-mortem](reviews/PQ-02-post.md), [audit](results/QM-PQ-02/audit.json), [cost reconciliation](results/QM-PQ-02/closeout.json). Qualification is inconclusive; no retry. Worker exited; exclusive claim released. Original ledger preserved/migrated with previous path fenced. CumulativeAPIcapUSD3 plus infrastructureUSD1 after owner'sUSD2 addition;75calls,USD0.905856 reservations,USD0.15611496 knownactual and USD0.061344 combined unknown bounds retained. Prepared offline safe-error telemetry patch; future constant-size schema needs fresh admission. Researcher review waived; old evaluation untouched.
 
 ## Current iteration: PQ-02 prepared, owner-approved
 

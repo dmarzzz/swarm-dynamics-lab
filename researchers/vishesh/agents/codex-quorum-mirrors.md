@@ -3,10 +3,10 @@ agent: vishesh/codex-quorum-mirrors
 tool: codex
 state: idle
 task: null
-doing: SP-01 span repair qualification reviewed and closed; no evaluation dispatched
-updated: 2026-10-04T20:23:16.963943+00:00
+doing: SP-02 quote-only repair reviewed and closed; no main evaluation
+updated: 2026-10-04T20:31:03.068871+00:00
 ---
 
-SP-01 span-selection qualification did not pass: 40/40 valid calls, 105/120 source selections, 280/280 report selections, 40/40 decisions and 11/20 exact paired roots. New API cost USD0.310122. Values/status/modes are derived by code from native selected clauses, not predicted by the model. Controlled authored grammar only; no field or swarm efficacy claim.
+SP-02 quote-only repair qualification passed: 40/40 valid calls; 120/120 source and 280/280 report selections correct; 40/40 decisions; 20/20 exact paired roots. Native quotations and code-derived facts are distinct. New API cost USD0.314064; authored grammar only, not field reliability or swarm efficacy.
 
-See notes/decision-models/quorum-of-mirrors/reviews/SP-01-post.md.
+See notes/decision-models/quorum-of-mirrors/reviews/SP-02-post.md.

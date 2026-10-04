@@ -1,0 +1,140 @@
+{
+  "attempt": "QM-SP-02",
+  "assessor": "vishesh/codex-quorum-mirrors",
+  "assessed_at": "2026-10-04T20:31:03.066350+00:00",
+  "evidence_revision": "567cda03b17060649d9f8d7d4bc89bb133944f84",
+  "execution": "complete",
+  "qualification": "passed",
+  "scientific_interpretation": "SP-02 quote-only repair qualification passed: 40/40 valid calls; 120/120 source and 280/280 report selections correct; 40/40 decisions; 20/20 exact paired roots. Native quotations and code-derived facts are distinct. New API cost USD0.314064; authored grammar only, not field reliability or swarm efficacy.",
+  "reporting": "all saved responses replayed; declared manual coverage; remote artifacts/hub verified",
+  "cost_status": "reconciled; original uncertain holds retained",
+  "reviewer_policy": "not required by owner direction",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Quote-only interface repair tested prospectively after a preserved failed null-selection contract.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/span-v2/PLAN.md",
+          "sha256": "d8a29064ece9a9e4eb12fec0d25d1a56705a5c6fc70264325d49acac6c8af00c"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Five authored mechanisms, not independently annotated field incidents.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/span-v2/cases.py",
+          "sha256": "8fb1bcce45f2f24a886618c130fee3e8e3834092bd9395947e6cdcea20243922"
+        }
+      ],
+      "next_action": "Prepare independently annotated naturalistic cases offline; inspect any retained native misses before broader collection.",
+      "acceptance_check": "Explicit independent units, annotation agreement, ambiguity and normalization coverage; no discarded failure or inflated native count."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Fixed paired evidence and exact parser; no causal randomized comparison against SP-01.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/analysis.json",
+          "sha256": "860241ebcec5c53ff732de2846836c238e4aa3419393171ebd046ce44100ea73"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Strict all-clause/fact/decision qualification outcome retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/summary.json",
+          "sha256": "b6934fbc09da32d3987d4e7c155f628485375ed04dfdbfaa6a8fe4159c062460"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Selected clauses and derived facts remain separate; every component and missing assignment scored.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/audit.json",
+          "sha256": "5d92151c84839bef241cb9ac70ae9b83c89ced61df21f1a884dd26c8bc9b6f6e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Twenty authored paired roots across five grammars; no population reliability inference.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/summary.json",
+          "sha256": "b6934fbc09da32d3987d4e7c155f628485375ed04dfdbfaa6a8fe4159c062460"
+        }
+      ],
+      "next_action": "Prepare independently annotated naturalistic cases offline; inspect any retained native misses before broader collection.",
+      "acceptance_check": "Explicit independent units, annotation agreement, ambiguity and normalization coverage; no discarded failure or inflated native count."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Stateless frozen requests, no gold/operator memory/inter-call feedback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/requests.jsonl",
+          "sha256": "63bc9138ee742e1a43499feaef9f1092fabefaeeb756999256f8a05efca9b84f"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Full saved replay and remote artifact hash reconciliation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/closeout.json",
+          "sha256": "1d344b65a7ddd315c821305bcaa54c4f49aaac0581a09074ed803e0fd04fe9fe"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original cumulative ledger, unknown holds and funding receipts retained; exclusive approved host released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/closeout.json",
+          "sha256": "1d344b65a7ddd315c821305bcaa54c4f49aaac0581a09074ed803e0fd04fe9fe"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Immutable source/request/corpus hashes, deterministic decoding and sorted pair replay.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/preflight.json",
+          "sha256": "9afcd5241df4431b855fd18b73b1edd05e0e16c656299e948f2d59b69678ba15"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All40 native assignment records and20 pairs; no hidden missingness or native/derived conflation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-02/traces.html",
+          "sha256": "0d4f7b1466c4657b5602c2a7dfdf794425828b53d29e454aca99c5f16c6888b7"
+        }
+      ]
+    }
+  ],
+  "decision": "FINISH bounded repair cycle; no main evaluation or automatic paid retry"
+}

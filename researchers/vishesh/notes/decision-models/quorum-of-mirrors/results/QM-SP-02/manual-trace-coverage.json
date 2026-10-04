@@ -1,0 +1,20 @@
+{
+  "actual_response_ids": [
+    "QM-SP-02-000",
+    "QM-SP-02-003",
+    "QM-SP-02-006",
+    "QM-SP-02-011",
+    "QM-SP-02-014",
+    "QM-SP-02-021",
+    "QM-SP-02-030",
+    "QM-SP-02-034",
+    "QM-SP-02-035",
+    "QM-SP-02-036"
+  ],
+  "selection": "both variants of lexicographically first root per family, plus all observed misses/invalids",
+  "manual_response_count": 10,
+  "all_assignment_statuses_checked": 40,
+  "native_responses_replayed": 40,
+  "hidden_reasoning_available": false,
+  "native_vs_derived": "Literal quotations are native; values/status/modes are code output."
+}

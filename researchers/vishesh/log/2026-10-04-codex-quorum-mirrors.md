@@ -78,3 +78,8 @@ R1 passed all ten qualification calls, then stopped after 25 of 40 evaluation ca
 ## SP-01 evidence-selection repair
 
 SP-01 span-selection qualification did not pass: 40/40 valid calls, 105/120 source selections, 280/280 report selections, 40/40 decisions and 11/20 exact paired roots. New API cost USD0.310122. Values/status/modes are derived by code from native selected clauses, not predicted by the model. Controlled authored grammar only; no field or swarm efficacy claim. Traces replayed, costs and original ledger reconciled, worker stopped and exclusive claim released. No evaluation or retry.
+
+
+## SP-02 quote-only follow-up
+
+SP-02 quote-only repair qualification passed: 40/40 valid calls; 120/120 source and 280/280 report selections correct; 40/40 decisions; 20/20 exact paired roots. Native quotations and code-derived facts are distinct. New API cost USD0.314064; authored grammar only, not field reliability or swarm efficacy. Original failed SP-01 preserved. Source/trace/cost/resource reconciliation complete, worker stopped and claim released. No main evaluation.

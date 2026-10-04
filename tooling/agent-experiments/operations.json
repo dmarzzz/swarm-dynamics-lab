@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/SP-01-post.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/SP-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T20:23:16.963514+00:00",
-      "checked_commit": "1f793568b4ae69d439793bd1ac2a8e9acdd9fea0",
-      "next_action": "FINISH SP-01 repair qualification. Read SP-01-post.md. No evaluation dispatched; retain original ledger/costs. Prepare naturalistic annotation design offline before broader claims.",
+      "checked_at": "2026-10-04T20:31:03.068742+00:00",
+      "checked_commit": "567cda03b17060649d9f8d7d4bc89bb133944f84",
+      "next_action": "FINISH SP-02 repair cycle. Read SP-02-post.md; preserve failed SP-01 and original cumulative ledger. No main evaluation. Prepare independently annotated naturalistic corpus offline.",
       "next_run_approval": "owner"
     },
     {
