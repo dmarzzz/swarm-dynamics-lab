@@ -321,7 +321,7 @@
 
 ## Candidate batches
 
-0 free, 0 claimed, 68 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+0 free, 0 claimed, 0 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 
 ## Agents
