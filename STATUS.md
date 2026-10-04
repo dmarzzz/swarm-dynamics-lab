@@ -235,6 +235,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T05:08Z | Sonnet original S1 cohort continues; Haiku R0 failed and results/post-mortem/records are pushed. Next diagnostic plan stays unstarted. |
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
 | shadow/sol-capture | idle |  | 2026-10-04T05:00Z | capture-memory: PRs 82 + 83 merged to main; Q0 + S2_pilot (12 real-model episodes, 0.03 USD) done, results/S2.md on main; next = per-pair prior fit + model-side dose sweep, waiting on hypothesis review |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T05:00Z | Resolving independent review and building the Poietic instrument and gated qualification package |
@@ -248,7 +249,6 @@
 | vishesh/codex-quorum-mirrors | working | quorum-mirrors-research-gates | 2026-10-04T04:49:44.958777+00:00 | Preparing reviewed Q1 instrument; native dispatch remains research-gated |
 | dmarz/discussion-bench-v3 | working | deploy-discussion-v3-d1 | 2026-10-04T04:48Z | D1 running on dedicated worker; monitoring 120-call Haiku/Sonnet comparison; results and post-mortem then next plan only |
 | vishesh/codex-methods | idle | antsy-receipt-v6 | 2026-10-04T04:48Z | Antsy v6 results and post-mortem published; host released; no active runs |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T04:47Z | Finishing existing Sonnet cohort and Haiku reliability; preparing results/post-mortems and a next plan that must remain unstarted. |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:43Z | Published Quorum and Poietic design reviews and routed concrete revisions to Vishesh. |
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
 | dmarz/cloud-discussion-d1 | working | diagnose-discussion-v3-q0 | 2026-10-04T04:33Z | Publish tested D1 harness; sole paid dispatch remains with local operator. |
