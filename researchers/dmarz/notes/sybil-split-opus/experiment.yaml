@@ -1,0 +1,36 @@
+id: sybil-split-opus
+title: Does splitting one attacker into more identities help it, at fixed resources? (Opus 5.5)
+description: One attacker's 27 report rows, 27 attachment edges and 27 verification attempts held by 1, 3, 9
+  or 27 identities; 108 honest simulated identities in two graph families; coverage, degree and random checks
+  at 4 or 12 checks; Opus 5.5 report synthesis beside same-packet plurality. Exploratory; identities and checks
+  are simulated, only the synthesis is a model call.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: fixed
+  batch:
+    type: str
+    role: replicate
+  source_hash:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- model_calls
+- input_tokens
+- output_tokens
+- cost_usd
+- qualification_passed
+- rare_wrong
+- rare_accuracy
+- primary_contrast
+primary_metric: primary_contrast
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-split-opus

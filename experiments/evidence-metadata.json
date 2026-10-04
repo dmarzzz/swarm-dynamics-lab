@@ -1941,6 +1941,34 @@
         "researchers/vishesh/notes/phantom-coast/pc3/reviews/S1-A1-POST.md": "86b33ff5540e2f7f24777e0c5839b1b63a0920f88cd2018db0adc76615ba55fd",
         "researchers/vishesh/notes/phantom-coast/pc3/results/CLOSEOUT.json": "65bd6deb45ca9b5ef798c07049be0bc7a3cd3e023589878c0722594a2fac1180"
       }
+    },
+    {
+      "id": "sybil-split-opus",
+      "title": "Identity splitting with fixed attacker resources (Opus 5.5)",
+      "documents": [
+        "researchers/dmarz/notes/sybil-split-opus/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-split-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-split-opus/experiment.yaml"
+      ],
+      "assessor": "dmarz/pipeline-split",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Splitting one attacker's fixed 27 report rows, 27 attachment edges and 27 verification attempts from 1 to 27 identities raises rare-skill wrong answers of an Opus 5.5 synthesizer more under degree-based than under coverage-based admission checks.",
+        "rationale": "Unrun. Plan and frozen design only; no stage has run on a server and no model call has been made."
+      },
+      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic roots in each of two graph families \u00d7 56 conditions = 2,688 S1 calls at 108 honest simulated identities and one synthesizer; separate Q0 of 60 calls on 10 roots and a one-call probe. Roots are the independent units, not calls or identities.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-split-opus/README.md",
+        "researchers/dmarz/notes/sybil-split-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-split-opus/design.yaml",
+        "researchers/dmarz/notes/sybil-split-opus/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
     }
   ],
   "source_sha256": {
