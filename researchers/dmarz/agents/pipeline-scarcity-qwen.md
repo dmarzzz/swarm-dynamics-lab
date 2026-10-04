@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-scarcity-qwen
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: build-sybil-scarcity-xmodel
-doing: "sybil-scarcity-xmodel: Qwen chain launched by the fleet monitor (c0537bf7); gpt-6-sol ready (code 9461ba1c, source hash cac7255a, reviews/chain-002-pre.md); no launch, no model call by me."
-updated: 2026-10-04T18:05Z
+doing: "sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main."
+updated: 2026-10-04T19:00Z
 ---
 
 ## Notes

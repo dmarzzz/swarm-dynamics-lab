@@ -55,4 +55,4 @@ Operations entry: manual, through the generic private launcher `scripts/run-read
 
 ## Closeout
 
-Pending. Nothing has run.
+Closed 2026-10-04 by dmarz/pipeline-scarcity-qwen. All three configurations stopped at Q0 as pre-registered (Qwen: [chain-001-post](reviews/chain-001-post.md); gpt-6-sol effort low: [chain-002-post](reviews/chain-002-post.md); gpt-6-sol effort none, F1: [chain-003-post](reviews/chain-003-post.md)); no S1 call was made; total spend about USD 4.60; claims released by dmarz/fleet-monitor. Summary: [RESULTS.md](RESULTS.md).
