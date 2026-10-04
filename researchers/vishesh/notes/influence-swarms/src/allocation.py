@@ -1,3 +1,4 @@
+from contextlib import closing
 """Non-overlapping quota leases. Run reservation on the existing budget authority.
 
 No key material is read. A lease is never silently refunded or copied to another host.
@@ -11,7 +12,7 @@ class AllocationError(Exception):pass
 def reserve(authority,lease_id,host,claim,until,amount):
     if not 0<amount<=8:raise AllocationError('quota outside authorized repair envelope')
     if not Path(authority).is_file():raise AllocationError('existing authority required')
-    with sqlite3.connect(authority,timeout=20) as db:
+    with closing(sqlite3.connect(authority,timeout=20)) as db, db:
         db.execute('BEGIN IMMEDIATE')
         db.execute('CREATE TABLE IF NOT EXISTS allocations (id TEXT PRIMARY KEY, receipt TEXT)')
         old=db.execute('SELECT receipt FROM allocations WHERE id=?',(lease_id,)).fetchone()

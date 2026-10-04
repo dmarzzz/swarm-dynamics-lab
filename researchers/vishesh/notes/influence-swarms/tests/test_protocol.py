@@ -1,3 +1,4 @@
+from contextlib import closing
 import copy
 import json
 from pathlib import Path
@@ -68,14 +69,14 @@ class Tests(unittest.TestCase):
         from datetime import datetime,timezone
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/'authority.sqlite'
-            with sqlite3.connect(path) as db:
+            with closing(sqlite3.connect(path)) as db, db:
                 db.execute('create table budget(id integer primary key, cap real, reserved real, calls integer)')
                 db.execute('insert into budget values(1,45,35,100)')
             a=reserve(path,'lease1','host1','claim1','2099-01-01T00:00:00Z',8)
             self.assertEqual(a,reserve(path,'lease1','host1','claim1','2099-01-01T00:00:00Z',8))
             with self.assertRaises(AllocationError):reserve(path,'lease2','host2','claim2','2099-01-01T00:00:00Z',8)
             with self.assertRaises(AllocationError):validate(a,'other-host',datetime.now(timezone.utc))
-            with sqlite3.connect(path) as db:self.assertEqual(db.execute('select reserved from budget').fetchone()[0],43)
+            with closing(sqlite3.connect(path)) as db, db:self.assertEqual(db.execute('select reserved from budget').fetchone()[0],43)
 
     def test_pairing_and_variation(self):
         for domain in ('procurement','dependency','travel'):

@@ -1,6 +1,7 @@
 """Trace-backed plots, animated GIF and self-contained interactive replay; no model calls."""
-import argparse,json
+import argparse,json,os,tempfile
 from pathlib import Path
+os.environ.setdefault('MPLCONFIGDIR',str(Path(tempfile.gettempdir())/'immune-matplotlib-cache'))
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -31,7 +32,8 @@ def plot(rows,out,step=24,title='Immune response',backend='scripted'):
         if hist:
             ys=[sum(x['utility'] for x in hist[:j+1])/(j+1) for j in range(len(hist))]
             ax.plot([x['round'] for x in hist],ys,label=r['arm'],lw=2,marker='.',color=palette[i%10])
-    ax.set_ylim(-.03,1.03);ax.set_xlim(7,24);ax.set_ylabel('Useful completion / requests so far');ax.set_xlabel('Logical round');ax.grid(axis='y',alpha=.13);ax.legend(ncol=5,loc='upper center',bbox_to_anchor=(.5,1.22),frameon=False,labelcolor='#d7e2eb',fontsize=10)
+    ax.set_ylim(-.03,1.03);ax.set_xlim(7,24);ax.set_ylabel('Useful completion / requests so far');ax.set_xlabel('Logical round');ax.grid(axis='y',alpha=.13)
+    if ax.lines:ax.legend(ncol=5,loc='upper center',bbox_to_anchor=(.5,1.22),frameon=False,labelcolor='#d7e2eb',fontsize=10)
     ax=axes[2];selected=[r for r in rows if r['arm'] in ['Q10F','Q11R','Q11','Q11S','CLEAN']]
     for i,r in enumerate(selected):
         hist=[x for x in r['trajectory'] if x['round']<=step]
@@ -53,7 +55,8 @@ def render(out,dest,world=None,task=None):
     world=world or rows[0]['world'];task=task if task is not None else rows[0]['task_id'];sample=[r for r in rows if r['world']==world and r['task_id']==task]
     plot(sample,dest/'final_frame.png',title='Memory repair: recovery and relapse',backend=backend)
     frames=[plot(sample,None,t,title='Memory repair: recovery and relapse',backend=backend) for t in range(1,25)]
-    frames[0].save(dest/'replay.gif',save_all=True,append_images=frames[1:],duration=[450]*23+[1800],loop=0,optimize=False)
+    frames=[frame.quantize(colors=32) for frame in frames]
+    frames[0].save(dest/'replay.gif',save_all=True,append_images=frames[1:],duration=[450]*23+[1800],loop=0,optimize=True)
     template=(Path(__file__).with_name('replay.html')).read_text();data={'backend':backend,'rows':rows,'manifest':{k:manifest.get(k) for k in ['source_hash','git_commit','model']}}
     (dest/'replay.html').write_text(template.replace('/* DATA_SLOT */{}',json.dumps(data).replace('</','<\\/')))
     (dest/'visualization-provenance.json').write_text(json.dumps({'input':str(out/'episodes.jsonl'),'source_hash':manifest.get('source_hash'),'backend':backend,'gif_world':world,'gif_task':task,'frames':24,'width':1600,'height':1000,'event_markers':EVENTS,'history':'measured round snapshots, no interpolation'},indent=2))

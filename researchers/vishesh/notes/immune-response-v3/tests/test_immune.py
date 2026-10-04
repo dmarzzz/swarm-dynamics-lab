@@ -62,6 +62,15 @@ class Test(unittest.TestCase):
             def complete(self,*args):raise PolicyError('injected')
         rows=m.run_episode(6500,1,'shared_evidence',1,m.ARMS,{},Broken())
         self.assertTrue(all(not r['validity']['ok'] and r['evaluation']['utility']==0 and r['evaluation']['recovery_round'] is None for r in rows))
+    def test_unknown_arms_fail_closed(self):
+        with self.assertRaises(ValueError):m.run_episode(6500,1,'shared_evidence',1,['CLEAN','unknown'],{},ScriptedPolicy())
+    def test_legacy_duplicate_response_is_rejected(self):
+        a=m.record('version:x',1);b=m.record('version:x',2,2)
+        class Legacy:
+            def complete(self,r,f):return {'claims':[a['id'],b['id']]}
+        memory={'version:x':a};before=copy.deepcopy(memory)
+        with self.assertRaises(PolicyError):m.act(Legacy(),memory,[b],'specialist',[])
+        self.assertEqual(memory,before)
     def test_target_coverage(self):
         frequencies=[]
         for task in range(6500,6516):

@@ -1,0 +1,5059 @@
+{
+  "assigned": [
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6600,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6601,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6602,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6603,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6604,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6605,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6606,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6607,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6608,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6609,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6610,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6611,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6612,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6613,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6614,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "shared_evidence"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_replay"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "no_incident"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "benign_learning"
+    },
+    {
+      "arm": "N",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q00",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q01",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q10F",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11R",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "Q11S",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    },
+    {
+      "arm": "CLEAN",
+      "dose": 1,
+      "seed": 1,
+      "task_id": 6615,
+      "world": "missing_lineage"
+    }
+  ],
+  "backend": "scripted",
+  "config": {
+    "n_agents": 8,
+    "rounds": 24
+  },
+  "design_sha256": "649cd64bd71e16976903fac35ff3c79782f33c9466815fcbf081a29810936bd6",
+  "git_commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+  "model": "scripted-observation-policy-v1",
+  "model_backed": false,
+  "protocol_sha256": "7222587e67f4ec265a9cad56863982bede7a821a06ca879573b60bf0a6e368df",
+  "python": "3.14.5",
+  "source_hash": "5409a091baebf14e716ad3c88be562fb821ba10764c06099d25dee59e799c8b9",
+  "stage": "engineering",
+  "started_unix": 1791077916.822227,
+  "study": "immune-response-v3"
+}
