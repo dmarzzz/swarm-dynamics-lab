@@ -3450,4 +3450,38 @@ artifacts:
           - https://github.com/texttron/BrowseComp-Plus/blob/046949032b0328319cc9a02663a759ec601d9402/scripts_evaluation/evaluate_run.py
           - https://hover-nlp.github.io/
         commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+  - id: shadow-wild-timeline
+    category: content
+    type: figure
+    title: Public incident timeline with undated SwarmTraces census
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/shadow-wild-timeline/shadow-wild-timeline-v1.png
+        built_at: '2026-10-04T15:51:01Z'
+        by: codex
+        prompt: Unified incident timeline across transluce daily counts, wiki events per day, SwarmTraces counts by kind,
+          METR report dates if in data. One clean figure + table.
+        ingredients:
+          - researchers/shadow/notes/wild-timeline/timeline.py
+          - researchers/shadow/notes/wild-timeline/daily.csv
+          - researchers/shadow/notes/wild-timeline/summary.json
+          - researchers/shadow/notes/wild-timeline/validation.json
+        commit: 4caec65d97986c8afc1536474ae804dd8cb526d4-dirty
+  - id: shadow-wild-shared-domains
+    category: content
+    type: figure
+    title: Transluce and wiki shared target-domain daily counts
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/shadow-wild-shared-domains/shadow-wild-shared-domains-v1.png
+        built_at: '2026-10-04T15:51:14Z'
+        by: codex
+        prompt: Domain overlap between transluce data_source and wiki page families.
+        ingredients:
+          - researchers/shadow/notes/wild-timeline/timeline.py
+          - researchers/shadow/notes/wild-timeline/shared_sources.csv
+          - researchers/shadow/notes/wild-timeline/validation.json
+        commit: 4caec65d97986c8afc1536474ae804dd8cb526d4-dirty
 requires: '1.2'
