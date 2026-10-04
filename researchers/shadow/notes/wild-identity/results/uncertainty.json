@@ -1,0 +1,62 @@
+{
+  "ci_interpretation": "Conditional model-based 95% percentile CIs assume exchangeable independent pages. Within-page dependence preserved; cross-page dependence not modeled. No guaranteed coverage for unseen agents, other archives or causal effects.",
+  "conditional_95pct_ci": {
+    "difference": [
+      0.14950076883274346,
+      0.27479263506919754
+    ],
+    "fresh_fraction": [
+      0.14893772172948955,
+      0.16780476468994346
+    ],
+    "ratio": [
+      1.9630139052701225,
+      2.7504150217191303
+    ],
+    "snapshot_fraction": [
+      0.3059512873441637,
+      0.43452913716181935
+    ]
+  },
+  "design": "Post-hoc saved-data report, paired page-cluster bootstrap",
+  "input_sha256": {
+    "revisions": "9c2a4ef0ccbfb5b42be8422342a6bd3a389a4a047bc891e3148354dd65b63c96",
+    "script": "0bc35312a7f6c84e0ae06c15ea02f1b066109ffb792a149d83f83f03179b8746",
+    "summary": "f51844d60ac52a4efe423365c44550f29d54923e1a23f92dac8974e695b21c91"
+  },
+  "leave_one_out_rejected": 0,
+  "leave_one_page_out_range": {
+    "difference": [
+      0.2054380664652568,
+      0.25244170699516055
+    ],
+    "fresh_fraction": [
+      0.15661150973788257,
+      0.15952485701715793
+    ],
+    "ratio": [
+      2.2907407407407407,
+      2.5824600110314395
+    ],
+    "snapshot_fraction": [
+      0.3646009873996021,
+      0.4119665640123185
+    ]
+  },
+  "pages": 4027,
+  "point": {
+    "difference": 0.21187554776511833,
+    "fresh_fraction": 0.15804849547180835,
+    "ratio": 2.340573012939002,
+    "snapshot_fraction": 0.3699240432369267
+  },
+  "replicates_rejected": 0,
+  "replicates_requested": 2000,
+  "replicates_valid": 2000,
+  "seed": 20261004,
+  "totals": {
+    "attributed": 13692,
+    "fresh": 2164,
+    "snapshot": 5065
+  }
+}
