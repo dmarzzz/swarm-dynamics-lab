@@ -3,7 +3,7 @@ id: telephone-t1-offline-iteration
 type: task
 title: Telephone T1 offline instrument and case iteration
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-village-fit
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-village-fit
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T19:09Z
-updated: 2026-10-04T19:09Z
+updated: 2026-10-04T19:15Z
+outputs:
+- researchers/vishesh/notes/telephone/t1/README.md
+- researchers/vishesh/notes/telephone/t1/POST-MORTEM.md
 ---
 
 ## Goal
