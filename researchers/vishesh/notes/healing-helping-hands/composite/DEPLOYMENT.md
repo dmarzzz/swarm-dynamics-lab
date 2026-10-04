@@ -9,3 +9,7 @@ Initial prospective plan committed before implementation, published and register
 ## Exact next action
 
 Resolve allocation, verify current claim/workload and model runtime, record source/dependency and current budget evidence, register frozen instrument commit, then create a current admission.json with the actual plan URL/hash, source commit, host/claim/expiry, budget and verification timestamps. Do not fabricate affirmative receipt fields. Run worker.py --stage S0 --admission <verified receipt> --out <fresh durable C1-S0 directory>, with the local relay.py --stage S0 using the original credential file and ledger. Run S1 only after a passing full-composite/strong-control screen, its audited post-mortem and a separately committed S1 assessment. No automatic stage advancement.
+
+## Published instrument checkpoint
+
+Tested source and current registered plan: 2a1453a3f4befaf86006dcb04bdfe6aafdb3c8de. This publication does not admit execution while the allocation gate remains blocked. No automatic/background run is queued.

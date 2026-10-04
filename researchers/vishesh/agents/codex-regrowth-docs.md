@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: blocked
 task: healing-qwen-jev
-doing: Registered Qwen plus Jev C1; instrument tests pass; resolving exclusive fleet allocation before launch
+doing: C1 composite built and registered; waiting for exclusive fleet release or explicit Mac exception
 updated: 2026-10-04T04:21Z
 ---
 
