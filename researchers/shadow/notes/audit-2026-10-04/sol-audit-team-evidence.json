@@ -1,0 +1,1542 @@
+{
+  "commit_counts_by_author_alias": {
+    "2026-10-03T18:00:00Z": {
+      "bot": 728,
+      "dmarz": 1004,
+      "other": 340,
+      "vishesh": 918
+    },
+    "2026-10-04T03:40:00Z": {
+      "bot": 352,
+      "dmarz": 488,
+      "other": 115,
+      "vishesh": 579
+    }
+  },
+  "hub_asof_utc": "2026-10-04T15:51:18.102314+00:00",
+  "hub_sha256": "ae51d90f438ecd82ee08c4396a3bc456153fe7f2bfa3dd67efe6d0b718446595",
+  "offline_validator_probes": {
+    "ADD-T-01": {
+      "illegal_labels_accepted": true
+    },
+    "EP-01": {
+      "illegal_action_accepted": true,
+      "malformed_plan_accepted": true,
+      "memory_cleared": true
+    }
+  },
+  "ready_inventory": [
+    {
+      "hub_runs": [],
+      "path": "researchers/dmarz/notes/false-alarm-cascade/READY.yaml",
+      "per_model_design": {
+        "claude-opus-5": {
+          "input_usd_per_million": 5,
+          "output_usd_per_million": 25
+        },
+        "claude-opus-5-5": {
+          "input_usd_per_million": 4,
+          "output_usd_per_million": 20
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 32400,
+        "contract": "ready-chain-v1",
+        "effort": "medium",
+        "experiment": "false-alarm-cascade",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 24,
+          "S0": 0,
+          "S1": 3600
+        },
+        "max_calls_total": 3625,
+        "model": "claude-opus-5-5",
+        "model_ladder": [
+          "claude-opus-5-5",
+          "claude-opus-5"
+        ],
+        "selftests": 41,
+        "source_hash": "7803e3b8b8cbf93ddf99cdd7151e49ead8d440d0fba8b69f663e9f6d429ac599",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "false-alarm-cascade",
+        "usd_cap": 450
+      }
+    },
+    {
+      "hub_runs": [
+        {
+          "calls": 576,
+          "cost_usd": 0.025057,
+          "ended": 1791117897.387294,
+          "episodes": 576,
+          "failed": 0,
+          "id": "memory-handoff-qwen/5a6fec17",
+          "invalid": 0,
+          "message": "S1: 576/576 valid, 0 failed (limit 6), 0 not started, 576 calls, USD 0.0251",
+          "model": null,
+          "not_started": null,
+          "stage": "S1",
+          "status": "done"
+        },
+        {
+          "calls": 23,
+          "cost_usd": 0.00097,
+          "ended": 1791117663.6773734,
+          "episodes": 23,
+          "failed": 0,
+          "id": "memory-handoff-qwen/43926309",
+          "invalid": 0,
+          "message": "Q0: 23/23 valid, 0 failed, 0 not started, 23 calls, USD 0.0010",
+          "model": null,
+          "not_started": null,
+          "stage": "Q0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 7.2e-05,
+          "ended": 1791117646.9056578,
+          "episodes": 1,
+          "failed": 0,
+          "id": "memory-handoff-qwen/94e45249",
+          "invalid": 0,
+          "message": "P0: 1/1 valid, 0 failed, 0 not started, 1 calls, USD 0.0001; probe response: model qwen/qwen3.7-flash, provider Alibaba, id gen-1791117643-nC9iuacNW6rIPd4GroOw, finish stop, reasoning tokens 0",
+          "model": null,
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791117642.8920178,
+          "episodes": 192,
+          "failed": 0,
+          "id": "memory-handoff-qwen/6e5badb7",
+          "invalid": 0,
+          "message": "S0: 192/192 valid, 0 failed, 0 not started, 0 calls, USD 0.0000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        },
+        {
+          "calls": 23,
+          "cost_usd": 0.000647,
+          "ended": 1791114557.834154,
+          "episodes": 23,
+          "failed": 0,
+          "id": "memory-handoff-qwen/908c3129",
+          "invalid": 0,
+          "message": "Q0: 23/23 valid, 0 failed, 0 not started, 23 calls, USD 0.0006; qualification_failed; rows preserved",
+          "model": null,
+          "not_started": null,
+          "stage": "Q0",
+          "status": "failed"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 3.7e-05,
+          "ended": 1791114543.0534005,
+          "episodes": 1,
+          "failed": 0,
+          "id": "memory-handoff-qwen/bc8748ab",
+          "invalid": 0,
+          "message": "P0: 1/1 valid, 0 failed, 0 not started, 1 calls, USD 0.0000; probe response: model qwen/qwen3.7-flash, provider Alibaba, id gen-1791114540-0YhJsfYgbtDOEWWqete7, finish stop, reasoning tokens 0",
+          "model": null,
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791114539.8751068,
+          "episodes": 192,
+          "failed": 0,
+          "id": "memory-handoff-qwen/95d12801",
+          "invalid": 0,
+          "message": "S0: 192/192 valid, 0 failed, 0 not started, 0 calls, USD 0.0000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        }
+      ],
+      "path": "researchers/dmarz/notes/memory-handoff-qwen/READY.yaml",
+      "per_model_design": {
+        "gpt-6-luna": {
+          "answer_format": 1,
+          "attempt": "003",
+          "budget": {
+            "aggregate_usd": 5,
+            "max_output_tokens": 1500,
+            "prices": {
+              "cache_write": 0.125,
+              "cached_input": 0.01,
+              "input": 0.1,
+              "output": 0.5
+            },
+            "retry": {
+              "backoff_seconds": [
+                2,
+                6
+              ],
+              "retry_after_cap_seconds": 20,
+              "retryable_http_status": [
+                429,
+                500,
+                502,
+                503,
+                504
+              ],
+              "transport_retries": 2
+            }
+          },
+          "provider": "openai",
+          "qualification_set": "a",
+          "reasoning": "low",
+          "request_template": {
+            "max_completion_tokens": 1500,
+            "model": "gpt-6-luna",
+            "reasoning_effort": "low",
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "tag": "-gpt-6-luna"
+        },
+        "qwen/qwen3.7-flash": {
+          "answer_format": 2,
+          "attempt": "002",
+          "provider": "openrouter",
+          "qualification_set": "b",
+          "reasoning": "disabled",
+          "tag": ""
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 7800,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "memory-handoff-qwen",
+        "ledger": "fresh",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 23,
+          "S0": 0,
+          "S1": 576
+        },
+        "max_calls_total": 600,
+        "model": "qwen/qwen3.7-flash",
+        "provider": "openrouter",
+        "review": "reviews/chain-002-pre.md",
+        "selftests": 88,
+        "source_hash": "10f51d2c5d2023fc82df57b2c26173c32aceae1fca4e443971b2686d9a019689",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "memory-handoff-qwen",
+        "usd_cap": 2
+      }
+    },
+    {
+      "hub_runs": [],
+      "path": "researchers/dmarz/notes/quota-splitting/READY.yaml",
+      "per_model_design": {
+        "claude-opus-5": {
+          "input_usd_per_million": 5,
+          "output_usd_per_million": 25
+        },
+        "claude-opus-5-5": {
+          "input_usd_per_million": 4,
+          "output_usd_per_million": 20
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 28800,
+        "contract": "ready-chain-v1",
+        "effort": "medium",
+        "experiment": "quota-splitting",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 96,
+          "S0": 0,
+          "S1": 3552
+        },
+        "max_calls_total": 3649,
+        "model": "claude-opus-5-5",
+        "model_ladder": [
+          "claude-opus-5-5",
+          "claude-opus-5"
+        ],
+        "selftests": 76,
+        "source_hash": "09c276486071c9c020de9e802ac1428ff8760362a2e43b896544a325e46298b7",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "quota-splitting",
+        "usd_cap": 270
+      }
+    },
+    {
+      "hub_runs": [
+        {
+          "calls": 192,
+          "cost_usd": 1.499078,
+          "ended": 1791120700.443243,
+          "episodes": 192,
+          "failed": null,
+          "id": "sybil-rules-180/d1-002-gpt-6-sol",
+          "invalid": 0,
+          "message": "D1: 192/192 accepted, 0 forced null, 192 model calls, USD 1.4991",
+          "model": "gpt-6-sol",
+          "not_started": null,
+          "stage": "D1",
+          "status": "done"
+        },
+        {
+          "calls": 7560,
+          "cost_usd": 51.266275,
+          "ended": 1791120557.3854299,
+          "episodes": 7560,
+          "failed": null,
+          "id": "sybil-rules-180/s1-002-gpt-6-sol",
+          "invalid": 6,
+          "message": "S1: 7554/7560 accepted, 6 forced null, 7560 model calls, USD 51.2663",
+          "model": "gpt-6-sol",
+          "not_started": null,
+          "stage": "S1",
+          "status": "done"
+        },
+        {
+          "calls": 180,
+          "cost_usd": 1.615645,
+          "ended": 1791118048.698757,
+          "episodes": 180,
+          "failed": null,
+          "id": "sybil-rules-180/x0-002-gpt-6-sol",
+          "invalid": 0,
+          "message": "X0: 180/180 accepted, 0 forced null, 180 model calls, USD 1.6156",
+          "model": "gpt-6-sol",
+          "not_started": null,
+          "stage": "X0",
+          "status": "done"
+        },
+        {
+          "calls": 185,
+          "cost_usd": 1.021149,
+          "ended": 1791117989.5457914,
+          "episodes": 185,
+          "failed": null,
+          "id": "sybil-rules-180/q0-002-gpt-6-sol",
+          "invalid": 0,
+          "message": "Q0: 185/185 accepted, 0 forced null, 185 model calls, USD 1.0211",
+          "model": "gpt-6-sol",
+          "not_started": null,
+          "stage": "Q0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 0.004149,
+          "ended": 1791117869.5487485,
+          "episodes": 1,
+          "failed": null,
+          "id": "sybil-rules-180/p0-002-gpt-6-sol",
+          "invalid": 0,
+          "message": "P0: 1/1 accepted, 0 forced null, 1 model calls, USD 0.0041",
+          "model": "gpt-6-sol",
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791117859.258654,
+          "episodes": 8118,
+          "failed": null,
+          "id": "sybil-rules-180/s0-002-gpt-6-sol",
+          "invalid": 0,
+          "message": "S0: 8118/8118 accepted, 0 forced null, 0 model calls, USD 0.0000",
+          "model": "gpt-6-sol",
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        },
+        {
+          "calls": 185,
+          "cost_usd": 0.013385,
+          "ended": 1791116609.7034082,
+          "episodes": 185,
+          "failed": null,
+          "id": "sybil-rules-180/q0-002",
+          "invalid": 11,
+          "message": "Q0: 174/185 accepted, 11 forced null, 185 model calls, USD 0.0134; stopped: gate_failed",
+          "model": "qwen/qwen3.7-flash",
+          "not_started": null,
+          "stage": "Q0",
+          "status": "failed"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 4.5e-05,
+          "ended": 1791116454.1904407,
+          "episodes": 1,
+          "failed": null,
+          "id": "sybil-rules-180/p0-002",
+          "invalid": 0,
+          "message": "P0: 1/1 accepted, 0 forced null, 1 model calls, USD 0.0000",
+          "model": "qwen/qwen3.7-flash",
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791116446.6833446,
+          "episodes": 8118,
+          "failed": null,
+          "id": "sybil-rules-180/s0-002",
+          "invalid": 0,
+          "message": "S0: 8118/8118 accepted, 0 forced null, 0 model calls, USD 0.0000",
+          "model": "qwen/qwen3.7-flash",
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 4.4e-05,
+          "ended": 1791115049.102667,
+          "episodes": 1,
+          "failed": null,
+          "id": "sybil-rules-180/p0-001",
+          "invalid": 1,
+          "message": "P0: 0/1 accepted, 1 forced null, 1 model calls, USD 0.0000; stopped: gate_failed",
+          "model": null,
+          "not_started": null,
+          "stage": "P0",
+          "status": "failed"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791115041.7631388,
+          "episodes": 8118,
+          "failed": null,
+          "id": "sybil-rules-180/s0-001",
+          "invalid": 0,
+          "message": "S0: 8118/8118 accepted, 0 forced null, 0 model calls, USD 0.0000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        }
+      ],
+      "path": "researchers/dmarz/notes/sybil-rules-180/READY.yaml",
+      "per_model_design": {
+        "gpt-6-sol": {
+          "api": "openai",
+          "budget": {
+            "in_flight_per_host": 3,
+            "in_flight_per_host_max": 3,
+            "max_output_tokens": 2000,
+            "prices": {
+              "cache_write": 2.5,
+              "cached_input": 0.2,
+              "input": 2.0,
+              "output": 10.0
+            },
+            "reservation_margin": 1,
+            "retry": {
+              "backoff_seconds": [
+                2,
+                6
+              ],
+              "retry_after_cap_seconds": 20,
+              "retryable_http_status": [
+                429,
+                500,
+                502,
+                503,
+                504
+              ],
+              "transport_retries": 2
+            }
+          },
+          "canonical_model": "gpt-6-sol",
+          "carried_from_attempt_001": {},
+          "fixtures": {
+            "ordinary_markets": [
+              318660,
+              318661,
+              318662,
+              318663,
+              318664,
+              318665
+            ],
+            "probe_first_market_id": 318640,
+            "smoke_markets": [
+              318670,
+              318671,
+              318672,
+              318673,
+              318674,
+              318675
+            ]
+          },
+          "request_template": {
+            "max_completion_tokens": 2000,
+            "model": "gpt-6-sol",
+            "reasoning_effort": "low",
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "status": "ready",
+          "tag": "gpt-6-sol",
+          "usd_cap": 150
+        },
+        "qwen/qwen3.7-flash": {
+          "api": "openrouter",
+          "carried_from_attempt_001": {
+            "P0": 1
+          },
+          "status": "ready",
+          "tag": "",
+          "usd_cap": 5
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 32400,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "sybil-rules-180",
+        "hosts": 3,
+        "max_calls": {
+          "D1": 192,
+          "P0": 1,
+          "Q0": 185,
+          "S0": 0,
+          "S1": 7560,
+          "X0": 180
+        },
+        "max_calls_total": 8478,
+        "max_reissued_calls": 360,
+        "model": "qwen/qwen3.7-flash",
+        "model_ladder": [
+          "qwen/qwen3.7-flash",
+          "gpt-6-sol"
+        ],
+        "provider": "openrouter",
+        "providers": {
+          "gpt-6-sol": "openai",
+          "qwen/qwen3.7-flash": "openrouter"
+        },
+        "review": "reviews/chain-003-pre.md",
+        "selftests": 89,
+        "source_hash": "17665ae01f3291848e57cd54b745f75afc5249eb8a3edc6543f9c7d94aa3810c",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "X0",
+          "S1",
+          "D1"
+        ],
+        "study": "sybil-rules-180",
+        "topology": "coordinator-workers",
+        "usd_cap": 150
+      }
+    },
+    {
+      "hub_runs": [
+        {
+          "calls": 1440,
+          "cost_usd": 136.49464,
+          "ended": 1791107971.0072188,
+          "episodes": 1440,
+          "failed": 0,
+          "id": "sybil-scarcity-opus/ba41e101",
+          "invalid": 0,
+          "message": "S1: 1440/1440 valid; 1440 model calls, USD 136.4946",
+          "model": null,
+          "not_started": 0,
+          "stage": "S1",
+          "status": "done"
+        },
+        {
+          "calls": 48,
+          "cost_usd": 4.555368,
+          "ended": 1791105606.3793495,
+          "episodes": 48,
+          "failed": 0,
+          "id": "sybil-scarcity-opus/089fc5b8",
+          "invalid": 0,
+          "message": "Q0: 48/48 valid; 48 model calls, USD 4.5554",
+          "model": null,
+          "not_started": 0,
+          "stage": "Q0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 0.094908,
+          "ended": 1791105521.0046382,
+          "episodes": 1,
+          "failed": 0,
+          "id": "sybil-scarcity-opus/135ef2c5",
+          "invalid": 0,
+          "message": "P0: 1/1 valid; 1 model calls, USD 0.0949",
+          "model": null,
+          "not_started": 0,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791105515.6723032,
+          "episodes": 168,
+          "failed": 0,
+          "id": "sybil-scarcity-opus/e536bb70",
+          "invalid": 0,
+          "message": "S0: 168/168 valid; 0 model calls, USD 0.0000",
+          "model": null,
+          "not_started": 0,
+          "stage": "S0",
+          "status": "done"
+        }
+      ],
+      "path": "researchers/dmarz/notes/sybil-scarcity-opus/READY.yaml",
+      "per_model_design": null,
+      "ready": {
+        "chain_timeout_seconds": 25200,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "sybil-scarcity-opus",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 48,
+          "S0": 0,
+          "S1": 1440
+        },
+        "max_calls_total": 1489,
+        "model": "claude-opus-5-5",
+        "selftests": 33,
+        "source_hash": "b37af99708c5f37740de3b21c7e82d5f9292584b236f0fcf30e7619e2efc58be",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "sybil-scarcity-opus",
+        "usd_cap": 220
+      }
+    },
+    {
+      "hub_runs": [
+        {
+          "calls": 1,
+          "cost_usd": 0.0,
+          "ended": 1791114632.4686925,
+          "episodes": 1,
+          "failed": 1,
+          "id": "sybil-scarcity-synth/7c26a1c6",
+          "invalid": 1,
+          "message": "P0: invalid_rows:http_429; 0/1 valid, 1 failed, 0 not started",
+          "model": "claude-opus-5",
+          "not_started": 0,
+          "stage": "P0",
+          "status": "failed"
+        },
+        {
+          "calls": 304,
+          "cost_usd": 28.331772,
+          "ended": 1791114288.2493467,
+          "episodes": 960,
+          "failed": 12,
+          "id": "sybil-scarcity-synth/d955e1b4",
+          "invalid": 668,
+          "message": "S1: failed_calls_exceed_limit:12; 292/960 valid, 12 failed, 656 not started",
+          "model": "claude-opus-5-5",
+          "not_started": 656,
+          "stage": "S1",
+          "status": "failed"
+        },
+        {
+          "calls": 48,
+          "cost_usd": 4.625896,
+          "ended": 1791113510.109064,
+          "episodes": 48,
+          "failed": 0,
+          "id": "sybil-scarcity-synth/3e594c13",
+          "invalid": 0,
+          "message": "Q0: 48/48 valid, 0 failed, 0 not started; 48 model calls in this run, USD 4.6259",
+          "model": "claude-opus-5-5",
+          "not_started": 0,
+          "stage": "Q0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 0.094904,
+          "ended": 1791113408.2160523,
+          "episodes": 1,
+          "failed": 0,
+          "id": "sybil-scarcity-synth/03aad727",
+          "invalid": 0,
+          "message": "P0: 1/1 valid, 0 failed, 0 not started; 1 model calls in this run, USD 0.0949",
+          "model": "claude-opus-5-5",
+          "not_started": 0,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791113402.8222857,
+          "episodes": 128,
+          "failed": 0,
+          "id": "sybil-scarcity-synth/e1ada5ff",
+          "invalid": 0,
+          "message": "S0: 128/128 valid, 0 failed, 0 not started; 0 model calls in this run, USD 0.0000",
+          "model": "scripted",
+          "not_started": 0,
+          "stage": "S0",
+          "status": "done"
+        }
+      ],
+      "path": "researchers/dmarz/notes/sybil-scarcity-synth/READY.yaml",
+      "per_model_design": {
+        "claude-opus-5": {
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "input_usd_per_million": 5,
+          "output_usd_per_million": 25,
+          "thinking": "on by default; the request never carries a thinking field"
+        },
+        "claude-opus-5-5": {
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "input_usd_per_million": 4,
+          "output_usd_per_million": 20,
+          "thinking": "always on; the request never carries a thinking field"
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 32400,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "sybil-scarcity-synth",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 48,
+          "S0": 0,
+          "S1": 960
+        },
+        "max_calls_total": 1009,
+        "model": "claude-opus-5-5",
+        "model_ladder": [
+          "claude-opus-5-5",
+          "claude-opus-5"
+        ],
+        "selftests": 39,
+        "source_hash": "b75d7b372e7e9780d79ab7b358f175752225f881e1dba87b8d6024f0a8129725",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "sybil-scarcity-synth",
+        "usd_cap": 240
+      }
+    },
+    {
+      "hub_runs": [],
+      "path": "researchers/dmarz/notes/sybil-scarcity-xmodel/READY.yaml",
+      "per_model_design": {
+        "gpt-6-sol": {
+          "api": "openai",
+          "ready": false,
+          "request": {
+            "max_completion_tokens": 2000,
+            "reasoning_effort": "low",
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "tag": "sol"
+        },
+        "qwen/qwen3.7-flash": {
+          "api": "openrouter",
+          "budget": {
+            "aggregate_usd": 4,
+            "input_usd_per_million": 0.03,
+            "max_input_tokens": 31000,
+            "max_output_tokens": 1000,
+            "output_usd_per_million": 0.13
+          },
+          "canonical_model": "qwen/qwen3.7-flash-20260727",
+          "provider": "alibaba",
+          "request_template": {
+            "max_tokens": 1000,
+            "model": "qwen/qwen3.7-flash",
+            "provider": {
+              "allow_fallbacks": false,
+              "only": [
+                "alibaba"
+              ],
+              "require_parameters": true
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "tag": "qwen"
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 18000,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "sybil-scarcity-xmodel",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 48,
+          "S0": 0,
+          "S1": 1440
+        },
+        "max_calls_total": 1489,
+        "model": "qwen/qwen3.7-flash",
+        "model_ladder": [
+          "qwen/qwen3.7-flash",
+          "gpt-6-sol"
+        ],
+        "provider": "openrouter",
+        "providers": {
+          "gpt-6-sol": "openai",
+          "qwen/qwen3.7-flash": "openrouter"
+        },
+        "review": "reviews/chain-001-pre.md",
+        "selftests": 65,
+        "source_hash": "06cbd97e1804d7ca6c355bad8ce85e2ab1e5f7caec9f17876c9791ec4eeee1c4",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "sybil-scarcity-xmodel",
+        "usd_cap": 4
+      }
+    },
+    {
+      "hub_runs": [
+        {
+          "calls": 2688,
+          "cost_usd": 44.310604,
+          "ended": 1791111015.0849142,
+          "episodes": 2688,
+          "failed": null,
+          "id": "sybil-split-opus/3ed4a6e8",
+          "invalid": 0,
+          "message": "S1: 2688/2688 valid, 2688 calls, $44.3106",
+          "model": null,
+          "not_started": null,
+          "stage": "S1",
+          "status": "done"
+        },
+        {
+          "calls": 60,
+          "cost_usd": 1.056736,
+          "ended": 1791108886.9376376,
+          "episodes": 60,
+          "failed": null,
+          "id": "sybil-split-opus/afc87621",
+          "invalid": 0,
+          "message": "Q0: 60/60 valid, 60 calls, $1.0567",
+          "model": null,
+          "not_started": null,
+          "stage": "Q0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 0.01858,
+          "ended": 1791108827.8732064,
+          "episodes": 1,
+          "failed": null,
+          "id": "sybil-split-opus/db5ea321",
+          "invalid": 0,
+          "message": "P0: 1/1 valid, 1 calls, $0.0186",
+          "model": null,
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0,
+          "ended": 1791108822.7364962,
+          "episodes": 1853,
+          "failed": null,
+          "id": "sybil-split-opus/17d6225d",
+          "invalid": 0,
+          "message": "S0: 1853/1853 valid, 0 calls, $0.0000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        }
+      ],
+      "path": "researchers/dmarz/notes/sybil-split-opus/READY.yaml",
+      "per_model_design": null,
+      "ready": {
+        "chain_timeout_seconds": 28800,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "sybil-split-opus",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 60,
+          "S0": 0,
+          "S1": 2688
+        },
+        "max_calls_total": 2749,
+        "model": "claude-opus-5-5",
+        "selftests": 55,
+        "source_hash": "95889beafbd40142ea68c52b4a00e2b1dbbbc10794f967cba3e00ca1767f3089",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "sybil-split-opus",
+        "usd_cap": 190
+      }
+    },
+    {
+      "hub_runs": [],
+      "path": "researchers/dmarz/notes/sybil-split-xmodel/READY.yaml",
+      "per_model_design": {
+        "gpt-6-sol": {
+          "backend": "openai",
+          "budget": {
+            "aggregate_usd": 90,
+            "input_usd_per_million": 2.0,
+            "max_input_tokens": 31000,
+            "max_output_tokens": 2000,
+            "output_usd_per_million": 10.0,
+            "prices": {
+              "cache_write": 2.5,
+              "cached_input": 0.2,
+              "input": 2.0,
+              "output": 10.0
+            }
+          },
+          "canonical_model": "gpt-6-sol",
+          "provider": "openai",
+          "request_template": {
+            "max_completion_tokens": 2000,
+            "model": "gpt-6-sol",
+            "reasoning_effort": "low",
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "tag": "sol"
+        },
+        "qwen/qwen3.7-flash": {
+          "backend": "openrouter",
+          "budget": {
+            "aggregate_usd": 3,
+            "input_usd_per_million": 0.03,
+            "max_input_tokens": 31000,
+            "max_output_tokens": 1000,
+            "output_usd_per_million": 0.13
+          },
+          "canonical_model": "qwen/qwen3.7-flash-20260727",
+          "provider": "alibaba",
+          "request_template": {
+            "max_tokens": 1000,
+            "model": "qwen/qwen3.7-flash",
+            "provider": {
+              "allow_fallbacks": false,
+              "only": [
+                "alibaba"
+              ],
+              "require_parameters": true
+            },
+            "reasoning": {
+              "enabled": false
+            },
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "tag": "qwen"
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 14400,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "sybil-split-xmodel",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 60,
+          "S0": 0,
+          "S1": 2688
+        },
+        "max_calls_total": 2749,
+        "model": "qwen/qwen3.7-flash",
+        "model_ladder": [
+          "qwen/qwen3.7-flash",
+          "gpt-6-sol"
+        ],
+        "provider": "openrouter",
+        "providers": {
+          "gpt-6-sol": "openai",
+          "qwen/qwen3.7-flash": "openrouter"
+        },
+        "selftests": 97,
+        "source_hash": "ebfb2bc3703cbb5ac882641ca0f71dfb9dfda0ee5436dd1a8b4879dcef97c2cd",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "sybil-split-xmodel",
+        "usd_cap": 90
+      }
+    },
+    {
+      "hub_runs": [
+        {
+          "calls": 504,
+          "cost_usd": 0.20096,
+          "ended": 1791118264.6245117,
+          "episodes": 504,
+          "failed": 0,
+          "id": "trust-credit-qwen/f874bc50",
+          "invalid": 0,
+          "message": "S1: 504/504 valid, 0 failed (limit 6), 504 calls, $0.2010",
+          "model": "gpt-6-luna",
+          "not_started": null,
+          "stage": "S1",
+          "status": "done"
+        },
+        {
+          "calls": 23,
+          "cost_usd": 0.008031,
+          "ended": 1791117889.0387547,
+          "episodes": 23,
+          "failed": 0,
+          "id": "trust-credit-qwen/bf31bec5",
+          "invalid": 0,
+          "message": "Q0: 23/23 valid, 0 failed, 23 calls, $0.0080",
+          "model": "gpt-6-luna",
+          "not_started": null,
+          "stage": "Q0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 0.000338,
+          "ended": 1791117872.2463799,
+          "episodes": 1,
+          "failed": 0,
+          "id": "trust-credit-qwen/26b9409b",
+          "invalid": 0,
+          "message": "P0: 1/1 valid, 0 failed, 1 calls, $0.0003; probe response model=gpt-6-luna provider=None id=chatcmpl-EVFrp3ajm3igV5RsJgcRTB4peJFpE finish=stop reasoning_tokens=0 input_tokens=2572 output_tokens=33 provider_reported_usd=None computed_usd=0.000337925 request_bytes=5846 error=None http_status=None",
+          "model": "gpt-6-luna",
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0,
+          "ended": 1791117867.9205382,
+          "episodes": 216,
+          "failed": 0,
+          "id": "trust-credit-qwen/2ad24f38",
+          "invalid": 0,
+          "message": "S0: 216/216 valid, 0 failed, 0 calls, $0.0000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        },
+        {
+          "calls": 504,
+          "cost_usd": 0.049649,
+          "ended": 1791113859.828012,
+          "episodes": 504,
+          "failed": 0,
+          "id": "trust-credit-qwen/d9c433dd",
+          "invalid": 0,
+          "message": "S1: 504/504 valid, 0 failed (limit 6), 504 calls, $0.0496",
+          "model": null,
+          "not_started": null,
+          "stage": "S1",
+          "status": "done"
+        },
+        {
+          "calls": 23,
+          "cost_usd": 0.002298,
+          "ended": 1791113645.0229666,
+          "episodes": 23,
+          "failed": 0,
+          "id": "trust-credit-qwen/f65a2ee6",
+          "invalid": 0,
+          "message": "Q0: 23/23 valid, 0 failed, 23 calls, $0.0023",
+          "model": null,
+          "not_started": null,
+          "stage": "Q0",
+          "status": "done"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 0.0001,
+          "ended": 1791113629.3353462,
+          "episodes": 1,
+          "failed": 0,
+          "id": "trust-credit-qwen/135ea6a1",
+          "invalid": 0,
+          "message": "P0: 1/1 valid, 0 failed, 1 calls, $0.0001; probe response model=qwen/qwen3.7-flash provider=Alibaba id=gen-1791113626-B6dzWs4aSM6zY8VOJP3X finish=stop reasoning_tokens=0 input_tokens=3072 output_tokens=57 provider_reported_usd=9.957e-05 request_bytes=5938 error=None http_status=None",
+          "model": null,
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0,
+          "ended": 1791113625.4433868,
+          "episodes": 216,
+          "failed": 0,
+          "id": "trust-credit-qwen/81f7ffe1",
+          "invalid": 0,
+          "message": "S0: 216/216 valid, 0 failed, 0 calls, $0.0000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        }
+      ],
+      "path": "researchers/dmarz/notes/trust-credit-qwen/READY.yaml",
+      "per_model_design": null,
+      "ready": {
+        "chain_timeout_seconds": 7200,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "trust-credit-qwen",
+        "ledger": "fresh",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 23,
+          "S0": 0,
+          "S1": 504
+        },
+        "max_calls_total": 528,
+        "model": "gpt-6-luna",
+        "provider": "openai",
+        "review": "reviews/chain-002-pre.md",
+        "selftests": 71,
+        "source_hash": "5155d2c6ec89a232db0c46bd025f2dfba5759991cac1b0c6a27b806d916f4b84",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "trust-credit-qwen",
+        "usd_cap": 5
+      }
+    },
+    {
+      "hub_runs": [
+        {
+          "calls": 23,
+          "cost_usd": 0.000646,
+          "ended": 1791117034.4454505,
+          "episodes": 23,
+          "failed": 0,
+          "id": "verify-cost-qwen/d45666da",
+          "invalid": 0,
+          "message": "Q0: 23/23 units valid, 0 failed, 23 calls, $0.000646; gate_failed; rows preserved",
+          "model": null,
+          "not_started": null,
+          "stage": "Q0",
+          "status": "failed"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 2.8e-05,
+          "ended": 1791117024.809202,
+          "episodes": 1,
+          "failed": 0,
+          "id": "verify-cost-qwen/0a09ff39",
+          "invalid": 0,
+          "message": "P0: 1/1 units valid, 0 failed, 1 calls, $0.000028",
+          "model": null,
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791117022.0654228,
+          "episodes": 144,
+          "failed": 0,
+          "id": "verify-cost-qwen/05d5448d",
+          "invalid": 0,
+          "message": "S0: 144/144 units valid, 0 failed, 0 calls, $0.000000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        },
+        {
+          "calls": 23,
+          "cost_usd": 0.000483,
+          "ended": 1791114156.986735,
+          "episodes": 23,
+          "failed": 0,
+          "id": "verify-cost-qwen/b1555378",
+          "invalid": 0,
+          "message": "Q0: 23/23 units valid, 0 failed, 23 calls, $0.000483; gate_failed; rows preserved",
+          "model": null,
+          "not_started": null,
+          "stage": "Q0",
+          "status": "failed"
+        },
+        {
+          "calls": 1,
+          "cost_usd": 2.1e-05,
+          "ended": 1791114148.6345682,
+          "episodes": 1,
+          "failed": 0,
+          "id": "verify-cost-qwen/205948a0",
+          "invalid": 0,
+          "message": "P0: 1/1 units valid, 0 failed, 1 calls, $0.000021",
+          "model": null,
+          "not_started": null,
+          "stage": "P0",
+          "status": "done"
+        },
+        {
+          "calls": 0,
+          "cost_usd": 0.0,
+          "ended": 1791114145.6471195,
+          "episodes": 144,
+          "failed": 0,
+          "id": "verify-cost-qwen/df815fcd",
+          "invalid": 0,
+          "message": "S0: 144/144 units valid, 0 failed, 0 calls, $0.000000",
+          "model": null,
+          "not_started": null,
+          "stage": "S0",
+          "status": "done"
+        }
+      ],
+      "path": "researchers/dmarz/notes/verify-cost-qwen/READY.yaml",
+      "per_model_design": {
+        "gpt-6-luna": {
+          "answer_schema": "choice_only",
+          "budget": {
+            "aggregate_usd": 5,
+            "max_output_tokens": 1500,
+            "prices": {
+              "cache_write": 0.125,
+              "cached_input": 0.01,
+              "input": 0.1,
+              "output": 0.5
+            },
+            "retry": {
+              "backoff_seconds": [
+                2,
+                6
+              ],
+              "retry_after_cap_seconds": 20,
+              "retryable_http_status": [
+                429,
+                500,
+                502,
+                503,
+                504
+              ],
+              "transport_retries": 2
+            }
+          },
+          "qualification_set": "a",
+          "request_template": {
+            "max_completion_tokens": 1500,
+            "model": "gpt-6-luna",
+            "reasoning_effort": "low",
+            "response_format": {
+              "type": "json_object"
+            }
+          },
+          "tag": "gpt-6-luna"
+        },
+        "qwen/qwen3.7-flash": {
+          "answer_schema": "cost_then_choice",
+          "tag": ""
+        }
+      },
+      "ready": {
+        "chain_timeout_seconds": 7200,
+        "contract": "ready-chain-v1",
+        "effort": "low",
+        "experiment": "verify-cost-qwen",
+        "ledger": "fresh",
+        "max_calls": {
+          "P0": 1,
+          "Q0": 23,
+          "S0": 0,
+          "S1": 576
+        },
+        "max_calls_total": 600,
+        "model": "qwen/qwen3.7-flash",
+        "provider": "openrouter",
+        "review": "reviews/chain-002-pre.md",
+        "selftests": 87,
+        "source_hash": "ef40246d5f7790898ed120146d9c873c7af2fe70bd2aed4ad4c8e6eea0970fd1",
+        "stages": [
+          "S0",
+          "P0",
+          "Q0",
+          "S1"
+        ],
+        "study": "verify-cost-qwen",
+        "usd_cap": 2
+      }
+    }
+  ],
+  "registry": {
+    "confidence_counts": {
+      "0": 48,
+      "1": 52,
+      "2": 16,
+      "None": 2
+    },
+    "rows": 118,
+    "score_2_rows": [
+      {
+        "id": "antsy-v4",
+        "status": "completed_valid_null_adverse"
+      },
+      {
+        "id": "sybil-specialists-api",
+        "status": "completed_exploratory_model_pilot"
+      },
+      {
+        "id": "sybil-scale-api",
+        "status": "completed_exploratory_model_pilot"
+      },
+      {
+        "id": "sybil-scale-sonnet",
+        "status": "complete_valid_replication_result_claim_released"
+      },
+      {
+        "id": "sybil-budget-api",
+        "status": "complete_valid_grid_result_worker_stopped_claim_released"
+      },
+      {
+        "id": "sybil-newcomer-api",
+        "status": "complete_valid_inconclusive_primary_allocation_closed"
+      },
+      {
+        "id": "market-split-api",
+        "status": "complete_valid_exploratory_result"
+      },
+      {
+        "id": "market-split-opus",
+        "status": "complete_valid_exploratory_replication"
+      },
+      {
+        "id": "sybil-newcomer-sonnet",
+        "status": "complete_valid_inconclusive_primary_allocation_closed"
+      },
+      {
+        "id": "sybil-budget-sonnet",
+        "status": "s1_complete_paired_with_haiku"
+      },
+      {
+        "id": "sybil-scale-xl",
+        "status": "s1_incomplete_reported_completion_proposed"
+      },
+      {
+        "id": "discussion-v3-d1-opus",
+        "status": "fresh_gate_passed_model_level_only"
+      },
+      {
+        "id": "sybil-scarcity-opus",
+        "status": "completed_s1_verified"
+      },
+      {
+        "id": "sybil-newcomer-opus",
+        "status": "complete_valid_inconclusive_primary_allocation_closed"
+      },
+      {
+        "id": "sybil-split-opus",
+        "status": "complete_exploratory"
+      },
+      {
+        "id": "sybil-scale-opus",
+        "status": "complete_valid_result_claim_released"
+      }
+    ]
+  },
+  "reviewed_source_comparisons": [
+    {
+      "actual_sha256": "cd8aac0b13e58c08866d6cfde0c06fc81c8147a1f4c1e2a3aea121050b79d932",
+      "availability": "exact reviewed bytes found",
+      "matches_reviewed_bytes": true,
+      "repository_path": "tooling/agent-experiments/scripts/toy_harness.py",
+      "reviewed_sha256": [
+        "cd8aac0b13e58c08866d6cfde0c06fc81c8147a1f4c1e2a3aea121050b79d932"
+      ],
+      "workspace_path": "agent-experiment-guide/scripts/toy_harness.py"
+    },
+    {
+      "actual_sha256": "e3774941d378d963fdf4cb033c240d60663cf4a56b106de4a588bf4f01edb44a",
+      "availability": "exact reviewed bytes found",
+      "matches_reviewed_bytes": true,
+      "repository_path": "tooling/agent-experiments/scripts/validate.py",
+      "reviewed_sha256": [
+        "e3774941d378d963fdf4cb033c240d60663cf4a56b106de4a588bf4f01edb44a"
+      ],
+      "workspace_path": "agent-experiment-guide/scripts/validate.py"
+    },
+    {
+      "actual_sha256": "5722f63f375612e4dc3e2dbab68df5900d9f1cd162c24954633d8366678209b1",
+      "availability": "exact reviewed bytes found",
+      "matches_reviewed_bytes": true,
+      "repository_path": "tooling/avalon-swarm/benchmark.py",
+      "reviewed_sha256": [
+        "5722f63f375612e4dc3e2dbab68df5900d9f1cd162c24954633d8366678209b1"
+      ],
+      "workspace_path": "avalon-swarm/benchmark.py"
+    },
+    {
+      "actual_sha256": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166",
+      "availability": "exact reviewed bytes found",
+      "matches_reviewed_bytes": true,
+      "repository_path": "researchers/vishesh/notes/experiment-documentation/public_plan.py",
+      "reviewed_sha256": [
+        "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+      ],
+      "workspace_path": "regrowth-200/src/public_plan.py"
+    },
+    {
+      "actual_sha256": null,
+      "availability": "local-only evidence or private task reference; not included in publication",
+      "matches_reviewed_bytes": null,
+      "repository_path": null,
+      "reviewed_sha256": [
+        "3a437fa2c87d200124795489a0b383ef64dea6a2555bd4f4cff310f0b71fef33"
+      ],
+      "workspace_path": "regrowth-200/src/run.py"
+    },
+    {
+      "actual_sha256": null,
+      "availability": "local-only evidence or private task reference; not included in publication",
+      "matches_reviewed_bytes": null,
+      "repository_path": null,
+      "reviewed_sha256": [
+        "d142dc001a70bad4803e88d12f75b721620e44f8798c48ca3c270cb8d2de2517"
+      ],
+      "workspace_path": "regrowth-200/src/publish_hub.py"
+    },
+    {
+      "actual_sha256": null,
+      "availability": "local-only evidence or private task reference; not included in publication",
+      "matches_reviewed_bytes": null,
+      "repository_path": null,
+      "reviewed_sha256": [
+        "f0db474b1118b2bc3db85ac9a73fa727c29d006e4119018c16a61edd72800473",
+        "5c60e6efb502d9dd1d18d775486a12363caa0ab667098b7a6fd06b836975985d"
+      ],
+      "workspace_path": "healing-helping-hands/site/artifact-manifest.json"
+    },
+    {
+      "actual_sha256": "9716657d5a3b809d4096b01ff964a4aa13340481254d2c243bc41a7245b3429e",
+      "availability": "related current repository file; not verified as reviewed bytes",
+      "matches_reviewed_bytes": false,
+      "repository_path": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py",
+      "reviewed_sha256": [
+        "e0284a3e7d4655985dc65c0187133ab8f4f0c448a7d2303779f4116ed234a28a"
+      ],
+      "workspace_path": "healing-helping-hands/visualization/render.py"
+    },
+    {
+      "actual_sha256": "950b8d9c5b0d230f4657f625b15da57ac30352a0fbce0142c7da2f4403ad0e9b",
+      "availability": "exact reviewed bytes found",
+      "matches_reviewed_bytes": true,
+      "repository_path": "researchers/vishesh/notes/swarm-of-theseus/src/study.py",
+      "reviewed_sha256": [
+        "950b8d9c5b0d230f4657f625b15da57ac30352a0fbce0142c7da2f4403ad0e9b"
+      ],
+      "workspace_path": "swarm-of-theseus/src/study.py"
+    },
+    {
+      "actual_sha256": "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510",
+      "availability": "exact reviewed bytes found",
+      "matches_reviewed_bytes": true,
+      "repository_path": "researchers/vishesh/notes/swarm-of-theseus/src/provider.py",
+      "reviewed_sha256": [
+        "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510"
+      ],
+      "workspace_path": "swarm-of-theseus/src/provider.py"
+    },
+    {
+      "actual_sha256": "59b84e493aa3bec2a428f5f8362db390eb13ea3c0bd6ba47329960d94605f49d",
+      "availability": "exact reviewed bytes found",
+      "matches_reviewed_bytes": true,
+      "repository_path": "researchers/vishesh/notes/swarm-of-theseus/src/runner.py",
+      "reviewed_sha256": [
+        "59b84e493aa3bec2a428f5f8362db390eb13ea3c0bd6ba47329960d94605f49d"
+      ],
+      "workspace_path": "swarm-of-theseus/src/runner.py"
+    }
+  ],
+  "scope": "Public repository and current public hub. Hub run lists may be truncated; absence is checked alongside owner README/pre-run records. Costs of worker sessions are not added to stage costs.",
+  "source_commit": "aa01058bd13f2f562a3572ff55c4aa41c8e59ec5"
+}

@@ -97,6 +97,8 @@ repo. The 7 episode files (1.1 MB) are now committed. Call logs stay on the hub 
 Every A1/A2 mean, CI, count and Fisher p in README.md and results/MP*.md is identical before and after (the
 selection is identical, C1). The cross-model verdict stands as dmarz wrote it: the mixture rescue reproduced on
 gpt-4o-mini only, not on gemma-3-27b, reversed on qwen3-235b. The long-list-read moderator is a post-hoc lead from
-three models, not a finding. No Claude replication has been preregistered or run by this correction. The owner instead requests a
-separate frozen-history reading-rule diagnostic, OpenRouter only, with a USD 12 ceiling. It will require
-its own prospective plan and saved call records before any result can be claimed.
+three models, not a finding. No Claude replication has been preregistered or run by this correction. The owner instead requested a
+separate [frozen-history reading-rule diagnostic](reading-rule/README.md), OpenRouter only, with a USD 12 ceiling.
+That plan and its source were published before dispatch; the first S0 request returned HTTP403, so the run
+stopped without a valid model output. No scientific reading-rule result exists. Residual README wording that
+called the post-hoc moderator a finding or causal transfer rule has also been corrected.

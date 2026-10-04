@@ -167,6 +167,8 @@ def build(args):
     if not now:
         raise ValueError('Invalid --as-of timestamp')
     registry = snap.data('experiments/evidence-metadata.json', {'studies': []})
+    snap.text('experiments/EVIDENCE.md')
+    snap.text('experiments/EVIDENCE-METADATA.md')
     frozen_review_path = 'researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json'
     frozen_review = snap.data(frozen_review_path, {})
     review_rows = frozen_review.get('studies', [])
@@ -226,7 +228,7 @@ def build(args):
             'support': [{'path': p, 'url': snap.link(p)} for p in citations[:6]],
             'audit': {'url': snap.link(audit), 'scope': edit['audit_scope']} if audit_available else None,
             'featured': rid in featured,
-            'blockers': excerpts(content.replace(content[content.find('<!-- experiment-evidence:start -->'):content.find('<!-- experiment-evidence:end -->') + 32], '') if '<!-- experiment-evidence:start -->' in content else content,
+            'blockers': excerpts(re.sub(r'<!-- experiment-evidence:start -->.*?<!-- experiment-evidence:end -->', '', content, flags=re.S),
                                   r'\b(blocked|failed|unrun|not started|not run|awaiting|requires approval)\b', 2),
             'hub': next((hub[x] for x in row.get('experiment_ids', [rid]) if x in hub), None)}
     # Discover newly shipped corpus findings before registry convergence, without inventing numeric claims.

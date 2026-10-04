@@ -43,7 +43,7 @@ function renderMap(){
  D.themes.forEach(t=>groups[t.id]=nodes.filter(n=>n.themes[0]===t.id));
  Object.entries(groups).forEach(([theme,ns])=>{
   const [cx,cy]=centers[theme];
-  ns.forEach((n,i)=>{const ring=Math.floor(i/14),count=Math.min(ns.length-ring*14,14),angle=(i%14)/count*Math.PI*2-Math.PI*.55,radius=78+ring*24;
+  ns.forEach((n,i)=>{let ring=0,offset=0,capacity=14;while(i>=offset+capacity){offset+=capacity;ring++;capacity=14+ring*12}const count=Math.min(ns.length-offset,capacity),angle=(i-offset)/count*Math.PI*2-Math.PI*.55,radius=78+Math.min(ring,4)*16;
    positions[n.id]=[cx+Math.cos(angle)*radius,cy+Math.sin(angle)*radius];
   });
  });

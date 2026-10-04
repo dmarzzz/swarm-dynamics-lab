@@ -17,3 +17,4 @@ Review policy: temporarily, shadow/sol-committee-astra holds both seats by orche
 | 15:48:13 | J013 / [#95](https://github.com/dmarzzz/swarm-lab/pull/95) | `91e14cba98f178d8a9915ad3505e776b5529fdfb` | Both astra passes APPROVE at `46f782c3`; 6 endpoint/cost tests pass offline; CI green. |
 | 15:54:02 | J008 / [#96](https://github.com/dmarzzz/swarm-lab/pull/96) | `79fb7b6f691a88f6f831caad325c8f04272dacf4` | Both astra passes APPROVE at `8fd218e1`; 4 targeted offline tests pass; CI green. |
 | 15:54:07 | J022 / [#97](https://github.com/dmarzzz/swarm-lab/pull/97) | `5d4c12e23a0e4950bf6008530a331960d286644d` | Both astra passes APPROVE at `b724073d`; 8 targeted offline tests pass; CI green. |
+| 16:01:57 | J006 / [#98](https://github.com/dmarzzz/swarm-lab/pull/98) | `79263e471c14c796e8bf78abc68685ab3f0ddd3b` | Both astra passes APPROVE at `d4ab29b6`; 17 capture-memory tests pass offline; CI green. Durable shared liability reservations, J009 pricing separate. |

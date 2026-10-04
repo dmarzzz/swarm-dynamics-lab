@@ -19,7 +19,7 @@ class EnvelopeTest(unittest.TestCase):
                 policy._request('unicode: ' + '\u2600' * 100)
             req = policy._opener.open.call_args.args[0]
             payload = json.loads(req.data)
-            self.assertEqual(payload['provider']['max_price'], {'prompt':3, 'completion':15})
+            self.assertEqual(payload['provider']['max_price'], {'prompt':3, 'completion':15, 'request':0})
             self.assertEqual(payload['max_tokens'], 6)
             expected = ((len(req.data) + 2048) * 2 * 3 + 8 * 15) / 1e6
             self.assertAlmostEqual(policy.ledger.spent(), expected, places=8)

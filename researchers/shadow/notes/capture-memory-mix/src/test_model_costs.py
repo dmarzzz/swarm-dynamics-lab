@@ -43,7 +43,7 @@ class CostTest(unittest.TestCase):
             policy._opener.open.return_value.__enter__.return_value.read.return_value = b'{"choices":[{}],"usage":{"cost":0}}'
             before = policy.ledger.spent()
             self.assertEqual(policy._request('test')['_cost'], 0)
-            self.assertEqual(policy.ledger.spent(), before)
+            self.assertAlmostEqual(policy.ledger.spent(), before, places=12)
 
 
 if __name__ == '__main__':
