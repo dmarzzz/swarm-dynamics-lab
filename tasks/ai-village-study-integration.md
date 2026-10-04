@@ -3,14 +3,16 @@ id: ai-village-study-integration
 type: task
 title: Integrate AI Village evidence contracts into relevant studies
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-village-fit
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-village-fit
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T18:08Z
+updated: 2026-10-04T18:08Z
 ---
 
 ## Goal
