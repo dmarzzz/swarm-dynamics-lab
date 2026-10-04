@@ -40,7 +40,7 @@ class CostTest(unittest.TestCase):
                 with self.subTest(bad=bad), self.assertRaises(model.ModelFailure):
                     policy._request('test')
                 self.assertGreater(policy.ledger.spent(), before)
-            policy._opener.open.return_value.__enter__.return_value.read.return_value = b'{"choices":[{}],"usage":{"cost":0}}'
+            policy._opener.open.return_value.__enter__.return_value.read.return_value = b'{"model":"test","provider":"TestProvider","choices":[{}],"usage":{"cost":0}}'
             before = policy.ledger.spent()
             self.assertEqual(policy._request('test')['_cost'], 0)
             self.assertAlmostEqual(policy.ledger.spent(), before, places=12)
