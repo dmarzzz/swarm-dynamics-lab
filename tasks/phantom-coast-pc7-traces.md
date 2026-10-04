@@ -3,14 +3,16 @@ id: phantom-coast-pc7-traces
 type: task
 title: Audit Phantom native traces and revise finite-history scenario
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T16:43Z
+updated: 2026-10-04T16:43Z
 ---
 
 ## Goal
