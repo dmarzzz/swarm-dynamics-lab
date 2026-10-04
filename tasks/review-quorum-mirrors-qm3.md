@@ -13,7 +13,7 @@ depends_on: []
 topics:
 - decision-models
 claimed_at: 2026-10-04T04:36Z
-updated: 2026-10-04T04:36Z
+updated: 2026-10-04T04:57Z
 ---
 
 ## Goal
