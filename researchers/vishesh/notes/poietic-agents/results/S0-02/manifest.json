@@ -1,0 +1,84 @@
+{
+  "attempt": "S0-02",
+  "native_source_commit": "f3621c649311f4e7a6c110c1b56f97b818927f9e",
+  "files": {
+    "route-check.json": {
+      "sha256": "f68962324801a07c0a47e39813dc3a30df176ccd2e8756f778adb0499c28a41b",
+      "bytes": 792
+    },
+    "summary.json": {
+      "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a",
+      "bytes": 3832
+    },
+    "post-mortem.json": {
+      "sha256": "61c2cc52809a0ab59c4d7264a50f8604998872ce4d73a50c2afd88620872cea0",
+      "bytes": 1595
+    },
+    "final_frame.png": {
+      "sha256": "e7947a0726ed8804df44bafe542bc19c7b025df159677ac95299c2be9e718c6a",
+      "bytes": 50298
+    },
+    "final_frame.svg": {
+      "sha256": "7d0d4a2ee3c51758ad07b524e72bb2ce148359da64540b77cf1537bcc2a7c0f0",
+      "bytes": 1299
+    },
+    "artifact-readback.json": {
+      "sha256": "7caf191e11e00331961c8e8b626ec688da83ac751b2b92f201e2ba23cf0c8846",
+      "bytes": 2618
+    },
+    "cost-reconciliation.json": {
+      "sha256": "3e120e96abb89d1e1fcf62dc2f58bd8a4e5ff43846296935864dda2b18da0eb2",
+      "bytes": 306
+    },
+    "cost-closeout.json": {
+      "sha256": "3842466685626976b21f1601ebf636833243455e7a064ce34d6e82dc6a46bffd",
+      "bytes": 888
+    },
+    "trace-review.json": {
+      "sha256": "aef791212831a6cfe58250359dae014b3ae0a123aa8f017124efe8e99d754551",
+      "bytes": 1245
+    },
+    "admitted-validation.json": {
+      "sha256": "2483c8ea3175a280c93f8c4955194c454bb8c6c3ac7218ddbfd58a027f66f82f",
+      "bytes": 4909
+    },
+    "public-page-closeout.json": {
+      "sha256": "8a5561acdcf10e5f3befc0cb18159361a42c41f80dce04823e134ed2d00997e9",
+      "bytes": 429
+    }
+  },
+  "private_admission_and_operator_context_excluded": true,
+  "retained_private_artifacts": {
+    "records.json": {
+      "sha256": "97dc8ed160b0461a2966931136a779993c568fbfedf922556d307ce7d269708c",
+      "bytes": 26720,
+      "public_contents": false
+    },
+    "responses.jsonl": {
+      "sha256": "f2a63a09347d377d17eb9a689c987290bdc150f38f5da6ba36fe1382ca7e8c70",
+      "bytes": 3789,
+      "public_contents": false
+    },
+    "call-starts.jsonl": {
+      "sha256": "6676a2e9d6a23a4635955a7c24b807049d68f5da9f5618084592377bd4b27a5c",
+      "bytes": 186,
+      "public_contents": false
+    },
+    "provider-receipts.json": {
+      "sha256": "d191ef48ca265e612dc84500279ca19916f4342274d0aba6ec936a748c39c884",
+      "bytes": 1399,
+      "public_contents": false
+    },
+    "assignments.json": {
+      "sha256": "d023663d0d22e78b3239f438cdc5abcaf5eb3d9d4152aa73392800829b61c522",
+      "bytes": 20403,
+      "public_contents": false
+    },
+    "public-plan.json": {
+      "sha256": "aaa12ff3baf714c3bd5e9536c57b5d3c7ff0f292ef303c4c05362bb4320740eb",
+      "bytes": 1563,
+      "public_contents": false
+    }
+  },
+  "private_trace_contents_excluded": true
+}

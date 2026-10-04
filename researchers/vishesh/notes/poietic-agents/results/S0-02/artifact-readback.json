@@ -1,0 +1,91 @@
+{
+  "verified": true,
+  "worker_stopped": true,
+  "checks": [
+    {
+      "role": "generalist",
+      "name": "records.json",
+      "sha256": "97dc8ed160b0461a2966931136a779993c568fbfedf922556d307ce7d269708c",
+      "hash_matches": true,
+      "bytes": 26720
+    },
+    {
+      "role": "generalist",
+      "name": "summary.json",
+      "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a",
+      "hash_matches": true,
+      "bytes": 3832
+    },
+    {
+      "role": "generalist",
+      "name": "assignments.json",
+      "sha256": "d023663d0d22e78b3239f438cdc5abcaf5eb3d9d4152aa73392800829b61c522",
+      "hash_matches": true,
+      "bytes": 20403
+    },
+    {
+      "role": "generalist",
+      "name": "final_frame.png",
+      "sha256": "e7947a0726ed8804df44bafe542bc19c7b025df159677ac95299c2be9e718c6a",
+      "hash_matches": true,
+      "bytes": 50298
+    },
+    {
+      "role": "cheap_generative",
+      "name": "records.json",
+      "sha256": "97dc8ed160b0461a2966931136a779993c568fbfedf922556d307ce7d269708c",
+      "hash_matches": true,
+      "bytes": 26720
+    },
+    {
+      "role": "cheap_generative",
+      "name": "summary.json",
+      "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a",
+      "hash_matches": true,
+      "bytes": 3832
+    },
+    {
+      "role": "cheap_generative",
+      "name": "assignments.json",
+      "sha256": "d023663d0d22e78b3239f438cdc5abcaf5eb3d9d4152aa73392800829b61c522",
+      "hash_matches": true,
+      "bytes": 20403
+    },
+    {
+      "role": "cheap_generative",
+      "name": "final_frame.png",
+      "sha256": "e7947a0726ed8804df44bafe542bc19c7b025df159677ac95299c2be9e718c6a",
+      "hash_matches": true,
+      "bytes": 50298
+    },
+    {
+      "role": "typed_choice",
+      "name": "records.json",
+      "sha256": "97dc8ed160b0461a2966931136a779993c568fbfedf922556d307ce7d269708c",
+      "hash_matches": true,
+      "bytes": 26720
+    },
+    {
+      "role": "typed_choice",
+      "name": "summary.json",
+      "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a",
+      "hash_matches": true,
+      "bytes": 3832
+    },
+    {
+      "role": "typed_choice",
+      "name": "assignments.json",
+      "sha256": "d023663d0d22e78b3239f438cdc5abcaf5eb3d9d4152aa73392800829b61c522",
+      "hash_matches": true,
+      "bytes": 20403
+    },
+    {
+      "role": "typed_choice",
+      "name": "final_frame.png",
+      "sha256": "e7947a0726ed8804df44bafe542bc19c7b025df159677ac95299c2be9e718c6a",
+      "hash_matches": true,
+      "bytes": 50298
+    }
+  ],
+  "checked_utc": "2026-10-04T16:52:25.535017+00:00"
+}

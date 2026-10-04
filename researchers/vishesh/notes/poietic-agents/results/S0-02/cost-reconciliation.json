@@ -1,0 +1,11 @@
+{
+  "worker_and_children_stopped": true,
+  "mirror_settlement_reconciled": true,
+  "cumulative_calls": 37,
+  "new_calls": 1,
+  "new_known_usd": 0.00077,
+  "cumulative_api_exposure_usd": 0.480002,
+  "unresolved_historical_calls": 36,
+  "native_summary_preserved": true,
+  "checked_at": 1791132782.5276508
+}

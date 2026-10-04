@@ -164,11 +164,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/poietic-agents",
       "setup_path": "researchers/vishesh/notes/poietic-agents/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/S0-01-post.md",
+      "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/S0-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T16:28:35.219553+00:00",
+      "checked_at": "2026-10-04T16:57:49.223648+00:00",
       "checked_commit": "f3621c649311f4e7a6c110c1b56f97b818927f9e",
-      "next_action": "One owner-directed S0-02 is prepared at81 checks; public plan verified. Runtime admission and dispatch coordination pending. Preserve original cumulative authority and all prior exposure; no new native calls."
+      "next_action": "S0-02 closed and scientifically reviewed:1nativecall,144terminal,12artifactsverified,USD0.562186183cumulativeupper.106offlinechecks support complete36decision D0-01 proposal/runner; owner update decision and admission pending. No allocation held."
     }
   ]
 }

@@ -21,7 +21,7 @@ from qualification import make_case
 
 
 class WorkerBoundaryTests(unittest.TestCase):
-    def rehearse(self, provider_result):
+    def rehearse(self, provider_result, expected_settlement='uncertain', expected_nano=None):
         dispatches = []
         completions = []
 
@@ -83,10 +83,10 @@ class WorkerBoundaryTests(unittest.TestCase):
             summary = json.loads((root/'out/summary.json').read_text())
             starts = (root/'out/call-starts.jsonl').read_text().splitlines()
             with contextlib.closing(sqlite3.connect(root/'authority/budget.sqlite')) as db:
-                charges = db.execute('SELECT status FROM charges').fetchall()
+                charges = db.execute('SELECT status,settled FROM charges').fetchall()
             self.assertEqual(len(dispatches), 1)
             self.assertEqual(len(starts), 1)
-            self.assertEqual(charges, [('uncertain',)])
+            self.assertEqual(charges, [(expected_settlement, expected_nano)])
             self.assertEqual(len(records), 144)
             self.assertEqual(sum(r.get('started', False) for r in records), 1)
             self.assertEqual(sum(r['status'] == 'not_started' for r in records), 143)
@@ -109,9 +109,29 @@ class WorkerBoundaryTests(unittest.TestCase):
         raw = {'model': model['accepted_response_model_ids'][0], 'provider': model['provider_name'],
                'choices': [{'finish_reason': 'stop', 'message': {'content': 'invalid JSON'}}],
                'usage': {'prompt_tokens': 10, 'completion_tokens': 5, 'cost': .00004}}
-        row = self.rehearse(raw)
+        row = self.rehearse(raw, 'known', 40000)
         self.assertEqual(row['status'], 'invalid')
         self.assertEqual(row['raw_response'], raw)
+        self.assertEqual(row['billing_receipt']['cost_usd'], .00004)
+
+    def test_fenced_action_preserves_known_usage_and_strict_failure(self):
+        model = json.loads((BASE/'models.json').read_text())['models']['generalist']
+        raw = {'model': model['accepted_response_model_ids'][0], 'provider': model['provider_name'],
+               'choices': [{'finish_reason': 'stop', 'message': {
+                   'content': '```json\n{"fetch":{"endpoint":"inventory","entities":["fixture"]}}\n```'}}],
+               'usage': {'prompt_tokens': 565, 'completion_tokens': 41, 'cost': .00077}}
+        row = self.rehearse(raw, 'known', 770000)
+        self.assertEqual(row['failure_code'], 'JSONDecodeError')
+        self.assertEqual(row['raw_response'], raw)
+
+    def test_invalid_usage_preserves_full_reservation(self):
+        model = json.loads((BASE/'models.json').read_text())['models']['generalist']
+        raw = {'model': model['accepted_response_model_ids'][0], 'provider': model['provider_name'],
+               'choices': [{'finish_reason': 'stop', 'message': {'content': '{"type":"directory"}'}}],
+               'usage': {'prompt_tokens': 0, 'completion_tokens': 1, 'cost': .00001}}
+        row = self.rehearse(raw)
+        self.assertEqual(row['failure_code'], 'token_usage')
+        self.assertNotIn('billing_receipt', row)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,52 @@
+{
+  "attempt": "D0-01",
+  "stage": "D0",
+  "status": "offline-complete; owner approval and runtime admission pending",
+  "created_utc": "2026-10-04T17:04:21.052600+00:00",
+  "initial_prospective_draft_sha256": "a84a560d727a73445ac9ebd5ef9f67d39f3789d70cadca1495f32e9f27a603e8",
+  "initial_draft_written_utc": "2026-10-04T16:55:02.234208+00:00",
+  "proposal_sha256": "48b2103c6ec0a790f4c38c620989d6089db5b2d3ad9e2623178a5a0664bf8e42",
+  "assignment_sha256": "aa9777d8e6235d56a89b1ead2961dde290f7be989bf15df3c78dd972e43d8917",
+  "independent_generator_roots": 3,
+  "paired_roles": 3,
+  "dependent_steps_per_sequence": 4,
+  "maximum_physical_calls": 36,
+  "maximum_new_api_reservations_usd": 0.180965376,
+  "maximum_new_infrastructure_usd": 0.09524,
+  "test_count": 106,
+  "tests_failed": 0,
+  "reserved_diagnostic_fixtures_generated": false,
+  "new_model_calls": 0,
+  "real_renewal_performed": false,
+  "candidate_authorized": false,
+  "model_qualification": false,
+  "full_worker_fault_tests": [
+    "all-scripted-success",
+    "role-format-failure",
+    "global-HTTP429",
+    "global-route-mismatch",
+    "global-invalid-usage",
+    "global-protected-action"
+  ],
+  "synthetic_renewal_tests": 12,
+  "scope_gate_checks": [
+    "changed-attempt",
+    "new-call-cap",
+    "stop-contract",
+    "proposal-binding",
+    "assignment-binding",
+    "owner-approval",
+    "instrument-binding",
+    "deadline",
+    "API-cap",
+    "physical-call-cap",
+    "staging-bound"
+  ],
+  "native_stages_admitted": [],
+  "visual_check": {
+    "scripted_fault_frame_inspected": true,
+    "all_role_denominators": 12,
+    "unstarted_count_visible": true,
+    "scripted_label_visible": true
+  }
+}

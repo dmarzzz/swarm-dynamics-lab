@@ -1,0 +1,70 @@
+{
+  "disposition": "diagnose-with-fresh-development",
+  "execution": "reconciled",
+  "qualification": false,
+  "scientific_conclusion": "none",
+  "process_compliance": "admitted-S0-only",
+  "reporting": [
+    {
+      "contract": "generalist",
+      "name": "summary.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "generalist",
+      "name": "records.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "generalist",
+      "name": "assignments.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "generalist",
+      "name": "final_frame.png",
+      "acknowledged": true
+    },
+    {
+      "contract": "cheap_generative",
+      "name": "summary.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "cheap_generative",
+      "name": "records.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "cheap_generative",
+      "name": "assignments.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "cheap_generative",
+      "name": "final_frame.png",
+      "acknowledged": true
+    },
+    {
+      "contract": "typed_choice",
+      "name": "summary.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "typed_choice",
+      "name": "records.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "typed_choice",
+      "name": "assignments.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "typed_choice",
+      "name": "final_frame.png",
+      "acknowledged": true
+    }
+  ],
+  "next_action": "Owner reviews all retained failures, usage and interface controls before any escalation"
+}

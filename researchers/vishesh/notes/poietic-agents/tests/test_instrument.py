@@ -29,6 +29,21 @@ class KnownWorld(World):
 
 class InstrumentTests(unittest.TestCase):
     def setUp(self): self.w=KnownWorld(0);self.e=Engine(self.w);self.j=job(0,1,0,'sku-x');self.j['quantity']=5
+    def test_delivered_wire_rule_and_directory_example_match_engine(self):
+        sections=self.e.context('agent-0',self.j)['sections']
+        policy=sections[0]['policy']
+        self.assertIn('top-level type field',policy)
+        self.assertIn('required siblings of type',policy)
+        self.assertIn('no Markdown fences',policy)
+        self.assertIn('{"type":"directory"}',policy)
+        self.assertEqual(self.e.dispatch('agent-0',{'type':'directory'},self.j),{})
+    def test_nested_and_extra_field_actions_are_not_silently_repaired(self):
+        flat={'type':'fetch','endpoint':'inventory','entities':['sku-x']}
+        nested={'fetch':{'endpoint':'inventory','entities':['sku-x']}}
+        for action in (nested,dict(flat,extra='unexpected')):
+            with self.assertRaises(ValueError):self.e.dispatch('agent-0',action,self.j)
+        self.assertEqual(self.e.usage['fetches'],0)
+        self.assertTrue(self.e.dispatch('agent-0',flat,self.j))
     def test_hand_computed_answers(self):
         p=self.w.fetch('supplier_terms','sku-x',1)
         self.assertEqual(reference(self.j,[p]),{'supplier':'a','total_cents':150})

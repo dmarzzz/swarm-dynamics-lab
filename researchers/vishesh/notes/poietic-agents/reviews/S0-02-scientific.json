@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "study_id": "poietic-agents",
+  "parent_handoff_sha256": "799989393cb63f1e30dac66b6ba3ad1e2549022e520c3a8538c9d280db7f07a4",
+  "verdict": "diagnostic",
+  "outcome_interpretation": "Native action-format failure; no model qualification or swarm efficacy result.",
+  "assessor": "vishesh/codex-heterogeneous",
+  "assessed_at": "2026-10-04T16:57:49.223648+00:00",
+  "attempt": "S0-02",
+  "evidence_revision": "f3621c649311f4e7a6c110c1b56f97b818927f9e native source; immutable native artifacts hashed in manifest",
+  "review_complete": true,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "S0 asks whether pinned models meet lifecycle interface/competence criteria. It supplies no swarm efficacy estimand or result.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/PROTOCOL.md",
+          "sha256": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/summary.json",
+          "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "First fetch instruction was paired with an action-field map that omitted explicit top-level type construction. This confounds interface communication with competence; realism remains a fictional desk.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/trace-review.json",
+          "sha256": "aef791212831a6cfe58250359dae014b3ae0a123aa8f017124efe8e99d754551"
+        }
+      ],
+      "next_action": "Clarify wire format using generic examples on development fixtures; propose bounded fresh diagnostics.",
+      "acceptance_check": "Delivered prompt explicitly describes bare JSON, type and sibling fields; strict valid/invalid fixtures behave as specified; native follow-through remains untested."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "No native action executed and two model roles were unstarted. Scripted reference checks are not native controls; Jev finite alternatives include the expected action and cannot support an open-generation model ranking.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/summary.json",
+          "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/PROTOCOL.md",
+          "sha256": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e"
+        }
+      ],
+      "next_action": "Retain exact/reference controls and label role-specific diagnostic scope.",
+      "acceptance_check": "All eligible diagnostic roles expose action/effect/reference traces before any full qualification proposal."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "1/144 decisions started,0 valid,143unstarted; no role qualifies. Observed fenced/nested fetch addresses the requested endpoint but is not an executable action.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/trace-review.json",
+          "sha256": "aef791212831a6cfe58250359dae014b3ae0a123aa8f017124efe8e99d754551"
+        }
+      ],
+      "next_action": "Use explicit contract and fresh approved diagnostic; keep full S0 gate unchanged.",
+      "acceptance_check": "Only a separately admitted full qualification with44/48correct,48/48valid andzero protected access per role permits advancement."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Strict invalid classification and144assigned denominator replay correctly. Worker snapshot overstated API exposure because billing settlement followed parsing; actual relay receipt enables an explicit correction without changing outcomes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/summary.json",
+          "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/cost-closeout.json",
+          "sha256": "3842466685626976b21f1601ebf636833243455e7a064ce34d6e82dc6a46bffd"
+        }
+      ],
+      "next_action": "Settle validated usage before parsing; preserve original native summary and separate correction.",
+      "acceptance_check": "Full-worker regression retains known usage after invalid action, reserves missing usage, and never upgrades invalid outcomes."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Declared12paired generator roots and4dependent steps per role; only1generalist root/step observed,0complete cases and0swarm roots. This is a stopped engineering screen, not an estimate of general reliability.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/summary.json",
+          "sha256": "6de95511a999e09451948d8888d562816a45e3eec9c38120fe938fc0a599996a"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/trace-review.json",
+          "sha256": "aef791212831a6cfe58250359dae014b3ae0a123aa8f017124efe8e99d754551"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "The one executed request and context receipt are retained; actualHaiku4.5/Anthropic matches the pinned requested route, no fallback. Experimental input is the declared fixture context, not operator conversation. No claim about unstarted roles.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/trace-review.json",
+          "sha256": "aef791212831a6cfe58250359dae014b3ae0a123aa8f017124efe8e99d754551"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/route-check.json",
+          "sha256": "f68962324801a07c0a47e39813dc3a30df176ccd2e8756f778adb0499c28a41b"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All144terminal statuses reconcile,1start joins1raw provider receipt and1usage receipt; every started miss inspected.12uploaded artifacts hash-match.143unstarted cells are explicit and not native errors.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/trace-review.json",
+          "sha256": "aef791212831a6cfe58250359dae014b3ae0a123aa8f017124efe8e99d754551"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/artifact-readback.json",
+          "sha256": "7caf191e11e00331961c8e8b626ec688da83ac751b2b92f201e2ba23cf0c8846"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "1newcall costsUSD0.00077;36earlier uncertain calls retainUSD0.479232. Full250second allocation lifetime plus historical infrastructure yieldsUSD0.562186183 total conservative exposure underUSD2. Worker, relay and claim released; invoice unavailable.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/cost-closeout.json",
+          "sha256": "3842466685626976b21f1601ebf636833243455e7a064ce34d6e82dc6a46bffd"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/cost-reconciliation.json",
+          "sha256": "3e120e96abb89d1e1fcf62dc2f58bd8a4e5ff43846296935864dda2b18da0eb2"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozenf362 source,81runtimechecks, exact request/response and artifact hashes identify the run. Saved strict parsing and qualification summary replay without calls. The post-run106check repair/diagnostic instrument is a distinct unexecuted instrument.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/admitted-validation.json",
+          "sha256": "2483c8ea3175a280c93f8c4955194c454bb8c6c3ac7218ddbfd58a027f66f82f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/trace-review.json",
+          "sha256": "aef791212831a6cfe58250359dae014b3ae0a123aa8f017124efe8e99d754551"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/manifest.json",
+          "sha256": "ec689f5ee0ee692ed6064ca566cd86aee1520fed3323573bbbcf9c94b9cd5da5"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Final PNG inspected against144assigned outcomes:0valid,1generalist started,0other roles started. All3copies hash-match; title labels qualification and excludes swarm efficacy. No live mechanism animation is inferred.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/final_frame.png",
+          "sha256": "e7947a0726ed8804df44bafe542bc19c7b025df159677ac95299c2be9e718c6a"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-02/artifact-readback.json",
+          "sha256": "7caf191e11e00331961c8e8b626ec688da83ac751b2b92f201e2ba23cf0c8846"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    }
+  ]
+}

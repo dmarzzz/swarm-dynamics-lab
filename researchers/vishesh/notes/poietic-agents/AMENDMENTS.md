@@ -37,3 +37,7 @@ After the prospective renewal design was specified, the owner requested reversib
 ### 2026-10-04: successor launch-loop verification
 
 The subsequent direct owner instruction authorizes one prepared S0-02 continuation with its bounded replacement window under the unchanged cap. Before further experimental work, wrote reviews/S0-02-launch-loop.md. Added two whole-worker fault rehearsals using fake transports/reporting, temporary ledgers and development fixtures only. Both preserve all144 assignments and stop after one failed dispatch. Updated the operational handoff privately. All81 software checks pass; models, prompts, scenarios, sample count, thresholds and experimental stopping rules are unchanged. Historical failures and original ledgers remain intact.
+
+## Post-S0-02 offline repair — 2026-10-04
+
+S0-02 remains failed at f362. The [prospective repair plan](reviews/S0-02-repair-plan.md) preceded an explicit bare-JSON/top-level `type` instruction and worker usage settlement before strict action parsing.106 offline checks pass. No permissive parser, rescoring, lowered qualification threshold or successor launch. The36 decision diagnostic changes sampling/stopping and needs its own owner decision and admitted manifest/runner.

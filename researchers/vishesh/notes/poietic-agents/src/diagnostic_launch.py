@@ -1,4 +1,4 @@
-"""One native entry point. No paid smoke/test bypass; S1/S2 intentionally unadmitted."""
+"""Explicitly admitted D0-01 only. No retry, no full qualification or successor launch."""
 import argparse
 import contextlib
 import json
@@ -13,11 +13,11 @@ import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 from pathlib import Path
-from admission import BASE, inventory, verify, verify_public, verify_relay_health
+from diagnostic_admission import BASE, inventory, verify, verify_public, verify_relay_health
 from budget import Budget
 from common import append, canonical, digest, save
 from native import request, response, reserve_nano, usage_receipt, verify_catalog
-from qualification import ROLES, assignments, make_case, probe, apply, analyze, complete_records
+from diagnostic import ROLES, assignments, make_case, probe, apply, analyze, complete_records
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -72,28 +72,31 @@ def run(config_path,out):
     budget=Budget(authority_dir/'budget.sqlite',digest(auth),config['allocation']['host'],1_500_000_000,288,auth['deadline'])
     os.environ.update(SWARM_SOURCE='vishesh/codex-heterogeneous',SWARM_HOST=config['allocation']['host'])
     import swarm_report as sr
-    runs={}; records=[]; stop=None; start=time.monotonic()
+    runs={}; records=[]; stop=None; role_stops={}; start=time.monotonic()
     try:
         # Three condition-specific run descriptions, one shared physical budget and assignment authority.
         for role in ROLES:
-            run_id=f'poietic-S0-02-{role}'
-            params=dict(stage='S0',contract=role,source_commit=config['source_commit'],assignment_sha256=digest(assignments()))
+            run_id=f'poietic-D0-01-{role}'
+            params=dict(stage='D0',contract=role,source_commit=config['source_commit'],assignment_sha256=digest(assignments()))
             if quiet(sr.report,'start','poietic-agents',run_id,params=params,message=config['condition_tldrs'][role],strict=True) is not True:
                 raise ValueError('hub_start_unacknowledged')
             runs[role]=sr.Run(run_id,'poietic-agents',params)
         for role in ROLES:
             contract=models[role]
-            for case in range(12):
+            for case in range(3):
                 state=make_case(case)
                 state['engine'].actors['agent-0'].model=role
                 for step in range(4):
-                    call_id=f'S0-02:{role}:{case}:{step}'
+                    call_id=f'D0-01:{role}:{case}:{step}'
                     row=dict(id=call_id,role=role,case=case,step=step,status='not_started',started=False)
-                    if stop or time.time()>=auth['deadline']-45:
-                        stop=stop or 'stage_deadline';records.append(row);continue
+                    if stop or role in role_stops or time.time()>=auth['deadline']-45:
+                        if time.time()>=auth['deadline']-45:stop=stop or 'stage_deadline'
+                        row['not_started_reason']=stop or role_stops[role]
+                        records.append(row);continue
                     packet=probe(state,step,role)
                     req=request(contract,packet['sections'],packet['choices'])
-                    row.update(request_sha256=digest(req),request=req,context_receipt=packet['context_receipt'])
+                    row.update(request_sha256=digest(req),request=req,context_receipt=packet['context_receipt'],
+                               expected_action=packet['expected'])
                     for attempt in range(1):
                         physical_id=call_id+f':physical-{attempt}'
                         try:
@@ -117,7 +120,10 @@ def run(config_path,out):
                             budget.settle(physical_id,actual)
                             row['billing_receipt']=measured
                             checked=response(raw,contract,packet['choices'])
+                            event_cursor=len(state['engine'].events)
                             row.update(checked=checked,**apply(state,step,checked['action'],packet['expected']))
+                            row['action_effect']={'definition':state['engine'].actors['agent-0'].definition(),
+                                                  'events':state['engine'].events[event_cursor:]}
                             row['status']='valid' if row['schema_valid'] else 'invalid'
                         except urllib.error.HTTPError as exc:
                             budget.settle(physical_id)
@@ -125,7 +131,7 @@ def run(config_path,out):
                             try:
                                 detail=json.loads(exc.read(32000));row['relay_diagnostic']={k:detail[k] for k in ('error_type','http_status','diagnostic_code','error_markers') if k in detail}
                             except Exception:pass
-                            # S0-02 admits no retry; preserve every rejection and stop for diagnosis.
+                            # D0-01 admits no retry; preserve every rejection and stop for diagnosis.
                             if exc.code==429:
                                 append(out/'transport.jsonl',dict(id=physical_id,status='rejected_429',elapsed_s=time.monotonic()-began))
                         except Exception as exc:
@@ -138,39 +144,39 @@ def run(config_path,out):
                         break
                     records.append(row);append(out/'responses.jsonl',row)
                     current=analyze(records)
-                    quiet(runs[role].progress,4*case+step+1,48,correct=current['contracts'][role]['correct'],
+                    quiet(runs[role].progress,4*case+step+1,12,correct=current['contracts'][role]['correct'],
                           valid=current['contracts'][role]['schema_valid'],cost_usd=budget.summary()['charged_upper_usd'])
                     if step==3:
-                        from render import qualification_png
+                        from diagnostic_render import diagnostic_png
                         frame=out/f'frame-{role}-{case:02d}.png'
-                        qualification_png(current,frame)
+                        diagnostic_png(current,frame)
                         quiet(runs[role].artifact,str(frame),'live.png')
-                    if row.get('status') in ('failed','invalid'):
-                        stop='interface_failure_guard'
-                    if row.get('protected_access_violation') or row.get('failure_code') in ('actual_route_mismatch','billing_exceeds_reserve'):
+                    if row.get('status')=='failed':stop='transport_or_runtime_failure_guard'
+                    if row.get('status')=='invalid':role_stops[role]='role_interface_failure_guard'
+                    if row.get('protected_access_violation') or row.get('failure_code') in ('actual_route_mismatch','billing_exceeds_reserve','cost_usage','token_usage'):
                         stop='integrity_guard'
         # Every assigned outcome, including unstarted ones, is present in the durable terminal record.
         save(out/'records.json',records)
         summary=analyze(records)
-        summary.update(budget=budget.summary(),elapsed_s=time.monotonic()-start,stop_reason=stop,
+        summary.update(budget=budget.summary(),elapsed_s=time.monotonic()-start,stop_reason=stop,role_stop_reasons=role_stops,
                        source_commit=config['source_commit'],file_hashes=config['file_hashes'],model_config_sha256=digest(models),
                        infrastructure_usd=(time.monotonic()-start)/3600*config['allocation']['allocated_usd_per_hour'])
         save(out/'summary.json',summary)
-        from render import qualification_frame, qualification_png
-        qualification_frame(summary,out/'final_frame.svg')
-        qualification_png(summary,out/'final_frame.png')
+        from diagnostic_render import diagnostic_frame, diagnostic_png
+        diagnostic_frame(summary,out/'final_frame.svg')
+        diagnostic_png(summary,out/'final_frame.png')
         reporting=[]
         for role,run in runs.items():
             for name in ('summary.json','records.json','assignments.json','final_frame.png'):
                 ack=quiet(run.artifact,str(out/name),name)
                 reporting.append(dict(contract=role,name=name,acknowledged=isinstance(ack,dict) and not ack.get('spooled')))
             method=run.done if summary['contracts'][role]['passed'] else run.fail
-            quiet(method,message='S0 qualification '+('passed' if summary['contracts'][role]['passed'] else 'failed')+'; no swarm efficacy result',correct=summary['contracts'][role]['correct'])
-        save(out/'post-mortem.json',dict(disposition='prepare-S1' if summary['qualification_passed'] else 'diagnose-with-fresh-development',
-             execution='reconciled',qualification=summary['qualification_passed'],scientific_conclusion='none',
-             process_compliance='admitted-S0-only',reporting=reporting,
+            quiet(method,message='D0 interface diagnostic '+('passed' if summary['contracts'][role]['passed'] else 'failed')+'; no full qualification or swarm efficacy result',correct=summary['contracts'][role]['correct'])
+        save(out/'post-mortem.json',dict(disposition='propose-full-qualification' if summary['diagnostic_passed'] else 'offline-diagnosis',
+             execution='reconciled',qualification=False,diagnostic=summary['diagnostic_passed'],scientific_conclusion='none',
+             process_compliance='admitted-D0-only',reporting=reporting,
              next_action='Owner reviews all retained failures, usage and interface controls before any escalation'))
-        print(canonical({k:summary[k] for k in ('assigned','started','terminal','qualification_passed','stop_reason')}))
+        print(canonical({k:summary[k] for k in ('assigned','started','terminal','diagnostic_passed','qualification_passed','stop_reason')}))
     except BaseException as exc:
         starts=[]
         if (out/'call-starts.jsonl').exists():
@@ -181,7 +187,7 @@ def run(config_path,out):
         save(out/'post-mortem.json',dict(disposition='blocked-repair',error_type=type(exc).__name__,
              reconciliation=analyze(records),budget=budget.summary(),scientific_conclusion='none',
              next_action='Inspect retained records; diagnose on development and use a fresh prospective attempt'))
-        for run in runs.values(): quiet(run.fail,message='S0 stopped; failure and spend retained')
+        for run in runs.values(): quiet(run.fail,message='D0 stopped; failure and spend retained')
         raise
     finally:
         for run in runs.values(): run._alive.set()

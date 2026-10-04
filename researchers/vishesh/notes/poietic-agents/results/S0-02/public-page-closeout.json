@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-04T16:59:56.339591+00:00",
+  "page": "https://swarm-live.pages.dev/#/x/poietic-agents",
+  "rendered": true,
+  "historical_failed_condition_runs": 6,
+  "S0_02_failed_condition_runs": 3,
+  "generalist_reached": "1/48",
+  "other_roles_unstarted": true,
+  "immutable_native_plan_unchanged": true,
+  "native_progress_cost_precedes_separate_closeout_reconciliation": true,
+  "outcome_tldr_verified": true
+}

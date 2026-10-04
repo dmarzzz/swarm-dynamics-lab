@@ -1,22 +1,22 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T16:20:24.253485+00:00",
+  "updated_utc": "2026-10-04T16:57:49.223648+00:00",
   "study": "poietic-agents",
-  "design_status": "reviewed-amended-offline-tested",
-  "implementation_status": "S0-launcher-and-lineage-instrument-built",
-  "execution_status": "S0-01-interrupted-and-reconciled",
-  "qualification_status": "not-qualified-instrument-failure",
+  "design_status": "S0-02-closed; diagnostic-proposal",
+  "implementation_status": "separate diagnostic candidate/admission/relay/runner/renewal complete offline;106tests",
+  "execution_status": "S0-02-stopped-on-first-interface-error; closed",
+  "qualification_status": "failed; no model qualifies",
   "scientific_conclusion": "none",
-  "process_compliance": "S0-01 admitted; instrument failed; post-hoc outcome reconciliation retained",
+  "process_compliance": "admitted one-shot S0-02; complete trace/ledger/artifact closeout; scientific review complete",
   "publication": {
     "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/f3621c649311f4e7a6c110c1b56f97b818927f9e/researchers/vishesh/notes/poietic-agents/README.md",
     "public_page": "https://swarm-live.pages.dev/#/x/poietic-agents",
-    "public_registration": "verified S0-02 proposal; no run queued",
+    "public_registration": "S0-02 outcome verified;D0proposal unlaunched",
     "public_registration_receipt": "registration-receipt.json",
     "documentation_preflight": "passed; source and plan binding match",
     "documentation_preflight_receipt": "public-plan-verification-S0-02-launch-loop.json",
-    "rendered_page": "Verified exact f3621c64 plan,81 offline checks and three historical failed runs on2026-10-04",
-    "native_launch_preflight": "must refresh after explicit time renewal and current runtime admission",
+    "rendered_page": "Six failed historical condition runs visible;S0-02 counts and outcome verified",
+    "native_launch_preflight": "passed before completedS0-02",
     "source_commit": "f3621c649311f4e7a6c110c1b56f97b818927f9e",
     "expected_plan_sha256": "be7520fcd3d349b8be9b6ce7a08c1402073fc8d3dc9562e05a414f9a6c602c1f"
   },
@@ -24,61 +24,61 @@
     "independent_design_review": "historical review received; P1-P3 resolved",
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
-    "exact_runtime_and_assignments": "frozen S0 deployment passed 54 checks; details retained privately",
-    "offline_instrument_checks": "81 passed, including two whole-worker failure rehearsals",
-    "model_qualification": "failed S0-01 instrument; no models qualified",
+    "exact_runtime_and_assignments": "S0-02 f362 passed81checks",
+    "offline_instrument_checks": "106 passed; completedS0-02 used81",
+    "model_qualification": "failedS0-02 strictformat",
     "budget_authorization": "direct owner launch instruction accepts preceding USD 2 proposal",
-    "dedicated_machine_allocation": "none held; previous allocation released",
-    "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending",
+    "dedicated_machine_allocation": "released",
+    "public_plan_and_run_tldr_preflight": "passed beforeS0-02 calls",
     "approved_credential": "resolved from established project access context; value never disclosed",
-    "execution_window": "bounded replacement window authorized by new direct run instruction; not activated"
+    "execution_window": "used for completed one-shotS0-02"
   },
   "review_task": "review-poietic-agents-design",
   "prior_art_task": "heterogeneous-methods-review",
   "authorized_api_usd": 1.5,
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
-  "started_run_count": 3,
-  "next_action": "Complete current runtime admission and execute only the approved S0-02 scope; preserve all prior charges.",
+  "started_run_count": 6,
+  "next_action": "Owner decision on concrete36decision diagnostic; no successor allocation or model calls",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
     "observed_jobs": 0,
     "planned_S1_jobs": 768,
-    "qualification_calls": 36,
+    "qualification_calls": 37,
     "note": "Editorial HX-31 score 94 is interest, not empirical confidence."
   },
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "current verified exclusive resource allocation",
-    "approved authority activation and complete accounting",
-    "frozen deployment, current tariffs and refreshed public-plan/page admission",
-    "native qualification before any S1"
+    "owner decision on changedD0-01 successor plan",
+    "freeze approved source and register prospective immutableD0plan/conditionTLDRs",
+    "fresh original-ledger bounded renewal/resource/source/runtime admission",
+    "full model qualification beforeS1"
   ],
   "s1_not_yet_admitted": [
     "qualified hash match",
     "A2 development selection and construction receipt",
     "S1 budget and stage admission"
   ],
-  "observed_model_calls": 36,
+  "observed_model_calls": 37,
   "actual_poietic_api_spend_usd": null,
   "host_claimed": false,
   "authorized_total_cumulative_usd": 2,
   "allocation_preparation": {
     "claimed": false,
-    "status": "released; no fresh allocation before explicit time renewal"
+    "status": "released after full closeout"
   },
   "central_dispatch": {
-    "status": "S0-02 requested; current allocation and operator acknowledgment pending",
-    "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044",
-    "scope": "S0-01 only; private request receipt retained outside public repository",
-    "model_calls_observed": 36
+    "status": "duplicate request closed; owner-approved directS0-02 completed",
+    "scope": "completedS0-02 only",
+    "model_calls_observed": 37
   },
   "unresolved_api_exposure_usd": 0.479232,
-  "allocated_infrastructure_usd": 0.07722376666666667,
-  "cumulative_cost_upper_usd": 0.5564557666666666,
-  "successor_scope_approved": true,
+  "allocated_infrastructure_usd": 0.08218418333333333,
+  "cumulative_cost_upper_usd": 0.5621861833333334,
+  "successor_scope_approved": false,
   "deadline_renewal_approved": true,
-  "deadline_renewal_applied": false
+  "deadline_renewal_applied": true,
+  "known_settled_api_usd": 0.00077
 }

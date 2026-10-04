@@ -2113,21 +2113,19 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Reversible self-differentiation improves lifetime swarm efficiency without losing quality; this intended efficacy claim remains untested.",
-        "rationale": "S0-01 failed at an instrument boundary after36 calls; no qualified model or efficacy comparison. The owner directed one bounded S0-02 continuation;81 software checks do not establish native behavior."
+        "rationale": "Both qualification attempts failed at interfaces. S0-02 retained one HTTP200 fenced/nested response and stopped; no model qualifies or efficacy comparison exists. The106 offline repair/diagnostic checks do not establish native behavior."
       },
-      "sample_size_summary": "Observed qualification:9 generalist case roots started;36/144 probes started,35 HTTP failures,1 interrupted,108 unstarted;144 terminal statuses retained. Four steps per case are dependent. Zero swarm efficacy roots. Planned S0-02:12 paired case roots across3 roles.",
+      "sample_size_summary": "S0-01:36/144 started over9generalist cases,0usable responses. S0-02:1/144 started over1generalist root,0executable actions,143unstarted;144terminal. Other roles untested. Four steps per case dependent;0swarm efficacy roots. Proposed diagnostic3paired roots/36dependent decisions is unrun.",
       "sources": [
-        "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
-        "researchers/vishesh/notes/poietic-agents/reviews/S0-01-post.md",
-        "researchers/vishesh/notes/poietic-agents/reviews/S0-01-scientific.json",
-        "researchers/vishesh/notes/poietic-agents/readiness/S0-02-cycle-2026-10-04.json",
-        "researchers/vishesh/notes/poietic-agents/reviews/S0-02-reassessment-2026-10-04.md",
-        "researchers/vishesh/notes/poietic-agents/reviews/S0-02-launch-loop.md"
+        "researchers/vishesh/notes/poietic-agents/results/S0-02/summary.json",
+        "researchers/vishesh/notes/poietic-agents/reviews/S0-02-post.md",
+        "researchers/vishesh/notes/poietic-agents/reviews/S0-02-scientific.json",
+        "researchers/vishesh/notes/poietic-agents/results/S0-02/trace-review.json"
       ],
-      "status_at_assessment": "S0-01-instrument-failure; S0-02-directed-pending-current-runtime-admission",
+      "status_at_assessment": "S0-02-failed; trace-reviewed; diagnostic-unapproved",
       "assessor": "vishesh/codex-heterogeneous",
       "assessed_at": "2026-10-04",
-      "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044"
+      "source_commit": "f3621c649311f4e7a6c110c1b56f97b818927f9e"
     },
     {
       "id": "optimal-swarm-size-q-a5",

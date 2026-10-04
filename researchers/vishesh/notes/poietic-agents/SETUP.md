@@ -2,7 +2,7 @@
 
 Updated 2026-10-04T08:59:25.064917+00:00; operator vishesh/codex-heterogeneous. Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md) and [quality rubric](../../../../tooling/agent-experiments/RUN-QUALITY.md).
 
-Current gate: G3 runtime admission. The owner’s subsequent direct run instruction covers one prepared S0-02 successor and its bounded replacement window within the unchanged USD 2 cumulative cap. Original charges persist; no real renewal has been applied yet. Follow the [launch-loop assessment](reviews/S0-02-launch-loop.md). Current resource, source and public-plan checks remain required. S0-01 remains an instrument failure, with no qualified model or swarm efficacy result.
+Current gate: G6 successor decision. S0-02 executed, failed strict action parsing after1 call and is fully closed with scientific review. Allocation released; original ledger/cap retained. Read [post-mortem](reviews/S0-02-post.md), [scientific review](reviews/S0-02-scientific.json) and [offline repair/diagnostic proposal](reviews/S0-02-repair-plan.md). The historical G3 notes below are superseded by this closeout.
 
 
 | Gate | Evidence and status | Next action |
@@ -28,3 +28,7 @@ No new native attempt was started. Saved assignments, call starts, request hashe
 ## Subsequent direct run instruction
 
 [Launch-loop review](reviews/S0-02-launch-loop.md): retain the existing scientific construction. Added two whole-worker failure rehearsals; all 81 checks pass. Current catalog identity/tariff checks pass without model calls. Current operational checks and reconciliation are recorded privately. Prior closeouts and earlier expired-window receipts remain historical evidence. Operational admission remains mandatory.
+
+## S0-02 completed cycle
+
+One-shot approved execution at f362 passed81runtimechecks;1 started/143 unstarted/144 terminal, no qualified role.12 artifact readbacks match, all workers stopped and allocation released. Operational finalize and owning scientific review complete.106 offline checks now validate prompt/billing repairs, which are unexecuted. Cumulative upper exposureUSD 0.562186183; no successor authority or new ledger. ProposedD0-01 has3 fresh paired roots/36 decisions and a separately implemented diagnostic runner awaiting owner approval and runtime admission. Prior-art review remains incomplete; no efficacy or novelty claim.

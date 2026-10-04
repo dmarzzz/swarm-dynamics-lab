@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Test whether initially identical agents can develop efficient shared data services and cheaper execution without losing fresh, correct answers. Compare with generalists, coherent caching and static specialists; count correct fresh on-time work and full lifecycle cost. S0-01 failed at the relay boundary after 36 calls; all 144 outcomes are retained and no model or swarm effect is established. Prepared S0-02 keeps models/thresholds with fresh cases, no retries and first-interface-error stopping. The owner has directed one bounded S0-02 continuation; renewal activation, exclusive allocation and central dispatch remain required. No new run has started. 81 offline checks pass. Original USD 2 cumulative cap and exposure remain unchanged; S1/S2 stay closed.",
+  "description": "TLDR: Test whether initially identical agents can develop efficient shared data services and cheaper execution without losing fresh, correct answers. Compare with generalists, coherent caching and static specialists; count correct fresh on-time work and full lifecycle cost. S0-02 stopped after one Haiku response with fenced/nested JSON: 1 started, 143 unstarted, 144 terminal. No model qualifies and no swarm effect is established. All 12 artifacts verified; allocation released. Offline action-contract/billing repair passes 106 offline checks. A complete 36-decision diagnostic runner is proposed, unapproved and not launched. Cumulative conservative exposure USD 0.562186183 under the original USD 2 cap; S1/S2 closed.",
   "params": {
     "stage": {
       "type": "str",
