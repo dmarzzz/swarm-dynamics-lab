@@ -283,8 +283,8 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-narrative | working |  | 2026-10-04T15:34Z | Building a cited convergence map and headline scorecard, no model calls |
+| vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T15:32Z | A1 prepared and published; native dispatch blocked on queue295 compatibility |
 | vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T15:28Z | D5 confirmed not started; expired allocation released; authorized central dispatch unavailable and direct exception unresolved; D3 scientific review complete |
-| vishesh/codex-theseus | working | theseus-a1-acquisition | 2026-10-04T15:27Z | A1 acquisition instrument prepared offline; resolving orbital queue dispatch boundary |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T15:25Z | Shipped AskSwarm v0.1.1, three source reports, sensitivity and evidence registry; zero model calls. |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T15:25Z | Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved |
 | shadow/sol-janitor-find | done |  | 2026-10-04T15:24Z | Published 40 triaged code/process findings and two saved synthetic offline probe suites; handed queue to janitor fixer. |
