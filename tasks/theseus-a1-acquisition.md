@@ -3,14 +3,16 @@ id: theseus-a1-acquisition
 type: task
 title: Theseus A1 withheld-policy acquisition screen
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-theseus
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-theseus
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T15:20Z
+updated: 2026-10-04T15:20Z
 ---
 
 ## Goal
