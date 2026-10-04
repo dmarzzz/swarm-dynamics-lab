@@ -4,7 +4,7 @@ title: 'Market splitting: Haiku with reasoning'
 description: Exploratory model-configuration comparison to Sonnet. Same neutral market
   and one action per round; Haiku V3 has more output headroom and must pass fresh
   full-length reliability checks. Failed attempts remain separate and visible.
-url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split-haiku
+url: https://github.com/dmarzzz/swarm-lab/tree/e36408b372a3ffa914a8adbee19b2cc82b56958b/researchers/dmarz/notes/market-split-haiku
 params:
   stage:
     type: str
