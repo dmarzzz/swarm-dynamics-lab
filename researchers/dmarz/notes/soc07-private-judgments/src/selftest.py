@@ -173,7 +173,7 @@ class PlanCounts(unittest.TestCase):
         self.assertEqual(ex['limits']['max_inflight_requests'], d['protocol']['max_inflight_requests'])
         self.assertEqual(ex['limits']['input_token_cap_per_request'], d['model']['input_token_cap_per_request'])
         self.assertEqual(config.launch_manifest()['temperature'], d['model']['temperature'])
-        self.assertEqual(config.launch_manifest()['model'], 'claude-haiku-4-5-20251001')
+        self.assertEqual(config.launch_manifest()['model'], 'claude-sonnet-4-6')
         self.assertEqual(config.thinking_budget(), 0)
         plan_caps = {p['id']: p['max_output_tokens'] for p in d['protocol']['phases']}
         plan_caps['qualification'] = config.stage_config('s1q')['output_tokens_per_agent']
@@ -498,7 +498,7 @@ def http_error(code, message='x', headers=None):
 
 
 def ok_payload(text='{"choice":"A","confidence":0.7}', **over):
-    base = {'model': 'claude-haiku-4-5-20251001', 'stop_reason': 'end_turn',
+    base = {'model': config.launch_manifest()['model'], 'stop_reason': 'end_turn',
             'content': [{'type': 'text', 'text': text}], 'usage': {'input_tokens': 300, 'output_tokens': 12}}
     base.update(over)
     return base
@@ -539,7 +539,7 @@ class Provider(unittest.TestCase):
         self.assertEqual(r['billing'], 'billed')
         request, timeout = self.requests[0]
         body = json.loads(request.data)
-        self.assertEqual(body['model'], 'claude-haiku-4-5-20251001')
+        self.assertEqual(body['model'], 'claude-sonnet-4-6')
         self.assertEqual(body['temperature'], 0.7)
         self.assertEqual(body['max_tokens'], 64)
         self.assertEqual(body['output_config'], {'format': {'type': 'json_schema', 'schema': parse.SCHEMAS['final']}})
@@ -636,7 +636,8 @@ class ControllerFaults(unittest.TestCase):
             self.assertEqual(analyze.qualification(episodes)['passed'], True)
             totals = ledger.totals()
             self.assertEqual(totals['logical_calls'], 12)
-            self.assertAlmostEqual(totals['billed_usd'], 12 * (300 * 1 + 20 * 5) / 1e6)
+            lm = config.launch_manifest()
+            self.assertAlmostEqual(totals['billed_usd'], 12 * (300 * lm['input_usd_per_million'] + 20 * lm['output_usd_per_million']) / 1e6)
             self.assertEqual(totals['open_reserved_usd'], 0)
             self.assertAlmostEqual(controller.totals['billed_usd'], totals['billed_usd'])
 
@@ -684,8 +685,9 @@ class ControllerFaults(unittest.TestCase):
             pres = generate.presentation(world, truth, 0)
             ctx = contexts.build('initial', 'shared', 0, contexts.Renderer(5, pres['label_of'], pres['evidence_id']), world['records'])
             micro = c._reservation(ctx, 256)
-            self.assertEqual(micro, (contexts.request_bytes(ctx) + 1024) * 1 + 256 * 5)
-            self.assertLess(micro / 1e6, 0.01)
+            lm = config.launch_manifest()
+            self.assertEqual(micro, (contexts.request_bytes(ctx) + 1024) * lm['input_usd_per_million'] + 256 * lm['output_usd_per_million'])
+            self.assertLess(micro / 1e6, 0.01 * lm['output_usd_per_million'] / 5)   # under one cent at m1 prices; scales with the manifest's price
 
 
 class PaidPathRehearsal(unittest.TestCase):
@@ -760,7 +762,7 @@ class PaidPathRehearsal(unittest.TestCase):
         self.assertTrue(doc['gate']['passed'])
         self.assertEqual(doc['reconciliation'], {'planned': 12, 'terminal': 12, 'completed': 12, 'interrupted': 0,
                                                  'incomplete': 0, 'graded': 12, 'analyzed': 12})
-        self.assertEqual(totals['calls_by_stage'], {'s1q': {'public': 12, 'aux': 0}})
+        self.assertEqual(totals['calls_by_stage'], {config.seed_stage('s1q'): {'public': 12, 'aux': 0}})
 
     def test_s1r_rehearsal(self):
         doc, analysis, totals = self.rehearse('s1r')
@@ -816,7 +818,7 @@ class LaunchManifest(unittest.TestCase):
     def test_run_parameters_record_the_manifest(self):
         p = coordinator.params('s1q')
         self.assertEqual((p['model'], p['reasoning_tokens'], p['output_caps'], p['launch_manifest'], p['batch']),
-                         ('claude-haiku-4-5-20251001', 0, '256/256/64/64/128', 'm1', 's1q-a1'))
+                         ('claude-sonnet-4-6', 0, '256/256/64/64/128', 'm2', 's1q.1-a1'))
         self.assertEqual(coordinator.params('s0')['model'], 'none')
         plan = study.manifest('s1q')
         self.assertEqual(plan['launch_manifest'], config.launch_manifest())
@@ -826,20 +828,20 @@ class LaunchManifest(unittest.TestCase):
     def test_switch_needs_no_code_change(self):
         before = study.manifest('s1q')
         old_worlds = [w['records'] for w, _ in study.worlds('s1q')]
-        switch = dict(version='m2', model='some-other-model', thinking={'type': 'budget', 'budget_tokens': 2048},
-                      input_usd_per_million=3, output_usd_per_million=15, qualification_set=1)
+        switch = dict(version='m3', model='some-other-model', thinking={'type': 'budget', 'budget_tokens': 2048},
+                      input_usd_per_million=3, output_usd_per_million=15, qualification_set=2)
         with amended(**switch):
             plan = study.manifest('s1q')
-            self.assertEqual(plan['namespace'], 's1q.1')
+            self.assertEqual(plan['namespace'], 's1q.2')
             self.assertEqual(plan['counts']['total'], 12)
-            self.assertTrue(all(c['call_id'].startswith('s1q.1/') for c in plan['calls']))
+            self.assertTrue(all(c['call_id'].startswith('s1q.2/') for c in plan['calls']))
             new_worlds = [w['records'] for w, _ in study.worlds('s1q')]
             self.assertFalse(any(w in old_worlds for w in new_worlds))          # twelve fresh worlds
             self.assertEqual(study.manifest('s1l')['hashes']['public_worlds'],
                              json.loads(json.dumps(self.s1l_hash)))             # S1-L worlds do not move
             p = coordinator.params('s1q')
             self.assertEqual((p['model'], p['reasoning_tokens'], p['launch_manifest'], p['batch']),
-                             ('some-other-model', 2048, 'm2', 's1q.1-a1'))
+                             ('some-other-model', 2048, 'm3', 's1q.2-a1'))
             os.environ['SWARM_MODEL_API_KEY'] = 'test-key-not-real'
             try:
                 seen = []
