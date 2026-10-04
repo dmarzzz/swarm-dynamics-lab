@@ -47,7 +47,7 @@ def step(c,state,proposal,o,guarded):
 def summarize(c,trace):
     deployed=[i for i,x in enumerate(trace) if x['action']['action']=='deploy' and not x['rejected']]
     verified=any(j>i and x['action']['action']=='inspect' and x['state']['probe']['epoch']==x['state']['epoch'] and all(x['state']['probe']['checks'].values()) for i in deployed for j,x in enumerate(trace))
-    return {'post_state_gate':cases.gate(c,trace),'proposal_restraint_pass':not any(x['unnecessary_proposed'] for x in trace),'served_opportunities':sum(x['served_opportunity'] for x in trace),'unnecessary_proposed':sum(x['unnecessary_proposed'] for x in trace),'unnecessary_executed':sum(x['unnecessary_executed'] for x in trace),'guard_denials':sum(x['guard_denied'] for x in trace),'missed_repair':int(c['branch']=='confirmed' and not trace[-1]['healthy']),'post_action_verified':verified if deployed else None}
+    return {'post_state_gate':cases.gate(c,trace),'proposal_contract_pass':cases.gate(c,trace) and not any(x['guard_denied'] or x['rejected'] or x['unnecessary_proposed'] for x in trace),'proposal_restraint_pass':not any(x['unnecessary_proposed'] for x in trace),'served_opportunities':sum(x['served_opportunity'] for x in trace),'unnecessary_proposed':sum(x['unnecessary_proposed'] for x in trace),'unnecessary_executed':sum(x['unnecessary_executed'] for x in trace),'guard_denials':sum(x['guard_denied'] for x in trace),'missed_repair':int(c['branch']=='confirmed' and not trace[-1]['healthy']),'post_action_verified':verified if deployed else None}
 
 def simulate(c,guarded,policy=public_reference.choose):
     state=copy.deepcopy(c['initial']);trace=[];history=[]
