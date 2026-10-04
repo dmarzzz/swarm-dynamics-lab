@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "study_id": "quorum-of-mirrors",
+  "parent_handoff": {
+    "path": "data/experiment-operations/closeouts/quorum-of-mirrors/qm-q1-02/ebaaabaa2fc9290721b8996cea93a638fc324a8a1a18b934607282fea4b5eb0a/handoff.json",
+    "sha256": "6319107f0b212ea57f8a9fe46f7527b35356401c403d0949a48270407d0c69e8"
+  },
+  "scientific_review": {
+    "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/d1/scientific-review.json",
+    "sha256": "eb56dcd2e2a4271087a347f33aaa0f60804e85c93f8a117421135fa5096db9db"
+  },
+  "question": "Does source deduplication improve copied-evidence decisions without prior choices, and do misleading prior choices separately impair them?",
+  "changes": [
+    "Separate raw versus deduplicated reports from none/correct/wrong self/peer context.",
+    "Require an eight-call clean capability screen.",
+    "Use one unambiguous instruction, 16 unanimous diagnostic control calls, preserved accounting and fail-closed admission."
+  ],
+  "acceptance_checks": [
+    "Exact source information matched across representations; no evaluator targets in requests.",
+    "Two repeated requests are byte-identical; all assigned/missing outcomes remain visible.",
+    "Qualification and incomplete/control-floor results cannot be interpreted as a diagnostic effect.",
+    "No fresh authority, retry, credential exposure or allocation while approval is pending."
+  ],
+  "sample_size": {
+    "independent_unit": "Fixed structural fixture; dependent finite support, not a sampled world or call.",
+    "planned_units": 8,
+    "rationale": "Four conflict structures and four agreement structures; feasibility diagnostic with .50 useful primary gain and no population power claim.",
+    "allocation": "8 clean qualification calls followed conditionally by 8 fixtures x 10 arms x 2 repeats = 160.",
+    "analysis_plan": "Equal-weight four conflict-fixture paired means; report eight paired observations and both repetition-block effects, missingness bounds and prior contrasts.",
+    "stopping_rule": "Stop at first failed call or live-admission failure, at 45 minutes, or if clean qualification fails. No retries or optional favorable stopping."
+  },
+  "scenarios": {
+    "families": [
+      "Copied evidence conflicting with source majority",
+      "Unanimous source agreement controls"
+    ],
+    "construction": "Fixed root triples 100,011,000,111 at q .65/.80; clean qualification uses all triples at .72. Seed 20261004 orders balanced repetition blocks.",
+    "challenge": "Seven copies of one source versus two contrary independent observations, crossed with scripted priors.",
+    "realism": "Synthetic explicit root IDs; no claims about paraphrases, hidden ancestry, real swarms or natural tasks.",
+    "controls": "No priors and correct priors; one report per source; unanimous source controls; exact-MAP and report-majority deterministic references.",
+    "holdout_policy": "C1 seeds 41000-41003 unopened. Reused grammar is not a new holdout or independent population."
+  },
+  "data_collection": {
+    "records": [
+      "Exact manifests and request hashes",
+      "Terminal receipts and usage journal before answer validation",
+      "Provider generation IDs when valid",
+      "Progress, replay, complete table, summary, public/source/allocation admission and release receipts"
+    ],
+    "missingness": "Failed/unstarted count zero for conservative accuracy; report best/worst accuracy and paired-effect bounds; withhold directional label if any missingness or control failure.",
+    "validation": "Recompute from saved source evidence, validate route/schema/accounting and unique assigned receipts, preserve all historical failures.",
+    "privacy": "Dedicated key via established verified-SSH memory-only receiver; no secrets in public artifacts or diagnostics."
+  },
+  "implementation": {
+    "change_summary": "New d1 contract, saved-evidence analyzer, replay and manual native adapter; historical Q1 sources unchanged.",
+    "offline_validation": "See VALIDATION.json and test_contract.py/test_d1_runtime.py; scripted policies are labelled and excluded from native evidence."
+  },
+  "resources": {
+    "maximum_calls": 168,
+    "maximum_cost_usd": 0.225792,
+    "machine_count": 1,
+    "cumulative_budget_ref": "Original $1 API/$1 infrastructure, <=6 hours; canonical sim-shadow ledger retains 49 calls/$0.065856 reserved. Cumulative maximum 217/$0.291648 reserved.",
+    "machine_requirements": "1 CPU, 1GB RAM, 100MB results, no GPU; 45-minute cumulative session. Previous hourly rate .07143 must be freshly checked; no account fallback.",
+    "allocation_required": true
+  }
+}

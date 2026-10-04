@@ -1,0 +1,73 @@
+{
+  "evidence_type": "SCRIPTED \u2014 NOT MODEL EVIDENCE",
+  "steps": [
+    {
+      "assigned": 160,
+      "valid": 0,
+      "correct": 0,
+      "failed": 0,
+      "unstarted": 160,
+      "valid_response_usage": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "accounting_summary": {
+        "reserved_usd": 0.0,
+        "known_actual_usd": 0,
+        "unknown_charge_calls": 0
+      }
+    },
+    {
+      "assigned": 160,
+      "valid": 1,
+      "correct": 0,
+      "failed": 0,
+      "unstarted": 159,
+      "valid_response_usage": {
+        "cost": 1e-05,
+        "input_tokens": 800,
+        "output_tokens": 39
+      },
+      "accounting_summary": {
+        "reserved_usd": 0.001344,
+        "known_actual_usd": 1e-05,
+        "unknown_charge_calls": 0
+      }
+    },
+    {
+      "assigned": 160,
+      "valid": 2,
+      "correct": 0,
+      "failed": 0,
+      "unstarted": 158,
+      "valid_response_usage": {
+        "cost": 2e-05,
+        "input_tokens": 1600,
+        "output_tokens": 78
+      },
+      "accounting_summary": {
+        "reserved_usd": 0.002688,
+        "known_actual_usd": 2e-05,
+        "unknown_charge_calls": 0
+      }
+    },
+    {
+      "assigned": 160,
+      "valid": 2,
+      "correct": 0,
+      "failed": 1,
+      "unstarted": 157,
+      "valid_response_usage": {
+        "cost": 2e-05,
+        "input_tokens": 1600,
+        "output_tokens": 78
+      },
+      "accounting_summary": {
+        "reserved_usd": 0.004032,
+        "known_actual_usd": 2e-05,
+        "unknown_charge_calls": 1
+      }
+    }
+  ]
+}
