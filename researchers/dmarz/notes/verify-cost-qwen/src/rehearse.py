@@ -4,7 +4,7 @@
 
 No request leaves the machine: the hub is a local process, and the model endpoint is replaced by an
 in-process stub injected as the adapter's opener. A rehearsal answer is never a sample. The adapter's
-clock and sleep are replaced, so backoff and billing waits take no real time. The chain runs five
+clock and sleep are replaced, so backoff and billing waits take no real time. The chain runs six
 times, each in fresh temporary result and ledger directories and on its own hub:
   (a) all four stages with a stub that answers by the analytic reference policy, computed from the
       request text alone (it parses the prose or the table it is sent), then `chain verify`;
@@ -18,7 +18,11 @@ times, each in fresh temporary result and ledger directories and on its own hub:
       failed;
   (e) from some point in S1 every request returns a credit error: the stage stops with
       provider_credit_balance_low and nothing failed; `chain resume` with a healthy stub then
-      completes the stage; every unit is counted exactly once; `chain verify`.
+      completes the stage; every unit is counted exactly once; `chain verify`;
+  (f) all four stages with a stub that cycles through every tolerated variant of a correct answer
+      (costs as strings, as integers, with more decimals, respaced keys, missing, partial or
+      non-numeric costs, extra keys, `inspect` first, a respaced `inspect`, pretty-printed): every call
+      is valid, every choice is graded, the variants are counted; `chain verify`.
 It refuses to run unless the hub URL host is 127.0.0.1.
 """
 import argparse
@@ -73,16 +77,64 @@ TEMPLATE_KEYS = {'model', 'provider', 'reasoning', 'max_tokens', 'response_forma
 
 
 def reference_answer(user, mode):
-    """The stub's answer, from the request text alone."""
+    """The stub's answer, from the request text alone: the expected cost of each allowed action as the sum of
+    probability x cost over the consequence records it parses from the prose or the table, then the choice."""
     first, second = re.search(r'Allowed cells, in this order: (\d,\d); (\d,\d)\.', user).groups()
-    if mode == 'always_first': return {'inspect': first}
-    report = re.search(r'Report, older \(1 cell\): cell (\d,\d) is', user).group(1)
-    error = float(re.search(r'The report is wrong with probability (\d\.\d\d)\.', user).group(1))
     _, block, _ = study.split_block(user)
     records = (study.parse_table if block.startswith(study.TABLE_HEADER) else study.parse_prose)(block)
-    unknown_cost = float(next(r['cost'] for r in records if r['outcome'] == 'unknown'))
-    other = second if report == first else first
-    return {'inspect': report if error > unknown_cost else other}
+    costs = {first: 0.0, second: 0.0}
+    for r in records:
+        if r['action'] in costs: costs[r['action']] = round(costs[r['action']] + float(r['probability']) * float(r['cost']), 6)
+    return {'cost_if_inspect': costs, 'inspect': first if mode == 'always_first' else min(costs, key=costs.get)}
+
+
+def tolerated_variants(answer):
+    """(name, returned text) for every harmless variant of a correct answer that validation tolerates. Each keeps
+    the choice; some spoil or drop the written costs, which is recorded and never a failure."""
+    (a, ca), (b, cb) = answer['cost_if_inspect'].items(); pick = answer['inspect']; dump = json.dumps
+    spaced = lambda cell: cell.replace(',', ' , ')
+    return [
+        ('canonical', dump(answer)),
+        ('costs_as_numeric_strings', dump({'cost_if_inspect': {a: f'{ca:.2f}', b: f' {cb} '}, 'inspect': pick})),
+        ('costs_as_integers', dump({'cost_if_inspect': {a: round(ca), b: round(cb)}, 'inspect': pick})),
+        ('costs_with_more_decimals', '{"cost_if_inspect": {"%s": %.6f, "%s": %.6f}, "inspect": "%s"}' % (a, ca, b, cb, pick)),
+        ('cost_keys_with_spaces', dump({'cost_if_inspect': {spaced(a): ca, b.replace(',', ', '): cb}, 'inspect': pick})),
+        ('cost_object_missing', dump({'inspect': pick})),
+        ('cost_object_partial', dump({'cost_if_inspect': {a: ca}, 'inspect': pick})),
+        ('cost_not_numeric', dump({'cost_if_inspect': {a: 'low', b: None}, 'inspect': pick})),
+        ('cost_not_an_object', dump({'cost_if_inspect': ca, 'inspect': pick})),
+        ('extra_keys', dump({'cost_if_inspect': {a: ca, b: cb, 'difference': abs(ca - cb)}, 'inspect': pick, 'note': 'cheaper action chosen'})),
+        ('inspect_before_cost', dump({'inspect': pick, 'cost_if_inspect': {a: ca, b: cb}})),
+        ('inspect_with_spaces', dump({'cost_if_inspect': {a: ca, b: cb}, 'inspect': ' ' + spaced(pick) + ' '})),
+        ('pretty_printed', '\n' + json.dumps(answer, indent=2) + '\n'),
+    ]
+
+
+def invalid_forms(answer):
+    """(name, returned text, failure category) for every form that stays invalid."""
+    costs = answer['cost_if_inspect']; pick = answer['inspect']; dump = json.dumps
+    return [
+        ('not_json', 'I would inspect ' + pick + '.', 'invalid_json'),
+        ('json_then_text', dump(answer) + ' This minimizes the cost.', 'invalid_json'),
+        ('fenced_json', '```json\n' + dump(answer) + '\n```', 'invalid_json'),
+        ('json_array', dump([answer]), 'invalid_answer'),
+        ('json_string', dump(pick), 'invalid_answer'),
+        ('inspect_missing', dump({'cost_if_inspect': costs}), 'invalid_answer'),
+        ('inspect_other_cell', dump({'cost_if_inspect': costs, 'inspect': '9,9'}), 'invalid_answer'),
+        ('inspect_action_word', dump({'cost_if_inspect': costs, 'inspect': 'check'}), 'invalid_answer'),
+        ('inspect_not_a_string', dump({'cost_if_inspect': costs, 'inspect': [int(x) for x in pick.split(',')]}), 'invalid_answer'),
+        ('inspect_null', dump({'cost_if_inspect': costs, 'inspect': None}), 'invalid_answer'),
+        ('inspect_both_cells', dump({'cost_if_inspect': costs, 'inspect': ' or '.join(costs)}), 'invalid_answer'),
+        ('duplicate_inspect', '{"cost_if_inspect": %s, "inspect": "%s", "inspect": "%s"}' % (dump(costs), pick, pick), 'invalid_json'),
+        ('duplicate_cost_cell', '{"cost_if_inspect": {"%s": 0.1, "%s": 0.2}, "inspect": "%s"}' % (pick, pick, pick), 'invalid_json'),
+    ]
+
+
+def answer_text(user, mode, n):
+    """What the stub returns as the message content for message ordinal n."""
+    if mode != 'variants': return json.dumps(reference_answer(user, mode))
+    variants = tolerated_variants(reference_answer(user, 'optimal'))
+    return variants[n % len(variants)][1]
 
 
 class Stub:
@@ -97,7 +149,7 @@ class Stub:
       credit_from     once this many messages minus one have been counted, every request returns a credit error"""
 
     def __init__(self, mode, credit_first=0, fail_messages=(), fail_from=None, credit_from=None, mutate=None):
-        assert mode in ('optimal', 'always_first')
+        assert mode in ('optimal', 'always_first', 'variants')
         self.mode = mode; self.lock = threading.Lock(); self.requests = 0; self.messages = 0; self.answered = 0
         self.mutate = mutate          # selftest only: (message ordinal, response) -> response, to return malformed answers
         self.credit_first = credit_first; self.fail_messages = set(fail_messages); self.fail_from = fail_from; self.credit_from = credit_from
@@ -123,8 +175,8 @@ class Stub:
         payload = {
             'id': 'gen-rehearsal', 'object': 'chat.completion', 'model': study.design()['canonical_model'], 'provider': 'Alibaba',
             'choices': [{'index': 0, 'finish_reason': 'stop', 'native_finish_reason': 'stop',
-                         'message': {'role': 'assistant', 'content': json.dumps(reference_answer(user, self.mode)), 'refusal': None, 'reasoning': None}}],
-            'usage': {'prompt_tokens': tokens, 'completion_tokens': 9, 'total_tokens': tokens + 9,
+                         'message': {'role': 'assistant', 'content': answer_text(user, self.mode, n), 'refusal': None, 'reasoning': None}}],
+            'usage': {'prompt_tokens': tokens, 'completion_tokens': 30, 'total_tokens': tokens + 30,
                       'completion_tokens_details': {'reasoning_tokens': 0}}}
         return Response(json.dumps(self.mutate(n, payload) if self.mutate else payload).encode())
 
@@ -217,6 +269,7 @@ def main():
         many = chain_once('d-failed-units-over-the-limit', Stub('optimal', fail_from=first_s1), hub_dir, base, sr)
         bill = chain_once('e-billing-stop-and-resume', Stub('optimal', credit_from=first_s1 + 40), hub_dir, base, sr,
                           resume_with=Stub('optimal'), verify=True)
+        mixed = chain_once('f-tolerated-answer-variants', Stub('variants'), hub_dir, base, sr, verify=True)
     finally:
         if not a.keep: shutil.rmtree(base, ignore_errors=True)
     calls = full.get('stages', {}); made = sum((e.get('calls') or 0) for e in calls.values())
@@ -239,7 +292,7 @@ def main():
         'b_exit_3': gate.get('exit') == 3, 'b_state_stopped_at_gate': gate.get('state') == 'stopped_at_gate',
         'b_stopped_at_Q0': gate.get('stopped_stage') == 'Q0' and gate.get('reason') == 'gate_failed',
         'b_no_S1_run_on_hub': all(not str(batch).startswith('s1') for batch, _ in gate.get('hub_runs', [('s1', '')])),
-        'b_hub_runs': gate.get('hub_runs') == [('p0-001', 'done'), ('q0-001', 'failed'), ('s0-001', 'done')],
+        'b_hub_runs': gate.get('hub_runs') == [(study.batch('P0'), 'done'), (study.batch('Q0'), 'failed'), (study.batch('S0'), 'done')],
         'b_hub_metrics_present': gate.get('hub_final_metrics_present') is True,
         'b_only_p0_and_q0_calls': gate.get('stub_messages') == 1 + budget['max_calls']['Q0']
                                   and gate.get('stages', {}).get('Q0', {}).get('valid') == budget['max_calls']['Q0'],
@@ -260,31 +313,41 @@ def main():
         'd_dispatch_stopped': limit < (d.get('S1', {}).get('failed') or 0) <= limit + budget['workers']
                               and (d.get('S1', {}).get('not_started') or 0) >= n_s1 - limit - budget['workers']
                               and many.get('stub_answered') == 1 + budget['max_calls']['Q0'],
-        'd_hub_s1_failed': ('s1-001', 'failed') in many.get('hub_runs', []) and many.get('hub_final_metrics_present') is True,
+        'd_hub_s1_failed': (study.batch('S1'), 'failed') in many.get('hub_runs', []) and many.get('hub_final_metrics_present') is True,
         'e_first_stop_is_a_billing_stop': first.get('exit') == 3 and first.get('reason') == provider.BILLING_STOP and first.get('stopped_stage') == 'S1'
                                           and first.get('stages', {}).get('S1', {}).get('failed') == 0 and first.get('stages', {}).get('S1', {}).get('resumable') is True
                                           and fu.get('failed') == 0 and fu.get('not_started', 0) > 0 and fu.get('completed') == 40,
         'e_reservations_of_unanswered_calls_voided': isinstance(voided, int) and 1 <= voided <= budget['workers']
                                                      and (first.get('stages', {}).get('S1') or {}).get('calls') == 40,
         'e_resume_completes': bill.get('resume_exit') == 0 and bill.get('state') == 'completed' and e.get('S1', {}).get('status') == 'done'
-                              and cont.get('batch') == 's1-001-r1' and cont.get('status') == 'done' and cont.get('failed') == 0,
+                              and cont.get('batch') == study.batch('S1') + '-r1' and cont.get('status') == 'done' and cont.get('failed') == 0,
         'e_every_unit_exactly_once': (bill.get('s1_units') or {}).get('every_unit_exactly_once') is True and (bill.get('s1_units') or {}).get('completed') == n_s1
                                      and (bill.get('s1_units') or {}).get('assigned') == n_s1 and cont.get('units') == fu.get('not_started')
                                      and (bill.get('s1_units') or {}).get('answered_calls') == n_s1 and (bill.get('s1_units') or {}).get('no_unit_answered_twice') is True,
-        'e_hub_runs': bill.get('hub_runs') == sorted(done4[:3] + [('s1-001', 'failed'), ('s1-001-r1', 'done')]),
+        'e_hub_runs': bill.get('hub_runs') == sorted(done4[:3] + [(study.batch('S1'), 'failed'), (study.batch('S1') + '-r1', 'done')]),
         'e_ledger_stays_inside_the_exact_s1_cap': isinstance(voided, int)
             and ((bill.get('ledger') or {}).get('calls_by_stage') or {}).get('S1') == n_s1
-            and ((bill.get('ledger') or {}).get('calls_by_batch') or {}).get('s1-001') == n_s1
+            and ((bill.get('ledger') or {}).get('calls_by_batch') or {}).get(study.batch('S1')) == n_s1
             and (bill.get('ledger') or {}).get('voided_calls') == voided
             and (bill.get('ledger') or {}).get('usage_reported_calls') == (bill.get('ledger') or {}).get('attempted_calls') == sum(budget['max_calls'].values())
             and (bill.get('s1_units') or {}).get('standing_reservations') == n_s1
             and (bill.get('ledger') or {}).get('transport_attempts', 10 ** 9) <= budget['max_transport_attempts'],
         'e_verify_exit_0': bill.get('verify_exit') == 0,
+        'f_exit_0_completed_and_verified': mixed.get('exit') == 0 and mixed.get('state') == 'completed' and mixed.get('hub_runs') == done4
+                                           and mixed.get('verify_exit') == 0,
+        'f_every_variant_is_valid_and_graded': {s: (e_.get('valid'), e_.get('failed')) for s, e_ in mixed.get('stages', {}).items()} ==
+                                               {'S0': (144, 0), 'P0': (1, 0), 'Q0': (budget['max_calls']['Q0'], 0), 'S1': (n_s1, 0)}
+                                               and (mixed.get('s1_units') or {}).get('regret_prose') == 0 and (mixed.get('s1_units') or {}).get('regret_table') == 0,
+        'f_variants_counted_not_failed': (mixed.get('s1_units') or {}).get('work_malformed', 0) >= 4 * (n_s1 // 13)
+                                         and (mixed.get('s1_units') or {}).get('work_malformed', n_s1) < n_s1 // 2
+                                         and (mixed.get('s1_units') or {}).get('choice_contradicts_own_costs') == 0,
+        'a_reference_stub_writes_both_costs_correctly': (full.get('s1_units') or {}).get('both_costs_correct') == n_s1
+                                                        and (full.get('s1_units') or {}).get('work_malformed') == 0,
         'no_real_wait': time.monotonic() - started < 600 and len(clock.waits) > 0,
     }
     ok = all(checks.values())
     print(json.dumps({'ok': ok, 'checks': checks, 'full_chain': full, 'failed_qualification': gate, 'one_failed_unit': one,
-                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'waits_replaced': len(clock.waits),
+                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'tolerated_variants': mixed, 'waits_replaced': len(clock.waits),
                       'waited_seconds_replaced': sum(clock.waits), 'seconds': round(time.monotonic() - started, 1),
                       'note': 'stub answers only; nothing here is a sample and nothing left this machine'}, sort_keys=True))
     return 0 if ok else 1
