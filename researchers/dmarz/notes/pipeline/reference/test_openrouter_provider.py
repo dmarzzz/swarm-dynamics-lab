@@ -393,6 +393,22 @@ class LedgerRules(Base):
         with path.open('a') as f: f.write('{"type": "reser')
         with self.assertRaises(Exception): ledger.transact()
 
+    def test_stage_caps_are_per_batch_family_and_the_study_cap_is_global(self):
+        b = json.loads(json.dumps(CONFIG['budget'])); b['max_calls'] = {'P0': 1, 'Q0': 2, 'S1': 3}; b['max_attempted_calls'] = 6
+        ledger = orp.Ledger(Path(self.tmp.name) / 'f.jsonl', b)
+        def reserve(call): return ledger.transact({'type': 'reserve', 'call_id': call, 'micro_usd': 1})
+        def refused(call):
+            with self.assertRaises(orp.CallFailure) as cm: reserve(call)
+            return cm.exception.category
+        reserve('p0-001:a'); reserve('q0-001:a'); reserve('q0-001:b')
+        self.assertEqual(refused('q0-001:c'), 'stage_call_cap_reached')
+        reserve('p0-002:a'); reserve('q0-002:a')                       # a repair attempt has its own allowance
+        self.assertEqual(refused('p0-002:b'), 'stage_call_cap_reached')
+        reserve('q0-002:b')
+        self.assertEqual(refused('s1-002:a'), 'study_call_cap_reached')  # the study cap counts every attempt
+        self.assertEqual(ledger.transact()['calls_by_batch'], {'p0-001': 1, 'q0-001': 2, 'p0-002': 1, 'q0-002': 2})
+        self.assertEqual([orp.family_of(x) for x in ('s1-001:a', 's1-001-r1:a', 's1-001-r12:b', 'q0-002:c')], ['s1-001', 's1-001', 's1-001', 'q0-002'])
+
     def test_void_rules(self):
         ledger = orp.Ledger(Path(self.tmp.name) / 'v.jsonl', CONFIG['budget'])
         ledger.transact({'type': 'reserve', 'call_id': 's1-001:a', 'micro_usd': 5})
