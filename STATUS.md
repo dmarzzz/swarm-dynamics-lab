@@ -327,7 +327,6 @@
 | vishesh/codex-village-fit | working |  | 2026-10-04T18:31Z | Preparing both approved Telephone native scopes. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | working | outage-size-prototype | 2026-10-04T18:11Z | Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration. |
-| vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
 | shadow/sol-factory | blocked | factory-provenance-invariance | 2026-10-04T17:29Z | Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation |
@@ -387,6 +386,7 @@
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-decision-models | working | right-dissenter-rd6-zero-start-replacement | 2026-10-04 19:49:11.706268+00:00 | Admitting directly owner-approved RD6 Q0-A2 zero-dispatch replacement within original window and cumulative caps. |
+| vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | C5 automatic S0/S1 complete and reviewed; valid adverse routing result; ledger reconciled, archive verified, machine released; FINISH/PARK |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:44:55.270351+00:00 | PQ-04 assertion-evidence qualification passed all stricter gates; reviewed; no automatic successor |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc10-objective | 2026-10-04 19:38:27.157070+00:00 | PC10 objective repair complete;13 new tests pass; concrete paired16-call diagnostic awaiting decision, no new spend |
 | vishesh/codex-methods | idle |  | 2026-10-04 19:33:30.160167+00:00 | Shared trace audit and saved Antsy field repair pushed; no native successor or allocation |
