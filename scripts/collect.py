@@ -262,8 +262,16 @@ def apify_spent(tok: str) -> float:
 
 
 def cmd_apify(a):
+    for name in ("max_usd", "hard_cap"):
+        value = getattr(a, name)
+        if isinstance(value, bool) or not math.isfinite(value) or value <= 0:
+            sys.exit(f"{name} must be finite and positive")
+    if isinstance(a.timeout, bool) or not isinstance(a.timeout, int) or a.timeout <= 0:
+        sys.exit("timeout must be a positive integer number of seconds")
     tok = secret("apify_token")
     spent, cap = apify_spent(tok)
+    if not math.isfinite(spent) or spent < 0 or not math.isfinite(cap) or cap <= 0:
+        sys.exit("invalid Apify account usage/cap; refusing dispatch")
     print(f"apify: ${spent:.3f} of ${cap:.2f} monthly spent before this run")
     if spent + a.max_usd > min(cap, a.hard_cap):
         sys.exit(f"refusing: {spent:.2f} + {a.max_usd:.2f} would exceed the hard cap {min(cap, a.hard_cap):.2f}")
