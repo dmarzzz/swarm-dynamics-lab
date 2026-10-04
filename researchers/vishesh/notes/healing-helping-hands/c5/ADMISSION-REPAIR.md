@@ -1,0 +1,5 @@
+# C5 pre-dispatch admission repair
+
+The first read-only native admission check stopped with `wrong_registered_plan` before any C5 model request or dispatch marker. Source/model verification and 36 offline checks had passed, but the C5 runtime still required the historical `/c4/PLAN.md` suffix. The actual public page correctly registered C5. This was an admission implementation defect and a missing integration-test case, not a model qualification failure.
+
+The repair changes that suffix to C5 and adds a regression test exercising the real registration predicate: current C5 accepted, historical C4 rejected even when the other receipt fields match. All 37 offline checks pass. The immutable plan contents, scientific design, 60/432 assignments, budgets, models and conditional-main approval remain unchanged. Publish and deploy a new exact source revision, re-register that revision's unchanged plan, refresh admission and verify the native tests before any dispatch. The ledger retains its sole remote writer and every historical entry. No paid retry or successor is authorized by this repair.

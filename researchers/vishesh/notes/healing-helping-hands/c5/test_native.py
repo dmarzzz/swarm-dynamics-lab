@@ -5,6 +5,19 @@ from unittest.mock import patch
 import runtime,worker
 from relay import store_response,stored_response
 class NativeTests(unittest.TestCase):
+    def test_public_plan_requires_C5_registration(self):
+        # Run the real URL/hash/source predicate; isolate unrelated admission gates.
+        plan_hash=runtime.hashlib.sha256((runtime.HERE/'PLAN.md').read_bytes()).hexdigest()
+        for cohort,accepted in [('c5',True),('c4',False)]:
+            url='https://github.com/dmarzzz/swarm-lab/blob/frozen/researchers/vishesh/notes/healing-helping-hands/'+cohort+'/PLAN.md'
+            receipt={'url':url,'commit':'frozen','plan_sha256':plan_hash}
+            admission={'source_commit':'frozen','scientific_hash':runtime.digest({}),'plan_url':url}
+            with patch('runtime.admit'),patch('runtime.sources',return_value={}):
+                if accepted:
+                    self.assertEqual(runtime.preflight(admission,'S0',public_check=lambda *a:receipt)[1],receipt)
+                else:
+                    with self.assertRaisesRegex(ValueError,'wrong_registered_plan'):
+                        runtime.preflight(admission,'S0',public_check=lambda *a:receipt)
     def db(self):
         d=sqlite3.connect(':memory:');d.execute('CREATE TABLE calls(hash TEXT PRIMARY KEY,reserved INTEGER,status TEXT,cost REAL)');d.executemany('INSERT INTO calls VALUES(?,?,?,?)',[(str(i),1344000,'completed',.04/2239) for i in range(2239)]);d.execute('CREATE TABLE c4_hashes(hash TEXT PRIMARY KEY)');d.commit();return d
     def test_rejected_qwen_preserves_task_output_without_retry(self):

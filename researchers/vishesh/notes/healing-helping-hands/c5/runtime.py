@@ -45,7 +45,7 @@ def preflight(a,stage,parent=None,public_check=None):
         sys.path.insert(0,str(HERE.parent.parent/'experiment-documentation'));from public_plan import check;public_check=check
     tldr=f'TLDR: C5-{stage} option-order agreement referral versus always-Jev, Qwen-only and same-count random referral; measure absolute error, missed errors and derived consultations on synthetic report families.'
     receipt=public_check('healing-helping-hands',tldr)
-    if receipt['url']!=a['plan_url'] or receipt['plan_sha256']!=plan_hash or receipt['commit']!=a['source_commit'] or not receipt['url'].endswith('/c4/PLAN.md'):raise ValueError('wrong_registered_plan')
+    if receipt['url']!=a['plan_url'] or receipt['plan_sha256']!=plan_hash or receipt['commit']!=a['source_commit'] or not receipt['url'].endswith('/c5/PLAN.md'):raise ValueError('wrong_registered_plan')
     if stage=='S1':
         if parent is None:raise ValueError('qualification_required')
         pm=json.loads((parent/'manifest.json').read_text());q=json.loads((parent/'qualification.json').read_text())
