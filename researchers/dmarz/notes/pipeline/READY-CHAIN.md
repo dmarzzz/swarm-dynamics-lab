@@ -64,7 +64,7 @@ source_hash: <study.source_hash() at the pinned commit>
   the stop reason is `end_turn` and the answer equals the expected values. Its measured input and output
   tokens are written to its summary and to the hub.
 - `Q0` is the clean qualification with the thresholds frozen in `design.yaml`.
-- `S1` is the comparison. One call per assignment, no retries.
+- `S1` is the comparison. One call per assignment. Answers are never retried.
 
 Every stage is one hub run. A stage ends `done` only when all of its rows are valid and, for S0, P0 and
 Q0, its gate passed (`qualification_passed: 1`). Otherwise it ends `failed`, with every assignment
@@ -81,8 +81,10 @@ recorded as completed, failed or not started. Both endings report `episodes`, `i
    stage exists at the same `source_hash` with status `done`, `invalid == 0` and
    `qualification_passed == 1`, and refuses a batch name that already exists (no replay).
 3. A failed stage stops the chain. Nothing further is queued, the process exits non-zero, and
-   `results/chain-status.json` names the stage and the reason. There are no retries and no agent is
-   needed between stages; a repair is a new attempt with its own pre-run review.
+   `results/chain-status.json` names the stage and the reason. A stage is never rerun and no agent is
+   needed between stages; a repair is a new attempt with its own pre-run review. Before S1 the chain
+   also checks a written projection rule: S1 calls times the measured cost per call in Q0 must fit in
+   the remaining dollar cap, otherwise it stops with reason `projection_exceeds_cap`.
 4. `results/chain-status.json` is rewritten atomically after every transition:
    `state` (`running`, `stopped_at_gate`, `completed`), and per stage the run id, status, calls, tokens,
    dollars, start and end times.
@@ -113,6 +115,23 @@ ledger refuses a reservation that would exceed either, or that would take settle
 reservations over `budget.aggregate_usd`. Reservations use the free token-counting endpoint for input
 and the full output limit. Dollars are not the gate for these runs (dmarz, 2026-10-04); the call caps are
 hard, and actual calls, tokens and dollars are reported to the hub.
+
+## Transport retry rule
+
+Added 2026-10-04 at dmarz/fleet-monitor's request, copied from soc07-private-judgments (`execution.json`
+key `retry`, `src/adapter.py`). Without it one HTTP 429 or 529 ends a long stage, and the repair is a new
+batch with the scripted stage and qualification again.
+
+- At most 2 retries per call, only for HTTP 429 and 529, where the provider rejected the request before
+  the model ran. Backoff 2 s, then 6 s; a `retry-after` header is honoured up to 20 s. All attempts and
+  waits share the one request timeout.
+- Never retried: a timeout, any other HTTP status, a refusal, an invalid or wrong answer, and anything
+  after a response that reports usage. Those end the call as failed, and the first failed call stops
+  new dispatch as before.
+- Every HTTP attempt is recorded in the ledger before it is sent and counts against
+  `budget.max_transport_attempts`; an attempt over that cap is refused. `max_calls` still counts
+  assignments dispatched: a retried call is one call, reserved once, billed at most once.
+- Each row records its `attempts`; the stage summary and the hub metrics report `transport_attempts`.
 
 ## Opus 5.5 request rules
 
