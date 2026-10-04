@@ -1,0 +1,16 @@
+{
+  "prefix": "v3o-a3",
+  "probe": {
+    "cost_usd": 0.005208,
+    "ok": true,
+    "status": "valid"
+  },
+  "q0_gate": {
+    "batch": "v3o-a2-q0",
+    "run": "discussion-v3-opus/v3o-a2-q0",
+    "summary_path": "../records/v3o-a2-q0/summary.json",
+    "summary_sha256": "26cd713ae4616998539614d48e61217b163209fbf10414e0da2cec336d65264d"
+  },
+  "stages": {},
+  "started_utc": "2026-10-04T10:25:08.276586+00:00"
+}

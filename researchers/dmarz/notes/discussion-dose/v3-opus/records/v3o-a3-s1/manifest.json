@@ -1,0 +1,2554 @@
+{
+  "assignments": [
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54201:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54201:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54201:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54201:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54201:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54201:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54201:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54201:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54202:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54202:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54202:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54202:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54202:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54202:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54202:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54202:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54203:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54203:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54203:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54203:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54203:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54203:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54203:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54203:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54204:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54204:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54204:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54204:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54204:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54204:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54204:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54204:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54205:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54205:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54205:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54205:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54205:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54205:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54205:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54205:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54206:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54206:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54206:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54206:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54206:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54206:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54206:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54206:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54207:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54207:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54207:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54207:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54207:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54207:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54207:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54207:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54208:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54208:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54208:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54208:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54208:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54208:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54208:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54208:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54209:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54209:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54209:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54209:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54209:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54209:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54209:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54209:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54210:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54210:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54210:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54210:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54210:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54210:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54210:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54210:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54211:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54211:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54211:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54211:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54211:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54211:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54211:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54211:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54212:0:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54212:0:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54212:0:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54212:0:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54212:1:independent",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54212:1:reports",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54212:1:private",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54212:1:board",
+      "kind": "swarm",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54213:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54213:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54213:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54213:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54213:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54213:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54213:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54213:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54214:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54214:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54214:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54214:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54214:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54214:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54214:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54214:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54215:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54215:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54215:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54215:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54215:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54215:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54215:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54215:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54216:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54216:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54216:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54216:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54216:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54216:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54216:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54216:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54217:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54217:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54217:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54217:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54217:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54217:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54217:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54217:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54218:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54218:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54218:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54218:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54218:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54218:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54218:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54218:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54219:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54219:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54219:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54219:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54219:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54219:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54219:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54219:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54220:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54220:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54220:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54220:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54220:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54220:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54220:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54220:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54221:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54221:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54221:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54221:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54221:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54221:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54221:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54221:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "capacity",
+      "id": "54222:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "capacity",
+      "id": "54222:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "capacity",
+      "id": "54222:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "capacity",
+      "id": "54222:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "capacity",
+      "id": "54222:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "capacity",
+      "id": "54222:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "capacity",
+      "id": "54222:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "capacity",
+      "id": "54222:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54223:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54223:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54223:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "total_cost",
+      "id": "54223:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54223:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54223:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54223:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "total_cost",
+      "id": "54223:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "arm": "independent",
+      "attack": false,
+      "family": "dependency",
+      "id": "54224:0:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "arm": "reports",
+      "attack": false,
+      "family": "dependency",
+      "id": "54224:0:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "arm": "private",
+      "attack": false,
+      "family": "dependency",
+      "id": "54224:0:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "arm": "board",
+      "attack": false,
+      "family": "dependency",
+      "id": "54224:0:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "arm": "independent",
+      "attack": true,
+      "family": "dependency",
+      "id": "54224:1:independent",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "arm": "reports",
+      "attack": true,
+      "family": "dependency",
+      "id": "54224:1:reports",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "arm": "private",
+      "attack": true,
+      "family": "dependency",
+      "id": "54224:1:private",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "arm": "board",
+      "attack": true,
+      "family": "dependency",
+      "id": "54224:1:board",
+      "kind": "swarm",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54201:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54201:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54201
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54202:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54202:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54202
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54203:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54203:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54203
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54204:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54204:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54204
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54205:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54205:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54205
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54206:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54206:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54206
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54207:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54207:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54207
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54208:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54208:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54208
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54209:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54209:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54209
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54210:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54210:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54210
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54211:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54211:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54211
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54212:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54212:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "resolvable",
+      "world": 54212
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54213:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54213:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54213
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54214:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54214:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54214
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54215:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54215:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54215
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54216:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54216:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54216
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54217:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54217:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54217
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54218:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54218:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54218
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54219:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54219:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54219
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54220:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54220:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54220
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54221:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54221:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54221
+    },
+    {
+      "attack": false,
+      "family": "capacity",
+      "id": "54222:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "attack": true,
+      "family": "capacity",
+      "id": "54222:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54222
+    },
+    {
+      "attack": false,
+      "family": "total_cost",
+      "id": "54223:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "attack": true,
+      "family": "total_cost",
+      "id": "54223:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54223
+    },
+    {
+      "attack": false,
+      "family": "dependency",
+      "id": "54224:0:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "attack": true,
+      "family": "dependency",
+      "id": "54224:1:diagnostic",
+      "kind": "diagnostic",
+      "stratum": "ambiguous",
+      "world": 54224
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-complete-0",
+      "kind": "memory",
+      "state": "complete"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-omitted-0",
+      "kind": "memory",
+      "state": "omitted"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-conflict-0",
+      "kind": "memory",
+      "state": "conflict"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-correlated_copies-0",
+      "kind": "memory",
+      "state": "correlated_copies"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-superseded-0",
+      "kind": "memory",
+      "state": "superseded"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-inherited_false-0",
+      "kind": "memory",
+      "state": "inherited_false"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-complete-1",
+      "kind": "memory",
+      "state": "complete"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-omitted-1",
+      "kind": "memory",
+      "state": "omitted"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-conflict-1",
+      "kind": "memory",
+      "state": "conflict"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-correlated_copies-1",
+      "kind": "memory",
+      "state": "correlated_copies"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-superseded-1",
+      "kind": "memory",
+      "state": "superseded"
+    },
+    {
+      "family": "capacity",
+      "id": "capacity-inherited_false-1",
+      "kind": "memory",
+      "state": "inherited_false"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-complete-0",
+      "kind": "memory",
+      "state": "complete"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-omitted-0",
+      "kind": "memory",
+      "state": "omitted"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-conflict-0",
+      "kind": "memory",
+      "state": "conflict"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-correlated_copies-0",
+      "kind": "memory",
+      "state": "correlated_copies"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-superseded-0",
+      "kind": "memory",
+      "state": "superseded"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-inherited_false-0",
+      "kind": "memory",
+      "state": "inherited_false"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-complete-1",
+      "kind": "memory",
+      "state": "complete"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-omitted-1",
+      "kind": "memory",
+      "state": "omitted"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-conflict-1",
+      "kind": "memory",
+      "state": "conflict"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-correlated_copies-1",
+      "kind": "memory",
+      "state": "correlated_copies"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-superseded-1",
+      "kind": "memory",
+      "state": "superseded"
+    },
+    {
+      "family": "total_cost",
+      "id": "total_cost-inherited_false-1",
+      "kind": "memory",
+      "state": "inherited_false"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-complete-0",
+      "kind": "memory",
+      "state": "complete"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-omitted-0",
+      "kind": "memory",
+      "state": "omitted"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-conflict-0",
+      "kind": "memory",
+      "state": "conflict"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-correlated_copies-0",
+      "kind": "memory",
+      "state": "correlated_copies"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-superseded-0",
+      "kind": "memory",
+      "state": "superseded"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-inherited_false-0",
+      "kind": "memory",
+      "state": "inherited_false"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-complete-1",
+      "kind": "memory",
+      "state": "complete"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-omitted-1",
+      "kind": "memory",
+      "state": "omitted"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-conflict-1",
+      "kind": "memory",
+      "state": "conflict"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-correlated_copies-1",
+      "kind": "memory",
+      "state": "correlated_copies"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-superseded-1",
+      "kind": "memory",
+      "state": "superseded"
+    },
+    {
+      "family": "dependency",
+      "id": "dependency-inherited_false-1",
+      "kind": "memory",
+      "state": "inherited_false"
+    }
+  ],
+  "chain_version": "v3-opus-chain-v1",
+  "created_utc": "2026-10-04T10:25:14.339086+00:00",
+  "launch_record": {
+    "configuration": {
+      "attempt_cap": "planned calls + max(10, planned calls // 10)",
+      "credit_halt": "after one provider_credit_balance_low failure (recorded as a provider failure) the next dispatch halts the stage; never retried",
+      "dispatch_order": "clean-first: per world clean acquisition, report snapshot, reports-only arm and clean full-evidence diagnostic; early gate after those 66 calls; then remaining clean arms, attacked exposures, memory fixtures",
+      "effort": "high",
+      "input_usd_per_million": 4,
+      "max_input_bytes": 60000,
+      "max_output_tokens": 16000,
+      "model": "claude-opus-5-5",
+      "output_usd_per_million": 20,
+      "refusal": "stop_reason refusal counted separately (public reason provider_schema_refusal)",
+      "server_fallbacks": "disabled",
+      "temperature": "omitted: rejected by claude-opus-5-5",
+      "thinking": "adaptive (cannot be disabled on claude-opus-5-5)",
+      "timeout": 600,
+      "transport_retries": "at most 2 per logical call, only HTTP 429/529 (model not run), within the 600 s request timeout; every attempt reserved and counted against the attempt cap; model answers never retried",
+      "visible_answer_max_chars": 8000
+    },
+    "experiment": "discussion-v3-opus",
+    "model": "claude-opus-5-5",
+    "owner_authorization": {
+      "path": "../OWNER-AUTHORIZATION.md",
+      "sha256": "60d14fc23c216b1c5599a18c9cf01a62710e330777e9f8cc5815333e1471a7cb"
+    },
+    "q0_gate": {
+      "batch": "v3o-a2-q0",
+      "run": "discussion-v3-opus/v3o-a2-q0",
+      "summary_path": "../records/v3o-a2-q0/summary.json",
+      "summary_sha256": "26cd713ae4616998539614d48e61217b163209fbf10414e0da2cec336d65264d"
+    },
+    "source_hashes": {
+      "bench_v3/__init__.py": "3c5fe43228d361bcf91c582c907545ba65ce7badf65b29f6941beb628e633d72",
+      "bench_v3/analysis.py": "dd97d3831607834c91d64ddc4469848034302a22aa4e08434b3174b86e317e7e",
+      "bench_v3/cli.py": "a419454733eae61fe50cc5d2e4de4c1db2679e559e9084b4d1f49b7acc13ac53",
+      "bench_v3/contracts.py": "d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7",
+      "bench_v3/evidence.py": "f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc",
+      "bench_v3/failures.py": "68934060f5a7054ef33ca28c1b99b254c95671c3683131c943accd9e5b2ab79e",
+      "bench_v3/hub_worker.py": "74ba406c142c5786b0e9c473020d39fb69552c30051c2572fbc7e236ab3e6d47",
+      "bench_v3/journal.py": "133569662d073f4d461843fea4c8492d863843366e18d6ac8987e65568a89518",
+      "bench_v3/policies.py": "7eb0ddb3e8d520754aac18eb62fb96714ee28829bc9139f516c50d69198e3cd9",
+      "bench_v3/portable_audit.py": "b7ae38ac9a93822d1457a5494fac9bd45d590d8f3fcefcbc67ea4b362508c880",
+      "bench_v3/replay_view.py": "ff5a658976e685cb5bc1f5be0828a585849c934e0b07b2db195b0d8f51a241e1",
+      "bench_v3/runner.py": "22edc2e874ed7ccacd19bcc815a79b3a28617867dd8c82a89c5966f2273a5351",
+      "bench_v3/scoring.py": "6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4",
+      "bench_v3/selftest.py": "12b8b2d94696322fbb5f38bdf407a868525641745ed73388110d6af86cccec48",
+      "bench_v3/worlds.py": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
+      "bench_v3_opus.py": "bdc9592f97bdd0e3917c93ea0d0567afd5e065ac6b56db3fd71318ca89a5a35b",
+      "providers.py": "22a2e672aeb168ab630bcc65ca2eb9838be910f332820b221720ffa09d82d500",
+      "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
+    },
+    "stages": {
+      "q0": {
+        "max_calls": 636,
+        "max_cost_usd": 400
+      },
+      "s1": {
+        "max_calls": 2436,
+        "max_cost_usd": 1500
+      }
+    },
+    "status": "owner-waived-opus-chain"
+  },
+  "model_config": {
+    "attempt_cap": "planned calls + max(10, planned calls // 10)",
+    "credit_halt": "after one provider_credit_balance_low failure (recorded as a provider failure) the next dispatch halts the stage; never retried",
+    "dispatch_order": "clean-first: per world clean acquisition, report snapshot, reports-only arm and clean full-evidence diagnostic; early gate after those 66 calls; then remaining clean arms, attacked exposures, memory fixtures",
+    "effort": "high",
+    "input_usd_per_million": 4,
+    "max_input_bytes": 60000,
+    "max_output_tokens": 16000,
+    "model": "claude-opus-5-5",
+    "output_usd_per_million": 20,
+    "refusal": "stop_reason refusal counted separately (public reason provider_schema_refusal)",
+    "server_fallbacks": "disabled",
+    "temperature": "omitted: rejected by claude-opus-5-5",
+    "thinking": "adaptive (cannot be disabled on claude-opus-5-5)",
+    "timeout": 600,
+    "transport_retries": "at most 2 per logical call, only HTTP 429/529 (model not run), within the 600 s request timeout; every attempt reserved and counted against the attempt cap; model answers never retried",
+    "visible_answer_max_chars": 8000
+  },
+  "n_agents": 3,
+  "planned_calls": 2436,
+  "provider": "claude-opus-5-5",
+  "reserved_holdout": [
+    30000,
+    30001,
+    30002,
+    30003,
+    30004,
+    30005,
+    30006,
+    30007,
+    30008,
+    30009,
+    30010,
+    30011,
+    30012,
+    30013,
+    30014,
+    30015,
+    30016,
+    30017,
+    30018,
+    30019,
+    30020,
+    30021,
+    30022,
+    30023
+  ],
+  "retry_policy": "none",
+  "rounds": 3,
+  "runtime": {
+    "machine": "x86_64",
+    "python": "3.12.3",
+    "system": "Linux"
+  },
+  "schema": "discussion-benchmark-v3.0",
+  "scientific": true,
+  "source_hashes": {
+    "bench_v3/__init__.py": "3c5fe43228d361bcf91c582c907545ba65ce7badf65b29f6941beb628e633d72",
+    "bench_v3/analysis.py": "dd97d3831607834c91d64ddc4469848034302a22aa4e08434b3174b86e317e7e",
+    "bench_v3/cli.py": "a419454733eae61fe50cc5d2e4de4c1db2679e559e9084b4d1f49b7acc13ac53",
+    "bench_v3/contracts.py": "d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7",
+    "bench_v3/evidence.py": "f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc",
+    "bench_v3/failures.py": "68934060f5a7054ef33ca28c1b99b254c95671c3683131c943accd9e5b2ab79e",
+    "bench_v3/hub_worker.py": "74ba406c142c5786b0e9c473020d39fb69552c30051c2572fbc7e236ab3e6d47",
+    "bench_v3/journal.py": "133569662d073f4d461843fea4c8492d863843366e18d6ac8987e65568a89518",
+    "bench_v3/policies.py": "7eb0ddb3e8d520754aac18eb62fb96714ee28829bc9139f516c50d69198e3cd9",
+    "bench_v3/portable_audit.py": "b7ae38ac9a93822d1457a5494fac9bd45d590d8f3fcefcbc67ea4b362508c880",
+    "bench_v3/replay_view.py": "ff5a658976e685cb5bc1f5be0828a585849c934e0b07b2db195b0d8f51a241e1",
+    "bench_v3/runner.py": "22edc2e874ed7ccacd19bcc815a79b3a28617867dd8c82a89c5966f2273a5351",
+    "bench_v3/scoring.py": "6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4",
+    "bench_v3/selftest.py": "12b8b2d94696322fbb5f38bdf407a868525641745ed73388110d6af86cccec48",
+    "bench_v3/worlds.py": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
+    "bench_v3_opus.py": "bdc9592f97bdd0e3917c93ea0d0567afd5e065ac6b56db3fd71318ca89a5a35b",
+    "providers.py": "22a2e672aeb168ab630bcc65ca2eb9838be910f332820b221720ffa09d82d500",
+    "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
+  },
+  "split": "opus-s1",
+  "stage": "s1",
+  "strata": {
+    "54201": "resolvable",
+    "54202": "resolvable",
+    "54203": "resolvable",
+    "54204": "resolvable",
+    "54205": "resolvable",
+    "54206": "resolvable",
+    "54207": "resolvable",
+    "54208": "resolvable",
+    "54209": "resolvable",
+    "54210": "resolvable",
+    "54211": "resolvable",
+    "54212": "resolvable",
+    "54213": "ambiguous",
+    "54214": "ambiguous",
+    "54215": "ambiguous",
+    "54216": "ambiguous",
+    "54217": "ambiguous",
+    "54218": "ambiguous",
+    "54219": "ambiguous",
+    "54220": "ambiguous",
+    "54221": "ambiguous",
+    "54222": "ambiguous",
+    "54223": "ambiguous",
+    "54224": "ambiguous"
+  },
+  "system_hash": "7b90b57dd3fd0a8cedb1b5ef06b182d1319cfb4d7c7501803350f4dd57616096",
+  "world_hashes": {
+    "54201": "1221fe421c1dd1df5f5ebcc5493aafba6505b4a44239323036a93e942f1d4353",
+    "54202": "b83d87aa70b53f9169eedc0aa0ce1440c65637574166aaf3098fa75cba5a9a99",
+    "54203": "92fadc915136973335ceaa8c581e471a5f2793129dfcd0fa82b8a73e70ca260a",
+    "54204": "ce2f23b7e3483841a06a7d2f2367db498f5ef9d3b248000270af54b7e8706f2d",
+    "54205": "e7fa7436c9593e3d22f34b28f315a5521e44f3621d5babbcf561f88b14eb68bb",
+    "54206": "0479d9830de63b1363afc05551faa06a194e0e2bdd3b67c1c694e26378750042",
+    "54207": "95ff6fa6f5300e2c72cb1422a9dbc8525bab347855851a8a8b36c9b9eeddc07e",
+    "54208": "e272f9cb5c7ca7a23a31340fa9a227ef02ead3c98f3d0525bfecbb7678d29098",
+    "54209": "00dab20f7994a8f35bd6c7bd7d8c2333f19030c31269cccc00ffa238402fd0ec",
+    "54210": "d1c91e463096de86ea81b3f7f001936014b796fb840bb1814b6ec2c5843f7c79",
+    "54211": "4923f0d24d842e6b48d99954b42dd622158b224e6464e437051c6c066fd891ec",
+    "54212": "739fc7ff941f399d0ad08c8645fe234a77a6d544660ae8c5eb6541b5eebdcc69",
+    "54213": "233ee73c1ead8b225c8516462235a95b1b2da511d8bcb7fdbc8f460649c5ea44",
+    "54214": "7ef6382bbca6efe239cf807e1dba984d82f4312641380610fd495c3243eec64b",
+    "54215": "672a668e23888b1e6679aea253ad19f26928a0be1a3606617d9c4e0c6070509a",
+    "54216": "49bd440a7d0100b85f4697d3fd5701c76ea83056e4a8f91411b22c5393a4d164",
+    "54217": "f7d1b34da7aa86d9e55ad91e53bf2e5ea06f4fc32522445e0657a8da764e0c8b",
+    "54218": "663be36640374ea7c63401b19d4eae9284f794013d8f47b5f49717a2a573af89",
+    "54219": "ac327f754226077039a4278b634e4b06110b577b667fdbbf11e72c361b4407a7",
+    "54220": "866793f9ed764cb132fc2747f7316dd69e785d1300ef3be8706883b352076aa9",
+    "54221": "9eddc2ab3180c8b8d686bbd906b5fdfcfd57439777cb5172fa78772fe7596add",
+    "54222": "844e1c6f92954b55deed4f5f263e4d0784e774d983e4e436138cb0d5e7a6a75d",
+    "54223": "e8d37d32a484f71015222031e38dd4afc987155c1118df7264a2d14b7e25864e",
+    "54224": "f0ea53f16e2b6d59d5e81bde9d36b66198fc91040fcdc2bb61c0785c8da58c1a"
+  },
+  "worlds": [
+    54201,
+    54202,
+    54203,
+    54204,
+    54205,
+    54206,
+    54207,
+    54208,
+    54209,
+    54210,
+    54211,
+    54212,
+    54213,
+    54214,
+    54215,
+    54216,
+    54217,
+    54218,
+    54219,
+    54220,
+    54221,
+    54222,
+    54223,
+    54224
+  ]
+}
