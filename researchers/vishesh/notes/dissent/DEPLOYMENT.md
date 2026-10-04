@@ -8,7 +8,7 @@ The requested host is **sim-right-dissenter**, owned by vishesh, with an exclusi
 
 Read-only DigitalOcean metadata on October 4 quoted the 2 vCPU / 4 GB size at **$0.03571/hour**, or **$0.21426 for six hours**. Eight droplets were in use out of the credential's 15-droplet allowance, and this experiment's host did not exist. These values are a snapshot, not permission to skip a fresh provisioning check. No private addresses or credentials are included here.
 
-The pending study-specific proposal is a **$2 total cap**: $1 API and $1 infrastructure, at most six hours, with teardown after artifact verification. It is not yet approved in this record. The native relay requires an explicit authorization receipt and one cumulative SQLite ledger. At the verified Jev price, 500 full-context reservations total $0.672, inside the API cap. Actual short packets should cost less; that is an estimate, not a result.
+The owner approved the **$2 total cap**: $1 API and $1 infrastructure, at most six hours, with teardown after artifact verification. See AUTHORIZATION.json. The runbook instruction is: **“Go ahead and create and borrow a machine from Demars's DigitalOcean machine list.”** Allocation uses the shared private agentops fleet, an exclusive claim and the authorized owner infrastructure state. The native relay requires an explicit authorization receipt and one cumulative SQLite ledger. At the verified Jev price, 500 full-context reservations total $0.672, inside the API cap. Actual short packets should cost less; that is an estimate, not a result.
 
 ## Launch binding
 

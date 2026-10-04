@@ -1,0 +1,43 @@
+{
+  "public_repair_examples": {
+    "parallel": {
+      "public_sign_repair_passes": true,
+      "original_bug_rejected": true
+    },
+    "chain": {
+      "public_sign_repair_passes": true,
+      "original_bug_rejected": true
+    }
+  },
+  "public_arithmetic": {
+    "reference_passes": true,
+    "wrong_value_rejected": true,
+    "first_value": 13,
+    "last_value": 27004
+  },
+  "distinct_failures_collapse": {
+    "budget_exhausted": "RuntimeError",
+    "route_changed": "RuntimeError",
+    "provider_deadline": "RuntimeError",
+    "credential_unavailable": "RuntimeError"
+  },
+  "public_chain_edges_can_be_removed": true,
+  "failed_upload_return_ignored": {
+    "artifact_failures": 4,
+    "terminal_failure": true,
+    "finish_raised": false
+  },
+  "progress_exception": {
+    "assigned": 16,
+    "outcomes": 16,
+    "failure_classes": [
+      "RuntimeError"
+    ],
+    "all_stop_after_first_item": true
+  },
+  "registration_failure_reconciliation": {
+    "assigned": 16,
+    "outcomes": 0,
+    "per_episode_assignments": 1
+  }
+}

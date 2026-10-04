@@ -46,3 +46,7 @@ The $20 cap is now authorized, not pending. Provider requests include price ceil
 ## Live setup update — 2026-10-04 UTC
 
 The public plan is now registered and verified; see reviews/q1-public-plan-receipt.json. Source 1002752 passed 23 offline checks on sim-test-01, and the synthetic replay passed browser inspection. Fixed public run requests to use the documented preflight user agent after reproducing HTTP 403 with the Python default. No model calls or spend occurred. Credential availability and independent package review remain unresolved. The temporary allocation is released while blocked; see reviews/q1-setup-post.md for exact resume steps. Earlier lists of unverified reporting/replay checks are superseded only to this extent: real per-run reporting and provider integration remain untested.
+
+## Engineering review repairs — 2026-10-04 UTC
+
+Review 273e35ed returned REVISE for error categories, reporting and batch reconciliation. Those repairs are implemented with 31 passing offline tests; see reviews/q1-engineering-response.md and the exact source hashes in validation.json. Re-review and a new bounded synthetic host reporting check remain pending. No model calls or spend. Formal cross-researcher review is now assigned to dmarz, superseding earlier Shadow references.

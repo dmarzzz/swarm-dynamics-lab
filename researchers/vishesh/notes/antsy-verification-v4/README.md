@@ -56,6 +56,16 @@ A measured comparison chart, an oracle-headroom plot, and time-ordered replays f
 
 **Completed results:** [the skeptical assessment](RESULTS.md) reports both 70-receipt studies. Confidence alone achieved 56.78% recall, versus 56.30% for Laya and 55.72% for Jev committees; neither adaptive committee saved checks. Both full runs passed the integrity audit with zero invalid calls. Earlier Jev qualification failures remain documented. A failed run remains visible, with the repair and its unchanged or amended protocol identified separately.
 
+## PI follow-through — 2026-10-04 UTC
+
+Both frozen evaluations are complete; the [results](RESULTS.md) supersede the [PI review's](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) historical running-status snapshot. Neither committee improved the observed mean over confidence alone or activated useful early stopping. Keep that completed comparison intact. It is evidence about this selector and QA contract, not a reason to abandon verification generally or rerun these receipts until a committee wins.
+
+A successor is conditional on fresh development documents demonstrating both decision headroom and informative purchasable checks. Repair empty-region handling and unequal-region weighting before testing efficacy. Use measured, imperfect checker outputs and actual review cost, with explicit abstain/escalate actions; distinguish choosing an OCR output from correcting its contents. Compare confidence/no-check, a competent single solver, a deterministic value-of-information policy and a committee with the same initial evidence and declared total resource allowance. Qualify cases that require both stopping and continued checking before expanding beyond one versus five decision agents.
+
+Freeze a required-field decision loss and report correct receipt-level decisions, false confident decisions, warranted abstention, checks and total cost. Token recall remains secondary. The existing 4.18-point recall headroom is not comparable to the PI's proposed 5-point improvement in receipt-level field decisions: those are different endpoints. The latter is a candidate useful-effect target to justify prospectively, not a threshold already established by v4.
+
+Use new document families for development and untouched evaluation, cluster duplicates and dependent vendor/layout templates, and size evaluation from paired uncertainty. Do not tune on these 70 evaluation receipts. These are successor-design requirements; no new run, model allocation or modification of the completed protocol follows from this amendment.
+
 ## Separately authorized Jev comparison
 
 [The Jev pre-run plan](reviews/Jev-pre.md) freezes the same task/policies for a distinct hosted model condition. Fresh competence and receipt qualification are required. Laya remains separately reported; access to a credential is not a qualification result.

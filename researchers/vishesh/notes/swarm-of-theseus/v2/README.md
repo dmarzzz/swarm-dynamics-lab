@@ -22,6 +22,16 @@ The first two are deliberately related controlled tasks. The third is a portabil
 - Analysis retains assigned denominators, observed-only rates and missingness bounds. A separate implementation recomputes raw decisions. It is a same-author software audit, not independent researcher review.
 - Exact public plan URL/revision/hash and an unblocked immutable pre-run review are mandatory. A stale plan or fresh local process on another study's active host cannot unlock the runner.
 
+## PI design disposition — 2026-10-04 UTC
+
+The [PI review](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) supports selective continuity before broader population or mentoring sweeps. The current release/incident/interface instrument is a narrower first diagnostic: its primary contrast is evidence-tagged versus plain rolling notes. It does not implement the proposed rolling-versus-frozen, changed-versus-stable reward interaction. Harbor remains deferred; its scheduling utility must not be imported into these tasks.
+
+Founders acquire procedures from labeled historical observations. Evidence tagging changes what writers attend to and how they organize a note as well as its provenance fields. Equal call and length limits do not isolate a pure representation effect. A positive result therefore supports this handoff instruction under supervised acquisition and interrupted feedback; it does not establish emergent culture or an advantage unique to swarms.
+
+Before making the broader continuity claim, a separately frozen successor must add stable and changed continuations from the same acquisition checkpoint, retained-member controls, exact archive transplants into fresh teams, and a single controller with matched authorized observations and total resources. These controls distinguish adaptation from simple updating, private-state continuity from a portable archive, and collective coordination from centralized record use. Adequately precise equivalence would narrow the explanation; an imprecise gap would remain inconclusive.
+
+Retain acquisition failures in assigned denominators and expand independent world/lineage coverage before headcount or turnover depth. The present two-world-per-scenario pilot is an instrument screen. Its primary, arms and launch gates remain unchanged; the deferred controls are requirements for stronger claims, not completed implementation.
+
 ## Verification and limits
 
 Offline tests cover lineage, archive masks, delayed/withheld feedback, paired cases, class change, mutation controls, missing votes, duplicate decisions, public plan freshness, resource receipts, atomic quota reservations, assigned denominators, qualification scoring and fixture rendering. These are software tests, not empirical trials. The retained replay is permanently watermarked **SCRIPTED — NOT MODEL EVIDENCE**.

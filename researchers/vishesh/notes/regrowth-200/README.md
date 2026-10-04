@@ -52,3 +52,11 @@ The model arms met the recovery threshold after four rounds, versus 18 for the a
 Before launch, publish a versioned plan, register its URL and a reader-facing TLDR, verify both through the public page, and store a preflight receipt. Each run must identify its exact condition and comparison. See the [documentation contract](../experiment-documentation/README.md). Follow-up research needs repeated held-out maps, randomized head locations, equal-compute extra-Qwen controls, a Laya head blinded to Qwen's proposal, and matched initial damage exposure.
 
 [Live experiment](https://swarm-live.pages.dev/#/x/regrowth-200)
+
+## Prospective design amendment 2026-10-04
+
+Incorporating [Dmarz's Regrowth recommendation](https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md), a follow-up should make coordination necessary through partial observations or changing constraints and evaluate it on independently generated maps. The completed six-world pilot and its retrospective-registration label remain unchanged.
+
+Use a **common absolute route-quality target** for every arm, alongside connectivity, excess hops and integrated quality loss after damage. Match pre-damage quality and damage exposure where the estimand permits; otherwise report those differences explicitly. Returning quickly to a poor or minimally disrupted baseline is not superior repair. Keep the exact local-information routing algorithm, and charge the hybrid's extra calls against an equal-budget extra-Qwen control. Randomize second-head placement and separate seeing Qwen's proposal from an independent second judgment.
+
+The independent unit is the map/disturbance root. Keep damage/control arms, head placements and repeated executions clustered within it; cells and rounds do not replace map diversity. Define total compute versus per-cell compute as separate resource regimes. Qualify the same initialization, context/reset rules and current-source action contract on fresh development maps before freezing a successor. No new run or registration is implied by this amendment.

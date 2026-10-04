@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
-task: null
-doing: Reconcile Dmarz PI review e0a3170 and incorporate current methods improvements.
-updated: 2026-10-04T03:54Z
+state: done
+task: reconcile-dmarz-pi-review-2026-10-04
+doing: Published Dmarz PI incorporation across 17 study and methods documents; all 27 items reconciled.
+updated: 2026-10-04T04:05Z
 ---
 
 ## Notes

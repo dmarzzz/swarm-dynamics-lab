@@ -40,7 +40,9 @@ For each metric (`vote_target`, `memory_false_target`, `parent_groundtruth_wrong
 - resample drift = (attack-clean) resample minus (attack-clean) reports
 - **self-revision = (attack-clean) private minus (attack-clean) resample** (primary: `vote_target`, resolvable)
 
-Readout: self-revision near zero and resample drift similar to private drift means the drift is sampling, and v3's private comparator is fair. Positive self-revision means private work itself moves agents toward the planted value, so v3's board-minus-private contrast nets out a self-persuasion effect and should say so. Six worlds per stratum: descriptive only.
+**Interpretation amendment, 2026-10-04:** the contrast named `self-revision` estimates the incremental effect of adding private work to repeated probes. Probe count and timing are matched; total work calls, actual tokens and evolving context are not. A positive contrast is consistent with additional private work increasing target adoption, but does not identify an internal self-persuasion mechanism. A near-zero estimate does not prove that drift is merely sampling, establish equivalence, or certify that v3's private comparator is fair. The earlier readout made that inference too strongly. Six worlds per stratum support descriptive comparisons; any later equivalence claim needs prospectively justified margins and adequate precision.
+
+Report all three arms, clean-adjusted effects, missing-cell bounds and actual resource use. Preserve the frozen metric names, assignments and qualification gate. The [completed sidecar report](reviews/resample-v3-a1-post.md) now records 72/72 terminal episodes and 936/936 completed calls, with failed clean competence (2/12 reports-only correct versus 10/12 required). All 72 repeated probe votes matched their checkpoint votes. This bounded observation does not establish equivalence for other models or contexts. Upstream v3 execution, review or qualification cannot substitute for this sidecar’s own failed gate. The recorded review waiver below remains part of its process history.
 
 ## Gates
 

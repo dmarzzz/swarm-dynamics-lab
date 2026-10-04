@@ -3,6 +3,8 @@ import concurrent.futures
 import copy
 import json
 import time
+import threading
+from failures import SafeFailure,safe_code
 from tasks import strict_json
 
 
@@ -32,18 +34,21 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
     start=time.monotonic();deadline=start+deadline_s;work_deadline=deadline-integration_reserve_s
     histories=[[{'role':'system','content':'Solve the supplied synthetic task. Return only JSON. You have no evaluator access.'},
                 {'role':'user','content':json.dumps(public,sort_keys=True)}] for _ in range(n)]
-    used=set();completed={};failures=[]
+    used=set();completed={};failures=[];fatal_stop=threading.Event()
     def emit(kind,**fields):event({'t':time.monotonic()-start,'kind':kind,**fields})
     def turn(actor,phase,prompt,until,item=None):
-        if time.monotonic()>=until:raise TimeoutError('deadline')
+        if fatal_stop.is_set():raise SafeFailure('transport_failed')
+        if time.monotonic()>=until:raise SafeFailure('deadline')
         used.add(actor)
         histories[actor].append({'role':'user','content':prompt})
         emit('service_start',actor=actor,phase=phase,item=item)
         try:
             try:
                 answer=call(copy.deepcopy(histories[actor]),until,actor,phase,item)
-            except Exception:
-                raise RuntimeError("transport_failed") from None
+            except Exception as exc:
+                failure=SafeFailure(safe_code(exc))
+                if failure.fatal:fatal_stop.set()
+                raise failure from None
             if time.monotonic()>until:raise TimeoutError('late_response')
             parsed=strict_json(answer)
             histories[actor].append({'role':'assistant','content':answer})
@@ -79,7 +84,9 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
                         if type(output) is not dict or set(output)!= {'artifact'}:raise ValueError('work_shape')
                         completed[item]=output['artifact']
                     except Exception as exc:
-                        completed[item]={'failure':type(exc).__name__};failures.append({'item':item,'class':type(exc).__name__})
+                        code=safe_code(exc) if isinstance(exc,SafeFailure) else 'malformed_output'
+                        completed[item]={'failure':code};failures.append({'item':item,'code':code})
+                        if isinstance(exc,SafeFailure) and exc.fatal:raise
                     emit('work_complete',actor=actor,item=item)
         except TimeoutError:
             failures.append({'class':'TimeoutError','phase':'work'})
@@ -90,7 +97,7 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
         final=turn(0,'integrate','Produce the full final artifact using the task output contract. These are all recorded work artifacts; missing items are incomplete: '+json.dumps(completed,sort_keys=True),deadline)
         artifact=json.dumps(final);failure=None
     except Exception as exc:
-        artifact=None;failure=type(exc).__name__
+        artifact=None;failure=safe_code(exc) if isinstance(exc,(SafeFailure,TimeoutError)) else 'malformed_output'
     elapsed=time.monotonic()-start
     emit('terminal',failure=failure,elapsed_s=elapsed)
-    return {'artifact':artifact,'elapsed_s':elapsed,'failure':failure,'work_failures':failures,'configured_n':n,'used_contexts':sorted(used),'completed_items':len(completed)}
+    return {'artifact':artifact,'elapsed_s':elapsed,'failure':failure,'fatal':bool(failure and SafeFailure(failure).fatal),'work_failures':failures,'configured_n':n,'used_contexts':sorted(used),'completed_items':len(completed)}

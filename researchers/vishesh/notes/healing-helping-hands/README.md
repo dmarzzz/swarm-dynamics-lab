@@ -1,12 +1,22 @@
 # Healing Helping Hands
 
-A living evidence atlas with 200 document scouts. **Exploratory S0 reference pilot completed; Qwen-derived conditions remain unqualified.** [Full assessment](ASSESSMENT.md) · [Latest pre-run plan](reviews/pilot-03-pre.md) · [Latest post-mortem](reviews/pilot-03-post.md) · [Reproduction](DEPLOYMENT.md) · [Agent definitions](agent-definitions.json)
+A living evidence atlas with 200 document scouts. **Exploratory S0 reference pilot completed; Qwen-derived conditions remain unqualified.** [Full assessment](ASSESSMENT.md) · [Pilot-03 pre-run plan](reviews/pilot-03-pre.md) · [Pilot-03 post-mortem](reviews/pilot-03-post.md) · [Reproduction](DEPLOYMENT.md) · [Agent definitions](agent-definitions.json)
 
 ## TLDR
 
 Can an evidence atlas recover when scouts lose memory and source reports are withdrawn? We compare sharing documents alone with sharing documents plus withdrawal notices, using the same reports and damage. The qualified Jev reference and exact controls completed 72 worlds across three synthetic corpora. Forwarding notices reduced mean post-event error by 28.1 percentage points and removed stale citations by the final frame. Qwen and Laya repairs failed competence gates; the 108 Qwen-derived assignments remain not-run. This validates a programmed evidence-repair mechanism with model-backed extraction, not autonomous scientific research or heterogeneous-head superiority.
 
 [Watch the measured 200-scout replay](https://swarm-live.pages.dev/api/a/healing-helping-hands/pilot-03-review/recovery.gif) · [Outcome figure](https://swarm-live.pages.dev/api/a/healing-helping-hands/pilot-03-review/outcomes.png) · [Swarm Lab runs](https://swarm-live.pages.dev/#/x/healing-helping-hands)
+
+## PI follow-through — 2026-10-04 UTC
+
+The [practical-01 post-mortem](practical/POST-01.md) reports all 180 assignments complete with zero new model calls. No scenario met the prospective utility rule for peer-verified versus central-append; central-verified was stronger still. The [practical plan](practical/PLAN.md) incorporates the [PI review's](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) central-index, legitimate-learning and unreliable-lineage comparisons. This adverse saved-tape architecture result is retained separately from the pilot-03 model-extraction results below. Historical live reporting failed; retrospective publication does not repair that process outcome.
+
+Interpret the planned peer policy against **central-verified** as well as central-append. Both verified policies use the same supplied issuer/root metadata. Beating an index that cannot process withdrawals would establish less than beating this stronger baseline. Supplied authentication is not a learned detector or a cryptographic implementation, and a missing target must remain unresolved rather than being recovered from evaluator truth.
+
+The 180 assignments reuse three known semantic corpora with two placement layouts. Corpora are the semantic clusters; layouts, curators, claims and rounds are dependent repeats. Report corpus-level contrasts and ranges, not 180 independent replications or a fresh Jev competence result. Integrated incorrect-or-missing queries must be read jointly with legitimate-update retention, false invalidations, stale citations and traffic.
+
+The central-outage condition disconnects central clients while preserving the mesh. It is an explicit architecture stress test, not evidence that decentralization is universally more reliable. Keep no-outage comparisons and the strong central cache/recovery baseline visible; report actual transport and latency differences rather than claiming equal resources. The [practical-02 assessment](practical/PRE-02.md) prospectively changes only the mesh packet cap from 4 to 16. This is a paired capacity sensitivity on reused evidence, not an independent replication or a warrant for further cap tuning until an advantage appears. A later efficacy study needs independently authored corpora and measured failure regimes. Prior outcomes and unqualified Qwen/Laya conditions are unchanged.
 
 ## Question and prediction
 

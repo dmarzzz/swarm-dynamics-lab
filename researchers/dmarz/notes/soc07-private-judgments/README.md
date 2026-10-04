@@ -2,6 +2,8 @@
 
 **Working experiment plan for human review · 3 October 2026 · dmarz/soc07-plan.**
 
+> **Execution amendment A1, 4 October 2026 UTC (dmarz/soc07-private).** dmarz asked for the development study to be built and run. Sections 1 to 10 below are the original plan and are unchanged. [Section 11](#11-execution-amendments-4-october-2026-utc) records what was built, every deviation from this plan and why. In short: scripted S0 and exploratory S1 only, on the Anthropic model `claude-haiku-4-5-20251001` instead of Qwen (no fleet server has a GPU), a USD 40 enforced cap, cross-researcher review waived by dmarz with dmarz/fleet-monitor as the reviewer, and S2 closed. Sentences below saying that nothing calls a model or reserves a server describe the plan as written on 3 October.
+
 Start with five agents solving small fictional decisions with objectively correct answers. Have every agent form an independent first judgment, then compare **keeping those judgments private** with **publishing them before discussion**. Give both groups the same facts, answer opportunities and resource ceilings. The useful result is better final decisions while retaining the ability to accept valid corrections.
 
 This is a draft for [SOC-07 on the question dashboard](https://swarm-research.pages.dev/#/questions?topic=llm-agent-swarms&id=SOC-07), not an accepted hypothesis, preregistration or executed experiment. The small development study below is the recommended starting scope. The larger confirmation is a costed planning example whose sample size must be checked after the pilot. Nothing in this package calls a model, reserves a server or deploys a website.
@@ -282,3 +284,82 @@ python3 .flightdeck/fd.py check --strict .
 The first command checks planning arithmetic only. It is not a simulator or an experiment runner. The machine-readable settings intentionally keep runtime and spending requirements unresolved. Formal preregistration must capture the exact prompts, full access manifest, source/data/model hashes, statistical simulation, schedule, stop rules, accountable operator and public timestamp before S2.
 
 Primary-source methods consulted: [Shehata](https://arxiv.org/html/2605.10698), [Choi et al.](https://arxiv.org/html/2508.17536), [SEPAL](https://arxiv.org/html/2609.39645), and [Barrera-Lemarchand et al., Methods pp. 19–20](https://arxiv.org/pdf/2609.22497). The first three are catalogued on SOC-07; the fourth makes the novelty boundary substantially narrower. Their reported findings were not reproduced in this task.
+
+## 11. Execution amendments (4 October 2026 UTC)
+
+Written by dmarz/soc07-private before any model output. This section is the dated amendment record that [design.json](design.json) (`amendments`) and [execution.json](execution.json) refer to. Status: **exploratory**. There is still no accepted SOC-07 hypothesis and no reviewed survey, so nothing here is a registered experiment and no result may be cited as reviewed evidence.
+
+### What was authorized
+
+- dmarz asked for this study to be shipped and operated by one agent, dmarz/soc07-private, with one reviewer, dmarz/fleet-monitor. Cross-researcher review by vishesh and shadow is **waived by dmarz** for this study: [launch/review-waiver.md](launch/review-waiver.md). Nobody outside dmarz's own agents has approved it.
+- Stages: S0 (scripted, zero model calls), then S1-Q, S1-R and S1-L. **S2 (the 960-world confirmation) and S3 are closed.** The holdout root 730072 is never used by the code.
+- Paid stages cannot start without `launch/s1-approval.json`, which is committed only after the reviewer's explicit go and pins the runtime fingerprint, the pre-run assessment and the waiver by hash ([src/launch.py](src/launch.py)).
+
+### A1. Model and provider
+
+| Plan | What runs | Why |
+| --- | --- | --- |
+| `Qwen/Qwen3-8B`, pinned revision, BF16, local serving | `claude-haiku-4-5-20251001` through the Anthropic Messages API, behind one adapter ([src/adapter.py](src/adapter.py)) | No fleet server has a GPU. This is the model id and provider pattern the sybil-scale-api and discussion v3 studies used the same night. |
+| temperature 0.7, top-p 0.8, top-k 20, min-p 0, presence penalty 0 | temperature 0.7 only | The API rejects temperature together with top-p on this model; top-k was a Qwen model-card default; min-p and presence penalty do not exist on the API. |
+| `enable_thinking=false` | thinking not requested | Same intent: short explicit outputs. |
+| Seeded policy sampling | No seed is sent | The API has no seed. Policy seeds are still derived per call and recorded; they drive only the scripted policies. Repeats therefore differ by provider sampling and by the counterbalanced A/B mapping. |
+| Free-text JSON, strict parser | Provider structured output with one fixed JSON schema per phase, then the same strict parser | Same contract as tonight's other API studies. It makes malformed JSON rare, so the 95% parse-validity gate is weaker evidence of format competence than it would be with Qwen. Out-of-range values, truncation at the token cap and refusals are still invalid. No repair call exists. |
+| Weights revision, dtype, tokenizer hash, chat-template hash, runtime image digest | Not available for a hosted model | The dated model snapshot id is the only pin. The adapter fails a call whose response names a different model. |
+| 8,192-token window, at most 4,096 input tokens per request | 4,096-token cap on **reported** input tokens, plus a 16,384-byte limit before dispatch | The provider's tokenizer is not available offline. A response whose reported input exceeds 4,096 tokens is a failure and its output is discarded; an over-limit request is refused before dispatch. Nothing is truncated. |
+| Tokens and GPU hours | Reported tokens and dollars at USD 1 (input) and USD 5 (output) per million tokens | Hosted pricing. |
+
+Qwen3-8B stays as a later replication on its own fresh worlds. **No fallback model exists inside this study.**
+
+**Launch manifest.** The model id, the reasoning allowance (off, or a fixed token budget added to every call), the per-call output caps, the prices and the qualification set are one block, `launch_manifest` in [execution.json](execution.json). They are stamped on every hub run (`model`, `reasoning_tokens`, `output_caps`, `launch_manifest`), in the journal header and in `summary.json`. Manifest m1 is Haiku 4.5, no reasoning allowance, the plan's caps (256 / 256 / 64 / 64, qualification 128), qualification set 0.
+
+**If S1-Q fails competence.** Fewer than 10 of 12 correct, or fewer than 11 of 12 valid, is a competence failure of manifest m1. Nothing further runs under m1: no S1-R, no S1-L, no prompt tuning against the 12 seen worlds. The post-run review records which worlds failed and how. The only permitted next step is a dated amendment that changes the launch manifest (a stronger model, a bounded reasoning allowance, or both) and moves to a new qualification set, which generates 12 fresh worlds with their own 12-call cap; then S0 again, a new reviewer approval and a fresh S1-Q. That switch changes configuration only, not code. It is a change of the studied model, not a fallback inside one study: results never mix models. A provider or infrastructure failure during S1-Q is not a competence result; it is repaired and qualified again on a new set in the same way.
+
+### A2. Retries
+
+The plan's rule stands for answers: zero automatic retries, zero repair calls, and a failed call is an auditable failure. One transport rule is added: a request that the provider rejects with HTTP 429 (rate limit) or 529 (overloaded) is sent again, at most twice, with waits of 2 and 6 seconds (or the provider's retry-after, capped at 20 seconds). In those two cases the provider states that the model did not run, so no answer exists to be replaced. All attempts and waits share the one 60-second request budget. Every attempt is counted in the ledger against a per-stage attempt cap (planned calls plus 5%). Timeouts, connection errors, 5xx other than 529, truncation, refusal and invalid output are never retried.
+
+### A3. Budget and stopping
+
+- Enforced cap: **USD 40** for the whole study, inside dmarz's USD 500 allowance, split USD 30 for the public-decision path (first pass, discussion, public final) and USD 10 for the auxiliary private final. The two pools also have separate call caps, so a private probe can never use a call or a dollar reserved for the public decision.
+- Hard `max_calls`: S1-Q 12, S1-R 672 (480 + 192 auxiliary), S1-L 4,080 (2,880 + 1,200 auxiliary). These equal the plan's unique-call table and are checked against the generated manifest before a stage starts.
+- Before each request the worst-case cost is reserved in a durable ledger; after the response the reservation is replaced by the billed amount. A call with an unknown outcome keeps its full reservation.
+- A stage halts (no new calls; unfinished episodes are recorded as interrupted or incomplete) on: an authentication, permission or malformed-request error, a low credit balance, a response from a different model, unexpected cache usage, a billed amount above its reservation, a detected truth leak, exhaustion of the public-path budget, or five consecutive provider failures. A stage attempt is never resumed or re-queued automatically; a new attempt is a new batch with its own review note.
+
+### A4. Other deviations from sections 1 to 10
+
+| # | Plan | Built | Reason |
+| --- | --- | --- | --- |
+| 1 | Accepted hypothesis and cross-researcher review before collection (section 9) | Neither exists; review waived by dmarz | Owner decision. The study stays in researcher notes and every result is labelled exploratory. |
+| 2 | Code under `experiments/<accepted-id>/src/`, prompts in `prompts/`, YAML from the worker template | Code under this note's `src/`, prompts in `src/prompts.py`, JSON configuration | No accepted experiment id exists. JSON avoids a YAML dependency on the server. |
+| 3 | One queued job per paired world/repeat block | One hub run per stage; blocks run in manifest order inside it, arms in a recorded random order | Same shape as tonight's other studies; one run per server. Hub reporting is per block. |
+| 4 | Resume from durable completed requests | No resume at all | Simpler and safe: an interrupted attempt is reconciled and preserved, never continued. |
+| 5 | Replay: "three peers wrong and one cites the audit; correction fixtures reverse that" | The focal agent is never the special-role agent. Its four scripted peers are the three other agents of its own role plus the special one, each speaking only from its own records. | This is the reading under which the scripted balance equals the regime's evidence allocation (3 wrong + 1 right under pressure, 3 right + 1 wrong under correction, 4 right in clean). |
+| 6 | PRIVATE, NEVER and PREPARE: no statement about visibility is specified | One sentence states that first answers (or inventories) have not been shared; PUBLIC states that they have and lists choice and confidence | Without it an agent in PRIVATE cannot know whether peers saw its answer. The sentence appears only after the common first pass. |
+| 7 | Discussion output: "short evidence-citing message and optional current recommendation" | JSON with `message`, `evidence_ids` and `recommendation` (A, B, ABSTAIN or NONE) | Makes the board's facts and recommendations separately marked, as section 5 asks. |
+| 8 | Clean regime: "everyone has current records" | Every clean world also contains one later audit that all five agents hold; it changes the answer in half of the clean worlds | Keeps the task surface the same across regimes, so "an audit exists" does not identify a regime. |
+| 9 | Feasibility worlds | The option that misses the deadline is always the cheaper one | Otherwise feasibility would not decide anything. |
+| 10 | 600-second episode deadline | Recorded and scored, but it cannot bind: three barriers of at most 60 seconds plus the first pass | Kept as a check, not a mechanism. |
+| 11 | Hub receives sanitized telemetry only; the scientific record stays local | Hub metrics, messages and images carry aggregates only. The compressed episode file and event journal are also uploaded as team-private artifacts | The fleet expires on 5 October; the hub is the only backed-up store. The public site serves images only. |
+| 12 | Stale-evidence citations as a process measure | Counted on the first answer and the discussion message: citing the superseded estimate without the audit | Operational definition. |
+| 13 | PREPARE premature-choice audit | A fixed word-pattern check on the inventory text, reported as a rate | Deterministic, no model judge. It is a screen, not a proof of absence. |
+
+### What S0 checks
+
+`python3 src/worker.py --stage s0 --attempt <name>` (or the hub run with `stage=s0`) executes 60 fixtures, 20 per regime, under four scripted policies in all five arms (1,200 team episodes), the controlled replay (240 focal episodes), the single-solver qualification (60), and nine fault runs: invalid first answer, invalid discussion and final outputs, truncation, refusal, timeout, overflow, public and auxiliary budget exhaustion, leaked truth, duplicate dispatch and a controller crash. Outcomes are compared with values fixed in [src/s0.py](src/s0.py) before running. `python3 src/selftest.py` runs the unit tests and the whole of S0 offline.
+
+## Question
+
+When five agents each form a first answer alone, does keeping those first answers private until after one discussion round give better final team decisions than publishing them before the discussion, while still letting a wrong minority accept a valid correction?
+
+## Setup
+
+Fictional two-option supplier decisions with one correct answer: choose the lowest-cost option that meets a 5-day delivery deadline, using the latest record for each value. Five agents, one discussion round, no tools, no memory. Three evidence regimes: clean (everyone has current records), informed minority (one of five holds the decisive audit) and correctable minority (four of five hold it). Arms: PRIVATE, PUBLIC, NEVER (told to keep the first choice), PREPARE (lists evidence instead of choosing) and VOTE (no communication). Model: `claude-haiku-4-5-20251001`, temperature 0.7, output caps 256 / 256 / 64 / 64 tokens. Exploratory; review waived by dmarz.
+
+## Protocol
+
+S0: 60 scripted fixtures and fault injections, no model. S1-Q: 12 worlds, one full-information solver, gate of at least 10 correct and 11 valid. S1-R: 24 worlds x 2 repeats, one model agent with four scripted peers, four arms, 672 calls. S1-L: 24 other worlds x 2 repeats, five model agents, five arms, 4,080 calls. The first pass is generated once per world and repeat and cloned into PRIVATE, PUBLIC, NEVER and VOTE. Every phase is a barrier; public and private final answers are two forks of the same frozen context. Zero answer retries, zero repair calls. Enforced cap USD 40. Sections 2 to 6 and 11 above give the detail.
+
+## Metrics
+
+Primary: correct public team decision (at least 3 of 5 valid final votes for the right option) over all assigned episodes, PRIVATE minus PUBLIC, regimes weighted equally, with a world-cluster bootstrap interval. Also: harmful (correct to wrong) and useful (wrong to correct) revisions over their eligible first answers, private-versus-public final mismatch, private-vote success, individual success, validity, abstention, stale citations, tokens, dollars and latency. On the hub: `private_minus_public` is that primary difference (0 by construction in scripted S0, absent in S1-Q); `failures` counts failed S0 checks, or failed calls plus unfinished episodes in S1; `gate_passed` is the stage's validity gate, not a scientific result. S1 has 24 worlds per study: every estimate is descriptive.
+

@@ -1,0 +1,33 @@
+{
+  "assigned": 32,
+  "valid": 32,
+  "correct": 29,
+  "wrong": 2,
+  "defer": 1,
+  "failed": 0,
+  "unstarted": 0,
+  "complete_pairs": 16,
+  "agreeing_pairs": 14,
+  "cells": {
+    "0.65-ZERO": {
+      "assigned": 8,
+      "correct": 8
+    },
+    "0.65-ONE": {
+      "assigned": 8,
+      "correct": 6
+    },
+    "0.8-ZERO": {
+      "assigned": 8,
+      "correct": 7
+    },
+    "0.8-ONE": {
+      "assigned": 8,
+      "correct": 8
+    }
+  },
+  "accuracy_all_assigned": 0.90625,
+  "qualified": true,
+  "actual_api_usd": 0.00103152,
+  "execution_complete": true
+}

@@ -14,8 +14,10 @@ Deployed on sim-dmarz. [Live dashboard](https://swarm-live.pages.dev/#/x/composi
 | q0-003 | Failed qualification: 16/24 safe, eight nonterminal responses | [Post-mortem](reviews/q0-003-post.md) |
 | i0-001 | One failure reproduced as provider cyber refusal | [Diagnostic](reviews/i0-001-post.md) |
 | i0-002 | One-call fallback compatibility check passed | [Diagnostic](reviews/i0-002-post.md) |
-| q0-004 | Frozen batch running; observed incompletions and provider refusals already prevent a pass | [Assessment](reviews/q0-004-pre.md) |
+| q0-004 | Failed qualification: 10/24 safe, twelve incomplete, two provider refusals | [Post-mortem](reviews/q0-004-post.md) |
 | P1 | Closed until the current-source qualification passes | 168-episode descriptive pilot |
+
+All attempts have terminated and their artifacts are reconciled. Qualification is blocked on baseline competence and provider suitability; the next approved model connection has been requested. Total reported study usage is 1,610 calls and $5.340097, with $28.033098 retained reservations. The larger study has not started.
 
 ## Question
 
@@ -68,3 +70,13 @@ Every bundle has a live progress PNG, final PNG and GIF replay of measured event
 ## Limits before scaling
 
 The task grammar has limited structural diversity, one pinned model, a fixed cyclic schedule and a fixed-byte placebo envelope with unmatched tokenizer/inner-schema details. Receipt context and retrieval actions have different costs. H assumes complete instrumentation and atomic settlement. There are no private incentives, collusion training or economic payoffs. The missing W comparison, tokenizer-matched sensitivity panel, stale receipts, randomized schedules, unseen structural families, model transfer and independent implementation remain necessary before the original scaled claim is credible.
+
+## Prospective imperfect-receipt amendment, 2026-10-04
+
+The [PI portfolio](../next-experiments-2026-10-04/README.md) proposes delayed and missing receipts after current qualification and the seven-arm pilot. Those prerequisites remain substantive: q0-003's zero committed violations accompanied eight invalid episodes out of 24, and the recorded q0-004 failures already prevent a pass. Neither establishes receipt efficacy. Complete each attempt's reconciliation before deciding a successor; preserve failures by model/configuration, without interpreting an incomplete or invalid episode as safe useful completion.
+
+For a later receipt comparison, freeze delivery on a commitment clock and record each actor's actual visible receipt age and availability. Distinguish **stale authentic information, absent information and fabricated information**. Authentication does not certify that a receipt contains the complete current global state. Pair assignment and observation opportunities across conditions. If an absent-receipt packet is identical to F, reuse that observation rather than counting the same condition as independent evidence.
+
+The proposed primary stale-receipt reduction in committed violations must be assessed jointly with safe legitimate completion; retain every invalid and incomplete assignment in the denominator. Canonical structural roots, not role turns or identifier renamings, are the independent units. The suggested 24 development roots and 10-point/3-point harm–utility margins are planning choices, not evidence of adequate evaluation precision. Transfer across constraint structures should precede increasing role count.
+
+Keep shared history, administrative text, reminder and atomic enforcement references; add the faithful W defense before superiority claims. Log actual tokens because matching a byte envelope does not match compute or information. Atomic complete-state enforcement is an advantaged reference; a prohibited committed effect under H signals an instrument defect, whereas a valid model failure remains an outcome. This amendment changes no current arm, scorer, competence threshold, held-out split or launch authorization.

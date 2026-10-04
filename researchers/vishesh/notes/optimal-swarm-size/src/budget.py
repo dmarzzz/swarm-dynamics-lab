@@ -28,7 +28,8 @@ class Budget:
             total=db.execute('SELECT COALESCE(SUM(held),0) FROM calls').fetchone()[0]
             used=db.execute('SELECT COALESCE(SUM(held),0) FROM calls WHERE episode=?',(episode,)).fetchone()[0]
             cap=db.execute('SELECT cap FROM settings').fetchone()[0]
-            if total+maximum>cap or used+maximum>episode_cap: raise ValueError('budget_exhausted')
+            if total+maximum>cap: raise ValueError('stage_budget_exhausted')
+            if used+maximum>episode_cap: raise ValueError('episode_budget_exhausted')
             db.execute('INSERT INTO calls VALUES (?,?,?,NULL,?)',(call,episode,maximum,'reserved'))
     def settle(self,call,actual):
         if type(actual) is not int or actual<0: raise ValueError('invalid_charge')

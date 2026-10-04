@@ -4,7 +4,7 @@ tool: claude-code
 state: working
 task: build-soc07-private-judgments
 doing: Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase.
-updated: 2026-10-04T03:30Z
+updated: 2026-10-04T04:45Z
 ---
 
 ## Notes

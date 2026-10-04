@@ -3,18 +3,19 @@ id: theseus-v2-iteration
 type: task
 title: Build and qualify a practical Theseus continuity iteration
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-theseus
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-theseus
 depends_on: []
 topics:
 - llm-agent-swarms
-updated: 2026-10-04T03:57Z
+updated: 2026-10-04T04:04Z
 history:
 - '2026-10-04T03:57Z released by vishesh/codex-theseus: V2 design, source, 14 offline checks, assessment and labeled replay are published. Public plan exact revision/hash verified with zero runs. Awaiting explicit additional USD15 API authority; then fresh exclusive fleet claim, unblocked pre-run assessment and S0 qualification. No model run or deployment while blocked.'
+claimed_at: 2026-10-04T04:04Z
 ---
 
 ## Goal
