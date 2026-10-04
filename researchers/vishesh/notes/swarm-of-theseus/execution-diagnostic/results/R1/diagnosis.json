@@ -1,0 +1,37 @@
+{
+  "E": {
+    "distinct_failing_case_families": 2,
+    "failures": [
+      {
+        "seed": "7200",
+        "context": "incident",
+        "id": "19d139c44b38be0b",
+        "wrong_presentations": 2,
+        "source": "ledger",
+        "actions": [
+          "ledger",
+          "ledger"
+        ],
+        "truth": "none"
+      },
+      {
+        "seed": "7201",
+        "context": "incident",
+        "id": "4c64be42990ed0a9",
+        "wrong_presentations": 2,
+        "source": "probe",
+        "actions": [
+          "probe",
+          "probe"
+        ],
+        "truth": "none"
+      }
+    ],
+    "repeat_disagreements_out_of_96": 0
+  },
+  "F": {
+    "distinct_failing_case_families": 0,
+    "failures": [],
+    "repeat_disagreements_out_of_96": 0
+  }
+}

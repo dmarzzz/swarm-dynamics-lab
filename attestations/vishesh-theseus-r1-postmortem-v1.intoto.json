@@ -1,0 +1,67 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a"
+   },
+   "internalParameters": {
+    "commit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md"
+    },
+    {
+     "digest": {
+      "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "9fa71000aa7c1b268245ff2fdebe85fa3830e8771d705a8a797aaf1fc5baa434"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/diagnosis.json"
+    },
+    {
+     "digest": {
+      "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T09:26:31Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T09:26:31Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "80241e8a14635a07a0aba9a44b11d6a33076d5a88badb36d28857c5c83462283"
+   },
+   "name": "artifacts/vishesh-theseus-r1-postmortem/vishesh-theseus-r1-postmortem-v1.md"
+  }
+ ]
+}

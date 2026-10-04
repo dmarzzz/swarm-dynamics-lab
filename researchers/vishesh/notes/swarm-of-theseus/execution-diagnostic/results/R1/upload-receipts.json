@@ -1,0 +1,50 @@
+{
+  "run_id": "R1-7203-incident-r0-E-6",
+  "receipts": [
+    {
+      "name": "results.png",
+      "sha256": "0e3a85d6b184067ce0820ca42a4a9ca841e27d675e6235cf5cc4b85d79cf05e4",
+      "readback_verified": true
+    },
+    {
+      "name": "RESULTS-R1.md",
+      "sha256": "80241e8a14635a07a0aba9a44b11d6a33076d5a88badb36d28857c5c83462283",
+      "readback_verified": true
+    },
+    {
+      "name": "diagnosis.json",
+      "sha256": "9fa71000aa7c1b268245ff2fdebe85fa3830e8771d705a8a797aaf1fc5baa434",
+      "readback_verified": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10",
+      "readback_verified": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "0637be448bc292a8c897fad5e45ecd733e7a03770b159583f392b3b1d9bc91ba",
+      "readback_verified": true
+    },
+    {
+      "name": "terminal.json",
+      "sha256": "ee7679687a7f48ed396b80ee0f96deb24517280be8084ba8f65e01dd31a24d2d",
+      "readback_verified": true
+    },
+    {
+      "name": "replay.html",
+      "sha256": "ce1577fc25c95b49811c6ab325236edd84c2d9dd315ce5a4ef9673ce5f5371c3",
+      "readback_verified": true
+    },
+    {
+      "name": "decisions.csv",
+      "sha256": "b1da58c62af64d1675f920df8f30f63a22070540345875073b3badbc06bea2be",
+      "readback_verified": true
+    },
+    {
+      "name": "evidence.tar.gz",
+      "sha256": "6da5148a157bdb4070c7c46fc6983be98eeb58d5c1b34b6b498bff6382da12bf",
+      "readback_verified": true
+    }
+  ]
+}

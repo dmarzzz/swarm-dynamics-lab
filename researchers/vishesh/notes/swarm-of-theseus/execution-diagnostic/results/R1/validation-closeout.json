@@ -1,0 +1,25 @@
+{
+  "D2_offline_tests_passed": 11,
+  "R1_offline_tests_passed": 8,
+  "new_model_calls_completed": 816,
+  "strict_score_audit_disagreements": 0,
+  "request_hash_mismatches": 0,
+  "native_provider_errors": 0,
+  "retries": 0,
+  "lab_check": {
+    "errors": 0,
+    "preexisting_library_warnings": 5
+  },
+  "artifact_strict_check": {
+    "owned_new_artifact_errors": 0,
+    "global_preexisting_missing_files": [
+      "discussion-memory-v3-film-v1.mp4",
+      "market-split-film-v1.mp4"
+    ]
+  },
+  "evidence_metadata_check": {
+    "known_unrelated_gap": "uncovered researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml",
+    "owned_rows_rendered": true
+  },
+  "scope": "No global all-checks-pass claim; native evidence and owned artifacts pass their stated checks."
+}

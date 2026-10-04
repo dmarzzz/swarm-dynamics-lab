@@ -2186,6 +2186,58 @@
         "researchers/dmarz/notes/false-alarm-cascade/experiment.yaml"
       ],
       "status_at_assessment": "planned_unrun"
+    },
+    {
+      "id": "theseus-execution-d2",
+      "title": "Swarm of Theseus D2 executor confirmation",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "66d20ec1d198cea099e6f64d75593cb071ff320e",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/README.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-execution-d2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Atomic calls outperform eight-case batches on six fixed executor worlds, but neither interface qualifies for the later study.",
+        "rationale": "Complete paired diagnostic and full-contract audit; E gains 7.55 points in all six worlds but fails strict gates. Finite Boolean tasks, dependent repetitions and unequal compute prevent a general reliability or culture claim."
+      },
+      "sample_size_summary": "Observed: six paired fixed worlds, two Boolean families, 96 distinct case/family pairs; 432/432 calls and 768 assigned decisions. D 344/384, E 373/384; both fail qualification. Two orders and two native repetitions are dependent.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json"
+      ],
+      "status_at_assessment": "complete_diagnostic_both_unqualified"
+    },
+    {
+      "id": "theseus-execution-r1",
+      "title": "Swarm of Theseus R1 atomic repair",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/README.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-execution-r1"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Repaired atomic executor F qualifies on the fresh fixed R1 screen; a material repair advantage and cultural preservation are unestablished.",
+        "rationale": "F192/192 versus E188/192 across six fixed worlds; all accounting/audits complete. Gain2.08points in two worlds misses the prospective material-benefit criterion. Bundled repair, finite Boolean tasks and dependent repetitions limit generality."
+      },
+      "sample_size_summary": "Observed: six fresh paired fixed worlds,96 distinct case/family pairs;384/384 calls/decisions,192 per arm, two native repetitions. F192/192 qualifies; E188/192 fails. Acquisition and cultural turnover not run.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-R1.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json"
+      ],
+      "status_at_assessment": "complete_valid_qualification_result"
     }
   ],
   "source_sha256": {

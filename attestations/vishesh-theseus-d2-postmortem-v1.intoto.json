@@ -1,0 +1,67 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a"
+   },
+   "internalParameters": {
+    "commit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md"
+    },
+    {
+     "digest": {
+      "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "eb0ba694f6febe852ad9a84e7225b77f1b9ec3b68ec60b5053b17b6cd0bdbdcb"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/diagnosis.json"
+    },
+    {
+     "digest": {
+      "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T09:13:54Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T09:13:54Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "9e83e324f126035f2dd2e5adcce4ec08c20c461f9eb07f93429a690236ea2c76"
+   },
+   "name": "artifacts/vishesh-theseus-d2-postmortem/vishesh-theseus-d2-postmortem-v1.md"
+  }
+ ]
+}
