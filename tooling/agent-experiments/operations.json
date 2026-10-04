@@ -166,9 +166,9 @@
       "setup_path": "researchers/vishesh/notes/poietic-agents/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/D0-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:17:30.538850+00:00",
+      "checked_at": "2026-10-04T19:33:45.810145+00:00",
       "checked_commit": "385441384fe4875609f369bcf6c15ebc94092abd",
-      "next_action": "D0-01 closed and scientifically reviewed:3nativecalls,36terminal,9artifactsverified,USD0.568560890cumulativeupper. Offline wrapper/429 diagnosis; no successor authorization or allocation."
+      "next_action": "D0-02 scope and new sim-vishesh-poietic approved; 129 offline checks pass. HOLD: original provisioner/account/state access unavailable and account capacity reported exhausted. No new machine, claim or native calls; preserve 40 historical charges and USD 0.568560890 cumulative exposure. Complete current admission then run D0-02 once."
     },
     {
       "id": "telephone",

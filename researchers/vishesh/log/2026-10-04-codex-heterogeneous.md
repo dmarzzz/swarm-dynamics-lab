@@ -86,3 +86,7 @@ Diagnostic preparation completion: separate manifest/candidate/admission/relay/r
 ## Formatting and provider-error repair
 
 Implemented a bounded JSON-fence policy with strict downstream validation; 121 offline tests and saved-data replay pass. Added safe retry/rate/typed-error metadata and handling for HTTP 200 error bodies. Non-billable status reads show current routes/tariffs match and key limit is not exhausted; historical 429 source remains unknowable from discarded metadata. Estimated Haiku substitution at about 9× token cost, roughly USD 0.00674 extra for 12 calls at the single observed Qwen fetch size, with USD 0.14265 maximum extra at declared bounds. No new native call, model selection change or allocation; original budget preserved. See notes/poietic-agents/readiness/format-repair/REPORT.md.
+
+## D0-02 approved preparation
+
+Owner approved the recommended repaired diagnostic and a new Vishesh-named dedicated machine. Wrote the prospective plan before extending the attempt-specific runner. Fresh IDs, preserved cumulative budgets, atomic audited host rebinding, old-mirror fencing gate and one execution window validated with 129 offline tests. Original provisioner/account/state and trusted access remain unavailable; no creation, claim, renewal, ledger relocation or native calls. Public registration and runtime admission follow verified allocation.

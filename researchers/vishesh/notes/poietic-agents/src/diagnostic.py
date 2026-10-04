@@ -3,23 +3,26 @@ from common import digest
 from engine import Engine
 from world import World, job
 from qualification import ROLES, probe, apply
+from diagnostic_scope import scope
 
 
-def assignments():
-    return [dict(id=f'D0-01:{role}:{case}:{step}',role=role,case=case,step=step,
-                 root=400+4*case,probe_id=400+4*case+step)
+def assignments(attempt='D0-01'):
+    root_start=scope(attempt)['root_start']
+    return [dict(id=f'{attempt}:{role}:{case}:{step}',role=role,case=case,step=step,
+                 root=root_start+4*case,probe_id=root_start+4*case+step)
             for role in ROLES for case in range(3) for step in range(4)]
 
 
-def make_case(case, development=False):
+def make_case(case, development=False, attempt='D0-01'):
     if not 0 <= case < 3: raise ValueError('diagnostic_case_range')
-    root=case if development else 400+4*case
+    root_start=scope(attempt)['root_start']
+    root=case if development else root_start+4*case
     world=World(root);task=job(root,1,case)
     return dict(world=world,job=task,engine=Engine(world,root=root,split='dev' if development else 'D0'),case=case)
 
 
-def analyze(records):
-    expected=assignments();allowed={a['id']:a for a in expected};by={r['id']:r for r in records}
+def analyze(records, attempt='D0-01'):
+    expected=assignments(attempt);allowed={a['id']:a for a in expected};by={r['id']:r for r in records}
     if len(by)!=len(records) or not set(by)<=set(allowed):raise ValueError('assignment_identity')
     groups={}
     for role in ROLES:
@@ -35,8 +38,8 @@ def analyze(records):
                 scientific_result=False,independent_units='3 generator roots paired across3roles;4dependent steps per sequence; no swarm efficacy roots')
 
 
-def complete_records(records,started_ids):
-    allowed={a['id']:a for a in assignments()};by={r['id']:r for r in records}
+def complete_records(records,started_ids,attempt='D0-01'):
+    allowed={a['id']:a for a in assignments(attempt)};by={r['id']:r for r in records}
     if len(by)!=len(records) or not set(by)<=set(allowed) or not set(started_ids)<=set(allowed):raise ValueError('assignment_identity')
     return [by[a['id']] if a['id'] in by else dict(a,status='failed' if a['id'] in started_ids else 'not_started',
-            started=a['id'] in started_ids,failure_code='interrupted_inflight' if a['id'] in started_ids else None) for a in assignments()]
+            started=a['id'] in started_ids,failure_code='interrupted_inflight' if a['id'] in started_ids else None) for a in assignments(attempt)]

@@ -147,5 +147,16 @@
     "evidence": "readiness/format-repair/validation.json",
     "new_model_calls": 0,
     "native_qualification": false
+  },
+  "latest_preparation": {
+    "attempt": "D0-02",
+    "owner_scope_approved": true,
+    "status": "hold_original_provisioner_account_state",
+    "plan": "D0-02-PLAN.md",
+    "assessment": "reviews/D0-02-pre.md",
+    "offline_tests_passed": 129,
+    "native_calls": 0,
+    "resources_created": 0,
+    "checked_utc": "2026-10-04T19:32:25.153360+00:00"
   }
 }

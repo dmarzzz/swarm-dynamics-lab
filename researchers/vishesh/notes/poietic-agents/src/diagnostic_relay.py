@@ -13,7 +13,7 @@ import urllib.error
 import urllib.request
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
-from diagnostic_admission import BASE, verify, verify_public
+from diagnostic_admission import BASE, verify, verify_public, verify_prior_budget
 from budget import Budget
 from provider_diagnostics import safe_error, has_provider_error, ProviderBodyError
 from common import canonical, digest, append
@@ -21,9 +21,9 @@ from native import reserve_nano, usage_receipt, verify_catalog
 from diagnostic import assignments
 
 
-def validate_payload(data, models):
+def validate_payload(data, models, diagnostic_attempt="D0-01"):
     if not isinstance(data,dict) or set(data)!={'id','role','request'}:raise ValueError('relay_envelope')
-    allowed={a['id']:a['role'] for a in assignments()}
+    allowed={a['id']:a['role'] for a in assignments(diagnostic_attempt)}
     logical, separator, attempt=data['id'].rpartition(':physical-')
     if not separator or attempt != '0' or logical not in allowed or allowed[logical]!=data['role']:
         raise ValueError('unassigned_request')
@@ -61,7 +61,13 @@ def serve(config_path,credential_file,ledger,port_file):
     models=json.loads((BASE/'models.json').read_text())['models'];opener=urllib.request.build_opener(NoRedirect())
     for c in models.values():verify_catalog(read_json(opener,c['catalog_url']),c)
     auth=config['authorization']
+    if config['attempt']=='D0-02' and not ledger.is_file():
+        raise ValueError('original_local_authority_required')
     budget=Budget(ledger,digest(auth),config['allocation']['host'],1_500_000_000,288,auth['deadline'])
+    if config['attempt']=='D0-02':
+        try: verify_prior_budget(budget,config)
+        except BaseException:
+            budget.close();raise
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
         def do_GET(self):
@@ -76,7 +82,7 @@ def serve(config_path,credential_file,ledger,port_file):
             try:
                 size=int(self.headers.get('Content-Length','0'))
                 if self.path!='/invoke' or not 0<size<=10000 or time.time()>=auth['deadline']-45:raise ValueError('relay_deadline_or_size')
-                data=json.loads(self.rfile.read(size));c=validate_payload(data,models);physical_id=data['id']
+                data=json.loads(self.rfile.read(size));c=validate_payload(data,models,config['attempt']);physical_id=data['id']
                 budget.reserve(physical_id,digest(data['request']),reserve_nano(c));reserved=True
                 suffix='/api/alpha/decisions' if c['kind']=='decision' else '/api/v1/chat/completions'
                 req=urllib.request.Request('https://openrouter.ai'+suffix,canonical(data['request']).encode(),{'Authorization':'Bearer '+key,'Content-Type':'application/json'})

@@ -37,8 +37,8 @@ class DiagnosticTests(unittest.TestCase):
         self.assertIsNone(c['public_plan']['url'])
         with self.assertRaises(ValueError):admission.verify(c,actual_host='fixture')
 
-    def admitted_fixture(self):
-        c=candidate();now=time.time()
+    def admitted_fixture(self,diagnostic_attempt="D0-01"):
+        c=candidate(diagnostic_attempt);now=time.time()
         c['owner_update_approval'].update(approved=True,decision_reference='FAKE-OFFLINE-ONLY')
         c['authorization'].update(owner_approved=True,reference='FAKE-OFFLINE-ONLY',deadline=now+3500)
         c['allocation'].update(host='fixture',claim_id='fixture',merged_claim_revision='0'*40,exclusive=True,
@@ -47,6 +47,11 @@ class DiagnosticTests(unittest.TestCase):
         c['credential']['study_authorized']=True
         url='https://github.com/dmarzzz/swarm-lab/blob/'+'0'*40+'/fixture'
         c['public_plan'].update(url=url,sha256='0'*64);c['page_verification'].update(url=url,rendered=True,checked_at=now)
+        if diagnostic_attempt=='D0-02':
+            c['allocation'].update(host='sim-vishesh-poietic',new_machine=True,
+                original_provisioner_receipt='OFFLINE-FIXTURE',host_key_provenance='OFFLINE-FIXTURE')
+            c['authority_relocation']=dict(verified=True,receipt_reference='OFFLINE-FIXTURE',
+                historical_charges=40,old_worker_mirror_fenced=True)
         return c,now
 
     def test_admission_rejects_scope_budget_source_and_stale_approval(self):
@@ -74,7 +79,7 @@ class DiagnosticTests(unittest.TestCase):
             with self.assertRaises(ValueError):validate_payload(bad,models)
         with self.assertRaises(ValueError):validate_payload(dict(wire,role='typed_choice'),models)
 
-    def rehearse(self,fault=None):
+    def rehearse(self,fault=None,diagnostic_attempt="D0-01"):
         models=json.loads((BASE/'models.json').read_text())['models'];expected={}
         # Build all scripted reference outputs on disjoint development roots before invoking the real loop.
         for role in d.ROLES:
@@ -82,7 +87,7 @@ class DiagnosticTests(unittest.TestCase):
                 state=d.make_case(case,development=True);state['engine'].actors['agent-0'].model=role
                 for step in range(4):
                     p=d.probe(state,step,role);req=request(models[role],p['sections'],p['choices'])
-                    expected[f'D0-01:{role}:{case}:{step}:physical-0']=(copy.deepcopy(p),req)
+                    expected[f'{diagnostic_attempt}:{role}:{case}:{step}:physical-0']=(copy.deepcopy(p),req)
                     self.assertTrue(d.apply(state,step,p['expected'],p['expected'])['correct'])
         dispatches=[];completions=[];uploads=[]
         class Provider:
@@ -117,18 +122,26 @@ class DiagnosticTests(unittest.TestCase):
             def fail(self,**kwargs):completions.append((self.ident,'failed'))
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);config=root/'config.json'
-            config.write_text(json.dumps({'attempt':'D0-01','source_commit':'fixture','file_hashes':{},
+            config.write_text(json.dumps({'attempt':diagnostic_attempt,'prior_budget':{'physical_calls':40,'exposure_nano':482269482},'source_commit':'fixture','file_hashes':{},
                 'allocation':{'host':'fixture','allocated_usd_per_hour':.07143},'authorization':{'deadline':time.time()+3600},
                 'credential':{'relay_url':'http://127.0.0.1:1/invoke'},'condition_tldrs':{r:'SCRIPTED OFFLINE' for r in d.ROLES}}))
+            if diagnostic_attempt=='D0-02':
+                from budget import Budget
+                cfg=json.loads(config.read_text());(root/'authority').mkdir()
+                prior=Budget(root/'authority/budget.sqlite',digest(cfg['authorization']),'fixture',1_500_000_000,288,cfg['authorization']['deadline'])
+                for i in range(40):
+                    prior.reserve(f'historical-{i}','fixture-history',482269443 if i==0 else 1)
+                    prior.settle(f'historical-{i}')
+                prior.close()
             def private_path(value):return root/'authority' if value=='/srv/swarm/poietic-agents-authority' else Path(value)
             with patch.object(worker,'verify'),patch.object(worker,'source_check'),patch.object(worker,'verify_public',return_value={}), \
                  patch.object(worker,'verify_catalog',return_value={}),patch.object(worker,'verify_relay_health'), \
                  patch.object(worker,'read_json',return_value={}),patch.object(worker.urllib.request,'build_opener',return_value=Provider()), \
-                 patch.object(worker,'Path',side_effect=private_path),patch.object(worker,'make_case',side_effect=lambda case:d.make_case(case,development=True)), \
+                 patch.object(worker,'Path',side_effect=private_path),patch.object(worker,'make_case',side_effect=lambda case,**kwargs:d.make_case(case,development=True)), \
                  patch.dict(sys.modules,{'swarm_report':SimpleNamespace(Run=Run,report=lambda *args,**kwargs:True)}), \
                  patch.dict(worker.os.environ,{}),contextlib.redirect_stdout(io.StringIO()):worker.run(config,root/'out')
             records=json.loads((root/'out/records.json').read_text());summary=json.loads((root/'out/summary.json').read_text())
-            with contextlib.closing(sqlite3.connect(root/'authority/budget.sqlite')) as db:charges=db.execute('SELECT status,settled FROM charges ORDER BY id').fetchall()
+            with contextlib.closing(sqlite3.connect(root/'authority/budget.sqlite')) as db:charges=db.execute("SELECT status,settled FROM charges WHERE id LIKE 'D0-%' ORDER BY id").fetchall()
             self.assertEqual(len(records),36);self.assertEqual(summary['terminal'],36)
             self.assertFalse(summary['qualification_passed']);self.assertFalse(summary['scientific_result'])
             self.assertTrue((root/'out/final_frame.png').exists());self.assertEqual(len(charges),len(dispatches))
@@ -139,6 +152,40 @@ class DiagnosticTests(unittest.TestCase):
             self.assertIn('records.json',manifest['files'])
             self.assertEqual(len({x['id'] for x in dispatches}),len(dispatches))
             return summary,records,charges,completions
+
+    def test_d002_keeps_history_and_runs_only_fresh_ids(self):
+        summary,records,charges,done=self.rehearse(diagnostic_attempt='D0-02')
+        self.assertEqual(summary['attempt'],'D0-02')
+        self.assertEqual(summary['started'],36);self.assertEqual(summary['budget']['physical_calls'],76)
+        self.assertTrue(summary['diagnostic_passed']);self.assertFalse(summary['qualification_passed'])
+        self.assertTrue(all(row['id'].startswith('D0-02:') for row in records))
+        self.assertTrue(all(ident.startswith('poietic-D0-02-') for ident,_ in done))
+
+    def test_d002_admission_requires_new_machine_and_ledger_evidence(self):
+        c,now=self.admitted_fixture('D0-02')
+        host='sim-vishesh-poietic'
+        self.assertTrue(admission.verify(c,now=now,actual_host=host)['ready'])
+        for field,value in [('new_machine',False),('original_provisioner_receipt',None),('host_key_provenance',None),('host','fixture')]:
+            bad=copy.deepcopy(c);bad['allocation'][field]=value
+            with self.subTest(field=field),self.assertRaises(ValueError):admission.verify(bad,now=now,actual_host=host)
+        for field,value in [('verified',False),('historical_charges',0),('old_worker_mirror_fenced',False),('receipt_reference',None)]:
+            bad=copy.deepcopy(c);bad['authority_relocation'][field]=value
+            with self.subTest(field=field),self.assertRaises(ValueError):admission.verify(bad,now=now,actual_host=host)
+        bad=copy.deepcopy(c);bad['prior_budget']['physical_calls']=37
+        with self.assertRaises(ValueError):admission.verify(bad,now=now,actual_host=host)
+
+    def test_d002_ids_roots_and_relay_are_disjoint_from_d001(self):
+        old=d.assignments();new=d.assignments('D0-02')
+        self.assertEqual({r['root'] for r in new},{500,504,508})
+        self.assertFalse({r['id'] for r in old}&{r['id'] for r in new})
+        self.assertFalse({r['probe_id'] for r in old}&{r['probe_id'] for r in new})
+        models=json.loads((BASE/'models.json').read_text())['models']
+        p=d.probe(d.make_case(0,development=True),0,'generalist')
+        wire=dict(id='D0-02:generalist:0:0:physical-0',role='generalist',request=request(models['generalist'],p['sections']))
+        validate_payload(wire,models,'D0-02')
+        with self.assertRaises(ValueError):validate_payload(wire,models,'D0-01')
+        with self.assertRaises(ValueError):d.analyze([dict(id=old[0]['id'])],'D0-02')
+        with self.assertRaises(ValueError):d.assignments('D0-03')
 
     def test_complete_success_is_only_diagnostic(self):
         summary,records,charges,done=self.rehearse()

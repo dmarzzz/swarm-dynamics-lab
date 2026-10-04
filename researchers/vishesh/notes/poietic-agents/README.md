@@ -1,5 +1,7 @@
 # Poietic Agents
 
+Current next attempt: [D0-02 repaired diagnostic](D0-02-PLAN.md), owner-approved with a new dedicated Vishesh-named machine; [129 offline checks pass](readiness/D0-02/validation.json). [Pre-run assessment](reviews/D0-02-pre.md) is HOLD on verified original provisioner/account/state access. No new machine or calls.
+
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 

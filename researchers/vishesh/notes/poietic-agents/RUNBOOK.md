@@ -1,3 +1,7 @@
+## D0-02: approved scope, provisioning hold
+
+Read [D0-02 plan](D0-02-PLAN.md) and [current assessment](reviews/D0-02-pre.md). Prepare with `python src/diagnostic_prepare.py --attempt D0-02 --out <new-private-directory>` from the study directory. The candidate intentionally blocks admission. The original provisioner/account/state and trusted exclusive new machine remain unverified. No new native call, claim, ledger relocation or deadline activation. Do not rerun consumed D0-01.
+
 ## Current offline update
 
 Read [formatting/error repair and substitution costs](readiness/format-repair/REPORT.md). 121 offline checks pass; current main uses `single-json-fence-v1`. Frozen D0-01 remains strict and failed. No new native attempt is approved or model substituted; do not reuse consumed D0 IDs or old admission.

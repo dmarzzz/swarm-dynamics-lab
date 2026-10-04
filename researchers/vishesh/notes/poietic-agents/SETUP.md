@@ -42,3 +42,7 @@ One approved diagnostic executed at38544138. Repeated Haiku wrapper failure and 
 ## Offline repair after D0-01
 
 Owner-directed formatting and error diagnosis complete; [prospective repair plan](reviews/D0-01-repair-plan.md), [report](readiness/format-repair/REPORT.md), [121-test validation](readiness/format-repair/validation.json). Bounded JSON-fence normalization, unchanged action/permission checks and allowlisted provider error telemetry are implemented. Current route/tariff and key-status reads pass but do not prove inference recovery or the historic 429 source. All 40 calls and spending are unchanged. No allocation or successor started; Qwen remains the selected cheap generative model. Haiku substitution costs are estimated, not authorized.
+
+## D0-02 approved preparation
+
+The owner approved the repaired 36-decision diagnostic on a new Vishesh-named machine. [Prospective plan](D0-02-PLAN.md), [current assessment](reviews/D0-02-pre.md), [offline validation](readiness/D0-02/validation.json). Fresh paired roots, unchanged selected models, original 40-charge history and cumulative caps. D0-02-specific IDs, candidate, runner, relay, ledger relocation and unique execution window are validated offline. Current gate: G3 HOLD on authenticated original provisioner/account/state access; no machine or native calls. Once verified, complete public registration, runtime, exclusive allocation, trusted SSH, fenced mirror and unchanged-budget admission. No repeated scope approval is required.

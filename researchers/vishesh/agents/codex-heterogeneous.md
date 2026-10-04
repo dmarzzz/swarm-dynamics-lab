@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: idle
+state: blocked
 task: null
-doing: D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated
-updated: 2026-10-04T18:32:55.072393+00:00
+doing: D0-02 approved and validated offline; new machine blocked on original provisioner/account/state
+updated: 2026-10-04T19:32:25.153360+00:00
 ---
 
-Read Poietic readiness/format-repair/REPORT.md and reviews/D0-01-post.md. Bounded JSON-fence normalization and allowlisted provider-error telemetry pass 121 offline tests; both retained model answers replay correctly without altering native grades. Current non-billable route/key checks pass; exact historical 429 cause is unresolved. Qwen remains selected. No successor launched or approved; original 40 calls and USD 0.568560890 cumulative exposure retained.
+D0-02 has owner approval for 36 repaired diagnostic calls on a new sim-vishesh-poietic machine. 129 offline tests pass; original 40 calls and USD 0.568560890 cumulative exposure unchanged. See Poietic D0-02-PLAN.md and reviews/D0-02-pre.md. Current HOLD is verified original provisioner/account/state access, not another owner decision. No new allocation or native calls.

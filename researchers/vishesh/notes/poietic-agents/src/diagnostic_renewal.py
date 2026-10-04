@@ -25,7 +25,7 @@ def apply_approved_window(path, receipt, *, now=None):
     if not isinstance(receipt, dict) or receipt.get('approved') is not True:
         raise RenewalError('explicit_renewal_receipt_required')
     if (receipt.get('schema_version') != 1 or receipt.get('study') != 'poietic-agents' or
-        receipt.get('attempt') != 'D0-01' or receipt.get('duration_seconds') != 3600 or
+        receipt.get('attempt') not in ('D0-01','D0-02') or receipt.get('duration_seconds') != 3600 or
         receipt.get('maximum_new_calls') != 36):
         raise RenewalError('renewal_scope')
     for key in ('receipt_id', 'decision_reference'):
@@ -33,7 +33,8 @@ def apply_approved_window(path, receipt, *, now=None):
             raise RenewalError('renewal_decision_reference')
     approved = receipt.get('approved_at')
     quiet = receipt.get('quiescence_checked_at')
-    if not _timestamp(now) or not _timestamp(approved) or not 0 <= now-approved <= 3600:
+    if (not _timestamp(now) or not _timestamp(approved) or not 0<approved<=now or
+        (receipt['attempt']=='D0-01' and now-approved>3600)):
         raise RenewalError('approval_activation_window')
     if (receipt.get('workers_and_relays_stopped') is not True or not _timestamp(quiet) or
         not 0 <= now-quiet <= 300 or not receipt.get('quiescence_reference')):
@@ -67,6 +68,15 @@ def apply_approved_window(path, receipt, *, now=None):
             raise RenewalError('charge_history_changed')
         if any(c[4] == 'reserved' for c in charges):
             raise RenewalError('inflight_reservation_unreconciled')
+        if receipt['attempt']=='D0-02':
+            if (old['host']!='sim-vishesh-poietic' or len(charges)!=40 or
+                sum(c[3] if c[3] is not None else c[2] for c in charges)!=482269482 or
+                'authority_relocations' not in tables or not db.execute(
+                    'SELECT 1 FROM authority_relocations WHERE attempt=?',('D0-02',)).fetchone()):
+                raise RenewalError('d002_relocated_history_required')
+            if 'diagnostic_windows' in tables and db.execute(
+                    'SELECT 1 FROM diagnostic_windows WHERE attempt=?',('D0-02',)).fetchone():
+                raise RenewalError('diagnostic_window_already_used')
         if not _timestamp(old['deadline']) or old['deadline'] >= now:
             raise RenewalError('original_window_not_expired')
         if old['hash'] != digest(old_auth) or old_auth.get('deadline') != old['deadline']:
@@ -87,6 +97,9 @@ def apply_approved_window(path, receipt, *, now=None):
         db.execute('INSERT INTO authority_renewals VALUES (?,?,?,?,?,?)',
                    (receipt['receipt_id'], receipt['decision_reference'], now,
                     canonical(old), canonical(new), digest(charges)))
+        if receipt['attempt']=='D0-02':
+            db.execute('CREATE TABLE IF NOT EXISTS diagnostic_windows (attempt TEXT PRIMARY KEY, receipt_id TEXT NOT NULL)')
+            db.execute('INSERT INTO diagnostic_windows VALUES (?,?)',('D0-02',receipt['receipt_id']))
         changed = db.execute('UPDATE authority SET hash=?,deadline=? WHERE id=1 AND hash=? AND deadline=?',
                              (new['hash'], new['deadline'], old['hash'], old['deadline'])).rowcount
         after = db.execute('SELECT hash,host,cap,calls,deadline FROM authority WHERE id=1').fetchone()

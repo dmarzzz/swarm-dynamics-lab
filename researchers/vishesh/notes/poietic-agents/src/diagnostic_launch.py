@@ -1,4 +1,4 @@
-"""Explicitly admitted D0-01 only. No retry, no full qualification or successor launch."""
+"""One explicitly admitted D0 cohort. No retry or automatic successor launch."""
 import argparse
 import contextlib
 import hashlib
@@ -14,7 +14,7 @@ import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 from pathlib import Path
-from diagnostic_admission import BASE, inventory, verify, verify_public, verify_relay_health
+from diagnostic_admission import BASE, inventory, verify, verify_public, verify_relay_health, verify_prior_budget
 from budget import Budget
 from provider_diagnostics import FIELDS as ERROR_FIELDS
 from common import append, canonical, digest, save
@@ -43,7 +43,7 @@ def source_check(config):
 
 
 def run(config_path,out):
-    config=json.loads(config_path.read_text())
+    config=json.loads(config_path.read_text());diagnostic_attempt=config["attempt"]
     resource.setrlimit(resource.RLIMIT_CORE,(0,0))
     verify(config,actual_host=socket.gethostname().split('.')[0])
     source_check(config)
@@ -63,33 +63,39 @@ def run(config_path,out):
     verify_relay_health(read_json(opener,relay.rsplit('/',1)[0]+'/health'),config)
     out.mkdir(parents=True,exist_ok=False)
     save(out/'admission.json',config);save(out/'public-plan.json',plan_receipt);save(out/'route-check.json',routes)
-    save(out/'assignments.json',assignments())
+    save(out/'assignments.json',assignments(diagnostic_attempt))
     # Study-wide path on one dedicated host; one admission lock prevents independent worker ledgers.
     authority_dir=Path('/srv/swarm/poietic-agents-authority')
+    if diagnostic_attempt=='D0-02' and not (authority_dir/'budget.sqlite').is_file():
+        raise ValueError('original_worker_mirror_required')
     authority_dir.mkdir(parents=True,exist_ok=True)
     import fcntl
     lock=(authority_dir/'worker.lock').open('a')
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     auth=config['authorization']
     budget=Budget(authority_dir/'budget.sqlite',digest(auth),config['allocation']['host'],1_500_000_000,288,auth['deadline'])
+    if diagnostic_attempt=='D0-02':
+        try: verify_prior_budget(budget,config)
+        except BaseException:
+            budget.close();lock.close();raise
     os.environ.update(SWARM_SOURCE='vishesh/codex-heterogeneous',SWARM_HOST=config['allocation']['host'])
     import swarm_report as sr
     runs={}; records=[]; stop=None; role_stops={}; start=time.monotonic()
     try:
         # Three condition-specific run descriptions, one shared physical budget and assignment authority.
         for role in ROLES:
-            run_id=f'poietic-D0-01-{role}'
-            params=dict(stage='D0',contract=role,source_commit=config['source_commit'],assignment_sha256=digest(assignments()))
+            run_id=f'poietic-{diagnostic_attempt}-{role}'
+            params=dict(stage='D0',contract=role,source_commit=config['source_commit'],assignment_sha256=digest(assignments(diagnostic_attempt)))
             if quiet(sr.report,'start','poietic-agents',run_id,params=params,message=config['condition_tldrs'][role],strict=True) is not True:
                 raise ValueError('hub_start_unacknowledged')
             runs[role]=sr.Run(run_id,'poietic-agents',params)
         for role in ROLES:
             contract=models[role]
             for case in range(3):
-                state=make_case(case)
+                state=make_case(case,attempt=diagnostic_attempt)
                 state['engine'].actors['agent-0'].model=role
                 for step in range(4):
-                    call_id=f'D0-01:{role}:{case}:{step}'
+                    call_id=f'{diagnostic_attempt}:{role}:{case}:{step}'
                     row=dict(id=call_id,role=role,case=case,step=step,status='not_started',started=False)
                     if stop or role in role_stops or time.time()>=auth['deadline']-45:
                         if time.time()>=auth['deadline']-45:stop=stop or 'stage_deadline'
@@ -133,7 +139,7 @@ def run(config_path,out):
                             try:
                                 detail=json.loads(exc.read(32000));row['relay_diagnostic']={k:detail[k] for k in ERROR_FIELDS if k in detail}
                             except Exception:pass
-                            # D0-01 admits no retry; preserve every rejection and stop for diagnosis.
+                            # Diagnostics admit no retry; retain rejection evidence for diagnosis.
                             if exc.code==429:
                                 append(out/'transport.jsonl',dict(id=physical_id,status='rejected_429',elapsed_s=time.monotonic()-began))
                         except Exception as exc:
@@ -145,7 +151,7 @@ def run(config_path,out):
                         row['elapsed_s']=time.monotonic()-began
                         break
                     records.append(row);append(out/'responses.jsonl',row)
-                    current=analyze(records)
+                    current=analyze(records,diagnostic_attempt)
                     quiet(runs[role].progress,4*case+step+1,12,correct=current['contracts'][role]['correct'],
                           valid=current['contracts'][role]['schema_valid'],cost_usd=budget.summary()['charged_upper_usd'])
                     if step==3:
@@ -159,8 +165,8 @@ def run(config_path,out):
                         stop='integrity_guard'
         # Every assigned outcome, including unstarted ones, is present in the durable terminal record.
         save(out/'records.json',records)
-        summary=analyze(records)
-        summary.update(budget=budget.summary(),elapsed_s=time.monotonic()-start,stop_reason=stop,role_stop_reasons=role_stops,
+        summary=analyze(records,diagnostic_attempt)
+        summary.update(attempt=diagnostic_attempt,budget=budget.summary(),elapsed_s=time.monotonic()-start,stop_reason=stop,role_stop_reasons=role_stops,
                        source_commit=config['source_commit'],file_hashes=config['file_hashes'],model_config_sha256=digest(models),
                        infrastructure_usd=(time.monotonic()-start)/3600*config['allocation']['allocated_usd_per_hour'])
         save(out/'summary.json',summary)
@@ -170,7 +176,7 @@ def run(config_path,out):
         # Full task/request/response payloads stay in the private experiment archive.
         # The public manifest supports byte-level auditing without disclosing them.
         evidence_names=('assignments.json','call-starts.jsonl','responses.jsonl','records.json','summary.json','final_frame.png')
-        save(out/'artifact-manifest.json',dict(attempt='D0-01',raw_payloads_public=False,
+        save(out/'artifact-manifest.json',dict(attempt=diagnostic_attempt,raw_payloads_public=False,
              files={name:dict(sha256=hashlib.sha256((out/name).read_bytes()).hexdigest(),bytes=(out/name).stat().st_size)
                     for name in evidence_names if (out/name).exists()}))
         reporting=[]
@@ -189,11 +195,11 @@ def run(config_path,out):
         starts=[]
         if (out/'call-starts.jsonl').exists():
             starts=[json.loads(line)['logical_id'] for line in (out/'call-starts.jsonl').read_text().splitlines()]
-        records=complete_records(records,starts)
+        records=complete_records(records,starts,diagnostic_attempt)
         save(out/'records.json',records)
         save(out/'failure.json',dict(error_type=type(exc).__name__,budget=budget.summary(),records_retained=len(records)))
         save(out/'post-mortem.json',dict(disposition='blocked-repair',error_type=type(exc).__name__,
-             reconciliation=analyze(records),budget=budget.summary(),scientific_conclusion='none',
+             reconciliation=analyze(records,diagnostic_attempt),budget=budget.summary(),scientific_conclusion='none',
              next_action='Inspect retained records; diagnose on development and use a fresh prospective attempt'))
         for run in runs.values(): quiet(run.fail,message='D0 stopped; failure and spend retained')
         raise
