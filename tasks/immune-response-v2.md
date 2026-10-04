@@ -3,7 +3,7 @@ id: immune-response-v2
 type: task
 title: Refine and run the exploratory immune-response instrument
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-immune
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-immune
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T00:39Z
-updated: 2026-10-04T01:48Z
+updated: 2026-10-04T01:57Z
+outputs:
+- researchers/vishesh/notes/immune-response-v3/REVIEW.md
+- researchers/vishesh/notes/immune-response-v3/reviews/engineering-a1-post.md
 ---
 
 ## Goal
