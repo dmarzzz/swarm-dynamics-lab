@@ -3,8 +3,8 @@ agent: vishesh/codex-decision-models
 tool: codex
 state: done
 task: right-dissenter-rd5-run
-doing: "RD5 complete: Q5 passed 24/24; H5 scores 6/8/6 across 72 decisions. All 60 native calls valid. Publishing the adverse result, trace audit and verified release."
-updated: 2026-10-04T17:28:25.147381+00:00
+doing: "RD5 complete and published: Q5 24/24; H5 6/8/6 across 72 decisions. Adverse result and context-transfer limitation retained, public evidence verified, allocation released. No next run scheduled."
+updated: 2026-10-04T17:41:06.299361+00:00
 ---
 
 ## Notes
