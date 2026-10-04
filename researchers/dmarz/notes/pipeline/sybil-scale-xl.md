@@ -1,6 +1,6 @@
 # sybil-scale-xl: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz, claim `dmarz-sybil-scale-xl` to 20:03Z. Amendment A1 (Opus 5.5, effort low, trimmed design). Not a review. Last updated 2026-10-04T08:20Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz, claim `dmarz-sybil-scale-xl` to 20:03Z. Amendment A1 (Opus 5.5, effort low, trimmed design). Not a review. Last updated 2026-10-04T08:25Z.
 
 ## 1. Results so far
 
@@ -8,8 +8,13 @@ Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz,
 - Q0 `q0-a1` (run a6b2a7b3): **passed**, 24 of 24 valid at all three sizes, 24 calls, USD 9.853, 59 seconds on the hub clock (07:53:00Z to 07:53:59Z).
 - S1 `s1-a1` (run 7a32ec63) started 07:54:07Z from the tmux chain. It has made no model call yet: it is building the recorded inputs on the server's 4 cores (load 4.3). N=972 took about 3 minutes, N=2,916 about 10 minutes, and N=8,748 began at 08:07Z. 0 of 576 answers at 08:09Z.
 
+### 08:21Z: A1's S1 stopped before any call; amendment A2 adds an overload retry
+
+The operator stopped `s1-a1` during input preparation (hub status failed, KeyboardInterrupt, 0 calls, no cost) and committed amendment A2 (commit 4217f29b): a call that gets HTTP 429 or 529 is retried at most twice, after 20 s and 60 s; every other failure still stops dispatch. Nothing scientific changes. Because the source hash changes, the chain restarts as batch a2: S0 `s0-a2` (run b7e6407c) has been running since about 08:23Z, then Q0 `q0-a2` (about USD 10 more), then S1.
+
 ## 2. Gate forecast
 
+- Timeline for batch a2, from batch a1's timings: S0 about 8 minutes (to about 08:31Z), Q0 about 1 minute plus its input preparation, then S1 input preparation of 40 to 50 minutes, so the first S1 model call is around 09:20Z to 09:30Z.
 - S1 has no pass gate; it ends when 576 calls are terminal or the ledger stops dispatch at USD 330.
 - Cost: Q0's USD 9.85 is at the top of the amendment's USD 7 to 10 estimate. Scaling the amendment's S1 estimate the same way gives about USD 235 to 245 for S1 and about USD 250 in total, under the USD 330 cap. This is my projection from one number, not a measurement; the per-size cost will be visible once S1 reports.
 - Time: input preparation is the long pole so far. If N=8,748 scales as the first two sizes did (about three times longer per step), the first model call is around 08:35Z to 08:45Z. Model time after that is unknown until answers land. Q0's 24 calls finishing inside a minute means calls run concurrently; if S1 keeps that pace the model part is well under an hour, unless the provider's input-token rate limit throttles the 4,374-report packets.

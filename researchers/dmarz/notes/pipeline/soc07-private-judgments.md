@@ -1,6 +1,6 @@
 # soc07-private-judgments: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T08:15Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T08:25Z.
 
 ## 1. Results so far
 
@@ -28,19 +28,20 @@ A sub-agent of this lane regenerated both qualification sets from the study's ge
 
 ## 2. Gate forecast
 
-S0 `s0-a5` should end about 08:17Z. Then the approval record for m3, then S1-Q.2 (12 calls, under a minute). Gate 10 of 12 correct, 11 of 12 valid.
+**S1-Q.2 passed at 08:24:02Z: 12 of 12 correct, 12 of 12 valid** (run a80d0c73, Opus 5.5 at effort medium, repaired prompt, qualification set 2). USD 0.053, about USD 0.0045 per call. S0 `s0-a5` had passed at 08:17:19Z and dmarz's go for S1-Q.2, S1-R and S1-L was recorded at 08:17Z. S1-R (`s1r-a1`, run 807dfab8) started at 08:24:25Z, 23 seconds after the gate.
 
-Forecast: more likely to pass than m2, because two of the three Sonnet misses are single-call override slips that reasoning addresses. The boundary ambiguity that affected 1 of the 12 set-2 worlds is now removed by the repaired rule text.
+Three cohorts on this gate: Haiku 7 of 12, Sonnet 9 of 12 (both without reasoning, on the unrepaired prompt), Opus 12 of 12 (with reasoning, on the repaired prompt). Model, reasoning and the prompt clause all changed between the second and third, so the improvement cannot be assigned to one of them.
+
+- S1-R: up to 672 calls (480 public, 192 auxiliary), five in flight. Gates: clean competence at least 13 of 16 focal public final answers correct in clean-regime replay episodes, parse-valid at least 95%, truncated at most 5% per phase, budget and timeout failures at most 5%, zero detected leaks. At S1-Q.2's price about USD 3 to 6. Duration not yet measurable; a first reading comes with the next hub update.
+- Forecast for S1-R's clean-competence gate: pass expected, given 12 of 12 in qualification on the same decision rule. The untested parts are the discussion and final phases with their 256 and 64 token visible caps plus the 4,096 reasoning allowance: truncation is the failure to watch.
 
 ## 3. Next run
 
-**Deadline clause: done.** The repair went in before any m3 model call (commit 71717def), so S1-Q.2, S1-R and S1-L are all scored on a stated rule. The exposure it removed: 1 of 12 worlds in set 2, 3 of 24 in S1-R, 4 of 24 in S1-L. The fingerprint binding that made the timing matter: `execution.json`, `design.json` and the prompt files are all in the hash the approval is bound to (`src/config.py` lines 80-96, `src/launch.py` line 31), and a spent set's call ids cannot be reused (`src/budget.py` lines 69-70).
+**If S1-R passes its gates:** S1-L (up to 4,080 calls: 2,880 public, 1,200 auxiliary), already authorized. At USD 0.0045 to 0.01 per call about USD 18 to 40, inside the USD 500 cap. If the launcher does not start S1-L by itself, that hand-over is the next place the lane can idle.
 
-**If S1-Q.2 passes (at least 10 of 12):** S1-R (up to 672 calls) then S1-L (up to 4,080) are authorized stages with software gates (clean competence 13 of 16, parse-valid 95%, truncation at most 5% per phase). The post-mortem promised dmarz a cost estimate from S1-Q.2's tokens before S1-R; with the cap at USD 500 that is a report and need not be a wait. Chain S1-Q.2 into S1-R under the gate.
+**If S1-R fails clean competence (12 or fewer of 16):** the plan says the team prompts are suspect and S1-L does not start. Read the focal agent's final answers in the failed clean episodes first; the single-solver rule is now known to be answerable (12 of 12), so a failure here is about the team context, not the rule.
 
-**If S1-Q.2 fails:**
-- Misses on cost-audit worlds again with reasoning on: read the answer text first (it is in the journal). A third model swap is not the next step.
-- `truncated` or `unexpected_content_blocks` failures: request shape. The adapter's adaptive path has only been exercised against a fake transport; the first real call is the test.
+**If S1-R fails on truncation:** raise the visible caps for the phase that truncated. That is a manifest change: fresh S0, approval and S1-Q on a new set (about 10 minutes of run time).
 
 ## 4. Design notes for later runs
 
