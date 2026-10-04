@@ -181,7 +181,11 @@ class FastLedger(provider.Ledger):
                     if e['type'] == 'response':
                         m['tokens'][0] += e.get('input_tokens', 0); m['tokens'][1] += e.get('output_tokens', 0)
                 self._size = self.path.stat().st_size
-            return {'attempted_calls': len(m['reserved']), 'calls_by_stage': dict(m['by_stage']),
+            by_batch = {}
+            for call in m['reserved']:
+                fam = provider.family_of(call)
+                by_batch[fam] = by_batch.get(fam, 0) + 1
+            return {'attempted_calls': len(m['reserved']), 'calls_by_stage': dict(m['by_stage']), 'calls_by_batch': by_batch,
                     'transport_attempts': m['attempts'], 'usage_reported_calls': len(m['settled']),
                     'reserved_usd': sum(m['reserved'].values()) / 1e6, 'actual_usd': sum(m['settled'].values()) / 1e6,
                     'committed_usd': m['committed'] / 1e6, 'input_tokens': m['tokens'][0], 'output_tokens': m['tokens'][1],
@@ -757,9 +761,11 @@ class HubDispatcher(Dispatcher):
             self.transport['hub_errors'] += 1
             raise HubTrouble('get_run') from None
         now = self.clock()
+        last = self.heard[slot]
+        self.last_alive = {'slot': slot, 'status': d.get('status'), 'updated': d.get('updated'), 'heard': last, 'now': now,
+                           'silent': self.silent}
         if d.get('status') not in ('running', 'assigned'):
             return False
-        last = self.heard[slot]
         if last is None or d.get('updated') != last[0]:
             self.heard[slot] = (d.get('updated'), now)
             return True
@@ -801,7 +807,7 @@ class HubDispatcher(Dispatcher):
                         if not self._alive(slot):
                             given_up.add(slot)
                             self.transport['events'].append({'event': 'worker_silent', 'slot': slot, 'fence': tasks[slot]['fence'],
-                                                             'time': time.time()})
+                                                             'time': time.time(), 'seen': getattr(self, 'last_alive', None)})
                     except HubTrouble:
                         trouble = True
             if len(results) + len(given_up) < len(tasks):

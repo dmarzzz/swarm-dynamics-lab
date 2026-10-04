@@ -269,14 +269,16 @@ def stage_s1(ctx, n=None):
         raise StageStop('no_batches_admitted')
     names = study.batches(n)
     ctx.planned += n * 200 * (d['opening_rounds'] + 4 * d['continuation_rounds'])
-    detail = {'batches': names, 'opening': {}, 'checkpoints': {}, 'continuations': {}, 'rounds_completed': {}}
+    detail = {'batches': names, 'opening': {}, 'checkpoints': {}, 'continuations': {}, 'rounds_completed': {}, 'opening_rounds_completed': 0}
+    ctx.partial = detail                 # kept in summary.json if the stage stops (T+52 stop, integrity stop)
     openings = []
     for i, b in enumerate(names):
         st = study.scientific_world(b)
-        openings.append(study.Economy(f'{b}.open', st, list(st['owners']), slot=i, policy=lambda oid, o: 'legal'))
+        openings.append(study.Economy(f'{b}.open', st, list(st['owners']), slot=None, policy=lambda oid, o: 'legal'))
     try:
         for r in range(d['opening_rounds']):
-            ctx.play(openings, 'opening', shuffle_seed=f'{d["arm_order_seed"]}/opening/{r + 1}')
+            ctx.play(openings, 'opening', slot_of=lambda i: i % ctx.workers, shuffle_seed=f'{d["arm_order_seed"]}/opening/{r + 1}')
+            detail['opening_rounds_completed'] = r + 1
             ctx.report(f'opening round {r + 1} of {d["opening_rounds"]} for {n} batch(es)')
         checkpoints = {}
         for i, (b, e) in enumerate(zip(names, openings)):
@@ -291,10 +293,10 @@ def stage_s1(ctx, n=None):
                 st = sim.fork(checkpoints[b], arm)
                 key = f'{b}.{arm}'
                 detail['continuations'][key] = {'fork_memory_hash': sim.memory_hash(st), 'slot': study.continuation_slot(i, arm)}
-                conts.append(study.Economy(key, st, list(st['owners']), slot=study.continuation_slot(i, arm), policy=lambda oid, o: 'legal'))
+                conts.append(study.Economy(key, st, list(st['owners']), slot=None, policy=lambda oid, o: 'legal'))
         ctx.extra['continuations'] = conts
         for r in range(d['continuation_rounds']):
-            ctx.play(conts, 'continuation', shuffle_seed=f'{d["arm_order_seed"]}/continuation/{r + 1}')
+            ctx.play(conts, 'continuation', slot_of=lambda i: i % ctx.workers, shuffle_seed=f'{d["arm_order_seed"]}/continuation/{r + 1}')
             for e in conts:
                 detail['rounds_completed'][e.key] = r + 1
             ctx.report(f'continuation round {r + 1} of {d["continuation_rounds"]}, {len(conts)} continuations')
@@ -428,6 +430,8 @@ def execute(p, out, run=None, dispatcher=None, deadline=None, prior=None):
     except BaseException as exc:
         ctx.failure = 'internal_' + type(exc).__name__
         ctx.internal = repr(exc)[:300]
+    if detail is None and getattr(ctx, 'partial', None) is not None:
+        detail = dict(ctx.partial, passed=False, stopped=ctx.failure)
     return _finish(ctx, detail)
 
 
@@ -446,8 +450,9 @@ def _save_states(ctx):
         write_gz(out / 'checkpoints.json.gz', json.dumps(cps))
     econs = list(ctx.extra.get('openings') or []) + list(ctx.extra.get('continuations') or [])
     if econs:
-        write_gz(out / 'messages.jsonl.gz', ''.join(json.dumps(dict(m, econ=e.key), sort_keys=True) + '\n'
-                                                    for e in econs for m in e.state['messages']))
+        rows = [dict(m, econ=e.key) for e in econs for m in e.state['messages']]
+        rows += [dict(m, econ=e.key, status='undelivered_run_ended') for e in econs for m in e.state['outbox']]
+        write_gz(out / 'messages.jsonl.gz', ''.join(json.dumps(r, sort_keys=True) + '\n' for r in rows))
         final = {e.key: {'round': e.state['round'], 'arm': e.state['arm'],
                          'owners': {oid: {'role': o['role'], 'slot': o['slot'], 'market': o['market'], 'seeder': o['seeder'],
                                           'cash': o['cash'], 'liability': o['liability'], 'inactive': o['inactive'],

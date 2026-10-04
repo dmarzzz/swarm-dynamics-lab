@@ -473,6 +473,7 @@ def fork(checkpoint_text, arm):
     st['arm'] = arm
     st['messaging'] = ARMS[arm]['messaging']
     st['outbox'] = []
+    st['messages'] = []                 # the opening's message log stays with the opening record
     for o in st['owners'].values():
         o['seeder'] = bool(ARMS[arm]['seeders'] and o['role'] == 'rival')
         o['inbox'] = []

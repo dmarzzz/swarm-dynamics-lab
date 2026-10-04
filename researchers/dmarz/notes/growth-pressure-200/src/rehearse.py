@@ -124,7 +124,7 @@ class Stub:
                 self.in_flight -= 1
 
 
-FAST_TRANSPORT = {'silent_seconds': 30.0, 'live_every': 2.0, 'backoff_max': 1.0}
+FAST_TRANSPORT = {'silent_seconds': 300.0, 'live_every': 2.0, 'backoff_max': 1.0, 'governor_scale': 100}
 
 
 class JumpClock:
@@ -219,7 +219,6 @@ def wait_for_hub(sr, proc):
     raise SystemExit('rehearse: the throwaway hub did not answer')
 
 
-FAST_TRANSPORT = {'silent_seconds': 3.0, 'live_every': 0.5, 'backoff_max': 1.0}
 
 
 def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False, transport_options=None):
@@ -292,6 +291,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--hub-dir', required=True)
     ap.add_argument('--only', default='a,b,d')
+    ap.add_argument('--keep', action='store_true')
     a = ap.parse_args(argv)
     hub_dir = Path(a.hub_dir).resolve()
     tmp = Path(tempfile.mkdtemp(prefix='gp200-rehearsal-'))
@@ -344,7 +344,10 @@ def main(argv=None):
             checks['d_records_kept'] = bool(s1.get('results_dir')) and (Path(s1['results_dir']) / 'rounds.jsonl.gz').exists()
             result['deadline_chain'] = brief(run)
     finally:
-        shutil.rmtree(tmp, ignore_errors=True)
+        if a.keep:
+            print(f'kept {tmp}', file=sys.stderr)
+        else:
+            shutil.rmtree(tmp, ignore_errors=True)
     result = dict({'rehearsal': 'passed' if checks and all(checks.values()) else 'FAILED', 'checks': checks,
                    'source_hash': study.source_hash(), 'model_calls_made': 0}, **result)
     print(json.dumps(result, sort_keys=True, default=str))

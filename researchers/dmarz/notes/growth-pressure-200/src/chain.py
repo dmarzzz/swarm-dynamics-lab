@@ -43,6 +43,8 @@ def now():
 def parse_stages(text):
     """Any ordered contiguous sub-list of the stages."""
     stages = [s.strip().upper() for s in text.split(',') if s.strip()]
+    if stages and stages[-1] == 'D1':
+        stages = stages[:-1]           # the ready-chain stage list ends with D1; this study does not use it
     order = list(study.STAGES)
     if not stages or any(s not in order for s in stages):
         raise ValueError('unknown_stage')
@@ -147,10 +149,11 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, t
             dispatcher = transport.HubDispatcher(sr, transport.FastLedger(ledger_path, study.ledger_budget()), study.provider_config(),
                                                  d['workers'], root / 'transport', d['attempt'] + '-' + p['batch'],
                                                  poll=poll, allow_shared_host=allow_shared_host,
-                                                 **{k: v for k, v in (transport_options or {}).items() if k != 'dispatch_stop_seconds'})
+                                                 **{k: v for k, v in (transport_options or {}).items() if k not in ('dispatch_stop_seconds', 'governor_scale')})
             g = budget['governor']
-            dispatcher.governor = {'token_limit_per_minute': g['token_limit_per_minute'],
-                                   'request_limit_per_minute': g['request_limit_per_minute'], 'fraction': g['fraction'],
+            scale = (transport_options or {}).get('governor_scale', 1)       # rehearsal only: a faster stub quota
+            dispatcher.governor = {'token_limit_per_minute': g['token_limit_per_minute'] * scale,
+                                   'request_limit_per_minute': g['request_limit_per_minute'] * scale, 'fraction': g['fraction'],
                                    'workers': d['workers'], 'max_completion_tokens': budget['max_output_tokens']}
             holder['dispatcher'] = dispatcher
             try:
