@@ -9,3 +9,5 @@ A late targeted search found a direct Jev missing-option rejection paper, demoti
 No research hypothesis was promoted and no experiment/model call was run. Formal methods and cross-researcher review remain a distinct follow-up task; this contribution does not assert search saturation. Scores are assistant assessments on Vishesh’s behalf; other researcher ratings remain NA. The active clone is isolated from other agents’ uncommitted work. Generated dashboard files are build outputs, not manually authored source changes.
 
 Validation completed: 29 export tests, idea-score JavaScript checks, TypeScript and production build passed. Bibliographic verification checked 15 new papers with zero problems. Lab schema check has zero errors and five pre-existing unresolved-link warnings.
+
+Integrated concurrent DM bank/rating additions without replacing them. A concurrent YAML status error was fixed upstream before publication; no other researcher files were modified. The merged export passed all 29 tests (343 total records).

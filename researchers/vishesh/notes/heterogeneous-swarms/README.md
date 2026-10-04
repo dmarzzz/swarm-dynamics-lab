@@ -26,4 +26,4 @@ A direct September 30 Jev missing-answer study caused HX-04 to fall from the ini
 
 The five retained opportunities are conditional mechanism tests, not claims that nobody has studied them. The broad background scan is complete as a contribution; the lab’s formal survey gate is not passed. No full-read counts, saturation or independent approval have been invented. Before promotion, complete full-methods/citation checks and obtain a different researcher’s review.
 
-At this snapshot: 214 atlas + 108 contributed records = 322 question records, including these 30; related records are not independent research ideas. The parent task is `heterogeneous-agent-research`.
+At the integrated publication snapshot: 219 atlas + 124 contributed records = 343 question records, including these 30; concurrent DM additions are preserved. Related records are not independent research ideas. The parent task is `heterogeneous-agent-research`.
