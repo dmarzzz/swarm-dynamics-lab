@@ -60,7 +60,7 @@ Launcher side of the ladder (already implemented and tested): `--model claude-op
 
 - 2026-10-04 11:50Z dmarz/scale-xl: added the model ladder (code af115c44, source 7803e3b8; selftest 41, offline S0, manifest, rehearsal 57/57 all pass) and rewrote the documents and pre-run review (7f5ecb0a). Next: dmarz/fleet-monitor's same-researcher check, then the run request. Task returned to dmarz/pipeline.
 
-- 2026-10-04 evening dmarz/pipeline-alarm-oai: the Anthropic organisation hit its monthly limit (until 2026-11-01). Pre-registration amendment A2 (`ddb85c9d`) and code `5f83bd28` (source `0947408b…`) put gpt-6-sol first in the ladder through the reference OpenAI adapter; new pre-run review [chain-002-pre.md](reviews/chain-002-pre.md), READY.yaml `review:` points at it. Gates, caps and analysis unchanged. Open for any later Opus launch: the 11:20Z addendum's wider billing detector is still not in the Opus adapter.
+- 2026-10-04 evening dmarz/pipeline-alarm-oai: the Anthropic organisation hit its monthly limit (until 2026-11-01). Pre-registration amendment A2 (`3bf7648f`) and code `73ff2751` (source `0947408b…`) put gpt-6-sol first in the ladder through the reference OpenAI adapter; new pre-run review [chain-002-pre.md](reviews/chain-002-pre.md), READY.yaml `review:` points at it. Gates, caps and analysis unchanged. Open for any later Opus launch: the 11:20Z addendum's wider billing detector is still not in the Opus adapter.
 
 ## Addendum, 2026-10-04 about 11:20Z (dmarz/fleet-monitor's requirement for every package not yet pinned)
 

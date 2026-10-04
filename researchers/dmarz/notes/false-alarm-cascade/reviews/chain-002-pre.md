@@ -2,7 +2,7 @@
 
 Written 2026-10-04 evening by dmarz/pipeline-alarm-oai, before any run of this study. No stage has run and no model call has been made.
 
-- **Code commit:** `5f83bd28a793a28c930ba387659becd0465515de` (the commit "[dmarz/pipeline-alarm-oai] false-alarm-cascade: gpt-6-sol rung").
+- **Code commit:** `73ff27519ab0b4546c41303b561fd55380164389` (the commit "[dmarz/pipeline-alarm-oai] false-alarm-cascade: gpt-6-sol rung").
 - **Source hash:** `0947408b186386656be794d9dc9d65246461c88aa3c598bde063fe349296e4fd`.
 - **Launch commit:** the commit named in the run request, the first commit on main that contains this review and has this source hash. No launch hash is written into any file.
 - **Pre-registration:** [amendment A2](../preregistration.md), committed before the code commit.
@@ -74,7 +74,7 @@ At most 10 requests in flight (2 episodes × 5 agents; 5 in Q0). Calls of a roun
 
 ## What was run (this builder, macOS, Python 3.9.6, no network to any model provider)
 
-All at source hash `0947408b…` (code commit `5f83bd28`), 2026-10-04 about 19:00 to 19:15 UTC.
+All at source hash `0947408b…` (code commit `73ff2751`), 2026-10-04 about 19:00 to 19:15 UTC.
 
 - `python3 src/selftest.py`: **49 of 49 OK**, run twice in parallel: once with `STUDY_MODEL`, `STUDY_PROVIDER` unset, once with `STUDY_MODEL=gpt-6-sol STUDY_PROVIDER=openai` (as the launcher's `setup` sets them). Same count, both OK, about 433 s each with the two runs sharing the CPU (about 177 s alone). The 41 earlier tests run on `claude-opus-5-5` (each sets its model); 8 new tests in `SolTests`: settings, budget and prices; the exact request body and price arithmetic (3,000 prompt tokens written to the cache + 1,200 completion → USD 0.0195; with 2,000 cached → USD 0.0149); failure categories (`length` → `truncated_output`, refusal, invalid JSON, invalid answer, model mismatch, missing usage, HTTP 400 kept with evidence and never re-sent; 500/503 and a plain 429 re-sent, three 5xx → `http_500`); billing (3 `insufficient_quota` errors then healthy: one pause of 180 s, 4 attempts; 30 errors: stop at 1,200 s, call voided, 21 attempts, nothing new starts); a failed Q0 on gpt-6-sol stops the chain and S1 is refused (`projection_needs_exactly_one_passed_q0`, coordinator gate); a full chain on gpt-6-sol with a billing stop in S1, then `resume` runs exactly the not-started rows in `s1-001-gpt-6-sol-r1` and `verify` passes; the projection uses USD 120 on gpt-6-sol and USD 450 on Opus; source hash, Q0 plan, schema and prompt identical under four launcher environments. The ladder test covers default gpt-6-sol, override to each Opus rung, refusal outside the ladder, and `STUDY_PROVIDER` that does not match the model.
 - Offline S0, `python3 src/worker.py --stage S0 --attempt oai-s0`: 1,225 of 1,225 valid, 16 of 16 invariants (both controls), scripted qualification 134 of 134, scripted probe passed, 0 model calls.
