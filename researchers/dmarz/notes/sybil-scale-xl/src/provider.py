@@ -137,6 +137,8 @@ class Anthropic:
             raise CallFailure('reservation_bound_breached', account)
         if data.get('model') != self.d['model']:
             raise CallFailure('model_mismatch', account)
+        if data.get('stop_reason') == 'refusal':
+            raise CallFailure('refusal', account)
         if data.get('stop_reason') != 'end_turn':
             raise CallFailure('nonterminal_output', account)
         # Thinking blocks (empty text by default) may precede the single answer block.

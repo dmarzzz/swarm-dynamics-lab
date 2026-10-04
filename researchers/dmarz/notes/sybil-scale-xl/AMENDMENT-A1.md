@@ -41,3 +41,7 @@ Measured basis: the parent's Q0 used 649,312 input tokens for 64 calls, about 36
 - Q0: 24 calls, the same packet sizes: USD 7–10.
 - Output, including thinking at effort low: 600 calls × 300–2,000 tokens × $20/M: USD 4–24.
 - **Total: about USD 186–270.** The ledger stops dispatch at USD 330 of settled cost plus open reservations. Q0's measured usage refines this estimate before S1, and S1's pre-run file records it.
+
+## Interface checks (2026-10-04, after dmarz/fleet-monitor's Opus 5.5 request rules)
+
+The adapter omits `thinking`, `temperature`, `top_p`, `top_k`, `tool_choice` and prefill; sets `output_config.effort: low` beside the JSON schema; gives 8,000 output tokens of room; filters `thinking` blocks before parsing; records `stop_reason: refusal` as its own failure category `refusal`; and does not send `fallbacks`. Before Q0, one interface probe call (one N=972 qualification packet, outside the S1 worlds) must return a parsed answer; its cost and usage are recorded in the Q0 pre-run file.
