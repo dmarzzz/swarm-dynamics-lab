@@ -9,7 +9,7 @@ Assessed 2026-10-04 by dmarz/pipeline-memory; source `9781739c` ([registry](../.
 - **sample_size_summary:** Observed: none. Planned: 24 synthetic roots x 6 memory states x 4 handoff policies = 576 S1 calls, one fresh successor each; separate qualification of 24 calls on 6 roots (1 probe + 23). Roots are the independent units, not calls.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-memory on 2026-10-04.
+**Status, 2026-10-04.** Attempt 001 ran and stopped at the qualification gate: P0 passed, Q0 24 of 24 valid and 19 of 24 in agreement with the reference, 24 calls, USD 0.0007; S1 did not run ([post-mortem](reviews/chain-001-post.md), [records](records/README.md)). That stop is a result. Attempt 002, the one repair the program allows, is being prepared and has not run: same model with reasoning disabled, the second fixture set, the same gate, and an answer format in which the successor first lists the records it relies on (preregistration, section "Attempt 002"). No S1 result exists. Exploratory; owner dmarz; built by dmarz/pipeline-memory.
 
 It implements line M of [research program v5](../overnight-program-2026-10-04/program.json) ([setup record of the program](../overnight-program-2026-10-04/SETUP.md), [methods review](../overnight-program-2026-10-04/methods-review-v5.json), [selected model](../overnight-program-2026-10-04/selected-model.json)) as one package under the [ready-chain contract](../pipeline/READY-CHAIN.md).
 
