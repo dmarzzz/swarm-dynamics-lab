@@ -57,3 +57,5 @@ Read Dmarz pipeline and historical completion-audit guidance. Audited all140 PC5
 ## PC9 population instrument
 
 Owner approved the refocused build. Wrote prospective contract before implementing isolated actor packets, synchronous peer delivery, two-slot exploration, strict failures, exact per-actor inference, paired metrics and full replay audit.30 tests pass; case-quality review separates offline readiness from native qualification. Deliberately credulous scripted fixture produces known harm, evidence-only null control does not; neither is native evidence. Browser replay verified. Zero new model calls/spend; no allocation. Next: concrete native qualification and transport/admission scope; original ledger and PC8 closed outcome retained.
+
+PC9 native preparation published `4dc45cfc2056ff247f693a8efcdbcca9a5507009`:47 offline tests; three added scenarios with12 audited branches; eight reachable Q0 development snapshots and bounded adapter. No native call or credential operation. Found that a three-known-sites/one-slot witness was unreachable in this design; accept all tied optimal inspections. Q0 concrete scope decision next; no automatic S1.

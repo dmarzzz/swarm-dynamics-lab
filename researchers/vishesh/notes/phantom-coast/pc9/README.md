@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `14504ced` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `4dc45cfc` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Population misinformation spread and acquisition feedback remain untested on native models; only the offline instrument is validated. Basis: Thirty software tests and replay of four conditions on one deliberately scripted development world pass. A positive fault witness and negative evidence-only control validate routing/scoring, not empirical susceptibility.
-- **sample_size_summary:** Native:0 worlds,0 requests. Saved unit fixture:1 world ×4 paired conditions ×5 scripted actors ×3 times; these60 decisions are dependent software fixtures. Candidate8-root pilot and8 qualification packets remain ungenerated/unrun.
+- **evidence_confidence:** **0/4** — Population misinformation spread and acquisition feedback remain untested on native models; only the offline instrument is validated. Basis: 47 offline software tests pass. Original four-arm fixture plus three added four-arm scenarios audit successfully. Eight reachable development snapshots and metered Q0 adapter are prepared; none is native evidence.
+- **sample_size_summary:** Native:0 worlds,0 requests. Four scripted fixture families ×4 arms ×5 actors ×3 times; all dependent software fixtures. Eight inspected development qualification snapshots; reserved native Q0 and pilot remain unmaterialized/unrun.
 <!-- experiment-evidence:end -->
 
 **Built and validated offline; no native run.** Five separate actor contexts map four locations, share optional prior-round interpretations and choose two collective inspections. The four paired conditions cross honest/false initial evidence with peer communication on/off. No location is made inaccessible because of a belief. [Prospective implementation contract](PLAN.md).

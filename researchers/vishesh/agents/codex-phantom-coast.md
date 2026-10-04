@@ -2,8 +2,8 @@
 agent: vishesh/codex-phantom-coast
 tool: codex
 state: done
-task: phantom-coast-pc9-instrument
-doing: PC9 offline population instrument complete;30 tests and replay pass; no native run or new spend
+task: phantom-coast-pc9-native-preparation
+doing: PC9 native Q0 preparation complete;47 tests and three added scenarios pass; concrete native decision next, no new spend
 updated: 2026-10-04T18:42:42.878610+00:00
 ---
 
