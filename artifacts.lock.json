@@ -5706,7 +5706,7 @@
     }
    ],
    "mime": "application/json",
-   "mtime": 1791102918,
+   "mtime": 1791103064,
    "path": "artifacts/vishesh-healing-c3-evidence/vishesh-healing-c3-evidence-v1.json",
    "prompt_sha256": "b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454",
    "sha256": "cb644fda4dedc6c3987ac6e865ccc4f88156ed23bc3e4390224bb779ce5f7c4f",
@@ -5716,20 +5716,20 @@
    "host": "mac",
    "ingredients": [
     {
-     "mtime": 1791103020,
+     "mtime": 1791103064,
      "sha256": "f4eff19e34bf40ed9609b42bb780b948406fcc75c5323c72e30081ca633409cc",
      "size": 4429,
      "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/report.py"
     },
     {
-     "mtime": 1791103020,
+     "mtime": 1791103064,
      "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f",
      "size": 142978,
      "uri": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json"
     }
    ],
    "mime": "image/png",
-   "mtime": 1791102577,
+   "mtime": 1791103064,
    "path": "artifacts/vishesh-healing-c3-outcomes/vishesh-healing-c3-outcomes-v1.png",
    "prompt_sha256": "b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454",
    "sha256": "bdd6c1f543860cf83f7570978d1dd15bfac88204128a4e679310b92afb704e09",
@@ -5768,19 +5768,53 @@
    "host": "mac",
    "ingredients": [
     {
-     "mtime": 1791103020,
+     "mtime": 1791103064,
      "sha256": "f4eff19e34bf40ed9609b42bb780b948406fcc75c5323c72e30081ca633409cc",
      "size": 4429,
      "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/report.py"
     },
     {
-     "mtime": 1791103020,
+     "mtime": 1791103064,
      "sha256": "1c356a58e1afed29fcad539ed5e7c67a1950bb87e330265bf0ccd1323cf628c1",
      "size": 8621,
      "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/replay.html"
     },
     {
-     "mtime": 1791103020,
+     "mtime": 1791103064,
+     "sha256": "c75f1989f3dc3d86ac8858f219e9c5e49f5dd9a6d713f5ee0feb3f8da5aff175",
+     "size": 1222,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/package_replay.py"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz"
+    }
+   ],
+   "mime": "text/html",
+   "mtime": 1791103064,
+   "path": "artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v1.html",
+   "prompt_sha256": "b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454",
+   "sha256": "7022fa21050fe5839ba3dae040bce83b0c519efd85c0daa12c685ea48048ca17",
+   "size_bytes": 3911088
+  },
+  "vishesh-healing-c3-replay@2": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791103064,
+     "sha256": "f4eff19e34bf40ed9609b42bb780b948406fcc75c5323c72e30081ca633409cc",
+     "size": 4429,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/report.py"
+    },
+    {
+     "mtime": 1791103064,
+     "sha256": "1c356a58e1afed29fcad539ed5e7c67a1950bb87e330265bf0ccd1323cf628c1",
+     "size": 8621,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/replay.html"
+    },
+    {
+     "mtime": 1791103064,
      "sha256": "c75f1989f3dc3d86ac8858f219e9c5e49f5dd9a6d713f5ee0feb3f8da5aff175",
      "size": 1222,
      "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/package_replay.py"
@@ -5793,8 +5827,8 @@
    ],
    "mime": "text/html",
    "mtime": 1791102899,
-   "path": "artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v1.html",
-   "prompt_sha256": "b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454",
+   "path": "artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v2.html",
+   "prompt_sha256": "5b88d9668b0935eb424b01b22f337d6a454a68582823888f02bb8d24cc120368",
    "sha256": "7022fa21050fe5839ba3dae040bce83b0c519efd85c0daa12c685ea48048ca17",
    "size_bytes": 3911088
   },
@@ -6386,7 +6420,7 @@
    "size_bytes": 1542505
   }
  },
- "generated": "2026-10-04T01:37:37-0700",
+ "generated": "2026-10-04T01:38:57-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }
