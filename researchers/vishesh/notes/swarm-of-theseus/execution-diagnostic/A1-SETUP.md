@@ -7,3 +7,7 @@ G0 exploratory continuation; researcher review not required by owner direction, 
 204assigned,1started/terminal provider failure,0valid responses,203unstarted; zero executor decisions and retries. Estimated priorUSD0.8122310437 plus unresolvedUSD0.010452 =USD0.8226830437 ofUSD5; actual new charge unknown, no new infrastructure cost. Retain reservation and all prior attempts. The earlier blocked preparation is preserved under results/A1-preparation and A1-PREPARATION-POST.md; it is not the current native status.
 
 Next action: stop this attempt. Resolve provider health and propose/test safe error-category/Retry-After retention before a separately approved future attempt. Do not infer transient throttling versus quota from429alone; no automatic retry, model/credential change, culture run or new allowance. The historical USD15/v2 adapter is not this manual A1 launcher.
+
+## Offline repair after closeout
+
+[Prospective repair plan](A1-DIAGNOSTICS-REPAIR-PLAN.md) was committed before implementation. New allowlisted failure telemetry and seven mocked transport/parser checks pass alongside sixteen prior checks ([receipt](a1-diagnostics-repair-checks.json)). Assignment digest remains unchanged. New source is preparation only; the frozen native source and A1 records are preserved. Provider cause/availability remain unresolved; no additional call, host claim or successor. Error token counts are diagnostic and do not settle the outstanding reservation.

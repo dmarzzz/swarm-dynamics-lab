@@ -31,3 +31,5 @@ The proposal above is now concretized in [A1-PLAN.md](A1-PLAN.md), with implemen
 ## A1 native disposition
 
 [A1 actually ran and stopped on HTTP429](RESULTS-A1.md) before any model response. The acquisition design remains empirically untested. Do not interpret conservative missing-as-incorrect counts as a learning failure or tune the scientific task on this evidence. Next useful preparation is safe provider-failure metadata and account availability resolution; no paid retry or successor is authorized. PreserveUSD0.010452unknown exposure and the originalUSD5ledger.
+
+Offline follow-through: [safe diagnostics repair](A1-DIAGNOSTICS-REPAIR-PLAN.md) is implemented; 23 checks pass with unchanged assignments. It retains allowlisted error type, status, bounded numeric retry delay and valid numeric error usage while discarding arbitrary messages and headers. A1 remains stopped; original cause unknown, charge unresolved, no new attempt approved or launched.

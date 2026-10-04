@@ -1,0 +1,16 @@
+{
+  "scope": "offline_only_no_provider_calls",
+  "tests_passed": 23,
+  "new_fault_tests": 7,
+  "existing_tests": 16,
+  "assignments_sha256": "c34ac36a5e1266932c1ea831294629f833a5bc8dcbf56f95ef4781d567051a26",
+  "native_evidence_source_unchanged": "dd09575d050e54fd8e4202d05cf1cc4aaa38033c",
+  "reservation_unchanged_usd": 0.010452,
+  "successor_launched": false,
+  "limitations": [
+    "Original HTTP429 category remains unknown",
+    "New telemetry has only fault-fixture validation",
+    "Error usage is diagnostic and does not settle cost",
+    "No model qualification or provider health demonstrated"
+  ]
+}

@@ -5,6 +5,7 @@ from design import ROOT,EXPERIMENT,MODEL,assignments,source_hash,digest,check,ex
 from admission import validate,public_check,GateError
 from scoring import policy_score
 from analyze import summarize
+from provider_diagnostics import http_failure
 ALLOCATION_LEDGER=Path('/srv/swarm/theseus-execution-allocations.sqlite')
 
 def write_new(path,value):
@@ -34,7 +35,10 @@ def invoke(body,key,timeout):
             except (ValueError,TypeError):result['value']=None # contract failure, not a hidden retry/transport error
         if result.get('served_model')!=MODEL:result['error']='served_model_mismatch'
         if result['usage'] is None:result['error']='usage_missing'
-    except urllib.error.HTTPError as e:result['error']='http_'+str(e.code)
+    except urllib.error.HTTPError as e:
+        result.update(http_failure(e,time.time()))
+        result['error']='http_'+str(result['http_status'])
+        e.close()
     except Exception as e:result['error']='provider_'+type(e).__name__
     result['finished_epoch']=time.time();return result
 
