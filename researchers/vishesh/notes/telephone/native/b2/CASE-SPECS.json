@@ -1,0 +1,91 @@
+{
+  "status": "prospective_recipes_not_validated_packets",
+  "observed_native_n": 0,
+  "planned_source_roots": 12,
+  "cases": [
+    {
+      "id": "b2-01",
+      "domain": "release",
+      "planned_decision": "HOLD",
+      "causal_structure": "Two sites; correction relaxes latency, but one rollback remains untested and approval is requested only.",
+      "counterfactual": "Completion of both missing prerequisites changes to GO."
+    },
+    {
+      "id": "b2-02",
+      "domain": "restoration",
+      "planned_decision": "GO",
+      "causal_structure": "Service recovery requires two independent probes after a restart; duplicate old failures share an origin; both new probes pass and authorization is current.",
+      "counterfactual": "Withdraw one independent fresh probe to change to HOLD."
+    },
+    {
+      "id": "b2-03",
+      "domain": "backup deletion",
+      "planned_decision": "HOLD",
+      "causal_structure": "Deletion needs a successful restore test for this exact backup generation; a passed test belongs to the preceding generation.",
+      "counterfactual": "Supply a matching generation restore test to change to GO."
+    },
+    {
+      "id": "b2-04",
+      "domain": "maintenance window",
+      "planned_decision": "GO",
+      "causal_structure": "A revised window supersedes an earlier deadline; work fits the new window, authorization and rollback remain valid.",
+      "counterfactual": "Move proposed work outside the current window to change to HOLD."
+    },
+    {
+      "id": "b2-05",
+      "domain": "purchase approval",
+      "planned_decision": "HOLD",
+      "causal_structure": "Authority is capped cumulatively; two individually permitted line items exceed the aggregate cap after a correction.",
+      "counterfactual": "Reduce total below the documented cap to change to GO."
+    },
+    {
+      "id": "b2-06",
+      "domain": "shipment release",
+      "planned_decision": "GO",
+      "causal_structure": "A damaged lot is excluded from a scoped shipment; every included lot has inspection and release receipts.",
+      "counterfactual": "Include the unapproved lot to change to HOLD."
+    },
+    {
+      "id": "b2-07",
+      "domain": "data export",
+      "planned_decision": "HOLD",
+      "causal_structure": "Export requires consent for all requested fields; one receipt covers an overlapping dataset but omits a requested field.",
+      "counterfactual": "Add explicit consent for the missing field to change to GO."
+    },
+    {
+      "id": "b2-08",
+      "domain": "deployment exception",
+      "planned_decision": "GO",
+      "causal_structure": "A written exception removes one prerequisite only for this version/site; all remaining prerequisites are satisfied.",
+      "counterfactual": "Change the deployment site outside the exception to change to HOLD."
+    },
+    {
+      "id": "b2-09",
+      "domain": "credential rotation",
+      "planned_decision": "HOLD",
+      "causal_structure": "Activation needs acknowledgement after the latest key version; several acknowledgements precede a later rotation.",
+      "counterfactual": "Supply latest-version acknowledgements to change to GO."
+    },
+    {
+      "id": "b2-10",
+      "domain": "incident closure",
+      "planned_decision": "GO",
+      "causal_structure": "Earlier symptoms are resolved by independent current checks and an explicit closure owner receipt; a proposed monitor is not a required closure condition.",
+      "counterfactual": "Withdraw the required closure receipt to change to HOLD."
+    },
+    {
+      "id": "b2-11",
+      "domain": "access grant",
+      "planned_decision": "HOLD",
+      "causal_structure": "A grant requires two distinct role approvals; apparently separate reports are forwarded copies of the same approver.",
+      "counterfactual": "Supply the missing distinct role approval to change to GO."
+    },
+    {
+      "id": "b2-12",
+      "domain": "batch release",
+      "planned_decision": "GO",
+      "causal_structure": "A threshold correction changes allowed aggregate error; measured error remains unchanged and lies exactly at an explicitly inclusive boundary; all provenance requirements pass.",
+      "counterfactual": "Change the specified relation to strict less-than to change to HOLD."
+    }
+  ]
+}
