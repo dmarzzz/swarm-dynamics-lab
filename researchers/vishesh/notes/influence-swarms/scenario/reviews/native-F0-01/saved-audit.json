@@ -1,0 +1,9 @@
+{
+  "attempt": "native-F0-01",
+  "exact_private_wires": 12,
+  "native_results_reproduced": 12,
+  "relay_response_hashes_match": 12,
+  "ledger_costs_match": 12,
+  "all_invalid_inspected": 3,
+  "new_model_calls": 0
+}

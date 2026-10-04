@@ -1,0 +1,35 @@
+[
+  {
+    "ordinal": 7,
+    "category": "rationale",
+    "rationale_length": 346,
+    "conditions_lengths": [
+      80,
+      84,
+      106
+    ],
+    "nonascii_count": 0
+  },
+  {
+    "ordinal": 8,
+    "category": "rationale",
+    "rationale_length": 184,
+    "conditions_lengths": [
+      50,
+      52,
+      106
+    ],
+    "nonascii_count": 0
+  },
+  {
+    "ordinal": 9,
+    "category": "rationale",
+    "rationale_length": 199,
+    "conditions_lengths": [
+      71,
+      64,
+      62
+    ],
+    "nonascii_count": 0
+  }
+]

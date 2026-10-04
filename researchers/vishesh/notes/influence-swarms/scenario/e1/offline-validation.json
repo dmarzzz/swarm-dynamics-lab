@@ -1,0 +1,12 @@
+{
+  "tests": 6,
+  "passed": true,
+  "model_calls": 0,
+  "full_fixture_calls": 1920,
+  "readiness_fixture_calls": 80,
+  "fault_fixture": "one cell invalid;287complete cells; malformed report never enters peers; independent collection continues",
+  "global_stop_fixture": "fourinflight, oneambiguous, threedrained; noadditionaldispatch",
+  "finite_ledger_fixture": "onlytworeservations available, exactlytwo starts",
+  "bounds_fixture": "allmissing[-2,2];one missing neutral-peer lower=-1/48 upper=0; fullyobserved fixturezero",
+  "scientific_dependencies": "unchanged B2 packet and compiler; successful96nativequalification retained, new80native acquisition qualification required"
+}

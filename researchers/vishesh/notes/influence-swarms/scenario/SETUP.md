@@ -155,3 +155,12 @@ B1-D0-02 executed240/240 valid calls and36cells at d187d69a, modelUSD0.152179870
 ### B2 qualification passed; conditional evaluation admission
 
 B2-D0-01 completed96/96valid and20/20acceptable finaldecisions at949b36c8. Allstrictneutralgates passed, no mismatchedchecks/costs, USD0.057737245reported/0.466944reserved. Exactwire/assignment/usage/assessment replay and scientificreview complete; see reviews/B2-D0-01-post.md. CurrentG4 passes within the declared reducedrolesubset. G3mustrefresh for already-fundedB2-E0:24variants/6families/288cells/1920calls. Preserve originalledger50/9.596/866atboundary and allhistoricalexposure. No newfunding/allocation or rawpublication.
+
+
+### B2 partial evaluation, F0 diagnosis and E1 preparation
+
+B2-E0-01 stopped after64reservations/62providerstarts/61valid; one knownlengthfailure emitted2579trailing spaces. Two relaydenials are reconciled as preprovider; originalsummary and reservations retained. All1856unstartedcalls remain unstarted. Primary comparison unavailable; see reviews/B2-E0-01-post.md and qualityreview.
+
+F0 completed12requests/9localvalid,USD.004031895actual under existingUSD.058368reassignment. Original/original,compact/original andcompact/relaxed were3/3valid each; original/relaxed0/3 due overlengthrationale. No whitespacefailure reproduced. Exact12wire/response/ledgerreplay, authoredscientificreview and offlinefinalize complete; see f0/POST-MORTEM.md. Preserve original B2outputcontract.
+
+Prospective e1/PLAN.md implements localformatfailure containment with no retry, globaloperationalstop and assigned-denominator worst-case bounds. Sixoffline tests include1920exactwire fixture,80readiness, localfailurecontainment, globaldrain and atomicbudgetlimit. Proposed80native readiness+conditional1920main needs namedUSD.758784delta funding and currentadmission; not yet launched. Originalledger50/9.965664/942 retained. Publicaggregate only; rawtraces remainprivate.

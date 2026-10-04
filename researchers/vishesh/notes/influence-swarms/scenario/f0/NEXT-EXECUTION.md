@@ -1,0 +1,22 @@
+# Proposed E1: fault-contained acquisition
+
+Prospective proposal, not launch authority. Preserve B2 scientific inputs and all previous outcomes. A formatting discriminator cannot by itself guarantee large-batch reliability.
+
+The useful question remains whether vendor framing changes unsupported clearance more under peer discussion than private reconsideration, with a strong simple comparator. Keep all 24 authored evaluation variants nested in six families, two fresh repeats, two framing contexts and three workflows: 288 assigned cells, 1,920 planned first-attempt logical responses. The earlier inspected location variants are disclosed as inspected; no untouched-holdout or population claim. Explicit provisional ranks, cited evidence and revision positions remain separate from final purchase permission. Advisory abstention is not measured in this schema.
+
+Keep the original B2 prompt/schema/model/provider/token cap unless F0 supplies a concrete reason for a separate output-contract amendment. Do not choose instructions by desirable procurement outcomes. The proposed repair concerns acquisition isolation:
+
+- One known returned length or local JSON/schema failure stops that cell's dependent steps, but other independent cells continue. No retry in this minimal proposal; no invalid reply is inserted into peer context.
+- Transport ambiguity, served-route mismatch, missing usage, budget violation or source/admission failure stops new dispatch globally and drains/accounts in-flight requests.
+- Preserve every assigned cell, first-attempt validity, failed step, blocked dependent steps, physical request and charge. Never label a valid wrong answer a formatting failure or discard it.
+- Maximum 16 independent cells and four starts per second. Existing dedicated allocation, original ledger, no new machine or hosting slice. Maximum 1,920 physical requests; dependent steps after cell failure are unstarted, not replacements.
+
+Qualification: offline fault-injection tests must show local failure containment, exact isolation, no retries, global operational stop and atomic finite reservations. Reuse unchanged scientific qualification only if all B2 executable/scientific dependencies match. A bounded fresh acquisition check on the two development families should verify the changed worker/relay under native responses before main dispatch; propose 80 requests across both contexts and all three workflows, with the same neutral competence criteria and zero unexplained transport/accounting failures. This is operational readiness, not rare-failure proof.
+
+Analysis keeps the original fully observed paired effect only when every required cell is observed. If cells are missing, publish assigned-denominator missingness by arm/context/family, descriptive observed outcomes and worst-case bounds for each harmful-clearance rate (missing outcomes anywhere from zero to one). Propagate those bounds through the paired peer-minus-private framing contrast and leave-one-family-out analysis. Do not report a complete-case point estimate as the primary comparison. Report acceptable-action coverage separately so missing decisions cannot look like harmless decisions. First-attempt invalidity is an operational outcome, not a procurement judgment.
+
+A later recovery extension could allow one explicitly counted repeat after known returned format failure, retain first-attempt and recovery outcomes, and cap extras. It is not included here; it would need its own finite decision and validation. Never retry semantic errors or ambiguous dispatches.
+
+Envelope: 80 qualification plus at most 1,920 main calls = 2,000 × USD0.004864 = USD9.728 maximum model reservation. F0 and all old attempts remain in the original ledger. Current 05+11 round model envelope after 240+96+64+12 prior reservations has USD8.969216 unspent; this proposal requires an explicit additional USD0.758784 if all 2,000 calls are reserved. Hosting remains inside the original six-hour/USD0.50 reservation. These are ceilings, not reported spend. Recheck exact maximal valid B2 wire bound including cache-write premium before admission. No full run is authorized by this proposal.
+
+Expected wall-clock at the measured partial E0 throughput is roughly 20–30 minutes including qualification and closeout, with provider latency uncertainty. The one-hour portfolio target does not waive readiness or make completion guaranteed. A completed valid null effect or broad missingness bounds can end the study; no reroll for a favorable framing effect.

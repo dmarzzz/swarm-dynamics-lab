@@ -1,0 +1,218 @@
+{
+  "assessor": "owning session; not independent replication",
+  "date": "2026-10-04T22:47:55.113918+00:00",
+  "attempt": "native-F0-01",
+  "evidence_revision": "f2a7ff930e8369bb2ebe8dad7beb4c2f75d7d083",
+  "decision": "prepare_fault_contained_successor",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Small2x2 distinguishes backend enforcement and explicit prompt bounds; whitespace mechanism remains unresolved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Two fixed inspected contexts; not new independent holdout cases.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Original/compact prompt crossed with original/relaxed backend; local validator constant; fixed-order/cache limitation disclosed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Nine valid outputs meet all candidate checks and acceptable actions; three overlength rationales remain invalid.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Completion, strict local validity and semantic scores retained separately; no salvage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "12requests/2contexts; no rare-failure reliability estimate or population inference.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact captured previous reports and frozen wires; no operator context.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "12native requests/replies/ledger entries exactly replayed; all invalids retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD.004031895actual;.058368reservation preserved; originalledger50/9.965664/942.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Published source/manifest and exact private wire/response hashes; no retries.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Per-condition table and complete12-row numeric report; no implied1920-call robustness.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/summary.json",
+          "sha256": "83254985aee69b3007bef716db4618010a1590b0085fd75812353f5e0f4a34ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/saved-audit.json",
+          "sha256": "2c35beef2a6193924fdfd197798459ef0a208c361aeaf78847afacd9dd1d25b6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-F0-01/invalid-metadata.json",
+          "sha256": "94bc2b28735855c30f33124feb2fcbf1f5b661d18485be1c38aab955411af11e"
+        }
+      ]
+    }
+  ]
+}
