@@ -1,7 +1,7 @@
 import importlib.util,json,sqlite3,tempfile,unittest,urllib.error
 from pathlib import Path
 from contextlib import closing
-from unittest.mock import Mock
+from unittest.mock import Mock,patch
 BASE=Path(__file__).resolve().parents[1]
 s=importlib.util.spec_from_file_location('d6',BASE/'analysis/acquisition_d6.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
 GOOD=json.dumps({'usage':{'input_tokens':10,'output_tokens':3},'stop_reason':'end_turn','content':[{'text':'{}'}]}).encode()
@@ -52,3 +52,21 @@ class AcquisitionTests(unittest.TestCase):
   p=self.root/'absent'
   with self.assertRaises(m.AcquisitionStopped):m.Session(self.root/'new',p)
   self.assertFalse(p.exists())
+
+ def test_failed_validation_retains_exact_bodies(self):
+  for name,raw,validator in [('malformed',b'not-json',lambda r:r),('unknown-usage',b'{}',lambda r:r),('bad-contract',GOOD,Mock(side_effect=ValueError()))]:
+   s=self.session(name);t=Mock(return_value=raw)
+   with self.assertRaises(m.AcquisitionStopped):self.invoke(s,t,validator)
+   self.assertEqual((s.directory/'01-request.bin').read_bytes(),b'{}');self.assertEqual((s.directory/'01-response.bin').read_bytes(),raw)
+   self.assertEqual((s.directory/'01-response.bin').stat().st_mode&0o777,0o600);self.assertEqual(s.directory.stat().st_mode&0o777,0o700)
+   self.assertFalse((s.directory/'02-request.bin').exists());self.assertFalse((s.directory/'02-response.bin').exists())
+ def test_artifact_writer_failure_closes_circuit(self):
+  for fail_on in ('request','response'):
+   s=self.session(fail_on);original=s._artifact;t=Mock(return_value=GOOD)
+   def writer(kind,raw):
+    if kind==fail_on:raise OSError('storage unavailable')
+    return original(kind,raw)
+   with patch.object(s,'_artifact',side_effect=writer):
+    with self.assertRaises(OSError):self.invoke(s,t)
+   with self.assertRaises(m.AcquisitionStopped):self.invoke(s,t)
+   self.assertEqual(t.call_count,0 if fail_on=='request' else 1)

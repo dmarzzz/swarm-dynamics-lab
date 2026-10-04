@@ -2,7 +2,7 @@
 
 D5 executed once and failed before any usable response. Read [D5 post-mortem](reviews/D5-post.md), [quality review](reviews/D5-quality-review.json), [all-assignment audit](reviews/D5-failure-audit.json) and [latest results](LATEST-RESULTS.md).24 assignments,48 failed transports,0valid decisions,48 missing usage records. Scientific comparisons are unavailable. Preserve the original ledger: cap8,reserved4.868832,calls246; remaining3.131168. No automatic replacement attempt. Full prior D5 worst-case envelope4.669440 no longer fits.
 
-The direct launch was authorized, the central queue fenced and the dedicated allocation released after worker exit. Offline telemetry/circuit-breaker repairs are implemented and70 tests pass. [D6 preparation](ITERATION-06-PREP.md) contains a concrete two-contract acquisition proposal (maximum USD0.097280, zero retries), not an admitted or approved live run; a changed execution contract or resource envelope needs the corresponding owner decision. D3 remains the latest behavioral finding. The historical blocked-request closeout is preserved separately.
+The direct launch was authorized, the central queue fenced and the dedicated allocation released after worker exit. Offline telemetry/circuit-breaker repairs are implemented and72 tests pass. [D6 preparation](ITERATION-06-PREP.md) contains a concrete two-contract acquisition proposal (maximum USD0.097280, zero retries), not an admitted or approved live run; a changed execution contract or resource envelope needs the corresponding owner decision. D3 remains the latest behavioral finding. The historical blocked-request closeout is preserved separately.
 
 ## Historical pre-run handoff (superseded by closeout above)
 

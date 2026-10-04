@@ -1,7 +1,7 @@
 {
   "stage": "D6-offline",
   "native_calls": 0,
-  "tests_passed": 70,
+  "tests_passed": 72,
   "fault_cases": [
     "HTTP429",
     "HTTP502",
@@ -19,7 +19,12 @@
     "contract_failure_known_usage",
     "two_request_limit",
     "reservation_before_send",
-    "missing_ledger"
+    "missing_ledger",
+    "failed_output_bytes_retained",
+    "private_artifact_permissions",
+    "request_writer_failure",
+    "response_writer_failure",
+    "unstarted_has_no_fabricated_body"
   ],
   "maximum_proposed_reservation_usd": 0.09728,
   "original_unreserved_usd": 3.131168,
@@ -28,15 +33,15 @@
   "files": [
     {
       "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-06-PREP.md",
-      "sha256": "e8e775c99985ac348bf108c6fc3548096313c39c0b62d648ff7092dc347741ef"
+      "sha256": "269fef32d104f3c789b407f256613a051ebd8364b7beab1a773ed908bf4a2420"
     },
     {
       "path": "researchers/vishesh/notes/influence-swarms/scenario/analysis/acquisition_d6.py",
-      "sha256": "2e04a954f571178914b511933b84ca217f0db6854da56d68eaf9f5e0aed11d3a"
+      "sha256": "f65dfa3090047f525a95300dfed224fbd6026870f4d3f51621365858e213f77b"
     },
     {
       "path": "researchers/vishesh/notes/influence-swarms/scenario/tests/test_acquisition_d6.py",
-      "sha256": "482124f68f7a5cbed6385e49c64e0006a906b79cea57f78b387e9f11af1fde86"
+      "sha256": "a027d5145df9d0c2f11b73968567a0099cdd1dd92aa21d2e05cdee0817e91f97"
     },
     {
       "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-acquisition-packet.json",

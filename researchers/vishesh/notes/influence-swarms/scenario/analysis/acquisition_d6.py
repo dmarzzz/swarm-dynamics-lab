@@ -3,7 +3,7 @@
 A future admitted launcher must bind exact wire requests, source, public plan,
 allocation and validator. This module cannot approve a run or create a budget.
 """
-import json,math,os,re,sqlite3,threading,urllib.error
+import hashlib,json,math,os,re,sqlite3,threading,urllib.error
 from contextlib import closing
 from pathlib import Path
 
@@ -41,6 +41,16 @@ class Session:
         finally:os.close(fd)
     def _event(self,event):
         with (self.directory/'events.jsonl').open('a') as f:f.write(json.dumps(event,allow_nan=False)+'\n');f.flush();os.fsync(f.fileno())
+    def _artifact(self,kind,raw):
+        name=f'{self.count:02d}-{kind}.bin';path=self.directory/name
+        fd=os.open(path,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o600)
+        with os.fdopen(fd,'wb') as f:f.write(raw);f.flush();os.fsync(f.fileno())
+        directory_fd=os.open(self.directory,os.O_RDONLY)
+        try:os.fsync(directory_fd)
+        finally:os.close(directory_fd)
+        reference={'name':name,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()}
+        self._event({'kind':kind+'_artifact','attempt':self.count,**reference})
+        return reference
     def _stop(self,detail):
         self.stopped=True
         self._event({'kind':'failure','attempt':self.count,**detail,'usage_known':False,'actual_usd':None,'retry_permitted':False})
@@ -67,12 +77,14 @@ class Session:
                 self.stopped=True;self._state('budget_stopped');raise AcquisitionStopped('budget_lineage_or_capacity')
             db.execute('UPDATE budget SET reserved=?,calls=? WHERE id=1',(used+reservation,calls+1))
         self.count+=1;self._state('inflight')
-        self._event({'kind':'attempt_start','attempt':self.count,'reserved_usd':reservation,'retry_permitted':False})
+        request_ref=self._artifact('request',encoded)
+        self._event({'kind':'attempt_start','attempt':self.count,'reserved_usd':reservation,'retry_permitted':False,'request':request_ref})
         try:raw=transport(encoded)
         except urllib.error.HTTPError as e:self._stop(safe_http(e))
         except TimeoutError:self._stop({'category':'timeout'})
         except Exception:self._stop({'category':'transport'})
         if not isinstance(raw,bytes) or len(raw)>1_000_000:self._stop({'category':'response_bound'})
+        self._artifact('response',raw)
         try:result=json.loads(raw)
         except Exception:self._stop({'category':'parse'})
         measured=usage(result)

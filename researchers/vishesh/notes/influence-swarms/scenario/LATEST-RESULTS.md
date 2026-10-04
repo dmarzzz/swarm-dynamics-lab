@@ -12,4 +12,4 @@ D5 assigned24 workflows but obtained0 usable responses in48 failed transport att
 
 
 
-[Offline D6 acquisition repairs and bounded next proposal](ITERATION-06-PREP.md): safe status telemetry, durable journal and first-failure stop implemented;70tests pass. Two requests maximum USD0.097280 proposed, not approved/admitted/launched.
+[Offline D6 acquisition repairs and bounded next proposal](ITERATION-06-PREP.md): safe status telemetry, durable journal and first-failure stop implemented;72tests pass. Two requests maximum USD0.097280 proposed, not approved/admitted/launched.
