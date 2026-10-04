@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: working
-task: theseus-a2-acquisition
-doing: A2 complete and scientifically reviewed; publishing final closeout; host released PR354
+state: idle
+task: null
+doing: A2 completed and published; acquisition failed; FINISH / PARK; host released PR354
 updated: 2026-10-04T19:06Z
 ---
 
