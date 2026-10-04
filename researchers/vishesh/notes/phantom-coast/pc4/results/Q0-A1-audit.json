@@ -1,0 +1,19 @@
+{
+  "operator_audit_passed": true,
+  "independent_review": false,
+  "stage": "Q0",
+  "assigned": 24,
+  "started": 24,
+  "valid": 24,
+  "known_cost_usd": 0.00620487,
+  "call_seconds": 5.506745370998942,
+  "failure_codes": {},
+  "hashes": {
+    "summary.json": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a",
+    "events.jsonl": "c0a413b2312f6ffea3d5f93e376bb79b3b0f3307d51fbcfd25391d6c602a5700",
+    "manifest.json": "74a1406d142e2b92156c4dcd944eaa8085b6bb8913375ec989577dbd6714b542",
+    "records.json": "9ee319e7816e26f676662cb0574d2f4e9d1eb3963575bb69c86b3e1cb9e604f6",
+    "worlds.json": "5552af3e33272fdcb6e2624e27216a8212524266d0a266a0fec11d7c6416ce4e"
+  },
+  "limits": "Stored checked decisions and hashes audited; provider bodies not retained, so invalid bodies cannot be revalidated."
+}

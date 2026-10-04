@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T08:46:58.840350+00:00",
+  "attempt": "pc3-s1-a1",
+  "verdict": "diagnostic",
+  "outcome_interpretation": "PC-3 is a valid adverse/inconclusive guard test. PC-4 is a distinct allocation diagnostic, not a repair intended to force success.",
+  "independent_review": false,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Guard-off contrast and practical target were explicit; negative/inconclusive result preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/PLAN.md",
+          "sha256": "d79aef0a9c82f054b9a63d8004c9e6342578557889feddb2b2289faa92ce656f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/reviews/S1-A1-POST.md",
+          "sha256": "86b33ff5540e2f7f24777e0c5839b1b63a0920f88cd2018db0adc76615ba55fd"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Two geometry families with all report cells truly LAND leave terrain balance and external realism unresolved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/PLAN.md",
+          "sha256": "d79aef0a9c82f054b9a63d8004c9e6342578557889feddb2b2289faa92ce656f"
+        }
+      ],
+      "next_action": "Use the prospectively defined PC-4 correction or retain the named limitation; do not rewrite PC-3 outcomes.",
+      "acceptance_check": "PC-4 balanced scenarios and equal map context pass offline/native audits; generalization remains explicitly limited."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Uniform and same-evidence controls exist, but endpoint legal-cell context differs with guard; do not isolate pure sensing mediation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/src/engine.py",
+          "sha256": "58a538fa5ec3fe4dd85270cd846c68b398cbdce4362b4201a831fde7dca9cd7f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/reviews/S1-A1-POST.md",
+          "sha256": "86b33ff5540e2f7f24777e0c5839b1b63a0920f88cd2018db0adc76615ba55fd"
+        }
+      ],
+      "next_action": "Use the prospectively defined PC-4 correction or retain the named limitation; do not rewrite PC-3 outcomes.",
+      "acceptance_check": "PC-4 balanced scenarios and equal map context pass offline/native audits; generalization remains explicitly limited."
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "24/24 qualification responses and 432 correct map labels establish scoped direct-evidence grounding, not strategic exploration.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/Q0-A1-summary.json",
+          "sha256": "7b180ec83c09e05ec2a29a2a7ef66a6eb791035090a8e3fb7867b82d21451958"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Saved-data audit reconstructs losses, errors, missingness and paired contrasts; utility sensitivity changes interpretation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/S1-A1-audit.json",
+          "sha256": "b47e59495101b221742bccfd2343d123728bf550fae6335a4b88153c0d9a59f6"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/S1-A1-analysis.json",
+          "sha256": "c67e2d75eb2ae949d0116164942236bf6fd05b356ba5fd7e18a8aecad7520cd1"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Eight independent roots leave wide interval and geometry dependence; 1792 calls are not independent observations.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/reviews/S1-A1-POST.md",
+          "sha256": "86b33ff5540e2f7f24777e0c5839b1b63a0920f88cd2018db0adc76615ba55fd"
+        }
+      ],
+      "next_action": "Use the prospectively defined PC-4 correction or retain the named limitation; do not rewrite PC-3 outcomes.",
+      "acceptance_check": "PC-4 balanced scenarios and equal map context pass offline/native audits; generalization remains explicitly limited."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen snapshot and request replay match specified packets; the planned endpoint confound is separately disclosed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/S1-A1-audit.json",
+          "sha256": "b47e59495101b221742bccfd2343d123728bf550fae6335a4b88153c0d9a59f6"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "1792 assigned calls, 1784 valid, eight invalid retained; all96 episodes replayed. Invalid bodies not retained, limiting forensic detail.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/S1-A1-audit.json",
+          "sha256": "b47e59495101b221742bccfd2343d123728bf550fae6335a4b88153c0d9a59f6"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Closed ledger carries nine unknown charges in USD0.574334208 exposure; key removed and claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/CLOSEOUT.json",
+          "sha256": "65bd6deb45ca9b5ef798c07049be0bc7a3cd3e023589878c0722594a2fac1180"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen scientific source and stored requests/events/decisions support operator replay; hosted-answer replication not claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/S1-A1-audit.json",
+          "sha256": "b47e59495101b221742bccfd2343d123728bf550fae6335a4b88153c0d9a59f6"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Interactive and public replay/figure verified from saved events; selected frames do not replace full cohort.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc3/results/VISUAL-QA.json",
+          "sha256": "3e63fb42b64141516d8dc838b69fc67a05ef8d5167caa3e4b5ed5edb0ea48c43"
+        }
+      ]
+    }
+  ],
+  "parent_handoff_sha256": "c440e75db0f264177416c9208d60eb430137936d53f737f2a81c0020d19119c1"
+}
