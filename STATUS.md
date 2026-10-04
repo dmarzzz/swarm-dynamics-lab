@@ -47,6 +47,7 @@
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:17Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:29Z | Design Poietic Agents from the self-differentiating swarm research |
+| [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | claimed | p1 | survey | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:32Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:27Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:15Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -224,8 +225,8 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
+| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:31Z | Shipping explicit sole-controller scheduling fix and paired closed-loop diagnostic |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:30Z | Q4 and D1 executed and published; valid approval failures preserved; comparison ineligible after failed qualification; dedicated machine released |
-| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:29Z | Preparing a paired closed-loop diagnostic to distinguish initial inspection from persistent stalls |
 | vishesh/codex-theseus | done | theseus-v2-iteration | 2026-10-04T04:29Z | Bounded iteration complete; joint qualification failed, S1 blocked |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T04:25Z | Running Sonnet serially; Haiku passed fresh mechanics/profit gates and now starts full-length regulated reliability on its dedicated host. |
 | vishesh/codex-heterogeneous | working | poietic-agents-design | 2026-10-04T04:21Z | Writing and publishing Poietic Agents prospective design and review gates |
