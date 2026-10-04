@@ -218,10 +218,11 @@ class Accounting(unittest.TestCase):
             request=json.loads(req.data)
             allowed=json.loads(request['messages'][0]['content'])['actions']
             self.assertEqual(request['output_config']['format']['schema']['properties']['action']['enum'],allowed)
-            if common.design()['model'] in ('claude-sonnet-5-5','claude-sonnet-5'):
+            if common.design()['model'] in ('claude-sonnet-5-5','claude-sonnet-5','claude-opus-5-5'):
                 self.assertNotIn('temperature',request)
-                self.assertEqual(request['thinking'],{'type':'between_tools' if common.design()['model']=='claude-sonnet-5-5' else 'disabled'})
+                self.assertEqual(request['thinking'],{'type':{'claude-sonnet-5-5':'between_tools','claude-sonnet-5':'disabled','claude-opus-5-5':'adaptive'}[common.design()['model']]})
                 self.assertEqual(request['output_config']['effort'],'high')
+                self.assertEqual(request['max_tokens'],common.design()['budget']['max_output_tokens'])
             return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='end_turn',
                 content=[dict(type='text',text=json.dumps(dict(action='wait',message='')))],
                 usage=dict(input_tokens=100,output_tokens=10))).encode())
@@ -236,6 +237,44 @@ class Accounting(unittest.TestCase):
             self.assertEqual(json.loads(caught.exception.accounting['response_text'])['action'],'wait')
             self.assertEqual(l.transact()['usage_reported_calls'],2)
             self.assertAlmostEqual(l.transact()['actual_usd'],2*expected)
+
+    def test_adaptive_thinking_blocks_are_counted_not_retained(self):
+        answer=dict(type='text',text=json.dumps(dict(action='wait',message='')))
+        shapes={'plain':[answer],'thinking':[dict(type='thinking',thinking='SECRET-REASONING',signature='sig'),answer],
+                'redacted':[dict(type='redacted_thinking',data='opaque'),answer]}
+        for name,content in shapes.items():
+            def response(req,timeout,content=content):
+                return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='end_turn',content=content,
+                    usage=dict(input_tokens=100,output_tokens=60,output_tokens_details=dict(thinking_tokens=50)))).encode())
+            with tempfile.TemporaryDirectory() as td:
+                a,acc=Anthropic(Ledger(Path(td)/'l.jsonl'),opener=response,key='fake',workspace='fake').call({'actions':['wait']},name)
+                self.assertEqual(a['action'],'wait');self.assertEqual(acc['thinking_blocks'],len(content)-1);self.assertEqual(acc['thinking_tokens'],50)
+                self.assertNotIn('SECRET-REASONING',json.dumps(acc));self.assertNotIn('opaque',json.dumps(acc))
+        bad={'two_texts':[answer,answer],'text_first':[answer,dict(type='thinking',thinking='x')],'tool':[dict(type='tool_use'),answer]}
+        for name,content in bad.items():
+            def response(req,timeout,content=content):
+                return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='end_turn',content=content,usage=dict(input_tokens=1,output_tokens=1))).encode())
+            with tempfile.TemporaryDirectory() as td:
+                with self.assertRaises(CallFailure) as caught:Anthropic(Ledger(Path(td)/'l.jsonl'),opener=response,key='fake',workspace='fake').call({'actions':['wait']},name)
+                self.assertEqual(caught.exception.category,'unexpected_content');self.assertNotIn('response_text',caught.exception.accounting)
+        def truncated(req,timeout):
+            return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='max_tokens',content=[dict(type='thinking',thinking='x'),dict(type='text',text='{"act')],usage=dict(input_tokens=1,output_tokens=4096))).encode())
+        with tempfile.TemporaryDirectory() as td:
+            with self.assertRaises(CallFailure) as caught:Anthropic(Ledger(Path(td)/'l.jsonl'),opener=truncated,key='fake',workspace='fake').call({'actions':['wait']},'t')
+            self.assertEqual(caught.exception.category,'nonterminal_output')
+
+    def test_http_error_keeps_bounded_provider_message(self):
+        import urllib.error
+        body=json.dumps({'type':'error','error':{'type':'invalid_request_error','message':'"thinking.type.disabled" is not supported for this model.'+'x'*500}}).encode()
+        def reject(req,timeout): raise urllib.error.HTTPError(req.full_url,400,'Bad Request',{'x-api-key':'fake-secret-header'},io.BytesIO(body))
+        with tempfile.TemporaryDirectory() as td:
+            l=Ledger(Path(td)/'l.jsonl')
+            with self.assertRaises(CallFailure) as caught:Anthropic(l,opener=reject,key='fake-key',workspace='fake').call({'actions':['wait']},'r')
+            acc=caught.exception.accounting
+            self.assertEqual(caught.exception.category,'http_400');self.assertEqual(acc['error_type'],'invalid_request_error')
+            self.assertTrue(acc['error_message'].startswith('"thinking.type.disabled"'));self.assertEqual(len(acc['error_message']),300)
+            self.assertNotIn('fake-secret-header',json.dumps(acc));self.assertNotIn('fake-key',json.dumps(acc))
+            self.assertEqual(l.transact()['attempted_calls'],1);self.assertEqual(l.transact()['usage_reported_calls'],0)
 
     def test_empty_refusal_retains_category_and_cost(self):
         def response(*args,**kwargs):
@@ -323,7 +362,7 @@ class ClosedLoop(unittest.TestCase):
         self.assertEqual(diag['max_calls'],len(rows)*d['cfg']['max_steps'])
         self.assertEqual(d['cfg']['max_steps'],40);self.assertEqual(d['cfg']['n'],4)
         # d0-003 ran on design v6 at USD 2 / 10 per million; v7 changed the live rates for q0-006.
-        b=d['budget'];per_call=(b['max_input_bytes']+4096)*2+b['max_output_tokens']*10
+        b=d['budget'];per_call=(b['max_input_bytes']+4096)*2+350*10
         self.assertEqual(per_call,43692);self.assertAlmostEqual(per_call*diag['max_calls']/1e6,6.99072)
         self.assertEqual(b['retries'],0);self.assertEqual(b['workers'],1)
         bad=copy.deepcopy(d);bad['diagnostics']['d0-003']['conditions']=['clarified','clarified']
@@ -365,14 +404,14 @@ class ClosedLoop(unittest.TestCase):
             self.assertTrue(e['validity']['ok']);self.assertEqual(e['evaluation']['completion'],1);self.assertEqual(e['evaluation']['violation'],0)
             self.assertIs(interface_transform('Q0',r,common.design()),clarify)
         d=common.design();self.assertEqual(d['model'],'claude-opus-5-5')
-        self.assertEqual(d['inference'],{'thinking':{'type':'disabled'},'effort':'high'})
+        self.assertEqual(d['inference'],{'thinking':{'type':'adaptive'},'effort':'high'})
         self.assertEqual(d['qualification'],dict(valid_rate=1.0,safe_completion_rate=0.9,minimum_domain_completion=0.8))
 
     def test_q0_006_call_cap_and_reservation_bound(self):
         d=common.design();b=d['budget']
         self.assertEqual(call_cap('Q0','q0-006',d),480);self.assertEqual(call_cap('I0','d0-003',d),160);self.assertIsNone(call_cap('S0','s0-x',d))
         per_call=(b['max_input_bytes']+4096)*b['input_usd_per_million']+b['max_output_tokens']*b['output_usd_per_million']
-        self.assertEqual(per_call,87384);self.assertAlmostEqual(per_call*480/1e6,41.94432)
+        self.assertEqual(b['max_output_tokens'],4096);self.assertEqual(per_call,162304);self.assertAlmostEqual(per_call*480/1e6,77.90592)
         with tempfile.TemporaryDirectory() as td:
             l=Ledger(Path(td)/'study.jsonl');l.transact(dict(type='reserve',call_id='earlier',micro_usd=5))
             before=l.transact();calls=[]
