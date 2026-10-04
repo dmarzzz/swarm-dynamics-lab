@@ -23,7 +23,7 @@ def verify(config, now=None, base=BASE, actual_host=None):
         raise ValueError('unadmitted_stage_or_attempt')
     if config.get('file_hashes') != inventory(base): raise ValueError('frozen_source_mismatch')
     if config.get('assignment_sha256') != digest(assignments()): raise ValueError('assignment_manifest')
-    if config.get('prior_budget')!={'physical_calls':36,'exposure_nano':479232000}: raise ValueError('prior_budget_evidence')
+    if config.get('prior_budget')!={'physical_calls':36,'exposure_nano':479232000,'infrastructure_nano':77223767}: raise ValueError('prior_budget_evidence')
     update=config.get('owner_update_approval',{})
     if (update.get('approved') is not True or update.get('attempt')!=config['attempt'] or
         not update.get('decision_reference') or update.get('assignment_sha256')!=config['assignment_sha256'] or
@@ -48,7 +48,7 @@ def verify(config, now=None, base=BASE, actual_host=None):
     rate=allocation.get('allocated_usd_per_hour')
     if type(rate) not in (int,float) or not 0 < rate <= 1: raise ValueError('infrastructure_budget')
     charge_start=allocation.get('charge_started_at')
-    if type(charge_start) not in (int,float) or not charge_start<=now or (auth['deadline']+300-charge_start)*rate/3600>0.5:
+    if type(charge_start) not in (int,float) or not charge_start<=now or (auth['deadline']+300-charge_start)*rate/3600+config['prior_budget']['infrastructure_nano']/1e9>0.5:
         raise ValueError('infrastructure_lifetime_budget')
     if config.get('credential',{}).get('alias')!='swarm-lab-openrouter' or config['credential'].get('study_authorized') is not True:
         raise ValueError('approved_credential_missing')
