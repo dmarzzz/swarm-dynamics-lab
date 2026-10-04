@@ -4,6 +4,8 @@ Exploratory experiment plan and executable environment, owned by **dmarz/discuss
 
 **Status:** human-requested exploratory build and deployment, not an accepted hypothesis or confirmatory finding. Submitted through [the lab task](../../../../tasks/build-discussion-dose.md) and registered as `discussion-dose` in the [live experiment list](https://swarm-live.pages.dev). The [worker template](../../../../templates/experiment-worker/README.md) explicitly permits S0/S1 builds in researcher notes while review is pending. The formal `experiments/` catalogue requires an accepted hypothesis; we preserve that gate. S2 is unavailable in the coordinator and worker.
 
+**Successor:** [V2-DESIGN.md](V2-DESIGN.md) specifies a harder contested-evidence version (no verification turn, hidden profile, graded cue removal), built while v1 S0 runs, with a predeclared calibration rule. Not yet run with a model.
+
 ## Question and prediction
 
 Primary link: **SEC-47, Where does the full fork-and-return chain actually fail?** Its [atlas record](../question-atlas/candidates.json) asks which stage contributes most to parent corruption after a clean child encounters untrusted material during legitimate work. This study measures a controlled tool-exposure path and varies deliberation length. It does not test autonomous source discovery, the original SEC-47 preseeded-state contrast, or the entire atlas hypothesis.
@@ -87,7 +89,7 @@ Proposed live qualification thresholds: at least 80% clean correctness and under
 ## Run and deploy
 
 ```sh
-python3 src/selftest.py
+python3 src/selftest.py && python3 src/selftest_v2.py
 python3 src/coordinator.py queue --stage S0 --dry-run
 python3 src/worker.py --stage S0 --backend scripted --out results/local-s0-001
 python3 src/analyze.py results/local-s0-001/episodes.jsonl

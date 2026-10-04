@@ -14,6 +14,7 @@ from providers import Scripted,HTTP,Anthropic,ProviderFailure,phase_schema
 from analyze import summarize,contrast
 from worker import execute_bundle
 from artifacts import prepare_artifacts
+from selftest_v2 import TestsV2  # noqa: F401  (collected here so CI runs v2 too)
 
 class Tests(unittest.TestCase):
     def test_worlds(self):
