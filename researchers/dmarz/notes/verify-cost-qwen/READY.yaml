@@ -12,3 +12,4 @@ chain_timeout_seconds: 7200
 selftests: 87
 source_hash: ef40246d5f7790898ed120146d9c873c7af2fe70bd2aed4ad4c8e6eea0970fd1
 review: reviews/chain-002-pre.md
+ledger: fresh

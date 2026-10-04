@@ -59,6 +59,15 @@ pre-run review `reviews/chain-002-pre.md` and names it in `READY.yaml` as `revie
 the earlier review stays untouched as the record of the earlier attempt. Without the field the launcher reads
 `reviews/chain-001-pre.md`.
 
+Ledger of a repaired attempt. The launcher refuses a paid stage with `missing_prior_ledger` when the hub holds
+paid runs of the study and the server holds no ledger, so that a study never gets a second ledger by accident.
+A repaired attempt has two pre-registered choices: continue the earlier attempt's ledger on the same server
+(the study cap then covers both attempts), or run on its own ledger. The second needs `ledger: fresh` in
+`READY.yaml` and the words "fresh ledger" in the attempt's pre-run review; the launcher then ignores paid runs
+at an earlier source hash and still refuses when a paid run at this attempt's source hash exists (launcher
+agentops 7560167). An attempt that changes only the provider or model of a finished package is in the same
+position and declares the same field.
+
 ## Stage behaviour
 
 - `S0` makes no model call. It answers every assignment of the engineering worlds and the qualification
