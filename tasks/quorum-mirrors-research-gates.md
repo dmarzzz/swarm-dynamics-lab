@@ -3,19 +3,19 @@ id: quorum-mirrors-research-gates
 type: task
 title: Complete Quorum prior-art evidence and staged run roadmap
 kind: survey
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-quorum-mirrors
+owner: null
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-quorum-mirrors
 depends_on: []
 topics:
 - decision-models
-updated: 2026-10-04T04:47Z
+updated: 2026-10-04T05:52Z
 history:
 - '2026-10-04T04:45Z released by vishesh/codex-quorum-mirrors: Published research evidence and roadmap; requested design review received and Q1-Q3 amended. Survey saturation and formal survey/hypothesis acceptance remain open; exact continuation in RESEARCH-GATES.md.'
-claimed_at: 2026-10-04T04:47Z
+- '2026-10-04T05:52Z released by vishesh/codex-quorum-mirrors: Published prospective Q1 plan, frozen manifests and fail-closed runtime; 52 tests pass. Native launch blocked by unsaturated survey/formal acceptance, operator registration and fresh allocation. See NEXT-RUN-READINESS.md; existing reviewer inbox updated. No new native calls.'
 ---
 
 ## Goal
