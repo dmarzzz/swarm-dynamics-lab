@@ -3,15 +3,17 @@ id: survey-agent-budgets
 type: task
 title: 'Survey: agent budgets, budget visibility and self-allocation among agents'
 kind: survey
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: shadow/sol-budget
+for: null
 created: 2026-10-03
 created_by: dmarz/budget
 depends_on: []
 topics:
 - agent-budgets
+claimed_at: 2026-10-04T14:27Z
+updated: 2026-10-04T14:27Z
 ---
 
 ## Goal
