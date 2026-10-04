@@ -30,7 +30,7 @@ Done. Passed. Post-mortem verdict: advance. Claim `dmarz-d1-opus` released 08:05
 
 ## 3. Next run
 
-Named in the post-mortem: a fresh v3 swarm qualification on Opus, lane `dmarz/v3-q0-opus` on sim-dmarz-9, same shape as `v3-q0-a1` (96 cases, 636 calls), fresh world ids, the D1-Opus request path ported into `bench_v3`, F1/F2 fixes pinned, new manifest, pre-run review and claim. At tonight's pace about 65 minutes and USD 13 at effort high. No plan or claim is on main yet (08:13Z).
+Named in the post-mortem: a fresh v3 swarm qualification on Opus, lane `dmarz/v3-q0-opus` on sim-dmarz-9, same shape as `v3-q0-a1` (96 cases, 636 calls), fresh world ids, the D1-Opus request path ported into `bench_v3`, F1/F2 fixes pinned, new manifest, pre-run review and claim. At tonight's pace about 65 minutes and USD 13 at effort high. The plan is on main since 08:11Z as `discussion-dose/v3-opus` (attempt `v3o-a1`, Q0 chained into a 24-world S1); see [discussion-v3-opus.md](discussion-v3-opus.md). An earlier version of this file said no plan was on main; that was out of date by a few minutes.
 
 Forecast for that run's two clean gates (5 of 6 each), from the D1-Opus numbers:
 
