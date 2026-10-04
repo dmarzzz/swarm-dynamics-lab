@@ -3,7 +3,7 @@ id: right-dissenter-design-build
 type: task
 title: Build the Right Dissenter exploratory design and scenario harness
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,13 @@ topics:
 - decision-models
 - collective-decision
 claimed_at: 2026-10-04T02:58Z
-updated: 2026-10-04T02:58Z
+updated: 2026-10-04T03:13Z
+outputs:
+- researchers/vishesh/notes/dissent/README.md
+- researchers/vishesh/notes/dissent/PLAN.md
+- researchers/vishesh/notes/dissent/IMPLEMENTATION.md
+- researchers/vishesh/notes/decision-models/handoffs/PHANTOM-COAST.md
+- researchers/vishesh/notes/decision-models/handoffs/QUORUM-OF-MIRRORS.md
 ---
 
 ## Goal
