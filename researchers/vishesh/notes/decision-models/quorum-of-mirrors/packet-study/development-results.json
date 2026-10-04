@@ -1,5 +1,9 @@
 {
   "split": "development",
+  "target_balance": {
+    "ONE": 24,
+    "ZERO": 24
+  },
   "roots": 12,
   "packets": 48,
   "family_counts": {

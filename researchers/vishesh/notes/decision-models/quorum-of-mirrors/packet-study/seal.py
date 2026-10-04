@@ -24,7 +24,7 @@ def main():
         q=args.custody/(split+'-qa.json');q.write_text(json.dumps(quality,indent=2)+'\n');os.chmod(q,0o600)
         private['seeds'][split]=seed
         manifest['splits'][split]={'packets':quality['packets'],'roots':quality['roots'],'families':quality['family_counts'],
-            'critical_mismatches':quality['critical_mismatches'],'corpus_sha256':sha(p),'qa_sha256':sha(q),
+            'critical_mismatches':quality['critical_mismatches'],'target_balance':quality['target_balance'],'corpus_sha256':sha(p),'qa_sha256':sha(q),
             'source_parser_correct':quality['correct']['source_parser'],'individual_cases_inspected_by_operator':False}
     dev=generate('development',20261004)
     assert not {r['actor']['event'] for r in dev}&all_events

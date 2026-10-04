@@ -52,6 +52,16 @@ class PacketTests(unittest.TestCase):
     def test_gold_not_available_to_parser(self):
         row=generate('development',1)[0];a=copy.deepcopy(row['actor']);got=predict(a)
         row['gold']['decision']='DEFER';self.assertEqual(predict(a),got)
+    def test_qualification_and_evaluation_target_balance(self):
+        q=generate('qualification',923)
+        self.assertEqual(sum(r['gold']['decision']=='ONE' for r in q),12)
+        self.assertEqual(sum(r['gold']['decision']=='ZERO' for r in q),12)
+        e=generate('evaluation',924)
+        for family in {r['family'] for r in e}:
+            group=[r for r in e if r['family']==family]
+            self.assertEqual(sum(r['gold']['decision']=='ONE' for r in group),8)
+            self.assertEqual(sum(r['gold']['decision']=='ZERO' for r in group),8)
+
     def test_conflicting_corrections_fail_closed(self):
         q={'kind':'running','entity':'M','time':'12:00'}
         self.assertIsNone(parse('Correction: at 12:00, M was running.\nCorrection: at 12:00, M was stopped.',q))

@@ -25,7 +25,7 @@ def generate(split,seed):
         for index in range(n):
             root=f'{split}-{family}-{index}';domain=DOMAINS[split][index%len(DOMAINS[split])]
             entity=domain+'-'+str(rng.randrange(10000,99999));event=hashlib.sha256((root+str(seed)).encode()).hexdigest()[:16]
-            bits=PATTERNS[(index+(0 if split=='evaluation' else 1))%4];time=f'{rng.randrange(10,17):02}:00'
+            bits=PATTERNS[(FAMILIES.index(family) if split=='qualification' else index+(0 if split=='evaluation' else 1))%4];time=f'{rng.randrange(10,17):02}:00'
             q={'kind':'mass' if family=='units' else 'running','entity':entity,'time':time}
             if family=='units':q['threshold_grams']=5000
             ids=[hashlib.sha256((event+str(i)).encode()).hexdigest()[:10] for i in range(3)]
@@ -71,7 +71,13 @@ def validate(rows,split):
             assert len(a['reports'])==r['condition']['copies']+2
             assert sum(not v for v in r['gold']['report_fidelity'].values())==(r['condition']['copies'] if r['condition']['inverted'] else 0)
             assert [x for x in a['reports'] if x['receipt_id']!=focal]==[x for x in base['reports'] if x['receipt_id']!=focal]
-    return {'split':split,'roots':len(groups),'packets':len(rows),'family_counts':{f:sum(r['family']==f for r in rows) for f in FAMILIES},
+    target_balance={choice:sum(r['gold']['decision']==choice for r in rows) for choice in ('ONE','ZERO')}
+    assert target_balance['ONE']==target_balance['ZERO']
+    if split=='evaluation':
+        for family in FAMILIES:
+            group=[r for r in rows if r['family']==family]
+            assert sum(r['gold']['decision']=='ONE' for r in group)==8
+    return {'split':split,'target_balance':target_balance,'roots':len(groups),'packets':len(rows),'family_counts':{f:sum(r['family']==f for r in rows) for f in FAMILIES},
             'critical_mismatches':mismatches,'correct':correct,'outcomes':outcomes}
 
 

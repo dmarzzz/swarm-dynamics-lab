@@ -1,12 +1,13 @@
 {
-  "frozen_at": "2026-10-04T18:19:15.706233+00:00",
+  "version": 2,
+  "frozen_at": "2026-10-04T18:20:24.821009+00:00",
   "development_packets": 48,
-  "tests_passed": 9,
+  "tests_passed": 10,
   "source_sha256": {
     "instrument.py": "0f687ac26b80ed5f4252fa4a44e8d795e724b7cb98e23017755f39a5ed3ef9a6",
-    "corpus.py": "0d65024bcfbfd7c06751c1bd97d464272c8d90b30882815df09769a827006189",
-    "test_packets.py": "dcfedde9338901ed3e8442ce2a1e9b386852d50598500035417b98a34bbd057a",
-    "seal.py": "9b33f4a629c779869a66c3eb715a26c84c0b1cb622b58e8d69e2d80b65b15e52"
+    "corpus.py": "fcfdbd4cca260609f4bb556479dfabcf06ebff67398b855ebce1d542dfe2a5f9",
+    "test_packets.py": "b1be301b11ba95c4279bdaf74034b3d4a40f936e0cb77a094ac92d7a03e7e7a9",
+    "seal.py": "2b59fdb299047974ec61c6c51edcc5d4922771f41bd3c9b143e00078896ed168"
   },
-  "policy": "No post-seal tuning; a changed instrument requires explicit seal retirement and a new version."
+  "policy": "v1 retired for qualification imbalance. No post-v2-seal tuning."
 }
