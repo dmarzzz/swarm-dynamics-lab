@@ -87,3 +87,7 @@ If the simple baseline explains the result, or the necessary evidence cannot be 
 ## AI Village integration update, 2026-10-04
 
 [Dataset-backed preparation and fit](../ai-village-replay-2026-10-04/TELEPHONE.md) now supplies concrete next steps. The [shared builder](../ai-village-replay-2026-10-04/IMPLEMENTATION.md) is validated offline; no real episode labels or native outcomes are claimed. This brief remains an unrun hunch.
+
+## Dedicated design package — 2026-10-04
+
+The owner selected this idea for further design. [Telephone T0](../telephone/README.md) is the current design page, with [background](../telephone/BACKGROUND.md), [plan](../telephone/PLAN.md), [annotation](../telephone/ANNOTATION.md), [dataset resource guide](../telephone/DATA.md) and its single authoritative [SETUP](../telephone/SETUP.md). It remains exploratory; selecting an idea does not establish efficacy, complete the survey or launch a native attempt.

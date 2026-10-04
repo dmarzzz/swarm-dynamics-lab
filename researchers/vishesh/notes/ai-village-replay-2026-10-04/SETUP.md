@@ -49,3 +49,7 @@ Next action: prepare a bounded candidate inventory and visibility/answerability 
 Operator: vishesh/codex-village-fit. The [prospective extension](INTEGRATION-PLAN.md) preceded code and bounded source reads. [Structural audit](inventory-audit.json) and [inventory](development-inventory.json) cover four noncontiguous 2,000-row prefixes. Seven study profiles and 21 tests pass; 18 scripted semantic cases are software fixtures, not native outcomes. No paid attempt or independent validation occurred.
 
 G0/G1 remain pending for actual cohort feasibility and native contract; G3/G4/G6 remain unfulfilled. Telephone and the acknowledgment hunch are candidate questions within this preparation record, not separately registered studies. Continue coherent task-window acquisition and label/visibility review before choosing a native scope. No extra researcher sign-off is required.
+
+## Telephone ownership split — 2026-10-04
+
+A later owner request selected Telephone for its own exploratory design. Its single authoritative readiness record is now [telephone/SETUP.md](../telephone/SETUP.md). This record continues to own shared dataset preparation and the memory/handoff pilot only; the earlier Telephone-candidate status above is historical. No native attempt or resource authority was transferred or created.

@@ -6,6 +6,8 @@ This collection documents candidate work on swarm evidence, communication, share
 
 ## Start here
 
+[Telephone: where evidence changes in an agent swarm](telephone/README.md) — new exploratory design page, focused background research, prospective three-hop comparison, annotation specification and setup record. [AI Village dataset resource](../../../library/datasets/data-ai-village-2026.md) and [study data guide](telephone/DATA.md). No Telephone outcomes or launch claimed.
+
 [Run completion and improvement cycle](../../../tooling/agent-experiments/RUN-REVIEW.md): automatic operational post-mortem, scientific quality assessment, concrete next-run plan, owner approval, then allocation and launch. [Quality rubric](../../../tooling/agent-experiments/RUN-QUALITY.md).
 
 [PI review decision guide](pi-review-guide-2026-10-04/README.md): dark visual overview of all ten projects, explicit green/yellow/red judgments, concise limitations and three next-step options per project. Full scientific assessments remain available in the same page.

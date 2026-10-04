@@ -1,5 +1,7 @@
 # Telephone: the best existing unrun fit
 
+**Historical integration sketch.** The owner subsequently selected Telephone for a dedicated design package: [current design](../telephone/README.md), [plan](../telephone/PLAN.md) and [authoritative Telephone setup](../telephone/SETUP.md). The shared preparation setup below remains historical for this sketch; it no longer owns Telephone-specific study readiness.
+
 Prospective exploratory preparation, 2026-10-04. Extends the [unrun brief](../project-briefs/telephone.md), not a formal hypothesis or launched experiment. Source: [[data-ai-village-2026]]. No source-text excerpts are published.
 
 ## TLDR

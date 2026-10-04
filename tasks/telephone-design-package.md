@@ -21,5 +21,9 @@ Create a dedicated Telephone idea, background research, prospective plan, annota
 
 ## Done when
 
-- [ ] Publish linked design, research, plan, annotation and setup documents.
-- [ ] Verify dataset resource and source citations.
+- [x] Publish linked design, research, plan, annotation and setup documents.
+- [x] Verify dataset resource and source citations.
+
+## Coverage note
+
+Published six linked Telephone T0 documents: design, background, prospective plan, annotation, data guide and authoritative setup. Added four paper and two primary blog records, retaining read-depth limits; four paper metadata checks pass. Expanded the existing canonical AI Village dataset entry with attributed resource/implementation links; no duplicate corpus or raw data. Local links and required plan sections pass, repository checker has zero errors. No claim of complete survey, native readiness or experimental outcomes.
