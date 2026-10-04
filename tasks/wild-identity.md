@@ -3,14 +3,19 @@ id: wild-identity
 type: task
 title: Identity churn and observable coordination across three swarms
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: shadow/sol-identity
 for: shadow
 created: 2026-10-04
 created_by: shadow/sol-identity
 depends_on: []
-topics: [swarm-detection, sybil-resistance, llm-agent-swarms]
+topics:
+- swarm-detection
+- sybil-resistance
+- llm-agent-swarms
+claimed_at: 2026-10-04T14:56Z
+updated: 2026-10-04T14:56Z
 ---
 
 ## Goal
