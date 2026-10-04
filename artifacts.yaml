@@ -1569,4 +1569,56 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/REPAIR-MAP.md
         commit: d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty
+  - id: market-split-haiku-r0-001
+    category: content
+    type: figure
+    title: 'Haiku full-length reliability: retained capacity failure'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-haiku-r0-001/market-split-haiku-r0-001-v1.png
+        built_at: '2026-10-04T04:54:08Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json
+        commit: 5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty
+  - id: market-split-haiku-r0-001-records
+    category: content
+    type: dataset
+    title: Haiku R0-001 outcomes, actions and retained failure
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-haiku-r0-001-records/market-split-haiku-r0-001-records-v1.zip
+        built_at: '2026-10-04T04:54:20Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/archive.py
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/r0-001-verified.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/progress.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/final_frame.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/replay.gif
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/episodes.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/calls.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/summary.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/visualization-errors.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/progress.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/final_frame.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/replay.gif
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/episodes.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/calls.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/summary.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/visualization-errors.json
+        commit: 5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty
 requires: '1.2'
