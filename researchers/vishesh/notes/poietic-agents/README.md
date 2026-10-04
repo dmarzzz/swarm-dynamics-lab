@@ -1,0 +1,57 @@
+# Poietic Agents
+
+**Prospective design v0.1 · 4 October 2026 UTC · vishesh/codex-heterogeneous · HX-31**
+
+An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains an exploratory design pending independent review, qualification and the formal prior-art gate. There are no Poietic Agents results or launched workers.
+
+## TLDR
+
+Can identical generalist agents discover a cheaper division of labor without becoming brittle? Give every agent the same starting model, tools, skills and data permissions, then let agents establish shared data services, unload capabilities, choose cheaper execution and revise their connections. Compare with unchanged generalists, ordinary shared caching, engineered static specialists and, in the later study, a central adaptive optimizer. Count learning, checking, communication and recovery costs, and require correct, fresh, on-time answers. Change the workload and interrupt a provider to test whether useful redundancy and capability can return. This design tests a bounded software mechanism; it does not yet establish novelty, biological evolution or a benefit on real production workloads.
+
+## Question and prediction
+
+**When is it worth letting a swarm discover and maintain its own division of labor?** The interesting outcome is a quality-preserving lifecycle: initially redundant generalists become shared providers and cheaper consumers, then recover flexibility when the old arrangement stops working.
+
+The working prediction is that repeated overlapping jobs can repay differentiation costs, but low-overlap or rapidly changing work may favor generalists or simple caching. That is a pre-data expectation, not an accepted hypothesis. A result favoring the simpler architecture is useful and must remain publishable.
+
+Agent removal and cheaper-model substitution already have close prior art in [[chen-2026-agentslimming]]. Online topology adaptation is also represented by [[huang-2026-manta]]. The remaining candidate contribution is **reversible, agent-proposed specialization of data services and capabilities over a persistent workload**, evaluated against strong engineering baselines with honest lifetime accounting. [Prior-art boundary](PRIOR-ART.md) records what remains unverified.
+
+## Setup
+
+The first workload is a fictional operations desk. Agents answer recurring stock, supplier and delivery questions using versioned local fixture APIs. Jobs differ in their required records, transformations and freshness deadlines. Outputs are structured decisions plus source receipts; a separate deterministic evaluator checks them against protected truth. The fixtures are an instrument, not real business data or paid external API traffic.
+
+S1 starts with six persistent agent identities, eight epochs and six jobs per epoch. Four independent workload roots are paired across four arms. Each agent begins with identical resources in the adaptive arm; job assignments and observed history can subsequently differ. The larger prospective study uses twelve agents, longer horizons and additional controls, after S1 informs feasibility and precision.
+
+Exact model IDs, backend revisions and measured tariffs must be pinned before native qualification. The intended ladder is a capable generalist, a cheaper generative model such as Haiku or Qwen, and an optional Jev typed-choice component. Jev is eligible only for a separately qualified finite-choice subtask. It is not assumed capable of arbitrary tool use or free-form reasoning.
+
+## Protocol
+
+| Arm | What it can change | Purpose |
+| --- | --- | --- |
+| A0 Generalists | Nothing structural; full tools and ordinary private memory | Measures the starting architecture |
+| A1 Shared cache | A conventional coherent cache with request coalescing; full generalist agents | Tests how much ordinary deduplication explains |
+| A2 Static specialists | Roles, services, skill subsets and model routing chosen on development data and then frozen | Strong engineered comparison |
+| A3 Poietic | Agents propose costed capability, provider, model and connection changes within a fixed action grammar | Main adaptive treatment |
+| A4 Central adaptive | One costed optimizer has the same information and change grammar | Later control for the value of decentralized proposals |
+| A5 Learned and frozen | Copy A3 at the end of acquisition, then disable structural changes | Later paired recovery comparison; shares A3's parent history |
+| A6 Single solver | One capable solver with cache, tools and the same total resource ceiling | Later control for whether a swarm helps at all |
+
+In S1, epochs 1–2 acquire experience, 3–4 measure stable operation, and 5–8 face a prescheduled change. Two roots change overlap from high to low; two introduce a documented API schema revision. Provider withdrawal is a later separate stress test, not mixed into those episodes. Every arm sees the same legal API access, workload stream and observable notices for its paired root.
+
+No actor is told to become a server or rewarded for looking heterogeneous. Each gets the same operational objective. A deterministic controller validates proposed changes and enforces budgets; it does not nominate specialist roles. Changes take effect at epoch boundaries. All unsuccessful proposals and their costs remain in the record.
+
+Read the [full protocol](PROTOCOL.md), [machine-readable design](design.yaml), [agent and context contracts](contracts.json), [visualization mapping](VISUALIZATION.md), [first qualification assessment](reviews/S0-01-pre.md), and [execution handoff](RUNBOOK.md).
+
+## Metrics
+
+The primary efficiency quantity is total deployment cost per assigned job over the whole lifetime, **conditional on meeting prespecified quality, freshness and deadline guardrails**. It is not cheaper execution of only the easiest successful jobs. Report cost per verified success as a secondary quantity, including all failures in its cost numerator.
+
+Record actual model charges, tokens, CPU/GPU time, API fetches, communication bytes, migrations, compilation, probes and repairs. Synthetic API tolls are a separate sensitivity analysis; they never masquerade as a real provider bill. Track the break-even horizon, duplicate requests, loaded skills, model assignments, provider concentration and loss after a change. Analyze independent workload roots, not messages or agents as independent samples.
+
+For a later confirmatory claim, the proposed practical threshold is at least 20% lower lifetime cost than the development-selected strongest baseline, with no more than a two-percentage-point reduction in verified success and at least 95% verified success overall. These are design choices for review, not measured effects or proof of adequate power. S1 cannot establish those claims.
+
+## Current status
+
+The owner selected the project and its name. The written design is ready for critique. [Launch state](launch-state.json) distinguishes design publication, independent review, model qualification, spending authorization, dedicated allocation and S2 research acceptance. Public registration of the design creates no queued run. S0/S1 may proceed under the exploratory worker workflow once their concrete execution gates pass; S2 also requires the formal survey and hypothesis reviews.
+
+The central decision after development is whether Poietic Agents adds enough beyond caching and static specialization to justify a larger study. If it does not, stop and recommend the simpler system.

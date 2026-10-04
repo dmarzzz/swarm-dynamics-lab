@@ -130,19 +130,21 @@ class AnthropicAdapter:
                 return _result(False, failure='model_mismatch', **base)
             if latency > self.limits['request_timeout_seconds']:
                 return _result(False, failure='timeout', **base)
-            stop = data.get('stop_reason')
-            if stop == 'max_tokens':
-                return _result(False, failure='truncated', **base)
-            if stop == 'refusal':
-                return _result(False, failure='refusal', **base)
-            if stop != 'end_turn':
-                return _result(False, failure='stop_' + str(stop), **base)
             content = data.get('content') or []
             if self.thinking:   # reasoning blocks are billed output but are never an answer and are not stored
                 content = [b for b in content if b.get('type') not in ('thinking', 'redacted_thinking')]
-            if len(content) != 1 or content[0].get('type') != 'text' or not isinstance(content[0].get('text'), str):
+            single = len(content) == 1 and content[0].get('type') == 'text' and isinstance(content[0].get('text'), str)
+            text = content[0]['text'] if single else None    # kept for the journal even when the call fails
+            stop = data.get('stop_reason')
+            if stop == 'max_tokens':
+                return _result(False, text=text, failure='truncated', **base)
+            if stop == 'refusal':
+                return _result(False, text=text, failure='refusal', **base)
+            if stop != 'end_turn':
+                return _result(False, text=text, failure='stop_' + str(stop), **base)
+            if not single:
                 return _result(False, failure='unexpected_content_blocks', **base)
-            return _result(True, text=content[0]['text'], **base)
+            return _result(True, text=text, **base)
 
 
 class ScriptedAdapter:

@@ -1020,4 +1020,98 @@ artifacts:
           - researchers/vishesh/notes/healing-helping-hands/practical/render.py
           - data/healing-practical/recorded-inputs.tar.gz
         commit: f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf-dirty
+  - id: vishesh-theseus-v2-initial-evidence
+    category: codebase
+    type: package
+    title: Theseus v2 S0 raw evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+        built_at: '2026-10-04T04:26:09Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/manifest.json
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-repair-evidence
+    category: codebase
+    type: package
+    title: Theseus v2 S0-repair raw evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+        built_at: '2026-10-04T04:26:10Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/results/S0-repair/manifest.json
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-measured-figure
+    category: content
+    type: figure
+    title: Theseus v2 qualification results
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-measured-figure/vishesh-theseus-v2-measured-figure-v1.png
+        built_at: '2026-10-04T04:26:11Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/analysis/qualification_report.py
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-measured-replay
+    category: content
+    type: doc
+    title: Theseus v2 measured qualification replay
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-measured-replay/vishesh-theseus-v2-measured-replay-v1.html
+        built_at: '2026-10-04T04:26:13Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/analysis/qualification_report.py
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-results
+    category: content
+    type: doc
+    title: Theseus v2 qualification postmortem
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-results/vishesh-theseus-v2-results-v1.md
+        built_at: '2026-10-04T04:26:15Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md
+          - researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
 requires: '1.2'

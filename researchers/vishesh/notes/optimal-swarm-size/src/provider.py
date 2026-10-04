@@ -1,4 +1,4 @@
-"""OpenRouter transport. Secret stays in the child process; no raw errors are logged.
+"""Native Anthropic transport. Secret stays in the child process; no raw errors are logged.
 
 The pricing/token bound and served snapshot must be independently reviewed before launch.
 """
@@ -19,26 +19,39 @@ def microdollars(value):
     return int((amount*1000000).to_integral_value(rounding=ROUND_CEILING))
 
 
+def native_payload(messages,cfg):
+    return {'model':cfg['model'],'system':'\n\n'.join(m['content'] for m in messages if m['role']=='system'),
+            'messages':[m for m in messages if m['role']!='system'],'max_tokens':cfg['max_output_tokens'],
+            'temperature':0,'stream':False,'service_tier':'standard_only'}
+
+
+def usage_charge(usage,cfg):
+    if not isinstance(usage,dict) or any(type(usage.get(k)) is not int or usage[k]<0 for k in ('input_tokens','output_tokens')):
+        raise SafeFailure('usage_missing')
+    if any(usage.get(k,0)!=0 for k in ('cache_creation_input_tokens','cache_read_input_tokens')):
+        raise SafeFailure('unexpected_cache_usage')
+    return microdollars(Decimal(usage['input_tokens'])*Decimal(str(cfg['input_usd_per_token']))+
+                        Decimal(usage['output_tokens'])*Decimal(str(cfg['output_usd_per_token'])))
+
+
 def request_child(connection,payload,timeout):
     try:
-        key=os.environ.get('OPENROUTER_API_KEY')
+        key=os.environ.get('SWARM_MODEL_API_KEY')
         if not key:raise ValueError('credential_unavailable')
-        request=urllib.request.Request('https://openrouter.ai/api/v1/chat/completions',
-            json.dumps(payload).encode(),{'Authorization':'Bearer '+key,'Content-Type':'application/json'})
-        with urllib.request.urlopen(request,timeout=timeout) as response:
-            raw=response.read(3_000_001)
+        headers={'x-api-key':key,'Content-Type':'application/json','anthropic-version':'2023-06-01'}
+        workspace=os.environ.get('SWARM_MODEL_WORKSPACE_ID')
+        if workspace:headers['anthropic-workspace-id']=workspace
+        request=urllib.request.Request('https://api.anthropic.com/v1/messages',json.dumps(payload).encode(),headers)
+        with urllib.request.urlopen(request,timeout=timeout) as response:raw=response.read(3_000_001)
         if len(raw)>3_000_000:raise ValueError('response_too_large')
         data=json.loads(raw)
-        # No HTTP headers or raw provider diagnostics cross this boundary.
-        choice=data['choices'][0]
-        connection.send({'ok':True,'text':choice['message']['content'],
-                         'finish_reason':choice['finish_reason'],'model':data.get('model'),
-                         'provider':data.get('provider'),'usage':data.get('usage',{})})
+        texts=[v['text'] for v in data['content'] if v.get('type')=='text']
+        connection.send({'ok':True,'text':''.join(texts),'finish_reason':data.get('stop_reason'),
+                         'model':data.get('model'),'provider':'anthropic','usage':data.get('usage',{})})
     except urllib.error.HTTPError as exc:
         code=exc.code;exc.close()
         connection.send({'ok':False,'failure':'http_'+str(code)})
-    except Exception as exc:
-        connection.send({'ok':False,'failure':safe_code(exc)})
+    except Exception as exc:connection.send({'ok':False,'failure':safe_code(exc)})
     finally:connection.close()
 
 
@@ -47,6 +60,7 @@ class Provider:
         self.config=config;self.bank=bank;self.episode=episode;self.journal=journal
     def __call__(self,messages,deadline,actor,phase,item):
         cfg=self.config
+        if cfg.get("claim_expiry_epoch",0)<=time.time():raise SafeFailure("claim_expired")
         # Config quotes reserve a full permitted context plus maximum output for every call.
         if len(json.dumps(messages).encode())>cfg['max_prompt_bytes']:raise ValueError('prompt_limit')
         if not self.bank.healthy():raise ValueError('budget_overrun')
@@ -59,13 +73,7 @@ class Provider:
         self.journal({'kind':'reservation','call':call_id,'maximum_microdollars':bound})
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('deadline_before_dispatch')
-        payload={'model':cfg['model'],'messages':messages,'max_tokens':cfg['max_output_tokens'],
-                 'temperature':0,'stream':False,'response_format':{'type':'json_object'},
-                 'provider':{'only':[cfg['provider_slug']],'allow_fallbacks':False,'require_parameters':True,
-                             'max_price':{'prompt':float(Decimal(str(cfg['input_usd_per_token']))*1000000),
-                                          'completion':float(Decimal(str(cfg['output_usd_per_token']))*1000000),
-                                          'request':0}},
-                 'plugins':[]}
+        payload=native_payload(messages,cfg)
         ctx=multiprocessing.get_context('spawn');parent,child=ctx.Pipe(duplex=False)
         proc=ctx.Process(target=request_child,args=(child,payload,remaining),daemon=True)
         try:
@@ -74,17 +82,15 @@ class Provider:
             response=parent.recv()
             if not response['ok']:raise SafeFailure(response['failure'])
             usage=response['usage']
-            if not isinstance(usage,dict) or 'cost' not in usage:raise SafeFailure('usage_missing')
-            try:charge=microdollars(usage['cost'])
-            except Exception:raise SafeFailure('invalid_cost') from None
+            charge=usage_charge(usage,cfg)
             self.bank.settle(call_id,charge)
             self.journal({'kind':'charge','call':call_id,'microdollars':charge,
-                          'prompt_tokens':usage.get('prompt_tokens'),'completion_tokens':usage.get('completion_tokens'),
+                          'prompt_tokens':usage.get('input_tokens'),'completion_tokens':usage.get('output_tokens'),
                           'model_matches':response['model']==cfg['expected_served_model'],
                           'provider_matches':response['provider']==cfg['expected_served_provider']})
             if response['model']!=cfg['expected_served_model'] or response['provider']!=cfg['expected_served_provider']:
                 raise ValueError('route_changed')
-            if response['finish_reason']!='stop':raise ValueError('incomplete_response')
+            if response['finish_reason']!='end_turn':raise ValueError('incomplete_response')
             if type(response['text']) is not str:raise ValueError('response_shape')
             return response['text']
         finally:

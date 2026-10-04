@@ -208,6 +208,10 @@ def call_stats(events, plan):
             'budget_timeout_failures': budget_timeout,
             'budget_timeout_failure_rate': _rate(budget_timeout, len(planned)),
             'failures': failures,
+            'by_phase': {phase: {'dispatched': sum(c['phase'] == phase for c in dispatched),
+                                 'valid': sum(c['phase'] == phase and c['ok'] for c in dispatched),
+                                 'truncated': sum(c['phase'] == phase and c['failure'] == 'truncated' for c in dispatched)}
+                         for phase in sorted({c['phase'] for c in dispatched})},
             'max_request_bytes': max([c['request_bytes'] for c in calls] or [0]),
             'max_input_tokens': max([c['usage'].get('input_tokens', 0) for c in calls] or [0]),
             'input_tokens': sum(c['usage'].get('input_tokens', 0) for c in calls),
@@ -223,14 +227,23 @@ def qualification(episodes):
             'passed': len(episodes) == gate['of'] and correct >= gate['min_correct'] and valid >= gate['min_valid']}
 
 
-def s1_gate(stats, leaks, crash, halted):
+def s1_gate(stats, leaks, crash, halted, mode=None, summary=None):
+    """Validity gate of a development stage. It never looks at the size or sign of an effect.
+    For the replay it also requires clean-regime competence under the team prompts."""
     gate = config.execution()['gates']['s1']
+    truncated = [v['truncated'] / v['dispatched'] for v in stats.get('by_phase', {}).values() if v['dispatched']]
     checks = {
         'parse_valid_rate': stats['valid_rate'] is not None and stats['valid_rate'] >= gate['min_parse_valid_rate'],
         'budget_timeout_failures': stats['budget_timeout_failure_rate'] is not None
         and stats['budget_timeout_failure_rate'] < gate['max_budget_timeout_failure_rate'],
+        'truncation_per_phase': all(rate <= gate['max_truncated_rate_per_phase'] for rate in truncated),
         'zero_leaks': leaks <= gate['max_detected_leaks'],
         'calls_counted_once_and_planned': stats['duplicate_call_ids'] == 0 and stats['unplanned_call_ids'] == 0,
         'no_crash_or_halt': crash is None and halted is None,
     }
+    if mode == 'replay':
+        clean = config.execution()['gates']['s1r_clean_competence']
+        cells = [summary['arms'].get(arm, {}).get('by_regime', {}).get('clean', {}) for arm in clean['arms']]
+        checks['clean_competence'] = all(c.get('episodes') == clean['of'] and c.get('team_success', 0) >= clean['min_correct']
+                                         for c in cells)
     return {'checks': checks, 'passed': all(checks.values())}

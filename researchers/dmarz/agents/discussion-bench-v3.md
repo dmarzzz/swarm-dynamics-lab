@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-bench-v3
 tool: codex
-state: idle
-task: null
-doing: Q0 and successor plan on main; 120-call diagnostic planned, cloud access/lifecycle not configured, no new launch
-updated: 2026-10-04T04:00Z
+state: working
+task: deploy-discussion-v3-d1
+doing: Dedicated D1 worker provisioned; coordinating cloud harness and single owner-controlled 120-call dispatch; no paid calls yet
+updated: 2026-10-04T04:20Z
 ---
 
 ## Notes

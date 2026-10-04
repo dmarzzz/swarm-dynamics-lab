@@ -52,3 +52,7 @@ The practical result of this iteration is a reviewable comparison with verified 
 ## Follow-on S0 preparation
 
 After explicit owner publication approval the design was pushed (published plan ancestor 5cca365). The earlier blanket native gate statement is narrowed by the worker template's explicit exploratory S0/S1 exception; formal S2 still requires research gates. S0 is planned separately before implementation. Added nine offline tests (23 total), the exact 32-assignment request matrix and all-assigned analyzer. No native dispatcher/relay, fleet allocation, budget grant or result exists yet. Funding approval is pending; no spending authority was inferred from another study.
+
+## Iteration 3, 2026-10-04
+
+Owner feedback: purpose and usefulness were unclear. [Retrospective plan](ITERATION-3.md) preceded independent analysis; [closeout](ITERATION-3-POST.md) records all checks. README now leads with the repeated-source problem and measured/computed distinctions. Source counting scores 32/32 on the saved full-lineage grammar, model 29/32, report counting 24/32. These post-hoc references do not establish native treatment effects. The [prospective S1 plan](S1-PLAN.md) adds those missing comparisons and a cost-conscious six-world pilot. [SETUP.md](SETUP.md) supersedes the old exploratory gate exemption and records the exact no-go state. One different-researcher review requested; no duplicate dossier review or new budget request.

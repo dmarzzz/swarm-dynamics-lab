@@ -158,7 +158,17 @@
     "s1": {
       "min_parse_valid_rate": 0.95,
       "max_budget_timeout_failure_rate": 0.05,
-      "max_detected_leaks": 0
+      "max_detected_leaks": 0,
+      "max_truncated_rate_per_phase": 0.05
+    },
+    "s1r_clean_competence": {
+      "arms": [
+        "private",
+        "public"
+      ],
+      "min_correct": 13,
+      "of": 16,
+      "note": "focal public final answer correct in clean-regime replay episodes; below this the team prompts are suspect and S1-L does not start"
     }
   },
   "review": {

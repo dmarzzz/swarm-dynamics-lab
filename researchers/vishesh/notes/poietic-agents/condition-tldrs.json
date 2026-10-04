@@ -1,0 +1,19 @@
+{
+  "schema": "poietic-condition-tldrs-v0.1",
+  "S1": {
+    "A0": "This development condition tests generalists on paired repeated operations jobs against ordinary shared caching and static specialists. Measure correct, fresh, on-time completions and total lifetime cost including learning and repair; this stage does not establish general superiority or novelty.",
+    "A1": "This development condition tests shared cache on paired repeated operations jobs against ordinary shared caching and static specialists. Measure correct, fresh, on-time completions and total lifetime cost including learning and repair; this stage does not establish general superiority or novelty.",
+    "A2": "This development condition tests static specialists on paired repeated operations jobs against ordinary shared caching and static specialists. Measure correct, fresh, on-time completions and total lifetime cost including learning and repair; this stage does not establish general superiority or novelty.",
+    "A3": "This development condition tests poietic on paired repeated operations jobs against ordinary shared caching and static specialists. Measure correct, fresh, on-time completions and total lifetime cost including learning and repair; this stage does not establish general superiority or novelty."
+  },
+  "deferred": {
+    "A4": "This development condition tests central adaptive on paired repeated operations jobs against ordinary shared caching and static specialists. Measure correct, fresh, on-time completions and total lifetime cost including learning and repair; this stage does not establish general superiority or novelty.",
+    "A5": "This development condition tests learned frozen on paired repeated operations jobs against ordinary shared caching and static specialists. Measure correct, fresh, on-time completions and total lifetime cost including learning and repair; this stage does not establish general superiority or novelty.",
+    "A6": "This development condition tests single solver on paired repeated operations jobs against ordinary shared caching and static specialists. Measure correct, fresh, on-time completions and total lifetime cost including learning and repair; this stage does not establish general superiority or novelty."
+  },
+  "S0": {
+    "generalist": "This qualification tests generalist interpretation of clean operations tasks and tool receipts against independently computed reference answers. Measure correctness, valid output, access violations and actual cost over 48 probes; it does not test swarm differentiation.",
+    "cheap_generative": "This qualification tests the cheaper generative executor on its permitted operations subset against independently computed reference answers. Measure correctness, valid output, access violations and actual cost over 48 probes; it does not demonstrate cost savings in a swarm.",
+    "typed_choice": "This qualification tests Jev finite-choice selection against exact supplied-choice reference answers. Measure correctness, schema validity, access violations and actual cost over 48 probes; it does not qualify arbitrary tool use or free-form generation."
+  }
+}

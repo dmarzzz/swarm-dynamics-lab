@@ -1,0 +1,1456 @@
+{
+  "analysis_type": "retrospective_descriptive_reanalysis",
+  "new_model_calls": 0,
+  "scope": "Exact MAP labels on saved full-lineage S0 inputs; not world-truth accuracy or a randomized model comparison.",
+  "totals": {
+    "calls": 32,
+    "configurations": 16,
+    "bit_patterns": 8,
+    "reliability_settings": 2,
+    "model_correct": 29,
+    "count_all_correct": 24,
+    "count_roots_correct": 32,
+    "pairs_agree": 14
+  },
+  "strata": {
+    "conflict": {
+      "calls": 8,
+      "model_correct": 5
+    },
+    "agreement": {
+      "calls": 24,
+      "model_correct": 24
+    }
+  },
+  "paired_method_changes": {
+    "model->count_all": {
+      "choices_changed": 6,
+      "corrected": 0,
+      "spoiled": 5
+    },
+    "model->count_roots": {
+      "choices_changed": 3,
+      "corrected": 3,
+      "spoiled": 0
+    },
+    "count_all->count_roots": {
+      "choices_changed": 8,
+      "corrected": 8,
+      "spoiled": 0
+    }
+  },
+  "cases": [
+    {
+      "case": "q65-000",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ZERO",
+      "conflict": false,
+      "request_sha256": "1a3fab41189226aa76aae5c477c9fdc4d2509053560193471dc7c0fe83aa12ba",
+      "observations": [
+        {
+          "id": "q65-000-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "DEFER": 0.02,
+            "ZERO": 0.94,
+            "ONE": 0.04
+          },
+          "correct": true
+        },
+        {
+          "id": "q65-000-r2",
+          "repeat": 2,
+          "choice": "ZERO",
+          "choice_scores": {
+            "DEFER": 0.03,
+            "ONE": 0.04,
+            "ZERO": 0.93
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q65-001",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ZERO",
+      "conflict": false,
+      "request_sha256": "4804d542f63cbd4748b3f1e213a9b55c920558d861cc6ab7e27ef57502f80261",
+      "observations": [
+        {
+          "id": "q65-001-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ONE": 0.06,
+            "ZERO": 0.91,
+            "DEFER": 0.03
+          },
+          "correct": true
+        },
+        {
+          "id": "q65-001-r2",
+          "repeat": 2,
+          "choice": "ZERO",
+          "choice_scores": {
+            "DEFER": 0.06,
+            "ONE": 0.09,
+            "ZERO": 0.85
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q65-010",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ZERO",
+      "conflict": false,
+      "request_sha256": "b3336863e8e19c42eeca777ed93c9fe7512605049737945e3e61218a36437318",
+      "observations": [
+        {
+          "id": "q65-010-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ONE": 0.04,
+            "DEFER": 0.05,
+            "ZERO": 0.91
+          },
+          "correct": true
+        },
+        {
+          "id": "q65-010-r2",
+          "repeat": 2,
+          "choice": "ZERO",
+          "choice_scores": {
+            "DEFER": 0.1,
+            "ONE": 0.08,
+            "ZERO": 0.82
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q65-011",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ONE",
+      "conflict": true,
+      "request_sha256": "d5f51189f5c12c1c44d88b1c30220866542aeedc92583914170c8836c27d3b66",
+      "observations": [
+        {
+          "id": "q65-011-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ONE": 0.37,
+            "ZERO": 0.41,
+            "DEFER": 0.22
+          },
+          "correct": false
+        },
+        {
+          "id": "q65-011-r2",
+          "repeat": 2,
+          "choice": "DEFER",
+          "choice_scores": {
+            "ZERO": 0.28,
+            "ONE": 0.32,
+            "DEFER": 0.39999999999999997
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "case": "q65-100",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ZERO",
+      "conflict": true,
+      "request_sha256": "0907f49c715645b0ea40cfba18180715ae348d38409c24a369941d74b7000aed",
+      "observations": [
+        {
+          "id": "q65-100-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ZERO": 0.38,
+            "DEFER": 0.27,
+            "ONE": 0.35
+          },
+          "correct": true
+        },
+        {
+          "id": "q65-100-r2",
+          "repeat": 2,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ONE": 0.31,
+            "ZERO": 0.41,
+            "DEFER": 0.28
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q65-101",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ONE",
+      "conflict": false,
+      "request_sha256": "5a4dcebe7e3becfb37f8ba61227f866331ada83ae798bcd3b0c5868e6a6a57d5",
+      "observations": [
+        {
+          "id": "q65-101-r1",
+          "repeat": 1,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.95,
+            "DEFER": 0.04,
+            "ZERO": 0.01
+          },
+          "correct": true
+        },
+        {
+          "id": "q65-101-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ZERO": 0.02,
+            "ONE": 0.92,
+            "DEFER": 0.06
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q65-110",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ONE",
+      "conflict": false,
+      "request_sha256": "3ad1a23dd082b4c669d2ff21a6c24a07dfa787a61939410682a36aca78577f19",
+      "observations": [
+        {
+          "id": "q65-110-r1",
+          "repeat": 1,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.96,
+            "DEFER": 0.03,
+            "ZERO": 0.01
+          },
+          "correct": true
+        },
+        {
+          "id": "q65-110-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.96,
+            "DEFER": 0.03,
+            "ZERO": 0.01
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q65-111",
+      "q": 0.65,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.65
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.65
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ONE",
+      "conflict": false,
+      "request_sha256": "364047ee714039d72ff27ffd79a1197fc2c41c9e234c52b650d26614ee758a62",
+      "observations": [
+        {
+          "id": "q65-111-r1",
+          "repeat": 1,
+          "choice": "ONE",
+          "choice_scores": {
+            "ZERO": 0.03,
+            "DEFER": 0.03,
+            "ONE": 0.94
+          },
+          "correct": true
+        },
+        {
+          "id": "q65-111-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ZERO": 0.03,
+            "DEFER": 0.02,
+            "ONE": 0.95
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q80-000",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ZERO",
+      "conflict": false,
+      "request_sha256": "f29924f6a99868188ae9333ef49d242dbc3b8da51c8c22011cfd1dca05d9b103",
+      "observations": [
+        {
+          "id": "q80-000-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "DEFER": 0.03,
+            "ZERO": 0.95,
+            "ONE": 0.02
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-000-r2",
+          "repeat": 2,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ONE": 0.03,
+            "ZERO": 0.94,
+            "DEFER": 0.03
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q80-001",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ZERO",
+      "conflict": false,
+      "request_sha256": "9df219c8c2501366ac84b50e21f32ea2f4cb8b49224d0d1ff5189feea37073b4",
+      "observations": [
+        {
+          "id": "q80-001-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "DEFER": 0.07,
+            "ONE": 0.06,
+            "ZERO": 0.87
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-001-r2",
+          "repeat": 2,
+          "choice": "ZERO",
+          "choice_scores": {
+            "DEFER": 0.04,
+            "ZERO": 0.89,
+            "ONE": 0.07
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q80-010",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ZERO",
+      "conflict": false,
+      "request_sha256": "885730813fdc9fbebea17857311c76da2b838707678c4442093e8f970bfd0444",
+      "observations": [
+        {
+          "id": "q80-010-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ONE": 0.03,
+            "ZERO": 0.89,
+            "DEFER": 0.08
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-010-r2",
+          "repeat": 2,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ONE": 0.05,
+            "DEFER": 0.06,
+            "ZERO": 0.89
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q80-011",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ZERO",
+      "count_roots": "ONE",
+      "conflict": true,
+      "request_sha256": "0a93d5c2ec71e11fc072d9efc6ada9525ea8492fcf649295bae3d7e58dcf52ef",
+      "observations": [
+        {
+          "id": "q80-011-r1",
+          "repeat": 1,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.52,
+            "DEFER": 0.3,
+            "ZERO": 0.18
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-011-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.45,
+            "DEFER": 0.3,
+            "ZERO": 0.25
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q80-100",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ZERO",
+      "conflict": true,
+      "request_sha256": "4a07007c227ccc1cd0b8a566c23ed0faf2394a2e0dd12675832f06d41aeec4b4",
+      "observations": [
+        {
+          "id": "q80-100-r1",
+          "repeat": 1,
+          "choice": "ZERO",
+          "choice_scores": {
+            "ZERO": 0.49,
+            "DEFER": 0.25,
+            "ONE": 0.26
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-100-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ZERO": 0.33,
+            "ONE": 0.33999999999999997,
+            "DEFER": 0.33
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "case": "q80-101",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 0,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ONE",
+      "conflict": false,
+      "request_sha256": "2c580c73f4d09d723ff0e82b1cb196e890e261306d4507e913b2f7b554800c76",
+      "observations": [
+        {
+          "id": "q80-101-r1",
+          "repeat": 1,
+          "choice": "ONE",
+          "choice_scores": {
+            "ZERO": 0.01,
+            "ONE": 0.94,
+            "DEFER": 0.05
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-101-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.94,
+            "ZERO": 0.01,
+            "DEFER": 0.05
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q80-110",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 0,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ONE",
+      "conflict": false,
+      "request_sha256": "7afa4c389716fea9b1770bd0c6d03f0565a87de1c7f9314ba5a2df637b26ec2f",
+      "observations": [
+        {
+          "id": "q80-110-r1",
+          "repeat": 1,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.95,
+            "DEFER": 0.04,
+            "ZERO": 0.01
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-110-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ZERO": 0.01,
+            "ONE": 0.96,
+            "DEFER": 0.03
+          },
+          "correct": true
+        }
+      ]
+    },
+    {
+      "case": "q80-111",
+      "q": 0.8,
+      "reports": [
+        {
+          "report_id": "p0-0",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-1",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-2",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-3",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-4",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-5",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p0-6",
+          "visible_root": "r0",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p1-0",
+          "visible_root": "r1",
+          "bit": 1,
+          "q": 0.8
+        },
+        {
+          "report_id": "p2-0",
+          "visible_root": "r2",
+          "bit": 1,
+          "q": 0.8
+        }
+      ],
+      "count_all": "ONE",
+      "count_roots": "ONE",
+      "conflict": false,
+      "request_sha256": "c6fc7eb482b229e4c262844737631997dfc7dd7d01ac7a04773c006befdc9ceb",
+      "observations": [
+        {
+          "id": "q80-111-r1",
+          "repeat": 1,
+          "choice": "ONE",
+          "choice_scores": {
+            "ZERO": 0.02,
+            "DEFER": 0.02,
+            "ONE": 0.96
+          },
+          "correct": true
+        },
+        {
+          "id": "q80-111-r2",
+          "repeat": 2,
+          "choice": "ONE",
+          "choice_scores": {
+            "ONE": 0.96,
+            "DEFER": 0.02,
+            "ZERO": 0.02
+          },
+          "correct": true
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "manifest.json": "2ca3a277fbff18264fe8db1ba9209dfc86b89f053e8519aa5e37edb28d9f97af",
+    "receipts.jsonl": "22996afe008eb59fb86805294785ac6ecef317f4acfa41a3cb61d4e838638dba"
+  }
+}

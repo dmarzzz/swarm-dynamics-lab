@@ -9,7 +9,9 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](..
 - **sample_size_summary:** S0: 6 scenario/world roots (2 per 3 scenarios) × 2 readers = 12/12 two-checkpoint runs; 24 calls, 144 dependent decisions. Qualification failed; 24-continuation S1 not started.
 <!-- experiment-evidence:end -->
 
-**Built and offline-checked; no v2 model results yet.** This is an exploratory instrument for learned procedure continuity, not a demonstration of emergent culture or a novelty claim. The public plan was written before implementation; an explicit prospective amendment adds a common feedback interruption. Read [PLAN.md](PLAN.md), [the pre-run assessment](reviews/S0-pre.md), and [the prior evidence/social review](../redesign/SOCIAL-GROUNDING.md).
+The evidence metadata above is the earlier independent assessment of S0; the repair results below were produced afterward.
+
+**Executed S0 and the one planned repair: 48 valid model calls. Both failed the joint competence gate, so no turnover pilot ran. Read [RESULTS.md](RESULTS.md).** This is an exploratory instrument for learned procedure continuity, not a demonstration of emergent culture or a novelty claim. The public plan was written before implementation; an explicit prospective amendment adds a common feedback interruption. Read [PLAN.md](PLAN.md), [the pre-run assessment](reviews/S0-pre.md), and [the prior evidence/social review](../redesign/SOCIAL-GROUNDING.md).
 
 The original result mostly showed that supplying and copying a useful rule works. This iteration asks a harder practical question: can successors retain the useful part of an inherited procedure while correcting the obsolete part, even when fresh feedback is interrupted?
 
@@ -45,7 +47,7 @@ Retain acquisition failures in assigned denominators and expand independent worl
 
 Offline tests cover lineage, archive masks, delayed/withheld feedback, paired cases, class change, mutation controls, missing votes, duplicate decisions, public plan freshness, resource receipts, atomic quota reservations, assigned denominators, qualification scoring and fixture rendering. These are software tests, not empirical trials. The retained replay is permanently watermarked **SCRIPTED — NOT MODEL EVIDENCE**.
 
-The native provider and actual model competence remain unqualified for v2. Ordinary handoff techniques may perform equally well. Two worlds per scenario cannot support a strong general claim. The single-controller comparison, another model family, larger task/rule diversity and uninterrupted-feedback sensitivity remain open. Any scientific null or ceiling is reported without favorable reruns.
+The native provider completed both qualifications without failures, but model competence remains below the joint gate. Ordinary handoff techniques may perform equally well. Two worlds per scenario cannot support a strong general claim. The single-controller comparison, another model family, larger task/rule diversity and uninterrupted-feedback sensitivity remain open. Any scientific null or ceiling is reported without favorable reruns.
 
 ## Reproduce software checks
 
@@ -65,6 +67,6 @@ The existing central USD 45 authority had reserved USD 44.902316 when checked on
 
 Approved new allocation: at most **USD 15**, **660 calls**, **two hours total**, **two concurrent worlds**, pinned Haiku, no new server purchase. Initial qualification uses 24 calls; one documented repair may use 24; gated S1 uses 612. No S2. The quota ledger persists both call count and the shared deadline across stages. Repeated stage IDs are rejected.
 
-After owner approval: reserve the additional authority transactionally, refresh private fleet inventory and claims, obtain a fresh exclusive eligible idle host, deploy a clean published source and verify dependencies, amend the blocked pre-run review with allocation metadata, publish and register immutable plan/review, visually verify the public page, execute qualification, review its outputs, and only then publish the S1 assessment and run the pilot. The worker's deployment receipt records experiment, host, exclusive claim, expiry, authority allocation, owner authorization, source and verification time; it expires after 15 minutes for dispatch. A local ledger by itself is never authorization.
+Both admitted qualifications are now complete and failed. The planned S1 is blocked by the unchanged joint gate. Next work requires a separately frozen diagnostic plan and resolution of applicable research review requirements.
 
-The public hub supports measured progress and images. Standalone replay HTML must be delivered as a file/artifact; no unsupported hub HTML embedding is claimed. Fresh dedicated sim-shadow claim vishesh-theseus-v2 is now held for qualification and pilot (expiry 2026-10-04T08:05:38Z).
+The public hub supports measured progress and images. Standalone replay HTML must be delivered as a file/artifact; no unsupported hub HTML embedding is claimed. Dedicated sim-shadow claim vishesh-theseus-v2 was released through merged private fleet PR119 after the failed repair and evidence verification. No additional workers will run under this plan.

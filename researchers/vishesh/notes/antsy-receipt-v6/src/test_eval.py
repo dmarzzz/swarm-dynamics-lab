@@ -11,6 +11,8 @@ class EvalTests(unittest.TestCase):
   rows,s=evaluate([record(gold='2.00')]);self.assertEqual(s['arms']['agreement']['wrong'],1);self.assertEqual(s['arms']['agreement']['correct'],0)
  def test_checker_cost_is_measured_calls(self):
   rows,s=evaluate([record()]);self.assertEqual(s['arms']['always-check']['checks'],2);self.assertEqual(s['arms']['always-check']['checker_wall_s'],1);self.assertEqual(s['arms']['selective-check']['checker_wall_s'],0)
+ def test_initial_cost_not_hidden(self):
+  rows,s=evaluate([record()]);self.assertEqual(s['arms']['fixed-B']['initial_ocr_calls'],1);self.assertEqual(s['arms']['confidence']['initial_ocr_calls'],3);self.assertEqual(s['arms']['always-check']['total_pipeline_wall_s'],2.5)
  def test_label_mutation_cannot_change_actions(self):
   a=record();b=copy.deepcopy(a);b['gold']['value']='900.00'
   for arm in ARMS:self.assertEqual(run_policy(actor(a),lambda k:a['pipelines'][k]['candidate'],arm),run_policy(actor(b),lambda k:b['pipelines'][k]['candidate'],arm))

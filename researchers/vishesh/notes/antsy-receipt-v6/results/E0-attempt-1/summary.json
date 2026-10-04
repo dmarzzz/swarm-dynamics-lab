@@ -1,0 +1,95 @@
+{
+  "assigned": 20,
+  "scorable": 0,
+  "unscorable": 20,
+  "invalid_ocr": 0,
+  "arms": {
+    "fixed-B": {
+      "assigned": 20,
+      "scorable": 0,
+      "correct": 0,
+      "wrong": 0,
+      "refer": 0,
+      "unscorable_accept": 5,
+      "conditional_error": null,
+      "coverage": null,
+      "checks": 0,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": null,
+        "0.25": null,
+        "0.5": null
+      }
+    },
+    "confidence": {
+      "assigned": 20,
+      "scorable": 0,
+      "correct": 0,
+      "wrong": 0,
+      "refer": 0,
+      "unscorable_accept": 5,
+      "conditional_error": null,
+      "coverage": null,
+      "checks": 0,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": null,
+        "0.25": null,
+        "0.5": null
+      }
+    },
+    "agreement": {
+      "assigned": 20,
+      "scorable": 0,
+      "correct": 0,
+      "wrong": 0,
+      "refer": 0,
+      "unscorable_accept": 3,
+      "conditional_error": null,
+      "coverage": null,
+      "checks": 0,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": null,
+        "0.25": null,
+        "0.5": null
+      }
+    },
+    "always-check": {
+      "assigned": 20,
+      "scorable": 0,
+      "correct": 0,
+      "wrong": 0,
+      "refer": 0,
+      "unscorable_accept": 4,
+      "conditional_error": null,
+      "coverage": null,
+      "checks": 40,
+      "checker_wall_s": 184.8740043739981,
+      "assumed_loss": {
+        "0.1": null,
+        "0.25": null,
+        "0.5": null
+      }
+    },
+    "selective-check": {
+      "assigned": 20,
+      "scorable": 0,
+      "correct": 0,
+      "wrong": 0,
+      "refer": 0,
+      "unscorable_accept": 4,
+      "conditional_error": null,
+      "coverage": null,
+      "checks": 34,
+      "checker_wall_s": 169.69755626599908,
+      "assumed_loss": {
+        "0.1": null,
+        "0.25": null,
+        "0.5": null
+      }
+    }
+  },
+  "candidate_oracle_correct": 0,
+  "checker_new_correct": 0
+}

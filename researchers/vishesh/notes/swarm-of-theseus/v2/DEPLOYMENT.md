@@ -11,3 +11,11 @@ Native pinned Haiku model, 900 output tokens, 18,000 encoded input bytes, max tw
 S0 is 24 calls (12 two-checkpoint qualification runs). S1 requires passing qualification with identical instrument hash and a separately published pre-run assessment. One documented repair may use fresh seeds302/303. No S2 is authorized. A model qualification pass does not establish a continuity effect or independent researcher approval.
 
 Prior publication correction: four artifact versions had an invalid `by` harness value. Corrected to `codex` through Flight Deck's metadata/statement writer; authorship retained in notes, session and ingredient hashes preserved, bytes unchanged. Full strict validation with jsonschema4.26.0 passed. The earlier environment lacked jsonschema, so its reported strict pass did not cover enum validation; this limitation is now resolved.
+
+## Terminal execution status
+
+S0: 12 runs /24calls, completed but failed qualification. S0-repair: fresh302/303, source095534bfab16085ac6f4032cd5137cf1e2c7b875,16 server tests passed, planSHA256 7cd472518a76eb901598852847a004c23e8d39836cd9c6523f96284021af4110;12runs/24calls completed but joint qualification again failed. Two-hour ledger retained; total48calls, estimatedUSD0.165211, conservativeUSD0.568098. No S1, no hidden retry, no quota/deadline reset. Full records retrieved with verified bundle hashes. Fleet checkout was isolated before repair because another agent had uncommitted private infrastructure state; that state was left untouched.
+
+Closeout: worker exit verified, both raw bundles retrieved, final measured figure uploaded, then exclusive claim released through merged private fleet PR119 and mirrored to the hub. No teardown or new server purchase.
+
+Dashboard reporting deviation: an experiment-level closeout log created a default administrative row named swarm-of-theseus-v2. It was explicitly closed and labeled zero calls/cases, not an experimental condition. The hub therefore has 25 rows, but exactly 24 experimental runs. All manifests and measured analyses retain the correct 24-run denominator.

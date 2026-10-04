@@ -1,4 +1,8 @@
 # Healing Helping Hands
+## Current model revision: Qwen + Jev
+
+The active prospective revision is [C1: Qwen 0.6B + Jev](composite/PLAN.md), with paired Qwen-only and Jev-only controls. Laya is historical. The composite is qualified on its own performance; Qwen-only failure does not automatically block it. New results are pending. The completed capacity studies below remain historical evidence.
+
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata

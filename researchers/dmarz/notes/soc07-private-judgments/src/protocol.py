@@ -131,8 +131,10 @@ class Controller:
         result = self.adapter.complete({'call_id': call_id, 'system': context['system'],
                                         'messages': context['messages'], 'schema': context['schema'],
                                         'max_tokens': max_tokens, 'meta': meta})
+        # raw: whatever text came back, kept in the journal for inspection. A failed call's text is
+        # never parsed into a record and never shown to any agent.
         out.update(usage=result['usage'], latency=result['latency'], attempts=result['attempts'],
-                   stop_reason=result['stop_reason'])
+                   stop_reason=result['stop_reason'], raw=result['text'])
         if result['billing'] == 'billed':
             billed = (result['usage']['input_tokens'] * self.provider['input_usd_per_million']
                       + result['usage']['output_tokens'] * self.provider['output_usd_per_million'])
@@ -149,7 +151,6 @@ class Controller:
             return finish(result['failure'])
         if result['usage'].get('input_tokens', 0) > self.limits['input_token_cap_per_request']:
             return finish('input_token_cap_exceeded')
-        out['raw'] = result['text']
         try:
             out['record'] = parse.parse(context['schema'], result['text'])
         except parse.Invalid as exc:
@@ -214,7 +215,7 @@ class Controller:
         results = dict(zip(actors, self.phase(jobs)))
         vault = Vault()
         for a in actors:
-            vault.put(a, results[a]['record'], results[a]['raw'])
+            vault.put(a, results[a]['record'], results[a]['raw'] if results[a]['ok'] else None)   # failed text stays in the journal
         return {'vault': vault, 'results': results, 'duration': self.clock() - started,
                 'interrupted': any(r['failure'] == 'not_dispatched_halt' for r in results.values())}
 

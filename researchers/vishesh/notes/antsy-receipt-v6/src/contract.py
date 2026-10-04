@@ -31,12 +31,14 @@ def extract(lines):
     value=next(iter(values));return {'status':'ok','value':value,'confidence':max(c for v,c in found)}
 
 def reference(gt):
-    # Gold parser uses annotated field labels, never actor OCR line anchors.
-    texts=[' '.join(w['text'] for w in line['words']) for line in gt['valid_line'] if line['category']=='total.total_price']
-    if not texts:return {'status':'missing','value':None}
-    parsed=[amount(t) for t in texts]
-    if any(v is None for v in parsed) or len(set(parsed))!=1:return {'status':'ambiguous','value':None}
-    return {'status':'ok','value':parsed[0]}
+    # CORD valid_line includes labels (e.g. "Grand Total 1,591,600").
+    # gt_parse stores the actual field value, independently of OCR anchors.
+    total=gt.get('gt_parse',{}).get('total',{})
+    if not isinstance(total,dict):return {'status':'ambiguous','value':None}
+    raw=total.get('total_price')
+    if raw is None:return {'status':'missing','value':None}
+    value=amount(raw)
+    return {'status':'ok','value':value} if value is not None else {'status':'ambiguous','value':None}
 
 def consensus(candidates):
     # Dictionary keys are pipeline identities; one source cannot vote twice.

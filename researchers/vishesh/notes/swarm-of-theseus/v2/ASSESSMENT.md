@@ -1,3 +1,5 @@
+> Historical build assessment. Subsequent model execution is reported in [RESULTS.md](RESULTS.md): both qualification attempts failed the joint gate; no turnover pilot ran.
+
 # Iteration assessment against the plan
 
 2026-10-04 UTC. No v2 model experiment attempted. No new API spending. This is an implementation/design assessment, not a post-hoc experiment plan or an empirical post-mortem.

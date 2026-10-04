@@ -1,3 +1,5 @@
+> Current iteration: [plain-language overview](../quorum-of-mirrors/README.md), [observed versus computed results](../quorum-of-mirrors/RESULTS.md), [all-case explorer](../quorum-of-mirrors/analysis/iteration-3/cases.html), [prospective S1](../quorum-of-mirrors/S1-PLAN.md). Follow the [required setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [current setup record](../quorum-of-mirrors/SETUP.md). Current gate: S1 blocked on research/review and runtime admission. Next: complete survey/hypothesis requirements and the one researcher design review, then freeze/test/register the context screen and S1. Spending is already approved. Historical proposal below is preserved.
+
 # Quorum of Mirrors handoff
 
 Owner preference: a primary project. Working headline: **One Witness, a Hundred Votes**. Canonical ID DM-02, area decision-models. “A hundred” is a communication hook, not an approved size or budget. Current exploratory context is in ../REIMAGINING.md.

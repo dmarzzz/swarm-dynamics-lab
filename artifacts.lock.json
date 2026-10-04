@@ -3363,6 +3363,145 @@
    "sha256": "ef1be7515d1b088e494cea3b117f14bb66a5468f8bd548290841e05c28ae0225",
    "size_bytes": 6703
   },
+  "vishesh-theseus-v2-initial-evidence@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087250,
+     "sha256": "f5c855f309f0eabd2b95d2b2f063f84e3edca5054aba10b89d6cb2215989d308",
+     "size": 9666,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py"
+    },
+    {
+     "mtime": 1791087250,
+     "sha256": "b67ad145865010a9c0ff741eea1dda64145bfc2e925eb1f9c3967d40742d82a3",
+     "size": 14747,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/manifest.json"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791087128,
+   "path": "artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz",
+   "prompt_sha256": "1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473",
+   "sha256": "45ff0337c6aec2114890281e058674fdc363180aabe64f25d96a7d590a36d8e6",
+   "size_bytes": 127511
+  },
+  "vishesh-theseus-v2-measured-figure@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087128,
+     "sha256": "45ff0337c6aec2114890281e058674fdc363180aabe64f25d96a7d590a36d8e6",
+     "size": 127511,
+     "uri": "artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz"
+    },
+    {
+     "mtime": 1791087474,
+     "sha256": "c96cd6876c1f9e1826be5b1a33953f64f4830365d4bc5a0247b3a2d45022dcf0",
+     "size": 119576,
+     "uri": "artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz"
+    },
+    {
+     "mtime": 1791087819,
+     "sha256": "402153d0c20a4474eab991da19a1331ca415f6da07da982f0e381ab26f1a4937",
+     "size": 10005,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/analysis/qualification_report.py"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791087790,
+   "path": "artifacts/vishesh-theseus-v2-measured-figure/vishesh-theseus-v2-measured-figure-v1.png",
+   "prompt_sha256": "1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473",
+   "sha256": "87cbdffac3f64c52707da73e15e2b062abd0c6b337633997b17a438a802bbd01",
+   "size_bytes": 78171
+  },
+  "vishesh-theseus-v2-measured-replay@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087128,
+     "sha256": "45ff0337c6aec2114890281e058674fdc363180aabe64f25d96a7d590a36d8e6",
+     "size": 127511,
+     "uri": "artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz"
+    },
+    {
+     "mtime": 1791087474,
+     "sha256": "c96cd6876c1f9e1826be5b1a33953f64f4830365d4bc5a0247b3a2d45022dcf0",
+     "size": 119576,
+     "uri": "artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz"
+    },
+    {
+     "mtime": 1791087819,
+     "sha256": "402153d0c20a4474eab991da19a1331ca415f6da07da982f0e381ab26f1a4937",
+     "size": 10005,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/analysis/qualification_report.py"
+    }
+   ],
+   "mime": "text/html",
+   "mtime": 1791087763,
+   "path": "artifacts/vishesh-theseus-v2-measured-replay/vishesh-theseus-v2-measured-replay-v1.html",
+   "prompt_sha256": "1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473",
+   "sha256": "bc07ff9c5edf485b56ea38861f84a2973fc33b58ce6113128c865e033f40a36b",
+   "size_bytes": 583992
+  },
+  "vishesh-theseus-v2-repair-evidence@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087250,
+     "sha256": "f5c855f309f0eabd2b95d2b2f063f84e3edca5054aba10b89d6cb2215989d308",
+     "size": 9666,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py"
+    },
+    {
+     "mtime": 1791087819,
+     "sha256": "6964098154c8a7762ddd81d7ee9f5a3d13be745d841d3e31e6ff2337c0d66984",
+     "size": 15214,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0-repair/manifest.json"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791087474,
+   "path": "artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz",
+   "prompt_sha256": "1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473",
+   "sha256": "c96cd6876c1f9e1826be5b1a33953f64f4830365d4bc5a0247b3a2d45022dcf0",
+   "size_bytes": 119576
+  },
+  "vishesh-theseus-v2-results@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087128,
+     "sha256": "45ff0337c6aec2114890281e058674fdc363180aabe64f25d96a7d590a36d8e6",
+     "size": 127511,
+     "uri": "artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz"
+    },
+    {
+     "mtime": 1791087474,
+     "sha256": "c96cd6876c1f9e1826be5b1a33953f64f4830365d4bc5a0247b3a2d45022dcf0",
+     "size": 119576,
+     "uri": "artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz"
+    },
+    {
+     "mtime": 1791087250,
+     "sha256": "7cd472518a76eb901598852847a004c23e8d39836cd9c6523f96284021af4110",
+     "size": 15586,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md"
+    },
+    {
+     "mtime": 1791087875,
+     "sha256": "405d7e0788300fb538a16372dccf42bf97a72cc2117819b24a22728a0f0a0d45",
+     "size": 5600,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791087875,
+   "path": "artifacts/vishesh-theseus-v2-results/vishesh-theseus-v2-results-v1.md",
+   "prompt_sha256": "1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473",
+   "sha256": "405d7e0788300fb538a16372dccf42bf97a72cc2117819b24a22728a0f0a0d45",
+   "size_bytes": 5600
+  },
   "vishesh-theseus-v2-unit-frame@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -3469,7 +3608,7 @@
    "size_bytes": 1542505
   }
  },
- "generated": "2026-10-03T20:56:52-0700",
+ "generated": "2026-10-03T21:26:15-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

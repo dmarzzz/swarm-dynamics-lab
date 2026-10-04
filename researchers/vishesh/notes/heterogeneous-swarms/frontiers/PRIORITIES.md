@@ -1,5 +1,7 @@
 # What to work on after owner feedback
 
+**Selected project:** [Poietic Agents](../../poietic-agents/README.md) turns HX-31 into a prospective design and review package. New close prior art narrows the novelty claim; no run or formal research acceptance is implied.
+
 2026-10-04 UTC · vishesh/codex-heterogeneous · research prioritization only
 
 **Work on HX-31: self-differentiating swarms, starting from an initially uniform network.** The concrete objective is to discover which capabilities should remain distributed, which should become shared services, and which can be replaced by cheaper execution as experience accumulates. Test whether those changes preserve quality and can be reversed when conditions change.

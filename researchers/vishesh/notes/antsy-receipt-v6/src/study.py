@@ -1,7 +1,7 @@
 """Real receipt-total application pilot with protected observations and full accounting."""
 import argparse,gzip,hashlib,json,subprocess,time,platform,importlib.metadata
 from pathlib import Path
-from contract import ARMS,actor,run_policy,grade
+from contract import ARMS,actor,run_policy,grade,reference
 from measure import dataset,measure,REV
 
 def evaluate(records):
@@ -10,11 +10,11 @@ def evaluate(records):
         for arm in ARMS:
             # Only numeric candidate records cross this boundary; no gold access.
             result=run_policy(actor(r),lambda tool:dict(r['pipelines'][tool]['candidate']),arm)
-            score=grade(result,r['gold']);outcomes.append({'id':r['id'],'arm':arm,**result,**score,'checker_wall_s':sum(r['pipelines'][t]['wall_s'] for t in result['checks']),'execution_valid':all(p['valid'] for p in r['pipelines'].values())})
+            score=grade(result,r['gold']);outcomes.append({'id':r['id'],'arm':arm,**result,**score,'initial_ocr_calls':1 if arm=='fixed-B' else 3,'initial_wall_s':sum(r['pipelines'][t]['wall_s'] for t in ('B' if arm=='fixed-B' else 'ABC')),'checker_wall_s':sum(r['pipelines'][t]['wall_s'] for t in result['checks']),'execution_valid':all(p['valid'] for p in r['pipelines'].values())})
     summary={'assigned':len(records),'scorable':sum(r['gold']['status']=='ok' for r in records),'unscorable':sum(r['gold']['status']!='ok' for r in records),'invalid_ocr':sum(not p['valid'] for r in records for p in r['pipelines'].values()),'arms':{}}
     for arm in ARMS:
         rows=[r for r in outcomes if r['arm']==arm];sc=[r for r in rows if r['scorable']];accept=sum(not r['refer'] for r in sc);wrong=sum(r['wrong'] for r in sc)
-        summary['arms'][arm]={'assigned':len(rows),'scorable':len(sc),'correct':sum(r['correct'] for r in sc),'wrong':wrong,'refer':sum(r['refer'] for r in sc),'unscorable_accept':sum(not r['refer'] and not r['scorable'] for r in rows),'conditional_error':wrong/accept if accept else None,'coverage':accept/len(sc) if sc else None,'checks':sum(len(r['checks']) for r in rows),'checker_wall_s':sum(r['checker_wall_s'] for r in rows),'assumed_loss':{str(p):sum(r['wrong']+p*r['refer'] for r in sc)/len(sc) if sc else None for p in [.1,.25,.5]}}
+        summary['arms'][arm]={'assigned':len(rows),'scorable':len(sc),'correct':sum(r['correct'] for r in sc),'wrong':wrong,'refer':sum(r['refer'] for r in sc),'unscorable_accept':sum(not r['refer'] and not r['scorable'] for r in rows),'conditional_error':wrong/accept if accept else None,'coverage':accept/len(sc) if sc else None,'checks':sum(len(r['checks']) for r in rows),'initial_ocr_calls':sum(r['initial_ocr_calls'] for r in rows),'total_pipeline_wall_s':sum(r['initial_wall_s']+r['checker_wall_s'] for r in rows),'checker_wall_s':sum(r['checker_wall_s'] for r in rows),'assumed_loss':{str(p):sum(r['wrong']+p*r['refer'] for r in sc)/len(sc) if sc else None for p in [.1,.25,.5]}}
     summary['candidate_oracle_correct']=sum(r['gold']['status']=='ok' and any(p['candidate']['status']=='ok' and p['candidate']['value']==r['gold']['value'] for p in r['pipelines'].values()) for r in records)
     summary['checker_new_correct']=sum(r['gold']['status']=='ok' and not any(r['pipelines'][k]['candidate']['value']==r['gold']['value'] for k in 'ABC') and any(r['pipelines'][k]['candidate']['value']==r['gold']['value'] for k in 'DE') for r in records)
     return outcomes,summary
@@ -38,6 +38,8 @@ def main():
    dev=[json.loads(l) for l in (a.development/'records.jsonl').read_text().splitlines()];oldhashes.update(r['image_sha256'] for r in dev)
   # Fail closed on image overlap before invoking any OCR on this stage.
   hashes=[hashlib.sha256(row['image']['bytes']).hexdigest() for row in rows[:n]];assert len(set(hashes))==n and not set(hashes)&oldhashes
+  references=[reference(json.loads(row['ground_truth'])) for row in rows[:n]]
+  if not any(g['status']=='ok' for g in references):raise ValueError('zero_scorable_references')
   records=[]
   with (a.out/'records.jsonl').open('x') as f:
    for i,row in enumerate(rows[:n]):

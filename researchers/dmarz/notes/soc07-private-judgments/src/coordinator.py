@@ -40,7 +40,7 @@ def enqueue(sr, stage, attempt=1):
         passed = [r for r in runs if r.get('params', {}).get('stage') == need and r['status'] == 'done'
                   and r.get('params', {}).get('source_hash') == p['source_hash']
                   and r.get('metrics', {}).get('gate_passed') == 1]
-        if len(passed) != 1:
+        if not passed:
             raise ValueError('exact_runtime_prerequisite_required:' + need)
     register(sr)
     return sr.enqueue(EXPERIMENT, [p], tags=[config.STAGE_LABELS[stage], p['backend'], 'exploratory'])
