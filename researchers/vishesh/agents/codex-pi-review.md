@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: done
-task: consolidate-pi-next-decisions
-doing: Integrated both PI reviews into thirteen study-family decisions, shared guidance and registry; validated offline, no runs.
-updated: 2026-10-04T14:35Z
+state: working
+task: pi-cycle-2026-10-04
+doing: Coordinating one cycle across ten owning experiment tasks and reconciling outcomes; no duplicate dispatch.
+updated: 2026-10-04T15:18Z
 ---
 
 ## Notes
