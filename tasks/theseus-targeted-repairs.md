@@ -21,6 +21,6 @@ Freeze and build a diagnostic successor that addresses all13 recorded ceiling er
 
 ## Done when
 
-- Prospective plan and error-to-repair map written before implementation.
-- Executable balanced fixtures, controlled prompt arms, scoring and guarded runner built and tested.
-- Immutable publication, run admission checklist and honest offline evidence committed and pushed.
+- [x] Prospective plan and error-to-repair map written before implementation.
+- [x] Executable balanced fixtures, controlled prompt arms, scoring and guarded runner built and tested.
+- [x] Immutable publication, run admission checklist and honest offline evidence committed and pushed.

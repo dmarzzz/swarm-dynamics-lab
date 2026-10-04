@@ -73,3 +73,5 @@ No claim that any of these changes improves model performance is made here. The 
 ## Reproduce
 
 Run `audit.py SAVED_RESULTS_ROOT audit.json` with the original S0 and S0-repair folders from the two published evidence packages. It reads evidence only, asserts the joins/score/table checks and writes all error cases, descriptive signature matches, equivalent-input groups, freshness coverage and SHA256 hashes of all 48 input events. Manual annotations identify exact cases and quote the recorded notebook. This is a same-author audit, not independent scientific review.
+
+Implementation follow-up: [targeted D1 repairs](../../execution-diagnostic/README.md) are built with a prospective five-arm plan and19 offline checks. These are not new model results.

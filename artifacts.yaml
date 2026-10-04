@@ -1523,4 +1523,50 @@ artifacts:
           - researchers/vishesh/notes/dissent/results/s1-a1/records.json
           - https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif
         commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: vishesh-theseus-d1-plan
+    category: content
+    type: spec
+    title: Theseus targeted execution diagnostic plan
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-plan/vishesh-theseus-d1-plan-v1.md
+        built_at: '2026-10-04T04:54:16Z'
+        note: vishesh/codex-theseus; prospective D1 preparation, no new model results.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions
+          to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors
+          and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so
+          we can get to the next useful experimental run.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/PLAN.md
+        commit: d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty
+  - id: vishesh-theseus-d1-repair-map
+    category: content
+    type: doc
+    title: Theseus thirteen-error targeted repair map
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-repair-map/vishesh-theseus-d1-repair-map-v1.md
+        built_at: '2026-10-04T04:54:16Z'
+        note: vishesh/codex-theseus; prospective D1 preparation, no new model results.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions
+          to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors
+          and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so
+          we can get to the next useful experimental run.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/REPAIR-MAP.md
+        commit: d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty
 requires: '1.2'

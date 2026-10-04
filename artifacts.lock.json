@@ -4331,6 +4331,76 @@
    "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc",
    "size_bytes": 7951
   },
+  "vishesh-theseus-d1-plan@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791089655,
+     "sha256": "0d52c59733a8d7d8d6b087358c969e4e2d557b28c0edb710c9e1ba207db61add",
+     "size": 10073,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md"
+    },
+    {
+     "mtime": 1791089655,
+     "sha256": "60cf421d10c661d6670896514527d501ee79b6a3c47f8246cc256ac7a1d90fd1",
+     "size": 14954,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json"
+    },
+    {
+     "mtime": 1791089603,
+     "sha256": "a8839e9e46d4e4de4c686263ea5001d77aea9ed0279bd88e2e58c53ff38e1602",
+     "size": 7538,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py"
+    },
+    {
+     "mtime": 1791089218,
+     "sha256": "ebc74096ce7820df2e25e8fa7413d22224f401ba778e57697188d312808e5359",
+     "size": 7830,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/PLAN.md"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791089218,
+   "path": "artifacts/vishesh-theseus-d1-plan/vishesh-theseus-d1-plan-v1.md",
+   "prompt_sha256": "9236cd557032bd33064d5b5ed55041dbf209ae7e0674e0fec7879c86a4b8b9a0",
+   "sha256": "ebc74096ce7820df2e25e8fa7413d22224f401ba778e57697188d312808e5359",
+   "size_bytes": 7830
+  },
+  "vishesh-theseus-d1-repair-map@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791089655,
+     "sha256": "0d52c59733a8d7d8d6b087358c969e4e2d557b28c0edb710c9e1ba207db61add",
+     "size": 10073,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md"
+    },
+    {
+     "mtime": 1791089655,
+     "sha256": "60cf421d10c661d6670896514527d501ee79b6a3c47f8246cc256ac7a1d90fd1",
+     "size": 14954,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json"
+    },
+    {
+     "mtime": 1791089603,
+     "sha256": "a8839e9e46d4e4de4c686263ea5001d77aea9ed0279bd88e2e58c53ff38e1602",
+     "size": 7538,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py"
+    },
+    {
+     "mtime": 1791089523,
+     "sha256": "01690d896f19968759b3419c386499357fffe9b089463125bffdc5b62c709747",
+     "size": 3022,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/REPAIR-MAP.md"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791089523,
+   "path": "artifacts/vishesh-theseus-d1-repair-map/vishesh-theseus-d1-repair-map-v1.md",
+   "prompt_sha256": "9236cd557032bd33064d5b5ed55041dbf209ae7e0674e0fec7879c86a4b8b9a0",
+   "sha256": "01690d896f19968759b3419c386499357fffe9b089463125bffdc5b62c709747",
+   "size_bytes": 3022
+  },
   "vishesh-theseus-rule-audit@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
