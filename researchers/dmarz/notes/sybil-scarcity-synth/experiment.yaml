@@ -1,0 +1,47 @@
+id: sybil-scarcity-synth
+title: Can the synthesizer resist repeated fabrications when truth is scarce? (Opus 5.5)
+description: Follow-up to sybil-scarcity-opus on fresh roots. 972 simulated identities, 108
+  checks, strong checking; each rare fact has 1, 3, 9, 27 or 81 truthful carriers. Every
+  486-report packet is read by claude-opus-5-5 in four configurations (effort low or high;
+  the original prompt or the original plus one frozen evidence rule). Measures how often the
+  answer is the repeated fabricated value and what the rule costs when truth is plentiful.
+  Exploratory.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: fixed
+  batch:
+    type: str
+    role: replicate
+  source_hash:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+  continues:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- failed
+- model_calls
+- input_tokens
+- output_tokens
+- cost_usd
+- transport_attempts
+- count_fallbacks
+- billing_pauses
+- billing_pause_seconds
+- billing_affected_calls
+- qualification_passed
+- rare_fabricated
+- rare_accuracy
+- primary_contrast_pp
+primary_metric: rare_fabricated
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-scarcity-synth
