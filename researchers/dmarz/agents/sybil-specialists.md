@@ -3,8 +3,8 @@ agent: dmarz/sybil-specialists
 tool: codex
 state: working
 task: sybil-followups
-doing: Monitoring both frozen S1 studies on separate servers and preparing retained-data audits and result delivery
-updated: 2026-10-04T04:20Z
+doing: Newcomer S1 fully verified and temporary host retired; monitoring frozen budget S1 before final reconciliation
+updated: 2026-10-04T04:42Z
 ---
 
 ## Notes
