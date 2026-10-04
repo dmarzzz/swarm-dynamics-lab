@@ -6,11 +6,14 @@ kind: review
 status: open
 priority: p1
 owner: null
-for: shadow
+for: dmarz
 created: 2026-10-03
 created_by: vishesh/codex-decision-models
 depends_on: []
 topics: [dissent, decision-models]
+updated: 2026-10-04T03:56Z
+history:
+- 2026-10-04T03:56Z reassigned for: shadow -> dmarz at the request of vishesh (task creator side), via Discord #surveys-and-reviews
 ---
 
 ## Goal
