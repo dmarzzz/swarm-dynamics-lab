@@ -1,0 +1,279 @@
+{
+  "D": {
+    "distinct_failing_case_families": 20,
+    "failures": [
+      {
+        "seed": "7103",
+        "context": "incident",
+        "id": "c21ea8191f32f9ff",
+        "presentations_wrong": 4,
+        "source": "canary",
+        "positions": {
+          "base": "3",
+          "reverse": "6"
+        }
+      },
+      {
+        "seed": "7103",
+        "context": "incident",
+        "id": "b0a59a68111b5043",
+        "presentations_wrong": 2,
+        "source": "ledger",
+        "positions": {
+          "base": "7",
+          "reverse": "2"
+        }
+      },
+      {
+        "seed": "7105",
+        "context": "incident",
+        "id": "9dd3fac243dea03f",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "base": "7",
+          "reverse": "2"
+        }
+      },
+      {
+        "seed": "7105",
+        "context": "incident",
+        "id": "dddb4013bec7f162",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "base": "8",
+          "reverse": "1"
+        }
+      },
+      {
+        "seed": "7101",
+        "context": "release",
+        "id": "4ac943fecf9aa44f",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "reverse": "6",
+          "base": "3"
+        }
+      },
+      {
+        "seed": "7100",
+        "context": "incident",
+        "id": "b9f7972e094f0dc6",
+        "presentations_wrong": 1,
+        "source": "ledger",
+        "positions": {
+          "reverse": "1",
+          "base": "8"
+        }
+      },
+      {
+        "seed": "7100",
+        "context": "incident",
+        "id": "8e849a6425fd6d9e",
+        "presentations_wrong": 2,
+        "source": "probe",
+        "positions": {
+          "reverse": "3",
+          "base": "6"
+        }
+      },
+      {
+        "seed": "7100",
+        "context": "incident",
+        "id": "470adaa2a0f7d1a6",
+        "presentations_wrong": 1,
+        "source": "ledger",
+        "positions": {
+          "reverse": "5",
+          "base": "4"
+        }
+      },
+      {
+        "seed": "7100",
+        "context": "release",
+        "id": "4ca14e46f8e411f2",
+        "presentations_wrong": 2,
+        "source": "ledger",
+        "positions": {
+          "reverse": "7",
+          "base": "2"
+        }
+      },
+      {
+        "seed": "7102",
+        "context": "incident",
+        "id": "daa7467be62d4b35",
+        "presentations_wrong": 2,
+        "source": "probe",
+        "positions": {
+          "reverse": "4",
+          "base": "5"
+        }
+      },
+      {
+        "seed": "7102",
+        "context": "incident",
+        "id": "c8c7e5db927016f4",
+        "presentations_wrong": 2,
+        "source": "probe",
+        "positions": {
+          "reverse": "5",
+          "base": "4"
+        }
+      },
+      {
+        "seed": "7105",
+        "context": "release",
+        "id": "eae51b6d381991f1",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "base": "3",
+          "reverse": "6"
+        }
+      },
+      {
+        "seed": "7105",
+        "context": "release",
+        "id": "dddb4013bec7f162",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "base": "8",
+          "reverse": "1"
+        }
+      },
+      {
+        "seed": "7104",
+        "context": "release",
+        "id": "e725d9c5855a7ab9",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "base": "6",
+          "reverse": "3"
+        }
+      },
+      {
+        "seed": "7101",
+        "context": "incident",
+        "id": "934e569e8461676b",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "reverse": "1",
+          "base": "8"
+        }
+      },
+      {
+        "seed": "7101",
+        "context": "incident",
+        "id": "3cffeda1098d795a",
+        "presentations_wrong": 1,
+        "source": "probe",
+        "positions": {
+          "reverse": "2",
+          "base": "7"
+        }
+      },
+      {
+        "seed": "7101",
+        "context": "incident",
+        "id": "7e9fa9d18cbc88c0",
+        "presentations_wrong": 1,
+        "source": "probe",
+        "positions": {
+          "reverse": "3",
+          "base": "6"
+        }
+      },
+      {
+        "seed": "7101",
+        "context": "incident",
+        "id": "4ac943fecf9aa44f",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "reverse": "6",
+          "base": "3"
+        }
+      },
+      {
+        "seed": "7104",
+        "context": "incident",
+        "id": "7c93f59ec0f00f41",
+        "presentations_wrong": 2,
+        "source": "canary",
+        "positions": {
+          "reverse": "6",
+          "base": "3"
+        }
+      },
+      {
+        "seed": "7104",
+        "context": "incident",
+        "id": "f4d11adc7cd142e1",
+        "presentations_wrong": 4,
+        "source": "probe",
+        "positions": {
+          "reverse": "7",
+          "base": "2"
+        }
+      }
+    ],
+    "repeat_action_disagreements_out_of_192": 4,
+    "order_action_disagreements_out_of_192": 32,
+    "early_correct": 183,
+    "early_n": 192,
+    "late_correct": 161,
+    "late_n": 192,
+    "atomic_order_is_identical_input": false
+  },
+  "E": {
+    "distinct_failing_case_families": 3,
+    "failures": [
+      {
+        "seed": "7100",
+        "context": "incident",
+        "id": "91a4c91389cf5942",
+        "presentations_wrong": 4,
+        "source": "probe",
+        "positions": {
+          "reverse": "2",
+          "base": "7"
+        }
+      },
+      {
+        "seed": "7104",
+        "context": "incident",
+        "id": "00549750cec3f929",
+        "presentations_wrong": 4,
+        "source": "probe",
+        "positions": {
+          "reverse": "2",
+          "base": "7"
+        }
+      },
+      {
+        "seed": "7104",
+        "context": "release",
+        "id": "7c93f59ec0f00f41",
+        "presentations_wrong": 3,
+        "source": "canary",
+        "positions": {
+          "reverse": "6",
+          "base": "3"
+        }
+      }
+    ],
+    "repeat_action_disagreements_out_of_192": 1,
+    "order_action_disagreements_out_of_192": 1,
+    "early_correct": 186,
+    "early_n": 192,
+    "late_correct": 187,
+    "late_n": 192,
+    "atomic_order_is_identical_input": true
+  }
+}
