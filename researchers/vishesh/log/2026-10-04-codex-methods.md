@@ -23,3 +23,7 @@ Antsy v7 diversity iteration: published prospective plan, five-worker/two-engine
 ## Antsy v8 development and successor design
 
 Replayed retained v7 OCR; preserved the rejected parser prototype and corrected dotted-subtotal/unreadable-final-total handling. R0 improves 11 to 13 correct of 19 scorable used receipts with zero observed wrong acceptances. Tesseract fallback still adds an error without a correct recovery, so rejected it. Published stricter fresh qualification and targeted-verification design with an unqualified EasyOCR candidate; 18 offline tests and two replay reproductions pass. No new native calls. Next: pin/stage checker runtime and models, bounded development admission, then frozen fresh Q0.
+
+## Antsy v8 native Q0 request
+
+Built and published the pixel-only RapidOCR/EasyOCR native runner, complete runtime/model inspection, call journal, first-error stop, evaluator and cumulative PNG/GIF.31 offline tests pass; all four immutable planning documents match public hashes. Submitted the bounded Q0 packet through the mandatory orbital queue. No fresh OCR started/result confirmed at dispatch; no S1 admitted. Follow external acceptance and close out with honest qualification/accounting.

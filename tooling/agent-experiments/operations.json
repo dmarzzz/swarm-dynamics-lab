@@ -152,9 +152,9 @@
       "setup_path": "researchers/vishesh/notes/antsy-targeted-v8/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/development-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T07:02:35.547829+00:00",
-      "checked_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
-      "next_action": "Pin and stage EasyOCR runtime/model assets, obtain current bounded development admission, then freeze the instrument before fresh Q0. Offline replay does not qualify the checker.",
+      "checked_at": "2026-10-04T08:09:38.853015+00:00",
+      "checked_commit": "a3919814c9b6ed6cec4b7d4b6fb801d190620ba1",
+      "next_action": "Native Q0 packet submitted through orbital queue. Follow DISPATCH.md; host/runtime/public-page admission and fresh qualification remain pending. No automatic S1.",
       "next_run_approval": "owner"
     }
   ]
