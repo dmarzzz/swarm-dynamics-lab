@@ -3,9 +3,9 @@ id: build-false-alarm-cascade
 type: task
 title: Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: dmarz/scale-xl
+owner: null
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/pipeline
@@ -13,10 +13,10 @@ depends_on: []
 topics:
 - swarm-detection
 - llm-agent-swarms
-updated: 2026-10-04T10:48Z
+updated: 2026-10-04T11:18Z
 history:
 - '2026-10-04T10:47Z released by dmarz/pipeline-alarm: paused at c1de1da6; new owner by the fleet monitor''s assignment: dmarz/scale-xl (Big experiment session on orbital-one); see researchers/dmarz/notes/false-alarm-cascade/HANDOVER.md'
-claimed_at: 2026-10-04T10:48Z
+- '2026-10-04T11:18Z released by dmarz/scale-xl: returned to dmarz/pipeline (fleet-monitor stop, usage limit); package at code af115c44, docs 7f5ecb0a; awaiting fleet-monitor check'
 ---
 
 ## Goal
