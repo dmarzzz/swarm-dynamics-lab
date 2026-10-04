@@ -1,0 +1,251 @@
+{
+  "experiment": "sybil-specialists",
+  "date": "2026-10-04",
+  "host": "sim-dmarz-4",
+  "claim": "dmarz-sybil-specialists",
+  "claim_expires": "2026-10-04T07:21:53Z",
+  "simulation_source": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+  "installed_verified_source": "dd99268244e3d48ce8750ea1e336709cfd0089c8",
+  "analysis_source": "d81c629bd6d09f930a7ea38d5e3a6642110812da",
+  "design_sha256": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d",
+  "runtime": {
+    "python": "3.12.3",
+    "pillow": "11.3.0",
+    "pyyaml": "6.0.1",
+    "host": "sim-dmarz-4"
+  },
+  "analysis_runtime": {
+    "python": "3.9.6",
+    "matplotlib": "3.9.4",
+    "pillow": "11.3.0",
+    "pyyaml": "6.0.3"
+  },
+  "limits": {
+    "workers": 1,
+    "stage_timeout_seconds": 1800,
+    "model_calls": 0,
+    "api_spend_usd": 0
+  },
+  "verification": {
+    "runs": 34,
+    "episodes": 1120,
+    "images": 68,
+    "gifs": 26,
+    "verified_checksums": 230
+  },
+  "analysis_run": "sybil-specialists/analysis-scripted-001",
+  "analysis_figure_sha256": "da6aabf3b648b393ecf283ecec5545d1b63301553b2f8d7304ff53d1e1b16f7d",
+  "runs": [
+    {
+      "run": "sybil-specialists/6bb54dd8",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/427b5c68",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/b032bd36",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/6e5d4171",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/db314497",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/33163856",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/63430866",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/71c5b463",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/30425a24",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/4fe85fc1",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/b8b133f7",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/d6a903bb",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/3ee55752",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/b72a67b5",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/6ae19125",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/5726a9a0",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/0da5d6a8",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/974eaf1d",
+      "stage": "S1",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/696e8f32",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/341ec322",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/ac2b33cb",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/81744046",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/097b71a6",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/89804c60",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/8b294dab",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/a87643c6",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/ddb820db",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/b2449d4e",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/e4926042",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/0c409eb8",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/b1dc5fa8",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/8a93c5f6",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/5dbba8fb",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    },
+    {
+      "run": "sybil-specialists/151b5e7a",
+      "stage": "S0",
+      "attempts": 1,
+      "status": "done"
+    }
+  ],
+  "claim_status": "done",
+  "workers_stopped": true,
+  "analysis_upload_checksums_verified": 5,
+  "ui_summary_loaded": {
+    "width": 1800,
+    "height": 1180
+  }
+}

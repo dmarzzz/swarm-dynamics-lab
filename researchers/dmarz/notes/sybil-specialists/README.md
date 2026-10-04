@@ -73,7 +73,22 @@ Primary papers were opened during planning on 2026-10-04; this bounded review is
 
 ## Results
 
-Pending the first recorded scripted rehearsal. Results and post-mortems will distinguish execution success, instrument qualification and scientific conclusions.
+The deployed scripted rehearsal completed on 2026-10-04 UTC: 16 S0 cells (256 arm outcomes) and 18 S1 cells (864 arm outcomes), all valid. All 230 run-artifact checksums reconcile; 68 PNG frames and 26 measured GIF replays are available. Fifteen offline controls now pass locally and on sim-dmarz-4, including the subsequently strengthened stop-after-failure control. No provider was called and API spend is zero.
+
+[Live experiment](https://swarm-live.pages.dev/#/x/sybil-specialists) · [Summary chart and analysis](https://swarm-live.pages.dev/#/r/sybil-specialists%2Fanalysis-scripted-001) · [Fleet post-mortem](reviews/fleet-s1-001-post.md) · [Reconciled results](results-summary.json) · [Deployment record](deployment.json).
+
+At the prespecified development cell (one bridge, attacker check-pass 0.10, four checks), the 12-world means are:
+
+| Policy | Rare-task accuracy | Adversarial identities admitted |
+|---|---:|---:|
+| No checks | 0.0% | 0.0% |
+| Highest degree | 2.8% | 3.7% |
+| Random | 44.4% | 6.5% |
+| Uncovered neighborhoods | 86.1% | 12.0% |
+
+Coverage minus degree is +83.3 percentage points rare accuracy (descriptive paired-world bootstrap interval +58.3 to +100.0 points) and +8.3 points malicious admission. The latter exceeds the plan's suggested +5-point risk margin; this pilot does not justify adoption. When attacker check-pass rises to 0.90 in the same cell, coverage yields 22.2% rare accuracy and admits 76.9% of attackers. All 18 S1 conditions and four arms appear in the summary chart. These are conditional synthetic outcomes, not measured LLM behavior or a general defense guarantee.
+
+Overview scalar metrics describe coverage. Compare all arms through the summary chart, per-world four-panel replays and saved arm summaries. Simulation source stays frozen at e3caaf3; the installed post-run revision adds failure-stop enforcement without changing simulation/scoring or rerunning observations.
 
 ## Analysis
 

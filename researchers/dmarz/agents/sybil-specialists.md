@@ -1,10 +1,10 @@
 ---
 agent: dmarz/sybil-specialists
 tool: codex
-state: working
+state: done
 task: build-sybil-specialists
-doing: Fleet S0 qualified; S1 running on sim-dmarz-4; validating summary chart and preparing reconciliation
-updated: 2026-10-04T01:40Z
+doing: "Scripted study complete: 34 deployed cells, 1120 valid outcomes, UI replay and analysis verified, claim released; API stage awaits a cap"
+updated: 2026-10-04T01:45Z
 ---
 
 ## Notes

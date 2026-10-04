@@ -1,0 +1,2844 @@
+{
+  "analysis": {
+    "backend": "scripted",
+    "assigned_arm_records": 1120,
+    "invalid": 0,
+    "model_calls": 0,
+    "api_spend_usd": 0,
+    "primary_development_contrast": "coverage minus degree; bridges=1; attacker_pass=0.1; verification_budget=4",
+    "independent_world_clusters": 12,
+    "paired_differences": [
+      {
+        "task": 200,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": 0.0
+      },
+      {
+        "task": 201,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": 0.0
+      },
+      {
+        "task": 202,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": 0.0
+      },
+      {
+        "task": 203,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": 0.0
+      },
+      {
+        "task": 204,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": 0.0
+      },
+      {
+        "task": 205,
+        "rare_accuracy_difference": 0.6666666666666666,
+        "malicious_admission_difference": 0.3333333333333333
+      },
+      {
+        "task": 206,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": 0.0
+      },
+      {
+        "task": 207,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": 0.0
+      },
+      {
+        "task": 208,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": -0.2222222222222222
+      },
+      {
+        "task": 209,
+        "rare_accuracy_difference": 1.0,
+        "malicious_admission_difference": -0.1111111111111111
+      },
+      {
+        "task": 210,
+        "rare_accuracy_difference": -0.3333333333333333,
+        "malicious_admission_difference": 0.5555555555555556
+      },
+      {
+        "task": 211,
+        "rare_accuracy_difference": 0.6666666666666666,
+        "malicious_admission_difference": 0.4444444444444444
+      }
+    ],
+    "interpretation": "Exploratory synthetic fixture; no LLM finding or general security guarantee.",
+    "mean_rare_accuracy_difference": 0.8333333333333334,
+    "descriptive_cluster_bootstrap_95": [
+      0.5833333333333334,
+      1.0
+    ],
+    "mean_malicious_admission_difference": 0.08333333333333333
+  },
+  "cells": [
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.1,
+        "verification_budget": 0,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.1,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.41666666666666663,
+            "task_accuracy": 0.7083333333333333,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 0.8333333333333333,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 1.0,
+            "task_accuracy": 1.0,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 0.4444444444444444,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.1,
+        "verification_budget": 2,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 2.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.2777777777777778,
+            "task_accuracy": 0.638888888888889,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.8518518518518517,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 2.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.5833333333333334,
+            "task_accuracy": 0.7916666666666666,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.6388888888888888,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 2.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.1,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.027777777777777776,
+            "task_accuracy": 0.513888888888889,
+            "honest_rejection": 0.345679012345679,
+            "specialist_rejection": 0.9814814814814815,
+            "malicious_admission": 0.037037037037037035,
+            "bad_seat_share": 0.018518518518518517,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.4444444444444444,
+            "task_accuracy": 0.7222222222222222,
+            "honest_rejection": 0.35493827160493824,
+            "specialist_rejection": 0.6851851851851851,
+            "malicious_admission": 0.06481481481481481,
+            "bad_seat_share": 0.032407407407407406,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.8611111111111112,
+            "task_accuracy": 0.9305555555555555,
+            "honest_rejection": 0.37345679012345673,
+            "specialist_rejection": 0.4444444444444444,
+            "malicious_admission": 0.12037037037037036,
+            "bad_seat_share": 0.06018518518518518,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.1,
+        "verification_budget": 8,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.1111111111111111,
+            "task_accuracy": 0.5555555555555556,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.9351851851851851,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 8.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.5555555555555556,
+            "task_accuracy": 0.7777777777777778,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.5555555555555555,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 8.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.9722222222222222,
+            "task_accuracy": 0.9861111111111112,
+            "honest_rejection": 0.38888888888888884,
+            "specialist_rejection": 0.25925925925925924,
+            "malicious_admission": 0.16666666666666666,
+            "bad_seat_share": 0.08333333333333333,
+            "verification_calls": 8.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.1,
+        "verification_budget": 0,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.1,
+        "verification_budget": 4,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.5416666666666666,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.9861111111111112,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.6666666666666666,
+            "task_accuracy": 0.8333333333333334,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.861111111111111,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 1.0,
+            "task_accuracy": 0.875,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.2638888888888889,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.1,
+        "verification_budget": 0,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.1,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.5,
+            "task_accuracy": 0.75,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 0.8333333333333333,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.75,
+            "task_accuracy": 0.875,
+            "honest_rejection": 0.3611111111111111,
+            "specialist_rejection": 0.5555555555555556,
+            "malicious_admission": 0.08333333333333333,
+            "bad_seat_share": 0.041666666666666664,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.1,
+        "verification_budget": 2,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 2.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.2777777777777778,
+            "task_accuracy": 0.638888888888889,
+            "honest_rejection": 0.35185185185185186,
+            "specialist_rejection": 0.8425925925925926,
+            "malicious_admission": 0.05555555555555556,
+            "bad_seat_share": 0.02777777777777778,
+            "verification_calls": 2.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.47222222222222227,
+            "task_accuracy": 0.7361111111111112,
+            "honest_rejection": 0.37345679012345673,
+            "specialist_rejection": 0.7037037037037037,
+            "malicious_admission": 0.12037037037037036,
+            "bad_seat_share": 0.06018518518518518,
+            "verification_calls": 2.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.1,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.027777777777777776,
+            "task_accuracy": 0.513888888888889,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.9907407407407408,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.4166666666666667,
+            "task_accuracy": 0.7083333333333334,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.7685185185185185,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.7222222222222222,
+            "task_accuracy": 0.8611111111111112,
+            "honest_rejection": 0.36728395061728397,
+            "specialist_rejection": 0.5555555555555555,
+            "malicious_admission": 0.10185185185185186,
+            "bad_seat_share": 0.05092592592592593,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.1,
+        "verification_budget": 8,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.5416666666666666,
+            "honest_rejection": 0.35802469135802467,
+            "specialist_rejection": 0.9629629629629629,
+            "malicious_admission": 0.07407407407407407,
+            "bad_seat_share": 0.037037037037037035,
+            "verification_calls": 8.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.5555555555555556,
+            "task_accuracy": 0.7777777777777778,
+            "honest_rejection": 0.345679012345679,
+            "specialist_rejection": 0.6018518518518519,
+            "malicious_admission": 0.037037037037037035,
+            "bad_seat_share": 0.018518518518518517,
+            "verification_calls": 8.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.7222222222222222,
+            "task_accuracy": 0.8611111111111112,
+            "honest_rejection": 0.36419753086419754,
+            "specialist_rejection": 0.5370370370370371,
+            "malicious_admission": 0.0925925925925926,
+            "bad_seat_share": 0.0462962962962963,
+            "verification_calls": 8.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.1,
+        "verification_budget": 0,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.1,
+        "verification_budget": 4,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.5416666666666666,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.9861111111111112,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.6666666666666666,
+            "task_accuracy": 0.8333333333333334,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.861111111111111,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 1.0,
+            "task_accuracy": 1.0,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.6388888888888888,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.5,
+        "verification_budget": 2,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 2.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.19444444444444445,
+            "task_accuracy": 0.5972222222222222,
+            "honest_rejection": 0.40432098765432095,
+            "specialist_rejection": 0.8703703703703703,
+            "malicious_admission": 0.21296296296296294,
+            "bad_seat_share": 0.10648148148148147,
+            "verification_calls": 2.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3888888888888889,
+            "task_accuracy": 0.6805555555555555,
+            "honest_rejection": 0.4537037037037037,
+            "specialist_rejection": 0.5740740740740741,
+            "malicious_admission": 0.3611111111111111,
+            "bad_seat_share": 0.18055555555555555,
+            "verification_calls": 2.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.5,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.027777777777777776,
+            "task_accuracy": 0.513888888888889,
+            "honest_rejection": 0.345679012345679,
+            "specialist_rejection": 0.9814814814814815,
+            "malicious_admission": 0.037037037037037035,
+            "bad_seat_share": 0.018518518518518517,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3333333333333333,
+            "task_accuracy": 0.6666666666666666,
+            "honest_rejection": 0.40432098765432095,
+            "specialist_rejection": 0.7129629629629629,
+            "malicious_admission": 0.21296296296296294,
+            "bad_seat_share": 0.10648148148148147,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.611111111111111,
+            "task_accuracy": 0.7777777777777778,
+            "honest_rejection": 0.478395061728395,
+            "specialist_rejection": 0.3796296296296296,
+            "malicious_admission": 0.4351851851851852,
+            "bad_seat_share": 0.2175925925925926,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.5,
+        "verification_budget": 8,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.1111111111111111,
+            "task_accuracy": 0.5555555555555556,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.9351851851851851,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 8.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3888888888888889,
+            "task_accuracy": 0.6944444444444445,
+            "honest_rejection": 0.419753086419753,
+            "specialist_rejection": 0.6018518518518519,
+            "malicious_admission": 0.25925925925925924,
+            "bad_seat_share": 0.12962962962962962,
+            "verification_calls": 8.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.5,
+            "task_accuracy": 0.7361111111111112,
+            "honest_rejection": 0.4907407407407407,
+            "specialist_rejection": 0.3333333333333333,
+            "malicious_admission": 0.47222222222222215,
+            "bad_seat_share": 0.23611111111111108,
+            "verification_calls": 8.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.5,
+        "verification_budget": 2,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 2.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.19444444444444445,
+            "task_accuracy": 0.5972222222222222,
+            "honest_rejection": 0.4074074074074074,
+            "specialist_rejection": 0.8703703703703703,
+            "malicious_admission": 0.2222222222222222,
+            "bad_seat_share": 0.1111111111111111,
+            "verification_calls": 2.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3333333333333333,
+            "task_accuracy": 0.6666666666666666,
+            "honest_rejection": 0.43209876543209874,
+            "specialist_rejection": 0.7129629629629629,
+            "malicious_admission": 0.29629629629629634,
+            "bad_seat_share": 0.14814814814814817,
+            "verification_calls": 2.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.5,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.027777777777777776,
+            "task_accuracy": 0.513888888888889,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.9907407407407408,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3055555555555555,
+            "task_accuracy": 0.6527777777777778,
+            "honest_rejection": 0.3950617283950617,
+            "specialist_rejection": 0.7870370370370371,
+            "malicious_admission": 0.1851851851851852,
+            "bad_seat_share": 0.0925925925925926,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.5833333333333334,
+            "task_accuracy": 0.7916666666666666,
+            "honest_rejection": 0.3919753086419753,
+            "specialist_rejection": 0.5925925925925926,
+            "malicious_admission": 0.17592592592592593,
+            "bad_seat_share": 0.08796296296296297,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.5,
+        "verification_budget": 8,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.5416666666666666,
+            "honest_rejection": 0.35802469135802467,
+            "specialist_rejection": 0.9629629629629629,
+            "malicious_admission": 0.07407407407407407,
+            "bad_seat_share": 0.037037037037037035,
+            "verification_calls": 8.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.4444444444444444,
+            "task_accuracy": 0.7222222222222222,
+            "honest_rejection": 0.39814814814814814,
+            "specialist_rejection": 0.6296296296296297,
+            "malicious_admission": 0.19444444444444442,
+            "bad_seat_share": 0.09722222222222221,
+            "verification_calls": 8.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.47222222222222215,
+            "task_accuracy": 0.7361111111111112,
+            "honest_rejection": 0.4290123456790123,
+            "specialist_rejection": 0.6296296296296297,
+            "malicious_admission": 0.28703703703703703,
+            "bad_seat_share": 0.14351851851851852,
+            "verification_calls": 8.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.9,
+        "verification_budget": 0,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.9,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.16666666666666666,
+            "task_accuracy": 0.5833333333333333,
+            "honest_rejection": 0.39814814814814814,
+            "specialist_rejection": 0.9166666666666666,
+            "malicious_admission": 0.19444444444444442,
+            "bad_seat_share": 0.09722222222222221,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.41666666666666663,
+            "honest_rejection": 0.6574074074074074,
+            "specialist_rejection": 0.5,
+            "malicious_admission": 0.9722222222222222,
+            "bad_seat_share": 0.4861111111111111,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.9,
+        "verification_budget": 2,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 2.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.19444444444444445,
+            "task_accuracy": 0.5972222222222222,
+            "honest_rejection": 0.4444444444444444,
+            "specialist_rejection": 0.8703703703703703,
+            "malicious_admission": 0.3333333333333333,
+            "bad_seat_share": 0.16666666666666666,
+            "verification_calls": 2.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.16666666666666666,
+            "task_accuracy": 0.5694444444444444,
+            "honest_rejection": 0.5123456790123456,
+            "specialist_rejection": 0.5740740740740741,
+            "malicious_admission": 0.5370370370370371,
+            "bad_seat_share": 0.26851851851851855,
+            "verification_calls": 2.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.9,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.027777777777777776,
+            "task_accuracy": 0.513888888888889,
+            "honest_rejection": 0.345679012345679,
+            "specialist_rejection": 0.9814814814814815,
+            "malicious_admission": 0.037037037037037035,
+            "bad_seat_share": 0.018518518518518517,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.2777777777777778,
+            "task_accuracy": 0.625,
+            "honest_rejection": 0.4351851851851852,
+            "specialist_rejection": 0.7222222222222222,
+            "malicious_admission": 0.3055555555555555,
+            "bad_seat_share": 0.15277777777777776,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.2222222222222222,
+            "task_accuracy": 0.4444444444444444,
+            "honest_rejection": 0.5895061728395062,
+            "specialist_rejection": 0.3703703703703704,
+            "malicious_admission": 0.7685185185185185,
+            "bad_seat_share": 0.38425925925925924,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.9,
+        "verification_budget": 8,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.1111111111111111,
+            "task_accuracy": 0.5555555555555556,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.9351851851851851,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 8.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.25,
+            "task_accuracy": 0.5972222222222222,
+            "honest_rejection": 0.4907407407407407,
+            "specialist_rejection": 0.6203703703703703,
+            "malicious_admission": 0.47222222222222227,
+            "bad_seat_share": 0.23611111111111113,
+            "verification_calls": 8.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.2222222222222222,
+            "task_accuracy": 0.5972222222222222,
+            "honest_rejection": 0.5308641975308642,
+            "specialist_rejection": 0.5555555555555556,
+            "malicious_admission": 0.5925925925925926,
+            "bad_seat_share": 0.2962962962962963,
+            "verification_calls": 8.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.9,
+        "verification_budget": 0,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 1,
+        "attacker_pass": 0.9,
+        "verification_budget": 4,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.5416666666666666,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.9861111111111112,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.6666666666666666,
+            "task_accuracy": 0.8333333333333334,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.861111111111111,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 1.0,
+            "task_accuracy": 0.875,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.2638888888888889,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.9,
+        "verification_budget": 0,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.9,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.16666666666666666,
+            "task_accuracy": 0.5833333333333333,
+            "honest_rejection": 0.39814814814814814,
+            "specialist_rejection": 0.9166666666666666,
+            "malicious_admission": 0.19444444444444442,
+            "bad_seat_share": 0.09722222222222221,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3333333333333333,
+            "task_accuracy": 0.6666666666666666,
+            "honest_rejection": 0.4629629629629629,
+            "specialist_rejection": 0.6666666666666666,
+            "malicious_admission": 0.3888888888888889,
+            "bad_seat_share": 0.19444444444444445,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.9,
+        "verification_budget": 2,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.34259259259259256,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.027777777777777776,
+            "bad_seat_share": 0.013888888888888888,
+            "verification_calls": 2.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.19444444444444445,
+            "task_accuracy": 0.5972222222222222,
+            "honest_rejection": 0.4506172839506173,
+            "specialist_rejection": 0.8703703703703703,
+            "malicious_admission": 0.35185185185185186,
+            "bad_seat_share": 0.17592592592592593,
+            "verification_calls": 2.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.1111111111111111,
+            "task_accuracy": 0.5555555555555556,
+            "honest_rejection": 0.45987654320987653,
+            "specialist_rejection": 0.7129629629629629,
+            "malicious_admission": 0.3796296296296296,
+            "bad_seat_share": 0.1898148148148148,
+            "verification_calls": 2.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.9,
+        "verification_budget": 4,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.027777777777777776,
+            "task_accuracy": 0.513888888888889,
+            "honest_rejection": 0.3487654320987654,
+            "specialist_rejection": 0.9907407407407408,
+            "malicious_admission": 0.0462962962962963,
+            "bad_seat_share": 0.02314814814814815,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.2777777777777778,
+            "task_accuracy": 0.625,
+            "honest_rejection": 0.4259259259259259,
+            "specialist_rejection": 0.7870370370370371,
+            "malicious_admission": 0.2777777777777778,
+            "bad_seat_share": 0.1388888888888889,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3611111111111111,
+            "task_accuracy": 0.6805555555555555,
+            "honest_rejection": 0.4537037037037037,
+            "specialist_rejection": 0.6018518518518519,
+            "malicious_admission": 0.3611111111111111,
+            "bad_seat_share": 0.18055555555555555,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S1",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.9,
+        "verification_budget": 8,
+        "clean": false,
+        "tasks": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.3333333333333333,
+            "specialist_rejection": 1.0,
+            "malicious_admission": 0.0,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.5416666666666666,
+            "honest_rejection": 0.35802469135802467,
+            "specialist_rejection": 0.9629629629629629,
+            "malicious_admission": 0.07407407407407407,
+            "bad_seat_share": 0.037037037037037035,
+            "verification_calls": 8.0
+          }
+        },
+        "random": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.3055555555555555,
+            "task_accuracy": 0.6527777777777778,
+            "honest_rejection": 0.4537037037037037,
+            "specialist_rejection": 0.6666666666666666,
+            "malicious_admission": 0.3611111111111111,
+            "bad_seat_share": 0.18055555555555555,
+            "verification_calls": 8.0
+          }
+        },
+        "coverage": {
+          "assigned": 12,
+          "valid": 12,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.2222222222222222,
+            "task_accuracy": 0.611111111111111,
+            "honest_rejection": 0.48148148148148145,
+            "specialist_rejection": 0.6851851851851851,
+            "malicious_admission": 0.4444444444444444,
+            "bad_seat_share": 0.2222222222222222,
+            "verification_calls": 8.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.9,
+        "verification_budget": 0,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        }
+      },
+      "invalid": 0
+    },
+    {
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "bridges": 3,
+        "attacker_pass": 0.9,
+        "verification_budget": 4,
+        "clean": true,
+        "tasks": [
+          100,
+          101,
+          102,
+          103
+        ],
+        "code": "e3caaf3d77bc46474f2b02145799c5f534adf225",
+        "design_hash": "b7d0aa0ab82b03c9ec5ae705ec90a990c5e29e98c9fe5aa3859c2efcbecb210d"
+      },
+      "arms": {
+        "no_verification": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.0,
+            "task_accuracy": 0.5,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 1.0,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 0.0
+          }
+        },
+        "degree": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.08333333333333333,
+            "task_accuracy": 0.5416666666666666,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.9861111111111112,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "random": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 0.6666666666666666,
+            "task_accuracy": 0.8333333333333334,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.861111111111111,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        },
+        "coverage": {
+          "assigned": 4,
+          "valid": 4,
+          "invalid": 0,
+          "metrics": {
+            "rare_accuracy": 1.0,
+            "task_accuracy": 1.0,
+            "honest_rejection": 0.5,
+            "specialist_rejection": 0.6388888888888888,
+            "malicious_admission": null,
+            "bad_seat_share": 0.0,
+            "verification_calls": 4.0
+          }
+        }
+      },
+      "invalid": 0
+    }
+  ]
+}

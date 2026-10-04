@@ -23,7 +23,7 @@ User asks to focus on SEC-19 and SEC-43, create an experiment plan, show a visua
 
 ## Done when
 
-- [ ] Versioned plan, design, metrics, visualization mapping and pre-run assessment are committed.
-- [ ] Scripted simulator and controls pass meaningful offline checks, with no provider calls.
-- [ ] Claimed fleet deployment reports results, final image and measured replay to the live UI.
-- [ ] Post-mortem reconciles assignments, metrics, visual artifacts and next-stage requirements.
+- [x] Versioned plan, design, metrics, visualization mapping and pre-run assessment are committed.
+- [x] Scripted simulator and controls pass meaningful offline checks, with no provider calls.
+- [x] Claimed fleet deployment reports results, final image and measured replay to the live UI.
+- [x] Post-mortem reconciles assignments, metrics, visual artifacts and next-stage requirements.
