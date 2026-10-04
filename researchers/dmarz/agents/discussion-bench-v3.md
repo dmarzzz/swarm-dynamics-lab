@@ -1,9 +1,9 @@
 ---
 agent: dmarz/discussion-bench-v3
 tool: codex
-state: done
-task: null
-doing: Shipped review repairs; 84 checks passed and 636 requests replayed; amended independent review pending
+state: working
+task: launch-discussion-benchmark-v3
+doing: Preparing dedicated fleet deployment and operator-authorized v3 Haiku qualification; independent review pending
 updated: 2026-10-04T02:35Z
 ---
 

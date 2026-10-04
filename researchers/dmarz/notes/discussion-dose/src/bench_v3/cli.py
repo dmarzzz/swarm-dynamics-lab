@@ -40,13 +40,14 @@ def write_json(path, value):
         json.dump(value, stream, sort_keys=True, indent=2); stream.write('\n')
 
 
-def run(destination, split='dev', rounds=3, provider=None, model_config=None):
+def run(destination, split='dev', rounds=3, provider=None, model_config=None, observer=None, launch_record=None):
     provider = provider or Scripted()
     frozen, worlds = manifest(split, rounds, provider, model_config)
+    if launch_record is not None: frozen['launch_record'] = launch_record
     # Exclusive directory creation prevents accidental overwrite/duplicate dispatch.
     destination.mkdir(parents=True, exist_ok=False)
     write_json(destination / 'manifest.json', frozen)
-    journal = Journal(destination / 'events.jsonl')
+    journal = Journal(destination / 'events.jsonl', observer=observer)
     try:
         journal.emit('manifest', manifest_hash=digest(frozen))
         rows = Runner(provider, journal, rounds).execute(worlds, frozen['assignments'])
@@ -88,10 +89,18 @@ def approved_model_config(path, split, rounds):
     if path is None: raise ValueError('paid launch requires a separately reviewed launch manifest')
     launch = strict_json(path.read_text())
     required = {'status', 'source_hashes', 'split', 'rounds', 'v2_results_review', 'independent_review', 'model_config'}
-    if set(launch) != required or launch['status'] != 'approved': raise ValueError('launch manifest is not approved')
+    operator = launch.get('status') == 'operator-authorized-qualification'
+    if operator:
+        required.add('operator_authorization')
+        if split != 'qualification' or type(rounds) is not int or not 0 <= rounds <= 3:
+            raise ValueError('operator authorization permits only bounded qualification, never holdout')
+        if launch.get('independent_review') != {'status': 'pending', 'task': 'review-discussion-benchmark-v3'}:
+            raise ValueError('operator authorization must preserve pending independent review')
+    if set(launch) != required or (not operator and launch['status'] != 'approved'):
+        raise ValueError('launch manifest is not approved or operator-authorized')
     if launch['split'] != split or launch['rounds'] != rounds or launch['source_hashes'] != source_hashes():
         raise ValueError('launch manifest does not match this source/configuration')
-    for name in ('v2_results_review', 'independent_review'):
+    for name in ('v2_results_review', 'operator_authorization' if operator else 'independent_review'):
         proof = launch[name]
         if type(proof) is not dict or set(proof) != {'path', 'sha256'}:
             raise ValueError('review evidence must identify a file and digest')
@@ -131,7 +140,8 @@ def main(argv=None):
                 if config.get('max_calls') != allocation(worlds, args.rounds)[1]: raise ValueError('model call allowance must match planned allocation')
                 provider = anthropic(config)
             else: provider = Scripted(args.policy)
-            result = run(args.output, args.split, args.rounds, provider, config)
+            launch_record = strict_json(args.launch_manifest.read_text()) if config is not None else None
+            result = run(args.output, args.split, args.rounds, provider, config, launch_record=launch_record)
             result = {'scientific': result['scientific'], 'reconciliation': result['reconciliation'], 'output': str(args.output.resolve())}
         print(json.dumps(result, indent=2, sort_keys=True))
         return 0

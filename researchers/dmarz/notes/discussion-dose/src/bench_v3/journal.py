@@ -7,9 +7,11 @@ from .contracts import strict_json
 
 
 class Journal:
-    def __init__(self, path=None):
+    def __init__(self, path=None, observer=None):
         self.events = []
         self.handle = open(path, 'x', encoding='utf-8') if path is not None else None
+        self.observer = observer
+        self.observer_failures = 0
 
     def emit(self, kind, **data):
         event = {'seq': len(self.events), 'previous': self.events[-1]['hash'] if self.events else '0' * 64,
@@ -19,6 +21,9 @@ class Journal:
             self.handle.write(json.dumps(event, sort_keys=True) + '\n')
             self.handle.flush(); os.fsync(self.handle.fileno())
         self.events.append(event)
+        if self.observer is not None:
+            try: self.observer(copy.deepcopy(event))
+            except Exception: self.observer_failures += 1
         return event
 
     def close(self):
