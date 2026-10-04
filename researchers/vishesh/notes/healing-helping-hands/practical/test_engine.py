@@ -25,6 +25,7 @@ class Checks(unittest.TestCase):
  def test_sync_and_budget(self):
   m=[set() for _ in range(200)];m[0]={'d0'};out,t,mx=peer_step(m,self.r);self.assertIn('d0',out[1]);self.assertNotIn('d0',out[2]);self.assertEqual(mx,1)
   records={f'd{i}':{'kind':'document'} for i in range(10)};m[0]=set(records);out,t,mx=peer_step(m,records);self.assertEqual(len(out[1]),4);self.assertEqual(mx,4)
+  out,t,mx=peer_step(m,records,cap=16);self.assertEqual(len(out[1]),10);self.assertEqual(mx,10)
  def test_central_outage_and_queue(self):
   own=[set() for _ in range(200)];cache=[set() for _ in range(200)];own[0]={'d0'}
   cache,b,t=central_step(cache,own,set(),self.r,{0});self.assertFalse(b)
@@ -57,3 +58,29 @@ class RunnerChecks(unittest.TestCase):
   from unittest.mock import patch
   with tempfile.TemporaryDirectory() as d:
    with self.assertRaises(FileNotFoundError):execute.inputs(Path(d))
+
+class ReportingChecks(unittest.TestCase):
+ def test_no_host_keyword_and_acknowledgement(self):
+  import tempfile
+  from reporting import Reporter
+  class SDK:
+   def report(self,kind,experiment,run,*,source,role,strict,metrics=None):return True
+  with tempfile.TemporaryDirectory() as d:
+   r=Reporter(SDK(),'e','r',Path(d)/'events');self.assertTrue(r.emit('metric',metrics={'completed':1}))
+   with self.assertRaises(ValueError):r.emit('metric',host='x')
+ def test_unacknowledged_fails_closed(self):
+  import tempfile
+  from reporting import Reporter,ReportingFailure
+  class SDK:
+   def report(self,*a,**k):return False
+  with tempfile.TemporaryDirectory() as d:
+   with self.assertRaises(ReportingFailure):Reporter(SDK(),'e','r',Path(d)/'events').emit('start')
+ def test_raw_error_not_recorded(self):
+  import tempfile
+  from reporting import Reporter,ReportingFailure
+  class SDK:
+   def report(self,*a,**k):raise RuntimeError('sensitive-diagnostic-placeholder')
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d)/'events'
+   with self.assertRaises(ReportingFailure):Reporter(SDK(),'e','r',p).emit('start')
+   self.assertNotIn('sensitive-diagnostic-placeholder',p.read_text());self.assertIn('RuntimeError',p.read_text())

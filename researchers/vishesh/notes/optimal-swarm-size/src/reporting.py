@@ -20,7 +20,7 @@ class Reporter:
             if not self.run.progress(step=0,total=16,message=tldr,force=True):raise RuntimeError('hub_registration_failed')
         # A run-specific public registration check precedes any actor call.
         try:
-            with urllib.request.urlopen('https://swarm-live.pages.dev/api/runs/'+self.id,timeout=20) as response:
+            with urllib.request.urlopen(urllib.request.Request('https://swarm-live.pages.dev/api/runs/'+self.id,headers={'User-Agent':'SwarmLab-PlanPreflight/1.0'}),timeout=20) as response:
                 public=json.load(response)
             record=public if isinstance(public,dict) else {}
             if not isinstance(record,dict) or record.get('params',{}).get('tldr')!=tldr:

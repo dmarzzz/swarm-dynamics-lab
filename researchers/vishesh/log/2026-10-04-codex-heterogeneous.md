@@ -21,3 +21,10 @@ New subset leaders: HX-31 (93), HX-32 (92), HX-33 (92), HX-35 (91), HX-37 (90); 
 No inference or experiments launched. Follow-up methods/independent review still required. Nine added paper identifiers passed verification; source summaries and original X URLs replace wholesale thread reproduction. Inaccessible biological sources remain explicit inbox leads rather than phantom catalogue entries.
 
 Published revision d903d00; dashboard workflow 37173891058 succeeded. Rebased concurrent updates while retaining other researchers’ task states and inbox processing. The merged export still passed all 29 tests. Biological-frontier research task marked done; no hypothesis or experiment status was advanced.
+
+
+## Owner-directed score revision
+
+Updated the five discussed frontier ideas under unchanged weights: HX-31 94 (lead), HX-32 34 (deprioritized), HX-33 82 (support), HX-35 60 (parked), HX-37 66 (consolidated). HX-31 now starts with identical generalists, discovers shared services and capability/model reductions, and includes temporal workflow hardening with re-escalation after change. The first recommended comparison is frozen generalists versus shared caching versus fixed specialists versus adaptive differentiation. Other 33 HX records and other scores remain unchanged.
+
+Preserved exact previous records, synchronized question cards/designs/overview/reviews, and refreshed score fingerprints. Contribution and score checks pass. Full dashboard export fails on noncanonical topics in three upstream Shadow hypotheses; opened a p0 metadata-repair task and inbox notice for the owner rather than editing their scientific records. No experiment started.

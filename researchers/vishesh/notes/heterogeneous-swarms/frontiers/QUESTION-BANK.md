@@ -1,34 +1,38 @@
-# Eight biological-frontier questions
+# Eight frontier records — owner-revised priorities
 
-Prospective hunches, not registered hypotheses or measured results. Full machine-readable metadata is in `../questions.json`, HX-31 through HX-38.
+See [current priorities](PRIORITIES.md). HX-32 is deprioritized, HX-35 parked, and HX-37 consolidated into HX-31. Records remain available for provenance; eight records are not eight recommended projects.
 
-## HX-31 — Black Queen swarms: can less capable individuals make a smarter collective?
+## HX-31 — Self-differentiating swarms: specialization through subtraction
 
-Can selection for cheaper agent policies cause useful individual skills to disappear while collective performance improves through dependence on a few helpers?
+**Current disposition:** lead project.
 
-**Prediction:** When costly outputs are shared, some lineages prune redundant capabilities, improving group performance per budget while losing solo competence; helper removal reveals the new dependence.
+Can an initially uniform network of generalist agents discover shared services, shed redundant capabilities, downgrade models and harden repeated workflows while preserving collective performance under change?
 
-**Comparison:** Cross inherited capability pruning enabled/disabled with public/private helper outputs. Compare heterogeneous Jev/Haiku/Qwen mixtures, same-model specialists, and a fixed optimizer-designed division of labor. Remove and restore helpers after adaptation.
+**Prediction:** On repeated tasks with overlapping data needs, learned service sharing and capability pruning reduce total cost at matched reliability; successful adaptation restores expensive reasoning or redundancy when providers fail or tasks change.
 
-**Metrics:** Verified task success per total budget; Solo versus group competence; Retained capability cost; Helper-removal loss and rescue; Lineage and dependency persistence
+**Comparison:** Initialize every agent with the same model, tools, skills, data permissions and resource rules; assign no specialist roles. Compare frozen generalists, a simple shared cache/service baseline, a static specialist topology optimized on development tasks, and adaptive differentiation. Ablate shared services, capability pruning/model downgrades and learned workflow hardening separately. Then perturb workload, data freshness or provider availability.
 
-**Falsifier:** Drop adaptive-dependence claim if no individual capacity is lost, helper removal has no selective effect, or fixed specialization explains the entire result.
+**Metrics:** Total cost per verified successful task including discovery and migration; Quality and latency at matched workload; Duplicated external API calls and context volume; Skill/tool inventory and model allocation over time; Provider count, traffic and dependency concentration; Recovery cost and reliability after environment change
 
-**Confounds:** Prune explicit tools, skill files or policy branches, not model weights. Include actual maintenance/context costs and a zero-maintenance control. Selection must not directly reward dependence; retain solo evaluation and matched tool access.
+**Falsifier:** Drop the distinct self-organization claim if simple caching or a static specialist architecture explains all gains, or if apparent savings come from stale data, skipped work, hidden optimization costs or lower reliability.
 
-**Prior-art boundary:** Biological mechanism established; agent transfer is a candidate gap, not certified novelty.
+**Confounds:** All agents start with identical capabilities; heterogeneity is an outcome. Hold initial data/tool permissions and workload fixed. Actual API, context, model, communication, adaptation and maintenance costs must be recorded; fewer declared skills need not save money. Provider information must be available through the same legal interfaces to all arms. A downgrade changes the model used, not its weights.
 
-**Candidate delta:** Black Queen dependence is established in microbes. Candidate extension is selection-induced loss of agent-side capabilities with a measured group gain and causal public-good dependence across different model interfaces.
+**Prior-art boundary:** Caching, routing, reuse and specialization are established. Novelty of automated joint differentiation and reversible simplification remains unconfirmed.
 
-**Biological mechanism:** Adaptive loss of costly leaky functions; measure cost, inheritance, dependence and frequency change.
+**Candidate delta:** Owner-directed refinement combines removal of duplication across agents with workflow hardening across time. Caching, routing, static specialization and trajectory reuse are mandatory baselines; the candidate contribution is discovering and revising the allocation of live reasoning, shared services and cheaper execution from a uniform start.
 
-**Decision value:** Discover when minimal cheap agents are an efficient ecology and when eliminating one rare helper makes the whole deployment brittle.
+**Biological mechanism:** Selected removal of costly redundant functions and resulting public-good dependencies. The broader workflow-hardening program also includes ordinary software optimization; the Black Queen analogy applies only where lost self-sufficiency is actually measured.
 
-**Visualization:** Replay a lineage tree whose capability icons disappear, beside a growing dependency graph; mark helper removal and rescue.
+**Decision value:** Primary recommended project: determine whether a swarm can discover, implement and revise its own economical division of labor without losing task quality or resilience.
 
-Sources: [[morris-2014-coexistence]], [[kim-2026-multi]], [[vallinder-2024-cultural]]. Score: **93**. Status: exploratory; self-review only.
+**Visualization:** Replay an initially uniform network as duplicate API calls disappear, shared service nodes emerge, skill inventories shrink, models change and edges reorganize; overlay measured cost, freshness, quality and recovery.
+
+Sources: [[morris-2014-coexistence]], [[kim-2026-multi]], [[vallinder-2024-cultural]], [[yue-2025-masrouter]], [[ong-2024-routellm]], [[gh-denis-pplx-autojev]]. Score: **94**. Status: exploratory; self-review only.
 
 ## HX-32 — Agent organelles: when does symbiosis become an evolutionary trap?
+
+**Current disposition:** deprioritized.
 
 Can a Jev decision policy and a generative partner become a jointly inherited unit whose private interface improves familiar performance but prevents adaptation to a new task ecology?
 
@@ -48,39 +52,43 @@ Can a Jev decision policy and a generative partner become a jointly inherited un
 
 **Biological mechanism:** Egalitarian transitions, co-inheritance and stabilizing selection from partner compatibility; operational analogy only.
 
-**Decision value:** Determine when a tightly paired cheap controller and planner can safely be upgraded independently, and when a successful pairing locks out future capabilities.
+**Decision value:** Deprioritized after owner feedback: ordinary modularity and interface engineering currently cover the practical problem; no separate project recommended.
 
 **Visualization:** Animate paired lineages, interface compatibility and fitness before and after a task shift; show severing and cross-partner rescue.
 
-Sources: [[kelley-2026-endosymbiotic]], [[morris-2014-coexistence]], [[deepmind-institute-2026-artificial]]. Score: **92**. Status: exploratory; self-review only.
+Sources: [[kelley-2026-endosymbiotic]], [[morris-2014-coexistence]], [[deepmind-institute-2026-artificial]]. Score: **34**. Status: exploratory; self-review only.
 
-## HX-33 — Ecological inheritance: does the habitat decide which agents are intelligent?
+## HX-33 — Workspace hardening: how much capability can move out of the model?
 
-Can agents transform a shared workspace so that it selectively favors their own model family, causing a self-reinforcing change in future population composition?
+**Current disposition:** supporting study for HX-31.
 
-**Prediction:** The same newcomer population performs differently in habitats built by different model mixtures; those effects persist through agent replacement and feed back into which mixture prospers.
+How much can durable tools, schemas, tests and cached knowledge let cheaper successor agents replace an expensive builder, and how portable are those gains across model families?
 
-**Comparison:** Use reciprocal transplants of naive/experienced agents into clean/mature habitats, then cross builder-family A/B with newcomer-family A/B. Equalize underlying information and tool semantics; separately normalize artifact schemas. Compare frozen versus composition-responsive recruitment.
+**Prediction:** A hardened workspace lets some cheaper successors preserve task quality; generic improvements benefit multiple families, while family-specific conventions reduce portability.
 
-**Metrics:** Agent-history and habitat-history interaction; Family-by-builder crossover; Verified success at equal context/tool cost; Persistence after complete turnover; Recruitment feedback and invasion from rarity
+**Comparison:** Cross naive/experienced agents with clean/hardened workspaces, then cross builder family with successor family. Match underlying evidence, tool permissions and total construction/use cost. Include an equal-information cache, standardized schemas and a fixed engineered workspace. Treat this as a supporting ablation of HX-31.
 
-**Falsifier:** Drop niche-construction claim if gains are generic retrieval for every model, vanish after equivalent information matching, or cannot affect later population composition.
+**Metrics:** Successor quality versus model cost; Construction-cost break-even workload; Portability across successor families; Freshness and maintenance burden; Recovery after task or API change
 
-**Confounds:** Shared memory, stigmergy and environment inheritance are prior art. Separate easier tasks, extra stored answers, schema familiarity and tool affordances. A dirty workspace is not automatically an ecosystem.
+**Falsifier:** Reject a special habitat claim if equal-information caching or conventional tooling explains the gains. Such a result can still identify useful engineering without constituting novel ecological feedback.
 
-**Prior-art boundary:** Memory and inheritance strongly covered; model-family habitat feedback remains unconfirmed.
+**Confounds:** Inherited artifacts and memory reuse are already studied. Separate stored answers, easier APIs, extra context, data freshness and schema familiarity. Reciprocal family effects are optional diagnostics; they are not required to justify practical hardening.
 
-**Candidate delta:** Beyond memory reuse or turnover alone: test reciprocal habitat adaptation that changes the relative fitness of model families, and the resulting population feedback.
+**Prior-art boundary:** Strong overlap with artifact inheritance and transactive memory; practical evaluation, not a new ecology claim.
 
-**Biological mechanism:** Niche construction, ecological inheritance and priority effects, tested by reciprocal transplants.
+**Candidate delta:** Practical supporting study of where capability resides and whether it transfers to cheaper successors. The former population-feedback idea is a deferred extension; generic artifact inheritance is not claimed as new.
 
-**Decision value:** Choose portable shared environments versus team-specific infrastructure, and detect path dependence when replacing a model.
+**Biological mechanism:** Environmental inheritance tested by crossed agent/workspace histories; many benefits may be adequately explained by normal tool engineering.
 
-**Visualization:** Replay two landscapes of artifacts and niches; swap entire populations and show which family flourishes in each inherited habitat.
+**Decision value:** Supporting study within HX-31: decide which improvements belong in shared tools and the workspace before paying for stronger models.
 
-Sources: [[kim-2026-multi]], [[nisioti-2024-collective]], [[park-2026-scaling]]. Score: **92**. Status: exploratory; self-review only.
+**Visualization:** Replay workspace construction and matched successor cohorts; show cost-quality changes, artifact provenance and cross-family portability.
+
+Sources: [[kim-2026-multi]], [[nisioti-2024-collective]], [[park-2026-scaling]]. Score: **82**. Status: exploratory; self-review only.
 
 ## HX-34 — Selfish skills: can agent culture evolve against the agents carrying it?
+
+**Current disposition:** earlier reserve assessment; not re-scored in this revision.
 
 Can a harmless, easily copied skill bundle spread across mixed agents even when it reduces their independently measured task performance?
 
@@ -108,6 +116,8 @@ Sources: [[papadopoulos-2026-mind]], [[vallinder-2024-cultural]], [[kim-2026-mul
 
 ## HX-35 — Cultural speciation: can compatible swarms evolve incompatible ways of thinking?
 
+**Current disposition:** parked.
+
 Can isolated mixed-model swarms develop co-adapted procedural bundles that work internally but fail when recombined, even after vocabulary and tool schemas are translated?
 
 **Prediction:** Low-migration islands develop positive within-lineage procedure interactions and poor cross-lineage hybrids; intermediate migration limits that incompatibility without eliminating useful specialization.
@@ -126,13 +136,15 @@ Can isolated mixed-model swarms develop co-adapted procedural bundles that work 
 
 **Biological mechanism:** Cultural isolation, migration and epistasis-like interactions among inherited procedures.
 
-**Decision value:** Predict when separately successful teams or skill libraries cannot merge, and whether modest exchange prevents fragmentation.
+**Decision value:** Parked after owner feedback: reconsider only with a concrete deployment where independently developed teams fail to integrate beyond ordinary schema and interface problems.
 
 **Visualization:** Replay diverging islands and skill lineages, then a matrix of successful within-island pairs and failing cross-island hybrids.
 
-Sources: [[stengel-eskin-2026-glossogen]], [[lai-2024-evolving]], [[nisioti-2024-collective]]. Score: **91**. Status: exploratory; self-review only.
+Sources: [[stengel-eskin-2026-glossogen]], [[lai-2024-evolving]], [[nisioti-2024-collective]]. Score: **60**. Status: exploratory; self-review only.
 
 ## HX-36 — Kill the winner: can ecological pressure preserve useful minority models?
+
+**Current disposition:** earlier reserve assessment; not re-scored in this revision.
 
 Can frequency-dependent challenge pressure maintain an otherwise displaced cheap-model niche without explicitly rewarding model diversity?
 
@@ -158,33 +170,37 @@ Can frequency-dependent challenge pressure maintain an otherwise displaced cheap
 
 Sources: [[kumar-2026-digital]], [[kelley-2026-endosymbiotic]]. Score: **87**. Status: exploratory; self-review only.
 
-## HX-37 — Cognitive food webs: can one agent live on another agent’s failed work?
+## HX-37 — Workflow hardening and artifact reuse (consolidated into HX-31)
 
-Can discarded partial work from one model create a resource niche that makes an otherwise dominated cheap model worth keeping?
+**Current disposition:** consolidated into HX-31.
 
-**Prediction:** A cheap consumer that cannot compete from scratch contributes verified solutions by transforming failed-but-partially-valid donor artifacts; removing that byproduct stream eliminates its advantage.
+When does accumulated expensive exploration let later agents use smaller models, fewer calls or deterministic procedures while maintaining reliability?
 
-**Comparison:** Give consumers budget-matched failed fragments, shuffled fragments, successful trajectories, or no donor artifacts. Remove and restore byproducts, compare copying versus transformation, and test whether the consumer can invade from a low resource share.
+**Prediction:** As reusable knowledge and procedures accumulate, cheaper execution can replace repeated discovery until changed conditions require renewed exploration.
 
-**Metrics:** Marginal verified solutions from failed artifacts; Artifact transformation lineage; Consumer invasion from rarity; Persistence after resource removal/restoration; Total cost including donor failures
+**Comparison:** Within HX-31, compare repeated expensive execution, model downgrading alone, shared caching alone and learned validated procedures with escalation. Include construction and maintenance costs. Retain failed-artifact salvage only as an optional exposure ablation, not a separate flagship.
 
-**Falsifier:** Drop food-web claim if benefits are ordinary retrieval of completed answers, extra sampling budget, or a niche assigned by the harness rather than earned through marginal contribution.
+**Metrics:** Verified quality and total lifetime cost; Break-even number of repeated executions; Fraction of work safely delegated to cheaper execution; Failure detection and escalation after change; Value attributable to reused artifacts
 
-**Confounds:** Trajectory markets and bacterial cross-feeding are prior art. A failed whole solution can contain useful local information; independently verify fragments and account for the cost of producing waste.
+**Falsifier:** Reject independent-project status if the result merely repeats HX-31 or a standard cache/static workflow. Reject hardening gains if construction costs, drift failures or escalations erase the savings.
 
-**Prior-art boundary:** Strong reuse overlap; transformation and sustained resource dependence are the proposed distinction.
+**Confounds:** Temporal hardening differs from concurrent salvage of failed artifacts. Preserve that distinction; the owner’s broader interpretation is now part of HX-31. Information reuse, workflow compilation and model routing are not themselves novelty claims.
 
-**Candidate delta:** Causal dependence on transformed failed work sustaining a useful cheap-model niche; reuse alone is insufficient.
+**Prior-art boundary:** Strong overlap with HX-31, workflow hardening, routing and trajectory reuse; do not count twice.
 
-**Biological mechanism:** Byproduct cross-feeding and resource-mediated coexistence; information is reusable, unlike consumed nutrients, so depletion must not be presumed.
+**Candidate delta:** Consolidated into HX-31 as the across-time axis of simplification. The original food-web framing is retained in revision history and the historical design only.
 
-**Decision value:** Find cheap agents that earn their place by recovering value from expensive failures, and distinguish them from redundant extra attempts.
+**Biological mechanism:** Primarily experience reuse and procedural hardening. Cross-feeding is optional and requires separate causal evidence; it is not assumed from ordinary reuse.
 
-**Visualization:** Animate provenance flows from failed donor artifacts through transformations into verified outputs, alongside niche shares.
+**Decision value:** Consolidated into HX-31; useful component of the main project, with little remaining value as an independently ranked research idea.
 
-Sources: [[kim-2026-multi]], [[park-2026-scaling]], [[morris-2014-coexistence]]. Score: **90**. Status: exploratory; self-review only.
+**Visualization:** Plot expensive discovery, procedure validation, cheaper repeated execution and return to exploration against lifetime cost and verified quality.
+
+Sources: [[kim-2026-multi]], [[park-2026-scaling]], [[morris-2014-coexistence]], [[gh-denis-pplx-autojev]], [[ong-2024-routellm]]. Score: **66**. Status: exploratory; self-review only.
 
 ## HX-38 — Swarm embryos: can a temporary signal create a lasting division of labor?
+
+**Current disposition:** earlier reserve assessment; not re-scored in this revision.
 
 Can a brief asymmetric cue establish a self-maintaining functional organization in a mixed swarm after the cue disappears, and can that organization regenerate after member replacement?
 

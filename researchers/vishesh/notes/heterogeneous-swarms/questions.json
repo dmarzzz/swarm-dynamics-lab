@@ -2275,24 +2275,28 @@
     },
     {
       "id": "HX-31",
-      "title": "Black Queen swarms: can less capable individuals make a smarter collective?",
-      "question": "Can selection for cheaper agent policies cause useful individual skills to disappear while collective performance improves through dependence on a few helpers?",
-      "prediction": "When costly outputs are shared, some lineages prune redundant capabilities, improving group performance per budget while losing solo competence; helper removal reveals the new dependence.",
-      "comparison": "Cross inherited capability pruning enabled/disabled with public/private helper outputs. Compare heterogeneous Jev/Haiku/Qwen mixtures, same-model specialists, and a fixed optimizer-designed division of labor. Remove and restore helpers after adaptation.",
+      "title": "Self-differentiating swarms: specialization through subtraction",
+      "question": "Can an initially uniform network of generalist agents discover shared services, shed redundant capabilities, downgrade models and harden repeated workflows while preserving collective performance under change?",
+      "prediction": "On repeated tasks with overlapping data needs, learned service sharing and capability pruning reduce total cost at matched reliability; successful adaptation restores expensive reasoning or redundancy when providers fail or tasks change.",
+      "comparison": "Initialize every agent with the same model, tools, skills, data permissions and resource rules; assign no specialist roles. Compare frozen generalists, a simple shared cache/service baseline, a static specialist topology optimized on development tasks, and adaptive differentiation. Ablate shared services, capability pruning/model downgrades and learned workflow hardening separately. Then perturb workload, data freshness or provider availability.",
       "metrics": [
-        "Verified task success per total budget",
-        "Solo versus group competence",
-        "Retained capability cost",
-        "Helper-removal loss and rescue",
-        "Lineage and dependency persistence"
+        "Total cost per verified successful task including discovery and migration",
+        "Quality and latency at matched workload",
+        "Duplicated external API calls and context volume",
+        "Skill/tool inventory and model allocation over time",
+        "Provider count, traffic and dependency concentration",
+        "Recovery cost and reliability after environment change"
       ],
-      "falsifier": "Drop adaptive-dependence claim if no individual capacity is lost, helper removal has no selective effect, or fixed specialization explains the entire result.",
-      "confounds": "Prune explicit tools, skill files or policy branches, not model weights. Include actual maintenance/context costs and a zero-maintenance control. Selection must not directly reward dependence; retain solo evaluation and matched tool access.",
-      "delta": "Black Queen dependence is established in microbes. Candidate extension is selection-induced loss of agent-side capabilities with a measured group gain and causal public-good dependence across different model interfaces.",
+      "falsifier": "Drop the distinct self-organization claim if simple caching or a static specialist architecture explains all gains, or if apparent savings come from stale data, skipped work, hidden optimization costs or lower reliability.",
+      "confounds": "All agents start with identical capabilities; heterogeneity is an outcome. Hold initial data/tool permissions and workload fixed. Actual API, context, model, communication, adaptation and maintenance costs must be recorded; fewer declared skills need not save money. Provider information must be available through the same legal interfaces to all arms. A downgrade changes the model used, not its weights.",
+      "delta": "Owner-directed refinement combines removal of duplication across agents with workflow hardening across time. Caching, routing, static specialization and trajectory reuse are mandatory baselines; the candidate contribution is discovering and revising the allocation of live reasoning, shared services and cheaper execution from a uniform start.",
       "sources": [
         "morris-2014-coexistence",
         "kim-2026-multi",
-        "vallinder-2024-cultural"
+        "vallinder-2024-cultural",
+        "yue-2025-masrouter",
+        "ong-2024-routellm",
+        "gh-denis-pplx-autojev"
       ],
       "atlas": [
         "SOC-16",
@@ -2306,36 +2310,43 @@
       ],
       "related": [
         "HX-02",
-        "HX-09"
+        "HX-09",
+        "HX-37",
+        "HX-33",
+        "HX-01",
+        "HX-17",
+        "HX-28"
       ],
-      "decision_value": "Discover when minimal cheap agents are an efficient ecology and when eliminating one rare helper makes the whole deployment brittle.",
-      "biophysical_mechanism": "Adaptive loss of costly leaky functions; measure cost, inheritance, dependence and frequency change.",
-      "visualization": "Replay a lineage tree whose capability icons disappear, beside a growing dependency graph; mark helper removal and rescue.",
-      "literature_overlap": "Biological mechanism established; agent transfer is a candidate gap, not certified novelty.",
+      "decision_value": "Primary recommended project: determine whether a swarm can discover, implement and revise its own economical division of labor without losing task quality or resilience.",
+      "biophysical_mechanism": "Selected removal of costly redundant functions and resulting public-good dependencies. The broader workflow-hardening program also includes ordinary software optimization; the Black Queen analogy applies only where lost self-sufficiency is actually measured.",
+      "visualization": "Replay an initially uniform network as duplicate API calls disappear, shared service nodes emerge, skill inventories shrink, models change and edges reorganize; overlay measured cost, freshness, quality and recovery.",
+      "literature_overlap": "Caching, routing, reuse and specialization are established. Novelty of automated joint differentiation and reversible simplification remains unconfirmed.",
       "status": "exploratory hunch; not a registered hypothesis",
       "scenario": "Bounded synthetic task ecology with independently verifiable outputs; design only",
       "feasibility": "Requires full-methods review, formal survey/hypothesis review, model qualification, budget and dedicated fleet allocation, then public immutable condition-specific plan registration before any run.",
-      "source_note": "Biological-frontier follow-up; see frontiers/README.md, X-THREADS.md, LITERATURE.md and sources.json. Abstract screening plus explicitly marked selected passages; no novelty certification or replication.",
+      "source_note": "Lead project. Owner-directed priority revision: see frontiers/PRIORITIES.md. Existing source access depths and novelty limits remain in frontiers/LITERATURE.md and sources.json; no new literature scan or independent approval.",
       "review": {
         "reviewer": "vishesh/codex-heterogeneous",
         "type": "editorial self-review; not independent approval",
-        "verdict": "retain as exploratory mechanism question",
+        "verdict": "lead project",
         "formal_review": null,
-        "critical_check": "Prune explicit tools, skill files or policy branches, not model weights. Include actual maintenance/context costs and a zero-maintenance control. Selection must not directly reward dependence; retain solo evaluation and matched tool access.",
-        "overlap_decision": "Biological mechanism established; agent transfer is a candidate gap, not certified novelty."
+        "critical_check": "All agents start with identical capabilities; heterogeneity is an outcome. Hold initial data/tool permissions and workload fixed. Actual API, context, model, communication, adaptation and maintenance costs must be recorded; fewer declared skills need not save money. Provider information must be available through the same legal interfaces to all arms. A downgrade changes the model used, not its weights.",
+        "overlap_decision": "Caching, routing, reuse and specialization are established. Novelty of automated joint differentiation and reversible simplification remains unconfirmed.",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "owner_feedback": "The owner clarified an initially uniform swarm that removes duplicated data/tool work, reduces skill/context loads, downgrades models and reorganizes communication. Strong practical mechanism; the biological analogy is narrower than the original 98 theory score implied."
       },
       "score_dimensions": {
-        "visual": 96,
-        "practical": 90,
-        "theory": 98,
-        "novelty": 85
+        "visual": 98,
+        "practical": 96,
+        "theory": 90,
+        "novelty": 88
       },
-      "score": 93,
+      "score": 94,
       "score_rationale": {
-        "visual": "Replay a lineage tree whose capability icons disappear, beside a growing dependency graph; mark helper removal and rescue.",
-        "practical": "Discover when minimal cheap agents are an efficient ecology and when eliminating one rare helper makes the whole deployment brittle.",
-        "theory": "Adaptive loss of costly leaky functions; measure cost, inheritance, dependence and frequency change.",
-        "novelty": "Black Queen dependence is established in microbes. Candidate extension is selection-induced loss of agent-side capabilities with a measured group gain and causal public-good dependence across different model interfaces."
+        "visual": "A measured transition from uniform nodes to differentiated providers/workers gives an unusually clear replay.",
+        "practical": "Direct savings in duplicated calls, context and model cost with quality/recovery constraints.",
+        "theory": "Costly-function loss and dependency are testable; software hardening does not automatically establish a biological mechanism.",
+        "novelty": "Distinct umbrella relative to team work, with existing allocation/recovery ideas serving as controls; literature novelty unresolved."
       },
       "activity": {
         "added_at": "2026-10-04T03:07:06Z",
@@ -2353,7 +2364,27 @@
         "execution": "not run",
         "public_plan_registration": null
       },
-      "research_wave": "biological-frontiers-2026-10-04"
+      "research_wave": "biological-frontiers-2026-10-04",
+      "priority_decision": {
+        "decision": "lead project",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "basis": "Owner feedback and assistant reassessment; not a numeric human vote",
+        "reason": "The owner clarified an initially uniform swarm that removes duplicated data/tool work, reduces skill/context loads, downgrades models and reorganizes communication. Strong practical mechanism; the biological analogy is narrower than the original 98 theory score implied.",
+        "parent_project": null
+      },
+      "score_history": [
+        {
+          "revised_at": "2026-10-04T03:43:06Z",
+          "previous_score": 93,
+          "previous_dimensions": {
+            "visual": 96,
+            "practical": 90,
+            "theory": 98,
+            "novelty": 85
+          },
+          "reason": "The owner clarified an initially uniform swarm that removes duplicated data/tool work, reduces skill/context loads, downgrades models and reorganizes communication. Strong practical mechanism; the biological analogy is narrower than the original 98 theory score implied."
+        }
+      ]
     },
     {
       "id": "HX-32",
@@ -2390,34 +2421,36 @@
         "HX-31",
         "HX-01"
       ],
-      "decision_value": "Determine when a tightly paired cheap controller and planner can safely be upgraded independently, and when a successful pairing locks out future capabilities.",
+      "decision_value": "Deprioritized after owner feedback: ordinary modularity and interface engineering currently cover the practical problem; no separate project recommended.",
       "biophysical_mechanism": "Egalitarian transitions, co-inheritance and stabilizing selection from partner compatibility; operational analogy only.",
       "visualization": "Animate paired lineages, interface compatibility and fitness before and after a task shift; show severing and cross-partner rescue.",
       "literature_overlap": "Strong digital-evolution overlap; retain only the semantic-interface mechanism.",
       "status": "exploratory hunch; not a registered hypothesis",
       "scenario": "Bounded synthetic task ecology with independently verifiable outputs; design only",
       "feasibility": "Requires full-methods review, formal survey/hypothesis review, model qualification, budget and dedicated fleet allocation, then public immutable condition-specific plan registration before any run.",
-      "source_note": "Biological-frontier follow-up; see frontiers/README.md, X-THREADS.md, LITERATURE.md and sources.json. Abstract screening plus explicitly marked selected passages; no novelty certification or replication.",
+      "source_note": "Deprioritized. Owner-directed priority revision: see frontiers/PRIORITIES.md. Existing source access depths and novelty limits remain in frontiers/LITERATURE.md and sources.json; no new literature scan or independent approval.",
       "review": {
         "reviewer": "vishesh/codex-heterogeneous",
         "type": "editorial self-review; not independent approval",
-        "verdict": "retain as exploratory mechanism question",
+        "verdict": "deprioritized",
         "formal_review": null,
         "critical_check": "Endosymbiosis and evolutionary lock-in already occur in digital life. External selection copies finite policy/skill bundles, not model weights or autonomous organisms. Paired budgets, interface bandwidth and accumulated history must be matched.",
-        "overlap_decision": "Strong digital-evolution overlap; retain only the semantic-interface mechanism."
+        "overlap_decision": "Strong digital-evolution overlap; retain only the semantic-interface mechanism.",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "owner_feedback": "The owner identifies an ordinary modularity/interface problem. No compelling deployment scenario or distinct biological mechanism justifies the former exceptional scores."
       },
       "score_dimensions": {
-        "visual": 98,
-        "practical": 84,
-        "theory": 98,
-        "novelty": 84
+        "visual": 50,
+        "practical": 25,
+        "theory": 30,
+        "novelty": 25
       },
-      "score": 92,
+      "score": 34,
       "score_rationale": {
-        "visual": "Animate paired lineages, interface compatibility and fitness before and after a task shift; show severing and cross-partner rescue.",
-        "practical": "Determine when a tightly paired cheap controller and planner can safely be upgraded independently, and when a successful pairing locks out future capabilities.",
-        "theory": "Egalitarian transitions, co-inheritance and stabilizing selection from partner compatibility; operational analogy only.",
-        "novelty": "Digital organelles are prior art. The narrower gap is whether learned semantic/typed interface compatibility, rather than hard-coded trait matching, causes and releases dependency in heterogeneous inference agents."
+        "visual": "A pair/interface plot is possible, but the original exceptional visual score lacked a compelling practical phenomenon.",
+        "practical": "No practical problem established beyond routine separation of modules and code.",
+        "theory": "Organelle language currently exceeds the demonstrated agent mechanism.",
+        "novelty": "Weak independent contribution once ordinary interface coupling and existing digital-life work are acknowledged."
       },
       "activity": {
         "added_at": "2026-10-04T03:07:06Z",
@@ -2435,24 +2468,44 @@
         "execution": "not run",
         "public_plan_registration": null
       },
-      "research_wave": "biological-frontiers-2026-10-04"
+      "research_wave": "biological-frontiers-2026-10-04",
+      "priority_decision": {
+        "decision": "deprioritized",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "basis": "Owner feedback and assistant reassessment; not a numeric human vote",
+        "reason": "The owner identifies an ordinary modularity/interface problem. No compelling deployment scenario or distinct biological mechanism justifies the former exceptional scores.",
+        "parent_project": null
+      },
+      "score_history": [
+        {
+          "revised_at": "2026-10-04T03:43:06Z",
+          "previous_score": 92,
+          "previous_dimensions": {
+            "visual": 98,
+            "practical": 84,
+            "theory": 98,
+            "novelty": 84
+          },
+          "reason": "The owner identifies an ordinary modularity/interface problem. No compelling deployment scenario or distinct biological mechanism justifies the former exceptional scores."
+        }
+      ]
     },
     {
       "id": "HX-33",
-      "title": "Ecological inheritance: does the habitat decide which agents are intelligent?",
-      "question": "Can agents transform a shared workspace so that it selectively favors their own model family, causing a self-reinforcing change in future population composition?",
-      "prediction": "The same newcomer population performs differently in habitats built by different model mixtures; those effects persist through agent replacement and feed back into which mixture prospers.",
-      "comparison": "Use reciprocal transplants of naive/experienced agents into clean/mature habitats, then cross builder-family A/B with newcomer-family A/B. Equalize underlying information and tool semantics; separately normalize artifact schemas. Compare frozen versus composition-responsive recruitment.",
+      "title": "Workspace hardening: how much capability can move out of the model?",
+      "question": "How much can durable tools, schemas, tests and cached knowledge let cheaper successor agents replace an expensive builder, and how portable are those gains across model families?",
+      "prediction": "A hardened workspace lets some cheaper successors preserve task quality; generic improvements benefit multiple families, while family-specific conventions reduce portability.",
+      "comparison": "Cross naive/experienced agents with clean/hardened workspaces, then cross builder family with successor family. Match underlying evidence, tool permissions and total construction/use cost. Include an equal-information cache, standardized schemas and a fixed engineered workspace. Treat this as a supporting ablation of HX-31.",
       "metrics": [
-        "Agent-history and habitat-history interaction",
-        "Family-by-builder crossover",
-        "Verified success at equal context/tool cost",
-        "Persistence after complete turnover",
-        "Recruitment feedback and invasion from rarity"
+        "Successor quality versus model cost",
+        "Construction-cost break-even workload",
+        "Portability across successor families",
+        "Freshness and maintenance burden",
+        "Recovery after task or API change"
       ],
-      "falsifier": "Drop niche-construction claim if gains are generic retrieval for every model, vanish after equivalent information matching, or cannot affect later population composition.",
-      "confounds": "Shared memory, stigmergy and environment inheritance are prior art. Separate easier tasks, extra stored answers, schema familiarity and tool affordances. A dirty workspace is not automatically an ecosystem.",
-      "delta": "Beyond memory reuse or turnover alone: test reciprocal habitat adaptation that changes the relative fitness of model families, and the resulting population feedback.",
+      "falsifier": "Reject a special habitat claim if equal-information caching or conventional tooling explains the gains. Such a result can still identify useful engineering without constituting novel ecological feedback.",
+      "confounds": "Inherited artifacts and memory reuse are already studied. Separate stored answers, easier APIs, extra context, data freshness and schema familiarity. Reciprocal family effects are optional diagnostics; they are not required to justify practical hardening.",
+      "delta": "Practical supporting study of where capability resides and whether it transfers to cheaper successors. The former population-feedback idea is a deferred extension; generic artifact inheritance is not claimed as new.",
       "sources": [
         "kim-2026-multi",
         "nisioti-2024-collective",
@@ -2470,36 +2523,40 @@
       ],
       "related": [
         "HX-12",
-        "HX-32"
+        "HX-32",
+        "HX-31",
+        "HX-37"
       ],
-      "decision_value": "Choose portable shared environments versus team-specific infrastructure, and detect path dependence when replacing a model.",
-      "biophysical_mechanism": "Niche construction, ecological inheritance and priority effects, tested by reciprocal transplants.",
-      "visualization": "Replay two landscapes of artifacts and niches; swap entire populations and show which family flourishes in each inherited habitat.",
-      "literature_overlap": "Memory and inheritance strongly covered; model-family habitat feedback remains unconfirmed.",
+      "decision_value": "Supporting study within HX-31: decide which improvements belong in shared tools and the workspace before paying for stronger models.",
+      "biophysical_mechanism": "Environmental inheritance tested by crossed agent/workspace histories; many benefits may be adequately explained by normal tool engineering.",
+      "visualization": "Replay workspace construction and matched successor cohorts; show cost-quality changes, artifact provenance and cross-family portability.",
+      "literature_overlap": "Strong overlap with artifact inheritance and transactive memory; practical evaluation, not a new ecology claim.",
       "status": "exploratory hunch; not a registered hypothesis",
       "scenario": "Bounded synthetic task ecology with independently verifiable outputs; design only",
       "feasibility": "Requires full-methods review, formal survey/hypothesis review, model qualification, budget and dedicated fleet allocation, then public immutable condition-specific plan registration before any run.",
-      "source_note": "Biological-frontier follow-up; see frontiers/README.md, X-THREADS.md, LITERATURE.md and sources.json. Abstract screening plus explicitly marked selected passages; no novelty certification or replication.",
+      "source_note": "Supporting study for hx-31. Owner-directed priority revision: see frontiers/PRIORITIES.md. Existing source access depths and novelty limits remain in frontiers/LITERATURE.md and sources.json; no new literature scan or independent approval.",
       "review": {
         "reviewer": "vishesh/codex-heterogeneous",
         "type": "editorial self-review; not independent approval",
-        "verdict": "retain as exploratory mechanism question",
+        "verdict": "supporting study for HX-31",
         "formal_review": null,
-        "critical_check": "Shared memory, stigmergy and environment inheritance are prior art. Separate easier tasks, extra stored answers, schema familiarity and tool affordances. A dirty workspace is not automatically an ecosystem.",
-        "overlap_decision": "Memory and inheritance strongly covered; model-family habitat feedback remains unconfirmed."
+        "critical_check": "Inherited artifacts and memory reuse are already studied. Separate stored answers, easier APIs, extra context, data freshness and schema familiarity. Reciprocal family effects are optional diagnostics; they are not required to justify practical hardening.",
+        "overlap_decision": "Strong overlap with artifact inheritance and transactive memory; practical evaluation, not a new ecology claim.",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "owner_feedback": "Useful workspace/tool hardening and portability comparison; lower conceptual distinctiveness and a more modest biological connection than initially scored."
       },
       "score_dimensions": {
-        "visual": 98,
-        "practical": 93,
-        "theory": 96,
-        "novelty": 70
+        "visual": 90,
+        "practical": 92,
+        "theory": 75,
+        "novelty": 55
       },
-      "score": 92,
+      "score": 82,
       "score_rationale": {
-        "visual": "Replay two landscapes of artifacts and niches; swap entire populations and show which family flourishes in each inherited habitat.",
-        "practical": "Choose portable shared environments versus team-specific infrastructure, and detect path dependence when replacing a model.",
-        "theory": "Niche construction, ecological inheritance and priority effects, tested by reciprocal transplants.",
-        "novelty": "Beyond memory reuse or turnover alone: test reciprocal habitat adaptation that changes the relative fitness of model families, and the resulting population feedback."
+        "visual": "Workspace construction and cross-model successor performance are legible, though less dramatic than the original ecology framing.",
+        "practical": "Directly useful for lowering deployment costs and improving portability.",
+        "theory": "Crossed history interventions support environmental inheritance; conventional tooling may explain outcomes.",
+        "novelty": "Useful supporting measurement with strong overlap in both literature and HX-31."
       },
       "activity": {
         "added_at": "2026-10-04T03:07:06Z",
@@ -2517,7 +2574,27 @@
         "execution": "not run",
         "public_plan_registration": null
       },
-      "research_wave": "biological-frontiers-2026-10-04"
+      "research_wave": "biological-frontiers-2026-10-04",
+      "priority_decision": {
+        "decision": "supporting study for HX-31",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "basis": "Owner feedback and assistant reassessment; not a numeric human vote",
+        "reason": "Useful workspace/tool hardening and portability comparison; lower conceptual distinctiveness and a more modest biological connection than initially scored.",
+        "parent_project": "HX-31"
+      },
+      "score_history": [
+        {
+          "revised_at": "2026-10-04T03:43:06Z",
+          "previous_score": 92,
+          "previous_dimensions": {
+            "visual": 98,
+            "practical": 93,
+            "theory": 96,
+            "novelty": 70
+          },
+          "reason": "Useful workspace/tool hardening and portability comparison; lower conceptual distinctiveness and a more modest biological connection than initially scored."
+        }
+      ]
     },
     {
       "id": "HX-34",
@@ -2635,34 +2712,36 @@
         "HX-16",
         "HX-33"
       ],
-      "decision_value": "Predict when separately successful teams or skill libraries cannot merge, and whether modest exchange prevents fragmentation.",
+      "decision_value": "Parked after owner feedback: reconsider only with a concrete deployment where independently developed teams fail to integrate beyond ordinary schema and interface problems.",
       "biophysical_mechanism": "Cultural isolation, migration and epistasis-like interactions among inherited procedures.",
       "visualization": "Replay diverging islands and skill lineages, then a matrix of successful within-island pairs and failing cross-island hybrids.",
       "literature_overlap": "Language and clusters established; procedural hybrid breakdown is a candidate distinction.",
       "status": "exploratory hunch; not a registered hypothesis",
       "scenario": "Bounded synthetic task ecology with independently verifiable outputs; design only",
       "feasibility": "Requires full-methods review, formal survey/hypothesis review, model qualification, budget and dedicated fleet allocation, then public immutable condition-specific plan registration before any run.",
-      "source_note": "Biological-frontier follow-up; see frontiers/README.md, X-THREADS.md, LITERATURE.md and sources.json. Abstract screening plus explicitly marked selected passages; no novelty certification or replication.",
+      "source_note": "Parked. Owner-directed priority revision: see frontiers/PRIORITIES.md. Existing source access depths and novelty limits remain in frontiers/LITERATURE.md and sources.json; no new literature scan or independent approval.",
       "review": {
         "reviewer": "vishesh/codex-heterogeneous",
         "type": "editorial self-review; not independent approval",
-        "verdict": "retain as exploratory mechanism question",
+        "verdict": "parked",
         "formal_review": null,
         "critical_check": "Emergent language, strong-to-weak learning and spontaneous social clusters are already demonstrated. Fix model versions and initial mix; no biological reproductive isolation is claimed.",
-        "overlap_decision": "Language and clusters established; procedural hybrid breakdown is a candidate distinction."
+        "overlap_decision": "Language and clusters established; procedural hybrid breakdown is a candidate distinction.",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "owner_feedback": "Interesting conceptual possibility, but realistic deployment relevance and a persuasive practical intervention remain weak. Biological speciation is an analogy, not an established mechanism here."
       },
       "score_dimensions": {
-        "visual": 97,
-        "practical": 86,
-        "theory": 92,
-        "novelty": 85
+        "visual": 80,
+        "practical": 35,
+        "theory": 65,
+        "novelty": 60
       },
-      "score": 91,
+      "score": 60,
       "score_rationale": {
-        "visual": "Replay diverging islands and skill lineages, then a matrix of successful within-island pairs and failing cross-island hybrids.",
-        "practical": "Predict when separately successful teams or skill libraries cannot merge, and whether modest exchange prevents fragmentation.",
-        "theory": "Cultural isolation, migration and epistasis-like interactions among inherited procedures.",
-        "novelty": "Test recombination incompatibility of co-adapted procedures beyond lexical dialects, using translation and linkage-breaking controls."
+        "visual": "An interoperability matrix can be informative, but a dramatic island animation is not assured.",
+        "practical": "Realistic use case and practical benefit remain poorly specified.",
+        "theory": "Procedural incompatibility is measurable, while the speciation analogy is limited.",
+        "novelty": "A possible narrower distinction, with substantial language/compatibility prior art and unclear payoff."
       },
       "activity": {
         "added_at": "2026-10-04T03:07:06Z",
@@ -2680,7 +2759,27 @@
         "execution": "not run",
         "public_plan_registration": null
       },
-      "research_wave": "biological-frontiers-2026-10-04"
+      "research_wave": "biological-frontiers-2026-10-04",
+      "priority_decision": {
+        "decision": "parked",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "basis": "Owner feedback and assistant reassessment; not a numeric human vote",
+        "reason": "Interesting conceptual possibility, but realistic deployment relevance and a persuasive practical intervention remain weak. Biological speciation is an analogy, not an established mechanism here.",
+        "parent_project": null
+      },
+      "score_history": [
+        {
+          "revised_at": "2026-10-04T03:43:06Z",
+          "previous_score": 91,
+          "previous_dimensions": {
+            "visual": 97,
+            "practical": 86,
+            "theory": 92,
+            "novelty": 85
+          },
+          "reason": "Interesting conceptual possibility, but realistic deployment relevance and a persuasive practical intervention remain weak. Biological speciation is an analogy, not an established mechanism here."
+        }
+      ]
     },
     {
       "id": "HX-36",
@@ -2763,24 +2862,26 @@
     },
     {
       "id": "HX-37",
-      "title": "Cognitive food webs: can one agent live on another agent’s failed work?",
-      "question": "Can discarded partial work from one model create a resource niche that makes an otherwise dominated cheap model worth keeping?",
-      "prediction": "A cheap consumer that cannot compete from scratch contributes verified solutions by transforming failed-but-partially-valid donor artifacts; removing that byproduct stream eliminates its advantage.",
-      "comparison": "Give consumers budget-matched failed fragments, shuffled fragments, successful trajectories, or no donor artifacts. Remove and restore byproducts, compare copying versus transformation, and test whether the consumer can invade from a low resource share.",
+      "title": "Workflow hardening and artifact reuse (consolidated into HX-31)",
+      "question": "When does accumulated expensive exploration let later agents use smaller models, fewer calls or deterministic procedures while maintaining reliability?",
+      "prediction": "As reusable knowledge and procedures accumulate, cheaper execution can replace repeated discovery until changed conditions require renewed exploration.",
+      "comparison": "Within HX-31, compare repeated expensive execution, model downgrading alone, shared caching alone and learned validated procedures with escalation. Include construction and maintenance costs. Retain failed-artifact salvage only as an optional exposure ablation, not a separate flagship.",
       "metrics": [
-        "Marginal verified solutions from failed artifacts",
-        "Artifact transformation lineage",
-        "Consumer invasion from rarity",
-        "Persistence after resource removal/restoration",
-        "Total cost including donor failures"
+        "Verified quality and total lifetime cost",
+        "Break-even number of repeated executions",
+        "Fraction of work safely delegated to cheaper execution",
+        "Failure detection and escalation after change",
+        "Value attributable to reused artifacts"
       ],
-      "falsifier": "Drop food-web claim if benefits are ordinary retrieval of completed answers, extra sampling budget, or a niche assigned by the harness rather than earned through marginal contribution.",
-      "confounds": "Trajectory markets and bacterial cross-feeding are prior art. A failed whole solution can contain useful local information; independently verify fragments and account for the cost of producing waste.",
-      "delta": "Causal dependence on transformed failed work sustaining a useful cheap-model niche; reuse alone is insufficient.",
+      "falsifier": "Reject independent-project status if the result merely repeats HX-31 or a standard cache/static workflow. Reject hardening gains if construction costs, drift failures or escalations erase the savings.",
+      "confounds": "Temporal hardening differs from concurrent salvage of failed artifacts. Preserve that distinction; the owner’s broader interpretation is now part of HX-31. Information reuse, workflow compilation and model routing are not themselves novelty claims.",
+      "delta": "Consolidated into HX-31 as the across-time axis of simplification. The original food-web framing is retained in revision history and the historical design only.",
       "sources": [
         "kim-2026-multi",
         "park-2026-scaling",
-        "morris-2014-coexistence"
+        "morris-2014-coexistence",
+        "gh-denis-pplx-autojev",
+        "ong-2024-routellm"
       ],
       "atlas": [
         "SOC-14",
@@ -2795,36 +2896,39 @@
       ],
       "related": [
         "HX-31",
-        "HX-33"
+        "HX-33",
+        "HX-28"
       ],
-      "decision_value": "Find cheap agents that earn their place by recovering value from expensive failures, and distinguish them from redundant extra attempts.",
-      "biophysical_mechanism": "Byproduct cross-feeding and resource-mediated coexistence; information is reusable, unlike consumed nutrients, so depletion must not be presumed.",
-      "visualization": "Animate provenance flows from failed donor artifacts through transformations into verified outputs, alongside niche shares.",
-      "literature_overlap": "Strong reuse overlap; transformation and sustained resource dependence are the proposed distinction.",
+      "decision_value": "Consolidated into HX-31; useful component of the main project, with little remaining value as an independently ranked research idea.",
+      "biophysical_mechanism": "Primarily experience reuse and procedural hardening. Cross-feeding is optional and requires separate causal evidence; it is not assumed from ordinary reuse.",
+      "visualization": "Plot expensive discovery, procedure validation, cheaper repeated execution and return to exploration against lifetime cost and verified quality.",
+      "literature_overlap": "Strong overlap with HX-31, workflow hardening, routing and trajectory reuse; do not count twice.",
       "status": "exploratory hunch; not a registered hypothesis",
       "scenario": "Bounded synthetic task ecology with independently verifiable outputs; design only",
       "feasibility": "Requires full-methods review, formal survey/hypothesis review, model qualification, budget and dedicated fleet allocation, then public immutable condition-specific plan registration before any run.",
-      "source_note": "Biological-frontier follow-up; see frontiers/README.md, X-THREADS.md, LITERATURE.md and sources.json. Abstract screening plus explicitly marked selected passages; no novelty certification or replication.",
+      "source_note": "Consolidated into hx-31. Owner-directed priority revision: see frontiers/PRIORITIES.md. Existing source access depths and novelty limits remain in frontiers/LITERATURE.md and sources.json; no new literature scan or independent approval.",
       "review": {
         "reviewer": "vishesh/codex-heterogeneous",
         "type": "editorial self-review; not independent approval",
-        "verdict": "retain as exploratory mechanism question",
+        "verdict": "consolidated into HX-31",
         "formal_review": null,
-        "critical_check": "Trajectory markets and bacterial cross-feeding are prior art. A failed whole solution can contain useful local information; independently verify fragments and account for the cost of producing waste.",
-        "overlap_decision": "Strong reuse overlap; transformation and sustained resource dependence are the proposed distinction."
+        "critical_check": "Temporal hardening differs from concurrent salvage of failed artifacts. Preserve that distinction; the owner’s broader interpretation is now part of HX-31. Information reuse, workflow compilation and model routing are not themselves novelty claims.",
+        "overlap_decision": "Strong overlap with HX-31, workflow hardening, routing and trajectory reuse; do not count twice.",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "owner_feedback": "The owner’s useful interpretation is expensive exploration followed by cheaper or deterministic execution. Treat this as temporal workflow hardening within HX-31; original failed-artifact salvage is an optional mechanism, not a second flagship."
       },
       "score_dimensions": {
-        "visual": 98,
-        "practical": 92,
-        "theory": 90,
-        "novelty": 68
+        "visual": 85,
+        "practical": 85,
+        "theory": 55,
+        "novelty": 10
       },
-      "score": 90,
+      "score": 66,
       "score_rationale": {
-        "visual": "Animate provenance flows from failed donor artifacts through transformations into verified outputs, alongside niche shares.",
-        "practical": "Find cheap agents that earn their place by recovering value from expensive failures, and distinguish them from redundant extra attempts.",
-        "theory": "Byproduct cross-feeding and resource-mediated coexistence; information is reusable, unlike consumed nutrients, so depletion must not be presumed.",
-        "novelty": "Causal dependence on transformed failed work sustaining a useful cheap-model niche; reuse alone is insufficient."
+        "visual": "A hardening and re-escalation timeline is useful as part of the main project.",
+        "practical": "Repeated workflows plausibly benefit; full creation and maintenance cost must be charged.",
+        "theory": "Main mechanism is procedural reuse; biological cross-feeding was overemphasized.",
+        "novelty": "Consolidated into HX-31, so almost no distinct standalone contribution remains."
       },
       "activity": {
         "added_at": "2026-10-04T03:07:06Z",
@@ -2842,7 +2946,27 @@
         "execution": "not run",
         "public_plan_registration": null
       },
-      "research_wave": "biological-frontiers-2026-10-04"
+      "research_wave": "biological-frontiers-2026-10-04",
+      "priority_decision": {
+        "decision": "consolidated into HX-31",
+        "updated_at": "2026-10-04T03:43:06Z",
+        "basis": "Owner feedback and assistant reassessment; not a numeric human vote",
+        "reason": "The owner’s useful interpretation is expensive exploration followed by cheaper or deterministic execution. Treat this as temporal workflow hardening within HX-31; original failed-artifact salvage is an optional mechanism, not a second flagship.",
+        "parent_project": "HX-31"
+      },
+      "score_history": [
+        {
+          "revised_at": "2026-10-04T03:43:06Z",
+          "previous_score": 90,
+          "previous_dimensions": {
+            "visual": 98,
+            "practical": 92,
+            "theory": 90,
+            "novelty": 68
+          },
+          "reason": "The owner’s useful interpretation is expensive exploration followed by cheaper or deterministic execution. Treat this as temporal workflow hardening within HX-31; original failed-artifact salvage is an optional mechanism, not a second flagship."
+        }
+      ]
     },
     {
       "id": "HX-38",

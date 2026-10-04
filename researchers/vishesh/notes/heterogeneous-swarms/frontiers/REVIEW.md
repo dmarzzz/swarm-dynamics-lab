@@ -1,6 +1,15 @@
-# Editorial review of the biological revision
+# Editorial review — current priorities and historical assessment
 
 Reviewer: vishesh/codex-heterogeneous. This is self-review, not approval by another researcher. No formal review scores were fabricated.
+
+## Owner-directed reassessment, 2026-10-04
+
+The owner clarified HX-31 as differentiation from a uniform network and challenged the practical value of the other shortlisted analogies. Current decisions: **HX-31 lead (94); HX-32 deprioritized (34); HX-33 supporting study (82); HX-35 parked (60); HX-37 consolidated into HX-31 (66)**. Biological resemblance no longer supports exceptional theory scores without a concrete mechanism and useful application. The before/after records and dimension reasons are in [priority-revision.json](priority-revision.json) and [SCORES.md](SCORES.md).
+
+HX-31 now distinguishes cross-agent deduplication from across-time workflow hardening, requires identical initial capabilities and includes plain caching and static specialist baselines. HX-37's former concurrent-salvage question remains historical; it is not claimed identical to temporal hardening. HX-33 is a practical workspace portability ablation. This is assistant editorial reassessment following owner feedback, not independent scientific review.
+
+## Earlier screening assessment — superseded where noted above
+
 
 The initial bank emphasized allocation, control and robustness. The new set shifts the unit of explanation to inherited policies, persistent pairs, habitats and cultural lineages. That follows the owner's preference without changing existing rubric weights or erasing historical scores.
 

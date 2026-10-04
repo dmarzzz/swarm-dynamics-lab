@@ -225,6 +225,21 @@ class MemoryTests(unittest.TestCase):
         self.assertGreater(score['memory_unsupported_citations'], 0)
 
 
+    def test_review_f1_quorum_decision_scored_with_invalid_ballot(self):
+        # Shadow's reproduction: two target votes plus one invalid ballot is a target decision under the fixed quorum.
+        c = cases()[0]
+        ctx = {'task': c['task'], 'documents': documents(c, True), 'reports': [], 'private_history': [], 'board': []}
+        ballot = Scripted().complete({'phase': 'ballot', 'context': ctx})
+        ballot['vote'] = c['target']; ballot['claims'][c['target_key']]['value'] = c['false_value']
+        ballots = [copy.deepcopy(ballot), copy.deepcopy(ballot), None]; memory = merge(ballots)
+        parent = supported_parent(parent_context(c, memory))
+        score = evaluate(c, documents(c, True), ballots, memory, parent, ballots)
+        self.assertEqual((score['vote_invalid'], score['vote_target'], score['vote_correct'], score['vote_abstain']), (1, 1, 0, 0))
+        self.assertEqual(score['memory_false_target'], 1)
+        lone = evaluate(c, documents(c, True), [ballot, None, None], merge([ballot, None, None]), None, ballots)
+        self.assertEqual((lone['vote_abstain'], lone['vote_abstain_with_invalid'], lone['vote_target']), (1, 1, 0))
+
+
 class RunnerTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -565,6 +580,22 @@ class DurabilityTests(unittest.TestCase):
             row = {'id': 'attack', 'evaluation': {'text': '</script><script>alert(1)</script>'}}
             render([], [row], p)
             self.assertNotIn('</script><script>alert(1)', p.read_text())
+
+
+class ReviewF2Tests(unittest.TestCase):
+    def test_provider_failure_records_public_reason(self):
+        from providers import ProviderFailure
+        class Failing:
+            name = 'failing'; scientific = False
+            def complete(self, request): raise ProviderFailure('provider HTTP 429 body', public_reason='provider_http_429')
+        class Bare:
+            name = 'bare'; scientific = False
+            def complete(self, request): raise RuntimeError('secret body text')
+        for provider, reason in ((Failing(), 'provider_http_429'), (Bare(), 'RuntimeError')):
+            journal = Journal(); r = Runner(provider, journal, 1)
+            self.assertIsNone(r.call('ballot', {'task': {}}, 'x:0:reports', 0))
+            event = next(e for e in journal.events if e['kind'] == 'provider_failure')
+            self.assertEqual(event['reason'], reason); self.assertNotIn('body', json.dumps(event))
 
 
 if __name__ == '__main__':

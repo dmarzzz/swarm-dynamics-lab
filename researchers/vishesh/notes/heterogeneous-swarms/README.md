@@ -2,7 +2,7 @@
 
 Added 2026-10-04 UTC for Vishesh. The original scan contains 30 exploratory questions, 29 primary sources and five X evidence/lead records. The biological revision adds eight questions, eight directly read X discussions, 11 new library entries, two freshly revisited papers and five new prospective designs. All 38 questions have metadata, editorial self-reviews and rubric scores. No experiments were launched.
 
-**Current recommended conceptual focus:** [biological frontiers, HX-31–HX-38](frontiers/README.md), developed after the owner requested edgier, biologically grounded questions. The revised top five within that subset are HX-31 (93), HX-32 (92), HX-33 (92), HX-35 (91) and HX-37 (90). Earlier scores are preserved.
+**Current recommendation after owner feedback:** [HX-31: self-differentiating swarms](frontiers/PRIORITIES.md), **94/100**, combining shared services and capability shedding with workflow hardening. HX-33 (82) supports the main project; HX-32 (34) is deprioritized, HX-35 (60) parked, and HX-37 (66) consolidated into HX-31. [Revised scores](frontiers/SCORES.md) preserve previous values and the unchanged rubric. Earlier top-five recommendations are superseded; original HX-01–HX-30 scores remain historical and unchanged.
 
 The original central question was **when typed Jev decisions and generative Haiku/Qwen agents produce useful specialization, rather than extra cost, correlated errors or a shared bottleneck**. “Quen” is interpreted as Qwen; exact models remain to be pinned.
 

@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: working
+state: done
 task: heterogeneous-priority-revision
-doing: Updating five scores and consolidating the self-differentiating swarm direction
-updated: 2026-10-04T03:40Z
+doing: Published owner-revised scores and the self-differentiating swarm recommendation
+updated: 2026-10-04T03:53Z
 ---
 
 ## Handoff
 
-Research bundle: `researchers/vishesh/notes/heterogeneous-swarms/README.md`. Parent and biological-frontier revision tasks are done. Read `notes/heterogeneous-swarms/frontiers/README.md` for the current conceptual shortlist. Follow-up `heterogeneous-methods-review` tracks full-methods reading, citation coverage and independent review before formal promotion. No experiments launched.
+Current recommendation: `researchers/vishesh/notes/heterogeneous-swarms/frontiers/PRIORITIES.md`. HX-31 94 is the lead; HX-32 34 deprioritized; HX-33 82 supports HX-31; HX-35 60 parked; HX-37 66 consolidated. Exactly five scores changed; rubric unchanged. Twelve targeted data tests and JavaScript score tests passed. Global dashboard export is separately blocked by upstream hypothesis topics, tracked in `repair-hypothesis-topic-navigation`. No experiments launched.

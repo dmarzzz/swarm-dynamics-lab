@@ -14,3 +14,14 @@
 No full-paper reads, formal prior-art gate, saturation, independent approval or measured biological outcomes are claimed. The five designs are prospective notes, not public-plan registrations.
 
 Publication: research revision `d903d00` reached shared main. The [dashboard workflow](https://github.com/dmarzzz/swarm-lab/actions/runs/37173891058) completed successfully, including export, contract checks, TypeScript and production build/deploy. A raw unauthenticated dashboard data request returned 403; browser verification uses the normal page. No authentication controls were bypassed.
+
+
+## Owner-directed score revision, 2026-10-04 UTC
+
+Exactly five HX question/score records changed: HX-31 94, HX-32 34, HX-33 82, HX-35 60 and HX-37 66. The other 33 HX records and other assessment records remain unchanged. Rubric weights remain unchanged. Previous question records are preserved exactly in `priority-revision.json`; revised score fingerprints match current exported contribution content. Dmarz/Shadow assessments remain null for these five.
+
+Contribution/score builders pass, the idea-score JavaScript checks pass, and targeted contribution/activity/score contract tests pass. Relative document links resolve. No new tests or validator exceptions were introduced. The TypeScript resolution workaround described above was reused without editing dependency links.
+
+Full dashboard export is currently blocked by an unrelated upstream error in the canonical topic tags of three Shadow hypotheses introduced in e51f3fe. The full test attempt also reported two navigation errors; a temporary partial export initially had a hypothesis-count mismatch, corrected by regenerating that payload from current source before the targeted checks. No partial generated payloads are committed. The underlying navigation error remains assigned to Shadow in `repair-hypothesis-topic-navigation`, with an inbox notice. These new scores are repository changes; do not claim live deployment until the dashboard workflow succeeds.
+
+No new literature scan, inference calls, experimental implementation or runs were performed for this prioritization update.

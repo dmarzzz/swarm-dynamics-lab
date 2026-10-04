@@ -26,6 +26,6 @@ dmarz decided (2026-10-04) not to stop the running v3 qualification `v3-q0-a1` o
 
 ## Done when
 
-- [ ] F1 and F2 fixed in bench_v3 with regression tests; v3 selftest passes.
+- [x] F1 and F2 fixed in bench_v3 with regression tests; v3 selftest passes (57/57). dmarz authorized dmarz/private-control to make the change before the next v3 run.
 - [ ] `rescore_votes_v3.py` run on `v3-q0-a1`; corrected vote metrics reported next to the pinned ones in its post-mortem.
 - [ ] Next v3 launch manifest pins the fixed source. (The resample sidecar picks up the fixes through its source patch; dmarz/private-control resyncs it.)

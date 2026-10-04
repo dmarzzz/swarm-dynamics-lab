@@ -33,12 +33,13 @@ def inputs(parent):
 
 def assignments():return [{'id':f'{s}-{s+offset}-{scenario}-{arm}','seed':s,'layout':s+offset,'scenario':scenario,'arm':arm,'status':'planned'} for s in (8701,8702,8703) for offset in (10000,20000) for scenario in SCENARIOS for arm in ARMS]
 
-def run(out,parent,tldr,hook=lambda kind,data:None,timeout=900):
+def run(out,parent,tldr,hook=lambda kind,data:None,timeout=900,attempt="practical-01",cap=4):
+ if (attempt,cap) not in (("practical-01",4),("practical-02",16)):raise ValueError("unregistered_capacity")
  receipt=check('healing-helping-hands',tldr)
  if not receipt['url'].endswith('/practical/PLAN.md'):raise ValueError('wrong_plan')
  sources=source_check(receipt['commit']);loaded,hashes=inputs(parent)
  out.mkdir(parents=True,exist_ok=False);start=time.monotonic()
- manifest={'attempt':'practical-01','parent_attempt':'pilot-03','stage':'S0','status':'running','plan':receipt,'source_hashes':sources,'input_hashes':hashes,'assignments':assignments(),'python':platform.python_version(),'model_calls':0,'inference_cost_usd':0,'host':'sim-vishesh','claim':'vishesh-healing-practical-01','started_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+ manifest={'attempt':attempt,'packet_cap':cap,'parent_attempt':'pilot-03' if attempt=='practical-01' else 'practical-01','stage':'S0','status':'running','plan':receipt,'source_hashes':sources,'input_hashes':hashes,'assignments':assignments(),'python':platform.python_version(),'model_calls':0,'inference_cost_usd':0,'host':'sim-vishesh','claim':'vishesh-healing-practical-01','started_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  write(out/'manifest.json',manifest);summary=[]
  for name,obj in loaded.items():write(out/name,obj)
  try:
@@ -49,7 +50,7 @@ def run(out,parent,tldr,hook=lambda kind,data:None,timeout=900):
     def checkpoint(f):
      if time.monotonic()-start>timeout:raise TimeoutError('attempt_deadline')
      frames.append(f)
-    result=rollout(loaded[f'corpus-{a["seed"]}.json'],loaded[f'tapes-{a["seed"]}.json']['jev'],a['layout'],a['arm'],a['scenario'],checkpoint)
+    result=rollout(loaded[f'corpus-{a["seed"]}.json'],loaded[f'tapes-{a["seed"]}.json']['jev'],a['layout'],a['arm'],a['scenario'],checkpoint,cap)
     a['status']='completed';write(out/(a['id']+'.json'),{**a,**result});summary.append({**a,**result['metrics']})
    except BaseException as e:
     a.update(status='failed',error_type=type(e).__name__);write(out/(a['id']+'.json'),{**a,'frames':frames});raise
