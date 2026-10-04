@@ -3,14 +3,16 @@ id: phantom-coast-pc10-objective
 type: task
 title: Repair Phantom acquisition objective and prepare paired diagnostic
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T19:44Z
+updated: 2026-10-04T19:44Z
 ---
 
 ## Goal
