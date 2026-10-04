@@ -288,6 +288,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T17:16Z | C4 S0 scientifically invalid from label leakage; full postmortem published, machine released; tested C5 proposal awaits changed-plan decision |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T17:05Z | S0-02 closed; strict format failure; offline repair validated; successor decision pending |
 | vishesh/codex-pi-review | working | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T16:56Z | Reconciling four native failures, remaining direct launches and trace-grounded offline repairs; central wait removed. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T16:55Z | D5 executed and failed acquisition; all24 assignments audited,48 failed transports,0responses; post-mortem complete and allocation released |
@@ -302,7 +303,6 @@
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T15:25Z | Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved |
 | shadow/sol-janitor-find | done |  | 2026-10-04T15:24Z | Published 41 triaged findings; J041 independently reproduces unrelated Flight Deck provenance mutation and proposes a dmarz-named scoped PR. |
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
-| vishesh/codex-regrowth-docs | blocked | healing-c4-selective | 2026-10-04T15:23Z | C4 ready integration; queue297 blocked on orbital-one and credential/original-ledger handoff; zero inference, runtime stopped |
 | shadow/sol-janitor-fix | working |  | 2026-10-04T15:16Z | Fix finder findings in severity order through janitor PRs only |
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
 | vishesh/fm-security-review | done | review-fork-merge-security | 2026-10-04T14:38Z | Review task complete; revise verdict published with source checks, three searches and correction groups R1-R4. |
