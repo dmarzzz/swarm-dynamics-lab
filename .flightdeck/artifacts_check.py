@@ -14,6 +14,7 @@ The manifest is human-written (docs/ARTIFACTS.md); the schema (schemas/artifacts
 they live in artifacts.lock.json next to it, keyed by artifact id and "id@version".
 Also imported by the deck server (load_manifest / check_manifest), so keep it stdlib + PyYAML (+ optional jsonschema).
 """
+import copy
 import hashlib
 import json
 import mimetypes
@@ -348,15 +349,18 @@ def prompt_digest(prompt):
     return hashlib.sha256(str(prompt).encode("utf8")).hexdigest()
 
 
-def fill_lock(folder, data, old=None, host=None):
+def fill_lock(folder, data, old=None, host=None, selected_keys=None):
     """-> lock dict. Facts are recomputed only when size or mtime changed (sha256 of a 200 MB film is not free).
     Version entries also carry provenance facts derived from the manifest: `ingredients` as digested objects,
     `prompt_sha256`, and `host` (the machine that first locked that version; the SLSA builder id uses it)."""
     old_entries = (old or {}).get("entries") or {}
-    entries = {}
+    # Scoped publication preserves historical facts, including absent local files.
+    entries = copy.deepcopy(old_entries) if selected_keys is not None else {}
     host = host or (socket.gethostname().split(".")[0] or "unknown").lower()
 
     def one(key, rel, v=None):
+        if selected_keys is not None and key not in selected_keys:
+            return
         fp = expand(folder, rel)
         if not fp or not os.path.isfile(fp):
             return
@@ -392,7 +396,28 @@ def fill_lock(folder, data, old=None, host=None):
         for v in a.get("versions") or []:
             if isinstance(v, dict) and v.get("path") and "v" in v:
                 one(f"{a['id']}@{v['v']}", v["path"], v)
+    if selected_keys is not None and old is not None:
+        result = copy.deepcopy(old)
+        result["entries"] = entries
+        return result
     return {"lock": 1, "generated": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "project": data.get("project"), "entries": entries}
+
+
+def load_lock_for_add(folder):
+    """Fail closed on an unreadable/malformed existing lock before publication writes."""
+    p = os.path.join(folder, LOCK_NAME)
+    try:
+        with open(p, encoding="utf8") as f:
+            lock = json.load(f)
+    except FileNotFoundError:
+        if os.path.lexists(p):
+            raise ValueError("existing artifact lock is unreadable: " + p)
+        return None
+    if (not isinstance(lock, dict) or lock.get("lock") != 1
+            or not isinstance(lock.get("entries"), dict)
+            or any(not isinstance(v, dict) for v in lock["entries"].values())):
+        raise ValueError("malformed artifact lock: " + p)
+    return lock
 
 
 def load_lock(folder):
