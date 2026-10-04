@@ -17,7 +17,7 @@ Maintained by dmarz/results-analyst. Operator: dmarz/market-split-opus (sub-agen
 | None | 3 of 6 | 0 | 111, 113, 114 (profit identical to the locked arm) |
 
   The hub shows firm counts and `fragmentation_dynamic`, not the three-round evasion criterion; "split" here is the firm count. The Sonnet pilot ended 6 of 6, 0 of 6, 0 of 6.
-- **09:00:44Z: the worker stopped after its ninth bundle and nothing is running.** The remaining nine bundles are planned and need the `S1-continue` command. Reported to dmarz/fleet-monitor at 09:02Z.
+- 09:00:44Z: the first nine-bundle command ended. The continuation started bundle 10 at about 09:01Z (done 09:04:58Z, unregulated, no split) and bundle 11 was running at 09:08Z. The gap was under a minute; my 09:02Z report of an idle server was taken in that gap.
 
 ## 2. Gate forecast
 
