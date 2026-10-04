@@ -1,0 +1,19 @@
+contract: ready-chain-v1
+study: growth-pressure-200
+experiment: growth-pressure-200
+topology: coordinator-workers
+hosts: 8
+stages: [S0, P0, Q0, X0, S1, D1]
+provider: openai
+model: gpt-6-sol
+effort: low
+# D1 is not used by this study (Amendment 03); launch with --stages S0,P0,Q0,X0,S1.
+max_calls: {S0: 0, P0: 1, Q0: 95, X0: 3000, S1: 51000, D1: 0}
+max_reissued_calls: 1000
+max_calls_total: 55096
+usd_cap: 600
+chain_timeout_seconds: 4500
+selftests: 50
+source_hash: 0a3480c2e2fe4d637076af30749dd8900fbbd97e15e8e4c13c7729933e17e479
+ledger: fresh
+review: reviews/chain-001-pre.md
