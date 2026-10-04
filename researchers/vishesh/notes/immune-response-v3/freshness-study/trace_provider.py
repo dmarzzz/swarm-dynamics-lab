@@ -1,6 +1,22 @@
 """Credential-free experimental transport records; never log headers or env."""
 import hashlib,json,time,urllib.error,urllib.request,os
 from durable_provider import DurablePolicy
+
+def http_diagnostics(exc):
+ """Allowlisted error metadata only; never retain provider messages/headers."""
+ out={}
+ try:
+  retry=exc.headers.get('Retry-After','')
+  if retry.isascii() and retry.isdigit() and len(retry)<=5 and int(retry)<=86400:out['retry_after_seconds']=int(retry)
+ except Exception:pass
+ try:
+  raw=exc.read(4097)
+  if len(raw)<=4096:
+   category=json.loads(raw).get('error',{}).get('type')
+   if category in {'invalid_request_error','authentication_error','permission_error','not_found_error','request_too_large','rate_limit_error','api_error','overloaded_error'}:out['error_category']=category
+ except Exception:pass
+ return out
+
 class TracePolicy(DurablePolicy):
  def record(self,row):
   path=self.usage_path.parent/'transport.jsonl';path.parent.mkdir(parents=True,exist_ok=True)
@@ -20,7 +36,7 @@ class TracePolicy(DurablePolicy):
    result=json.loads(raw)
   except Exception as exc:
    state='http_'+str(exc.code) if isinstance(exc,urllib.error.HTTPError) else 'transport_or_decode_'+type(exc).__name__
-   self.finish(request_id,state);self.record({'kind':'transport_error','request_id':request_id,'state':state,'at':time.time()});raise ValueError(state) from None
+   self.finish(request_id,state);diagnostics=http_diagnostics(exc) if isinstance(exc,urllib.error.HTTPError) else {};self.record({'kind':'transport_error','request_id':request_id,'state':state,'at':time.time(),**diagnostics});raise ValueError(state) from None
   self.finish(request_id,'response_received',result.get('usage'))
   self.record({'kind':'response','request_id':request_id,'body':{k:result[k] for k in ['id','model','stop_reason','usage','content'] if k in result},'at':time.time()})
   if result.get('stop_reason')!='end_turn':raise ValueError('incomplete_output')

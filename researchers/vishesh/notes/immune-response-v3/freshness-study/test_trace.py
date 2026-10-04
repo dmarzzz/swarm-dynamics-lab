@@ -20,4 +20,16 @@ class TraceTests(unittest.TestCase):
   rows=self.run_case({'stop_reason':'end_turn','usage':{'input_tokens':1,'output_tokens':2},'content':[{'type':'text','text':'not-json'}]});self.assertEqual(rows[1]['body']['content'][0]['text'],'not-json')
  def test_refusal_stop_reason_preserved(self):
   rows=self.run_case({'stop_reason':'refusal','usage':{'input_tokens':1,'output_tokens':2},'content':[]});self.assertEqual(rows[1]['body']['stop_reason'],'refusal')
+class HttpDiagnosticTests(unittest.TestCase):
+ def error(self,body,retry):
+  import io,urllib.error
+  return urllib.error.HTTPError('https://fixture.invalid',429,'failure',{'Retry-After':retry,'Authorization':'SECRET-HEADER'},io.BytesIO(body))
+ def test_allowlist_excludes_messages_and_headers(self):
+  from trace_provider import http_diagnostics
+  result=http_diagnostics(self.error(json.dumps({'error':{'type':'rate_limit_error','message':'SECRET-BODY'}}).encode(),'12'))
+  self.assertEqual(result,{'error_category':'rate_limit_error','retry_after_seconds':12});self.assertNotIn('SECRET',json.dumps(result))
+ def test_untrusted_categories_and_retry_values_omitted(self):
+  from trace_provider import http_diagnostics
+  for raw in [b'not-json',b'x'*4097,json.dumps({'error':{'type':'SECRET-CATEGORY'}}).encode()]:
+   self.assertEqual(http_diagnostics(self.error(raw,'SECRET-RETRY')), {})
 if __name__=='__main__':unittest.main()
