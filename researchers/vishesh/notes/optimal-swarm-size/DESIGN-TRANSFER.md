@@ -40,3 +40,7 @@ Source evidence: [M1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Exact remaining blocker | Central dispatcher, eligible exclusive worker and secure original-ledger/credential handoff. The historical worker is occupied; a registry entry is not available capacity. |
 
 Prior-art inputs: [[kim-2025-towards]], [[bertalanic-2026-ringelmann]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.
+
+## Later question-quality revision
+
+[2026-10-04 design refresh](design-refresh-2026-10-04/README.md) replaces generic novelty framing with a candidate comparison of team contraction against stronger synchronization. Includes source search limits, definitions, eight realistic task families, six comparison strategies and sample/precision requirements. This is exploratory planning; earlier central-only blocker text above is historical and current Q-A7 status is in SETUP.md.
