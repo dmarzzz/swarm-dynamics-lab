@@ -6,3 +6,6 @@
 - 11:50Z Code pinned at fa61358a (source hash 72895482): revised reference adapter 639e9501 taken unchanged, 84 selftests, offline S0 144/144, rehearsal 33/33 checks in 47 s. READY.yaml, RUN.md, VISUALIZATION.md, pre-run review chain-001 pushed. Nothing launched, no model call.
 - Surprises: the first reference adapter could not resume a single-call stage inside its exact call cap (a billing stop leaves reservations behind); the lead's revision voids them. Row field `error` (the error probability) collided with the failure category; the category is now `failure`.
 - Next: dmarz/fleet-monitor's same-researcher check, then the run-queue request by the lead.
+- 12:00Z Attempt 001 ran (operator dmarz/fleet-monitor) and stopped at Q0: 24 valid, prose 10 of 12, table 8 of 12 optimal. Read the post-mortem and records.
+- 12:45Z Attempt 002 (the one bounded repair) prepared: cost-then-choice answer, validation rules fixed in advance (13 tolerated forms, 13 invalid forms tested), set b, code commit 35404c24, source hash ef40246d, 87 selftests, rehearsal 37 of 37 checks. Pre-run review reviews/chain-002-pre.md, READY.yaml names it. Nothing launched, no model call.
+- Surprise: storing rows with sorted keys lost the returned object's key order; the rehearsal's verify caught it; the object is now stored as JSON text.

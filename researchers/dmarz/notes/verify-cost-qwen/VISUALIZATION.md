@@ -1,7 +1,7 @@
 # Visualization mapping v1: verify-cost-qwen
 
 - Mapping version: v1, bound to the source hash in [READY.yaml](READY.yaml). Renderer: `src/render.py` (Pillow only). No parent mapping; the layout is specific to this study.
-- Run bindings: each stage is one hub run of experiment `verify-cost-qwen` with params `stage`, `batch` (`s0-001`, `p0-001`, `q0-001`, `s1-001`, and `s1-001-r<n>` for a continuation after a billing stop), `source_hash` and `code`. Each row binds layout seed, error probability e, UNKNOWN cost U and representation.
+- Run bindings: each stage is one hub run of experiment `verify-cost-qwen` with params `stage`, `batch` (attempt 002: `s0-002`, `p0-002`, `q0-002`, `s1-002`, and `s1-002-r<n>` for a continuation after a billing stop; attempt 001 used `-001`), `source_hash` and `code`. Each row binds layout seed, error probability e, UNKNOWN cost U and representation.
 - Behaviour to show: whether the choice between checking and exploring follows the case (regret near 0 everywhere) or a constant habit (regret in the six cases where that habit is wrong), and whether the table and the prose differ, layout by layout.
 - Status: the renderer is implemented and tested offline on scripted rows. No frame of a paid stage exists, because nothing has run.
 
@@ -13,6 +13,7 @@
 | regret per case against the comparators | per case: prose bar, table bar; always-check and always-explore regret as horizontal marks where that policy is wrong | bottom left: 12 bar pairs, y from 0 to 0.75; amber prose, teal table, white mark always-check, red mark always-explore; "R" above a reliable-source case flagged as a regression | evaluator-only | "?" in place of a bar with no valid row |
 | reliable-source regression | in strata with e ≤ 0.20: optimal count table minus prose; flagged at −3 or lower | text line, bottom right, red when any stratum is flagged | evaluator-only | counted over valid rows |
 | stage accounting | valid / assigned, failed, not started, pending; calls, transport attempts, input and output tokens; stage dollars from usage; ledger committed dollars and the cap; elapsed seconds | text lines, bottom right (the cost panel) | — | zero until the first call |
+| written costs (attempt 002): `evaluation.work` | valid rows with both costs written, with both within 0.005 of the analytic costs, with a choice against the model's own numbers, with malformed costs | one text line, bottom right; reported, never graded | evaluator-only | counts over valid rows; absent when no row carries written costs |
 | failures by category | units without a valid answer, by failure category or stop reason | red text line, bottom right | — | absent when there is none |
 | qualification fixtures | one square per fixture and representation | bottom right: green optimal, red not optimal, grey no valid answer | evaluator-only | grey |
 
