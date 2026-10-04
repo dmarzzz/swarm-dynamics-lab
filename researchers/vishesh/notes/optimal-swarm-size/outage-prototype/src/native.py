@@ -23,12 +23,13 @@ def payload(messages,max_tokens=512):
         'output_config':{'format':{'type':'json_schema','schema':SCHEMA}}})
 
 class Native:
-    def __init__(self,bank,episode,journal,expiry,stop=None,*,max_tokens=512,max_bytes=12000,quote=QUOTE,episode_cap=850000):
+    def __init__(self,bank,episode,journal,expiry,stop=None,*,max_tokens=512,max_bytes=12000,quote=QUOTE,episode_cap=850000,payload_builder=None):
+        self.payload_builder=payload_builder or payload
         self.max_tokens=max_tokens;self.max_bytes=max_bytes;self.quote=quote;self.episode_cap=episode_cap
         self.bank=bank;self.episode=episode;self.journal=journal;self.expiry=expiry
         self.stop=stop or threading.Event();self.lock=threading.Lock()
     def __call__(self,messages,actor,tick):
-        body=payload(messages,self.max_tokens);encoded=json.dumps(body).encode();call=f'{self.episode}/{tick}/{actor}'
+        body=self.payload_builder(messages,self.max_tokens);encoded=json.dumps(body).encode();call=f'{self.episode}/{tick}/{actor}'
         if len(encoded)>self.max_bytes:raise SafeFailure('prompt_limit')
         if time.time()+120>=self.expiry:raise SafeFailure('claim_expired')
         with self.lock:

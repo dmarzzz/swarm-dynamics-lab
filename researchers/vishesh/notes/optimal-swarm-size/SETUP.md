@@ -115,3 +115,7 @@ Allocation closeout: agentops PR391 merged, releasing the completed study claim 
 ## Richer incident investigation: offline prototype
 
 [Prototype and case-quality assessment](incident-investigation/README.md), [prospective plan](incident-investigation/PLAN.md): independent, serial and mixed structures, each with fault/clean/insufficient conditions.18/18 deterministic reference executions and12 tests pass. Acquisition rounds at1/3tool slots are9/3,3/3,4/2 respectively; these are capacity effects, not agent-count evidence. Ground truth, citation support, incorrect repairs, shared capacity, capability discovery and invariance checks validated. All cases are exposed authored development material. No native qualification, model calls, allocation or budget mutation. Next action: review the concrete task contract and prepare bounded native qualification before any larger roster comparison.
+
+## Incident Q1 native preparation
+
+[Prospective plan](incident-investigation/NATIVE-Q1-PLAN.md) defines nine single-context qualification episodes, three query slots, maximum90 calls and USD4 attempt cap within originalUSD20. No larger swarm stage. The native wrapper rejects unsupported escalation without observed missing evidence; offline historical results preserved.19 incident/interface/receipt tests,28 outage regressions,70 existing study tests and14 shared trace-receipt checks pass. Native runtime, public registration, account/claim and original-ledger admission still required. Original exposureUSD3.727799 retained.

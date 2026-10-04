@@ -14,6 +14,11 @@ def allowed_calls():
     return {f"{r['id']}/{tick}/{actor}" for r in assignments() if r['arm']!='scheduled' for tick in range(8) for actor in range(1 if r['arm']=='single' else 4)}
 
 def contracts(scope):
+    if scope=='incident-q1':
+        import sys
+        sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'incident-investigation'))
+        from native_q1 import assignments as q_assignments,payload as q_payload
+        return {f"{r['id']}/{turn}/0":q_payload([])['response_format'] for r in q_assignments() for turn in range(10)},1024,24000
     if scope=='outage-o2':
         from run_outage_o2 import assignments as o2_assignments
         return {f"{r['id']}/{tick}/{actor}":payload([],1024)['response_format'] for r in o2_assignments() if r['arm']!='scheduled' for tick in range(8) for actor in range(r['n'])},1024,24000
@@ -33,7 +38,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs):raise ValueError('redirect_rejected')
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--credential',type=Path,required=True);p.add_argument('--port-file',type=Path,required=True);p.add_argument('--dispatch-log',type=Path,required=True);p.add_argument('--expires',type=float,required=True);p.add_argument('--scope',choices=['outage-o1','outage-o2','q-a7'],default='outage-o1');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--credential',type=Path,required=True);p.add_argument('--port-file',type=Path,required=True);p.add_argument('--dispatch-log',type=Path,required=True);p.add_argument('--expires',type=float,required=True);p.add_argument('--scope',choices=['outage-o1','outage-o2','incident-q1','q-a7'],default='outage-o1');a=p.parse_args()
     os.umask(0o077);resource.setrlimit(resource.RLIMIT_CORE,(0,0))
     if a.credential.is_symlink() or a.credential.stat().st_mode&0o077 or a.credential.stat().st_uid!=os.getuid():raise ValueError('credential_permissions')
     opener=urllib.request.build_opener(NoRedirect())
