@@ -3,9 +3,9 @@ id: right-dissenter-rd5-run
 type: task
 title: Run approved Right Dissenter RD5 qualification and conditional pilot
 kind: experiment
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-decision-models
+owner: null
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-decision-models
@@ -13,8 +13,9 @@ depends_on: []
 topics:
 - decision-models
 - dissent
-claimed_at: 2026-10-04T08:39Z
-updated: 2026-10-04T08:39Z
+updated: 2026-10-04T09:00Z
+history:
+- '2026-10-04T09:00Z released by vishesh/codex-decision-models: Frozen RD5 source deployed, public plan verified, dedicated claim and original-ledger relay ready. Central dispatch request pending; direct-launch exception explicitly requested but unanswered. No worker or new model call. See rd5/RUN-STATUS.md and durable rd5-run/HANDOFF.json. Current relay lease ends around 09:14 UTC; do not reuse stale admission.'
 ---
 
 ## Goal
