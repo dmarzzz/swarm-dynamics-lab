@@ -8,7 +8,9 @@ import instrument as i
 def write(path,value):
     with Path(path).open('x') as f:json.dump(value,f,sort_keys=True);f.flush();os.fsync(f.fileno())
 def fetch(url):
-    with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=30) as r:return r.read(2_000_001).decode()
+    with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache','User-Agent':'Theseus-Q0'}),timeout=30) as r:data=r.read(10_000_001)
+    if len(data)>10_000_000:raise ValueError('public_response_bound')
+    return data.decode()
 def public_check(r):
     state=json.loads(fetch('https://swarm-live.pages.dev/api/state'))
     exp=next((x for x in state['experiments'] if x.get('id')==n.EXPERIMENT),{})

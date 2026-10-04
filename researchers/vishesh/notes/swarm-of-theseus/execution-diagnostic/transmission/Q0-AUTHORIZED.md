@@ -17,3 +17,5 @@ Host/allocation amendment: the former host became exclusively claimed by a diffe
 ## TLDR
 
 Can a founder learn a role-specific policy and teach a successor through a bounded direct handover? Six fresh roots cover stable exceptions, changed practices and unreliable evidence. Measure exact evidence-supported policies and unseen actions before/after teaching; exact references audit answerability. Up to72calls,USD1.80, no retry. This qualifies acquisition/teaching, not cultural survival or swarm advantage.
+
+Before-dispatch preflight repair: the public state feed exceeded2MB and its endpoint rejected the default Python user-agent. Use the existing named Theseus user-agent and a bounded10MB reader. Preserve the same72assignments, private seeds, reservation and scientific contract; re-register the repaired source before any call. This is a public-read repair, not a relaxation of plan/hash/page verification.

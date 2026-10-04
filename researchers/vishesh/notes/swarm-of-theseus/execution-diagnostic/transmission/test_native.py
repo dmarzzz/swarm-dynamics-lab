@@ -54,6 +54,15 @@ class NativeTests(unittest.TestCase):
         with self.assertRaises(ValueError):runner.validate({},'f'*40,self.m)
     def test_seeds_unique_required(self):
         with self.assertRaises(AssertionError):n.manifest([1]*6)
+    def test_public_fetch_named_agent_and_explicit_bound(self):
+        from unittest.mock import patch, MagicMock
+        response=MagicMock();response.__enter__.return_value.read.return_value=b'x'*2_100_000
+        with patch('runner.urllib.request.urlopen',return_value=response) as call:
+            self.assertEqual(len(runner.fetch('https://example.invalid/state')),2_100_000)
+            self.assertEqual(call.call_args.args[0].get_header('User-agent'),'Theseus-Q0')
+        response.__enter__.return_value.read.return_value=b'x'*10_000_001
+        with patch('runner.urllib.request.urlopen',return_value=response):
+            with self.assertRaises(ValueError):runner.fetch('https://example.invalid/state')
     def test_lower_stage_envelope_not_topup_consumption(self):
         self.assertLessEqual(72*(16000+5120)/1e6,1.70)
         self.assertLess(.9793100437+1.8,25)
