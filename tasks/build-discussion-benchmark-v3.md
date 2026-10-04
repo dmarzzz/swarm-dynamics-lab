@@ -3,14 +3,16 @@ id: build-discussion-benchmark-v3
 type: task
 title: Ship a validated offline discussion and memory benchmark v3
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/discussion-bench-v3
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T01:51Z
+updated: 2026-10-04T01:51Z
 ---
 
 ## Goal
