@@ -327,12 +327,12 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/astra-ultra-review | done |  | 2026-10-04T21:21Z | Published Astra Ultra's growth-pressure-200 plan; arithmetic and repository checks complete. |
 | vishesh/codex-theseus | idle |  | 2026-10-04T20:42Z | Q2 completed and qualified; main50-member study not dispatched |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T20:40Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-pi-review | done | refresh-review-action-guidance | 2026-10-04T20:38Z | Published refreshed guidance for 15 study notes; 11 updated decisions, 229 recommendations preserved, validation passed. |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T20:24Z | Telephone A1 completed and reviewed; semantic qualification failed, V0 unstarted; sequence parked. |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
-| dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
