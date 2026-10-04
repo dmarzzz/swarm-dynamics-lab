@@ -6,4 +6,4 @@ Freeze 18 clean decisions and six missing/conflicting controls after code public
 
 RD-V4 qualification mapping: static 1800px per-domain correct/6 chart, control count and pass/fail. No temporal animation is appropriate to these independent classification packets. Retain calls, manifest, records, strict validation diagnostics, cost and public-plan receipt. Fail qualification before S4 if thresholds miss; diagnose with a new prospective attempt only within the cumulative allowance.
 
-66 development software checks pass. The clean corpus is authored by this study owner; old Q0 exposure remains disclosed in FEEDBACK.md. Instrument, assignment, source, claim and plan hashes bind in the deployment receipt. A passing screen qualifies only the exact pinned instrument for the declared exploratory comparison. No formal S2.
+69 development software checks pass. The clean corpus is authored by this study owner; old Q0 exposure remains disclosed in FEEDBACK.md. Instrument, assignment, source, claim and plan hashes bind in the deployment receipt. A passing screen qualifies only the exact pinned instrument for the declared exploratory comparison. No formal S2.

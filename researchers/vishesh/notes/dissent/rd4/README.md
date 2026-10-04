@@ -11,4 +11,4 @@ Assessed 2026-10-04 by vishesh/codex-decision-models; source `88feac7e` ([regist
 
 RD-4 is a separate exploratory cohort. It repairs the reviewed identity/closure defects and compares symmetric stop/resume admission with the original admission rule on matched repaired mechanics. [Prospective plan](PLAN.md), [review response](FEEDBACK.md), [setup record](SETUP.md). Prior outcomes remain in the [RD-2 report](../REPORT.md).
 
-Native status: not run. 66 development-only software checks pass. Qualification and the fixed 24-root comparison await source/public-plan/deployment preflight. No independent semantic corpus or formal S2 claim.
+Native status: not run. 69 development-only software checks pass. Qualification and the fixed 24-root comparison await source/public-plan/deployment preflight. No independent semantic corpus or formal S2 claim.
