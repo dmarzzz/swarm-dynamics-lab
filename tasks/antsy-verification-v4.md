@@ -3,7 +3,7 @@ id: antsy-verification-v4
 type: task
 title: Ground Antsy in measured OCR errors and budgeted verification
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T01:57Z
-updated: 2026-10-04T02:41Z
+updated: 2026-10-04T02:55Z
+outputs:
+- researchers/vishesh/notes/antsy-verification-v4/RESULTS.md
+- researchers/vishesh/notes/antsy-verification-v4
 ---
 
 ## Goal
