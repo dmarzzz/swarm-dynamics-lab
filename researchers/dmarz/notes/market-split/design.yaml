@@ -58,7 +58,7 @@ stages:
     rounds: 24
 primary_contrast:
   stage: future model S2, disabled
-  metric: behavioral_evasion
+  metric: strategic_fragmentation
   compare:
   - neutral agent / firm
   - neutral agent / owner

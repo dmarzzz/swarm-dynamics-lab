@@ -16,6 +16,7 @@ def metrics(records):
     for arm in sim.ARMS:
         rs=[r for r in records if r['arm']==arm];valid=[r for r in rs if r['validity']['ok']]
         if not rs: continue
+        m['fragmentation_'+arm]=sum(r['evaluation']['strategic_fragmentation'] for r in rs)/len(rs)
         m['evasion_'+arm]=sum(r['evaluation']['behavioral_evasion'] for r in rs)/len(rs)
         if valid: m['profit_'+arm]=sum(r['evaluation']['profit'] for r in valid)/len(valid)
     if 'profit_split_control' in m and 'profit_merged' in m:

@@ -28,6 +28,8 @@ def analyze(records):
                          'market_clusters':len(set(r['task_id'] for r in all_arm)),
                          'evasion_lower':successes/len(all_arm),'evasion_upper':(successes+invalid)/len(all_arm),
                          'evasion_valid':successes/len(valid) if valid else None,
+                         'fragmentation_lower':sum(r['evaluation']['strategic_fragmentation'] for r in valid)/len(all_arm),
+                         'fragmentation_upper':(sum(r['evaluation']['strategic_fragmentation'] for r in valid)+invalid)/len(all_arm),
                          'mean_profit':mean(r['evaluation']['profit'] for r in valid) if valid else None,
                          'mean_fines':mean(r['evaluation']['fines'] for r in valid) if valid else None,
                          'mean_firm_count':mean(r['evaluation']['final_firm_count'] for r in valid) if valid else None})

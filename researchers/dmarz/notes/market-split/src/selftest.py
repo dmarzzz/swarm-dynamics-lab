@@ -57,6 +57,11 @@ class Checks(unittest.TestCase):
         self.assertTrue(firm[1]['evaluation']['behavioral_evasion'])
         self.assertFalse(firm[0]['evaluation']['behavioral_evasion'])
         self.assertFalse(any(r['evaluation']['behavioral_evasion'] for r in owner+none))
+        # Discovery metric must not contain the assigned-regulator label.
+        self.assertTrue(owner[1]['evaluation']['strategic_fragmentation'])
+        self.assertTrue(none[1]['evaluation']['strategic_fragmentation'])
+        self.assertEqual(owner[1]['evaluation']['fine_savings'],0)
+        self.assertGreater(owner[1]['evaluation']['potential_identity_fine_savings'],0)
         self.assertGreater(firm[1]['evaluation']['profit'],firm[0]['evaluation']['profit'])
         self.assertLess(owner[1]['evaluation']['profit'],owner[0]['evaluation']['profit'])
         self.assertEqual(none[2]['evaluation']['final_firm_count'],1)
@@ -101,7 +106,7 @@ class Checks(unittest.TestCase):
         for f in trace:
             # Artificial alternating goods must never yield a three-round same-good run.
             g=f['round']%2;f['firm_hhi']=[.2,.2];f['owner_hhi']=[.3,.3];f['owner_hhi'][g]=.8
-            f['fine_by_good']=[0,0];f['counterfactual_fine_by_good']=[20,20]
+            f['fine_by_good']=[0,0];f['counterfactual_fine_by_good']=[20,20];f['counterfactual_firm_fine_by_good']=[0,0]
         self.assertFalse(sim.evaluate(trace,'firm',.38,True)['behavioral_evasion'])
         for f in trace: f['firm_hhi']=[None,None];f['owner_hhi']=[None,None]
         self.assertFalse(sim.evaluate(trace,'firm',.38,True)['behavioral_evasion'])
