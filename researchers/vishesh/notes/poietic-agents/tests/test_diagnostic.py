@@ -174,6 +174,20 @@ class DiagnosticTests(unittest.TestCase):
         bad=copy.deepcopy(c);bad['prior_budget']['physical_calls']=37
         with self.assertRaises(ValueError):admission.verify(bad,now=now,actual_host=host)
 
+    def test_d002_existing_allocation_requires_owner_history_and_trust(self):
+        c,now=self.admitted_fixture('D0-02')
+        c['allocation'].update(mode='existing',host='sim-vishesh',new_machine=False)
+        c.pop('authority_relocation')
+        c['existing_authority']=dict(owner_approved=True,decision_reference='OFFLINE',receipt_reference='OFFLINE',
+            historical_charges=40,same_host_binding=True,mirror_history_matches=True,old_workers_stopped=True)
+        self.assertTrue(admission.verify(c,now=now,actual_host='sim-vishesh')['ready'])
+        for field in c['existing_authority']:
+            bad=copy.deepcopy(c);bad['existing_authority'][field]=None
+            with self.subTest(field=field),self.assertRaises(ValueError):admission.verify(bad,now=now,actual_host='sim-vishesh')
+        for field,value in [('host','other'),('new_machine',True),('host_key_provenance',None),('mode','unknown')]:
+            bad=copy.deepcopy(c);bad['allocation'][field]=value
+            with self.subTest(field=field),self.assertRaises(ValueError):admission.verify(bad,now=now,actual_host='sim-vishesh')
+
     def test_d002_ids_roots_and_relay_are_disjoint_from_d001(self):
         old=d.assignments();new=d.assignments('D0-02')
         self.assertEqual({r['root'] for r in new},{500,504,508})

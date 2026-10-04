@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-04",
+  "authority": "Owner direction in owning Poietic task; paraphrased, exact prompts private",
+  "existing_sim_vishesh_allocation_authorized": true,
+  "total_cumulative_study_budget_usd": 10,
+  "prior_exposure_usd": 0.5685608903333335,
+  "budget_is_total_not_addition": true,
+  "requested_swarm_members": 30,
+  "model_selection": "inexpensive OpenRouter models; Haiku or GPT-6 Sol permitted",
+  "D0_02_execution_cap_retained_usd": 2,
+  "diagnostic_scope_unchanged": true,
+  "no_new_ledger": true
+}

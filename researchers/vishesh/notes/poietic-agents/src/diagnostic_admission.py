@@ -48,13 +48,22 @@ def verify(config, now=None, base=BASE, actual_host=None):
         allocation.get('registered_fleet_destination') is not True or allocation.get('workload_idle') is not True or
         allocation.get('approved_account_verified') is not True): raise ValueError('dedicated_allocation')
     if attempt=='D0-02':
-        migration=config.get('authority_relocation',{})
-        if (allocation.get('host')!='sim-vishesh-poietic' or allocation.get('new_machine') is not True or
-            not allocation.get('original_provisioner_receipt') or not allocation.get('host_key_provenance')):
-            raise ValueError('new_machine_provenance')
-        if (migration.get('verified') is not True or not migration.get('receipt_reference') or
-            migration.get('historical_charges')!=40 or migration.get('old_worker_mirror_fenced') is not True):
-            raise ValueError('original_authority_relocation_required')
+        if allocation.get('mode')=='existing':
+            reuse=config.get('existing_authority',{})
+            if (allocation.get('host')!='sim-vishesh' or allocation.get('new_machine') is not False or
+                not allocation.get('host_key_provenance') or reuse.get('owner_approved') is not True or
+                not reuse.get('decision_reference') or not reuse.get('receipt_reference') or
+                reuse.get('historical_charges')!=40 or reuse.get('same_host_binding') is not True or
+                reuse.get('mirror_history_matches') is not True or reuse.get('old_workers_stopped') is not True):
+                raise ValueError('existing_authority_evidence_required')
+        else:
+            migration=config.get('authority_relocation',{})
+            if (allocation.get('host')!='sim-vishesh-poietic' or allocation.get('new_machine') is not True or
+                not allocation.get('original_provisioner_receipt') or not allocation.get('host_key_provenance')):
+                raise ValueError('new_machine_provenance')
+            if (migration.get('verified') is not True or not migration.get('receipt_reference') or
+                migration.get('historical_charges')!=40 or migration.get('old_worker_mirror_fenced') is not True):
+                raise ValueError('original_authority_relocation_required')
     if not 0 <= now-allocation.get('checked_at',0) <= 300: raise ValueError('stale_allocation')
     if allocation.get('expires_at',0) < auth['deadline']+spec['cleanup_seconds']: raise ValueError('claim_lifetime')
     rate=allocation.get('allocated_usd_per_hour')

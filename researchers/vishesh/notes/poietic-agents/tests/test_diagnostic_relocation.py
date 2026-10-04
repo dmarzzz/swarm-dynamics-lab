@@ -75,6 +75,35 @@ class RelocationTests(unittest.TestCase):
                 apply_approved_window(path,repeated,now=later)
             self.assertEqual(self.snapshot(path),before)
 
+    def test_existing_host_renewal_preserves_history_and_permits_only_one_window(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path,r,auth,charges,now=self.fixture(Path(directory))
+            with contextlib.closing(sqlite3.connect(path,isolation_level=None)) as db:
+                db.execute('UPDATE authority SET host=?',('sim-vishesh',))
+            renewal=dict(schema_version=1,study='poietic-agents',attempt='D0-02',approved=True,
+                duration_seconds=3600,maximum_new_calls=36,receipt_id='OFFLINE-REUSE',decision_reference='OFFLINE',
+                approved_at=now,quiescence_checked_at=now,workers_and_relays_stopped=True,quiescence_reference='OFFLINE',
+                old_authorization=auth,expected_authority=dict(r['expected_authority'],host='sim-vishesh'),
+                charges_sha256=digest(charges),expected_charge_count=40,allocation_mode='existing',
+                existing_host_owner_approved=True,allocation_reference='OFFLINE',exclusive_approved_account_allocation=True,
+                mirror_history_matches=True,mirror_check_reference='OFFLINE')
+            before=self.snapshot(path)
+            for field in ['existing_host_owner_approved','allocation_reference','exclusive_approved_account_allocation','mirror_history_matches','mirror_check_reference']:
+                bad=dict(renewal);bad[field]=None
+                with self.subTest(field=field),self.assertRaises(ValueError):apply_approved_window(path,bad,now=now)
+                self.assertEqual(self.snapshot(path),before)
+            result=apply_approved_window(path,renewal,now=now)
+            after=self.snapshot(path)
+            self.assertEqual(before[1],after[1]);self.assertEqual(after[0][0][2],'sim-vishesh')
+            with self.assertRaises(ValueError):apply_approved_window(path,renewal,now=now)
+            with contextlib.closing(sqlite3.connect(path)) as db:
+                current=dict(zip(('hash','host','cap','calls','deadline'),db.execute('SELECT hash,host,cap,calls,deadline FROM authority').fetchone()))
+            later=now+7200
+            repeated=dict(renewal,receipt_id='DIFFERENT',quiescence_checked_at=later,
+                old_authorization=result['authorization'],expected_authority=current)
+            with self.assertRaisesRegex(ValueError,'diagnostic_window_already_used'):apply_approved_window(path,repeated,now=later)
+            self.assertEqual(self.snapshot(path),after)
+
     def test_owner_decision_survives_provisioning_wait_but_checks_must_be_fresh(self):
         with tempfile.TemporaryDirectory() as directory:
             path,r,_,_,now=self.fixture(Path(directory))

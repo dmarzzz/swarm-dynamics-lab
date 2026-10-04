@@ -69,9 +69,14 @@ def apply_approved_window(path, receipt, *, now=None):
         if any(c[4] == 'reserved' for c in charges):
             raise RenewalError('inflight_reservation_unreconciled')
         if receipt['attempt']=='D0-02':
-            if (old['host']!='sim-vishesh-poietic' or len(charges)!=40 or
-                sum(c[3] if c[3] is not None else c[2] for c in charges)!=482269482 or
-                'authority_relocations' not in tables or not db.execute(
+            if (len(charges)!=40 or sum(c[3] if c[3] is not None else c[2] for c in charges)!=482269482):
+                raise RenewalError('d002_history_required')
+            if receipt.get('allocation_mode')=='existing':
+                if (old['host']!='sim-vishesh' or receipt.get('existing_host_owner_approved') is not True or
+                    not receipt.get('allocation_reference') or receipt.get('exclusive_approved_account_allocation') is not True or
+                    receipt.get('mirror_history_matches') is not True or not receipt.get('mirror_check_reference')):
+                    raise RenewalError('d002_existing_host_evidence_required')
+            elif (old['host']!='sim-vishesh-poietic' or 'authority_relocations' not in tables or not db.execute(
                     'SELECT 1 FROM authority_relocations WHERE attempt=?',('D0-02',)).fetchone()):
                 raise RenewalError('d002_relocated_history_required')
             if 'diagnostic_windows' in tables and db.execute(
