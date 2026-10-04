@@ -21,6 +21,10 @@ Verify dataset documentation and access, map the corpus to owned studies, and pr
 
 ## Done when
 
-- [ ] Record source revision, access scope and dataset limitations.
-- [ ] Map each study to useful data and a valid comparison.
-- [ ] Publish a bounded prospective pilot and setup status without claiming observed outcomes.
+- [x] Record source revision, access scope and dataset limitations.
+- [x] Map each study to useful data and a valid comparison.
+- [x] Publish a bounded prospective pilot and setup status without claiming observed outcomes.
+
+## Coverage note
+
+Pinned source documentation read and four small gated tables loaded; manifest counts kept separate from independently parsed counts. Eleven research directions mapped; prospective memory replay plan includes context visibility, cluster splits, four baselines/arms, bounded calls, scoring, uncertainty, terms and honest pending gates. No behavioral corpus evaluation, model collection, machine allocation or launcher implementation claimed.

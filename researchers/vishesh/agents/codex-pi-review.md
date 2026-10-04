@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: idle
-task: standard-experiment-iteration-2026-10-04
-doing: Standing iteration process documented, linked and validated; no experiment launched by this documentation change.
-updated: 2026-10-04T17:49Z
+state: working
+task: ai-village-dataset-design-2026-10-04
+doing: Verifying AI Village sources and preparing an exploratory dataset replay design; no paid collection.
+updated: 2026-10-04T17:58Z
 ---
 
 ## Notes

@@ -1,0 +1,45 @@
+{
+  "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+  "scope": "small metadata tables only; no chat, memory content, computer turns or screenshots read",
+  "files": {
+    "agents.jsonl.gz": {
+      "bytes": 5280,
+      "rows_loaded": 46,
+      "sha256": "b7af5dd3bed6f58d0f7627706b103bdba387ed678d6ac9caf5f084799dec0350"
+    },
+    "village_goals.jsonl.gz": {
+      "bytes": 4449,
+      "rows_loaded": 51,
+      "sha256": "14474413db05a1fef73bf54f120404526217c5286e24f0bda5cbf72bdef75886"
+    },
+    "agent_goals.jsonl.gz": {
+      "bytes": 3973,
+      "rows_loaded": 33,
+      "sha256": "ae87e5cedbe9cbd363038eb8d20a99d29df264c609c6d87754e9d0b18b761860"
+    },
+    "chat_rooms.jsonl.gz": {
+      "bytes": 1711,
+      "rows_loaded": 16,
+      "sha256": "d10abea67a3c6f040cfb8a39ced570a30188f1006cf246bc6ac3beef7f626e58"
+    },
+    "README.md": {
+      "bytes": 15101,
+      "sha256": "f3ecbc9662c6db14de41e1c140d400b23dbcb28d012283fb30ea752e803da0d2"
+    },
+    "SCHEMA.md": {
+      "bytes": 18647,
+      "sha256": "50f27bda7b862723b8d47d7f7652a6b1c0e0ce9d7c5db572252da4d886bd9903"
+    },
+    "CHANGELOG.md": {
+      "bytes": 21965,
+      "sha256": "65cac86a5ace6442879331ca7aadc7a46d4c77f7dd59979865cce708661e63d5"
+    },
+    "manifest.json": {
+      "bytes": 706,
+      "sha256": "28383809e34d38f00037dd31d830fa9b826b59fd91c0460e03efcbed6ee9e332"
+    }
+  },
+  "assessed_at": "2026-10-04T18:00:56.177514+00:00",
+  "assessor": "vishesh/codex-pi-review",
+  "manifest_counts_status": "Source-reported, not independently counted except four loaded small tables"
+}

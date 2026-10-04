@@ -95,3 +95,7 @@ Objective truth known to the experimenter and verified reachable; majority-vote-
 - Debate-or-Vote's decentralised-debate Qwen average was read as 73.77 and 73.32 in two passes of the table; the PDF should settle it before the number is quoted to four digits.
 - arXiv:2601.19921, cited in the dossier, is "Demystifying Multi-Agent Debate" (Zhu et al., 2026-01-09), a follow-up to Debate-or-Vote and not one of the twelve; documented inside `readings/debate-or-vote.md`.
 - AI Village dataset access remains unconfirmed (carried over from the context note).
+
+## Dataset access update on October 4
+
+The earlier unconfirmed-access note is historical. Authenticated source and small-table access is now verified; see [the scoped audit and replay proposal](ai-village-replay-2026-10-04/README.md). Behavioral episodes have not yet been evaluated.

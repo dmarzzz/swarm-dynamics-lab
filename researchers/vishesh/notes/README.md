@@ -101,3 +101,5 @@ Expanded all sixteen briefs; added the external-influence animation and revised 
 - [Combined PI next-step decisions](pi-next-decisions-2026-10-04/README.md): dispositions for every owned study, current evidence, accepted/rejected review inputs and explicit stop/park choices.
 
 - [Active ten-study cycle: findings, prepared runs and remaining gates](pi-cycle-2026-10-04/README.md).
+
+- [AI Village dataset and replay proposal](ai-village-replay-2026-10-04/README.md): authenticated metadata access, transfer options for eleven study directions, and a prospective memory/handoff pilot; no model run.
