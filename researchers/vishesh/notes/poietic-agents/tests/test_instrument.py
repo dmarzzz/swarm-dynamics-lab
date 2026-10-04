@@ -211,8 +211,8 @@ class NativeAndQualificationTests(unittest.TestCase):
 
 class AdmissionTests(unittest.TestCase):
     def setUp(self):
-        self.now=time.time();self.c={'experiment':'poietic-agents','stage':'S0','attempt':'S0-01','file_hashes':inventory(),
-          'assignment_sha256':digest(assignments()),'review_resolution':'P1-P3-v0.2-tested','source_commit':'a'*40,
+        self.now=time.time();self.c={'experiment':'poietic-agents','stage':'S0','attempt':'S0-02','file_hashes':inventory(),
+          'assignment_sha256':digest(assignments()),'prior_budget':{'physical_calls':36,'exposure_nano':479232000},'review_resolution':'P1-P3-v0.2-tested','source_commit':'a'*40,
           'authorization':{'study':'poietic-agents','stage':'S0','owner_approved':True,'reference':'unit-fixture-only','api_cap_usd':1.5,'infrastructure_cap_usd':0.5,'total_cumulative_cap_usd':2,'physical_call_cap':288,'deadline':self.now+3600},
           'allocation':{'experiment':'poietic-agents','operator':'vishesh/codex-heterogeneous','host':'fixture','claim_id':'fixture','merged_claim_revision':'a'*40,'exclusive':True,'registered_fleet_destination':True,'workload_idle':True,'approved_account_verified':True,'checked_at':self.now,'expires_at':self.now+4000,'allocated_usd_per_hour':.1,'charge_started_at':self.now},
           'credential':{'alias':'swarm-lab-openrouter','study_authorized':True},'worker_count':1,'concurrency':1,
@@ -288,7 +288,7 @@ class RelayTests(unittest.TestCase):
     def setUp(self):
         self.models=json.loads((BASE/'models.json').read_text())['models']
         state=make_case(0,development=True);packet=probe(state,0,'generalist')
-        self.data={'id':'S0-01:generalist:0:0:physical-0','role':'generalist','request':request(self.models['generalist'],packet['sections'])}
+        self.data={'id':'S0-02:generalist:0:0:physical-0','role':'generalist','request':request(self.models['generalist'],packet['sections'])}
     def test_assigned_native_envelope(self):
         from relay import validate_payload
         self.assertEqual(validate_payload(self.data,self.models)['provider_tag'],'anthropic')
@@ -314,8 +314,8 @@ class RelayTests(unittest.TestCase):
 class RelayHealthTests(unittest.TestCase):
     def test_mismatched_or_used_relay_blocks_before_dispatch(self):
         from admission import verify_relay_health
-        now=time.time();c={'attempt':'S0-01','source_commit':'a'*40,'assignment_sha256':'b'*64}
-        health=dict(c,experiment='poietic-agents',credential_ready=True,deadline=now+600,api_cap_usd=1.5,physical_calls=0)
+        now=time.time();c={'attempt':'S0-02','source_commit':'a'*40,'assignment_sha256':'b'*64,'prior_budget':{'physical_calls':36,'exposure_nano':479232000}}
+        health=dict(c,experiment='poietic-agents',credential_ready=True,deadline=now+600,api_cap_usd=1.5,physical_calls=36,api_exposure_usd=.479232)
         self.assertTrue(verify_relay_health(health,c,now))
         for k,v in [('source_commit','old'),('physical_calls',1),('credential_ready',False),('deadline',now)]:
             h=dict(health);h[k]=v
@@ -324,3 +324,27 @@ class RelayHealthTests(unittest.TestCase):
         import inspect,launch
         source=inspect.getsource(launch.run)
         self.assertLess(source.index('verify_relay_health('),source.index("quiet(sr.report,'start'"))
+
+
+class RepairBoundaryTests(unittest.TestCase):
+    def test_usage_receipt_survives_invalid_action(self):
+        from native import usage_receipt
+        c=json.loads((BASE/'models.json').read_text())['models']['generalist']
+        raw={'model':c['accepted_response_model_ids'][0],'provider':c['provider_name'],'choices':[{'finish_reason':'stop','message':{'content':'invalid JSON'}}],'usage':{'prompt_tokens':10,'completion_tokens':5,'cost':.00004}}
+        self.assertEqual(usage_receipt(raw,c)['cost_usd'],.00004)
+        with self.assertRaises(ValueError):response(raw,c)
+    def test_interrupted_dispatch_is_started_not_unstarted(self):
+        from qualification import complete_records
+        ident=assignments()[0]['id'];r=complete_records([],[ident]);s=analyze(r)
+        self.assertEqual((s['assigned'],s['started'],s['terminal']),(144,1,144))
+        self.assertEqual(r[0]['status'],'failed')
+    def test_prior_exposure_drift_blocks_repair_admission(self):
+        case=AdmissionTests();case.setUp();case.c['prior_budget']['exposure_nano']=0
+        with self.assertRaisesRegex(ValueError,'prior_budget_evidence'):verify(case.c,case.now,actual_host='fixture')
+    def test_transport_retry_not_admitted(self):
+        from relay import validate_payload
+        case=RelayTests();case.setUp();case.data['id']=case.data['id'].replace('physical-0','physical-1')
+        with self.assertRaises(ValueError):validate_payload(case.data,case.models)
+    def test_repair_ids_are_disjoint_without_generating_worlds(self):
+        rows=assignments();self.assertTrue(all(r['id'].startswith('S0-02:') for r in rows))
+        self.assertEqual(min(r['probe_id'] for r in rows),300);self.assertEqual(max(r['probe_id'] for r in rows),347)

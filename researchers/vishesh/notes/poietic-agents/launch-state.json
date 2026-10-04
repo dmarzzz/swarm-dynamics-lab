@@ -1,11 +1,11 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T08:01:23.491279+00:00",
+  "updated_utc": "2026-10-04T08:45:21.828890+00:00",
   "study": "poietic-agents",
   "design_status": "reviewed-amended-offline-tested",
   "implementation_status": "S0-launcher-and-lineage-instrument-built",
-  "execution_status": "not-launched",
-  "qualification_status": "not-run",
+  "execution_status": "S0-01-interrupted-and-reconciled",
+  "qualification_status": "not-qualified-instrument-failure",
   "scientific_conclusion": "none",
   "process_compliance": "no-run-to-assess",
   "publication": {
@@ -25,7 +25,7 @@
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
     "exact_runtime_and_assignments": "frozen S0 deployment passed 54 checks; details retained privately",
-    "offline_instrument_checks": "54 passed",
+    "offline_instrument_checks": "59 passed for S0-02 repair",
     "model_qualification": "not-run",
     "budget_authorization": "direct owner launch instruction accepts preceding USD 2 proposal",
     "dedicated_machine_allocation": "current verification retained in private runtime admission",
@@ -38,27 +38,28 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 0,
-  "next_action": "Central dispatcher starts the prepared S0 worker; no further owner credential input needed",
+  "next_action": "admit fresh S0-02 instrument repair under original remaining authority",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
     "observed_jobs": 0,
     "planned_S1_jobs": 768,
-    "qualification_calls": 0,
+    "qualification_calls": 36,
     "note": "Editorial HX-31 score 94 is interest, not empirical confidence."
   },
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "central dispatcher refreshes current admission and starts S0 once",
-    "run S0 and reconcile before S1 preparation"
+    "publish and verify S0-02 immutable plan",
+    "deploy and verify repaired source with original authority/ledgers",
+    "execute fresh qualification and reconcile before S1"
   ],
   "s1_not_yet_admitted": [
     "qualified hash match",
     "A2 development selection and construction receipt",
     "S1 budget and stage admission"
   ],
-  "observed_model_calls": 0,
+  "observed_model_calls": 36,
   "actual_poietic_api_spend_usd": 0,
   "host_claimed": false,
   "authorized_total_cumulative_usd": 2,
@@ -72,9 +73,10 @@
     "previous_candidate_now_occupied": true
   },
   "central_dispatch": {
-    "status": "ready-awaiting-central-worker-start",
+    "status": "owner-approved-direct-launch; first attempt stopped; bounded repair",
     "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044",
     "scope": "S0-01 only; private request receipt retained outside public repository",
     "model_calls_observed": 0
-  }
+  },
+  "unresolved_api_exposure_usd": 0.479232
 }

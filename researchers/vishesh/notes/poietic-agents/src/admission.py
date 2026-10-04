@@ -19,10 +19,11 @@ def inventory(base=BASE):
 
 def verify(config, now=None, base=BASE, actual_host=None):
     now=time.time() if now is None else now
-    if config.get('experiment')!='poietic-agents' or config.get('stage')!='S0' or config.get('attempt')!='S0-01':
+    if config.get('experiment')!='poietic-agents' or config.get('stage')!='S0' or config.get('attempt')!='S0-02':
         raise ValueError('unadmitted_stage_or_attempt')
     if config.get('file_hashes') != inventory(base): raise ValueError('frozen_source_mismatch')
     if config.get('assignment_sha256') != digest(assignments()): raise ValueError('assignment_manifest')
+    if config.get('prior_budget')!={'physical_calls':36,'exposure_nano':479232000}: raise ValueError('prior_budget_evidence')
     if config.get('review_resolution') != 'P1-P3-v0.2-tested': raise ValueError('review_resolution_missing')
     auth=config.get('authorization',{})
     if auth.get('owner_approved') is not True or not auth.get('reference') or auth.get('study')!='poietic-agents' or auth.get('stage')!='S0':
@@ -74,6 +75,7 @@ def verify_relay_health(data, config, now=None):
     if (data.get('experiment')!='poietic-agents' or data.get('attempt')!=config['attempt'] or
         data.get('source_commit')!=config['source_commit'] or data.get('assignment_sha256')!=config['assignment_sha256'] or
         data.get('credential_ready') is not True or data.get('deadline',0)<=now+45 or
-        data.get('api_cap_usd')!=1.5 or data.get('physical_calls')!=0):
+        data.get('api_cap_usd')!=1.5 or data.get('physical_calls')!=config.get('prior_budget',{}).get('physical_calls') or
+        round(data.get('api_exposure_usd',-1)*1e9)!=config.get('prior_budget',{}).get('exposure_nano')):
         raise ValueError('relay_health_or_attempt_binding')
     return True

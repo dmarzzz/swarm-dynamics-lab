@@ -10,13 +10,13 @@ ROLES = ('generalist', 'cheap_generative', 'typed_choice')
 
 
 def assignments():
-    return [dict(id=f'S0-01:{role}:{case}:{step}', role=role, case=case, step=step,
-                 root=100+4*case, probe_id=100+4*case+step) for role in ROLES for case in range(12) for step in range(4)]
+    return [dict(id=f'S0-02:{role}:{case}:{step}', role=role, case=case, step=step,
+                 root=300+4*case, probe_id=300+4*case+step) for role in ROLES for case in range(12) for step in range(4)]
 
 
 def make_case(case, development=False):
     if not 0 <= case < 12: raise ValueError('case_range')
-    root = case if development else 100+4*case
+    root = case if development else 300+4*case
     world=World(root)
     task=job(root,1,case)
     engine=Engine(world,root=root,split='dev' if development else 'S0')
@@ -117,3 +117,13 @@ def analyze(records):
                 assigned=144,started=sum(g['started'] for g in groups.values()),
                 terminal=sum(g['terminal'] for g in groups.values()),
                 scientific_result=False,independent_units='12 dependent four-step cases per contract; no swarm efficacy roots')
+
+
+def complete_records(records, started_ids):
+    allowed={a['id']:a for a in assignments()}
+    by={r['id']:r for r in records}
+    if len(by)!=len(records) or not set(by)<=set(allowed) or not set(started_ids)<=set(allowed):
+        raise ValueError('assignment_identity')
+    return [by[a['id']] if a['id'] in by else dict(a,status='failed' if a['id'] in started_ids else 'not_started',
+            started=a['id'] in started_ids,failure_code='interrupted_inflight' if a['id'] in started_ids else None)
+            for a in assignments()]

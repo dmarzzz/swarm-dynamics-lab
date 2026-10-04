@@ -2,7 +2,7 @@
 
 **Prospective design and qualification package v0.2 · 4 October 2026 UTC · vishesh/codex-heterogeneous · HX-31**
 
-An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains exploratory. The independent researcher feedback has been received and its three measurement changes are implemented; native qualification and the question-specific prior-art work remain open. There are no Poietic Agents results or launched workers.
+An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains exploratory. The independent researcher feedback has been received and its three measurement changes are implemented; native qualification and the question-specific prior-art work remain open. The first native qualification was interrupted by an instrument failure; no model is qualified and no swarm efficacy result exists.
 
 ## TLDR
 
@@ -40,7 +40,9 @@ In S1, epochs 1–2 acquire experience, 3–4 measure stable operation, and 5–
 
 No actor is told to become a server or rewarded for looking heterogeneous. Each gets the same operational objective. A deterministic controller validates proposed changes and enforces budgets; it does not nominate specialist roles. Changes take effect at epoch boundaries. All unsuccessful proposals and their costs remain in the record.
 
-The next step is a 144-request S0 qualification across three contracts, at most 288 physical requests including eligible transport retries. At the pinned tariffs the worst permitted API requests total $1.447723008; the approved $1.50 API allocation fits this worst case. The owner explicitly directed the actual-model run after the $2 proposal: $1.50 API and $0.50 infrastructure, cumulative across all stages and attempts. [Authorization](AUTHORIZATION.json) records that direct instruction. Credential and current operational admission remain required. No machine is held while admission gates are unresolved. The current fleet workflow dispatches through its central run queue; [dispatch handoff](DISPATCH.md) preserves the same gates and bounded relay.
+S0-01 made 36 actual generalist calls, then stopped after repeated relay errors. All 144 assigned outcomes are reconciled, including 108 unstarted; USD 0.479232 remains conservatively reserved because the original relay lost usable response/billing details. This is an instrument failure, not evidence of model incompetence. See [post-mortem](reviews/S0-01-post.md).
+
+The prospective S0-02 repair retains sanitized provider receipts before parsing, settles verifiable usage separately from answer correctness, and stops on the first transport/interface failure. It keeps the original model routes, prompts and thresholds, uses fresh qualification roots 300–347, and allows 144 physical requests maximum without retries. At pinned tariffs, maximum new reservations are USD 0.723861504; with prior unresolved exposure the total is USD 1.203093504, below the unchanged USD 1.50 API cap. USD 0.50 remains allocated to infrastructure within the USD 2 cumulative experiment cap. Original ledgers and deadline are preserved. The owner explicitly approved direct requester dispatch for this run. [S0-02 pre-assessment](reviews/S0-02-pre.md) was written before the repair. S1 and S2 remain closed.
 
 Read the [full protocol](PROTOCOL.md), [machine-readable design](design.yaml), [agent and context contracts](contracts.json), [visualization mapping](VISUALIZATION.md), [first qualification assessment](reviews/S0-01-pre.md), and [execution handoff](RUNBOOK.md).
 
