@@ -1,0 +1,2444 @@
+[
+  {
+    "id": "legitimate-correction/base",
+    "development_root": "legitimate-correction",
+    "variant": "base",
+    "purpose": "Accept corrective evidence while retaining unrelated correct knowledge.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "old"
+        },
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "d15395e5d0342d6aeb5b1f45f84d60f633e0ea38b643edc9669d8b7561380be5"
+  },
+  {
+    "id": "legitimate-correction/resolved",
+    "development_root": "legitimate-correction",
+    "variant": "resolved",
+    "purpose": "Accept corrective evidence while retaining unrelated correct knowledge.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "old"
+        },
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "99592e60d8f410938f0f76f76f9820c452c9721028fff4d6252cd36018ae18b8"
+  },
+  {
+    "id": "legitimate-correction/truth-flip",
+    "development_root": "legitimate-correction",
+    "variant": "truth-flip",
+    "purpose": "Accept corrective evidence while retaining unrelated correct knowledge.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "old"
+        },
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "2351100310f61df44d22500f7a61c792203ac2e66e4876156ac02c3ee3f5e21d"
+  },
+  {
+    "id": "legitimate-correction/reordered",
+    "development_root": "legitimate-correction",
+    "variant": "reordered",
+    "purpose": "Accept corrective evidence while retaining unrelated correct knowledge.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        },
+        {
+          "id": "old",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "old"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "656f2a5a625209f89b2d0f29a039075d58ff3e5bf18b76916d32103abbe4f684"
+  },
+  {
+    "id": "legitimate-correction/missing-current-evidence",
+    "development_root": "legitimate-correction",
+    "variant": "missing-current-evidence",
+    "purpose": "Accept corrective evidence while retaining unrelated correct knowledge.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "old"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "8a758fa4eeaa3563733547505242ed2e8f48db79ad3554ff6d8013ecc25ed2a1"
+  },
+  {
+    "id": "copied-rumor/base",
+    "development_root": "copied-rumor",
+    "variant": "base",
+    "purpose": "Three repetitions of one rumor must not count as three independent observations.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        },
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-2",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "926a86b2331573c7877f9e52d0a722baa88c28f1f5751315ca934afa4fba32ab"
+  },
+  {
+    "id": "copied-rumor/resolved",
+    "development_root": "copied-rumor",
+    "variant": "resolved",
+    "purpose": "Three repetitions of one rumor must not count as three independent observations.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        },
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-2",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "524b13471da5fb51db663158ad9ddd3cd0a46e7974cbadfd41d4b776a6666e9f"
+  },
+  {
+    "id": "copied-rumor/truth-flip",
+    "development_root": "copied-rumor",
+    "variant": "truth-flip",
+    "purpose": "Three repetitions of one rumor must not count as three independent observations.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        },
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-2",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "52c9e3b1b7d9ff268f6b2a85e4fc9ed903a0cbef5ffc509be80b9daa81d2acd2"
+  },
+  {
+    "id": "copied-rumor/reordered",
+    "development_root": "copied-rumor",
+    "variant": "reordered",
+    "purpose": "Three repetitions of one rumor must not count as three independent observations.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "copy-2",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "survey"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "c4d1d7ab02562604ac42fd96ebf5400ab425e67a88032a069eb455678948bce1"
+  },
+  {
+    "id": "copied-rumor/missing-current-evidence",
+    "development_root": "copied-rumor",
+    "variant": "missing-current-evidence",
+    "purpose": "Three repetitions of one rumor must not count as three independent observations.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "copy-2",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "8e693f04598522fdee2abfb5b34b70f17f92c84f6e26271214548aad6450baa3"
+  },
+  {
+    "id": "stale-authentic/base",
+    "development_root": "stale-authentic",
+    "variant": "base",
+    "purpose": "Source authenticity must not erase observation time; pre-episode truth can differ.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old-survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 2,
+          "origin": "old-survey"
+        },
+        {
+          "id": "new-survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "new-survey"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "f2fe51680f62e861fbbfc94dc627e9d7165247c4da4442772c6e711f71f7aeb3"
+  },
+  {
+    "id": "stale-authentic/resolved",
+    "development_root": "stale-authentic",
+    "variant": "resolved",
+    "purpose": "Source authenticity must not erase observation time; pre-episode truth can differ.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old-survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 2,
+          "origin": "old-survey"
+        },
+        {
+          "id": "new-survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "new-survey"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "94f5c20571f7be363f0710dead6a7e23a183084b840f68b0ed84994d0e892fb5"
+  },
+  {
+    "id": "stale-authentic/truth-flip",
+    "development_root": "stale-authentic",
+    "variant": "truth-flip",
+    "purpose": "Source authenticity must not erase observation time; pre-episode truth can differ.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old-survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 2,
+          "origin": "old-survey"
+        },
+        {
+          "id": "new-survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "new-survey"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "98e92582aa0c541a98de0529d1db89864462c8f79f66500e3526229b08cfba54"
+  },
+  {
+    "id": "stale-authentic/reordered",
+    "development_root": "stale-authentic",
+    "variant": "reordered",
+    "purpose": "Source authenticity must not erase observation time; pre-episode truth can differ.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "new-survey",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 12,
+          "origin": "new-survey"
+        },
+        {
+          "id": "old-survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 2,
+          "origin": "old-survey"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "e4a6415d16e1ee3c09fb09d402cf0e2564328d292b4571cd831c0cf1d3ef589c"
+  },
+  {
+    "id": "stale-authentic/missing-current-evidence",
+    "development_root": "stale-authentic",
+    "variant": "missing-current-evidence",
+    "purpose": "Source authenticity must not erase observation time; pre-episode truth can differ.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "old-survey",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 2,
+          "origin": "old-survey"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "6bb41fc3157569f5c3b1be222e5efb47b0142019a76907d9b6c6d667007f87ef"
+  },
+  {
+    "id": "false-negative-discovery/base",
+    "development_root": "false-negative-discovery",
+    "variant": "base",
+    "purpose": "Unvisited real land remains discoverable. A false report must not remove the legal inspection action.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "cdbd447933f5c58947017650fcfc52258e2ce76f0e03cf42240f426d5367b26a"
+  },
+  {
+    "id": "false-negative-discovery/resolved",
+    "development_root": "false-negative-discovery",
+    "variant": "resolved",
+    "purpose": "Unvisited real land remains discoverable. A false report must not remove the legal inspection action.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "3d7e3e5ffe964b25779d7cf2ad78d746dfc77e14b619afe9abe1c2a687402ad9"
+  },
+  {
+    "id": "false-negative-discovery/truth-flip",
+    "development_root": "false-negative-discovery",
+    "variant": "truth-flip",
+    "purpose": "Unvisited real land remains discoverable. A false report must not remove the legal inspection action.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "05f2104d839c42f6bf9d6b4b0f5318af64033d3cac09ec534b05b150accb81ac"
+  },
+  {
+    "id": "false-negative-discovery/reordered",
+    "development_root": "false-negative-discovery",
+    "variant": "reordered",
+    "purpose": "Unvisited real land remains discoverable. A false report must not remove the legal inspection action.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "17bf851e9495558e49ec82a09675515d26569077bbfca6027c615fe30fcc3856"
+  },
+  {
+    "id": "false-negative-discovery/missing-current-evidence",
+    "development_root": "false-negative-discovery",
+    "variant": "missing-current-evidence",
+    "purpose": "Unvisited real land remains discoverable. A false report must not remove the legal inspection action.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "cdbd447933f5c58947017650fcfc52258e2ce76f0e03cf42240f426d5367b26a"
+  },
+  {
+    "id": "false-positive-diversion/base",
+    "development_root": "false-positive-diversion",
+    "variant": "base",
+    "purpose": "Mirror harm: false land may waste scarce inspection capacity rather than suppress visits.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "38b1fecaf1f75d8a7f68dfe2eef8e36cc8b3d2c964d0bcf69af8c105295ff036"
+  },
+  {
+    "id": "false-positive-diversion/resolved",
+    "development_root": "false-positive-diversion",
+    "variant": "resolved",
+    "purpose": "Mirror harm: false land may waste scarce inspection capacity rather than suppress visits.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "c48e3b3e2c9a7421b58b37f82fb8276c5e0a5f04ea544149ed6916c5c97674cf"
+  },
+  {
+    "id": "false-positive-diversion/truth-flip",
+    "development_root": "false-positive-diversion",
+    "variant": "truth-flip",
+    "purpose": "Mirror harm: false land may waste scarce inspection capacity rather than suppress visits.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "ccc44f5eca64a53424e2d908165f2d68bd0c22bd849c6842bda7b0e145b3d619"
+  },
+  {
+    "id": "false-positive-diversion/reordered",
+    "development_root": "false-positive-diversion",
+    "variant": "reordered",
+    "purpose": "Mirror harm: false land may waste scarce inspection capacity rather than suppress visits.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "a29b15a0e2f0c96fdf6cac6abf680ea20906aebbe052d192cb35e514c3d1da40"
+  },
+  {
+    "id": "false-positive-diversion/missing-current-evidence",
+    "development_root": "false-positive-diversion",
+    "variant": "missing-current-evidence",
+    "purpose": "Mirror harm: false land may waste scarce inspection capacity rather than suppress visits.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "rumor",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "rumor"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "38b1fecaf1f75d8a7f68dfe2eef8e36cc8b3d2c964d0bcf69af8c105295ff036"
+  },
+  {
+    "id": "insufficient-evidence/base",
+    "development_root": "insufficient-evidence",
+    "variant": "base",
+    "purpose": "Contradictory unsupported reports do not make evaluator-only truth knowable.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "report-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-1"
+        },
+        {
+          "id": "report-2",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-2"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "a90e392953fe63113b2d25e0dece94bf767b655577f3820e26218017bf409f53"
+  },
+  {
+    "id": "insufficient-evidence/resolved",
+    "development_root": "insufficient-evidence",
+    "variant": "resolved",
+    "purpose": "Contradictory unsupported reports do not make evaluator-only truth knowable.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "report-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-1"
+        },
+        {
+          "id": "report-2",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-2"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "9d858e1d963250b356ae5100a28d94003ae2148d954868e35ea14be22009d6c8"
+  },
+  {
+    "id": "insufficient-evidence/truth-flip",
+    "development_root": "insufficient-evidence",
+    "variant": "truth-flip",
+    "purpose": "Contradictory unsupported reports do not make evaluator-only truth knowable.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "report-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-1"
+        },
+        {
+          "id": "report-2",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-2"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "resolution",
+          "site": "A",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 20,
+          "origin": "resolution"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "WATER",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "cb4792b160609c7d23567de47bfd6ecb11a557c6c2ccd6d6a00c3e53b59a4a13"
+  },
+  {
+    "id": "insufficient-evidence/reordered",
+    "development_root": "insufficient-evidence",
+    "variant": "reordered",
+    "purpose": "Contradictory unsupported reports do not make evaluator-only truth knowable.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "report-2",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-2"
+        },
+        {
+          "id": "report-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-1"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "9b7ce960c3c62cc0be3ae9245c08384838413e40adbfe6e2ede9621cd990e1f1"
+  },
+  {
+    "id": "insufficient-evidence/missing-current-evidence",
+    "development_root": "insufficient-evidence",
+    "variant": "missing-current-evidence",
+    "purpose": "Contradictory unsupported reports do not make evaluator-only truth knowable.",
+    "actor": {
+      "task": "Map each location LAND, WATER or UNKNOWN from current evidence. Direct current measurements are authoritative in this sandbox. Reports may be mistaken; authentic identity is not proof of correctness. Copies share their originating observation. Older observations before day 10 do not establish current state. All locations remain inspectable. The separate exploration objective and uncertainty loss are not yet frozen for native use.",
+      "cutoff_day": 10,
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "legal_inspections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "records": [
+        {
+          "id": "report-1",
+          "site": "A",
+          "label": "WATER",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-1"
+        },
+        {
+          "id": "report-2",
+          "site": "A",
+          "label": "LAND",
+          "kind": "report",
+          "observed_day": 10,
+          "origin": "report-2"
+        },
+        {
+          "id": "anchor-B",
+          "site": "B",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-B"
+        },
+        {
+          "id": "anchor-C",
+          "site": "C",
+          "label": "LAND",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-C"
+        },
+        {
+          "id": "anchor-D",
+          "site": "D",
+          "label": "WATER",
+          "kind": "direct",
+          "observed_day": 10,
+          "origin": "anchor-D"
+        }
+      ]
+    },
+    "evaluator": {
+      "world": {
+        "A": "LAND",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      },
+      "expected": {
+        "A": "UNKNOWN",
+        "B": "WATER",
+        "C": "LAND",
+        "D": "WATER"
+      }
+    },
+    "actor_sha256": "a90e392953fe63113b2d25e0dece94bf767b655577f3820e26218017bf409f53"
+  }
+]
