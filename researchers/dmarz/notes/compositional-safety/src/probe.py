@@ -7,6 +7,9 @@ from provider import Anthropic, CallFailure, Ledger
 
 
 def execute(attempt):
+    if common.design().get('diagnostics',{}).get(attempt,{}).get('mode')=='closed-loop':
+        from worker import execute as closed_loop
+        return closed_loop('I0',attempt)
     if common.design().get('diagnostics',{}).get(attempt,{}).get('mode')=='interface':
         from diagnose import execute as diagnose
         return diagnose(attempt)

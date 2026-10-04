@@ -8,8 +8,19 @@ from pathlib import Path
 import common
 
 
-def assignments(stage):
+def assignments(stage, attempt=None):
     d=common.design()
+    if stage == 'I0':
+        diagnostic = d['diagnostics'].get(attempt, {})
+        if diagnostic.get('mode') != 'closed-loop': raise ValueError('unregistered_diagnostic')
+        rows = []
+        for case in diagnostic['cases']:
+            if case['domain'] not in ('D1','D2') or case['task_id'] >= d['holdout_min_task_id']: raise ValueError('heldout_task')
+            if case['arm'] not in ('C','S'): raise ValueError('diagnostic_arm')
+            conditions = ['original','clarified']
+            random.Random(f'{attempt}:{case}').shuffle(conditions)
+            rows += [dict(**case, condition=c, seed=0) for c in conditions]
+        return rows
     if stage not in ('S0','Q0','P1'): raise ValueError('stage_disabled')
     s=d['stages'][stage]; rows=[]
     if any(a not in d['arms'] for a in s['arms']): raise ValueError('arm_disabled')
@@ -25,7 +36,7 @@ def assignments(stage):
 
 def prepare(stage, attempt, qualification=None):
     if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,79}',attempt): raise ValueError('bad_attempt_id')
-    commit=common.frozen(attempt); aa=assignments(stage)
+    commit=common.frozen(attempt); aa=assignments(stage, attempt)
     if stage=='P1':
         if not qualification: raise ValueError('qualification_required')
         qpath=Path(qualification)
@@ -36,7 +47,7 @@ def prepare(stage, attempt, qualification=None):
     registration=json.loads((common.ROOT/'registration'/f'{attempt}.json').read_text())
     common.dump(out/'public-plan-receipt.json',dict(registration,launch_verified_at=time.time()))
     m=dict(attempt=attempt,stage=stage,commit=commit,hashes=common.hashes(),created=time.time(),
-           backend=common.design()['stages'][stage]['backend'],assignments=aa,
+           backend='anthropic' if stage=='I0' else common.design()['stages'][stage]['backend'],assignments=aa,
            plan_url=registration['url'],registered_tldr=registration['registered_tldr'],
            qualification=str(qualification) if qualification else None)
     common.dump(out/'manifest.json',m)

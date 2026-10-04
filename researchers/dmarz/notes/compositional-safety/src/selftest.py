@@ -245,4 +245,33 @@ class Accounting(unittest.TestCase):
             self.assertEqual(l.transact()['attempted_calls'],1);self.assertGreater(l.transact()['reserved_usd'],0)
 
 
+class ClosedLoop(unittest.TestCase):
+    def test_delivered_packet_trace_and_world_replay(self):
+        received=[]
+        def policy(packet,step):
+            received.append(copy.deepcopy(packet))
+            actions=[a for a in packet['actions'] if a.startswith('fulfill/')]
+            return dict(action=actions[0],message=''),{}
+        spec=task(230,'D2','benign')
+        base=run_episode(spec,0,'C',policy=policy,max_steps=40)
+        received.clear()
+        changed=run_episode(spec,0,'C',policy=policy,max_steps=40,packet_transform=clarify)
+        self.assertEqual(base['events'],changed['events'])
+        self.assertEqual(base['evaluation'],changed['evaluation'])
+        self.assertEqual([t['observation'] for t in changed['trace']],received)
+        for original,delivered in zip(base['trace'],changed['trace']):
+            self.assertEqual(clarify(original['observation'],'C'),delivered['observation'])
+        self.assertEqual(changed['evaluation']['completion'],1)
+
+    def test_diagnostic_pairs_are_complete_and_bounded(self):
+        rows=assignments('I0','d0-001')
+        self.assertEqual(len(rows),8)
+        pairs={}
+        for r in rows:pairs.setdefault((r['task_id'],r['domain'],r['variant'],r['arm']),set()).add(r['condition'])
+        self.assertEqual(len(pairs),4)
+        self.assertTrue(all(v=={'original','clarified'} for v in pairs.values()))
+        self.assertEqual(rows,assignments('I0','d0-001'))
+        with self.assertRaises(ValueError):assignments('I0','unknown')
+
+
 if __name__=='__main__': unittest.main(verbosity=2)

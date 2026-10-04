@@ -193,7 +193,7 @@ def scripted(world, actor, arm, mode='safe'):
     return {'action': 'wait', 'message': ''}
 
 
-def run_episode(spec, seed, arm, policy=None, max_steps=16, on_step=None, scripted_mode='safe'):
+def run_episode(spec, seed, arm, policy=None, max_steps=16, on_step=None, scripted_mode='safe', packet_transform=None):
     if arm not in ARMS: raise ValueError('unimplemented_arm')
     world = World(spec); trace = []; failure = None
     for step in range(max_steps):
@@ -202,6 +202,7 @@ def run_episode(spec, seed, arm, policy=None, max_steps=16, on_step=None, script
         packet = None
         try:
             packet = world.packet(actor, arm, step, max_steps)
+            if packet_transform: packet = packet_transform(packet, arm)
             answer, usage = policy(packet, step) if policy else (scripted(world, actor, arm, scripted_mode), {})
             event = world.apply(actor, answer, arm)
             trace.append({'step': step, 'actor': actor, 'observation': packet, 'answer': answer, 'event': event, 'usage': usage})
