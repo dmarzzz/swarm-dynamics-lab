@@ -1,0 +1,13 @@
+status: E0-diagnostic-only
+source: naver-clova-ix/cord-v2
+revision: 7f0115a4b758a71d6473b8d085751692da2fef98
+split: validation
+calibration: [0, 19]
+instrument_screen: [20, 29]
+exploratory: [30, 99]
+held_out: official-test-unopened
+ocr_modes: {A: 3, B: 6, C: 11}
+languages: ind+eng
+routing_relevance_gate: 0.01
+policy_freeze: after E0 calibration; evaluation rows must remain uninspected
+S2_enabled: false
