@@ -1,0 +1,24 @@
+{
+  "verified_utc": "2026-10-04T03:41:37.329425+00:00",
+  "software_checks": 49,
+  "native_calls": 0,
+  "validation_scope": "Local tests, fake-provider integration, actor isolation and budget accounting; not native qualification",
+  "files": {
+    "researchers/vishesh/notes/dissent/src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "researchers/vishesh/notes/dissent/src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "researchers/vishesh/notes/dissent/src/jev.py": "27a28420a4171689c24e68024a5d5c6e1c2f7f915847df7cd3cc4b598741dff7",
+    "researchers/vishesh/notes/dissent/src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "researchers/vishesh/notes/dissent/src/live_design.py": "5d98b8015507dc82424f469cc80b4a758617b5da2d9dffe51c0413cc3fc268a0",
+    "researchers/vishesh/notes/dissent/src/live_relay.py": "91116216fa344e6e37a1d88ef8bf634d3b33c21e17dc007903fab8a64b0a8c72",
+    "researchers/vishesh/notes/dissent/src/live_render.py": "2c0087c9e4571d59926ae7f0b8030e61026588e4f1ce96735ae9097232cc8306",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "6a22049ce9be6dcb1ddc0a2bf833fae93573d611b2e917aa0d7887f0213f22f2",
+    "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "researchers/vishesh/notes/dissent/src/protocol.py": "637559e808c22c269ee2727069b629b47ad5f49fd8a2dd5f8309e2fe0419d195",
+    "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
+    "researchers/vishesh/notes/dissent/tests/test_live.py": "f34a7800600898ffdc4765099cf89b3b6a0ba0ff8b84402cace2c837a80b78f7",
+    "researchers/vishesh/notes/dissent/tests/test_protocol.py": "662a1efadeeb851055677b796b3d32afec4ed80fcf43cdd0826d8ce2bd20c2b8",
+    "researchers/vishesh/notes/dissent/tests/test_study.py": "f6f68d08f4aa1d8042b702567fccce8ac5f30ab167cc89503e5ebf69d3240f5b",
+    "researchers/vishesh/notes/dissent/LIVE-PLAN.md": "e306c0186c77fd8d60babc83bf78fb29f967c6d74c5672a8f17d7f4cb3a9d844",
+    "researchers/vishesh/notes/dissent/SOURCES.md": "a480d323a9c849a093b3ddf103b6327b9be3ed28ae994e28e6ce7b97bfe7cab5"
+  }
+}

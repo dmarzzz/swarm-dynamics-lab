@@ -1,0 +1,8 @@
+# Pre-run assessment: s0-local-002
+
+Local attempts are uncommitted engineering validation, not a precommitted scientific freeze. Root commits the final source, design and fleet pre-run before fleet S0 or any API stage.
+Parent [s0-local-001 post-mortem](s0-local-001-post.md). Status ready for offline requalification. Question, pairing, controls, evaluation and engineering acceptance remain as in [the initial pre-run](s0-local-001-pre.md), with the unchanged [mappingv1](../VISUALIZATION.md). Owner independent-review waiver remains recorded; this is an own engineering assessment.
+
+Changes: root's joint actual-plus-unsettled spending guard added; two concurrent calls per paid study; per-study conservative reservation cap$140 after exact$130.754844preflight; final heatmap legend repaired to prevent panel overlap and make cell counts/near-threshold values legible. No simulator, actor prompt, model or scientific cell changes. The first test-only float comparison now uses an approximate assertion.
+
+Run nine offline regressions then `python3 src/worker.py --stage S0 --attempt s0-local-002`, recompute stored grades/analysis and decode all25replay frames. Expected256assigned/terminal/valid, zero API calls/cost; every clean fixture exact. Offline local work needs no server claim. Source fingerprint stamps this attempt; root commits before fleet/APIexecution. Inspect final and companion images, then freeze source. Any defect gets a preserved repair attempt; adverse scripted attack outcomes do not trigger tuning. Fleet/APIexecution remains subject to the already documented exact-runtime gates and persistent budget guards.

@@ -1,0 +1,29 @@
+{
+  "observed_at_utc": "2026-10-04T03:34:00Z",
+  "owner_shared_cap_usd": 500,
+  "followups_actual_plus_unsettled_cap_usd": 60,
+  "reported_hub_cost_nonbilling_usd": 52.529508,
+  "replaced_reported_market_cost_usd": 2.511934,
+  "other_cohort_bounds_usd": {
+    "market_split_lifetime_1600_calls": 189.39,
+    "market_haiku_lifetime_1000_calls": 39.456,
+    "resampling_control_frozen_936_calls": 93.6,
+    "soc07_announced_cap": 40
+  },
+  "sum_with_followups_usd": 472.463574,
+  "buffer_usd": 27.536426,
+  "limitations": [
+    "Reported hub costs are operational telemetry, not complete provider billing.",
+    "Completed compositional and discussion-v3 cohorts have no queued successor in this snapshot.",
+    "Bounded cohorts may settle below these maxima; no unused budget is claimed as actual spending.",
+    "Refresh before paid stages; newly authorized independent launches must respect the same owner cap."
+  ],
+  "provenance": [
+    "dmarz researcher budget directive",
+    "private hub sanitized prelaunch snapshot",
+    "market-split-api deployment.md and design.yaml",
+    "market-split-haiku design.yaml",
+    "discussion-dose/launch/resample-v3-a1.json",
+    "merged SOC-07 fleet claim"
+  ]
+}
