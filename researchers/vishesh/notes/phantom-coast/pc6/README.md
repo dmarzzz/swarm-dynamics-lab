@@ -1,5 +1,14 @@
 # PC6 PI review: parked before native dispatch
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `f635d380` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — The proposed action-consequence table effect remains untested; PC6 was parked before dispatch for insufficient decision value. Basis: A pass and failure currently leave the same analytic-controller recommendation. Saved-data analysis of PC5 and the separate Qwen cohort is retrospective and does not supply PC6 samples.
+- **sample_size_summary:** PC6 observed: 0 native outcomes; planned 12 paired layouts/48 choices, never dispatched. Retrospective analysis reuses PC5 32 roots/128 choices and separate Qwen 12 roots/24 choices; these are not new samples.
+<!-- experiment-evidence:end -->
+
 The saved-data review is complete. **No PC6 native attempt was launched.** The prospective 48-choice plan and implementation are retained, but both native admission and dispatch now reject `pc6_parked_no_decision_value` before credentials or allocation. No new machine, claim, model call or spend occurred.
 
 [PI post-mortem](reviews/PI-POST.md) | [setup and handoff](SETUP.md) | [recomputed evidence](results/prior-analysis.json) | [paired layouts](results/paired-layouts.json) | [original prospective plan, not executed](PLAN.md)

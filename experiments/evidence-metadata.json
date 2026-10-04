@@ -2669,6 +2669,39 @@
       "assessor": "vishesh/codex-idea-scores",
       "assessed_at": "2026-10-04",
       "source_commit": "b01fa92999aa8018e41bdcce57c190f477ab3ccf"
+    },
+    {
+      "id": "phantom-coast-pc6",
+      "title": "Phantom Coast PC6: parked semantic screen and PI review",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc6/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc6"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "The proposed action-consequence table effect remains untested; PC6 was parked before dispatch for insufficient decision value.",
+        "rationale": "A pass and failure currently leave the same analytic-controller recommendation. Saved-data analysis of PC5 and the separate Qwen cohort is retrospective and does not supply PC6 samples."
+      },
+      "sample_size_summary": "PC6 observed: 0 native outcomes; planned 12 paired layouts/48 choices, never dispatched. Retrospective analysis reuses PC5 32 roots/128 choices and separate Qwen 12 roots/24 choices; these are not new samples.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc6/PLAN.md",
+        "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+        "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json"
+      ],
+      "status_at_assessment": "parked_before_native_dispatch",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "f635d3806c8642bb24df48166e1055619a6c690a",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc6/PLAN.md": "61aa186b719cfc1bbf2ca5f7e41bf2d8c584d2c6521bdef85b039ae92f3b1019",
+        "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e",
+        "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29",
+        "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+      }
     }
   ],
   "source_sha256": {
