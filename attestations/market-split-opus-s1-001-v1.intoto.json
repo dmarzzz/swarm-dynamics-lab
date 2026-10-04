@@ -17,13 +17,13 @@
      "digest": {
       "sha256": "82dbc143d4f10291bdf0477b640ca936da07a2b51a270c4e3fb47c624130bf95"
      },
-     "uri": "researchers/dmarz/notes/market-split-opus/report/src/plot.py"
+     "uri": "5-experiments/studies/dmarz/market-split-opus/report/src/plot.py"
     },
     {
      "digest": {
       "sha256": "2fe5f956f3939bc17c3fffcd7babf27ae68560e47c16a2acf2696ccb2b2cdb80"
      },
-     "uri": "researchers/dmarz/notes/market-split-opus/results/s1-001-collected/episodes.jsonl"
+     "uri": "5-experiments/studies/dmarz/market-split-opus/results/s1-001-collected/episodes.jsonl"
     },
     {
      "digest": {

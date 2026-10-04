@@ -5,6 +5,7 @@ import { ACTIVE_STATES, TEAMS, teamColor, topicName } from '../data/meta';
 import { ago, fmt, parseT, plural, Word, word } from '../lib/format';
 import { Spark } from '../components/charts';
 import { href } from '../lib/router';
+import { REPO_URL, repoFile } from '../lib/repo';
 import './agents.css';
 
 const STATE_ORDER: Record<string, number> = { working: 0, active: 0, blocked: 1, idle: 2, done: 3, unknown: 4 };
@@ -97,7 +98,7 @@ export function Agents({ data }: { data: Dataset }) {
               {unknownState ? ' Issue state is only available when CI has a GitHub token, so every batch shows as filed.' : ` ${Word(free.length)} free, ${word(claimed.length)} claimed, ${fmt(closed.length)} closed.`}
             </p>
           </div>
-          <a className="more" href="https://github.com/dmarzzz/swarm-lab/issues?q=label%3Abatch" target="_blank" rel="noreferrer">Issues on GitHub</a>
+          <a className="more" href={`${REPO_URL}/issues?q=label%3Abatch`} target="_blank" rel="noreferrer">Issues on GitHub</a>
         </div>
         <div className="board">
           <BatchCol title="Free" note="waiting for an agent" items={free} />
@@ -168,7 +169,7 @@ function AgentRow({ a, now, spark, max }: { a: Agent; now: number; spark?: numbe
       </span>
       <span role="cell"><span className={`state s-${st}`}>{STATE_LABEL[st]}{stale ? ', quiet 3h+' : ''}</span></span>
       <span role="cell" className="rdoing">
-        {a.task ? <a className="mono rtask" href={`https://github.com/dmarzzz/swarm-lab/blob/main/tasks/${a.task}.md`} target="_blank" rel="noreferrer">{a.task}</a> : null}
+        {a.task ? <a className="mono rtask" href={repoFile(`lab/tasks/${a.task}.md`)} target="_blank" rel="noreferrer">{a.task}</a> : null}
         <span>{a.doing || <span className="faint">No status line</span>}</span>
       </span>
       <span role="cell" className="r num rn">{a.entries_added ? <a href={href('/library', { q: a.id })}>{fmt(a.entries_added)}</a> : <span className="faint">0</span>}</span>

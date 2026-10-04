@@ -2,8 +2,9 @@
 import json
 from pathlib import PurePosixPath
 import re
+from layout import STUDIES, current_path
 
-SOURCE = 'researchers/vishesh/notes/research-navigation/navigation.json'
+SOURCE = STUDIES + '/vishesh/research-navigation/navigation.json'
 
 
 def build_navigation(root, atlas, hypotheses, topics, source=None):
@@ -17,7 +18,9 @@ def build_navigation(root, atlas, hypotheses, topics, source=None):
         require(isinstance(path, str) and bool(path), 'invalid path')
         p = PurePosixPath(path)
         require(not p.is_absolute() and '..' not in p.parts and '\\' not in path
-                and p.as_posix() == path and (root / path).is_file()
+                and p.as_posix() == path, 'unsafe or missing path')
+        path = current_path(path)  # navigation files written before the layout move keep their old paths
+        require((root / path).is_file()
                 and (root / path).resolve().is_relative_to(root.resolve()), 'unsafe or missing path')
         return root / path
 
@@ -74,7 +77,8 @@ def build_navigation(root, atlas, hypotheses, topics, source=None):
         # Only explicit author tags. No inference of acceptance or inheritance from a survey.
         tagged_hypotheses.append({'id': ident, 'title': fm.get('title') or ident,
             'path': doc.rel, 'status': fm.get('status') or 'unspecified',
-            'topics': refs(fm.get('topics') or [], topics, 'hypothesis topic'),
+            # Hypothesis `topics` also carry free keywords; only library topic slugs link to a research area.
+            'topics': refs([t for t in dict.fromkeys(fm.get('topics') or []) if t in topics], topics, 'hypothesis topic'),
             'focus_areas': refs(fm.get('focus_areas') or [], focus_ids, 'hypothesis focus area'),
             'projects': refs(fm.get('project_briefs') or [], project_ids, 'hypothesis project')})
     return {'schema': source['schema'], 'owner': source['owner'], 'source_path': SOURCE,

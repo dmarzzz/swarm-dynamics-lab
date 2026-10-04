@@ -15,19 +15,19 @@
      "digest": {
       "sha256": "f7a84a3ceca5f38a7e6cc75b376d059c37e0e93a62885ac6db906b3b50811209"
      },
-     "uri": "researchers/shadow/notes/wild-timeline/timeline.py"
+     "uri": "5-experiments/studies/shadow/wild-timeline/timeline.py"
     },
     {
      "digest": {
       "sha256": "38f96626fe3fe422998713f62b2a4477b4dea0a8d6604048149b87d99da4d7c0"
      },
-     "uri": "researchers/shadow/notes/wild-timeline/shared_sources.csv"
+     "uri": "5-experiments/studies/shadow/wild-timeline/shared_sources.csv"
     },
     {
      "digest": {
       "sha256": "cd3751c6a53ea91deecc2e5d30b753e8d771abcdb84d886c11ba0e07b9852a46"
      },
-     "uri": "researchers/shadow/notes/wild-timeline/validation.json"
+     "uri": "5-experiments/studies/shadow/wild-timeline/validation.json"
     },
     {
      "digest": {

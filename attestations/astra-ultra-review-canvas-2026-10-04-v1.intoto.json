@@ -17,19 +17,19 @@
      "digest": {
       "sha256": "075826fdd644e51f6cbd31b3c67583a9981a8684a755e20b8d141f30504715e5"
      },
-     "uri": "researchers/dmarz/notes/astra-ultra-review-2026-10-04/src/build_canvas.py"
+     "uri": "5-experiments/studies/dmarz/astra-ultra-review-2026-10-04/src/build_canvas.py"
     },
     {
      "digest": {
       "sha256": "21c9257a6fa2deef157a5649000bdedd7e4f5f112a64197aca9ba4f49d75e14f"
      },
-     "uri": "researchers/dmarz/notes/astra-ultra-review-2026-10-04/evidence.json"
+     "uri": "5-experiments/studies/dmarz/astra-ultra-review-2026-10-04/evidence.json"
     },
     {
      "digest": {
       "sha256": "0677d5424154d93d113e234aee44ddba8971de064e489b47512fcbfa5798c790"
      },
-     "uri": "researchers/dmarz/notes/astra-ultra-review-2026-10-04/source-inventory.txt"
+     "uri": "5-experiments/studies/dmarz/astra-ultra-review-2026-10-04/source-inventory.txt"
     },
     {
      "uri": "https://github.com/dmarzzz/swarm-lab/blob/a5144a2a241c55085d95762afdbf3e3735b76198/researchers/dmarz/notes/always-five/README.md"

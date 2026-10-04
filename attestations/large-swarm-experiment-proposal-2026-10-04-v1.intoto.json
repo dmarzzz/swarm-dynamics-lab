@@ -17,85 +17,85 @@
      "digest": {
       "sha256": "0d1338c02366420f6c44670e16648ee942049bb7bfb8dd9c86b70900e69c202e"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/proposal.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/proposal.json"
     },
     {
      "digest": {
       "sha256": "9522a0bb891d4fda3ea1e6aed9482500bbf1c8abd81e663c3e569e49c9652a07"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/SETUP.md"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/SETUP.md"
     },
     {
      "digest": {
       "sha256": "419a23687beec7647afc37ce659c99993439e1f0dc551038d94f16bc0a7695dc"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/build_review.py"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/src/build_review.py"
     },
     {
      "digest": {
       "sha256": "1d5a8b69c9f11731e54ad8bdaec05bd38feaa6728755e049223532d1fabdcbe9"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/file_review.py"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/src/file_review.py"
     },
     {
      "digest": {
       "sha256": "7f997e0c524d24b6d45abe6b1429cc4de1f5f470ae9cd1d604f9aef510e109af"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/anthropic--claude-haiku-4.5.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/anthropic--claude-haiku-4.5.json"
     },
     {
      "digest": {
       "sha256": "7131843a6fdee6648769a38bd4dd9fc3f40d287e2e2819d2422a8636614fb45b"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/anthropic--claude-sonnet-5.5.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/anthropic--claude-sonnet-5.5.json"
     },
     {
      "digest": {
       "sha256": "181228b5fa10579a29d1aff3048a137d4d05941a33942ee03ce11bef1fc0dc4f"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/deepseek--deepseek-v4.1-flash.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/deepseek--deepseek-v4.1-flash.json"
     },
     {
      "digest": {
       "sha256": "5bd3167cb24de751fc567eef0447ee7f5b10eeb9038426e3aba2ce26fe2bac3f"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/google--gemini-2.5-flash-lite.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/google--gemini-2.5-flash-lite.json"
     },
     {
      "digest": {
       "sha256": "4dc2ac40b5c6f7dbb31749c569e46835d18126fde7ccbc2ca3027f806c01850b"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/openai--gpt-6-luna.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/openai--gpt-6-luna.json"
     },
     {
      "digest": {
       "sha256": "28eace2a0934b87239b20c772e28640248b844c1a015b97df242660ce9a3c392"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/portfolio-evidence.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/portfolio-evidence.json"
     },
     {
      "digest": {
       "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/previous-next-experiments.md"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/previous-next-experiments.md"
     },
     {
      "digest": {
       "sha256": "6d5ae8c5d4990dbafefd7f4def76f96dc0b4d405bdef5e1ad3afe0ee5c8be3d4"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/qwen--qwen3.8-flash.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/qwen--qwen3.8-flash.json"
     },
     {
      "digest": {
       "sha256": "45414b6ec78d14f358ba7a5b738f51740c106346fe73e83eeb715c1d5e6ed2d4"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/scarcity-proposal.md"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/scarcity-proposal.md"
     },
     {
      "digest": {
       "sha256": "57c1f8389c5661c25533db0e6bb14161c132167610f4b218bfd5217d5f584337"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/source-index.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/inputs/source-index.json"
     },
     {
      "uri": "https://arxiv.org/abs/2603.01045"

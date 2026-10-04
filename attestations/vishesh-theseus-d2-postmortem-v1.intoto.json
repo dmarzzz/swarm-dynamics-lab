@@ -16,25 +16,25 @@
      "digest": {
       "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/D2-PLAN.md"
     },
     {
      "digest": {
       "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/results/D2/summary.json"
     },
     {
      "digest": {
       "sha256": "eb0ba694f6febe852ad9a84e7225b77f1b9ec3b68ec60b5053b17b6cd0bdbdcb"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/diagnosis.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/results/D2/diagnosis.json"
     },
     {
      "digest": {
       "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json"
     },
     {
      "digest": {

@@ -17,19 +17,19 @@
      "digest": {
       "sha256": "5b4977f63aabec350cf4b96f34bc03c54858177fdfd960164819fd755583789d"
      },
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/build_explorer.py"
+     "uri": "5-experiments/studies/vishesh/influence-swarms/scenario/src/build_explorer.py"
     },
     {
      "digest": {
       "sha256": "892004b0068dedc926558846933826e5d6534b0617bad10e4faff0c36c6ce135"
      },
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/explorer.html"
+     "uri": "5-experiments/studies/vishesh/influence-swarms/scenario/src/explorer.html"
     },
     {
      "digest": {
       "sha256": "8034b9450dedee740f02d6d0e81f04ac4837aa058d4a233b6cad26199d7826bc"
      },
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/dossier.py"
+     "uri": "5-experiments/studies/vishesh/influence-swarms/scenario/src/dossier.py"
     },
     {
      "digest": {

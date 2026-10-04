@@ -17,277 +17,277 @@
      "digest": {
       "sha256": "a79569b1d325d6fec728cc89ebf3900402370348a772b3523fb289f4981b8f1d"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/program.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/program.json"
     },
     {
      "digest": {
       "sha256": "082f284f5cd557d6eb359f07e3b617f37c17234f7a06cad0edce69617665bbb1"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v2.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/methods-review-v2.json"
     },
     {
      "digest": {
       "sha256": "36edb63bad62d1b0deda9c32ef32912a2230b25f15bafe5199cb8078fa80bec2"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/SETUP.md"
     },
     {
      "digest": {
       "sha256": "7fa892d51b11fba5fad85b3fe483daeff68e5a3b4dd05eb857b25657becfe254"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/src/build_program.py"
     },
     {
      "digest": {
       "sha256": "f4774eb95e208376769e638e45900e2c3a7dbc5cfafaa6737e0bb2ced827a79c"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_200.py"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/src/build_program_200.py"
     },
     {
      "digest": {
       "sha256": "8097e6a81882712e4869625888d5bd36e570c48d1ed8c82d4aec8b354185dc82"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_200.py"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/src/file_program_200.py"
     },
     {
      "digest": {
       "sha256": "ef6796f4405f30c221b55ccb8c173448cc300a1cf0af54b27adea157c9f89656"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/SETUP-v1.md"
     },
     {
      "digest": {
       "sha256": "72972cc3fb9ed2c1a9a0c2564c82927f8a0653b3d0c56ebf7f5be3f8021ba191"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json"
     },
     {
      "digest": {
       "sha256": "0d1338c02366420f6c44670e16648ee942049bb7bfb8dd9c86b70900e69c202e"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/large-proposal.json"
     },
     {
      "digest": {
       "sha256": "0854d8ec6e399959b6d1fa87139aa4e7de31b6b798251758caf19c0748b95b41"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json"
     },
     {
      "digest": {
       "sha256": "28eace2a0934b87239b20c772e28640248b844c1a015b97df242660ce9a3c392"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/prior-review.json"
     },
     {
      "digest": {
       "sha256": "fb40c29fe267796f76e56fe8eaac41e8b306c1717023977cc20c60e3f5b90fbf"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/program-v1.json"
     },
     {
      "digest": {
       "sha256": "4bcaf73346b7c03f935193286b54fed25387493086dbecbc307b4e5796626ca1"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md"
     },
     {
      "digest": {
       "sha256": "de14017a1606b49ffbfc4f90b72a68b1deca9134de30c90c746c9427ad617da7"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md"
     },
     {
      "digest": {
       "sha256": "8d5b24026e7620a6244ab23dd2bef9e470b6dd6885c6bf55822d270ab7c4cf29"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md"
     },
     {
      "digest": {
       "sha256": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py"
     },
     {
      "digest": {
       "sha256": "bb2162e8ba37b4e0856136dd6185804dd5f04413698a9539f8e65cf62ac5c16f"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md"
     },
     {
      "digest": {
       "sha256": "acb6996e031566428ebdbe69f04e60c5b0920ad872091664a79e90457bc79f02"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv"
     },
     {
      "digest": {
       "sha256": "ffe03eddfd04d452626d7ce07e0a593d496978078ec4267009bedfb87e61d151"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md"
     },
     {
      "digest": {
       "sha256": "525f49ee57881080d1bd10d1d86ecbf88553085251b350304eab5e3cf4be9dc5"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md"
     },
     {
      "digest": {
       "sha256": "64bc687fa03ad57eafcc9bdb0514b632f1281d2ab945b099f1ed6f463cd671f5"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv"
     },
     {
      "digest": {
       "sha256": "edc67bb6eace06bd9603f66f7ff036c4aa285c466d0a188a0df2d528a1711de3"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md"
     },
     {
      "digest": {
       "sha256": "6097054f301ba5ae8a97980e14a615a6d9731b01c0de7f72b9984303fea5876a"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md"
     },
     {
      "digest": {
       "sha256": "59036b5f262eee8da34830a1a7e8a88fc556769d522e93067a5483f04fece38b"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md"
     },
     {
      "digest": {
       "sha256": "1269edcf77221e2b065c6b168dad72cec77dcf8187b25a97f2f40b8ac3a4ea2e"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md"
     },
     {
      "digest": {
       "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py"
     },
     {
      "digest": {
       "sha256": "319f503cea4feaf401e8ee410be8a54c62a66ed173b9e7d6e1c5c1a3a6c067e7"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md"
     },
     {
      "digest": {
       "sha256": "ecebc1b42bbf46884c8506690b78f3f3f30143d23faa0619e7b219b6a75b9eb7"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json"
     },
     {
      "digest": {
       "sha256": "ed19825fb643a5ff3271625d9b44348b81bbb390c187f60d352fa08131a22447"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md"
     },
     {
      "digest": {
       "sha256": "ec11a6d9c0217f1da3a1fa2173d2ff611576eb7a122ff2209e2971eb9180bff3"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md"
     },
     {
      "digest": {
       "sha256": "e84f3437061e3332b37d17f6a49ce023467a96e8f55a0eb08b699637177c4a08"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md"
     },
     {
      "digest": {
       "sha256": "6a5c726c54edc150142d282c2d8f6bebe886d23805e4bca819d713eb5c876ff9"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md"
     },
     {
      "digest": {
       "sha256": "95d99b9534c247e12be3e97c493900262b3b72adc8bed54d9b8957e424f63c93"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv"
     },
     {
      "digest": {
       "sha256": "b3c885cf3ec1b7539512d1db94f03fd16872398b272cecc629b610d84ff36214"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md"
     },
     {
      "digest": {
       "sha256": "1651a8e9e8461c0c97b19d091c729641e123f0a2d724297a53a8964e5c28f3be"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md"
     },
     {
      "digest": {
       "sha256": "b219d62664be1a65d398c566781cbb6c8abfc0476f8404c7217fe9cc521414cc"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md"
     },
     {
      "digest": {
       "sha256": "04642e60c55494caf2e0854c28b199eb848f56eb75c5421e9d90ad96b504bb89"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md"
     },
     {
      "digest": {
       "sha256": "4d73851e98ca8ad381e033a555bd3812ccd4c198b9adc2ea252dd3f08ed72d50"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md"
     },
     {
      "digest": {
       "sha256": "0186c37fd35bbc637155100c7176b6e8f712bb58b1b2892a247a7aa87cbf9bc8"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md"
     },
     {
      "digest": {
       "sha256": "c5939719441fe96edd7b995a7ca51e53c417ec936effbcd2da1e7d73a442ddcc"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md"
     },
     {
      "digest": {
       "sha256": "fd92728f8735a601a2e6b5ec22227d2ed9414d2908c16a45f3529d163e1577ac"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md"
     },
     {
      "digest": {
       "sha256": "ae592612430412a7649deb91f59c5841786e2a4b889148593b66461954b47627"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md"
     },
     {
      "digest": {
       "sha256": "9325fa98c3ff889c0f69336e4f5216b3db106fda8eb3f9683ab6dac2499d6bf0"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md"
     },
     {
      "digest": {
       "sha256": "f5dd1400634d65eb957191a84d08f09d4a23a7939fd1578bffb45fcfb1b18a99"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md"
     },
     {
      "digest": {
       "sha256": "0177eb3c1e04f43afbf7e06502e78d11a11ca9384553b547389a4dba2a0d133c"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/source-index.json"
     },
     {
      "digest": {
       "sha256": "f4abe2e9d9678f43c9d3ad99bdf19d11daec9e7466b51137c0f07ee2ec63f21e"
      },
-     "uri": "researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md"
+     "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md"
     },
     {
      "uri": "https://swarmchasing.com/"

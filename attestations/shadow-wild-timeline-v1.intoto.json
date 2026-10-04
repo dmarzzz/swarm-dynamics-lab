@@ -15,25 +15,25 @@
      "digest": {
       "sha256": "f7a84a3ceca5f38a7e6cc75b376d059c37e0e93a62885ac6db906b3b50811209"
      },
-     "uri": "researchers/shadow/notes/wild-timeline/timeline.py"
+     "uri": "5-experiments/studies/shadow/wild-timeline/timeline.py"
     },
     {
      "digest": {
       "sha256": "04f58fc949d22997ae9aa08cdcc1468c46f51e3d8767f4912b9876040990d529"
      },
-     "uri": "researchers/shadow/notes/wild-timeline/daily.csv"
+     "uri": "5-experiments/studies/shadow/wild-timeline/daily.csv"
     },
     {
      "digest": {
       "sha256": "de32aa7381501a65e3aa8b5cd34b87185bd87a0fa946737dd7dde5dd684717f7"
      },
-     "uri": "researchers/shadow/notes/wild-timeline/summary.json"
+     "uri": "5-experiments/studies/shadow/wild-timeline/summary.json"
     },
     {
      "digest": {
       "sha256": "cd3751c6a53ea91deecc2e5d30b753e8d771abcdb84d886c11ba0e07b9852a46"
      },
-     "uri": "researchers/shadow/notes/wild-timeline/validation.json"
+     "uri": "5-experiments/studies/shadow/wild-timeline/validation.json"
     },
     {
      "digest": {

@@ -17,31 +17,31 @@
      "digest": {
       "sha256": "98d537d95ee530c36cbff0e28707f14a9eae9dec29874a0ec2797d0a7b25174e"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/proposal.json"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/proposal.json"
     },
     {
      "digest": {
       "sha256": "da0fe31b410d013ca89ee43386168c6beab14307cf78b31315728e0b98c22f2c"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/SETUP.md"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/SETUP.md"
     },
     {
      "digest": {
       "sha256": "8440d9021a154cb8883b987d65cc178d6a7d54203310705ad6bc0d19d623f806"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/build_review.py"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/src/build_review.py"
     },
     {
      "digest": {
       "sha256": "e08fe1bf2753faaf7a6c4a28863bb8bf904be09946fd0067918229e6432c4600"
      },
-     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/file_correction.py"
+     "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/src/file_correction.py"
     },
     {
      "digest": {
       "sha256": "f4abe2e9d9678f43c9d3ad99bdf19d11daec9e7466b51137c0f07ee2ec63f21e"
      },
-     "uri": "tooling/agent-experiments/EXPERIMENT-SETUP.md"
+     "uri": "5-experiments/toolkit/agent-experiments/EXPERIMENT-SETUP.md"
     },
     {
      "digest": {

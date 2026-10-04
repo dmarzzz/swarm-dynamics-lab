@@ -18,6 +18,7 @@ from collections import Counter
 from research_navigation import build_navigation
 from contributions import build_contributions
 from idea_scores import build_scores
+from layout import CANDIDATES, LIBRARY, REPO, STUDIES, current_path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -25,7 +26,7 @@ import lab as helpers
 
 KINDS = helpers.LIB_DIRS
 OUT = ROOT / 'dashboard/public/data'
-ATLAS = ROOT / 'researchers/dmarz/notes/question-atlas/candidates.json'
+ATLAS = ROOT / STUDIES / 'dmarz/question-atlas/candidates.json'
 QUESTION_FIELDS = ('id', 'area', 'title', 'question', 'hypothesis', 'test', 'baseline',
                    'metrics', 'falsifier', 'confounds', 'prior', 'novelty', 'feasibility',
                    'needs', 'briefs')
@@ -49,6 +50,10 @@ def validate_questions(payload, library_paths, topic_slugs, root=ROOT):
     def repo_file(value):
         if not string(value) or '\\' in value:
             return False
+        path = PurePosixPath(value)
+        if path.is_absolute() or '..' in path.parts or path.as_posix() != value:
+            return False
+        value = current_path(value)  # the atlas is hash-bound and keeps the paths it was written with
         path = PurePosixPath(value)
         return (not path.is_absolute() and '..' not in path.parts
                 and path.as_posix() == value
@@ -99,7 +104,7 @@ def validate_questions(payload, library_paths, topic_slugs, root=ROOT):
             require(all(string(source[field]) for field in ('id', 'relation', 'title', 'path', 'catalogued_depth'))
                     and isinstance(source['url'], str), f'{ident}: invalid source fields')
             require(source['id'] in library_paths, f'{ident}: unknown source {source["id"]}')
-            require(source['path'] == library_paths[source['id']] and repo_file(source['path']),
+            require(current_path(source['path']) == library_paths[source['id']] and repo_file(source['path']),
                     f'{ident}: source path does not match {source["id"]}')
         require(isinstance(row['briefs'], list) and all(repo_file(x) for x in row['briefs']),
                 f'{ident}: unknown or invalid brief path')
@@ -133,7 +138,7 @@ def history():
     first, additions = {}, []
     # Reverse history means the first observed A record really is the first addition.
     raw = git('log', '--reverse', '--diff-filter=AR', '--name-status',
-              '--format=@@%H\t%aI\t%s', '--', 'library/')
+              '--format=@@%H\t%aI\t%s', '--', LIBRARY + '/', 'library/')
     current = None
     for line in raw.splitlines():
         if line.startswith('@@'):
@@ -143,14 +148,17 @@ def history():
         if current and line.startswith('R'):
             # Renamed entry keeps its original addition stamp and agent.
             _, old, new = line.split('\t', 2)
+            old, new = current_path(old), current_path(new)
             if new.endswith('.md'):
                 first.setdefault(new, dict(first.get(old, current)))
             continue
         if current and line.startswith('A\t'):
-            path = line[2:]
+            path = current_path(line[2:])  # entries added before the layout move keep their addition stamp
             parts = Path(path).parts
             if len(parts) != 3 or parts[1] not in KINDS or not path.endswith('.md') or parts[2] in {'README.md','INDEX.md'}:
                 continue
+            if path in first and line[2:] != path:
+                continue  # the layout move itself, seen as an add when rename detection misses it
             first.setdefault(path, dict(current))
             additions.append({**current, 'path': path, 'kind': KINDS[parts[1]]})
     return first, additions
@@ -202,7 +210,7 @@ def thread_payload(ident, doc):
 
 def batch_payload():
     mapped = {}
-    mapping = ROOT / 'candidates/ISSUES.tsv'
+    mapping = ROOT / CANDIDATES / 'ISSUES.tsv'
     if mapping.exists():
         for line in mapping.read_text().splitlines():
             if not line.strip() or line.startswith('#'):
@@ -210,7 +218,7 @@ def batch_payload():
             bid, number, url = line.split('\t')
             mapped[bid] = {'number': int(number), 'url': url}
     result = []
-    for path in sorted((ROOT / 'candidates').glob('*/*.jsonl')):
+    for path in sorted((ROOT / CANDIDATES).glob('*/*.jsonl')):
         rows = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
         row = rows[0] if rows else {}
         result.append({'id': path.stem, 'source': path.parent.name,
@@ -219,7 +227,7 @@ def batch_payload():
                        'assignees': [], 'updated': None, **mapped.get(path.stem, {})})
     if os.environ.get('GH_TOKEN'):
         try:
-            command = ['gh', 'issue', 'list', '-R', 'dmarzzz/swarm-lab', '-l', 'batch',
+            command = ['gh', 'issue', 'list', '-R', REPO, '-l', 'batch',
                        '--state', 'all', '--limit', '1000', '--json',
                        'number,title,state,labels,assignees,updatedAt,url,body']
             p = subprocess.run(command, text=True, capture_output=True, timeout=15, check=True)

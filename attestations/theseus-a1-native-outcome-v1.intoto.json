@@ -17,19 +17,19 @@
      "digest": {
       "sha256": "815463a825ba03803b1f8cdb03afc18bfed1dafd7a3aecdba448e5620169a18b"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_a1_closeout.py"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/analysis/report_a1_closeout.py"
     },
     {
      "digest": {
       "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/results/A1/summary.json"
     },
     {
      "digest": {
       "sha256": "e083064bd4479282537eeb4f775684eff6e092a33bc21ea7df1f50996b4e2231"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json"
     },
     {
      "digest": {

@@ -17,7 +17,7 @@
      "digest": {
       "sha256": "04503cc49df1964ec4aa1db65cb672d4c9d07e26f505a7e7c84bf6a54087ee98"
      },
-     "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
+     "uri": "5-experiments/studies/vishesh/healing-helping-hands/visualization/render.py"
     },
     {
      "uri": "data/healing-helping-hands/render-inputs.tar.gz"
@@ -26,7 +26,7 @@
      "digest": {
       "sha256": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c"
      },
-     "uri": "researchers/vishesh/notes/healing-helping-hands/results-summary.json"
+     "uri": "5-experiments/studies/vishesh/healing-helping-hands/results-summary.json"
     },
     {
      "digest": {

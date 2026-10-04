@@ -82,7 +82,7 @@ export interface Survey {
   reviewed_by: (string | null)[];
 }
 
-/** X thread extras exported from library/threads frontmatter and archived text. Optional artifact. */
+/** X thread extras exported from 1-library/threads frontmatter and archived text. Optional artifact. */
 export interface ThreadMeta {
   id: string;
   handle: string;

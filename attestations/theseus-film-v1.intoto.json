@@ -17,79 +17,79 @@
      "digest": {
       "sha256": "adba02eb011dc5d26c5973ff1fd07108cad3af94290bff8d64508dd7bb0706c0"
      },
-     "uri": "researchers/dmarz/notes/theseus-film/_decision.md"
+     "uri": "5-experiments/studies/dmarz/theseus-film/_decision.md"
     },
     {
      "digest": {
       "sha256": "4e80f30de76a233608c80b9f4762099fa2026df3d61e1136a019a974f30aad71"
      },
-     "uri": "researchers/dmarz/notes/theseus-film/script.json"
+     "uri": "5-experiments/studies/dmarz/theseus-film/script.json"
     },
     {
      "digest": {
       "sha256": "eb5e8f911b227b22d707baf5faca9347889626eeb5d387651ac97bb1c341e5b2"
      },
-     "uri": "researchers/dmarz/notes/theseus-film/film_data.py"
+     "uri": "5-experiments/studies/dmarz/theseus-film/film_data.py"
     },
     {
      "digest": {
       "sha256": "193b20dc2ee52364747ccc659e5dbbe415a2404e26f8b84c071b4805ace11a2e"
      },
-     "uri": "researchers/dmarz/notes/theseus-film/make_film.py"
+     "uri": "5-experiments/studies/dmarz/theseus-film/make_film.py"
     },
     {
      "digest": {
       "sha256": "a36feb23e3da7c23e07422c0c7930b0dbb36da1cf34d1367d951d251878d2f4c"
      },
-     "uri": "researchers/dmarz/notes/theseus-film/film.html"
+     "uri": "5-experiments/studies/dmarz/theseus-film/film.html"
     },
     {
      "digest": {
       "sha256": "142bf28cc701ca295f353385800b1f7da74261edddc55d045bf91f5934c2b8aa"
      },
-     "uri": "researchers/dmarz/notes/market-split-film/narrated/vo.py"
+     "uri": "5-experiments/studies/dmarz/market-split-film/narrated/vo.py"
     },
     {
      "digest": {
       "sha256": "7e981c0985fc85f830aa52fb94779fbea0cc5d8bf9d877b9efc291f5366a16aa"
      },
-     "uri": "researchers/dmarz/notes/market-split-film/narrated/build.py"
+     "uri": "5-experiments/studies/dmarz/market-split-film/narrated/build.py"
     },
     {
      "digest": {
       "sha256": "bf14d79818e219b1bb1f56cf818bfbf6c8f661fc306338e29c2469dee7c3d031"
      },
-     "uri": "researchers/dmarz/notes/market-split-film/build.py"
+     "uri": "5-experiments/studies/dmarz/market-split-film/build.py"
     },
     {
      "digest": {
       "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/record.mjs"
     },
     {
      "digest": {
       "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/qr-repo.svg"
     },
     {
      "digest": {
       "sha256": "432fc6742b7e632d669e2c46507e010762a2ce6b953ff7f52c6d6cb14d4111e5"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/rows.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/rows.json"
     },
     {
      "digest": {
       "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/summary.json"
     },
     {
      "digest": {
       "sha256": "bc452a324567602da4afbb168aabc0d5161431505b17e7961da2331142b453ad"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/manifest.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/manifest.json"
     },
     {
      "digest": {
@@ -101,19 +101,19 @@
      "digest": {
       "sha256": "517cc2ba1563947af78f740f01230cbdc5cb2947621c2ec851de26faf15f2db2"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/README.md"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/README.md"
     },
     {
      "digest": {
       "sha256": "405d7e0788300fb538a16372dccf42bf97a72cc2117819b24a22728a0f0a0d45"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/v2/RESULTS.md"
     },
     {
      "digest": {
       "sha256": "9e83e324f126035f2dd2e5adcce4ec08c20c461f9eb07f93429a690236ea2c76"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md"
     },
     {
      "digest": {

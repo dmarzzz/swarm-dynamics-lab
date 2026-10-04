@@ -114,7 +114,7 @@ class NavigationTest(unittest.TestCase):
 
     def test_explicit_hypothesis_tags_and_untagged_fallback(self):
         def doc(fm):
-            return SimpleNamespace(fm=fm, rel='hypotheses/example.md')
+            return SimpleNamespace(fm=fm, rel='4-hypotheses/example.md')
         hypotheses = {'example': doc({'status': 'proposed', 'topics': ['llm-agent-swarms'],
                         'focus_areas': ['immune-response'], 'project_briefs': ['memory']}),
                       'untagged': doc({'status': 'draft'})}
@@ -179,7 +179,7 @@ class QuestionsValidationTest(unittest.TestCase):
             self.validate(payload)
 
     def test_rejects_missing_or_escaping_briefs(self):
-        for path in ('researchers/dmarz/notes/question-atlas/nonexistent-brief.md',
+        for path in ('5-experiments/studies/dmarz/question-atlas/nonexistent-brief.md',
                      '../AGENTS.md', str(exporter.ROOT / 'AGENTS.md')):
             with self.subTest(path=path):
                 payload = copy.deepcopy(self.canonical)
@@ -213,7 +213,7 @@ class ContributionTest(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        self.path = self.root / 'researchers/vishesh/notes/bank.json'
+        self.path = self.root / '5-experiments/studies/vishesh/bank.json'
         self.path.parent.mkdir(parents=True)
         brief = self.path.parent / 'project-briefs/memory.md'
         brief.parent.mkdir()
@@ -247,7 +247,7 @@ class ContributionTest(unittest.TestCase):
         with self.assertRaises(ValueError): self.build_fixture([{**self.row, 'status':'accepted'}])
 
     def test_paths_cannot_escape_owner_notes(self):
-        for path in ['../secret.json', '/secret.json', 'researchers/dmarz/notes/bank.json', 'researchers/vishesh/notes/../../bank.json']:
+        for path in ['../secret.json', '/secret.json', '5-experiments/studies/dmarz/bank.json', '5-experiments/studies/vishesh/../../bank.json']:
             with self.subTest(path=path):
                 with self.assertRaises(ValueError): self.build_fixture(registry=[{**self.registry[0], 'path':path}])
 
@@ -338,6 +338,31 @@ class IdeaScoreContractTest(unittest.TestCase):
         self.assertTrue(scores['ideas'][original]['ratings']['vishesh']['stale'])
         self.assertEqual(scores['ideas']['NEW-01']['ratings'], {'vishesh': None, 'dmarz': None, 'shadow': None})
         self.assertEqual(scores['ideas'][original]['ratings']['vishesh']['candidate_sha256'], load('idea-scores')['ideas'][original]['ratings']['vishesh']['candidate_sha256'])
+
+class LayoutTest(unittest.TestCase):
+    def test_old_layout_paths_resolve_and_current_paths_are_stable(self):
+        from layout import current_path
+        cases = {'library/papers/a.md': '1-library/papers/a.md',
+                 'surveys/a.md': '2-surveys/a.md', 'reviews/a.md': '2-surveys/reviews/a.md',
+                 'synthesis/a.md': '3-synthesis/a.md', 'hypotheses/a.md': '4-hypotheses/a.md',
+                 'experiments/EVIDENCE.md': '5-experiments/EVIDENCE.md',
+                 'tooling/x/README.md': '5-experiments/toolkit/x/README.md',
+                 'researchers/vishesh/notes/project-briefs/memory.md': '5-experiments/studies/vishesh/project-briefs/memory.md',
+                 'researchers/shadow/qa/a.md': '5-experiments/studies/shadow/qa/a.md',
+                 'researchers/dmarz/inbox.md': 'lab/researchers/dmarz/inbox.md',
+                 'tasks/t.md': 'lab/tasks/t.md', 'candidates/x/b.jsonl': 'lab/candidates/x/b.jsonl',
+                 'templates/a.md': 'lab/templates/a.md', 'STATUS.md': 'lab/STATUS.md',
+                 'dashboard/DEPLOY.md': 'dashboard/DEPLOY.md', 'src/x.py': 'src/x.py'}
+        for old, new in cases.items():
+            self.assertEqual(current_path(old), new)
+            self.assertEqual(current_path(new), new)
+
+    def test_atlas_paths_resolve_to_files_in_this_checkout(self):
+        from layout import current_path
+        for question in load('questions')['candidates']:
+            for path in [s['path'] for s in question['prior']] + question['briefs']:
+                self.assertTrue((exporter.ROOT / current_path(path)).is_file(), path)
+
 
 if __name__ == '__main__':
     unittest.main()

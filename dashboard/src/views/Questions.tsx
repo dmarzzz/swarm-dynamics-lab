@@ -9,18 +9,18 @@ import {
   type QuestionReviewState,
 } from '../lib/questionReviews';
 import { href, useParamSetter } from '../lib/router';
+import { repoFile } from '../lib/repo';
 import './questions.css';
 import { matchesResearch, type ResearchNavigation } from '../data/navigation';
 import { ResearchConnections } from '../components/ResearchConnections';
 
-const REPO = 'https://github.com/dmarzzz/swarm-lab/blob/main/';
-const GUIDE = REPO + 'synthesis/research-question-atlas.md';
+const GUIDE = repoFile('3-synthesis/research-question-atlas.md');
 const TEST_CLASSES: Record<string, string> = {
   offline: 'Offline simulation / traces', 'api-small': 'Small model-call study',
   training: 'Train policies / models', hardware: 'Hardware / physical access',
   'access-dependent': 'Dataset / participant access',
 };
-const repoLink = (path: string) => REPO + path.split('/').map(encodeURIComponent).join('/');
+const repoLink = repoFile;
 const normalize = (value: string) => value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 
 export function Questions({ params, navigation }: { params: URLSearchParams; navigation: ResearchNavigation }) {

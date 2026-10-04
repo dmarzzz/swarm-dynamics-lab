@@ -17,13 +17,13 @@
      "digest": {
       "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-AUDIT.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-AUDIT.json"
     },
     {
      "digest": {
       "sha256": "304bd25eb04c94201c2ae90de237b77a373d30d888218db94447a81ff06eb7b0"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-QUALITY.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-QUALITY.json"
     },
     {
      "digest": {

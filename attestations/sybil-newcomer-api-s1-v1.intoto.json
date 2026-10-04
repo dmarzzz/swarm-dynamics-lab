@@ -16,31 +16,31 @@
      "digest": {
       "sha256": "c7970f14a00ed46fd07a52189f0da0e626f299957fa69081826146aa1c143fd7"
      },
-     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/render.py"
+     "uri": "5-experiments/studies/dmarz/sybil-newcomer-api/src/render.py"
     },
     {
      "digest": {
       "sha256": "eeb2705e1d01329cfb5f379e6490cfcad48ed0234c12c8cc7f7bbe16928813a3"
      },
-     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/sim.py"
+     "uri": "5-experiments/studies/dmarz/sybil-newcomer-api/src/sim.py"
     },
     {
      "digest": {
       "sha256": "bf6109198ea22ce597c402c7c2f2783cce07f8231f15632548dc5efda8f13301"
      },
-     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/study.py"
+     "uri": "5-experiments/studies/dmarz/sybil-newcomer-api/src/study.py"
     },
     {
      "digest": {
       "sha256": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2"
      },
-     "uri": "researchers/dmarz/notes/sybil-newcomer-api/design.yaml"
+     "uri": "5-experiments/studies/dmarz/sybil-newcomer-api/design.yaml"
     },
     {
      "digest": {
       "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce"
      },
-     "uri": "researchers/dmarz/notes/sybil-newcomer-api/requirements.txt"
+     "uri": "5-experiments/studies/dmarz/sybil-newcomer-api/requirements.txt"
     },
     {
      "digest": {

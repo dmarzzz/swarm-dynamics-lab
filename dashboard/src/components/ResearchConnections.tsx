@@ -1,8 +1,7 @@
 import { matchesHypothesis, type ResearchNavigation } from '../data/navigation';
 import { href } from '../lib/router';
+import { repoFile as repo } from '../lib/repo';
 import './researchConnections.css';
-
-const repo = (path: string) => 'https://github.com/dmarzzz/swarm-lab/blob/main/' + path.split('/').map(encodeURIComponent).join('/');
 
 export function ResearchConnections({ navigation: nav, topic = '', focus = '', project = '' }: {
   navigation: ResearchNavigation; topic?: string; focus?: string; project?: string;

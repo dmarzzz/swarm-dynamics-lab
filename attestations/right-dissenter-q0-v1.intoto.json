@@ -17,19 +17,19 @@
      "digest": {
       "sha256": "ab69e34346cfae82d6fdbfa5b3662c1cc39a159b01354038258bd71af09e780f"
      },
-     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/live_render.py"
+     "uri": "5-experiments/studies/vishesh/dissent/results/q0-a1/live_render.py"
     },
     {
      "digest": {
       "sha256": "8b233796994ba7f62f32085c1b20d7e4a6f31526432ff80ffe24775272327a8d"
      },
-     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/summary.json"
+     "uri": "5-experiments/studies/vishesh/dissent/results/q0-a1/summary.json"
     },
     {
      "digest": {
       "sha256": "99aced866d39bb328cc432c2278a4b5bb054f4700cee76ed93c3587124e808fd"
      },
-     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/records.json"
+     "uri": "5-experiments/studies/vishesh/dissent/results/q0-a1/records.json"
     },
     {
      "digest": {

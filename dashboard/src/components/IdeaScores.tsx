@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { DIMENSIONS, DIMENSION_LABELS, REVIEWERS, REVIEWER_LABELS, RUBRIC_VERSION, SCORE_STORAGE_KEY, WEIGHTS,
   effectiveRating, parseDrafts, scoreExport, total, validRating, type Dimension, type Drafts, type Rating, type Reviewer, type ScoresData } from '../lib/ideaScores';
+import { repoFile } from '../lib/repo';
 import './ideaScores.css';
 
 interface State { data: ScoresData | null; drafts: Drafts; status: string; notice: string; save: (id: string, reviewer: Reviewer, rating: Rating | null) => void; discard: (id: string, reviewer: Reviewer) => void; exportReviewer: (reviewer: Reviewer) => void }
@@ -52,7 +53,7 @@ export function ScoreGuide() {
     <strong>Researcher scores / 100</strong>
     <p>Visual potential 30% · Practical usefulness 30% · Physical / biological connection 25% · Novelty relative to our work 15%.</p>
     <p>Vishesh’s initial scores were assessed by Codex on his behalf. Dimarz and Shadow are optional: NA means not rated, never zero.</p>
-    {status === 'error' ? <p role="alert">Published scores could not be loaded. Reload to retry; this is not an NA rating.</p> : status === 'loading' ? <p role="status">Loading scores…</p> : <details><summary>Rubric, provenance and downloads</summary><p>{data?.rubric.anchors}</p><p>{data?.rubric.limitations}</p><p><a href={dataUrl}>Download all scores</a> · <a href="https://github.com/dmarzzz/swarm-lab/blob/main/dashboard/IDEA-SCORES.md">How to publish your scores</a></p></details>}
+    {status === 'error' ? <p role="alert">Published scores could not be loaded. Reload to retry; this is not an NA rating.</p> : status === 'loading' ? <p role="status">Loading scores…</p> : <details><summary>Rubric, provenance and downloads</summary><p>{data?.rubric.anchors}</p><p>{data?.rubric.limitations}</p><p><a href={dataUrl}>Download all scores</a> · <a href={repoFile('dashboard/IDEA-SCORES.md')}>How to publish your scores</a></p></details>}
     {notice && <p role="status">{notice}</p>}
   </aside>;
 }
@@ -107,7 +108,7 @@ function RatingEditor({ id, reviewer }: { id: string; reviewer: Reviewer }) {
     <div className="score-actions"><button type="submit">Save local draft</button><button type="button" onClick={() => { save(id, reviewer, null); setValues({ visual: '', practical: '', theory: '', novelty: '' }); setRationale(''); setError(''); }}>Set to NA</button>
       <button type="button" onClick={() => { discard(id, reviewer); const published = data!.ideas[id].ratings[reviewer]; setValues(Object.fromEntries(DIMENSIONS.map(k => [k, published == null ? '' : String(published.dimensions[k])])) as Record<Dimension, string>); setRationale(published?.rationale ?? ''); setError(''); }}>Discard local draft</button>
       <button type="button" onClick={() => exportReviewer(reviewer)}>Export {REVIEWER_LABELS[reviewer]} scores</button></div>
-    <p>Exports include saved drafts only. Publish at <a href={`https://github.com/dmarzzz/swarm-lab/blob/main/dashboard/idea-scores/${reviewer}.json`}>dashboard/idea-scores/{reviewer}.json</a>. Reconcile the latest file before committing.</p>
+    <p>Exports include saved drafts only. Publish at <a href={repoFile(`dashboard/idea-scores/${reviewer}.json`)}>dashboard/idea-scores/{reviewer}.json</a>. Reconcile the latest file before committing.</p>
     {error && <p role="alert">{error}</p>}
   </form>;
 }

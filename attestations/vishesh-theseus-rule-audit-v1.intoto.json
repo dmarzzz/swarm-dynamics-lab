@@ -29,13 +29,13 @@
      "digest": {
       "sha256": "4d6e3c39b6f232714e2bbdcbc96e5126215001f253a0e30438faf555a09c0c66"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/audit.py"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/v2/diagnosis/audit.py"
     },
     {
      "digest": {
       "sha256": "ac7b1c9059f5f64f62458120a492ac02f0bdd780639f0ed96f9675bac4df7dc7"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json"
     },
     {
      "digest": {

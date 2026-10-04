@@ -17,13 +17,13 @@
      "digest": {
       "sha256": "f5c855f309f0eabd2b95d2b2f063f84e3edca5054aba10b89d6cb2215989d308"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/v2/src/runner.py"
     },
     {
      "digest": {
       "sha256": "b67ad145865010a9c0ff741eea1dda64145bfc2e925eb1f9c3967d40742d82a3"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/manifest.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/v2/results/S0/manifest.json"
     },
     {
      "digest": {

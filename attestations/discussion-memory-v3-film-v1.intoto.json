@@ -17,31 +17,31 @@
      "digest": {
       "sha256": "695e1897fc17d248388787620fdceb75fc69f18628a2f143070a4f951f503e43"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build_data.py"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/build_data.py"
     },
     {
      "digest": {
       "sha256": "97730117997fc2ba319004d2c62bcc6d0eb1e40d74769084063a76a7442c76b6"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build.py"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/build.py"
     },
     {
      "digest": {
       "sha256": "bba61083f64b40f6b722127562ca49b200a31bc133b7cc93aaba5c2dde9b4f0f"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/film.html"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/film.html"
     },
     {
      "digest": {
       "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/record.mjs"
     },
     {
      "digest": {
       "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/qr-repo.svg"
     },
     {
      "digest": {

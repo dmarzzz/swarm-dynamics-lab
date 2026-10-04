@@ -17,25 +17,25 @@
      "digest": {
       "sha256": "b7f940fe3708af9f9bdee89cc578c1331d3f5bfb32fdf14cfa3226e1acb02bef"
      },
-     "uri": "researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py"
+     "uri": "5-experiments/studies/dmarz/market-split-api/report/src/qualification_plot.py"
     },
     {
      "digest": {
       "sha256": "1c220b4e126bcae589a14949b690bca59feb70b7903f9d99bf74da11c97b1a0c"
      },
-     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv"
+     "uri": "5-experiments/studies/dmarz/market-split-haiku/report/r0-001/episode-results.csv"
     },
     {
      "digest": {
       "sha256": "b5d4abbd80ec5e1dbb285130915675cef6e7e248ba3e7c1f2de3a11b9ef3fdd9"
      },
-     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json"
+     "uri": "5-experiments/studies/dmarz/market-split-haiku/report/r0-001/run-receipts.json"
     },
     {
      "digest": {
       "sha256": "cc8292fd5cdc3c7c4d2f5faa9bfa75309f0c5fe28863d26daccad27c651558f8"
      },
-     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json"
+     "uri": "5-experiments/studies/dmarz/market-split-haiku/report/r0-001/usage.json"
     },
     {
      "digest": {

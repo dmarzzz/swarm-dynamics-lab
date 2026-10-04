@@ -13,6 +13,7 @@ import { Timeline } from './views/Timeline';
 import { ResearchPath } from './views/ResearchPath';
 import { Threads } from './views/Threads';
 import { ago, parseT } from './lib/format';
+import { REPO_NAME, REPO_URL } from './lib/repo';
 import { Mark } from './components/Mark';
 const Contributions = lazy(() => import('./views/Contributions').then(m => ({ default: m.Contributions })));
 const Questions = lazy(() => import('./views/Questions').then(m => ({ default: m.Questions })));
@@ -105,10 +106,10 @@ export default function App() {
 
       <footer className="footer">
         <div className="wrap">
-          <span>Built from <a href="https://github.com/dmarzzz/swarm-lab">dmarzzz/swarm-lab</a>. Every number on this page is computed from files in the repository.</span>
+          <span>Built from <a href={REPO_URL}>{REPO_NAME}</a>. Every number on this page is computed from files in the repository.</span>
           {state.status === 'ready' && (
             <span className="mono">
-              <a href={`https://github.com/dmarzzz/swarm-lab/commit/${state.data.summary.head_sha}`}>{state.data.summary.head_sha.slice(0, 7)}</a>
+              <a href={`${REPO_URL}/commit/${state.data.summary.head_sha}`}>{state.data.summary.head_sha.slice(0, 7)}</a>
             </span>
           )}
         </div>

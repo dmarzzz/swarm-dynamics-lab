@@ -17,37 +17,37 @@
      "digest": {
       "sha256": "637fa48c20b937a9ef0ce798c4fefbcf046fb24e8f89823cb88063e9a92508af"
      },
-     "uri": "researchers/dmarz/notes/sybil-budget-api/src/render.py"
+     "uri": "5-experiments/studies/dmarz/sybil-budget-api/src/render.py"
     },
     {
      "digest": {
       "sha256": "77664ba3d9d454e6b3c3b3afaa34ba977ecca9926567a8134a1f020ad951f875"
      },
-     "uri": "researchers/dmarz/notes/sybil-budget-api/src/analyze.py"
+     "uri": "5-experiments/studies/dmarz/sybil-budget-api/src/analyze.py"
     },
     {
      "digest": {
       "sha256": "aeb4100b710c40495d64e6f9c7ff044bbdeb75151caca4209467ecabd31f5ce4"
      },
-     "uri": "researchers/dmarz/notes/sybil-budget-api/src/study.py"
+     "uri": "5-experiments/studies/dmarz/sybil-budget-api/src/study.py"
     },
     {
      "digest": {
       "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398"
      },
-     "uri": "researchers/dmarz/notes/sybil-budget-api/src/sim.py"
+     "uri": "5-experiments/studies/dmarz/sybil-budget-api/src/sim.py"
     },
     {
      "digest": {
       "sha256": "7ece847fa6dbb18ad831c7e8e4cbd18efccc1bef7ce3fda68382d89523268c9f"
      },
-     "uri": "researchers/dmarz/notes/sybil-budget-api/design.yaml"
+     "uri": "5-experiments/studies/dmarz/sybil-budget-api/design.yaml"
     },
     {
      "digest": {
       "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce"
      },
-     "uri": "researchers/dmarz/notes/sybil-budget-api/requirements.txt"
+     "uri": "5-experiments/studies/dmarz/sybil-budget-api/requirements.txt"
     },
     {
      "digest": {

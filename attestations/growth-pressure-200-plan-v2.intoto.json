@@ -17,43 +17,43 @@
      "digest": {
       "sha256": "080655398a088e70477b7ba6acd52d08cd777ce1613da91f7706d6097b286b7d"
      },
-     "uri": "researchers/dmarz/notes/growth-pressure-200/PLAN.md"
+     "uri": "5-experiments/studies/dmarz/growth-pressure-200/PLAN.md"
     },
     {
      "digest": {
       "sha256": "67a6b36e55083c81ed5cdb9e806f57cc78d988b50b363e2b35815d4ccbee255e"
      },
-     "uri": "researchers/dmarz/notes/growth-pressure-200/design.json"
+     "uri": "5-experiments/studies/dmarz/growth-pressure-200/design.json"
     },
     {
      "digest": {
       "sha256": "e710fb91ffc51eb1439e97b6d7d06db5a9b25edbfd3728dd747bdf8a264d2a91"
      },
-     "uri": "researchers/dmarz/notes/growth-pressure-200/SETUP.md"
+     "uri": "5-experiments/studies/dmarz/growth-pressure-200/SETUP.md"
     },
     {
      "digest": {
       "sha256": "13a7273f443d3f174ecaafc18557743c1d9e9ee5b2b322782a3f3c7f344649a5"
      },
-     "uri": "researchers/dmarz/notes/growth-pressure-200/AMENDMENT-02.md"
+     "uri": "5-experiments/studies/dmarz/growth-pressure-200/AMENDMENT-02.md"
     },
     {
      "digest": {
       "sha256": "af2c7a1907cf9d73d2a9dd67f996870a94e59cfc8dd6e79281bcf5cf90e2fd52"
      },
-     "uri": "researchers/dmarz/notes/growth-pressure-200/reviews/design-review-v2.md"
+     "uri": "5-experiments/studies/dmarz/growth-pressure-200/reviews/design-review-v2.md"
     },
     {
      "digest": {
       "sha256": "196c60da5399f0aedebb68ca1a6b9f176f0459d977f2a27708e832f92af1f357"
      },
-     "uri": "researchers/dmarz/notes/growth-pressure-200/src/build_plan.py"
+     "uri": "5-experiments/studies/dmarz/growth-pressure-200/src/build_plan.py"
     },
     {
      "digest": {
       "sha256": "ccac18ead98bfc8611b7a21123beb0c6a109b9067b72830f573c294da0218c63"
      },
-     "uri": "researchers/dmarz/notes/growth-pressure-200/src/check_plan.py"
+     "uri": "5-experiments/studies/dmarz/growth-pressure-200/src/check_plan.py"
     },
     {
      "digest": {
@@ -65,25 +65,25 @@
      "digest": {
       "sha256": "7d624a512771079d1dab11c9e19e19fb2cba648d26cbafaeda627177f4f7e38d"
      },
-     "uri": "researchers/dmarz/notes/sybil-rules-180/RESULTS.md"
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md"
     },
     {
      "digest": {
       "sha256": "eb01514123f0a920ef1d1f3d2a58a0aa5b1b343ab73297548289b954c486c157"
      },
-     "uri": "researchers/dmarz/notes/sybil-rules-180/design.yaml"
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/design.yaml"
     },
     {
      "digest": {
       "sha256": "d7c40d80c5dd8519a001efb45ba8ed070a2ca75cc5ed03cccdbe1d3b94db9221"
      },
-     "uri": "researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/s1-002-gpt-6-sol/summary.json"
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/records/gpt-6-sol/s1-002-gpt-6-sol/summary.json"
     },
     {
      "digest": {
       "sha256": "81a3e60139485de4e4d131d06710c74bbd9853c0c099ee8a58f0b5a2ff415231"
      },
-     "uri": "researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol-r1/s1-002-gpt-6-sol-r1/summary.json"
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/records/gpt-6-sol-r1/s1-002-gpt-6-sol-r1/summary.json"
     },
     {
      "uri": "https://arxiv.org/abs/2609.04170"

@@ -170,7 +170,7 @@ export function Library({ data, params }: { data: Dataset; params?: URLSearchPar
         {rows.length === 0 ? (
           <div className="lib-empty">
             <p className="h2">Nothing matches.</p>
-            <p className="reading">Try a broader term or <button className="btn-text" onClick={reset}>clear the filters</button>. If a source is missing, drop its link in <span className="mono">researchers/&lt;you&gt;/inbox.md</span> and an agent will catalogue it.</p>
+            <p className="reading">Try a broader term or <button className="btn-text" onClick={reset}>clear the filters</button>. If a source is missing, drop its link in <span className="mono">lab/researchers/&lt;you&gt;/inbox.md</span> and an agent will catalogue it.</p>
           </div>
         ) : view === 'table' ? (
           <VirtualTable table={table} rows={sorted} onOpen={(id) => set({ e: id })} />

@@ -17,25 +17,25 @@
      "digest": {
       "sha256": "5ba6f1b87c112b2dc1be0f480c988ea00e674db9f2a9f7926d8a5e94ac185889"
      },
-     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/trace-audit.json"
+     "uri": "5-experiments/studies/vishesh/dissent/freshness/results/f0-a1/trace-audit.json"
     },
     {
      "digest": {
       "sha256": "e439f1baf8eacc4b77ee73b57ea84d03fcf132bebd40db0993e2d428fdf07009"
      },
-     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/assessment.json"
+     "uri": "5-experiments/studies/vishesh/dissent/freshness/results/f0-a1/assessment.json"
     },
     {
      "digest": {
       "sha256": "0e98a064128ab8ba5cb0a6e2f408a53ffa4cec2b8f5e2c3fb23ff340797a5855"
      },
-     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/figure-data.json"
+     "uri": "5-experiments/studies/vishesh/dissent/freshness/results/f0-a1/figure-data.json"
     },
     {
      "digest": {
       "sha256": "631bd1f1c535a1c2d4d0ae2478aa2a9fc14e2881a35cadbf28fea638222de36a"
      },
-     "uri": "researchers/vishesh/notes/dissent/freshness/results/f0-a1/plot_results.py"
+     "uri": "5-experiments/studies/vishesh/dissent/freshness/results/f0-a1/plot_results.py"
     },
     {
      "digest": {

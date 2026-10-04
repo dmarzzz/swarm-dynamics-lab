@@ -17,49 +17,49 @@
      "digest": {
       "sha256": "f0c24fba1c8333a4e4fc2675f77ed967f214eb3997e43d7f4ec0f2062106c0f0"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/reporting/build_report.py"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/reporting/build_report.py"
     },
     {
      "digest": {
       "sha256": "3b632443aab8b281166bd6d40a9ae55d2887044fd658c71587334d0792c539a1"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/src/render.py"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/src/render.py"
     },
     {
      "digest": {
       "sha256": "7823428b71de267740d4f21d08bc80f80d89d6f43d90aec0c268f71fd3ffcf80"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/src/analyze.py"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/src/analyze.py"
     },
     {
      "digest": {
       "sha256": "e0897afec8025248d5653c28d92b0ca331957a53aca95e215d97d6f63a8c079e"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/src/study.py"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/src/study.py"
     },
     {
      "digest": {
       "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/src/sim.py"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/src/sim.py"
     },
     {
      "digest": {
       "sha256": "57b267b0e22a5829e5c6b80c922723ad6e140f91d272d3ac0f0286159c396262"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/design.yaml"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/design.yaml"
     },
     {
      "digest": {
       "sha256": "cc23f511068ce97a3308f04ab600ca47201c211c5bd1282bc580d87bbbcf3804"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/experiment.yaml"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/experiment.yaml"
     },
     {
      "digest": {
       "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce"
      },
-     "uri": "researchers/dmarz/notes/sybil-scale-api/requirements.txt"
+     "uri": "5-experiments/studies/dmarz/sybil-scale-api/requirements.txt"
     },
     {
      "uri": "data/sybil-scale-api/s1-001/summary.json"

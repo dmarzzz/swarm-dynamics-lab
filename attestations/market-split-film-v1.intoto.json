@@ -17,37 +17,37 @@
      "digest": {
       "sha256": "7bdd8e3f023e81e0105cf50e561c8bed11cc92ac508a8d9fa8bdd39f28ba1580"
      },
-     "uri": "researchers/dmarz/notes/market-split-film/_decision.md"
+     "uri": "5-experiments/studies/dmarz/market-split-film/_decision.md"
     },
     {
      "digest": {
       "sha256": "db0486d60d1e30fc30b47a5b01cabe2ca6d427b0d47273a5520fcff63f54752b"
      },
-     "uri": "researchers/dmarz/notes/market-split-film/build_data.py"
+     "uri": "5-experiments/studies/dmarz/market-split-film/build_data.py"
     },
     {
      "digest": {
       "sha256": "bf14d79818e219b1bb1f56cf818bfbf6c8f661fc306338e29c2469dee7c3d031"
      },
-     "uri": "researchers/dmarz/notes/market-split-film/build.py"
+     "uri": "5-experiments/studies/dmarz/market-split-film/build.py"
     },
     {
      "digest": {
       "sha256": "49b09238845bdfbf8400aad7aa04c15c5895505a0b3dedb32ba4f58ed4aa6b7d"
      },
-     "uri": "researchers/dmarz/notes/market-split-film/film.html"
+     "uri": "5-experiments/studies/dmarz/market-split-film/film.html"
     },
     {
      "digest": {
       "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/record.mjs"
     },
     {
      "digest": {
       "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2"
      },
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/src/film_v3/qr-repo.svg"
     },
     {
      "digest": {
@@ -59,19 +59,19 @@
      "digest": {
       "sha256": "35943045c19e053bee7137dbd4c73bd52b2a0e56e7dba5e434e74936d84da6f3"
      },
-     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/usage.json"
+     "uri": "5-experiments/studies/dmarz/market-split-api/report/s1-002/usage.json"
     },
     {
      "digest": {
       "sha256": "1b0e374abe50ba004f733b53ff0541be299fc90f973dd1d1452a48a8784fef5f"
      },
-     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json"
+     "uri": "5-experiments/studies/dmarz/market-split-api/report/s1-002/analysis.json"
     },
     {
      "digest": {
       "sha256": "b3f65bd61bb63306752b1b8756755d8f1317c51b44fddfd3d30639e495fd796c"
      },
-     "uri": "researchers/dmarz/notes/market-split-api/report/s1-002/first-registration-notes.json"
+     "uri": "5-experiments/studies/dmarz/market-split-api/report/s1-002/first-registration-notes.json"
     },
     {
      "digest": {

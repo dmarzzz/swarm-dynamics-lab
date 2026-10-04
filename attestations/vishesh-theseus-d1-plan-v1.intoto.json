@@ -17,25 +17,25 @@
      "digest": {
       "sha256": "0d52c59733a8d7d8d6b087358c969e4e2d557b28c0edb710c9e1ba207db61add"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/v2/diagnosis/FINDINGS.md"
     },
     {
      "digest": {
       "sha256": "60cf421d10c661d6670896514527d501ee79b6a3c47f8246cc256ac7a1d90fd1"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/regressions.json"
     },
     {
      "digest": {
       "sha256": "a8839e9e46d4e4de4c686263ea5001d77aea9ed0279bd88e2e58c53ff38e1602"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/src/instrument.py"
     },
     {
      "digest": {
       "sha256": "ebc74096ce7820df2e25e8fa7413d22224f401ba778e57697188d312808e5359"
      },
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/PLAN.md"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/PLAN.md"
     },
     {
      "digest": {

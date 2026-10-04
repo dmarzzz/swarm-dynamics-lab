@@ -17,7 +17,7 @@
      "digest": {
       "sha256": "22ca86c45911a82a36e79ba13da7da06170a9e9b617333c1c6af269c1767144a"
      },
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py"
+     "uri": "5-experiments/studies/vishesh/influence-swarms/scenario/src/render_native.py"
     },
     {
      "uri": "data/influence-native/native-Q2-01/outcomes.json"

@@ -1,6 +1,7 @@
 import type { Dataset, Entry, Kind, Task } from './types';
 import { ACTIVE_STATES, HACK_START, KINDS, teamOf } from './meta';
 import { parseT } from '../lib/format';
+import { repoFile } from '../lib/repo';
 
 export interface Derived {
   now: number;
@@ -96,14 +97,13 @@ export function derive(d: Dataset): Derived {
 
 function humanAsks(d: Dataset, now: number): Derived['humanAsks'] {
   const out: Derived['humanAsks'] = [];
-  const repo = 'https://github.com/dmarzzz/swarm-lab/blob/main/';
   for (const t of d.tasks as Task[]) {
     if (t.status === 'done') continue;
     const owner = t.owner ? teamOf(t.owner) : null;
     if (t.kind === 'admin' || (t.for && (t.owner == null || t.owner.endsWith('/human')))) {
-      out.push({ kind: 'task', title: t.title, who: t.for ?? owner, href: `${repo}tasks/${t.id}.md`, detail: t.priority ?? undefined });
+      out.push({ kind: 'task', title: t.title, who: t.for ?? owner, href: repoFile(`lab/tasks/${t.id}.md`), detail: t.priority ?? undefined });
     } else if (t.kind === 'review' && t.status === 'open') {
-      out.push({ kind: 'review', title: t.title, who: t.for, href: `${repo}tasks/${t.id}.md`, detail: 'needs a reviewer from another team' });
+      out.push({ kind: 'review', title: t.title, who: t.for, href: repoFile(`lab/tasks/${t.id}.md`), detail: 'needs a reviewer from another team' });
     }
   }
   for (const a of d.agents) {

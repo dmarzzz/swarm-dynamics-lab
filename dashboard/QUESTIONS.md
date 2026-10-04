@@ -6,7 +6,7 @@ Research navigation now includes grouped literature topics and cross-cutting foc
 
 `#/questions` presents the canonical research question atlas for human selection. It includes each question, tentative hypothesis, proposed test, comparison, metrics, falsifier, confounds, promotion requirements and linked prior work. Search and filters are encoded in the URL; `#/questions?id=BUD-01` links directly to one candidate.
 
-The exporter copies `researchers/dmarz/notes/question-atlas/candidates.json` to `public/data/questions.json` and verifies the existing content hashes. Edit the canonical lane files and rebuild the atlas through `src/question-atlas/build.py` when research changes; do not edit the dashboard copy. See [DATA-CONTRACT.md](DATA-CONTRACT.md) for the exact contract.
+The exporter copies `5-experiments/studies/dmarz/question-atlas/candidates.json` to `public/data/questions.json` and verifies the existing content hashes. Edit the canonical lane files and rebuild the atlas through `src/question-atlas/build.py` when research changes; do not edit the dashboard copy. See [DATA-CONTRACT.md](DATA-CONTRACT.md) for the exact contract.
 
 Reviews are local to the browser and site. Shortlist, Discuss and Park are selection notes, not approval for an experiment. The page accepts the standalone atlas's `swarm-lab-question-review-v1` export. Export from the old atlas and import here to move a review between sites. There is no shared review server. Import merges known candidate IDs and replaces overlapping choices; export your local review first when combining reviewers. The local reviewer name is retained.
 

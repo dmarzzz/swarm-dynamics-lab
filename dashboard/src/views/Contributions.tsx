@@ -3,6 +3,7 @@ import { sortIdeas } from '../lib/ideaScores';
 import { useState } from 'react';
 import { useContributions } from '../data/contributions';
 import { href, useParamSetter } from '../lib/router';
+import { repoFile } from '../lib/repo';
 import './questions.css';
 import './contributions.css';
 
@@ -54,7 +55,7 @@ export function Contributions({ params }: { params: URLSearchParams }) {
         <p>Project areas: {item.briefs.map(id => <a className="contribution-link" key={id} href={href('/contributions', { brief: id })}>{id} {item.activity?.new_tags.includes(id) && <span className="contribution-badge" title={`Tag added ${item.activity.tags_added_at[id]}`}>New tag</span>}</a>)}</p>
         <p>Source leads: {item.sources.map(id => <a className="contribution-link" key={id} href={href('/library', { q: id })}>{id}</a>)}</p>
         <p className="q-boundary">{item.source_note}</p>
-        <a href={`https://github.com/dmarzzz/swarm-lab/blob/main/${item.source_path}`}>Original contribution record</a>
+        <a href={repoFile(item.source_path)}>Original contribution record</a>
       </article>)}</div>
       {!questions.length && <p>No matching contributions. Clear filters to see all banks.</p>}
     </>}

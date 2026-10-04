@@ -2,31 +2,31 @@
   {
     "id": "VX",
     "owner": "vishesh/codex-methods",
-    "path": "researchers/vishesh/notes/atlas-review/extensions.json",
+    "path": "5-experiments/studies/vishesh/atlas-review/extensions.json",
     "collection": "extensions"
   },
   {
     "id": "PX",
     "owner": "vishesh/codex-methods",
-    "path": "researchers/vishesh/notes/priority-research-expansion/ideas.json",
+    "path": "5-experiments/studies/vishesh/priority-research-expansion/ideas.json",
     "collection": "ideas"
   },
   {
     "id": "EX",
     "owner": "vishesh/codex-methods",
-    "path": "researchers/vishesh/notes/experimental-expansion/questions.json",
+    "path": "5-experiments/studies/vishesh/experimental-expansion/questions.json",
     "collection": "ideas"
   },
   {
     "id": "DM",
     "owner": "vishesh/codex-decision-models",
-    "path": "researchers/vishesh/notes/decision-models/ideas.json",
+    "path": "5-experiments/studies/vishesh/decision-models/ideas.json",
     "collection": "ideas"
   },
   {
     "id": "HX",
     "owner": "vishesh/codex-heterogeneous",
-    "path": "researchers/vishesh/notes/heterogeneous-swarms/questions.json",
+    "path": "5-experiments/studies/vishesh/heterogeneous-swarms/questions.json",
     "collection": "ideas"
   }
 ]

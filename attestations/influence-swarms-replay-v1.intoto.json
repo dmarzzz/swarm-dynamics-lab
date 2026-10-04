@@ -16,13 +16,13 @@
      "digest": {
       "sha256": "486ca56d36027bd727100ce1caf3bfc89c11c98072c59c96decfd90a6a11ec75"
      },
-     "uri": "researchers/vishesh/notes/external-influence-v2/analysis/build_replay.py"
+     "uri": "5-experiments/studies/vishesh/external-influence-v2/analysis/build_replay.py"
     },
     {
      "digest": {
       "sha256": "6d8d0375d0074ba9b98bd4c628dc2d1f4fd8d3fedc2a5c6248135e93bcf53a33"
      },
-     "uri": "researchers/vishesh/notes/external-influence-v2/analysis/replay_template.html"
+     "uri": "5-experiments/studies/vishesh/external-influence-v2/analysis/replay_template.html"
     },
     {
      "uri": "data/external-influence-v2/audit.json"

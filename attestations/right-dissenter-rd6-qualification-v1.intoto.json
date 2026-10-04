@@ -17,19 +17,19 @@
      "digest": {
       "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
      },
-     "uri": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json"
+     "uri": "5-experiments/studies/vishesh/dissent/reopening/results/q0-a2/trace-audit.json"
     },
     {
      "digest": {
       "sha256": "c237b3b3f407040d164d47db8a1baec434cb42c746ea03b0898cdee6e42cef50"
      },
-     "uri": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/figure-data.json"
+     "uri": "5-experiments/studies/vishesh/dissent/reopening/results/q0-a2/figure-data.json"
     },
     {
      "digest": {
       "sha256": "aad5e5820c3684a6c0a38188feb2a7cb3a8afc1d1dbd3bf117cd6c84f3e649ba"
      },
-     "uri": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/plot.py"
+     "uri": "5-experiments/studies/vishesh/dissent/reopening/results/q0-a2/plot.py"
     },
     {
      "digest": {

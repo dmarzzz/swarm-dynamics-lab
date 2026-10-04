@@ -3,6 +3,7 @@ import type { Entry } from '../data/types';
 import { DEPTH_LABEL, KIND_ONE, kindColor, teamColor, teamOf, topicName } from '../data/meta';
 import { clockET, parseT } from '../lib/format';
 import { href } from '../lib/router';
+import { repoFile } from '../lib/repo';
 
 export function EntryDrawer({ entry, byId, onClose, onOpen }: {
   entry: Entry | null; byId: Map<string, Entry>; onClose: () => void; onOpen: (id: string) => void;
@@ -44,7 +45,7 @@ export function EntryDrawer({ entry, byId, onClose, onOpen }: {
 
               <div className="drawer-actions">
                 {entry.url && <a className="btn" href={entry.url} target="_blank" rel="noreferrer">Open source <span aria-hidden="true">↗</span></a>}
-                <a className="btn ghost" href={`https://github.com/dmarzzz/swarm-lab/blob/main/library/${folder}/${entry.id}.md`} target="_blank" rel="noreferrer">Full catalogue entry</a>
+                <a className="btn ghost" href={repoFile(`1-library/${folder}/${entry.id}.md`)} target="_blank" rel="noreferrer">Full catalogue entry</a>
               </div>
 
               {links.length > 0 && (

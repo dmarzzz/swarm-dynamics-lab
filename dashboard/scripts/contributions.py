@@ -3,6 +3,7 @@ from datetime import datetime, timezone, timedelta
 import json
 import re
 from pathlib import PurePosixPath
+from layout import STUDIES
 
 STATUS = 'exploratory hunch; not a registered hypothesis'
 
@@ -40,10 +41,10 @@ def build_contributions(root, atlas, library, hypotheses, registry=None, now=Non
     for bank in registry:
         path = PurePosixPath(bank['path'])
         researcher = bank['owner'].split('/')[0]
-        if path.is_absolute() or '..' in path.parts or not path.as_posix().startswith(f'researchers/{researcher}/notes/'):
-            raise ValueError('Contribution path must be owned researcher notes')
-        if not (root / path).resolve().is_relative_to((root / 'researchers' / researcher / 'notes').resolve()):
-            raise ValueError('Contribution path escapes owned notes')
+        if path.is_absolute() or '..' in path.parts or not path.as_posix().startswith(f'{STUDIES}/{researcher}/'):
+            raise ValueError('Contribution path must be in the owner\'s studies folder')
+        if not (root / path).resolve().is_relative_to((root / STUDIES / researcher).resolve()):
+            raise ValueError('Contribution path escapes the owner\'s studies folder')
         raw = json.loads((root / path).read_text())[bank['collection']]
         for item in raw:
             ident = item['id']
@@ -62,7 +63,7 @@ def build_contributions(root, atlas, library, hypotheses, registry=None, now=Non
             if not item.get('atlas') or any(q not in canonical for q in item['atlas']):
                 raise ValueError(f'Unknown atlas link in {ident}')
             for brief in item['briefs']:
-                if not re.fullmatch(r'[a-z0-9-]+', brief) or not (root / 'researchers/vishesh/notes/project-briefs' / (brief + '.md')).is_file():
+                if not re.fullmatch(r'[a-z0-9-]+', brief) or not (root / STUDIES / 'vishesh/project-briefs' / (brief + '.md')).is_file():
                     raise ValueError(f'Unknown brief in {ident}: {brief}')
             records.append({**{key: item.get(key, '') for key in ['id','title','prediction','comparison','falsifier','confounds','feasibility','decision_value','scenario']},
                 'question': question, 'delta': item.get('delta', item.get('v2_overlap_review', '')),

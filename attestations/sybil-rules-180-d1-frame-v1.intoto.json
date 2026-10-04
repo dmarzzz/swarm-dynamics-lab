@@ -17,19 +17,19 @@
      "digest": {
       "sha256": "d4467c45eda980cfb5385a74d7ec79060f10ada99b47c1445ea5062d3639f9b8"
      },
-     "uri": "researchers/dmarz/notes/sybil-rules-180/analysis/render_frames.py"
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/analysis/render_frames.py"
     },
     {
      "digest": {
       "sha256": "7233f92d4f5dea960a14e6b9c0ffd8f30cac303fc7aba9a06bd49dadcb784cf4"
      },
-     "uri": "researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/d1-002-gpt-6-sol/rounds.jsonl.gz"
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/records/gpt-6-sol/d1-002-gpt-6-sol/rounds.jsonl.gz"
     },
     {
      "digest": {
       "sha256": "7e02f24ba08bbf0565dd9c3975f0c55b2281b4b7ce2a8d66ffa0987083ae9979"
      },
-     "uri": "researchers/dmarz/notes/sybil-rules-180/src/render.py"
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/src/render.py"
     },
     {
      "digest": {
