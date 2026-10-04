@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 # The launcher's setup runs these tests with STUDY_MODEL set to the launched model. The tests fix the model they
 # test themselves, so the ambient choice is removed here (it never reaches the source hash).
 os.environ.pop('STUDY_MODEL', None)
+os.environ.pop('STUDY_REPLICATION', None)
 
 import coordinator
 import provider
@@ -493,7 +494,7 @@ class ModelLadder(unittest.TestCase):
             self.assertFalse(mine & used)
             self.assertTrue(all(318640 <= m <= 318699 for m in mine))
             self.assertTrue(study.witnesses()['passed'])
-        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-luna'}):
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-4o'}):
             with self.assertRaises(ValueError):
                 study.model_name()
 
@@ -514,6 +515,47 @@ class ModelLadder(unittest.TestCase):
             self.assertLess(micro, 50_000)                                        # under USD 0.05 per call
             self.assertGreater(micro, 20_000)
 
+
+    def test_replication_r1_and_model_r2(self):
+        f0 = study.design()['fixtures']
+        e0 = study.design()['economy']
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-sol', study.REPLICATION_ENV: 'r1'}):
+            d = study.design()
+            p = study.params('S1')
+            self.assertEqual((p['batch'], p['replication']), ('s1-002-gpt-6-sol-r1', 'r1'))
+            self.assertEqual(study.session_experiment(), study.EXPERIMENT + '-gpt-6-sol-r1')
+            self.assertEqual(d['budget']['aggregate_usd'], 120)
+            self.assertNotEqual(d['economy']['seed'], e0['seed'])
+            w = study.main_world()
+            self.assertEqual([m['id'] for m in w['markets']], list(range(319000, 319060)))
+            fresh = (set(range(d['fixtures']['probe_first_market_id'], d['fixtures']['probe_first_market_id'] + 18))
+                     | set(d['fixtures']['ordinary_markets']) | set(d['fixtures']['smoke_markets'])
+                     | set(range(d['fixtures']['context_first_market_id'], d['fixtures']['context_first_market_id'] + 60))
+                     | set(d['fixtures']['diagnostic_markets']) | set(range(319000, 319060)))
+            self.assertTrue(all(319000 <= m < 320000 for m in fresh))
+            self.assertEqual(len(fresh), 18 + 6 + 6 + 60 + 12 + 60)
+            self.assertEqual(study.branch_order(), ['C', 'B', 'A', 'A2'])
+            self.assertTrue(study.witnesses()['passed'])
+            self.assertEqual(study.provider_config()['model'], 'gpt-6-sol')
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-luna', study.REPLICATION_ENV: 'r1'}):
+            with self.assertRaises(ValueError):
+                study.design()
+        with patch.dict(os.environ, {study.MODEL_ENV: 'gpt-6-luna', openai_provider.KEY_ENV: 'x'}):
+            d = study.design()
+            config = study.provider_config()
+            openai_provider.check_config(config)
+            self.assertEqual(config['budget']['prices'], openai_provider.PRICES['gpt-6-luna'])
+            self.assertEqual((d['budget']['aggregate_usd'], config['request_template']['reasoning_effort']), (15, 'low'))
+            self.assertEqual(study.params('P0')['batch'], 'p0-002-gpt-6-luna')
+            self.assertEqual(d['economy']['seed'], e0['seed'])
+            f = d['fixtures']
+            mine = set(range(f['probe_first_market_id'], f['probe_first_market_id'] + 18)) | set(f['ordinary_markets']) | set(f['smoke_markets'])
+            used = (set(range(318600, 318618)) | set(range(318620, 318626)) | set(range(318630, 318636))
+                    | set(range(318640, 318658)) | set(range(318660, 318666)) | set(range(318670, 318676)))
+            self.assertEqual(len(mine), 30)
+            self.assertFalse(mine & used)
+            self.assertTrue(all(318600 <= m <= 318699 for m in mine))
+            self.assertEqual((f['context_first_market_id'], f['diagnostic_markets']), (f0['context_first_market_id'], f0['diagnostic_markets']))
 
     def test_gates_never_pool_models(self):
         with patch.dict(os.environ, {study.MODEL_ENV: ''}):

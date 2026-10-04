@@ -42,6 +42,16 @@ def design():
     d['budget'].update(copy.deepcopy(entry.get('budget') or {}))
     d['fixtures'].update(copy.deepcopy(entry.get('fixtures') or {}))
     d['budget']['aggregate_usd'] = entry['usd_cap']
+    rid = os.environ.get(REPLICATION_ENV) or ''
+    if rid:
+        r = (d.get('replications') or {}).get(rid)
+        if r is None:
+            raise ValueError('replication_not_in_design')
+        if name not in r['models']:
+            raise ValueError('replication_not_for_this_model')
+        d['economy'].update(copy.deepcopy(r['economy']))
+        d['fixtures'].update(copy.deepcopy(r['fixtures']))
+        d['budget']['aggregate_usd'] = r['usd_cap']
     return d
 
 
@@ -67,6 +77,14 @@ def results_root():
 
 
 MODEL_ENV = 'STUDY_MODEL'
+REPLICATION_ENV = 'STUDY_REPLICATION'
+
+
+def replication():
+    """'' for the study's own economy (attempt 002), else the pre-registered replication id (e.g. 'r1')."""
+    rid = os.environ.get(REPLICATION_ENV) or ''
+    design()                               # refuses an unknown replication or one not declared for this model
+    return rid
 
 
 def model_name():
@@ -83,7 +101,9 @@ def model_entry():
 
 
 def model_tag():
-    return model_entry()['tag'] or ''
+    """Suffix of batch names and worker-session experiment: the model's tag, then the replication id."""
+    parts = [model_entry()['tag'] or '', replication()]
+    return '-'.join(p for p in parts if p)
 
 
 def session_experiment():
@@ -96,8 +116,11 @@ def session_experiment():
 def params(stage):
     s = design()['stages'][stage]
     tag = model_tag()
-    return {'stage': stage, 'backend': s['backend'], 'batch': s['batch'] + ('-' + tag if tag else ''), 'model': model_name(),
-            'source_hash': source_hash(), 'code': code_revision()}
+    out = {'stage': stage, 'backend': s['backend'], 'batch': s['batch'] + ('-' + tag if tag else ''), 'model': model_name(),
+           'source_hash': source_hash(), 'code': code_revision()}
+    if replication():
+        out['replication'] = replication()
+    return out
 
 
 def ledger_budget():

@@ -104,6 +104,7 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, t
     previous = read_status(root) or {}
     status = {'experiment': study.EXPERIMENT, 'state': 'running', 'requested': stages, 'started': now(),
               'source_hash': study.source_hash(), 'code': study.code_revision(), 'model': study.model_name(),
+              'replication': study.replication() or None, 'economy_seed': study.design()['economy']['seed'],
               'stages': dict(previous.get('stages') or {}),
               'budget': {'max_calls': budget['max_calls'], 'max_calls_total': budget['max_attempted_calls'],
                          'usd_cap': budget['aggregate_usd']}}
@@ -138,7 +139,7 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, t
             runs = sr.runs(study.EXPERIMENT, limit=5000)
             coordinator.gate(runs, stage, p)
             if stage in ('S1', 'D1'):
-                x0 = coordinator.stage_runs(runs, 'X0', p['source_hash'], p['model'])
+                x0 = coordinator.stage_runs(runs, 'X0', p['source_hash'], p['model'], p.get('replication'))
                 metrics = (x0[0].get('metrics') or {}) if len(x0) == 1 else {}
                 in_flight = int(metrics.get('in_flight_selected') or budget['in_flight_per_host'])
                 if not budget['in_flight_per_host'] <= in_flight <= budget['in_flight_per_host_max']:

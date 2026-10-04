@@ -347,7 +347,8 @@ def serve(sr, work_dir, opener=None, poll=None, attach_seconds=None, idle_second
                 return 5
             waited += poller.wait(trouble)
     p = run.params or {}
-    if p.get('role') != SESSION_ROLE or p.get('source_hash') != study.source_hash() or p.get('model') != study.model_name():
+    if p.get('role') != SESSION_ROLE or p.get('source_hash') != study.source_hash() or p.get('model') != study.model_name() \
+            or (p.get('replication') or '') != study.replication():
         run.fail('worker refused this run: not a worker session at this source hash and model', model_calls=0)
         return 4
     try:
@@ -644,7 +645,7 @@ class HubDispatcher(Dispatcher):
     def attach(self, timeout):
         """Queue the worker sessions and wait until three workers on three different hosts hold them."""
         params = [{'role': SESSION_ROLE, 'slot': k, 'source_hash': study.source_hash(), 'code': study.code_revision(),
-                   'model': study.model_name()}
+                   'model': study.model_name(), 'replication': study.replication()}
                   for k in range(self.slots)]
         self.sr.enqueue(study.session_experiment(), params, tags=['worker-session'], run_ids=self.sessions)
         self.queued = True

@@ -54,6 +54,55 @@ models:
         retryable_http_status: [429, 500, 502, 503, 504]
         backoff_seconds: [2, 6]
         retry_after_cap_seconds: 20
+  # Replication R2 (dated addition by dmarz/fleet-monitor, 2026-10-04, after seeing attempt 002's result): the original
+  # economy seed on gpt-6-luna, configured like gpt-6-sol. Fresh probe and qualification fixtures from the last unused
+  # ids of the reserved range 318600-318699; X0, main and D1 fixtures are those gpt-6-sol saw (a different model reusing
+  # clean fixtures).
+  gpt-6-luna:
+    api: openai
+    tag: gpt-6-luna
+    status: ready
+    usd_cap: 15
+    carried_from_attempt_001: {}
+    canonical_model: gpt-6-luna
+    fixtures:
+      probe_first_market_id: 318676
+      ordinary_markets: [318694, 318695, 318696, 318697, 318698, 318699]
+      smoke_markets: [318626, 318627, 318628, 318629, 318636, 318637]
+    request_template:
+      model: gpt-6-luna
+      reasoning_effort: low
+      max_completion_tokens: 2000
+      response_format:
+        type: json_object
+    budget:
+      max_output_tokens: 2000
+      in_flight_per_host: 3
+      in_flight_per_host_max: 3
+      reservation_margin: 1
+      prices: {input: 0.1, cached_input: 0.01, cache_write: 0.125, output: 0.5}
+      retry:
+        transport_retries: 2
+        retryable_http_status: [429, 500, 502, 503, 504]
+        backoff_seconds: [2, 6]
+        retry_after_cap_seconds: 20
+# Replications (dated addition by dmarz/fleet-monitor, 2026-10-04, after seeing attempt 002's result; follow-ups, not
+# confirmations of a hypothesis stated before all data). A replication is a launch parameter (STUDY_REPLICATION, set by
+# the launcher's --replication): the same frozen design with a fresh economy seed and fresh fixtures; its own batches,
+# ledger, dollar cap, results and worker-session experiment; never pooled with attempt 002.
+replications:
+  r1:
+    models: [gpt-6-sol]
+    usd_cap: 120
+    economy:
+      seed: sybil-rules-180-economy-r1
+      first_market_id: 319000
+    fixtures:
+      probe_first_market_id: 319400
+      ordinary_markets: [319420, 319421, 319422, 319423, 319424, 319425]
+      smoke_markets: [319430, 319431, 319432, 319433, 319434, 319435]
+      context_first_market_id: 319700
+      diagnostic_markets: [319300, 319301, 319302, 319303, 319304, 319305, 319306, 319307, 319308, 319309, 319310, 319311]
 request_template:
   model: qwen/qwen3.7-flash
   provider:
