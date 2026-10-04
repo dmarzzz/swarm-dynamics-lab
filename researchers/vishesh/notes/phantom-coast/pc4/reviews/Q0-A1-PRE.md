@@ -1,0 +1,3 @@
+# PC-4 Q0-A1 pre-run assessment
+
+Operator assessment, not independent review. Frozen PLAN specifies qualification and comparison; original cost cap and prior uncertainty retained. Current owner request covers this bounded diagnostic. Required before launch: ten semantic offline tests pass locally and on Linux; source and runtime match; public immutable plan plus condition TLDR verified; dedicated approved Mars claim and idle workload fresh; no prior output; one carried ledger. Q0 must pass actual evidence/abstention screen before S1. Retain assigned missing results, no retries, separate scientific and operational outcomes. No native admission represented by this file alone.
