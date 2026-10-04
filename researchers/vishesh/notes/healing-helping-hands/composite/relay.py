@@ -36,6 +36,10 @@ def serve(key_path,ledger,stage):
     allowed=payloads(stage);limit=120 if stage=='S0' else 1200;deadline=time.monotonic()+(900 if stage=='S0' else 3600);opener=urllib.request.build_opener(NoRedirect());calls=0
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
+        def do_GET(self):
+            if self.path!='/health':self.send_error(404);return
+            b=wire({'ready':time.monotonic()<deadline,'attempt':ATTEMPT,'stage':stage,'seconds_remaining':max(0,deadline-time.monotonic())})
+            self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(b)));self.end_headers();self.wfile.write(b)
         def do_POST(self):
             nonlocal calls
             h=None;status=502

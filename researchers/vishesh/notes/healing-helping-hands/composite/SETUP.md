@@ -24,3 +24,7 @@ C1-S0 completed: 60/60 composite and Jev-only, 36/60 Qwen-only; see S0-POST.md. 
 ## Closeout
 
 Pending execution, qualification, reconciliation, visual audit, costs, durable uploads and release. Current gate G3 for S1; next action register S1-PRE.md at the new immutable revision, verify unchanged qualified code and refresh operational receipts.
+
+## Cycle closure
+
+C1-S0 qualified, C1-S1 failed, C2-S0 failed before provider dispatch. See RESULTS.md and C2-S0-POST.md. G3 for any new attempt is blocked pending a newly registered prospective transport/recovery plan and current allocation; the repair allowance is consumed. Health preflight fix passes 19 offline checks but has no new native qualification. Preserve original budget and failed reservations. Resource release and teardown follow durable artifact verification.

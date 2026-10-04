@@ -2,7 +2,7 @@
 import unittest,copy,sqlite3
 from contextlib import closing
 from definition import cases,request,assess,ARMS,LABELS,digest,ATTEMPT,REQUEST_TIMEOUT,UPSTREAM_TIMEOUT
-from worker import admission
+from worker import admission,check_transport
 from relay import payloads,safe_error
 from jev_relay import reserve
 
@@ -15,6 +15,15 @@ class Contract(unittest.TestCase):
   import urllib.error
   e=urllib.error.URLError(TimeoutError('secret-value-must-not-appear'))
   self.assertEqual(safe_error(e),{'error_type':'URLError','cause_type':'TimeoutError'})
+ def test_transport_gate_rejects_dead_wrong_and_stale_relay(self):
+  import io,json
+  from unittest.mock import patch
+  good={'ready':True,'attempt':ATTEMPT,'stage':'S0','seconds_remaining':800}
+  for key,value in [('ready',False),('attempt','historic'),('stage','S1'),('seconds_remaining',0)]:
+   bad={**good,key:value}
+   with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(bad).encode())),self.assertRaises(ValueError):check_transport('S0')
+  with patch('urllib.request.urlopen',side_effect=ConnectionRefusedError),self.assertRaises(ConnectionRefusedError):check_transport('S0')
+  with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(good).encode())):self.assertEqual(check_transport('S0'),good)
  def test_balanced_unique(self):
   c=cases();self.assertEqual(len({x['id'] for x in c}),60)
   for k in LABELS:self.assertEqual(sum(x['expected']==k for x in c),20)

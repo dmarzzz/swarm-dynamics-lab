@@ -3,8 +3,8 @@ agent: vishesh/codex-regrowth-docs
 tool: codex
 state: working
 task: healing-qwen-jev
-doing: Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification
-updated: 2026-10-04T04:54Z
+doing: Closing C1/C2 bounded cycle: qualification passed, comparison interrupted; publishing failures and retiring dedicated worker
+updated: 2026-10-04T06:02Z
 ---
 
 ## Notes

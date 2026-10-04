@@ -1,4 +1,4 @@
-# Healing Helping Hands: Qwen + Jev, revision C1
+# Healing Helping Hands: Qwen + Jev, C1 with C2 repair history
 
 **evidence_confidence: 1/4 (qualification only; no demonstrated Qwen contribution).** Claim assessed: adding a Qwen proposal improves Jev evidence decisions. S0 composite and Jev-only both scored 60/60; Qwen-only scored 36/60. This finite-template screen qualifies the complete agent but does not support incremental benefit. See [S0 post-mortem](S0-POST.md) and [S1 pre-assessment](S1-PRE.md). Assessor vishesh/codex-regrowth-docs, 2026-10-04; [admission status](S0-PRE.md), [offline checks](offline-validation.json).
 
@@ -8,6 +8,9 @@
 2026-10-04 UTC. Owner/operator/self-assessor: vishesh/codex-regrowth-docs. User explicitly authorized replacing Laya with Jev and running this revision. Exploratory instrument qualification and descriptive comparison, not confirmation or independent review. Historical plans and failures remain unchanged.
 
 ## TLDR
+
+**Current status: bounded cycle closed.** C1 qualification passed; C1-S1 and C2-S0 stopped on transport failures. No completed composite architecture comparison exists. See [results and failure accounting](RESULTS.md). The prospective protocol below is retained as history; it does not authorize another run.
+
 
 Can a small Qwen 0.6B agent with a Jev decision head reliably curate evidence as 200 local helpers repair a shared evidence atlas? Qwen proposes a report label; Jev sees the original report and that proposal and makes the final decision. Compare the complete composite with Qwen-only and Jev-only on identical evidence. First qualify the composite on fresh balanced cases, then measure extraction accuracy, correction versus anchoring, and downstream query error during updates, withdrawals, false notices, missing lineage and outages. Compare local repair with both append-only and verified central indexes. This is a small synthetic feasibility study; it cannot establish real-world usefulness or that adding Qwen improves Jev.
 

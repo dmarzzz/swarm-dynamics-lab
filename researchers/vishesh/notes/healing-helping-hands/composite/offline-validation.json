@@ -23,5 +23,11 @@
     "composite_checks": 18,
     "change": "fresh namespace and timeout margin; safe reason classes; uncertain budget preserved",
     "model_calls": 0
+  },
+  "post_C2_health_guard": {
+    "composite_checks": 19,
+    "practical_checks": 22,
+    "native_qualification": "not performed",
+    "model_calls": 0
   }
 }
