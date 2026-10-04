@@ -2,7 +2,7 @@
 
 **Result: software qualification passed. Independent researcher review and model qualification are pending. No v3 model calls, credits, fleet jobs or deployments were used.**
 
-Release source: `883a4fd` (with implementation commits `2942e23`, `144b85c` and the earlier shared-clone sync `e3a1903`). Exact source hashes, runtime and output digests are in [validation.json](validation.json). The original [pre-run assessment](../reviews/v3-offline-pre.md) records the 708→636-call amendment after the final v2 private-control findings.
+Release source: `0f5044a` (with implementation commits `4cdf7d2`, `421d4e5` and the earlier shared-clone sync `e3a1903`). Exact source hashes, runtime and output digests are in [validation.json](validation.json). The original [pre-run assessment](../reviews/v3-offline-pre.md) records the 708→636-call amendment after the final v2 private-control findings.
 
 ## What was checked
 

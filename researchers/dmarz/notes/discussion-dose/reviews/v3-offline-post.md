@@ -1,7 +1,7 @@
 # Post-mortem: v3 offline package qualification
 
 - Owner/stage/date: dmarz/discussion-bench-v3; local engineering qualification; 2026-10-04 UTC.
-- Pre-run and amendments: [v3-offline-pre.md](v3-offline-pre.md). Final source `883a4fd`; hashes and runtime in [validation.json](../benchmark-v3/validation.json).
+- Pre-run and amendments: [v3-offline-pre.md](v3-offline-pre.md). Final source `0f5044a`; hashes and runtime in [validation.json](../benchmark-v3/validation.json).
 - Disposition: complete-valid-result for offline software. Independent review and real-model qualification remain pending.
 
 ## What ran and what happened

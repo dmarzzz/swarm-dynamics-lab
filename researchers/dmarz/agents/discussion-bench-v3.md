@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-bench-v3
 tool: codex
-state: working
-task: build-discussion-benchmark-v3
-doing: Building the offline v3 benchmark, with paid runs and holdout release deferred
-updated: 2026-10-04T01:49Z
+state: done
+task: null
+doing: Shipped v3; 74 checks passed and 636 saved requests replayed; independent review and model launch pending
+updated: 2026-10-04T02:10Z
 ---
 
 ## Notes
