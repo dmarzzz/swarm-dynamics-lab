@@ -21,6 +21,6 @@ Scope the ant-inspired stopping comparison, implement a template-compatible boun
 
 ## Done when
 
-- [ ] Commit protocol, fixture, policies, worker, tests and visual replay.
-- [ ] Launch engineering qualification on the hub and report results.
-- [ ] Launch bounded Jev S0 if secure credentials and verified pricing are available; otherwise record the exact prerequisite.
+- [x] Commit protocol, fixture, policies, worker, tests and visual replay.
+- [x] Launch engineering qualification on the hub and report results.
+- [x] Run the owner-selected local Laya S0; record Jev via OpenRouter as the deferred secure-credential follow-up.

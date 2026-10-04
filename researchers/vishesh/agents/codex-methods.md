@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: adaptive-quorum-pilot
-doing: Building paired stopping-rule pilot with local Laya; Jev via OpenRouter deferred
-updated: 2026-10-04T00:23Z
+doing: Published and ran 144 Laya plus 144 scripted S0 outcomes; clean gates passed, adaptive tied fixed
+updated: 2026-10-04T00:27Z
 ---
 
 ## Notes

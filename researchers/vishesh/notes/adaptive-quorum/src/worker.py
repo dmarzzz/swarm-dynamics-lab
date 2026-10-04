@@ -28,6 +28,8 @@ def publish(directory, definition):
     with sr.start(exp, run=run_id, params={'backend': manifest['backend'], 'stage': 'S0', 'code': manifest['code']}) as run:
         for name in ('manifest.json', 'summary.json', 'episodes.jsonl', 'assignments.json', 'replay.html'):
             run.artifact(directory / name, name)
+        if (directory / 'final_frame.png').exists():
+            run.artifact(directory / 'final_frame.png', 'final_frame.png')
         run.done(message='Local exploratory qualification; no Jev calls; see clean competence gate',
                  episodes=summary['episodes'], invalid=summary['invalid'],
                  qualified=int(summary['clean_qualification_pass']))

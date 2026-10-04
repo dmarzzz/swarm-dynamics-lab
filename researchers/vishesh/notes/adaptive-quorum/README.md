@@ -34,4 +34,4 @@ Output directories must be new; existing assignments are never overwritten or si
 
 ## Results
 
-Pending qualification. The committed protocol precedes model inference; append results with exact source revision, platform and commands.
+[S0 completed](results/S0.md): 144 scripted and 144 local Laya outcomes; zero invalid; clean-task screen passed. Fixed and adaptive policies tied. [Live hub](https://swarm-live.pages.dev/#/x/adaptive-quorum) holds the reported runs and artifacts. This is qualification, not confirmation.

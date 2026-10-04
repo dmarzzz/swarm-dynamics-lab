@@ -1,0 +1,21 @@
+{
+  "backend": "laya",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "python": "3.12.13",
+  "stage": "S0",
+  "code": "c9dc5be49cf1141ccb8098110dafef73876bac3b",
+  "design_hash": "5da016f616bf8039866210e366ad48387f63020668847f5fe5872f2905eca701",
+  "assigned_blocks": 36,
+  "complete": true,
+  "model": "convaiinnovations/laya",
+  "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+  "source_revision": "2e4d9c87e8b1621deb344eac7de5c7258f32f849",
+  "device": "cpu",
+  "versions": {
+    "laya": "0.3.26",
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "safetensors": "0.8.0"
+  }
+}

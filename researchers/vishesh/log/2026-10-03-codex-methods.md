@@ -115,3 +115,5 @@ Validation: all forty targets and content fingerprints resolve after the latest 
 ## Adaptive quorum S0 protocol
 
 Scoped stopping-rule comparison with four policies and fixed paired evidence delivery. Added local Laya backend at owner request; hosted Jev via OpenRouter is a deferred, separately qualified factor. Six invariant checks and 144 scripted outcomes passed; no model finding claimed. Continuing scoped manual sync for public-data and secret audit. Protocol precedes model inference.
+
+Adaptive-quorum qualification completed at code c9dc5be: 144 Laya and 144 scripted outcomes, zero invalid, clean gates passed. Laya fixed/adaptive tied; do not infer adaptation benefit. Hub runs adaptive-quorum/laya-S0-982d4b540de7 and adaptive-quorum/scripted-S0-280ac26be323. Local inference only; shared server used briefly for reporting. Preserved setup failure and pinned-source amendment. Jev via OpenRouter remains a separately qualified future backend once secure key/route are available.
