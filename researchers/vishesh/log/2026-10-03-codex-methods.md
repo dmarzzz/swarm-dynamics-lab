@@ -127,3 +127,7 @@ Researched primary ant, debate/vote and stable-tool methods; built 5/9-agent fac
 At the human’s explicit request, updated protected AGENTS.md and the worker README to require pre-run design assessment, post-mortem and continued bounded repair/rerun. Added reusable forms and failure taxonomy; distinguished negative findings from defects, and stage gating from repair diagnostics. Added retrospective API v2 post-mortem; its qualification issues remain open, not fixed by documentation. Manual scoped checked publication.
 
 Renamed the factual API v2 experiment display name to Antsy at the owner’s request. Stable experiment ID and historical outcomes retained; metadata-only update, no new experiment launch.
+
+## Antsy quality repair completed (2026-10-04 UTC)
+
+Pulled latest, audited seven dimensions and corrected missing-evidence/provenance/cost/reproducibility issues. D0 exposed combined-task failure; Q1 failed one-day retention; guarded Q2 passed22/22. S1 produced384 matched blocks/2688 outcomes; GIF bug fixed with a real regression and exact25-block recovery. All actor outputs valid; learned and symbolic policies identical. Published conditional positive/negative findings, eight measured GIFs, full outcome CSV and post-mortems. Dedicated sim-vishesh workers exited; releasing claim after verified uploads. Next scientific step is realistic cited source extraction and independent review, not more rerolls of this toy matrix.

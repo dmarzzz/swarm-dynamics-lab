@@ -14,7 +14,7 @@ from render import animation,overview,frame
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);ap.add_argument('--qualification',type=Path,required=True);ap.add_argument('--report',action='store_true');ap.add_argument('--resume',type=Path);ap.add_argument('--attempt',default='2');a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);ap.add_argument('--qualification',type=Path,required=True);ap.add_argument('--report',action='store_true');ap.add_argument('--resume',type=Path);ap.add_argument('--attempt',required=True);a=ap.parse_args()
     if not json.loads((a.qualification/'summary.json').read_text())['qualification_pass']:raise SystemExit('Qualification gate failed')
     a.out.mkdir(parents=True,exist_ok=False)
     def timeout(signum,frame):raise TimeoutError('run_wall_cap')
@@ -26,7 +26,7 @@ def main():
     hub=None
     if a.report:
         import swarm_report as sr
-        hub=sr.start('adaptive-quorum-api-v2',run='adaptive-quorum-api-v2/repair-v3-S1-attempt-'+a.attempt,params={'stage':'S1-engineering','backend':'laya-hybrid','agents':'5,9','kind':'analysis','code':code})
+        hub=sr.start('adaptive-quorum-api-v2',run='adaptive-quorum-api-v2/repair-v3-S1-attempt-'+a.attempt,params={'stage':'S1-engineering','backend':'laya-hybrid','agents':'5,9','kind':'experiment','code':code})
         sr.report('progress','adaptive-quorum-api-v2',hub.id,url='https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3',strict=True)
     start=time.monotonic();runtime=Runtime();model=Hybrid(runtime);records=[];symbolic_disagreements=0
     prior=[]

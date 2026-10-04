@@ -9,10 +9,10 @@ From this directory:
 ```sh
 python -m unittest discover -s src -p test_engine.py
 python src/qualify.py --out /path/to/new-Q2-attempt
-python src/sweep.py --qualification /path/to/passed-Q2-attempt --out /path/to/new-S1-attempt --report
+python src/sweep.py --qualification /path/to/passed-Q2-attempt --attempt NEW-UNUSED-ID --out /path/to/new-S1-attempt --report
 ```
 
-`--report` requires the existing server `swarm_report` module and authorized local credential mechanism. Do not print or copy its secret configuration. SWARM_SOURCE is `vishesh/codex-methods`. The stable experiment is `adaptive-quorum-api-v2`. The first sweep ID is frozen in source; change it explicitly and pre-register a fresh attempt before rerunning. Never overwrite directories or resubmit outcomes as a new scientific replicate.
+`--report` requires the existing server `swarm_report` module and authorized local credential mechanism. Do not print or copy its secret configuration. SWARM_SOURCE is `vishesh/codex-methods`. The stable experiment is `adaptive-quorum-api-v2`. Every sweep requires an explicit unused `--attempt` suffix; pre-register it before rerunning. Never overwrite directories or resubmit outcomes as a new scientific replicate.
 
 Q1 code is frozen at commit4247d1f; Q2 at6d98eac. Use exact commits to reproduce a historical architecture, not today's amended adapter. D0 was run at5e735fb. Preserve all failed outputs. Rendering uses Pillow only and can be repeated without models. The public hub embeds PNG/GIF, while full JSON/receipts remain downloadable team artifacts and compact results in git. Register the plan URL to this folder. Do not label a failed scientific gate as an infrastructure crash.
 
