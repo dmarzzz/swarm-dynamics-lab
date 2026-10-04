@@ -1,0 +1,16 @@
+contract: ready-chain-v1
+study: sybil-scarcity-xmodel
+experiment: sybil-scarcity-xmodel
+stages: [S0, P0, Q0, S1]
+provider: openrouter
+model: qwen/qwen3.7-flash
+model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]
+providers: {qwen/qwen3.7-flash: openrouter, gpt-6-sol: openai}
+effort: low
+max_calls: {S0: 0, P0: 1, Q0: 48, S1: 1440}
+max_calls_total: 1489
+usd_cap: 4
+chain_timeout_seconds: 18000
+selftests: 65
+source_hash: 06cbd97e1804d7ca6c355bad8ce85e2ab1e5f7caec9f17876c9791ec4eeee1c4
+review: reviews/chain-001-pre.md
