@@ -1,0 +1,25 @@
+{
+  "assigned_calls": 204,
+  "learning_calls": 12,
+  "evaluation_calls": 192,
+  "independent_designed_roots": 6,
+  "distinct_test_case_family_pairs": 96,
+  "max_request_bytes": {
+    "learn": 3944,
+    "execute": 2120
+  },
+  "wrong_source_disagreements": {
+    "probe": 16,
+    "ledger": 16,
+    "canary": 16
+  },
+  "assignments_sha256": "c34ac36a5e1266932c1ea831294629f833a5bc8dcbf56f95ef4781d567051a26",
+  "evidence_type": "offline_contract_check_not_native_evidence",
+  "checked_at": "2026-10-04T15:27:28.970153+00:00",
+  "offline_tests_passed": 15,
+  "native_calls": 0,
+  "instrument_sha256": "b6fb496a4215335f5588de6a6cf2a5786af4a353bb3aeb3bc7db6ad79acfd897",
+  "fixture_visual_checked": true,
+  "fixture_visual_sha256": "b2a71538793405c9afe35ee53d8c4f9a1b2ecdc06736221178c89197c2b9548e",
+  "scope": "Software validation only; queue, account/claim, credential handoff, public-page and remote runtime gates unresolved."
+}

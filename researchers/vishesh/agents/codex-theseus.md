@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: done
-task: theseus-d2-run
-doing: D2 and single R1 repair complete; F qualified, postmortems and next proposal published
-updated: 2026-10-04T09:25Z
+state: working
+task: theseus-a1-acquisition
+doing: A1 acquisition instrument prepared offline; resolving orbital queue dispatch boundary
+updated: 2026-10-04T15:27Z
 ---
 
-816 new calls, USD0.626774 model usage; cumulative estimated USD0.812231 of USD5. Host released PR251 after verified evidence. No cultural-preservation result claimed.
+R1 F remains qualified192/192. A1 planned204calls; native0. Original USD5 authority, prior estimated0.8122310437, no reset.
