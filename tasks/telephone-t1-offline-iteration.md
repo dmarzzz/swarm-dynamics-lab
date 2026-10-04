@@ -21,4 +21,4 @@ Apply the standard iteration process to Telephone: evaluate T0, implement scorin
 
 ## Done when
 
-- [ ] Complete scoped instrument, case checks, source index and closeout.
+- [x] Complete scoped instrument, case checks, source index and closeout.

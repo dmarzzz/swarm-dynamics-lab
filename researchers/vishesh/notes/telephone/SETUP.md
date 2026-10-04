@@ -56,3 +56,9 @@ Private credentials/host/account details stay in local configuration. Use approv
 Attempts: none. Execution: not started. Qualification: not established. Scientific result: untested. Documentation: design/background/resource package complete. Process: prospective preparation only. Cost: zero new model calls and machines; no budget reservation. Source corpus remains private. No release/teardown needed.
 
 **Next action:** build a metadata-first complete-window inventory, then annotate eight development components with the two-pass rubric and run strong simple baselines. Stop or narrow if visibility, labels, rights or a residual useful task cannot be established. Only after that freeze the native packet and present its concrete scope. No automatic model execution or duplicate researcher approval is added.
+
+## T1 status update — 2026-10-04
+
+The T0 gate table above is historical. [T1 offline iteration](t1/README.md) now supplies 24 Telephone checks, eight original fixture roots and 14 private source joins; shared checks remain 21. G1 passes for prospective offline implementation. G2 passes only for declared annotation arithmetic, with real semantic/case validity pending. G3/G4/G6 remain unavailable: no native packet, qualified interface, admitted scope or run registration. G5 has an [offline preparation post-mortem](t1/POST-MORTEM.md), not a native attempt closeout.
+
+Telephone is now registered for manual navigation (`python3 scripts/experiment.py inspect telephone` from a refreshed checkout), adapter null. No prepare/run/resume support is added. The single authoritative setup remains this file. **HOLD native collection**; next action is the complete-window and two-pass development-label audit in the post-mortem. Zero model calls/spend/machines; no scope or budget reset.

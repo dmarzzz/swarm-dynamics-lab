@@ -1,0 +1,177 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "attempt": null,
+  "scope": "T1 offline preparation",
+  "decision": "repair",
+  "native_disposition": "HOLD",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Prospective offline arithmetic contract; no efficacy inference.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Authored short cases at copy ceiling; no validated real episode.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ],
+      "next_action": "Construct complete-window development cohort with reviewed evidence and visibility; benchmark useful task.",
+      "acceptance_check": "Two-pass labels and strong source-preserving baselines establish answerability and residual decision value; no arbitrary prefix enlargement."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Faithful/change/omission checks with copy and lookup ceiling.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "not_applicable",
+      "finding": "No native agent/interface in offline scope; qualification absent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Exact reference arithmetic and failure tests; reviewed semantics are attestations, not automatically validated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Eight authored roots, 24 trajectories, 72 outputs; no population precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "not_applicable",
+      "finding": "No experimental model context or provider dispatch.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All fixture assignments reconcile; candidate metadata reports zero admitted real cases.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Zero model calls, allocations, reservations or new experiment charges.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Public fixture replay matches; candidate replay requires private hashed projections.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Case tables and trajectory outcomes label scripted scope and denominator.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/VALIDATION.json",
+          "sha256": "a1e7348ce4214f4696135c23b862a6644b21f0e3f3ce38d340b5d5da9bfa5ed9"
+        },
+        {
+          "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+          "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+        }
+      ]
+    }
+  ]
+}

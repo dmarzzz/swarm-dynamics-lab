@@ -7,3 +7,7 @@ Telephone is the strongest existing unrun fit. Acknowledgment versus evidence-ba
 ## Telephone design follow-up
 
 Created a dedicated six-document T0 design package and six background source records, separating natural-trace audit from a conditional three-hop representation comparison. Existing canonical AI Village resource retained and expanded through an attributed note; researcher navigation and original brief linked. Exact Telephone paper is direct prior art, so no generic drift novelty claim. Source read scopes and incomplete survey disclosed. No corpus expansion, model call, budget or machine allocation.
+
+## Telephone T1 offline iteration
+
+Prospective plan followed by annotation scorer, private candidate joiner, eight original case roots and full offline closeout. 24 Telephone and 21 shared checks pass; 72 scripted outputs reconcile. Fourteen source joins remain unreviewed development candidates, zero complete episodes. Copy/lookup reaches the fixture ceiling. Added manual registry navigation; HOLD native collection pending complete-window labels and useful baseline task. No model calls, machine or new experiment charges.

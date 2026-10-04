@@ -1,0 +1,26 @@
+{
+  "scope": "metadata joins over retained development prefixes; no corpus text in report",
+  "input_rows": {
+    "events": 2000,
+    "chat_messages": 2000,
+    "agent_memories": 2000,
+    "computer_use_sessions": 2000
+  },
+  "source_projection_hashes": {
+    "events": "216612af23eeca655495094775543a3574b9371cebd4515f8586206ed7ddda9a",
+    "chat_messages": "3b8f1e7478d20e84d98aefaa700f155eb72d206f8649ab9a4716f30db973b165",
+    "agent_memories": "0016fec164a7231c74ac92dfc5339c29d40a8cf41c0dfa204fa45e63837f58f4",
+    "computer_use_sessions": "66b77c223b7af2be994cc0d5512256cc388dc506f4016854f57910b30478eac4"
+  },
+  "joins": {
+    "chat_references": 896,
+    "chat_loaded": 7,
+    "consolidation_references": 283,
+    "consolidation_loaded": 7
+  },
+  "candidate_join_bundles": 14,
+  "independent_tasks_established": 0,
+  "validated_cases": 0,
+  "model_calls": 0,
+  "private_bundle_sha256": "43359f92113dd2ebc1487d05ee095f04dfb8a6dc7b91aaefdde232d3d59a33de"
+}

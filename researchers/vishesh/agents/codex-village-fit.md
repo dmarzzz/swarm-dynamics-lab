@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: working
+state: done
 task: null
-doing: Applying Telephone T1 offline iteration with scorer, cases and source feasibility.
+doing: Telephone T1 offline iteration complete; native collection on HOLD.
 updated: 2026-10-04T18:31Z
 ---
 
