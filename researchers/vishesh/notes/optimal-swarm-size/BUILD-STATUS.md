@@ -88,3 +88,9 @@ Investigation and prospective plan published in 3b75d2c1 before implementation: 
 ## Q-A3 canary passed — 2026-10-04 UTC
 
 Four width-2 N=1 cases passed end to end at frozen source c2655e66. All four correct/on-time final artifacts, eight completed work items, 16 model calls, zero repairs. Every uploaded artifact (16 files) matched local hashes on download; public TLDRs and terminal statuses verified. Added spend $0.014038; canonical cumulative exposure $0.343028 of the unchanged $20 cap. Full closeout: reviews/q-a3-canary-post.md. Full-width qualification and any size comparison remain unrun. Legacy live progress total=16 is a documented display defect for width-2 runs; final artifacts and scores are correct.
+
+## Q-A4 full-width build and admission — 2026-10-04 UTC
+
+Prospective plan q-a4-full-width-plan.md published in c12ac6af before implementation. Frozen implementation 69cb6a288d2993cd231f1954519810970dbe5104 passes 48 experiment tests locally and on research-01/Python 3.12.3. Full-width manifest interleaves 16 width-16 N=1 cases, records width/hash/parent identity, uses strict phase-schema checks and enforces an $8 attempt/$2 episode sublimit in the original $20 canonical ledger. Fixed live progress totals to use assignment width, with width-2 and width-16 regression coverage.
+
+Fresh exclusive claim vishesh-swarm-size-full-q4, agentops PR212. Prior canary completion/readback and exited worker verified; exact new immutable plan URL/commit verified on the public API before dispatch. Starting canonical exposure $0.343028 across 55 previous calls, including the unresolved original hold. Dedicated Swarm Lab credential policy remains binding. This is full-width single-agent qualification; no matched-N or core stage was opened. Runtime outcome and closeout remain pending.
