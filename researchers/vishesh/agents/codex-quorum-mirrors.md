@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: idle
-task: null
-doing: Q1 launch closed; contract failure preserved and allocation released; accounting/interface repair tracked
+state: working
+task: quorum-mirrors-q1-interface-repair
+doing: Fixing output-token contract and rerunning the sole bounded Q1 interface repair
 updated: 2026-10-04T06:59:50.549036+00:00
 ---
 

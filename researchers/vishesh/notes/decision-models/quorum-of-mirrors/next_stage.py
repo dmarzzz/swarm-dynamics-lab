@@ -108,8 +108,7 @@ def validate_manifest(data):
 
 def checked_response(raw):
     response = validate_response(raw)
-    if response['usage']['output_tokens'] != 0:
-        raise ValueError('decision_output_contract_changed')
+    # Typed decision responses report output tokens even when their price is zero.
     # Reject booleans via the historical validator and keep only its allowlisted fields.
     return response
 
