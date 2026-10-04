@@ -1,14 +1,24 @@
 # Immune Response — A7 HTTP400 failure diagnostic
 
+## TLDR
+
 Prospective operational diagnostic, 2026-10-04, following the A6 post-mortem. Owner requested investigation and execution of failure diagnostics. No researcher sign-off is required. This does not authorize a larger scientific comparison.
+
+## Question and prediction
 
 Question: does A6's exact controller request still fail, and does replacing partial union branches with complete closed object schemas remove that rejection? Anthropic documents anyOf support; its presence alone is not a diagnosed cause. A6 discarded the provider error body, so its historical message cannot be reconstructed.
 
+## Protocol
+
 Three fixed requests, once each, no retries: (1) exact retained A6 controller wire; (2) identical wire except schema, with complete typed/required/closed branches including reason; (3) identical wire except removal of anyOf, the previous flat object contract as a transport control. Only the second schema is intended to preserve legal action combinations; the flat control intentionally permits invalid combinations and is never executed. All model outputs are diagnostic evidence; no simulator action executes. No new advisors, world or operator context. Public constructed service and retained experimental advice only. One inspected request, three dependent variants; not independent samples and no population confidence interval or competence claim.
+
+## Metrics
 
 Primary outcomes: HTTP status, safe provider error category and allowlisted schema-keyword indicators; successful route, usage, parse/schema validity. Record exact request hashes, responses, known cost and uncertain reservations. Error readers consume at most8193bytes, retain a SHA256 plus fixed classifications only, never arbitrary text, headers or credentials. Continue after expected HTTP400 to the next distinct planned variant; stop immediately on other transport/status errors, missing successful usage, route mismatch, cost overrun or incomplete output. A successful but invalid action is reported, never repaired or executed.
 
 Interpretation: repeated400 plus explicit provider schema diagnostics establishes the rejection reported for the new exact replay. Original failure remains historical and body-missing. Original400 / complete-branch success supports that bundled schema repair as a discriminator, not identification of one keyword. All400 suggests another constraint; allsuccess suggests transient or provider drift. Flat success alone establishes only basic transport/format support. Do not weaken scientific success gates based on any outcome.
+
+## Setup
 
 Maximum3 requests,512outputtokens,16000inputbytes each, maximum additional reservation USD0.057216. Preserve original USD8 ledger:408 prior requests,USD3.329282reserved including unknowns. No new allowance; no budget increase needed. Reuse an exclusively allocated eligible Dmarz-account researcher host after fresh claim, actual workload/account/source verification. No default-account provisioning. Hard stop10minutes, exclusive claim at least30minutes; localhost-only key relay and verified SSH. Immutable public plan registration before dispatch. Offline checks compare old/new schema languages exhaustively and test safe diagnostic handling. One-time dispatch marker; no automatic successor.
 
