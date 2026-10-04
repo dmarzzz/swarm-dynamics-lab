@@ -3635,11 +3635,11 @@
       "experiment_ids": [],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Effects of history, opposing ballots, clock translation and evidence age on Jev interpretation remain untested in this new controlled matrix.",
-        "rationale": "Q0-A1 stopped during startup with zero provider requests; all18qualification assignments remain unstarted and D0 is unrun. The original ledger, failed attempt, operational finalize and eleven-dimension owning review are retained. Startup repairs pass88offline checks with the162request manifest unchanged. No native effect or qualification is established."
+        "score": 1,
+        "claim": "On 18 authored qualification requests, Jev correctly handled all clean and conflicting-current controls but chose PROCEED on all three expired favorable observations; qualification failed.",
+        "rationale": "Q0-A2 completed 18/18 valid native responses and scored 15/18. All traces and original-ledger charges reconcile, with complete operational and owning scientific reviews. The inspected controls share three grammars and do not isolate context mechanisms or estimate a field failure rate. D0 was not run; its causal context and repeat contrasts remain untested. The prior zero-dispatch attempt is preserved."
       },
-      "sample_size_summary": "Observed native: none. Planned D0: 12 authored cases in six shared families/three grammars x six conditions x two repeats = 144 dependent requests; separate Q0 has 18 requests. No independent field sample or held-out generalization evaluation.",
+      "sample_size_summary": "Observed Q0: 18 authored controls sharing three grammars; 18/18 valid, 15/18 correct (clean 12/12, conflict 3/3, stale 0/3). No independent field sample or holdout. D0: unrun; planned 12 cases \u00d7 6 conditions \u00d7 2 repeats = 144 dependent requests. Q0-A1: zero dispatch.",
       "sources": [
         "researchers/vishesh/notes/dissent/reopening/PLAN.md",
         "researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md",
@@ -3653,27 +3653,47 @@
         "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md",
         "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-QUALITY.json",
         "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json",
-        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json"
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json",
+        "researchers/vishesh/notes/dissent/reopening/REPORT.md",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-PRE.md",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-POST.md",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/summary.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/assessment.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/reconciliation.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/resources.json",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/figure-data.json"
       ],
       "source_sha256": {
         "researchers/vishesh/notes/dissent/reopening/PLAN.md": "d9d0ba99e1a7ec705a64045babe88ce4757d3a7ccfa120ef15790a1a666662ed",
         "researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md": "29c9ef1f1c7c85b64631305913331933b7b4e764abc6c977de97528ffd0b4e64",
-        "researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md": "f97b90df9651d0f0b47fbbca0bf0f8f8e55c4503452f53ce283549f671f13e77",
-        "researchers/vishesh/notes/dissent/reopening/offline/validation.json": "1c9781f0029bbe9bff12a38a5387117bee9353ac492bb8400b75b41f20f79162",
+        "researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md": "8dc23555ced2caf54f1092bd8632007b6ffdfa2cfbea17d6daab668f64420d8b",
+        "researchers/vishesh/notes/dissent/reopening/offline/validation.json": "7c4b1fd962af35c169822df6d008828d5ebe36e356d17d8855e85aa042329c24",
         "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "bd030126cd1a021674facfc9b9e1be7ebd8ab9538d6dc6e78b45f1bdc875429d",
-        "researchers/vishesh/notes/dissent/reopening/OPERATOR.md": "e44f3b5164dec4e0eae6b96826faf2560ff18ca5bbf4a655f22c8bfa81beade6",
+        "researchers/vishesh/notes/dissent/reopening/OPERATOR.md": "25e480b2262c4bf5d0286da4ab3035591b9614f42ae6570ef1edbbc725e8a184",
         "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "615132a91be6c25ed5258625ad0508b34d6058760d3a447bf0e7d8ea1425faf6",
-        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md": "fd39f702038c3be5dbdd7895555a2f0b3b6f3e9f178eba80a6f92af3e6a621bb",
+        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md": "6d871aea9b940923c82c67283c8774a9fc73c202a031dbcee02af4d704b4af77",
         "researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md": "2d4843c9cb1e38a883b7cfaee7b281d8beb0b6108daa05775f18058761be63a5",
         "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md": "4089b1e8a34d55d81f04f55930c6e175884af5dad281eee9b1d02807cd24a7fa",
         "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-QUALITY.json": "0e23f666619584e63ad1bba2f99ad9f916a8ec97f88b6497b1b9e55f85da36e6",
         "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json": "56a1650e0c8c1101900c8f6a5d505fb803010d2175efa95cd89b8e6508ae0139",
-        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json": "ef94c4bf2388704cd5ab43d2fdf80dab15e0962e0926dda5b7a5fbdba9660a93"
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json": "ef94c4bf2388704cd5ab43d2fdf80dab15e0962e0926dda5b7a5fbdba9660a93",
+        "researchers/vishesh/notes/dissent/reopening/REPORT.md": "ffc2838bb81292057da13135a20e19b3a40eb2451b7b80edf92638c6ac4a64a5",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-PRE.md": "d4333337a412f7303242cda2f7cc190404874e5ed6aa405ee5e7f7863a6164ce",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-POST.md": "175c8b9f502482ba4c7e9675629e721e1b8882238fc681ebb239392dd5bb7608",
+        "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/native/summary.json": "5cf492f18d905f3244368ea745e3c75544bd6999229c18132596a2edb258485e",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/assessment.json": "9677240a159abb8cdca6bfc58e656a3accc338a4d20828954fd585c15a46633b",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/reconciliation.json": "bf4043125f63719f9a85baa0873776c7592086a181b2813acfcb4cebbcf4a9bd",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/resources.json": "3084ce4787bbe9a2a2ab60fc469e9bf691efeddb580ad28c4d3bc1129aafa496",
+        "researchers/vishesh/notes/dissent/reopening/results/q0-a2/figure-data.json": "c237b3b3f407040d164d47db8a1baec434cb42c746ea03b0898cdee6e42cef50"
       },
-      "status_at_assessment": "q0_a2_replacement_contract_approved_current_admission_in_preparation",
+      "status_at_assessment": "q0_a2_completed_qualification_failed_d0_unrun_closed",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "8715052e8dd51dc4bf0d01b7c51b9b7f2c006b1e"
+      "source_commit": "4e830695a8a27e13f86635c755e2c90e2c12fa89"
     },
     {
       "id": "phantom-coast-pc9",
