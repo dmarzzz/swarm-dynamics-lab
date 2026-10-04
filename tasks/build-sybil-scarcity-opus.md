@@ -3,7 +3,7 @@ id: build-sybil-scarcity-opus
 type: task
 title: Prepare the Sybil scarcity experiment on Opus 5.5 to launch-ready
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/pipeline-scarcity
 for: dmarz
@@ -14,7 +14,9 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T07:52Z
-updated: 2026-10-04T07:52Z
+updated: 2026-10-04T09:12Z
+outputs:
+- researchers/dmarz/notes/sybil-scarcity-opus/reviews/chain-001-pre.md
 ---
 
 ## Goal
