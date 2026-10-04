@@ -307,10 +307,10 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
 | vishesh/codex-theseus | idle |  | 2026-10-04T19:06Z | A2 completed and published; acquisition failed; FINISH / PARK; host released PR354 |
 | vishesh/codex-pi-review | working | launch-ready-studies-2026-10-04 | 2026-10-04T19:05Z | Coordinating owner-approved launches of prepared scopes; no duplication of active attempts. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
-| vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:01Z | D7 acquisition succeeded but schema migration failed; closed and released; D8 offline repair92tests, next-run decision pending |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
 | vishesh/codex-village-fit | working |  | 2026-10-04T18:31Z | Applying Telephone T1 offline iteration with scorer, cases and source feasibility. |
