@@ -1,3 +1,4 @@
+from contextlib import closing
 """A1 manual native contract: orbital queue admission required; no resume or retries."""
 import argparse,hashlib,json,os,resource,socket,sqlite3,subprocess,sys,time,urllib.request,urllib.error
 from pathlib import Path
@@ -11,7 +12,7 @@ ALLOCATION_LEDGER=Path('/srv/swarm/theseus-execution-allocations.sqlite')
 def write_new(path,value):
     with Path(path).open('x') as f:json.dump(value,f,sort_keys=True);f.flush();os.fsync(f.fileno())
 def reserve(ledger,cost,now):
-    with sqlite3.connect(ledger,timeout=30) as db:
+    with closing(sqlite3.connect(ledger,timeout=30)) as db, db:
         db.execute('BEGIN IMMEDIATE');cap,used,calls,deadline=db.execute('SELECT cap,used,calls,deadline FROM budget WHERE id=1').fetchone()
         if cap!=2.5 or calls>=204 or used+cost>cap or now>=deadline:raise GateError('budget_or_deadline')
         db.execute('UPDATE budget SET used=?,calls=? WHERE id=1',(used+cost,calls+1))
@@ -64,11 +65,11 @@ def run(receipt_path,output):
     resource.setrlimit(resource.RLIMIT_CORE,(0,0));key=os.environ['SWARM_MODEL_API_KEY']
     sys.path.insert(0,'/usr/local/lib/swarm');import swarm_report as sr
     # The queue operator reconciles/retire-transfers the original ledger, never creates a new authority.
-    with sqlite3.connect(ALLOCATION_LEDGER,timeout=30) as db:
+    with closing(sqlite3.connect(ALLOCATION_LEDGER,timeout=30)) as db, db:
         db.execute('BEGIN IMMEDIATE')
         db.execute('INSERT INTO allocations VALUES (?,?,?)',(receipt['authority_allocation_id'],str(root),digest(design)))
     root.mkdir();(root/'calls').mkdir();(root/'outcomes').mkdir();deadline=min(time.time()+7200,receipt['claim_until_epoch']);ledger=root/'quota.sqlite'
-    with sqlite3.connect(ledger) as db:
+    with closing(sqlite3.connect(ledger)) as db, db:
         db.execute('CREATE TABLE budget (id INTEGER PRIMARY KEY,cap REAL,used REAL,calls INTEGER,deadline REAL)');db.execute('INSERT INTO budget VALUES (1,2.5,0,0,?)',(deadline,))
     write_new(root/'manifest.json',{'evidence_type':'measured_model_outputs','assignments':design,'source_commit':rev,'instrument_sha256':source_hash(),'admission':receipt,'public_preflight':pub})
     policies={};stop=None;pending=set()

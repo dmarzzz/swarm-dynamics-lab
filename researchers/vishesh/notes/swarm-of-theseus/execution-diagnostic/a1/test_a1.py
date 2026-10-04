@@ -1,3 +1,4 @@
+from contextlib import closing
 import copy,json,sqlite3,tempfile,time,unittest
 from pathlib import Path
 from design import *
@@ -80,7 +81,7 @@ class A1Tests(unittest.TestCase):
     def test_budget_and_duplicate_write(self):
         with tempfile.TemporaryDirectory() as tmp:
             p=Path(tmp)/'quota.sqlite'
-            with sqlite3.connect(p) as db:db.execute('CREATE TABLE budget (id,cap,used,calls,deadline)');db.execute('INSERT INTO budget VALUES (1,2.5,2.499,203,?)',(time.time()+10,))
+            with closing(sqlite3.connect(p)) as db, db:db.execute('CREATE TABLE budget (id,cap,used,calls,deadline)');db.execute('INSERT INTO budget VALUES (1,2.5,2.499,203,?)',(time.time()+10,))
             with self.assertRaises(GateError):reserve(p,.01,time.time())
             write_new(Path(tmp)/'once',{})
             with self.assertRaises(FileExistsError):write_new(Path(tmp)/'once',{})
@@ -121,7 +122,7 @@ class A1Tests(unittest.TestCase):
             return {'value':v,'raw_text':json.dumps(v),'error':None,'actual_usd':0.,'response_received':True}
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);ledger=root/'original.sqlite'
-            with sqlite3.connect(ledger) as db:db.execute('CREATE TABLE allocations (id TEXT PRIMARY KEY, output TEXT, assigned_sha TEXT)')
+            with closing(sqlite3.connect(ledger)) as db, db:db.execute('CREATE TABLE allocations (id TEXT PRIMARY KEY, output TEXT, assigned_sha TEXT)')
             r=receipt();r['status']='diagnostic-only';rp=root/'receipt.json';rp.write_text(json.dumps(r))
             def git(cmd,**kw):
                 return '/private/tmp/swarm-theseus' if '--show-toplevel' in cmd else '' if 'status' in cmd else 'a'*40

@@ -12,5 +12,14 @@
     "New telemetry has only fault-fixture validation",
     "Error usage is diagnostic and does not settle cost",
     "No model qualification or provider health demonstrated"
-  ]
+  ],
+  "resource_cleanup_validation": {
+    "python_versions": [
+      "3.12.13",
+      "3.14"
+    ],
+    "tests_per_runtime": 23,
+    "resource_warnings": "none with -W error::ResourceWarning",
+    "scope": "explicit SQLite close after transaction and HTTP fixture cleanup; no provider calls"
+  }
 }
