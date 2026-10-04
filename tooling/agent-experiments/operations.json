@@ -35,9 +35,9 @@
       "setup_path": "researchers/vishesh/notes/dissent/rd5/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T20:06:30.485229+00:00",
-      "checked_commit": "4e830695a8a27e13f86635c755e2c90e2c12fa89",
-      "next_action": "FINISH / PARK: approved Q0-A2 completed 18 valid requests, failed qualification 15/18 (all three expired-evidence controls wrong); D0 unrun. Operational and eleven-dimension scientific closeout complete; workers and allocation released. Original 506-call ledger and USD2 split cap retained. Read reopening/REPORT.md and RUN-STATUS.md; no automatic retry or threshold relaxation.",
+      "checked_at": "2026-10-04T20:21:19.836359+00:00",
+      "checked_commit": "edcd77579cf1644864bd2cb9e6f20381e5c5a9d7",
+      "next_action": "RUN approved RD7 F0-A1 after fresh public/source/account/exclusive allocation admission:48 matched freshness/representation/context requests;60offline checks pass. Preserve RD6 failed qualification and original506-call ledger/USD2 split cap. No native qualification or main dissent stage automatically follows. See freshness/PLAN.md.",
       "next_run_approval": "owner"
     },
     {
