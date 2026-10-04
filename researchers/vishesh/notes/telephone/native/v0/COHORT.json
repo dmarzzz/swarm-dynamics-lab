@@ -1,0 +1,78 @@
+{
+  "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+  "cases": [
+    {
+      "case": "V00",
+      "obligations": 3,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "46cccd8bb27ed642c78576285579cab486d399eb51910cc3c82131b729d073cd",
+      "source_record_count": 1
+    },
+    {
+      "case": "V01",
+      "obligations": 3,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "9f6490c24532eb28a4cee24c1994839c2ddb7a56b12e1177887c457917b7c691",
+      "source_record_count": 1
+    },
+    {
+      "case": "V02",
+      "obligations": 3,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "39748ab469a7310644e79dcfe795b073ba62143cba14303dc79f8288990b6dcc",
+      "source_record_count": 1
+    },
+    {
+      "case": "V03",
+      "obligations": 3,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "4f9de366d243bb2530a5b846c742d47d74eb344c72c11df96009cf5c77e82e7a",
+      "source_record_count": 1
+    },
+    {
+      "case": "V04",
+      "obligations": 3,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "a5e5f3fb45f0ab9ce3110bd8147931f417fce9cc17585ce0765e88ab0cc1ad84",
+      "source_record_count": 1
+    },
+    {
+      "case": "V05",
+      "obligations": 3,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "0c43e04cee994ebc803dba8aea89909f41db64d500c8f7e588fc3e8f2fbec455",
+      "source_record_count": 1
+    },
+    {
+      "case": "V06",
+      "obligations": 4,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "ae74731a073aaa4cdd609a2719bd29c9f2b71f1dbf6618e49f0be171dbda8768",
+      "source_record_count": 1
+    },
+    {
+      "case": "V07",
+      "obligations": 3,
+      "source_copy_critical_retention": 1.0,
+      "source_sha256": "9c5dc3169005b057b433850787b79cd1d0406e3c1e167aa457c09c8b1e30a96b",
+      "source_record_count": 1
+    }
+  ],
+  "case_count": 8,
+  "critical_obligations": 25,
+  "source_type": "agent chat assertions with uniquely linked events",
+  "historical_visibility_claimed": false,
+  "world_truth_verified": false,
+  "goal_windows": 51,
+  "goal_windows_touched_by_prior_prefixes": 51,
+  "untouched_goal_windows": 0,
+  "split": "development",
+  "second_pass": "same-author shuffled source reread; critical timestamp targets removed before generation",
+  "native_calls": 0,
+  "native_admitted": false,
+  "packet_sha256": "da6c95638cf39e537ce0c88613fc68de3ad9ae727175d6758905f0ffaaf04aa6",
+  "gold_sha256": "0d320d14f990994ffc9f3deea9cb1ff2751b7ee188a410bfdacb2edb43094722",
+  "annotation_file_sha256": "f1d96a8685b7b3eb79911e7e2d0d7958c349e0d2bb10cde7396fef9b8f7397a9",
+  "source_copy_scope": "critical obligation retention only; full factual-precision annotation not established by this receipt",
+  "baseline_measurement_note": "Critical-only source-copy review. A preliminary full-scorer invocation was discarded because complete assertion segmentation was not performed; this receipt does not attest all assertions reviewed."
+}

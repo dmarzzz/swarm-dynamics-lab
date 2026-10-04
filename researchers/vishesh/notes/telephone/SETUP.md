@@ -66,3 +66,11 @@ Telephone is now registered for manual navigation (`python3 scripts/experiment.p
 ## Native launch direction and preparation — 2026-10-04
 
 Owner directed native execution; default cumulative USD2 now applies. [Native preparation](native/README.md) adds 11 passing offline request-contract checks and a bounded candidate envelope. Cohort clarification remains pending: original AI Village evaluation versus authored clean-case diagnostic. Neither is currently admitted. No native calls, reservations, allocations or provider transfer occurred. The pure contract is not a launcher. Preserve the T1 no-native history and use the selected cohort to complete the remaining admission work.
+
+## Both native scopes authorized — 2026-10-04
+
+Owner approved authored A0 and real-source V0. A0 is frozen at `8c2350b4c19166116a0491b759e5d78b631efae8`, deployed/tested on the exclusive approved-account host, and queued through the private central launch workflow. Public plan registration, rendered page and public preflight are verified. Central start is still pending; zero native generation calls or results.
+
+[V0 preparation](native/v0/PLAN.md) now contains eight privately reviewed source-meaning cases with 25 critical obligations. Complete source projections match manifest counts. All 51 goal windows have prior prefix exposure, so this is a development pilot, not the original held-out evaluation. No world-truth/historical-transmission claim. Updated native preparation tests: 24 pass; A0 retains its immutable 23-test deployed version. V0 awaits actual A0 semantic qualification and its own admission.
+
+Both stages retain Telephone's existing USD2 cumulative authority while an exact higher cap remains unresolved. Never reset the ledger or infer a numerical cap from an unspecified increase. Keep actual infrastructure allocation costs in the same accounting. This is a queued/prepared status, not a completed attempt or scientific closeout.

@@ -1,22 +1,13 @@
-# Telephone native launch preparation
+# Telephone native scopes
 
-**DECISION NEEDED on cohort; no native run started.** The owner has directed native execution with the standing USD2 cumulative budget. Preparation found two distinct scientific scopes, and the cohort clarification remains unanswered.
+Owner approved both authored and AI Village scopes on 2026-10-04. **A0 is queued for central start; no model calls have begun. V0 is prepared as a narrow real-source development pilot and awaits actual native qualification/admission.** No native results are claimed.
 
-| Scope | What it tests | Outstanding preparation |
-|---|---|---|
-| Original AI Village study | Fidelity across real source-derived episodes | Complete task windows, reviewed labels, provider-transfer review and frozen cohort; the 14 existing joins are insufficient. |
-| Authored-case diagnostic | Whether a native model preserves clean original facts through three hops | Confirm this scope, freeze eight authored roots and semantic qualification rules, complete admitted dispatch and host verification. It cannot establish Village findings or model necessity. |
+- [A0 authored plan](a0/PLAN.md): 8 original roots, 72 calls maximum, source-copy ceiling; pinned launch commit `8c2350b4c19166116a0491b759e5d78b631efae8`. Its 23 offline checks and 24 T1 scorer checks passed on the dedicated host. Public registration and page verification passed.
+- [V0 real-source plan](v0/PLAN.md): 8 reviewed AI Village source statements, 25 critical targets, 72 calls maximum. Explicitly constructed actor context, development exposure, no historical transmission or world-truth claim. Updated offline tests: 24 pass.
+- [Full-table acquisition](v0/ACQUISITION.json): 183,485 chat records and 381,610 event metadata rows match the pinned manifest. Raw corpus remains private.
 
-[Prospective preparation and candidate envelope](PREPARATION.md). Candidate diagnostic: 72 calls, Haiku 4.5, up to USD0.774144 in token charges at stated limits; USD1.50 API / USD0.50 infrastructure partitions preserve the USD2 total. This is a maximum-token calculation, not a provider-access or allocation receipt. No automatic provider fallback.
+Prior prefixes touch all 51 goal windows. We therefore cannot label a goal-window cohort untouched. The original 24-component evaluation remains unprepared; the bounded source-meaning pilot does not replace that evidence.
 
-[Offline validation](VALIDATION.json): 11 tests pass for the pure [request/response contract](src/contract.py). New API requests contain one user message and no provider history; actor sources omit evaluator fields. P/S receive only their own prior handoff after hop one; R can reopen original evidence. Input counting, served model/finish reason, token usage, structured shape and missing parents fail closed.
+The existing cumulative USD2 remains the operative cap while an exact higher amount is unresolved. Both 72-call stages total at most USD1.548288 in model-token charges before infrastructure; actual ledger exposure and infrastructure reservations determine admission. There is no new allowance per stage.
 
-This module has no network or credential consumer and is not a runnable launcher. It does not substitute for transactional reservations, runtime checks, semantic qualification, hub registration, public-page verification or exclusive approved-account allocation. A native run is not claimed merely because a request serializes.
-
-## Handoff
-
-Resolve the pending cohort choice. For an authored diagnostic, publish the concrete final scope and freeze assignments before completing the admitted native worker. For AI Village, continue complete-window preparation and two-pass labels under the original study contract. Preserve zero current spend and the cumulative cap. Do not turn the eight authored roots into a purported real-data evaluation.
-
-Private fleet read found some hosts without active claims, but no Telephone host, actual idle-workload check or account verification. No claim, provisioning, queue request, credential transfer, provider probe or model dispatch occurred. The established queue documentation routes new launches through orbital-one; Telephone is outside the enumerated direct-launch exception. No unlaunchable queue request was filed.
-
-The scientific next-scope decision comes from the owner's [standing update process](../../../../../tooling/agent-experiments/ITERATION.md); researcher review remains waived. The T1 closeout remains the latest completed offline scientific assessment; there is no native post-mortem to invent.
+A0 is in the private central run queue with an exclusive host claim. It cannot be described as running until the central receiver starts and credential/admission checks pass. V0 cannot run merely because its packet exists: actual A0 semantic qualification, immutable V0 registration, source/runtime/transfer review and current allocation/budget checks remain mandatory. No researcher sign-off is required.

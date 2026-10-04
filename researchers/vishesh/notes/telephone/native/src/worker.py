@@ -11,7 +11,7 @@ def write(path,data):
 def execute(packet,out,ledger,count_tokens,generate,deadline,report=lambda x:None):
  if out.exists():raise ValueError('attempt_exists')
  expected=assignments([x['id'] for x in packet['cases']])
- if packet['assignments']!=expected or len(expected)>72 or packet['stage']!='A0':raise ValueError('packet_scope')
+ if packet['assignments']!=expected or len(expected)>72 or packet['stage'] not in ('A0','V0'):raise ValueError('packet_scope')
  out.mkdir(mode=0o700,parents=True);write(out/'packet.json',packet)
  byid={x['id']:x for x in packet['cases']};parents={};rows=[];stopped=False
  for a in expected:
@@ -39,5 +39,5 @@ def execute(packet,out,ledger,count_tokens,generate,deadline,report=lambda x:Non
    if type(getattr(exc,'code',None)) is int:row['http_status']=exc.code
   write(out/(a['call_id']+'.receipt.json'),row)
   report({'assigned':len(expected),'valid':sum(x['status']=='valid' for x in rows),'stopped':stopped})
- summary={'scope':'native authored diagnostic; semantic review pending','stage':packet['stage'],'assigned':len(expected),'valid':sum(x['status']=='valid' for x in rows),'failed':sum(x['status']=='failed' for x in rows),'unstarted':sum(x['status']=='unstarted' for x in rows),'scored':0,'stopped':stopped,'budget':ledger.summary(),'assignments':rows}
+ summary={'scope':packet['scope']+'; semantic review pending','stage':packet['stage'],'assigned':len(expected),'valid':sum(x['status']=='valid' for x in rows),'failed':sum(x['status']=='failed' for x in rows),'unstarted':sum(x['status']=='unstarted' for x in rows),'scored':0,'stopped':stopped,'budget':ledger.summary(),'assignments':rows}
  write(out/'summary.json',summary);return summary

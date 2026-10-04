@@ -15,3 +15,9 @@ Prospective plan followed by annotation scorer, private candidate joiner, eight 
 ## Telephone native preparation
 
 Native launch direction recorded with standing USD2 cap. Verified current source card and read private queue workflow without exposing operational details. Original real-corpus cohort remains unvalidated; asked whether the intended next scope is authored clean-case diagnostic or original Village study. Built pure fresh-context request/response contract and 11 passing tests while scope remains unresolved. No credentials transferred, queue request, allocation or model calls. Native launch remains unfulfilled pending cohort and admission evidence.
+
+## Both Telephone native scopes
+
+A0 authored diagnostic approved, frozen and deployed with 23 passing native-preparation checks plus 24 scorer checks; plan registered and public preflight verified. Private exclusive allocation and central request recorded; no receiver/generation yet. V0 acquired complete bounded chat/event tables (183,485/381,610 rows) and froze eight development source cases/25 critical meanings after same-author rereading. All goal windows have prefix exposure; no untouched holdout claimed. Updated V0 preparation has 24 tests, requires actual A0 semantic qualification and preserves the cumulative ledger. Existing USD2 remains until exact increase is given.
+
+An unrelated shared heartbeat merge conflict was rejected by automatic approval review; only the Telephone worker commit was cherry-picked into a clean checkout and published, preserving unrelated changes. The earlier conflicted checkout remains untouched for recovery.

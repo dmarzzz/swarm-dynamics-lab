@@ -7,7 +7,8 @@ class Ledger:
   self.db.executescript('CREATE TABLE IF NOT EXISTS authority (id INTEGER PRIMARY KEY CHECK(id=1),cap INTEGER,ref TEXT);CREATE TABLE IF NOT EXISTS charges (id TEXT PRIMARY KEY,stage TEXT,kind TEXT,reserve INTEGER,actual INTEGER,status TEXT,request_hash TEXT);')
   row=self.db.execute('SELECT cap,ref FROM authority').fetchone()
   if row is None:self.db.execute('INSERT INTO authority VALUES (1,?,?)',(total_cap_nano,authority_ref))
-  elif row!=(total_cap_nano,authority_ref):raise ValueError('cannot_reset_authority')
+  elif row!=(total_cap_nano,authority_ref):
+   self.db.close();raise ValueError('cannot_reset_authority')
  def reserve(self,cid,stage,kind,amount,request_hash,stage_call_cap=72):
   self.db.execute('BEGIN IMMEDIATE')
   try:

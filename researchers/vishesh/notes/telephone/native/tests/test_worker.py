@@ -15,6 +15,11 @@ class WorkerTests(unittest.TestCase):
  def test_complete_reconciles_but_does_not_claim_semantic_pass(self):
   s=execute(self.packet,self.base/'out',self.l,lambda r:500,self.raw,time.time()+300)
   self.assertEqual((s['assigned'],s['valid'],s['scored']),(72,72,0));self.assertEqual(s['budget']['model_calls'],72)
+ def test_v0_uses_same_cumulative_ledger_and_distinct_stage(self):
+  self.l.reserve('prior','A0','model',1000000,'old');self.l.settle('prior',1000000)
+  self.packet['stage']='V0';self.packet['scope']='real-source test fixture only'
+  s=execute(self.packet,self.base/'v0',self.l,lambda r:500,self.raw,time.time()+300)
+  self.assertEqual(s['stage'],'V0');self.assertEqual(s['budget']['model_calls'],73)
  def test_unknown_failure_keeps_reserve_stops_without_retry(self):
   def fail(req):raise TimeoutError('suppressed')
   s=execute(self.packet,self.base/'out',self.l,lambda r:500,fail,time.time()+300)

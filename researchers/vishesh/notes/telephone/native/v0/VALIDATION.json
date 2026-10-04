@@ -1,0 +1,70 @@
+{
+  "scope": "offline V0 preparation; not native qualification",
+  "tests": 24,
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "researchers/vishesh/notes/telephone/native/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "output": "test_allocation_unknown_or_stale_refused (test_admission.AdmissionTests.test_allocation_unknown_or_stale_refused) ... ok\ntest_no_host_or_budget_or_scope_substitution (test_admission.AdmissionTests.test_no_host_or_budget_or_scope_substitution) ... ok\ntest_scope_passes_only_exact_contract (test_admission.AdmissionTests.test_scope_passes_only_exact_contract) ... ok\ntest_unbounded_or_expired_window_refused (test_admission.AdmissionTests.test_unbounded_or_expired_window_refused) ... ok\ntest_72_assignments_unique_and_balanced (test_contract.ContractTests.test_72_assignments_unique_and_balanced) ... ok\ntest_actor_projection_excludes_gold_and_context (test_contract.ContractTests.test_actor_projection_excludes_gold_and_context) ... ok\ntest_actual_route_and_stop_checked (test_contract.ContractTests.test_actual_route_and_stop_checked) ... ok\ntest_envelope_preserves_total_cap (test_contract.ContractTests.test_envelope_preserves_total_cap) ... ok\ntest_later_hops_only_see_previous_except_retrieval (test_contract.ContractTests.test_later_hops_only_see_previous_except_retrieval) ... ok\ntest_no_missing_parent_or_hop_one_previous (test_contract.ContractTests.test_no_missing_parent_or_hop_one_previous) ... ok\ntest_no_silent_truncation (test_contract.ContractTests.test_no_silent_truncation) ... ok\ntest_sources_must_be_unique_and_nonempty (test_contract.ContractTests.test_sources_must_be_unique_and_nonempty) ... ok\ntest_structured_shape_required_without_repair (test_contract.ContractTests.test_structured_shape_required_without_repair) ... ok\ntest_usable_response_not_semantic_pass (test_contract.ContractTests.test_usable_response_not_semantic_pass) ... ok\ntest_usage_and_thinking_faults (test_contract.ContractTests.test_usage_and_thinking_faults) ... ok\ntest_complete_reconciles_but_does_not_claim_semantic_pass (test_worker.WorkerTests.test_complete_reconciles_but_does_not_claim_semantic_pass) ... ok\ntest_count_refusal_makes_no_paid_call (test_worker.WorkerTests.test_count_refusal_makes_no_paid_call) ... ok\ntest_duplicate_call_and_stage_limit (test_worker.WorkerTests.test_duplicate_call_and_stage_limit) ... ok\ntest_invalid_response_is_retained_and_bounded (test_worker.WorkerTests.test_invalid_response_is_retained_and_bounded) ... ok\ntest_ledger_cannot_reset (test_worker.WorkerTests.test_ledger_cannot_reset) ... ok\ntest_no_duplicate_attempt (test_worker.WorkerTests.test_no_duplicate_attempt) ... ok\ntest_reservations_include_infrastructure (test_worker.WorkerTests.test_reservations_include_infrastructure) ... ok\ntest_unknown_failure_keeps_reserve_stops_without_retry (test_worker.WorkerTests.test_unknown_failure_keeps_reserve_stops_without_retry) ... ok\ntest_v0_uses_same_cumulative_ledger_and_distinct_stage (test_worker.WorkerTests.test_v0_uses_same_cumulative_ledger_and_distinct_stage) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.094s\n\nOK\n",
+  "files": [
+    {
+      "path": "researchers/vishesh/notes/telephone/native/src/acquire.py",
+      "sha256": "28d7cbbc1b324b3704a356ac8178858f0e5e59fb34e741b36deda26940a04849"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/src/contract.py",
+      "sha256": "c64ef6739dc4da757c0b00a9ee179672c86e497ff573bfc0681d909a663e4a74"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/src/ledger.py",
+      "sha256": "be73cf6da6922cb77f8aee499045f47c4361d3e8c9287c615ab5d1e9611c305f"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/src/prepare_a0.py",
+      "sha256": "3c5088f2d505c22bf48ff0465cd53bb259a8e820873731c501629af084951235"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/src/remote.py",
+      "sha256": "93e7110c0674b2c8d1a2a807440d07b01c67d191fcd2fbcd1fa31c65bf0df27a"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/src/select_real_candidates.py",
+      "sha256": "2eac1ffab826079d2cc385f8df4632dac21e6d828663af885d56f96c97112984"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/src/worker.py",
+      "sha256": "88d2490ea7ca30b0dfa2f764438bf5916e81e8bec34b78c455d21760a67e05f6"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/tests/test_admission.py",
+      "sha256": "bc962e735153f94cd6ff0e94ee86ea3d0efc5607d21ee86634784154aafea29b"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/tests/test_contract.py",
+      "sha256": "2ad9cdd490944f2c6eeaf5636810fbaa458a24257420848643f5ba07f4eb9458"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/tests/test_worker.py",
+      "sha256": "44fd2b3368508de1e556eba821c65f7071fc55c671d9c6ad35350cc6b29f5eca"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/v0/COHORT.json",
+      "sha256": "298df832eeba465a55340353c6fe95052fa36a449f35c81596544af906dc152b"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/v0/DATA-PROCESSING.md",
+      "sha256": "fba9c60ae2d7c737fcd12d8b787a74b4ff86b723ec2835a3528f98b7590c9297"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/v0/PLAN.md",
+      "sha256": "a81834ba35db6243067831c1be3a323a206aec84e6f9d32dcd4f491c9f58976a"
+    }
+  ],
+  "model_calls": 0
+}

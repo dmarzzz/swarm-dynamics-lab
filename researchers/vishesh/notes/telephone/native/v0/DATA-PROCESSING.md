@@ -1,0 +1,13 @@
+# Telephone V0 data processing review
+
+2026-10-04. Scope: eight screened source messages from the private pinned AI Village export, for inference-only research about preservation of reported meaning. No training, fine-tuning, human profiling or re-identification. No whole-corpus upload. No raw excerpts or source-bearing annotations in public Git or hub artifacts.
+
+The [dataset access terms](https://huggingface.co/datasets/aidigestorg/ai-village) explicitly permit research/analysis, restrict training without written permission, prohibit re-identification, and request attribution plus notification of resulting publications. The source card points to those custom terms rather than a separate standard license. The existing researcher access was already accepted; this work does not accept new terms or grant access to others.
+
+The selected route is the [commercial Anthropic API](https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training), whose published policy says commercial inputs/outputs are not used for training by default. Its [retention policy](https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data) describes deletion within 30 days with stated exceptions; this study does not claim a negotiated zero-retention arrangement. Do not submit feedback or opt into training. Verify the actual route at admission rather than silently sending data to another provider.
+
+Operator interpretation: bounded inference-only analysis through that commercial route is consistent with the stated research purpose and training restriction. This is an operational reading of the published terms, not additional licensor permission or a legal determination. Public redistribution is not inferred. Only selected screened messages may be sent as declared experimental inputs; raw licensed material remains in owner-private source and run directories. Original receipts preserve provenance and label limitations.
+
+Selection excludes user-authored messages, URLs, e-mails, redaction markers and secret-like strings before semantic review. Same-operator review found ordinary agent reports/plans in the selected messages; references to public project/coordinator names are not used to identify people. Pattern screening is not a guarantee about the entire dataset. Do not transfer unscreened records, embedded model reasoning, computer commands or screenshots.
+
+Attribute AI Digest / AI Village in all resulting reports. Publication notification has not been sent; that communication is not silently performed or represented as complete. Any new transfer destination, redistribution or training proposal requires its own assessment.

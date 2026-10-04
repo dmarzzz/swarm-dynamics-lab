@@ -14,7 +14,8 @@ CONDITION_TLDR={
 
 def check(config,now=None,host=None):
  now=time.time() if now is None else now;host=socket.gethostname() if host is None else host
- if config.get('study')!='telephone' or config.get('stage')!='A0' or config.get('host')!=host:raise ValueError('scope_host')
+ if config.get('study')!='telephone' or config.get('stage') not in ('A0','V0') or config.get('host')!=host:raise ValueError('scope_host')
+ if config.get('stage')=='V0' and config.get('private_transfer_review') is not True:raise ValueError('real_transfer_not_reviewed')
  if config.get('owner_scope_ref')!='Telephone owner approval of both scopes, 2026-10-04':raise ValueError('scope_authority')
  if config.get('cap_nano')!=2000000000 or config.get('authority_ref')!='Telephone cumulative default USD2; owner-directed launch 2026-10-04':raise ValueError('budget_authority')
  if not now+90<config.get('deadline',0)<=now+7200:raise ValueError('deadline')
@@ -34,13 +35,22 @@ def prepare(config):
  for rel,h in config['file_hashes'].items():
   path=(ROOT/rel).resolve()
   if not path.is_relative_to(ROOT) or hashlib.sha256(path.read_bytes()).hexdigest()!=h:raise ValueError('source_hash')
- packet=json.loads((BASE/'a0/packet.json').read_text())
+ stage=config['stage']
+ if stage=='A0':packet=json.loads((BASE/'a0/packet.json').read_text())
+ else:
+  packet=json.loads(Path('/srv/swarm/telephone-private/v0-packet.json').read_text())
+  receipt=json.loads(Path('/srv/swarm/telephone-private/A0-QUALIFICATION.json').read_text())
+  if receipt.get('native_case_screen_passed') is not True or receipt.get('scored')!=72 or receipt.get('model')!=MODEL or receipt.get('source_commit')!='8c2350b4c19166116a0491b759e5d78b631efae8':raise ValueError('A0_not_semantically_qualified')
+  review=Path('/srv/swarm/telephone-private/A0-semantic-review.json')
+  if hashlib.sha256(review.read_bytes()).hexdigest()!=receipt.get('review_sha256'):raise ValueError('qualification_review_hash')
+  cohort=json.loads((BASE/'v0/COHORT.json').read_text())
+  if sha(packet)!=cohort['packet_sha256'] or config.get('private_transfer_review') is not True:raise ValueError('real_cohort_or_transfer')
  if sha(packet)!=config['packet_sha256']:raise ValueError('packet_hash')
- url='https://github.com/dmarzzz/swarm-lab/blob/'+rev+'/researchers/vishesh/notes/telephone/native/a0/PLAN.md'
+ url='https://github.com/dmarzzz/swarm-lab/blob/'+rev+'/researchers/vishesh/notes/telephone/native/'+stage.lower()+'/PLAN.md'
  if config.get('plan_url')!=url:raise ValueError('plan_url')
  raw=url.replace('github.com/dmarzzz/swarm-lab/blob/','raw.githubusercontent.com/dmarzzz/swarm-lab/')
  with urllib.request.urlopen(raw,timeout=25) as response:data=response.read()
- if data!=(BASE/'a0/PLAN.md').read_bytes():raise ValueError('public_plan_bytes')
+ if data!=(BASE/stage.lower()/'PLAN.md').read_bytes():raise ValueError('public_plan_bytes')
  return packet
 
 def main(config_path,private,check_only=False):
@@ -49,25 +59,26 @@ def main(config_path,private,check_only=False):
  for k in list(os.environ):
   if k.startswith(('ANTHROPIC','OPENAI','OPENROUTER','SWARM_MODEL','SWARM_HUB')):os.environ.pop(k)
  os.environ['SWARM_SOURCE']='vishesh/codex-village-fit'
- config=json.loads(config_path.read_text());packet=prepare(config)
+ config=json.loads(config_path.read_text());packet=prepare(config);stage=config['stage']
  private.mkdir(mode=0o700,parents=True,exist_ok=True)
  if private.stat().st_uid!=os.getuid() or stat.S_IMODE(private.stat().st_mode)!=0o700:raise ValueError('private_directory')
  if check_only:print(json.dumps({'preflight':True,'model_calls':0}));return
- with (private/'A0.lock').open('a+') as lock:
+ with (private/(stage+'.lock')).open('a+') as lock:
   fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-  if (private/'A0').exists() or (private/'receiver.json').exists():raise ValueError('attempt_exists')
+  if (private/stage).exists() or (private/(stage+'-receiver.json')).exists():raise ValueError('attempt_exists')
   sys.path[:0]=[str(ROOT/'tooling/agent-experiments'),'/usr/local/lib/swarm',str(ROOT/'researchers/vishesh/notes/experiment-documentation')]
   import swarm_report as sr
   from public_plan import check as check_plan
   from swarm_lab_credentials import validate_payload
   with contextlib.redirect_stderr(open(os.devnull,'w')):
-   sr.register('telephone',title='Telephone',description=TLDR,owner='vishesh',url=config['plan_url'],params={'stage':{'type':'str'},'arm':{'type':'str'}},metrics=['valid_outputs','model_calls'],primary_metric='valid_outputs')
-  check_plan('telephone',TLDR)
-  if any(r.get('params',{}).get('stage')=='A0' for r in sr.runs('telephone',limit=5000)):raise ValueError('prior_hub_attempt')
-  path=private/'credential.sock'
+   tldr=TLDR if stage=='A0' else 'TLDR: Test three-hop preservation of reported meaning from eight AI Village development records; compare prose, structured handoffs and original-source lookup using critical retention and unsupported assertions. No historical transmission or world-truth claim.'
+   sr.register('telephone',title='Telephone',description=tldr,owner='vishesh',url=config['plan_url'],params={'stage':{'type':'str'},'arm':{'type':'str'}},metrics=['valid_outputs','model_calls'],primary_metric='valid_outputs')
+  check_plan('telephone',tldr)
+  if any(r.get('params',{}).get('stage')==stage for r in sr.runs('telephone',limit=5000)):raise ValueError('prior_hub_attempt')
+  path=private/(stage+'-credential.sock')
   with socket.socket(socket.AF_UNIX,socket.SOCK_STREAM) as listener:
    listener.bind(str(path));os.chmod(path,0o600);listener.listen(1);listener.settimeout(180)
-   write(private/'receiver.json',{'state':'waiting','host':config['host'],'pid':os.getpid(),'created_at':time.time(),'source_commit':config['source_commit'],'packet_sha256':config['packet_sha256']})
+   write(private/(stage+'-receiver.json'),{'state':'waiting','host':config['host'],'pid':os.getpid(),'created_at':time.time(),'source_commit':config['source_commit'],'packet_sha256':config['packet_sha256']})
    print(json.dumps({'receiver':'ready','host':config['host']}),flush=True)
    with listener.accept()[0] as conn:
     conn.settimeout(30);_,uid,_=struct.unpack('3i',conn.getsockopt(socket.SOL_SOCKET,socket.SO_PEERCRED,12))
@@ -87,7 +98,8 @@ def main(config_path,private,check_only=False):
     conn.sendall(b'accepted')
   path.unlink(missing_ok=True)
   ledger=Ledger(private/'budget.sqlite',config['cap_nano'],config['authority_ref'])
-  ledger.reserve('A0-infrastructure','A0','infrastructure',config['allocation']['infrastructure_reserve_nano'],sha(config['allocation']))
+  if ledger.summary()['total_upper_nano']+len(packet['assignments'])*10752000+config['allocation']['infrastructure_reserve_nano']>config['cap_nano']:raise ValueError('whole_stage_budget')
+  ledger.reserve(stage+'-infrastructure',stage,'infrastructure',config['allocation']['infrastructure_reserve_nano'],sha(config['allocation']))
   def api(endpoint,req):
    call=urllib.request.Request('https://api.anthropic.com/v1/'+endpoint,data=json.dumps(req).encode(),headers={'x-api-key':key,'anthropic-workspace-id':workspace,'anthropic-version':'2023-06-01','content-type':'application/json'})
    with urllib.request.urlopen(call,timeout=50) as response:raw=response.read(2*1024**2+1)
@@ -96,16 +108,16 @@ def main(config_path,private,check_only=False):
   def count(req):return api('messages/count_tokens',{k:v for k,v in req.items() if k not in ('temperature','max_tokens')})['input_tokens']
   runs={}
   with contextlib.redirect_stderr(open(os.devnull,'w')):
-   for arm in ('P','S','R'):runs[arm]=sr.start('telephone',run='telephone/A0-'+arm,params={'stage':'A0','arm':arm,'roots':8,'hops':3},message=CONDITION_TLDR[arm])
+   for arm in ('P','S','R'):runs[arm]=sr.start('telephone',run='telephone/'+stage+'-'+arm,params={'stage':stage,'arm':arm,'roots':8,'hops':3},message=CONDITION_TLDR[arm] if stage=='A0' else CONDITION_TLDR[arm].replace('authored','AI Village development').replace('original facts','reported claims'))
    def report(s):
     for run in runs.values():run.progress(s['valid'],s['assigned'],valid_outputs=s['valid'])
-   result=execute(packet,private/'A0',ledger,count,lambda req:api('messages',req),config['deadline'],report)
+   result=execute(packet,private/stage,ledger,count,lambda req:api('messages',req),config['deadline'],report)
    for arm,run in runs.items():
     valid=sum(x['status']=='valid' and x['arm']==arm for x in result['assignments'])
     if result['stopped']:run.fail(message='Collection stopped; semantic review and cost reconciliation pending.',valid_outputs=valid)
     else:run.done(message='Collection complete; semantic review pending, no efficacy conclusion.',valid_outputs=valid)
   del key,workspace
-  write(private/'exit.json',{'state':'collection_stopped' if result['stopped'] else 'collection_complete','valid':result['valid'],'budget':result['budget'],'semantic_review_complete':False})
+  write(private/(stage+'-exit.json'),{'state':'collection_stopped' if result['stopped'] else 'collection_complete','valid':result['valid'],'budget':result['budget'],'semantic_review_complete':False})
   print(json.dumps({'valid':result['valid'],'stopped':result['stopped'],'budget':result['budget']}),flush=True)
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--config',type=Path,required=True);p.add_argument('--private',type=Path,required=True);p.add_argument('--check-only',action='store_true');a=p.parse_args()
