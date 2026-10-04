@@ -11,11 +11,12 @@ Assessed 2026-10-04 by vishesh/codex-experiments; source `9eaa1d31` ([registry](
 
 **Five bad purchases. One muddy cost rule.** Updated 2026-10-04 23:17 UTC. [Current findings](LATEST-RESULTS.md).
 
-- **The test:** Can a sales pitch hijack a swarm’s procurement judgment?
-- **The finding:** The simple analyst made 96/96 acceptable decisions. Five unsafe purchases in larger workflows all excluded legacy costs in the same scenario.
-- **The lesson:** A muddy cost rule can look like bad judgment; a social hijack is not established.
-- **The limit:** Three decisions are missing, and these are authored cases—not a real-world prevalence estimate.
-- **Next:** Build a tighter team-versus-generalist test with matched truthful/false claims and explicit all-in costs.
+Can shared evidence become shared error?
+- The question: Does peer deliberation amplify unsupported recommendations, or help agents resist them compared with independent judgment?
+- Why it matters: A shared bad source can correlate errors across an agent network; this procurement study tests one narrow example.
+- So far: Five unsafe purchases all shared one muddy cost interpretation. A social hijack is not established; three decisions remain missing.
+- Watch: Source → Advisers → Decider. The Decider reviews recommendations and makes the final choice; replay shows recorded changes, not invented beliefs.
+- Next: A matched 40-member team comparison is being prepared, with explicit all-in costs and competent smaller-team/generalist controls.
 
 ## Redesign proposal v2 — 2026-10-04
 

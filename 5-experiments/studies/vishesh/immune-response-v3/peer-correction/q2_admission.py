@@ -38,7 +38,7 @@ def validate_contract(r,packet,now,host):
     if a.get('status')!='active':raise ValueError('inactive_allocation')
     duration=(stamp(a['expires'])-stamp(a['started'])).total_seconds()
     remaining=(stamp(a['expires'])-now).total_seconds()
-    required=16*60
+    required=12*60
     if not 0<duration<=1200 or not required<=remaining<=1200:raise ValueError('allocation_time_window')
     if r.get('contract_sha256')!=packet['contract_sha256']:raise ValueError('source_contract_mismatch')
     return True
