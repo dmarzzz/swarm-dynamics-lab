@@ -1654,7 +1654,7 @@
     "recovery_rounds": 20,
     "takeover_max_rounds": 400
   },
-  "created": "2026-10-04T20:24:09.139555+00:00",
+  "created": "2026-10-04T20:25:12.754311+00:00",
   "hard_cap": 1500,
   "nominal_calls": 1248,
   "qualification": [
@@ -9980,7 +9980,7 @@
   ],
   "source_hashes": {
     "PREREG.md": "8c54925f9d931dc2454d724ccb2edb2a060dee1c913a9f0088da29ec50c957b6",
-    "run.py": "5e1fe7d688f63b9b83eb5fbc901097d3a95e15c05e72c2e2102536aa1786b766",
+    "run.py": "4229eb3e59c07218f78ca6ef00bc834ece0007aab0e0df32dac256b83c4eba24",
     "sim.py": "011d6983087cd6301fbda8edc5923b34ea06f603dadc4de7efe8b31be2015f0e"
   },
   "version": 1

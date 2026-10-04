@@ -163,7 +163,8 @@ class Stop(Exception): pass
 
 class Pool:
     def __init__(self):
-        cfg=json.loads(Path('/home/shad0w/.openclaw/ocplatform.json').read_text())
+        # Brief named ocplatform.json, absent on this host. Same authorized provider in actual config.
+        cfg=json.loads(Path('/home/shad0w/.openclaw/openclaw.json').read_text())
         self.key=cfg['models']['providers']['anthropic-proxy']['apiKey']
         self.lock=threading.Lock()
         self.count=sum(1 for _ in (ROOT/'requests.jsonl').open()) if (ROOT/'requests.jsonl').exists() else 0
