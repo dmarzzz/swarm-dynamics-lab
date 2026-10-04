@@ -3,7 +3,7 @@ id: clarify-pi-review-visual-guide
 type: task
 title: Clarify the PI review visual guide
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T05:01Z
-updated: 2026-10-04T05:01Z
+updated: 2026-10-04T05:53Z
+outputs:
+- researchers/vishesh/notes/pi-review-guide-2026-10-04/README.md
+- researchers/vishesh/notes/pi-review-guide-2026-10-04/index.html
+- researchers/vishesh/notes/pi-review-guide-2026-10-04/checks.json
 ---
 
 ## Goal
