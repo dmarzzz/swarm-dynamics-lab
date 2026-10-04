@@ -1,0 +1,12 @@
+{
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/30c32dad2e286456b5842e0043dc140ad1f664b9/researchers/dmarz/notes/compositional-safety/reviews/q0-013-pre.md",
+  "plan_sha256": "4c1d750d2c5d309c74b05e5714ab1891d051b68cebc3f856704c7937a87ea831",
+  "source_hashes": {
+    "engine_sha256": "ab91f0ca0399914546747b269a4bc4ad296a75fde241b0a93ec8ebfedce346e9",
+    "design_sha256": "28ca7441b207f1d173d4681324119884aee365b003a1a7f97c542663cbf3b933"
+  },
+  "registered_tldr": "TLDR: Requalify the Opus 5.5 configuration under design v12, which treats an HTTP 400 credit-balance response as a billing outage: wait and resend the identical request instead of ending the episode. 24 episodes on roots 248, 249 and 250, never sent to a model. Same thresholds. At most 480 calls. A pass starts P1 p1-005 in the same process.",
+  "page_verified_at": 1791109047.3504784,
+  "verification": "Fetched the raw GitHub file at this revision (byte-identical to the checkout) and the rendered blob page (HTTP 200; headings TLDR, Question and prediction, Setup, Protocol, Metrics, Visualization mapping present) immediately before registration. Not a visual inspection.",
+  "launch_verified_at": 1791109053.7788794
+}

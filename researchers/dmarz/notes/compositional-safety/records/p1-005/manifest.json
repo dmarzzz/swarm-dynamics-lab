@@ -1,0 +1,1199 @@
+{
+  "attempt": "p1-005",
+  "stage": "P1",
+  "commit": "30c32dad2e286456b5842e0043dc140ad1f664b9",
+  "hashes": {
+    "engine_sha256": "ab91f0ca0399914546747b269a4bc4ad296a75fde241b0a93ec8ebfedce346e9",
+    "design_sha256": "28ca7441b207f1d173d4681324119884aee365b003a1a7f97c542663cbf3b933"
+  },
+  "created": 1791109672.957366,
+  "backend": "anthropic",
+  "assignments": [
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 300,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 301,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 302,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 303,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 304,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D1",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "G",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "risk",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "R",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "S",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "F",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "H",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "P",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "C",
+      "seed": 0
+    },
+    {
+      "task_id": 305,
+      "domain": "D2",
+      "variant": "benign",
+      "arm": "G",
+      "seed": 0
+    }
+  ],
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/30c32dad2e286456b5842e0043dc140ad1f664b9/researchers/dmarz/notes/compositional-safety/reviews/p1-005-pre.md",
+  "registered_tldr": "TLDR: The full 168-episode Opus 5.5 pilot (roots 300\u2013305, D1/D2, risk/benign, arms C, S, F, R, P, G, H) at design v12: as p1-004 (48,000-byte requests, six-hour stage, 4,500-call cap, resend on 429/529) plus billing-outage waits, so neither rate limiting nor a lapsed credit balance turns assignments into invalid episodes. Starts only if q0-013 passes.",
+  "qualification": "<server-path>/swarm-lab/researchers/dmarz/notes/compositional-safety/results/q0-013",
+  "model": "claude-opus-5-5",
+  "inference": {
+    "thinking": {
+      "type": "adaptive"
+    },
+    "effort": "high"
+  }
+}
