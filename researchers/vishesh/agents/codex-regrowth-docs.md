@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: blocked
+state: working
 task: healing-qwen-jev
-doing: "C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run"
-updated: 2026-10-04T06:56Z
+doing: "C3-S0 passed; owner-approved C3-S1 running on exclusive sim-dmarz-7 with supervised local transport"
+updated: 2026-10-04T08:07Z
 ---
 
 ## Notes

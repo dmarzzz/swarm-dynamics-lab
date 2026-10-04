@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "study_id": "healing-helping-hands",
+  "attempt": "C3-S0",
+  "verdict": "advance",
+  "assessor": "vishesh/codex-regrowth-docs",
+  "assessed_at": "2026-10-04T08:09:45.868302+00:00",
+  "outcome_interpretation": "Native qualification passed; no measured incremental Qwen benefit; separately admitted S1 only.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fixed composite-minus-Jev contrast and native-transport qualification question stated prospectively; null allowed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "unknown",
+      "finding": "Repeated finite synthetic templates qualify this interface only; external curation validity remains unknown.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ],
+      "next_action": "Limit C3 claims to synthetic feasibility; seek owner approval before any externally sourced task redesign.",
+      "acceptance_check": "Independent task families and qualified task-relevant controls would be needed for a broader generalization claim."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Paired Jev-only and Qwen-only controls retained; Qwen fails the refutation class while Jev and composite pass.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Composite and Jev meet 51/60 overall and 14/20 per-class thresholds with all responses valid.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Saved labels recount to reported confusion matrices; exact actor payload hashes and costs audited.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "60 engineering fixtures, six reused template families per class; no independent-case population interval claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned Qwen digest, Jev route and unchanged prompts; stateless reports and evaluator truth excluded from inputs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "60 assigned and completed, 180 starts and terminal responses, no missing/duplicate calls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "New API cost 0.002341164; original cumulative cap and one unresolved C1 reservation retained; exclusive existing machine.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source manifest and actual requests support replay; hosted model answers are not guaranteed by seeds alone.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Measured three-arm confusion figure checked against saved counts; no invented spatial S0 animation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/audit.json",
+          "sha256": "325b8a3ae44dbb73f0742894daaa0c7bd4b0ec8b5b89f89ce903fc1239162e08"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/manifest.json",
+          "sha256": "142402e59abea91a7e6694858b765faa976532f5be10c0056fec9f29da52cc08"
+        }
+      ]
+    }
+  ]
+}

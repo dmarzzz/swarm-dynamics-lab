@@ -1,0 +1,62 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "sha256:894c5f5f687eb39d43395f21c8e112290a76543a88ef3b189877d00133c6918d"
+   },
+   "internalParameters": {
+    "commit": "8de1578f020db9593fbf44dd4c7b808badbe5438-dirty",
+    "session": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "81195e96ba93d686bcd4626d9776dfb4165a75e37bef8e7eeb5a4acf21f4d236"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/visualize.py"
+    },
+    {
+     "digest": {
+      "sha256": "801afacc1686d34131c184b6a1a523c35b9d75a3e88ec5d38daa73b1bfc73b73"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/definition.py"
+    },
+    {
+     "digest": {
+      "sha256": "8da89990eb29197a3e8bfd4b00f83256e868443518a5db058d80747790074406"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/observations.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "8de1578f020db9593fbf44dd4c7b808badbe5438"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T08:09:20Z",
+    "invocationId": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e",
+    "startedOn": "2026-10-04T08:09:20Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "aa571e9ae6291393f067aba1d9bce3a6cb8ef14bef008f8e30991a0ae082e58c"
+   },
+   "name": "artifacts/vishesh-healing-c3-qualification/vishesh-healing-c3-qualification-v1.png"
+  }
+ ]
+}

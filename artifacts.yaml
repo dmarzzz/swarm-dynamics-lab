@@ -2039,4 +2039,22 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/INTERPRETATION-D1.md
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/closeout.json
         commit: c12ac6af5bbc7b35e6f98868511d7d05ab174b05-dirty
+  - id: vishesh-healing-c3-qualification
+    category: content
+    type: figure
+    title: 'Healing C3: measured composite qualification'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-healing-c3-qualification/vishesh-healing-c3-qualification-v1.png
+        built_at: '2026-10-04T08:09:20Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: sha256:894c5f5f687eb39d43395f21c8e112290a76543a88ef3b189877d00133c6918d
+        ingredients:
+          - researchers/vishesh/notes/healing-helping-hands/composite/visualize.py
+          - researchers/vishesh/notes/healing-helping-hands/composite/definition.py
+          - researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/observations.json
+        commit: 8de1578f020db9593fbf44dd4c7b808badbe5438-dirty
 requires: '1.2'

@@ -1,0 +1,902 @@
+[
+  {
+    "id": "C3-SUPPORT-7",
+    "family": 1,
+    "claim": "procedure D1408 improves accuracy.",
+    "report": "Accuracy rose from 67% to 74% when procedure D1408 was used.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 0,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-8",
+    "family": 2,
+    "claim": "procedure D1409 improves accuracy.",
+    "report": "procedure D1409 processed 75 examples per second. The number of correct answers was not recorded.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 1,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-16",
+    "family": 4,
+    "claim": "procedure D1417 improves accuracy.",
+    "report": "procedure D1417 was more accurate than its comparator in the completed evaluation.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 2,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-16",
+    "family": 4,
+    "claim": "procedure D1417 improves accuracy.",
+    "report": "procedure D1417 was less accurate than its comparator in the completed evaluation.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 3,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-8",
+    "family": 2,
+    "claim": "procedure D1409 improves accuracy.",
+    "report": "The baseline and procedure D1409 both got 68 of 100 answers right.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 4,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "REFUTE",
+      "qwen+jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-7",
+    "family": 1,
+    "claim": "procedure D1408 improves accuracy.",
+    "report": "The team expects procedure D1408 to improve accuracy, but no experiment has been run.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 5,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-10",
+    "family": 4,
+    "claim": "procedure D1411 improves accuracy.",
+    "report": "procedure D1411 was less accurate than its comparator in the completed evaluation.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 6,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "REFUTE",
+      "qwen+jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-7",
+    "family": 1,
+    "claim": "procedure D1408 improves accuracy.",
+    "report": "Accuracy fell from 74% to 67% when procedure D1408 was used.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 7,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-14",
+    "family": 2,
+    "claim": "procedure D1415 improves accuracy.",
+    "report": "The baseline and procedure D1415 both got 74 of 100 answers right.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 8,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "REFUTE",
+      "qwen+jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-12",
+    "family": 0,
+    "claim": "procedure D1413 improves accuracy.",
+    "report": "procedure D1413 scored 72% accuracy; the baseline scored 79% on the same test.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 9,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-18",
+    "family": 0,
+    "claim": "procedure D1419 improves accuracy.",
+    "report": "procedure D1419 scored 85% accuracy; the baseline scored 78% on the same test.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 10,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-2",
+    "family": 2,
+    "claim": "procedure D1403 improves accuracy.",
+    "report": "The baseline and procedure D1403 both got 62 of 100 answers right.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 11,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-11",
+    "family": 5,
+    "claim": "procedure D1412 improves accuracy.",
+    "report": "The completed study measured better accuracy with procedure D1412, despite slower runtime.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 12,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-15",
+    "family": 3,
+    "claim": "procedure D1416 improves accuracy.",
+    "report": "Using procedure D1416 decreased the fraction of correct answers by seven percentage points.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 13,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-0",
+    "family": 0,
+    "claim": "procedure D1401 improves accuracy.",
+    "report": "procedure D1401 used 60 megabytes of memory; accuracy was not examined.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 14,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-11",
+    "family": 5,
+    "claim": "procedure D1412 improves accuracy.",
+    "report": "The completed study measured equal accuracy with procedure D1412, despite faster runtime.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 15,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-5",
+    "family": 5,
+    "claim": "procedure D1406 improves accuracy.",
+    "report": "The completed study measured better accuracy with procedure D1406, despite slower runtime.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 16,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-9",
+    "family": 3,
+    "claim": "procedure D1410 improves accuracy.",
+    "report": "Using procedure D1410 increased the fraction of correct answers by seven percentage points.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 17,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "SUPPORT",
+      "jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-0",
+    "family": 0,
+    "claim": "procedure D1401 improves accuracy.",
+    "report": "procedure D1401 scored 60% accuracy; the baseline scored 67% on the same test.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 18,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "REFUTE",
+      "qwen+jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-19",
+    "family": 1,
+    "claim": "procedure D1420 improves accuracy.",
+    "report": "Accuracy fell from 86% to 79% when procedure D1420 was used.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 19,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-12",
+    "family": 0,
+    "claim": "procedure D1413 improves accuracy.",
+    "report": "procedure D1413 scored 79% accuracy; the baseline scored 72% on the same test.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 20,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-3",
+    "family": 3,
+    "claim": "procedure D1404 improves accuracy.",
+    "report": "Using procedure D1404 decreased the fraction of correct answers by seven percentage points.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 21,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-0",
+    "family": 0,
+    "claim": "procedure D1401 improves accuracy.",
+    "report": "procedure D1401 scored 67% accuracy; the baseline scored 60% on the same test.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 22,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-1",
+    "family": 1,
+    "claim": "procedure D1402 improves accuracy.",
+    "report": "The team expects procedure D1402 to improve accuracy, but no experiment has been run.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 23,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-2",
+    "family": 2,
+    "claim": "procedure D1403 improves accuracy.",
+    "report": "procedure D1403 processed 69 examples per second. The number of correct answers was not recorded.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 24,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-13",
+    "family": 1,
+    "claim": "procedure D1414 improves accuracy.",
+    "report": "Accuracy rose from 73% to 80% when procedure D1414 was used.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 25,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "SUPPORT",
+      "jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-14",
+    "family": 2,
+    "claim": "procedure D1415 improves accuracy.",
+    "report": "The baseline got 74 of 100 answers right. procedure D1415 got 81 right.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 26,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-15",
+    "family": 3,
+    "claim": "procedure D1416 improves accuracy.",
+    "report": "The accuracy outcomes for procedure D1416 are unavailable.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 27,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-17",
+    "family": 5,
+    "claim": "procedure D1418 improves accuracy.",
+    "report": "The study measured faster runtime with procedure D1418; it collected no accuracy observations.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 28,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-2",
+    "family": 2,
+    "claim": "procedure D1403 improves accuracy.",
+    "report": "The baseline got 62 of 100 answers right. procedure D1403 got 69 right.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 29,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "SUPPORT",
+      "jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-17",
+    "family": 5,
+    "claim": "procedure D1418 improves accuracy.",
+    "report": "The completed study measured better accuracy with procedure D1418, despite slower runtime.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 30,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-4",
+    "family": 4,
+    "claim": "procedure D1405 improves accuracy.",
+    "report": "The proposed accuracy comparison of procedure D1405 was cancelled before data collection.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 31,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-3",
+    "family": 3,
+    "claim": "procedure D1404 improves accuracy.",
+    "report": "Using procedure D1404 increased the fraction of correct answers by seven percentage points.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 32,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-13",
+    "family": 1,
+    "claim": "procedure D1414 improves accuracy.",
+    "report": "Accuracy fell from 80% to 73% when procedure D1414 was used.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 33,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-15",
+    "family": 3,
+    "claim": "procedure D1416 improves accuracy.",
+    "report": "Using procedure D1416 increased the fraction of correct answers by seven percentage points.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 34,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-12",
+    "family": 0,
+    "claim": "procedure D1413 improves accuracy.",
+    "report": "procedure D1413 used 72 megabytes of memory; accuracy was not examined.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 35,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-5",
+    "family": 5,
+    "claim": "procedure D1406 improves accuracy.",
+    "report": "The completed study measured equal accuracy with procedure D1406, despite faster runtime.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 36,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "REFUTE",
+      "qwen+jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-17",
+    "family": 5,
+    "claim": "procedure D1418 improves accuracy.",
+    "report": "The completed study measured equal accuracy with procedure D1418, despite faster runtime.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 37,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-14",
+    "family": 2,
+    "claim": "procedure D1415 improves accuracy.",
+    "report": "procedure D1415 processed 81 examples per second. The number of correct answers was not recorded.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 38,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-6",
+    "family": 0,
+    "claim": "procedure D1407 improves accuracy.",
+    "report": "procedure D1407 scored 73% accuracy; the baseline scored 66% on the same test.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 39,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "SUPPORT",
+      "jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-1",
+    "family": 1,
+    "claim": "procedure D1402 improves accuracy.",
+    "report": "Accuracy fell from 68% to 61% when procedure D1402 was used.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 40,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "REFUTE",
+      "qwen+jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-18",
+    "family": 0,
+    "claim": "procedure D1419 improves accuracy.",
+    "report": "procedure D1419 scored 78% accuracy; the baseline scored 85% on the same test.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 41,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-5",
+    "family": 5,
+    "claim": "procedure D1406 improves accuracy.",
+    "report": "The study measured faster runtime with procedure D1406; it collected no accuracy observations.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 42,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-13",
+    "family": 1,
+    "claim": "procedure D1414 improves accuracy.",
+    "report": "The team expects procedure D1414 to improve accuracy, but no experiment has been run.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 43,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-9",
+    "family": 3,
+    "claim": "procedure D1410 improves accuracy.",
+    "report": "Using procedure D1410 decreased the fraction of correct answers by seven percentage points.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 44,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "REFUTE",
+      "qwen+jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-10",
+    "family": 4,
+    "claim": "procedure D1411 improves accuracy.",
+    "report": "procedure D1411 was more accurate than its comparator in the completed evaluation.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 45,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "SUPPORT",
+      "jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-19",
+    "family": 1,
+    "claim": "procedure D1420 improves accuracy.",
+    "report": "The team expects procedure D1420 to improve accuracy, but no experiment has been run.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 46,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-6",
+    "family": 0,
+    "claim": "procedure D1407 improves accuracy.",
+    "report": "procedure D1407 scored 66% accuracy; the baseline scored 73% on the same test.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 47,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-8",
+    "family": 2,
+    "claim": "procedure D1409 improves accuracy.",
+    "report": "The baseline got 68 of 100 answers right. procedure D1409 got 75 right.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 48,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-9",
+    "family": 3,
+    "claim": "procedure D1410 improves accuracy.",
+    "report": "The accuracy outcomes for procedure D1410 are unavailable.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 49,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-16",
+    "family": 4,
+    "claim": "procedure D1417 improves accuracy.",
+    "report": "The proposed accuracy comparison of procedure D1417 was cancelled before data collection.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 50,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-1",
+    "family": 1,
+    "claim": "procedure D1402 improves accuracy.",
+    "report": "Accuracy rose from 61% to 68% when procedure D1402 was used.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 51,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "SUPPORT",
+      "jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-10",
+    "family": 4,
+    "claim": "procedure D1411 improves accuracy.",
+    "report": "The proposed accuracy comparison of procedure D1411 was cancelled before data collection.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 52,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-4",
+    "family": 4,
+    "claim": "procedure D1405 improves accuracy.",
+    "report": "procedure D1405 was more accurate than its comparator in the completed evaluation.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 53,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "SUPPORT",
+      "jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-11",
+    "family": 5,
+    "claim": "procedure D1412 improves accuracy.",
+    "report": "The study measured faster runtime with procedure D1412; it collected no accuracy observations.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 54,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-REFUTE-4",
+    "family": 4,
+    "claim": "procedure D1405 improves accuracy.",
+    "report": "procedure D1405 was less accurate than its comparator in the completed evaluation.",
+    "expected": "REFUTE",
+    "scope": "C3-S0",
+    "index": 55,
+    "labels": {
+      "qwen": "SUPPORT",
+      "qwen+jev": "REFUTE",
+      "jev": "REFUTE"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-SUPPORT-19",
+    "family": 1,
+    "claim": "procedure D1420 improves accuracy.",
+    "report": "Accuracy rose from 79% to 86% when procedure D1420 was used.",
+    "expected": "SUPPORT",
+    "scope": "C3-S0",
+    "index": 56,
+    "labels": {
+      "qwen": "SUPPORT",
+      "jev": "SUPPORT",
+      "qwen+jev": "SUPPORT"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-6",
+    "family": 0,
+    "claim": "procedure D1407 improves accuracy.",
+    "report": "procedure D1407 used 66 megabytes of memory; accuracy was not examined.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 57,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-18",
+    "family": 0,
+    "claim": "procedure D1419 improves accuracy.",
+    "report": "procedure D1419 used 78 megabytes of memory; accuracy was not examined.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 58,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  },
+  {
+    "id": "C3-UNCERTAIN-3",
+    "family": 3,
+    "claim": "procedure D1404 improves accuracy.",
+    "report": "The accuracy outcomes for procedure D1404 are unavailable.",
+    "expected": "UNCERTAIN",
+    "scope": "C3-S0",
+    "index": 59,
+    "labels": {
+      "qwen": "UNCERTAIN",
+      "qwen+jev": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    },
+    "status": "completed"
+  }
+]

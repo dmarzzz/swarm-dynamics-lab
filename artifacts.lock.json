@@ -5620,6 +5620,35 @@
    "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc",
    "size_bytes": 7951
   },
+  "vishesh-healing-c3-qualification@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791093063,
+     "sha256": "81195e96ba93d686bcd4626d9776dfb4165a75e37bef8e7eeb5a4acf21f4d236",
+     "size": 4209,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/visualize.py"
+    },
+    {
+     "mtime": 1791096878,
+     "sha256": "801afacc1686d34131c184b6a1a523c35b9d75a3e88ec5d38daa73b1bfc73b73",
+     "size": 4119,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/definition.py"
+    },
+    {
+     "mtime": 1791101267,
+     "sha256": "8da89990eb29197a3e8bfd4b00f83256e868443518a5db058d80747790074406",
+     "size": 23662,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S0/observations.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791101158,
+   "path": "artifacts/vishesh-healing-c3-qualification/vishesh-healing-c3-qualification-v1.png",
+   "prompt_sha256": "894c5f5f687eb39d43395f21c8e112290a76543a88ef3b189877d00133c6918d",
+   "sha256": "aa571e9ae6291393f067aba1d9bce3a6cb8ef14bef008f8e30991a0ae082e58c",
+   "size_bytes": 85290
+  },
   "vishesh-theseus-d1-evidence@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -6208,7 +6237,7 @@
    "size_bytes": 1542505
   }
  },
- "generated": "2026-10-04T01:01:55-0700",
+ "generated": "2026-10-04T01:09:20-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

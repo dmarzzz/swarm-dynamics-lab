@@ -1,0 +1,71 @@
+{
+  "stage": "S0",
+  "attempt": "C3-S0",
+  "plan": {
+    "experiment": "healing-helping-hands",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/b2a09a420dbfc42f8334543f495a815e9818be73/researchers/vishesh/notes/healing-helping-hands/composite/PLAN.md",
+    "commit": "b2a09a420dbfc42f8334543f495a815e9818be73",
+    "plan_sha256": "eccd98c451253e08a12e45977cee7c755d529e67a02d17c2fcf9565b24bb4588",
+    "registered_tldr": "TLDR: C3 tests Qwen 0.6B plus Jev against paired Qwen-only and Jev-only controls, first on 60 fresh qualification cases, then in 270 evidence-atlas worlds with 200 curators each. Compare repair during withdrawals, false notices and outages with verified central controls. Measure extraction accuracy, correction, anchoring, query error, retention and cost. Worker-local supervision replaces the failed laptop tunnel; original budget and C1/C2 failures are preserved. Synthetic repeated templates and three corpora limit generalization. Prior composite and Jev-only both scored 60/60: no incremental Qwen benefit established.",
+    "run_tldr": "TLDR: C3 S0, Qwen 0.6B + Jev versus paired Qwen-only/Jev-only; measure correct labels, correction and anchoring before 200-curator repair. Synthetic feasibility, no independent-agent replication claim.",
+    "checked_utc": "2026-10-04T08:03:28.617053+00:00"
+  },
+  "source_hashes": {
+    "researchers/vishesh/notes/healing-helping-hands/composite/audit.py": "7162486aaa072eef2ee593f10fafc0aafdded4d8eaa0712ee6e1887742020bfd",
+    "researchers/vishesh/notes/healing-helping-hands/composite/definition.py": "801afacc1686d34131c184b6a1a523c35b9d75a3e88ec5d38daa73b1bfc73b73",
+    "researchers/vishesh/notes/healing-helping-hands/composite/qwen_trace.py": "2a96e9e4a326687712f105693b71af76b33b92a1b19d06594fe4903fe8dc284a",
+    "researchers/vishesh/notes/healing-helping-hands/composite/relay.py": "21e8447243b9a26f3bce9dd27b13f01aa1db17f6cbc1d5854d9e6448d53a318e",
+    "researchers/vishesh/notes/healing-helping-hands/composite/supervise.py": "17c90977e1a8c670b66fd85dc3a31bf8e6876521cfcc605078b9408fdeb2c09a",
+    "researchers/vishesh/notes/healing-helping-hands/composite/test_composite.py": "fe82c54f1f2a725fcb0a827a3bf984e4343a5c842736bf9c050310c865e977fa",
+    "researchers/vishesh/notes/healing-helping-hands/composite/visualize.py": "81195e96ba93d686bcd4626d9776dfb4165a75e37bef8e7eeb5a4acf21f4d236",
+    "researchers/vishesh/notes/healing-helping-hands/composite/worker.py": "56057cb7543bbed5cb181dc4bf8e845ac40a57c532642536753e221d22379aad",
+    "researchers/vishesh/notes/healing-helping-hands/src/corpus.py": "c1d8bc0f1c96ae8703c9aadc1384b2b8871ac8ae1ade4f72c4ecd037d2acf479",
+    "researchers/vishesh/notes/healing-helping-hands/src/diagnose.py": "ef5e5e5f152971c9d87d58c394f1ac2eef42b88d7ff57fd01b1f0b3804085a24",
+    "researchers/vishesh/notes/healing-helping-hands/src/jev.py": "e18030f9a73b409e0b7b2c1c5b5d4e4907b71aa3aaea72cc5ef0ab2cf5298ede",
+    "researchers/vishesh/notes/healing-helping-hands/src/jev_relay.py": "8d9ec958e7f2d63a45cd9e7913a90c17a542adb18cf2765ead9eb8d201cc5ecb",
+    "researchers/vishesh/notes/healing-helping-hands/src/providers.py": "1d020c4509904760a765ed2928ff6965a43b89781ef7a960b02624ccafe8bdee",
+    "researchers/vishesh/notes/healing-helping-hands/src/qualify_jev.py": "f90f1e156d02420fc76ee2c621566e78773010b93d22b159ccb97b4dd567b216",
+    "researchers/vishesh/notes/healing-helping-hands/src/reference.py": "d83f3e6c53990b23dc883673328b264d462602cfe2b74435ca738d17edd53b54",
+    "researchers/vishesh/notes/healing-helping-hands/src/run.py": "4f3150f1efc06cb9d7171137a3e936059e68c3df76803701fe7705016fdda460",
+    "researchers/vishesh/notes/healing-helping-hands/src/run_reference.py": "19afac2c2760821447c2af4be6b9354c4af85139f6d26f47dd4d1bf1fb7a00df",
+    "researchers/vishesh/notes/healing-helping-hands/src/sim.py": "22daeb42fdd68470dccb8fd2faea8d2f871eb328fa5ace4947aba257036dc874",
+    "researchers/vishesh/notes/healing-helping-hands/practical/audit.py": "88115b0f0ff1d30ce59cc7aac97aa08d5239eb073b9c18088d3baac9b6d3af33",
+    "researchers/vishesh/notes/healing-helping-hands/practical/compare.py": "1e295089d68270cefc4469061de057de98770b406404d882d7dc5947b974b0cf",
+    "researchers/vishesh/notes/healing-helping-hands/practical/engine.py": "4840b93e28b08811e34119ec5a51910a7a03dcd9e68c28ca850cb92d937b05c9",
+    "researchers/vishesh/notes/healing-helping-hands/practical/execute.py": "9fa0e528fa0f90f566183c7f1e6d44851f05dce00d4ab305ff9eb3228cd2a5af",
+    "researchers/vishesh/notes/healing-helping-hands/practical/package.py": "98894b126799767f5d92f0dd84ef184aa5d871c68e4b01cc010a1d422738d92d",
+    "researchers/vishesh/notes/healing-helping-hands/practical/render.py": "8d0066fe0665d96b8a33dde80a49e8fc7ea896e48de7caab664c6a25ec194a2e",
+    "researchers/vishesh/notes/healing-helping-hands/practical/reporting.py": "3b75a9f8a7dc12fd9b6822f8f314b1808894f3565ffe2e7b07917a156d8e8528",
+    "researchers/vishesh/notes/healing-helping-hands/practical/test_engine.py": "7de624a62c98e6225682d9a4f49701ea4234fab85b1a84d195eae694a7ce7098"
+  },
+  "host": "sim-dmarz-7",
+  "claim": "vishesh-healing-c3",
+  "python": "3.12.3",
+  "status": "completed",
+  "calls": {
+    "qwen": 60,
+    "jev": 120
+  },
+  "qwen_metadata": {
+    "name": "qwen3:0.6b",
+    "model": "qwen3:0.6b",
+    "modified_at": "2026-10-04T08:03:02.901935805Z",
+    "size": 522653767,
+    "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M"
+    }
+  },
+  "seconds": 108.84830529499959,
+  "observation_counts": {
+    "completed": 60
+  },
+  "world_counts": {}
+}

@@ -1,0 +1,28 @@
+{
+  "same_author_audit": true,
+  "stage": "S0",
+  "status": "completed",
+  "assigned": 60,
+  "completed": 60,
+  "calls_started": 180,
+  "calls_terminal": 180,
+  "accuracy": {
+    "qwen": 0.6166666666666667,
+    "jev": 1.0,
+    "qwen+jev": 1.0
+  },
+  "cost_usd": 0.002341164,
+  "worlds_assigned": 0,
+  "worlds_completed": 0,
+  "paired": {
+    "complete": 60,
+    "assigned": 60,
+    "qwen_wrong_corrected": 23,
+    "qwen_right_damaged": 0,
+    "anchoring": 0,
+    "composite_jev_agree": 60,
+    "accuracy_delta": 0.0
+  },
+  "qualified": true,
+  "reconciliation_passed": true
+}
