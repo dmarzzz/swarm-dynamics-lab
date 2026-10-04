@@ -277,7 +277,7 @@
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
 | vishesh/codex-quorum-mirrors | working | quorum-mirrors-q1-launch | 2026-10-04 06:45:22.628151+00:00 | Directly allocating, deploying and running the authorized Q1 screen |
-| vishesh/codex-phantom-coast | done | phantom-coast-review-process | 2026-10-04 05:51:41.825522+00:00 | Researcher review made optional; PC-2 gate updated; 44 tests pass; operational admission next |
+| vishesh/codex-phantom-coast | working | phantom-coast-pc2-live | 2026-10-04 06:42:12.981971+00:00 | Q0 passed; executing admitted S1 pilot and reconciling artifacts within original budget |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
