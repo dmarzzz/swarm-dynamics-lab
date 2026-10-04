@@ -21,5 +21,5 @@ Review v2 implementation and available results against the original pilot retros
 
 ## Done when
 
-- [ ] Verify completed v2 calibration records and identify pending comparisons.
-- [ ] Publish evidence-backed assessment linked to the original retrospective.
+- [x] Verify completed v2 calibration records and identify pending comparisons.
+- [x] Publish evidence-backed assessment linked to the original retrospective.

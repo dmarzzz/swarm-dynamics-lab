@@ -81,3 +81,7 @@ The dashboard now shows the successful run alongside preserved failures and the 
 Before a new study is chosen, the design should require measurable contamination at the point where discussion is varied, retain a solvable clean control, and compare discussion with matched private work. New qualification worlds should be disjoint from the repaired development fixtures. The memory analysis should separately score required-fact coverage, false admissions, abstention, and unsupported parent answers. These are recommendations for a subsequent design review, not launches made by this retrospective.
 
 For SEC-47, the result is useful stage localization: initial false belief can be corrected before discussion, while a later parent can still fail through missing information. We have not measured a general discussion benefit, a robust attack-success rate, or accumulation across generations. The next decision should be about which of those mechanisms to isolate—not simply how many more calls to buy.
+
+## Follow up review
+
+The separate [v2 issue review](V2-ISSUE-REVIEW.md) compares the successor design and its completed calibration with this pilot's limitations. Its findings are not pooled into the original results above.
