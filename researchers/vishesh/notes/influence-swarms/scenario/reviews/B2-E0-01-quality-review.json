@@ -1,0 +1,218 @@
+{
+  "assessor": "owning session; not independent replication",
+  "date": "2026-10-04T22:39:45.913953+00:00",
+  "attempt": "native-B2-E0-01",
+  "evidence_revision": "be0edbfd745a727cb4d386d413c77190188fc8e5",
+  "decision": "diagnose",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The intended paired framing comparison remains clear; no effect estimate is claimed from partial acquisition.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Partial location-family observations are not all24 roots; failed inspected case becomes repair development context.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Planned peer/private/simple controls remain frozen but the complete matched set was not acquired.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Prior96-call qualification passed within its subset; no claim of full-output reliability.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Primary comparison withheld; invalid completion retained separately from substantive procurement scores.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "64reservations/62provider starts/61valid outputs do not constitute1920calls or24complete independent roots.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All64exact input wires and stable assignment identities replay; operator context excluded.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "One known lengthfailure retained; two preprovider denials reconciled without rewriting originalsummary or reservations.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD.029811365known provider usage;.311296reservations retained;1856unstarted calls are not spent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Originalsource,packet,private raw responses and exact-wire/record replay preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "Aggregate failure accounting available; terminal replay refresh pending and no completed effect graphic is appropriate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/summary.json",
+          "sha256": "8ea910a02d2463dd6575042b68c6cdd288c5dc9b97aa875edebc5ef43920da1e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/saved-audit.json",
+          "sha256": "33edd150cf1609528074f93b8082c17ee2f4cabc9bdf35eceea1332ba6aeaab6"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B2-E0-01/relay-reconciliation.json",
+          "sha256": "a5bb85fcda4ca4bdb564436ba5b755ff6b431061300776286471119a8e897028"
+        }
+      ]
+    }
+  ]
+}

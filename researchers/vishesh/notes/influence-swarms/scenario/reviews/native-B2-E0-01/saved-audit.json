@@ -1,0 +1,28 @@
+{
+  "attempt": "native-B2-E0-01",
+  "native_calls_replayed": 64,
+  "valid_outputs_reproduced": 61,
+  "exact_wires": true,
+  "record_sequence_equal": true,
+  "stable_assignment_ids": true,
+  "usage_and_reservations_reconciled": true,
+  "assessment_reproduced": false,
+  "failures_retained": [
+    {
+      "ordinal": 27,
+      "category": "unvalidated_response_cost_retained"
+    },
+    {
+      "ordinal": 63,
+      "category": "no_response"
+    },
+    {
+      "ordinal": 64,
+      "category": "no_response"
+    }
+  ],
+  "new_model_calls": 0,
+  "run": "influence-swarms/1004-223011-2c26dc",
+  "source_commit": "be0edbfd745a727cb4d386d413c77190188fc8e5",
+  "packet_sha256": "ecdb1e3146faa0c9a1b814610be03b1fd45ffc6ee2a4dbce00d6cbf37b2e06ba"
+}

@@ -1,0 +1,22 @@
+{
+  "tests": 7,
+  "passed": true,
+  "model_calls": 0,
+  "checks": [
+    "2x2matrix",
+    "frozen input preservation",
+    "backend-only relaxation",
+    "strict local validator retained",
+    "known format failures continue",
+    "unknown transport stops",
+    "original cumulative ledger reservations",
+    "cache-write-inclusive cost bound"
+  ],
+  "files": {
+    "diagnostic.py": "3887305c62575e0134c99396e6587644bff2a5992ea4f03869b38658f67f5194",
+    "f0_worker.py": "f06952bbb349ef40ddd7a9af3b140e55e7d04ae2fb8e184a6318d98d8e2d597b",
+    "test_diagnostic.py": "a9d282e1e55a8a9679efdf93814e0d1b116fda26f9eb9faf4370f3cab26da379",
+    "manifest.json": "1b9f44694358d27b098fac73f0fa8e9f9c3c01cba6e332b8600582cd2a855516",
+    "PLAN.md": "a16a30951c236e0d3b0d3ee50c8bcfb7a9e64e346ac027824834d84ba58b04f9"
+  }
+}

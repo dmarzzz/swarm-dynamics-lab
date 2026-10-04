@@ -1,0 +1,96 @@
+[
+  {
+    "ordinal": 27,
+    "assignment": {
+      "assignment": {
+        "arm": "simple",
+        "calls": 2,
+        "case_id": "b2-location-2",
+        "condition": "neutral",
+        "repetition": 0
+      },
+      "assignment_id": "013-09589170e751f394",
+      "assignment_index": 13,
+      "step": 1,
+      "wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c"
+    },
+    "state": "usage_observed",
+    "provider": "OpenAI",
+    "model": "openai/gpt-6-luna",
+    "usage": {
+      "prompt_tokens": 2868,
+      "completion_tokens": 3072,
+      "total_tokens": 5940,
+      "cost": 0.001894425,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 2865,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001894425,
+        "upstream_inference_prompt_cost": 0.000358425,
+        "upstream_inference_completions_cost": 0.001536
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 175,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "finish_reason": "length",
+    "tool_calls": false,
+    "content_characters": 3816,
+    "response_present": true
+  },
+  {
+    "ordinal": 63,
+    "assignment": {
+      "assignment": {
+        "arm": "peer",
+        "calls": 9,
+        "case_id": "b2-location-2",
+        "condition": "neutral",
+        "repetition": 0
+      },
+      "assignment_id": "017-dc85e88569070c5f",
+      "assignment_index": 17,
+      "step": 2,
+      "wire_sha256": "41212ba004efdaa913067dfa6654697c44de883c6bd5fb5f49924a92db1a538a"
+    },
+    "state": "reserved_unknown",
+    "provider": null,
+    "model": null,
+    "usage": null,
+    "finish_reason": null,
+    "tool_calls": false,
+    "content_characters": 0,
+    "response_present": false
+  },
+  {
+    "ordinal": 64,
+    "assignment": {
+      "assignment": {
+        "arm": "private",
+        "calls": 9,
+        "case_id": "b2-location-2",
+        "condition": "advocacy",
+        "repetition": 0
+      },
+      "assignment_id": "015-ef05d5f1bffac3fa",
+      "assignment_index": 15,
+      "step": 3,
+      "wire_sha256": "a4d246ed415fecd847d3f1b6d1a89dcf2a7b9126464455575e49d0019117568c"
+    },
+    "state": "reserved_unknown",
+    "provider": null,
+    "model": null,
+    "usage": null,
+    "finish_reason": null,
+    "tool_calls": false,
+    "content_characters": 0,
+    "response_present": false
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "worker_reservations": 64,
+  "provider_start_journal_entries": 62,
+  "unique_entries": 62,
+  "reconciled_denials": [
+    {
+      "ordinal": 63,
+      "provider_dispatch_journal_present": false,
+      "classification": "relay_rejected_after_global_stop_before_provider",
+      "reservation_preserved": 0.004864
+    },
+    {
+      "ordinal": 64,
+      "provider_dispatch_journal_present": false,
+      "classification": "relay_rejected_after_global_stop_before_provider",
+      "reservation_preserved": 0.004864
+    }
+  ],
+  "unresolved_provider_charge_count": 0,
+  "original_reservations_preserved": true
+}

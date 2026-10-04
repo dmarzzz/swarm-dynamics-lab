@@ -1,0 +1,1 @@
+{"actual_usd":null,"attempt":"native-B2-E0-01","budget_after":[50.0,9.907295999999787,930],"calls":64,"complete":false,"failure":"incomplete_or_tool_call","new_reserved_usd":0.311296,"planned_calls":1920,"reported_usd":0.029811365,"retries":0,"stage":"B2-E0","unstarted_calls":1856,"usage_missing":2,"valid_calls":61}

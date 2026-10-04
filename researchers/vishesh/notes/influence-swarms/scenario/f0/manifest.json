@@ -1,0 +1,131 @@
+{
+  "version": "F0",
+  "calls": 12,
+  "reservation_usd": 0.004864,
+  "maximum_usd": 0.058368,
+  "model": "openai/gpt-6-luna",
+  "provider": "OpenAI",
+  "max_tokens": 3072,
+  "rows": [
+    {
+      "ordinal": 1,
+      "condition": "original_original",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_bytes": 13592,
+      "cost_bound_usd": 0.003299
+    },
+    {
+      "ordinal": 2,
+      "condition": "original_original",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_bytes": 13592,
+      "cost_bound_usd": 0.003299
+    },
+    {
+      "ordinal": 3,
+      "condition": "original_original",
+      "context": "unaffected",
+      "case_id": "b2-cost-0",
+      "parent_wire_sha256": "5a22ef7fab8dee8f55005034a38f4350091ec2d51f7e598f0fd8336246893ffc",
+      "wire_sha256": "5a22ef7fab8dee8f55005034a38f4350091ec2d51f7e598f0fd8336246893ffc",
+      "wire_bytes": 13531,
+      "cost_bound_usd": 0.003291375
+    },
+    {
+      "ordinal": 4,
+      "condition": "compact_original",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "deb1f909e795371376c1e2e7e7f1c46f8903f39d793c1fc6a09fc7c623fe360f",
+      "wire_bytes": 13788,
+      "cost_bound_usd": 0.0033235
+    },
+    {
+      "ordinal": 5,
+      "condition": "compact_original",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "deb1f909e795371376c1e2e7e7f1c46f8903f39d793c1fc6a09fc7c623fe360f",
+      "wire_bytes": 13788,
+      "cost_bound_usd": 0.0033235
+    },
+    {
+      "ordinal": 6,
+      "condition": "compact_original",
+      "context": "unaffected",
+      "case_id": "b2-cost-0",
+      "parent_wire_sha256": "5a22ef7fab8dee8f55005034a38f4350091ec2d51f7e598f0fd8336246893ffc",
+      "wire_sha256": "23a76ecb02373fe07e5d72620332592cd54eb5f1fbc195affbd82a76b967c45f",
+      "wire_bytes": 13727,
+      "cost_bound_usd": 0.0033158750000000002
+    },
+    {
+      "ordinal": 7,
+      "condition": "original_relaxed",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "767ea762a59aa1726265619707945bd74361f43c8923eeff14d265e87b07be99",
+      "wire_bytes": 13518,
+      "cost_bound_usd": 0.00328975
+    },
+    {
+      "ordinal": 8,
+      "condition": "original_relaxed",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "767ea762a59aa1726265619707945bd74361f43c8923eeff14d265e87b07be99",
+      "wire_bytes": 13518,
+      "cost_bound_usd": 0.00328975
+    },
+    {
+      "ordinal": 9,
+      "condition": "original_relaxed",
+      "context": "unaffected",
+      "case_id": "b2-cost-0",
+      "parent_wire_sha256": "5a22ef7fab8dee8f55005034a38f4350091ec2d51f7e598f0fd8336246893ffc",
+      "wire_sha256": "414de52caf048c2f2d91e16857915e0d1f2ae15bbdb5b6623ac7dc1485e6e543",
+      "wire_bytes": 13457,
+      "cost_bound_usd": 0.0032821250000000003
+    },
+    {
+      "ordinal": 10,
+      "condition": "compact_relaxed",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "8b7dd0cdb90f336e0843b1b4cc99672c18f858d34b264a77970d763f8a72384e",
+      "wire_bytes": 13714,
+      "cost_bound_usd": 0.0033142500000000004
+    },
+    {
+      "ordinal": 11,
+      "condition": "compact_relaxed",
+      "context": "failed",
+      "case_id": "b2-location-2",
+      "parent_wire_sha256": "b5144fb09d1756cfb6a7703da2f2ca590dfe07001e256e3b0d509092ae08a91c",
+      "wire_sha256": "8b7dd0cdb90f336e0843b1b4cc99672c18f858d34b264a77970d763f8a72384e",
+      "wire_bytes": 13714,
+      "cost_bound_usd": 0.0033142500000000004
+    },
+    {
+      "ordinal": 12,
+      "condition": "compact_relaxed",
+      "context": "unaffected",
+      "case_id": "b2-cost-0",
+      "parent_wire_sha256": "5a22ef7fab8dee8f55005034a38f4350091ec2d51f7e598f0fd8336246893ffc",
+      "wire_sha256": "26c2b51f9e80465d816799a6e4a0b022de283bc019e04fc2272b58c67c10748c",
+      "wire_bytes": 13653,
+      "cost_bound_usd": 0.003306625
+    }
+  ]
+}
