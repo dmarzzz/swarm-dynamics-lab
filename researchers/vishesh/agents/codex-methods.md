@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: done
-task: adaptive-quorum-pilot
-doing: Published and ran 144 Laya plus 144 scripted S0 outcomes; clean gates passed, adaptive tied fixed
+state: working
+task: adaptive-quorum-api-v2
+doing: Building factual API selection with five/nine agents, strong central controls and local qualification
 updated: 2026-10-04T00:27Z
 ---
 
