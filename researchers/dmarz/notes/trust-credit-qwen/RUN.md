@@ -72,3 +72,7 @@ python3 src/analyze.py calibration
 ```
 
 Set `STUDY_RESULTS_DIR` to keep outputs outside the checkout; the default `results/` is git-ignored. The rehearsal uses its own temporary directories, a throwaway hub on 127.0.0.1 and an in-process stub in place of the model endpoint; it refuses any hub address that is not 127.0.0.1.
+
+## Attempt 002 (gpt-6-luna), added 2026-10-04
+
+Same commands; the launch commit is the first commit on `main` with [reviews/chain-002-pre.md](reviews/chain-002-pre.md) and source hash `5155d2c6…`. `READY.yaml` names `provider: openai`, `model: gpt-6-luna`, `review: reviews/chain-002-pre.md` and `ledger: fresh`, so the launcher sends `SWARM_OPENAI_API_KEY` only and starts this attempt's own ledger. Do not pass `--model`. `setup` runs 71 selftests. Batches `s0-002`, `p0-002`, `q0-002`, `s1-002`; a billing stop is `provider_billing_stopped` and is resumed with the launcher's `resume` action.
