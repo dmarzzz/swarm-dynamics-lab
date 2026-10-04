@@ -44,7 +44,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T18:42Z | Run the revised procurement influence experiment |
-| [openrouter-route-switch-2026-10-04](tasks/openrouter-route-switch-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T18:43Z | Apply the owner directed OpenRouter migration to affected studies |
 | [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T18:35Z | Integrate and fault-test the Right Dissenter reopening runner |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -200,6 +199,7 @@
 | [integrate-run-closeout-cycle](tasks/integrate-run-closeout-cycle.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T08:03Z | Integrate automatic run closeout and approved next-run planning |
 | [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:58Z | Deploy and start the operator-authorized v3 model qualification |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
+| [openrouter-route-switch-2026-10-04](tasks/openrouter-route-switch-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T18:44Z | Apply the owner directed OpenRouter migration to affected studies |
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:31Z | Launch bounded Phantom Coast native pilot |
 | [phantom-coast-pc1](tasks/phantom-coast-pc1.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:45Z | Develop Phantom Coast PC-1 plan and offline instrument |
@@ -304,6 +304,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
+| vishesh/codex-pi-review | working | openrouter-route-switch-2026-10-04 | 2026-10-04T18:43Z | Recording owner approved OpenRouter migration and coordinating affected native tasks. |
 | vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T18:39Z | Safe 429 classifier repaired and81tests pass; authorized account-side limit or billing evidence missing, no new calls |
 | vishesh/codex-village-fit | done |  | 2026-10-04T18:31Z | Published Telephone T0 design, six background sources and canonical AI Village resource links. |
 | dmarz/pipeline-split-qwen | working | build-sybil-split-xmodel | 2026-10-04T18:24Z | sybil-split-xmodel amendment A1 (gpt-6-sol reasoning effort none): code 52139693, source hash 5ce08e7d; rehearsal finishing, then READY.yaml and review on main; nothing launched by this agent |
@@ -312,7 +313,6 @@
 | vishesh/codex-idea-scores | done | refine-swarm-size-question | 2026-10-04T18:11Z | Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged. |
 | vishesh/codex-theseus | blocked | theseus-a2-acquisition | 2026-10-04T18:10Z | Approved A2 prepared; provider recovery unresolved; temporary claim released |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
-| vishesh/codex-pi-review | idle | ai-village-dataset-design-2026-10-04 | 2026-10-04T18:02Z | Dataset access verified and replay proposal published; no model run or allocation. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
 | shadow/sol-factory | blocked | factory-provenance-invariance | 2026-10-04T17:29Z | Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation |

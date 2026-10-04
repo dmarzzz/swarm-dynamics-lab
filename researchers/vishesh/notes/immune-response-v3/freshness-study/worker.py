@@ -12,7 +12,7 @@ def main():
  import swarm_report as sr
  job=sr.start('immune-response-v3',params={'stage':a.attempt,'runtime_commit':commit,'max_calls':60,'seed':a.seed,'episodes':12},message=tldr);print(json.dumps({'run':job.id}),flush=True)
  try:
-  child=subprocess.Popen([sys.executable,str(freshness.ROOT/'freshness.py'),'--out',str(out),'--backend','anthropic','--seed',str(a.seed),'--attempt',a.attempt],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
+  child=subprocess.Popen([sys.executable,str(freshness.ROOT/'freshness.py'),'--out',str(out),'--backend','openrouter','--seed',str(a.seed),'--attempt',a.attempt],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
   for line in child.stdout:
    d=json.loads(line);print(json.dumps(d),flush=True)
    if 'recorded' in d:

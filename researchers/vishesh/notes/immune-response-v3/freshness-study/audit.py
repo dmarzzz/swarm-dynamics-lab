@@ -24,7 +24,7 @@ def audit(out):
   assert all(all(e[k]==v for k,v in x.items()) for x,e in zip(r['trace'],frames))
  assert sum(e['kind']=='advice' for e in events)==12 and sum(e['kind']=='decision' for e in events)==48 and not any(e['kind']=='error' for e in events)
  result={'assigned':12,'recorded':12,'paired_worlds':6,'advice_records':12,'decision_records':48,'source_records_identical_within_pairs':True,'all_frames_match':True,'health_and_restart_classification_recomputed':True,'paired_healthy_tick_deltas':{c:next(r['healthy_ticks'] for r in rows if r['case']==c and r['arm']=='checked')-next(r['healthy_ticks'] for r in rows if r['case']==c and r['arm']=='raw') for c in s.CASES}}
- if m['backend']=='anthropic':
+ if m['backend']=='openrouter':
   usage=[json.loads(x) for x in (out/'usage.jsonl').read_text().splitlines()];assert len(usage)==60 and all(x['actual_usd'] is not None for x in usage);assert abs(sum(x['actual_usd'] for x in usage)-summary['actual_usd'])<1e-9;result['usage_receipts']=60
   transport=[json.loads(x) for x in (out/'transport.jsonl').read_text().splitlines()];reqs=[x for x in transport if x['kind']=='request'];responses=[x for x in transport if x['kind']=='response'];assert len(reqs)==len(responses)==60
   assert {x['request_id'] for x in reqs}=={x['request_id'] for x in responses}=={x['request_id'] for x in usage}
