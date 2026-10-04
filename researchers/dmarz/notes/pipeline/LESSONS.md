@@ -1,6 +1,6 @@
 # Cross-lane lessons
 
-Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T09:42Z. Each item says what was observed, where, and what to do in the next plan.
+Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T10:16Z. Each item says what was observed, where, and what to do in the next plan.
 
 ## 1. Caps and timeouts are part of the hash that binds a stage to its qualification. Size them for the whole ladder before the qualifying run.
 
@@ -88,3 +88,27 @@ At 09:20Z the question was whether sybil-scale-xl's S1 (about 6 to 7M input toke
 Measured at 09:20Z by the scale-xl session with one header call: 5,000,000 input tokens, 1,000,000 output tokens and 5,000 requests per minute for the workspace. Against that: scale-xl's S1 asks for about 5.9M per minute by itself (q0-a2 records: 2,458,711 tokens completing inside 22 seconds with four in flight), scarcity's S1 0.9M, every other lane together under 0.2M. The fleet monitor paused scale-xl's worker until scarcity was nearly done.
 
 For the next adapter revision: record the `anthropic-ratelimit-*` limit and remaining values from each response (numbers only, no other headers) next to the usage counts. Then any session can read the headroom from the records, and a chain can hold itself when `remaining` is low instead of finding the limit by hitting it.
+
+## 11. A credit outage is an HTTP 400, not a 429. No retry rule covers it, and each adapter fails differently.
+
+(The fleet monitor refers to this as the credit-outage lesson; item 10 above is the rate-limit header lesson.)
+
+What happened: for about 20 to 30 seconds around 10:10:30Z to 10:10:50Z the account's prepaid credit ran out, then calls succeeded again. Reported spend had gone from about USD 390 at 09:15Z to about USD 780 at 10:12Z.
+
+| Lane | Timestamp (UTC) | What the record shows | What the adapter did |
+|---|---|---|---|
+| sybil-scale-xl S1 | last reservation 10:10:26; failure on the next count_tokens request, by 10:10:36 | 1 x `count_http_400` | Stage stopped: 481 of 576 done, 94 not started. Same code path in sybil-scarcity-opus, sybil-split-opus and sybil-newcomer-opus: any failed call stops dispatch |
+| discussion-v3-opus S1 | 61 consecutive failures ending at about 10:10:48 (no timestamps in the journal; derived from the 12 later calls' latencies) | 61 x `provider_failure`, reason `provider_credit_balance_low`, `http_status_class` 4xx | Each call recorded as missing and the run continued, so 61 calls across 7 of 24 worlds (54101, 54119 to 54124) are lost in this attempt |
+| compositional-safety | none in the credit window (its four invalid episodes at 10:06Z to 10:07:30Z are `http_429`) | | Would record the episode as invalid and continue; no retry |
+| soc07 v2, sybil-split-opus, market-split-opus, sybil-scarcity-opus | no call in the window | | |
+
+Rules that follow:
+
+- A credit error is a 400. The 429/529 retry added tonight does not catch it. Treat it as "pause the stage and report", never as a failed call or a missing response.
+- A canary check must read the failure reason, not a count of 429s or a latency. My 10:06Z and 10:08Z canary readings on discussion-v3-opus (0 failures) were true when taken and were read as "small-request lanes are safe"; two minutes later that lane had 61 failures from a different cause, and a no-retry lane had already lost four episodes to 429s. A canary shows that nothing has failed yet, in lanes that retry.
+- Only the discussion adapters name the cause in the record. The sybil adapters keep `count_http_400` or `http_400` with no message. Keep the provider's error type and the first 300 characters of its message on every 4xx (compositional-safety already does).
+- Before any stage over about USD 50: someone with console access confirms the balance and the auto-reload setting.
+
+## 12. The rate limit behaves as a 5M-token bucket; a lane with no retry pays for every 429 with data.
+
+Measured on sybil-scale-xl S1: 5.8M input tokens per minute against a 5.0M limit ran clean for about five and a half minutes, then 429s began. That is a bucket of 5M refilled at 5M per minute: a stage can exceed the limit by X for about 5/X minutes from full. Timestamps from scale-xl's ledger: first calls 10:01:36Z; 429s at about 10:07:10Z to 10:07:14Z (four calls) and 10:08:23Z (four calls), each cleared by the 20-second retry. compositional-safety (`retries: 0`) lost four episodes to `http_429` between about 10:06:30Z and 10:07:30Z and had to relaunch. discussion-v3-opus recorded no failed call in that period; its adapter retries 429s and does not log cleared retries, so whether it drew any is not known. Every adapter needs the 429/529 retry, including the ones whose own traffic is tiny, and a stage that will exceed the limit should be scheduled when no no-retry lane is running.

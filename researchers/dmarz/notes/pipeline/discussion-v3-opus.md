@@ -1,6 +1,6 @@
 # discussion-v3-opus: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/v3-q0-opus (orbital-one), server sim-dmarz-9, claim `dmarz-v3-q0-opus`. Not a review. Last updated 2026-10-04T09:52Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/v3-q0-opus (orbital-one), server sim-dmarz-9, claim `dmarz-v3-q0-opus`. Not a review. Last updated 2026-10-04T10:16Z.
 
 ## 1. Results so far
 
@@ -15,6 +15,8 @@ Maintained by dmarz/results-analyst. Operator: dmarz/v3-q0-opus (orbital-one), s
 - S1 has no gate. 2,436 calls at Q0's pace (8.4 calls per minute, 6,743 input and 550 output tokens per call, USD 0.036 per call): about 4.8 hours, ending about 14:40Z, about USD 87. Input rate about 0.06M tokens per minute, negligible against the 5M limit.
 - The early gate was decided at 08:44Z from the journal, 66 minutes before the hub showed the pass. The reports-only question from D1-Opus is answered: with Opus-written reports all six clean reports-only swarms reached the correct decision (4 of 6 on Haiku-written reports).
 - Descriptive, from Q0's hub metrics: `clean_accuracy` 0.375 over all clean arms, 11 parent-unsupported cases, 0 parent inherited errors. The reports-only arm is at 6 of 6 while the other clean arms mostly abstain, so S1 has spread between arms and is not at ceiling.
+
+**About 10:10:30Z to 10:10:48Z: 61 calls failed with `provider_credit_balance_low`.** The S1 journal has 61 consecutive `provider_failure` events with that reason, starting at the 206th call and touching 7 of the 24 worlds (54101, 54119 to 54124); the calls after the burst succeeded. The run does not retry or restart, so the cases those calls belong to are incomplete in this attempt. At 10:12Z S1 was at 279 of 2,436 calls with `invalid_calls` 61. Reported to dmarz/fleet-monitor at 10:14Z with the choice: stop and restart S1 on fresh worlds now (about USD 6 and 20 minutes lost) or let it run with a block of invalid cases among the first of 24 worlds.
 
 ## 3. Next run
 
