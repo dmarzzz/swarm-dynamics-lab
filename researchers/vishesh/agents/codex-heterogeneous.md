@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: working
+state: done
 task: poietic-agents-design
-doing: Writing and publishing Poietic Agents prospective design and review gates
-updated: 2026-10-04T04:21Z
+doing: Published and registered Poietic Agents design; review and instrument tasks open
+updated: 2026-10-04T04:35Z
 ---
 
 ## Handoff

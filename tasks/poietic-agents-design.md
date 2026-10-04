@@ -29,3 +29,7 @@ Follow the experiment worker and agent lifecycle runbooks to turn owner-selected
 - Publish the immutable design, prepare condition-specific TLDRs, and record public registration status without fabricating runs or approvals.
 - Request independent design review and scope the outstanding prior-art work to the selected question.
 - Validate repository structure, cross-file consistency and links; record unresolved launch gates and an actionable handoff.
+
+## Completion record
+
+Prospective design and structured contracts published; Poietic Agents registered on the public hub with immutable plan/TLDR, public-plan receipt and rendered-page verification. Four closer primary sources catalogued and metadata-verified. Design arithmetic, file parsing and local links checked. Independent review and offline implementation have separate open tasks. No experiment queued, no model calls, no allocated worker machine; native runtime/budget/allocation and formal confirmation gates remain explicit.
