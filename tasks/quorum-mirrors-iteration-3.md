@@ -3,14 +3,17 @@ id: quorum-mirrors-iteration-3
 type: task
 title: Clarify Quorum utility and prepare a controlled successor
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-quorum-mirrors
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-quorum-mirrors
 depends_on: []
-topics: [decision-models]
+topics:
+- decision-models
+claimed_at: 2026-10-04T04:20Z
+updated: 2026-10-04T04:20Z
 ---
 
 ## Goal
