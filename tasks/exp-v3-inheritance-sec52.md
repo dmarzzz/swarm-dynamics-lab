@@ -1,7 +1,7 @@
 ---
 id: exp-v3-inheritance-sec52
 type: task
-title: E4: two-generation memory inheritance (SEC-52) on v3
+title: "E4: two-generation memory inheritance (SEC-52) on v3"
 kind: experiment
 status: open
 priority: p2
