@@ -33,3 +33,10 @@ Current fleet policy requires orbital-one launch via run queue. Direct dispatch 
 
 
 Current closeout: [C4 admission blocked, no run](ADMISSION-POST.md). Queue297 and merged private dispatcher296 are the resume path. Native runtime stopped and claim released; original ledger unchanged. New model calls0, not a failed scientific result.
+
+
+## Current direct execution and trace review
+
+The initial delegated queue-fencing action was rejected by automatic approval review. The portfolio owner subsequently applied the fence through an approved action and published scoped direct-execution authority. The central request is closed with a no-central-dispatch fence. This supersedes the historical central-only blocker above; C4 still has no model calls. The original ledger and dollar limits are unchanged.
+
+See [trace readiness](TRACE-READINESS.md) for the prospective rejected-response retention repair. Twenty-two offline tests pass. Re-pin this source, verify a dedicated approved-account allocation, register/read back the immutable plan and qualify S0 before any conditional S1. No occupied allocation or unverified SSH identity may be reused.

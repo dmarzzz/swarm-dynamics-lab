@@ -14,6 +14,10 @@ def stored_response(db,h):
     row=db.execute('SELECT body FROM composite_responses WHERE hash=?',(h,)).fetchone()
     return json.loads(row[0]) if row else None
 
+def rejected_response(data):
+    keys=('answers','model','provider','usage','id')
+    return {k:data[k] for k in keys if k in data} if isinstance(data,dict) else {'invalid_shape':type(data).__name__}
+
 def store_response(db,h,data):
     checked=validate(data)
     # Commit successful response and settled usage atomically before writing to the client.
@@ -37,6 +41,7 @@ def serve(key_path,ledger,stage,unlink_credential=False):
     db=sqlite3.connect(ledger);n,cost=db.execute('SELECT count(*),sum(cost) FROM calls').fetchone()
     if n<2179 or cost<.040890821:raise ValueError('historical_ledger_missing')
     db.execute('CREATE TABLE IF NOT EXISTS composite_slots(slot TEXT PRIMARY KEY,hash TEXT NOT NULL)');db.execute('CREATE TABLE IF NOT EXISTS composite_responses(hash TEXT PRIMARY KEY,body TEXT NOT NULL)');db.commit()
+    db.execute('CREATE TABLE IF NOT EXISTS c4_rejected_responses(hash TEXT PRIMARY KEY,body TEXT NOT NULL)');db.commit()
     allowed=payloads(stage);limit=60 if stage=='S0' else 432;deadline=time.monotonic()+(900 if stage=='S0' else 3600);opener=urllib.request.build_opener(NoRedirect());calls=0
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
@@ -45,6 +50,9 @@ def serve(key_path,ledger,stage,unlink_credential=False):
                 h=self.path[len('/result/'):]
                 if h not in allowed:self.send_error(404);return
                 data=stored_response(db,h)
+                if data is None:
+                    row=db.execute('SELECT body FROM c4_rejected_responses WHERE hash=?',(h,)).fetchone()
+                    data={'rejected_task_response':json.loads(row[0])} if row else None
                 if data is None:self.send_error(404);return
                 b=wire(data);self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(b)));self.end_headers();self.wfile.write(b);return
             if self.path!='/health':self.send_error(404);return
@@ -68,7 +76,11 @@ def serve(key_path,ledger,stage,unlink_credential=False):
                 reserve(db,h,LEDGER_CALL_CAP,settle=True);calls+=1
                 # session_id is request namespace only, not model-visible state.
                 with opener.open(urllib.request.Request('https://openrouter.ai/api/alpha/decisions',wire(p),{'Authorization':'Bearer '+key,'Content-Type':'application/json'}),timeout=UPSTREAM_TIMEOUT) as r:data=json.loads(r.read(200000))
-                store_response(db,h,data);status=200
+                try:store_response(db,h,data)
+                except (ValueError,KeyError,TypeError,AttributeError):
+                    with db:db.execute('INSERT INTO c4_rejected_responses VALUES(?,?)',(h,json.dumps(rejected_response(data))))
+                    raise
+                status=200
             except Exception as e:
                 data=safe_error(e)
                 if h:db.execute("UPDATE calls SET status='failed' WHERE hash=? AND status='started'",(h,));db.commit()

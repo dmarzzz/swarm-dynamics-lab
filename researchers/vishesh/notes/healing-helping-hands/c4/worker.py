@@ -15,6 +15,16 @@ def health(stage):
     if h.get('ready') is not True or h.get('attempt')!='C4' or h.get('stage')!=stage or h.get('seconds_remaining',0)<60:raise ValueError('transport_not_ready')
     return h
 
+class RejectedResponse(ValueError):
+    def __init__(self,raw):
+        super().__init__('invalid_task_response')
+        self.raw=raw
+
+def task_response(raw,model):
+    # Retain only protocol task fields, never headers or arbitrary error bodies.
+    keys=('message','model','prompt_eval_count','eval_count') if model=='qwen' else ('answers','model','provider','usage','id')
+    return {k:raw[k] for k in keys if k in raw} if isinstance(raw,dict) else {'invalid_shape':type(raw).__name__}
+
 def call_http(model,payload,timeout):
     path='http://127.0.0.1:'+('11434/api/chat' if model=='qwen' else '18443/decision')
     cached=False
@@ -24,9 +34,14 @@ def call_http(model,payload,timeout):
         if model!='jev':raise
         with urllib.request.urlopen('http://127.0.0.1:18443/result/'+digest(payload),timeout=5) as r:raw=json.load(r)
         cached=True
-    if model=='jev':return {**validate(raw),'raw':raw,'recovered_cached_response':cached}
-    label=json.loads(raw['message']['content'])['label']
-    if label not in ('SUPPORT','REFUTE','UNCERTAIN'):raise ValueError('invalid_qwen_label')
+    try:
+        if model=='jev':
+            if raw.get('rejected_task_response') is not None:raise RejectedResponse(raw['rejected_task_response'])
+            return {**validate(raw),'raw':raw,'recovered_cached_response':cached}
+        label=json.loads(raw['message']['content'])['label']
+        if label not in ('SUPPORT','REFUTE','UNCERTAIN'):raise ValueError('invalid_qwen_label')
+    except RejectedResponse:raise
+    except (ValueError,KeyError,TypeError,AttributeError):raise RejectedResponse(task_response(raw,model)) from None
     return {'label':label,'raw':raw,'input_tokens':raw.get('prompt_eval_count',0),'output_tokens':raw.get('eval_count',0)}
 
 def run(out,stage,admission,parent=None):
@@ -50,7 +65,7 @@ def run(out,stage,admission,parent=None):
         append(out/'calls.jsonl',{'type':'start','id':cid,'row_id':rowid,'variant':variant,'model':model,'payload':payload,'payload_hash':digest(payload)})
         try:
             result=call_http(model,payload,min(90,deadline-time.monotonic()));append(out/'calls.jsonl',{'type':'completed','id':cid,'result':result,'seconds':time.monotonic()-t});return result['label']
-        except Exception as e:append(out/'calls.jsonl',{'type':'failed','id':cid,'error_type':type(e).__name__,'seconds':time.monotonic()-t});raise
+        except Exception as e:append(out/'calls.jsonl',{'type':'failed','id':cid,'error_type':type(e).__name__,'seconds':time.monotonic()-t,**({'rejected_task_response':e.raw} if isinstance(e,RejectedResponse) else {})});raise
     def stop(*args):raise InterruptedError('supervisor_stop')
     signal.signal(signal.SIGTERM,stop)
     try:
