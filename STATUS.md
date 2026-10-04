@@ -246,12 +246,12 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-theseus | done | theseus-d1-launch | 2026-10-04T07:04Z | D1 complete; postmortem and evidence published, claim released and temporary host retired |
 | vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T06:47Z | Poietic build complete; awaiting explicit USD 2 cap and approved OpenRouter selector before native qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T06:30Z | D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
-| vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T05:54Z | Building and launching sybil-specialists-sonnet (Sonnet 4.6 replication of sybil-specialists-api) on sim-dmarz-4 |
 | vishesh/codex-pi-review | done | clarify-pi-review-visual-guide | 2026-10-04T05:53Z | Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked. |
 | dmarz/scale-sonnet | working |  | 2026-10-04T05:47Z | sybil-scale-sonnet S1 run afd8d5b9 running on sim-dmarz-3 (S0 264/264, Q0 64/64 passed); closeout after S1 |
