@@ -85,13 +85,13 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/immune-response-v3",
       "setup_path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a6-post.md",
+      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a7-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:43:05.239183+00:00",
-      "checked_commit": "5c1a9da4bfbf360b2ddc4d720f0798bd5c8e1a33",
-      "next_action": "A6 closed:3calls,2advisor responses,first controller HTTP400,0/6complete. Hosted contract and safe error diagnostics need offline repair; factual advisor errors retained. No successor dispatched. OriginalUSD8ledger408calls/3.329282reserved; allocation released.",
+      "checked_at": "2026-10-04T19:56:49.370180+00:00",
+      "checked_commit": "d64febc4179eecf136eeb4bd3203c200e58bd29a",
+      "next_action": "A7 reviewed: original+complete-branch400 schema rejection;flatcontrol response. Offline lossless action-ID contract repair before further qualification. No auto successor.411calls/3.352050reserved/original8cap;allocation released.",
       "next_run_approval": "owner",
-      "operational_state": "HOLD: A6 qualification failed; scientific post-mortem complete; next contract requires prospective admission"
+      "operational_state": "A7 diagnostics complete; scientific qualification HOLD pending supported lossless contract"
     },
     {
       "id": "influence-swarms",

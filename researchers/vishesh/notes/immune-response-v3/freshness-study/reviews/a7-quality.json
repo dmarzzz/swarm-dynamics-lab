@@ -1,0 +1,179 @@
+{
+  "attempt": "freshness-a7",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "repair",
+  "evidence_revision": "d64febc4179eecf136eeb4bd3203c200e58bd29a",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Three fixed requests isolated schema variants from other payload fields.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "One exact failing development request is appropriate for a transport diagnostic; realism and new worlds are outside scope.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Flat schema control succeeded with identical remaining wire; complete branches failed.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "not_applicable",
+      "finding": "No service actions executed; neither repair nor healthy abstention was qualified.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Safe schema rejection category established, but exact rejected rule and provider layer remain unresolved.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ],
+      "next_action": "Prepare lossless flat action-ID schema offline or a narrowly justified parser discriminator; no automatic new model call.",
+      "acceptance_check": "Exhaustive semantic mapping plus separately admitted hosted acceptance; exact-rule diagnosis must not exceed retained error evidence."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One dependent request with3variants, openly scoped to a request diagnostic with no population estimate.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exactpublicfixture/retainedexperimentaladvice; same route and generation settings; successful served route verified.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All3assignments and hashes reconcile;2unknownusage retained;6hubhashes match;startup0calls preserved.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "3requests within original8cap;411cumulative/3.352050reserved;host released and no added machine.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "ExactA6wire reproduces schema400, but safe error indicators cannot reconstruct the precise validation message.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ],
+      "next_action": "Prepare lossless flat action-ID schema offline or a narrowly justified parser discriminator; no automatic new model call.",
+      "acceptance_check": "Exhaustive semantic mapping plus separately admitted hosted acceptance; exact-rule diagnosis must not exceed retained error evidence."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Complete3row request table; no invented native transitions or animation.",
+      "evidence": [
+        {
+          "path": "a7-post.md",
+          "sha256": "706f7d93a22754418558c1c2babc2f61736b57832ca348df4037aa058dead4a1"
+        },
+        {
+          "path": "a7-reconciliation.json",
+          "sha256": "bebbf73acb173e9d14e331f35d24a1f7e2f835a64513b915fef171ed60f5abc6"
+        }
+      ]
+    }
+  ]
+}

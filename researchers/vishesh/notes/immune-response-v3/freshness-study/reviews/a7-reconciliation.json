@@ -1,0 +1,58 @@
+{
+  "attempt": "freshness-a7",
+  "assigned_requests": 3,
+  "dispatched": 3,
+  "responses": 1,
+  "http400": 2,
+  "unstarted": 0,
+  "service_actions": 0,
+  "original_exact_wire_matches_a6": true,
+  "request_usage_hashes_match": true,
+  "flat_answer_valid_under_both_contracts": true,
+  "known_actual_usd": 0.001441,
+  "usage_missing": 2,
+  "new_reserved_usd": 0.022768,
+  "cumulative_calls": 411,
+  "cumulative_reserved_usd": 3.35205,
+  "cap_usd": 8,
+  "hub_artifacts_verified": 6,
+  "initial_import_failure_calls": 0,
+  "conditions": [
+    {
+      "condition": "original",
+      "status": "http_400",
+      "reported_reason": "schema_invalid_or_unsupported",
+      "keywords": [
+        "anyOf",
+        "additionalProperties",
+        "required",
+        "type",
+        "properties"
+      ],
+      "known_actual_usd": null,
+      "reserved_usd": 0.007497
+    },
+    {
+      "condition": "complete_branches",
+      "status": "http_400",
+      "reported_reason": "schema_invalid_or_unsupported",
+      "keywords": [
+        "anyOf",
+        "additionalProperties",
+        "required",
+        "type",
+        "properties"
+      ],
+      "known_actual_usd": null,
+      "reserved_usd": 0.008257
+    },
+    {
+      "condition": "flat_control",
+      "status": "response",
+      "reported_reason": null,
+      "keywords": [],
+      "known_actual_usd": 0.001441,
+      "reserved_usd": 0.007014
+    }
+  ]
+}
