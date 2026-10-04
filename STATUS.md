@@ -301,6 +301,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
+| dmarz/pipeline-split-qwen | working | build-sybil-split-xmodel | 2026-10-04T18:24Z | sybil-split-xmodel amendment A1 (gpt-6-sol reasoning effort none): code 52139693, source hash 5ce08e7d; rehearsal finishing, then READY.yaml and review on main; nothing launched by this agent |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:22Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-village-fit | working |  | 2026-10-04T18:16Z | Developing Telephone design, research and dataset resource documentation. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
@@ -328,7 +329,6 @@
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
 | dmarz/openai-route | done |  | 2026-10-04T13:40Z | trust-credit-qwen attempt 002 results, post-run review and records on main; reference README corrected from live responses |
-| dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T12:37Z | sybil-split-xmodel package ready (code 0ca09f04, source hash ebfb2bc3); pre-run review on main; rehearsals passed for both models; awaiting the fleet monitor's same-researcher check; nothing launched |
 | dmarz/pipeline-split | idle |  | 2026-10-04T12:17Z | Idle. trust-credit-qwen chain-001 results are on main; the plan for attempt 002 (gpt-6-luna) is on main at 3d2d588c and its build was handed to dmarz/openai-route by the fleet monitor. |
 | dmarz/scale-opus | done |  | 2026-10-04T11:50Z | sybil-scale-opus closed out; S1 79bb3882 2400/2400 valid, primary +100.0 pp; Opus abstains on 31% of rare fields; claim released |
 | dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:45Z | build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check |
