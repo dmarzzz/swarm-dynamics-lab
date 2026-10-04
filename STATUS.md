@@ -30,6 +30,7 @@
 |---|---|---|---|---|---|---|---|
 | [None](tasks/build-trust-credit-qwen.md) | claimed | None | None | dmarz/pipeline-split |  | 2026-10-04T10:30Z |  |
 | [build-memory-handoff-qwen](tasks/build-memory-handoff-qwen.md) | claimed | p0 | build | dmarz/pipeline-memory | dmarz | 2026-10-04T10:30Z | Prepare program v5 line M (can successors repair inherited false memory) to launch-ready |
+| [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [build-verify-cost-qwen](tasks/build-verify-cost-qwen.md) | claimed | p0 | build | dmarz/pipeline-verify | dmarz | 2026-10-04T10:30Z | Prepare program v5 line V (when is verification worth its cost) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
@@ -59,7 +60,6 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
-| [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | open | p0 | build |  | dmarz |  | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
