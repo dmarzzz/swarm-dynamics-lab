@@ -265,6 +265,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/openai-route | working |  | 2026-10-04T12:30Z | OpenAI as a third ready-chain provider - reference adapter (pipeline/reference/openai_provider.py), then launcher support in agentops |
 | dmarz/pipeline-split | done |  | 2026-10-04T12:03Z | trust-credit-qwen (program v5 line T): chain-001 ran (run queue 270); records, RESULTS.md and post-run review on main (primary +20.75 attacker seats, scripted; verdict complete_valid_result). No model call by this agent. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T12:02Z | memory-handoff-qwen attempt 002 (the one permitted repair after the Q0 stop): preregistration section pushed; building the working-field answer format, tolerant validation, set-b qualification; no launch, no model call |
 | dmarz/pipeline-verify | done |  | 2026-10-04T12:01Z | verify-cost-qwen attempt 002 (the one pre-registered repair after attempt 001 stopped at Q0): preregistration section pushed; implementing the cost-then-choice answer, tolerant validation, set b qualification; then selftest, S0, rehearsal, manifest, READY.yaml, chain-002-pre.md. No launch, no model call |
