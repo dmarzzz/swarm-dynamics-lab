@@ -154,8 +154,11 @@ category name.
    id mismatch, a source or batch mismatch, a deadline. S1 ends `done` when failed units are within the
    limit and reports them; S0, P0 and Q0 stay strict. Failed and not-started units stay in their
    denominators with outcome bounds; nothing is dropped, imputed or re-run.
-4. A billing outage is not a model failure. An HTTP 400, 402 or 403 whose body names the credit balance
-   pauses dispatch for the whole stage; the same call is re-sent every 60 s for up to 20 minutes; nothing
+4. A billing or limit stop is not a model failure. Detector, widened 2026-10-04 at about 11:20Z at the fleet
+   monitor's request (packages pinned earlier match "credit balance" only): HTTP 402, or an HTTP 400, 403
+   or 429 whose body names, case-insensitively, any of `credit`, `balance`, `billing`, `usage limit`,
+   `spend limit`, `limit exceeded`, `insufficient`. A 429 without such words is ordinary rate limiting and
+   goes through the retry rule. Such a refusal pauses dispatch for the whole stage; the same call is re-sent every 60 s for up to 20 minutes; nothing
    is recorded as a model outcome meanwhile; the pause is reported to the hub and in the summary
    (`billing_pauses`, `billing_pause_seconds`, `billing_affected_calls`). If the outage outlasts the
    limit the stage stops with reason `provider_credit_balance_low` and the unfinished units are recorded
