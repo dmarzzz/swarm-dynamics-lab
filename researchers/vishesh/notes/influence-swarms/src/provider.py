@@ -3,6 +3,7 @@
 The shared SQLite ledger reserves conservative cost BEFORE dispatch, across processes
 and both studies. Reservations are never refunded, including ambiguous failures.
 """
+from contextlib import closing
 import json
 import os
 from pathlib import Path
@@ -37,7 +38,7 @@ class HTTPPolicy:
             raise PolicyError('qualified endpoint and pricing date required')
         if not (self.base.startswith('https://') or self.base.startswith('http://127.0.0.1:')):
             raise PolicyError('HTTPS or loopback required')
-        with sqlite3.connect(self.ledger) as db:
+        with closing(sqlite3.connect(self.ledger)) as db, db:
             db.execute('CREATE TABLE IF NOT EXISTS budget (id INTEGER PRIMARY KEY CHECK(id=1), cap REAL, reserved REAL, calls INTEGER)')
             db.execute('INSERT OR IGNORE INTO budget VALUES (1, ?, 0, 0)', (self.cap,))
             cap = db.execute('SELECT cap FROM budget').fetchone()[0]
@@ -54,7 +55,7 @@ class HTTPPolicy:
             raise PolicyError('input bound exceeded')
         # Byte count plus envelope bounds input tokens for qualified byte-token endpoints.
         cost = ((len(encoded)+512)*self.input_rate + self.max_output*self.output_rate)/1e6
-        with sqlite3.connect(self.ledger, timeout=20) as db:
+        with closing(sqlite3.connect(self.ledger, timeout=20)) as db, db:
             db.execute('BEGIN IMMEDIATE')
             cap, used, calls = db.execute('SELECT cap,reserved,calls FROM budget').fetchone()
             if used + cost > cap or calls >= 6500:
@@ -131,7 +132,7 @@ class AnthropicPolicy(HTTPPolicy):
         encoded=json.dumps(body).encode()
         if len(encoded)>self.max_input_bytes:raise PolicyError('input bound exceeded')
         cost=((len(encoded)+512)*self.input_rate+self.max_output*self.output_rate)/1e6
-        with sqlite3.connect(self.ledger,timeout=20) as db:
+        with closing(sqlite3.connect(self.ledger,timeout=20)) as db, db:
             db.execute('BEGIN IMMEDIATE')
             cap,used,calls=db.execute('SELECT cap,reserved,calls FROM budget').fetchone()
             if used+cost>cap or calls>=6500:raise PolicyError('shared budget exhausted')

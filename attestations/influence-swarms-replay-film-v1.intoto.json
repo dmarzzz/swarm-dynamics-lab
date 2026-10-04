@@ -1,0 +1,55 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "vishesh/codex-experiments",
+    "prompt": "Animate the recorded experiment evidence."
+   },
+   "internalParameters": {
+    "commit": "162a9cf0f3c430a26b975e4b93b7d3243ec8e5bd-dirty",
+    "session": "vishesh/codex-experiments:01a1041f-9bfc-7891-be03-69925e274e9f"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "b0378c14e9acc952a60af44a08088c82c59da2713d877db4b172a29c8a77ecb8"
+     },
+     "uri": "researchers/vishesh/notes/external-influence-v2/analysis/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9"
+     },
+     "uri": "data/external-influence-v2/audit.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "162a9cf0f3c430a26b975e4b93b7d3243ec8e5bd"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/vishesh/codex-experiments"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T01:55:46Z",
+    "invocationId": "vishesh/codex-experiments:01a1041f-9bfc-7891-be03-69925e274e9f",
+    "startedOn": "2026-10-04T01:55:46Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "1c2e0074bfddc07a48481dedce0c0413534fc95f5d7a09842ae44f9c133d9a16"
+   },
+   "name": "artifacts/influence-swarms-replay-film/influence-swarms-replay-film-v1.mp4"
+  }
+ ]
+}
