@@ -3,7 +3,7 @@ id: poietic-agents-design
 type: task
 title: Design Poietic Agents from the self-differentiating swarm research
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-heterogeneous
 for: vishesh
@@ -15,7 +15,9 @@ topics:
 - llm-agent-swarms
 - agent-budgets
 claimed_at: 2026-10-04T04:08Z
-updated: 2026-10-04T04:29Z
+updated: 2026-10-04T04:35Z
+outputs:
+- researchers/vishesh/notes/poietic-agents/VALIDATION.json
 ---
 
 ## Goal
