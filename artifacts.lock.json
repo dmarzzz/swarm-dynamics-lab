@@ -4,20 +4,20 @@
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
     {
-     "mtime": 1791055913,
+     "mtime": 1791076911,
      "sha256": "bd1750f92b931ba7e3f6079e3983a6fb1664268c833ffa2adad83686db9fdcfd",
      "size": 3063,
      "uri": "src/x-trend/trend.py"
     },
     {
-     "mtime": 1791055913,
+     "mtime": 1791076911,
      "sha256": "60a271ffbb7f9c8f571ad028b901584cc8752f190f3be8c049eb559d7ed0bc63",
      "size": 269631,
      "uri": "src/x-trend/trend_data.json"
     }
    ],
    "mime": "text/html",
-   "mtime": 1791055913,
+   "mtime": 1791076911,
    "path": "artifacts/agent-discourse-x-page/agent-discourse-x-page-v1.html",
    "prompt_sha256": "785e041b68ace9486c6633ffdf260ae189d2443cdc86797f1abd557b2f928570",
    "sha256": "394ee28af098013059287132505593b37e7a24d763533a92df2f563ccd60972d",
@@ -27,20 +27,20 @@
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
     {
-     "mtime": 1791055913,
+     "mtime": 1791076911,
      "sha256": "bd1750f92b931ba7e3f6079e3983a6fb1664268c833ffa2adad83686db9fdcfd",
      "size": 3063,
      "uri": "src/x-trend/trend.py"
     },
     {
-     "mtime": 1791055913,
+     "mtime": 1791076911,
      "sha256": "60a271ffbb7f9c8f571ad028b901584cc8752f190f3be8c049eb559d7ed0bc63",
      "size": 269631,
      "uri": "src/x-trend/trend_data.json"
     }
    ],
    "mime": "image/png",
-   "mtime": 1791055913,
+   "mtime": 1791076911,
    "path": "artifacts/agent-discourse-x/agent-discourse-x-v1.png",
    "prompt_sha256": "785e041b68ace9486c6633ffdf260ae189d2443cdc86797f1abd557b2f928570",
    "sha256": "29daf755d1a7b85663bc3a4fea0330f10d0af831340b06d9d0c8b5d2f4373e59",
@@ -50,75 +50,110 @@
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
     {
-     "mtime": 1791060727,
+     "mtime": 1791076911,
      "sha256": "1a6485bc63ea58bda401fabf1772faeb29f6af8724770e118f1301dd131da923",
      "size": 18811,
      "uri": "src/fork-merge-setups/build.py"
     },
     {
-     "mtime": 1791060556,
+     "mtime": 1791076911,
      "sha256": "8740480f7bd92f5f261b9b4a4dfa691cbce7f49919773b04104d26fbd8658d9e",
      "size": 12612,
      "uri": "src/fork-merge-setups/prose.html"
     },
     {
-     "mtime": 1791060606,
+     "mtime": 1791076911,
      "sha256": "a13b4624072fe57861f2d05d4b36f2600bba9160ee14bcd520f55406b84d04b9",
      "size": 14178,
      "uri": "src/fork-merge-setups/rigs.json"
     },
     {
-     "mtime": 1791060503,
+     "mtime": 1791076911,
      "sha256": "0a5183145dc82d5954777e78a62b5cb737c61fdb27a63ddef4f0a90c3da8de9c",
      "size": 94429,
      "uri": "src/fork-merge-setups/cards/A.json"
     },
     {
-     "mtime": 1791060503,
+     "mtime": 1791076911,
      "sha256": "5653b34f92076eebe5b4cbdebc6483b8fa1523df2ba97f212b0e8069e50f3512",
      "size": 66938,
      "uri": "src/fork-merge-setups/cards/B.json"
     },
     {
-     "mtime": 1791060503,
+     "mtime": 1791076911,
      "sha256": "016515ab6bb5291e67b3630207f46c030a6641b659a600bad25bdf0f5dcb7ec4",
      "size": 77247,
      "uri": "src/fork-merge-setups/cards/C.json"
     },
     {
-     "mtime": 1791060503,
+     "mtime": 1791076911,
      "sha256": "559a2e9c196058b42e34814710f5bbbf2d6010c34f5fcdb0acc3a651014f2c5d",
      "size": 92242,
      "uri": "src/fork-merge-setups/cards/D.json"
     },
     {
-     "mtime": 1791060503,
+     "mtime": 1791076911,
      "sha256": "a4e0bed925a52f9abd07b788147da46df24bb2a1e5271fd5b89779bdf18e5ec6",
      "size": 106840,
      "uri": "src/fork-merge-setups/cards/E.json"
     },
     {
-     "mtime": 1791060503,
+     "mtime": 1791076911,
      "sha256": "ef84f81b1457c4dd75059352b7c3e2123f0576dd07b2395adbb32043f5d80f97",
      "size": 70721,
      "uri": "src/fork-merge-setups/cards/F.json"
     },
     {
-     "mtime": 1791058402,
+     "mtime": 1791076911,
      "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd",
      "size": 44661,
      "uri": "synthesis/fork-merge-questions.md"
     }
    ],
    "mime": "text/html",
-   "mtime": 1791060760,
+   "mtime": 1791076911,
    "path": "artifacts/fork-merge-setups/fork-merge-setups-v1.html",
    "prompt_sha256": "98715429608ca1c386834a4450950dcdfa6a35d69a1d50a4c1bc88b68fff3b73",
    "sha256": "b6434d725dcaeb3b1cab20f338262fba2ab362746d4fb6804e5ba241b3831210",
    "size_bytes": 531379
+  },
+  "market-split-scripted-frame@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791077477,
+     "sha256": "ce550b18a33c382e7cbfdf4d84137e36150af0ee30b109b0df6754d4f739f795",
+     "size": 5290,
+     "uri": "researchers/dmarz/notes/market-split/src/render.py"
+    },
+    {
+     "mtime": 1791077826,
+     "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d",
+     "size": 14042,
+     "uri": "researchers/dmarz/notes/market-split/src/sim.py"
+    },
+    {
+     "mtime": 1791077826,
+     "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263",
+     "size": 884,
+     "uri": "researchers/dmarz/notes/market-split/design.yaml"
+    },
+    {
+     "mtime": 1791077775,
+     "sha256": "7967c8da65771b2acfa66093c9a47d13245b00d35f23f2f4e6c94adfdae3f52f",
+     "size": 95030,
+     "uri": "researchers/dmarz/notes/market-split/results/s0-local-002/cell-01/episodes.jsonl"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791077776,
+   "path": "artifacts/market-split-scripted-frame/market-split-scripted-frame-v1.png",
+   "prompt_sha256": "d0fd797b2ddd3fa7f96fa0db70f1205d2f836341cb53c0c557a2d1f948ce6bef",
+   "sha256": "606fd3f5088ed2844801e37c30b9b101338f4668ee47ae0b8c04cf99afae9b3b",
+   "size_bytes": 137073
   }
  },
- "generated": "2026-10-03T13:52:41-0700",
+ "generated": "2026-10-03T18:37:59-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }
