@@ -1,20 +1,31 @@
 """Native launcher: real allocation + budget receipt, durable outcomes, measured images."""
-import argparse,json,os,subprocess,sys
+import argparse,gzip,hashlib,json,os,subprocess,sys
 from pathlib import Path
 import study_receipts as study, render_receipts as render
 sys.path.insert(0,str(study.ROOT.parent/'src'))
-from hub_worker import allocation,upload
+from hub_worker import allocation,upload as base_upload
 sys.path.insert(0,str(study.ROOT.parent.parent/'experiment-documentation'))
 from public_plan import check
+
+def upload(job,out):
+ base_upload(job,out)
+ p=out/'usage.jsonl'
+ if p.exists():
+  raw=p.read_bytes();chunk=out/'usage.jsonl.gz.part0000';chunk.write_bytes(gzip.compress(raw,mtime=0));job.artifact(chunk,chunk.name)
+  index=json.loads((out/'artifact-index.json').read_text());index.append({'file':'usage.jsonl','sha256':hashlib.sha256(raw).hexdigest(),'encoding':'gzip','parts':[chunk.name]})
+  (out/'artifact-index.json').write_text(json.dumps(index,indent=2));job.artifact(out/'artifact-index.json','artifact-index.json')
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);a=p.parse_args();out=Path(a.out)
  if out.exists():raise ValueError('output_exists')
  receipt=allocation(a.receipt);expected=16
+ if receipt.get('cloud_account_verified') is not True or len(receipt.get('cloud_verification_sha256',''))!=64:raise ValueError('verified_cloud_account_receipt_required')
+ os.environ['SWARM_ATTEMPT_ID']='receipt-native-a3'
+ os.environ['SWARM_USAGE_LOG']=str(out/'usage.jsonl')
  tldr='Paired evidence receipt diagnostic: 16 deployment episodes, identical shared reviewer advice, clean and stale memory, raw versus checked probe claims; maximum 120 calls.'
  public=check('immune-response-v3',tldr)
  import swarm_report as sr
- job=sr.start('immune-response-v3',params={'stage':'receipt-native-a2','backend':'anthropic','episodes':expected,'max_calls':120,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
+ job=sr.start('immune-response-v3',params={'stage':'receipt-native-a3','backend':'anthropic','episodes':expected,'max_calls':120,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
  print(json.dumps({'run':job.id}),flush=True)
  try:
   p=subprocess.Popen([sys.executable,str(study.ROOT/'study_receipts.py'),'--backend','anthropic','--out',str(out)],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)

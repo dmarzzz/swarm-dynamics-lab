@@ -27,4 +27,4 @@ Freeze and run a bounded evidence-checking diagnostic on the dedicated Immune Re
 
 ## Coverage note
 
-Design and offline audit published. Native run interrupted after user identified wrong DigitalOcean account. Workers stopped, all evidence and persistent budget backed up; scoped deletion plan prepared. Resume requires Dmarz-account provisioning and durable per-call usage recording. See researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md.
+Design and offline audit published. Native run interrupted after user identified wrong DigitalOcean account. Wrong-account host deleted with other resources preserved; all evidence and persistent budget backed up. Durable per-call usage implemented and offline tested. Resume requires Dmarz-account provisioning and durable per-call usage recording. See researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md.

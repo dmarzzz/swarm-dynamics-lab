@@ -28,3 +28,9 @@ These cases establish an interpretable feasibility screen, not realistic deploym
 ## Account correction
 
 The claimed host was registered in the fleet but provisioned with the wrong local default DigitalOcean account. The user required Dmarz's existing Swarm Lab account/setup. No experiment worker remains active; evidence and budget state are backed up. No further launch is authorized on that deployment. See [incident post-mortem](reviews/receipt-a2-post.md).
+
+## Retirement and next attempt
+
+The user authorized proceeding with the correct replacement. The mistakenly created droplet, its dedicated firewall and cloud root-key registration were deleted and the droplet endpoint returned 404. Dedicated local key/state resources were removed through the same reviewed plan. Eight other droplets were unchanged. A stale saved plan was rejected before mutation after concurrent infrastructure state changed; a fresh isolated configuration used the original locked backend and verified preservation of all other inventory before applying.
+
+The verified evidence/ledger backup remains available. A3 now includes durable request-level usage receipts and refuses a missing ledger. Fourteen tests pass; scripted A3 records and reconciles 16/16 episodes. Replacement and native A3 are not started: Dmarz's original provisioning checkout/state and authorized credential context have not been located on this machine. User was asked only for the path/context, never a secret. No fallback account is permitted. See [A3 pre-run assessment](reviews/receipt-a3-pre.md).

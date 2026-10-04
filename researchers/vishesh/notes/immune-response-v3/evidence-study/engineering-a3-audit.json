@@ -1,0 +1,17 @@
+{
+  "assigned": 16,
+  "recorded": 16,
+  "paired_worlds": 8,
+  "unique_reviewer_records": 24,
+  "decision_records": 96,
+  "errors": 0,
+  "paired_advice_identical": true,
+  "all_trace_frames_match": true,
+  "clean_memory_traces_empty": true,
+  "mean_commander_seconds": 0.00016763668766846726,
+  "reviewer_false_claims": 0,
+  "reviewer_declared_booleans": 96,
+  "commander_false_claims": 0,
+  "commander_declared_booleans": 384,
+  "episodes_sha256": "9db871b64a80d063ffde9e7e39deb1898943c03defa3685945ecdf9e75be6ad3"
+}
