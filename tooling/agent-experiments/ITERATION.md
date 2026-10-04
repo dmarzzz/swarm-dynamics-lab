@@ -33,6 +33,8 @@ If the review finds that cases are too easy, repetitive, unrealistic, ambiguous 
 - Preserve original cases, outcomes and their interpretation. Version the new cases and explain which defect they address. Report independent scenario/event units separately from variants and repeated calls; inspected or tuned cases remain development data, never an untouched holdout.
 - Publish the concrete case revision, validation results and remaining limitations. If construction needs unavailable data, rights or access, identify that exact dependency and do all feasible design work first. Then decide whether the revised cases justify a ready approved run, a concrete material-scope decision, further case development, or finishing the study.
 
+Evaluate the revised cases themselves with [TEST-CASE-QUALITY.md](TEST-CASE-QUALITY.md). Publish the evidence-linked rubric and distinguish case readiness for the stated scope from native qualification and run admission. Connect cases to the full task, implement strong relevant baselines, and protect evaluation cases from tuning; do not repeatedly stop at known, feasible case-quality gaps.
+
 A case revision does not reset spending, authorize a new native scope, erase a valid negative result or require manufacturing a harder problem. Apply the existing approval and admission rules after offline improvement.
 
 ## 3. Prepare the change and push it

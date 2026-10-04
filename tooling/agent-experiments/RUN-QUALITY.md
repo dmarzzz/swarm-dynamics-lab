@@ -61,3 +61,7 @@ Use safe allowlisted failure categories and numeric cost/throughput telemetry. P
 ## Prospective claim scope
 
 Apply [claim-scoping guidance](CLAIM-SCOPE.md) before implementation: identify the intended inference, independent units, comparator and untested boundaries. If the useful claim needs broader evidence, improve the design prospectively; do not rely on a post-hoc caveat.
+
+## Evaluate the cases as well as the run
+
+Use [TEST-CASE-QUALITY.md](TEST-CASE-QUALITY.md) to assess answerability, labels, leakage, causal contrasts, realism, strong comparisons, independent units and holdout integrity. Record evidence and critical failures, not a blanket average score. Case readiness, native capability and run admission are separate determinations.

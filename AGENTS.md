@@ -469,3 +469,8 @@ Owner direction, 2026-10-04 UTC: when an iteration finds test cases insufficient
 ## Well-scoped experimental claims
 
 Owner direction, 2026-10-04: define each claim prospectively and match its population, mechanism, comparator, sample unit and precision to the actual design. Distinguish execution, acquisition, continuity and comparative benefit. Apply [CLAIM-SCOPE.md](tooling/agent-experiments/CLAIM-SCOPE.md); unsupported broad claims require better evidence, not stronger wording.
+
+
+## Evaluate test-case quality during iteration
+
+Owner direction, 2026-10-04 UTC: define and evaluate what makes the experiment’s cases good using the shared TEST-CASE-QUALITY.md rubric. Improve feasible gaps in task relevance, answerability, labels, isolation, controls, realistic challenge, strong baselines and holdouts before declaring cases ready. Publish evidence-linked acceptance checks and distinguish case readiness for a stated scope from native qualification and run admission. Preserve historical results and all spending/scope boundaries.
