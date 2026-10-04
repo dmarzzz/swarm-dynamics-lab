@@ -32,3 +32,10 @@ class ReadinessTests(unittest.TestCase):
   with self.assertRaises(AcquisitionStopped):Session(self.root/'bad',self.db,maximum_requests=13)
   self.p['requests'][0]['wire_body']['provider']['allow_fallbacks']=True
   with self.assertRaises((ValueError,AssertionError)):run.verify_packet(self.p)
+ def test_shared_schema_is_exact_and_tampering_refused(self):
+  from readiness_contract import expand
+  p=run.verify_packet(json.loads((BASE/'reviews/D9-B-packet.json').read_text()))
+  get=lambda p:p['requests'][0]['wire_body']['response_format']['json_schema']['schema']
+  self.assertEqual(expand(get(p)),get(self.p))
+  get(p)['$defs']['scope']['properties']['storage_region']['type']='number'
+  with self.assertRaises(ValueError):run.verify_packet(p)

@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d9-a-01",
+  "native_attempt_id": "native-D9-A-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T19:31:13.925402+00:00",
+  "verdict": "repair",
+  "outcome_interpretation": "Typed acquisition still blocked; root cause unknown. D9-B is a schema-representation discriminator, not a claimed fix.",
+  "parent_handoff_sha256": "ed60426dc1c2fc59fc9ff7c7d4b337d89e891c8a4f31499f497ce90c4ad08f51",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "One exact typed-contract acquisition request still fails; no causal effect estimated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "One previously inspected synthetic procurement case, not a holdout.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same wire as D8 typed request; only diagnostic measurement changed, no retries or fallback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "fail",
+      "finding": "HTTP400 prevents any typed response; acquisition not qualified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ],
+      "next_action": "Test semantics-equivalent shared schema definitions with broader safe error categorization.",
+      "acceptance_check": "Exact reference expansion equivalence, unchanged strict local validator, complete native response/usage or safe actionable error."
+    },
+    {
+      "dimension": "measurement",
+      "status": "fail",
+      "finding": "Structured error parsed but narrow classifier returns unknown; usage missing.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ],
+      "next_action": "Test semantics-equivalent shared schema definitions with broader safe error categorization.",
+      "acceptance_check": "Exact reference expansion equivalence, unchanged strict local validator, complete native response/usage or safe actionable error."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One request, no behavioral sample or availability estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen actor context and schema, no operator or evaluator leakage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "One assigned/started/failed, zero valid, request and failure retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "One call/.048640 reservation, cumulative5.112032/8 and251calls; no new machine.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source, exact wire hash, durable event journal and103 deployed tests retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Explicit missing typed result and cost; no misleading interaction animation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-A-post.md",
+          "sha256": "5e1363373d4aa328aeb6110e5c975eabd7552c2af11a67441b40ab7318457037"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-A-01/summary.json",
+          "sha256": "9569886ee97ae49c36ea0f857887b642ecbb45d0fcfca119853646acc980f9eb"
+        }
+      ]
+    }
+  ]
+}

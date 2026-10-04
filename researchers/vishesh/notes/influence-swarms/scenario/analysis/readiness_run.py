@@ -4,7 +4,8 @@ from contextlib import closing
 from pathlib import Path
 from acquisition_d6 import Session,AcquisitionStopped
 from openrouter_d7 import MODEL,PROVIDER,normalize,verify_route
-from output_contract_d8 import verify_item,JSON_ONLY
+from output_contract_d8 import JSON_ONLY
+from readiness_contract import verify_item
 from openrouter_errors import safe_relay_error
 BASE=Path(__file__).resolve().parents[1];ROOT=BASE.parents[4]
 PACKET=None;PLAN=BASE/'ITERATION-09-READINESS.md'

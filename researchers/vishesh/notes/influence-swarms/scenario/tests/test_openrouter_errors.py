@@ -15,3 +15,6 @@ class OpenRouterErrorTests(unittest.TestCase):
   for raw,label in [(b'x'*8193,'oversized'),(b'bad','malformed'),(b'[]','unknown_envelope')]:
    error=self.error({});error.read=Mock(return_value=raw);out=safe_openrouter_error(error);self.assertEqual(out['error_body_status'],label);error.read.assert_called_once_with(8193)
   error=self.error({});error.read=Mock(side_effect=OSError('PRIVATE_SENTINEL'));self.assertEqual(safe_openrouter_error(error)['error_body_status'],'unreadable')
+ def test_plain_upstream_metadata_remains_redacted(self):
+  out=safe_openrouter_error(self.error({'error':{'message':'Provider returned error','metadata':{'raw':'Schema has too many parameters PRIVATE_SENTINEL'}}}))
+  self.assertEqual(out['reported_reason'],'schema_complexity');self.assertNotIn('PRIVATE_SENTINEL',json.dumps(out))

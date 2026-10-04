@@ -16,6 +16,7 @@ def safe_openrouter_error(exc):
     messages=[error.get('message')]
     metadata=error.get('metadata')
     if isinstance(metadata,dict) and isinstance(metadata.get('raw'),str):
+        messages.append(metadata['raw'])
         try:
             upstream=json.loads(metadata['raw'])
             nested=upstream.get('error') if isinstance(upstream,dict) else None
@@ -24,8 +25,8 @@ def safe_openrouter_error(exc):
     messages=[s.lower() for s in messages if isinstance(s,str)]
     reasons=set()
     for message in messages:
-        if 'schema is too complex' in message:reasons.add('schema_complexity')
-        elif 'schema' in message and ('unsupported' in message or 'invalid' in message):reasons.add('schema_invalid_or_unsupported')
+        if ('schema' in message or 'grammar' in message) and any(x in message for x in ('too complex','complexity','compilation timeout','too many','limit exceeded')):reasons.add('schema_complexity')
+        elif 'schema' in message and any(x in message for x in ('unsupported','not supported','invalid','must be','is required')):reasons.add('schema_invalid_or_unsupported')
         if 'insufficient credits' in message:reasons.add('insufficient_credits')
         if 'rate limit' in message:reasons.add('rate_limit')
     if len(reasons)==1:out['reported_reason']=next(iter(reasons))

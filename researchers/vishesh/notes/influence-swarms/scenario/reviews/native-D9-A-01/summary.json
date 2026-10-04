@@ -1,0 +1,43 @@
+{
+  "stage": "D9-A",
+  "attempt": "native-D9-A-01",
+  "planned": 1,
+  "started": 1,
+  "terminal": 1,
+  "valid": 0,
+  "failed": 1,
+  "unstarted": 0,
+  "calls": 1,
+  "usage_missing": 1,
+  "observed_usage_cost_usd": 0,
+  "actual_usd": null,
+  "new_reserved_usd": 0.04864,
+  "qualified": false,
+  "failures": [
+    {
+      "kind": "failure",
+      "attempt": 1,
+      "category": "http",
+      "http_status": 400,
+      "retry_after_seconds": null,
+      "request_id": null,
+      "retry_permitted": false,
+      "reported_reason": "unknown",
+      "error_body_status": "parsed",
+      "usage_known": false,
+      "actual_usd": null
+    }
+  ],
+  "assignments": [
+    {
+      "arm": "typed_inherited",
+      "case_id": "regional-no-approval",
+      "status": "failed",
+      "category": "http"
+    }
+  ],
+  "run": "influence-swarms/1004-193003-d28084",
+  "source_commit": "1122b3f9cd81c51e0f531c6a54b4b7fdf6447ca6",
+  "packet_sha256": "c341e5b53e7a6ab30e78d704646e9fd17d6983a940c4b2fcf238b1116d59ec9d",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/1122b3f9cd81c51e0f531c6a54b4b7fdf6447ca6/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-09-READINESS.md"
+}
