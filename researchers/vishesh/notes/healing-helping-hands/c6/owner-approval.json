@@ -1,0 +1,9 @@
+{
+  "status": "approved",
+  "date": "2026-10-04",
+  "authority": "Owner direction in owning task: use stronger Jev/Haiku agents and cumulative USD50 ceiling. No exact owner prompt published.",
+  "scope": "C6 S0 plus conditional automatic S1; original ledger carried forward; no new VM",
+  "plan_sha256": "f939879945c6e3813bd4246c537ab30002eb7e542866f899e4f51871898fd9e4",
+  "cumulative_cap_usd": 50,
+  "attempt_cap_usd": 2
+}

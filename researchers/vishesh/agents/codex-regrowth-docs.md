@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: idle
+state: working
 task: healing-c4-selective
-doing: "C5 automatic S0/S1 complete and reviewed; valid adverse routing result; ledger reconciled, archive verified, machine released; FINISH/PARK"
+doing: "Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound"
 updated: 2026-10-04T19:48:28.933993+00:00
 ---
 

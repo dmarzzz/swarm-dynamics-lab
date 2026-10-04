@@ -1,0 +1,31 @@
+{
+  "unit_tests_passed": 15,
+  "case_and_cost_checks": {
+    "S0": {
+      "cases": 60,
+      "haiku_calls": 120,
+      "jev_calls": 60,
+      "haiku_reserved_bound": 0.13211,
+      "jev_reserved_bound": 0.08064,
+      "total_reserved_bound": 0.21275,
+      "case_sha256": "edfa507c85963465c7dd228a059450f8949a791357779760551bc4e00e853267",
+      "parser_correct": 60
+    },
+    "S1": {
+      "cases": 432,
+      "haiku_calls": 864,
+      "jev_calls": 432,
+      "haiku_reserved_bound": 1.021488,
+      "jev_reserved_bound": 0.580608,
+      "total_reserved_bound": 1.602096,
+      "case_sha256": "bbc72ce710fa20fd9ff09762c92c7358d37f65fa93133d2743fa9e59ae19bf36",
+      "parser_correct": 432
+    },
+    "all_new_maximum_usd": 1.814846,
+    "historical_exposure_usd": 0.053342898,
+    "cumulative_bound_usd": 1.868188898,
+    "approved_cumulative_cap": 50,
+    "self_imposed_attempt_cap": 2
+  },
+  "model_calls": 0
+}

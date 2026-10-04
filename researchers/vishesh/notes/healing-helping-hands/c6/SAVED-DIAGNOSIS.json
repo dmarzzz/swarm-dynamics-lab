@@ -1,0 +1,146 @@
+{
+  "S0": {
+    "cases": 60,
+    "qwen_calls_reconstructed": 120,
+    "confusion": {
+      "a": {
+        "SUPPORT": {
+          "REFUTE": 20
+        },
+        "REFUTE": {
+          "REFUTE": 20
+        },
+        "UNCERTAIN": {
+          "REFUTE": 3,
+          "UNCERTAIN": 17
+        }
+      },
+      "b": {
+        "SUPPORT": {
+          "REFUTE": 20
+        },
+        "REFUTE": {
+          "REFUTE": 20
+        },
+        "UNCERTAIN": {
+          "REFUTE": 4,
+          "UNCERTAIN": 16
+        }
+      }
+    },
+    "stop_reasons": {
+      "stop": 120
+    },
+    "output_token_counts": {
+      "12": 102,
+      "11": 18
+    },
+    "examples": [
+      {
+        "case": "C5-S0-49",
+        "claim": "Method 62dd4c53cf59 improves accuracy over baseline.",
+        "report": "Method 62dd4c53cf59 improved measured accuracy over the baseline.",
+        "expected": "SUPPORT",
+        "actual": "REFUTE",
+        "raw_content": "{\n  \"label\": \"REFUTE\"\n}"
+      },
+      {
+        "case": "C5-S0-49",
+        "claim": "Method 62dd4c53cf59 improves accuracy over baseline.",
+        "report": "Method 62dd4c53cf59 improved measured accuracy over the baseline.",
+        "expected": "SUPPORT",
+        "actual": "REFUTE",
+        "raw_content": "{\n  \"label\": \"REFUTE\"\n}"
+      },
+      {
+        "case": "C5-S0-21",
+        "claim": "Method 1a07fc24e160 improves accuracy over baseline.",
+        "report": "Method 1a07fc24e160 improved measured accuracy over the baseline.",
+        "expected": "SUPPORT",
+        "actual": "REFUTE",
+        "raw_content": "{\n  \"label\": \"REFUTE\"\n}"
+      }
+    ]
+  },
+  "S1": {
+    "cases": 432,
+    "qwen_calls_reconstructed": 864,
+    "confusion": {
+      "a": {
+        "SUPPORT": {
+          "REFUTE": 132,
+          "UNCERTAIN": 12
+        },
+        "REFUTE": {
+          "REFUTE": 129,
+          "UNCERTAIN": 15
+        },
+        "UNCERTAIN": {
+          "REFUTE": 91,
+          "UNCERTAIN": 53
+        }
+      },
+      "b": {
+        "SUPPORT": {
+          "REFUTE": 132,
+          "UNCERTAIN": 12
+        },
+        "REFUTE": {
+          "REFUTE": 129,
+          "UNCERTAIN": 15
+        },
+        "UNCERTAIN": {
+          "REFUTE": 86,
+          "UNCERTAIN": 58
+        }
+      }
+    },
+    "stop_reasons": {
+      "stop": 864
+    },
+    "output_token_counts": {
+      "12": 862,
+      "11": 2
+    },
+    "examples": [
+      {
+        "case": "C5-S1-33",
+        "claim": "Method 0f2272697822 improves accuracy over the baseline on Task e1cc2077abf9.",
+        "report": "On Task e1cc2077abf9, Method 0f2272697822 achieved 68% accuracy and the baseline achieved 62%.",
+        "expected": "SUPPORT",
+        "actual": "REFUTE",
+        "raw_content": "{\n  \"label\": \"REFUTE\"\n}"
+      },
+      {
+        "case": "C5-S1-33",
+        "claim": "Method 0f2272697822 improves accuracy over the baseline on Task e1cc2077abf9.",
+        "report": "On Task e1cc2077abf9, Method 0f2272697822 achieved 68% accuracy and the baseline achieved 62%.",
+        "expected": "SUPPORT",
+        "actual": "REFUTE",
+        "raw_content": "{\n  \"label\": \"REFUTE\"\n}"
+      },
+      {
+        "case": "C5-S1-312",
+        "claim": "Method 6d604aa1fe22 improves accuracy over the baseline on Task d0e10a6cd259.",
+        "report": "On Task d0e10a6cd259, Method 6d604aa1fe22 achieved 78% accuracy and the baseline achieved 72%. A different test showed the opposite result.",
+        "expected": "SUPPORT",
+        "actual": "UNCERTAIN",
+        "raw_content": "{\n  \"label\": \"UNCERTAIN\"\n}"
+      }
+    ]
+  },
+  "interpretation": {
+    "first_divergence": "raw classification with relevant evidence delivered",
+    "ruled_out": [
+      "actor payload differs from frozen contract",
+      "stored label differs from raw JSON label"
+    ],
+    "not_identified": [
+      "model competence",
+      "prompt interpretation",
+      "constrained decoder interaction",
+      "non-thinking runtime behavior"
+    ],
+    "native_diagnostic": "prospective C6 D0 2x2 prompt/decoder intervention; no hidden reasoning inferred"
+  }
+}
