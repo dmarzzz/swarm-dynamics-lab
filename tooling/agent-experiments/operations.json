@@ -164,11 +164,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/poietic-agents",
       "setup_path": "researchers/vishesh/notes/poietic-agents/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/D0-01-post.md",
+      "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/D0-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:33:45.810145+00:00",
-      "checked_commit": "385441384fe4875609f369bcf6c15ebc94092abd",
-      "next_action": "D0-02 scope and new sim-vishesh-poietic approved; 129 offline checks pass. HOLD: original provisioner/account/state access unavailable and account capacity reported exhausted. No new machine, claim or native calls; preserve 40 historical charges and USD 0.568560890 cumulative exposure. Complete current admission then run D0-02 once."
+      "checked_at": "2026-10-04T20:17:03.824589+00:00",
+      "checked_commit": "d2b33c0cd4534a4bd7eb027a206d3487d5ed016a",
+      "next_action": "Prepare 30-member paired feasibility design with inexpensive routes; run necessary fresh contract diagnostic under standing authority, preserving all54charges."
     },
     {
       "id": "telephone",

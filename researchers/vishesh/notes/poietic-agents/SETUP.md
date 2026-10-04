@@ -50,3 +50,7 @@ The owner approved the repaired 36-decision diagnostic on a new Vishesh-named ma
 ## Existing machine and expanded owner scope
 
 The owner approved reuse of sim-vishesh, increased the cumulative study ceiling to USD 10 including all historical spend, and requested a 30-agent swarm using inexpensive OpenRouter models. [D0-02 plan](D0-02-PLAN.md) now records the allocation amendment; 131 offline checks verify original-history preservation and one renewal only. D0-02 retains the stricter original USD 2 total/1.50 API/0.50 infrastructure limits. It is a necessary interface diagnostic, not the 30-agent comparative run. The broader 30-agent construction requires its own prospective design, qualification and admission; no ledger increase or swarm launch has occurred. Researcher review remains not required by owner direction.
+
+## D0-02 completed
+
+[Post-mortem](reviews/D0-02-post.md) and [scientific assessment](reviews/D0-02-scientific.json):14 started/36 terminal, Haiku7/12 correct, Qwen1/12 then provider429, Jev unstarted.131 runtime checks; all14 traces replayed/reviewed;9 artifact readbacks verified; original54-charge history retained. Worker/relay/tunnel stopped, claim released. Conservative cumulative exposureUSD0.590633047 of the newly authorizedUSD10. Next: prepare the owner-requested30-member cheap-model plan and necessary fresh contract qualification; do not launch the original six-agent S1 or call D0 a swarm result.

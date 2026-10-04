@@ -1,0 +1,135 @@
+{
+  "checked_utc": "2026-10-04T20:14:56.038422+00:00",
+  "started_traces_reviewed": 14,
+  "request_and_context_replays": 14,
+  "native_response_replays": 13,
+  "transport_receipts": 1,
+  "assigned_outcomes_recompute": true,
+  "checks": [
+    {
+      "id": "D0-02:generalist:0:0",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:0:1",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:0:2",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:0:3",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:1:0",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:1:1",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:1:2",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:1:3",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:2:0",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:2:1",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:2:2",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:generalist:2:3",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": true
+    },
+    {
+      "id": "D0-02:cheap_generative:0:0",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "parsed_receipt_matches": true,
+      "outcome_replayed": true,
+      "fence_removed": false
+    },
+    {
+      "id": "D0-02:cheap_generative:0:1",
+      "effective_request_reconstructed": true,
+      "context_receipt_matches": true,
+      "safe_transport_receipt_reviewed": true
+    }
+  ],
+  "failure_classes": {
+    "generalist": [
+      "three semantically incorrect answer values; two additionally wrong value shapes",
+      "extra register_service fields executed but failed exact-action criterion",
+      "install payload used wrong field names; engine transaction rejected"
+    ],
+    "cheap_generative": [
+      "HTTP429 attributed to pinned Alibaba route; subtype/retry timing absent"
+    ],
+    "typed_choice": [
+      "not started by global transport stop"
+    ]
+  },
+  "normalization_removed_fences": 12,
+  "historical_scores_unchanged": true
+}

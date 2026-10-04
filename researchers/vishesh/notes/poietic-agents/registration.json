@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Poietic D0-01 tested repaired Haiku,Qwen and Jev action interfaces on3paired four-step cases, requiring12/12valid and correct perrole. Diagnostic stopped at3calls:Haiku returned exact correct fetch inside rejected Markdown fences;Qwen executed one correct fetch thenHTTP429;Jev unstarted.36terminal/33unstarted;no retries,no full qualification or swarm efficacy conclusion. All9aggregate artifacts verified;full rawtraces archived privately;worker/relay/allocation released. Total conservative exposureUSD0.568560890 under originalUSD2. Scientific review complete;next work offline,no successor authorized.",
+  "description": "TLDR: Poietic D0-02 tested repaired Haiku, Qwen and Jev interfaces against protected expected actions. Haiku returned12parseable actions with7exact correct; Qwen1correct fetch thenHTTP429; Jev unstarted.14started/36terminal;22unstarted;no retries or qualification/swarm efficacy conclusion. All14traces reviewed and9aggregate artifacts verified. Cumulative exposureUSD0.590633047 of ownerUSD10;allocation released. Next: prepare requested30-member cheap-model design and fresh qualification.",
   "params": {
     "stage": {
       "type": "str",
@@ -43,5 +43,5 @@
     "terminal_jobs"
   ],
   "primary_metric": "verified_success_rate",
-  "url": "https://github.com/dmarzzz/swarm-lab/blob/385441384fe4875609f369bcf6c15ebc94092abd/researchers/vishesh/notes/poietic-agents/D0-01-PLAN.md"
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/d2b33c0cd4534a4bd7eb027a206d3487d5ed016a/researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md"
 }

@@ -1,0 +1,318 @@
+{
+  "attempt": "D0-02",
+  "assessor": "vishesh/codex-heterogeneous",
+  "date": "2026-10-04",
+  "evidence_revision": "d2b33c0cd4534a4bd7eb027a206d3487d5ed016a",
+  "decision": "repair",
+  "overall_attempt_reviewed": true,
+  "execution": "reconciled",
+  "qualification": "failed",
+  "scientific_result": false,
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fresh interface repair diagnostic with explicit reference and stopping criteria; no swarm-effect claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Three synthetic lifecycle roots identify readiness failures; nested payload contracts were incomplete and realism is limited.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ],
+      "next_action": "Publish complete contracts and selected cheap-model qualification before the 30-agent feasibility comparison.",
+      "acceptance_check": "Fresh contract qualification passes and scoped paired-arm instrument checks demonstrate treatment, comparator and complete accounting."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Exact reference and request/effect replay work; no collective manipulation or comparator was run.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ],
+      "next_action": "Publish complete contracts and selected cheap-model qualification before the 30-agent feasibility comparison.",
+      "acceptance_check": "Fresh contract qualification passes and scoped paired-arm instrument checks demonstrate treatment, comparator and complete accounting."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Haiku 7/12 exact correct, Qwen 1/12 with provider refusal, Jev unstarted; none qualified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ],
+      "next_action": "Publish complete contracts and selected cheap-model qualification before the 30-agent feasibility comparison.",
+      "acceptance_check": "Fresh contract qualification passes and scoped paired-arm instrument checks demonstrate treatment, comparator and complete accounting."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "All outcomes recompute; outer action validity and payload/effect validity need separate explicit metrics. Redundant service fields failed exact scoring despite execution.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ],
+      "next_action": "Publish complete contracts and selected cheap-model qualification before the 30-agent feasibility comparison.",
+      "acceptance_check": "Fresh contract qualification passes and scoped paired-arm instrument checks demonstrate treatment, comparator and complete accounting."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Three paired roots and dependent decisions were declared a tiny diagnostic; no population confidence or agent-level independence claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All 14 effective requests/context receipts reconstruct; native agents received frozen fixture inputs, no operator history.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "14 starts, 13 responses, one safe transport receipt, 36 terminal records; all 14 traces reviewed and 13 returned actions replayed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "54 cumulative calls and USD0.590633047 exposure preserved; worker/relay/tunnel stopped and exclusive claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Published immutable source and 131 runtime checks; saved requests, responses and action effects replay. Hosted resampling remains nondeterministic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Final frame visually checked against all role counts and unstarted denominators; nine artifact readbacks match.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
+          "sha256": "348652621dd7c213ca56fcf0d0e9adc95ca9c1b4a27a9a0fd03e05d1606e183f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/trace-review.json",
+          "sha256": "490af49d6175b9e5f1daffe510adbda3fb5e47aae75026af10616711015756d8"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/summary.json",
+          "sha256": "5b1c334296f95716716253d2cd9e9bb8ceaf3c8e247520c87af6353bfb2950dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/cost-closeout.json",
+          "sha256": "804f0ac68069f5a32997ddd5ab3a4f3eda8ad0eee5bb85a5733b5c862779ece1"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-02/artifact-readback.json",
+          "sha256": "8dc108c5e348355ba6973ab9454e36fe6e08f87086761e56e4e24dc7981cf4ea"
+        }
+      ]
+    }
+  ]
+}
