@@ -21,18 +21,25 @@ def validate_response(data,criteria):
     if set(p)!=set(criteria) or c not in criteria or any(not math.isfinite(v) or not 0<=v<=1 for v in p.values()) or abs(sum(p.values())-1)>.001 or p[c]<max(p.values())-1e-5:raise ValueError('choice_invalid')
     return {'model':data['model'],'provider':data['provider'],'usage':{k:u[k] for k in ('cost','input_tokens','output_tokens')},'answers':{'decision':{'choice':c,'probabilities':p}}}
 
+def safe_diagnostic(data,criteria):
+    def number(v):return v if isinstance(v,(int,float)) and math.isfinite(v) else None
+    u=data.get('usage',{});a=data.get('answers',{}).get('decision',{});p=a.get('probabilities',{})
+    vals={k:number(p.get(k)) for k in criteria};c=a.get('choice')
+    return {'model_matches':data.get('model')==SNAPSHOT,'provider_matches':data.get('provider')==PROVIDER,'selected':c if c in criteria else 'unexpected','labels_match':set(p)==set(criteria),'probabilities':vals,'probability_sum':sum(vals.values()) if all(v is not None for v in vals.values()) else None,'usage':{k:number(u.get(k)) for k in ['cost','input_tokens','output_tokens']}}
+
 class Runtime:
-    def __init__(self,relay):
+    def __init__(self,relay,attempt=1):
         assert relay.startswith('http://127.0.0.1:')
-        self.relay=relay;self.receipts=[];self.metadata={'model':MODEL,'checkpoint':SNAPSHOT,'provider':PROVIDER,'endpoint':'OpenRouter Decisions API','route_fallbacks':False,'input_usd_per_token':RATE,'device':'hosted; worker on exclusive fleet allocation'}
+        self.relay=relay;self.attempt=attempt;self.receipts=[];self.metadata={'model':MODEL,'checkpoint':SNAPSHOT,'provider':PROVIDER,'endpoint':'OpenRouter Decisions API','route_fallbacks':False,'input_usd_per_token':RATE,'device':'hosted; worker on exclusive fleet allocation'}
     def choose(self,state,instructions,criteria,context):
-        q={'type':'choice','instructions':instructions,'criteria':criteria};h=digest(state,q);rid=hashlib.sha256(json.dumps([context,h],sort_keys=True).encode()).hexdigest()
+        q={'type':'choice','instructions':instructions,'criteria':criteria};h=digest(state,q);rid=hashlib.sha256(json.dumps([context,h,self.attempt],sort_keys=True).encode()).hexdigest()
         receipt={'context':context,'state':state,'question':q,'input_hash':h,'valid':False,'encoded_tokens':0};self.receipts.append(receipt);start=time.monotonic()
         try:
             payload=json.dumps({'id':rid,'state':state,'question':q}).encode()
             request=urllib.request.Request(self.relay,payload,{'Content-Type':'application/json'})
             with urllib.request.urlopen(request,timeout=35) as response:data=json.load(response)
-            if 'error' in data:raise RuntimeError('relay_rejected_or_provider_failed')
+            if 'error' in data:
+                receipt['diagnostic']=data.get('diagnostic');receipt['reason']=data.get('reason');raise RuntimeError('relay_rejected_or_provider_failed')
             data=validate_response(data,criteria);answer=data['answers']['decision']
             receipt.update(valid=True,choice=answer['choice'],probabilities=answer['probabilities'],usage=data['usage'],encoded_tokens=data['usage']['input_tokens'],served_model=data['model'],provider=data['provider'])
             return answer['choice']
