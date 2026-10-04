@@ -15,7 +15,7 @@ Owner/operator/design assessor: dmarz/market-split; no independent implementatio
 | G2 Instrument | S0-fleet-005:15offline checks,12valid mock episodes,42artifact hashes | No source changes |
 | G3 Admission | Original pre-review and two operational continuation reviews retained; terminal manifest matches all18original IDs. Historical immutable public-plan browser receipt is missing; mutable-main registration is disclosed | Do not fabricate retrospective admission |
 | G4 Qualification | I0-0036/6mechanics; Q0-0054/4profit episodes, minimum99.9879%reference, exact replay | Qualified scope only |
-| G5 Closeout | 18done/36valid/864priced;126artifact readbacks; exact864action replay; RESULTS.md and s1-002-post.md | Finish publication/UI receipt and claim release; no paid work |
+| G5 Closeout | 18done/36valid/864priced;126artifact readbacks; exact864action replay; RESULTS.md and s1-002-post.md | Complete: publication, UI receipt and claim release recorded in deployment.md; no paid work |
 
 ## Design and instrument index
 

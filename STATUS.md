@@ -28,7 +28,6 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [quorum-mirrors-q1-launch](tasks/quorum-mirrors-q1-launch.md) | claimed | p0 | experiment | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T06:45Z | Launch bounded Quorum context qualification under owner no-review direction |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed (stale) | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
@@ -44,7 +43,7 @@
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T06:51Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T06:48Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
-| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:48Z | Ship the neutral-agent market-splitting pilot |
+| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T06:59Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -54,7 +53,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [theseus-d1-launch](tasks/theseus-d1-launch.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T06:47Z | Admit and run Theseus execution diagnostic D1 |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -67,7 +65,7 @@
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T06:28Z | Run the revised procurement influence experiment |
-| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh |  | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
+| [quorum-mirrors-q1-interface-repair](tasks/quorum-mirrors-q1-interface-repair.md) | open | p1 | build |  | vishesh |  | Preserve rejected-response usage and reconcile Q1 output-token contract |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
@@ -104,6 +102,7 @@
 | [survey-avalon-swarm](tasks/survey-avalon-swarm.md) | open | p2 | survey |  | dmarz |  | Survey: swarm-scale hidden-role games as a Sybil / fork-merge testbed |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | done | p0 | admin | vishesh/codex-regrowth-docs | dmarz | 2026-10-04T06:13Z | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
+| [quorum-mirrors-q1-launch](tasks/quorum-mirrors-q1-launch.md) | done | p0 | experiment | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T06:59Z | Launch bounded Quorum context qualification under owner no-review direction |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | done | p0 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:16Z | Re-review survey: llm agent swarms (after revise) |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | done | p0 | review | dmarz/reviewer-1 | dmarz | 2026-10-03T19:27Z | Review survey: llm agent swarms (cross-researcher) |
 | [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
@@ -131,6 +130,7 @@
 | [antsy-diversity-v7](tasks/antsy-diversity-v7.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T06:29Z | Measure worker diversity and correlated errors in Antsy |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
+| [antsy-targeted-v8](tasks/antsy-targeted-v8.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T07:03Z | Repair Antsy extraction and design targeted verification |
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:55Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [antsy-verification-v5](tasks/antsy-verification-v5.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T03:51Z | Repair Antsy verification semantics and qualify cost-aware stopping |
 | [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
@@ -203,6 +203,7 @@
 | [right-dissenter-rd4](tasks/right-dissenter-rd4.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T06:28Z | Repair and evaluate the Right Dissenter recovery protocol |
 | [right-dissenter-rd5-design](tasks/right-dissenter-rd5-design.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T06:50Z | Plan Right Dissenter repairs and the right to reopen |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:21Z | Prepare and run the first real-model discussion-dose qualification |
+| [run-market-split-api](tasks/run-market-split-api.md) | done | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:58Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | done | p1 | scan | dmarz/sd-code-data |  | 2026-10-03T19:40Z | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | done | p1 | scan | dmarz/active-matter |  | 2026-10-03T18:18Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | done | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T18:18Z | Catalogue the papers: criticality, information and measurement |
@@ -229,6 +230,7 @@
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
 | [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
+| [theseus-d1-launch](tasks/theseus-d1-launch.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T07:04Z | Admit and run Theseus execution diagnostic D1 |
 | [theseus-rule-diagnosis](tasks/theseus-rule-diagnosis.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T04:39Z | Diagnose Theseus rule application from saved evidence |
 | [theseus-social-grounding](tasks/theseus-social-grounding.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T03:06Z | Ground Theseus scenario selection in X discussions and practical failures |
 | [theseus-targeted-repairs](tasks/theseus-targeted-repairs.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:55Z | Build targeted Theseus execution diagnostic repairs |
@@ -244,13 +246,12 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-heterogeneous | blocked |  | 2026-10-04T06:47Z | Poietic build complete; awaiting explicit USD 2 cap and approved OpenRouter selector before native qualification |
+| vishesh/codex-theseus | done | theseus-d1-launch | 2026-10-04T07:04Z | D1 complete; postmortem and evidence published, claim released and temporary host retired |
+| vishesh/codex-heterogeneous | working | qualify-poietic-agents-s0 | 2026-10-04T07:03Z | Recording direct USD 2 approval and preparing central S0 dispatch; approved OpenRouter selector unresolved |
+| vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
+| dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T06:30Z | D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn |
-| vishesh/codex-methods | idle |  | 2026-10-04T06:29Z | Antsy v7 published; qualification failed honestly, S1 unrun, allocation released |
-| vishesh/codex-regrowth-docs | idle |  | 2026-10-04T06:13Z | C1/C2 cycle closed; failures published, worker retired; full comparison remains incomplete |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
-| vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T05:57Z | Final three original Sonnet S1 assignments running serially after 30 valid episodes and 720-call exact replay; reporting next. Haiku closed, next plan unstarted. |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T05:54Z | Building and launching sybil-specialists-sonnet (Sonnet 4.6 replication of sybil-specialists-api) on sim-dmarz-4 |
 | vishesh/codex-pi-review | done | clarify-pi-review-visual-guide | 2026-10-04T05:53Z | Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked. |
 | dmarz/scale-sonnet | working |  | 2026-10-04T05:47Z | sybil-scale-sonnet S1 run afd8d5b9 running on sim-dmarz-3 (S0 264/264, Q0 64/64 passed); closeout after S1 |
@@ -275,9 +276,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-methods | idle |  | 2026-10-04 07:02:35.547829+00:00 | Antsy v8 development and design delivered; fresh checker qualification pending |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 06:59:50.549036+00:00 | Q1 launch closed; contract failure preserved and allocation released; accounting/interface repair tracked |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
-| vishesh/codex-quorum-mirrors | working | quorum-mirrors-q1-launch | 2026-10-04 06:45:22.628151+00:00 | Directly allocating, deploying and running the authorized Q1 screen |
-| vishesh/codex-phantom-coast | done | phantom-coast-review-process | 2026-10-04 05:51:41.825522+00:00 | Researcher review made optional; PC-2 gate updated; 44 tests pass; operational admission next |
+| vishesh/codex-phantom-coast | working | phantom-coast-pc2-live | 2026-10-04 06:42:12.981971+00:00 | Q0 passed; executing admitted S1 pilot and reconciling artifacts within original budget |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |

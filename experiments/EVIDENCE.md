@@ -8,7 +8,7 @@ Source snapshot: `9781739cd06e0c9606ed0ed053bf91b5e2a42b57`; individual rows may
 
 | Study / cohort | Evidence confidence | Sample size |
 | --- | --- | --- |
-| [Quorum of Mirrors — repeated reports versus independent sources](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md) (`quorum-of-mirrors`) | 1/4 | S0: 8 bit triples × 2 reliability settings × 2 identical-request samples = 16 configurations, 32/32 valid calls, 29 MAP-correct; not 32 independent worlds. S1 not run. |
+| [Quorum of Mirrors — repeated reports versus independent sources](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md) (`quorum-of-mirrors`) | 1/4 | S0: 16 fixed configurations, 32/32 valid calls, 29 MAP-correct; not independent worlds. Q1: 16 constructed context fixtures, 1 contract-failed response, 15 unstarted, 0 valid. M1/C1 not run. |
 | [Phantom Coast: PC-1](../researchers/vishesh/notes/phantom-coast/README.md) (`phantom-coast`) | 1/4 | Q0: 6 world roots × 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked. |
 | [Dissent: The Right Dissenter](../researchers/vishesh/notes/dissent/README.md) (`right-dissenter`) | 1/4 | Observed S1: 52 fixed roots with reused grammar; 420/420 decisions across 7 policies; 129/132 unique calls valid. Separate screens: Q0 12/18 correct; Q1 clarified 18/18 plus 6/6 uncertainty controls; D1 9/9 valid. No independent replication. |
 | [Optimal swarm size under task and resource constraints](../researchers/vishesh/notes/optimal-swarm-size/README.md) (`optimal-swarm-size`) | 0/4 | No model runs. Planned 32 core roots and 16 transfer roots; 2,512 episodes including 80 qualification and 512 fresh policy trials (3,792 with optional extension). |
@@ -68,3 +68,4 @@ Source snapshot: `9781739cd06e0c9606ed0ed053bf91b5e2a42b57`; individual rows may
 | [Capture Memory Mix](../researchers/shadow/notes/capture-memory-mix/README.md) (`capture-memory-mix`) | unassessed | Unassessed; see the owner registration and study documentation. |
 | [Sybil Specialists Sonnet](../researchers/dmarz/notes/sybil-specialists-sonnet/README.md) (`sybil-specialists-sonnet`) | unassessed | Unassessed; see the owner registration and study documentation. |
 | [Sybil Budget Sonnet](../researchers/dmarz/notes/sybil-budget-sonnet/README.md) (`sybil-budget-sonnet`) | unassessed | Unassessed; see the owner registration and study documentation. |
+| [Antsy v8: targeted field verification](../researchers/vishesh/notes/antsy-targeted-v8/README.md) (`antsy-targeted-v8`) | 1/4 | 20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun. |

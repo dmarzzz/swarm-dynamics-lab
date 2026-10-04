@@ -9,7 +9,7 @@
 
 ## TLDR
 
-**Current status: bounded cycle closed.** C1 qualification passed; C1-S1 and C2-S0 stopped on transport failures. No completed composite architecture comparison exists. See [results and failure accounting](RESULTS.md). The prospective protocol below is retained as history; it does not authorize another run.
+**Historical C1/C2 status: bounded cycle closed.** C1 qualification passed; C1-S1 and C2-S0 stopped on transport failures. No completed composite architecture comparison exists. See [results and failure accounting](RESULTS.md). The prospective protocol below is retained as history; it does not authorize another run.
 
 
 Can a small Qwen 0.6B agent with a Jev decision head reliably curate evidence as 200 local helpers repair a shared evidence atlas? Qwen proposes a report label; Jev sees the original report and that proposal and makes the final decision. Compare the complete composite with Qwen-only and Jev-only on identical evidence. First qualify the composite on fresh balanced cases, then measure extraction accuracy, correction versus anchoring, and downstream query error during updates, withdrawals, false notices, missing lineage and outages. Compare local repair with both append-only and verified central indexes. This is a small synthetic feasibility study; it cannot establish real-world usefulness or that adding Qwen improves Jev.
@@ -62,3 +62,7 @@ One bounded repair cycle C2 is authorized within the original user request to fi
 C2 limits: 60 Qwen/120 Jev for S0, then 600 Qwen/1200 Jev for S1; same 900/3600-second stage bounds, no additional repair cycle. Across C1+C2: maximum 730 Qwen and 1459 Jev calls (2179 ledger entries including the 720 historical calls). This explicit prospective amendment adds only the 10 Qwen/19 Jev calls already consumed by the failed S1 to the earlier revision envelope; USD 0.10 cumulative inference cap is unchanged, including ambiguous reservations. Verified spent USD 0.015678054 plus USD 0.001344 uncertain exposure leaves USD 0.082977946 before C2. The dedicated VM/three-hour allocation and infrastructure ceiling are unchanged. If C2 fails, preserve and close this cycle; no automatic third attempt.
 
 The C1 screen establishes previous competence, but C2 must pass fresh qualification after transport changes. Original C1 immutable plans, results and failed run remain available. Source fingerprints and current operational receipts govern each new stage.
+
+## C3 owner-authorized continuation — prospective
+
+The owner requested transport repair and another run after closure. [C3 pre-run design](C3-PRE.md) governs this continuation, including worker-local supervised relay, single-writer budget transfer, cached completed responses without provider retries, fresh S0 fixtures and seeds 8821–8823. Previous closed-cycle restrictions remain historical; C3 requires fresh admission and does not alter C1/C2 outcomes. Actor prompts, competence thresholds, metrics and controls remain unchanged.

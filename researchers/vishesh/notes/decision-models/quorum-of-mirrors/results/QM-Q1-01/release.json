@@ -1,0 +1,12 @@
+{
+  "host": "sim-vishesh",
+  "claim_id": "vishesh-quorum-mirrors-q1",
+  "status": "done",
+  "since": "2026-10-04T06:46:01Z",
+  "ended": "2026-10-04T06:56:28Z",
+  "new_vm_created": false,
+  "allocated_seconds": 627,
+  "hourly_rate_usd": 0.07143,
+  "estimated_allocated_host_cost_usd": 0.012440724999999998,
+  "billing_note": "Allocated existing-host time estimate, not incremental invoice."
+}

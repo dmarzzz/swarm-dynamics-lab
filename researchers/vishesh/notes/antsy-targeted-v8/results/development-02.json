@@ -1,0 +1,2227 @@
+{
+  "summary": {
+    "kind": "development replay, not fresh qualification",
+    "assigned": 20,
+    "scorable": 19,
+    "new_ocr_calls": 0,
+    "new_hosted_model_calls": 0,
+    "workers": {
+      "T0": {
+        "old": {
+          "correct": 0,
+          "wrong": 1,
+          "refer": 18,
+          "unknown_accepted": 0
+        },
+        "new": {
+          "correct": 1,
+          "wrong": 1,
+          "refer": 17,
+          "unknown_accepted": 0
+        }
+      },
+      "T1": {
+        "old": {
+          "correct": 1,
+          "wrong": 0,
+          "refer": 18,
+          "unknown_accepted": 0
+        },
+        "new": {
+          "correct": 2,
+          "wrong": 2,
+          "refer": 15,
+          "unknown_accepted": 0
+        }
+      },
+      "T2": {
+        "old": {
+          "correct": 0,
+          "wrong": 1,
+          "refer": 18,
+          "unknown_accepted": 0
+        },
+        "new": {
+          "correct": 1,
+          "wrong": 1,
+          "refer": 17,
+          "unknown_accepted": 0
+        }
+      },
+      "R0": {
+        "old": {
+          "correct": 11,
+          "wrong": 0,
+          "refer": 8,
+          "unknown_accepted": 0
+        },
+        "new": {
+          "correct": 13,
+          "wrong": 0,
+          "refer": 6,
+          "unknown_accepted": 0
+        }
+      },
+      "R1": {
+        "old": {
+          "correct": 9,
+          "wrong": 2,
+          "refer": 8,
+          "unknown_accepted": 0
+        },
+        "new": {
+          "correct": 11,
+          "wrong": 1,
+          "refer": 7,
+          "unknown_accepted": 0
+        }
+      }
+    },
+    "policies": {
+      "primary": {
+        "correct": 13,
+        "wrong": 0,
+        "refer": 6,
+        "unknown_accepted": 0,
+        "checker_uses": 0,
+        "replayed_worker_seconds": 132.37091027100178
+      },
+      "checker": {
+        "correct": 2,
+        "wrong": 2,
+        "refer": 15,
+        "unknown_accepted": 0,
+        "checker_uses": 20,
+        "replayed_worker_seconds": 71.55520132298989
+      },
+      "targeted-fallback": {
+        "correct": 13,
+        "wrong": 1,
+        "refer": 5,
+        "unknown_accepted": 0,
+        "checker_uses": 7,
+        "replayed_worker_seconds": 148.5850973519955
+      },
+      "always-fallback": {
+        "correct": 13,
+        "wrong": 1,
+        "refer": 5,
+        "unknown_accepted": 0,
+        "checker_uses": 20,
+        "replayed_worker_seconds": 203.92611159399166
+      },
+      "agreement": {
+        "correct": 2,
+        "wrong": 0,
+        "refer": 17,
+        "unknown_accepted": 0,
+        "checker_uses": 20,
+        "replayed_worker_seconds": 203.92611159399166
+      }
+    }
+  },
+  "records": [
+    {
+      "id": 40,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "125334.00",
+          "evidence": [
+            {
+              "value": "125334.00",
+              "region_hash": "0ee990fe54d79c634c8bf27956ab8e1835b8164fa3797f1b2887a61f0978ce73",
+              "observation_hash": "f690e84846c96887febf385f871f4a9e74e777e59d7a19fa745f3867ef2991dd"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "1255244.00",
+          "evidence": [
+            {
+              "value": "1255244.00",
+              "region_hash": "0a0b39ef32da052ab83d3f6532248e7b211e7228e53d5e9a524cbe9cca6dbbff",
+              "observation_hash": "9d4d077d73050446c30d45a82c604ca2f55c3f354589809201545228dec16854"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "125334.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "125334.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "125334.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 41,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "44999.00",
+          "evidence": [
+            {
+              "value": "44999.00",
+              "region_hash": "d6aec77a9b1b0bf231cfbb19d912c48fe3619b8e71ac58d899db6d97e260d088",
+              "observation_hash": "b3300218275a1539e20a559d9edbba37416c60b066c3df72001df261f017af98"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "44999.00",
+          "evidence": [
+            {
+              "value": "44999.00",
+              "region_hash": "e47f0d213b93fac7db04f1a9da94a0c282d932164c33563991805171638bca37",
+              "observation_hash": "c7c2c79eaf89c1d61af6edbb81ec25fe29e5400e3c6274dee29c6c304d9b4dab"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "44999.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "44999.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "44999.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 42,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "28000.00",
+          "evidence": [
+            {
+              "value": "28000.00",
+              "region_hash": "c8a4bf5e018db2922a3002f06a069949a4b17641bf52c9a2d28bb59b6ff07c38",
+              "observation_hash": "5d0409299e9b6da94d2a6a35f69ddfbab7e8df3ec7f305c30c5b8045855ace57"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "28000.00",
+          "evidence": [
+            {
+              "value": "28000.00",
+              "region_hash": "41970ec72aecab1d32e1b9c93a5fad5f28bcc4d0b22dc570381fdd0e965e19f9",
+              "observation_hash": "e659558b6527911aa843fe38685fa4f0a60d9fc54ba527296dcfd6dc38935d48"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "28000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "28000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "28000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 43,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "60999.00",
+          "evidence": [
+            {
+              "value": "60999.00",
+              "region_hash": "42bf9acc14b74afa20cf766dd3c5b164f4753353ca57a9b8bcc593456de63b53",
+              "observation_hash": "3334a4a1a7543652c47c23b677a11c6d1ca91f4f2ce7ddd0ea3f1926785358cf"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "60999.00",
+          "evidence": [
+            {
+              "value": "60999.00",
+              "region_hash": "a68bbc2f53c4a3ea2f1303d52adbc61a59b95413f0724b2690d072c98498698e",
+              "observation_hash": "7a2963423dce55a5e91199b27e14ed961976e6c7683f6f3a3f800cea8b33395b"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "60999.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "60999.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "60999.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 44,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "282000.00",
+          "evidence": [
+            {
+              "value": "282000.00",
+              "region_hash": "8c7c5be4046cf1aec635c8cf8c6dacfee4f5b43c3fdff2c5ac2fe5eb4dd5469b",
+              "observation_hash": "1773dfaa78f5a3585a7de5ad06a98c87aec61edb45ce5720b3e6f7f6452858d5"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "282000.00",
+          "evidence": [
+            {
+              "value": "282000.00",
+              "region_hash": "f9b78e186eb2bdbdc93b1bd9aaf91ed9fd4a47b7be50de74ac73911ef36d66cd",
+              "observation_hash": "2d99acc3c7271c0b2cf08fad9e94a8545913af84c1ed915b2c9ca08b63190996"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "282000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "282000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "282000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 45,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "22000.00",
+          "evidence": [
+            {
+              "value": "22000.00",
+              "region_hash": "9c5c4110ed0fc13791c418025d1aa17f4dd2eb4fb0ad39d7bccefd0e0f8262d0",
+              "observation_hash": "48f6af0f86931b7aea883a2da0bf4bcf3b28e05bb022cbb824a08144afc8db15"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "22000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "22000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "22000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 46,
+      "candidates": {
+        "T0": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts",
+            "unresolved_explicit_final_total"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [
+            {
+              "value": "5.00",
+              "region_hash": "a1ec4a834972647dc98b8e803977e98bc8058cbd0895edf00980f7ac0fcdb425",
+              "observation_hash": "e060a2c48eee9fd42bf39250a0dc6ef6f86ffe0455c6aabe06ffcb5ed3219131"
+            }
+          ],
+          "reasons": [
+            "missing_or_multiple_amounts",
+            "unresolved_explicit_final_total"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts",
+            "unresolved_explicit_final_total"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [
+            {
+              "value": "43636.00",
+              "region_hash": "1a8c42b302d6a73a91bebce39fcbd634bd51db34034493e143a4e7cd30f30841",
+              "observation_hash": "e5378680e34f3771fd55a567a9c07a26534895186c8181d5fee10c06d83e4014"
+            },
+            {
+              "value": "48000.00",
+              "region_hash": "dc7882f11a00c6d3dfe038cad56081670f0e14a9849c97827eaf39cca93df8d4",
+              "observation_hash": "d98606efee1d367c310f2839cb43a492f2f60579b159da86a47234e6389a221c"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [
+            {
+              "value": "43636.00",
+              "region_hash": "891c2983d29d0a20283febc5e5781c0d80a9c053bc3ea49b00459d685630926e",
+              "observation_hash": "0aeba5730be489c81eacd975b37bec75cbfe64b28644129761c411489768d5b1"
+            },
+            {
+              "value": "48000.00",
+              "region_hash": "637301b36c07e522b93757c1c2eb9d4d5ca9445f82eb86277449697009406279",
+              "observation_hash": "d11e06efedc1e92e9994668c8cd046421753c3fe36f82c6e1022c37040df089f"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 47,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "20000.00",
+          "evidence": [
+            {
+              "value": "20000.00",
+              "region_hash": "76a7f460407c84d5c236e5e170f1571d3c48a76dd8027690acd1a851fae3166d",
+              "observation_hash": "d10c5a1fcb17c52dd3e1ea46bf36e0a7f47e50671cd46abe46383a763a7dafe0"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "20000.00",
+          "evidence": [
+            {
+              "value": "20000.00",
+              "region_hash": "92b18a51c1edb1904f1e25df4495d1780c8f4c6d82b759e6080a378ee7b6b14e",
+              "observation_hash": "77b531fb339161a087c0915158542b7ad366f45cfdf06b95df0875c619250508"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "20000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "20000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "20000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 48,
+      "candidates": {
+        "T0": {
+          "status": "ok",
+          "value": "13450.00",
+          "evidence": [
+            {
+              "value": "13450.00",
+              "region_hash": "d0ee74e4d19edd30f4c72bcc599890b8205e96d90821f09ee7eb72840a6687b0",
+              "observation_hash": "60ae44c3f80281d93400bf3dd9344aac61a510e8beb5f36e61ffcdd81fc9a4b0"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "ok",
+          "value": "13450.00",
+          "evidence": [
+            {
+              "value": "13450.00",
+              "region_hash": "c1ee56345215d12b3e2a936595104aa18b838aa5fda03616663b821d138a5059",
+              "observation_hash": "bae65294b76e2e3fe13b2420c0c8c03a9ca07f7d075c40f3785ed314d4088a19"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "unrecognized_label_value_gap"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "73450.00",
+          "evidence": [
+            {
+              "value": "73450.00",
+              "region_hash": "0afe9fc816fa4f88187af17cc93937a5ef392218308d96deaab487faacafeeb6",
+              "observation_hash": "694934d577f199bb07e63f37b38a45594d06b16f74cd488e02d4688a767975b3"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "73450.00",
+          "evidence": [
+            {
+              "value": "73450.00",
+              "region_hash": "68e80dfcea10c3e7a5f19de194fc78aa4204e8e89d59111bc9927ffea55dd0ba",
+              "observation_hash": "ebec9e2e1822019503f9bcdf777f62fc008a80f71fd5691d32f89804ad9ac0ee"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "73450.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": "13450.00",
+          "action": "accept",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "73450.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "73450.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 49,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 50,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "ok",
+          "value": "30000.00",
+          "evidence": [
+            {
+              "value": "30000.00",
+              "region_hash": "03ceee291defcd3b1cb83ff52597972c4f4aa76d58946a50918f287f39126de8",
+              "observation_hash": "0a009074dbbb1ab0a1ab6772af4d522c6aaeb2bd302ac0f6e688d42122d69717"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 51,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "ok",
+          "value": "933000.00",
+          "evidence": [
+            {
+              "value": "933000.00",
+              "region_hash": "db89d72efe5e2716ec0390aebc00dda61f18a8e93ee2d6e5bba106d01c3ccf93",
+              "observation_hash": "e2d8a8d1d1a04071961264ea2a3ddfb388ee03cac1d4028d8c1c537c985f2de0"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "unrecognized_label_value_gap"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "unrecognized_label_value_gap"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": "933000.00",
+          "action": "accept",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "933000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "933000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 52,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 53,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 54,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context",
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context",
+            "unrecognized_label_value_gap"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context",
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "29000.00",
+          "evidence": [
+            {
+              "value": "29000.00",
+              "region_hash": "185fb9cf85b83026f5ce8c06ffe28b045cbaefd2073c1f6f9ff7beb58b785a27",
+              "observation_hash": "5a12499d9cd87187b9335e2cca63b095793195740fe0bbbbc8f2cf208091ef20"
+            }
+          ],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "29000.00",
+          "evidence": [
+            {
+              "value": "29000.00",
+              "region_hash": "22da9d40c03dac861034471899b8581bb9486ef6252d52206d47d238e067cc05",
+              "observation_hash": "6212af1ef82674ad022437ea8a63d7b7d53e8ffab378d171cc168571e9b9d41e"
+            }
+          ],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "29000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "29000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "29000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 55,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "17999.00",
+          "evidence": [
+            {
+              "value": "17999.00",
+              "region_hash": "45b231abfb155fa8bba5a9fa9621a7b1c4707c5e23184d3ff5cf6d398bd1225b",
+              "observation_hash": "266b5092465881d152d7a4b39f8fd8d68350bca63a93ecd704fb83413353eeab"
+            }
+          ],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "17999.00",
+          "evidence": [
+            {
+              "value": "17999.00",
+              "region_hash": "69e24b60575d382ae77e097109a07423c961c232726ec09778480003b7e6bb82",
+              "observation_hash": "0103bf9685f686c250522fc203998a950ba7dc367e0d3205258fde9d672236ee"
+            }
+          ],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "17999.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "17999.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "17999.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 56,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "unrecognized_label_value_gap"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "missing_or_multiple_amounts",
+            "unresolved_explicit_final_total"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "54600.00",
+          "evidence": [
+            {
+              "value": "54600.00",
+              "region_hash": "dcf8d0f883c419bc6ce4984f10077bf3cac59fd2f82f86ea368c93ecd7120ff3",
+              "observation_hash": "eba717bd5bb6335f1dab29994e63d520fb32007cf402caffac0c87ca7b74d60c"
+            }
+          ],
+          "reasons": [
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "54600.00",
+          "evidence": [
+            {
+              "value": "54600.00",
+              "region_hash": "e9bd58c7cb3193ded3b4b29b67cf729c3090a4d17eb5a6fa3a363c159b29e31d",
+              "observation_hash": "78f03ccc570e6efa23807b1d0733f19a9517e101e1e00f14523f7f6b71fdc622"
+            }
+          ],
+          "reasons": [
+            "missing_or_multiple_amounts"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "54600.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "54600.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "54600.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    },
+    {
+      "id": 57,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "ok",
+          "value": "39000.00",
+          "evidence": [
+            {
+              "value": "39000.00",
+              "region_hash": "9fb68edeabf88a58500d9c610f09e39b1d779e4eb1553c157fe6cc9e5ef7de1d",
+              "observation_hash": "de38a99dca98f092c0efb2bf438fee316be4409959d1dc9382a256a6811f9908"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "39000.00",
+          "evidence": [
+            {
+              "value": "39000.00",
+              "region_hash": "68a3dd41e54c32534c4d8ae3c00588e9f659918452661ac8e1e8d1746fb8ac8e",
+              "observation_hash": "ffd101bec182a146ee131d451580c18161cbeb3a6879f3199ec03808c655e6db"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "39000.00",
+          "evidence": [
+            {
+              "value": "39000.00",
+              "region_hash": "4bd36b6912bb66a8287928d0c9f45528e860b08b5876293133ebdc1400110765",
+              "observation_hash": "6d1decc72cbd6e75d49f2419a154fbec11dc16d50ebd42a159e33b06d9e75375"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "39000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": "39000.00",
+          "action": "accept",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "39000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "39000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": "39000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": true
+        }
+      }
+    },
+    {
+      "id": 58,
+      "candidates": {
+        "T0": {
+          "status": "ok",
+          "value": "35000.00",
+          "evidence": [
+            {
+              "value": "35000.00",
+              "region_hash": "fac0d2f0e7eebfad5d9f7462156005f65a301a387ba4b3fc04d8ed6202e99e50",
+              "observation_hash": "e22d3b592a50be4638806e9efbed5549482c2ddcf99405e41af05dea3224c54f"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "ok",
+          "value": "35000.00",
+          "evidence": [
+            {
+              "value": "35000.00",
+              "region_hash": "fac0d2f0e7eebfad5d9f7462156005f65a301a387ba4b3fc04d8ed6202e99e50",
+              "observation_hash": "a1fb04242c54da78af1089cee4b20338c43e541d39ea0934c6dd87952a6b203a"
+            }
+          ],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "ok",
+          "value": "35000.00",
+          "evidence": [
+            {
+              "value": "35000.00",
+              "region_hash": "c3d748a4b9f1da7ce87219773864aadee13fdf6b713cb7d9b5f116be86286dcc",
+              "observation_hash": "aea5d09d39607c22f4534e1d3ae609002ca6f3bf2dae239f9b282e935c88eea7"
+            }
+          ],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ok",
+          "value": "35000.00",
+          "evidence": [
+            {
+              "value": "35000.00",
+              "region_hash": "860a4a33cca710f7149e07b266f76e4b6c7be98e62697fb27c927134a37a2d81",
+              "observation_hash": "aa3b8cdba4195d67769f35dcaa146d49029a9db16bc47963346d19e1e851217a"
+            }
+          ],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ok",
+          "value": "35000.00",
+          "evidence": [
+            {
+              "value": "35000.00",
+              "region_hash": "880a406bb69800d229a8503e62062b643dc6d7d3cfd72d705e92d06394e8a01c",
+              "observation_hash": "d5bfa6a7d6b0593ceb8f4212c6c99951736427c8e275cab9ca223c1f307f17fc"
+            }
+          ],
+          "reasons": [
+            "excluded_context"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": "35000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": "35000.00",
+          "action": "accept",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": "35000.00",
+          "action": "accept",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": "35000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": "35000.00",
+          "action": "accept",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": true
+        }
+      }
+    },
+    {
+      "id": 59,
+      "candidates": {
+        "T0": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T1": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "T2": {
+          "status": "missing",
+          "value": null,
+          "evidence": [],
+          "reasons": [],
+          "contract": "anchor-row-v2"
+        },
+        "R0": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context",
+            "missing_or_multiple_amounts",
+            "unresolved_explicit_final_total"
+          ],
+          "contract": "anchor-row-v2"
+        },
+        "R1": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [],
+          "reasons": [
+            "excluded_context",
+            "missing_or_multiple_amounts",
+            "unresolved_explicit_final_total"
+          ],
+          "contract": "anchor-row-v2"
+        }
+      },
+      "policies": {
+        "primary": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P"
+          ],
+          "corroborated": false
+        },
+        "checker": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "C"
+          ],
+          "corroborated": false
+        },
+        "targeted-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "always-fallback": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        },
+        "agreement": {
+          "value": null,
+          "action": "refer",
+          "used": [
+            "P",
+            "C"
+          ],
+          "corroborated": false
+        }
+      }
+    }
+  ],
+  "input_sha256": {
+    "train-40-T0.json": "62431a1c3d551ec81e555d55f87061111c6cc2fbcdf21e23f36fda90af47f9ff",
+    "train-40-T1.json": "52883b37550180caec81fd87fd852874c4fee015d93fdee0de0fbe7252254f3f",
+    "train-40-T2.json": "22e4a8c2717e690a7028b4a83130d1e639235038160a81405838ce1553359220",
+    "train-40-R0.json": "403f3f410899f4b61b0124ea0a91adbb0c98b1aaa7e02f5518361fa262fc3fda",
+    "train-40-R1.json": "85be74e94f3698026400512662d5eed383b7e213f0c808dc1c19d84766fd9400",
+    "train-41-T0.json": "62431a1c3d551ec81e555d55f87061111c6cc2fbcdf21e23f36fda90af47f9ff",
+    "train-41-T1.json": "b09f66c54f837ed8e3cc7c9dcf4fa10959dc49485b2a0e1d5db3aa50ac4bac7f",
+    "train-41-T2.json": "efe6552a564f875ac56a66a6c7ac1d21c5ca7420d23086ed44697fb003fe95ab",
+    "train-41-R0.json": "649af1d0300005a360642a40f96c025a3ffab1da41232f813419a8934393d159",
+    "train-41-R1.json": "df574334690c72a3a0121735a2cd82db83663126f22926908ae2541bc1c22bc4",
+    "train-42-T0.json": "523d63465706df7eb15b4918b1a9128c945405edbf61e247dde70bd48a0325f1",
+    "train-42-T1.json": "1966c02f62346f0364568a7c695a5418eab7d5dc5951c8dc4c15a073177aec7d",
+    "train-42-T2.json": "08c6460e2f0109fc3017d9946fa73f481d260574b9aace1996d102cf6c40fe28",
+    "train-42-R0.json": "a4273c94ee953857b5895d2fe2970739852789bc0ab7f8b72c6a9794ebf2ac7b",
+    "train-42-R1.json": "e68a4c2f8ba8affba30af02e23056cf717d7e78a3e9a753249ce8cd2282be258",
+    "train-43-T0.json": "a743a7e546a4c55fe79bc879410e82f1f9f5a6ffee019967a3e6e1fd9882963f",
+    "train-43-T1.json": "534dc6d6355cb4014309d5a380136c6c97c8d01b56442d6aaa83e3f34df690f1",
+    "train-43-T2.json": "86c3826a3f7112bcca9f24e182b0ffa6c08999908e35599b771616c8de154eb9",
+    "train-43-R0.json": "0aa516bb18b360ea6ded1831992d21e2191e0511f34fb2532d9d32f8d1d62ad8",
+    "train-43-R1.json": "831ad005cc4efef49cd631972c3339f7d91a819e712b7ce7a271577b5a0265fb",
+    "train-44-T0.json": "62431a1c3d551ec81e555d55f87061111c6cc2fbcdf21e23f36fda90af47f9ff",
+    "train-44-T1.json": "4f74d7eedf06ca7b1c6cdf99f34b770df6b020a5e2848ed0f0cc66859733525d",
+    "train-44-T2.json": "28bacb98b2ab63b5720c625272feb73b72e0038dcd180dd9e1d30e14500e869f",
+    "train-44-R0.json": "6128a594c58dd873ad97b319b7be709903f0c21ae5326b81eca25a47a89ad286",
+    "train-44-R1.json": "8d3e30d3243676c1b0a48278df43cb34268e7d33f578bb58673f10116d6b6c81",
+    "train-45-T0.json": "588f8795ea0bad4b3ec2f7bce30cab4c8841d2f42fa5e06e4a824b88a1d5b7a9",
+    "train-45-T1.json": "69caec28920de7861a662d6c6e6b7f061ce2bcc09acc4c04323daef2afce86e0",
+    "train-45-T2.json": "d3d729e5620616071e3623501da956b5de4ece2014ec553611999dac60bcd3a3",
+    "train-45-R0.json": "005db992036c59cfec77da924a2e8f5f69fcd12b8297bf32d3283a2086c5bece",
+    "train-45-R1.json": "aafdc53804e35755a6a83a5f92234b24979e5ebd8c094167fd40e4c2003b3431",
+    "train-46-T0.json": "89f3a50847d6930dca6a97253985bbb24d7c6ee733c789877eac4a93883fabcf",
+    "train-46-T1.json": "2fbe342d1d0270bbd13b6c4600c0bc8b164c3aa2409cf842e91ee3a86a85f6c9",
+    "train-46-T2.json": "a098d8970beb07c0b342f550dca5b4db0ad930f1d08c91705d60f3d7fc8aba53",
+    "train-46-R0.json": "2b8344cbc8c6fffed9cc252f01430a00446c523e0d82ef3b78b57e0f798a17a2",
+    "train-46-R1.json": "923bba07399b3133b104a86541750cc1ad08a5de1c727b2a144d6ad74efb3a22",
+    "train-47-T0.json": "ad7ca9da46e08913e0666ea88fff13f9c016d8ba2d7125cb7e4886739df4f311",
+    "train-47-T1.json": "d21182871b1d1b49fba70333b0b3a4af05966b899bb39aa1feba685516b402ca",
+    "train-47-T2.json": "909c57f037ab4989a3d0fbb6b7446a37112ceed30c338caf8346d814a98d0790",
+    "train-47-R0.json": "3b5e35803886e9c66d0a5b32b9e9d88cc25a8d28409b6e6a20b2d2ae5deaa5f2",
+    "train-47-R1.json": "b247c25721ff91f67fec5aa7cda54fd404f607e18a4429baff2aa8e23c9512f4",
+    "train-48-T0.json": "8dd732f7358cb19620eb4bb702d5edb8f00f396dea84e191bf8e3e6586718276",
+    "train-48-T1.json": "7b81fbcac19ad9f7cb01ed274bfb405e0ba145b9f53f528b68dac4416bf014cb",
+    "train-48-T2.json": "c7f15739b653d5cc6b5887e42faaf2dff25a57b0f306ae4847beafd7e0fa1414",
+    "train-48-R0.json": "b1f4172b7c3b07407b407e604902d4b54668c867c26065f3bde414433fae1087",
+    "train-48-R1.json": "e7758797e7e362b1ce555294f5798cfc28b5da0cec448539b34eede9cefb91d3",
+    "train-49-T0.json": "62431a1c3d551ec81e555d55f87061111c6cc2fbcdf21e23f36fda90af47f9ff",
+    "train-49-T1.json": "dfd49caacbb0d022a7c5ea8604f507c357750eb5ceb9a2c609641b8cfaebb621",
+    "train-49-T2.json": "5d862db91a855ba9e3663d6527f12075227d72e365385695755f60a8692ccb34",
+    "train-49-R0.json": "046e9f4b525c145669bd0d164a0412eba6b493358a1340567148f8b38aa84fb3",
+    "train-49-R1.json": "b011f77d4a18a7ee685bfc0d98744c23b7f537bd6996a7a0dfe7067e6b662d06",
+    "train-50-T0.json": "b056a2282f7492a3c603bb20bb0b6e49ef6eda2f951e73555d35a08d03c1f5bf",
+    "train-50-T1.json": "57c993e8b28da27a1ae45ef5d703cc8db7afe19aa2a76a2a6861b35e45b2de80",
+    "train-50-T2.json": "f2082340455f37ebb1310c86b29b2795fbb1cb65d7050ab1da8eab0695b5b153",
+    "train-50-R0.json": "5cc69be0fa68122e420fce04d7e09f0b0c5ff4c89a10cfc72438ceaf5fc6eae4",
+    "train-50-R1.json": "3b6fe7a127a5019e07798f5fd431d7adc2060c0215c0a1501a6f01f41ee5d0a8",
+    "train-51-T0.json": "40d45514b751364a7be9b0e1c3838375be7d3955e42b24c2f466e828a0cd7a08",
+    "train-51-T1.json": "f0bcdae6209b1187f5246ba92bf592e35c299eb55c077dc90c65a4d051c18b43",
+    "train-51-T2.json": "6491822c6f64ba402c81a1ee80c6115b71ffdbd362b74e2be446f886f96a433b",
+    "train-51-R0.json": "f207077beb988a5564197e8a2daf578c458ffc752054b64beb14288a1268b9dc",
+    "train-51-R1.json": "001e3df605f712f7b99d936a4152d1c751bdc2a3116bd419b4a7f998e0c0c8db",
+    "train-52-T0.json": "aee61573e221bc93fafbafecb71adfdd1fdba2705208dcedcdeb0d630e65a9f0",
+    "train-52-T1.json": "8f741a00d3ce0a7c35584779cb52eac2556ecc3850a1b9bb992bc0c635f3035a",
+    "train-52-T2.json": "2bfb4eea6f1d1500c0ec50c7204ed9e57449351ba82cecf0e16a4c11bd42f9ea",
+    "train-52-R0.json": "b30b9f4da5c9076df1d20a1afa898c3c7e3ea42b69dfa0f42acfedf4a9a9f42e",
+    "train-52-R1.json": "0cba1e31c8fb7d08150fccfd889534b5db2d68220ada51f5137b08b782f52e35",
+    "train-53-T0.json": "bfe1d87a74a373c1d9a226ef342fd85baec6b22e6ec26c33b73702c623b5c001",
+    "train-53-T1.json": "afc47b5c607ccb45dc15687aec72459b62c155f56002bd7f19b71977a33b1a76",
+    "train-53-T2.json": "730645a3e18f8dc55b7437b574a67175bc9629994b40be1a9bd9ea69c7cce182",
+    "train-53-R0.json": "2458de2053f475b111473256427acb58dd0efd6e2d68708776186816db14e131",
+    "train-53-R1.json": "aae7a92a7c5c449b6457e484aec1564ccf4f0ea41de73741dea231c07dfc2d9a",
+    "train-54-T0.json": "e14ffe0fbacc0f0c303965d3df8c5cac57f4c9cdf3eef020ca3fe5e5197b7375",
+    "train-54-T1.json": "e24196e494d9aefbfc868e735fce2fc0a1c6faddeade5b3a9b5c50ec79df923f",
+    "train-54-T2.json": "0ac75e876e9e437677a67de8045ba784d5ea052f5df768ef67047dde9673eded",
+    "train-54-R0.json": "64e18027ef4c788c48e417860261e437df3e07af173caa8a2b4407535b43bbd6",
+    "train-54-R1.json": "60ddbb92fb2a0265073a0851a359d550c7598de97d7be9454b78315366c80851",
+    "train-55-T0.json": "823eb407a327037f8d32d1114e5dcb5054168e780967f6eb7ce2c5a6ba0a78f8",
+    "train-55-T1.json": "c6232483ec410fb4b97fe2f7d301eda4e2e51d852cfffdb80fb864fe5afb0ab3",
+    "train-55-T2.json": "ef557863b5b00fd55fc1c6535c0bd5b3818e4248b43b8c56b26fe6d18b0301e7",
+    "train-55-R0.json": "1aa42a0d52914843a6aa8cc3109cc1f4ea342b277907ad8dec1fa875c86d406d",
+    "train-55-R1.json": "3f23d9ab950e67992e1142b44e92ce47c18ec406f18198e7f061298a8536b8f2",
+    "train-56-T0.json": "03805629e3d0f3b7a14bc3220c25eddd6d32bc08dd6b9c75834227e631867405",
+    "train-56-T1.json": "81b6a48e4952c1f99a547d34f32a5cc4901f6b3953165ef2caa6b7eee9e848eb",
+    "train-56-T2.json": "634593f82ba086c660911c61a12c9695b3817e2c560469436f01e735f32a6d2b",
+    "train-56-R0.json": "b33a9053c2cf81114d0f9efb5be5d10a74abf8360ba692a6f87c069f3cd59dd9",
+    "train-56-R1.json": "9fa727a832fc1f346b0effc722fe94a09e6d6b448e0c0cfbc0820c71df2e9f69",
+    "train-57-T0.json": "03a5993e4276d238507d2587f887ba5109cfe6103f8bbecf3740151075fbfd1a",
+    "train-57-T1.json": "3fecc27ef08cc4d7144d9cbc59f1c3d3d5d011af9dacd2bdecc5255b1bdf9f9d",
+    "train-57-T2.json": "1f27311f4b4b4920c43124f3d1fb44de983c16988bd034d1c0548b858f766646",
+    "train-57-R0.json": "f219144984c71344b76cab1c74af9e97644255dfcc0a41f7fd45590ee6dc0d6e",
+    "train-57-R1.json": "ce8320c478ac271a48af4a44f2a2d5139384b3cad1cb5541ffa811d5ab53d7ac",
+    "train-58-T0.json": "212fd6677128886a6b9ddcd48682a4cf4849289a09a59a30d9c3e21fce8591a6",
+    "train-58-T1.json": "727aeb24306579162b79e02a2c3845bb061660abfae08f21ebd5331f15bb82de",
+    "train-58-T2.json": "fd8210ce1ff6bfab628200e2934f4fe37222c6ece3f47dfd9b744aef9f05723f",
+    "train-58-R0.json": "eb1c2a01c11d1dd8703954fd86dcc56c7fb978a8aa515aac8ce20e8c5872695e",
+    "train-58-R1.json": "27c8e8c11c5a299477f5983e6b19013671bf30b850ac96c3cd1f3ab0f79ef388",
+    "train-59-T0.json": "62431a1c3d551ec81e555d55f87061111c6cc2fbcdf21e23f36fda90af47f9ff",
+    "train-59-T1.json": "db4133207363e5507dcd1f7c1317324488ace0c80e1c5c5c9637a068c4bec315",
+    "train-59-T2.json": "cb74286520c911dfc31dc854b415b2fc70377b8d932a2c8e88a55f6372ee24a6",
+    "train-59-R0.json": "9d68778dc91377a0eaf8928b9cbb8b3a70870015c3dd44e67135f790069f0cee",
+    "train-59-R1.json": "4d6d499eb6633b5c394c9d9c81b9ed7037420dc6cd81d513b74411a22b5b6048"
+  },
+  "source_sha256": {
+    "fields.py": "184297e4c27ed121afce5d5e60490fbf6e0d9e3845b8882a3c992f24971a463c",
+    "replay.py": "5e0e5ff339485b3cf4925be905d1503928fae1cf79fd41dfa21adadb79053f6a",
+    "test_fields.py": "2e03c04318d0f6d3722d25b70e11bc4a51478b0d9480426f101610914cea3649"
+  },
+  "limits": "Used train40\u201359; developer saw prior outcomes; no held-out inference. Cost reuses v7 worker durations, excludes new parser time, and is not measured v8 latency."
+}

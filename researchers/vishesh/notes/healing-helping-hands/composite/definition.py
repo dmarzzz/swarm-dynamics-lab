@@ -5,8 +5,8 @@ HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parent/'src'))
 from jev import request as base_request,LABELS
 ARMS=('qwen','jev','qwen+jev')
-ATTEMPT='C2'
-SEEDS=(8811,8812,8813)
+ATTEMPT='C3'
+SEEDS=(8821,8822,8823)
 REQUEST_TIMEOUT=90
 UPSTREAM_TIMEOUT=60
 LEDGER_CALL_CAP=2179
@@ -25,13 +25,13 @@ def cases():
     out=[]
     for label in LABELS:
         for i in range(20):
-            m=f'procedure D{1201+i}';lo=40+i;hi=lo+7
+            m=f'procedure D{1401+i}';lo=60+i;hi=lo+7
             templates={
               'SUPPORT':[f'{m} scored {hi}% accuracy; the baseline scored {lo}% on the same test.',f'Accuracy rose from {lo}% to {hi}% when {m} was used.',f'The baseline got {lo} of 100 answers right. {m} got {hi} right.',f'Using {m} increased the fraction of correct answers by seven percentage points.',f'{m} was more accurate than its comparator in the completed evaluation.',f'The completed study measured better accuracy with {m}, despite slower runtime.'],
               'REFUTE':[f'{m} scored {lo}% accuracy; the baseline scored {hi}% on the same test.',f'Accuracy fell from {hi}% to {lo}% when {m} was used.',f'The baseline and {m} both got {lo} of 100 answers right.',f'Using {m} decreased the fraction of correct answers by seven percentage points.',f'{m} was less accurate than its comparator in the completed evaluation.',f'The completed study measured equal accuracy with {m}, despite faster runtime.'],
               'UNCERTAIN':[f'{m} used {lo} megabytes of memory; accuracy was not examined.',f'The team expects {m} to improve accuracy, but no experiment has been run.',f'{m} processed {hi} examples per second. The number of correct answers was not recorded.',f'The accuracy outcomes for {m} are unavailable.',f'The proposed accuracy comparison of {m} was cancelled before data collection.',f'The study measured faster runtime with {m}; it collected no accuracy observations.']}
             out.append({'id':f'{ATTEMPT}-{label}-{i}','family':i%6,'claim':m+' improves accuracy.','report':templates[label][i%6],'expected':label})
-    random.Random(8810).shuffle(out);return out
+    random.Random(8820).shuffle(out);return out
 
 def assess(rows):
     n=len(rows);out={}

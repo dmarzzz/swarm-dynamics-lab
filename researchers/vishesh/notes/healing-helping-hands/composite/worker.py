@@ -1,5 +1,6 @@
 """Explicitly admitted, bounded C1 stages. No inference during import."""
-import argparse,collections,hashlib,json,os,platform,subprocess,sys,time,urllib.request
+import signal
+import argparse,collections,hashlib,json,os,platform,subprocess,sys,time,urllib.request,urllib.error
 from pathlib import Path
 from definition import HERE,ARMS,SEEDS,LABELS,ATTEMPT,REQUEST_TIMEOUT,cases,request,wire,digest,assess
 from qwen_trace import Qwen
@@ -42,6 +43,16 @@ def check_transport(stage):
         raise ValueError('relay_not_ready_for_attempt')
     return health
 
+def infer_decision(payload,timeout):
+    recovered=False
+    try:
+        with urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:18443/decision',wire(payload),{'Content-Type':'application/json'}),timeout=timeout) as response:raw=json.load(response)
+    except (urllib.error.URLError,TimeoutError,ConnectionError):
+        # GET only: recover a durably completed response, never resubmit a provider call.
+        with urllib.request.urlopen('http://127.0.0.1:18443/result/'+digest(payload),timeout=5) as response:raw=json.load(response)
+        recovered=True
+    return {**validate(raw),'raw':raw,'recovered_cached_response':recovered}
+
 def run(out,stage,admit_path,parent=None):
     a=json.loads(admit_path.read_text());admission(a,stage)
     tldr=f'TLDR: {ATTEMPT} {stage}, Qwen 0.6B + Jev versus paired Qwen-only/Jev-only; measure correct labels, correction and anchoring before 200-curator repair. Synthetic feasibility, no independent-agent replication claim.'
@@ -76,18 +87,19 @@ def run(out,stage,admit_path,parent=None):
             value=fn(min(REQUEST_TIMEOUT,deadline-time.monotonic()));append(out/'calls.jsonl',{'type':'completed','id':cid,'model':model,'result':value,'seconds':time.monotonic()-t});return value
         except Exception as e:
             append(out/'calls.jsonl',{'type':'failed','id':cid,'model':model,'error_type':type(e).__name__,'seconds':time.monotonic()-t});raise
+    def interrupted(signum,frame):raise InterruptedError('supervisor_stop')
+    signal.signal(signal.SIGTERM,interrupted)
     try:
         backend=Qwen();manifest['qwen_metadata']=backend.metadata
         for r in rows:
+            check_transport(stage)
             r['status']='running';write(out/'observations.json',rows);obs={k:r[k] for k in ('claim','report')};i=r['index']
             # The journal saves report/seed plus pinned provider source; provider determines exact Qwen schema.
             q=call('qwen',{'observation':obs,'index':i},lambda timeout:backend.predict(obs,i,timeout));r['labels']['qwen']=q['label']
             for arm in (('jev','qwen+jev') if i%2==0 else ('qwen+jev','jev')):
+                check_transport(stage)
                 payload=request(obs,i,r['scope'],q['label'] if arm=='qwen+jev' else None)
-                def infer(timeout):
-                    with urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:18443/decision',wire(payload),{'Content-Type':'application/json'}),timeout=timeout) as response:raw=json.load(response)
-                    return {**validate(raw),'raw':raw}
-                value=call('jev',payload,infer);r['labels'][arm]=value['label']
+                value=call('jev',payload,lambda timeout:infer_decision(payload,timeout));r['labels'][arm]=value['label']
             r['status']='completed';write(out/'observations.json',rows)
             if sum(x['status']=='completed' for x in rows)%10==0:reporter.emit('metric',step=sum(x['status']=='completed' for x in rows),metrics={'completed_cases':sum(x['status']=='completed' for x in rows),'assigned_cases':len(rows),'model_calls':sum(counts.values())})
         write(out/'summary.json',assess(rows))

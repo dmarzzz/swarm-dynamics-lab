@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-10-04T06:57:03.406264+00:00",
+  "result_commit": "e84428d59d278ce9837d9111f2b9047cf53a0fbb",
+  "immutable_readme_commit": "18a520695d2ffb93f022854a0f044b32a1b1064b",
+  "experiment_url": "https://swarm-live.pages.dev/#/x/market-split-api",
+  "analysis_run": "market-split-api/s1-002-analysis",
+  "original_bundles_done": 18,
+  "valid_episodes": 36,
+  "cohort_calls": 864,
+  "cohort_api_cost_usd": 14.125788,
+  "study_lifetime_calls": 1408,
+  "study_lifetime_api_cost_usd": 15.563113,
+  "run_artifact_readbacks": 126,
+  "analysis_artifact_readbacks": 8,
+  "active_model_workers": 0,
+  "remaining_original_assignments": 0,
+  "claim": "dmarz-market-split-api",
+  "claim_status": "done",
+  "server": "sim-dmarz-2",
+  "server_preserved": true,
+  "public_ui": {
+    "complete_description_visible": true,
+    "all_three_sonnet_cells_show_6_of_6": true,
+    "analysis_done_visible": true,
+    "summary_png_loaded": [
+      1800,
+      1100
+    ],
+    "representative_replay": "139d8f744ae9",
+    "replay_visible_rounds": [
+      4,
+      24
+    ],
+    "replay_size": [
+      1080,
+      720
+    ],
+    "historical_failure_banner_retained": true
+  },
+  "next_diagnostic_plan": "published_unstarted",
+  "strict_project_check": {
+    "errors": 1,
+    "warnings": 0,
+    "scope": "Pre-existing unrelated missing discussion-memory-v3-film file; this study artifacts verified."
+  }
+}

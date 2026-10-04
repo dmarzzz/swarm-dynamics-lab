@@ -1,0 +1,15 @@
+{
+  "allocation": "theseus-execution-d1-owner5-20261004",
+  "cap_usd": 5,
+  "planned_model_reservations_usd": 1.229731,
+  "infrastructure_hold_usd": 0.5,
+  "remaining_unallocated_usd": 3.270269,
+  "previous_d1_calls": 0,
+  "host": "sim-theseus-d1",
+  "state": "model_settled_infrastructure_pending",
+  "verified_epoch": 1791096528.7769036,
+  "actual_model_usd": 0.17834099999999997,
+  "model_calls": 144,
+  "model_reservation_released_usd": 1.05139,
+  "settled_epoch": 1791097122.6399357
+}

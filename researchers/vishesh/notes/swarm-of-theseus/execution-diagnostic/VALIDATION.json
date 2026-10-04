@@ -16,7 +16,7 @@
     "invalid command visible",
     "missing output visible"
   ],
-  "native_provider_live_validation": "not run",
+  "native_provider_live_validation": "D1 complete:144 calls, no provider errors, all usage returned; results/D1/summary.json",
   "review_status": "not required by explicit owner direction; no independent validation claimed",
   "shared_artifact_validation": {
     "errors": 1,
@@ -24,5 +24,13 @@
     "preexisting_missing_artifact": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
     "theseus_artifact_errors": 0
   },
-  "authorization_update": "Owner confirmed USD5/144 calls, explicitly waived researcher review and authorized a new dedicated machine if occupied. Iteration uses change/run/postmortem/plan revision within cumulative authority."
+  "authorization_update": "Owner confirmed USD5/144 calls, explicitly waived researcher review and authorized a new dedicated machine if occupied. Iteration uses change/run/postmortem/plan revision within cumulative authority.",
+  "measured_closeout": {
+    "model_calls": 144,
+    "assigned_decisions": 480,
+    "model_cost_usd": 0.178341,
+    "retries": 0,
+    "score_disagreements": 0,
+    "raw_archive_hash_verified": true
+  }
 }
