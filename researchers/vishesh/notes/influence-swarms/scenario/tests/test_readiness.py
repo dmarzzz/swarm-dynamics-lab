@@ -39,3 +39,10 @@ class ReadinessTests(unittest.TestCase):
   self.assertEqual(expand(get(p)),get(self.p))
   get(p)['$defs']['scope']['properties']['storage_region']['type']='number'
   with self.assertRaises(ValueError):run.verify_packet(p)
+ def test_five_case_packet_stops_at_first_failure(self):
+  p=run.verify_packet(json.loads((BASE/'reviews/D9-C-packet.json').read_text()))
+  self.assertEqual(len({i['case_id'] for i in p['requests']}),5)
+  self.assertNotIn(self.p['requests'][0]['case_id'],[i['case_id'] for i in p['requests']])
+  error=urllib.error.HTTPError('x',400,'private',{},io.BytesIO(b'{}'));t=Mock(side_effect=error)
+  out=run.collect(p,self.root/'five',self.db,t)
+  self.assertEqual((out['planned'],out['failed'],out['unstarted'],out['calls']),(5,1,4,1));self.assertEqual(t.call_count,1)

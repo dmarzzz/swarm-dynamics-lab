@@ -1,0 +1,86 @@
+{
+  "case_id": "regional-no-approval",
+  "extraction": {
+    "raw_facts_correct": 36,
+    "raw_facts_total": 36,
+    "aligned_facts": 17,
+    "wrong_accepted_facts": 0
+  },
+  "wrong_checks": [
+    {
+      "candidate": "Aster",
+      "field": "capabilities",
+      "expected": "PASS",
+      "actual": "UNKNOWN"
+    },
+    {
+      "candidate": "Aster",
+      "field": "software_budget",
+      "expected": "PASS",
+      "actual": "UNKNOWN"
+    },
+    {
+      "candidate": "Aster",
+      "field": "service_coverage",
+      "expected": "PASS",
+      "actual": "UNKNOWN"
+    },
+    {
+      "candidate": "Birch",
+      "field": "capabilities",
+      "expected": "PASS",
+      "actual": "UNKNOWN"
+    },
+    {
+      "candidate": "Birch",
+      "field": "software_budget",
+      "expected": "PASS",
+      "actual": "UNKNOWN"
+    },
+    {
+      "candidate": "Cobalt",
+      "field": "capabilities",
+      "expected": "PASS",
+      "actual": "UNKNOWN"
+    },
+    {
+      "candidate": "Cobalt",
+      "field": "software_budget",
+      "expected": "PASS",
+      "actual": "UNKNOWN"
+    }
+  ],
+  "raw_preference": "Birch",
+  "guard": {
+    "action": "DEFER",
+    "raw_choice": "Birch",
+    "eligible_alternatives": [],
+    "cost_acceptable_alternatives": [],
+    "unnecessary_deferral": false,
+    "purchase_refused": true,
+    "reason": "purchase lacks complete requirement/cost support"
+  },
+  "source_checks": {
+    "Aster": {
+      "deployment_scope": "UNKNOWN",
+      "capabilities": "PASS",
+      "rollout_deadline": "PASS",
+      "software_budget": "PASS",
+      "service_coverage": "PASS"
+    },
+    "Birch": {
+      "deployment_scope": "UNKNOWN",
+      "capabilities": "PASS",
+      "rollout_deadline": "PASS",
+      "software_budget": "PASS",
+      "service_coverage": "PASS"
+    },
+    "Cobalt": {
+      "deployment_scope": "UNKNOWN",
+      "capabilities": "PASS",
+      "rollout_deadline": "PASS",
+      "software_budget": "PASS",
+      "service_coverage": "PASS"
+    }
+  }
+}

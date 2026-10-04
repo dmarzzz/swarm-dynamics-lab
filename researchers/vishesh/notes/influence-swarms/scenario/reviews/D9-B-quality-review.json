@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d9-b-01",
+  "native_attempt_id": "native-D9-B-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T19:34:24.323631+00:00",
+  "verdict": "repair",
+  "outcome_interpretation": "Acquisition recovered; excerpt quality limits accurate complete checks. Qualify remaining cases once, not reroll this outcome.",
+  "parent_handoff_sha256": "9320cbc600ff2d960e30a17cfc3cb50274941968a88df6ca68542243ac6a1e84",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Equivalent schema representation completes; no root-cause or architecture-effect claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "One inspected case; acquisition result reused transparently in development qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact expanded schema equivalence; same actors/model/policy and zero retries.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "fail",
+      "finding": "36/36raw facts but17/36aligned,8/15accurate checks. Raw blocked preference remains; guard defers.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ],
+      "next_action": "Qualify remaining five inspected cases once; retain every behavioral failure.",
+      "acceptance_check": "Complete schema/usage and zero accepted unsupported facts; report falseUNKNOWNs and blocked preferences separately."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Complete response/usage and original exact-source audit expose fabricated/spliced excerpts.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One development case, no independent effect or reliability estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Same frozen observation/instructions; only equivalent schema representation differs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "One assigned/started/valid, response retained; no exclusion of poor excerpt quality.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "One call/.048640reservation,.011789actual; cumulative5.160672/8and252calls; worker stopped.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Published packet, exact-equivalence tests,105deployed checks and response retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Source audit separates raw values, evidence alignment, policy checks and guarded action.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-post.md",
+          "sha256": "fb12d08885b4eca661e4e8a749370aa8e5742cb059b7ac0267fe8569f699c6d3"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-B-facts.json",
+          "sha256": "b8598d1bc5acb0eb751ca93b00b33815d5a30eb65e24619f62a2bfab7dd51343"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-B-01/summary.json",
+          "sha256": "d30305e53408a58621b8481500fbb56b6132c6a364c3941e6dcf94c439c831c4"
+        }
+      ]
+    }
+  ]
+}
