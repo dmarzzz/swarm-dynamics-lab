@@ -2265,6 +2265,34 @@
         "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json"
       ],
       "status_at_assessment": "complete_valid_qualification_result"
+    },
+    {
+      "id": "quota-splitting",
+      "title": "Identity splitting for quota (Opus 5.5)",
+      "documents": [
+        "researchers/dmarz/notes/quota-splitting/README.md"
+      ],
+      "experiment_ids": [
+        "quota-splitting"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/quota-splitting/experiment.yaml"
+      ],
+      "assessor": "dmarz/pipeline-quota",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Under a stated per-identity compute quota an Opus 5.5 lead agent creates more subagent identities than it creates for the same job with no quota, and so draws more than one quota from a pool shared with three other teams.",
+        "rationale": "Unrun. Prospective plan only; no stage has run and no model call has been made."
+      },
+      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic roots \u00d7 8 quota conditions \u00d7 3 quota sizes = 576 episodes of one model agent, at most 6 calls each (at most 3,456 S1 calls); separate Q0 of 16 episodes on 8 roots and a one-call probe. Roots are the independent units, not episodes, rounds or calls.",
+      "sources": [
+        "researchers/dmarz/notes/quota-splitting/README.md",
+        "researchers/dmarz/notes/quota-splitting/preregistration.md",
+        "researchers/dmarz/notes/quota-splitting/design.yaml",
+        "researchers/dmarz/notes/quota-splitting/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
     }
   ],
   "source_sha256": {
