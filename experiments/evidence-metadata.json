@@ -7,8 +7,12 @@
     {
       "id": "wild-identity",
       "title": "Observable names and reference provenance across three swarm archives",
-      "documents": ["researchers/shadow/notes/wild-identity/README.md"],
-      "experiment_ids": ["wild-identity"],
+      "documents": [
+        "researchers/shadow/notes/wild-identity/README.md"
+      ],
+      "experiment_ids": [
+        "wild-identity"
+      ],
       "registration_paths": [],
       "evidence_confidence": {
         "score": 1,
@@ -2641,6 +2645,30 @@
       "assessor": "shadow/sol-askswarm",
       "assessed_at": "2026-10-04",
       "source_commit": "d6463560b10d6468d2a165971dbbbebe61ae1e49"
+    },
+    {
+      "id": "optimal-swarm-size-q-a7",
+      "title": "Optimal Swarm Size Q-A7 public-input binding preparation",
+      "documents": [
+        "researchers/vishesh/notes/optimal-swarm-size/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether redundant public-input bindings improve fixed-N1 competence and correct throughput is untested.",
+        "rationale": "Prospective bounded diagnostic and 63 offline tests exist, but dedicated queue allocation, allowed credential delivery and original-ledger continuity remain unresolved; zero native dispatch."
+      },
+      "sample_size_summary": "Observed Q-A7: 0 assigned/started/valid native episodes. Planned: 2 fresh roots \u00d7 2 structures \u00d7 full/bound arms = 8 N1 episodes; a prospective root6 futility stop can leave 4 unstarted. Items and arm pairs share roots.",
+      "sources": [
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-input-binding-plan.md",
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/results/q-a7-preparation/status.json"
+      ],
+      "status_at_assessment": "prepared_admission_blocked_zero_dispatch",
+      "assessor": "vishesh/codex-idea-scores",
+      "assessed_at": "2026-10-04",
+      "source_commit": "b01fa92999aa8018e41bdcce57c190f477ab3ccf"
     }
   ],
   "source_sha256": {
