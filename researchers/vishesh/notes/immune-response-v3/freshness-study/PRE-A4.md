@@ -1,0 +1,9 @@
+# Prospective A4 admission assessment
+
+Status: diagnostic-only; native dispatch requires current allocation, source/public-plan and ledger receipts. Owner's current PI-review/implement/run/iterate instruction authorizes this bounded cycle. Maximum two60-call attempts; no new cap or unrestricted repetition.
+
+The PI critique and README were committed before the new instrument. Eight semantic checks pass: useful versus redundant restart, stale state concealment, metadata-only receipt, cache/inspection semantics, all-case visible reference recovery, stale-trusting failure, destructive-format gate, and identical source evidence across arms. The complete scripted12-episode grid passes capability gates. Audit reconciles12 shared advisory records,48 decisions, state-derived health/restart labels and all frames. This is an offline instrument check, not native qualification.
+
+Preserve A3's outcomes and original ledger:387 prior calls,USD3.179489 reserved,capUSD8. At most60 new requests, max16000 input bytes and512 output tokens, no retries: maximum additional conservative reservationUSD1.14432 per attempt. Two attempts plus temporary infrastructure fit the remaining authority; launch still checks the durable ledger. Freeze actual revision before dispatch; publish/register exact README URL/hash. Paired advice is generated once and reused; no actor sees the case label, hidden runtime state or outcome scorer.
+
+Any missing usage, transport or schema failure stops collection and requires reconciliation before retry. A capability failure requires a specific post-mortem and justified repair; a valid null/ceiling without further decision value ends collection. No success criterion is weakened after observing responses. Public summaries exclude raw operational/credential records; preserve full raw evidence locally and indexed on the authorized run dashboard.
