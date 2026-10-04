@@ -30,7 +30,7 @@ Use PC-1 all-cell lower/upper error bounds, fixed three-assigned-voter majority,
 
 ## Budget, launch and process checks
 
-Study-specific total cap is pending the owner's answer; until then paid dispatch is forbidden. A planned number of calls is not a monetary authorization. Reserve at most 36 x 32,000 x the verified input-token price for each map request, plus any verified output/request charge; reject unsupported or changed prices. This intentionally conservative multi-question bound may stop a small budget before the full cohort, which remains in the denominator. Reject a provider usage charge beyond its reservation and stop the attempt.
+The owner authorized $5 total on 2026-10-04 UTC (SPENDING-AUTHORIZATION.json): at most $4 API and $1 infrastructure, six-hour host limit. An existing idle Mars fleet host is exclusively allocated, so no new provisioning spend is required. A planned number of calls is not a monetary authorization. Reserve at most 36 x 32,000 x the verified input-token price for each map request, plus any verified output/request charge; reject unsupported or changed prices. This intentionally conservative multi-question bound may stop a small budget before the full cohort, which remains in the denominator. Reject a provider usage charge beyond its reservation and stop the attempt.
 
 A machine claim is mandatory before deployment or any native qualification. An existing idle eligible host can be exclusively allocated; a new server requires approved infrastructure spending and the original owner-controlled infrastructure state. Never reuse another experiment's active/planned claim. Public deployment records identify host and claim only, without private addresses or inventory.
 
