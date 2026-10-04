@@ -1,47 +1,62 @@
-"""Reference OpenRouter adapter and study ledger for ready-chain studies (program v5, 2026-10-04).
+"""Reference OpenAI adapter and study ledger for ready-chain studies (2026-10-04).
 
 Copy this file into a study's `src/` (it is then covered by the study's source hash) and pass the
-study's frozen configuration to it. It imports nothing from a study. Written by dmarz/pipeline at
-dmarz/fleet-monitor's request; tests are in `test_openrouter_provider.py` beside it.
+study's frozen configuration to it. It imports nothing from a study. Written by dmarz/openai-route at
+dmarz/fleet-monitor's request, from `openrouter_provider.py` (same ledger, reservation, failure and
+billing-pause rules); tests are in `test_openai_provider.py` beside it.
+
+Endpoint: OpenAI Chat Completions, https://api.openai.com/v1/chat/completions, `Authorization: Bearer`.
 
 What it guarantees
-- The request body is exactly the frozen template of `selected-model.json` plus `messages`:
-  `model`, `provider {only, allow_fallbacks: false, require_parameters: true}`,
-  `reasoning {enabled: false}`, `max_tokens`, `response_format {type: json_object}`, `messages`.
-  Nothing else is ever added. No model fallback, no provider fallback.
-- The answer is JSON-object mode with LOCAL validation (the provider gives no schema guarantee):
-  the caller passes `validate(obj)`, which returns the accepted answer or raises.
-- No answer is ever retried. A request is re-sent only when the provider rejected it before the
-  model ran: HTTP 429 and overload statuses (502, 503, 529), at most twice, backoff 2 s then 6 s,
-  `retry-after` honoured up to 20 s, all inside the one request timeout.
-- A billing or limit stop is not a model failure: HTTP 402, or a 400/403/429 whose body names
-  credit, balance, billing, a usage or spend limit, an exceeded limit or insufficient funds, pauses dispatch for every thread using this adapter, re-sends the same call every 60 s
-  for up to 20 minutes, and then stops with category `provider_credit_balance_low`.
-- Every failed request keeps its HTTP status, the first 2,000 characters of the response body and
-  the request id. Request headers and the key are never stored.
-- There is no token-counting endpoint on this route. The reservation is a byte-based upper bound:
-  input tokens <= bytes of the encoded request body (a token is at least one byte), plus the full
-  output limit, at the frozen prices. The ledger settles each call at its actual cost: the cost the
-  provider reports when present, otherwise tokens times the frozen prices. Both are recorded.
-- The response's model slug must be the requested model or its dated canonical form, and the
-  response must name the serving provider and it must be the pinned one. A missing provider field
-  or a mismatch is an integrity failure (so a probe cannot pass without the provider being named).
-- The per-call reservation carries a wide margin (`reservation_margin`, default 10 times the
-  snapshot-price bound), so a provider-reported cost above the snapshot does not stop a stage over
-  fractions of a cent. The study dollar cap stays the hard guard.
-- A call that a billing stop left unanswered has its reservation voided (no model ran), so it does
-  not count against the call caps or the dollar cap and a continuation batch can run it.
-- Duplicate keys in the answer's JSON object are rejected (`invalid_json`).
+- The request body is exactly the frozen template plus `messages`: `model`, `reasoning_effort`,
+  `max_completion_tokens`, `response_format`, then `temperature` and `top_p` only if the template has
+  them, then `messages`. Nothing else is ever added (no `max_tokens`, no tools, no `stream`, no `n`).
+  `temperature`/`top_p` are refused unless `reasoning_effort` is `none` on a model that accepts sampling
+  parameters there (gpt-6-sol, gpt-6-luna; docs "latest model" guide, 2026-10-04).
+- `reasoning_effort` must be one of the values the model's documentation page lists (`REASONING_EFFORTS`).
+- `response_format` is `{type: json_object}` (local validation by the caller's `validate(obj)`), or
+  `{type: json_schema, json_schema: {name, schema, strict: true}}` when the study supplies a schema.
+  Either way the answer is parsed locally, duplicate keys rejected, and passed to `validate(obj)`.
+- Usage carries no cost. Cost is COMPUTED from the per-million prices pinned in the study's hashed design
+  (`budget.prices`, which must equal this file's `PRICES` row for the model), recorded as
+  `cost_source: computed_from_pinned_prices`; `provider_reported_usd` is always None.
+  Cached prompt tokens (`prompt_tokens_details.cached_tokens`) are priced at the cached-input price.
+  GPT-6 models bill cache writes automatically (prompt-caching guide); if the usage names
+  `prompt_tokens_details.cache_write_tokens` those are priced at the cache-write price, and if it does
+  not, every uncached prompt token of a prompt of 1,024 tokens or more (the caching minimum) is priced at
+  the cache-write price, an upper bound marked `cache_write_upper_bound`.
+  `completion_tokens` includes reasoning tokens (they are billed as output and count against
+  `max_completion_tokens`); `completion_tokens_details.reasoning_tokens` is recorded.
+- Prompts over 272,000 tokens are priced higher by OpenAI; the adapter refuses a budget whose
+  `max_input_tokens` exceeds 272,000 (`long_context_not_supported`).
+- The response's `model` must be the requested id, the configured `canonical_model`, or its dated form
+  `<id>-YYYY-MM-DD`; otherwise `model_mismatch` (integrity). There is no provider routing or check.
+- Refusals (`message.refusal` set, or `finish_reason: content_filter`) are category `refusal`;
+  `finish_reason: length` is `truncated_output` (reasoning can use up the allowance: the account keeps
+  `reasoning_tokens`). With `reasoning_effort: none`, any reasoning token is `unexpected_reasoning_tokens`.
+- No answer is ever retried. A request is re-sent only on HTTP 429 (rate limit) and 500/502/503/504, at
+  most twice, backoff 2 s then 6 s, `retry-after` honoured up to 20 s, all inside one request timeout.
+- A billing or quota stop is not a rate limit: HTTP 402, or a 400/403/429 whose error code or message
+  names insufficient_quota, quota, billing, credit, balance, insufficient, a usage limit, a spend limit
+  or a hard limit pauses dispatch for every thread using this adapter, re-sends the same call every 60 s
+  for up to 20 minutes, and then stops with `provider_billing_stopped` (resumable, see READY-CHAIN.md).
+  The call left unanswered has its reservation voided (no model ran).
+- Every failed request keeps its HTTP status, the first 2,000 characters of the response body and the
+  request id. Request headers and the key are never stored. From a successful response only the numeric
+  `x-ratelimit-*` limit/remaining values are kept (LESSONS.md item 10).
+- Reservation: input tokens <= bytes of the encoded request body, priced at the higher of the input and
+  cache-write prices, plus the full `max_completion_tokens` at the output price, times
+  `reservation_margin` (default 10). The ledger settles each call at its computed cost.
 
 Failure categories (CallFailure.category)
-  refusal, empty_answer, truncated_output, invalid_json, invalid_answer, answer_too_long,
-  unexpected_reasoning_tokens, missing_usage, input_ceiling_exceeded,
-  http_<status>, provider_error_<code>, transport_<ExceptionName>, timeout,
-  provider_credit_balance_low, missing_credential_alias, input_size_limit,
+  refusal, empty_answer, truncated_output, nonterminal_output, invalid_json, invalid_answer,
+  answer_too_long, unexpected_reasoning_tokens, missing_usage, input_ceiling_exceeded,
+  output_ceiling_exceeded, malformed_provider_response, http_<status>, provider_error_<code>,
+  transport_<ExceptionName>, timeout, provider_billing_stopped, missing_credential_alias,
+  input_size_limit, json_mode_prompt_lacks_json,
   and from the ledger: duplicate_call_refused, stage_call_cap_reached, study_call_cap_reached,
   aggregate_budget_exhausted, attempt_without_reservation, transport_attempt_cap_reached,
-  and the integrity failures model_mismatch, provider_missing, provider_mismatch,
-  reservation_bound_breached.
+  and the integrity failures model_mismatch, reservation_bound_breached.
 `INTEGRITY` lists the categories that must stop dispatch at once; `BILLING_STOP` is the category
 after which unfinished units are recorded as not started and may be resumed (`chain.py resume`).
 """
@@ -49,22 +64,52 @@ import fcntl
 import json
 import os
 from pathlib import Path
+import re
 import socket
 import threading
 import time
 import urllib.error
 import urllib.request
 
-URL = 'https://openrouter.ai/api/v1/chat/completions'
-KEY_ENV = 'SWARM_OPENROUTER_API_KEY'
+URL = 'https://api.openai.com/v1/chat/completions'
+KEY_ENV = 'SWARM_OPENAI_API_KEY'
 LEDGER_ENV = 'STUDY_BUDGET_LEDGER'
-BODY_KEYS = ('model', 'provider', 'reasoning', 'max_tokens', 'response_format', 'messages')
-BILLING_STOP = 'provider_credit_balance_low'
+BODY_KEYS = ('model', 'reasoning_effort', 'max_completion_tokens', 'response_format', 'messages')
+SAMPLING_KEYS = ('temperature', 'top_p')
+BILLING_STOP = 'provider_billing_stopped'
 INTEGRITY = ('duplicate_call_refused', 'stage_call_cap_reached', 'study_call_cap_reached',
              'aggregate_budget_exhausted', 'attempt_without_reservation', 'transport_attempt_cap_reached',
-             'model_mismatch', 'provider_missing', 'provider_mismatch', 'reservation_bound_breached',
+             'model_mismatch', 'reservation_bound_breached', 'output_ceiling_exceeded',
              'missing_credential_alias')
 BODY_KEPT = 2000
+LONG_CONTEXT_TOKENS = 272000       # above this OpenAI charges long-context prices; not supported here
+CACHE_MIN_TOKENS = 1024            # prompts shorter than this are never cached (no cache write)
+
+# Standard-tier USD per million tokens, short context (<= 272K prompt tokens).
+# Source: https://developers.openai.com/api/docs/pricing and each model page
+# (https://developers.openai.com/api/docs/models/<id>), retrieved 2026-10-04T12:10Z by dmarz/openai-route.
+# A study copies the row of its model into `budget.prices` of its hashed design.
+PRICES = {
+    'gpt-6-luna':  {'input': 0.10, 'cached_input': 0.01, 'cache_write': 0.125, 'output': 0.50},
+    'gpt-6-sol':   {'input': 2.00, 'cached_input': 0.20, 'cache_write': 2.50,  'output': 10.00},
+    'gpt-6.1-sol': {'input': 2.00, 'cached_input': 0.10, 'cache_write': 2.50,  'output': 10.00},
+    'gpt-6-astra': {'input': 10.00, 'cached_input': 1.00, 'cache_write': 12.50, 'output': 50.00},
+}
+PRICES_SOURCE = {'url': 'https://developers.openai.com/api/docs/pricing', 'retrieved': '2026-10-04T12:10Z', 'tier': 'standard'}
+# Allowed `reasoning_effort` per model (model pages, 2026-10-04). `minimal` is listed by the generic API
+# reference but by none of these model pages; gpt-6.1-sol's page says `none` and `minimal` are unsupported.
+REASONING_EFFORTS = {
+    'gpt-6-luna':  ('none', 'low', 'medium', 'high', 'xhigh', 'max'),
+    'gpt-6-sol':   ('none', 'low', 'medium', 'high', 'xhigh', 'max'),
+    'gpt-6.1-sol': ('low', 'medium', 'high', 'xhigh', 'max'),
+    'gpt-6-astra': ('low', 'medium', 'high', 'xhigh', 'max'),
+}
+# Models that accept temperature/top_p, and only with reasoning_effort none ("latest model" guide).
+SAMPLING_MODELS = ('gpt-6-sol', 'gpt-6-luna')
+BILLING_WORDS = ('insufficient_quota', 'quota', 'billing', 'credit', 'balance', 'insufficient',
+                 'usage limit', 'spend limit', 'spending limit', 'hard limit', 'hard_limit')
+RATE_HEADERS = ('x-ratelimit-limit-requests', 'x-ratelimit-remaining-requests',
+                'x-ratelimit-limit-tokens', 'x-ratelimit-remaining-tokens')
 
 
 class CallFailure(Exception):
@@ -78,26 +123,47 @@ def stage_of(call_id):
     return call_id.split(':', 1)[0].split('-', 1)[0].upper()
 
 
-BILLING_WORDS = ('credit', 'balance', 'billing', 'usage limit', 'spend limit', 'limit exceeded', 'insufficient')
-
-
 def family_of(call_id):
     """The batch a call belongs to, without a continuation suffix: 's1-001-r2:<id>' -> 's1-001'.
     Per-stage call caps apply per family, so a repair attempt ('q0-002') has its own allowance while a
     continuation after a billing stop shares the allowance of the batch it continues."""
-    import re
     return re.sub(r'-r\d+$', '', call_id.split(':', 1)[0])
 
 
 def is_billing_error(status, body):
-    """A provider-side billing or limit stop, never a model failure: HTTP 402 always, and an HTTP
-    400, 403 or 429 whose body names credit, balance, billing, a usage or spend limit, an exceeded
-    limit or insufficient funds (case-insensitive). A 429 without such words is ordinary rate
-    limiting and goes through the transport retry rule."""
+    """A billing or quota stop, never a model failure and never a rate limit: HTTP 402 always, and an
+    HTTP 400, 403 or 429 whose error code or message names insufficient_quota, quota, billing, credit,
+    balance, insufficient, a usage, spend or hard limit (case-insensitive). OpenAI reports an exhausted
+    quota as 429 `insufficient_quota`; a 429 without such words (e.g. "Rate limit reached ... tokens per
+    min") is ordinary rate limiting and goes through the transport retry rule."""
     text = (body or '').lower()
     return status == 402 or (status in (400, 403, 429) and any(word in text for word in BILLING_WORDS))
 
 
+def check_config(config):
+    """Refuse a configuration this adapter cannot price or send exactly. Returns the config."""
+    model, t, b = config['model'], config['request_template'], config['budget']
+    if model not in PRICES or model not in REASONING_EFFORTS: raise ValueError('model_not_supported')
+    if t.get('model') != model: raise ValueError('template_model_differs')
+    keys = [k for k in t if k not in SAMPLING_KEYS]
+    if keys != [k for k in BODY_KEYS if k != 'messages']: raise ValueError('template_keys')
+    if t['reasoning_effort'] not in REASONING_EFFORTS[model]: raise ValueError('reasoning_effort_not_allowed_for_model')
+    if any(k in t for k in SAMPLING_KEYS) and not (t['reasoning_effort'] == 'none' and model in SAMPLING_MODELS):
+        raise ValueError('sampling_parameters_need_reasoning_effort_none')
+    if t['max_completion_tokens'] != b['max_output_tokens']: raise ValueError('max_completion_tokens_differs_from_budget')
+    rf = t['response_format']
+    if rf == {'type': 'json_object'}:
+        pass
+    elif rf.get('type') == 'json_schema' and set(rf) == {'type', 'json_schema'}:
+        js = rf['json_schema']
+        if not (isinstance(js, dict) and set(js) == {'name', 'schema', 'strict'} and js['strict'] is True
+                and isinstance(js['schema'], dict) and re.fullmatch(r'[A-Za-z0-9_-]{1,64}', str(js['name']))):
+            raise ValueError('json_schema_needs_name_schema_strict_true')
+    else:
+        raise ValueError('response_format')
+    if b['max_input_tokens'] > LONG_CONTEXT_TOKENS: raise ValueError('long_context_not_supported')
+    if dict(b['prices']) != PRICES[model]: raise ValueError('prices_differ_from_reference_table')
+    return config
 class Ledger:
     """One append-only ledger for the whole study, shared by every stage, thread and process.
 
@@ -167,20 +233,28 @@ class Ledger:
                     'cap_transport_attempts': b['max_transport_attempts']}
 
 
+
 class _HttpFailure(Exception):
     def __init__(self, status, body, request_id, retry_after):
         super().__init__(status)
         self.status, self.body, self.request_id, self.retry_after = status, body, request_id, retry_after
 
 
-class OpenRouter:
-    """config: {'model', 'canonical_model' (optional dated slug), 'provider' (pinned, lower case),
-    'request_template' (the frozen template), 'budget' {...}}. See the module docstring and the test
-    file's CONFIG for every budget key. One instance is shared by all threads of a stage: the
-    billing pause is stage-wide."""
+def _number(value):
+    try:
+        return int(str(value).strip())
+    except (TypeError, ValueError):
+        return None
+
+
+class OpenAI:
+    """config: {'model', 'canonical_model' (optional), 'request_template' (the frozen template),
+    'budget' {..., 'prices': PRICES[model]}}. See the module docstring and the test file's CONFIG for every
+    budget key. One instance is shared by all threads of a stage: the billing pause is stage-wide."""
 
     def __init__(self, ledger, config, opener=None, clock=time.monotonic, sleep=time.sleep):
-        self.ledger, self.c, self.b = ledger, config, config['budget']
+        self.ledger, self.c, self.b = ledger, check_config(config), config['budget']
+        self.p = self.b['prices']
         self.opener = opener or urllib.request.urlopen
         self.clock, self.sleep = clock, sleep
         self.key = os.environ.get(KEY_ENV)
@@ -198,12 +272,13 @@ class OpenRouter:
     def body(self, system, user):
         """The frozen template plus the two messages. Nothing else is ever added."""
         t = self.c['request_template']
-        body = {'model': t['model'], 'provider': dict(t['provider']), 'reasoning': dict(t['reasoning']),
-                'max_tokens': t['max_tokens'], 'response_format': dict(t['response_format']),
-                'messages': [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]}
-        assert tuple(body) == BODY_KEYS and body['model'] == self.c['model']
-        assert body['provider'].get('allow_fallbacks') is False and body['provider'].get('require_parameters') is True
-        assert body['reasoning'] == {'enabled': False} and body['max_tokens'] == self.b['max_output_tokens']
+        body = {'model': t['model'], 'reasoning_effort': t['reasoning_effort'],
+                'max_completion_tokens': t['max_completion_tokens'],
+                'response_format': json.loads(json.dumps(t['response_format']))}
+        for key in SAMPLING_KEYS:
+            if key in t: body[key] = t[key]
+        body['messages'] = [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]
+        assert [k for k in body if k not in SAMPLING_KEYS] == list(BODY_KEYS) and body['model'] == self.c['model']
         return body
 
     def _send(self, encoded, timeout):
@@ -211,6 +286,8 @@ class OpenRouter:
         try:
             with self.opener(request, timeout=timeout) as response:
                 raw = response.read()
+                got = getattr(response, 'headers', None) or {}
+                limits = {h: _number(got.get(h)) for h in RATE_HEADERS if _number(got.get(h)) is not None}
         except urllib.error.HTTPError as exc:
             try: text = exc.read().decode('utf-8', 'replace')[:BODY_KEPT]
             except Exception: text = ''
@@ -221,7 +298,7 @@ class OpenRouter:
             try: exc.close()
             except Exception: pass
             raise _HttpFailure(exc.code, text, rid, after) from None
-        return raw
+        return raw, limits
 
     def _post(self, encoded, account, on_attempt):
         """One logical request under the transport retry rule and the billing-outage rule.
@@ -240,13 +317,12 @@ class OpenRouter:
             on_attempt()
             tries += 1
             try:
-                raw = self._send(encoded, max(remaining, 30.0) if owner else remaining)
+                raw, limits = self._send(encoded, max(remaining, 30.0) if owner else remaining)
                 try:
                     data = json.loads(raw)
                 except Exception:
                     data = None
                 if isinstance(data, dict) and isinstance(data.get('error'), dict) and not data.get('choices'):
-                    # OpenRouter can answer 200 with an error object; treat it as the status it names.
                     err = data['error']
                     code = err.get('code') if type(err.get('code')) is int else 200
                     raise _HttpFailure(code, json.dumps(err)[:BODY_KEPT], None, None)
@@ -294,6 +370,7 @@ class OpenRouter:
                 raise CallFailure('malformed_provider_response', account)
             for key in ('http_status', 'error_body', 'request_id'):
                 if key in account: account['earlier_' + key] = account.pop(key)   # evidence of a recovered attempt
+            if limits: account['rate_limits'] = limits
             return data
 
     # ------------------------------------------------------------------ billing pause (stage-wide)
@@ -331,6 +408,29 @@ class OpenRouter:
         with self._state:
             return self._stopped
 
+    # ------------------------------------------------------------------ cost
+    def cost_micro_usd(self, usage):
+        """Computed cost in micro-dollars (float) and how it was priced. Prices are USD per million tokens,
+        so tokens x price is micro-dollars."""
+        p = self.p
+        prompt, completion = usage['prompt_tokens'], usage['completion_tokens']
+        details = usage.get('prompt_tokens_details') or {}
+        cached = details.get('cached_tokens') if isinstance(details, dict) else None
+        cached = cached if type(cached) is int and 0 <= cached <= prompt else 0
+        written = details.get('cache_write_tokens') if isinstance(details, dict) else None
+        uncached = prompt - cached
+        if type(written) is int and 0 <= written <= uncached:
+            basis = 'cache_write_reported'
+            cost = (uncached - written) * p['input'] + written * p['cache_write']
+        elif prompt >= CACHE_MIN_TOKENS:
+            basis = 'cache_write_upper_bound'       # writes not reported: price every uncached token as written
+            cost = uncached * max(p['input'], p['cache_write'])
+        else:
+            basis = 'below_cache_minimum'
+            cost = uncached * p['input']
+        cost += cached * p['cached_input'] + completion * p['output']
+        return cost, {'cached_tokens': cached, 'cache_write_tokens': written if type(written) is int else None, 'input_pricing': basis}
+
     # ------------------------------------------------------------------ one call
     def call(self, system, user, call_id, validate):
         """Returns (answer, accounting). `validate(obj)` returns the accepted answer or raises."""
@@ -341,9 +441,12 @@ class OpenRouter:
             raise CallFailure(BILLING_STOP, account)
         if len(encoded) > self.b['max_input_bytes']:
             raise CallFailure('input_size_limit', account)
-        # Byte-based upper bound: input tokens <= request bytes; the whole output limit priced in full.
-        # times a wide margin, because the provider's reported cost may sit above the snapshot prices.
-        bound = len(encoded) * self.b['input_usd_per_million'] + self.b['max_output_tokens'] * self.b['output_usd_per_million']
+        if body['response_format']['type'] == 'json_object' and 'json' not in (system + user).lower():
+            raise CallFailure('json_mode_prompt_lacks_json', account)   # the API rejects JSON mode without the word
+        # Byte-based upper bound: input tokens <= request bytes at the higher input price; the whole output
+        # allowance (visible plus reasoning tokens) at the output price; times the margin.
+        p = self.p
+        bound = len(encoded) * max(p['input'], p['cache_write']) + self.b['max_output_tokens'] * p['output']
         reserve = int(bound * self.b.get('reservation_margin', 10) + 0.999999)
         account['reserved_usd'] = reserve / 1e6
         try:
@@ -368,38 +471,34 @@ class OpenRouter:
                 account['voided'] = True
             raise
         account['latency_seconds'] = self.clock() - started
-        if not isinstance(data, dict):
-            raise CallFailure('malformed_provider_response', account)
         usage = data.get('usage') or {}
         tokens_in, tokens_out = usage.get('prompt_tokens'), usage.get('completion_tokens')
         if not (type(tokens_in) is int and type(tokens_out) is int and tokens_in >= 0 and tokens_out >= 0):
             raise CallFailure('missing_usage', account)
-        computed = tokens_in * self.b['input_usd_per_million'] + tokens_out * self.b['output_usd_per_million']
-        reported = usage.get('cost')
-        actual = int(round(reported * 1e6)) if isinstance(reported, (int, float)) and not isinstance(reported, bool) and reported >= 0 else int(computed + 0.999999)
+        computed, pricing = self.cost_micro_usd(usage)
+        actual = int(computed + 0.999999)
         details = usage.get('completion_tokens_details') or {}
         reasoning = details.get('reasoning_tokens') if isinstance(details, dict) else None
         self.ledger.transact({'type': 'response', 'call_id': call_id, 'actual_micro_usd': actual,
                               'input_tokens': tokens_in, 'output_tokens': tokens_out})
         account.update(usage_reported=True, actual_usd=actual / 1e6, computed_usd=computed / 1e6,
-                       provider_reported_usd=reported if isinstance(reported, (int, float)) and not isinstance(reported, bool) else None,
+                       cost_source='computed_from_pinned_prices', provider_reported_usd=None,
                        input_tokens=tokens_in, output_tokens=tokens_out, reasoning_tokens=reasoning,
-                       response_model=data.get('model'), response_provider=data.get('provider'), response_id=data.get('id'))
+                       visible_output_tokens=tokens_out - reasoning if type(reasoning) is int else None,
+                       response_model=data.get('model'), response_id=data.get('id'),
+                       system_fingerprint=data.get('system_fingerprint'), **pricing)
         # Nothing below is retried: the model ran and usage was reported.
         if actual > reserve:
             raise CallFailure('reservation_bound_breached', account)
         model = data.get('model')
-        accepted = {self.c['model'], self.c.get('canonical_model') or self.c['model']}
-        if model not in accepted:
+        dated = isinstance(model, str) and re.fullmatch(re.escape(self.c['model']) + r'-\d{4}-\d{2}-\d{2}', model)
+        if model not in {self.c['model'], self.c.get('canonical_model') or self.c['model']} and not dated:
             raise CallFailure('model_mismatch', account)
-        served = data.get('provider')
-        if not isinstance(served, str) or not served.strip():
-            raise CallFailure('provider_missing', account)
-        if self.c['provider'] not in served.lower():
-            raise CallFailure('provider_mismatch', account)
+        if tokens_out > self.b['max_output_tokens']:
+            raise CallFailure('output_ceiling_exceeded', account)
         if tokens_in > self.b['max_input_tokens']:
             raise CallFailure('input_ceiling_exceeded', account)
-        if reasoning:
+        if reasoning and self.c['request_template']['reasoning_effort'] == 'none':
             raise CallFailure('unexpected_reasoning_tokens', account)
         choices = data.get('choices')
         if not isinstance(choices, list) or len(choices) != 1 or not isinstance(choices[0], dict):
@@ -408,6 +507,7 @@ class OpenRouter:
         finish = choice.get('finish_reason')
         account['finish_reason'] = finish
         if message.get('refusal') or finish == 'content_filter':
+            if isinstance(message.get('refusal'), str): account['refusal_text'] = message['refusal'][:BODY_KEPT]
             raise CallFailure('refusal', account)
         if finish == 'length':
             raise CallFailure('truncated_output', account)

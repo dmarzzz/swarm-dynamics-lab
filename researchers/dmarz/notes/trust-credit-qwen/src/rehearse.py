@@ -9,7 +9,7 @@ chains run in fresh temporary result and ledger directories:
   (b) a stub that never abstains, which must fail qualification: exit 3, stopped_at_gate at Q0 and
       no S1 run on the hub;
   (c) a stub whose account runs out of credit during S1 and stays out: the stage must stop with
-      provider_credit_balance_low and nothing failed; then, with credit restored, `chain resume`
+      provider_billing_stopped and nothing failed; then, with credit restored, `chain resume`
       must finish S1 with every unit recorded exactly once, and `chain verify` must pass.
 It refuses to run unless the hub URL host is 127.0.0.1.
 """
@@ -49,10 +49,10 @@ class Response(io.BytesIO):
 
 
 class Stub:
-    """Stands in for the OpenRouter chat-completions endpoint and answers in its response shape.
+    """Stands in for the OpenAI chat-completions endpoint and answers in its response shape.
     It rejects any request body that is not exactly the frozen template plus messages.
-    credit_after: from that many answered S1-sized requests on, every request gets HTTP 402 until
-    `restore()` is called."""
+    credit_after: from that many answered requests on, every request gets HTTP 429 `insufficient_quota`
+    (OpenAI's quota stop) until `restore()` is called."""
 
     def __init__(self, mode='reference', credit_after=None):
         assert mode in ('reference', 'never_abstain')
@@ -74,18 +74,20 @@ class Stub:
             if self.credit_after is not None and self.answered >= self.credit_after: self.out_of_credit = True
             if self.out_of_credit:
                 self.refused += 1
-                raise urllib.error.HTTPError(provider.URL, 402, 'payment required', {},
-                                             io.BytesIO(b'{"error":{"code":402,"message":"Insufficient credits. Add more to continue."}}'))
+                raise urllib.error.HTTPError(provider.URL, 429, 'too many requests', {}, io.BytesIO(
+                    b'{"error":{"message":"You exceeded your current quota, please check your plan and billing details.",'
+                    b'"type":"insufficient_quota","param":null,"code":"insufficient_quota"}}'))
             self.answered += 1
         answer = study.scripted(json.loads(body['messages'][1]['content']))
         if self.mode == 'never_abstain':
             answer = {'values': {k: (0 if v is None else v) for k, v in answer['values'].items()}}
         tokens = int(len(request.data) * 0.45)
         return Response(json.dumps({
-            'id': 'gen-rehearsal', 'model': d['canonical_model'], 'provider': 'Alibaba', 'object': 'chat.completion',
-            'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer)}}],
-            'usage': {'prompt_tokens': tokens, 'completion_tokens': 40, 'total_tokens': tokens + 40,
-                      'completion_tokens_details': {'reasoning_tokens': 0}}}).encode())
+            'id': 'chatcmpl-rehearsal', 'model': d['model'], 'object': 'chat.completion',
+            'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer), 'refusal': None}}],
+            'usage': {'prompt_tokens': tokens, 'completion_tokens': 240, 'total_tokens': tokens + 240,
+                      'prompt_tokens_details': {'cached_tokens': 0},
+                      'completion_tokens_details': {'reasoning_tokens': 200}}}).encode())
 
 
 class FakeClock:

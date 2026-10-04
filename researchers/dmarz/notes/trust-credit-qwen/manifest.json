@@ -1,5 +1,5 @@
 {
- "attempt": "001",
+ "attempt": "002",
  "contract": "ready-chain-v1",
  "digest": "e09119d1f0fcad81876d7b87cf94cf639725f026aa20007f8eea9be4a0129f50",
  "experiment": "trust-credit-qwen",
@@ -8,8 +8,8 @@
    "assignments": 216,
    "digest": "d973fce7881b0296715e403f105284e292985d13fb937974a69ab47e621974c4",
    "distinct_packets": 215,
-   "max_request_bytes": 5967,
-   "request_bytes": 1282426,
+   "max_request_bytes": 5875,
+   "request_bytes": 1262554,
    "ids": [
     "00449dd2e69216278982:84f908312aac9e03",
     "016a4026d1b5ddf9f624:ba92a26592f82178",
@@ -233,8 +233,8 @@
    "assignments": 1,
    "digest": "7ff52043f055d0a26f2c10a804bd9544bbc1328b3051aed99cf5344d71765f0c",
    "distinct_packets": 1,
-   "max_request_bytes": 5938,
-   "request_bytes": 5938,
+   "max_request_bytes": 5846,
+   "request_bytes": 5846,
    "ids": [
     "9493ef27f102c44c81e2:df67890b929ded16"
    ]
@@ -243,8 +243,8 @@
    "assignments": 23,
    "digest": "03800f8242fa93b8c6a865832df42cc789d7eb0a1c804e8b1c0c2ccad7d4bc3c",
    "distinct_packets": 23,
-   "max_request_bytes": 5967,
-   "request_bytes": 136825,
+   "max_request_bytes": 5875,
+   "request_bytes": 134709,
    "ids": [
     "1284a4e28a420f8aa671:f3cf905150712841",
     "1b025c30966091e06018:7d18e664e1aee941",
@@ -275,8 +275,8 @@
    "assignments": 504,
    "digest": "1afebafd418540ab3ade71d4f81bb520ddb4636c0e7bdbe97fa450e2b1aad212",
    "distinct_packets": 499,
-   "max_request_bytes": 5962,
-   "request_bytes": 2990509,
+   "max_request_bytes": 5870,
+   "request_bytes": 2944141,
    "ids": [
     "00113b2f1e6e21c301fa:e4e2479c9200901d",
     "008a43708ef89780fcbf:8e0055c897b17f0e",
@@ -788,8 +788,8 @@
    "assignments": 24,
    "digest": "97447d5a7744813a314e1ced832d70dee4207cca8ebae5313bdc3e0a05e98b95",
    "distinct_packets": 24,
-   "max_request_bytes": 5961,
-   "request_bytes": 142750,
+   "max_request_bytes": 5869,
+   "request_bytes": 140542,
    "ids": [
     "016a4026d1b5ddf9f624:ba92a26592f82178",
     "05e20e3da7de7769f82b:3efc0e8df74347b5",
