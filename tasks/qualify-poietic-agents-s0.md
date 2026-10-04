@@ -3,9 +3,9 @@ id: qualify-poietic-agents-s0
 type: task
 title: Qualify Poietic Agents S0-02 within retained cumulative authority
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-heterogeneous
+owner: null
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-heterogeneous
@@ -14,12 +14,12 @@ depends_on:
 topics:
 - llm-agent-swarms
 - agent-budgets
-updated: 2026-10-04T15:34Z
+updated: 2026-10-04T15:39Z
 history:
 - '2026-10-04T07:14Z released by vishesh/codex-heterogeneous: Direct USD 2 run approval recorded; central S0 request submitted at 2796183f. Approved OpenRouter selector unresolved and dispatcher has not acknowledged. Zero calls/spend. Follow study DISPATCH.md and SETUP.md; do not duplicate dispatch.'
 - '2026-10-04T08:07Z released by vishesh/codex-heterogeneous: Credential resolved from existing access context; deployed 54 checks passed; existing central S0 request has complete launch handoff. Awaiting dispatcher start, not additional owner credentials. Preserve the existing frozen source/admission/budget and do not duplicate dispatch.'
 - '2026-10-04T09:07Z released by vishesh/codex-heterogeneous: S0-01 native failure fully closed: 36 calls, 144 outcomes retained, nine artifacts verified, allocation released, cumulative upper exposure USD0.556455767. Prepared S0-02 has63 offline checks and verified public plan; current G6 requires owner approval before fresh allocation or launch. Keep original USD2 cap, API ledger and deadline. See Poietic SETUP.md and S0-02-pre.md.'
-claimed_at: 2026-10-04T15:34Z
+- '2026-10-04T15:39Z released by vishesh/codex-heterogeneous: S0-02 preparation cycle closed at expired execution-window gate. Scope is conditionally authorized; distinct renewal remains pending with PI Review.79 offline checks pass, public plan and rendered page verified at9d99ec2d, handoff published atdf4f3fea. Original authority and36 uncertain calls unchanged; USD0.556455767 conservative cumulative exposure. No successor allocation, dispatch or new calls. Preserve original ledgers and await actual bounded renewal decision.'
 ---
 
 ## Goal
