@@ -1,0 +1,1094 @@
+{
+  "schema": "publication-supplement-dmarz-v1",
+  "original_source_freeze": "5945294fa853d7ff60a7ec62b31fd2158d74c3de",
+  "publication_source_freeze": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+  "original_hub_cutoff_utc": "2026-10-04T04:11:27Z",
+  "latest_documented_result_update_utc": "2026-10-04T04:27:00Z",
+  "method": "Bounded read-only diff and committed documents only. No new hub fetches, provider calls, servers or experiment edits. Original dmarz.json and its frozen counts remain unchanged. New postmortem claims are distinguished from directly inspected raw evidence.",
+  "key_changes": [
+    "Haiku V3 D0 two legal terminal actions, I0 six correct mechanics probes, Q0 four successful clean eight-round episodes:40 newly completed paid calls, costing$0.270549. Lifetime140 priced calls/$1.093064 at04:27UTC.",
+    "D0 responses use2478 and2115 output tokens, below the former3072ceiling; this does not identify a causal headroom repair.",
+    "Full-length regulated R0 is documented running with8episodes/192calls planned; no terminal result available in this source revision. Main discovery remains blocked.",
+    "Sybil budget/newcomer launch appendices corroborate already captured04:09 launches; no newer completion counts.",
+    "Sonnet market adds no completed-cohort outcome in the changed source. Preserve six completed bundles/one running as04:11 snapshot, not a current claim.",
+    "Discussion adds E1\u2013E4 unrun proposals and marks resampling-only/v2 continuation dropped or superseded; no new model outcome."
+  ],
+  "new_attempts": [
+    {
+      "family": "market-split-haiku",
+      "id": "market-split-haiku/d0-001",
+      "attempt": "d0-001",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001",
+      "backend": "anthropic",
+      "unit": "one replayed actor observation / model response",
+      "count_unit": "one replayed actor observation / model response",
+      "counts": {
+        "planned": 2,
+        "started": 2,
+        "terminal": 2,
+        "valid": 2,
+        "completed": 2,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "One preserved failed market observation is dispatched once and returns a valid terminal action; an entire market episode is not rerun.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "diagnostic_passed_no_causal_repair_claim"
+      },
+      "stalling_behavior": "Both observations return legal maintain actions with end_turn. They do not establish full-length episode reliability.",
+      "causes": {
+        "confirmed": [
+          "Both responses fit inside the former 3072-token ceiling.",
+          "New stop-reason accounting reported end_turn for both calls."
+        ],
+        "plausible": [
+          "Stochastic variation could explain the successful redispatch under the new configuration."
+        ],
+        "unknown": [
+          "A causal effect of larger output headroom and resolution of the original fault remain unproven."
+        ]
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/d0-001-post.md",
+          "lines": [
+            3,
+            11
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/d0-001-post.md#L3"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/d0-001-pre.md",
+          "lines": [
+            1,
+            13
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/d0-001-pre.md#L1"
+        }
+      ],
+      "smallest_diagnostic": "Proceed only through the already specified fresh mechanics, clean-profit and full-length regulated reliability gates.",
+      "falsifier": "Recurrence of nonterminal generation during fresh regulated R0 would falsify sufficient repair for that qualification set.",
+      "acceptance": "All full-length R0 episodes valid, profitable and priced with exact replay; no gate requiring a split.",
+      "conclusions": [
+        "Two legal responses are new diagnostic evidence, not replacement outcomes for the two failed S1 dynamic episodes.",
+        "Refused=0 is supported here by the publication report of both stop reasons being end_turn; new raw provider envelopes were not inspected."
+      ],
+      "task_success_definition": null,
+      "call_counts": {
+        "attempted": 2,
+        "priced": 2,
+        "model_cost_usd": 0.026172,
+        "output_tokens_by_observation": [
+          2478,
+          2115
+        ],
+        "reported_stop_reason": [
+          "end_turn",
+          "end_turn"
+        ]
+      },
+      "inference_settings": {
+        "max_output_tokens": 8192,
+        "requested_thinking_tokens": 2048,
+        "retries": 0
+      },
+      "independent_unit": "Two previously failed observations from task36 round2 and task37 round10; reused diagnostic states, not fresh independent markets."
+    },
+    {
+      "family": "market-split-haiku",
+      "id": "market-split-haiku/d0-001-launcher-compile-failure",
+      "attempt": "d0-001-launcher-compile-failure",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "scripted",
+      "model": null,
+      "backend": "local/scripted",
+      "unit": "local launcher compilation attempt",
+      "count_unit": "local launcher compilation attempt",
+      "counts": {
+        "planned": 1,
+        "started": 1,
+        "terminal": 1,
+        "valid": 0,
+        "completed": 0,
+        "incomplete": 1,
+        "refused": null,
+        "errored": 1,
+        "missing": 0,
+        "task_success": 0
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Launcher must compile before any transmission or remote model process. Initial attempt terminated with a compilation error and did not reach that endpoint.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "pre_dispatch_setup_failure_repaired"
+      },
+      "stalling_behavior": "Pre-dispatch local compilation failure, not model behavior.",
+      "causes": {
+        "confirmed": [
+          "Generic MODE substitution altered MODEL alias spelling.",
+          "A unique placeholder and compile-before-transmission check repaired the launcher before the single D0 hub run."
+        ],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/d0-001-post.md",
+          "lines": [
+            9,
+            9
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/d0-001-post.md#L9"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "Preserves a newly disclosed setup failure without counting it as another model or scientific run."
+      ],
+      "task_success_definition": "Launcher compilation succeeds; the initial local attempt failed.",
+      "call_counts": {
+        "model_calls": 0,
+        "hub_assignments": 0
+      }
+    },
+    {
+      "family": "market-split-haiku",
+      "id": "market-split-haiku/i0-003",
+      "attempt": "i0-003",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001",
+      "backend": "anthropic",
+      "unit": "one-response stateless mechanics probe",
+      "count_unit": "one-response stateless mechanics probe",
+      "counts": {
+        "planned": 6,
+        "started": 6,
+        "terminal": 6,
+        "valid": 6,
+        "completed": 6,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": 0,
+        "task_success": 6
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "One fresh fixture returns a terminal legal action; task success also requires the requested operation.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "mechanics_passed_main_blocked"
+      },
+      "stalling_behavior": "All six return terminal legal actions; no missing or duplicate cases reported.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/i0-003-post.md",
+          "lines": [
+            3,
+            7
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/i0-003-post.md#L3"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/i0-003-pre.md",
+          "lines": [
+            1,
+            11
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/i0-003-pre.md#L1"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "Mechanics succeeds under V3. Ordinary profit and full-length regulated reliability are separate gates; no spontaneous-discovery conclusion."
+      ],
+      "task_success_definition": "Each of six fresh fixtures selects its mandated operation with legal quantities.",
+      "call_counts": {
+        "attempted": 6,
+        "priced": 6,
+        "model_cost_usd": 0.030029
+      },
+      "inference_settings": {
+        "max_output_tokens": 8192,
+        "requested_thinking_tokens": 2048,
+        "retries": 0
+      },
+      "independent_unit": "Six fresh stateless mechanics fixtures80\u201385, not six completed markets."
+    },
+    {
+      "family": "market-split-haiku",
+      "id": "market-split-haiku/q0-002",
+      "attempt": "q0-002",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001",
+      "backend": "anthropic",
+      "unit": "eight-round clean market-arm episode",
+      "count_unit": "eight-round clean market-arm episode",
+      "counts": {
+        "planned": 4,
+        "started": 4,
+        "terminal": 4,
+        "valid": 4,
+        "completed": 4,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": 0,
+        "task_success": 4
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Locked/dynamic arm executes all eight rounds with valid actions; task success additionally requires positive profit and >=75% of the fixed reference.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "clean_profit_passed_R0_required",
+        "minimum_profit_ratio": 0.754926176,
+        "threshold": 0.75
+      },
+      "stalling_behavior": "All four episodes complete and all32 calls priced; no invalid or missing episodes reported.",
+      "causes": {
+        "confirmed": [
+          "Fresh eight-round unregulated competence gate passes unchanged75% threshold."
+        ],
+        "plausible": [],
+        "unknown": [
+          "Task76 dynamic is close to the floor; no evidence of general optimality, equal capability to Sonnet, or repaired regulated reliability."
+        ]
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/q0-002-post.md",
+          "lines": [
+            3,
+            9
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/q0-002-post.md#L3"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/q0-002-pre.md",
+          "lines": [
+            1,
+            13
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/q0-002-pre.md#L1"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": "Fresh R024-round regulated reliability must pass before a separate main cohort; no registration/evasion requirement.",
+      "conclusions": [
+        "This updates current Haiku competence status while preserving the historical failed gates and incomplete S1 cohort.",
+        "New publication states exact pinned-runtime replay of32 observations/actions; this supplement did not independently fetch those new traces."
+      ],
+      "task_success_definition": "Four complete, valid, positive-profit episodes each reach at least75% of the fixed clean reference.",
+      "bundle_counts": {
+        "planned": 2,
+        "completed": 2
+      },
+      "call_counts": {
+        "attempted": 32,
+        "priced": 32,
+        "model_cost_usd": 0.214348
+      },
+      "profit_ratios": [
+        0.968636218,
+        0.754926176,
+        1.0,
+        0.999792642
+      ],
+      "run_ids": [
+        "market-split-haiku/3dc30c5ea065",
+        "market-split-haiku/304b99832418"
+      ],
+      "inference_settings": {
+        "max_output_tokens": 8192,
+        "requested_thinking_tokens": 2048,
+        "retries": 0
+      },
+      "independent_unit": "Two fresh clean market tasks76/77, seed31, paired locked/dynamic arms; four dependent episodes."
+    },
+    {
+      "family": "market-split-haiku",
+      "id": "market-split-haiku/r0-001",
+      "attempt": "r0-001",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001",
+      "backend": "anthropic",
+      "unit": "24-round regulated market-arm episode",
+      "count_unit": "24-round regulated market-arm episode",
+      "counts": {
+        "planned": 8,
+        "started": null,
+        "terminal": null,
+        "valid": null,
+        "completed": null,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Each of eight planned arms must execute24 regulated rounds with valid actions, positive profit, complete pricing and exact replay.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "running_no_published_terminal_results",
+        "publication_update_utc": "2026-10-04T04:27:00Z"
+      },
+      "stalling_behavior": "Deployment document says running; no postmortem or terminal-count evidence in this source revision. Running is not evidence of stalling.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/r0-001-pre.md",
+          "lines": [
+            3,
+            21
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/r0-001-pre.md#L3"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/deployment.md",
+          "lines": [
+            13,
+            13
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/deployment.md#L13"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": "Every episode valid and profitable, every call priced, matching source/design, all artifacts and exact replay. A valid absence of splitting passes.",
+      "conclusions": [
+        "Status is model stage running, not unrun and not passed. Per-episode started/completed/missing counts remain unknown without newer hub or endpoint artifacts.",
+        "Main Haiku discovery remains blocked pending this gate and a postmortem."
+      ],
+      "bundle_counts": {
+        "planned": 4,
+        "started": null,
+        "terminal": null
+      },
+      "call_counts": {
+        "planned_maximum": 192,
+        "observed_attempted": null
+      },
+      "inference_settings": {
+        "max_output_tokens": 8192,
+        "requested_thinking_tokens": 2048,
+        "retries": 0
+      },
+      "independent_unit": "Two fresh market tasks78/79, paired across firm/owner regulation and locked/dynamic arms."
+    }
+  ],
+  "updated_attempts": [
+    {
+      "family": "market-split-haiku",
+      "id": "market-split-haiku/s0-fleet-003",
+      "attempt": "s0-fleet-003",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "scripted",
+      "model": null,
+      "backend": "local/scripted",
+      "unit": "eight-round mock market-arm episode",
+      "count_unit": "eight-round mock market-arm episode",
+      "counts": {
+        "planned": 12,
+        "started": 12,
+        "terminal": 12,
+        "valid": 12,
+        "completed": 12,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": 0,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Each mock arm completes eight scheduled rounds and records its actions/evaluation.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "mock_adapter_passed"
+      },
+      "stalling_behavior": "Twelve full mock traces, no invalid or missing episodes; scripted engineering evidence only.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md",
+          "lines": [
+            3,
+            9
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md#L3"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "Original snapshot already counted12/12 from hub/local raw. New postmortem adds source-pinned replay and42 artifact checks; do not add another12 observations."
+      ],
+      "update_type": "documentation_corroboration_no_new_scientific_observations",
+      "original_snapshot_id": "market-split-haiku/s0-fleet-003",
+      "bundle_counts": {
+        "planned": 6,
+        "completed": 6
+      },
+      "call_counts": {
+        "mock_requests": 96,
+        "model_calls": 0
+      }
+    },
+    {
+      "family": "sybil-budget-api",
+      "id": "sybil-budget-api/46ebda03",
+      "attempt": "46ebda03",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001",
+      "backend": "anthropic",
+      "unit": "packet/arm observation",
+      "count_unit": "packet/arm observation",
+      "counts": {
+        "planned": 2880,
+        "started": null,
+        "terminal": null,
+        "valid": null,
+        "completed": null,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "One assigned packet observation obtains synthesis and recorded evaluation; source publication supplies no newer completed count.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "prior_Q0_passed_S1_collecting"
+      },
+      "stalling_behavior": "The source now confirms the same04:09 launch observed in the earlier04:11 snapshot; no newer completion or failure result is published.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/sybil-budget-api/DEPLOYMENT.md",
+          "lines": [
+            47,
+            49
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/sybil-budget-api/DEPLOYMENT.md#L47"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "Documentation catches up with the original hub snapshot; no extra experiment, rerun or final scientific result.",
+        "Per-publication terminal, valid, completed, error and missing counts stay unknown; never replace earlier0/231 with presumed current counts."
+      ],
+      "update_type": "source_confirms_previously_observed_launch_no_new_terminal_counts",
+      "original_snapshot_id": "sybil-budget-api/46ebda03",
+      "original_snapshot": {
+        "cutoff_utc": "2026-10-04T04:11:27Z",
+        "terminal": 0,
+        "valid": 0,
+        "completed": 0,
+        "note": "Historical snapshot values, explicitly not asserted to be publication-time counts."
+      },
+      "source_execution_revision": "e9db4c58a8847d2f54d60a8ff3cc70f81f58263e"
+    },
+    {
+      "family": "sybil-newcomer-api",
+      "id": "sybil-newcomer-api/8def40e4",
+      "attempt": "8def40e4",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "model",
+      "model": "claude-haiku-4-5-20251001",
+      "backend": "anthropic",
+      "unit": "packet/arm observation",
+      "count_unit": "packet/arm observation",
+      "counts": {
+        "planned": 1944,
+        "started": null,
+        "terminal": null,
+        "valid": null,
+        "completed": null,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "One assigned packet observation obtains synthesis and recorded evaluation; source publication supplies no newer completed count.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "prior_Q0_passed_S1_collecting"
+      },
+      "stalling_behavior": "The source now confirms the same04:09 launch observed in the earlier04:11 snapshot; no newer completion or failure result is published.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/sybil-newcomer-api/DEPLOYMENT.md",
+          "lines": [
+            50,
+            52
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/sybil-newcomer-api/DEPLOYMENT.md#L50"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "Documentation catches up with the original hub snapshot; no extra experiment, rerun or final scientific result.",
+        "Per-publication terminal, valid, completed, error and missing counts stay unknown; never replace earlier0/231 with presumed current counts."
+      ],
+      "update_type": "source_confirms_previously_observed_launch_no_new_terminal_counts",
+      "original_snapshot_id": "sybil-newcomer-api/8def40e4",
+      "original_snapshot": {
+        "cutoff_utc": "2026-10-04T04:11:27Z",
+        "terminal": 231,
+        "valid": 231,
+        "completed": 231,
+        "note": "Historical snapshot values, explicitly not asserted to be publication-time counts."
+      },
+      "source_execution_revision": "e9db4c58a8847d2f54d60a8ff3cc70f81f58263e"
+    }
+  ],
+  "unrun_plans": [
+    {
+      "family": "discussion-dose-v3",
+      "id": "discussion-dose-v3/proposed-E1",
+      "attempt": "proposed-E1",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "unrun",
+      "model": null,
+      "backend": null,
+      "unit": "proposed physical model request",
+      "count_unit": "proposed physical model request",
+      "counts": {
+        "planned": 252,
+        "started": 0,
+        "terminal": 0,
+        "valid": 0,
+        "completed": 0,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": 252,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Proposal only; no experimental request dispatched. Exact proposed call count only where specified; approximate E3/E4 sizes are not assigned denominators.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "proposed_not_authorized_not_launched"
+      },
+      "stalling_behavior": "No executed behavioral observation.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            1,
+            12
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L1"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            14,
+            31
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L14"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "New proposal, not a result or replacement of the original V3/D1 plans. Each needs owner authorization and its own review."
+      ],
+      "proposed_model": "claude-haiku-4-5-20251001",
+      "approximate_planned_model_calls": null
+    },
+    {
+      "family": "discussion-dose-v3",
+      "id": "discussion-dose-v3/proposed-E2",
+      "attempt": "proposed-E2",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "unrun",
+      "model": null,
+      "backend": null,
+      "unit": "proposed physical model request",
+      "count_unit": "proposed physical model request",
+      "counts": {
+        "planned": 252,
+        "started": 0,
+        "terminal": 0,
+        "valid": 0,
+        "completed": 0,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": 252,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Proposal only; no experimental request dispatched. Exact proposed call count only where specified; approximate E3/E4 sizes are not assigned denominators.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "proposed_not_authorized_not_launched"
+      },
+      "stalling_behavior": "No executed behavioral observation.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            1,
+            12
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L1"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            33,
+            35
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L33"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "New proposal, not a result or replacement of the original V3/D1 plans. Each needs owner authorization and its own review."
+      ],
+      "proposed_model": "claude-sonnet-5-5",
+      "approximate_planned_model_calls": null
+    },
+    {
+      "family": "discussion-dose-v3",
+      "id": "discussion-dose-v3/proposed-E3",
+      "attempt": "proposed-E3",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "unrun",
+      "model": null,
+      "backend": null,
+      "unit": "proposed physical model request",
+      "count_unit": "proposed physical model request",
+      "counts": {
+        "planned": null,
+        "started": 0,
+        "terminal": 0,
+        "valid": 0,
+        "completed": 0,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": null,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Proposal only; no experimental request dispatched. Exact proposed call count only where specified; approximate E3/E4 sizes are not assigned denominators.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "proposed_not_authorized_not_launched"
+      },
+      "stalling_behavior": "No executed behavioral observation.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            1,
+            12
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L1"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            37,
+            44
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L37"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "New proposal, not a result or replacement of the original V3/D1 plans. Each needs owner authorization and its own review."
+      ],
+      "proposed_model": null,
+      "approximate_planned_model_calls": 2450
+    },
+    {
+      "family": "discussion-dose-v3",
+      "id": "discussion-dose-v3/proposed-E4",
+      "attempt": "proposed-E4",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "unrun",
+      "model": null,
+      "backend": null,
+      "unit": "proposed physical model request",
+      "count_unit": "proposed physical model request",
+      "counts": {
+        "planned": null,
+        "started": 0,
+        "terminal": 0,
+        "valid": 0,
+        "completed": 0,
+        "incomplete": 0,
+        "refused": null,
+        "errored": 0,
+        "missing": null,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Proposal only; no experimental request dispatched. Exact proposed call count only where specified; approximate E3/E4 sizes are not assigned denominators.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "proposed_not_authorized_not_launched"
+      },
+      "stalling_behavior": "No executed behavioral observation.",
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            1,
+            12
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L1"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+          "lines": [
+            46,
+            48
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L46"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "New proposal, not a result or replacement of the original V3/D1 plans. Each needs owner authorization and its own review."
+      ],
+      "proposed_model": null,
+      "approximate_planned_model_calls": 1500
+    },
+    {
+      "family": "market-split-haiku",
+      "id": "market-split-haiku/s1-002-conditional",
+      "attempt": "s1-002-conditional",
+      "publication_source": "4d007242b7ae5117d7f497036fa51f2225d7f993",
+      "kind": "unrun",
+      "model": null,
+      "backend": null,
+      "unit": "future main market-arm episode",
+      "count_unit": "future main market-arm episode",
+      "counts": {
+        "planned": null,
+        "started": null,
+        "terminal": null,
+        "valid": null,
+        "completed": null,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null,
+        "task_success": null
+      },
+      "evidencecoverage": {
+        "level": "publication_postmortem_and_deployment_only",
+        "saved_requests_directly_inspected": false,
+        "saved_responses_directly_inspected": false,
+        "full_provider_wire_request": false,
+        "full_provider_wire_response": false,
+        "limitation": "No new artifact fetch or model call; new record is grounded in the committed publication documents, not independently inspected new raw traces."
+      },
+      "endpoint_definition": "Separate future discovery cohort, permitted only after full-length reliability gate and its postmortem; no assignments or completion result established in these new documents.",
+      "count_overlap_notes": [
+        "All primary counts use the stated count unit; bundles and physical requests are separately recorded.",
+        "Terminal includes known failures. Incomplete excludes never-started units. Missing means no terminal endpoint record at the publication evidence cutoff.",
+        "Null means unknown or not applicable; earlier snapshot numbers are retained separately and are not presumed current."
+      ],
+      "qualification": {
+        "status": "conditional_main_blocked_pending_R0"
+      },
+      "stalling_behavior": null,
+      "causes": {
+        "confirmed": [],
+        "plausible": [],
+        "unknown": []
+      },
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/r0-001-pre.md",
+          "lines": [
+            19,
+            21
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/reviews/r0-001-pre.md#L19"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-api/parallel-plan.md",
+          "lines": [
+            17,
+            19
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-api/parallel-plan.md#L17"
+        }
+      ],
+      "smallest_diagnostic": null,
+      "falsifier": null,
+      "acceptance": null,
+      "conclusions": [
+        "Do not pool a future8192-output Haiku configuration with the old3072-output cohort or interpret comparison with Sonnet as model identity alone."
+      ]
+    }
+  ],
+  "no_new_result_families": [
+    {
+      "family": "market-split-api",
+      "source": {
+        "path": "researchers/dmarz/notes/market-split-api/README.md",
+        "lines": [
+          3,
+          11
+        ],
+        "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-api/README.md#L3"
+      },
+      "finding": "Added evidence metadata retains pending main discovery status; no new S1 result or postmortem."
+    },
+    {
+      "family": "discussion-dose-v3",
+      "source": {
+        "path": "researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md",
+        "lines": [
+          1,
+          12
+        ],
+        "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md#L1"
+      },
+      "finding": "New plan repeats prior failed competence and unchanged-probe observations; source says no authorization or launch."
+    }
+  ],
+  "publication_reporting_gaps": [
+    {
+      "issue": "Haiku overview metadata lags its newer same-revision postmortems.",
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/README.md",
+          "lines": [
+            3,
+            11
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/README.md#L3"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/deployment.md",
+          "lines": [
+            13,
+            13
+          ],
+          "immutable_link": "https://github.com/dmarzzz/swarm-lab/blob/4d007242b7ae5117d7f497036fa51f2225d7f993/researchers/dmarz/notes/market-split-haiku/deployment.md#L13"
+        }
+      ],
+      "evidence": "README evidence metadata says V3 only has scripted rehearsal and fresh native gates pending; deployment04:27 and D0/I0/Q0 postmortems record successful native gates and R0 running. This is a document-timestamp mismatch, not evidence that earlier failures were concealed."
+    }
+  ],
+  "interpretation": [
+    "No change to the ever-failed clean-baseline classification: market retains historical failures despite fresh Q0 success.",
+    "New complete legal outputs are evidence of local recovery but do not establish the cause of original nonterminal generation or reliable long-regulated completion.",
+    "Do not add corroborating updated_attempts to original observation denominators. Do not sum model calls, probes, episodes and setup attempts into a global task count.",
+    "Explicit original version/attempt identities and all failed initial work remain preserved."
+  ]
+}

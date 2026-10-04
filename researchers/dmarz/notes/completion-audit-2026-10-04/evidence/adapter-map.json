@@ -1,0 +1,213 @@
+{
+  "source_freeze": "5945294fa853d7ff60a7ec62b31fd2158d74c3de",
+  "findings": [
+    "Compositional source explicitly derives its adapter pattern from Market; Market explicitly derives from Sybil specialists. These are maintained local copies, not necessarily identical implementations.",
+    "Discussion v3 imports the existing Discussion Anthropic boundary.",
+    "Vishesh actual-experiments/Immune/Theseus/Influence adapters share the bounded JSON policy pattern and generic incomplete-output error handling; they differ in source hash. Shared observability weakness is confirmed, common cause of behavior is not.",
+    "Valid long sequences through these provider families counter a universal transport or parsing explanation for valid nonprogress."
+  ],
+  "sources": [
+    {
+      "path": "researchers/dmarz/notes/compositional-safety/src/provider.py",
+      "sha256": "a45ef033fa8ec5a66a7338b927e7a3a5b2a1d42282c649508dfddec5323cffc4",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/dmarz/notes/compositional-safety/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 3,
+          "text": "Pattern adapted from the lab's market-split-api provider. No automatic model retries."
+        },
+        {
+          "line": 81,
+          "text": "acc['stop_reason'] = data.get('stop_reason')"
+        },
+        {
+          "line": 92,
+          "text": "if data.get('stop_reason') == 'refusal':"
+        },
+        {
+          "line": 99,
+          "text": "if data.get('stop_reason') != 'end_turn': raise CallFailure('nonterminal_output', acc)"
+        }
+      ]
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-api/src/provider.py",
+      "sha256": "c45b1a5e6e9ad897cfdefb267efca3d7b51244b84f3e01831d8a9dae30836af2",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/dmarz/notes/market-split-api/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 3,
+          "text": "Adapted from the owned sybil-specialists-api/src/provider.py adapter."
+        },
+        {
+          "line": 114,
+          "text": "if data.get('stop_reason') != 'end_turn':"
+        },
+        {
+          "line": 115,
+          "text": "raise CallFailure('nonterminal_output', account)"
+        }
+      ]
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-specialists-api/src/provider.py",
+      "sha256": "f1e38cc009e12be1c84cc67b9044586c4209822d99bac4a47a42c65d54cd857a",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/dmarz/notes/sybil-specialists-api/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 118,
+          "text": "if data.get('stop_reason') != 'end_turn':"
+        },
+        {
+          "line": 119,
+          "text": "raise CallFailure('nonterminal_output', account)"
+        }
+      ]
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/src/providers.py",
+      "sha256": "3ba5279e2b8065ef036e489352dea9d6c69d8a35a97260eb626260e71df7c897",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/dmarz/notes/discussion-dose/src/providers.py",
+      "relevant_lines": [
+        {
+          "line": 162,
+          "text": "if response.get('stop_reason')!='end_turn': raise ProviderFailure('incomplete response')"
+        }
+      ]
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/src/bench_v3/policies.py",
+      "sha256": "7eb0ddb3e8d520754aac18eb62fb96714ee28829bc9139f516c50d69198e3cd9",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/dmarz/notes/discussion-dose/src/bench_v3/policies.py",
+      "relevant_lines": [
+        {
+          "line": 45,
+          "text": "from providers import Anthropic"
+        }
+      ]
+    },
+    {
+      "path": "researchers/vishesh/notes/actual-experiments/src/provider.py",
+      "sha256": "d403509f0223ee52653a03090e418bebec019ea924172fec17f9b32df3ad3ee7",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/actual-experiments/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 76,
+          "text": "raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 82,
+          "text": "raise PolicyError('HTTP status '+str(exc.code)) from None"
+        },
+        {
+          "line": 141,
+          "text": "if result.get('stop_reason')!='end_turn':raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 143,
+          "text": "except urllib.error.HTTPError as exc:raise PolicyError('HTTP status '+str(exc.code)) from None"
+        }
+      ]
+    },
+    {
+      "path": "researchers/vishesh/notes/immune-response-v3/src/provider.py",
+      "sha256": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 76,
+          "text": "raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 82,
+          "text": "raise PolicyError('HTTP status '+str(exc.code)) from None"
+        },
+        {
+          "line": 141,
+          "text": "if result.get('stop_reason')!='end_turn':raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 143,
+          "text": "except urllib.error.HTTPError as exc:raise PolicyError('HTTP status '+str(exc.code)) from None"
+        }
+      ]
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/src/provider.py",
+      "sha256": "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/swarm-of-theseus/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 77,
+          "text": "raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 83,
+          "text": "raise PolicyError('HTTP status '+str(exc.code)) from None"
+        },
+        {
+          "line": 145,
+          "text": "if result.get('stop_reason')!='end_turn':raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 147,
+          "text": "except urllib.error.HTTPError as exc:raise PolicyError('HTTP status '+str(exc.code)) from None"
+        }
+      ]
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/src/provider.py",
+      "sha256": "047f367307e8ac260b1ada6f16eb5ace0a2108379f6fd1000fe26d2f5398143d",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 77,
+          "text": "raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 83,
+          "text": "raise PolicyError('HTTP status '+str(exc.code)) from None"
+        },
+        {
+          "line": 120,
+          "text": "# Retry only enumerated transient HTTP statuses, once. Each _once call"
+        },
+        {
+          "line": 125,
+          "text": "if attempt or str(exc) not in ('HTTP status 429','HTTP status 502','HTTP status 503','HTTP status 504'):raise"
+        },
+        {
+          "line": 155,
+          "text": "if result.get('stop_reason')!='end_turn':raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 157,
+          "text": "except urllib.error.HTTPError as exc:raise PolicyError('HTTP status '+str(exc.code)) from None"
+        }
+      ]
+    },
+    {
+      "path": "researchers/vishesh/notes/external-influence-v2/src/provider.py",
+      "sha256": "e6e1f27bbea201c914cc0045ebf3fce1ae8e5d831d452d7b1a76ed00330abaec",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/external-influence-v2/src/provider.py",
+      "relevant_lines": [
+        {
+          "line": 76,
+          "text": "raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 82,
+          "text": "raise PolicyError('HTTP status '+str(exc.code)) from None"
+        },
+        {
+          "line": 142,
+          "text": "if result.get('stop_reason')!='end_turn':raise PolicyError('incomplete output')"
+        },
+        {
+          "line": 144,
+          "text": "except urllib.error.HTTPError as exc:raise PolicyError('HTTP status '+str(exc.code)) from None"
+        }
+      ]
+    }
+  ]
+}

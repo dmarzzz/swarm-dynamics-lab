@@ -1343,6 +1343,489 @@
    "sha256": "9a3368a2485a94a354550689ca6c17a1a0aba42cab27b5698a8cd45ced086fc6",
    "size_bytes": 59552
   },
+  "swarm-completion-audit-2026-10-04@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791088018,
+     "sha256": "563c38d203bd2bde22efdbe9e064f01290c6720b6cac550b27c73861ab970802",
+     "size": 8718,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json"
+    },
+    {
+     "mtime": 1791087750,
+     "sha256": "c66242504fe1c0a641ec1e43d9d1837328039d908b130672f37a65bcbfa6f667",
+     "size": 516801,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json"
+    },
+    {
+     "mtime": 1791087925,
+     "sha256": "37294a3eadf876b3cc042e0c42a507b81aae7bbd3d4bfb3224c7b10731eeb021",
+     "size": 429016,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json"
+    },
+    {
+     "mtime": 1791087567,
+     "sha256": "6c9477b7b0b394049cc089e218a5b35e8207086cf898679689156e648d52497b",
+     "size": 18902,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json"
+    },
+    {
+     "mtime": 1791088016,
+     "sha256": "8d763e02938cf4d2428b425725bd250fc6a31a3df22975eeb372983eef499399",
+     "size": 52144,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json"
+    },
+    {
+     "mtime": 1791087476,
+     "sha256": "c10f8b58ffdc4f55035168d217d44b9be40390ea8efd3ef3417d6805d31c37d0",
+     "size": 12230,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json"
+    },
+    {
+     "mtime": 1791087235,
+     "sha256": "a61b20ffd88ba89a4cf5a7d77bf01388677e3a8e440f2233396d34a7a3b6f7f3",
+     "size": 68597,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "c619754a4730e9b9d9b8be44d8338e21f32a16ebeccfea27d43b052b99a52383",
+     "size": 11357,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json"
+    },
+    {
+     "mtime": 1791088237,
+     "sha256": "bc8000b2d20f6121ff852f89c2e29e07b61d3adacf4f8b1f4747646dd2007b6e",
+     "size": 22120,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json"
+    },
+    {
+     "mtime": 1791088276,
+     "sha256": "cc69a7abc9ebe4b02e23957dea920e3a279db6f48893421a9e0ed33d302d38dc",
+     "size": 4797,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json"
+    },
+    {
+     "mtime": 1791088296,
+     "sha256": "7c53e449642836391448101157e956296516ffe3124ad591636d9827e809ff4c",
+     "size": 48501,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json"
+    },
+    {
+     "mtime": 1791088287,
+     "sha256": "a7721411a2909c3ce130506fe1d16029a5ebfa1e89ff77691932658b15e9f11a",
+     "size": 25281,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "12ef1ea2dc256b37672bc401ace6c576f34c5a807b9a70b8869252bd27b18a7c",
+     "size": 54998,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json"
+    },
+    {
+     "mtime": 1791087947,
+     "sha256": "90d7cefe1f75045a3d0c527c983d84eb1ac5d3a1186a6b11289d6d68c8bbeb8f",
+     "size": 14311,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json"
+    },
+    {
+     "mtime": 1791088016,
+     "sha256": "15429fa1237cd2e81467575e5aed4253a838ca2e5f9b31f38c0c3c64c90fd3f8",
+     "size": 312776,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json"
+    },
+    {
+     "mtime": 1791088480,
+     "sha256": "4206a8b93ab0d147a3cec1900002c040afabfbb0540258ed3ec576a9f9e537f2",
+     "size": 33899,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/README.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "976d6031bc59fa2814b9043c8cb8c114534dc66c127f4dbf0ae35a0cf49d7f03",
+     "size": 7803,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "23be400060892b8397ff91f75462f5b07c403b3dea21400a828b0053a1df51f8",
+     "size": 326409,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "3c4d6aa6c54090cc9c1e89bea02258b2676681a9842e947d6592057a42bfbfbd",
+     "size": 1024556,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json"
+    },
+    {
+     "mtime": 1791088430,
+     "sha256": "da7a2df125f1bc8dbf3db6f0cb483f290a3f46a182aca17436fd716c783dc128",
+     "size": 12256,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py"
+    },
+    {
+     "mtime": 1791088430,
+     "sha256": "e0d7081b04c924fdf0f14e8aa7d3e8faa0f0b9305c31f2fb1516cbd6988314ec",
+     "size": 7635,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py"
+    },
+    {
+     "mtime": 1791087748,
+     "sha256": "4cefb268a376db5b06bcbfb70dc380ae2bab4e1017009575b8402e4a19ad275e",
+     "size": 8589,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py"
+    },
+    {
+     "mtime": 1791088237,
+     "sha256": "fd0d363f9b58436bc0925b6986a07864ba437579bdbe053ae956118518797449",
+     "size": 3291,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py"
+    },
+    {
+     "mtime": 1791088505,
+     "sha256": "34deed36e1c6a552b5a5f1421002b82e44d3fb605fbfd107954f83280315681b",
+     "size": 772,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py"
+    },
+    {
+     "mtime": 1791088114,
+     "sha256": "ec4104291dd6780d9979378a87db31418855512766b21469fccd5632ef01abeb",
+     "size": 15051,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791088505,
+   "path": "artifacts/swarm-completion-audit-2026-10-04/swarm-completion-audit-2026-10-04-v1.md",
+   "prompt_sha256": "11b9ec3477d33ef3d92d8e2a58175318dc9070da2d09bf35192cf9413db940ab",
+   "sha256": "df461b7261ef60b56f363cee6036e8b63c5b2fc33fa52a114d7d48916048ac9a",
+   "size_bytes": 371966
+  },
+  "swarm-completion-ledger-2026-10-04@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791088018,
+     "sha256": "563c38d203bd2bde22efdbe9e064f01290c6720b6cac550b27c73861ab970802",
+     "size": 8718,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json"
+    },
+    {
+     "mtime": 1791087750,
+     "sha256": "c66242504fe1c0a641ec1e43d9d1837328039d908b130672f37a65bcbfa6f667",
+     "size": 516801,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json"
+    },
+    {
+     "mtime": 1791087925,
+     "sha256": "37294a3eadf876b3cc042e0c42a507b81aae7bbd3d4bfb3224c7b10731eeb021",
+     "size": 429016,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json"
+    },
+    {
+     "mtime": 1791087567,
+     "sha256": "6c9477b7b0b394049cc089e218a5b35e8207086cf898679689156e648d52497b",
+     "size": 18902,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json"
+    },
+    {
+     "mtime": 1791088016,
+     "sha256": "8d763e02938cf4d2428b425725bd250fc6a31a3df22975eeb372983eef499399",
+     "size": 52144,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json"
+    },
+    {
+     "mtime": 1791087476,
+     "sha256": "c10f8b58ffdc4f55035168d217d44b9be40390ea8efd3ef3417d6805d31c37d0",
+     "size": 12230,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json"
+    },
+    {
+     "mtime": 1791087235,
+     "sha256": "a61b20ffd88ba89a4cf5a7d77bf01388677e3a8e440f2233396d34a7a3b6f7f3",
+     "size": 68597,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "c619754a4730e9b9d9b8be44d8338e21f32a16ebeccfea27d43b052b99a52383",
+     "size": 11357,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json"
+    },
+    {
+     "mtime": 1791088237,
+     "sha256": "bc8000b2d20f6121ff852f89c2e29e07b61d3adacf4f8b1f4747646dd2007b6e",
+     "size": 22120,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json"
+    },
+    {
+     "mtime": 1791088276,
+     "sha256": "cc69a7abc9ebe4b02e23957dea920e3a279db6f48893421a9e0ed33d302d38dc",
+     "size": 4797,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json"
+    },
+    {
+     "mtime": 1791088296,
+     "sha256": "7c53e449642836391448101157e956296516ffe3124ad591636d9827e809ff4c",
+     "size": 48501,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json"
+    },
+    {
+     "mtime": 1791088287,
+     "sha256": "a7721411a2909c3ce130506fe1d16029a5ebfa1e89ff77691932658b15e9f11a",
+     "size": 25281,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "12ef1ea2dc256b37672bc401ace6c576f34c5a807b9a70b8869252bd27b18a7c",
+     "size": 54998,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json"
+    },
+    {
+     "mtime": 1791087947,
+     "sha256": "90d7cefe1f75045a3d0c527c983d84eb1ac5d3a1186a6b11289d6d68c8bbeb8f",
+     "size": 14311,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json"
+    },
+    {
+     "mtime": 1791088016,
+     "sha256": "15429fa1237cd2e81467575e5aed4253a838ca2e5f9b31f38c0c3c64c90fd3f8",
+     "size": 312776,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json"
+    },
+    {
+     "mtime": 1791088480,
+     "sha256": "4206a8b93ab0d147a3cec1900002c040afabfbb0540258ed3ec576a9f9e537f2",
+     "size": 33899,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/README.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "976d6031bc59fa2814b9043c8cb8c114534dc66c127f4dbf0ae35a0cf49d7f03",
+     "size": 7803,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "23be400060892b8397ff91f75462f5b07c403b3dea21400a828b0053a1df51f8",
+     "size": 326409,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "3c4d6aa6c54090cc9c1e89bea02258b2676681a9842e947d6592057a42bfbfbd",
+     "size": 1024556,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json"
+    },
+    {
+     "mtime": 1791088430,
+     "sha256": "da7a2df125f1bc8dbf3db6f0cb483f290a3f46a182aca17436fd716c783dc128",
+     "size": 12256,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py"
+    },
+    {
+     "mtime": 1791088430,
+     "sha256": "e0d7081b04c924fdf0f14e8aa7d3e8faa0f0b9305c31f2fb1516cbd6988314ec",
+     "size": 7635,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py"
+    },
+    {
+     "mtime": 1791087748,
+     "sha256": "4cefb268a376db5b06bcbfb70dc380ae2bab4e1017009575b8402e4a19ad275e",
+     "size": 8589,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py"
+    },
+    {
+     "mtime": 1791088237,
+     "sha256": "fd0d363f9b58436bc0925b6986a07864ba437579bdbe053ae956118518797449",
+     "size": 3291,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py"
+    },
+    {
+     "mtime": 1791088505,
+     "sha256": "34deed36e1c6a552b5a5f1421002b82e44d3fb605fbfd107954f83280315681b",
+     "size": 772,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py"
+    },
+    {
+     "mtime": 1791088114,
+     "sha256": "ec4104291dd6780d9979378a87db31418855512766b21469fccd5632ef01abeb",
+     "size": 15051,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py"
+    }
+   ],
+   "mime": "application/json",
+   "mtime": 1791088459,
+   "path": "artifacts/swarm-completion-ledger-2026-10-04/swarm-completion-ledger-2026-10-04-v1.json",
+   "prompt_sha256": "11b9ec3477d33ef3d92d8e2a58175318dc9070da2d09bf35192cf9413db940ab",
+   "sha256": "3c4d6aa6c54090cc9c1e89bea02258b2676681a9842e947d6592057a42bfbfbd",
+   "size_bytes": 1024556
+  },
+  "swarm-completion-view-2026-10-04@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791088018,
+     "sha256": "563c38d203bd2bde22efdbe9e064f01290c6720b6cac550b27c73861ab970802",
+     "size": 8718,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json"
+    },
+    {
+     "mtime": 1791087750,
+     "sha256": "c66242504fe1c0a641ec1e43d9d1837328039d908b130672f37a65bcbfa6f667",
+     "size": 516801,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json"
+    },
+    {
+     "mtime": 1791087925,
+     "sha256": "37294a3eadf876b3cc042e0c42a507b81aae7bbd3d4bfb3224c7b10731eeb021",
+     "size": 429016,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json"
+    },
+    {
+     "mtime": 1791087567,
+     "sha256": "6c9477b7b0b394049cc089e218a5b35e8207086cf898679689156e648d52497b",
+     "size": 18902,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json"
+    },
+    {
+     "mtime": 1791088016,
+     "sha256": "8d763e02938cf4d2428b425725bd250fc6a31a3df22975eeb372983eef499399",
+     "size": 52144,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json"
+    },
+    {
+     "mtime": 1791087476,
+     "sha256": "c10f8b58ffdc4f55035168d217d44b9be40390ea8efd3ef3417d6805d31c37d0",
+     "size": 12230,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json"
+    },
+    {
+     "mtime": 1791087235,
+     "sha256": "a61b20ffd88ba89a4cf5a7d77bf01388677e3a8e440f2233396d34a7a3b6f7f3",
+     "size": 68597,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "c619754a4730e9b9d9b8be44d8338e21f32a16ebeccfea27d43b052b99a52383",
+     "size": 11357,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json"
+    },
+    {
+     "mtime": 1791088237,
+     "sha256": "bc8000b2d20f6121ff852f89c2e29e07b61d3adacf4f8b1f4747646dd2007b6e",
+     "size": 22120,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json"
+    },
+    {
+     "mtime": 1791088276,
+     "sha256": "cc69a7abc9ebe4b02e23957dea920e3a279db6f48893421a9e0ed33d302d38dc",
+     "size": 4797,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json"
+    },
+    {
+     "mtime": 1791088296,
+     "sha256": "7c53e449642836391448101157e956296516ffe3124ad591636d9827e809ff4c",
+     "size": 48501,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json"
+    },
+    {
+     "mtime": 1791088287,
+     "sha256": "a7721411a2909c3ce130506fe1d16029a5ebfa1e89ff77691932658b15e9f11a",
+     "size": 25281,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "12ef1ea2dc256b37672bc401ace6c576f34c5a807b9a70b8869252bd27b18a7c",
+     "size": 54998,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json"
+    },
+    {
+     "mtime": 1791087947,
+     "sha256": "90d7cefe1f75045a3d0c527c983d84eb1ac5d3a1186a6b11289d6d68c8bbeb8f",
+     "size": 14311,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json"
+    },
+    {
+     "mtime": 1791088016,
+     "sha256": "15429fa1237cd2e81467575e5aed4253a838ca2e5f9b31f38c0c3c64c90fd3f8",
+     "size": 312776,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json"
+    },
+    {
+     "mtime": 1791088480,
+     "sha256": "4206a8b93ab0d147a3cec1900002c040afabfbb0540258ed3ec576a9f9e537f2",
+     "size": 33899,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/README.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "976d6031bc59fa2814b9043c8cb8c114534dc66c127f4dbf0ae35a0cf49d7f03",
+     "size": 7803,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "23be400060892b8397ff91f75462f5b07c403b3dea21400a828b0053a1df51f8",
+     "size": 326409,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md"
+    },
+    {
+     "mtime": 1791088459,
+     "sha256": "3c4d6aa6c54090cc9c1e89bea02258b2676681a9842e947d6592057a42bfbfbd",
+     "size": 1024556,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json"
+    },
+    {
+     "mtime": 1791088430,
+     "sha256": "da7a2df125f1bc8dbf3db6f0cb483f290a3f46a182aca17436fd716c783dc128",
+     "size": 12256,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py"
+    },
+    {
+     "mtime": 1791088430,
+     "sha256": "e0d7081b04c924fdf0f14e8aa7d3e8faa0f0b9305c31f2fb1516cbd6988314ec",
+     "size": 7635,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py"
+    },
+    {
+     "mtime": 1791087748,
+     "sha256": "4cefb268a376db5b06bcbfb70dc380ae2bab4e1017009575b8402e4a19ad275e",
+     "size": 8589,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py"
+    },
+    {
+     "mtime": 1791088237,
+     "sha256": "fd0d363f9b58436bc0925b6986a07864ba437579bdbe053ae956118518797449",
+     "size": 3291,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py"
+    },
+    {
+     "mtime": 1791088505,
+     "sha256": "34deed36e1c6a552b5a5f1421002b82e44d3fb605fbfd107954f83280315681b",
+     "size": 772,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py"
+    },
+    {
+     "mtime": 1791088114,
+     "sha256": "ec4104291dd6780d9979378a87db31418855512766b21469fccd5632ef01abeb",
+     "size": 15051,
+     "uri": "researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791088459,
+   "path": "artifacts/swarm-completion-view-2026-10-04/swarm-completion-view-2026-10-04-v1.tsx",
+   "prompt_sha256": "11b9ec3477d33ef3d92d8e2a58175318dc9070da2d09bf35192cf9413db940ab",
+   "sha256": "845ca47d4da1d159b3cc2f3749e087fc3a0f024235772b79d9069d76972d2e9a",
+   "size_bytes": 834476
+  },
   "sybil-newcomer-api-s1@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [

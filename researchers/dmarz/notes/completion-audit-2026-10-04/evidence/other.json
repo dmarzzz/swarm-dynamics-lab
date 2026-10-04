@@ -1,0 +1,1373 @@
+{
+  "audit_revision": "5945294fa853d7ff60a7ec62b31fd2158d74c3de",
+  "scope": "shadow, tooling examples, Avalon, template and repositorywide experimental-root inventory; other researchers inventoried but not deep audited",
+  "audit_mode": "read-only originals; no simulations, provider requests, servers, claims, sync, push or external writes",
+  "public_snapshot_utc": "2026-10-04 T04:09:14.842916+00:00",
+  "definitions": {
+    "completed": "execution yielded a retained end-state; never equated with scientific success",
+    "valid": "mechanically valid episode if aggregate report or complete policyvalidation supports it; null when unavailable",
+    "missing": "planned outcomes not observed, null if full denominator/trace unavailable",
+    "unrun_counts": "started/terminal/completed 0 within explicit unrun corpus; proposed sample not a frozen planned assignment count"
+  },
+  "attempts": [
+    {
+      "family": "Capture and memory",
+      "id": "capture-memory",
+      "attempt": "S0",
+      "kind": "scripted exploratory simulation",
+      "model_backend": "deterministic tanh/FIFO policy; no model API",
+      "evidence_coverage": {
+        "level": "aggregate tables plus hub job summaries; no raw episode/request/response trace accessible locally",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "raw_paths_checked": [
+          "researchers/shadow/notes/capture-memory/results/",
+          "data/",
+          "/Users/halcyon/swarm-lab/data/"
+        ],
+        "limits": "The committed CSVs account for episodes, not independent semantic tasks. Deterministic local/fleet reruns reuse inputs and are reproducibility checks, not independent evidence.",
+        "hub_scope": "Complete sanitized hub job inventory reconciled; no missing job rows in this stage."
+      },
+      "unit": "Arm episode; 50 task/randomness clusters, all cells and seeds paired within task",
+      "counts": {
+        "planned": 600,
+        "started": 600,
+        "terminal": 600,
+        "valid": 600,
+        "completed": 600,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "600 records across 12 cells. Task IDs encode seeded simulation draws and label parity, not 50 diverse real tasks. S1 and S1 b reuse 100 development task IDs; do not sum their records as independent worlds. Local/fleet reruns are not separately counted.",
+      "qualification": "Scripted selftest 32 checks and S0 reported passed; hypothesis remains proposed; no confirmatory S2.",
+      "stalling_behavior": "No execution stall reported; clean convention retained. Memory 1 has noise floor: final original fraction 0.8042; longer windows 1.0.",
+      "causes": [
+        {
+          "explanation": "Scripted clean policy is sufficient to preserve the seeded convention; this is a mechanical clean-world qualification, not model competence.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "researchers/shadow/notes/capture-memory/results/S0.md",
+          "lines": [
+            1,
+            3
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/results/S0.md#L1-L3"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/results/S0_cells.csv",
+          "lines": [
+            1,
+            13
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/results/S0_cells.csv#L1-L13"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            115,
+            121
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L115-L121"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            342,
+            356
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L342-L356"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "selection": {
+            "experiment": "capture-memory",
+            "stage": "S0"
+          },
+          "description": "Complete read-only hub inventory, sanitized by root; no per-experiment 200-row cap."
+        }
+      ],
+      "smallest_diagnostic": "Inspect/replay existing per-episode traces to check the aggregate clean qualification and deterministic local/fleet equality before any model translation.",
+      "falsifier": "A mismatch between retained episode scores and cells, or a qualified real model not preserving the clean convention.",
+      "acceptance": "Before model execution: response-curve and memory-access qualification on disjoint development contexts, fixed dose/horizon/endpoint, explicit model/call/spend caps and existing research gates.",
+      "scientific_conclusions": "600 clean scripted arm episodes,0 invalid. No LLM result.",
+      "hub_job_counts": {
+        "total": 9,
+        "simulation": 8,
+        "analysis": 1,
+        "done": 9,
+        "reported_arm_episodes": 600
+      }
+    },
+    {
+      "family": "Capture and memory",
+      "id": "capture-memory",
+      "attempt": "S1",
+      "kind": "scripted exploratory simulation",
+      "model_backend": "deterministic tanh/FIFO policy; no model API",
+      "evidence_coverage": {
+        "level": "aggregate tables plus hub job summaries; no raw episode/request/response trace accessible locally",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "raw_paths_checked": [
+          "researchers/shadow/notes/capture-memory/results/",
+          "data/",
+          "/Users/halcyon/swarm-lab/data/"
+        ],
+        "limits": "The committed CSVs account for episodes, not independent semantic tasks. Deterministic local/fleet reruns reuse inputs and are reproducibility checks, not independent evidence.",
+        "hub_scope": "Complete sanitized hub job inventory reconciled; no missing job rows in this stage."
+      },
+      "unit": "Arm episode; 100 task/randomness clusters, all cells and seeds paired within task",
+      "counts": {
+        "planned": 9600,
+        "started": 9600,
+        "terminal": 9600,
+        "valid": 9600,
+        "completed": 9600,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "9600 records across 48 cells. Task IDs encode seeded simulation draws and label parity, not 100 diverse real tasks. S1 and S1 b reuse 100 development task IDs; do not sum their records as independent worlds. Local/fleet reruns are not separately counted.",
+      "qualification": "Scripted selftest 32 checks and S0 reported passed; hypothesis remains proposed; no confirmatory S2.",
+      "stalling_behavior": "Scientific persistence, not execution stalling: A1 purge in W1_INSIDE has recovered=0 for bounded memories at the 50-round deadline; full memory never captures within 100 takeover rounds at either dose.",
+      "causes": [
+        {
+          "explanation": "For the scripted tanh/FIFO rule, memory averaging sustains a metastable attack state; removal leaves captured peers to perpetuate it.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        },
+        {
+          "explanation": "Full-memory no-capture is horizon censoring, not demonstrated immunity; S1 b provides the direct longer-horizon diagnostic.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "researchers/shadow/notes/capture-memory/results/S1.md",
+          "lines": [
+            1,
+            3
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/results/S1.md#L1-L3"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/results/S1_cells.csv",
+          "lines": [
+            1,
+            49
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/results/S1_cells.csv#L1-L49"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            150,
+            180
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L150-L180"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            342,
+            356
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L342-L356"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "selection": {
+            "experiment": "capture-memory",
+            "stage": "S1"
+          },
+          "description": "Complete read-only hub inventory, sanitized by root; no per-experiment 200-row cap."
+        }
+      ],
+      "smallest_diagnostic": "Retain the failed binary endpoint and assess change from removal to the common deadline, rather than final original fraction alone.",
+      "falsifier": "Measured model response curves do not show the stipulated metastable regime or the held-out same-dose memory 20−1 effect is absent.",
+      "acceptance": "Before model execution: response-curve and memory-access qualification on disjoint development contexts, fixed dose/horizon/endpoint, explicit model/call/spend caps and existing research gates.",
+      "scientific_conclusions": "Declared continuous contrast memory 20−memory 1 under purge at dose 0.42 is−0.294 [−0.311,−0.277],100 task clusters/200 pairs, all captured. The original binary recovery endpoint remains adverse. Findings describe the chosen rule, not an LLM memory law.",
+      "hub_job_counts": {
+        "total": 65,
+        "simulation": 64,
+        "analysis": 1,
+        "done": 65,
+        "reported_arm_episodes": 9600
+      }
+    },
+    {
+      "family": "Capture and memory",
+      "id": "capture-memory",
+      "attempt": "S1b",
+      "kind": "scripted exploratory simulation",
+      "model_backend": "deterministic tanh/FIFO policy; no model API",
+      "evidence_coverage": {
+        "level": "aggregate tables plus hub job summaries; no raw episode/request/response trace accessible locally",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "raw_paths_checked": [
+          "researchers/shadow/notes/capture-memory/results/",
+          "data/",
+          "/Users/halcyon/swarm-lab/data/"
+        ],
+        "limits": "The committed CSVs account for episodes, not independent semantic tasks. Deterministic local/fleet reruns reuse inputs and are reproducibility checks, not independent evidence.",
+        "hub_scope": "Complete sanitized hub job inventory reconciled; no missing job rows in this stage."
+      },
+      "unit": "Arm episode; 100 task/randomness clusters, all cells and seeds paired within task",
+      "counts": {
+        "planned": 38400,
+        "started": 38400,
+        "terminal": 38400,
+        "valid": 38400,
+        "completed": 38400,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "38400 records across 192 cells. Task IDs encode seeded simulation draws and label parity, not 100 diverse real tasks. S1 and S1 b reuse 100 development task IDs; do not sum their records as independent worlds. Local/fleet reruns are not separately counted.",
+      "qualification": "Scripted selftest 32 checks and S0 reported passed; hypothesis remains proposed; no confirmatory S2.",
+      "stalling_behavior": "Full memory becomes capturable given 200–400 rounds and sufficient dose, then remains almost stationary after purge; final original fraction≈0.25 is residual state rather than recovery.",
+      "causes": [
+        {
+          "explanation": "The unbounded running mean moves slowly in both directions; higher capture resistance and post-capture inertia are distinct.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        },
+        {
+          "explanation": "Wiping full memory removes protective original-history mass and exposes the residual original agents to still-captured peers.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "researchers/shadow/notes/capture-memory/results/S1b.md",
+          "lines": [
+            1,
+            3
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/results/S1b.md#L1-L3"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/results/S1b_cells.csv",
+          "lines": [
+            1,
+            193
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/results/S1b_cells.csv#L1-L193"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            185,
+            260
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L185-L260"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            342,
+            356
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L342-L356"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "selection": {
+            "experiment": "capture-memory",
+            "stage": "S1 b"
+          },
+          "description": "Complete read-only hub inventory, sanitized by root; no per-experiment 200-row cap."
+        }
+      ],
+      "smallest_diagnostic": "Use a fixed all-assigned attack/removal study separately from a prospectively standardized captured-state repair comparison, and report same-dose versus calibrated-dose contrasts separately.",
+      "falsifier": "The full-memory apparent return disappears when subtracting state at removal; that already falsifies reading final original fraction as recovery.",
+      "acceptance": "Before model execution: response-curve and memory-access qualification on disjoint development contexts, fixed dose/horizon/endpoint, explicit model/call/spend caps and existing research gates.",
+      "scientific_conclusions": "38,400 scripted arm episodes,0 invalid. Full memory versus memory 1 at common dose 0.54 is+0.004 [−0.022,+0.029], whereas per-memory-dose comparison is−0.067 [−0.090,−0.043]. Full-memory wipe−purge is−0.193 [−0.215,−0.167]. Post hoc minimum 10 honest-agent amendment is disclosed; no model transfer established.",
+      "hub_job_counts": {
+        "total": 129,
+        "simulation": 128,
+        "analysis": 1,
+        "done": 129,
+        "reported_arm_episodes": 38400
+      }
+    },
+    {
+      "family": "Capture and memory",
+      "id": "capture-memory",
+      "attempt": "prospective model pilot / S2 draft",
+      "kind": "unrun proposal",
+      "model_backend": "unselected 7 B–9 B open instruct model; HTTP adapter exists but unrun",
+      "evidence_coverage": {
+        "level": "design and explicit unrun statements only",
+        "provider_wire_proof": false,
+        "model_calls": 0
+      },
+      "unit": "Draft 24 arm episodes:6 tasks×2 memories×2 arms; execution not scheduled",
+      "counts": {
+        "planned": null,
+        "started": 0,
+        "terminal": 0,
+        "valid": null,
+        "completed": 0,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null
+      },
+      "denominator_notes": "Draft sample is not a frozen assignment manifest; planned execution count unknown. No model result found in repository or frozen hub snapshot.",
+      "qualification": "No model-specific calibration or qualification; S2 not implemented as a coordinator stage.",
+      "stalling_behavior": "No observed model stalling or refusal can be inferred from unrun code.",
+      "causes": [
+        {
+          "explanation": "Model response-curve calibration, endpoint selection, qualified doses, fixed caps and hypothesis acceptance remain prerequisites.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            287,
+            340
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L287-L340"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "lines": [
+            358,
+            366
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/README.md#L358-L366"
+        },
+        {
+          "path": "researchers/shadow/notes/capture-memory/src/model.py",
+          "lines": [
+            1,
+            8
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/shadow/notes/capture-memory/src/model.py#L1-L8"
+        }
+      ],
+      "smallest_diagnostic": "Offline inspect logging contract, then qualify response curve and clean competence on disjoint contexts under an owner-approved bounded protocol.",
+      "falsifier": "No interior metastable pair or no qualified capture under allowed doses would block the proposed mechanism comparison.",
+      "acceptance": "Freeze whether memory 1-versus-full is a capacity diagnostic or whether the original memory 20-versus 1 mechanism is the target; they cannot silently replace one another.",
+      "scientific_conclusions": "No evidence about LLM recovery, refusal or spontaneous capture exists in this lane."
+    },
+    {
+      "family": "Shadow proposed board studies",
+      "id": "shadow-board-nsweep",
+      "attempt": "proposal only",
+      "kind": "unrun hypothesis",
+      "model_backend": "unselected open model",
+      "evidence_coverage": {
+        "level": "hypothesis text only; no matching experiment root or hub registration found",
+        "provider_wire_proof": false
+      },
+      "unit": "Prospective population/world; no completed assignment",
+      "counts": {
+        "planned": null,
+        "started": 0,
+        "terminal": 0,
+        "valid": null,
+        "completed": 0,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null
+      },
+      "denominator_notes": "Explicit PROPOSAL ONLY / not accepted / not run. Absence claim is bounded to frozen repository and snapshot.",
+      "qualification": "Status proposed; no launch qualification evidenced.",
+      "stalling_behavior": "No observed stalling, refusal or failure.",
+      "causes": [],
+      "sources": [
+        {
+          "path": "hypotheses/shadow-board-nsweep.md",
+          "lines": [
+            1,
+            22
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/hypotheses/shadow-board-nsweep.md#L1-L22"
+        }
+      ],
+      "smallest_diagnostic": "Reconcile overlap and nominate one frozen qualified study before adding any execution lane.",
+      "falsifier": "No result yet to falsify; preregister the claim-specific population/evidence contrast before running.",
+      "acceptance": "Reviewed survey/hypothesis and exact model/task/information/cost qualification.",
+      "scientific_conclusions": "No empirical support yet. The collective-sensing teaching toy is not execution of either hypothesis."
+    },
+    {
+      "family": "Shadow proposed board studies",
+      "id": "shadow-neff-evidence-board",
+      "attempt": "proposal only",
+      "kind": "unrun hypothesis",
+      "model_backend": "unselected open model",
+      "evidence_coverage": {
+        "level": "hypothesis text only; no matching experiment root or hub registration found",
+        "provider_wire_proof": false
+      },
+      "unit": "Prospective population/world; no completed assignment",
+      "counts": {
+        "planned": null,
+        "started": 0,
+        "terminal": 0,
+        "valid": null,
+        "completed": 0,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null
+      },
+      "denominator_notes": "Explicit PROPOSAL ONLY / not accepted / not run. Absence claim is bounded to frozen repository and snapshot.",
+      "qualification": "Status proposed; no launch qualification evidenced.",
+      "stalling_behavior": "No observed stalling, refusal or failure.",
+      "causes": [],
+      "sources": [
+        {
+          "path": "hypotheses/shadow-neff-evidence-board.md",
+          "lines": [
+            1,
+            22
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/hypotheses/shadow-neff-evidence-board.md#L1-L22"
+        }
+      ],
+      "smallest_diagnostic": "Reconcile overlap and nominate one frozen qualified study before adding any execution lane.",
+      "falsifier": "No result yet to falsify; preregister the claim-specific population/evidence contrast before running.",
+      "acceptance": "Reviewed survey/hypothesis and exact model/task/information/cost qualification.",
+      "scientific_conclusions": "No empirical support yet. The collective-sensing teaching toy is not execution of either hypothesis."
+    },
+    {
+      "family": "Avalon swarm prototype",
+      "id": "avalon-swarm",
+      "attempt": "scale-final",
+      "kind": "scripted prototype mechanics",
+      "model_backend": "trusted in-process scripted policies; no provider adapter",
+      "evidence_coverage": {
+        "level": "all 15 saved outcome JSONL rows and 15 planned configurations directly checked; stored source SHA256 matches retained code",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "full_event_traces": "not committed and not found in audited local paths; endpoint/trajectory summaries available"
+      },
+      "unit": "Whole world; one seed per N/topology for scale and consensus, five paired seeds across 3 recovery arms for pilot",
+      "counts": {
+        "planned": 15,
+        "started": 15,
+        "terminal": 15,
+        "valid": 15,
+        "completed": 15,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "15 terminal records match 15 saved planned configurations; populations/councils are not independent replication. v 0.1 and v 0.2 reuse initialization and must not be pooled as independent worlds. valid refers to completed scripted mechanics, not qualified model competence.",
+      "qualification": "Reported 13 unit tests for v 0.2; no provider qualification. Thresholds provisional.",
+      "stalling_behavior": "No execution stall or exception in saved cohort. Some fifth proposals forced by game mechanics; task quality remains weak.",
+      "causes": [
+        {
+          "explanation": "Weak scripted heuristics and programmed truth-audit repair generate this behavior; no learned detection/repair was measured.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "tooling/avalon-swarm/RESULTS.md",
+          "lines": [
+            5,
+            17
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/RESULTS.md#L5-L17"
+        },
+        {
+          "path": "tooling/avalon-swarm/results/scale-final/outcomes.jsonl",
+          "lines": [
+            1,
+            15
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/results/scale-final/outcomes.jsonl#L1-L15"
+        },
+        {
+          "path": "tooling/avalon-swarm/results/scale-final/plan.json",
+          "lines": [
+            1,
+            1
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/results/scale-final/plan.json#L1"
+        },
+        {
+          "path": "tooling/avalon-swarm/PROTOCOL.md",
+          "lines": [
+            75,
+            99
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/PROTOCOL.md#L75-L99"
+        }
+      ],
+      "smallest_diagnostic": "Replay stored consensus trajectory against fixed threshold; next development test needs a competent inference baseline and consequential mission guardrail.",
+      "falsifier": "Failure to improve mission choices at matched resources despite fewer stale-claim exposures falsifies useful-repair claims for this policy.",
+      "acceptance": "Qualify competent policies and confirm all assignments terminal; preserve adverse worlds; freeze new thresholds before held-out seeds.",
+      "scientific_conclusions": "All 15 worlds complete and no good_swarm_win. N=100–2000 single-process capacity check, one seed per condition, no inference about LLM throughput or scaling.",
+      "auxiliary_counts": {
+        "good_swarm_win": 0,
+        "forced_proposals": 26,
+        "consensus_signal_loss": 0
+      }
+    },
+    {
+      "family": "Avalon swarm prototype",
+      "id": "avalon-swarm",
+      "attempt": "recovery-pilot",
+      "kind": "scripted prototype mechanics",
+      "model_backend": "trusted in-process scripted policies; no provider adapter",
+      "evidence_coverage": {
+        "level": "all 15 saved outcome JSONL rows and 15 planned configurations directly checked; stored source SHA256 matches retained code",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "full_event_traces": "not committed and not found in audited local paths; endpoint/trajectory summaries available"
+      },
+      "unit": "Whole world; one seed per N/topology for scale and consensus, five paired seeds across 3 recovery arms for pilot",
+      "counts": {
+        "planned": 15,
+        "started": 15,
+        "terminal": 15,
+        "valid": 15,
+        "completed": 15,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "15 terminal records match 15 saved planned configurations; populations/councils are not independent replication. v 0.1 and v 0.2 reuse initialization and must not be pooled as independent worlds. valid refers to completed scripted mechanics, not qualified model competence.",
+      "qualification": "Reported 13 unit tests for v 0.2; no provider qualification. Thresholds provisional.",
+      "stalling_behavior": "No execution stall or exception in saved cohort. Some fifth proposals forced by game mechanics; task quality remains weak.",
+      "causes": [
+        {
+          "explanation": "Weak scripted heuristics and programmed truth-audit repair generate this behavior; no learned detection/repair was measured.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "tooling/avalon-swarm/RESULTS.md",
+          "lines": [
+            19,
+            39
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/RESULTS.md#L19-L39"
+        },
+        {
+          "path": "tooling/avalon-swarm/results/recovery-pilot/outcomes.jsonl",
+          "lines": [
+            1,
+            15
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/results/recovery-pilot/outcomes.jsonl#L1-L15"
+        },
+        {
+          "path": "tooling/avalon-swarm/results/recovery-pilot/plan.json",
+          "lines": [
+            1,
+            1
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/results/recovery-pilot/plan.json#L1"
+        },
+        {
+          "path": "tooling/avalon-swarm/PROTOCOL.md",
+          "lines": [
+            75,
+            99
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/PROTOCOL.md#L75-L99"
+        }
+      ],
+      "smallest_diagnostic": "Replay stored consensus trajectory against fixed threshold; next development test needs a competent inference baseline and consequential mission guardrail.",
+      "falsifier": "Failure to improve mission choices at matched resources despite fewer stale-claim exposures falsifies useful-repair claims for this policy.",
+      "acceptance": "Qualify competent policies and confirm all assignments terminal; preserve adverse worlds; freeze new thresholds before held-out seeds.",
+      "scientific_conclusions": "Five paired seed blocks: repair vs audit later mission success 0.380 vs 0.3733; good council wins both 0.16; contradictory exposures 54.8 vs 79.6. No reliable task-performance improvement established; all 15 world-level good_swarm_win values false.",
+      "auxiliary_counts": {
+        "good_swarm_win": 0,
+        "forced_proposals": 10,
+        "consensus_signal_loss": 0
+      }
+    },
+    {
+      "family": "Avalon swarm prototype",
+      "id": "avalon-swarm",
+      "attempt": "consensus-v02",
+      "kind": "scripted prototype mechanics",
+      "model_backend": "trusted in-process scripted policies; no provider adapter",
+      "evidence_coverage": {
+        "level": "all 15 saved outcome JSONL rows and 15 planned configurations directly checked; stored source SHA256 matches retained code",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "full_event_traces": "not committed and not found in audited local paths; endpoint/trajectory summaries available"
+      },
+      "unit": "Whole world; one seed per N/topology for scale and consensus, five paired seeds across 3 recovery arms for pilot",
+      "counts": {
+        "planned": 15,
+        "started": 15,
+        "terminal": 15,
+        "valid": 15,
+        "completed": 15,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "15 terminal records match 15 saved planned configurations; populations/councils are not independent replication. v 0.1 and v 0.2 reuse initialization and must not be pooled as independent worlds. valid refers to completed scripted mechanics, not qualified model competence.",
+      "qualification": "Reported 13 unit tests for v 0.2; no provider qualification. Thresholds provisional.",
+      "stalling_behavior": "Signal_loss at round 5 in everyv 0.2 world; fixed mission horizon deliberately continues after terminal scientific failure. Scripted fifth-proposal fallback occurs and is not a provider refusal.",
+      "causes": [
+        {
+          "explanation": "signal_loss means insufficient class-specific consensus for 5 consecutive ticks; combines uncertainty/fragmentation/wrong agreement, not a uniquely identified causal mechanism.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "tooling/avalon-swarm/RESULTS.md",
+          "lines": [
+            41,
+            65
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/RESULTS.md#L41-L65"
+        },
+        {
+          "path": "tooling/avalon-swarm/results/consensus-v02/outcomes.jsonl",
+          "lines": [
+            1,
+            15
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/results/consensus-v02/outcomes.jsonl#L1-L15"
+        },
+        {
+          "path": "tooling/avalon-swarm/results/consensus-v02/plan.json",
+          "lines": [
+            1,
+            1
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/results/consensus-v02/plan.json#L1"
+        },
+        {
+          "path": "tooling/avalon-swarm/PROTOCOL.md",
+          "lines": [
+            75,
+            99
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/PROTOCOL.md#L75-L99"
+        }
+      ],
+      "smallest_diagnostic": "Replay stored consensus trajectory against fixed threshold; next development test needs a competent inference baseline and consequential mission guardrail.",
+      "falsifier": "Failure to improve mission choices at matched resources despite fewer stale-claim exposures falsifies useful-repair claims for this policy.",
+      "acceptance": "Qualify competent policies and confirm all assignments terminal; preserve adverse worlds; freeze new thresholds before held-out seeds.",
+      "scientific_conclusions": "All 15 worlds complete and all 15 fail truth consensus as signal_loss at round 5; no good_swarm_win. This validates adverse scoring mechanics, not a collapse law.",
+      "auxiliary_counts": {
+        "good_swarm_win": 0,
+        "forced_proposals": 26,
+        "consensus_signal_loss": 15
+      }
+    },
+    {
+      "family": "Avalon swarm prototype",
+      "id": "avalon-swarm",
+      "attempt": "prospective model track",
+      "kind": "unrun proposal",
+      "model_backend": "no provider integration implemented",
+      "evidence_coverage": {
+        "level": "adapter specification only",
+        "provider_wire_proof": false
+      },
+      "unit": "Prospective world",
+      "counts": {
+        "planned": null,
+        "started": 0,
+        "terminal": 0,
+        "valid": null,
+        "completed": 0,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null
+      },
+      "denominator_notes": "Planning upper-bound logical calls are not provider requests or invoices.",
+      "qualification": "No real-model qualification.",
+      "stalling_behavior": "Not observed.",
+      "causes": [
+        {
+          "explanation": "Provider adapter, isolated execution, prompts, truncation, budget, deadline and failure reconciliation are explicitly unfinished.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "tooling/avalon-swarm/ADAPTER.md",
+          "lines": [
+            1,
+            19
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/ADAPTER.md#L1-L19"
+        },
+        {
+          "path": "tooling/avalon-swarm/PROTOCOL.md",
+          "lines": [
+            75,
+            81
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/avalon-swarm/PROTOCOL.md#L75-L81"
+        }
+      ],
+      "smallest_diagnostic": "Implement and offline-verify strict action schemas and plan reconciliation before any owner-authorized tiny model qualification.",
+      "falsifier": "Invalid or missing actor actions without a retained terminal record falsify readiness.",
+      "acceptance": "Complete provider and information-isolation qualification at small N and measure costs before population scaling.",
+      "scientific_conclusions": "No LLM autonomy, detection, repair or scaling result."
+    },
+    {
+      "family": "Collective sensing teaching example",
+      "id": "collective-sensing",
+      "attempt": "offline demonstration",
+      "kind": "scripted teaching simulation",
+      "model_backend": "deterministic majority/deduplication rules",
+      "evidence_coverage": {
+        "level": "committed expected-summary.json and report; full 960 world/12480 event traces not found locally",
+        "provider_wire_proof": false,
+        "model_calls": 0
+      },
+      "unit": "60 scenario clusters×4 paired repetitions×4 conditions; five dependent decisions per world",
+      "counts": {
+        "planned": 960,
+        "started": 960,
+        "terminal": 960,
+        "valid": 960,
+        "completed": 960,
+        "incomplete": 0,
+        "refused": 0,
+        "errored": 0,
+        "missing": 0
+      },
+      "denominator_notes": "960 completed worlds;4800 agent decisions and 12480 event records reported. Repeated validator executions are deterministic checks, not new empirical replications.",
+      "qualification": "Reported offline replay, pairing, isolation and integrity checks; no model qualification.",
+      "stalling_behavior": "No execution failure reported; no adaptive dialogue or temporal stall exists in one-decision toy.",
+      "causes": [
+        {
+          "explanation": "Tripling source 0 can flip unweighted majority; exact source deduplication removes that known duplication mechanically.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "tooling/agent-experiments/examples/collective-sensing/RESULTS.md",
+          "lines": [
+            1,
+            20
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/agent-experiments/examples/collective-sensing/RESULTS.md#L1-L20"
+        },
+        {
+          "path": "tooling/agent-experiments/examples/collective-sensing/expected-summary.json",
+          "lines": [
+            1,
+            25
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/agent-experiments/examples/collective-sensing/expected-summary.json#L1-L25"
+        },
+        {
+          "path": "tooling/agent-experiments/examples/collective-sensing/PROTOCOL.md",
+          "lines": [
+            13,
+            36
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/agent-experiments/examples/collective-sensing/PROTOCOL.md#L13-L36"
+        },
+        {
+          "path": "tooling/agent-experiments/VALIDATION.md",
+          "lines": [
+            5,
+            9
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/agent-experiments/VALIDATION.md#L5-L9"
+        }
+      ],
+      "smallest_diagnostic": "Audit existing known-answer fixture and recover raw event archive if endpoint provenance needs independent replay.",
+      "falsifier": "The toy effect disappears under a competent source-counting control; it cannot establish an LLM instruction effect.",
+      "acceptance": "Keep scripted label; a future model study needs competent identical-evidence control, union-evidence single solver, provider qualification and disjoint pilot.",
+      "scientific_conclusions": "Naive mean 0.8042 vsunique-source 0.8667; paired+0.0625 illustrative clusterCI[0.0125,0.1125]. This is a programmed evidence-aggregation demonstration, not LLM empirical evidence."
+    },
+    {
+      "family": "Collective sensing teaching example",
+      "id": "collective-sensing",
+      "attempt": "prospective model protocol",
+      "kind": "unrun proposal",
+      "model_backend": "unselected model/provider",
+      "evidence_coverage": {
+        "level": "protocol template, no request/response trace",
+        "provider_wire_proof": false
+      },
+      "unit": "Prospective scenario/world",
+      "counts": {
+        "planned": null,
+        "started": 0,
+        "terminal": 0,
+        "valid": null,
+        "completed": 0,
+        "incomplete": null,
+        "refused": null,
+        "errored": null,
+        "missing": null
+      },
+      "denominator_notes": "60×4 worked power example uses assumed variance; it is not an executed model study or measured model power.",
+      "qualification": "No model pilot collected.",
+      "stalling_behavior": "Not observed.",
+      "causes": [],
+      "sources": [
+        {
+          "path": "tooling/agent-experiments/examples/collective-sensing/PROTOCOL.md",
+          "lines": [
+            30,
+            47
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/tooling/agent-experiments/examples/collective-sensing/PROTOCOL.md#L30-L47"
+        }
+      ],
+      "smallest_diagnostic": "Resolve and qualify a competent ordinary aggregation prompt with identical source metadata before comparative testing.",
+      "falsifier": "No difference against competent equal-information control would narrow the provenance-instruction claim.",
+      "acceptance": "Existing survey/hypothesis gates, frozen prompts/resources and fresh pilot/holdout.",
+      "scientific_conclusions": "No empirical LLM result."
+    },
+    {
+      "family": "Distributed worker teaching template",
+      "id": "template-quorum",
+      "attempt": "S0",
+      "kind": "scripted infrastructure demonstration",
+      "model_backend": "programmed plurality and evidence-root quorum",
+      "evidence_coverage": {
+        "level": "all 84 hub job summaries in frozen public snapshot plus source/design; no local episodes.jsonl",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "hub_scope": "Complete sanitized hub job inventory reconciled; no missing job rows in this stage."
+      },
+      "unit": "Arm episode; task is cluster; S0=50 tasks, S1=200 tasks, S2=300 tasks",
+      "counts": {
+        "planned": 100,
+        "started": 100,
+        "terminal": 100,
+        "valid": null,
+        "completed": 100,
+        "incomplete": 0,
+        "refused": null,
+        "errored": null,
+        "missing": 0
+      },
+      "denominator_notes": "2 simulation jobs and 0 analysis jobs; 100 arm episodes. Terminal job status is not evidence of episode validity; invalid/refusal rates unavailable in snapshot. S2 label denotes toy holdout mechanics, not formal accepted-hypothesis confirmation.",
+      "qualification": "Toy clean qualification and template selftests; no model qualification.",
+      "stalling_behavior": "No job stall orerror appears in frozen cohort; scientific accuracy-delay tradeoff is programmed.",
+      "causes": [
+        {
+          "explanation": "Counting unique upstream roots prevents duplicated wrong evidence from dominating the programmed quorum, with a delay cost.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "templates/experiment-worker/README.md",
+          "lines": [
+            9,
+            24
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/README.md#L9-L24"
+        },
+        {
+          "path": "templates/experiment-worker/README.md",
+          "lines": [
+            153,
+            159
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/README.md#L153-L159"
+        },
+        {
+          "path": "templates/experiment-worker/design.yaml",
+          "lines": [
+            20,
+            46
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/design.yaml#L20-L46"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/public-state.json",
+          "json_pointer": "/experiments[id=template-quorum]/runs[stage=S0]",
+          "public_url": "https://swarm-live.pages.dev/#/",
+          "snapshot_utc": "2026-10-04 T04:09:14.842916+00:00"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "selection": {
+            "experiment": "template-quorum",
+            "stage": "S0"
+          },
+          "description": "Complete read-only hub inventory, sanitized by root; no per-experiment 200-row cap."
+        }
+      ],
+      "smallest_diagnostic": "Recover and reconcile the existing episode JSONL with hub counts if audit needs episode validity; no new simulation needed.",
+      "falsifier": "A count mismatch or scorer replay disagreement would invalidate template accounting.",
+      "acceptance": "Report toy outcome separately; do not include its S2 results as a confirmatory model study.",
+      "scientific_conclusions": "Engineering demonstration of clean/development staging, not model empirical support.",
+      "hub_job_counts": {
+        "total": 2,
+        "simulation": 2,
+        "analysis": 0,
+        "done": 2,
+        "reported_arm_episodes": 100
+      }
+    },
+    {
+      "family": "Distributed worker teaching template",
+      "id": "template-quorum",
+      "attempt": "S1",
+      "kind": "scripted infrastructure demonstration",
+      "model_backend": "programmed plurality and evidence-root quorum",
+      "evidence_coverage": {
+        "level": "all 84 hub job summaries in frozen public snapshot plus source/design; no local episodes.jsonl",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "hub_scope": "Complete sanitized hub job inventory reconciled; no missing job rows in this stage."
+      },
+      "unit": "Arm episode; task is cluster; S0=50 tasks, S1=200 tasks, S2=300 tasks",
+      "counts": {
+        "planned": 3200,
+        "started": 3200,
+        "terminal": 3200,
+        "valid": null,
+        "completed": 3200,
+        "incomplete": 0,
+        "refused": null,
+        "errored": null,
+        "missing": 0
+      },
+      "denominator_notes": "32 simulation jobs and 1 analysis jobs; 3200 arm episodes. Terminal job status is not evidence of episode validity; invalid/refusal rates unavailable in snapshot. S2 label denotes toy holdout mechanics, not formal accepted-hypothesis confirmation.",
+      "qualification": "Toy clean qualification and template selftests; no model qualification.",
+      "stalling_behavior": "No job stall orerror appears in frozen cohort; scientific accuracy-delay tradeoff is programmed.",
+      "causes": [
+        {
+          "explanation": "Counting unique upstream roots prevents duplicated wrong evidence from dominating the programmed quorum, with a delay cost.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "templates/experiment-worker/README.md",
+          "lines": [
+            9,
+            24
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/README.md#L9-L24"
+        },
+        {
+          "path": "templates/experiment-worker/README.md",
+          "lines": [
+            153,
+            159
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/README.md#L153-L159"
+        },
+        {
+          "path": "templates/experiment-worker/design.yaml",
+          "lines": [
+            20,
+            46
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/design.yaml#L20-L46"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/public-state.json",
+          "json_pointer": "/experiments[id=template-quorum]/runs[stage=S1]",
+          "public_url": "https://swarm-live.pages.dev/#/",
+          "snapshot_utc": "2026-10-04 T04:09:14.842916+00:00"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "selection": {
+            "experiment": "template-quorum",
+            "stage": "S1"
+          },
+          "description": "Complete read-only hub inventory, sanitized by root; no per-experiment 200-row cap."
+        }
+      ],
+      "smallest_diagnostic": "Recover and reconcile the existing episode JSONL with hub counts if audit needs episode validity; no new simulation needed.",
+      "falsifier": "A count mismatch or scorer replay disagreement would invalidate template accounting.",
+      "acceptance": "Report toy outcome separately; do not include its S2 results as a confirmatory model study.",
+      "scientific_conclusions": "Engineering demonstration of clean/development staging, not model empirical support.",
+      "hub_job_counts": {
+        "total": 33,
+        "simulation": 32,
+        "analysis": 1,
+        "done": 33,
+        "reported_arm_episodes": 3200
+      }
+    },
+    {
+      "family": "Distributed worker teaching template",
+      "id": "template-quorum",
+      "attempt": "S2",
+      "kind": "scripted infrastructure demonstration",
+      "model_backend": "programmed plurality and evidence-root quorum",
+      "evidence_coverage": {
+        "level": "all 84 hub job summaries in frozen public snapshot plus source/design; no local episodes.jsonl",
+        "provider_wire_proof": false,
+        "model_calls": 0,
+        "hub_scope": "Complete sanitized hub job inventory reconciled; no missing job rows in this stage."
+      },
+      "unit": "Arm episode; task is cluster; S0=50 tasks, S1=200 tasks, S2=300 tasks",
+      "counts": {
+        "planned": 7200,
+        "started": 7200,
+        "terminal": 7200,
+        "valid": null,
+        "completed": 7200,
+        "incomplete": 0,
+        "refused": null,
+        "errored": null,
+        "missing": 0
+      },
+      "denominator_notes": "48 simulation jobs and 1 analysis jobs; 7200 arm episodes. Terminal job status is not evidence of episode validity; invalid/refusal rates unavailable in snapshot. S2 label denotes toy holdout mechanics, not formal accepted-hypothesis confirmation.",
+      "qualification": "Toy clean qualification and template selftests; no model qualification.",
+      "stalling_behavior": "No job stall orerror appears in frozen cohort; scientific accuracy-delay tradeoff is programmed.",
+      "causes": [
+        {
+          "explanation": "Counting unique upstream roots prevents duplicated wrong evidence from dominating the programmed quorum, with a delay cost.",
+          "confidence": "high",
+          "basis": "saved results and source inspection"
+        }
+      ],
+      "sources": [
+        {
+          "path": "templates/experiment-worker/README.md",
+          "lines": [
+            9,
+            24
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/README.md#L9-L24"
+        },
+        {
+          "path": "templates/experiment-worker/README.md",
+          "lines": [
+            153,
+            159
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/README.md#L153-L159"
+        },
+        {
+          "path": "templates/experiment-worker/design.yaml",
+          "lines": [
+            20,
+            46
+          ],
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/design.yaml#L20-L46"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/public-state.json",
+          "json_pointer": "/experiments[id=template-quorum]/runs[stage=S2]",
+          "public_url": "https://swarm-live.pages.dev/#/",
+          "snapshot_utc": "2026-10-04 T04:09:14.842916+00:00"
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "selection": {
+            "experiment": "template-quorum",
+            "stage": "S2"
+          },
+          "description": "Complete read-only hub inventory, sanitized by root; no per-experiment 200-row cap."
+        }
+      ],
+      "smallest_diagnostic": "Recover and reconcile the existing episode JSONL with hub counts if audit needs episode validity; no new simulation needed.",
+      "falsifier": "A count mismatch or scorer replay disagreement would invalidate template accounting.",
+      "acceptance": "Report toy outcome separately; do not include its S2 results as a confirmatory model study.",
+      "scientific_conclusions": "Toy S2 reports plurality falsecommit 0.814 vsprovenance 0.030, diff−0.784 [−0.811,−0.756],300 task clusters; illustrates the defined mechanism.",
+      "hub_job_counts": {
+        "total": 49,
+        "simulation": 48,
+        "analysis": 1,
+        "done": 49,
+        "reported_arm_episodes": 7200
+      }
+    }
+  ],
+  "inventory": {
+    "experiment_config_paths": [
+      "researchers/dmarz/notes/compositional-safety-plan/design.json",
+      "researchers/dmarz/notes/compositional-safety/design.yaml",
+      "researchers/dmarz/notes/compositional-safety/experiment.yaml",
+      "researchers/dmarz/notes/discussion-dose/design.yaml",
+      "researchers/dmarz/notes/discussion-dose/experiment.yaml",
+      "researchers/dmarz/notes/market-split-api/design.yaml",
+      "researchers/dmarz/notes/market-split-api/experiment.yaml",
+      "researchers/dmarz/notes/market-split-haiku/design.yaml",
+      "researchers/dmarz/notes/market-split-haiku/experiment.yaml",
+      "researchers/dmarz/notes/market-split/design.yaml",
+      "researchers/dmarz/notes/market-split/experiment.yaml",
+      "researchers/dmarz/notes/soc07-private-judgments/design.json",
+      "researchers/dmarz/notes/soc07-private-judgments/experiment.json",
+      "researchers/dmarz/notes/sybil-budget-api/design.yaml",
+      "researchers/dmarz/notes/sybil-budget-api/experiment.yaml",
+      "researchers/dmarz/notes/sybil-newcomer-api/design.yaml",
+      "researchers/dmarz/notes/sybil-newcomer-api/experiment.yaml",
+      "researchers/dmarz/notes/sybil-scale-api/design.yaml",
+      "researchers/dmarz/notes/sybil-scale-api/experiment.yaml",
+      "researchers/dmarz/notes/sybil-specialists-api/design.yaml",
+      "researchers/dmarz/notes/sybil-specialists-api/experiment.yaml",
+      "researchers/dmarz/notes/sybil-specialists/design.yaml",
+      "researchers/dmarz/notes/sybil-specialists/experiment.yaml",
+      "researchers/shadow/notes/capture-memory/design.yaml",
+      "researchers/shadow/notes/capture-memory/experiment.yaml",
+      "researchers/vishesh/notes/actual-experiments/external-influence/design.yaml",
+      "researchers/vishesh/notes/actual-experiments/external-influence/experiment.yaml",
+      "researchers/vishesh/notes/actual-experiments/immune-response/design.yaml",
+      "researchers/vishesh/notes/actual-experiments/immune-response/experiment.yaml",
+      "researchers/vishesh/notes/adaptive-quorum-v2/design.json",
+      "researchers/vishesh/notes/adaptive-quorum/design.yaml",
+      "researchers/vishesh/notes/adaptive-quorum/experiment.yaml",
+      "researchers/vishesh/notes/antsy-verification-v4/design.yaml",
+      "researchers/vishesh/notes/antsy-verification-v4/experiment.yaml",
+      "researchers/vishesh/notes/dissent/experiment.json",
+      "researchers/vishesh/notes/external-influence-v2/design.yaml",
+      "researchers/vishesh/notes/external-influence-v2/experiment.yaml",
+      "researchers/vishesh/notes/immune-response-v3/design.json",
+      "researchers/vishesh/notes/immune-response-v3/experiment.yaml",
+      "researchers/vishesh/notes/influence-swarms/design.yaml",
+      "researchers/vishesh/notes/influence-swarms/experiment.yaml",
+      "researchers/vishesh/notes/optimal-swarm-size/design.json",
+      "researchers/vishesh/notes/swarm-of-theseus/design.yaml",
+      "researchers/vishesh/notes/swarm-of-theseus/experiment.yaml",
+      "templates/experiment-worker/design.yaml",
+      "templates/experiment-worker/experiment.yaml",
+      "tooling/agent-experiments/examples/collective-sensing/config.json"
+    ],
+    "experimental_roots_from_configs": [
+      "researchers/dmarz/notes/compositional-safety",
+      "researchers/dmarz/notes/compositional-safety-plan",
+      "researchers/dmarz/notes/discussion-dose",
+      "researchers/dmarz/notes/market-split",
+      "researchers/dmarz/notes/market-split-api",
+      "researchers/dmarz/notes/market-split-haiku",
+      "researchers/dmarz/notes/soc07-private-judgments",
+      "researchers/dmarz/notes/sybil-budget-api",
+      "researchers/dmarz/notes/sybil-newcomer-api",
+      "researchers/dmarz/notes/sybil-scale-api",
+      "researchers/dmarz/notes/sybil-specialists",
+      "researchers/dmarz/notes/sybil-specialists-api",
+      "researchers/shadow/notes/capture-memory",
+      "researchers/vishesh/notes/actual-experiments/external-influence",
+      "researchers/vishesh/notes/actual-experiments/immune-response",
+      "researchers/vishesh/notes/adaptive-quorum",
+      "researchers/vishesh/notes/adaptive-quorum-v2",
+      "researchers/vishesh/notes/antsy-verification-v4",
+      "researchers/vishesh/notes/dissent",
+      "researchers/vishesh/notes/external-influence-v2",
+      "researchers/vishesh/notes/immune-response-v3",
+      "researchers/vishesh/notes/influence-swarms",
+      "researchers/vishesh/notes/optimal-swarm-size",
+      "researchers/vishesh/notes/swarm-of-theseus",
+      "templates/experiment-worker",
+      "tooling/agent-experiments/examples/collective-sensing",
+      "tooling/avalon-swarm"
+    ],
+    "all_research_note_readmes": [
+      "researchers/dmarz/notes/compositional-safety-plan/README.md",
+      "researchers/dmarz/notes/compositional-safety/README.md",
+      "researchers/dmarz/notes/discussion-dose/README.md",
+      "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md",
+      "researchers/dmarz/notes/discussion-dose/handoff/v21-keyed-claims/README.md",
+      "researchers/dmarz/notes/distributed-evidence-suite/README.md",
+      "researchers/dmarz/notes/market-split-api/README.md",
+      "researchers/dmarz/notes/market-split-api/report/README.md",
+      "researchers/dmarz/notes/market-split-haiku/README.md",
+      "researchers/dmarz/notes/market-split/README.md",
+      "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+      "researchers/dmarz/notes/question-atlas/README.md",
+      "researchers/dmarz/notes/soc07-private-judgments/README.md",
+      "researchers/dmarz/notes/sybil-budget-api/README.md",
+      "researchers/dmarz/notes/sybil-followups/README.md",
+      "researchers/dmarz/notes/sybil-newcomer-api/README.md",
+      "researchers/dmarz/notes/sybil-scale-api/README.md",
+      "researchers/dmarz/notes/sybil-specialists-api/README.md",
+      "researchers/dmarz/notes/sybil-specialists/README.md",
+      "researchers/shadow/notes/capture-memory/README.md",
+      "researchers/vishesh/notes/README.md",
+      "researchers/vishesh/notes/actual-experiments/README.md",
+      "researchers/vishesh/notes/actual-experiments/external-influence/README.md",
+      "researchers/vishesh/notes/actual-experiments/immune-response/README.md",
+      "researchers/vishesh/notes/adaptive-quorum-v2/README.md",
+      "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+      "researchers/vishesh/notes/adaptive-quorum/README.md",
+      "researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "researchers/vishesh/notes/antsy-verification-v5/README.md",
+      "researchers/vishesh/notes/atlas-review/README.md",
+      "researchers/vishesh/notes/biology-visual-review/README.md",
+      "researchers/vishesh/notes/decision-models/README.md",
+      "researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md",
+      "researchers/vishesh/notes/dissent/README.md",
+      "researchers/vishesh/notes/experiment-documentation/README.md",
+      "researchers/vishesh/notes/experimental-expansion/README.md",
+      "researchers/vishesh/notes/external-influence-v2/README.md",
+      "researchers/vishesh/notes/hackathon-scenarios/README.md",
+      "researchers/vishesh/notes/healing-helping-hands/README.md",
+      "researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "researchers/vishesh/notes/heterogeneous-swarms/frontiers/README.md",
+      "researchers/vishesh/notes/immune-response-v3/README.md",
+      "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md",
+      "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md",
+      "researchers/vishesh/notes/influence-swarms/README.md",
+      "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "researchers/vishesh/notes/phantom-coast/README.md",
+      "researchers/vishesh/notes/priority-research-expansion/README.md",
+      "researchers/vishesh/notes/project-briefs/README.md",
+      "researchers/vishesh/notes/readings/README.md",
+      "researchers/vishesh/notes/regrowth-200/README.md",
+      "researchers/vishesh/notes/seo-poisoning/README.md",
+      "researchers/vishesh/notes/skeptical-review/README.md",
+      "researchers/vishesh/notes/swarm-immune-response/README.md",
+      "researchers/vishesh/notes/swarm-of-theseus/README.md",
+      "researchers/vishesh/notes/swarm-of-theseus/v2/README.md"
+    ],
+    "formal_experiment_paths": [
+      "experiments/README.md"
+    ],
+    "shadow_hypotheses": [
+      "hypotheses/shadow-board-nsweep.md",
+      "hypotheses/shadow-capture-memory.md",
+      "hypotheses/shadow-neff-evidence-board.md"
+    ],
+    "public_experiment_ids": [
+      "sybil-budget-api",
+      "sybil-newcomer-api",
+      "market-split-api",
+      "external-influence-v 2",
+      "healing-helping-hands",
+      "quorum-of-mirrors",
+      "market-split-haiku",
+      "optimal-swarm-size-q 1",
+      "compositional-safety",
+      "phantom-coast",
+      "swarm-of-theseus-v 2",
+      "immune-response-v 3",
+      "antsy-verification-v 5",
+      "discussion-v 3-resample",
+      "discussion-dose-v 3",
+      "right-dissenter",
+      "sybil-scale-api",
+      "antsy-verification-v 4",
+      "influence-swarms",
+      "swarm-of-theseus",
+      "capture-memory",
+      "sybil-specialists-api",
+      "immune-response",
+      "market-split",
+      "discussion-dose-v 2",
+      "adaptive-quorum-api-v 2",
+      "sybil-specialists",
+      "discussion-dose",
+      "regrowth-200",
+      "adaptive-quorum",
+      "external-influence",
+      "template-quorum"
+    ],
+    "extra_roots_to_crosscheck": [
+      "researchers/dmarz/notes/sybil-budget-api",
+      "researchers/dmarz/notes/sybil-newcomer-api",
+      "researchers/dmarz/notes/distributed-evidence-suite",
+      "researchers/dmarz/notes/soc07-private-judgments",
+      "researchers/vishesh/notes/antsy-verification-v5",
+      "researchers/vishesh/notes/swarm-of-theseus/v2",
+      "researchers/vishesh/notes/immune-response-v3/evidence-study",
+      "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3"
+    ],
+    "routing_assignment": "Actual routing study regrowth-200 and Healing belong to vishesh deep audit; Avalon message routing covered here. No distinct other routing experiment found.",
+    "smokes": "No separate smoke registration found among 32 frozen public IDs. Template/stage S0 and offline unit/integration checks are engineering checks; not additional scientific studies.",
+    "not_execution_evidence": [
+      "tooling/agent-experiments/templates/run-config.json",
+      "tooling/agent-experiments/templates/agent-definition.json",
+      "tooling/agent-experiments/templates/context-access.json",
+      "hypotheses/shadow-board-nsweep.md",
+      "hypotheses/shadow-neff-evidence-board.md"
+    ]
+  },
+  "coverage_gaps": [
+    {
+      "family": "capture-memory",
+      "gap": "Resolved dashboard coverage gap: the public snapshot embedded only 200 of 203 done jobs. Complete sanitized hub inventory has S0=8 simulation+1 analysis, S1=64+1, S1 b=128+1. Metrics account for 600+9600+38400=48600 arm-episode records and 0 invalid.",
+      "recommendation": "Report 203 terminal jobs separately from 48600 arm-episode records. Local/fleet reruns and shared development IDs are not independent new worlds. README fleet prose saying S0 eight runs with a duplicate analysis is imprecise; full hub inventory has nine S0 rows."
+    },
+    {
+      "family": "all scoped scripted studies",
+      "gap": "No provider request/response traces exist for completed scripted runs. Code-only HTTP adapter in capture-memory is explicitly unrun.",
+      "recommendation": "No model-stalling/refusal/error attribution from code intent; neither countlogical policy activations asAPI requests."
+    },
+    {
+      "family": "Avalon",
+      "gap": "Complete saved outcomes andsource hashes verified, butbulky raw events omitted fromGit andnot found locally.",
+      "recommendation": "Terminal trajectory metrics support adverse consensus; independent full-event replay would need retained archive."
+    },
+    {
+      "family": "collective-sensing",
+      "gap": "Only reference summary and report available, not 960 raw outcomes; reported validator replays are not counted as new data.",
+      "recommendation": "Retrieve existing local archive if needed; no new run required for this audit."
+    },
+    {
+      "family": "formal registry",
+      "gap": "Only experiments/README.md exists at frozen revision.",
+      "recommendation": "Do not equate absence of accepted registry entries with absence of exploratory notes results."
+    }
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "lines": [
+        23,
+        32
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/AGENTS.md#L23-L32"
+    },
+    {
+      "path": "experiments/README.md",
+      "lines": [
+        1,
+        5
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/experiments/README.md#L1-L5"
+    },
+    {
+      "path": "templates/experiment-worker/README.md",
+      "lines": [
+        43,
+        45
+      ],
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/templates/experiment-worker/README.md#L43-L45"
+    }
+  ],
+  "prevalence_guidance": {
+    "primary_denominator": "Distinct scientific families with at least one evidenced model-backed attempt. Exclude scripted-only and unrun families from a model-completion rate.",
+    "classification": "For each family separately code observed execution/completion failure, observed model refusal, valid adverse scientific outcome, and unknown due to coverage. Do not collapse these into one failure category.",
+    "reporting": "Report k/D families with at least one observed event and coverage per family; this is event presence, not per-call incidence. Multiple versions and retries remain one family. Give uncertain coverage explicitly; if u model-executed families cannot be assessed, show confirmed k/D and possible (k+u)/D instead of treating unknown as zero.",
+    "bias": "A family with many attempts has more chances to reveal at least one failure. This descriptive family prevalence is neither an unbiased failure-probability estimate nor an LLM capability benchmark.",
+    "within_family_rates": "Use only frozen homogeneous attempt/cohort manifests with complete denominator and assignment-level records; valid scientific losses remain outcomes, retries are not fresh independent samples. Terminal hub jobs are never a substitute for episode or request counts.",
+    "scope_result": "No scoped completed family in other.json is model-backed. Therefore these records contribute zero to a model-failure prevalence denominator, while their scripted scientific failures must still be reported."
+  }
+}

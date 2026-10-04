@@ -1241,4 +1241,134 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/audit.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json
         commit: 063f8ce933809fca994a8ef8e51b8d7712ed3347-dirty
+  - id: swarm-completion-audit-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Lab completion and baseline failure audit
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/swarm-completion-audit-2026-10-04/swarm-completion-audit-2026-10-04-v1.md
+        built_at: '2026-10-04T04:35:28Z'
+        note: Read-only audit; original failures preserved; snapshot and publication supplement explicitly separated.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: Review all Swarm Lab experiments to determine how widespread **agent stalling, provider refusals, and failures
+          to complete baseline tasks** are, and whether our current reporting hides these problems. This request is an evidence
+          audit; do not launch new paid experiments or provision servers.
+        ingredients:
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/README.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py
+        commit: 4d007242b7ae5117d7f497036fa51f2225d7f993-dirty
+  - id: swarm-completion-ledger-2026-10-04
+    category: content
+    type: dataset
+    title: Swarm Lab attempt-by-attempt completion audit ledger
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/swarm-completion-ledger-2026-10-04/swarm-completion-ledger-2026-10-04-v1.json
+        built_at: '2026-10-04T04:35:29Z'
+        note: Read-only audit; original failures preserved; snapshot and publication supplement explicitly separated.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: Review all Swarm Lab experiments to determine how widespread **agent stalling, provider refusals, and failures
+          to complete baseline tasks** are, and whether our current reporting hides these problems. This request is an evidence
+          audit; do not launch new paid experiments or provision servers.
+        ingredients:
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/README.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py
+        commit: 4d007242b7ae5117d7f497036fa51f2225d7f993-dirty
+  - id: swarm-completion-view-2026-10-04
+    category: deployment
+    type: app
+    title: Swarm Lab completion audit interactive evidence view
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/swarm-completion-view-2026-10-04/swarm-completion-view-2026-10-04-v1.tsx
+        built_at: '2026-10-04T04:35:30Z'
+        note: Read-only audit; original failures preserved; snapshot and publication supplement explicitly separated.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: Review all Swarm Lab experiments to determine how widespread **agent stalling, provider refusals, and failures
+          to complete baseline tasks** are, and whether our current reporting hides these problems. This request is an evidence
+          audit; do not launch new paid experiments or provision servers.
+        ingredients:
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/README.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py
+        commit: 4d007242b7ae5117d7f497036fa51f2225d7f993-dirty
+    source: researchers/dmarz/notes/completion-audit-2026-10-04
 requires: '1.2'

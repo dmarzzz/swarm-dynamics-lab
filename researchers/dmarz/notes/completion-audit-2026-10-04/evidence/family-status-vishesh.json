@@ -1,0 +1,756 @@
+{
+  "audit": "Vishesh family-level baseline, nonprogress and refusal audit",
+  "definitions": {
+    "family": "Conservative broad scientific family; versions and aliases collapsed. This is one explicit grouping, not an objective universal denominator.",
+    "true": "Confirmed in the inspected primary traces or explicit saved qualification result.",
+    "false": "Evaluated and not observed within the stated available scope; not a claim about all possible future behavior.",
+    "null": "Unknown or not sufficiently covered.",
+    "clean_baseline_gate_failure": "Historical failed declared competence/clean control gate; excludes setup failures and legitimate adverse treatment results.",
+    "prolonged_task_nonprogress": "Repeated available action slots without useful task progress despite a visible feasible repair. Valid caution, a single DEFER/STOP or a completed wrong answer do not suffice.",
+    "explicit_provider_refusal": "Provider refusal field or explicit semantic refusal to perform the requested task. Validation errors and missing responses do not suffice."
+  },
+  "family_denominator": 7,
+  "counts": {
+    "model_executed": 7,
+    "historical_clean_baseline_gate_failure_confirmed": 5,
+    "historical_clean_baseline_gate_failure_absent_in_observed_scope": 1,
+    "historical_clean_baseline_gate_failure_unknown": 1,
+    "prolonged_task_nonprogress_confirmed": 1,
+    "prolonged_task_nonprogress_absent_in_observed_scope": 2,
+    "prolonged_task_nonprogress_unknown": 4,
+    "explicit_provider_refusal_confirmed": 0,
+    "explicit_provider_refusal_absent_in_observed_scope": 1,
+    "explicit_provider_refusal_unknown": 6
+  },
+  "excluded_from_native_denominator": [
+    "Optimal Swarm Size (credential-blocked; reporting/engineering fixtures only)",
+    "Phantom Coast (offline fixtures; native unrun)",
+    "Right Dissenter (design/software; native unrun)"
+  ],
+  "families": [
+    {
+      "family": "Influence",
+      "aliases": [
+        "external-influence",
+        "external-influence-v2",
+        "influence-swarms"
+      ],
+      "model_executed": true,
+      "any_historical_clean_baseline_gate_failure": true,
+      "prolonged_task_nonprogress_confirmed": null,
+      "explicit_provider_refusal_confirmed": null,
+      "classification_reason": "Local Q0/Q1 fail clean competence/contract gates; native redesigned Q2 fails missing-approval competence. These are separate from the older zero targeted-minus-random effect.",
+      "coverage_and_unknowns": "Q2 has 42 actual request/parsed-response pairs and old S1 has 50 derived episode traces. Q0/Q1/D0 raw responses and earlier provider failures are not fully accessible. No explicit refusal is confirmed; prolonged task inaction is not established.",
+      "valid_adverse_or_null_science": "Older50-outcome study has zero primary targeted-check advantage in each domain and low baseline correctness; invalid local attempts are not safety successes.",
+      "attempt_ids": [
+        "external-influence/750034be",
+        "external-influence/8a8174a7",
+        "external-influence/cba83c06",
+        "external-influence-v2/d398fe3b",
+        "external-influence-v2/38908910",
+        "external-influence-v2/scripted-robustness",
+        "external-influence-v2/local-q0-20261004",
+        "external-influence-v2/local-q1-20261004",
+        "external-influence-v2/local-d0-20261004",
+        "external-influence-v2/local-S1",
+        "influence-swarms/scenario-01",
+        "influence-swarms/scenario-02",
+        "influence-swarms/scenario-03",
+        "influence-swarms/iteration-02",
+        "influence-swarms/iteration-03",
+        "influence-swarms/1004-023244-7928bb",
+        "influence-swarms/1004-023547-52e310",
+        "influence-swarms/1004-023911-a5197e",
+        "influence-swarms/1004-024635-5fea57",
+        "influence-swarms/Q4",
+        "influence-swarms/P0",
+        "influence-swarms/S1"
+      ],
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md",
+          "line": 17,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md#L17",
+          "sha256": "76795779764ad7f7d7bc8e9320edb3262113e8e0085f967905d9a5778167e213"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/external-influence-v2/README.md",
+          "line": 16,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/external-influence-v2/README.md#L16",
+          "sha256": "3d78288311ee004ae381d6f50c35f57e4db2fc9578b8818677db98981c4f1e0f"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+          "line": 21,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md#L21",
+          "sha256": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+          "line": 23,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md#L23",
+          "sha256": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/influence-swarms-replay/influence-swarms-replay-v1.html",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/artifacts/influence-swarms-replay/influence-swarms-replay-v1.html#L1",
+          "sha256": "542a74084f87c39e3c3d4afff994bc89974be14bc7046cb634e3dd5a255aa6c0",
+          "note": "Embedded JSON includes all 50 episode trajectories, scorecards and checks, not full raw HTTP bytes."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+          "line": 11,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md#L11",
+          "sha256": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q0-post.md",
+          "line": 7,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q0-post.md#L7",
+          "sha256": "ef6b25caec6a2e46256281968b1a26271ac7d5a7b3662d98a53527c80a529a1b"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "line": 1,
+          "sha256": "73e605bc6e60405e097ad4036e438bdc43ed034bd6ff7f4fed6bab623dd14ab3",
+          "note": "Ignored audit capture: not present at Git permalink; exact run ID identifies record."
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/external-influence-v2__local-q1-20261004/manifest.json",
+          "line": 1,
+          "sha256": "1a0b814882a01b4c89e8078100ca00a041c08f8e9ac71171e3cc6be399add560",
+          "coverage": "Actual saved manifest/summary; requests and responses not in artifact catalogue."
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/external-influence-v2__local-q1-20261004/summary.json",
+          "line": 1,
+          "sha256": "5232f3bda5d7a0fdbdb99504bab923bac8324e665314da464539f312bf60de15",
+          "coverage": "Actual saved manifest/summary; requests and responses not in artifact catalogue."
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/external-influence-v2__local-d0-20261004/manifest.json",
+          "line": 1,
+          "sha256": "67d970eb1c986121449986278ea561198b95232acf7dbf30cf3ec34ae28290ff",
+          "coverage": "Actual saved manifest/summary; requests and responses not in artifact catalogue."
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/external-influence-v2__local-d0-20261004/summary.json",
+          "line": 1,
+          "sha256": "a72db8520562dd7184c4f7db95fe4b861af34671b59b34bdb07c7ecb76641999",
+          "coverage": "Actual saved manifest/summary; requests and responses not in artifact catalogue."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN.md",
+          "line": 21,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN.md#L21",
+          "sha256": "7e38da3a88a653a0d27679be167e51adb885f3132e8ca337468d183dc695aa01"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-01-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-01-post.md#L3",
+          "sha256": "a5261a4954819ce8e90c96074dd34ab363d6dd6c786a3bec9a4f4429161a01ac"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-02-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-02-post.md#L3",
+          "sha256": "2fbe695a1f7b40d8e58812c821251a80c18d6eeedb0c9f597e165600424cae16"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-03-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-03-post.md#L3",
+          "sha256": "0df924a9148561edd4fca9bdd80d3a5f413319a5de415964c54621c2c8ded333"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-02-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-02-post.md#L3",
+          "sha256": "36ff98df261212ec828f8ea3ba8ecee19881f56826515a5d9983b6b929f19685"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-03-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-03-post.md#L3",
+          "sha256": "d4b32e73d7d13ada79288e6042c48313405cb94a109faf77c8d21d5845125c72"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q0-01-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q0-01-post.md#L3",
+          "sha256": "c2459071439e740b700afeb756dcbf2474b017abb2092b63a5f00d4bf8341811"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q1-01-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q1-01-post.md#L3",
+          "sha256": "6a2d5c65a84f2372ded09888999c8db316b6dfaa3afe3d212f9bae236ef22e12"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q2-01-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q2-01-post.md#L3",
+          "sha256": "7e2987876cfb83a54b0e48c31f908323cf73b4d9479231a4633794aaf44fd89d"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/influence-native-q2-replay/influence-native-q2-replay-v1.html",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/artifacts/influence-native-q2-replay/influence-native-q2-replay-v1.html#L1",
+          "sha256": "d6b2ca7bcd9e1d29132c2353f88863fce44ed68744c6df471de61ebe7162fc52",
+          "note": "Embedded const D: 3 cases,42 request+42response+9terminal events."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q3-01-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-Q3-01-post.md#L3",
+          "sha256": "24d68c7c90880cf12bf9c1674d402b76e666de4f9d8fc69267a3228dc0bf05f1"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-P0-01-pre.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/influence-swarms/scenario/reviews/native-P0-01-pre.md#L3",
+          "sha256": "ea082151f8e3ceb6996e32fbb548c6242cd9fa88aa809b7c3cb8701adcf680b1"
+        }
+      ]
+    },
+    {
+      "family": "Immune Response",
+      "aliases": [
+        "immune-response",
+        "immune-response-v3",
+        "scenario-study",
+        "evidence-study"
+      ],
+      "model_executed": true,
+      "any_historical_clean_baseline_gate_failure": true,
+      "prolonged_task_nonprogress_confirmed": true,
+      "explicit_provider_refusal_confirmed": null,
+      "classification_reason": "A1 and solo fail healthy-system preservation. A2 passes that narrow gate but fails recovery; actual traces show seven of nine incident arms WAIT for all six action slots despite failing telemetry.",
+      "coverage_and_unknowns": "All108 + 108 + 24 scenario native responses and 26 receipt-study responses inspected. No explicit refusal in those responses. The original ledger study and one missing interrupted receipt response prevent a complete family refusal denominator.",
+      "valid_adverse_or_null_science": "Persistent false evidence claims and inaction are genuine adverse behavior. Receipt study was operator-interrupted and has no valid treatment conclusion; observed structured claims have zero mismatches.",
+      "attempt_ids": [
+        "immune-response/8de9162d",
+        "immune-response/4d83c625",
+        "immune-response/v2-scripted-s0-072061fe",
+        "immune-response/v2-scripted-s1-072061fe",
+        "immune-response/5f9d1d2a",
+        "immune-response/4deeb0f2",
+        "immune-response-v3/engineering-a1-5409a091",
+        "immune-response-v3/ledger-native-repair-task6700",
+        "immune-response-v3/scenario-engineering-a1",
+        "immune-response-v3/scenario-engineering-a2",
+        "immune-response-v3/1004-023612-d2bea8",
+        "immune-response-v3/1004-024328-524091",
+        "immune-response-v3/1004-024829-d6805e",
+        "immune-evidence-study/engineering-a1",
+        "immune-evidence-study/engineering-a2",
+        "immune-evidence-study/receipt-a1",
+        "immune-response-v3/1004-034657-73913b"
+      ],
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/actual-experiments/immune-response/RESULTS-v2.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/actual-experiments/immune-response/RESULTS-v2.md#L5",
+          "sha256": "276fab0960a0653118c35a55b6fbf2ac485e11d980ec574ca5262e5720291be4"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md",
+          "line": 17,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md#L17",
+          "sha256": "76795779764ad7f7d7bc8e9320edb3262113e8e0085f967905d9a5778167e213"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+          "line": 1,
+          "sha256": "73e605bc6e60405e097ad4036e438bdc43ed034bd6ff7f4fed6bab623dd14ab3"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/REVIEW.md",
+          "line": 23,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/REVIEW.md#L23",
+          "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/reviews/engineering-a1-post.md",
+          "line": 7,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/reviews/engineering-a1-post.md#L7",
+          "sha256": "7cc27d3063e6f4e7f7e6b5537263e8b49cccfcc75b40c0ae200a3c05a6f69b0e"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/scenario-study/README.md",
+          "line": 7,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/scenario-study/README.md#L7",
+          "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md",
+          "line": 15,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md#L15",
+          "sha256": "962891407fe4a7276348aaedabf7cfd1f62f5f1e589ead74ba22935f02e06218"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md",
+          "line": 21,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md#L21",
+          "sha256": "962891407fe4a7276348aaedabf7cfd1f62f5f1e589ead74ba22935f02e06218"
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/immune-response-v3__1004-023612-d2bea8/events.jsonl",
+          "line": 4,
+          "sha256": "b4c69052c9291d76d784e8b1fd7fd2b8a0536458d13e261eb8e5dde65b5f7534",
+          "availability": "private local audit cache; provenance in retrieved-artifact-index.json; not committed"
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/immune-response-v3__1004-024328-524091/events.jsonl",
+          "line": 4,
+          "sha256": "65554e76f18384311d990ceb78a97483797cd9fdac1ce9af491f7bd4a3d240d9",
+          "availability": "private local audit cache; provenance in retrieved-artifact-index.json; not committed"
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/immune-response-v3__1004-024829-d6805e/events.jsonl",
+          "line": 1,
+          "sha256": "ee65acdc5aac0d4000303f1ddbb3e557e645f1c947f6e685ef1b0a0f5497182d",
+          "availability": "private local audit cache; provenance in retrieved-artifact-index.json; not committed"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/evidence-study/engineering-a1-summary.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/evidence-study/engineering-a1-summary.json#L1",
+          "sha256": "ddfb21bb3f8f4e939ec715d08f9fcd6170f7ced4abef18b8829bc1cd7a3117b0"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/evidence-study/engineering-a2-summary.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/evidence-study/engineering-a2-summary.json#L1",
+          "sha256": "1b089e0113b1fbcfcf50f5117ea902d3420c4caceb05c66ca531616005b93545"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a1-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a1-post.md#L3",
+          "sha256": "a55374865308fd71ed79e1e0e37920e0fff67dbd24cb5e8b5871baa0373b72c5"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
+          "line": 12,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md#L12",
+          "sha256": "799e0d310ab7c7c7f1921836e12c2c6d0ffee1cb9b11540f501243e95b1fb9ae"
+        },
+        {
+          "path": "/Users/halcyon/swarm-labs-agentops/.audit-cache/completion-audit-2026-10-04/immune-response-v3__1004-034657-73913b/events.jsonl",
+          "line": 5,
+          "sha256": "d6ec61965ed19d3ad6dd9eb8bce5d88db3f5d9263a242c87ba2ae381c6f65f08"
+        }
+      ]
+    },
+    {
+      "family": "Healing Helping Hands",
+      "aliases": [
+        "reference healing",
+        "practical healing"
+      ],
+      "model_executed": true,
+      "any_historical_clean_baseline_gate_failure": true,
+      "prolonged_task_nonprogress_confirmed": null,
+      "explicit_provider_refusal_confirmed": null,
+      "classification_reason": "Historical Qwen/Laya balanced semantic screens fail per-class baseline competence. Jev later passes accuracy but one option-order screen is invalidated by serialization.",
+      "coverage_and_unknowns": "Reports/summaries inspected; actual model request/response journal not recovered. Practical 180 + 180 world studies are zero-new-model replays. Native prolonged action stalling is not evaluated by one-shot extraction calls.",
+      "valid_adverse_or_null_science": "Jev/exact policy agreement supports a narrow propagation result; strong central verified policy beats peer policies under practical scenarios. That adverse comparison is not a qualification failure.",
+      "attempt_ids": [
+        "healing-helping-hands/pilot-01",
+        "healing-helping-hands/pilot-02",
+        "healing-helping-hands/pilot-03",
+        "healing-helping-hands/diagnostic-03",
+        "healing-helping-hands/diagnostic-04",
+        "healing-helping-hands/jev-qualification-01",
+        "healing-helping-hands/practical-01",
+        "healing-helping-hands/practical-02",
+        "healing-helping-hands/practical-01-reporting-failures",
+        "healing-helping-hands/pilot-01-qualification",
+        "healing-helping-hands/pilot-02-qualification",
+        "healing-helping-hands/pilot-03-qualification"
+      ],
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/ATTEMPT-01-REVIEW.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/ATTEMPT-01-REVIEW.md#L3",
+          "sha256": "6671db190822ab1efb7bee24b2b83df4be52fe9d4675cf33005fc62ad67d420a"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-02-post.md",
+          "line": 9,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-02-post.md#L9",
+          "sha256": "efd0f94f22bc100f78a85df5934952574bc6c95acb3291f39b73728d3184dc26"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-03-post.md",
+          "line": 9,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-03-post.md#L9",
+          "sha256": "56963bd08a1c354aa875d7a2d7e347ed8bba0a0af2996df218805fcbfa9cbef1"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/reviews/diagnostic-03-post.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/reviews/diagnostic-03-post.md#L5",
+          "sha256": "fbb95cd193f60fdfdbfc9177c6a205920929c20c8e3dbd8514fe236392e8e326"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/reviews/diagnostic-04-post.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/reviews/diagnostic-04-post.md#L5",
+          "sha256": "3515c99a26fcdd9b2494aa624751661a057e87fcceaafbc2406216d64807e495"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/reviews/jev-qualification-01-post.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/reviews/jev-qualification-01-post.md#L5",
+          "sha256": "6110361cd564b340d36185e08af2310363434c82280bec75444d7ca623210c2d"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md#L5",
+          "sha256": "fcc9159dd90a34769b22562a9bb2301c866ff73be9f714ee1478ca8cfafc5f52"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/practical/POST-02.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/practical/POST-02.md#L5",
+          "sha256": "190999ccb9270e35d86d5f4de61f519cbef2f9e0f25ebf8d0a8e2a78c19f310b"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
+          "line": 20,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md#L20",
+          "sha256": "fcc9159dd90a34769b22562a9bb2301c866ff73be9f714ee1478ca8cfafc5f52"
+        }
+      ]
+    },
+    {
+      "family": "Antsy",
+      "aliases": [
+        "adaptive-quorum-v1",
+        "adaptive-quorum-v2",
+        "adaptive-quorum-api-v2",
+        "repair-v3",
+        "antsy-verification-v4",
+        "antsy-verification-v5"
+      ],
+      "model_executed": true,
+      "any_historical_clean_baseline_gate_failure": true,
+      "prolonged_task_nonprogress_confirmed": false,
+      "explicit_provider_refusal_confirmed": null,
+      "classification_reason": "V2 clean competence and repair D0/Q1 fail. Later repaired Q2 passes. OCR committees complete but never stop early; this is failed cost-adaptive behavior, not prolonged task noncompletion.",
+      "coverage_and_unknowns": "All 840 model receipts per S1 backend and 70 episode journals per backend inspected. Two historical Jev validation aborts include an unresolved first reason; earlier adaptive-quorum raw requests are not fully covered. No explicit refusal is confirmed.",
+      "valid_adverse_or_null_science": "All repaired quorum policy choices match symbolic baseline. OCR committees score below confidence-only and buy both checks. V5 reanalyses do not add model evidence.",
+      "attempt_ids": [
+        "adaptive-quorum-v1/wrapper-import-failure",
+        "adaptive-quorum-v1/wheel-init-failure",
+        "adaptive-quorum-v1/scripted-S0",
+        "adaptive-quorum-v1/laya-S0",
+        "adaptive-quorum-v2/scripted-S0",
+        "adaptive-quorum-v2/laya-S0",
+        "adaptive-quorum-repair-v3/D0",
+        "adaptive-quorum-repair-v3/Q1",
+        "adaptive-quorum-repair-v3/Q2",
+        "adaptive-quorum-repair-v3/S1-attempt-1",
+        "adaptive-quorum-repair-v3/S1-attempt-2",
+        "antsy-verification-v4/E0",
+        "antsy-verification-v4/S0-Laya",
+        "antsy-verification-v4/J0-Jev",
+        "antsy-verification-v4/D1-Jev",
+        "antsy-verification-v4/S0-Jev-attempt-3",
+        "antsy-verification-v4/S0-Jev-attempt-1",
+        "antsy-verification-v4/S0-Jev-attempt-2",
+        "antsy-verification-v4/S1-Laya",
+        "antsy-verification-v4/S1-Jev",
+        "antsy-verification-v4/S1-comparison",
+        "antsy-verification-v5/D0-attempt-1",
+        "antsy-verification-v5/D1-attempt-1"
+      ],
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum/results/S0.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum/results/S0.md#L5",
+          "sha256": "4cc9f9acdf3d73cf3684a7fc720d7031962dba14a484bf5cd7230b9e699d7472"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum/results/S0.md",
+          "line": 16,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum/results/S0.md#L16",
+          "sha256": "4cc9f9acdf3d73cf3684a7fc720d7031962dba14a484bf5cd7230b9e699d7472"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/results/laya-analysis.md",
+          "line": 5,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum-v2/results/laya-analysis.md#L5",
+          "sha256": "f03b8f019b7fa7dbf017601054d8446edbf66e3fdedd37844bfbeb8f7f3675bd"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/AUDIT.md",
+          "line": 17,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/AUDIT.md#L17",
+          "sha256": "43da9bcd119014bb1545edfff17da7744f8414855ba4f6ed189d525168ac1fdf"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/D0-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/D0-post.md#L3",
+          "sha256": "749d0af2457bd93c51e37131260fca5096d6b5a92bcfa6af3638784845bdd22e"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/Q1-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/Q1-post.md#L3",
+          "sha256": "a98cb6c4381d50791281aaff1eade5bb4925ba9f52c72521728eadfa1d0138f5"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/Q2-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/Q2-post.md#L3",
+          "sha256": "44d8be9b68f6402c7ba1ef239a0fd6a19ba1e1283bcd2786b8b426fd084dda46"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-1-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-1-post.md#L3",
+          "sha256": "c58bb6bc3caa805d133cc616c79af9293b7f2c93d0b468ec370bac4ffe63f39b"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md#L3",
+          "sha256": "df44be98bee1912b8218c0e69572acc96ddb184c8c206282eb761599fc85062b"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+          "line": 7,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md#L7",
+          "sha256": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+          "line": 16,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md#L16",
+          "sha256": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+          "line": 26,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md#L26",
+          "sha256": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/results/S1-attempt-1/receipts.json.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v4/results/S1-attempt-1/receipts.json.gz#L1",
+          "sha256": "653083482a16f344a6f188db7ac71bf5df403df1294cf9d74696a4713c3b65a3",
+          "note": "Gzip JSON contains840actualstate/question/options/choice/probability receipts;Jevalso servedmodel/provider/usage."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/results/S1-jev-attempt-1/receipts.json.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v4/results/S1-jev-attempt-1/receipts.json.gz#L1",
+          "sha256": "a27aaaf83f431e0a4970eadc8c8dae4facfe21f0f60a2e362a6029ff668b05c9",
+          "note": "Gzip JSON contains840actualstate/question/options/choice/probability receipts;Jevalso servedmodel/provider/usage."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/results/comparison/comparison.json",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v4/results/comparison/comparison.json#L1",
+          "sha256": "b02a85736ac7d5774bc3bf0c03acd3b62f4a3a02a0e6eb07a8f094ed0be9fe00"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v5/RESULTS.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v5/RESULTS.md#L3",
+          "sha256": "06d2512c8a31cadddb11c24f04ca65f6fe7d7792fc4590915fe89590a7d43f48"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v5/results/D0-attempt-1/traces.json.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v5/results/D0-attempt-1/traces.json.gz#L1",
+          "sha256": "62df3efb663812f12379430597d610421402e0605950b830bb01473bcc487a95"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/antsy-verification-v5/results/D1-attempt-1/traces.json.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/antsy-verification-v5/results/D1-attempt-1/traces.json.gz#L1",
+          "sha256": "d133fd650b914743aa6150cac8e1d3045ce6c669bae605fa7c1ee9cd930b0fa9"
+        }
+      ]
+    },
+    {
+      "family": "Regrowth200",
+      "aliases": [
+        "regrowth-200"
+      ],
+      "model_executed": true,
+      "any_historical_clean_baseline_gate_failure": null,
+      "prolonged_task_nonprogress_confirmed": null,
+      "explicit_provider_refusal_confirmed": null,
+      "classification_reason": "Historical qualification was adapted until 8/10 with equally short routes accepted, and four stopped attempts lack individual records. A formally failed clean gate is therefore not established; poor 6.5% shortest-path performance is established.",
+      "coverage_and_unknowns": "Six 80-round pilot worlds complete on one fixed map. Actual model journals and four prior stopped attempts unavailable. No explicit refusal or sustained no-action pattern can be confirmed.",
+      "valid_adverse_or_null_science": "Model routes are valid but much longer than the algorithm. Faster recovery is confounded by lower damage exposure of long detours. This is adverse quality evidence, not automatically a failed preregistered gate.",
+      "attempt_ids": [
+        "regrowth-200/pilot-v4-algorithm-control",
+        "regrowth-200/pilot-v4-algorithm-damage",
+        "regrowth-200/pilot-v4-qwen-control",
+        "regrowth-200/pilot-v4-qwen-damage",
+        "regrowth-200/pilot-v4-hybrid-control",
+        "regrowth-200/pilot-v4-hybrid-damage",
+        "regrowth-200/prior-stopped-attempts-aggregate",
+        "regrowth-200/plan-registration-failure-v1"
+      ],
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md",
+          "line": 25,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/regrowth-200/README.md#L25",
+          "sha256": "9d9fe78145fda34b4d26ebb19c20b007a5a29054e718702bb5493e7a664278a3"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md",
+          "line": 37,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/regrowth-200/README.md#L37",
+          "sha256": "9d9fe78145fda34b4d26ebb19c20b007a5a29054e718702bb5493e7a664278a3"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md",
+          "line": 35,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/regrowth-200/README.md#L35",
+          "sha256": "9d9fe78145fda34b4d26ebb19c20b007a5a29054e718702bb5493e7a664278a3"
+        }
+      ]
+    },
+    {
+      "family": "Swarm of Theseus",
+      "aliases": [
+        "swarm-of-theseus",
+        "swarm-of-theseus-v2"
+      ],
+      "model_executed": true,
+      "any_historical_clean_baseline_gate_failure": true,
+      "prolonged_task_nonprogress_confirmed": null,
+      "explicit_provider_refusal_confirmed": null,
+      "classification_reason": "V1 S0-a3 fails the verbatim ceiling; v2 both S0 cohorts fail reported clean competence thresholds. Four v1 generic PolicyErrors are unclassified, not demonstrated refusals.",
+      "coverage_and_unknowns": "V1 archive 1,697 requests/1,693 responses inspected. All 24 v2 world artifact catalogues are empty; only two checkpoint metrics per world are available. Model response behavior behind v2 low accuracy is unknown.",
+      "valid_adverse_or_null_science": "V1 notes transmit supplied rules effectively in 6 paired worlds. That positive effect survives the competence failures of earlier attempts but does not establish spontaneous culture or swarm superiority.",
+      "attempt_ids": [
+        "swarm-of-theseus/S0-a1",
+        "swarm-of-theseus/S0-a2",
+        "swarm-of-theseus/S0-a3",
+        "swarm-of-theseus/S0-a4",
+        "swarm-of-theseus/S1-a1",
+        "swarm-of-theseus-v2/S0-plan-at-frozencommit",
+        "swarm-of-theseus-v2/S0",
+        "swarm-of-theseus-v2/S0-repair"
+      ],
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a1-post.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a1-post.md#L3",
+          "sha256": "bc8c03db97927a886c84fb57c4d81c3922aa17e98be4d4b23b0c71d02e01c39f"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md",
+          "line": 9,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md#L9",
+          "sha256": "5af038d90fb9da83d6ae749da0a36d2613fe8ee2da783ceab44361a168644508"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz#L1",
+          "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+          "note": "Gzip TAR: S0-a2/*/events.jsonl actualrequests/parsedresponses;72totalepisodejournals."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz#L1",
+          "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+          "note": "Gzip TAR: S0-a3/*/events.jsonl actualrequests/parsedresponses;72totalepisodejournals."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz#L1",
+          "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+          "note": "Gzip TAR: S0-a4/*/events.jsonl actualrequests/parsedresponses;72totalepisodejournals."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz#L1",
+          "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+          "note": "Gzip TAR: S1-a1/*/events.jsonl actualrequests/parsedresponses;72totalepisodejournals."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-pre.md",
+          "line": 14,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-pre.md#L14",
+          "sha256": "4a8e433f61e1dab23f4ee2495b382d2711ef7a6bdb4716587ca70c757bcaf3ab"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/data/completion-audit-2026-10-04/public-followup-state.json",
+          "sha256": "d601a5367bd93718b9012202c2c4dd433f818dbff085f9f277f95b8227a26e1f",
+          "record_filter": "S0",
+          "capture_utc": "2026-10-04T04:17:46Z"
+        },
+        {
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/095534bfab16085ac6f4032cd5137cf1e2c7b875/researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md",
+          "note": "Hub registered plan; content at this newer commit not locally inspected."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/data/completion-audit-2026-10-04/targeted-followup-artifacts.json",
+          "note": "All24 native run artifact catalogues empty."
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/data/completion-audit-2026-10-04/public-followup-state.json",
+          "sha256": "d601a5367bd93718b9012202c2c4dd433f818dbff085f9f277f95b8227a26e1f",
+          "record_filter": "S0-repair",
+          "capture_utc": "2026-10-04T04:17:46Z"
+        }
+      ]
+    },
+    {
+      "family": "Quorum of Mirrors",
+      "aliases": [
+        "quorum-of-mirrors"
+      ],
+      "model_executed": true,
+      "any_historical_clean_baseline_gate_failure": false,
+      "prolonged_task_nonprogress_confirmed": false,
+      "explicit_provider_refusal_confirmed": false,
+      "classification_reason": "The first attempt fails setup before any model call; S0-02 meets its declared competence gate despite two wrong and one DEFER. Setup failure is not model baseline failure.",
+      "coverage_and_unknowns": "All 32 actual response objects inspected. Each task is one decision, not a prolonged action sequence. No explicit refusal observed; DEFER is an allowed task outcome. Request payloads are hash-referenced rather than embedded.",
+      "valid_adverse_or_null_science": "Narrow pattern qualification passes; no swarm efficacy result exists.",
+      "attempt_ids": [
+        "quorum-of-mirrors/QM-S0-01",
+        "quorum-of-mirrors/QM-S0-02"
+      ],
+      "sources": [
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md",
+          "line": 3,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md#L3",
+          "sha256": "857b7939056058e709f56cab6108adae8d9e264e083fcf3f9253c05e6e866ce2"
+        },
+        {
+          "path": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-S0-02/receipts.jsonl",
+          "line": 1,
+          "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/5945294fa853d7ff60a7ec62b31fd2158d74c3de/researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-S0-02/receipts.jsonl#L1",
+          "sha256": "22996afe008eb59fb86805294785ac6ecef317f4acfa41a3cb61d4e838638dba"
+        }
+      ]
+    }
+  ],
+  "source_inventory": "/Users/halcyon/swarm-lab-lanes/pi-next-experiments/swarm-lab/researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json"
+}
