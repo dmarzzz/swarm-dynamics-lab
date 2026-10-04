@@ -1,6 +1,6 @@
-# Pre-registration: sybil-rules-180, attempt 001
+# Pre-registration: sybil-rules-180, attempts 001 and 002
 
-Written 2026-10-04 by dmarz/flagship-market before any stage ran and before any model call. Frozen values are in [design.yaml](design.yaml), covered by the source hash named in [the pre-run review](reviews/chain-001-pre.md); a change to any of them needs a new attempt. The design follows line F of [research program v5](../overnight-program-2026-10-04/SETUP.md); where this file and the program differ, the program wins except for the dated additions marked below.
+Written 2026-10-04 by dmarz/flagship-market before any stage ran and before any model call. Frozen values are in [design.yaml](design.yaml), covered by the source hash named in the pre-run review of each attempt ([001](reviews/chain-001-pre.md), [002](reviews/chain-002-pre.md)); a change to any of them needs a new attempt. The design follows line F of [research program v5](../overnight-program-2026-10-04/SETUP.md); where this file and the program differ, the program wins except for the dated additions marked below.
 
 Review status: exploratory. dmarz/fleet-monitor's check of this package is a same-researcher check. Cross-researcher review is waived by dmarz for these exploratory runs (relayed by dmarz/fleet-monitor). The run is not independently reviewed, is not an accepted hypothesis and makes no novelty claim.
 
@@ -47,4 +47,23 @@ Fixed now, never changed after X0.
 
 ## Changes after the first version of this file
 
-None yet. The first version includes the fleet monitor's requirements of 2026-10-04 (X0 valid-action gate, void limits, re-issue of lost tasks, 3 s hub polling, A', D1 order, the dominant-owner fraction beside the primary, one reservation authority).
+The first version includes the fleet monitor's requirements of 2026-10-04 (X0 valid-action gate, void limits, re-issue of lost tasks, 3 s hub polling, A', D1 order, the dominant-owner fraction beside the primary, one reservation authority).
+
+### Amendment 1, 2026-10-04, attempt 002 (written before any call of attempt 002)
+
+Attempt 001 stopped at P0 after one call ([post-mortem](reviews/chain-001-post.md)). The model filed the instructed registration correctly but added a zero production order for an id it invented for the firm it was registering (`firm-00-02`, which in that market belongs to a rival); the engine voided the whole response with `production_unknown_firm`. This is an interface defect, not a competence result. dmarz/fleet-monitor directed one bounded interface repair; this is the second and last configuration the program allows.
+
+1. Documentation. The manual's Production paragraph now says: "Production orders may name only the firms listed in `portfolio.firms` this round. Firm ids are assigned by the registry, never chosen by you: a firm you register this round has no id yet and cannot be given an order; it appears in `portfolio.firms` from the next round." Every round prompt carries `portfolio.production_orders_rule`: "Production orders may name only the firm ids listed in portfolio.firms. A firm registered this round has no id yet and cannot be ordered." The text is identical in all branches, both D1 arms and every qualification fixture.
+2. Normalisation, applied before validation, recorded on each owner-round (`normalized`) and counted per stage, per continuation and by firms held. Each is unambiguous and changes no economic action:
+   - `zero_order_unknown_firm_dropped`: a production entry with quantity 0 for a firm id the owner does not hold (an invented id, a rival's firm, a retired firm) is dropped; reported as `dropped_zero_orders`. A non-zero order for such an id still voids the round (`production_unknown_firm`).
+   - `extra_top_level_key_dropped`: a top-level key other than memo, admin, production, message.
+   - `admin_omitted_as_noop`: no `admin` key, treated like `admin: null`, which was already a no-op.
+   - `command_spelling`: a command that differs from a valid one only in case, spaces, hyphens or underscores (`no-op`, `NOOP`, `Register`).
+   - `noop_extra_field_dropped`: fields on a no-op.
+   - `null_admin_field_dropped`: a field outside the command's own fields whose value is null.
+   - `product_case`: product `a`/`b` for `A`/`B`.
+   Already accepted before this amendment and unchanged: integers written as floats with no fractional part (576.0), `message` or `memo` null (read as empty), a zero order for one's own pending firm. Still void, because the intent is not certain: a missing `production` key, an unknown command word (e.g. `skip`), a non-null extra field on a command, a fractional or negative quantity, a non-string message, any infeasible or unaffordable order.
+3. Fixtures and names: fresh probe fixtures 318600 to 318617 (P0 is again probe 0, case `register_other`), fresh ordinary-profit fixtures 318620 to 318625 and native smoke 318630 to 318635, all from the range reserved for one repair configuration; X0, main economy and D1 fixtures are unchanged and have never been shown to a model. Batches `s0-002`, `p0-002`, `q0-002`, `x0-002`, `s1-002`, `d1-002`; worker sessions `workers-002-*`.
+4. Ledger: attempt 002 continues attempt 001's ledger file on the coordinator (one ledger, one cumulative USD 5 cap). Its caps are attempt 002's own caps plus the one P0 call attempt 001 reserved (P0 2, total 8,479 reservations, 9,803 transport attempts in that file).
+
+Unchanged: economics, rules, threshold and charge, gates and their thresholds (X0 171 of 180), void limits (36 / 36 / 180), per-attempt call caps, stage order, A', D1, model and request template. Effect on interpretation: owners who write zero orders for firms they do not hold are no longer voided, so the void bias against multi-firm owners is smaller than in attempt 001's configuration; normalisation counts are reported beside every contrast with the void rates.

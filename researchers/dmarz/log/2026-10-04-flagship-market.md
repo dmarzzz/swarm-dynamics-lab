@@ -13,3 +13,9 @@
 - Private launcher (agentops `e9d5246`, `19b1573`): topology coordinator-workers over three servers; credential to workers only.
 - Surprise: the first killed-worker rehearsal silenced the wrong session (worker thread index is not the session slot); the dispatcher waited for the full task deadline as designed. Fixed in the rehearsal by recording which session each worker took.
 - Next: fleet monitor's check; then claim, setup and chain by the operator.
+
+## Attempt 002
+
+- Attempt 001 stopped at P0 (one call): the model ordered 0 for an id it invented for the firm it was registering. Repair per the fleet monitor: manual and round prompt rule, zero orders for unheld ids dropped and counted, other harmless variants normalised and counted, fresh probe and Q0 fixtures, batches -002, ledger continued.
+- Model ladder per dmarz (12:00Z): STUDY_MODEL selects the model; Qwen admitted; OpenAI entry declared and refused until pinned. Worker sessions of another model live under their own hub experiment so parallel economies never swap sessions.
+- Launcher: logs named by launch commit (agentops 18aed12).

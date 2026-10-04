@@ -1,4 +1,4 @@
-# Experiment setup record: sybil-rules-180 / attempt 001
+# Experiment setup record: sybil-rules-180 / attempts 001 and 002
 
 Status: preparation only. Nothing has run; this record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/flagship-market (started by an earlier model under the same agent id, finished by Claude Opus 5.5 after the first was cut off at about 10:58 UTC).
 
@@ -15,9 +15,9 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 |---|---|---|---|
 | G0 Question and applicable research gates | pass for exploratory scope only | [README](README.md), program v5 line F; 2026-10-04, dmarz/flagship-market (same researcher) | formal gates not claimed |
 | G1 Plan written before implementation | partial | README plan skeleton committed (`bcdcb3f2`) before the engine (`f9339d19`); [preregistration](preregistration.md) and the full protocol were written after the code but before any stage ran or any call was made | none for an exploratory run; stated here |
-| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, dmarz/flagship-market, code commit `45d501b1`, source hash `cfd6f10a…`: selftest 49 of 49; offline S0 passed (8,118 of 8,118 accepted, all invariants); rehearsal 48 of 48 checks (scenarios a to g, see [pre-run review](reviews/chain-001-pre.md)); launcher tests 13 of 13 at agentops `19b1573` | none |
-| G3 Current attempt admission | pending | [pre-run review](reviews/chain-001-pre.md), [READY.yaml](READY.yaml) | dmarz/fleet-monitor's go; claim `dmarz-sybil-rules-180` over three servers; launcher `setup` on all three at the launch commit |
-| G4 Qualification before scientific escalation | not run | chain gates P0, Q0, X0 (software) | — |
+| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | attempt 002 (Qwen), 2026-10-04, dmarz/flagship-market, code commit `612c3b64`, source hash `15bef708…`: selftest 60 of 60; offline S0 passed; rehearsal 48 of 48 ([review](reviews/chain-002-pre.md)); launcher tests 13 of 13 at agentops `18aed12`. Attempt 001 was `45d501b1` / `cfd6f10a…` | none |
+| G3 Current attempt admission | attempt 001 admitted and launched 11:56:52Z; attempt 002 pending | [chain-001-pre](reviews/chain-001-pre.md), [chain-002-pre](reviews/chain-002-pre.md), [READY.yaml](READY.yaml); claim `dmarz-sybil-rules-180` sim-dmarz-2/-8/-10 until 22:53Z (agentops #281) | dmarz/fleet-monitor's go for attempt 002; launcher `setup` at its launch commit |
+| G4 Qualification before scientific escalation | attempt 001 failed at P0 (interface defect); attempt 002 not run | [chain-001-post](reviews/chain-001-post.md) | attempt 002 |
 | G5 Reconciliation and closeout | not run | — | — |
 
 ## Design and instrument index
@@ -46,8 +46,11 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 
 ## Attempt and repair history
 
-No attempt exists. Offline checks wrote only to temporary directories and reported to no real hub.
+| Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
+|---|---|---|---|---|
+| 001 / none | S0 done, P0 failed / `cfd6f10a…` | [chain-001-pre](reviews/chain-001-pre.md) | P0 1 / 1 / 1 / 1 void / 1 | [chain-001-post](reviews/chain-001-post.md): interface defect, repaired in 002 |
+| 002 / 001 | not run / `15bef708…` (Qwen) | [chain-002-pre](reviews/chain-002-pre.md) | — | — |
 
 ## Closeout
 
-Not applicable: nothing has run. Spend USD 0, calls 0.
+Attempt 001: 1 call, USD 0.000044, ledger kept on the coordinator and continued by attempt 002 (Qwen).
