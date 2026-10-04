@@ -3,14 +3,16 @@ id: build-swarm-size-qualification
 type: task
 title: Build and qualify optimal swarm-size generators and launch package
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-idea-scores
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T03:32Z
+updated: 2026-10-04T03:32Z
 ---
 
 ## Goal
