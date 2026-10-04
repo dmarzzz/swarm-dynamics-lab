@@ -2,8 +2,8 @@ import argparse,json,os,subprocess,sys,hashlib,importlib.util,socket,datetime
 from pathlib import Path
 import cases
 import freshness
-import render
 BASE=Path(__file__).resolve().parent
+render_spec=importlib.util.spec_from_file_location('immune_controller_render',BASE/'render.py');render=importlib.util.module_from_spec(render_spec);render_spec.loader.exec_module(render)
 sys.path.insert(0,str(freshness.ROOT.parent.parent/'experiment-documentation'));from public_plan import check
 spec=importlib.util.spec_from_file_location('receipt_worker',freshness.ROOT.parent/'evidence-study/worker.py');old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
 def main():

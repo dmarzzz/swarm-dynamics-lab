@@ -13,15 +13,15 @@ def plot(rows,path,tick=2):
   selected=[r for r in rows if r['split']==split];ax.set_title(split.title());ax.set_xlim(-.15,2.2);ax.set_xticks([0,1,2]);ax.set_xlabel('Simulator tick');ax.grid(alpha=.15)
   labels=[]
   for i,r in enumerate(selected):
-   labels.append(r['model']+' / '+r['case']['kind']+' / '+r['condition']);states=[int(all(cases.f.health(r['case']['fixture'],r['case']['initial']).values()))]+[x['healthy'] for x in r['trace'][:tick]]
+   labels.append(r['model']+' / '+r['case']['kind']+' / '+r['condition']+(' [PASS]' if r.get('outcome_pass') else ' [FAIL]'));states=[int(all(cases.f.health(r['case']['fixture'],r['case']['initial']).values()))]+[x['healthy'] for x in r['trace'][:tick]]
    ax.plot(range(len(states)),[i]*len(states),c='#687b90',lw=2)
    for t,healthy in enumerate(states):
     ax.scatter(t,i,c='#61dbc0' if healthy else '#fa7285',s=90,marker='o')
     if t:
-     x=r['trace'][t-1];mark='R' if x['useful_restart'] else 'C' if x['configuration_change'] else 'I' if x['action']['action']=='inspect' else '·';ax.text(t+.07,i,mark+(' !' if not x['diagnosis_correct'] else ''),va='center',fontsize=9)
+     x=r['trace'][t-1];mark='X' if x['rejected'] else 'R' if x['useful_restart'] else 'C' if x['configuration_change'] else 'I' if x['action']['action']=='inspect' else 'D' if x['action']['action']=='deploy' else 'G' if x['action']['action']=='refresh' else 'W';ax.text(t+.07,i,mark+(' !' if not x['diagnosis_correct'] else ''),va='center',fontsize=9)
   ax.set_yticks(range(len(labels)),labels,fontsize=8);ax.invert_yaxis()
   if not selected:ax.text(.5,.5,'Conditional stage not opened',ha='center',transform=ax.transAxes)
- fig.suptitle('Immune Response | native controller qualification');fig.text(.03,.02,'Green: healthy; red: unhealthy. R: useful restart; C: configuration change; I: inspect; !: diagnosis error. Repeated roots are dependent.',fontsize=9);fig.tight_layout(rect=(0,.055,1,.95));fig.savefig(path,dpi=120);plt.close(fig)
+ fig.suptitle('Immune Response | native controller qualification');fig.text(.03,.02,'Green: healthy; red: unhealthy. R: useful restart; C: configuration change; I: inspect; X: rejected; D: other deploy; G: registry; W: wait; !: diagnosis error.',fontsize=9);fig.tight_layout(rect=(0,.055,1,.95));fig.savefig(path,dpi=120);plt.close(fig)
 def render(out):
  out=Path(out);rows=[json.loads(x) for x in (out/'episodes.jsonl').read_text().splitlines()];plot(rows,out/'final_frame.png');frames=[]
  for tick in range(3):

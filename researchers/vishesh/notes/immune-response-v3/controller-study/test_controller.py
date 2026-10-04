@@ -51,3 +51,21 @@ class StageGates(unittest.TestCase):
  def test_fail_opens_opus_not_sonnet_holdout_or_advice(self):
   s,c=self.exercise(fail=True);self.assertEqual(c.count('controller-a10-sonnet'),16);self.assertEqual(c.count('controller-a10-opus'),32);self.assertEqual(s['recorded'],12);self.assertTrue(s['core_qualified'])
  def test_transport_does_not_escalate(self):self.exercise(transport=True)
+
+class Reporting(unittest.TestCase):
+ def test_worker_selects_own_renderer(self):
+  import subprocess,sys
+  from pathlib import Path
+  base=Path(__file__).resolve().parent
+  result=subprocess.check_output([sys.executable,'-c',"import sys;sys.path.insert(0,sys.argv[1]);import worker;print(worker.render.__file__)",str(base)],text=True)
+  self.assertEqual(Path(result.strip()),base/'render.py')
+ def test_render_saved_development_rows(self):
+  import importlib.util
+  from pathlib import Path
+  base=Path(__file__).resolve().parent;spec=importlib.util.spec_from_file_location('a10_renderer_test',base/'render.py');renderer=importlib.util.module_from_spec(spec);spec.loader.exec_module(renderer)
+  c=cases.development()[0];state=copy.deepcopy(c['initial']);trace=[]
+  for tick in (1,2):
+   o=cases.observe(c,state,tick,[],[]);a=cases.reference(o);x=cases.f.step(c['fixture'],state,a);x.update(tick=tick,observation=o,diagnosis=cases.diagnosis(o),diagnosis_correct=True,raw_response=cases.f.controller.encode(c['fixture'],a));trace.append(x)
+  with tempfile.TemporaryDirectory() as td:
+   out=Path(td);(out/'episodes.jsonl').write_text(json.dumps({'model':'sonnet','split':'development','case':c,'condition':'none','trace':trace})+'\n');renderer.render(out)
+   self.assertTrue((out/'replay.html').exists());self.assertEqual(json.loads((out/'visualization-provenance.json').read_text())['frames'],3)
