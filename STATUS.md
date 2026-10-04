@@ -49,6 +49,7 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed (stale) | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
 | [pi-cycle-2026-10-04](tasks/pi-cycle-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T15:18Z | Coordinate one evidence-led iteration across ten active studies |
+| [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T15:19Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -59,6 +60,7 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T15:00Z | Survey: agent budgets, budget visibility and self-allocation among agents |
+| [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T15:20Z | Theseus A1 withheld-policy acquisition screen |
 | [wild-identity](tasks/wild-identity.md) | claimed | p1 | build | shadow/sol-identity | shadow | 2026-10-04T14:56Z | Identity churn and observable coordination across three swarms |
 | [wild-timeline](tasks/wild-timeline.md) | claimed | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:00Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
@@ -76,7 +78,6 @@
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
-| [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | open | p1 | experiment |  | vishesh | 2026-10-04T09:00Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
