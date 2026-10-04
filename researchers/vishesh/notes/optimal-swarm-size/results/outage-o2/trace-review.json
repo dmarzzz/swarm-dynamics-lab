@@ -1,0 +1,5266 @@
+[
+  {
+    "id": "outage-o2/qualification/0/1/legacy4",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-888": false,
+          "svc-600": false,
+          "svc-405": false,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-888": false,
+          "svc-600": false,
+          "svc-405": false,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-888": false,
+          "svc-600": false,
+          "svc-405": false,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-888": false,
+          "svc-600": false,
+          "svc-405": true,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-888": false,
+          "svc-600": false,
+          "svc-405": true,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-600"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-600"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-600"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-600"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-888": false,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-600",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-600",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-600",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-600",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-888": false,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-648"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-648"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-648"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-648"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-888": false,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-648",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-648",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-648",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-648",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/qualification/0/1/owned4",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-888": false,
+          "svc-600": false,
+          "svc-405": false,
+          "svc-648": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-600"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-648"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-888"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-888": false,
+          "svc-600": true,
+          "svc-405": false,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-600",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-648",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-888",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-888": false,
+          "svc-600": true,
+          "svc-405": false,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-888"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-888": true,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-405",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-888",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-888": true,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-888": true,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-600"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-648"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-888": true,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-405"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-888"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-888": true,
+          "svc-600": true,
+          "svc-405": true,
+          "svc-648": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/0/single",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/0/owned4",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/0/owned8",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/0/scheduled",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/1/scheduled",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/1/owned8",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 4,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 5,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 6,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 7,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/1/owned4",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 2
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 1,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 2,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 3,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "outage-o2/demonstration/0/1/single",
+    "rounds": [
+      {
+        "tick": 1,
+        "health": {
+          "svc-934": false,
+          "svc-235": false,
+          "svc-515": false,
+          "svc-986": false,
+          "svc-761": false,
+          "svc-777": false,
+          "svc-543": false,
+          "svc-729": false
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          }
+        ]
+      },
+      {
+        "tick": 2,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-235",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-729",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-777",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-986",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          }
+        ]
+      },
+      {
+        "tick": 3,
+        "health": {
+          "svc-934": false,
+          "svc-235": true,
+          "svc-515": false,
+          "svc-986": true,
+          "svc-761": false,
+          "svc-777": true,
+          "svc-543": false,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-515"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-543"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-761"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-934"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 2,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 2,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 2,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 2,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "stale_version"
+          }
+        ]
+      },
+      {
+        "tick": 4,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-515",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-543",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-761",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-934",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-b",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "status": "applied"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 5,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 6,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-235"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-729"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-777"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-986"
+            },
+            "status": "observed"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 7,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      },
+      {
+        "tick": 8,
+        "health": {
+          "svc-934": true,
+          "svc-235": true,
+          "svc-515": true,
+          "svc-986": true,
+          "svc-761": true,
+          "svc-777": true,
+          "svc-543": true,
+          "svc-729": true
+        },
+        "actions": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "status": "waited"
+          }
+        ]
+      }
+    ]
+  }
+]

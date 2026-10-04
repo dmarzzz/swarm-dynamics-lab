@@ -107,3 +107,7 @@ Allocation closeout: agentops PR391 merged, releasing the completed study claim 
 ## O2 ownership and larger-roster diagnostic
 
 [Prospective O2 plan](outage-prototype/O2-PLAN.md) precedes implementation. Owner requested stronger baseline and larger swarm; bounded post-mortem diagnostic authority applies. First legacy/owned-four on original four-service case, then conditional single/owned-four/owned-eight/controller on equal eight-tool-slot eight-service worlds.10 episodes,272 calls max,USD11 sublimit within original20 (prior exposure2.903680).28 outage and70 shared offline checks pass. Current model admission/public registration/account/claim/runtime evidence pending; no O2 calls yet. Historical O1/Q-A7 remain immutable.
+
+## O2 completed and scientifically assessed
+
+[O2 post-mortem](reviews/outage-o2-post.md):10/10 terminal,272 calls,40 artifact hashes verified. Explicit ownership repairs all4 services with0duplicate patches versus legacy3/4 and12duplicates. Single/four/eight/controller each recover8/8 services in both demonstration variants at identical ticks2/4. Eight contexts cost6.33x single, with no measured recovery or latency advantage on this one authored template. Original cumulative exposureUSD3.727799 (settled3.352858),remaining16.272201; holds preserved. Offline closeout and eleven-dimension scientific review complete. Worker/relay stopped, forensic backup retained, claimPR404 released. No successor queued; park larger-N escalation.

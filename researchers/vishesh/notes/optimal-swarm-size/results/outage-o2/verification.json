@@ -1,0 +1,256 @@
+{
+  "checks": [
+    {
+      "run": "optimal-swarm-size-outage-o2/ac39d88df957e893",
+      "name": "assignment.json",
+      "sha256": "0c820cee88180c9c4b6bd3894be708793e226ddc3c73deed2bce4fafde410cae",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/ac39d88df957e893",
+      "name": "trace.jsonl",
+      "sha256": "6a2dd6b6a939d98abffb5b14472a1098d6d441b79d7f6b1314b9c718bad29a1f",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/ac39d88df957e893",
+      "name": "outcome.json",
+      "sha256": "9c756a97ee9d9262325500a531161ccfd2cc141cdaa2e96dd4163a00afa63450",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/ac39d88df957e893",
+      "name": "replay.html",
+      "sha256": "dd0fc07a66dd736f50512dc459596daa0a8d0dabc3fe56406a5cb3413320071a",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/91a9b4f63ec4f91e",
+      "name": "assignment.json",
+      "sha256": "7fc0696fbea0a5ed5073608e935d3d1b590feae89932dbe9033ce10a1ff94059",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/91a9b4f63ec4f91e",
+      "name": "trace.jsonl",
+      "sha256": "c4c1dc90c586093a175315c5f88d910e875dae754cfc998a82de3176cdaebe35",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/91a9b4f63ec4f91e",
+      "name": "outcome.json",
+      "sha256": "56f92e3f9b41cdc51c28e1fd5b37fff0ea8c84ed3423c7fc3bc7f84866457b24",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/91a9b4f63ec4f91e",
+      "name": "replay.html",
+      "sha256": "85c6c269ebe055dc77c0318a162f03bc35da27a54c3ef7862b2f4255affb6b15",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/a94dc848fe5b6e71",
+      "name": "assignment.json",
+      "sha256": "d47a3ee2e5f17d4c2c0d4020dc74ca5662c953b61e71bf7877e40326e88fc7e0",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/a94dc848fe5b6e71",
+      "name": "trace.jsonl",
+      "sha256": "69d25e242c70b0c1c5416f9ac555f9a5c671eb20454b3dfedb0e769952ed4efd",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/a94dc848fe5b6e71",
+      "name": "outcome.json",
+      "sha256": "d6d9d7ad1b16f331eeddc73cae2954c217507627f4d6aa4a80997212d2b7b2dc",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/a94dc848fe5b6e71",
+      "name": "replay.html",
+      "sha256": "6ab568ca78323b405f08f5b106685163663d65208d2950975eac050cecf6f200",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/7e6477ca7363ce6e",
+      "name": "assignment.json",
+      "sha256": "33a7fb3b580fc9f5449602f9123a9f50bd5d5778985c326588114e409ace84cf",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/7e6477ca7363ce6e",
+      "name": "trace.jsonl",
+      "sha256": "4d79aa88879587eade387a5e8a7ff3ba5aa8fbcc9a7a9b5a9a203febd919cc5a",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/7e6477ca7363ce6e",
+      "name": "outcome.json",
+      "sha256": "1ab02ddcbb587167c3d29e5e45bc5f5ecbbc65682b81f568899815c4b0a4409c",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/7e6477ca7363ce6e",
+      "name": "replay.html",
+      "sha256": "8a9d4d5acbf6bcf3f4f80acdaa28e02d0076408d7f52eb194c230b58a428c1d8",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/187aa43a5bfe0ed3",
+      "name": "assignment.json",
+      "sha256": "6dc37f1a885299e14b26ac826ee2daf27362b2ef88658f38303c6b67a1160efd",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/187aa43a5bfe0ed3",
+      "name": "trace.jsonl",
+      "sha256": "a02cec0193ce520e89841c401164f5e5d3ac5c5f861330bc9e3ef4b0dffd7b04",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/187aa43a5bfe0ed3",
+      "name": "outcome.json",
+      "sha256": "f20e0ed747d1a7bc1d2c9a43f9890814ffba67f6d4cbc0143531f07cf55eb38e",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/187aa43a5bfe0ed3",
+      "name": "replay.html",
+      "sha256": "ebe1cfa87cd70b5c3edb97afc3eabd59b087b344cf13bceabcdb48990722738f",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/95e05f088d32a430",
+      "name": "assignment.json",
+      "sha256": "43008fcc0105553c08c28db75143451197a00c6732d67afff046597fa164df6e",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/95e05f088d32a430",
+      "name": "trace.jsonl",
+      "sha256": "072673d2686ca0225d458768de80c342b2d5ed60384e0e9e43f6750c77bcf11c",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/95e05f088d32a430",
+      "name": "outcome.json",
+      "sha256": "af5cd0e9082347fdb2f6f676c1b43023995424c3191c841bf617dd7947aff256",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/95e05f088d32a430",
+      "name": "replay.html",
+      "sha256": "fbfac1e849857e8e7b0da474cd0dc3aff64f5026691d4c0d14e99185244c4fc4",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/4caaa3393d586566",
+      "name": "assignment.json",
+      "sha256": "aa24ed98409f149b344a8ddff4479d8adfb462c37cb251fb5a582f22f866b757",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/4caaa3393d586566",
+      "name": "trace.jsonl",
+      "sha256": "593e9e962d4807b92cf6435de9974cfb9fe42d06010697f08011f35c38bc55ae",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/4caaa3393d586566",
+      "name": "outcome.json",
+      "sha256": "473d0b51c14cab123a89ac872448017d3997146b46304576921261145575e6fd",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/4caaa3393d586566",
+      "name": "replay.html",
+      "sha256": "6871b5e36b846d149fb04b039fc722158a127d09fe56fdae8e2094a627227dfc",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/0c0c091b6fc19dce",
+      "name": "assignment.json",
+      "sha256": "87ba039f84ea5105f78058051e2568a46615e049e0ffe05dccea1562315274fd",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/0c0c091b6fc19dce",
+      "name": "trace.jsonl",
+      "sha256": "3ca89acd99ddee79c148375a9e0c12efe12e64a2b1f7708cf9cb92a48b215da0",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/0c0c091b6fc19dce",
+      "name": "outcome.json",
+      "sha256": "66313149b2d49ec1dbe9f022da8e7b0bf12d42a136dc90e97e43ddbb5a911128",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/0c0c091b6fc19dce",
+      "name": "replay.html",
+      "sha256": "e07594d0514be996b6ddb0d84e46ae927a1a48929297748a77582b5465f1aaba",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/984f7539fb347da6",
+      "name": "assignment.json",
+      "sha256": "c5dc7dcca5031bde7bb3e2ff80767bd5eb87c70d27e7a249e80cb5c553c84cbc",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/984f7539fb347da6",
+      "name": "trace.jsonl",
+      "sha256": "6d14731a55bf508914f0c811e408fe4d6d206dd6d73f0e768b446aa52cb89605",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/984f7539fb347da6",
+      "name": "outcome.json",
+      "sha256": "9101de5383c5c5256e0586d728ecc3506b49e45397d9269c1f861af5efc187d3",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/984f7539fb347da6",
+      "name": "replay.html",
+      "sha256": "57f92a5ad973051fbf1674e285047eca056e13a7f6300377d384ee7c685bec71",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/64a0a70e92a629c6",
+      "name": "assignment.json",
+      "sha256": "949084894573f5bef777198ba421af0dfb1a6afa0f4439594780a578f94a96d3",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/64a0a70e92a629c6",
+      "name": "trace.jsonl",
+      "sha256": "d3f11a19b5cc02abe56f9da2d8b0c6770a49f02f1f450b9a3c7cdbb563e63cc9",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/64a0a70e92a629c6",
+      "name": "outcome.json",
+      "sha256": "2f6342f6916d803a7ac3b19b0a274e0abafd19ee93490b034c341091dfa13aee",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-outage-o2/64a0a70e92a629c6",
+      "name": "replay.html",
+      "sha256": "10627f4be3a03f35c9ca9955c3678c107d0f99bb7486a2f42dfefebf15d597da",
+      "match": true
+    }
+  ],
+  "all_verified": true,
+  "ledger": [
+    1187,
+    3727799,
+    3352858
+  ],
+  "attempt": [
+    272,
+    824119,
+    749080
+  ],
+  "artifact_access": "authenticated hub; synthetic raw files retained in research repository"
+}

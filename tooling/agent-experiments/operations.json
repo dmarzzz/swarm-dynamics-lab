@@ -46,11 +46,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/optimal-swarm-size",
       "setup_path": "researchers/vishesh/notes/optimal-swarm-size/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-post.md",
+      "postmortem_path": "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o2-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:55:12.579964+00:00",
-      "checked_commit": "291581ff2140ca797e650d249fd6c13f0d3850ce",
-      "next_action": "O1 and Q-A7 complete and scientifically assessed. Broad size sweep parked: strengthen outage fixed-team ownership and separately define provenance qualification before any proposed successor. No dispatch queued. Original20 cap retained; exposure2.903680. Allocation release recorded in SETUP.",
+      "checked_at": "2026-10-04T20:14:35.097932+00:00",
+      "checked_commit": "cc91c560af8c12eac6b6caaa38f1406306aee863",
+      "next_action": "O2 complete_valid_result: ownership repaired duplication; one/four/eight/controller matched recovery in both eight-service worlds. Eight-agent cost6.33x single, no observed latency advantage. Worker releasedPR404. Park size escalation; future main study needs independently varied realistic incidents and residual decision value. Original20 cap, exposure3.727799; no successor queued.",
       "next_run_approval": "owner"
     },
     {

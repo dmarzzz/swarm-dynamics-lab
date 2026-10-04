@@ -1,0 +1,132 @@
+{
+  "attempt": "outage-o2",
+  "assessor": "vishesh/codex-idea-scores (owning agent)",
+  "date": "2026-10-04",
+  "evidence_revision": "cc91c560af8c12eac6b6caaa38f1406306aee863",
+  "decision": "complete_valid_result",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Prospective comparator repair followed by bounded larger-roster diagnostic; decision limits explicit.",
+      "evidence": [
+        {
+          "path": "outage-prototype/O2-PLAN.md",
+          "sha256": "16593d07c7e255012e16232f7d2f9e4012dae2589316ef05a5f985afa4fbe8f3"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "One easy-to-batch authored endpoint template; all stronger comparators reach the same ceiling.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/analysis.json",
+          "sha256": "e2d1b760aedf3b2566ebcfdedc9fe25d0f506cb814afee4fb5000c104b084dfe"
+        }
+      ],
+      "next_action": "Park larger-N escalation; require a concrete real-world residual need before proposing a broader study.",
+      "acceptance_check": "Prospective independently varied incident tasks, strong simple baselines, realistic evidence acquisition and declared precision/decision value; no native successor by default."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Equal tool slots within each stage; explicit ownership and unequal model compute disclosed; strong simple controller retained.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/analysis.json",
+          "sha256": "e2d1b760aedf3b2566ebcfdedc9fe25d0f506cb814afee4fb5000c104b084dfe"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Owned-four passes the specified qualification without unsafe or duplicate repairs; all demonstration arms recover.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/analysis.json",
+          "sha256": "e2d1b760aedf3b2566ebcfdedc9fe25d0f506cb814afee4fb5000c104b084dfe"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Every final grade/case hash recomputed; ticks, latency, health coverage and cost kept separate.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/analysis.json",
+          "sha256": "e2d1b760aedf3b2566ebcfdedc9fe25d0f506cb814afee4fb5000c104b084dfe"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Feasibility scope only: one template, dependent variants, no incident-level or item-level precision claim.",
+      "evidence": [
+        {
+          "path": "reviews/outage-o2-post.md",
+          "sha256": "b1455f92959f70975290bc74cf48a9ba00fc8fe3a8c33ade728415d9685ad809"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All272 requests checked against declared ownership and action slots; responses reconcile to saved actions.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/analysis.json",
+          "sha256": "e2d1b760aedf3b2566ebcfdedc9fe25d0f506cb814afee4fb5000c104b084dfe"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "10 assigned/started/terminal/graded/analyzed;40 artifact hashes match, legacy miss retained.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/verification.json",
+          "sha256": "55acc876f44a4c04d9818b81f34e45c65e310aec858d980f5c7596cc50b298e8"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "272 calls, original20 cap and prior holds retained, bounded11 subcap; stopped and released.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/verification.json",
+          "sha256": "55acc876f44a4c04d9818b81f34e45c65e310aec858d980f5c7596cc50b298e8"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source, exact API payloads/visible outputs, assignments and offline analysis retained; no deterministic hosted-answer claim.",
+      "evidence": [
+        {
+          "path": "results/outage-o2/analysis.json",
+          "sha256": "e2d1b760aedf3b2566ebcfdedc9fe25d0f506cb814afee4fb5000c104b084dfe"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Native eight-agent replay initial/final states checked against raw health and cost/timing table.",
+      "evidence": [
+        {
+          "path": "reviews/outage-o2-post.md",
+          "sha256": "b1455f92959f70975290bc74cf48a9ba00fc8fe3a8c33ade728415d9685ad809"
+        }
+      ]
+    }
+  ]
+}

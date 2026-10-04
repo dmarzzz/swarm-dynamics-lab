@@ -181,18 +181,20 @@
         "claim": "Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints.",
         "rationale": "Native qualification and stage diagnostics now exist, but no conditional launch rule has been fit or tested. Failures and engineering readiness do not establish optimal-size efficacy."
       },
-      "sample_size_summary": "Observed: Q-A4 16/16 N1 qualification episodes (11 successes); Q-A5 8/8 repeated evidence diagnostics (3 successes); Q-A6 8/8 matched N1/N2 episodes on 2 fresh roots (0 full successes). Conditional launch policy and transfer remain untested.",
+      "sample_size_summary": "Observed: Q-A4 16, Q-A5 8, Q-A6 8, Q-A7 8 development episodes; O1 12 authored outage episodes; O2 10 episodes from one endpoint template. Conditional optimal-size policy remains untested; cohorts must not be pooled.",
       "sources": [
         "researchers/vishesh/notes/optimal-swarm-size/README.md",
         "researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md",
         "researchers/vishesh/notes/optimal-swarm-size/design.json",
         "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a5-post.md",
-        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a6-post.md"
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a6-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o2-post.md"
       ],
       "status_at_assessment": "qualification_observed_conditional_policy_untested",
       "assessor": "vishesh/codex-idea-scores",
       "assessed_at": "2026-10-04",
-      "source_commit": "3331c6c6083caf1f69ccfdac4d5faa704c94c183"
+      "source_commit": "cc91c560af8c12eac6b6caaa38f1406306aee863"
     },
     {
       "id": "heterogeneous-swarms",
@@ -2700,27 +2702,26 @@
     },
     {
       "id": "optimal-swarm-size-q-a7",
-      "title": "Optimal Swarm Size Q-A7 public-input binding preparation",
+      "title": "Optimal Swarm Size Q-A7 public-input binding diagnostic",
       "documents": [
         "researchers/vishesh/notes/optimal-swarm-size/README.md"
       ],
       "experiment_ids": [],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Whether redundant public-input bindings improve fixed-N1 competence and correct throughput is untested.",
-        "rationale": "Prospective bounded diagnostic and 63 offline tests exist, but dedicated queue allocation, allowed credential delivery and original-ledger continuity remain unresolved; zero native dispatch."
+        "score": 1,
+        "claim": "Binding improved joint value/source correctness35/64 to48/64 on two development roots, but failed the preset0.90 mean-quality screen.",
+        "rationale": "All8 outcomes and native traces reconciled; dependent cases and residual source failures prevent broader competence or optimal-size inference."
       },
-      "sample_size_summary": "Observed Q-A7: 0 assigned/started/valid native episodes. Planned: 2 fresh roots \u00d7 2 structures \u00d7 full/bound arms = 8 N1 episodes; a prospective root6 futility stop can leave 4 unstarted. Items and arm pairs share roots.",
+      "sample_size_summary": "Observed:2 development roots \u00d72 structures \u00d7full/bound arms;8/8 terminal and analyzed,144calls atN1. Four paired contrasts share two roots; item counts are dependent.",
       "sources": [
-        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-input-binding-plan.md",
-        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
-        "researchers/vishesh/notes/optimal-swarm-size/results/q-a7-preparation/status.json"
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/results/q-a7/analysis.json"
       ],
-      "status_at_assessment": "prepared_admission_blocked_zero_dispatch",
+      "status_at_assessment": "complete_valid_exploratory_result",
       "assessor": "vishesh/codex-idea-scores",
       "assessed_at": "2026-10-04",
-      "source_commit": "b01fa92999aa8018e41bdcce57c190f477ab3ccf"
+      "source_commit": "291581ff2140ca797e650d249fd6c13f0d3850ce"
     },
     {
       "id": "phantom-coast-pc6",
@@ -3820,6 +3821,56 @@
       ],
       "source_commit": "179b1cca28a2b45b07850f0fae4b13767a871619",
       "status_at_assessment": "completed_valid_adverse_FINISH_PARK"
+    },
+    {
+      "id": "optimal-swarm-size-outage-o1",
+      "title": "Outage prototype O1",
+      "documents": [
+        "researchers/vishesh/notes/optimal-swarm-size/README.md"
+      ],
+      "experiment_ids": [
+        "optimal-swarm-size-outage-o1"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Native actors can recover these authored outages, but fixed-four duplicated repairs and contraction triggered in stable control.",
+        "rationale": "Weak coordination comparator and one demonstration template prevent a contraction or optimal-N claim."
+      },
+      "sample_size_summary": "Observed:4 qualification mechanisms plus8 demonstration episodes on one template with stable/changing variants;12/12 terminal,140calls,11task successes.",
+      "sources": [
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o1-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/analysis.json"
+      ],
+      "status_at_assessment": "complete_valid_exploratory_result",
+      "assessor": "vishesh/codex-idea-scores",
+      "assessed_at": "2026-10-04",
+      "source_commit": "2acfe6cfedf910f53e60807473027b7a0f7bde25"
+    },
+    {
+      "id": "optimal-swarm-size-outage-o2",
+      "title": "Outage ownership and eight-agent diagnostic O2",
+      "documents": [
+        "researchers/vishesh/notes/optimal-swarm-size/README.md"
+      ],
+      "experiment_ids": [
+        "optimal-swarm-size-outage-o2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Explicit ownership removed the observed duplicate-repair failure; one/four/eight/controller tied recovery in both eight-service worlds, with higher model cost at largerN.",
+        "rationale": "One authored template and development variants; unequal aggregate model computation and one sample per condition preclude population inference."
+      },
+      "sample_size_summary": "Observed:1 authored endpoint template;2 reused four-service qualification episodes +8 eight-service demonstration episodes across2 dependent variants.10/10 terminal/analyzed,272calls,9task successes.",
+      "sources": [
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o2-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/results/outage-o2/analysis.json"
+      ],
+      "status_at_assessment": "complete_valid_exploratory_result",
+      "assessor": "vishesh/codex-idea-scores",
+      "assessed_at": "2026-10-04",
+      "source_commit": "cc91c560af8c12eac6b6caaa38f1406306aee863"
     }
   ],
   "source_sha256": {

@@ -1,0 +1,429 @@
+{
+  "attempt": "outage-o2",
+  "execution_source": "cc91c560af8c12eac6b6caaa38f1406306aee863",
+  "planned": 10,
+  "terminal": 10,
+  "unstarted": 0,
+  "stop_reason": null,
+  "records": [
+    {
+      "id": "outage-o2/qualification/0/1/legacy4",
+      "label": "legacy4",
+      "stage": "qualification",
+      "changing": true,
+      "evaluation": {
+        "success": false,
+        "quality": 0.75,
+        "faults": {
+          "svc-888": [
+            "endpoint"
+          ],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 32,
+      "elapsed_s": 18.05704610099201,
+      "stale_writes": 13,
+      "duplicate_patch_targets": 12,
+      "ownership_violations": 0,
+      "exposure_microdollars": 83428,
+      "failure": null,
+      "first_all_healthy_tick": null,
+      "healthy_service_ticks": 9,
+      "observed_service_ticks": 32,
+      "tool_operations": 32
+    },
+    {
+      "id": "outage-o2/qualification/0/1/owned4",
+      "label": "owned4",
+      "stage": "qualification",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 32,
+      "elapsed_s": 17.295161731002736,
+      "stale_writes": 2,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 72716,
+      "failure": null,
+      "first_all_healthy_tick": 4,
+      "healthy_service_ticks": 24,
+      "observed_service_ticks": 32,
+      "tool_operations": 32
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/single",
+      "label": "single",
+      "stage": "demonstration",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 8,
+      "elapsed_s": 15.686605030001374,
+      "stale_writes": 0,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 31037,
+      "failure": null,
+      "first_all_healthy_tick": 2,
+      "healthy_service_ticks": 56,
+      "observed_service_ticks": 64,
+      "tool_operations": 22
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/owned4",
+      "label": "owned4",
+      "stage": "demonstration",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 32,
+      "elapsed_s": 17.574262911992264,
+      "stale_writes": 0,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 97416,
+      "failure": null,
+      "first_all_healthy_tick": 2,
+      "healthy_service_ticks": 56,
+      "observed_service_ticks": 64,
+      "tool_operations": 40
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/owned8",
+      "label": "owned8",
+      "stage": "demonstration",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 64,
+      "elapsed_s": 19.98818110799766,
+      "stale_writes": 0,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 189864,
+      "failure": null,
+      "first_all_healthy_tick": 2,
+      "healthy_service_ticks": 56,
+      "observed_service_ticks": 64,
+      "tool_operations": 64
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/scheduled",
+      "label": "scheduled",
+      "stage": "demonstration",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 0,
+      "elapsed_s": 0.028796915008570068,
+      "stale_writes": 0,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 0,
+      "failure": null,
+      "first_all_healthy_tick": 2,
+      "healthy_service_ticks": 56,
+      "observed_service_ticks": 64,
+      "tool_operations": 22
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/scheduled",
+      "label": "scheduled",
+      "stage": "demonstration",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 0,
+      "elapsed_s": 0.022694313011015765,
+      "stale_writes": 4,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 0,
+      "failure": null,
+      "first_all_healthy_tick": 4,
+      "healthy_service_ticks": 48,
+      "observed_service_ticks": 64,
+      "tool_operations": 28
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/owned8",
+      "label": "owned8",
+      "stage": "demonstration",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 64,
+      "elapsed_s": 19.77117355799419,
+      "stale_writes": 4,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 208092,
+      "failure": null,
+      "first_all_healthy_tick": 4,
+      "healthy_service_ticks": 48,
+      "observed_service_ticks": 64,
+      "tool_operations": 64
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/owned4",
+      "label": "owned4",
+      "stage": "demonstration",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 32,
+      "elapsed_s": 19.0232741029904,
+      "stale_writes": 4,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 109719,
+      "failure": null,
+      "first_all_healthy_tick": 4,
+      "healthy_service_ticks": 48,
+      "observed_service_ticks": 64,
+      "tool_operations": 59
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/single",
+      "label": "single",
+      "stage": "demonstration",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-934": [],
+          "svc-235": [],
+          "svc-515": [],
+          "svc-986": [],
+          "svc-761": [],
+          "svc-777": [],
+          "svc-543": [],
+          "svc-729": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 8,
+      "elapsed_s": 17.35286951099988,
+      "stale_writes": 8,
+      "duplicate_patch_targets": 0,
+      "ownership_violations": 0,
+      "exposure_microdollars": 31847,
+      "failure": null,
+      "first_all_healthy_tick": 4,
+      "healthy_service_ticks": 48,
+      "observed_service_ticks": 64,
+      "tool_operations": 64
+    }
+  ],
+  "trace_coverage": [
+    {
+      "id": "outage-o2/qualification/0/1/legacy4",
+      "requests": 32,
+      "responses": 32,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/qualification/0/1/owned4",
+      "requests": 32,
+      "responses": 32,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/single",
+      "requests": 8,
+      "responses": 8,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/owned4",
+      "requests": 32,
+      "responses": 32,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/owned8",
+      "requests": 64,
+      "responses": 64,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/0/scheduled",
+      "requests": 0,
+      "responses": 0,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/scheduled",
+      "requests": 0,
+      "responses": 0,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/owned8",
+      "requests": 64,
+      "responses": 64,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/owned4",
+      "requests": 32,
+      "responses": 32,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    },
+    {
+      "id": "outage-o2/demonstration/0/1/single",
+      "requests": 8,
+      "responses": 8,
+      "all_request_hashes_verified": true,
+      "request_ownership_and_capacity_verified": true,
+      "all_visible_decisions_reconciled": true,
+      "grade_recomputed": true
+    }
+  ],
+  "model_calls": 272,
+  "exposure_microdollars": 824119,
+  "claim_scope": "one authored endpoint template with stable/changing variants; descriptive diagnostic, no optimal-N or population inference"
+}

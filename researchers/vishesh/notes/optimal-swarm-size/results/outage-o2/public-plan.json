@@ -1,0 +1,9 @@
+{
+  "experiment": "optimal-swarm-size-outage-o2",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/cc91c560af8c12eac6b6caaa38f1406306aee863/researchers/vishesh/notes/optimal-swarm-size/outage-prototype/O2-PLAN.md",
+  "commit": "cc91c560af8c12eac6b6caaa38f1406306aee863",
+  "plan_sha256": "16593d07c7e255012e16232f7d2f9e4012dae2589316ef05a5f985afa4fbe8f3",
+  "registered_tldr": "TLDR: Qualify explicit service ownership against legacy-four, then compare single/four/eight contexts and a rule controller on stable/changing eight-service outages at equal tool capacity. Recovery, duplicate repairs and cost; one authored template, no optimal-N inference.",
+  "run_tldr": "O2 explicit ownership repair qualification then conditional single/four/eight-context outage comparison at equal tool capacity; recovery and cost, authored development worlds, no optimal-N inference.",
+  "checked_utc": "2026-10-04T20:09:02.891011+00:00"
+}

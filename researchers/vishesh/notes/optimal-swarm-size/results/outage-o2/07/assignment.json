@@ -1,0 +1,13 @@
+{
+  "stage": "demonstration",
+  "root": 0,
+  "changing": true,
+  "replica": 21,
+  "arm": "fixed",
+  "n": 8,
+  "ownership": true,
+  "service_count": 8,
+  "label": "owned8",
+  "id": "outage-o2/demonstration/0/1/owned8",
+  "width": 8
+}

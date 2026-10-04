@@ -1,0 +1,13 @@
+{
+  "stage": "demonstration",
+  "root": 0,
+  "changing": false,
+  "replica": 21,
+  "arm": "scheduled",
+  "n": 1,
+  "ownership": false,
+  "service_count": 8,
+  "label": "scheduled",
+  "id": "outage-o2/demonstration/0/0/scheduled",
+  "width": 8
+}

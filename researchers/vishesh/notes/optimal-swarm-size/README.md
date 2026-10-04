@@ -6,10 +6,10 @@
 Assessed 2026-10-04 by vishesh/codex-idea-scores; source snapshots shown per cohort ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 **Optimal swarm size under task and resource constraints** (`optimal-swarm-size`)
-Source: `3331c6c6`.
+Source: `cc91c560`.
 
 - **evidence_confidence:** **0/4** — Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints. Basis: Native qualification and stage diagnostics now exist, but no conditional launch rule has been fit or tested. Failures and engineering readiness do not establish optimal-size efficacy.
-- **sample_size_summary:** Observed: Q-A4 16/16 N1 qualification episodes (11 successes); Q-A5 8/8 repeated evidence diagnostics (3 successes); Q-A6 8/8 matched N1/N2 episodes on 2 fresh roots (0 full successes). Conditional launch policy and transfer remain untested.
+- **sample_size_summary:** Observed: Q-A4 16, Q-A5 8, Q-A6 8, Q-A7 8 development episodes; O1 12 authored outage episodes; O2 10 episodes from one endpoint template. Conditional optimal-size policy remains untested; cohorts must not be pooled.
 
 **Optimal swarm size — Q-A5 worker-stage diagnostic** (`optimal-swarm-size-q-a5`)
 Source: `3331c6c6`.
@@ -23,11 +23,23 @@ Source: `3331c6c6`.
 - **evidence_confidence:** **1/4** — N2 was faster and cheaper but less accurate on both parallel fixtures; chain quality stayed near zero with mixed timing. Basis: Matched tasks and verified concurrency support a descriptive tradeoff, but only two roots, one model sample per arm and zero full-task successes prevent an optimal-size inference.
 - **sample_size_summary:** Observed: 2 fresh development root seeds × 2 structures × N1/N2; 8/8 episodes analyzed, 0 full successes, 144 calls. Four pairs share two roots; 128 items are dependent.
 
-**Optimal Swarm Size Q-A7 public-input binding preparation** (`optimal-swarm-size-q-a7`)
-Source: `b01fa929`.
+**Optimal Swarm Size Q-A7 public-input binding diagnostic** (`optimal-swarm-size-q-a7`)
+Source: `291581ff`.
 
-- **evidence_confidence:** **0/4** — Whether redundant public-input bindings improve fixed-N1 competence and correct throughput is untested. Basis: Prospective bounded diagnostic and 63 offline tests exist, but dedicated queue allocation, allowed credential delivery and original-ledger continuity remain unresolved; zero native dispatch.
-- **sample_size_summary:** Observed Q-A7: 0 assigned/started/valid native episodes. Planned: 2 fresh roots × 2 structures × full/bound arms = 8 N1 episodes; a prospective root6 futility stop can leave 4 unstarted. Items and arm pairs share roots.
+- **evidence_confidence:** **1/4** — Binding improved joint value/source correctness35/64 to48/64 on two development roots, but failed the preset0.90 mean-quality screen. Basis: All8 outcomes and native traces reconciled; dependent cases and residual source failures prevent broader competence or optimal-size inference.
+- **sample_size_summary:** Observed:2 development roots ×2 structures ×full/bound arms;8/8 terminal and analyzed,144calls atN1. Four paired contrasts share two roots; item counts are dependent.
+
+**Outage prototype O1** (`optimal-swarm-size-outage-o1`)
+Source: `2acfe6cf`.
+
+- **evidence_confidence:** **1/4** — Native actors can recover these authored outages, but fixed-four duplicated repairs and contraction triggered in stable control. Basis: Weak coordination comparator and one demonstration template prevent a contraction or optimal-N claim.
+- **sample_size_summary:** Observed:4 qualification mechanisms plus8 demonstration episodes on one template with stable/changing variants;12/12 terminal,140calls,11task successes.
+
+**Outage ownership and eight-agent diagnostic O2** (`optimal-swarm-size-outage-o2`)
+Source: `cc91c560`.
+
+- **evidence_confidence:** **1/4** — Explicit ownership removed the observed duplicate-repair failure; one/four/eight/controller tied recovery in both eight-service worlds, with higher model cost at largerN. Basis: One authored template and development variants; unequal aggregate model computation and one sample per condition preclude population inference.
+- **sample_size_summary:** Observed:1 authored endpoint template;2 reused four-service qualification episodes +8 eight-service demonstration episodes across2 dependent variants.10/10 terminal/analyzed,272calls,9task successes.
 <!-- experiment-evidence:end -->
 
 Author: vishesh/codex-idea-scores. Updated 2026-10-04 UTC.
