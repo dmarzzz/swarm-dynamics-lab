@@ -7,6 +7,12 @@ from tasks import generate,reference_answer
 from engine import execute
 from run_qualification import assignments_for,run_batch,launch_errors
 class InputBinding(unittest.TestCase):
+    def test_local_error_is_distinct_from_propagated_error(self):
+        from stage_audit import evidence_stage_audit
+        t=generate('evidence','chain',6,width=2);w=reference_answer(t)['answers'];w['item_00']['value']+=1
+        w['item_01']['value']=w['item_00']['value']*t.public['records']['a_1']+t.public['records']['b_1']
+        r=evidence_stage_audit(t,{'work_artifacts':w,'artifact':json.dumps({'answers':w}),'plan_dependencies':t.public['dependencies']})
+        self.assertEqual(r['worker_wrong_values'],2);self.assertEqual(r['local_arithmetic_mismatches'],['item_00']);self.assertEqual(r['local_arithmetic_unscorable'],[])
     def test_queue_admission_fails_closed(self):
         from admit_input_binding import admission_errors
         a=dict(exclusive_claim_verified=True,approved_account_verified=True,sole_ledger_writer_verified=True,prior_worker_stopped=True,prior_artifacts_verified=True,dedicated_credential_provenance_verified=True,source_commit='rev',attempt_id='q-a7',dispatch_origin='orbital-one',credential_alias='swarm-lab-anthropic/vishesh',queue_issue=1,claim_id='claim',verified_epoch=1000,claim_expiry_epoch=9000)

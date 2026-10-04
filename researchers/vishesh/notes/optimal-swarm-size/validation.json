@@ -1,6 +1,6 @@
 {
   "kind": "offline software validation, not native experimental evidence",
-  "test_methods": 62,
+  "test_methods": 63,
   "passed": true,
   "model_calls": 0,
   "files": {
@@ -18,13 +18,13 @@
     "src/reporting_diagnostic.py": "d4039b4c19d80c75c22d7d9c230e6dc40657b4a547b97d8950cb11dbe56025bb",
     "src/response_contract.py": "a4b7c5d11ffab073de1d5a370126a1db0b16846d02a2344c82a153958c6b5c04",
     "src/run_qualification.py": "c070fcf946425941ec04d05ff38d95b214f0337894daafe2abae11d9be52d099",
-    "src/stage_audit.py": "5511ffbbf00b203c59570a0776069d3f9367e83310c81312f6022d7332aecd49",
+    "src/stage_audit.py": "f2b89668f5869e5b6e6c6215b439323ac9cbcecce3ab1a04bc293ca84863f5b1",
     "src/tasks.py": "aebcc37c36af3cfa4f38b2a58ba3808145475d7047e85c5c81eed8f57fddc14a",
     "src/test_budget.py": "405be35713f879ecf9f9cacef012d7598c0f741ef4559a8317bdc59398dc099f",
     "src/test_canary.py": "f1f5e5ece29c7e8b1b7c6b3620013a54e4de2453ed92783c0124063100009212",
     "src/test_engine.py": "4875b0565b999d6a6ad4394f3f14c1f73031239d785cfc22d4467c35c44fbb0a",
     "src/test_failures.py": "b50b8cb65c1418867b8426fd90082586f80881b6cf8b3b6f41579b4f9586c553",
-    "src/test_input_binding.py": "cc0c3b1cd20bc72fa56eae1eec70ee73fb4f9804d3777b9faad992d20934510b",
+    "src/test_input_binding.py": "67d76f5bd8af3426a13a3d4f9de7ad5952c4b48b45124279938c4acccbfe77cf",
     "src/test_launch.py": "898514ba39b300e331d131b9082105c42817df0f7badee54c2efc97afc48bbc3",
     "src/test_matched_roster.py": "e8bdd18a4b1517f4201df49cab4f27db5ca4096ccee815ca1d224be981ef0355",
     "src/test_provider.py": "78052539014c660699a2988dd95777ebf0bc9430c0027b09bb7e9bd8961dc6f7",

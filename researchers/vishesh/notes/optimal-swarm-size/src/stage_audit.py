@@ -20,9 +20,16 @@ def evidence_stage_audit(task,record):
         items.append({'item':item,'worker':w,'final':f,'changed_at_integration':workers.get(item)!=final.get(item),
                       'correct_to_wrong':w['correct'] and not f['correct'],'wrong_to_correct':not w['correct'] and f['correct']})
     deps=record.get('plan_dependencies',{})
+    local_errors=[];local_unknown=[]
+    for j,item in enumerate(task.public['items']):
+        parents=task.public['dependencies'][item];observed=workers.get(item,{})
+        previous=workers.get(parents[0],{}).get('value') if parents else task.public['records']['opening']
+        if type(previous) is not int or type(observed.get('value')) is not int:local_unknown.append(item);continue
+        expected=previous*task.public['records']['a_'+str(j)]+task.public['records']['b_'+str(j)]
+        if observed['value']!=expected:local_errors.append(item)
     return {'kind':'post-termination evaluator-only diagnostic; not a separate executed arm',
             'assembled_worker_evaluation':evaluate(task,json.dumps({'answers':workers})),
-            'items':items,'correct_to_wrong':sum(i['correct_to_wrong'] for i in items),'wrong_to_correct':sum(i['wrong_to_correct'] for i in items),
+            'items':items,'local_arithmetic_mismatches':local_errors,'local_arithmetic_unscorable':local_unknown,'correct_to_wrong':sum(i['correct_to_wrong'] for i in items),'wrong_to_correct':sum(i['wrong_to_correct'] for i in items),
             'worker_wrong_values':sum(not i['worker']['value_correct'] for i in items),'final_wrong_values':sum(not i['final']['value_correct'] for i in items),
             'worker_wrong_proofs':sum(not i['worker']['proof_correct'] for i in items),'final_wrong_proofs':sum(not i['final']['proof_correct'] for i in items),
             'first_worker_value_error':next((i['item'] for i in items if not i['worker']['value_correct']),None),

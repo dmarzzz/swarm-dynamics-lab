@@ -8,7 +8,7 @@ Eight planned episodes on two fresh independent root seeds; **0 assigned to a na
 
 Saved Q-A6 data show opposite N2 correct-throughput changes on the two parallel roots. This rejects treating raw speed alone as the target. Worker errors remain unresolved; integration-only repair and wider deadlines lack supporting evidence. The selected minimal diagnostic repeats relevant public operands at fixed N1 instead of changing model or buying a broad size sweep. It retains full history, so it tests redundant binding rather than pretending to isolate context pruning. No empirical benefit is claimed.
 
-The shared offline finalize bridge recorded q-a6 historical evidence and q-a7-preparation as blocked. Its generated handoff flags scientific review required; this document and structured review complete the owning-session assessment without altering the generated facts. Preparation took approximately20minutes including reading, implementation and checks; execution and native reporting time are zero. No requested infrastructure was created or charged.
+The shared offline finalize bridge recorded q-a6 historical evidence and q-a7-preparation as blocked. Its generated handoff flags scientific review required; this document and structured review complete the owning-session assessment without altering the generated facts. Preparation took approximatelyapproximately10–15minutes including reading, implementation and checks; execution and native reporting time are zero. No requested infrastructure was created or charged.
 
 ## Quality rubric
 
@@ -23,7 +23,7 @@ The shared offline finalize bridge recorded q-a6 historical evidence and q-a7-pr
 | agent_context | pass offline | Full public initial history retained, bindings contain no answer oracle, actual request-body hashes instrumented; verify native receipt hashes after dispatch |
 | data_integrity | pass for zero-dispatch state | Eight planned, zero executed; original immutable Q-A6 records and held costs preserved; duplicate output/call guards implemented |
 | resources | gap | No exclusive worker; allowed credential is not assumed available to queue operator; ledger migration must preserve sole spending authority |
-| reproducibility | pass offline | Source hashes, 62 tests, config, planned manifest and exact queue commands; no hosted reproducibility claim |
+| reproducibility | pass offline | Source hashes, 63 tests, config, planned manifest and exact queue commands; no hosted reproducibility claim |
 | visualization | unknown natively | Measured replay extended with arm and correct throughput; scripted renderer executes in tests. No native Q-A7 timeline exists to inspect or publish |
 
 ## Admission blocker and exact next action
