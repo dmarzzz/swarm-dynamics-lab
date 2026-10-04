@@ -31,6 +31,12 @@ BINS = [(1, 1), (2, 2), (3, 4), (5, 9), (10, 19), (20, 10**9)]
 URL_RE = re.compile(r"https?://[^\s\]|\"'<>)]+", re.I)
 LEAD_RE = re.compile(r"^[\s*\-#=>|]+")
 WIKI_DEFAULT = "beschreibe hier die neue seite."
+# POST-HOC (added after first results, 2026-10-04): the wiki's English default page text and template
+# files outside templates/** (e.g. tooling/agent-experiments/templates/) surfaced among top units.
+# Only used when --posthoc is passed; preregistered outputs never use these.
+POSTHOC_WIKI_DEFAULTS = {"describe the new page here."}
+POSTHOC_TEMPLATE_GLOB = ":(glob)**/templates/**"
+POSTHOC = False
 GIT_EXCLUDE = ["STATUS.md", "library/INDEX.md", "library/references.bib"]
 AGENT_RE = re.compile(r"^\[([A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)\]")
 MIN_LINE = 25
@@ -58,7 +64,8 @@ def line_units(lines, exclude=frozenset()) -> set[str]:
     out = set()
     for l in lines:
         n = norm_line(l)
-        if len(n) >= MIN_LINE and n != WIKI_DEFAULT and n not in exclude:
+        if len(n) >= MIN_LINE and n != WIKI_DEFAULT and n not in exclude and not (
+                POSTHOC and n in POSTHOC_WIKI_DEFAULTS):
             out.add(n)
     return out
 
@@ -105,9 +112,12 @@ def git(repo, *args) -> str:
 
 def load_git(repo: str, rev: str):
     rev = git(repo, "rev-parse", rev).strip()
-    tmpl = git(repo, "log", "--no-merges", "-p", "--format=", rev, "--", "templates")
+    tmpl_spec = ["templates", POSTHOC_TEMPLATE_GLOB] if POSTHOC else ["templates"]
+    tmpl = git(repo, "log", "--no-merges", "-p", "--format=", rev, "--", *tmpl_spec)
     tmpl_lines = {norm_line(l[1:]) for l in tmpl.split("\n") if l.startswith("+") and not l.startswith("+++")}
     pathspec = ["--", "."] + [f":(exclude){p}" for p in GIT_EXCLUDE] + [":(exclude)templates"]
+    if POSTHOC:
+        pathspec.append(":(exclude,glob)**/templates/**")
     out = subprocess.Popen(["git", "-C", repo, "log", "--no-merges", "-p", "--no-color",
                             "--format=@@@COMMIT %H %at %an%x09%s", rev, *pathspec],
                            stdout=subprocess.PIPE, text=True, errors="replace")
@@ -453,8 +463,11 @@ def main(argv=None):
     ap.add_argument("--rev", default="66fa0aa6")
     ap.add_argument("--out", required=True)
     ap.add_argument("--boot", type=int, default=1000)
+    ap.add_argument("--posthoc", action="store_true",
+                    help="POST-HOC sensitivity: extra boilerplate exclusions, identity A only, writes posthoc.json")
     a = ap.parse_args(argv)
     globals()["N_BOOT"] = a.boot
+    globals()["POSTHOC"] = a.posthoc
     os.makedirs(a.out, exist_ok=True)
     summary = dict(plan="PLAN.md", seed=SEED, n_boot=a.boot, generated_by="halflife.py",
                    note="Aggregates only. Intervals: 95% percentile cluster bootstrap over origin page (wiki) "
@@ -469,15 +482,22 @@ def main(argv=None):
         summary[sw] = dict(records=len(recs), span_hours=(ts[-1] - ts[0]) / 3600,
                            identities_A=len({r["a"] for r in recs if r["a"]}),
                            identities_B=len({r["b"] for r in recs if r["b"]}))
-        for ident in ("a", "b"):
+        for ident in (("a",) if a.posthoc else ("a", "b")):
             key = ident.upper()
             summary[sw][key] = {}
             for kind in ("url", "line", "host"):
                 rng = np.random.default_rng(SEED)
                 table, t_end, a_end, _ = adoption_table(recs, kind, ident)
                 summary[sw][key][kind] = analyse(table, t_end, a_end, rng, f"{sw}/{key}/{kind}")
-                if sw == "wiki" and ident == "a" and kind == "url":
+                if sw == "wiki" and ident == "a" and kind == "url" and not a.posthoc:
                     summary[sw]["visible_copies_url"] = visible_copies(recs, table, t_end)
+    if a.posthoc:
+        summary["posthoc"] = ("POST-HOC sensitivity, not preregistered: excludes the wiki English default page "
+                              "line and git lines from any **/templates/** path. Identity A only.")
+        with open(os.path.join(a.out, "posthoc.json"), "w") as f:
+            json.dump(summary, f, indent=1)
+        print("done", file=sys.stderr)
+        return
     with open(os.path.join(a.out, "summary.json"), "w") as f:
         json.dump(summary, f, indent=1)
     figure(summary, os.path.join(a.out, "fig-adoption.png"))
