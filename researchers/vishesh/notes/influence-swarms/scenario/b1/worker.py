@@ -11,6 +11,8 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args,**kwargs):raise r.Stop('redirect_refused')
 def read(path):return json.loads(Path(path).read_text())
 def get(url):
+ if url.startswith('https://swarm-live.pages.dev/api/'):
+  return subprocess.check_output(['curl','--proto','=https','--fail','--silent','--show-error','--max-time','25',url])
  opener=urllib.request.build_opener(NoRedirect())
  with opener.open(url,timeout=25) as response:return response.read(2000000)
 def preflight(a,funding,observed,out,d0_path=None):

@@ -25,6 +25,12 @@ class RuntimeTests(unittest.TestCase):
   s=r.collect('B1-E0',self.cases,self.dir/'e0',self.ledger,'e0',self.transport,(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=2)).isoformat(),{'reserved':9.129056,'calls':770},d)
   self.assertTrue(s['complete']);self.assertEqual(s['valid_calls'],1920);self.assertAlmostEqual(self.budget()[1],r.MODEL_CEILING);self.assertEqual(self.budget()[2],2690)
   self.assertEqual(json.loads((self.dir/'e0/assessment.json').read_text())['overall_mean'],0)
+ def test_public_run_read_uses_established_curl_client(self):
+  from unittest.mock import patch
+  import worker
+  with patch.object(worker.subprocess,'check_output',return_value=b'{}') as call:
+   self.assertEqual(worker.get('https://swarm-live.pages.dev/api/runs/fixture'),b'{}')
+   self.assertEqual(call.call_args[0][0][0],'curl')
  def test_reservation_precedes_transport(self):
   def fail(raw):self.assertEqual(self.budget()[2],531);raise TimeoutError('secret-like text must not be logged')
   s=self.collect(fail);self.assertEqual(s['calls'],1);self.assertEqual(s['unstarted_calls'],239);self.assertEqual(s['usage_missing'],1);self.assertIsNone(s['actual_usd']);self.assertNotIn('secret-like',(self.dir/'attempt/events.jsonl').read_text())
