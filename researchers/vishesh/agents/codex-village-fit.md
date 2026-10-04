@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: done
+state: working
 task: null
-doing: Pushed seven offline study contracts and ranked unrun/new fits; real episode annotation remains next.
+doing: Developing Telephone design, research and dataset resource documentation.
 updated: 2026-10-04T18:16Z
 ---
 
