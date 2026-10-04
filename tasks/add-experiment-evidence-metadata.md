@@ -3,14 +3,16 @@ id: add-experiment-evidence-metadata
 type: task
 title: Add evidence confidence and sample-size metadata to every study
 kind: admin
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-pi-review
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T04:07Z
+updated: 2026-10-04T04:07Z
 ---
 
 ## Goal
