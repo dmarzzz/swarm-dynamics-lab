@@ -1,0 +1,21 @@
+{
+  "assessment": "diagnostic-only; same-author, scoped to PLAN.md",
+  "cap_usd": 12.0,
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "hub_registered": true,
+  "input_sha256": "c9d24c92ff32abbdd3c961bb4446f07edf60ba9aff330417b5436b4cc71f2639",
+  "model": "openai/gpt-4o-mini",
+  "public_plan_sha256": "38469297ce7f86dccaf57bb9a42f11ecc093373958bff4420ef514196eaa1f6f",
+  "public_plan_url": "https://raw.githubusercontent.com/dmarzzz/swarm-lab/cf36e30fd72c53147afa37f6418b94f6870e0fb2/researchers/shadow/notes/capture-memory-mix/reading-rule/PLAN.md",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "qualification": {
+    "assigned": 12,
+    "correct": 0,
+    "pass": false,
+    "valid": 0
+  },
+  "revision": "cf36e30fd72c53147afa37f6418b94f6870e0fb2",
+  "source_sha256": "6a84a4dbcc4186191f7f5c19375164cb9798c3e03f5e75813fcf6674e982e340",
+  "stage": "S0",
+  "time": "2026-10-04T15:50:39.811508+00:00"
+}

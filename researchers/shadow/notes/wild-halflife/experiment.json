@@ -1,0 +1,13 @@
+{
+  "id": "wild-halflife",
+  "title": "Cross-swarm URL adoption timing: wiki versus research git",
+  "description": "Retrospective publication of a completed offline exploratory census, not experimental model dispatch or historical hub preregistration. Two dependent corpora; exact artifacts and self-reported identities are proxies. Wiki task-engaged filtering and actual views are not reconstructed. Kaplan-Meier and pooled-rate slopes are descriptive, not a causal copying mechanism. Source plan committed before baseline measurements; documentation gaps are disclosed.",
+  "owner": "shadow",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/notes/wild-halflife",
+  "params": {
+    "git_ref": {"type": "str", "description": "Frozen git cohort revision", "role": "fixed"},
+    "stage": {"type": "str", "description": "Retrospective baseline plus separately labeled post-hoc checks", "role": "condition"}
+  },
+  "metrics": ["wiki_url_beta", "git_url_beta", "wiki_url_conditional_median_records", "git_url_conditional_median_records", "wiki_records", "git_records", "bootstrap_resamples", "model_calls", "cost_usd"],
+  "primary_metric": "wiki_url_beta"
+}

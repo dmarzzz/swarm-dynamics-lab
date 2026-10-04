@@ -3484,4 +3484,22 @@ artifacts:
           - researchers/shadow/notes/wild-timeline/shared_sources.csv
           - researchers/shadow/notes/wild-timeline/validation.json
         commit: 4caec65d97986c8afc1536474ae804dd8cb526d4-dirty
+  - id: wild-halflife-adoption
+    category: content
+    type: figure
+    title: Cross-swarm artifact adoption timing and rates
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/wild-halflife-adoption/wild-halflife-adoption-v1.png
+        built_at: '2026-10-04T15:57:10Z'
+        prompt: Idea half-life / adoption curves on collusion.wiki (by label and by /16 ip block) vs swarm-lab own commit
+          history (by agent id). One figure and bootstrap CIs. Frame as a cross-swarm extension of arXiv 2609.09150, descriptive,
+          not causal.
+        ingredients:
+          - researchers/shadow/notes/wild-halflife/halflife.py
+          - researchers/shadow/notes/wild-halflife/render.py
+          - researchers/shadow/notes/wild-halflife/results/summary.json
+          - researchers/shadow/notes/wild-halflife/results/supplement.json
+        commit: 4eff98d076dcdf6d1c0b849f067fc5442c127132-dirty
 requires: '1.2'

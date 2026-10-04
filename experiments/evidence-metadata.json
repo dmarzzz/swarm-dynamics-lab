@@ -5,6 +5,31 @@
   "source_commit": "9781739cd06e0c9606ed0ed053bf91b5e2a42b57",
   "studies": [
     {
+      "id": "wild-halflife",
+      "title": "Cross-swarm URL adoption timing: wiki versus research git",
+      "documents": ["researchers/shadow/notes/wild-halflife/README.md"],
+      "experiment_ids": ["wild-halflife"],
+      "registration_paths": ["researchers/shadow/notes/wild-halflife/experiment.json"],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "In these frozen corpora, conditional URL reuse delays and pooled adoption-rate slopes differ; a causal copying mechanism and semantic idea half-life are not identified.",
+        "rationale": "Two dependent observational corpora, unauthenticated identities, exact artifacts, unmatched time windows and unverified censoring assumptions. Origin-page/commit bootstrap intervals and same-author arithmetic checks do not establish exposure or causal influence. Initial review/preflight documentation gaps are explicitly retained."
+      },
+      "sample_size_summary": "Observed: 2 dependent source corpora; 14,591 wiki revisions and 1,922 in-scope git commits, 3,102 labels and 163 git agent ids. Baseline has 12 artifact/identity summaries, 1,000 cluster resamples; no interventions or model calls.",
+      "sources": [
+        "researchers/shadow/notes/wild-halflife/PLAN.md",
+        "researchers/shadow/notes/wild-halflife/FINDING.md",
+        "researchers/shadow/notes/wild-halflife/results/summary.json",
+        "researchers/shadow/notes/wild-halflife/results/supplement.json",
+        "researchers/shadow/notes/wild-halflife/results/verification.json",
+        "researchers/shadow/notes/wild-halflife/reviews/supplement-post.md"
+      ],
+      "status_at_assessment": "descriptive_complete_mechanism_not_identified",
+      "assessor": "shadow/sol-halflife",
+      "assessed_at": "2026-10-04",
+      "source_commit": "48bc8a76a3b32361fc54a830f5ffc052a9f24245"
+    },
+    {
       "id": "wild-identity",
       "title": "Observable names and reference provenance across three swarm archives",
       "documents": [
@@ -1686,17 +1711,21 @@
         "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": null,
-        "claim": "Unassessed at registry discovery.",
-        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+        "score": 1,
+        "claim": "Mixture rescue is model-specific in these pilots, not a general swarm result; the long-list reading explanation is a post-hoc lead.",
+        "rationale": "Three small model/policy cohorts differ; sampling mode and validity-triggered selection confound transfer claims. Corrected raw/selected/first-observed counts and paired metrics are reproducible; no independent causal reading-rule diagnostic completed."
       },
-      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sample_size_summary": "Observed: up to 24 task roots GPT, 6 Gemma, 12 Qwen, reused across memory cells; 432/432, 44/90 and 178/180 selected valid arm records. Qwen: 327 raw, 127 invalid, 54/180 logical arm keys valid at first observation. Cells/arms are dependent repeats.",
       "sources": [
-        "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
+        "researchers/shadow/notes/capture-memory-mix/CORRECTIONS.md",
+        "researchers/shadow/notes/capture-memory-mix/results/MP.md",
+        "researchers/shadow/notes/capture-memory-mix/results/MP2.md",
+        "researchers/shadow/notes/capture-memory-mix/results/MP3.md"
       ],
-      "status_at_assessment": "unassessed_registration_coverage",
-      "assessor": "vishesh/codex-methods",
-      "assessed_at": "2026-10-04"
+      "status_at_assessment": "exploratory_corrected_model_specific",
+      "assessor": "shadow/sol-cm2",
+      "assessed_at": "2026-10-04",
+      "source_commit": "cf36e30fd72c53147afa37f6418b94f6870e0fb2"
     },
     {
       "id": "sybil-specialists-sonnet",
@@ -3283,6 +3312,33 @@
       "assessor": "shadow/sol-audit-gap",
       "assessed_at": "2026-10-04",
       "source_commit": "473077421c01a8fa382f93bbb2f23f074ff29ec1"
+    },
+    {
+      "id": "capture-memory-reading-rule",
+      "title": "Frozen-history reading-rule diagnostic (access blocked)",
+      "documents": [
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/README.md"
+      ],
+      "experiment_ids": [
+        "capture-memory-reading-rule"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "The frozen-history presentation effect is untested: the first qualification request returned HTTP403.",
+        "rationale": "No valid model output or scientific history observed. Offline lossless-history, scoring and budget guards pass, but software tests and an access failure do not establish an empirical reading-rule effect."
+      },
+      "sample_size_summary": "Observed: 0 scientific histories. S0 1/12 requests started, 1 HTTP403, 0 valid; S1 0/144 started. Planned: 24 synthetic histories, 6 paired presentations each; two separate unanimous qualification histories. USD0.05 retained reservation, actual charge unknown.",
+      "sources": [
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/PLAN.md",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/POSTMORTEM.md",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/results/summary.json",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/reading_rule.py"
+      ],
+      "status_at_assessment": "blocked_no_model_observations",
+      "assessor": "shadow/sol-cm2",
+      "assessed_at": "2026-10-04",
+      "source_commit": "cf36e30fd72c53147afa37f6418b94f6870e0fb2"
     }
   ],
   "source_sha256": {

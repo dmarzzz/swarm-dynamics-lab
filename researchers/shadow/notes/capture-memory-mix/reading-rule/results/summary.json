@@ -1,0 +1,114 @@
+{
+  "model": "openai/gpt-4o-mini",
+  "independent_unit": "synthetic frozen history",
+  "qualification": {
+    "assigned": 12,
+    "valid": 0,
+    "correct": 0,
+    "pass": false
+  },
+  "assigned": 156,
+  "started": 1,
+  "terminal": 1,
+  "valid": 0,
+  "scientific_assigned_histories": 24,
+  "scientific_valid_calls": 0,
+  "actual_reported_usd": 0,
+  "actual_total_usd": null,
+  "terminal_cost_unknown": 1,
+  "ambiguous_started": 0,
+  "retained_reservations_usd": 0.05,
+  "cap_usd": 12.0,
+  "contrasts": {
+    "primary_abs_raw_reverse_minus_chrono": {
+      "n_histories": 0,
+      "mean": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "all_assigned_missingness_bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "abs_raw_shuffle_minus_chrono": {
+      "n_histories": 0,
+      "mean": null,
+      "ci95": [
+        null,
+        null
+      ],
+      "all_assigned_missingness_bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "signed_summary_chrono_minus_raw_chrono": {
+      "n_histories": 0,
+      "mean": null,
+      "ci95": [
+        null,
+        null
+      ]
+    }
+  },
+  "conditions": [
+    {
+      "representation": "raw",
+      "order": "chronological",
+      "assigned_histories": 24,
+      "valid_histories": 0,
+      "mean_p_majority": null,
+      "mean_p_last": null,
+      "majority_choices": 0
+    },
+    {
+      "representation": "raw",
+      "order": "reversed",
+      "assigned_histories": 24,
+      "valid_histories": 0,
+      "mean_p_majority": null,
+      "mean_p_last": null,
+      "majority_choices": 0
+    },
+    {
+      "representation": "raw",
+      "order": "shuffled",
+      "assigned_histories": 24,
+      "valid_histories": 0,
+      "mean_p_majority": null,
+      "mean_p_last": null,
+      "majority_choices": 0
+    },
+    {
+      "representation": "summary",
+      "order": "chronological",
+      "assigned_histories": 24,
+      "valid_histories": 0,
+      "mean_p_majority": null,
+      "mean_p_last": null,
+      "majority_choices": 0
+    },
+    {
+      "representation": "summary",
+      "order": "reversed",
+      "assigned_histories": 24,
+      "valid_histories": 0,
+      "mean_p_majority": null,
+      "mean_p_last": null,
+      "majority_choices": 0
+    },
+    {
+      "representation": "summary",
+      "order": "shuffled",
+      "assigned_histories": 24,
+      "valid_histories": 0,
+      "mean_p_majority": null,
+      "mean_p_last": null,
+      "majority_choices": 0
+    }
+  ],
+  "input_sha256": "c9d24c92ff32abbdd3c961bb4446f07edf60ba9aff330417b5436b4cc71f2639",
+  "journal_sha256": "78f7f3c1be4beed6fba65428ae1003ef006664e0db7f7f2d8c134619378b67ae"
+}

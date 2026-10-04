@@ -152,7 +152,8 @@ def load_git(repo: str, rev: str):
         elif line.startswith("+") and not line.startswith("+++"):
             added.append(line[1:])
     flush()
-    out.wait()
+    if out.wait() != 0:
+        raise RuntimeError('git diff history failed; refusing to analyze partial output')
     meta = dict(source="dmarzzz/swarm-lab git history (non-merge, origin/main)", rev=rev,
                 records=len(recs), skipped=dict(skipped), template_lines_excluded=len(tmpl_lines))
     return recs, meta
@@ -263,6 +264,17 @@ def wls_slope(E, X, mids):
     return float((w * (x - xm) * (y - ym)).sum() / den) if den > 0 else float("nan")
 
 
+def finite_json(obj):
+    """Undefined estimates are null, never nonstandard JSON NaN tokens."""
+    if isinstance(obj, dict):
+        return {k: finite_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [finite_json(v) for v in obj]
+    if isinstance(obj, float) and not math.isfinite(obj):
+        return None
+    return obj
+
+
 def ci(a):
     a = np.asarray(a, float)
     a = a[np.isfinite(a)]
@@ -347,7 +359,7 @@ def analyse(table, t_end, a_end, rng, label):
             within_ge5_rate_j1to4=[None if not np.isfinite(r) else float(r) for r in rate_w],
             within_ge5_events=[int(e) for e in Ewt],
             within_ge5_beta=beta_w, within_ge5_beta_ci=ci(bbw))
-    top = sorted(units, key=lambda u: -len(table[u]))[:5]
+    top = sorted(units, key=lambda u: (-len(table[u]), u))[:5]
     res["top_units"] = [dict(unit=u[:90], identities=len(table[u])) for u in top]
     print(f"  {label}: {nU} units, {res['units_ge2']} >=2 ids, beta act={res['activity']['beta']:.2f} "
           f"within={res['activity']['within_ge5_beta']:.2f}", file=sys.stderr)
@@ -363,7 +375,7 @@ def downsample(t, F, n=200):
 
 # ---------------------------------------------------------------- wiki visible copies
 
-def visible_copies(recs, table_url, t_end):
+def visible_copies(recs, table_url, t_end, n_boot=0):
     """Rate of new label adoption vs number of pages currently showing the URL (wiki only).
 
     A page shows a URL if its latest revision body contains it. Deletions are ignored (stated limit).
@@ -384,8 +396,12 @@ def visible_copies(recs, table_url, t_end):
             changes[u].append((a, r["page"], -1))
         last_state[r["page"]] = cur
     vb = [(0, 0), (1, 1), (2, 2), (3, 4), (5, 9), (10, 10**9)]
-    E = np.zeros(len(vb)); X = np.zeros(len(vb))
+    clusters = sorted({ev[0][3] for ev in table_url.values()})
+    cluster_idx = {c: i for i, c in enumerate(clusters)}
+    Ec = np.zeros((len(clusters), len(vb)))
+    Xc = np.zeros_like(Ec)
     for u, ev in table_url.items():
+        c = cluster_idx[ev[0][3]]
         arrivals = sorted(e[1] for e in ev)
         a0 = arrivals[0]
         arr = collections.Counter(arrivals[1:]) if len(ev) > 1 else collections.Counter()
@@ -402,25 +418,36 @@ def visible_copies(recs, table_url, t_end):
             n_vis = sum(1 for v in vis.values() if v > 0)
             # adoptions at hi are attributed to the state just before hi
             b = next(i for i, (l, h) in enumerate(vb) if l <= n_vis <= h)
-            X[b] += hi - lo
-            E[b] += arr.get(hi, 0)
+            Xc[c, b] += hi - lo
+            Ec[c, b] += arr.get(hi, 0)
             while ci_ < len(ch) and ch[ci_][0] <= hi:
                 vis[ch[ci_][1]] += ch[ci_][2]; ci_ += 1
+    E, X = Ec.sum(0), Xc.sum(0)
     rate = np.divide(E, X, out=np.full(len(vb), np.nan), where=X > 0)
-    return dict(bins=[f"{l}-{h}" if h < 10**9 else f"{l}+" for l, h in vb], events=[int(e) for e in E],
-                exposure_records=[float(x) for x in X],
-                rate_per_1k_records=[None if not np.isfinite(r) else float(r * 1000) for r in rate],
-                note="Adoptions by new labels of URLs; visibility = pages whose latest revision contains the URL; "
-                     "deletions ignored; activity clock. Point estimates only.")
+    result = dict(bins=[f"{l}-{h}" if h < 10**9 else f"{l}+" for l, h in vb], events=[int(e) for e in E],
+                  exposure_records=[float(x) for x in X],
+                  rate_per_1k_records=[None if not np.isfinite(r) else float(r * 1000) for r in rate],
+                  note="Adoptions by new labels of URLs; visibility = pages whose latest revision contains the URL; "
+                       "moderator page-deletion events ignored, revision removals included; activity clock. "
+                       "Tied-origin identities excluded from subsequent-arrival counts.")
+    if n_boot:
+        rng = np.random.default_rng(SEED)
+        weights = rng.multinomial(len(clusters), np.ones(len(clusters)) / len(clusters), size=n_boot)
+        be, bx = weights @ Ec, weights @ Xc
+        br = np.divide(be * 1000, bx, out=np.full_like(bx, np.nan), where=bx > 0)
+        result.update(n_boot=n_boot, seed=SEED, clusters=len(clusters),
+                      rate_per_1k_records_ci=[ci(br[:, i]) for i in range(len(vb))],
+                      uncertainty="Post-draft supplement: origin-page percentile cluster bootstrap, not independent pages.")
+    return result
 
 
 # ---------------------------------------------------------------- figure
 
-def figure(summary, path):
+def figure(summary, path, visibility=None):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    fig, ax = plt.subplots(1, 2, figsize=(11, 4.2))
+    fig, ax = plt.subplots(1, 3 if visibility else 2, figsize=(15.5 if visibility else 11, 4.2))
     styles = {("wiki", "url"): ("#d62728", "-"), ("wiki", "line"): ("#d62728", "--"),
               ("git", "url"): ("#1f77b4", "-"), ("git", "line"): ("#1f77b4", "--")}
     names = {"wiki": "collusion.wiki (label)", "git": "swarm-lab git (agent id)"}
@@ -430,6 +457,11 @@ def figure(summary, path):
         if len(c):
             ax[0].step(np.maximum(c[:, 0], 0.5), c[:, 1], where="post", color=col, ls=ls,
                        label=f"{names[sw]}, {kind} units")
+        # Pointwise uncertainty only, not a simultaneous confidence band.
+        ax[0].vlines(r['km_points'], [x[0] for x in r['km_adopted_frac_ci']],
+                     [x[1] for x in r['km_adopted_frac_ci']], color=col, alpha=.5, lw=1.4)
+        ax[0].plot(r['km_points'], r['km_adopted_frac'], color=col, ls='none',
+                   marker='o' if kind == 'url' else 'x', ms=3)
         rates = r["rate"]
         xs = [1, 2, 3.5, 7, 14.5, 30.0]
         pts = [(x, y, lo_hi) for x, y, lo_hi in zip(xs, rates, r["rate_ci"]) if y]
@@ -450,15 +482,29 @@ def figure(summary, path):
     ax[1].set_ylabel("new-identity adoptions per 1k swarm records")
     ax[1].set_title("B. adoption rate vs prior adopters (95% cluster bootstrap)")
     ax[1].legend(fontsize=7)
+    if visibility:
+        yy = np.array(visibility['rate_per_1k_records'])
+        cc = np.array(visibility['rate_per_1k_records_ci'])
+        xx = np.arange(len(yy))
+        ax[2].plot(xx, yy, color='#d62728', marker='o', ms=4)
+        ax[2].vlines(xx, cc[:, 0], cc[:, 1], color='#d62728', lw=1.4)
+        ax[2].set_xticks(xx, ['0', '1', '2', '3–4', '5–9', '10+'])
+        ax[2].set_yscale('log')
+        ax[2].set_xlabel('pages showing URL in latest known revision')
+        ax[2].set_ylabel('new-label adoptions per 1k wiki records')
+        ax[2].set_title('C. wiki visibility proxy (95% cluster bootstrap)')
+        ax[2].text(.03, .97, 'Not actual views; page deletion events ignored',
+                   transform=ax[2].transAxes, va='top', fontsize=7)
     fig.tight_layout()
-    fig.savefig(path, dpi=130)
+    fig.savefig(path, dpi=170)
 
 
 # ---------------------------------------------------------------- main
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("--wiki", required=True, help="collusion-wiki data dir (revisions.jsonl.gz)")
+    ap.add_argument("--data", "--wiki", dest="wiki", required=True,
+                    help="collusion-wiki data dir (revisions.jsonl.gz)")
     ap.add_argument("--repo", required=True, help="swarm-lab git checkout")
     ap.add_argument("--rev", default="66fa0aa6")
     ap.add_argument("--out", required=True)
@@ -495,11 +541,11 @@ def main(argv=None):
         summary["posthoc"] = ("POST-HOC sensitivity, not preregistered: excludes the wiki English default page "
                               "line and git lines from any **/templates/** path. Identity A only.")
         with open(os.path.join(a.out, "posthoc.json"), "w") as f:
-            json.dump(summary, f, indent=1)
+            json.dump(finite_json(summary), f, indent=1, allow_nan=False)
         print("done", file=sys.stderr)
         return
     with open(os.path.join(a.out, "summary.json"), "w") as f:
-        json.dump(summary, f, indent=1)
+        json.dump(finite_json(summary), f, indent=1, allow_nan=False)
     figure(summary, os.path.join(a.out, "fig-adoption.png"))
     print("done", file=sys.stderr)
 

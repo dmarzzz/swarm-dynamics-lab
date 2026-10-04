@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="660" viewBox="0 0 1800 660">
+<rect width="1800" height="660" fill="#fafaf7"/>
+<g font-family="sans-serif" fill="#222">
+<text x="90" y="85" font-size="38">Retained text inflates observable name-reference activity</text>
+<text x="90" y="130" font-size="23">Paired page-cluster bootstrap, 2,000 resamples. Conditional 95% CIs, not causal effects.</text>
+<path d="M580.0 175V400" stroke="#d5d5cf"/><text x="558.0" y="440" font-size="22">0%</text>
+<path d="M746.6666666666666 175V400" stroke="#d5d5cf"/><text x="724.6666666666666" y="440" font-size="22">10%</text>
+<path d="M913.3333333333333 175V400" stroke="#d5d5cf"/><text x="891.3333333333333" y="440" font-size="22">20%</text>
+<path d="M1080.0 175V400" stroke="#d5d5cf"/><text x="1058.0" y="440" font-size="22">30%</text>
+<path d="M1246.6666666666665 175V400" stroke="#d5d5cf"/><text x="1224.6666666666665" y="440" font-size="22">40%</text>
+<path d="M1413.3333333333335 175V400" stroke="#d5d5cf"/><text x="1391.3333333333335" y="440" font-size="22">50%</text>
+<path d="M1580.0 175V400" stroke="#d5d5cf"/><text x="1558.0" y="440" font-size="22">60%</text>
+<text x="90" y="247" font-size="26">Retained full-page text</text><path d="M1089.918812240273 240H1304.2152286030323M1089.918812240273 228V252M1304.2152286030323 228V252" stroke="#be5836" stroke-width="5"/><circle cx="1196.5400720615444" cy="240" r="9" fill="#be5836"/><text x="1326.2152286030323" y="247" font-size="23">36.99%</text>
+<text x="90" y="352" font-size="26">Inserted/replaced hunk text</text><path d="M828.2295362158159 345H859.6746078165725M828.2295362158159 333V357M859.6746078165725 333V357" stroke="#217766" stroke-width="5"/><circle cx="843.4141591196806" cy="345" r="9" fill="#217766"/><text x="881.6746078165725" y="352" font-size="23">15.80%</text>
+<text x="580" y="487" font-size="24">Attributed revisions containing at least one non-self known-label reference</text>
+<text x="90" y="550" font-size="25">4,027 page clusters; 13,692 attributed revisions. Same labels and matcher in both views.</text>
+<text x="90" y="595" font-size="23">Unverified independent-page assumption. Cross-page copying and shared actors can invalidate coverage.</text>
+</g></svg>

@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-methods; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-cm2; source `cf36e30f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **unassessed** — Unassessed at registry discovery. Basis: Registration coverage only; this addition is not a review of the experiment or its results.
-- **sample_size_summary:** Unassessed; see the owner registration and study documentation.
+- **evidence_confidence:** **1/4** — Mixture rescue is model-specific in these pilots, not a general swarm result; the long-list reading explanation is a post-hoc lead. Basis: Three small model/policy cohorts differ; sampling mode and validity-triggered selection confound transfer claims. Corrected raw/selected/first-observed counts and paired metrics are reproducible; no independent causal reading-rule diagnostic completed.
+- **sample_size_summary:** Observed: up to 24 task roots GPT, 6 Gemma, 12 Qwen, reused across memory cells; 432/432, 44/90 and 178/180 selected valid arm records. Qwen: 327 raw, 127 invalid, 54/180 logical arm keys valid at first observation. Cells/arms are dependent repeats.
 <!-- experiment-evidence:end -->
 
 Owned by **shadow/sol-goal**, 4 October 2026, under the 12-hour goal in `GOAL-12H.md`. Attribution: Sol.
@@ -202,8 +202,9 @@ the mixtures, reproduces on one model and fails on two others, and the three out
 property of the model's response to a long memory list (per-call logs, `src/calls_summary.py`): whether its read of
 a 30-plus list near the 50 percent line is noisy (gpt-4o-mini: the running mean can be unfrozen, mixtures rescue),
 sharp (gemma: frozen agents stay frozen, nothing rescues), or recency-weighted (qwen: the "full" agent behaves like
-a short one and the short-memory population itself drifts back, so mixing adds nothing). That moderator is the
-finding this goal can defend; "mixtures rescue LLM swarms" is not. Novelty check (above) found no catalogued source
+a short one and the short-memory population itself drifts back, so mixing adds nothing). This is a post-hoc
+reading-rule lead from three confounded model/policy cohorts, not an identified moderator or a finding that
+"mixtures rescue LLM swarms". Novelty check (above) found no catalogued source
 that varies memory length as a mixture, measures a rescue fraction, or ties post-purge reversibility to the shape of
 the long-window read. Scripted M1 (30,000 episodes) remains the clean statement of the mechanism under the tanh rule.
 
@@ -240,7 +241,7 @@ What holds up at 12 to 24 tasks per cell:
   0.00 to 0.12 (P(copy the one word heard) = 1.00). f = 15/16 (one full-memory agent among 8 honest) is identical: a
   single anchor cannot do it. All-full: 0 of 21 recover, mean 0.21, max 0.50 (frozen at the uncaptured quarter plus
   count noise).
-- **The interior optimum is real; the mean lift is modest and the outcome is bimodal.** Mean `frac_T`:
+- **This gpt-4o-mini pilot has an interior peak; the mean lift is modest and the outcome is bimodal.** Mean `frac_T`:
   0.05 / 0.21 / 0.17 / 0.31 / 0.34 / 0.39 / 0.03 for f = 1, 0, 1/2, 5/8, 3/4, 7/8, 15/16. Paired per task against
   all-full on the design's metrics: f = 7/8 is higher by **+0.16 [+0.03, +0.29]** on `frac_T` and +0.16 [+0.01, +0.29]
   on `delta_original` (21 shared tasks, mixture higher in 13, lower in 4); f = 3/4 is +0.07 [-0.09, +0.26]; f = 1/2
@@ -269,8 +270,9 @@ curve explains why: on long windows gemma reads the whole-list share AND the tai
 (P(original) = 0.00 up to share 0.5, 0.05 to 0.30 at 0.6, 0.76 at 0.7, `results/MP2.md` and
 `results/pilot-mp2/calls-*.jsonl`), so after capture a full-memory agent whose list is 25 to 40 percent original is
 pinned at 0, with no read noise to unfreeze it; the all-full cell goes to 0.00, lower than gpt-4o-mini's 0.28. The
-rescue needs long-memory agents that are frozen but NOISY, not frozen and sharp. That is a real moderator, found
-by running a second model, and it is why the headline cannot be "mixtures rescue LLM swarms" in general.
+observed contrast is consistent with a role for long-list read noise. It does not establish that noise is
+necessary or causal: model family and sampling mode also changed. This is why the headline cannot be
+"mixtures rescue LLM swarms" in general.
 
 ## Third model: qwen3-235b-a22b-2507 reverses the ordering (logprobs, 12 tasks per cell)
 
@@ -296,8 +298,8 @@ Calibration said qwen is a sharp majority rule (beta about 6.4, h about 0) that 
 - Wipe is neutral or helpful (+0.01 to +0.07, the f = 7/8 CI just above 0): with nothing banked that helps, erasing
   the pinned anchors can only free them.
 
-The three models therefore span the three possible regimes for the long-memory agents (unfreezable, frozen, not
-really long-memory), and the mixture effect follows the regime, not the model's headline majority-rule sharpness.
+The three model/policy cohorts show three different patterns. Their association with long-list reading behavior
+is post hoc; these data do not establish an exhaustive three-regime taxonomy or isolate a causal moderator.
 
 Figure: [results/rescue-vs-f.svg](results/rescue-vs-f.svg) (scripted vs gpt-4o-mini vs gemma, A1 and A2).
 
@@ -305,10 +307,15 @@ Status of the claim after the pilots: the memory-MIXTURE dependence of post-purg
 real model (gpt-4o-mini, 141 captured A1 episodes, exact p = 0.0003 for full recovery occurring only in interior
 mixtures, f = 7/8 beats all-full by +0.16 [+0.03, +0.29] paired; wipe harm reproduced with CIs excluding 0 in every
 mixed cell), NOT reproduced on gemma-3-27b (16 valid episodes, nothing recovers at any f), and REVERSED on
-qwen3-235b (pure short returns on its own, mixtures dilute it). The scripted claim transfers when the long-memory
-agents' read of a long list is noisy near the 50 percent line, fails when it is sharp, and inverts when it is
-recency-weighted. One dose, N = 16, 12 to 24 tasks per cell per model: a reproduced lead with a measured
-moderator and two measured failure modes, not a powered finding.
+qwen3-235b (pure short returns on its own, mixtures dilute it). The association with long-list noise, sharpness
+and recency is a post-hoc hypothesis, not an established transfer rule. One dose, N = 16, 6 to 24 tasks per
+cell per model, and different sampling policies: a model-specific lead and two nonreplications, not a general finding.
+
+**Reading-rule diagnostic, 2026-10-04:** [prospective plan and closeout](reading-rule/README.md) freeze
+24 synthetic histories across six information-matched presentations. OpenRouter returned HTTP 403 on the
+first qualification request. No valid model output and no scientific history were observed; S1 did not run.
+USD 0.05 remains reserved against the USD 12 cap; actual charge is unknown. This is an access blocker,
+not evidence for or against the reading-rule explanation. No Anthropic pool was used.
 
 ## Scope boundaries
 

@@ -21,6 +21,9 @@ Start with the one-page [FINDING.md](FINDING.md). The [plan](PLAN.md) was writte
 - [identity-aggregates.csv](results/identity-aggregates.csv): per-observable-name counts, spans and reference-event counts; names replaced by deterministic SHA256 digests. These are derived aggregates, not raw events.
 - [degree-histograms.csv](results/degree-histograms.csv): reference graph indegree/outdegree distributions, including isolated labels.
 - [audit.json](results/audit.json): 25 passing aggregate checks, including independent Gini calculation by Lorenz trapezoids and wiki label-table checks.
+- [uncertainty.json](results/uncertainty.json): 2,000 paired page-cluster resamples, conditional 95% percentile CIs, zero rejected draws, and leave-one-page-out ranges. The [supplement plan](UNCERTAINTY-PLAN.md) was committed before its implementation, after census point estimates were known.
+- [reference-uncertainty.svg](results/reference-uncertainty.svg): 1800px reference-fraction figure with conditional CIs. This is distinct from the unique-edge ratio, which receives no invented CI.
+- [page-reference-aggregates.csv](results/page-reference-aggregates.csv): derived counts for 4,027 hashed page clusters; no raw revisions or page names.
 
 ## Rerun
 
@@ -39,10 +42,13 @@ From the repository root:
 
 ```sh
 python3 researchers/shadow/notes/wild-identity/test_analyze.py
+python3 researchers/shadow/notes/wild-identity/test_uncertainty.py
 nice -n 10 python3 researchers/shadow/notes/wild-identity/analyze.py \
   --data /path/to/DATA --repo /path/to/swarm-lab \
   --commit 4959a80b --out /tmp/wild-identity-results
 python3 researchers/shadow/notes/wild-identity/audit.py \
+  --data /path/to/DATA --results /tmp/wild-identity-results
+nice -n 10 python3 researchers/shadow/notes/wild-identity/uncertainty.py \
   --data /path/to/DATA --results /tmp/wild-identity-results
 ```
 
@@ -64,6 +70,8 @@ The recorded run used one `nice 10` CPU process on nyx-node, outside all product
 **Observed span**, not survival: `max(time)-min(time)` for each nonblank exact label/id. Singletons are zero, but zero-span need not mean singleton: simultaneous events create one additional zero-span identity in each archive. The positive-span sensitivity therefore excludes 1,333 wiki labels and 22 git ids, not just the 1,332 and 21 singletons. Endpoints are censored by archive and commit cutoff; neither a Kaplan-Meier estimator nor a true identity-lifetime claim is justified. Normalized CDFs divide by each full archive's observation window, which does not make the sampling processes equivalent.
 
 **Participation:** Gini uses every attributed event and exact named identity, including potentially human or reused labels. Top-10% share uses `ceil(n/10)` names. Names and repeated events are dependent; no artificial bootstrap of revisions is offered as uncertainty about unseen agents. The archive is the observed census, not a sample of an authenticated agent population.
+
+**Supplementary uncertainty, requested by the 11:25 EDT audit.** For wiki reference-event proportions only, uncertainty.py groups the same attributed revisions into 4,027 pages and resamples whole pages in pairs for the snapshot and hunk views. It performs exactly 2,000 resamples, seed 20261004, with linearly interpolated 2.5th/97.5th percentiles. These conditional model-based 95% CIs assume exchangeable independent page clusters. Cross-page copying and actors violate potential independence; no general-population coverage is claimed. All three totals reconcile exactly to summary.json; source/script hashes and rejected draws are saved. The deterministic leave-one-page-out ranges provide a separate concentration sensitivity, not confidence intervals. Five new fixtures test pairing, quantiles, zero denominators, reproducibility and known-answer leave-one-out ranges. The original lifetime, Gini and unique-edge census metrics are unchanged and receive no invented iid CI.
 
 **Graph:** literal case-sensitive known-label/id references with conservative token boundaries; directed editor -> mentioned name; remove self references; one count per target per event. Wikipedia-like retained snapshots preserve predecessors' prose and signatures. The conservative graph uses only `insert`/`replace` target line ranges in the archive's diff hunks. Whole replacement lines can still contain retained or copied tokens, so even that graph is **not** proof that the editor read or addressed the named agent. Removed text is not added. Cross-page copying is not distinguished from an original message. The method misses unnamed, indirect, encoded, differently cased, and punctuation-boundary references. The two graph edge sets measure different textual artifacts; their difference is not a causal estimate.
 

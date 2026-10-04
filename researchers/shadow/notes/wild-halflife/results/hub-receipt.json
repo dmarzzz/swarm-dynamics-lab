@@ -1,0 +1,13 @@
+{
+  "experiment": "wild-halflife",
+  "run": "wild-halflife/retrospective-66fa0aa6-v1",
+  "retrospective": true,
+  "done_event_acknowledged": true,
+  "readback_status": "done",
+  "artifacts": [
+    "results/summary.json",
+    "results/supplement.json",
+    "results/fig-adoption.png",
+    "FINDING.md"
+  ]
+}

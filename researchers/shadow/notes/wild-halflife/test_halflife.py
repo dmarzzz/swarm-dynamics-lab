@@ -22,6 +22,8 @@ class T(unittest.TestCase):
         self.assertEqual(H.norm_line("  * Hello   WORLD this is a long enough line"),
                          "hello world this is a long enough line")
         self.assertEqual(H.line_units(["short", "Beschreibe hier die neue Seite."]), set())
+        self.assertEqual(H.finite_json({'undefined': float('nan'), 'data': [1., float('inf')]}),
+                         {'undefined': None, 'data': [1., None]})
 
     def test_repeat_writer_and_ties(self):
         recs = [rec(0, "A", ["u"]), rec(0, "B", ["u"]), rec(5, "A", ["u"]), rec(10, "C", ["u"]),
@@ -53,6 +55,23 @@ class T(unittest.TestCase):
         E = mids * 3  # rate proportional to j
         self.assertAlmostEqual(H.wls_slope(E, X, mids), 1.0, places=9)
         self.assertAlmostEqual(H.wls_slope(np.ones(6) * 5, X, mids), 0.0, places=9)
+
+    def test_visible_copies_and_bootstrap(self):
+        recs = [rec(0, 'A', ['u'], cluster='p'), rec(1, 'B', ['u'], cluster='p'),
+                rec(2, 'C', [], cluster='p')]
+        for r in recs:
+            r['page'] = 'p'
+            r['full_urls'] = r['units']['url']
+        table, te, _, _ = H.adoption_table(recs, 'url', 'a')
+        a = H.visible_copies(recs, table, te, n_boot=10)
+        b = H.visible_copies(recs, table, te, n_boot=10)
+        self.assertEqual(a, b)
+        self.assertEqual(a['events'], [0, 1, 0, 0, 0, 0])
+        # URL remains for two records then is removed; one more record until censoring.
+        self.assertEqual(a['exposure_records'], [1., 2., 0., 0., 0., 0.])
+        self.assertEqual(a['rate_per_1k_records'][1], 500.)
+        self.assertEqual(a['rate_per_1k_records_ci'][1], [500., 500.])
+        self.assertEqual(a['rate_per_1k_records_ci'][2], [None, None])
 
     def test_analyse_runs(self):
         rng = np.random.default_rng(0)

@@ -41,7 +41,7 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [wild-halflife](tasks/wild-halflife.md) | claimed | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T15:24Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
-| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T15:29Z | Build a cited narrative convergence map across the three researchers |
+| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T15:59Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -284,8 +284,8 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:57Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
+| shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
 | shadow/sol-audit-team | done | sol-audit-team | 2026-10-04T15:51Z | Completed frozen-PI delta, legacy gate probes, and exhaustive ready-chain inventory |
-| shadow/sol-cm2 | working |  | 2026-10-04T15:42Z | Reporting corrections reconciled with RSI PR 84; preparing OpenRouter-only frozen-history diagnostic. |
 | shadow/sol-factory | done |  | 2026-10-04T15:38Z | Factory build shipped; scientific queue blocked by pool unavailability and shared paid-key daily cap |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T15:38Z | S0-02 scope authorized; original window expired; 79 offline checks and retained-ledger audit complete |
 | vishesh/codex-pi-review | done | pi-cycle-2026-10-04 | 2026-10-04T15:37Z | Ten-study analysis/preparation cycle reconciled; two scientific stops, eight native launches gated, explicit decisions pending. |

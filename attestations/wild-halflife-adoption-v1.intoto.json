@@ -1,0 +1,64 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "prompt": "Idea half-life / adoption curves on collusion.wiki (by label and by /16 ip block) vs swarm-lab own commit history (by agent id). One figure and bootstrap CIs. Frame as a cross-swarm extension of arXiv 2609.09150, descriptive, not causal."
+   },
+   "internalParameters": {
+    "commit": "4eff98d076dcdf6d1c0b849f067fc5442c127132-dirty"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "fdb63212a29237647b3d58cca00fa47f26ba7e9d92bdb9bce4cd61ed9ccd4a6a"
+     },
+     "uri": "researchers/shadow/notes/wild-halflife/halflife.py"
+    },
+    {
+     "digest": {
+      "sha256": "db17cbfbc75a4205541a1b03a10cea7aaed66af4a9b76f30eee124ffa375987e"
+     },
+     "uri": "researchers/shadow/notes/wild-halflife/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "5f1fd3c5ffc3863c5046b855bb3b3df13b126f7769d60dcb8044ab23b97e7be4"
+     },
+     "uri": "researchers/shadow/notes/wild-halflife/results/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "22014e231476de2a253728035fb655575b272732c75183a6169777e6bf61ff9d"
+     },
+     "uri": "researchers/shadow/notes/wild-halflife/results/supplement.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "4eff98d076dcdf6d1c0b849f067fc5442c127132"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/shad0wbot/unknown"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T15:57:10Z",
+    "startedOn": "2026-10-04T15:57:10Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "050b2c9e2ef514145f7501ac72623f51000d89e800d94a70b06f93381418a16a"
+   },
+   "name": "artifacts/wild-halflife-adoption/wild-halflife-adoption-v1.png"
+  }
+ ]
+}
