@@ -1,0 +1,9 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "api_cap_usd": 1,
+  "calls": 32,
+  "reserved_usd": 0.043008,
+  "actual_usd": 0.00103152,
+  "infrastructure_incremental_provisioning_usd": 0,
+  "infrastructure_note": "Existing idle host allocated exclusively; no VM created. Existing owner baseline billing not measured."
+}

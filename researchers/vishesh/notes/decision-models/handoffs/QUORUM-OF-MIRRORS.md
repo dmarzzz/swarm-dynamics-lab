@@ -29,3 +29,7 @@ Continue Quorum of Mirrors in https://github.com/dmarzzz/swarm-lab. Read AGENTS.
 ## QM-2 design revision, 2026-10-04
 
 The owner requested a fresh pull and another design iteration. [QM-2 plan and offline validation](../quorum-of-mirrors/README.md) now specify fixed-evidence repetition, two-root partial lineage, five-judge comparisons, exact and implementable references, all-assigned scoring and launch gates. This remains an unrun exploratory design; unit fixtures are not Quorum model results. See the issue ledger for resolved instrument defects and remaining research, provider and execution work.
+
+## Native S0 outcome, 2026-10-04
+
+[QM-S0-02 completed and qualified](../quorum-of-mirrors/RESULTS.md): 29/32 exact-MAP choices, 32 valid responses, 14/16 repeated-request pairs agreeing. Actual API cost $0.00103152. A prior output-directory setup failure consumed zero calls and is retained. This supersedes the earlier no-native-qualification status, without implying swarm efficacy or formal research-gate completion.

@@ -1,0 +1,9 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/7aa4dde88faaf0cce91fcfe658252694338fea65/researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/S0-02-pre.md",
+  "commit": "7aa4dde88faaf0cce91fcfe658252694338fea65",
+  "plan_sha256": "207f6af743b9958abb6909d467527dfd48146ea6abde645cc1b3823b0c29beb3",
+  "registered_tldr": "TLDR: QM-S0-02 tests explicit-lineage evidence reading with skewed (7,1,1) copies on 16 cases repeated twice. Pinned Jev choices are compared with exact root MAP answers; metrics are all-32 correctness, validity, per-label/q competence and repeat consistency. No peers, no retries; a tiny synthetic competence screen, not swarm efficacy or calibrated belief. Parent attempt failed before paid calls; output-directory repair only.",
+  "run_tldr": "TLDR: QM-S0-02 tests explicit-lineage evidence reading with skewed (7,1,1) copies on 16 cases repeated twice. Pinned Jev choices are compared with exact root MAP answers; metrics are all-32 correctness, validity, per-label/q competence and repeat consistency. No peers, no retries; a tiny synthetic competence screen, not swarm efficacy or calibrated belief. Parent attempt failed before paid calls; output-directory repair only.",
+  "checked_utc": "2026-10-04T03:56:14.888767+00:00"
+}

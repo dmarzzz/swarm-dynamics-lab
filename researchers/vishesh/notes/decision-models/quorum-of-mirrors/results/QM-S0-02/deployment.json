@@ -1,0 +1,22 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-S0-02",
+  "host": "sim-shadow",
+  "claim_id": "vishesh-quorum-mirrors-s0",
+  "claim_until": 1791093063.0,
+  "deadline": 1791089755.2514281,
+  "api_cap_usd": 1,
+  "owner_approved": true,
+  "source_commit": "7aa4dde88faaf0cce91fcfe658252694338fea65",
+  "source_sha256": {
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "relay.py": "f600c8400243919d7fa55a35f790c3fb0e874eb15c0597da01d406071c8c41ed",
+    "worker.py": "e19b382b1e608d5d0f4c6e280eeafc747b0090bfbd4f4483c87181aa94000d38",
+    "public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/7aa4dde88faaf0cce91fcfe658252694338fea65/researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/S0-02-pre.md",
+  "plan_sha256": "207f6af743b9958abb6909d467527dfd48146ea6abde645cc1b3823b0c29beb3",
+  "run_tldr": "TLDR: QM-S0-02 tests explicit-lineage evidence reading with skewed (7,1,1) copies on 16 cases repeated twice. Pinned Jev choices are compared with exact root MAP answers; metrics are all-32 correctness, validity, per-label/q competence and repeat consistency. No peers, no retries; a tiny synthetic competence screen, not swarm efficacy or calibrated belief. Parent attempt failed before paid calls; output-directory repair only.",
+  "run_id": "quorum-of-mirrors/qm-s0-02"
+}
