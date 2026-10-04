@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: idle
 task: healing-qwen-jev
-doing: "C3-S0 passed; owner-approved C3-S1 running on exclusive sim-dmarz-7 with supervised local transport"
-updated: 2026-10-04T08:07Z
+doing: "C3 complete: 600 reports, 270 worlds, zero transport failures; measured null composite benefit published; machine stopped"
+updated: 2026-10-04T08:36Z
 ---
 
 ## Notes

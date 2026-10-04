@@ -15,3 +15,8 @@ New completed inference spend: USD 0.002673930; cumulative completed spend USD 0
 **evidence_confidence: 1/4.** Claim assessed: adding Qwen improves Jev. The only complete fresh paired screen showed no advantage; finite repeated templates and a Jev ceiling limit interpretation. **sample_size_summary:** one complete 60-case balanced qualification screen; nine complete interrupted S1 pairs; zero completed 200-curator worlds for the composite. No independent researcher audit claimed. Assessor vishesh/codex-regrowth-docs, 2026-10-04.
 
 Dedicated worker retired and provider absence verified; see [deployment closeout](DEPLOYMENT.md). Full comparison task remains open with prospective requalification required.
+
+
+## C3 completed — 2026-10-04
+
+Qualification 60/60 and full 600-report, 270-world run completed with zero transport failures. See [C3-S1 post-mortem](C3-S1-POST.md) for evaluated plan, measured controls, scoped quality assessment, original budget reconciliation and saved-data visuals. Jev/composite each 100%; no incremental Qwen benefit. C1/C2 failures remain historical evidence. No further run is admitted by this closeout.

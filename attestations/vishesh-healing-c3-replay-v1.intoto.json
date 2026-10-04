@@ -1,0 +1,65 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "sha256:b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454"
+   },
+   "internalParameters": {
+    "commit": "c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7-dirty",
+    "session": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "f4eff19e34bf40ed9609b42bb780b948406fcc75c5323c72e30081ca633409cc"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/report.py"
+    },
+    {
+     "digest": {
+      "sha256": "1c356a58e1afed29fcad539ed5e7c67a1950bb87e330265bf0ccd1323cf628c1"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/replay.html"
+    },
+    {
+     "digest": {
+      "sha256": "c75f1989f3dc3d86ac8858f219e9c5e49f5dd9a6d713f5ee0feb3f8da5aff175"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/composite/presentation/package_replay.py"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz"
+    },
+    {
+     "digest": {
+      "gitCommit": "c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T08:37:36Z",
+    "invocationId": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e",
+    "startedOn": "2026-10-04T08:37:36Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "7022fa21050fe5839ba3dae040bce83b0c519efd85c0daa12c685ea48048ca17"
+   },
+   "name": "artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v1.html"
+  }
+ ]
+}

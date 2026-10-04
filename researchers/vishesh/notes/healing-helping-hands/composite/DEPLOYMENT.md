@@ -37,3 +37,10 @@ Prospective plan and deployed source: `66ec09017284892a59623c7e7a73d93651b4a686`
 Source b2a09a420dbfc42f8334543f495a815e9818be73 deployed to existing sim-dmarz-7 after verified account identity, exclusive claim PR 214 and idle-workload check. No new VM created. Registered C3 TLDR and exact immutable plan rendered on the public page before model load. Pinned Ollama image and Qwen weights verified. Original 859-entry ledger transferred with its historical rows intact and canonical local dispatch path disabled. Sole remote writer is protected by an exclusive lock; credential reaches only the admitted host through encrypted stdin and ephemeral private memory-backed storage, which is removed after reading.
 
 C3-S0 ran as detached healing-c3-s0: 60 cases, 180 calls, 108.8483 seconds, no transport failures; qualification and raw-data audit passed. Its eight hub artifacts include measured confusion chart. C3-S1 was separately assessed in C3-S1-PRE.md at 8de1578f020db9593fbf44dd4c7b808badbe5438, then launched as detached healing-c3-s1 with the unchanged qualified instrument. Run IDs C3-S0/C3-S1; expected S1 600 reports and 270 worlds. Live completion counts are actual observed rows. Remaining original inference authority at S1 launch USD 0.080636782. Both native commands and runtime parameters follow C3-OPERATIONS.md and durable admission receipts.
+
+
+## C3 completed — 2026-10-04
+
+Qualification 60/60 and full 600-report, 270-world run completed with zero transport failures. See [C3-S1 post-mortem](C3-S1-POST.md) for evaluated plan, measured controls, scoped quality assessment, original budget reconciliation and saved-data visuals. Jev/composite each 100%; no incremental Qwen benefit. C1/C2 failures remain historical evidence. No further run is admitted by this closeout.
+
+Closeout verified both native services inactive, ephemeral credential absent, remote ledger authority closed, original local authority restored, and `hhh-ollama` stopped. Evidence archive upload/readback passed with SHA256 `bbeacef5f8bba1cea364b49e7a505255940f40cad779bbc0d5e3271e49c93147`. Existing fleet VM retained; only the experiment allocation is released.

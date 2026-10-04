@@ -1,8 +1,15 @@
 # Healing Helping Hands
-## Current model revision: Qwen + Jev
+## Current result: Qwen + Jev, C3 completed
 
-The active prospective revision is [C1: Qwen 0.6B + Jev](composite/PLAN.md), with paired Qwen-only and Jev-only controls. Laya is historical. The composite is qualified on its own performance; Qwen-only failure does not automatically block it. New results are pending. The completed capacity studies below remain historical evidence.
+### Historical practical-study TLDR
 
+We tested whether 200 curators can repair a changing evidence index and whether Qwen 0.6B plus Jev improves on Jev alone. The registered C3 run completed **600 paired reports, 270 worlds and 8,100 frames with zero transport failures**. Qwen scored 87%; Jev and Qwen+Jev each scored 100%, so Qwen added no measured benefit. Verified central indexing had lower mean post-event error than peer repair in every scenario. Verification blocked false withdrawals; missing lineage remained unresolved.
+
+Three fresh synthetic corpora were paired across three model configurations, five policies and six scenarios. The 200 curators run programmed propagation; they are not independent language researchers or independent samples. Model outputs, controls, adverse results and earlier failed attempts are retained.
+
+[Interactive replay](https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/replay.html) · [Registered plan](composite/PLAN.md) · [Full assessment and cost](composite/C3-S1-POST.md) · [All-scenario chart](https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/outcomes.png) · [Measured animation](https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/recovery.gif)
+
+The following evidence metadata and practical studies are historical, with their original scope preserved.
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
@@ -28,9 +35,9 @@ Source: `b51e3f1f`.
 - **sample_size_summary:** Practical02: same 3 corpora × 2 placements × 6 scenarios × 5 policies = 180/180 worlds; cap 4→16. Together both capacities yield 360 dependent worlds, 0 new model calls.
 <!-- experiment-evidence:end -->
 
-A 200-curator evidence-repair experiment. **Latest cycle: practical central baselines and a bounded capacity sensitivity, completed as exploratory S0 diagnostics.** [Plan](practical/PLAN.md) · [Cap-4 assessment](practical/POST-01.md) · [Cap-16 assessment](practical/POST-02.md) · [Feedback response](practical/FEEDBACK-RESPONSE.md) · [Earlier reference pilot](PILOT-03-OVERVIEW.md)
+A 200-curator evidence-repair experiment. **Historical cycle: practical central baselines and a bounded capacity sensitivity, completed as exploratory S0 diagnostics.** [Plan](practical/PLAN.md) · [Cap-4 assessment](practical/POST-01.md) · [Cap-16 assessment](practical/POST-02.md) · [Feedback response](practical/FEEDBACK-RESPONSE.md) · [Earlier reference pilot](PILOT-03-OVERVIEW.md)
 
-## TLDR
+## Historical practical-study TLDR
 
 How should an evidence index learn new reports, remove withdrawn findings, and resist incorrect withdrawal notices? We compared five programmed central/peer policies on the same saved Jev extraction outputs, including temporary central disconnection and incomplete source lineage. Two prospectively registered attempts completed 360 worlds with no new model calls. Increasing peer packet capacity improved delivery, but the version-aware central index still had lower error in every scenario. Verification prevented false deletions; neither architecture could reliably remove a withdrawal whose target was missing. Qwen/Laya remain unqualified.
 

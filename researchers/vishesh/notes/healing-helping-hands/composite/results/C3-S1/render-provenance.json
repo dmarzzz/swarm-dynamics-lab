@@ -1,0 +1,9 @@
+{
+  "source_commit": "b2a09a420dbfc42f8334543f495a815e9818be73",
+  "source_manifest_sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1",
+  "renderer_sha256": "f4eff19e34bf40ed9609b42bb780b948406fcc75c5323c72e30081ca633409cc",
+  "html_sha256": "1c356a58e1afed29fcad539ed5e7c67a1950bb87e330265bf0ccd1323cf628c1",
+  "worlds": 270,
+  "frames": 8100,
+  "mapping": "C3 measured labels and propagation; saved-data render only"
+}

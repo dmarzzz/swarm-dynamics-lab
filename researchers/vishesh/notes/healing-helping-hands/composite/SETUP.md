@@ -34,3 +34,8 @@ C1-S0 qualified, C1-S1 failed, C2-S0 failed before provider dispatch. See RESULT
 Owner requested another run after C1/C2 closure. Prospective design committed as 289c285f before implementation; see [C3 pre-assessment](C3-PRE.md). Worker-local relay/supervisor replaces the reverse SSH tunnel, checks transport between requests, durably caches validated responses and permits GET-only recovery. Original cumulative budget remains authoritative. [Offline validation](C3-offline-validation.json): 24 composite and 22 practical tests passed. Native qualification and fresh public/resource admission remain outstanding. Current coordinator orbital-one could not be resolved from this operator; no C3 model call or machine allocation has occurred.
 
 C3 implementation published at 90510135d74bf86eaaf74345c55174c91e4150e8. Plan registration through the former reporting host was rejected by platform approval review because no current exclusive claim authorizes its use. No registration was performed, no C3 public readback passed, and no model call or provisioning occurred. Required next input: reachable authorized fleet coordinator connection. Do not bypass the allocation boundary.
+
+
+## C3 completed — 2026-10-04
+
+Qualification 60/60 and full 600-report, 270-world run completed with zero transport failures. See [C3-S1 post-mortem](C3-S1-POST.md) for evaluated plan, measured controls, scoped quality assessment, original budget reconciliation and saved-data visuals. Jev/composite each 100%; no incremental Qwen benefit. C1/C2 failures remain historical evidence. No further run is admitted by this closeout.

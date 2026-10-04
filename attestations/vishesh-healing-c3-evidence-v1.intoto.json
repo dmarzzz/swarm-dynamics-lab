@@ -1,0 +1,47 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "sha256:b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454"
+   },
+   "internalParameters": {
+    "commit": "c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7-dirty",
+    "session": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e"
+   },
+   "resolvedDependencies": [
+    {
+     "uri": "https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz"
+    },
+    {
+     "digest": {
+      "gitCommit": "c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T08:37:37Z",
+    "invocationId": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e",
+    "startedOn": "2026-10-04T08:37:37Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "cb644fda4dedc6c3987ac6e865ccc4f88156ed23bc3e4390224bb779ce5f7c4f"
+   },
+   "name": "artifacts/vishesh-healing-c3-evidence/vishesh-healing-c3-evidence-v1.json"
+  }
+ ]
+}

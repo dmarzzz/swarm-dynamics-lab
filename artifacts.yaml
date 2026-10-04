@@ -2090,4 +2090,56 @@ artifacts:
           - researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json
           - researchers/dmarz/notes/market-split-api/report/s1-002/first-registration-notes.json
         commit: 2c261f3d33e594a8169619949fdd6a6ce295048a-dirty
+  - id: vishesh-healing-c3-outcomes
+    category: content
+    type: figure
+    title: 'Healing C3: every scenario and control'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-healing-c3-outcomes/vishesh-healing-c3-outcomes-v1.png
+        built_at: '2026-10-04T08:37:36Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: sha256:b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454
+        ingredients:
+          - researchers/vishesh/notes/healing-helping-hands/composite/presentation/report.py
+          - researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json
+        commit: c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7
+  - id: vishesh-healing-c3-replay
+    category: deployment
+    type: app
+    title: 'Healing C3: measured interactive replay'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v1.html
+        built_at: '2026-10-04T08:37:36Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: sha256:b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454
+        ingredients:
+          - researchers/vishesh/notes/healing-helping-hands/composite/presentation/report.py
+          - researchers/vishesh/notes/healing-helping-hands/composite/presentation/replay.html
+          - researchers/vishesh/notes/healing-helping-hands/composite/presentation/package_replay.py
+          - https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz
+        commit: c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7-dirty
+  - id: vishesh-healing-c3-evidence
+    category: content
+    type: dataset
+    title: 'Healing C3: archived evidence index'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-healing-c3-evidence/vishesh-healing-c3-evidence-v1.json
+        built_at: '2026-10-04T08:37:37Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: sha256:b4810a300cbece08804ae1a0b6a3029c58cb64a3671bb72dd00e4a49bba64454
+        ingredients:
+          - https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz
+        commit: c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7-dirty
 requires: '1.2'

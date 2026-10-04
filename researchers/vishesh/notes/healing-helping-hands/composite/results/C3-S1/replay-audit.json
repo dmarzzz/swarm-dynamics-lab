@@ -1,0 +1,15 @@
+{
+  "source": "same-author replay and arithmetic audit",
+  "verified_observations": 600,
+  "verified_worlds": 270,
+  "verified_frames": 8100,
+  "call_starts": 1800,
+  "call_terminal": 1800,
+  "input_tokens": 609044,
+  "output_tokens": 59960,
+  "cost_usd": 0.022871604,
+  "seconds_by_component": {
+    "qwen": 676.3284143980054,
+    "jev": 259.4308176740069
+  }
+}

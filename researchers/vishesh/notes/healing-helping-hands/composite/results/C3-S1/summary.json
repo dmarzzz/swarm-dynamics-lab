@@ -1,0 +1,105 @@
+{
+  "qwen": {
+    "accuracy": 0.87,
+    "per_class": {
+      "SUPPORT": 1.0,
+      "REFUTE": 0.35,
+      "UNCERTAIN": 1.0
+    },
+    "valid": 600,
+    "assigned": 600,
+    "confusion": {
+      "SUPPORT": {
+        "SUPPORT": 120,
+        "REFUTE": 0,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 40,
+        "REFUTE": 42,
+        "UNCERTAIN": 38,
+        "MISSING": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 360,
+        "MISSING": 0
+      }
+    },
+    "passed": false
+  },
+  "jev": {
+    "accuracy": 1.0,
+    "per_class": {
+      "SUPPORT": 1.0,
+      "REFUTE": 1.0,
+      "UNCERTAIN": 1.0
+    },
+    "valid": 600,
+    "assigned": 600,
+    "confusion": {
+      "SUPPORT": {
+        "SUPPORT": 120,
+        "REFUTE": 0,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 120,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 360,
+        "MISSING": 0
+      }
+    },
+    "passed": false
+  },
+  "qwen+jev": {
+    "accuracy": 1.0,
+    "per_class": {
+      "SUPPORT": 1.0,
+      "REFUTE": 1.0,
+      "UNCERTAIN": 1.0
+    },
+    "valid": 600,
+    "assigned": 600,
+    "confusion": {
+      "SUPPORT": {
+        "SUPPORT": 120,
+        "REFUTE": 0,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 120,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 360,
+        "MISSING": 0
+      }
+    },
+    "passed": false
+  },
+  "paired": {
+    "complete": 600,
+    "assigned": 600,
+    "qwen_wrong_corrected": 78,
+    "qwen_right_damaged": 0,
+    "anchoring": 0,
+    "composite_jev_agree": 600,
+    "accuracy_delta": 0.0
+  },
+  "admit_s1": false
+}

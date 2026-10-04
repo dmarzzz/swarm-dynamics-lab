@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "study_id": "healing-helping-hands",
+  "attempt": "C3-S1",
+  "verdict": "complete_valid_result",
+  "assessor": "vishesh/codex-regrowth-docs",
+  "assessed_at": "2026-10-04T08:34:15.218697+00:00",
+  "outcome_interpretation": "No incremental composite benefit; central verified lower mean error in every scenario; complete native transport run.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Prospective composite-minus-Jev and architecture contrasts retained; valid null accepted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "unknown",
+      "finding": "Six programmed challenges exercise repair, but finite synthetic templates do not establish external curation validity.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ],
+      "next_action": "Limit claims to synthetic mechanism evidence; prepare a new real-report design only within owner-approved scope.",
+      "acceptance_check": "Held-out independent task families and task-relevant central controls would be required for broader generalization."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Paired Qwen-only, Jev-only, central verified and append/blind controls retained; unfavorable outcomes reported.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Composite qualified natively before S1; S1 Jev/composite each 600/600; Qwen negative control 522/600.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Same-author arithmetic and deterministic replay verified every label, 270 worlds and 8100 frames.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Three paired corpora are the descriptive units; nested worlds and curators are not independent replication; no population interval claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned model/runtime and stateless report prompts; evaluator truth and assistant context excluded.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "600 assigned/completed reports, 1800 starts/terminal records, all 270 worlds accounted for.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original ledger reconciled with 859 historical entries unchanged; C3 API cost 0.025212768; existing exclusive machine.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source and actual request hashes frozen; saved-data replay exact, hosted inference not guaranteed by seed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All-scenario measured figures and 30-frame animation; interactive corpus, model, scenario and round controls inspected.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/audit.json",
+          "sha256": "6c3b24bc7db70e882f203d1fe76de21bfa311bb95ddb6ea4ade839a17ce57381"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/replay-audit.json",
+          "sha256": "01126bce2e87d574b14399b848cc0bd7868208f41b60c5550ef3a7350bd61151"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/manifest.json",
+          "sha256": "24d51aa51c0ad83abf1515a9068b6ec5fcaffa8eed959a1772d2af40ad7605d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/composite/results/C3-S1/effects.json",
+          "sha256": "014ff55923d1c521f50bd9ba645a4d2689673f24a4e0a3db58878a9b8989816f"
+        }
+      ]
+    }
+  ]
+}

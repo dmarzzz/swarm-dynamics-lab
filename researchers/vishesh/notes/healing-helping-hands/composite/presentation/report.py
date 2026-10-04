@@ -43,7 +43,7 @@ def run(root,out):
  fig.suptitle('Healing Helping Hands | every model, architecture and scenario',fontsize=20)
  fig.text(.07,.022,'270 completed worlds, 200 curators each; three fresh synthetic corpora. Whiskers are corpus ranges, not confidence intervals.\nShared extraction tapes pair architectures. Logical rounds and item-copy traffic do not establish equal compute or real-world latency.',fontsize=11)
  fig.tight_layout(rect=[0,.065,1,.90]);fig.savefig(out/'outcomes.png');plt.close(fig)
- provenance={'source_commit':manifest['plan']['commit'],'source_manifest_sha256':hashlib.sha256((root/'manifest.json').read_bytes()).hexdigest(),'renderer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'html_sha256':hashlib.sha256((HERE/'replay.html').read_bytes()).hexdigest(),'worlds':270,'frames':sum(len(w['frames']) for w in worlds.values()),'mapping':'C1 measured labels and propagation; saved-data render only'}
+ provenance={'source_commit':manifest['plan']['commit'],'source_manifest_sha256':hashlib.sha256((root/'manifest.json').read_bytes()).hexdigest(),'renderer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'html_sha256':hashlib.sha256((HERE/'replay.html').read_bytes()).hexdigest(),'worlds':270,'frames':sum(len(w['frames']) for w in worlds.values()),'mapping':'C3 measured labels and propagation; saved-data render only'}
  (out/'render-provenance.json').write_text(json.dumps(provenance,indent=2));print(json.dumps({'rendered':True,'contrasts':contrasts}))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--results',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args();run(a.results,a.out)

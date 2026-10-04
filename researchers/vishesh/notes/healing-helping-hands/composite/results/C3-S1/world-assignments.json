@@ -1,0 +1,2432 @@
+[
+  {
+    "id": "8821-qwen-central-append-benign",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-append-withdrawal",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-append-forged",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-append-missing-lineage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-append-central-outage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-append-combined",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-verified-benign",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-verified-withdrawal",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-verified-forged",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-verified-missing-lineage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-verified-central-outage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-central-verified-combined",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-append-benign",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-append-withdrawal",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-append-forged",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-append-missing-lineage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-append-central-outage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-append-combined",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-blind-benign",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-blind-withdrawal",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-blind-forged",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-blind-missing-lineage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-blind-central-outage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-blind-combined",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-verified-benign",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-verified-withdrawal",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-verified-forged",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-verified-missing-lineage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-verified-central-outage",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen-peer-verified-combined",
+    "seed": 8821,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-append-benign",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-append-withdrawal",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-append-forged",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-append-missing-lineage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-append-central-outage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-append-combined",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-verified-benign",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-verified-withdrawal",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-verified-forged",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-verified-missing-lineage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-verified-central-outage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-central-verified-combined",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-append-benign",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-append-withdrawal",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-append-forged",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-append-missing-lineage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-append-central-outage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-append-combined",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-blind-benign",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-blind-withdrawal",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-blind-forged",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-blind-missing-lineage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-blind-central-outage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-blind-combined",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-verified-benign",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-verified-withdrawal",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-verified-forged",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-verified-missing-lineage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-verified-central-outage",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-jev-peer-verified-combined",
+    "seed": 8821,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-append-benign",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-append-withdrawal",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-append-forged",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-append-missing-lineage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-append-central-outage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-append-combined",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-verified-benign",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-verified-withdrawal",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-verified-forged",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-verified-missing-lineage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-verified-central-outage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-central-verified-combined",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-append-benign",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-append-withdrawal",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-append-forged",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-append-missing-lineage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-append-central-outage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-append-combined",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-blind-benign",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-blind-withdrawal",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-blind-forged",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-blind-missing-lineage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-blind-central-outage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-blind-combined",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-verified-benign",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-verified-withdrawal",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-verified-forged",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-verified-missing-lineage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-verified-central-outage",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8821-qwen+jev-peer-verified-combined",
+    "seed": 8821,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18821,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-append-benign",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-append-withdrawal",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-append-forged",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-append-missing-lineage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-append-central-outage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-append-combined",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-verified-benign",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-verified-withdrawal",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-verified-forged",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-verified-missing-lineage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-verified-central-outage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-central-verified-combined",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-append-benign",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-append-withdrawal",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-append-forged",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-append-missing-lineage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-append-central-outage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-append-combined",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-blind-benign",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-blind-withdrawal",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-blind-forged",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-blind-missing-lineage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-blind-central-outage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-blind-combined",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-verified-benign",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-verified-withdrawal",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-verified-forged",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-verified-missing-lineage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-verified-central-outage",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen-peer-verified-combined",
+    "seed": 8822,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-append-benign",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-append-withdrawal",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-append-forged",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-append-missing-lineage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-append-central-outage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-append-combined",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-verified-benign",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-verified-withdrawal",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-verified-forged",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-verified-missing-lineage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-verified-central-outage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-central-verified-combined",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-append-benign",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-append-withdrawal",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-append-forged",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-append-missing-lineage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-append-central-outage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-append-combined",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-blind-benign",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-blind-withdrawal",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-blind-forged",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-blind-missing-lineage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-blind-central-outage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-blind-combined",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-verified-benign",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-verified-withdrawal",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-verified-forged",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-verified-missing-lineage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-verified-central-outage",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-jev-peer-verified-combined",
+    "seed": 8822,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-append-benign",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-append-withdrawal",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-append-forged",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-append-missing-lineage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-append-central-outage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-append-combined",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-verified-benign",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-verified-withdrawal",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-verified-forged",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-verified-missing-lineage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-verified-central-outage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-central-verified-combined",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-append-benign",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-append-withdrawal",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-append-forged",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-append-missing-lineage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-append-central-outage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-append-combined",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-blind-benign",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-blind-withdrawal",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-blind-forged",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-blind-missing-lineage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-blind-central-outage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-blind-combined",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-verified-benign",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-verified-withdrawal",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-verified-forged",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-verified-missing-lineage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-verified-central-outage",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8822-qwen+jev-peer-verified-combined",
+    "seed": 8822,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18822,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-append-benign",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-append-withdrawal",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-append-forged",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-append-missing-lineage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-append-central-outage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-append-combined",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-verified-benign",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-verified-withdrawal",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-verified-forged",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-verified-missing-lineage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-verified-central-outage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-central-verified-combined",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-append-benign",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-append-withdrawal",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-append-forged",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-append-missing-lineage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-append-central-outage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-append-combined",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-blind-benign",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-blind-withdrawal",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-blind-forged",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-blind-missing-lineage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-blind-central-outage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-blind-combined",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-verified-benign",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-verified-withdrawal",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-verified-forged",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-verified-missing-lineage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-verified-central-outage",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen-peer-verified-combined",
+    "seed": 8823,
+    "model": "qwen",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-append-benign",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-append-withdrawal",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-append-forged",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-append-missing-lineage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-append-central-outage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-append-combined",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-verified-benign",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-verified-withdrawal",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-verified-forged",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-verified-missing-lineage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-verified-central-outage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-central-verified-combined",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-append-benign",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-append-withdrawal",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-append-forged",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-append-missing-lineage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-append-central-outage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-append-combined",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-blind-benign",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-blind-withdrawal",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-blind-forged",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-blind-missing-lineage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-blind-central-outage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-blind-combined",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-verified-benign",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-verified-withdrawal",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-verified-forged",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-verified-missing-lineage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-verified-central-outage",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-jev-peer-verified-combined",
+    "seed": 8823,
+    "model": "jev",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-append-benign",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-append-withdrawal",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-append-forged",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-append-missing-lineage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-append-central-outage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-append-combined",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-append",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-verified-benign",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-verified-withdrawal",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-verified-forged",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-verified-missing-lineage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-verified-central-outage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-central-verified-combined",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "central-verified",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-append-benign",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-append-withdrawal",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-append-forged",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-append-missing-lineage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-append-central-outage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-append-combined",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-append",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-blind-benign",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-blind-withdrawal",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-blind-forged",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-blind-missing-lineage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-blind-central-outage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-blind-combined",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-blind",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-verified-benign",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "benign",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-verified-withdrawal",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "withdrawal",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-verified-forged",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "forged",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-verified-missing-lineage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "missing-lineage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-verified-central-outage",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "central-outage",
+    "layout": 18823,
+    "status": "completed"
+  },
+  {
+    "id": "8823-qwen+jev-peer-verified-combined",
+    "seed": 8823,
+    "model": "qwen+jev",
+    "arm": "peer-verified",
+    "scenario": "combined",
+    "layout": 18823,
+    "status": "completed"
+  }
+]
