@@ -2542,17 +2542,22 @@
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
         "score": 0,
-        "claim": "On the byte-identical packets of sybil-split-opus, splitting one attacker's fixed resources from 1 to 27 identities raises rare-skill wrong answers more under degree-based than under coverage-based checks for qwen/qwen3.7-flash (reasoning disabled) and for gpt-6-sol (reasoning effort low), each model reported separately.",
-        "rationale": "Unrun. Prospective package only; tested offline with stub models; no stage has run and no model call has been made."
+        "claim": "On the byte-identical packets of sybil-split-opus, splitting one attacker's fixed resources from 1 to 27 identities raises rare-skill wrong answers more under degree-based than under coverage-based checks for qwen/qwen3.7-flash (reasoning disabled) and gpt-6-sol (reasoning effort low), each reported separately.",
+        "rationale": "No evidence for the claim: neither model passed the parent's clean-packet qualification (gpt-6-sol 3 of 6 shapes, Qwen 5 of 6), so no S1 contrast exists. Observed: both models abstain on some unanimous present facts (25 and 3 of 320 fields), 0 wrong values. Builder's own assessment; not independently reviewed."
       },
-      "sample_size_summary": "Observed: none. Planned per model: 24 paired synthetic roots in each of two graph families x 56 conditions = 2,688 S1 calls on the parent's packets, after a 60-call qualification and a one-call probe; two models, never pooled. Roots are the independent units, not calls or identities.",
+      "sample_size_summary": "Observed: qualification only, per model 60 clean packets on 10 roots (5 ring, 5 community) plus a 1-call probe; gpt-6-sol 60/60 valid, 3 of 6 shapes passed; Qwen 60/60 valid, 5 of 6 shapes passed. S1 (planned 48 roots x 56 conditions = 2,688 calls per model) not run for either. Roots are the independent units, not calls.",
       "sources": [
         "researchers/dmarz/notes/sybil-split-xmodel/README.md",
+        "researchers/dmarz/notes/sybil-split-xmodel/RESULTS.md",
         "researchers/dmarz/notes/sybil-split-xmodel/preregistration.md",
         "researchers/dmarz/notes/sybil-split-xmodel/design.yaml",
-        "researchers/dmarz/notes/sybil-split-xmodel/experiment.yaml"
+        "researchers/dmarz/notes/sybil-split-xmodel/experiment.yaml",
+        "researchers/dmarz/notes/sybil-split-xmodel/reviews/chain-001-sol-post.md",
+        "researchers/dmarz/notes/sybil-split-xmodel/reviews/chain-001-qwen-post.md",
+        "researchers/dmarz/notes/sybil-split-xmodel/records/sol-q0-summary.json",
+        "researchers/dmarz/notes/sybil-split-xmodel/records/qwen-q0-summary.json"
       ],
-      "status_at_assessment": "planned_unrun"
+      "status_at_assessment": "qualification_failed_both_models_s1_unrun"
     },
     {
       "id": "sybil-rules-180",

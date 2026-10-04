@@ -1,0 +1,244 @@
+{
+  "analyzed": 60,
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0,
+  "continuation": null,
+  "cost_usd": 0.006404,
+  "elapsed_seconds": 37.16963969099743,
+  "episodes": 60,
+  "errors": [],
+  "experiment": "sybil-split-xmodel",
+  "failed": 0,
+  "fixture_exact": null,
+  "graded": 60,
+  "initial_study_accounting": {
+    "actual_usd": 0.000111,
+    "attempted_calls": 1,
+    "calls_by_batch": {
+      "p0-001-qwen": 1
+    },
+    "calls_by_stage": {
+      "P0": 1
+    },
+    "cap_calls": 2749,
+    "cap_transport_attempts": 3300,
+    "cap_usd": 3,
+    "committed_usd": 0.000111,
+    "input_tokens": 3563,
+    "output_tokens": 33,
+    "reserved_usd": 0.004467,
+    "transport_attempts": 1,
+    "usage_reported_calls": 1,
+    "voided_calls": 0
+  },
+  "input_tokens": 199840,
+  "invalid": 0,
+  "invariant_violations": [],
+  "max_failed": null,
+  "max_request_bytes": 13515,
+  "max_tokens_per_byte": 0.34857565667776547,
+  "model_calls": 60,
+  "not_started": 0,
+  "output_tokens": 3127,
+  "params": {
+    "backend": "openrouter",
+    "batch": "q0-001-qwen",
+    "code": "f673f09bce75b76380e67f8be4b9adb756dd5aab",
+    "model": "qwen/qwen3.7-flash",
+    "source_hash": "ebfb2bc3703cbb5ac882641ca0f71dfb9dfda0ee5436dd1a8b4879dcef97c2cd",
+    "stage": "Q0"
+  },
+  "passed": false,
+  "planned": 60,
+  "primary_contrast": null,
+  "probe": null,
+  "qualification": {
+    "cells": [
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "full",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "common_only",
+        "withheld_fields": 30
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 0.7,
+        "expected": 10,
+        "fact_accuracy": 0.95,
+        "missing_abstention": 1.0,
+        "passed": false,
+        "shape": "sparse",
+        "withheld_fields": 10
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow1",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow3",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow9",
+        "withheld_fields": 0
+      }
+    ],
+    "passed": false
+  },
+  "qualification_misses": [
+    {
+      "answer": {
+        "values": {
+          "0": 50,
+          "1": 83,
+          "2": 23,
+          "3": null,
+          "4": 68,
+          "5": null
+        }
+      },
+      "answer_text": null,
+      "error": null,
+      "expected": {
+        "0": 50,
+        "1": 83,
+        "2": 23,
+        "3": 78,
+        "4": 68,
+        "5": null
+      },
+      "family": "ring",
+      "id": "622d93c2dbfdfa2ea13e",
+      "kind": "qualification",
+      "shape": "sparse",
+      "status": "completed",
+      "task": 5142
+    },
+    {
+      "answer": {
+        "values": {
+          "0": 35,
+          "1": 34,
+          "2": 71,
+          "3": null,
+          "4": null,
+          "5": 74
+        }
+      },
+      "answer_text": null,
+      "error": null,
+      "expected": {
+        "0": 35,
+        "1": 34,
+        "2": 71,
+        "3": 62,
+        "4": null,
+        "5": 74
+      },
+      "family": "community",
+      "id": "0c250c2b8c1552abfdee",
+      "kind": "qualification",
+      "shape": "sparse",
+      "status": "completed",
+      "task": 5145
+    },
+    {
+      "answer": {
+        "values": {
+          "0": 11,
+          "1": 81,
+          "2": 39,
+          "3": null,
+          "4": 43,
+          "5": null
+        }
+      },
+      "answer_text": null,
+      "error": null,
+      "expected": {
+        "0": 11,
+        "1": 81,
+        "2": 39,
+        "3": 60,
+        "4": 43,
+        "5": null
+      },
+      "family": "community",
+      "id": "cb7f8f6c486ba521050f",
+      "kind": "qualification",
+      "shape": "sparse",
+      "status": "completed",
+      "task": 5146
+    }
+  ],
+  "qualification_passed": 0,
+  "rare_accuracy": null,
+  "rare_wrong": null,
+  "reason": "gate_failed",
+  "reporting_errors": [],
+  "resumable": 0,
+  "started": 60,
+  "stop_reason": null,
+  "study_accounting": {
+    "actual_usd": 0.006515,
+    "attempted_calls": 61,
+    "calls_by_batch": {
+      "p0-001-qwen": 1,
+      "q0-001-qwen": 60
+    },
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 60
+    },
+    "cap_calls": 2749,
+    "cap_transport_attempts": 3300,
+    "cap_usd": 3,
+    "committed_usd": 0.006515,
+    "input_tokens": 203403,
+    "output_tokens": 3160,
+    "reserved_usd": 0.260665,
+    "transport_attempts": 61,
+    "usage_reported_calls": 61,
+    "voided_calls": 0
+  },
+  "terminal": 60,
+  "transport_attempts": 60,
+  "visualization": {
+    "frames": 33,
+    "mapping": "v1"
+  },
+  "voided_calls": 0
+}
