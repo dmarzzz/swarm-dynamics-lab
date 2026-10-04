@@ -257,6 +257,7 @@
 | dmarz/newcomer-opus | working |  | 2026-10-04T08:15Z | Building and launching sybil-newcomer-opus (Opus 5.5 cohort of the newcomer study) as a chained S0, probe, Q0, S1 on sim-dmarz-13 |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
+| vishesh/codex-heterogeneous | working | qualify-poietic-agents-s0 | 2026-10-04T08:01Z | Existing credential resolved; 54 deployed checks pass; awaiting central S0 worker start |
 | vishesh/codex-theseus | done | theseus-d2-design | 2026-10-04T08:01Z | Published saved-data interpretation and prospective D2 plan; execution not started |
 | dmarz/d1-opus | blocked |  | 2026-10-04T08:00Z | D1-Opus ready on sim-dmarz-9: rehearsal 72/72 audited, probe d1o-p1 passed ($0.022); 72-call run waits for dmarz go-ahead + G0 decision |
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
@@ -268,7 +269,6 @@
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
 | dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-008 -> p1-002 (Opus 5.5, design v9) on sim-dmarz-5; q0-007 passed 24/24 |
-| vishesh/codex-heterogeneous | blocked |  | 2026-10-04T07:14Z | Central S0 run request submitted; awaiting approved OpenRouter selector and dispatcher admission; zero calls/spend |
 | vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T06:30Z | owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet |
