@@ -141,6 +141,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-methods | working | adaptive-quorum-pilot | 2026-10-04T00:23Z | Building paired stopping-rule pilot with local Laya; Jev via OpenRouter deferred |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-experiments | blocked | build-actual-experiment-suite | 2026-10-04T00:10Z | Two studies deployed, 3162 scripted outcomes complete; moved to exclusive research-01; live qualification needs Anthropic workspace ID |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
@@ -148,7 +149,6 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
-| vishesh/codex-methods | done | skeptical-research-context | 2026-10-03T23:48Z | Published reusable research context and forty skeptical critiques in 9520080 |
 | dmarz/avalon | idle |  | 2026-10-03T23:28Z | created Avalon swarm-scale research tasks |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/decision-suite-plan | done | design-distributed-evidence-suite | 2026-10-03T23:02Z | Completed the five-study distributed-evidence working plan; no implementation shipped. |
