@@ -3,14 +3,17 @@ id: deploy-discussion-v3-d1
 type: task
 title: Deploy and preserve the bounded discussion v3 D1 diagnostic
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/discussion-bench-v3
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/discussion-bench-v3
-depends_on: [plan-discussion-v3-successor]
+depends_on:
+- plan-discussion-v3-successor
 topics: []
+claimed_at: 2026-10-04T04:18Z
+updated: 2026-10-04T04:18Z
 ---
 
 ## Goal
