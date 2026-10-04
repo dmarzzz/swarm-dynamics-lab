@@ -1,0 +1,3 @@
+# Phantom authoritative setup: PC12R
+
+Owner Vishesh; operator vishesh/codex-phantom-coast. See [setup](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). G0:PC12 failed action/label contract despite exact probabilities; prior post-mortem read. G1:prospective one-shot clarification and original conditional eight-world scope in PLAN.md. G2:offline validation pending. G3:public/runtime/current allocation and fenced-ledger continuation pending. G4:Q0-A2 pending. G5:pending. Researcher review not required. Same owner-approved diagnostic plus standing necessary-repair authority; original cap unchanged.

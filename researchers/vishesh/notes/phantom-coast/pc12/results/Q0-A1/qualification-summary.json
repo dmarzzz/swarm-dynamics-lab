@@ -1,0 +1,12 @@
+{
+  "assigned": 16,
+  "valid": 16,
+  "passed_cases": 8,
+  "independent_gain": [
+    0.18461538461538463,
+    0.17142857142857149,
+    0.18461538459999993,
+    0.1714
+  ],
+  "qualification_passed": false
+}

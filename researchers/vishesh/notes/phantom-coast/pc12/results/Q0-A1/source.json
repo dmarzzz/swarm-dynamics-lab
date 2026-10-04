@@ -1,0 +1,12 @@
+{
+  "commit": "487fdd9ed161118319b9d2c56f7032f8c7e72a11",
+  "files": {
+    "audit.py": "26b7c5308d886ca8c8941debc8be54551a901c0bfbdb008ef21ffca89c4f92cc",
+    "instrument.py": "cb3b3b939fb1f2a8aab657dbfda49e5b1c327f8e5aa2cd9c96ce01e6f5239368",
+    "ledger.py": "01c8eec3b25af87fce9f6b717622774ed74db9016e86caeb4778421832c63f6f",
+    "native.py": "7d6e1724e21706319144d8fe3a78e18538e34805845b71b44f382156a27c4766",
+    "runner.py": "6026f2ee722ef027dce331faaea8c1d29b75e11d5e831846e8ef6537b27afb64",
+    "validate_offline.py": "beba621042bb2807e62c0a0d03c3f533807c7c2caaa16d292a5afb5ecc98f66e",
+    "PLAN.md": "232616f77502b57901e8c8101d76f19b7c93fb9f82286475dea3eb917ae407d3"
+  }
+}

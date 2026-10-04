@@ -1,0 +1,3 @@
+# PC12R pre-run assessment
+
+Read PC12/Q0-A1-POST.md before this repair. Same16 released cases compare the explicit optimal-decision contract against prior responses. Probability/independent-source/correction capability already passed; labels and inspections did not. Clarification supplies loss objective, not answers. Preserve14/16labels,10/16inspections,8/16full cases as the original result. Thirteen tests and arithmetic sweep are rerun; all-admitted request bounds remain1280bytes/64tokens. Gate thresholds unchanged; do not exclude hard cases. One diagnostic only, conditional original eight-world scope, no wider main run. Original ledger exposure1.202987490 carried forward. No new account/credential/budget/reviewer authority.

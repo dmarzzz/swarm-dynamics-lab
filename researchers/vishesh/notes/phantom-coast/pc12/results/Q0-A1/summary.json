@@ -1,0 +1,26 @@
+{
+  "qualification": {
+    "assigned": 16,
+    "valid": 16,
+    "passed_cases": 8,
+    "independent_gain": [
+      0.18461538461538463,
+      0.17142857142857149,
+      0.18461538459999993,
+      0.1714
+    ],
+    "qualification_passed": false
+  },
+  "diagnostic": null,
+  "stop": null,
+  "started": 16,
+  "valid": 16,
+  "budget": {
+    "calls": 16,
+    "new_known_nano": 9192000,
+    "cumulative_known_nano": 1190891490,
+    "cumulative_exposure_nano": 1202987490,
+    "original_api_cap_nano": 4000000000,
+    "original_total_cap_nano": 5000000000
+  }
+}
