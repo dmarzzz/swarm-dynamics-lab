@@ -37,7 +37,6 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [adaptive-quorum-api-v2](tasks/adaptive-quorum-api-v2.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:30Z | Expand adaptive quorum into evidence-based API selection |
-| [build-discussion-dose-v2](tasks/build-discussion-dose-v2.md) | claimed | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:33Z | Build the harder contested-evidence version of discussion-dose (v2), ready to roll out |
 | [external-influence-v2](tasks/external-influence-v2.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T00:34Z | Build expanded external-influence procurement pilot |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | claimed | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:35Z | Prepare and run the first real-model discussion-dose qualification |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -104,6 +103,7 @@
 | [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
 | [build-dashboard-questions](tasks/build-dashboard-questions.md) | done | p1 | build | dmarz/dashboard-questions |  | 2026-10-03T21:56Z | Add question atlas and review tools to the research dashboard |
 | [build-discussion-dose](tasks/build-discussion-dose.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-03T23:39Z | Build and deploy the SEC-47 discussion dose exploratory study |
+| [build-discussion-dose-v2](tasks/build-discussion-dose-v2.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:38Z | Build the harder contested-evidence version of discussion-dose (v2), ready to roll out |
 | [contribution-new-badges](tasks/contribution-new-badges.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T23:40Z | Show recent contributions and added project tags |
 | [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | done | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:06Z | Plan five shared-environment distributed-evidence studies |
 | [design-soc07-private-commitment](tasks/design-soc07-private-commitment.md) | done | p1 | question | dmarz/soc07-plan | dmarz | 2026-10-03T22:35Z | Draft a concrete SOC-07 private-judgment experiment plan |
