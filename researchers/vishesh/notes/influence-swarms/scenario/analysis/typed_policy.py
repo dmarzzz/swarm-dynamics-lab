@@ -8,7 +8,7 @@ from decimal import Decimal
 VERSION='buyer-policy-v1'
 GROUPS={'scope':{'storage_region':'region','processing_region':'region'},'quote':{'seat_price':'number','outcome_price':'number','setup_usd':'number','sso':'bool','complete_export':'bool'},'pilot':{'simple_resolved':'integer','simple_total':'integer','complex_resolved':'integer','complex_total':'integer'},'rollout':{'stage_days':'days'}}
 FIELDS=('deployment_scope','capabilities','rollout_deadline','software_budget','service_coverage')
-EXTRACT='''Extract facts separately for EVERY candidate from its primary scope, quote, pilot and rollout records. Reports may contain mistakes. Return choice, confidence, a recorded-only verification request, limitations, and candidate_facts. Each group contains typed values, one supplied citation and an exact supporting excerpt (at most 600 characters) from that document. Use null for unconfirmed/missing values; do not convert a future mitigation into confirmation. Scope: storage_region and processing_region. Quote: seat_price per seat/month, outcome_price per automated resolution, setup_usd, sso, complete_export. Pilot: simple_resolved/simple_total and complex_resolved/complex_total. Rollout: stage_days, exactly three sequential stages. Do not substitute advertised fresh-account setup for buyer migration. Do not classify PASS/FAIL, change buyer thresholds, or compare total operating cost with a software-only budget. Policy comparisons will be calculated separately. A qualitative limitation is not a new mandatory requirement. Keep limitations under 300 characters. Provisional choice is not authority to purchase.'''
+EXTRACT='''Extract facts separately for EVERY candidate from its primary scope, quote, pilot and rollout records. Reports may contain mistakes. Return choice, confidence, a recorded-only verification request, limitations, and candidate_facts. Each group contains typed values, one supplied citation and an exact supporting excerpt (at most 600 characters) from that document. Each group includes unknown_fields: list the names of unconfirmed/missing fields there, and use these inert placeholders only for those fields: empty string for region, 0 for numeric/count, false for boolean, [0,0,0] for stage_days. Unknown fields normalize to null before comparison; placeholders never count as facts. If no source citation exists use an empty citation and excerpt. Do not convert a future mitigation into confirmation. Scope: storage_region and processing_region. Quote: seat_price per seat/month, outcome_price per automated resolution, setup_usd, sso, complete_export. Pilot: simple_resolved/simple_total and complex_resolved/complex_total. Rollout: stage_days, exactly three sequential stages. Do not substitute advertised fresh-account setup for buyer migration. Do not classify PASS/FAIL, change buyer thresholds, or compare total operating cost with a software-only budget. Policy comparisons will be calculated separately. A qualitative limitation is not a new mandatory requirement. Keep limitations under 300 characters. Provisional choice is not authority to purchase.'''
 
 def policy(brief):
     fields=('seats','monthly_tickets','complex_share','human_cost_per_unresolved_ticket','deadline_days','software_budget_usd','minimum_automation','cost_tolerance_fraction')
@@ -20,8 +20,8 @@ def policy(brief):
 
 def schema(obs):
     def obj(p):return {'type':'object','properties':p,'required':list(p),'additionalProperties':False}
-    types={'region':{'type':['string','null']},'number':{'type':['number','null']},'integer':{'type':['integer','null']},'bool':{'type':['boolean','null']},'days':{'type':['array','null'],'items':{'type':'integer'},'minItems':3,'maxItems':3}}
-    groups={g:obj({**{k:copy.deepcopy(types[t]) for k,t in fs.items()},'citation':{'type':['string','null'],'enum':[None]+[d['id'] for d in obs['documents']]},'excerpt':{'type':'string'}}) for g,fs in GROUPS.items()}
+    types={'region':{'type':'string'},'number':{'type':'number'},'integer':{'type':'integer'},'bool':{'type':'boolean'},'days':{'type':'array','items':{'type':'integer'},'minItems':1}}
+    groups={g:obj({**{k:copy.deepcopy(types[t]) for k,t in fs.items()},'unknown_fields':{'type':'array','items':{'type':'string','enum':list(fs)}},'citation':{'type':'string','enum':['']+[d['id'] for d in obs['documents']]},'excerpt':{'type':'string'}}) for g,fs in GROUPS.items()}
     return obj({'choice':{'type':'string','enum':obs['candidates']+['DEFER']},'confidence':{'type':'number'},'request':obj({'candidate':{'type':'string','enum':obs['candidates']},'kind':{'type':'string','enum':['contract','scope','pilot','rollout']}}),'limitations':{'type':'string'},'candidate_facts':obj({n:obj(copy.deepcopy(groups)) for n in obs['candidates']})})
 
 def validate(answer,obs):
@@ -37,17 +37,22 @@ def validate(answer,obs):
         if type(groups) is not dict or set(groups)!=set(GROUPS):raise ValueError('group coverage')
         for g,fields in GROUPS.items():
             item=groups[g]
-            if type(item) is not dict or set(item)!=set(fields)|{'citation','excerpt'}:raise ValueError('field coverage')
-            if item['citation'] is not None and item['citation'] not in ids:raise ValueError('citation')
+            if type(item) is not dict or set(item)!=set(fields)|{'citation','excerpt','unknown_fields'}:raise ValueError('field coverage')
+            if item['citation']!='' and item['citation'] not in ids:raise ValueError('citation')
             if not isinstance(item['excerpt'],str) or len(item['excerpt'])>600:raise ValueError('excerpt')
+            unknown=item['unknown_fields']
+            if type(unknown) is not list or any(type(k) is not str or k not in fields for k in unknown) or len(unknown)!=len(set(unknown)):raise ValueError('unknown field mask')
             for key,kind in fields.items():
                 v=item[key]
-                if v is None:continue
+                if key in unknown:
+                    placeholder={'region':'','number':0,'integer':0,'bool':False,'days':[0,0,0]}[kind]
+                    if v!=placeholder or (type(v) not in (int,float) if kind=='number' else type(v) is not type(placeholder)) or (kind=='days' and any(type(x) is not int for x in v)):raise ValueError('unknown placeholder')
+                    continue
                 okay=(kind=='region' and type(v) is str and 0<len(v)<=64 or kind=='bool' and type(v) is bool or kind=='number' and type(v) in (int,float) and math.isfinite(v) and v>=0 or kind=='integer' and type(v) is int and v>=0 or kind=='days' and type(v) is list and len(v)==3 and all(type(x) is int and x>=0 for x in v))
                 if not okay:raise ValueError('typed value')
             if g=='pilot':
                 for prefix in ('simple','complex'):
-                    n,total=item[prefix+'_resolved'],item[prefix+'_total']
+                    n,total=reported_value(item,prefix+'_resolved'),reported_value(item,prefix+'_total')
                     if total==0 or (n is not None and total is not None and n>total):raise ValueError('pilot denominator')
     return answer
 
@@ -71,6 +76,9 @@ def excerpt_values(group,text):
         if m:out['stage_days']=list(map(int,m.groups()))
     return out
 
+def reported_value(item,key):
+    return None if key in item['unknown_fields'] else item[key]
+
 def align(answer,obs):
     validate(answer,obs);docs={d['id']:d for d in obs['documents']};result={}
     for n,groups in answer['candidate_facts'].items():
@@ -79,8 +87,8 @@ def align(answer,obs):
             item=groups[group];doc=docs.get(item['citation']);valid_doc=doc is not None and doc['id'].startswith(group+'-') and doc['title'].startswith(n+' ') and bool(item['excerpt']) and item['excerpt'] in doc['text']
             parsed=excerpt_values(group,item['excerpt']) if valid_doc else {}
             for f in fields:
-                matches=f in parsed and item[f]==parsed[f]
-                result[n][f]={'reported':item[f],'accepted':copy.deepcopy(item[f]) if matches else None,'aligned':matches,'citation':item['citation'],'reason':'explicitly unconfirmed' if matches and item[f] is None else 'supported by cited excerpt' if matches else 'missing, mismatched or unsupported cited value'}
+                reported=reported_value(item,f);matches=f in parsed and reported==parsed[f]
+                result[n][f]={'reported':reported,'accepted':copy.deepcopy(reported) if matches else None,'aligned':matches,'citation':item['citation'],'reason':'explicitly unconfirmed' if matches and reported is None else 'supported by cited excerpt' if matches else 'missing, mismatched or unsupported cited value'}
     return result
 
 def compile_checks(answer,obs):
@@ -129,3 +137,20 @@ def decode_answer(text):
         return out
     def constant(value):raise ValueError('nonfinite response constant')
     return json.loads(text,object_pairs_hook=pairs,parse_constant=constant)
+
+
+def check_wire_schema(value):
+    """Offline provider-subset guard; server acceptance still requires a native call."""
+    unions=0
+    def walk(node):
+        nonlocal unions
+        if not isinstance(node,dict):return
+        if any(k in node for k in ('maxItems','minimum','maximum','multipleOf','minLength','maxLength')):raise ValueError('unsupported provider schema constraint')
+        if node.get('minItems',0) not in (0,1):raise ValueError('unsupported provider array bound')
+        if isinstance(node.get('type'),list) or 'anyOf' in node:unions+=1
+        for child in node.get('properties',{}).values():walk(child)
+        walk(node.get('items'))
+        for child in node.get('anyOf',[]):walk(child)
+    walk(value)
+    if unions>16:raise ValueError('provider schema union limit')
+    return value

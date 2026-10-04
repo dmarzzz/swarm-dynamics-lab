@@ -17,7 +17,7 @@ class FactsPolicy(ChecksPolicy):
         return tp.decode_answer(text)
 
     def schema(self,q,fallback):
-        return tp.schema(q['observation']) if q.get('output_contract')=='typed_facts' else super().schema(q,fallback)
+        return tp.check_wire_schema(tp.schema(q['observation']) if q.get('output_contract')=='typed_facts' else super().schema(q,fallback))
 
 def instrument_files():
     return sorted(set(list((BASE/'src').glob('*.py'))+[BASE.parent/'src/provider.py',BASE.parent/'src/allocation.py',BASE/'ITERATION-05.md',BASE/'d3-parent-hashes.json',CONFIG]+[Path(__file__).with_name(n) for n in ('typed_diagnostic.py','typed_policy.py','candidate_checks.py','approval_review.py','audit_approval.py','typed_report.py')]))
@@ -81,7 +81,7 @@ def extraction_grade(answer,compiled,case):
     for n,groups in answer['candidate_facts'].items():
         for g,fields in tp.GROUPS.items():
             for f in fields:
-                good=groups[g][f]==gold[n][f];record=compiled['extraction_alignment'][n][f];correct+=good;aligned+=record['aligned'];wrong_accepted+=record['aligned'] and not good
+                good=tp.reported_value(groups[g],f)==gold[n][f];record=compiled['extraction_alignment'][n][f];correct+=good;aligned+=record['aligned'];wrong_accepted+=record['aligned'] and not good
     return {'raw_facts_correct':correct,'raw_facts_total':36,'aligned_facts':aligned,'wrong_accepted_facts':wrong_accepted}
 
 def fixture_answer(obs):
@@ -90,7 +90,9 @@ def fixture_answer(obs):
     for n in obs['candidates']:
         a['candidate_facts'][n]={}
         for group in tp.GROUPS:
-            d=next(d for d in obs['documents'] if d['id'].startswith(group+'-') and d['title'].startswith(n+' '));a['candidate_facts'][n][group]={**tp.excerpt_values(group,d['text']),'citation':d['id'],'excerpt':d['text']}
+            d=next(d for d in obs['documents'] if d['id'].startswith(group+'-') and d['title'].startswith(n+' '));values=tp.excerpt_values(group,d['text']);unknown=[f for f,v in values.items() if v is None]
+            for f in unknown:values[f]={'region':'','number':0,'integer':0,'bool':False,'days':[0,0,0]}[tp.GROUPS[group][f]]
+            a['candidate_facts'][n][group]={**values,'unknown_fields':unknown,'citation':d['id'],'excerpt':d['text']}
     return a
 
 class FixturePolicy:

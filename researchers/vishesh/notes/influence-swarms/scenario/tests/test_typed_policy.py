@@ -30,7 +30,7 @@ class TypedPolicy(unittest.TestCase):
    if kind=='wrong_candidate':q.update(citation=a['candidate_facts']['Birch']['quote']['citation'],excerpt=a['candidate_facts']['Birch']['quote']['excerpt'])
    elif kind=='non_entailing':q['excerpt']='No other discounts are committed.'
    elif kind=='invented_excerpt':q['excerpt']='SSO included: True; complete export: True. Fake context.'
-   else:q.update(citation=None,excerpt='')
+   else:q.update(citation='',excerpt='')
    r=tp.compile_checks(a,self.obs);self.assertFalse(r['extraction_alignment']['Aster']['seat_price']['aligned']);self.assertEqual(r['candidate_checks']['Aster']['software_budget'],'UNKNOWN')
  def test_unknown_not_failure(self):
   r=tp.compile_checks(self.a,self.obs);self.assertTrue(all(x['deployment_scope']=='UNKNOWN' for x in r['candidate_checks'].values()))
@@ -73,6 +73,24 @@ class TypedPolicy(unittest.TestCase):
   old=object.__new__(ScenarioPolicy);new=object.__new__(td.FactsPolicy)
   self.assertEqual(old.parse_answer('{"a":1,"a":2}'),{'a':2})
   with self.assertRaises(ValueError):new.parse_answer('{"a":1,"a":2}')
+ def test_wire_schema_supported_subset(self):
+  schema=tp.schema(self.obs);unions=0
+  def walk(node):
+   nonlocal unions
+   if isinstance(node,dict):
+    self.assertNotIn('maxItems',node)
+    if 'minItems' in node:self.assertIn(node['minItems'],(0,1))
+    if isinstance(node.get('type'),list) or 'anyOf' in node:unions+=1
+    for v in node.values():walk(v)
+   elif isinstance(node,list):
+    for v in node:walk(v)
+  walk(schema);self.assertEqual(unions,0)
+ def test_unknown_placeholder_never_becomes_evidence(self):
+  a=copy.deepcopy(self.a);q=a['candidate_facts']['Aster']['quote'];q['unknown_fields']=['seat_price'];q['seat_price']=0;r=tp.compile_checks(a,self.obs);self.assertIsNone(r['extraction_alignment']['Aster']['seat_price']['reported']);self.assertEqual(r['candidate_checks']['Aster']['software_budget'],'UNKNOWN')
+  q['seat_price']=1
+  with self.assertRaises(ValueError):tp.validate(a,self.obs)
+  q['seat_price']=0;q['unknown_fields']=['seat_price','seat_price']
+  with self.assertRaises(ValueError):tp.validate(a,self.obs)
  def test_packet_tamper(self):
   with self.assertRaises(ValueError):td.verify_packet({'packet_hash':'forged'})
  def test_failure_preserves_every_assignment_and_null_pairs(self):
@@ -84,7 +102,7 @@ class TypedPolicy(unittest.TestCase):
    p=td.FixturePolicy();summary=td.collect(packet,Path(tmp)/'timeout',p,deadline_seconds=-1)
    self.assertEqual(summary['terminal'],24);self.assertEqual(summary['invalid'],24);self.assertEqual(p.calls,0);self.assertTrue(all(x['difference'] is None for x in summary['paired_differences']))
  def test_forged_known_value_not_fixed_to_gold(self):
-  self.a['candidate_facts']['Aster']['scope']['processing_region']='EU';r=tp.compile_checks(self.a,self.obs);v=r['extraction_alignment']['Aster']['processing_region'];self.assertEqual(v['reported'],'EU');self.assertIsNone(v['accepted']);self.assertFalse(v['aligned']);self.assertEqual(r['candidate_checks']['Aster']['deployment_scope'],'UNKNOWN')
+  self.a['candidate_facts']['Aster']['scope']['processing_region']='EU';self.a['candidate_facts']['Aster']['scope']['unknown_fields']=[];r=tp.compile_checks(self.a,self.obs);v=r['extraction_alignment']['Aster']['processing_region'];self.assertEqual(v['reported'],'EU');self.assertIsNone(v['accepted']);self.assertFalse(v['aligned']);self.assertEqual(r['candidate_checks']['Aster']['deployment_scope'],'UNKNOWN')
 
 class AdmissionTests(unittest.TestCase):
  def test_stale_mismatched_or_unverified_admission(self):

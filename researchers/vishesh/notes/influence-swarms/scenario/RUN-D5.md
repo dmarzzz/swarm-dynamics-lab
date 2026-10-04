@@ -4,7 +4,7 @@ D5 implements the concrete repair suggested by [D3](RESULTS-D3.md). It is a new,
 
 ## Implemented behavior
 
-- Require all three candidates, four primary-record groups and36 typed fields per extraction response. Unknown values remain explicit nulls. Reject duplicate JSON fields, invalid types, nonfinite values, invalid pilot denominators and unsupported fields.
+- Require all three candidates, four primary-record groups and36 typed fields per extraction response. Explicit unknown-field masks normalize to null; typed wire placeholders never count as facts. Reject duplicate JSON fields, invalid types, nonfinite values, invalid pilot denominators and unsupported fields.
 - Preserve the original extraction. Verify candidate-specific citation, exact supporting excerpt and value alignment with labelled source fields. An unsupported number is rejected into unknown evidence; the correct source number is not silently supplied to the agent.
 - Compile five mandatory checks using one buyer-policy version and Decimal arithmetic. Each receipt shows its policy clause, observed value, operator/threshold, source IDs, result and reason. Future mitigation and qualitative concerns cannot modify policy.
 - Keep raw choice and separate purchase authority distinct. Refuse an unsupported or excessively expensive purchase; list eligible alternatives on an unnecessary deferral without silently selecting one.
