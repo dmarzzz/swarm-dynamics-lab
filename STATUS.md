@@ -28,7 +28,6 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [audit-gap-opportunities](tasks/audit-gap-opportunities.md) | claimed | p0 | synthesis | shadow/sol-audit-gap | shadow | 2026-10-04T15:00Z | Audit judging fit and run an unowned forensic evidence-coverage analysis |
 | [build-shadow-experiment-factory](tasks/build-shadow-experiment-factory.md) | claimed | p0 | build | shadow/sol-factory | shadow | 2026-10-04T15:00Z | Build and run a lean exploratory experiment factory for Shadow |
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed (stale) | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:29Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
@@ -48,6 +47,7 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed (stale) | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
+| [pi-cycle-2026-10-04](tasks/pi-cycle-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T15:18Z | Coordinate one evidence-led iteration across ten active studies |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -109,6 +109,7 @@
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | done | p0 | admin | shadow/sol-submit | dmarz | 2026-10-04T14:04Z | Fill in HACKATHON.md |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | done | p0 | admin | vishesh/codex-regrowth-docs | dmarz | 2026-10-04T06:13Z | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
+| [audit-gap-opportunities](tasks/audit-gap-opportunities.md) | done | p0 | synthesis | shadow/sol-audit-gap | shadow | 2026-10-04T15:18Z | Audit judging fit and run an unowned forensic evidence-coverage analysis |
 | [build-memory-handoff-qwen](tasks/build-memory-handoff-qwen.md) | done | p0 | build | dmarz/pipeline-memory | dmarz | 2026-10-04T11:38Z | Prepare program v5 line M (can successors repair inherited false memory) to launch-ready |
 | [build-sybil-split-xmodel](tasks/build-sybil-split-xmodel.md) | done | p0 | build | dmarz/pipeline-split-qwen | dmarz | 2026-10-04T12:37Z | Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready |
 | [build-trust-credit-qwen](tasks/build-trust-credit-qwen.md) | done | p0 | build | dmarz/pipeline-split | dmarz | 2026-10-04T11:37Z | Prepare program v5 line T (trust credit, when verification amplifies capture) to launch-ready |
@@ -277,6 +278,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | working | pi-cycle-2026-10-04 | 2026-10-04T15:18Z | Coordinating one cycle across ten owning experiment tasks and reconciling outcomes; no duplicate dispatch. |
 | shadow/sol-audit-gap | done | audit-gap-opportunities | 2026-10-04T15:17Z | Ranked audit and SwarmTraces evidence-depth census shipped; hub reporting blocked on absent local config |
 | shadow/sol-janitor-find | working |  | 2026-10-04T15:13Z | Find code/process defects, append triaged evidence to janitor FINDINGS.jsonl; no fixes or paid calls. |
 | shadow/sol-halflife | working | wild-halflife | 2026-10-04T15:05Z | Writing the half-life analysis plan, then offline adoption-curve analysis on collusion.wiki and swarm-lab git history. |
@@ -287,7 +289,6 @@
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
 | vishesh/fm-security-review | done | review-fork-merge-security | 2026-10-04T14:38Z | Review task complete; revise verdict published with source checks, three searches and correction groups R1-R4. |
 | shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
-| vishesh/codex-pi-review | done | consolidate-pi-next-decisions | 2026-10-04T14:35Z | Integrated both PI reviews into thirteen study-family decisions, shared guidance and registry; validated offline, no runs. |
 | shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
