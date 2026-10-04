@@ -8,7 +8,7 @@ Owner: vishesh. Operator/author: vishesh/codex-heterogeneous. Independent design
 
 Question: does reversible, locally proposed specialization lower complete deployment cost per assigned, fresh, correct and on-time job beyond competent caching/static specialization? Research status: exploratory instrument. [Prior art](PRIOR-ART.md) leaves formal research gates open. No previous Poietic attempt or post-mortem exists.
 
-Current gate: G3 for S0-01. G2 offline preparation passed 47 checks. Next action: record the pending S0 budget, verify credential provenance, then resolve the dedicated allocation task and deployment evidence. G3 additionally needs a recorded Poietic budget and fresh exclusive approved-fleet allocation. The owner was asked about a $5 API / $2 infrastructure S0 cap; no answer is presumed.
+Current gate: G3 for S0-01. G2 offline preparation passed 52 checks. Next action: resolve explicit confirmation of the proposed $2 cumulative cap, verify credential provenance, then resolve the dedicated allocation task and deployment evidence. G3 awaits explicit confirmation of the proposed $2 cumulative budget and still needs the approved credential selector plus a fresh exclusive approved-fleet allocation. The reduced $2 proposal is sufficient for initial S0; explicit confirmation is pending and the earlier $7 increase is not presumed approved.
 
 ## Gate evidence
 
@@ -16,7 +16,7 @@ Current gate: G3 for S0-01. G2 offline preparation passed 47 checks. Next action
 |---|---|---|---|
 | G0 question / research gates | partial | [PRIOR-ART.md](PRIOR-ART.md), author; independent focused overlap review linked above | Full survey/hypothesis acceptance before formal research |
 | G1 prospective design | pass for offline implementation | Published v0.1 at `4a373dad56aab6a7129f16748a2edf312ce6d048`; [v0.2 amendment](AMENDMENTS.md) resolves P1–P3 before code | Bind executable definitions |
-| G2 instrument | pass for S0 preparation | [VALIDATION.json](VALIDATION.json), author; 47 checks; [review resolution](REVIEW-RESOLUTION.md) | Native interface behavior remains unobserved |
+| G2 instrument | pass for S0 preparation | [VALIDATION.json](VALIDATION.json), author; 52 checks; [review resolution](REVIEW-RESOLUTION.md) | Native interface behavior remains unobserved |
 | G3 S0 admission | blocked | [S0 pre-assessment](reviews/S0-01-pre.md) | Budget, exclusive allocation, source/plan freeze, public verification |
 | G4 qualification | not run | 0 native responses | Only after G3 |
 | G5 closeout | not applicable yet | No experimental assignments started | Reconcile and post-mortem every future attempt |
@@ -30,7 +30,7 @@ Current gate: G3 for S0-01. G2 offline preparation passed 47 checks. Next action
 
 ## Current attempt admission
 
-S0-01 is blocked. Existing [registration](registration.json) publishes design only. A newly frozen immutable plan, condition TLDR, public receipt/page check, model/source hashes, durable assigned manifest, shared budget reservation, deployment/credential status and exclusive claim must be checked before any native request. Missing evidence cannot be replaced by operator booleans or another study's receipts. No host is claimed while approval is pending.
+S0-01 is blocked on credential/allocation admission, with budget authority pending. Existing [registration](registration.json) publishes design only. A newly frozen immutable plan, condition TLDR, public receipt/page check, model/source hashes, durable assigned manifest, shared budget reservation, deployment/credential status and exclusive claim must be checked before any native request. Missing evidence cannot be replaced by operator booleans or another study's receipts. No host is claimed while approval is pending.
 
 ## Attempt and repair history
 
@@ -38,8 +38,10 @@ No attempts. Independent P1–P3 measurement clarifications are prospective desi
 
 ## Closeout
 
-Execution: not started. Response validity: unobserved. Qualification: untested. Scientific conclusion: none. Process compliance: preparation only. Reporting: previously verified public design with zero runs. Evidence confidence remains 0/4 for the claimed adaptive benefit. Exact next action is G3 S0 admission; budget response is pending, [allocation task](../../../../tasks/allocate-poietic-agents-s0.md) is open, credential provenance must be verified, and S2 remains closed.
+Execution: not started. Response validity: unobserved. Qualification: untested. Scientific conclusion: none. Process compliance: preparation only. Reporting: previously verified public design with zero runs. Evidence confidence remains 0/4 for the claimed adaptive benefit. Exact next action is G3 S0 admission; the $2 proposal is recorded as unapproved in AUTHORIZATION.json, [allocation task](../../../../tasks/allocate-poietic-agents-s0.md) is open, credential provenance must be verified, and S2 remains closed.
 
 ## Completed preparation evidence
 
-`src/prepare.py` wrote 144 assignment IDs without opening reserved source fixtures. `src/launch.py check` rejected the candidate with `study_budget_not_authorized` before network/credential/model work. No allocation is held. Official route metadata fixed Haiku/Anthropic, Qwen/Alibaba and Jev/TypeSafe; worst-case API reservation for all 288 physical calls is $1.447723008. The approved amount remains zero pending the owner’s answer. PNG layout and interactive replay transitions were inspected locally. The latter remains visibly scripted. A1 serializes requests in the one-worker instrument, so shared-cache hits coalesce repeated work without a separately claimed concurrent-cache benchmark.
+`src/prepare.py` wrote 144 assignment IDs without opening reserved source fixtures. `src/launch.py check` rejected the candidate with `study_budget_not_authorized` before network/credential/model work. No allocation is held. Official route metadata fixed Haiku/Anthropic, Qwen/Alibaba and Jev/TypeSafe; worst-case API reservation for all 288 physical calls is $1.447723008. The proposed amount is $2 cumulative, allocated as $1.50 API plus $0.50 infrastructure; the approved amount remains zero pending explicit confirmation. PNG layout and interactive replay transitions were inspected locally. The latter remains visibly scripted. A1 serializes requests in the one-worker instrument, so shared-cache hits coalesce repeated work without a separately claimed concurrent-cache benchmark.
+
+The historical independent review and its useful corrections remain in place; no waiver is needed. The candidate refuses dispatch without explicit budget confirmation and current host/credential/deadline evidence. Continue via [qualification task](../../../../tasks/qualify-poietic-agents-s0.md).

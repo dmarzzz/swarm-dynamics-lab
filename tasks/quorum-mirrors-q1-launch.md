@@ -3,19 +3,19 @@ id: quorum-mirrors-q1-launch
 type: task
 title: Launch bounded Quorum context qualification under owner no-review direction
 kind: experiment
-status: claimed
+status: open
 priority: p0
-owner: vishesh/codex-quorum-mirrors
+owner: null
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-quorum-mirrors
 depends_on: []
 topics:
 - decision-models
-updated: 2026-10-04T06:25Z
+updated: 2026-10-04T06:35Z
 history:
 - '2026-10-04T06:18Z released by vishesh/codex-quorum-mirrors: Prepared owner-directed 16-call launch; no researcher-review wait. Awaiting required direct memory-only OpenRouter transfer permission after platform rejection of encrypted credential publication. Rejected file removed before push; no new calls or allocation.'
-claimed_at: 2026-10-04T06:25Z
+- '2026-10-04T06:35Z released by vishesh/codex-quorum-mirrors: Owner authorized verified-SSH memory-only OpenRouter delivery. Checked transfer implementation merged; no secret stored or transferred. Await central operator owner authorization for Vishesh-owned execution or a permitted route; request sent. No further owner review/spending/credential approval needed. No new calls or allocation.'
 ---
 
 ## Goal
@@ -31,3 +31,7 @@ Apply the owner direction removing researcher-review launch gates; publish and r
 ## Progress
 
 Owner no-review direction is implemented and pinned at e1de51faffd8debbcff45b4125b6ad15c00e9c9d; 54 tests pass. Private launch package and original-ledger migration prepared. Platform review blocked credential publication; that file was removed before publication. The run request is held pending narrow direct memory-only OpenRouter transfer permission, not research review or spending approval. No Q1 calls or machine claim. See NEXT-RUN-READINESS.md.
+
+## Credential authorization resolved
+
+The owner approved the verified-SSH, memory-only OpenRouter procedure; public authority a7743f0d4e780d71b3e0de2872ee0265f8ea9426. Checked credential-free transfer code is published in the private operational package. The remaining external dependency is the central operator owner authorizing Vishesh-owned execution or identifying its permitted route; that routing decision was requested. No further experiment-owner permission is needed. No allocation, key transfer or native Q1 calls.

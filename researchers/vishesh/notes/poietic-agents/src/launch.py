@@ -11,6 +11,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from urllib.parse import urlparse
 from pathlib import Path
 from admission import BASE, inventory, verify, verify_public
 from budget import Budget
@@ -52,9 +53,10 @@ def run(config_path,out):
     opener=urllib.request.build_opener(NoRedirect())
     routes={role:verify_catalog(read_json(opener,c['catalog_url']),c) for role,c in models.items()}
     verify(config,actual_host=socket.gethostname().split('.')[0])
-    # The credential must be injected by the approved allocation-specific launcher; never an env fallback.
-    key=os.environ.pop('POIETIC_OPENROUTER_KEY','')
-    if not key or '\n' in key: raise ValueError('credential_unavailable')
+    relay=config.get('credential',{}).get('relay_url','')
+    parsed=urlparse(relay)
+    if parsed.scheme!='http' or parsed.hostname!='127.0.0.1' or parsed.path!='/invoke' or not parsed.port or parsed.username or parsed.password:
+        raise ValueError('loopback_credential_relay_required')
     out.mkdir(parents=True,exist_ok=False)
     save(out/'admission.json',config);save(out/'public-plan.json',plan_receipt);save(out/'route-check.json',routes)
     save(out/'assignments.json',assignments())
@@ -65,7 +67,7 @@ def run(config_path,out):
     lock=(authority_dir/'worker.lock').open('a')
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     auth=config['authorization']
-    budget=Budget(authority_dir/'budget.sqlite',digest(auth),config['allocation']['host'],5_000_000_000,288,auth['deadline'])
+    budget=Budget(authority_dir/'budget.sqlite',digest(auth),config['allocation']['host'],1_500_000_000,288,auth['deadline'])
     os.environ.update(SWARM_SOURCE='vishesh/codex-heterogeneous',SWARM_HOST=config['allocation']['host'])
     import swarm_report as sr
     runs={}; records=[]; stop=None; start=time.monotonic()
@@ -98,12 +100,11 @@ def run(config_path,out):
                             stop='budget_guard'; break
                         row.update(started=True,status='failed')
                         append(out/'call-starts.jsonl',dict(id=physical_id,logical_id=call_id,request_sha256=digest(req),utc=time.time()))
-                        suffix='/api/alpha/decisions' if contract['kind']=='decision' else '/api/v1/chat/completions'
-                        wire=urllib.request.Request('https://openrouter.ai'+suffix,canonical(req).encode(),
-                               {'Authorization':'Bearer '+key,'Content-Type':'application/json'})
+                        wire=urllib.request.Request(relay,canonical(dict(id=physical_id,role=role,request=req)).encode(),
+                               {'Content-Type':'application/json'})
                         began=time.monotonic()
                         try:
-                            with opener.open(wire,timeout=45) as stream:
+                            with opener.open(wire,timeout=50) as stream:
                                 raw=json.loads(stream.read(1000000))
                             # Save only public response fields; no headers, endpoint URLs or request authorization.
                             row['raw_response']={k:raw[k] for k in ('id','model','provider','choices','answers','usage') if k in raw}
@@ -172,7 +173,7 @@ def run(config_path,out):
         raise
     finally:
         for run in runs.values(): run._alive.set()
-        budget.close();lock.close();key=''
+        budget.close();lock.close()
 
 
 def main():
