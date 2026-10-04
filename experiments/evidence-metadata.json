@@ -2358,6 +2358,34 @@
       "status_at_assessment": "implemented_no_model_results_in_repository",
       "assessor": "dmarz/fleet-monitor",
       "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "verify-cost-qwen",
+      "title": "When is verification worth its cost? (Qwen3.7 Flash, program v5 line V)",
+      "documents": [
+        "researchers/dmarz/notes/verify-cost-qwen/README.md"
+      ],
+      "experiment_ids": [
+        "verify-cost-qwen"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/verify-cost-qwen/experiment.yaml"
+      ],
+      "assessor": "dmarz/pipeline-verify",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "A structured action-consequence table changes the expected regret of a Qwen3.7 Flash agent's one-step choice between checking a report and exploring an unknown cell, relative to explicit prose carrying the same objective, facts and consequences, across twelve reliability and cost cases.",
+        "rationale": "Unrun. Prospective plan only; no stage has run and no model call has been made."
+      },
+      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic layouts \u00d7 12 authored risk and cost cases \u00d7 2 representations = 576 single stateless calls; separate qualification of 24 calls (12 clear-dominance fixtures \u00d7 2 representations, the first of them as a one-call probe). Layouts are the independent units, not calls or cases.",
+      "sources": [
+        "researchers/dmarz/notes/verify-cost-qwen/README.md",
+        "researchers/dmarz/notes/verify-cost-qwen/preregistration.md",
+        "researchers/dmarz/notes/verify-cost-qwen/design.yaml",
+        "researchers/dmarz/notes/verify-cost-qwen/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
     }
   ],
   "source_sha256": {

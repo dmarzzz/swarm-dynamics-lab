@@ -1,0 +1,135 @@
+# Frozen design of verify-cost-qwen (research program v5, line V). Covered by study.source_hash():
+# any change is a new attempt with a new source hash and its own pre-run review.
+version: 1
+experiment: verify-cost-qwen
+status: exploratory
+program: research program v5, line V (2026-10-04)
+attempt: '001'
+
+# Model route: the program's selected-model.json request template, unchanged. Reasoning is disabled,
+# so `effort` does not apply; the key stays only because the ready-chain launcher requires the field.
+model: qwen/qwen3.7-flash
+canonical_model: qwen/qwen3.7-flash-20260727
+provider: alibaba
+effort: low
+request_template:
+  model: qwen/qwen3.7-flash
+  provider: {only: [alibaba], allow_fallbacks: false, require_parameters: true}
+  reasoning: {enabled: false}
+  max_tokens: 1000
+  response_format: {type: json_object}
+
+# Source instrument: a dmarz-owned, parameterized copy of the phantom-coast PC5 contract and engine.
+# The originals are not edited, moved or run.
+source_instrument:
+  study: researchers/vishesh/notes/phantom-coast/pc5
+  commit: 61307ac19d9af2d8119736f9886e85683ce7e21d
+  contract_sha256: 18610c5b7fde5ed9cd2b55445ec113d91510938a28cd3871a2a409c7450104c1
+  design_sha256: 5e256e32883f0a9edb430a915afd09e3570f056ab5dbcfbfde39847390ec801d
+  engine_sha256: 0371aea6173ecfce23cdc8366023ba020ac9eb1160b512fb7f991e05bfa19bf6
+
+# The one-step decision. One report of known error probability e, one cell with no evidence, one
+# inspection. Inspecting the reported cell ("check") leaves the other cell UNKNOWN: loss U.
+# Inspecting the cell with no evidence ("explore") keeps the report: expected loss e x 1.
+grid: {rows: 6, columns: 6}
+rng_namespace: verify-cost-qwen      # prefixed to every seed stream: no layout repeats a phantom-coast root
+costs: {wrong: 1.0, correct: 0.0}
+error_probabilities: [0.05, 0.20, 0.50, 0.80]   # probability that the report is wrong
+unknown_costs: [0.10, 0.25, 0.75]               # cost of returning UNKNOWN for a cell
+representations: [prose, table]                  # same objective, facts and action consequences
+answer: {key: inspect}                           # {"inspect": "<row>,<column>"}, one of the two legal cells
+
+layouts:                 # all task ids stay below 10000
+  engineering: [2600, 2601, 2602, 2603]
+  qualification_a: [2800, 2801, 2802, 2803, 2804, 2805, 2806, 2807, 2808, 2809, 2810, 2811]
+  qualification_b: [2900, 2901, 2902, 2903, 2904, 2905, 2906, 2907, 2908, 2909, 2910, 2911]
+  main: [3000, 3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011,
+         3012, 3013, 3014, 3015, 3016, 3017, 3018, 3019, 3020, 3021, 3022, 3023]
+  reserved_holdout: [10000, 19999]
+
+# Qualification: twelve clear-dominance choices x two representations, both actions legal.
+# Each fixture is [error probability, UNKNOWN cost] on its own layout; none is a main-grid case and
+# the two sets share no layout and no pair. The first six of a set make checking optimal, the last
+# six make exploring optimal; the expected-loss margin |e - U| is at least min_margin in every one.
+qualification:
+  set: a                 # attempt 001 uses set a; the one permitted repair (attempt 002) uses set b
+  min_margin: 0.60
+  fixtures_a:
+  - [0.90, 0.05]
+  - [0.95, 0.15]
+  - [0.85, 0.20]
+  - [0.90, 0.30]
+  - [0.99, 0.05]
+  - [0.70, 0.05]
+  - [0.02, 0.90]
+  - [0.10, 0.80]
+  - [0.01, 0.65]
+  - [0.15, 0.85]
+  - [0.03, 0.70]
+  - [0.10, 0.95]
+  fixtures_b:
+  - [0.92, 0.08]
+  - [0.97, 0.12]
+  - [0.88, 0.22]
+  - [0.94, 0.28]
+  - [0.98, 0.02]
+  - [0.75, 0.06]
+  - [0.04, 0.92]
+  - [0.08, 0.82]
+  - [0.02, 0.68]
+  - [0.12, 0.88]
+  - [0.06, 0.72]
+  - [0.07, 0.97]
+  valid_required: 24               # valid structure throughout: P0's row and Q0's 23 rows
+  optimal_required_per_format: 11  # of 12, in each representation
+  repairs_allowed: 1               # one bounded repair on set b; a failed repeat ends the line
+
+stages:
+  S0: {backend: scripted, assignments: 144}    # 4 engineering layouts x 24 + both qualification sets (24 + 24)
+  P0: {backend: openrouter, assignments: 1}    # the first qualification fixture of the active set
+  Q0: {backend: openrouter, assignments: 23}   # the other 23; the gate is evaluated over all 24 rows
+  S1: {backend: openrouter, assignments: 576}  # 24 layouts x 12 cases x 2 representations
+  S2: {enabled: false}
+
+budget:
+  max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
+  max_attempted_calls: 600
+  aggregate_usd: 2                 # settled actual cost plus open reservations
+  max_output_tokens: 1000
+  max_input_tokens: 8000
+  max_input_bytes: 6000            # a request of at most 6,000 bytes cannot exceed 6,000 tokens
+  max_visible_chars: 400
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 5400
+  chain_timeout_seconds: 7200
+  workers: 4                       # requests in flight
+  answer_retries: 0
+  retry:
+    transport_retries: 2
+    retryable_http_status: [429, 502, 503, 529]
+    backoff_seconds: [2, 6]
+    retry_after_cap_seconds: 20
+  max_transport_attempts: 760      # 600 calls + 160: two full billing outages (21 attempts each) and 118 transport retries
+  max_failed: 6                    # S1 only: the larger of 3 and 1% of 576 calls, rounded up
+  billing_outage:
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
+    # A call that met only a credit error holds a ledger reservation although no model ran. When
+    # `chain.py resume` re-sends such a unit, the S1 call cap and the study call cap are raised by the
+    # number of those unanswered reservations and by nothing else; answered S1 calls stay <= 576.
+    resume_reissues_unanswered_reservations: true
+  input_usd_per_million: 0.03
+  output_usd_per_million: 0.13
+
+primary_contrast:
+  metric: expected_regret
+  definition: per layout, the mean over the twelve cases of (expected regret with the table minus expected regret with the prose)
+  unit: layout (24 paired values)
+  predicted_direction: negative    # the table lowers regret
+  practical_marker: 0.03           # expected-loss units per decision
+  status: exploratory
+analysis:
+  interval: descriptive 95% t interval over layouts (t23 = 2.0687 when all 24 layouts are complete)
+  missing_outcome_bounds: a unit without a valid answer has regret between 0 and |e - U|
+  reliable_source_error_max: 0.20  # strata with e <= 0.20 are the reliable-source strata
+  regression_flag: 3               # table optimal count lower than prose by >= 3 of 24 in a reliable-source stratum

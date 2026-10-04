@@ -1,0 +1,83 @@
+# When is verification worth its cost? (program v5 line V, Qwen3.7 Flash)
+
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/pipeline-verify; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — A structured action-consequence table changes the expected regret of a Qwen3.7 Flash agent's one-step choice between checking a report and exploring an unknown cell, relative to explicit prose carrying the same objective, facts and consequences, across twelve reliability and cost cases. Basis: Unrun. Prospective plan only; no stage has run and no model call has been made.
+- **sample_size_summary:** Observed: none. Planned: 24 paired synthetic layouts × 12 authored risk and cost cases × 2 representations = 576 single stateless calls; separate qualification of 24 calls (12 clear-dominance fixtures × 2 representations, the first of them as a one-call probe). Layouts are the independent units, not calls or cases.
+<!-- experiment-evidence:end -->
+
+**Nothing has run.** This directory is a launch-ready package in preparation: plan, frozen design, code, offline tests and a pre-run review. No stage has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-verify on 2026-10-04.
+
+It implements line V of research program v5 ("When is verification worth its cost?") as a [ready-chain](../pipeline/READY-CHAIN.md) package. The program's files are `researchers/dmarz/notes/overnight-program-2026-10-04/` (`program.json`, `SETUP.md`, `selected-model.json`); they are being committed to main by another agent.
+
+Authority and review status, recorded 2026-10-04 as relayed to this builder by dmarz/pipeline: dmarz directed this program himself (research program v5, written with him by a Codex session on 2026-10-04; his instruction to ship it was relayed by dmarz/fleet-monitor). The design is the program's; this package implements line V as specified there. Cross-researcher review is waived by dmarz for these exploratory runs; dmarz/fleet-monitor's check is a same-researcher check and nothing more; the run is not independently reviewed. The run is launched only by the orchestrator from the private run queue. S2 is disabled. It is not an accepted hypothesis and makes no novelty claim.
+
+Implementation note, 2026-10-04: the program describes five sessions and one shared reservation authority. That arrangement is replaced by the ready-chain: one package per line, one server per line, its own ledger and caps. The program's design for this line (sample, cases, representations, primary measure, qualification thresholds, call counts) is unchanged.
+
+Source instrument: Vishesh's phantom-coast PC5 study, [`researchers/vishesh/notes/phantom-coast/pc5/`](../../../vishesh/notes/phantom-coast/pc5/README.md), copied at commit `61307ac19d9af2d8119736f9886e85683ce7e21d` (`src/contract.py`, `src/design.py`, `src/engine.py`). The copy in `src/` is dmarz-owned and parameterized; nothing in `researchers/vishesh/` was edited, moved or run. PC5's own [next-iteration note](../../../vishesh/notes/phantom-coast/pc5/NEXT-ITERATION.md) proposed this threshold study and did not start it.
+
+## TLDR
+
+An agent has one inspection left. It can check a report that may be wrong, or explore a cell nobody has looked at. Checking is worth it only when the report's error probability is larger than the cost of leaving the other cell UNKNOWN. PC5 found that stating the scoring rule improved the average choice but made choices worse when the report was reliable (28 of 32 optimal fell to 21 of 32). This study asks whether the form of the same information matters: explicit prose against a structured action-consequence table, across twelve cases in which the better action changes. 24 layouts × 12 cases × 2 representations = 576 calls to `qwen/qwen3.7-flash`, one stateless call each. The measure is expected regret against the analytic minimum-loss action. This is a one-step policy assay. It is not learned multi-step sensing and it does not claim that typography repairs a live swarm.
+
+## Question and prediction
+
+Can an agent choose checking versus exploration when the optimal action changes with report reliability and the cost of leaving territory unknown, and does a structured action-consequence table change the choice relative to explicit prose carrying the same objective, facts and consequences?
+
+Primary measure: for each layout, the mean over the twelve cases of expected regret with the table minus expected regret with the prose. That gives 24 paired layout-level values. Prediction, written before any outcome exists: the mean is negative (the table lowers regret). Practical marker: 0.03 expected-loss units per decision. The largest difference the design can show is 0.3208 (the mean of |e − U| over the twelve cases). A difference near zero, or a positive one, is a valid result and triggers no tuning and no rerun.
+
+Anchors from PC5, measured on a different model (`typesafe/jev-1.13`) with a prose contract and 32 layouts; none is an outcome of this study: at report reliability 0.8 and UNKNOWN cost 0.25 (exploring optimal) 21 of 32 choices were optimal with the explicit contract; at reliability 0.2 (checking optimal) 24 of 32. Those two cases are the cells e = 0.20 and e = 0.80 at U = 0.25 of this grid.
+
+## Setup
+
+- **The decision.** A 6 × 6 map. 34 cells have a noiseless current measurement. One cell has only an older report (LAND or WATER) that is wrong with stated probability e. One cell has no evidence. The agent may inspect exactly one of those two cells; both are always legal. A fixed rule then completes the map: the inspected cell gets a correct measurement; an uninspected report is kept; an uninspected cell without evidence is returned as UNKNOWN. A wrong label costs 1, UNKNOWN costs U, a correct label costs 0.
+- **Analytic optimum.** Checking the report costs U for certain. Exploring costs 1 with probability e, so e in expectation. The minimum-loss action is to check when e > U and to explore when e < U. Expected regret of a choice is its expected loss minus min(e, U). No case has e = U.
+- **Cases.** e in {0.05, 0.20, 0.50, 0.80} crossed with U in {0.10, 0.25, 0.75}: twelve cases. Checking is optimal in six and exploring in six, so a policy that always checks or always explores is wrong in half of them. Always-check has mean regret 0.1500 and always-explore 0.1708; both are offline comparators, never model arms.
+- **Representations.** Both requests carry the same map, evidence, objective and the same consequence records for each of the two actions (which cell ends in which state, with which probability and at which cost). `prose` writes the records as sentences; `table` writes them as rows of an action-consequence table. Everything outside the consequence block is byte-identical. Neither states an expected loss, a comparison or a recommendation. A test parses each block back into the records and proves that both hold exactly the same facts and numbers and nothing else.
+- **Layouts.** A layout fixes the two cells, the report's label, the 34 measurements and the order in which the two legal cells are listed. Within a layout these are identical in all 24 requests; only e, U and the representation change. The order (report first or unexplored cell first) and the label are balanced over the 24 layouts by construction. Main layouts 3000 to 3023, qualification 2800 to 2811 (set a) and 2900 to 2911 (set b), engineering 2600 to 2603. Every seed stream carries the prefix `verify-cost-qwen`, so no layout repeats a phantom-coast root.
+- **Model.** `qwen/qwen3.7-flash` through OpenRouter, provider pinned to Alibaba, `allow_fallbacks: false`, `require_parameters: true`, reasoning disabled, JSON-object mode, `max_tokens` 1,000. The request body is the program's frozen template plus `messages` and nothing else. No other model and no fallback. Reasoning is disabled, so effort does not apply; `effort: low` appears in `READY.yaml` and `design.yaml` only because the launcher requires the field.
+- **Answer.** `{"inspect": "<row>,<column>"}`, one of the two legal cells. The provider gives no schema guarantee, so the answer is validated locally: exactly that key, a string, one of the two legal cells. Anything else is a failed call. No repair call and no answer retry.
+- **Frozen files.** [design.yaml](design.yaml), [preregistration.md](preregistration.md), `manifest.json`. The source hash covers `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`.
+
+## Protocol
+
+Four stages run as one chain on one server. Each stage is one hub run. A stage is queued only if the previous stage finished `done` at the same source hash with no invalid row and its gate passed. A failed stage stops the chain and nothing further is queued.
+
+1. **S0, scripted, 0 calls.** The four engineering layouts through the whole grid (96 rows) and both qualification sets (24 + 24 rows), answered by the analytic minimum-loss policy: 144 rows. S0 passes only if every row is valid, the scripted qualification passes on both sets, and every invariant holds: both actions legal in every request; the two representations hold the same facts; within a layout only e, U and the representation change; no request contains a truth value, a seed, an expected loss or the optimal action; the optimum is `check` in six cases and `explore` in six; always-check, always-explore, always-first and always-second each fail the qualification gate and have positive regret on the engineering layouts; every qualification fixture has one action better by at least 0.60 in expected loss; a scripted pair of policies that differs between the representations produces the contrast the scorer should report.
+2. **P0, 1 call.** The first of the 24 qualification fixtures. It checks the interface: the response parses, the model slug and provider match, usage is reported, the finish reason is `stop`, no reasoning tokens are billed and the answer is structurally valid. Its measured input tokens per request byte are written to its summary and to the hub.
+3. **Q0, 23 calls.** The other 23 qualification fixtures. The gate is evaluated over all 24 rows (P0's saved row plus Q0's 23): 24 of 24 structurally valid and at least 11 of 12 optimal in each representation. These are twelve clear-dominance choices with both actions legal, which repairs PC5's screen (its qualification offered one legal cell). A failed qualification stops the chain.
+4. **S1, 576 calls.** 24 layouts × 12 cases × 2 representations, one stateless call each, four requests in flight, the 24 requests of a layout in a seeded order. Before S1 is queued the chain stops with reason `projection_exceeds_cap` if 576 × Q0's measured cost per call does not fit in the remaining dollar cap, and with reason `input_ceiling_projection` if P0's measured tokens per byte times the largest S1 request exceeds 8,000 tokens.
+
+Call caps in the ledger: P0 1, Q0 23, S1 576, 600 in total. Dollar cap USD 2 of settled cost plus open reservations. There is no token-counting endpoint on this route; each reservation is a byte-based upper bound (input tokens ≤ request bytes, plus the full output limit), so part 2 of the failure-handling rule (token counting) does not apply.
+
+Failure handling (ready-chain rule of 2026-10-04): every failed request keeps its HTTP status, response body (2,000 characters) and request id; S1 continues past failed calls until more than 6 have failed (the larger of 3 and 1% of 576); integrity failures stop dispatch at once; a credit or balance error pauses the stage, re-sends the same call every 60 s for up to 20 minutes and then stops with `provider_credit_balance_low`, after which `chain.py resume` continues the not-started units at the same source hash. S0, P0 and Q0 stay strict.
+
+The one permitted repair after a failed qualification is a new attempt (`attempt: '002'`, qualification set b, new source hash, its own pre-run review) after reading the failing answers. A failed repeat ends the line. Thresholds are never lowered.
+
+Analysis: the independent randomized units are the 24 layouts within twelve authored cases, not 576 independent tasks. All 24 layouts stay in the primary analysis. A unit without a valid answer keeps its place with its regret bounded between 0 and |e − U|; the contrast is then reported as bounds over all 24 layouts together with the complete-case estimate and its denominator. Nothing is dropped, imputed or re-run. All twelve strata are reported for both representations, with the optimal-choice counts, and the reliable-source strata (e ≤ 0.20) are checked for regressions of the table against the prose.
+
+## Metrics
+
+| Measure | Definition |
+|---|---|
+| **Table-minus-prose expected regret (primary)** | Per layout, the mean over the twelve cases of regret(table) − regret(prose). 24 paired values; mean, standard error, descriptive 95% t interval, range, leave-one-layout-out range. Negative favours the table. |
+| Expected regret | Expected loss of the chosen action (U for check, e for explore) minus min(e, U). Uses the stated probabilities, not the realized draw. |
+| Strata | For each of the twelve (e, U) cases and each representation: valid, optimal, check and explore counts out of 24, mean regret, and the paired difference. |
+| Reliable-source regression | In each stratum with e ≤ 0.20: optimal count with the table minus optimal count with the prose. A drop of 3 or more of 24 is flagged. |
+| Offline comparators | Always-check and always-explore regret per case and on average; the analytic policy has regret 0. |
+| Position | Share of choices of the first-listed cell, per representation. |
+| Realized scripted loss | Loss under the layout's seeded truth draw. Secondary; it does not define the optimal action. |
+| Qualification | Valid rows of 24; optimal of 12 per representation. |
+| Failure report | Every unit without a valid answer: category, HTTP status, response body, request id, returned text. |
+| Resources | Calls, transport attempts, input and output tokens, dollars from reported usage, billing pauses. |
+
+## Limits
+
+One model, one synthetic decision with stated calibrated probabilities, scripted consequences, twelve authored cases. Twenty-four layouts randomize coordinates, labels and listing order; they are not twenty-four distinct reasoning tasks. A difference between two renderings of the same information says nothing about multi-step sensing, learned source estimates or a group of agents.
+
+## Results
+
+None. No stage has run.
