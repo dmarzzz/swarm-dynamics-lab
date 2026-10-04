@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: done
-task: right-dissenter-rd4
-doing: RD4 completed and published; 576 decisions, preserved failures, measured replay, no workers, allocation released.
-updated: 2026-10-04T06:27:24.563149+00:00
+state: working
+task: right-dissenter-rd5-design
+doing: Reconciling RD4 failure mechanisms and drafting RD5 repair contracts and the right-to-reopen research plan; no native run.
+updated: 2026-10-04T06:40:18.903745+00:00
 ---
 
 ## Notes
