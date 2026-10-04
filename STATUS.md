@@ -283,7 +283,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:52Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:57Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-audit-team | done | sol-audit-team | 2026-10-04T15:51Z | Completed frozen-PI delta, legacy gate probes, and exhaustive ready-chain inventory |
 | shadow/sol-cm2 | working |  | 2026-10-04T15:42Z | Reporting corrections reconciled with RSI PR 84; preparing OpenRouter-only frozen-history diagnostic. |
 | shadow/sol-factory | done |  | 2026-10-04T15:38Z | Factory build shipped; scientific queue blocked by pool unavailability and shared paid-key daily cap |
