@@ -1,0 +1,1022 @@
+[
+  {
+    "run": "market-split/80dc3fe5",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "owner",
+      "threshold": 0.46,
+      "registration_fee": 2500,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 2500,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 39371.596476305924,
+      "fragmentation_split_control": 0.8333333333333334,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 34248.596476305924,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 49820.193065390915,
+      "profit_lift_split_control": -5123.0,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "c67388de836ddd48edf7207ea9550d2fb3acacf0c94eaea4c22c83c658b72735"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "b9341e9e4b42bedf8d71dd22af172aba8da5913b862b76b7bebb47ae2b43c3ac"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "1e300f62e42db0f83ff0937970a575ca9ec486bfb8e658a90b8f325589443d30"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "a1ed6e1bbf48504b3fc9f2f73262982ce5c6d51e65590dd476265eed3a25035f"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "533c6b0b6afb5daceb3d747a3178c90062e039444b4ed1148807012f5439be0f"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/beb86549",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "owner",
+      "threshold": 0.46,
+      "registration_fee": 20,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 20,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 39371.596476305924,
+      "fragmentation_split_control": 0.8333333333333334,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 39208.596476305924,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 49820.193065390915,
+      "profit_lift_split_control": -163.0,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "148108e2dae48ba30b30cbf1f866b36591e053443e85b066ad57b55ea1d9dfba"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "66dcd6892ee961ae908678ac1e70e0d0fc7a41be5e5c7308fe65a84e213a044d"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "485f86b25c3a3932df42d54510ab66ea058a5298b82a269a5f746a6f0c476b48"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "c4818025bf77d858959096ddcb6f5e8e896d712d0ebb0c73522965b55251111f"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "713d779f9c4dd5cf0c92922318316dd3c37ac0262db5913f66bed2faf6924c05"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/571440e6",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "owner",
+      "threshold": 0.38,
+      "registration_fee": 2500,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 2500,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 33050.63854645783,
+      "fragmentation_split_control": 1.0,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 27927.638546457823,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 39935.14750273947,
+      "profit_lift_split_control": -5123.000000000004,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "bcda5ea15213d621aeb49d7576b7436fd8c0bc32f42786aa976383ad18cf559f"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "92999f2b4457103b3f5db03f134412abdbab88a477743013f5f7fceb818eb2d0"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "7bfc51ca97ceedd039729c118a14a400f78a08f3f7a17eeaea687d8ca664ed25"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "846b0b6122a29177d43746214fceef8bbd53ea0cc27cde0c92882112ca0afe5d"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "df657a9e4b022528988fa13fcdcd4afe30c1fe2e06023b3c45fa3a5abe58f339"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/9b718064",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "owner",
+      "threshold": 0.38,
+      "registration_fee": 20,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 20,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 33050.63854645783,
+      "fragmentation_split_control": 1.0,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 32887.63854645783,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 39935.14750273947,
+      "profit_lift_split_control": -163.0,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "4e2b3f06f51ed5b3dc96eb26c46b108b07ca7a32aa6c953e62f7892853cb1c4a"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "f93d930019797646166ed64909a46436a4579d562590d33f1c6ed7515aed782d"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "c985fd7ad9f6987dcdc51954f8d9eca0e5b54901c36061ae163165850bc0487c"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "85f30289ddc7709418eb9ad14af16aa14e610cea4dbd37eba1e83ac4de67e491"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "9b5996ebd42238d6d76b2973917c9643d7a8cb59723149bb461c69cedd3617fa"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/d4c749f3",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "firm",
+      "threshold": 0.46,
+      "registration_fee": 2500,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 2500,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 39371.596476305924,
+      "fragmentation_split_control": 0.8333333333333334,
+      "evasion_split_control": 0.8333333333333334,
+      "profit_split_control": 44327.78303873611,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 49820.193065390915,
+      "profit_lift_split_control": 4956.186562430186,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "0460728d01c9c4e456e58951097943bdb2f0c703bf4ae73482d4f7f941fe7793"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "eca47e35d988a5ba8b10faab25f1009bb1d85c2dce153dc2e6543e71faac34a1"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "d2c023187246e906b02fc14314288adec04a39c4cf732b3d887b7d33d3a69f99"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "d1415564cedae3be25b67bbf0a2fc2dc1397e46ef7705426f22354a93f8410d3"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "1ee42820e16cb60a93bfef9d041a8b7952e270e74d6e48eed7d4eb385ad2175f"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/edbf1b22",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "firm",
+      "threshold": 0.46,
+      "registration_fee": 20,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 20,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 39371.596476305924,
+      "fragmentation_split_control": 0.8333333333333334,
+      "evasion_split_control": 0.8333333333333334,
+      "profit_split_control": 49287.78303873611,
+      "fragmentation_profit_search": 0.8333333333333334,
+      "evasion_profit_search": 0.8333333333333334,
+      "profit_profit_search": 50809.23878942229,
+      "profit_lift_split_control": 9916.186562430186,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "af0f9af03850afdd2fb8fc62d3eb752f6d86092554451d157595c6beb7c7e0ff"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "12300cd61bea1a628e355c236089a48299d19f00edf0441e7d04c5cb46b296f9"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "5e8c138f47aeb2f13cc2efddbc9a4fc64ecfe02a4d1a637be48cfd043141740c"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "666781230248d23681dc70017342a3732904b2f19d527a62f09d83d99a68e20a"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "7efcd535b50506bba9f0e7f0136e755474fd0a4c5d0c04c80b029afaf5018602"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/f837b597",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "firm",
+      "threshold": 0.38,
+      "registration_fee": 2500,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 2500,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 33050.63854645783,
+      "fragmentation_split_control": 1.0,
+      "evasion_split_control": 1.0,
+      "profit_split_control": 43541.14071593766,
+      "fragmentation_profit_search": 0.16666666666666666,
+      "evasion_profit_search": 0.16666666666666666,
+      "profit_profit_search": 42444.26309071393,
+      "profit_lift_split_control": 10490.502169479834,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "9dc4bc0e65f564dfd61607bd4e6eca758880feb1e5a82662288ffd0bcc7dd8f9"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "0c7160af4d2daf11ae574b7cde769267175a5d8630e7a7767cf32d4113075b66"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "02eebf2d50977a283459833ecec7eafbdd85c4246525d72cd846ab15fd18eb45"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "88e008d621e4dc06eed48a67ec769fb91ac3a42891a10d310673ef1c4354475a"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "919cbfa7f4fc3e38cb5d746f960068f707c9495d72d3d4b7690f2831a5db3847"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/c473a1f2",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "firm",
+      "threshold": 0.38,
+      "registration_fee": 20,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 20,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 33050.63854645783,
+      "fragmentation_split_control": 1.0,
+      "evasion_split_control": 1.0,
+      "profit_split_control": 48501.14071593766,
+      "fragmentation_profit_search": 1.0,
+      "evasion_profit_search": 1.0,
+      "profit_profit_search": 50793.905456088956,
+      "profit_lift_split_control": 15450.502169479834,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "e192004f28ea28016a9c83d27ef17c7e46c31ebd218478bf5ca24b4d7ed6130d"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "97b2275c60d6fe2256982b806c06eb118b22591c2bcb7fd3cfdb3f5adec5eb8a"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "160edb604984a3344cf50dc4d5a1d2c92d0848be1e4709d5d031b9154fa03c65"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "cc3d8ff10f3c1ada4b7449fe49ffb87fdf04c24f3faee8d540d71623a92f350a"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "ce74843eb607e7b7c6361a507d05ac97a8a0b8568bcddf1a6b9435c3c4257483"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/a0c01a75",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "none",
+      "threshold": 0.46,
+      "registration_fee": 2500,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 2500,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 50885.905456088956,
+      "fragmentation_split_control": 0.8333333333333334,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 45762.905456088956,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 50885.905456088956,
+      "profit_lift_split_control": -5123.0,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "bce8892a0bb8f5e0facfc6de020cfdf84bbfa2ade544d425947abf53d649c35a"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "2c31893d802056830bbf93aa467a38600023ed8da2ba668b9509f57bcd6c587a"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "c7d40405b7fe84f7ab504902ada482b8f7cba38d0827eac3c588bed6a72ac210"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "29e1851260659bde0d7fe1814121dbfbb87fdb4138692529124d75e3de1125b1"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "f4f12308512b96be3570f979908e9d7942841f97d576de78a4c1eb943b8dc87e"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/003256cd",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "none",
+      "threshold": 0.46,
+      "registration_fee": 20,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 20,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 50885.905456088956,
+      "fragmentation_split_control": 0.8333333333333334,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 50722.905456088956,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 50885.905456088956,
+      "profit_lift_split_control": -163.0,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "cc15b5fa877ac8452974eed33ce1fe451836521cc567f9c9376c73113b659e0f"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "caf5149850bd835169e79c2960d84f0cc477e517910aa3c4243a7d0af5af21d1"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "2a4a4bc03981d8a71de0cc87962294e1a087dbe402ec95c9003cbe5c67345ff2"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "43f3de63179348ada5188adb536b4c70f373d90898dcfb1be1ea2064a74ad3da"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "dd009a61db9fedf8970e617ba2701ac79dd921daedb435de2e3ed98f8f7873fa"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/2e22ba11",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "none",
+      "threshold": 0.38,
+      "registration_fee": 2500,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 2500,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 50885.905456088956,
+      "fragmentation_split_control": 1.0,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 45762.905456088956,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 50885.905456088956,
+      "profit_lift_split_control": -5123.0,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "11733a0012329ba1ed380c159d0a4923fec327339ac240e2ebccc7deb52a8c24"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "a19db648dc4098640bbc996b45a7e1027076c69ff7dc0c868e6aee70a93b4df3"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "518c6093b9cb34f2e11f374dce46fbbddec9335b5776820d2fc0fa2c66f37733"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "7248236c79d6a96812207aac8032245d5103b49ca7fe0c592ec58c1fd94cb87d"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "283790100b621bbc99f15d00bcf8bc7b7c35530ae00747beec40d07467d76c7a"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  },
+  {
+    "run": "market-split/4f5c01e6",
+    "status": "done",
+    "params": {
+      "stage": "S1",
+      "backend": "scripted",
+      "regulator": "none",
+      "threshold": 0.38,
+      "registration_fee": 20,
+      "tasks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "seeds": [
+        21,
+        22
+      ],
+      "arms": [
+        "merged",
+        "split_control",
+        "profit_search"
+      ],
+      "cfg": {
+        "rounds": 24,
+        "max_firms": 4,
+        "start_cash": 20000,
+        "fine_rate": 0.35,
+        "overhead": 3,
+        "registration_fee": 20,
+        "history_rounds": 6,
+        "split_round": 4
+      },
+      "attempt_id": "s1-fleet-001",
+      "code": "6ca3f16ef9f3a0dbad0ed280c032e78e31195dc3",
+      "engine_sha256": "8abdfb4e59787213c4518f662af3976a2af31f11904ead4582afd51a3f260312",
+      "design_sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+    },
+    "metrics": {
+      "episodes": 36,
+      "invalid": 0,
+      "model_calls": 0,
+      "api_cost_usd": 0,
+      "fragmentation_merged": 0.0,
+      "evasion_merged": 0.0,
+      "profit_merged": 50885.905456088956,
+      "fragmentation_split_control": 1.0,
+      "evasion_split_control": 0.0,
+      "profit_split_control": 50722.905456088956,
+      "fragmentation_profit_search": 0.0,
+      "evasion_profit_search": 0.0,
+      "profit_profit_search": 50885.905456088956,
+      "profit_lift_split_control": -163.0,
+      "visual_ok": 1
+    },
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "71d681907abd1d0c35aa99eec47d2830afba5ee18c4a4f432a2f190a8e53c251"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "e192f67202eb3aad74e5a0b960093b2663a8b0bb8acdfbf9e5abe6f2170422b8"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "7176e41003f45579a37d80735bb917d8558531593f6dda3e17187d2f82011f10"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "f27a425f0a9af1c01d9f60099afaffd5a99ad0ea60839adcd792412301eb617b"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "a699b01e74264a52298a33a41bd0365feff813d046b48dd989526611e7fde0ce"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ]
+  }
+]

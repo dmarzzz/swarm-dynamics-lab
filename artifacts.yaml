@@ -147,4 +147,31 @@ artifacts:
           - researchers/vishesh/notes/external-influence-v2/analysis/replay_template.html
           - data/external-influence-v2/audit.json
         commit: 162a9cf0f3c430a26b975e4b93b7d3243ec8e5bd-dirty
+  - id: market-split-experiment-plan
+    category: content
+    type: doc
+    title: Can agents discover ownership-preserving firm splitting?
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md
+        built_at: '2026-10-04T01:59:03Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: create an experiment plan and also lets make sure theres some type of visual we show in the UI and make sure
+          to do a scripted version to make sure everything works before we actully use api key and then follow swarm-labs-agentops
+          to deploy the exerpiment and all of that for "Can one owner’s many firms defeat a concentration-based regulator?
+          — MKT-03 + MKT-11" and in particular, Im actually curious if agents will naturally discover the strategy to split
+          apart to avoid the regulator
+        ingredients:
+          - researchers/dmarz/notes/market-split/README.md
+          - researchers/dmarz/notes/market-split/design.yaml
+          - researchers/dmarz/notes/market-split/src/prompt.txt
+          - researchers/dmarz/notes/market-split/src/sim.py
+          - researchers/dmarz/notes/market-split/src/analyze.py
+          - researchers/dmarz/notes/market-split/analysis/s1-summary.json
+          - researchers/dmarz/notes/market-split/analysis/s1-reconciliation.json
+          - researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md
+        commit: 52e83f415d91aa79e761d5d9bf82893e1c3807a6-dirty
 requires: '1.2'
