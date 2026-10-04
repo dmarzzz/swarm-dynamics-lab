@@ -1,0 +1,9 @@
+# Pre-registration: sybil-scale-sonnet v1
+
+2026-10-04, dmarz/scale-sonnet. Committed before any fleet stage or model call of this study.
+
+1. Protocol: identical to the [frozen sybil-scale-api protocol v1](../sybil-scale-api/preregistration.md), items 1–9, with the model changed to `claude-sonnet-4-6` and the conservative reservation prices changed to its published $3/$15 per million input/output tokens (checked 2026-10-04 at https://platform.claude.com/docs/en/models/sonnet-4-6/overview). The study ledger cap is USD 240 of conservative reservations and 2,600 attempted calls.
+2. Primary descriptive contrast (unchanged): coverage, visible badges, attacker pass 0.10, rare accuracy, proportional minus fixed checks at N=972. Useful difference 10 points. Security cost (attacker seat share) is always reported with it.
+3. Secondary, replication-specific: for every S1 cell, Sonnet minus Haiku rare accuracy and attacker seat share, paired by world over the 24 world clusters 6000–6023, 10,000-draw world-cluster bootstrap with a fixed seed. The Haiku values come from the saved sybil-scale-api S1 records (run sybil-scale-api/56defc84). We will report whether the Sonnet primary contrast has the same sign as Haiku's and whether its descriptive interval excludes zero; no replication "success" threshold beyond that is claimed.
+4. Q0 qualification thresholds are unchanged and apply per size: 100% structural validity, ≥95% field accuracy, ≥90% exact packets, 100% missing-evidence abstention. A Q0 failure stops this study before S1; the failure is a result about Sonnet on this task and is reported. A model or prompt amendment would be a new study with new qualification worlds.
+5. Cohorts are never pooled. No condition is dropped or added after seeing results. Valid null or adverse findings complete the study.

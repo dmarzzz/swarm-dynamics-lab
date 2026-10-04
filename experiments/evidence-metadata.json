@@ -911,6 +911,33 @@
       "status_at_assessment": "completed_exploratory_model_pilot"
     },
     {
+      "id": "sybil-scale-sonnet",
+      "title": "Sybil resistance as swarms grow: Sonnet 4.6 replication",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-sonnet/experiment.yaml"
+      ],
+      "assessor": "dmarz/scale-sonnet",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether the Haiku sybil-scale-api budget-scaling findings hold with claude-sonnet-4-6 on identical worlds and packets.",
+        "rationale": "Unrun replication: only offline scripted S0 has executed. It does not inherit the Haiku study's score or sample count."
+      },
+      "sample_size_summary": "Observed: none (offline scripted S0 264/264 only). Planned: 24 paired worlds × 100 conditions = 2,400 S1 calls plus 64 Q0 calls; 36–972 simulated identities feeding one synthesizer.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-sonnet/README.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/preregistration.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
+    },
+    {
       "id": "sybil-budget-api",
       "title": "Verification budget and verifier reliability",
       "documents": [
