@@ -1,10 +1,10 @@
 {
   "study_id": "growth-pressure-200",
-  "version": 1,
+  "version": 2,
   "status": "plan_only_unrun",
   "author": "Astra Ultra",
   "owner": "dmarz",
-  "batches": 4,
+  "batches": 3,
   "markets_per_batch": 4,
   "owners_per_market": 50,
   "focals_per_market": 2,
@@ -12,14 +12,13 @@
   "ordinary_small_per_market": 44,
   "assigned_doses": [
     0,
-    1,
     4
   ],
   "opening_rounds": 5,
   "continuation_rounds": 20,
   "primary_contrast": [
-    4,
-    0
+    "D",
+    "B"
   ],
   "primary_streak_rounds": 3,
   "primary_practical_effect_pp": 25,
@@ -53,25 +52,26 @@
     "levy_share_strictly_above": 0.1,
     "levy_fraction": 0.35,
     "unpaid_overhead_deducted_from_terminal_wealth": true,
-    "operating_profit_includes_registration_fees": true
+    "operating_profit_includes_registration_fees": true,
+    "new_firm_first_eligible_round_offset": 1
   },
   "qualification": {
     "mechanics_calls": 48,
     "seeder_fixtures": 8,
     "seeder_steps": 6,
-    "opening_load_calls": 800,
+    "opening_load_calls": 600,
     "continuation_load_calls": 2400
   },
   "expected_counts": {
-    "independent_paired_markets": 16,
+    "independent_paired_markets": 12,
     "agents_per_economy": 200,
-    "focals_per_arm": 32,
-    "ordinary_owners_per_arm": 736,
-    "main_calls": 52000,
-    "qualification_calls": 3296,
-    "planned_calls": 55296,
-    "max_extra_transport_attempts": 553,
-    "max_http_attempts": 55849
+    "focals_per_arm": 24,
+    "ordinary_owners_per_arm": 552,
+    "main_calls": 51000,
+    "qualification_calls": 3096,
+    "planned_calls": 54096,
+    "max_extra_transport_attempts": 541,
+    "max_http_attempts": 54637
   },
   "time": {
     "execution_limit_seconds": 3600,
@@ -99,15 +99,55 @@
   },
   "evidence_confidence": {
     "score": 0,
-    "claim": "Assigned rival evasion changes sustained levy avoidance by growing ordinary focal owners.",
-    "rationale": "Prospective plan only; no experimental implementation, qualification or scientific observations."
+    "claim": "Untested v2 question: whether assigned rival evasion changes sustained levy avoidance by ordinary owners, and whether peer messaging changes that effect.",
+    "rationale": "Prospective factorial amendment only; v1 and v2 are unrun, with no experimental implementation or native qualification."
   },
-  "sample_size_summary": "Observed: none. Planned: 16 independent paired markets in four 200-agent batches; 3 arms, 5 shared opening + 20 continuation rounds; 32 focal owners/arm; 52,000 main and 3,296 qualification decisions.",
+  "sample_size_summary": "Observed: none. Planned v2: 12 independent paired markets in three 200-agent batches; 4 arms (0/4 evaders × messaging off/on), 5 silent opening + 20 continuation rounds; 24 focal owners/arm; 51,000 main and 3,096 qualification decisions.",
   "analysis": {
     "independent_unit": "market",
     "bootstrap_replicates": 10000,
-    "all_zero_difference_bound": "1 - 0.05**(1/16)",
-    "sparse_or_other_degenerate_interval": "Hoeffding, radius sqrt(2*log(40)/16)",
-    "unknown_primary_outcomes": "bounds only; no complete-case estimate"
+    "all_zero_difference_bound": "1 - 0.05**(1/12)",
+    "sparse_or_other_degenerate_interval": "Hoeffding, radius sqrt(2*log(40)/12)",
+    "unknown_primary_outcomes": "Bounds over all markets; no point estimate unless every outcome required by that contrast is known.",
+    "secondary_interaction": "D-B-C+A",
+    "interaction_all_zero_bound": "2 * (1 - 0.05**(1/12))",
+    "interaction_sparse_or_degenerate_interval": "Hoeffding, radius 2*sqrt(2*log(40)/12)",
+    "analysis_seed": "growth-pressure-200/v2/analysis"
+  },
+  "opening_messaging": "off",
+  "secondary_interaction": "D-B-C+A",
+  "arms": [
+    {
+      "id": "A",
+      "assigned_evaders": 0,
+      "peer_messaging": "off"
+    },
+    {
+      "id": "B",
+      "assigned_evaders": 0,
+      "peer_messaging": "on"
+    },
+    {
+      "id": "C",
+      "assigned_evaders": 4,
+      "peer_messaging": "off"
+    },
+    {
+      "id": "D",
+      "assigned_evaders": 4,
+      "peer_messaging": "on"
+    }
+  ],
+  "communication": {
+    "choice": "explicit_send_or_pass",
+    "common_prompt": "When peer messaging is available, consider whether asking another owner a question, sharing an observation, or discussing a strategy would help your business. Choose one owner and send a short message, or choose to pass. There is no separate bonus for sending messages or persuading other owners.",
+    "max_words": 40,
+    "max_sent_per_owner_round": 1,
+    "max_delivered_per_owner_round": 4,
+    "delivery_lag_rounds": 1,
+    "public_market_observations_in_all_arms": true,
+    "extra_model_calls": 0,
+    "minimum_message_rate_gate": false,
+    "seeders_instructed_to_recruit": false
   }
 }
