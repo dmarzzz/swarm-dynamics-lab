@@ -3,14 +3,16 @@ id: standardize-experiment-diagnosis
 type: task
 title: Standardize evidence-based diagnosis before experiment scaling
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: vishesh/codex-idea-scores
+for: null
 created: 2026-10-04
 created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T20:20Z
+updated: 2026-10-04T20:20Z
 ---
 
 ## Goal
