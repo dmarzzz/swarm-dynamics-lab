@@ -8,11 +8,11 @@
 - Question: does source-aware discussion improve decisions under repeated reports and withheld ancestry metadata (not an inherent information limit on this support)? Decision: spend on judgments, provenance or deterministic deduplication. Claim boundary: synthetic binary reports, known equal reliability; S0 tests one reader only.
 - Research status: exploratory instrument, no accepted hypothesis. [Survey](../../../../../surveys/vishesh-decision-models.md) remains in progress. Updated `lab.py gate vishesh-decision-models` now passes citation/reading/search-coverage floors (six catalogue full-read records, 12 structured rounds), but fails saturation: latest rounds 6/6 and 9/9 new. Five full-read records are inherited team work, not fresh personal reads. [RESEARCH-GATES.md](RESEARCH-GATES.md) records evidence and remaining methods work. Research owner must complete truthful source work and formal acceptance; a design review alone does not satisfy this.
 - Previous [post-mortem](reviews/S0-02-post.md): competence passed, repeat disagreement retained, setup-parent defect repaired. [Iteration plan](ITERATION-3.md) adds independent deterministic references and repairs unclear/stale reporting.
-- Next action: researcher review and completion of applicable research gates before new native experimental implementation/launch. No machine claim is held pending these gates.
+- Next action: carry the received review amendments forward and complete applicable research gates before new native experimental implementation/launch. No machine claim is held pending these gates.
 
 ## Gate evidence
 
-Assessor for the status table: vishesh/codex-quorum-mirrors, 2026-10-04. Independent review is explicitly pending.
+Assessor for the status table: vishesh/codex-quorum-mirrors, 2026-10-04. The different-researcher design review is received (REVISE), with operator resolutions in REVIEW-RESPONSE.md; formal survey/hypothesis acceptance remains pending.
 
 | Gate | Status | Evidence | Blocker / next action |
 |---|---|---|---|
