@@ -94,7 +94,7 @@ def evaluate(memory,records,truth,active,mode,t,traffic,disconnected):
  atlas=[majority(local[c::20]) for c in range(20)]
  return {'round':t,'incorrect_or_missing':1-sum(correct)/200,'local_accuracy':sum(a==gold[i%20] for i,a in enumerate(local))/200,'missing_fraction':sum(missing)/200,'atlas_accuracy':sum(a==b for a,b in zip(atlas,gold))/20,'stale_fraction':sum(stale)/citations if citations else 0,'stale_citations':sum(stale),'citation_count':citations,'false_invalidations':false_deletions,'coverage':sum(coverage)/200,'new_retention':sum(retention)/200,'abstention':local.count('UNCERTAIN')/200,'traffic':traffic,'correct':correct,'missing':missing,'local':local,'gold':gold,'atlas':atlas,'memory_count':[len(m) for m in memory],'stale_by_agent':stale,'disconnected':sorted(disconnected),'state_sha256':digest([sorted(m) for m in memory])}
 
-def rollout(c,tape,layout,arm,scenario,checkpoint=lambda f:None):
+def rollout(c,tape,layout,arm,scenario,checkpoint=lambda f:None,cap=4):
  if arm not in ARMS or scenario not in SCENARIOS:raise ValueError('invalid_condition')
  env,truth=build(c,tape,layout,scenario);records=env['records'];own=[m.copy() for m in env['initial']];memory=[m.copy() for m in own];bank=set();traffic=0;frames=[];events=[];maximum=0
  mode=arm.split('-')[1];iscentral=arm.startswith('central');active={r for r in truth['roots'] if not r.endswith('R4')}
@@ -106,7 +106,7 @@ def rollout(c,tape,layout,arm,scenario,checkpoint=lambda f:None):
     own[i].update(env['added'][i]|env['notices'][i]);memory[i].update(env['added'][i]|env['notices'][i])
   if t in (10,20):events.append(evaluate(memory,records,truth,active,mode,t,traffic,disconnected if iscentral else set()))
   if iscentral:memory,bank,amount=central_step(memory,own,bank,records,disconnected)
-  else:memory,amount,maxpacket=peer_step(memory,records);maximum=max(maximum,maxpacket)
+  else:memory,amount,maxpacket=peer_step(memory,records,cap);maximum=max(maximum,maxpacket)
   traffic+=amount
   frame=evaluate(memory,records,truth,active,mode,t,traffic,disconnected if iscentral else set());frames.append(frame);checkpoint(frame)
  recovery=next((t-10 for t in range(10,28) if all(f['incorrect_or_missing']<=.05+1e-10 for f in frames[t:t+3])),None)

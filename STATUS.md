@@ -44,7 +44,6 @@
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:32Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:51Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [healing-practical-repair](tasks/healing-practical-repair.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T03:40Z | Compare Healing evidence repair with practical central baselines |
-| [heterogeneous-priority-revision](tasks/heterogeneous-priority-revision.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T03:40Z | Revise heterogeneous-swarm priorities from owner feedback |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:52Z | Launch bounded Phantom Coast native pilot |
 | [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:46Z | Prepare and qualify Quorum of Mirrors S0 |
@@ -61,6 +60,7 @@
 | [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T03:51Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
 | [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T03:40Z | Build and qualify a practical Theseus continuity iteration |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
+| [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | open | p1 | build |  | vishesh | 2026-10-04T00:11Z | Implement and deploy developed exploratory experiment designs |
@@ -149,6 +149,7 @@
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:52Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | done | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:41Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
 | [heterogeneous-biological-frontiers](tasks/heterogeneous-biological-frontiers.md) | done | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T03:22Z | Biological frontiers for heterogeneous swarms grounded in X discussions |
+| [heterogeneous-priority-revision](tasks/heterogeneous-priority-revision.md) | done | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T03:53Z | Revise heterogeneous-swarm priorities from owner feedback |
 | [immune-response-v2](tasks/immune-response-v2.md) | done | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:57Z | Refine and run the exploratory immune-response instrument |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | done | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:54Z | Qualify the repaired immune-response contract on a dedicated host |
 | [influence-quality-review](tasks/influence-quality-review.md) | done | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:24Z | Audit and improve How to win agents and influence swarms |

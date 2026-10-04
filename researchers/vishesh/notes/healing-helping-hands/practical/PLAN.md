@@ -68,3 +68,15 @@ Default replay: first corpus 8701, first layout 18701, combined scenario, all ar
 ## Remaining unresolved work
 
 Qwen and Laya remain unsuitable under prior gates. This iteration repairs baseline, lineage, utility and failure-scenario gaps; it does not repair their semantic capability. A future composite-agent diagnostic needs a distinct plan and fresh qualification; previous failed tasks cannot become held-out evidence. Real-paper curation needs human annotations, independently authored tasks and external review before efficacy claims. No claim that the entire research program is failure-proof is warranted.
+
+## Prospective amendment: practical-02 capacity sensitivity
+
+Written after practical-01 and its [post-mortem](POST-01.md), before practical-02 execution. Practical-01 remains an adverse result: no scenario met the utility rule, and peer delivery lost substantial new evidence under the four-item cap. The active next attempt is `practical-02`, parent practical-01, still exploratory S0 with the same saved pilot-03 semantic inputs.
+
+Change **only the peer per-directed-edge packet cap from 4 to 16**. Run all 180 assignments again under the same seeds, layouts, arms, events, 30 rounds and scoring. Central controls must be byte-identical to practical-01 in all scientific output fields. This is an explicitly post-outcome engineering sensitivity check, not an independent replication or confirmation. Keep both capacity settings in the final table. Report per-corpus paired cap differences, final learning retention and traffic. All previous metrics/utility thresholds remain unchanged; no further cap will be selected based on performance in this cycle.
+
+Prediction: increasing capacity improves delivery but increases traffic, while source verification still cannot identify targetless notices. Plausible negative outcome: high capacity still fails to beat central append or loses on the retention guardrail. Strong central-verified controls remain mandatory. The purpose is to bound the prior conclusion to its transport regime, not find a favorable swarm result.
+
+Zero model calls and inference spend, one CPU worker, 900 seconds, same still-exclusive experiment allocation through subsequent diagnostic stages. Fresh public plan/source check and an acknowledged hub start are required. `reporting.launch` is the tracked repaired entry point. Preserve practical-01 results unchanged. Visualization mapping H3 applies, with a visible packet-cap label and distinct attempt ID; first corpus/layout/combined remains the default. No-new-model claim and all remaining scope limits persist.
+
+Latest review response: [FEEDBACK-RESPONSE.md](FEEDBACK-RESPONSE.md). UNCERTAIN is a valid class, not abstention. Historical `recovery_rounds` means first qualifying post-exchange round offset; a finite offset + 1 is the number of exchanges. These interpretation/packaging corrections do not change the capacity comparison.
