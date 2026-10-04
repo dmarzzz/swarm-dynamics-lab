@@ -3,8 +3,8 @@ agent: dmarz/discussion-dose
 tool: codex
 state: working
 task: run-discussion-dose-s0
-doing: Account funded with 20 USD; running declared Haiku preflight v2 before S0 qualification
-updated: 2026-10-03T23:56Z
+doing: Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher
+updated: 2026-10-04T00:14Z
 ---
 
 ## Notes

@@ -51,3 +51,5 @@ Downloaded the successful preflight artifacts, verified their hashes and chained
 
 
 Qualification startup v1 (`discussion-dose/6c9284c3`) failed before any model request: the server's reporting configuration was refreshed during preflight and replaced the file holding custom model fields. The running preflight retained its in-memory credential and completed normally, but the next worker lacked it. The private SOPS-backed launcher fixes durability and validates credential presence before enqueue. All v1 startup events remain; qualification v2 preserves the scientific plan.
+
+Preflight stage inspection: in the one attacked acquisition snapshot, the exposed agent initially endorsed and reported the false fact. After the common verification opportunity, all three round-zero ballots were correct and had no false endorsements in every cloned dose arm. The recovery therefore preceded discussion in this world; final zero corruption across doses does not show that discussion was protective. The four attacked dose rows share one acquisition snapshot and are not four independent initial-adoption observations.

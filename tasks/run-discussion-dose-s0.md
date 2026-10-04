@@ -29,4 +29,4 @@ Add the native Anthropic adapter, qualify with Haiku 4.5, and report every explo
 
 ## Progress
 
-Runtime deployed; first real-provider attempt `discussion-dose/775e3cd6` was blocked by insufficient Anthropic API credits before any model output. User asked to fund billing. Preserve failed attempt and resume declared preflight v2 after funding; full S0 remains unsubmitted.
+Runtime deployed. Billing-blocked attempt `discussion-dose/775e3cd6` preserved. Funded preflight `discussion-dose/00820f46` passed all 8 episodes for $0.615028. Qualification startup `discussion-dose/6c9284c3` failed before calls when server configuration refreshed the credential file; SOPS-backed launcher fixed. Declared qualification v2 `discussion-dose/3e4b084a` is now running on pinned e8ae7a4; first world completed with 8 valid correct episodes.
