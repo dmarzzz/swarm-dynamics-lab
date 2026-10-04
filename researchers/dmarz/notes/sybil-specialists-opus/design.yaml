@@ -86,8 +86,8 @@ budget:
   max_attempted_calls: 300
   max_output_tokens: 3000
   max_input_bytes: 12000
-  request_timeout_seconds: 60
-  stage_timeout_seconds: 1800
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 3600
   retries: 0
   workers: 1
   input_usd_per_million: 4
