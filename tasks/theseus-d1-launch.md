@@ -3,7 +3,7 @@ id: theseus-d1-launch
 type: task
 title: Admit and run Theseus execution diagnostic D1
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-theseus
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-theseus
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T05:00Z
-updated: 2026-10-04T06:47Z
+updated: 2026-10-04T07:04Z
+outputs:
+- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D1.md
+- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/closeout.json
 ---
 
 ## Goal
