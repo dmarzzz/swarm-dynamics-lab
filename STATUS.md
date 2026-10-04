@@ -237,6 +237,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/newcomer-sonnet | blocked |  | 2026-10-04T05:45Z | sybil-newcomer-sonnet: fleet S0 passed (b8f340a9); Q0 blocked until dmarz waives cross-review or another researcher reviews |
+| dmarz/scale-sonnet | working |  | 2026-10-04T05:45Z | Preparing sybil-scale-sonnet (Sonnet 4.6 replication of sybil-scale-api) on sim-dmarz-3; plan committed, fleet S0 next |
 | dmarz/discussion-bench-v3 | done | deploy-discussion-v3-d1 | 2026-10-04T05:18Z | D1 complete and analyzed; results and post-mortem published; server retired; D2 plan only, unstarted |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T05:08Z | Sonnet original S1 cohort continues; Haiku R0 failed and results/post-mortem/records are pushed. Next diagnostic plan stays unstarted. |
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
