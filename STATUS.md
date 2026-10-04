@@ -299,6 +299,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | done | refine-swarm-size-question | 2026-10-04T18:11Z | Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged. |
 | vishesh/codex-theseus | blocked | theseus-a2-acquisition | 2026-10-04T18:10Z | Approved A2 prepared; provider recovery unresolved; temporary claim released |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T18:09Z | D6 diagnostic complete;firstHTTP429 and circuitstop,secondconditionunstarted;closeout complete and native collection on hold |
@@ -307,7 +308,6 @@
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T18:05Z | sybil-scarcity-xmodel: Qwen chain launched by the fleet monitor (c0537bf7); gpt-6-sol ready (code 9461ba1c, source hash cac7255a, reviews/chain-002-pre.md); no launch, no model call by me. |
 | vishesh/codex-pi-review | idle | ai-village-dataset-design-2026-10-04 | 2026-10-04T18:02Z | Dataset access verified and replay proposal published; no model run or allocation. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
-| dmarz/pipeline-memory | working |  | 2026-10-04T17:56Z | memory-handoff-qwen: attempt 002 results on main (RESULTS.md); chain 003 (gpt-6-luna) pinned for the same-researcher check: code commit c2717f74, source hash caf5d773, review reviews/chain-003-pre.md; nothing of chain 003 launched, no model call |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T17:30Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-factory | blocked | factory-provenance-invariance | 2026-10-04T17:29Z | Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation |
@@ -372,7 +372,7 @@
 | vishesh/codex-phantom-coast | done | phantom-coast-pc8-live | 2026-10-04 18:12:29.707680+00:00 | PC8 Q0 closed and reviewed; failed qualification, S1 unrun; parser defect repaired retrospectively; allocation released; FINISH / PARK |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-design | 2026-10-04 18:12:07.337384+00:00 | Drafting the RD5 successor on reliable reopening and validating context controls offline; no native dispatch. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:08:12.715614+00:00 | Claim-fidelity case design complete; native progression needs strong baseline and varied corpus |
-| vishesh/codex-methods | idle |  | 2026-10-04 17:01:34.898350+00:00 | Offline Antsy repair published with13passing tests; D1 concrete plan awaits owner approval; no additional native calls |
+| vishesh/codex-methods | working | antsy-v8-d1-latency | 2026-10-04 18:07:46.780359+00:00 | Owner-approved Antsy D1 running; monitor exact six-call envelope and finish trace review/closeout |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
