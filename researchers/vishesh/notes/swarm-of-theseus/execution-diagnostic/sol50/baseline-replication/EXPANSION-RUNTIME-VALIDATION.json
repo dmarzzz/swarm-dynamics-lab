@@ -1,0 +1,15 @@
+{
+  "funding_decision": "PI-FUND-20261004-10",
+  "source_sha256": "c325190317df0948ac0d684f1e42193c95ce20c483e20073c66a58f28f7038c8",
+  "tests_passed": 35,
+  "sequential_Q3_and_six_parallel_P1_prefix_replay": "passed",
+  "duplicate_concurrent_reservation": "only_one_winner",
+  "missing_Q3_gate": "rejected",
+  "changed_actor_packet": "rejected",
+  "shared_stop": "prevents_new_reservation_and_dispatch",
+  "unknown_cost": "full_reservation_preserved",
+  "known_usage_bad_route": "usage_settled_no_retry",
+  "original_failed_Q3_row": "unchanged",
+  "native_calls": 0,
+  "P2_enabled": false
+}
