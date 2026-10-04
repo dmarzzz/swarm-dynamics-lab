@@ -1,0 +1,61 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a"
+   },
+   "internalParameters": {
+    "commit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "1dc504ccfa630e03dfa9ee20a900f79e3e79cd8e89a882942565c1fd1a5c6a22"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_d2.py"
+    },
+    {
+     "digest": {
+      "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "53e87a19d2820152a39566ffeb0fc7eb5521f38c9cd1cdbacef6ccb067b325b8"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/decisions.csv"
+    },
+    {
+     "digest": {
+      "gitCommit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T09:13:53Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T09:13:53Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "117a73a539eff8b299e54ddfd8b75e48ac78a96edfba4daac2cadbf858863a37"
+   },
+   "name": "artifacts/vishesh-theseus-d2-results/vishesh-theseus-d2-results-v1.png"
+  }
+ ]
+}

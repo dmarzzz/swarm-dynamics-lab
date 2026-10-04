@@ -1,0 +1,2382 @@
+{
+  "evidence_type": "measured_model_outputs",
+  "assigned_calls": 384,
+  "started_calls": 384,
+  "terminal_calls": 384,
+  "assigned_decisions": 384,
+  "scored_decisions": 384,
+  "actual_model_usd": 0.2689239999999999,
+  "usage_unknown_calls": 0,
+  "provider_errors": [],
+  "audit_disagreements": [],
+  "request_mismatches": [],
+  "arms": {
+    "E": {
+      "correct": 188,
+      "assigned": 192,
+      "valid_contract_decisions": 192,
+      "world_correct_out_of_32": {
+        "7200": 30,
+        "7201": 30,
+        "7202": 32,
+        "7203": 32,
+        "7204": 32,
+        "7205": 32
+      },
+      "family_correct_out_of_96": {
+        "release": 96,
+        "incident": 92
+      },
+      "valid_release_correct": 24,
+      "valid_release_assigned": 24,
+      "false_releases": 0,
+      "incident_false_activation": 4,
+      "calls": 192,
+      "actual_model_usd": 0.12854100000000002,
+      "qualified": false
+    },
+    "F": {
+      "correct": 192,
+      "assigned": 192,
+      "valid_contract_decisions": 192,
+      "world_correct_out_of_32": {
+        "7200": 32,
+        "7201": 32,
+        "7202": 32,
+        "7203": 32,
+        "7204": 32,
+        "7205": 32
+      },
+      "family_correct_out_of_96": {
+        "release": 96,
+        "incident": 96
+      },
+      "valid_release_correct": 24,
+      "valid_release_assigned": 24,
+      "false_releases": 0,
+      "incident_false_activation": 0,
+      "calls": 192,
+      "actual_model_usd": 0.14038299999999998,
+      "qualified": true
+    }
+  },
+  "world_F_minus_E": {
+    "7200": 0.0625,
+    "7201": 0.0625,
+    "7202": 0.0,
+    "7203": 0.0,
+    "7204": 0.0,
+    "7205": 0.0
+  },
+  "mean_F_minus_E": 0.020833333333333332,
+  "material_repair_advantage": false,
+  "candidate_executor": "F",
+  "independent_worlds": 6,
+  "distinct_case_family_pairs": 96,
+  "paired_cases": [
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "da3f8dae08d67e82",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "17be2feba4a7b818",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "1af40943325e4c46",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "649a68f6f94b1cdc",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "03108df7cc7defce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "19d139c44b38be0b",
+      "strict_successes_out_of_2": 0,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "5b1f339d1aa29385",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "c10a876ffc2698a0",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "8f36a09b219923ab",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "03108df7cc7defce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "1163b5b8764d19a6",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "f355d9943067c23b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "2835ff0667ddca66",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "cb2e5c846676573b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "8f36a09b219923ab",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "84ca7106dd99ea67",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "19d139c44b38be0b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "38573906673c7624",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "86b8c1fa270739c4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "canary",
+        "single-0": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "64ddc5f8bf205ce2",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "7e180ad08b5e7287",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "4b21af28dbd3c219",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "canary",
+        "single-0": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "b9abbf063d34c4e5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ship",
+        "single-0": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "fb55efc90e4cd340",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "69f3f3ea020ce105",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "da3f8dae08d67e82",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "90d1f4c285c90e96",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "86b8c1fa270739c4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "af7578524278d9b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "922b7d56f641513c",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "fb55efc90e4cd340",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "922b7d56f641513c",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ship",
+        "single-0": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "777bdd6bb7fe8b74",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "b9abbf063d34c4e5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "e432740b456af19d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "c9287fcbffcb71b3",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "129eeb60316f8554",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "1a9334b98f01aa86",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "fff45e965e163cba",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ship",
+        "single-0": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "7c3ecaa0bb067b4b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "af7578524278d9b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "1a9334b98f01aa86",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "1163b5b8764d19a6",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "777bdd6bb7fe8b74",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "probe",
+        "single-0": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "4b21af28dbd3c219",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "2a108b09ff37f092",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "649a68f6f94b1cdc",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "17be2feba4a7b818",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "9df74751bf3ac57d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "1eb4f544d29e3a56",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "fff45e965e163cba",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "f5e0f4bfba0fd6e8",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "canary",
+        "single-0": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "90d1f4c285c90e96",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "f355d9943067c23b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "1eb4f544d29e3a56",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "440d7eb6afb162ce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "7d116ad67c5b3891",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "c173a23e56baf977",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "440d7eb6afb162ce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "1c15aa6647105708",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "69f3f3ea020ce105",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "c173a23e56baf977",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "incident",
+      "id": "e090ea2d46ce2bb1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "4c64be42990ed0a9",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "7e180ad08b5e7287",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "1af40943325e4c46",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "866f05cc3bd500b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "2a108b09ff37f092",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "f5e0f4bfba0fd6e8",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "38573906673c7624",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "129eeb60316f8554",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "e432740b456af19d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "7c3ecaa0bb067b4b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "64ddc5f8bf205ce2",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "592f8a076d2a3b71",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "2835ff0667ddca66",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "634fc55709f644f4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "4c64be42990ed0a9",
+      "strict_successes_out_of_2": 0,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "incident",
+      "id": "592f8a076d2a3b71",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "release",
+      "id": "1c15aa6647105708",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "7e50d5f5420102a5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "c10a876ffc2698a0",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7203,
+      "context": "release",
+      "id": "e090ea2d46ce2bb1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "cb2e5c846676573b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "5126dd6a78e1da84",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "release",
+      "id": "7e50d5f5420102a5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "216f286117650009",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "634fc55709f644f4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7200,
+      "context": "incident",
+      "id": "5126dd6a78e1da84",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "9df74751bf3ac57d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "incident",
+      "id": "84ca7106dd99ea67",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7205,
+      "context": "release",
+      "id": "5b1f339d1aa29385",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ship",
+        "single-0": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "release",
+      "id": "216f286117650009",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7204,
+      "context": "incident",
+      "id": "866f05cc3bd500b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7202,
+      "context": "release",
+      "id": "7d116ad67c5b3891",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "E",
+      "seed": 7201,
+      "context": "incident",
+      "id": "c9287fcbffcb71b3",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "1a9334b98f01aa86",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "216f286117650009",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "922b7d56f641513c",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "17be2feba4a7b818",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "4c64be42990ed0a9",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "c10a876ffc2698a0",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "probe",
+        "single-0": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "b9abbf063d34c4e5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "1eb4f544d29e3a56",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "4c64be42990ed0a9",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "7e50d5f5420102a5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "fb55efc90e4cd340",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "216f286117650009",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "2a108b09ff37f092",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "e432740b456af19d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "1a9334b98f01aa86",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "38573906673c7624",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "e090ea2d46ce2bb1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "8f36a09b219923ab",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "e090ea2d46ce2bb1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "7e180ad08b5e7287",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "4b21af28dbd3c219",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "7c3ecaa0bb067b4b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "4b21af28dbd3c219",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "649a68f6f94b1cdc",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "c9287fcbffcb71b3",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "777bdd6bb7fe8b74",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "1163b5b8764d19a6",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "64ddc5f8bf205ce2",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "7e50d5f5420102a5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "5b1f339d1aa29385",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "canary",
+        "single-0": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "84ca7106dd99ea67",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "f5e0f4bfba0fd6e8",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "1af40943325e4c46",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "cb2e5c846676573b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "19d139c44b38be0b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "592f8a076d2a3b71",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "440d7eb6afb162ce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "5126dd6a78e1da84",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "592f8a076d2a3b71",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "1c15aa6647105708",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "84ca7106dd99ea67",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "2835ff0667ddca66",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "1eb4f544d29e3a56",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "7d116ad67c5b3891",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "5b1f339d1aa29385",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "922b7d56f641513c",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ship",
+        "single-0": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "634fc55709f644f4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ship",
+        "single-0": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "c9287fcbffcb71b3",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "03108df7cc7defce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "fb55efc90e4cd340",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "af7578524278d9b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "9df74751bf3ac57d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "cb2e5c846676573b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "129eeb60316f8554",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "03108df7cc7defce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "canary",
+        "single-0": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "f355d9943067c23b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "38573906673c7624",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "7d116ad67c5b3891",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "probe",
+        "single-0": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "e432740b456af19d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "fff45e965e163cba",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ship",
+        "single-0": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "777bdd6bb7fe8b74",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "probe",
+        "single-0": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "8f36a09b219923ab",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "9df74751bf3ac57d",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "5126dd6a78e1da84",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "f5e0f4bfba0fd6e8",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "canary",
+        "single-0": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "649a68f6f94b1cdc",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "fff45e965e163cba",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "release",
+      "id": "440d7eb6afb162ce",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "69f3f3ea020ce105",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "64ddc5f8bf205ce2",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "probe",
+        "single-0": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "c10a876ffc2698a0",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "f355d9943067c23b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "866f05cc3bd500b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "c173a23e56baf977",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "af7578524278d9b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "69f3f3ea020ce105",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "1c15aa6647105708",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "release",
+      "id": "86b8c1fa270739c4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "da3f8dae08d67e82",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "release",
+      "id": "da3f8dae08d67e82",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "2a108b09ff37f092",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ship",
+        "single-1": "ship"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "b9abbf063d34c4e5",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "probe",
+        "single-1": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "634fc55709f644f4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7202,
+      "context": "incident",
+      "id": "1af40943325e4c46",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "ledger",
+        "single-1": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "7e180ad08b5e7287",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "866f05cc3bd500b1",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "probe",
+        "single-0": "probe"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "incident",
+      "id": "19d139c44b38be0b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "129eeb60316f8554",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "release",
+      "id": "90d1f4c285c90e96",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7203,
+      "context": "incident",
+      "id": "7c3ecaa0bb067b4b",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "ledger",
+        "single-0": "ledger"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7200,
+      "context": "release",
+      "id": "1163b5b8764d19a6",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "hold",
+        "single-1": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "release",
+      "id": "2835ff0667ddca66",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "hold",
+        "single-0": "hold"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7204,
+      "context": "incident",
+      "id": "c173a23e56baf977",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-1": "none",
+        "single-0": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "17be2feba4a7b818",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7201,
+      "context": "incident",
+      "id": "86b8c1fa270739c4",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "canary",
+        "single-1": "canary"
+      },
+      "order_effect_interpretable": false
+    },
+    {
+      "arm": "F",
+      "seed": 7205,
+      "context": "incident",
+      "id": "90d1f4c285c90e96",
+      "strict_successes_out_of_2": 2,
+      "actions": {
+        "single-0": "none",
+        "single-1": "none"
+      },
+      "order_effect_interpretable": false
+    }
+  ]
+}

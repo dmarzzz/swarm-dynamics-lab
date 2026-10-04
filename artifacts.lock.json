@@ -6153,6 +6153,35 @@
    "sha256": "c87024ba12bebf8d061927dca445cb40ce3f35c0e159e483a9725ce1b5d27c94",
    "size_bytes": 199037
   },
+  "vishesh-theseus-d2-evidence@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791103722,
+     "sha256": "b5eed7de7e15e769aa3aa3c4bb6f3c17d981d1cb06ccde009604a41c68190420",
+     "size": 9790,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/d2/runner.py"
+    },
+    {
+     "mtime": 1791104952,
+     "sha256": "8e511e521fa354ed6f09191127ad33cb97c62efab85cccd71a87239f2850c315",
+     "size": 1211471,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/manifest.json"
+    },
+    {
+     "mtime": 1791104952,
+     "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb",
+     "size": 128,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791104952,
+   "path": "artifacts/vishesh-theseus-d2-evidence/vishesh-theseus-d2-evidence-v1.gz",
+   "prompt_sha256": "cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a",
+   "sha256": "cd8f61bc6a570165d76a8e1a95839c5c8b003c46d44e56a4982c18cacb1a2275",
+   "size_bytes": 185235
+  },
   "vishesh-theseus-d2-plan@1": {
    "host": "mac",
    "ingredients": [
@@ -6187,6 +6216,192 @@
    "prompt_sha256": "03a998d5403bf6a717f695d678919a0f35bb3d4123626451a4b1de46cf5893b0",
    "sha256": "30c9da1be7dcfa8523b1cfbf5c21025525078425766e417cd9aefa6fc8c6d780",
    "size_bytes": 12159
+  },
+  "vishesh-theseus-d2-postmortem@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791103515,
+     "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703",
+     "size": 12642,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md"
+    },
+    {
+     "mtime": 1791104952,
+     "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac",
+     "size": 65195,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json"
+    },
+    {
+     "mtime": 1791104952,
+     "sha256": "eb0ba694f6febe852ad9a84e7225b77f1b9ec3b68ec60b5053b17b6cd0bdbdcb",
+     "size": 6338,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/diagnosis.json"
+    },
+    {
+     "mtime": 1791104952,
+     "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a",
+     "size": 1258,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791104952,
+   "path": "artifacts/vishesh-theseus-d2-postmortem/vishesh-theseus-d2-postmortem-v1.md",
+   "prompt_sha256": "cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a",
+   "sha256": "9e83e324f126035f2dd2e5adcce4ec08c20c461f9eb07f93429a690236ea2c76",
+   "size_bytes": 6195
+  },
+  "vishesh-theseus-d2-results@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791104234,
+     "sha256": "1dc504ccfa630e03dfa9ee20a900f79e3e79cd8e89a882942565c1fd1a5c6a22",
+     "size": 3389,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_d2.py"
+    },
+    {
+     "mtime": 1791104952,
+     "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac",
+     "size": 65195,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json"
+    },
+    {
+     "mtime": 1791104952,
+     "sha256": "53e87a19d2820152a39566ffeb0fc7eb5521f38c9cd1cdbacef6ccb067b325b8",
+     "size": 113291,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/decisions.csv"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791104952,
+   "path": "artifacts/vishesh-theseus-d2-results/vishesh-theseus-d2-results-v1.png",
+   "prompt_sha256": "cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a",
+   "sha256": "117a73a539eff8b299e54ddfd8b75e48ac78a96edfba4daac2cadbf858863a37",
+   "size_bytes": 128891
+  },
+  "vishesh-theseus-r1-evidence@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791104952,
+     "sha256": "40fa3a39e8f333f4d6d28024555ea37f9902def2071cd0dd90b29a9663317107",
+     "size": 9775,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/r1/runner.py"
+    },
+    {
+     "mtime": 1791105752,
+     "sha256": "0637be448bc292a8c897fad5e45ecd733e7a03770b159583f392b3b1d9bc91ba",
+     "size": 963912,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/manifest.json"
+    },
+    {
+     "mtime": 1791105752,
+     "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566",
+     "size": 128,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791105752,
+   "path": "artifacts/vishesh-theseus-r1-evidence/vishesh-theseus-r1-evidence-v1.gz",
+   "prompt_sha256": "cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a",
+   "sha256": "0cb1cde0b3038b5c83c9a42dfb1800fc69129be9785cd8989575b6137d564cb0",
+   "size_bytes": 146445
+  },
+  "vishesh-theseus-r1-plan@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791104952,
+     "sha256": "9e83e324f126035f2dd2e5adcce4ec08c20c461f9eb07f93429a690236ea2c76",
+     "size": 6195,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md"
+    },
+    {
+     "mtime": 1791105073,
+     "sha256": "1053cfffa2c69b70ca5e11c20e4e7d1b8fa51c9561bfce330455203a50c23f3d",
+     "size": 2822,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PRE.md"
+    },
+    {
+     "mtime": 1791105073,
+     "sha256": "52fca780d7d897f39822ef3f6cd8b4b1609e39783b71107f1b0f29f76ba42a99",
+     "size": 348,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-VALIDATION.json"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791105073,
+   "path": "artifacts/vishesh-theseus-r1-plan/vishesh-theseus-r1-plan-v1.md",
+   "prompt_sha256": "cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a",
+   "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d",
+   "size_bytes": 7380
+  },
+  "vishesh-theseus-r1-postmortem@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791105073,
+     "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d",
+     "size": 7380,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md"
+    },
+    {
+     "mtime": 1791105752,
+     "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10",
+     "size": 54713,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json"
+    },
+    {
+     "mtime": 1791105774,
+     "sha256": "9fa71000aa7c1b268245ff2fdebe85fa3830e8771d705a8a797aaf1fc5baa434",
+     "size": 759,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/diagnosis.json"
+    },
+    {
+     "mtime": 1791105958,
+     "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e",
+     "size": 1392,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791105846,
+   "path": "artifacts/vishesh-theseus-r1-postmortem/vishesh-theseus-r1-postmortem-v1.md",
+   "prompt_sha256": "cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a",
+   "sha256": "80241e8a14635a07a0aba9a44b11d6a33076d5a88badb36d28857c5c83462283",
+   "size_bytes": 6445
+  },
+  "vishesh-theseus-r1-results@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791105194,
+     "sha256": "c7bd9989c319aa4566540e167f77b3afc9420ea05da56468a839d611220207c2",
+     "size": 2562,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_r1.py"
+    },
+    {
+     "mtime": 1791105752,
+     "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10",
+     "size": 54713,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json"
+    },
+    {
+     "mtime": 1791105752,
+     "sha256": "b1da58c62af64d1675f920df8f30f63a22070540345875073b3badbc06bea2be",
+     "size": 54369,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/decisions.csv"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791105774,
+   "path": "artifacts/vishesh-theseus-r1-results/vishesh-theseus-r1-results-v1.png",
+   "prompt_sha256": "cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a",
+   "sha256": "0e3a85d6b184067ce0820ca42a4a9ca841e27d675e6235cf5cc4b85d79cf05e4",
+   "size_bytes": 111085
   },
   "vishesh-theseus-rule-audit@1": {
    "host": "ultrons-macbook-pro",

@@ -2191,4 +2191,132 @@ artifacts:
         ingredients:
           - https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz
         commit: c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7-dirty
+  - id: vishesh-theseus-d2-results
+    category: content
+    type: figure
+    title: Theseus D2 measured results
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-d2-results/vishesh-theseus-d2-results-v1.png
+        built_at: '2026-10-04T09:13:53Z'
+        note: vishesh/codex-theseus; D2 measured, R1 prospective; no cultural-preservation claim.
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_d2.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/decisions.csv
+        commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
+  - id: vishesh-theseus-d2-postmortem
+    category: content
+    type: doc
+    title: Theseus D2 PI postmortem
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-d2-postmortem/vishesh-theseus-d2-postmortem-v1.md
+        built_at: '2026-10-04T09:13:54Z'
+        note: vishesh/codex-theseus; D2 measured, R1 prospective; no cultural-preservation claim.
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/diagnosis.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json
+        commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
+  - id: vishesh-theseus-d2-evidence
+    category: content
+    type: dataset
+    title: Theseus D2 raw evidence
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-d2-evidence/vishesh-theseus-d2-evidence-v1.gz
+        built_at: '2026-10-04T09:13:55Z'
+        note: vishesh/codex-theseus; D2 measured, R1 prospective; no cultural-preservation claim.
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/d2/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/manifest.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json
+        commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
+  - id: vishesh-theseus-r1-plan
+    category: content
+    type: spec
+    title: Theseus single targeted repair protocol
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-r1-plan/vishesh-theseus-r1-plan-v1.md
+        built_at: '2026-10-04T09:13:56Z'
+        note: vishesh/codex-theseus; D2 measured, R1 prospective; no cultural-preservation claim.
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PRE.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-VALIDATION.json
+        commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
+  - id: vishesh-theseus-r1-results
+    category: content
+    type: figure
+    title: Theseus R1 measured repair results
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-r1-results/vishesh-theseus-r1-results-v1.png
+        built_at: '2026-10-04T09:26:29Z'
+        note: vishesh/codex-theseus; D2 and R1 measured; no cultural-preservation claim.
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_r1.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/decisions.csv
+        commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
+  - id: vishesh-theseus-r1-postmortem
+    category: content
+    type: doc
+    title: Theseus R1 PI postmortem
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-r1-postmortem/vishesh-theseus-r1-postmortem-v1.md
+        built_at: '2026-10-04T09:26:31Z'
+        note: vishesh/codex-theseus; D2 and R1 measured; no cultural-preservation claim.
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/diagnosis.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json
+        commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
+  - id: vishesh-theseus-r1-evidence
+    category: content
+    type: dataset
+    title: Theseus R1 complete raw evidence
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/vishesh-theseus-r1-evidence/vishesh-theseus-r1-evidence-v1.gz
+        built_at: '2026-10-04T09:26:32Z'
+        note: vishesh/codex-theseus; D2 and R1 measured; no cultural-preservation claim.
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:cd6c58e9338c7583f4d8376e8017c6babd4ffd7544823625f49cd9a23c4cc24a
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/r1/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/manifest.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json
+        commit: c4c7a87973b0027e70f4bb6bfd44c7fd664bf656-dirty
 requires: '1.2'

@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "study_id": "swarm-of-theseus-execution-d2",
+  "assessor": "vishesh/codex-theseus",
+  "assessed_at": "2026-10-04",
+  "source_commit": "66d20ec1d198cea099e6f64d75593cb071ff320e",
+  "verdict": "repair",
+  "outcome_interpretation": "Atomic execution improves descriptive accuracy by 7.55 points across six fixed worlds but neither interface qualifies; cultural preservation untested.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fixed D/E strict accuracy contrast and explicit gate; D2-PLAN.md.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Six fixed balanced worlds, all source mappings and two task families; finite Boolean scope.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Matched cases and actor interfaces; mutant controls distinguish wrong policies; compute unequal by design.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Both arms fail frozen gates; one prospectively planned repair required before any advancement.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "Run the sole prospectively specified R1 repair.",
+      "acceptance_check": "Meet all frozen R1 gates on fresh worlds; otherwise stop this repair line."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All 768 strict decisions independently recalculated from raw text, no disagreements.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six fixed worlds and 96 distinct case/family pairs, repeated requests dependent; descriptive only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "432 saved request hashes match manifest and served model; no memory, notebook or feedback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "432 assigned/started/terminal and 768 graded, no exclusions, errors or unresolved outcomes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.357850 model, zero incremental machine purchase; prior ledger carried forward.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source and Python version, complete raw archive and derived CSV, same-author reference implementation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Full-assignment table and inspected static figure; raw trace remains available, no culture animation implied.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/summary.json",
+          "sha256": "b5bc2719666ddd4250476c009f6253cc9abb79f05b18f9ec541cc261a9ed23ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/closeout.json",
+          "sha256": "b919af24d705eec747742d5d579ebe47fd2c7f9e62a25d99d04cfa3eee13626a"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D2/evidence-hashes.json",
+          "sha256": "79a541991832a65078f875a36e34914f762556e5dc6cf7e59b19880e99229ebb"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md",
+          "sha256": "714d5806cf16c7dd8e591da55ed3dbb4c5969e78daff961716129daea07e0703"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    }
+  ]
+}

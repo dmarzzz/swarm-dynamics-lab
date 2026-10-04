@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "study_id": "swarm-of-theseus-execution-r1",
+  "assessor": "vishesh/codex-theseus",
+  "assessed_at": "2026-10-04",
+  "source_commit": "c4c7a87973b0027e70f4bb6bfd44c7fd664bf656",
+  "verdict": "complete_valid_result",
+  "outcome_interpretation": "F qualifies192/192; E188/192 fails. The 2.08-point gain in two worlds fails the separate material-benefit threshold. Freeze F, stop repairs; cultural preservation untested.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fixed F/E contrast and material-benefit threshold assessed separately from qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Six fresh fixed worlds; all mappings and conflict strata covered, finite synthetic scope.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Unchanged E, matched case information/call counts; bundled F prevents component attribution.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "F passes every gate; E fails. No population reliability guarantee.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All384 raw-text strict scores and request hashes agree; zero missing records.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six paired worlds,96 distinct pairs, dependent repeats, descriptive contrast.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned model served, actual request hashes match; no notebook/history/feedback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "384 assigned/started/terminal/graded, zero exclusions or retries.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.268924 model, no incremental machine purchase; cumulative authority preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source and runtime, preserved raw evidence; same-author audit only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Inspected static figure and complete table agree with saved evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+          "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/summary.json",
+          "sha256": "803ba7760ae3b29333e329efaf40a30577c9bd842ffdafa0b7c668bf87060f10"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/closeout.json",
+          "sha256": "27238608c5a1e8c9240e524fa41fe50308c76cd112a29bcf986c635eb2d64e3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/evidence-hashes.json",
+          "sha256": "fb42558d47ad4f7fa74afb97d1871595ce233cae5136b045b2f8788b3cead566"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    }
+  ]
+}
