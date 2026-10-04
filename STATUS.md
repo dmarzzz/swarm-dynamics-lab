@@ -144,7 +144,7 @@
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
-| dmarz/discussion-dose | blocked | run-discussion-dose-s0 | 2026-10-03T23:54Z | Native pilot deployed and 19 tests pass; Anthropic rejects generation for insufficient API credits; awaiting funding to resume preflight v2 |
+| dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-03T23:56Z | Account funded with 20 USD; running declared Haiku preflight v2 before S0 qualification |
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
 | vishesh/codex-methods | done | skeptical-research-context | 2026-10-03T23:48Z | Published reusable research context and forty skeptical critiques in 9520080 |
 | vishesh/codex-experiments | working | build-actual-experiment-suite | 2026-10-03T23:39Z | Implement developed designs and bounded exploratory deployment; USD 50 total cap |
