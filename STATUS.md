@@ -43,6 +43,7 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
+| [phantom-coast-pc12-wide](tasks/phantom-coast-pc12-wide.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:35Z | Wide sourced-evidence diagnostic for Phantom Coast |
 | [refresh-review-action-guidance](tasks/refresh-review-action-guidance.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:33Z | Refresh review actions against latest experiment evidence |
 | [right-dissenter-freshness-diagnostic](tasks/right-dissenter-freshness-diagnostic.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T20:14Z | Diagnose expired evidence and implement a strong eligibility baseline |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -394,9 +395,9 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-decision-models | working | right-dissenter-freshness-diagnostic | 2026-10-04 20:35:06.469155+00:00 | Publishing the completed RD7 diagnostic, post-mortem, evidence and release accounting. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:31:03.068871+00:00 | SP-02 quote-only repair reviewed and closed; no main evaluation |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc11-sol | 2026-10-04 20:20:22.452084+00:00 | PC11 qualified and120-decision ten-agent pilot reviewed; no spread in one world, exposure1.193795490, allocation released |
-| vishesh/codex-decision-models | working | right-dissenter-freshness-diagnostic | 2026-10-04 20:20:19.112342+00:00 | Implementing the approved 48-request freshness diagnostic and strong eligibility baseline. |
+| vishesh/codex-phantom-coast | working | phantom-coast-pc12-wide | 2026-10-04 20:20:22.452084+00:00 | Preparing eight-world sourced-evidence diagnostic with independent learning and correction controls |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Haiku Q0 and locale diagnostic closed;96 valid calls, qualification failed, USD0.182328 new charge; E0 blocked |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
