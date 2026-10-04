@@ -320,7 +320,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-pi-review | working | integrate-top10-portfolio-feedback | 2026-10-04T20:12Z | Reconciling all24 top-ten review entries into owned scale, evaluation and presentation plans; preserving active run contracts. |
+| vishesh/codex-pi-review | done | integrate-top10-portfolio-feedback | 2026-10-04T20:13Z | Published24 top-ten review dispositions and14 study additions; current plans preserved, no runs launched. |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
