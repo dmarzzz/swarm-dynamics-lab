@@ -441,6 +441,19 @@ class ClosedLoop(unittest.TestCase):
             self.assertEqual(l.transact()['attempted_calls'],3)
         self.assertEqual(common.design()['budget']['study_settled_usd_cap'],75);self.assertNotIn('study_reserved_usd',common.design()['budget'])
 
+    def test_ledger_read_stays_fast_at_p1_scale(self):
+        # q0-008 regression: a quadratic settled-cost sum made each ledger read take seconds at about 2,000 calls.
+        with tempfile.TemporaryDirectory() as td:
+            path=Path(td)/'study.jsonl'
+            with path.open('w') as f:
+                for i in range(6000):
+                    f.write(json.dumps(dict(type='reserve',call_id=f'c{i}',micro_usd=100))+'\n')
+                    if i%10: f.write(json.dumps(dict(type='response',call_id=f'c{i}',actual_micro_usd=10,input_tokens=1,output_tokens=1))+'\n')
+            l=Ledger(path);t=time.monotonic()
+            for _ in range(5):totals=l.transact()
+            self.assertLess((time.monotonic()-t)/5,0.25)
+            self.assertAlmostEqual(totals['settled_usd'],(5400*10+600*100)/1e6)
+
     def test_p1_manifest_shape(self):
         rows=assignments('P1')
         self.assertEqual(len(rows),168);self.assertEqual(len({json.dumps(r,sort_keys=True) for r in rows}),168)
