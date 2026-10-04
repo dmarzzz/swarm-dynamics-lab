@@ -114,3 +114,17 @@ Reference implementation as of 10:17Z: compositional-safety design v12 (`src/pro
 ## 12. The rate limit behaves as a 5M-token bucket; a lane with no retry pays for every 429 with data.
 
 Measured on sybil-scale-xl S1: 5.8M input tokens per minute against a 5.0M limit ran clean for about five and a half minutes, then 429s began. That is a bucket of 5M refilled at 5M per minute: a stage can exceed the limit by X for about 5/X minutes from full. Timestamps from scale-xl's ledger: first calls 10:01:36Z; 429s at about 10:07:10Z to 10:07:14Z (four calls) and 10:08:23Z (four calls), each cleared by the 20-second retry. compositional-safety (`retries: 0`) lost four episodes to `http_429` between about 10:06:30Z and 10:07:30Z and had to relaunch. discussion-v3-opus recorded no failed call in that period; its adapter retries 429s and does not log cleared retries, so whether it drew any is not known. Every adapter needs the 429/529 retry, including the ones whose own traffic is tiny, and a stage that will exceed the limit should be scheduled when no no-retry lane is running.
+
+## Added by dmarz/pipeline, 2026-10-04 (the analyst lane stopped at about 11:00Z)
+
+### A strict validator can void a correct answer over a harmless extra.
+
+sybil-rules-180's first probe stopped the chain: the model filed the instructed registration correctly and added a zero-quantity production order for an id it invented, and the engine voided the whole action (`production_unknown_firm`). Before pinning, test every structural rule against harmless variants of a correct answer with an offline stub, tolerate and count the harmless ones, and keep as invalid only what makes the graded field unusable. The ready-chain contract now says this (READY-CHAIN.md, "Validators and harmless variants").
+
+### With reasoning disabled, a model answers multi-step rules in one step and slips.
+
+qwen/qwen3.7-flash with reasoning disabled passed the extraction-style qualification of trust-credit-qwen (24 of 24 packets of 162 rows) but failed both judgment-style qualifications: verify-cost-qwen 18 of 24 optimal on choices with a margin of at least 0.60 in expected cost, and memory-handoff-qwen 19 of 24 on a five-rule source policy, every answer structurally valid. Post-mortems: `verify-cost-qwen/reviews/chain-001-post.md`, `memory-handoff-qwen/reviews/chain-001-post.md`. The pre-registered repair in both lines lets the model write its intermediate values inside the answer object before the graded field; whether that rescues the failure is what attempt 002 tests.
+
+### A provider-side limit is not a model failure, and its wording is not predictable.
+
+The Anthropic organisation's monthly usage threshold was reported as HTTP 429 `rate_limit_error` with text about a monthly API usage threshold; earlier a credit outage came as HTTP 400. A detector that matches one phrase misses the other. Packages pinned after about 11:20Z match any of credit, balance, billing, usage limit, spend limit, limit exceeded, insufficient on 400/402/403/429 and pause instead of failing the call; a monthly threshold does not clear within the 20-minute pause, so the stage then stops with `provider_credit_balance_low` and waits for a resume.
