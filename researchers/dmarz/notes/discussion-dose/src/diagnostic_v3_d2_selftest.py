@@ -471,6 +471,18 @@ class D2Tests(unittest.TestCase):
             d.execute(frozen, inputs, root / 'rehearsal', root / 'ledger', scripted('oracle'), False)
             self.assertTrue((root / 'ledger/v3-d2-a1-zero-model-rehearsal.started.json').exists())
 
+    def test_rehearsal_cli_path_with_injected_failure(self):
+        frozen, inputs = fixture()
+        with tempfile.TemporaryDirectory() as folder, patch.object(d, 'verify_manifest', lambda manifest, q0: (frozen, inputs)):
+            root = Path(folder); ledger = root / 'ledger'; ledger.mkdir()
+            result = d.rehearse(root / 'manifest.json', None, root / 'out', ledger, failure_call=5)
+            self.assertEqual((result['terminal'], result['physical_calls']), (72, 0))
+            rows = d.read(root / 'out/outcomes.json'); failed = [r for r in rows if r['status'] != 'valid']
+            self.assertEqual([(r['call_id'], r['reason'], r['dispatch_state']) for r in failed], [('d2-005', 'provider_timeout', 'terminal')])
+            self.assertEqual(d.audit(root / 'out', None)['outcomes_recomputed'], 72)
+            with self.assertRaises(ValueError): d.rehearse(root / 'manifest.json', None, root / 'slow', ledger, delay=60)
+            with self.assertRaises(ValueError): d.rehearse(root / 'manifest.json', None, root / 'bad', ledger, failure_call=72)
+
     # ------------------------------------------------------------ audit
     def test_audit_recomputes_and_detects_tampering(self):
         folder, root, frozen, inputs, _ = run(native(), True)

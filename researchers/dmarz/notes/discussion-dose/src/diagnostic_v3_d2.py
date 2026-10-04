@@ -382,9 +382,9 @@ class ScriptedD2:
     scientific = False
     BEHAVIORS = ('oracle', 'always_feasible', 'always_infeasible', 'wrong_vote', 'malformed')
 
-    def __init__(self, behavior='oracle'):
+    def __init__(self, behavior='oracle', delay=0):
         if behavior not in self.BEHAVIORS: raise ValueError('unknown scripted control')
-        self.behavior = behavior; self.name = 'scripted-d2-' + behavior
+        self.behavior = behavior; self.name = 'scripted-d2-' + behavior; self.delay = delay
         self.calls = 0; self.last_usage = {}; self.last_response_text = None; self.last_model = None
 
     def belief(self, task, facts, option):
@@ -395,6 +395,7 @@ class ScriptedD2:
 
     def complete(self, request):
         self.calls += 1
+        if self.delay: time.sleep(self.delay)  # rehearsal pacing only, so live progress is observable
         if self.behavior == 'malformed': return {'vote': 'D', 'feasible': 'yes'}
         context = request['context']; task = context['task']
         if request['phase'] == 'd2_feasibility':
@@ -964,10 +965,11 @@ def run(manifest, q0, preflight_path, probe_path, output, ledger, hub_run):
 REHEARSAL_CONTROLS = {OPUS: 'oracle', SONNET: 'always_infeasible', HAIKU: 'always_feasible'}
 
 
-def rehearse(manifest, q0, output, ledger, hub_run=None, failure_call=None):
+def rehearse(manifest, q0, output, ledger, hub_run=None, failure_call=None, delay=0):
+    if not 0 <= delay <= 5: raise ValueError('scripted pacing must be 0..5 seconds')
     frozen, inputs = verify_manifest(manifest, q0)
     observer = HubProgress(hub_run, fingerprint(manifest)['sha256'], False) if hub_run else None
-    providers = {m: ScriptedD2(REHEARSAL_CONTROLS[m]) for m in MODELS}
+    providers = {m: ScriptedD2(REHEARSAL_CONTROLS[m], delay) for m in MODELS}
     if failure_call is not None:
         if not 0 <= failure_call < ASSIGNED: raise ValueError('scripted failure index must be 0..71')
         target = frozen['schedule'][failure_call]
@@ -977,7 +979,7 @@ def rehearse(manifest, q0, output, ledger, hub_run=None, failure_call=None):
                 if self.calls == ordinal:
                     self.calls += 1; raise TimeoutError('scripted deliberate failure')
                 return super().complete(request)
-        providers[target['model']] = FailureFixture(REHEARSAL_CONTROLS[target['model']])
+        providers[target['model']] = FailureFixture(REHEARSAL_CONTROLS[target['model']], delay)
     result = execute(frozen, inputs, output, ledger, providers, False, observer=observer)
     if observer: observer.finish(output, audit(output, q0))
     return result
@@ -1045,7 +1047,9 @@ def main(argv=None):
         if name in ('probe', 'run', 'rehearse'): p.add_argument('--dispatch-ledger', type=Path, required=True)
         if name in ('run', 'rehearse'):
             p.add_argument('--hub-run', required=name == 'run', help='operator-started manifest-bound run; never enqueued by this CLI')
-        if name == 'rehearse': p.add_argument('--scripted-failure-call', type=int, help='0-based deliberate software failure; no model call')
+        if name == 'rehearse':
+            p.add_argument('--scripted-failure-call', type=int, help='0-based deliberate software failure; no model call')
+            p.add_argument('--scripted-delay', type=float, default=0, help='seconds of pacing per scripted assignment')
         if name == 'audit':
             p.add_argument('--directory', type=Path, required=True)
             p.add_argument('--allow-interrupted', action='store_true')
@@ -1058,7 +1062,7 @@ def main(argv=None):
         elif args.command == 'probe': result = probe(args.manifest, args.q0, args.preflight, args.dispatch_ledger, args.output)
         elif args.command == 'run': result = run(args.manifest, args.q0, args.preflight, args.probe, args.output, args.dispatch_ledger, args.hub_run)
         elif args.command == 'rehearse':
-            result = rehearse(args.manifest, args.q0, args.output, args.dispatch_ledger, args.hub_run, args.scripted_failure_call)
+            result = rehearse(args.manifest, args.q0, args.output, args.dispatch_ledger, args.hub_run, args.scripted_failure_call, args.scripted_delay)
         else:
             result = {k: v for k, v in audit(args.directory, args.q0, args.allow_interrupted).items() if k != 'summary'}
         print(json.dumps(result, sort_keys=True)); return 0
