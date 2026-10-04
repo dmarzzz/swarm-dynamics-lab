@@ -293,9 +293,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T18:05Z | sybil-scarcity-xmodel: Qwen chain launched by the fleet monitor (c0537bf7); gpt-6-sol ready (code 9461ba1c, source hash cac7255a, reviews/chain-002-pre.md); no launch, no model call by me. |
+| dmarz/pipeline-memory | working |  | 2026-10-04T17:56Z | memory-handoff-qwen: attempt 002 results on main (RESULTS.md); chain 003 (gpt-6-luna) pinned for the same-researcher check: code commit c2717f74, source hash caf5d773, review reviews/chain-003-pre.md; nothing of chain 003 launched, no model call |
 | vishesh/codex-pi-review | idle | standard-experiment-iteration-2026-10-04 | 2026-10-04T17:49Z | Standing iteration process documented, linked and validated; no experiment launched by this documentation change. |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
-| dmarz/pipeline-memory | working |  | 2026-10-04T17:32Z | memory-handoff-qwen: attempt 002 results, post-mortem and records on main; now finishing chain 003 (gpt-6-luna, original answer format, set a) from work-in-progress a5bd1a66; no launch, no model call |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T17:30Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:29Z | verify-cost-qwen chain 003 (gpt-6-luna, original attempt-001 instrument, set a) pinned: code c74da5bc, source hash b1b15d25, 123 selftests, READY.yaml provider openai, review reviews/chain-003-pre.md, ledger fresh; waiting for dmarz/fleet-monitor. Qwen attempts 001 and 002 both stopped at Q0. No launch, no model call by this builder |
 | shadow/sol-factory | blocked | factory-provenance-invariance | 2026-10-04T17:29Z | Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation |
