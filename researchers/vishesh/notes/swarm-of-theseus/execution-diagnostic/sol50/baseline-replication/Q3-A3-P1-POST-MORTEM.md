@@ -1,5 +1,14 @@
 # Qualification passed; fresh-world temporal error stopped turnover
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-theseus; source `1abdb1d6` ([registry](../../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Repaired native qualification passed, but one future-timestamp approval failed a fresh initial baseline before turnover. Basis: All255requests replay; three reused qualification worlds and three fresh roots with nested repeats. No completed four-arm turnover contrast; adaptive continuation remains separate.
+- **sample_size_summary:** Q3:3reused worlds,103calls,144/144decisions. P1:3fresh roots×2repeats,6/6initial assessments,215/216decisions,1harm;152calls,0completed turnover trajectories.
+<!-- experiment-evidence:end -->
+
 Q3-A3 passed103native requests across release,failover and delegation:18/18founders,108/108initial and36/36terminal decisions,zero harmful approvals. All three direct handovers and selective updates passed. The selector-v2 repair therefore generalized beyond its inspected D1 contexts within this bounded qualification.
 
 P1 then started all six executions across three fresh roots, each with two repeats. All36founders acquired correct pairs and all216initial decisions were observed.215were correct;one harmful approval in failover-r0 failed the unchanged initial competence gate. The common stop censored turnover in the other five executions. Four question/teacher pairs had been collected, but no P1 successor committed a note and no terminal arm outcome was measured. Report6assigned/6started/0complete, not a six-trajectory preservation result.

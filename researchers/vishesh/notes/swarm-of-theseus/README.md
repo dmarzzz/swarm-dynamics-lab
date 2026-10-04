@@ -1,5 +1,14 @@
 # Swarm of Theseus — SOC-24
 
+## Latest iteration — 2026-10-04 UTC
+
+- Selector repair and full three-domain qualification passed:103calls,144/144decisions.
+- Fresh P1 baselines scored215/216;one harmful approval used a future timestamp.
+- No P1 full-turnover trajectory completed;the original six-execution attempt remains failed.
+- Five exact initial-pass prefixes have a tested conditional-continuation plan;no replacement outcomes claimed yet.
+
+See the [latest post-mortem](execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-POST-MORTEM.md) and [prospective conditional continuation](execution-diagnostic/sol50/baseline-replication/CONTINUATION-PLAN.md). Historical cohort results below remain separate.
+
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 

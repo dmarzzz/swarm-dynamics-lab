@@ -4302,6 +4302,59 @@
       "assessor": "vishesh/codex-village-fit",
       "assessed_at": "2026-10-04",
       "source_commit": "16d7cb931143aeb44d2b55880a80088b94764b28"
+    },
+    {
+      "id": "theseus-selector-d1",
+      "title": "Theseus D1: single-choice writeback diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-r3-d1"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Single-choice selection followed by faithful persistence passed three inspected diagnostic contexts; full native qualification and cultural survival are separate.",
+        "rationale": "Three selected development contexts and scripted witness delivery;18dependent decisions,zero errors,not generalization or proof of native collective transmission."
+      },
+      "sample_size_summary": "Three inspected contexts from two reused qualification worlds;6/6native calls,3/3pairs,18/18decisions,0harm. Scripted witness delivery; no full turnover in D1.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-AUDIT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-CLOSEOUT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-QUALITY.json"
+      ],
+      "status_at_assessment": "completed_reviewed_targeted_diagnostic_pass",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "fb0e058e1a8e007116ba3266a7faefdba1ad22ef"
+    },
+    {
+      "id": "theseus-selector-q3a3-p1",
+      "title": "Theseus selector-v2: qualification passed, fresh initial competence failed",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-r3-q3-a3",
+        "swarm-of-theseus-r3-p1-v2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Repaired native qualification passed, but one future-timestamp approval failed a fresh initial baseline before turnover.",
+        "rationale": "All255requests replay; three reused qualification worlds and three fresh roots with nested repeats. No completed four-arm turnover contrast; adaptive continuation remains separate."
+      },
+      "sample_size_summary": "Q3:3reused worlds,103calls,144/144decisions. P1:3fresh roots\u00d72repeats,6/6initial assessments,215/216decisions,1harm;152calls,0completed turnover trajectories.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-AUDIT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-CLOSEOUT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-QUALITY.json"
+      ],
+      "status_at_assessment": "completed_reviewed_failed_initial_gate",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "1abdb1d6a962da5696e05792886cab68dfc3cde6"
     }
   ],
   "source_sha256": {
