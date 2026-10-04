@@ -32,6 +32,11 @@ def render(root,out):
   b.set_xlim(0,max(1000*v/n for v in costs.values())*1.25)
  fig.suptitle(f'C6R2 {stage}: correctness and the actual API cost tradeoff\n{n} cases • 12 authored semantic families in main • no population CI',fontsize=17)
  fig.savefig(out/'outcomes.png',dpi=140);plt.close(fig)
+ families=list(result['families']);keys=('qwen','jev','cascade','matched');values=np.array([[100*result['families'][f]['error'][k] for k in keys] for f in families])
+ fig,ax=plt.subplots(figsize=(12,max(4,len(families)*.5)),layout='constrained');im=ax.imshow(values,cmap='YlOrRd',vmin=0,vmax=max(5,float(values.max())),aspect='auto')
+ for y in range(len(families)):
+  for x in range(len(keys)):ax.text(x,y,f'{values[y,x]:.1f}%',ha='center',va='center',color='#172132')
+ ax.set(xticks=range(4),xticklabels=('Haiku A','Always Jev','Agreement route','Matched random'),yticks=range(len(families)),yticklabels=families,title=f'C6R2 {stage}: error within each authored family\nFinite synthetic cells; no population uncertainty claim');fig.colorbar(im,ax=ax,label='Error (%)');fig.savefig(out/'family-errors.png',dpi=150);plt.close(fig)
  events=[json.loads(x) for x in (root/'calls.jsonl').read_text().splitlines()];starts={e['id']:e for e in events if e['type']=='start'};responses={e['id']:e for e in events if e['type']=='response'};complete=[e for e in events if e['type']=='completed'];byid={r['id']:r for r in rows};timeline=[]
  for e in complete:
   st=starts[e['id']];r=byid[st['row_id']];raw=responses[e['id']]['raw'];timeline.append({'seconds':round(responses[e['id']]['epoch']-manifest['started_epoch'],3),'case':r['id'],'agent':st['variant'],'label':e['result']['label'],'truth':r['expected'],'claim':r['claim'],'report':r['report'],'raw':raw.get('answers') or raw.get('choices')})

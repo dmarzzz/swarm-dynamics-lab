@@ -1,0 +1,123 @@
+{
+  "status": "offline_development_only",
+  "native_calls": 0,
+  "baseline": "structured fact ledger, not a natural-language parser",
+  "cases": [
+    {
+      "id": "development-sign-positive",
+      "claim": "Method M had higher measured accuracy than baseline on task ALPHA in session ONE.",
+      "report": "In session ONE on task ALPHA, method M accuracy was 8 percentage points higher than baseline. In session ONE on task BETA, method M accuracy was 5 percentage points lower than baseline.",
+      "facts": [
+        {
+          "task": "ALPHA",
+          "session": "ONE",
+          "delta": 8
+        },
+        {
+          "task": "BETA",
+          "session": "ONE",
+          "delta": -5
+        }
+      ],
+      "expected": "SUPPORT",
+      "label_rule": "Conflicting same-task same-session results with no precedence are UNCERTAIN; other tasks are irrelevant."
+    },
+    {
+      "id": "development-sign-negative",
+      "claim": "Method M had higher measured accuracy than baseline on task ALPHA in session ONE.",
+      "report": "In session ONE on task ALPHA, method M accuracy was 8 percentage points lower than baseline. In session ONE on task BETA, method M accuracy was 5 percentage points lower than baseline.",
+      "facts": [
+        {
+          "task": "ALPHA",
+          "session": "ONE",
+          "delta": -8
+        },
+        {
+          "task": "BETA",
+          "session": "ONE",
+          "delta": -5
+        }
+      ],
+      "expected": "REFUTE",
+      "label_rule": "Conflicting same-task same-session results with no precedence are UNCERTAIN; other tasks are irrelevant."
+    },
+    {
+      "id": "development-conflict",
+      "claim": "Method M had higher measured accuracy than baseline on task ALPHA in session ONE.",
+      "report": "In session ONE on task ALPHA, method M accuracy was 8 percentage points higher than baseline. In session ONE on task ALPHA, method M accuracy was 5 percentage points lower than baseline. Both reports concern the same session and task; neither result supersedes the other.",
+      "facts": [
+        {
+          "task": "ALPHA",
+          "session": "ONE",
+          "delta": 8
+        },
+        {
+          "task": "ALPHA",
+          "session": "ONE",
+          "delta": -5
+        }
+      ],
+      "expected": "UNCERTAIN",
+      "label_rule": "Conflicting same-task same-session results with no precedence are UNCERTAIN; other tasks are irrelevant."
+    },
+    {
+      "id": "development-other-task",
+      "claim": "Method M had higher measured accuracy than baseline on task ALPHA in session ONE.",
+      "report": "In session ONE on task ALPHA, method M accuracy was 8 percentage points higher than baseline. In session ONE on task BETA, method M accuracy was 5 percentage points lower than baseline.",
+      "facts": [
+        {
+          "task": "ALPHA",
+          "session": "ONE",
+          "delta": 8
+        },
+        {
+          "task": "BETA",
+          "session": "ONE",
+          "delta": -5
+        }
+      ],
+      "expected": "SUPPORT",
+      "label_rule": "Conflicting same-task same-session results with no precedence are UNCERTAIN; other tasks are irrelevant."
+    },
+    {
+      "id": "development-absent",
+      "claim": "Method M had higher measured accuracy than baseline on task ALPHA in session ONE.",
+      "report": "In session ONE on task BETA, method M accuracy was 5 percentage points higher than baseline. Task ALPHA has no accuracy measurement for session ONE.",
+      "facts": [
+        {
+          "task": "BETA",
+          "session": "ONE",
+          "delta": 5
+        }
+      ],
+      "expected": "UNCERTAIN",
+      "label_rule": "Conflicting same-task same-session results with no precedence are UNCERTAIN; other tasks are irrelevant."
+    },
+    {
+      "id": "development-measured-negative",
+      "claim": "Method M had higher measured accuracy than baseline on task ALPHA in session ONE.",
+      "report": "In session ONE on task ALPHA, method M accuracy was 8 percentage points lower than baseline. In session ONE on task BETA, method M accuracy was 5 percentage points higher than baseline.",
+      "facts": [
+        {
+          "task": "ALPHA",
+          "session": "ONE",
+          "delta": -8
+        },
+        {
+          "task": "BETA",
+          "session": "ONE",
+          "delta": 5
+        }
+      ],
+      "expected": "REFUTE",
+      "label_rule": "Conflicting same-task same-session results with no precedence are UNCERTAIN; other tasks are irrelevant."
+    }
+  ],
+  "checks": {
+    "case_count": 6,
+    "fact_labels_match": true,
+    "holdout": false,
+    "independent_adjudication": false,
+    "manual_wording_review": "All six reports inspected: target scope, contradictions, missingness and paired labels explicit."
+  }
+}

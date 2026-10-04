@@ -1,0 +1,5618 @@
+[
+  {
+    "id": "C6R2-S1-320",
+    "family": "error_rates",
+    "claim": "Method 48996edf3b5e improves accuracy over the baseline on Task be3067669cfd.",
+    "report": "On Task be3067669cfd, the baseline made 40 errors in 100 answers. Method 48996edf3b5e made 46 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-376",
+    "family": "target_distractor",
+    "claim": "Method 56d5a51178f9 improves accuracy over the baseline on Task 60d92e2a41bc.",
+    "report": "Another method achieved 78% accuracy on Task 60d92e2a41bc. For the requested method: On Task 60d92e2a41bc, Method 56d5a51178f9 achieved 78% accuracy and the baseline achieved 74%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-430",
+    "family": "negation",
+    "claim": "Method 4aaffe0cabad improves accuracy over the baseline on Task da2253435177.",
+    "report": "Method 4aaffe0cabad was not merely faster: measured accuracy on Task da2253435177 improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-52",
+    "family": "percentages",
+    "claim": "Method 9a72f5a17407 improves accuracy over the baseline on Task eca4f188f67e.",
+    "report": "On Task eca4f188f67e, Method 9a72f5a17407 achieved 63% accuracy and the baseline achieved 70%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-120",
+    "family": "expectations",
+    "claim": "Method 62672bafdf03 improves accuracy over the baseline on Task 7512d1404484.",
+    "report": "The team expects Method 62672bafdf03 to beat the baseline on Task 7512d1404484, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-89",
+    "family": "superseded",
+    "claim": "Method 2c2ea7e9f0c4 improves accuracy over the baseline on Task 9f89dfdad5a7.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 9f89dfdad5a7, Method 2c2ea7e9f0c4 achieved 53% accuracy and the baseline achieved 60%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-133",
+    "family": "irrelevant_metric",
+    "claim": "Method 37039273b08f improves accuracy over the baseline on Task 69080274fcfc.",
+    "report": "Method 37039273b08f used less memory and ran faster. On Task 69080274fcfc, Method 37039273b08f achieved 83% accuracy and the baseline achieved 77%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-318",
+    "family": "superseded",
+    "claim": "Method 64382726c40c improves accuracy over the baseline on Task bff1684bcdb1.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task bff1684bcdb1, Method 64382726c40c achieved 63% accuracy and the baseline achieved 59%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-81",
+    "family": "uncertainty",
+    "claim": "Method 65f0fe3ee26c improves accuracy over the baseline on Task aab03229513d.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task aab03229513d found Method 65f0fe3ee26c better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-310",
+    "family": "percentages",
+    "claim": "Method 285c18995530 improves accuracy over the baseline on Task 7924e7e27c22.",
+    "report": "On Task 7924e7e27c22, Method 285c18995530 achieved 47% accuracy and the baseline achieved 55%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-123",
+    "family": "superseded",
+    "claim": "Method 62b0fb97614b improves accuracy over the baseline on Task 9983e2d9e4a3.",
+    "report": "An earlier accuracy result for Method 62b0fb97614b on Task 9983e2d9e4a3 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-428",
+    "family": "superseded",
+    "claim": "Method f8e42cca0b9c improves accuracy over the baseline on Task 445547cf06b5.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 445547cf06b5, Method f8e42cca0b9c achieved 54% accuracy and the baseline achieved 60%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-6",
+    "family": "repeated_tests",
+    "claim": "Method e5ac7dbcd8bd improves accuracy over the baseline on Task 5071d38ecb0b.",
+    "report": "Two completed evaluations on Task 5071d38ecb0b each found Method e5ac7dbcd8bd had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-165",
+    "family": "percentages",
+    "claim": "Method 8df422b74ed7 improves accuracy over the baseline on Task 4fb1f2cd4ca8.",
+    "report": "On Task 4fb1f2cd4ca8, Method 8df422b74ed7 achieved 81% accuracy and the baseline achieved 76%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-134",
+    "family": "percentages",
+    "claim": "Method 9d179c9fd5d2 improves accuracy over the baseline on Task 50e05db2756d.",
+    "report": "On Task 50e05db2756d, Method 9d179c9fd5d2 achieved 47% accuracy and the baseline achieved 52%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-128",
+    "family": "error_rates",
+    "claim": "Method 46fa58b74453 improves accuracy over the baseline on Task 1ef6a774c050.",
+    "report": "On Task 1ef6a774c050, the baseline made 48 errors in 100 answers. Method 46fa58b74453 made 43 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-400",
+    "family": "error_rates",
+    "claim": "Method 51a5ef13e287 improves accuracy over the baseline on Task 22428d282c2a.",
+    "report": "On Task 22428d282c2a, the baseline made 43 errors in 100 answers. Method 51a5ef13e287 made 47 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-375",
+    "family": "percentages",
+    "claim": "Method 61669263cb61 improves accuracy over the baseline on Task 9a6484dfb2d9.",
+    "report": "On Task 9a6484dfb2d9, Method 61669263cb61 achieved 57% accuracy and the baseline achieved 60%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-138",
+    "family": "error_rates",
+    "claim": "Method ebba68be1b8e improves accuracy over the baseline on Task 7bec9b45df82.",
+    "report": "On Task 7bec9b45df82, the baseline made 29 errors in 100 answers. Method ebba68be1b8e made 24 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-178",
+    "family": "superseded",
+    "claim": "Method 260d4bd15588 improves accuracy over the baseline on Task 6dee7b08ce2e.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task 6dee7b08ce2e, Method 260d4bd15588 achieved 61% accuracy and the baseline achieved 54%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-425",
+    "family": "counts",
+    "claim": "Method ec7640aa23a3 improves accuracy over the baseline on Task 10396583cda9.",
+    "report": "On Task 10396583cda9, the baseline answered 66 of 100 questions correctly. Method ec7640aa23a3 answered 74 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-219",
+    "family": "repeated_tests",
+    "claim": "Method 458ed2b1248d improves accuracy over the baseline on Task ea98167a6423.",
+    "report": "Accuracy for Method 458ed2b1248d on Task ea98167a6423 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-35",
+    "family": "negation",
+    "claim": "Method e311931c3cbd improves accuracy over the baseline on Task 161c1d7dcd1b.",
+    "report": "Method e311931c3cbd was not merely faster: measured accuracy on Task 161c1d7dcd1b improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-90",
+    "family": "superseded",
+    "claim": "Method f73ddaab6c32 improves accuracy over the baseline on Task 1ada4d4ac27d.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task 1ada4d4ac27d, Method f73ddaab6c32 achieved 64% accuracy and the baseline achieved 55%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-366",
+    "family": "before_after",
+    "claim": "Method 91a0c67806a3 improves accuracy over the baseline on Task d278d58f8d30.",
+    "report": "Accuracy for Method 91a0c67806a3 on Task d278d58f8d30 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-139",
+    "family": "before_after",
+    "claim": "Method 2397e21648ff improves accuracy over the baseline on Task 15db74037eb6.",
+    "report": "Accuracy for Method 2397e21648ff on Task 15db74037eb6 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-71",
+    "family": "before_after",
+    "claim": "Method 2a35504a52a3 improves accuracy over the baseline on Task 7f0bbcaed384.",
+    "report": "The same Task 7f0bbcaed384 comparison changed accuracy from the baseline of 58% to 54% with Method 2a35504a52a3.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-276",
+    "family": "superseded",
+    "claim": "Method 4276d90344d8 improves accuracy over the baseline on Task a476a0410cdd.",
+    "report": "An earlier accuracy result for Method 4276d90344d8 on Task a476a0410cdd was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-176",
+    "family": "error_rates",
+    "claim": "Method 734167d838a0 improves accuracy over the baseline on Task 53dda948ec41.",
+    "report": "Accuracy for Method 734167d838a0 on Task 53dda948ec41 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-92",
+    "family": "superseded",
+    "claim": "Method 8c0ef2841527 improves accuracy over the baseline on Task 51f133d79494.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 51f133d79494, Method 8c0ef2841527 achieved 75% accuracy and the baseline achieved 78%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-110",
+    "family": "superseded",
+    "claim": "Method 4ca2c939a503 improves accuracy over the baseline on Task f9ce116b9514.",
+    "report": "An earlier accuracy result for Method 4ca2c939a503 on Task f9ce116b9514 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-266",
+    "family": "expectations",
+    "claim": "Method cd36c6fbbed2 improves accuracy over the baseline on Task 5a0fcbf72605.",
+    "report": "The team expected Method cd36c6fbbed2 to be better. Actual results: On Task 5a0fcbf72605, Method cd36c6fbbed2 achieved 53% accuracy and the baseline achieved 56%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-129",
+    "family": "irrelevant_metric",
+    "claim": "Method c4bbfe1b0f9e improves accuracy over the baseline on Task fe97bbb5824d.",
+    "report": "Method c4bbfe1b0f9e used less memory and ran faster. On Task fe97bbb5824d, Method c4bbfe1b0f9e achieved 70% accuracy and the baseline achieved 66%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-23",
+    "family": "repeated_tests",
+    "claim": "Method f2251c900f12 improves accuracy over the baseline on Task 2264a4b042b3.",
+    "report": "Two completed evaluations on Task 2264a4b042b3 each found Method f2251c900f12 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-257",
+    "family": "expectations",
+    "claim": "Method cc26ab655930 improves accuracy over the baseline on Task 16eb275d4373.",
+    "report": "The team expected Method cc26ab655930 to be better. Actual results: On Task 16eb275d4373, Method cc26ab655930 achieved 52% accuracy and the baseline achieved 55%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-289",
+    "family": "percentages",
+    "claim": "Method 8a02d64d1cf0 improves accuracy over the baseline on Task 10d49a74fd4a.",
+    "report": "On Task 10d49a74fd4a, Method 8a02d64d1cf0 achieved 53% accuracy and the baseline achieved 56%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-258",
+    "family": "target_distractor",
+    "claim": "Method 89247db7fb7c improves accuracy over the baseline on Task 8a6e98cfd6f6.",
+    "report": "Another method beat the baseline on Task 8a6e98cfd6f6. Method 89247db7fb7c was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-371",
+    "family": "negation",
+    "claim": "Method da2f065f5ec3 improves accuracy over the baseline on Task 64aed3f26638.",
+    "report": "Method da2f065f5ec3 was not merely faster: measured accuracy on Task 64aed3f26638 improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-392",
+    "family": "subgroup",
+    "claim": "Method 6a5fb41252a9 improves accuracy over the baseline on Task 69fc6a1058bb.",
+    "report": "Method 6a5fb41252a9 improved on a different test; Task 69fc6a1058bb has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-94",
+    "family": "subgroup",
+    "claim": "Method 8eb8ee95a0f0 improves accuracy over the baseline on Task 5f2ca70e1b80.",
+    "report": "Method 8eb8ee95a0f0 improved on a different test; Task 5f2ca70e1b80 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-21",
+    "family": "superseded",
+    "claim": "Method c54444cdc943 improves accuracy over the baseline on Task d7b037e0acba.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task d7b037e0acba, Method c54444cdc943 achieved 64% accuracy and the baseline achieved 72%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-342",
+    "family": "expectations",
+    "claim": "Method ad73f729ad5d improves accuracy over the baseline on Task 7cc50dd97b24.",
+    "report": "The team expects Method ad73f729ad5d to beat the baseline on Task 7cc50dd97b24, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-18",
+    "family": "expectations",
+    "claim": "Method f89886475b5f improves accuracy over the baseline on Task 53d80306762c.",
+    "report": "The team expected Method f89886475b5f to be better. Actual results: On Task 53d80306762c, Method f89886475b5f achieved 47% accuracy and the baseline achieved 55%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-105",
+    "family": "expectations",
+    "claim": "Method 7302f758602f improves accuracy over the baseline on Task 3e6e67555939.",
+    "report": "The team expects Method 7302f758602f to beat the baseline on Task 3e6e67555939, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-20",
+    "family": "subgroup",
+    "claim": "Method 62a7b22f61fd improves accuracy over the baseline on Task 7a23b42e7d1b.",
+    "report": "On Task 7a23b42e7d1b, Method 62a7b22f61fd achieved 68% accuracy and the baseline achieved 77%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-243",
+    "family": "expectations",
+    "claim": "Method 5e1e6a19a237 improves accuracy over the baseline on Task d7a153f3c7ea.",
+    "report": "The team expected Method 5e1e6a19a237 to be worse. Actual results: On Task d7a153f3c7ea, Method 5e1e6a19a237 achieved 78% accuracy and the baseline achieved 70%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-265",
+    "family": "target_distractor",
+    "claim": "Method b5d2b2cb892a improves accuracy over the baseline on Task baacbd220e74.",
+    "report": "Another method beat the baseline on Task baacbd220e74. Method b5d2b2cb892a was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-283",
+    "family": "error_rates",
+    "claim": "Method c417f363aebf improves accuracy over the baseline on Task f56f05902e2a.",
+    "report": "On Task f56f05902e2a, the baseline made 27 errors in 100 answers. Method c417f363aebf made 31 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-390",
+    "family": "uncertainty",
+    "claim": "Method d13aea41b8eb improves accuracy over the baseline on Task 66ec588be243.",
+    "report": "No accuracy estimates are available for Method d13aea41b8eb or the baseline on Task 66ec588be243; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-347",
+    "family": "before_after",
+    "claim": "Method e6ce22930d26 improves accuracy over the baseline on Task 52952c29332a.",
+    "report": "The same Task 52952c29332a comparison changed accuracy from the baseline of 59% to 65% with Method e6ce22930d26.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-316",
+    "family": "negation",
+    "claim": "Method 499f1be1235b improves accuracy over the baseline on Task f88766f8c57f.",
+    "report": "Method 499f1be1235b did not improve accuracy over the baseline on Task f88766f8c57f; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-220",
+    "family": "error_rates",
+    "claim": "Method 16fb5ecd9cd2 improves accuracy over the baseline on Task 06c1ad377533.",
+    "report": "Accuracy for Method 16fb5ecd9cd2 on Task 06c1ad377533 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-363",
+    "family": "target_distractor",
+    "claim": "Method e6e764053279 improves accuracy over the baseline on Task c9577321d0f0.",
+    "report": "Another method beat the baseline on Task c9577321d0f0. Method e6e764053279 was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-350",
+    "family": "error_rates",
+    "claim": "Method e5ddc14be049 improves accuracy over the baseline on Task 5c3e98415529.",
+    "report": "Accuracy for Method e5ddc14be049 on Task 5c3e98415529 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-361",
+    "family": "subgroup",
+    "claim": "Method 4b18a182009a improves accuracy over the baseline on Task befdac16c719.",
+    "report": "On Task befdac16c719, Method 4b18a182009a achieved 73% accuracy and the baseline achieved 64%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-335",
+    "family": "expectations",
+    "claim": "Method ce52d41af7f4 improves accuracy over the baseline on Task 474705ed40cc.",
+    "report": "The team expected Method ce52d41af7f4 to be worse. Actual results: On Task 474705ed40cc, Method ce52d41af7f4 achieved 62% accuracy and the baseline achieved 58%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-247",
+    "family": "subgroup",
+    "claim": "Method 6551374f5e92 improves accuracy over the baseline on Task 179e3246ff91.",
+    "report": "Method 6551374f5e92 improved on a different test; Task 179e3246ff91 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-195",
+    "family": "uncertainty",
+    "claim": "Method cc32c9837d95 improves accuracy over the baseline on Task ff28585262e3.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task ff28585262e3 found Method cc32c9837d95 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-87",
+    "family": "negation",
+    "claim": "Method 2ef454bb26db improves accuracy over the baseline on Task 08e984c1ad40.",
+    "report": "Method 2ef454bb26db was not merely faster: measured accuracy on Task 08e984c1ad40 improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-296",
+    "family": "expectations",
+    "claim": "Method 5ae3cb3c3c30 improves accuracy over the baseline on Task 3dbd080aa590.",
+    "report": "The team expected Method 5ae3cb3c3c30 to be better. Actual results: On Task 3dbd080aa590, Method 5ae3cb3c3c30 achieved 72% accuracy and the baseline achieved 75%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-431",
+    "family": "before_after",
+    "claim": "Method 7bc6a218bdf3 improves accuracy over the baseline on Task bc0fd4d986ce.",
+    "report": "The same Task bc0fd4d986ce comparison changed accuracy from the baseline of 56% to 50% with Method 7bc6a218bdf3.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-177",
+    "family": "counts",
+    "claim": "Method 293c6ce404fb improves accuracy over the baseline on Task f52634e655ad.",
+    "report": "On Task f52634e655ad, the baseline answered 77 of 100 questions correctly. Method 293c6ce404fb answered 85 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-16",
+    "family": "superseded",
+    "claim": "Method f5042143498d improves accuracy over the baseline on Task 7b506d4f1ba5.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 7b506d4f1ba5, Method f5042143498d achieved 44% accuracy and the baseline achieved 53%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-197",
+    "family": "superseded",
+    "claim": "Method ecbb8cef697b improves accuracy over the baseline on Task a3ced7b776d7.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task a3ced7b776d7, Method ecbb8cef697b achieved 69% accuracy and the baseline achieved 77%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-334",
+    "family": "percentages",
+    "claim": "Method 580274124e22 improves accuracy over the baseline on Task a3987dd5d72c.",
+    "report": "Accuracy for Method 580274124e22 on Task a3987dd5d72c was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-130",
+    "family": "counts",
+    "claim": "Method dbf0d7209e03 improves accuracy over the baseline on Task b91962eb12e2.",
+    "report": "On Task b91962eb12e2, the baseline answered 63 of 100 questions correctly. Method dbf0d7209e03 answered 71 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-398",
+    "family": "subgroup",
+    "claim": "Method df0a5a8b9c54 improves accuracy over the baseline on Task 4d7c4b12f679.",
+    "report": "Method df0a5a8b9c54 improved on a different test; Task 4d7c4b12f679 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-307",
+    "family": "repeated_tests",
+    "claim": "Method 6621b75fd509 improves accuracy over the baseline on Task 4eea71b21f8f.",
+    "report": "Two completed evaluations on Task 4eea71b21f8f each found Method 6621b75fd509 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-187",
+    "family": "target_distractor",
+    "claim": "Method b8b72e6ede1f improves accuracy over the baseline on Task ee9b3ff68931.",
+    "report": "Another method achieved 75% accuracy on Task ee9b3ff68931. For the requested method: On Task ee9b3ff68931, Method b8b72e6ede1f achieved 69% accuracy and the baseline achieved 72%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-241",
+    "family": "uncertainty",
+    "claim": "Method e125df5ed863 improves accuracy over the baseline on Task bf235010259f.",
+    "report": "No accuracy estimates are available for Method e125df5ed863 or the baseline on Task bf235010259f; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-188",
+    "family": "percentages",
+    "claim": "Method c5265c96de49 improves accuracy over the baseline on Task c4113b631292.",
+    "report": "On Task c4113b631292, Method c5265c96de49 achieved 67% accuracy and the baseline achieved 71%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-173",
+    "family": "expectations",
+    "claim": "Method 5d1191a41655 improves accuracy over the baseline on Task ba4fe8def326.",
+    "report": "The team expects Method 5d1191a41655 to beat the baseline on Task ba4fe8def326, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-373",
+    "family": "negation",
+    "claim": "Method 0e42b8db1c9a improves accuracy over the baseline on Task 954ef2847496.",
+    "report": "Method 0e42b8db1c9a did not improve accuracy over the baseline on Task 954ef2847496; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-209",
+    "family": "repeated_tests",
+    "claim": "Method b21172f3d92e improves accuracy over the baseline on Task 869673b64d6c.",
+    "report": "Two completed evaluations on Task 869673b64d6c each found Method b21172f3d92e had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-154",
+    "family": "negation",
+    "claim": "Method 77ff8e2e4bfc improves accuracy over the baseline on Task 9ca6184ed556.",
+    "report": "The team did not test accuracy for Method 77ff8e2e4bfc on Task 9ca6184ed556.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-242",
+    "family": "percentages",
+    "claim": "Method 72450cf7561f improves accuracy over the baseline on Task def231ddbb43.",
+    "report": "On Task def231ddbb43, Method 72450cf7561f achieved 80% accuracy and the baseline achieved 73%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-48",
+    "family": "percentages",
+    "claim": "Method 8a461de2bfd6 improves accuracy over the baseline on Task 6e994b8a2480.",
+    "report": "On Task 6e994b8a2480, Method 8a461de2bfd6 achieved 77% accuracy and the baseline achieved 72%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-416",
+    "family": "irrelevant_metric",
+    "claim": "Method 932ab74f983a improves accuracy over the baseline on Task 7035423b4c06.",
+    "report": "Method 932ab74f983a ran faster on Task 7035423b4c06, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-183",
+    "family": "percentages",
+    "claim": "Method b29a72a25a24 improves accuracy over the baseline on Task 0b7c4de51cad.",
+    "report": "On Task 0b7c4de51cad, Method b29a72a25a24 achieved 67% accuracy and the baseline achieved 70%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-60",
+    "family": "subgroup",
+    "claim": "Method 728bb4ddc722 improves accuracy over the baseline on Task 1f242fcb5d25.",
+    "report": "Method 728bb4ddc722 improved on a different test; Task 1f242fcb5d25 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-315",
+    "family": "repeated_tests",
+    "claim": "Method f6652f60cf3e improves accuracy over the baseline on Task 73a96500fed0.",
+    "report": "Accuracy for Method f6652f60cf3e on Task 73a96500fed0 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-290",
+    "family": "irrelevant_metric",
+    "claim": "Method 07f50d45c2e7 improves accuracy over the baseline on Task 18d6b3bfcc0e.",
+    "report": "Method 07f50d45c2e7 used less memory and ran faster. On Task 18d6b3bfcc0e, Method 07f50d45c2e7 achieved 58% accuracy and the baseline achieved 61%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-36",
+    "family": "repeated_tests",
+    "claim": "Method 5bf20bb54224 improves accuracy over the baseline on Task f9585441413c.",
+    "report": "Two completed evaluations on Task f9585441413c each found Method 5bf20bb54224 had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-228",
+    "family": "expectations",
+    "claim": "Method 8d17dfc86ea1 improves accuracy over the baseline on Task b828e60eded0.",
+    "report": "The team expects Method 8d17dfc86ea1 to beat the baseline on Task b828e60eded0, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-223",
+    "family": "uncertainty",
+    "claim": "Method ffa06d7470c9 improves accuracy over the baseline on Task e1b6aa718354.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task e1b6aa718354 found Method ffa06d7470c9 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-93",
+    "family": "counts",
+    "claim": "Method 4273ae74ef58 improves accuracy over the baseline on Task ca7ee74d06be.",
+    "report": "On Task ca7ee74d06be, the baseline answered 64 of 100 questions correctly. Method 4273ae74ef58 answered 55 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-116",
+    "family": "subgroup",
+    "claim": "Method 767261d73d8d improves accuracy over the baseline on Task 1ff2af8ec1cd.",
+    "report": "Method 767261d73d8d improved on a different test; Task 1ff2af8ec1cd has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-383",
+    "family": "before_after",
+    "claim": "Method 2ccff940cc80 improves accuracy over the baseline on Task 3e8fe4287178.",
+    "report": "The same Task 3e8fe4287178 comparison changed accuracy from the baseline of 52% to 46% with Method 2ccff940cc80.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-215",
+    "family": "error_rates",
+    "claim": "Method c7ea1a22d21f improves accuracy over the baseline on Task 455be7d94f8d.",
+    "report": "Accuracy for Method c7ea1a22d21f on Task 455be7d94f8d was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-103",
+    "family": "negation",
+    "claim": "Method fb86e5a096c9 improves accuracy over the baseline on Task af504d322795.",
+    "report": "Method fb86e5a096c9 was not merely faster: measured accuracy on Task af504d322795 improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-395",
+    "family": "uncertainty",
+    "claim": "Method 1b76dff5c094 improves accuracy over the baseline on Task 9d8d2b9c2051.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 9d8d2b9c2051 found Method 1b76dff5c094 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-202",
+    "family": "error_rates",
+    "claim": "Method 15b1e3b34a5e improves accuracy over the baseline on Task 13c25be8290e.",
+    "report": "On Task 13c25be8290e, the baseline made 31 errors in 100 answers. Method 15b1e3b34a5e made 22 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-340",
+    "family": "irrelevant_metric",
+    "claim": "Method c6f84446dca8 improves accuracy over the baseline on Task 3aa341d085ae.",
+    "report": "Method c6f84446dca8 used less memory and ran faster. On Task 3aa341d085ae, Method c6f84446dca8 achieved 70% accuracy and the baseline achieved 66%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-113",
+    "family": "before_after",
+    "claim": "Method 7f5e272433d3 improves accuracy over the baseline on Task 87b0beb71ff9.",
+    "report": "Accuracy for Method 7f5e272433d3 on Task 87b0beb71ff9 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-321",
+    "family": "target_distractor",
+    "claim": "Method 52b1baf7772d improves accuracy over the baseline on Task f315ca09100f.",
+    "report": "Another method achieved 73% accuracy on Task f315ca09100f. For the requested method: On Task f315ca09100f, Method 52b1baf7772d achieved 65% accuracy and the baseline achieved 69%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-57",
+    "family": "negation",
+    "claim": "Method 92d406532141 improves accuracy over the baseline on Task da7cd6e431c0.",
+    "report": "Method 92d406532141 did not improve accuracy over the baseline on Task da7cd6e431c0; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-180",
+    "family": "repeated_tests",
+    "claim": "Method ecf51b343aec improves accuracy over the baseline on Task 6c30de606c36.",
+    "report": "Two completed evaluations on Task 6c30de606c36 each found Method ecf51b343aec had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-358",
+    "family": "superseded",
+    "claim": "Method 78f2daa4343b improves accuracy over the baseline on Task 4601f8fa5a60.",
+    "report": "An earlier accuracy result for Method 78f2daa4343b on Task 4601f8fa5a60 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-168",
+    "family": "repeated_tests",
+    "claim": "Method 6443ff5b90af improves accuracy over the baseline on Task 664546a031f5.",
+    "report": "Two completed evaluations on Task 664546a031f5 each found Method 6443ff5b90af had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-426",
+    "family": "subgroup",
+    "claim": "Method 7aa67d9e016b improves accuracy over the baseline on Task 4e9ea0485f81.",
+    "report": "On Task 4e9ea0485f81, Method 7aa67d9e016b achieved 69% accuracy and the baseline achieved 65%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-218",
+    "family": "subgroup",
+    "claim": "Method b881cf3456aa improves accuracy over the baseline on Task 177b15f15c54.",
+    "report": "Method b881cf3456aa improved on a different test; Task 177b15f15c54 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-288",
+    "family": "target_distractor",
+    "claim": "Method eee7ff4d0106 improves accuracy over the baseline on Task 63cad68b7e6c.",
+    "report": "Another method beat the baseline on Task 63cad68b7e6c. Method eee7ff4d0106 was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-402",
+    "family": "repeated_tests",
+    "claim": "Method 6a7d40f51a6c improves accuracy over the baseline on Task 5ae981bad286.",
+    "report": "Accuracy for Method 6a7d40f51a6c on Task 5ae981bad286 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-182",
+    "family": "subgroup",
+    "claim": "Method de1e8cc56df8 improves accuracy over the baseline on Task c36f39471ab6.",
+    "report": "Method de1e8cc56df8 improved on a different test; Task c36f39471ab6 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-55",
+    "family": "counts",
+    "claim": "Method f83e91c25b6e improves accuracy over the baseline on Task aadaa327c5ec.",
+    "report": "On Task aadaa327c5ec, the baseline answered 70 of 100 questions correctly. Method f83e91c25b6e answered 64 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-268",
+    "family": "percentages",
+    "claim": "Method 09700fadcd86 improves accuracy over the baseline on Task b8bf39f7f0f1.",
+    "report": "On Task b8bf39f7f0f1, Method 09700fadcd86 achieved 68% accuracy and the baseline achieved 62%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-217",
+    "family": "irrelevant_metric",
+    "claim": "Method 492a1d5ebd46 improves accuracy over the baseline on Task fcac61ac010b.",
+    "report": "Method 492a1d5ebd46 used less memory and ran faster. On Task fcac61ac010b, Method 492a1d5ebd46 achieved 57% accuracy and the baseline achieved 65%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-26",
+    "family": "expectations",
+    "claim": "Method 21faedfa35e5 improves accuracy over the baseline on Task b67d9f1b7067.",
+    "report": "The team expected Method 21faedfa35e5 to be worse. Actual results: On Task b67d9f1b7067, Method 21faedfa35e5 achieved 81% accuracy and the baseline achieved 74%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-59",
+    "family": "repeated_tests",
+    "claim": "Method e0431be5cd15 improves accuracy over the baseline on Task 7b18b41642ad.",
+    "report": "Two completed evaluations on Task 7b18b41642ad each found Method e0431be5cd15 had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-225",
+    "family": "irrelevant_metric",
+    "claim": "Method 1799b40b8e83 improves accuracy over the baseline on Task 14c90e41dffb.",
+    "report": "Method 1799b40b8e83 used less memory and ran faster. On Task 14c90e41dffb, Method 1799b40b8e83 achieved 59% accuracy and the baseline achieved 67%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-124",
+    "family": "expectations",
+    "claim": "Method 91cd700be238 improves accuracy over the baseline on Task 20bc77932b19.",
+    "report": "The team expects Method 91cd700be238 to beat the baseline on Task 20bc77932b19, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-185",
+    "family": "repeated_tests",
+    "claim": "Method 5fcb219abaaf improves accuracy over the baseline on Task 00a37e052590.",
+    "report": "Two completed evaluations on Task 00a37e052590 each found Method 5fcb219abaaf had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-421",
+    "family": "repeated_tests",
+    "claim": "Method e8605cf06594 improves accuracy over the baseline on Task 2bf44c15f7de.",
+    "report": "Two completed evaluations on Task 2bf44c15f7de each found Method e8605cf06594 had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-77",
+    "family": "error_rates",
+    "claim": "Method c2681de39c0d improves accuracy over the baseline on Task a977989c8f6d.",
+    "report": "On Task a977989c8f6d, the baseline made 45 errors in 100 answers. Method c2681de39c0d made 49 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-397",
+    "family": "uncertainty",
+    "claim": "Method 2b7ff18d0305 improves accuracy over the baseline on Task 833dbf6162db.",
+    "report": "No accuracy estimates are available for Method 2b7ff18d0305 or the baseline on Task 833dbf6162db; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-423",
+    "family": "negation",
+    "claim": "Method d51db100293c improves accuracy over the baseline on Task f140fc0b59d0.",
+    "report": "Method d51db100293c did not improve accuracy over the baseline on Task f140fc0b59d0; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-231",
+    "family": "error_rates",
+    "claim": "Method 36855ef2c06a improves accuracy over the baseline on Task 052fa835999a.",
+    "report": "Accuracy for Method 36855ef2c06a on Task 052fa835999a was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-355",
+    "family": "expectations",
+    "claim": "Method a75de99b8aa2 improves accuracy over the baseline on Task 1602fdc174f5.",
+    "report": "The team expected Method a75de99b8aa2 to be worse. Actual results: On Task 1602fdc174f5, Method a75de99b8aa2 achieved 73% accuracy and the baseline achieved 69%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-311",
+    "family": "negation",
+    "claim": "Method 652d90c19ca1 improves accuracy over the baseline on Task a1885f438720.",
+    "report": "Method 652d90c19ca1 did not improve accuracy over the baseline on Task a1885f438720; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-216",
+    "family": "negation",
+    "claim": "Method 0af58ccbbcbb improves accuracy over the baseline on Task 51538d3f91c9.",
+    "report": "The team did not test accuracy for Method 0af58ccbbcbb on Task 51538d3f91c9.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-19",
+    "family": "negation",
+    "claim": "Method d3fe2d05cdac improves accuracy over the baseline on Task 489a537a96f7.",
+    "report": "The team did not test accuracy for Method d3fe2d05cdac on Task 489a537a96f7.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-213",
+    "family": "percentages",
+    "claim": "Method 5af4d4834eb0 improves accuracy over the baseline on Task caabdc223112.",
+    "report": "On Task caabdc223112, Method 5af4d4834eb0 achieved 73% accuracy and the baseline achieved 64%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-351",
+    "family": "target_distractor",
+    "claim": "Method 9a7402fa39e9 improves accuracy over the baseline on Task 3cd4098279f6.",
+    "report": "Another method beat the baseline on Task 3cd4098279f6. Method 9a7402fa39e9 was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-127",
+    "family": "counts",
+    "claim": "Method b843a4764892 improves accuracy over the baseline on Task db15dfe37e2a.",
+    "report": "On Task db15dfe37e2a, the baseline answered 62 of 100 questions correctly. Method b843a4764892 answered 59 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-267",
+    "family": "repeated_tests",
+    "claim": "Method 00d671fc6e39 improves accuracy over the baseline on Task 35cdcb817f8d.",
+    "report": "Two completed evaluations on Task 35cdcb817f8d each found Method 00d671fc6e39 had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-7",
+    "family": "before_after",
+    "claim": "Method 81a68f0e722d improves accuracy over the baseline on Task 19bb9a73153d.",
+    "report": "The same Task 19bb9a73153d comparison changed accuracy from the baseline of 76% to 82% with Method 81a68f0e722d.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-232",
+    "family": "superseded",
+    "claim": "Method 51c1177fe21d improves accuracy over the baseline on Task 7eb3e912d253.",
+    "report": "An earlier accuracy result for Method 51c1177fe21d on Task 7eb3e912d253 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-308",
+    "family": "subgroup",
+    "claim": "Method 99bf2b1b1a57 improves accuracy over the baseline on Task 5a79b83c7808.",
+    "report": "On Task 5a79b83c7808, Method 99bf2b1b1a57 achieved 67% accuracy and the baseline achieved 76%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-74",
+    "family": "subgroup",
+    "claim": "Method e8dc43b4c3d8 improves accuracy over the baseline on Task 713bdb613069.",
+    "report": "On Task 713bdb613069, Method e8dc43b4c3d8 achieved 81% accuracy and the baseline achieved 78%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-412",
+    "family": "expectations",
+    "claim": "Method 2855caae588d improves accuracy over the baseline on Task 2d7d07198a1e.",
+    "report": "The team expected Method 2855caae588d to be worse. Actual results: On Task 2d7d07198a1e, Method 2855caae588d achieved 65% accuracy and the baseline achieved 61%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-198",
+    "family": "uncertainty",
+    "claim": "Method c1eaa3c9bab6 improves accuracy over the baseline on Task 981849c83a4e.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 981849c83a4e found Method c1eaa3c9bab6 better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-196",
+    "family": "negation",
+    "claim": "Method 144e35e61b26 improves accuracy over the baseline on Task edbc19fd0e73.",
+    "report": "The team did not test accuracy for Method 144e35e61b26 on Task edbc19fd0e73.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-356",
+    "family": "subgroup",
+    "claim": "Method 6beb62ebe9ac improves accuracy over the baseline on Task a79674872c0f.",
+    "report": "On Task a79674872c0f, Method 6beb62ebe9ac achieved 48% accuracy and the baseline achieved 53%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-13",
+    "family": "superseded",
+    "claim": "Method 9a186b81280b improves accuracy over the baseline on Task d3267893cbe8.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task d3267893cbe8, Method 9a186b81280b achieved 71% accuracy and the baseline achieved 68%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-38",
+    "family": "superseded",
+    "claim": "Method 1347ab80d164 improves accuracy over the baseline on Task 00cfdd58c8e7.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 00cfdd58c8e7, Method 1347ab80d164 achieved 65% accuracy and the baseline achieved 68%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-272",
+    "family": "subgroup",
+    "claim": "Method d44c1b62003f improves accuracy over the baseline on Task 9b8a5a498ff2.",
+    "report": "On Task 9b8a5a498ff2, Method d44c1b62003f achieved 66% accuracy and the baseline achieved 69%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-212",
+    "family": "repeated_tests",
+    "claim": "Method d21c9760af9b improves accuracy over the baseline on Task 4965b98b051b.",
+    "report": "Two completed evaluations on Task 4965b98b051b each found Method d21c9760af9b had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-100",
+    "family": "negation",
+    "claim": "Method 5b1df3e72613 improves accuracy over the baseline on Task 7a12916c7c7e.",
+    "report": "The team did not test accuracy for Method 5b1df3e72613 on Task 7a12916c7c7e.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-273",
+    "family": "counts",
+    "claim": "Method e8352a63c8e9 improves accuracy over the baseline on Task 7ba27099adea.",
+    "report": "On Task 7ba27099adea, the baseline answered 64 of 100 questions correctly. Method e8352a63c8e9 answered 60 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-332",
+    "family": "expectations",
+    "claim": "Method 52eeabbf094c improves accuracy over the baseline on Task 7daf7e8638db.",
+    "report": "The team expected Method 52eeabbf094c to be better. Actual results: On Task 7daf7e8638db, Method 52eeabbf094c achieved 68% accuracy and the baseline achieved 77%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-2",
+    "family": "uncertainty",
+    "claim": "Method 225f52d3f689 improves accuracy over the baseline on Task d7d7a796dd47.",
+    "report": "No accuracy estimates are available for Method 225f52d3f689 or the baseline on Task d7d7a796dd47; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-204",
+    "family": "error_rates",
+    "claim": "Method 3057283f6687 improves accuracy over the baseline on Task 49b0522a99f1.",
+    "report": "On Task 49b0522a99f1, the baseline made 47 errors in 100 answers. Method 3057283f6687 made 42 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-387",
+    "family": "error_rates",
+    "claim": "Method a5d1bbdf9822 improves accuracy over the baseline on Task 7ee9ecfb6087.",
+    "report": "On Task 7ee9ecfb6087, the baseline made 23 errors in 100 answers. Method a5d1bbdf9822 made 14 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-50",
+    "family": "expectations",
+    "claim": "Method 77f48a9caac2 improves accuracy over the baseline on Task 02702ae7638b.",
+    "report": "The team expects Method 77f48a9caac2 to beat the baseline on Task 02702ae7638b, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-331",
+    "family": "counts",
+    "claim": "Method ebbc95453a9f improves accuracy over the baseline on Task 7b399108f6be.",
+    "report": "On Task 7b399108f6be, the baseline answered 63 of 100 questions correctly. Method ebbc95453a9f answered 59 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-164",
+    "family": "target_distractor",
+    "claim": "Method 594cc5717297 improves accuracy over the baseline on Task 3170f7b10ce9.",
+    "report": "Another method beat the baseline on Task 3170f7b10ce9. Method 594cc5717297 was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-25",
+    "family": "negation",
+    "claim": "Method 79d9344c19da improves accuracy over the baseline on Task d654aaf44f23.",
+    "report": "Method 79d9344c19da did not improve accuracy over the baseline on Task d654aaf44f23; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-199",
+    "family": "counts",
+    "claim": "Method 6bb2fd5d9d56 improves accuracy over the baseline on Task 49928709ff59.",
+    "report": "On Task 49928709ff59, the baseline answered 57 of 100 questions correctly. Method 6bb2fd5d9d56 answered 65 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-377",
+    "family": "uncertainty",
+    "claim": "Method 2b2c70850c7e improves accuracy over the baseline on Task 40a2a9026288.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 40a2a9026288 found Method 2b2c70850c7e better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-181",
+    "family": "percentages",
+    "claim": "Method bbfebd33c8a7 improves accuracy over the baseline on Task 1d8a9aa6939a.",
+    "report": "Accuracy for Method bbfebd33c8a7 on Task 1d8a9aa6939a was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-411",
+    "family": "negation",
+    "claim": "Method 918daf45f949 improves accuracy over the baseline on Task f8fe2562d95e.",
+    "report": "Method 918daf45f949 was not merely faster: measured accuracy on Task f8fe2562d95e improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-405",
+    "family": "target_distractor",
+    "claim": "Method ff9176f071ad improves accuracy over the baseline on Task 41b37b132b39.",
+    "report": "Another method achieved 68% accuracy on Task 41b37b132b39. For the requested method: On Task 41b37b132b39, Method ff9176f071ad achieved 62% accuracy and the baseline achieved 65%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-166",
+    "family": "subgroup",
+    "claim": "Method 8e13f7d4c67c improves accuracy over the baseline on Task 4cc3fbc2cdc9.",
+    "report": "On Task 4cc3fbc2cdc9, Method 8e13f7d4c67c achieved 64% accuracy and the baseline achieved 58%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-403",
+    "family": "target_distractor",
+    "claim": "Method 0ad408592e19 improves accuracy over the baseline on Task 14d59245a15b.",
+    "report": "Another method achieved 87% accuracy on Task 14d59245a15b. For the requested method: On Task 14d59245a15b, Method 0ad408592e19 achieved 69% accuracy and the baseline achieved 78%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-152",
+    "family": "before_after",
+    "claim": "Method 11c096198f2f improves accuracy over the baseline on Task 9d86bee20ca4.",
+    "report": "The same Task 9d86bee20ca4 comparison changed accuracy from the baseline of 55% to 62% with Method 11c096198f2f.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-190",
+    "family": "before_after",
+    "claim": "Method 9895777d2fa3 improves accuracy over the baseline on Task 9ab2b5a3de16.",
+    "report": "Accuracy for Method 9895777d2fa3 on Task 9ab2b5a3de16 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-70",
+    "family": "irrelevant_metric",
+    "claim": "Method 1f7fb8ea0507 improves accuracy over the baseline on Task f5c230278d26.",
+    "report": "Method 1f7fb8ea0507 used less memory and ran faster. On Task f5c230278d26, Method 1f7fb8ea0507 achieved 77% accuracy and the baseline achieved 74%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-98",
+    "family": "counts",
+    "claim": "Method 41fe889f9e6b improves accuracy over the baseline on Task ce19b6aca5cd.",
+    "report": "On Task ce19b6aca5cd, the baseline answered 70 of 100 questions correctly. Method 41fe889f9e6b answered 66 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-293",
+    "family": "error_rates",
+    "claim": "Method 1384f70d9e1b improves accuracy over the baseline on Task 05fe50874817.",
+    "report": "Accuracy for Method 1384f70d9e1b on Task 05fe50874817 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-54",
+    "family": "irrelevant_metric",
+    "claim": "Method bdd60b19f55d improves accuracy over the baseline on Task 56cb65dde470.",
+    "report": "Method bdd60b19f55d ran faster on Task 56cb65dde470, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-172",
+    "family": "counts",
+    "claim": "Method 5c27f64fffae improves accuracy over the baseline on Task 56dd4693629b.",
+    "report": "Accuracy for Method 5c27f64fffae on Task 56dd4693629b was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-237",
+    "family": "error_rates",
+    "claim": "Method 802f322750ba improves accuracy over the baseline on Task f98a02952477.",
+    "report": "Accuracy for Method 802f322750ba on Task f98a02952477 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-360",
+    "family": "expectations",
+    "claim": "Method 92ec56822e0e improves accuracy over the baseline on Task 2c0fb4409b08.",
+    "report": "The team expected Method 92ec56822e0e to be better. Actual results: On Task 2c0fb4409b08, Method 92ec56822e0e achieved 43% accuracy and the baseline achieved 52%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-253",
+    "family": "error_rates",
+    "claim": "Method d1b251b95da5 improves accuracy over the baseline on Task f0c0fa6e96d2.",
+    "report": "On Task f0c0fa6e96d2, the baseline made 32 errors in 100 answers. Method d1b251b95da5 made 23 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-56",
+    "family": "counts",
+    "claim": "Method 20b35270320b improves accuracy over the baseline on Task b8534f157f24.",
+    "report": "Accuracy for Method 20b35270320b on Task b8534f157f24 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-422",
+    "family": "percentages",
+    "claim": "Method 03f2e33e758c improves accuracy over the baseline on Task 3a40f476b05a.",
+    "report": "Accuracy for Method 03f2e33e758c on Task 3a40f476b05a was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-95",
+    "family": "error_rates",
+    "claim": "Method 57f14a0911b5 improves accuracy over the baseline on Task 096f4873ec32.",
+    "report": "On Task 096f4873ec32, the baseline made 44 errors in 100 answers. Method 57f14a0911b5 made 49 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-132",
+    "family": "expectations",
+    "claim": "Method 4420f40396d4 improves accuracy over the baseline on Task 3db3c02fc392.",
+    "report": "The team expected Method 4420f40396d4 to be better. Actual results: On Task 3db3c02fc392, Method 4420f40396d4 achieved 53% accuracy and the baseline achieved 60%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-277",
+    "family": "uncertainty",
+    "claim": "Method 8afc97bc2ef6 improves accuracy over the baseline on Task 69deccb7e82f.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 69deccb7e82f found Method 8afc97bc2ef6 better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-64",
+    "family": "uncertainty",
+    "claim": "Method 18dd59dfe31e improves accuracy over the baseline on Task b7dc41d02d41.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task b7dc41d02d41 found Method 18dd59dfe31e worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-85",
+    "family": "percentages",
+    "claim": "Method 8a7bc6cf5542 improves accuracy over the baseline on Task 79fbb5a20828.",
+    "report": "On Task 79fbb5a20828, Method 8a7bc6cf5542 achieved 78% accuracy and the baseline achieved 71%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-238",
+    "family": "negation",
+    "claim": "Method 326e98cb850f improves accuracy over the baseline on Task 1d2bea4e2035.",
+    "report": "The team did not test accuracy for Method 326e98cb850f on Task 1d2bea4e2035.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-424",
+    "family": "error_rates",
+    "claim": "Method 5aa739e5c3dd improves accuracy over the baseline on Task 4d0fc72c05c4.",
+    "report": "Accuracy for Method 5aa739e5c3dd on Task 4d0fc72c05c4 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-230",
+    "family": "negation",
+    "claim": "Method 119a0e123273 improves accuracy over the baseline on Task dd6d96a0916a.",
+    "report": "Method 119a0e123273 was not merely faster: measured accuracy on Task dd6d96a0916a improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-278",
+    "family": "counts",
+    "claim": "Method 9a4fb8c67ffa improves accuracy over the baseline on Task 50dce17aeea9.",
+    "report": "On Task 50dce17aeea9, the baseline answered 78 of 100 questions correctly. Method 9a4fb8c67ffa answered 84 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-295",
+    "family": "error_rates",
+    "claim": "Method 07539de3394f improves accuracy over the baseline on Task 259fa2c0ceb9.",
+    "report": "Accuracy for Method 07539de3394f on Task 259fa2c0ceb9 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-415",
+    "family": "subgroup",
+    "claim": "Method 2ed71969eaf6 improves accuracy over the baseline on Task f1bdf42be39c.",
+    "report": "On Task f1bdf42be39c, Method 2ed71969eaf6 achieved 64% accuracy and the baseline achieved 67%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-279",
+    "family": "negation",
+    "claim": "Method b918819baedd improves accuracy over the baseline on Task 632bd41988ac.",
+    "report": "Method b918819baedd did not improve accuracy over the baseline on Task 632bd41988ac; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-362",
+    "family": "counts",
+    "claim": "Method 728277524c6d improves accuracy over the baseline on Task dc85b2fbdcf8.",
+    "report": "Accuracy for Method 728277524c6d on Task dc85b2fbdcf8 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-145",
+    "family": "uncertainty",
+    "claim": "Method ec6ef0352cec improves accuracy over the baseline on Task 5ff843aa328e.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 5ff843aa328e found Method ec6ef0352cec worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-147",
+    "family": "before_after",
+    "claim": "Method a25189404b58 improves accuracy over the baseline on Task e185478eaf11.",
+    "report": "The same Task e185478eaf11 comparison changed accuracy from the baseline of 66% to 70% with Method a25189404b58.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-239",
+    "family": "percentages",
+    "claim": "Method b6def1eeb3a6 improves accuracy over the baseline on Task e2334fda804a.",
+    "report": "On Task e2334fda804a, Method b6def1eeb3a6 achieved 82% accuracy and the baseline achieved 75%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-79",
+    "family": "uncertainty",
+    "claim": "Method e8ce596a4c4c improves accuracy over the baseline on Task a6ce2c55ee86.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task a6ce2c55ee86 found Method e8ce596a4c4c worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-159",
+    "family": "counts",
+    "claim": "Method 836d9d0fdf7e improves accuracy over the baseline on Task b3009e07fbfa.",
+    "report": "Accuracy for Method 836d9d0fdf7e on Task b3009e07fbfa was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-41",
+    "family": "percentages",
+    "claim": "Method 2f732a816f9d improves accuracy over the baseline on Task 8d91b957ff40.",
+    "report": "Accuracy for Method 2f732a816f9d on Task 8d91b957ff40 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-33",
+    "family": "negation",
+    "claim": "Method 526b6f1aaad5 improves accuracy over the baseline on Task 822c125aa5a3.",
+    "report": "Method 526b6f1aaad5 did not improve accuracy over the baseline on Task 822c125aa5a3; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-305",
+    "family": "uncertainty",
+    "claim": "Method 6fa9419e971b improves accuracy over the baseline on Task 434809c28c26.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 434809c28c26 found Method 6fa9419e971b better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-184",
+    "family": "before_after",
+    "claim": "Method 519c78acaa8f improves accuracy over the baseline on Task 9d951d034b47.",
+    "report": "The same Task 9d951d034b47 comparison changed accuracy from the baseline of 54% to 45% with Method 519c78acaa8f.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-314",
+    "family": "before_after",
+    "claim": "Method 15f4edff9a51 improves accuracy over the baseline on Task 80ef05cb8700.",
+    "report": "Accuracy for Method 15f4edff9a51 on Task 80ef05cb8700 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-269",
+    "family": "subgroup",
+    "claim": "Method 41c39481308d improves accuracy over the baseline on Task ba9a92f53c77.",
+    "report": "Method 41c39481308d improved on a different test; Task ba9a92f53c77 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-226",
+    "family": "uncertainty",
+    "claim": "Method 1981ac27c522 improves accuracy over the baseline on Task 59001b839676.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 59001b839676 found Method 1981ac27c522 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-72",
+    "family": "percentages",
+    "claim": "Method c974b5f2222a improves accuracy over the baseline on Task af0a55556f6f.",
+    "report": "Accuracy for Method c974b5f2222a on Task af0a55556f6f was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-108",
+    "family": "before_after",
+    "claim": "Method 6f04ea3f64ef improves accuracy over the baseline on Task 99cb0df94ef2.",
+    "report": "The same Task 99cb0df94ef2 comparison changed accuracy from the baseline of 76% to 69% with Method 6f04ea3f64ef.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-45",
+    "family": "irrelevant_metric",
+    "claim": "Method f9352f74fd1a improves accuracy over the baseline on Task 54e874c4800d.",
+    "report": "Method f9352f74fd1a ran faster on Task 54e874c4800d, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-304",
+    "family": "subgroup",
+    "claim": "Method 7fcc4a49058b improves accuracy over the baseline on Task 91f7b1ab030f.",
+    "report": "On Task 91f7b1ab030f, Method 7fcc4a49058b achieved 52% accuracy and the baseline achieved 55%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-150",
+    "family": "repeated_tests",
+    "claim": "Method 0ec319dd0b05 improves accuracy over the baseline on Task 45d1e6e48c57.",
+    "report": "Two completed evaluations on Task 45d1e6e48c57 each found Method 0ec319dd0b05 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-15",
+    "family": "uncertainty",
+    "claim": "Method 90d842396721 improves accuracy over the baseline on Task 196c3e0ff115.",
+    "report": "No accuracy estimates are available for Method 90d842396721 or the baseline on Task 196c3e0ff115; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-275",
+    "family": "error_rates",
+    "claim": "Method a00bf049eb12 improves accuracy over the baseline on Task 2ca989c8bdae.",
+    "report": "On Task 2ca989c8bdae, the baseline made 50 errors in 100 answers. Method a00bf049eb12 made 59 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-206",
+    "family": "target_distractor",
+    "claim": "Method 05a1d1c7c0cb improves accuracy over the baseline on Task d3b59168c9a2.",
+    "report": "Another method achieved 56% accuracy on Task d3b59168c9a2. For the requested method: On Task d3b59168c9a2, Method 05a1d1c7c0cb achieved 56% accuracy and the baseline achieved 53%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-319",
+    "family": "expectations",
+    "claim": "Method 2b1e9cb9fb6a improves accuracy over the baseline on Task bc896a6bbefb.",
+    "report": "The team expected Method 2b1e9cb9fb6a to be worse. Actual results: On Task bc896a6bbefb, Method 2b1e9cb9fb6a achieved 77% accuracy and the baseline achieved 69%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-29",
+    "family": "negation",
+    "claim": "Method 1b1cee605e65 improves accuracy over the baseline on Task f299d718d83a.",
+    "report": "Method 1b1cee605e65 did not improve accuracy over the baseline on Task f299d718d83a; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-382",
+    "family": "expectations",
+    "claim": "Method d72e0b5854ae improves accuracy over the baseline on Task faa1c208b012.",
+    "report": "The team expected Method d72e0b5854ae to be worse. Actual results: On Task faa1c208b012, Method d72e0b5854ae achieved 76% accuracy and the baseline achieved 67%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-429",
+    "family": "uncertainty",
+    "claim": "Method fbfe96277e9c improves accuracy over the baseline on Task 462385b76a38.",
+    "report": "No accuracy estimates are available for Method fbfe96277e9c or the baseline on Task 462385b76a38; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-353",
+    "family": "repeated_tests",
+    "claim": "Method 056897736232 improves accuracy over the baseline on Task 9af35777d495.",
+    "report": "Two completed evaluations on Task 9af35777d495 each found Method 056897736232 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-32",
+    "family": "error_rates",
+    "claim": "Method af6c148ebe2a improves accuracy over the baseline on Task 009279a36e99.",
+    "report": "On Task 009279a36e99, the baseline made 29 errors in 100 answers. Method af6c148ebe2a made 25 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-192",
+    "family": "counts",
+    "claim": "Method 686dbd01c157 improves accuracy over the baseline on Task 388c9ee4948d.",
+    "report": "On Task 388c9ee4948d, the baseline answered 75 of 100 questions correctly. Method 686dbd01c157 answered 79 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-349",
+    "family": "subgroup",
+    "claim": "Method e835cbc1c468 improves accuracy over the baseline on Task 5120259b38f6.",
+    "report": "On Task 5120259b38f6, Method e835cbc1c468 achieved 82% accuracy and the baseline achieved 75%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-281",
+    "family": "expectations",
+    "claim": "Method 4543d0075710 improves accuracy over the baseline on Task 71c5be3f7604.",
+    "report": "The team expected Method 4543d0075710 to be better. Actual results: On Task 71c5be3f7604, Method 4543d0075710 achieved 66% accuracy and the baseline achieved 72%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-419",
+    "family": "repeated_tests",
+    "claim": "Method 9cd0c77ac7e2 improves accuracy over the baseline on Task c73be38e08b5.",
+    "report": "Two completed evaluations on Task c73be38e08b5 each found Method 9cd0c77ac7e2 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-153",
+    "family": "irrelevant_metric",
+    "claim": "Method 121231bfa94b improves accuracy over the baseline on Task ce3577e7205c.",
+    "report": "Method 121231bfa94b ran faster on Task ce3577e7205c, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-131",
+    "family": "expectations",
+    "claim": "Method 3d2a8ce87c9f improves accuracy over the baseline on Task d1e9dc74813a.",
+    "report": "The team expected Method 3d2a8ce87c9f to be worse. Actual results: On Task d1e9dc74813a, Method 3d2a8ce87c9f achieved 61% accuracy and the baseline achieved 58%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-323",
+    "family": "repeated_tests",
+    "claim": "Method 24c0c93d4a53 improves accuracy over the baseline on Task bc0a87a6cd80.",
+    "report": "Two completed evaluations on Task bc0a87a6cd80 each found Method 24c0c93d4a53 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-301",
+    "family": "irrelevant_metric",
+    "claim": "Method 52ece9a2af7a improves accuracy over the baseline on Task e3c85f5afa2d.",
+    "report": "Method 52ece9a2af7a used less memory and ran faster. On Task e3c85f5afa2d, Method 52ece9a2af7a achieved 46% accuracy and the baseline achieved 51%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-370",
+    "family": "target_distractor",
+    "claim": "Method 4d384d3727b7 improves accuracy over the baseline on Task 2918211048a9.",
+    "report": "Another method beat the baseline on Task 2918211048a9. Method 4d384d3727b7 was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-210",
+    "family": "expectations",
+    "claim": "Method 412318167a90 improves accuracy over the baseline on Task 12a7656186d4.",
+    "report": "The team expected Method 412318167a90 to be worse. Actual results: On Task 12a7656186d4, Method 412318167a90 achieved 78% accuracy and the baseline achieved 70%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-341",
+    "family": "irrelevant_metric",
+    "claim": "Method 70e31b11c04b improves accuracy over the baseline on Task 79ae1c201e18.",
+    "report": "Method 70e31b11c04b used less memory and ran faster. On Task 79ae1c201e18, Method 70e31b11c04b achieved 49% accuracy and the baseline achieved 58%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-112",
+    "family": "superseded",
+    "claim": "Method d87da7db982d improves accuracy over the baseline on Task edc5b3ff5b51.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task edc5b3ff5b51, Method d87da7db982d achieved 56% accuracy and the baseline achieved 59%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-51",
+    "family": "error_rates",
+    "claim": "Method 7aaa98f5282f improves accuracy over the baseline on Task 3e52221fbc27.",
+    "report": "On Task 3e52221fbc27, the baseline made 32 errors in 100 answers. Method 7aaa98f5282f made 23 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-244",
+    "family": "superseded",
+    "claim": "Method a9dd0930e750 improves accuracy over the baseline on Task dd2a03aa77b2.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task dd2a03aa77b2, Method a9dd0930e750 achieved 80% accuracy and the baseline achieved 74%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-30",
+    "family": "uncertainty",
+    "claim": "Method 69de5b894233 improves accuracy over the baseline on Task 9f373df42229.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 9f373df42229 found Method 69de5b894233 better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-292",
+    "family": "before_after",
+    "claim": "Method 32dd1b145419 improves accuracy over the baseline on Task 085e8a2c8b57.",
+    "report": "The same Task 085e8a2c8b57 comparison changed accuracy from the baseline of 68% to 71% with Method 32dd1b145419.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-149",
+    "family": "target_distractor",
+    "claim": "Method f17b8ad500e3 improves accuracy over the baseline on Task 6b8d45dd2d7a.",
+    "report": "Another method beat the baseline on Task 6b8d45dd2d7a. Method f17b8ad500e3 was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-102",
+    "family": "superseded",
+    "claim": "Method 385804525fcd improves accuracy over the baseline on Task 6a5c3f5d2689.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 6a5c3f5d2689, Method 385804525fcd achieved 51% accuracy and the baseline achieved 58%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-205",
+    "family": "before_after",
+    "claim": "Method 22dd455627ea improves accuracy over the baseline on Task 8bdda084d28d.",
+    "report": "Accuracy for Method 22dd455627ea on Task 8bdda084d28d was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-254",
+    "family": "target_distractor",
+    "claim": "Method 47fa5eebcbad improves accuracy over the baseline on Task 699de9d3d1f7.",
+    "report": "Another method achieved 82% accuracy on Task 699de9d3d1f7. For the requested method: On Task 699de9d3d1f7, Method 47fa5eebcbad achieved 82% accuracy and the baseline achieved 78%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-233",
+    "family": "irrelevant_metric",
+    "claim": "Method c0e934bc79e3 improves accuracy over the baseline on Task 61c3724febbf.",
+    "report": "Method c0e934bc79e3 used less memory and ran faster. On Task 61c3724febbf, Method c0e934bc79e3 achieved 61% accuracy and the baseline achieved 52%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-162",
+    "family": "subgroup",
+    "claim": "Method 1235c4582002 improves accuracy over the baseline on Task d8d42148da02.",
+    "report": "On Task d8d42148da02, Method 1235c4582002 achieved 51% accuracy and the baseline achieved 54%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-97",
+    "family": "repeated_tests",
+    "claim": "Method ba0b2349f2de improves accuracy over the baseline on Task 7b18e4c24379.",
+    "report": "Two completed evaluations on Task 7b18e4c24379 each found Method ba0b2349f2de had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-248",
+    "family": "repeated_tests",
+    "claim": "Method 6f73a8ee751c improves accuracy over the baseline on Task 1b1c28075e65.",
+    "report": "Two completed evaluations on Task 1b1c28075e65 each found Method 6f73a8ee751c had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-374",
+    "family": "error_rates",
+    "claim": "Method 3de8e21b8f0c improves accuracy over the baseline on Task 70056ccdc66c.",
+    "report": "Accuracy for Method 3de8e21b8f0c on Task 70056ccdc66c was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-388",
+    "family": "repeated_tests",
+    "claim": "Method 33736f090df7 improves accuracy over the baseline on Task ce1b0c29a13a.",
+    "report": "Two completed evaluations on Task ce1b0c29a13a each found Method 33736f090df7 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-136",
+    "family": "irrelevant_metric",
+    "claim": "Method af7547b22f4b improves accuracy over the baseline on Task 8f7d3a586a3e.",
+    "report": "Method af7547b22f4b ran faster on Task 8f7d3a586a3e, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-259",
+    "family": "irrelevant_metric",
+    "claim": "Method 4fb45a539fbf improves accuracy over the baseline on Task 0ce3d7a65e28.",
+    "report": "Method 4fb45a539fbf used less memory and ran faster. On Task 0ce3d7a65e28, Method 4fb45a539fbf achieved 82% accuracy and the baseline achieved 78%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-250",
+    "family": "counts",
+    "claim": "Method 45ec9160bb5f improves accuracy over the baseline on Task 877f41fb86bf.",
+    "report": "Accuracy for Method 45ec9160bb5f on Task 877f41fb86bf was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-174",
+    "family": "negation",
+    "claim": "Method f00201dbcad6 improves accuracy over the baseline on Task 08cf382e0707.",
+    "report": "The team did not test accuracy for Method f00201dbcad6 on Task 08cf382e0707.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-73",
+    "family": "target_distractor",
+    "claim": "Method af004587af7b improves accuracy over the baseline on Task a98b04f5504b.",
+    "report": "Another method beat the baseline on Task a98b04f5504b. Method af004587af7b was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-126",
+    "family": "repeated_tests",
+    "claim": "Method f261d68c760d improves accuracy over the baseline on Task 7688cbf74bb6.",
+    "report": "Accuracy for Method f261d68c760d on Task 7688cbf74bb6 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-372",
+    "family": "counts",
+    "claim": "Method 65155d1bcddb improves accuracy over the baseline on Task 0427838ae13c.",
+    "report": "On Task 0427838ae13c, the baseline answered 59 of 100 questions correctly. Method 65155d1bcddb answered 55 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-65",
+    "family": "uncertainty",
+    "claim": "Method 0e6734137de1 improves accuracy over the baseline on Task 36ffe23f71ae.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 36ffe23f71ae found Method 0e6734137de1 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-83",
+    "family": "before_after",
+    "claim": "Method 03bb3dd0b729 improves accuracy over the baseline on Task 0d08bcc7c505.",
+    "report": "The same Task 0d08bcc7c505 comparison changed accuracy from the baseline of 64% to 56% with Method 03bb3dd0b729.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-115",
+    "family": "before_after",
+    "claim": "Method d6169a185288 improves accuracy over the baseline on Task 2bc8ed315fbb.",
+    "report": "The same Task 2bc8ed315fbb comparison changed accuracy from the baseline of 62% to 66% with Method d6169a185288.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-327",
+    "family": "uncertainty",
+    "claim": "Method 0555d3939d17 improves accuracy over the baseline on Task cbd28d479068.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task cbd28d479068 found Method 0555d3939d17 better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-17",
+    "family": "uncertainty",
+    "claim": "Method 7a96041b390c improves accuracy over the baseline on Task 59dd47539ade.",
+    "report": "No accuracy estimates are available for Method 7a96041b390c or the baseline on Task 59dd47539ade; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-326",
+    "family": "uncertainty",
+    "claim": "Method 02506d6f1518 improves accuracy over the baseline on Task 3388ead82519.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 3388ead82519 found Method 02506d6f1518 better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-322",
+    "family": "before_after",
+    "claim": "Method 5b6fc2904ffe improves accuracy over the baseline on Task 076a1374c901.",
+    "report": "The same Task 076a1374c901 comparison changed accuracy from the baseline of 53% to 57% with Method 5b6fc2904ffe.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-336",
+    "family": "irrelevant_metric",
+    "claim": "Method 9da537773bf3 improves accuracy over the baseline on Task 02cdd145152f.",
+    "report": "Method 9da537773bf3 ran faster on Task 02cdd145152f, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-144",
+    "family": "superseded",
+    "claim": "Method 911cc92b1c15 improves accuracy over the baseline on Task c8bf32298faa.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task c8bf32298faa, Method 911cc92b1c15 achieved 74% accuracy and the baseline achieved 70%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-203",
+    "family": "target_distractor",
+    "claim": "Method 182a1b453a3c improves accuracy over the baseline on Task a53676a2d0dc.",
+    "report": "Another method achieved 58% accuracy on Task a53676a2d0dc. For the requested method: On Task a53676a2d0dc, Method 182a1b453a3c achieved 58% accuracy and the baseline achieved 53%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-391",
+    "family": "percentages",
+    "claim": "Method 9945272faa94 improves accuracy over the baseline on Task 814704f6ad6b.",
+    "report": "On Task 814704f6ad6b, Method 9945272faa94 achieved 50% accuracy and the baseline achieved 56%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-284",
+    "family": "repeated_tests",
+    "claim": "Method 00cade1de873 improves accuracy over the baseline on Task 3380a6cc9c6f.",
+    "report": "Accuracy for Method 00cade1de873 on Task 3380a6cc9c6f was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-348",
+    "family": "before_after",
+    "claim": "Method 9523809418ee improves accuracy over the baseline on Task 68bee0018dcb.",
+    "report": "The same Task 68bee0018dcb comparison changed accuracy from the baseline of 79% to 88% with Method 9523809418ee.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-303",
+    "family": "counts",
+    "claim": "Method b0b2c3896f00 improves accuracy over the baseline on Task 21562b6b87c3.",
+    "report": "Accuracy for Method b0b2c3896f00 on Task 21562b6b87c3 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-229",
+    "family": "irrelevant_metric",
+    "claim": "Method 34dc7413c2b0 improves accuracy over the baseline on Task 5f46d78a1338.",
+    "report": "Method 34dc7413c2b0 ran faster on Task 5f46d78a1338, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-364",
+    "family": "counts",
+    "claim": "Method 22ea666c9c4e improves accuracy over the baseline on Task 7eda2358be17.",
+    "report": "Accuracy for Method 22ea666c9c4e on Task 7eda2358be17 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-171",
+    "family": "expectations",
+    "claim": "Method b4aab0bc408a improves accuracy over the baseline on Task c08168add698.",
+    "report": "The team expected Method b4aab0bc408a to be worse. Actual results: On Task c08168add698, Method b4aab0bc408a achieved 62% accuracy and the baseline achieved 57%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-175",
+    "family": "percentages",
+    "claim": "Method 8ebf968fb6f1 improves accuracy over the baseline on Task 2db47db8a0f4.",
+    "report": "On Task 2db47db8a0f4, Method 8ebf968fb6f1 achieved 63% accuracy and the baseline achieved 68%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-262",
+    "family": "uncertainty",
+    "claim": "Method c6c488ca8d7d improves accuracy over the baseline on Task 843eb9a53cfd.",
+    "report": "No accuracy estimates are available for Method c6c488ca8d7d or the baseline on Task 843eb9a53cfd; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-24",
+    "family": "before_after",
+    "claim": "Method e9395e2acc1e improves accuracy over the baseline on Task 781399e42209.",
+    "report": "Accuracy for Method e9395e2acc1e on Task 781399e42209 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-287",
+    "family": "percentages",
+    "claim": "Method 56562372fad0 improves accuracy over the baseline on Task 96537b3bede8.",
+    "report": "On Task 96537b3bede8, Method 56562372fad0 achieved 55% accuracy and the baseline achieved 63%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-191",
+    "family": "before_after",
+    "claim": "Method 7701c33f4eba improves accuracy over the baseline on Task d9d34bbca771.",
+    "report": "The same Task d9d34bbca771 comparison changed accuracy from the baseline of 62% to 54% with Method 7701c33f4eba.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-211",
+    "family": "error_rates",
+    "claim": "Method 753cfa66413d improves accuracy over the baseline on Task 8c6b62832cb4.",
+    "report": "On Task 8c6b62832cb4, the baseline made 50 errors in 100 answers. Method 753cfa66413d made 54 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-297",
+    "family": "counts",
+    "claim": "Method 92cd05d3665b improves accuracy over the baseline on Task 34bb75de079c.",
+    "report": "On Task 34bb75de079c, the baseline answered 67 of 100 questions correctly. Method 92cd05d3665b answered 74 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-43",
+    "family": "target_distractor",
+    "claim": "Method 2913a733842b improves accuracy over the baseline on Task c8fe390bc913.",
+    "report": "Another method achieved 83% accuracy on Task c8fe390bc913. For the requested method: On Task c8fe390bc913, Method 2913a733842b achieved 83% accuracy and the baseline achieved 79%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-255",
+    "family": "uncertainty",
+    "claim": "Method a2349de53a95 improves accuracy over the baseline on Task e8d5714edd08.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task e8d5714edd08 found Method a2349de53a95 better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-404",
+    "family": "repeated_tests",
+    "claim": "Method 9b5c29cd5523 improves accuracy over the baseline on Task 1556cfc78ab6.",
+    "report": "Accuracy for Method 9b5c29cd5523 on Task 1556cfc78ab6 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-167",
+    "family": "percentages",
+    "claim": "Method 066cb73170fe improves accuracy over the baseline on Task 15b0457165eb.",
+    "report": "Accuracy for Method 066cb73170fe on Task 15b0457165eb was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-11",
+    "family": "subgroup",
+    "claim": "Method 03c903a1fdd2 improves accuracy over the baseline on Task 2ea2d65d2205.",
+    "report": "On Task 2ea2d65d2205, Method 03c903a1fdd2 achieved 76% accuracy and the baseline achieved 72%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-359",
+    "family": "before_after",
+    "claim": "Method 871945a1296b improves accuracy over the baseline on Task 3c062d2ee492.",
+    "report": "The same Task 3c062d2ee492 comparison changed accuracy from the baseline of 52% to 49% with Method 871945a1296b.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-14",
+    "family": "target_distractor",
+    "claim": "Method 72ad247ad943 improves accuracy over the baseline on Task a438ad5b4cba.",
+    "report": "Another method achieved 79% accuracy on Task a438ad5b4cba. For the requested method: On Task a438ad5b4cba, Method 72ad247ad943 achieved 79% accuracy and the baseline achieved 76%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-137",
+    "family": "irrelevant_metric",
+    "claim": "Method d5552072c52f improves accuracy over the baseline on Task 2be37b063cf4.",
+    "report": "Method d5552072c52f used less memory and ran faster. On Task 2be37b063cf4, Method d5552072c52f achieved 58% accuracy and the baseline achieved 53%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-208",
+    "family": "uncertainty",
+    "claim": "Method 9c1743243675 improves accuracy over the baseline on Task 3c0ddd25cc81.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 3c0ddd25cc81 found Method 9c1743243675 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-325",
+    "family": "irrelevant_metric",
+    "claim": "Method 3266d8f7ff06 improves accuracy over the baseline on Task 910e2cd187cf.",
+    "report": "Method 3266d8f7ff06 used less memory and ran faster. On Task 910e2cd187cf, Method 3266d8f7ff06 achieved 53% accuracy and the baseline achieved 60%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-201",
+    "family": "uncertainty",
+    "claim": "Method 7c133feced64 improves accuracy over the baseline on Task c96434f34d4c.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task c96434f34d4c found Method 7c133feced64 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-396",
+    "family": "error_rates",
+    "claim": "Method 27e0dc322641 improves accuracy over the baseline on Task 8e194515a514.",
+    "report": "Accuracy for Method 27e0dc322641 on Task 8e194515a514 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-368",
+    "family": "error_rates",
+    "claim": "Method 606578295941 improves accuracy over the baseline on Task 77b6ddee9e8a.",
+    "report": "On Task 77b6ddee9e8a, the baseline made 38 errors in 100 answers. Method 606578295941 made 45 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-169",
+    "family": "irrelevant_metric",
+    "claim": "Method decac311eb87 improves accuracy over the baseline on Task 3e932d5ad53f.",
+    "report": "Method decac311eb87 used less memory and ran faster. On Task 3e932d5ad53f, Method decac311eb87 achieved 70% accuracy and the baseline achieved 75%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-270",
+    "family": "repeated_tests",
+    "claim": "Method a47ddf099d43 improves accuracy over the baseline on Task 8a5737fb2073.",
+    "report": "Accuracy for Method a47ddf099d43 on Task 8a5737fb2073 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-101",
+    "family": "error_rates",
+    "claim": "Method c22e86f13a1c improves accuracy over the baseline on Task 4e62085ba395.",
+    "report": "On Task 4e62085ba395, the baseline made 24 errors in 100 answers. Method c22e86f13a1c made 15 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-394",
+    "family": "repeated_tests",
+    "claim": "Method 088496dd6b24 improves accuracy over the baseline on Task 769268ba8141.",
+    "report": "Two completed evaluations on Task 769268ba8141 each found Method 088496dd6b24 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-140",
+    "family": "counts",
+    "claim": "Method 043657e11d00 improves accuracy over the baseline on Task ca763e8caaa8.",
+    "report": "On Task ca763e8caaa8, the baseline answered 79 of 100 questions correctly. Method 043657e11d00 answered 72 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-261",
+    "family": "expectations",
+    "claim": "Method 6116252269e4 improves accuracy over the baseline on Task f7418a94dcf8.",
+    "report": "The team expects Method 6116252269e4 to beat the baseline on Task f7418a94dcf8, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-407",
+    "family": "irrelevant_metric",
+    "claim": "Method b6d0017410c3 improves accuracy over the baseline on Task 4b3e77926dee.",
+    "report": "Method b6d0017410c3 ran faster on Task 4b3e77926dee, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-99",
+    "family": "error_rates",
+    "claim": "Method 8b21f407b7db improves accuracy over the baseline on Task ee3af4df2f75.",
+    "report": "On Task ee3af4df2f75, the baseline made 43 errors in 100 answers. Method 8b21f407b7db made 35 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-44",
+    "family": "percentages",
+    "claim": "Method d35ce6b9d678 improves accuracy over the baseline on Task 8291c3e45842.",
+    "report": "Accuracy for Method d35ce6b9d678 on Task 8291c3e45842 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-68",
+    "family": "subgroup",
+    "claim": "Method 617411c55858 improves accuracy over the baseline on Task 4104b595005a.",
+    "report": "On Task 4104b595005a, Method 617411c55858 achieved 78% accuracy and the baseline achieved 75%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-389",
+    "family": "percentages",
+    "claim": "Method 04d1468e7975 improves accuracy over the baseline on Task 04b8059826a4.",
+    "report": "On Task 04b8059826a4, Method 04d1468e7975 achieved 64% accuracy and the baseline achieved 61%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-302",
+    "family": "target_distractor",
+    "claim": "Method ec395c04de2f improves accuracy over the baseline on Task c116b5071961.",
+    "report": "Another method beat the baseline on Task c116b5071961. Method ec395c04de2f was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-0",
+    "family": "subgroup",
+    "claim": "Method 271a6ebd4fd5 improves accuracy over the baseline on Task 0e9ef5eebcae.",
+    "report": "On Task 0e9ef5eebcae, Method 271a6ebd4fd5 achieved 61% accuracy and the baseline achieved 57%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-142",
+    "family": "percentages",
+    "claim": "Method 61281ebf6b0e improves accuracy over the baseline on Task 16f04ba54618.",
+    "report": "Accuracy for Method 61281ebf6b0e on Task 16f04ba54618 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-119",
+    "family": "before_after",
+    "claim": "Method e52fb10f045f improves accuracy over the baseline on Task 70bf7a5cacd0.",
+    "report": "Accuracy for Method e52fb10f045f on Task 70bf7a5cacd0 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-200",
+    "family": "expectations",
+    "claim": "Method cf553ad1f12f improves accuracy over the baseline on Task 12eab6f6b478.",
+    "report": "The team expects Method cf553ad1f12f to beat the baseline on Task 12eab6f6b478, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-417",
+    "family": "counts",
+    "claim": "Method 6e58b486a541 improves accuracy over the baseline on Task fd471a592012.",
+    "report": "Accuracy for Method 6e58b486a541 on Task fd471a592012 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-22",
+    "family": "uncertainty",
+    "claim": "Method af3c247c15cc improves accuracy over the baseline on Task e658834e7fcc.",
+    "report": "No accuracy estimates are available for Method af3c247c15cc or the baseline on Task e658834e7fcc; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-4",
+    "family": "expectations",
+    "claim": "Method e009a6aeef71 improves accuracy over the baseline on Task 25f011cfec00.",
+    "report": "The team expected Method e009a6aeef71 to be worse. Actual results: On Task 25f011cfec00, Method e009a6aeef71 achieved 80% accuracy and the baseline achieved 71%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-386",
+    "family": "irrelevant_metric",
+    "claim": "Method c1da55addb2e improves accuracy over the baseline on Task e34d72b25106.",
+    "report": "Method c1da55addb2e used less memory and ran faster. On Task e34d72b25106, Method c1da55addb2e achieved 85% accuracy and the baseline achieved 78%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-91",
+    "family": "superseded",
+    "claim": "Method 56c2deb46dad improves accuracy over the baseline on Task e8fbc0023e3d.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task e8fbc0023e3d, Method 56c2deb46dad achieved 54% accuracy and the baseline achieved 50%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-151",
+    "family": "counts",
+    "claim": "Method e1d7bd564ea4 improves accuracy over the baseline on Task 289072fb0bb1.",
+    "report": "Accuracy for Method e1d7bd564ea4 on Task 289072fb0bb1 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-346",
+    "family": "counts",
+    "claim": "Method bed8cf1716ac improves accuracy over the baseline on Task 8b93192a5574.",
+    "report": "Accuracy for Method bed8cf1716ac on Task 8b93192a5574 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-155",
+    "family": "counts",
+    "claim": "Method 18b83879e9d9 improves accuracy over the baseline on Task 1e7fc9a44bc4.",
+    "report": "On Task 1e7fc9a44bc4, the baseline answered 72 of 100 questions correctly. Method 18b83879e9d9 answered 76 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-9",
+    "family": "negation",
+    "claim": "Method 5ec1b9b6eecf improves accuracy over the baseline on Task f63b1a0ca142.",
+    "report": "The team did not test accuracy for Method 5ec1b9b6eecf on Task f63b1a0ca142.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-236",
+    "family": "negation",
+    "claim": "Method fed531904e67 improves accuracy over the baseline on Task d1d86455aa6d.",
+    "report": "Method fed531904e67 did not improve accuracy over the baseline on Task d1d86455aa6d; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-337",
+    "family": "subgroup",
+    "claim": "Method 36df23d45684 improves accuracy over the baseline on Task 4522abd34bf1.",
+    "report": "On Task 4522abd34bf1, Method 36df23d45684 achieved 87% accuracy and the baseline achieved 79%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-117",
+    "family": "repeated_tests",
+    "claim": "Method 0786028f4b09 improves accuracy over the baseline on Task fcd3d7cc2259.",
+    "report": "Two completed evaluations on Task fcd3d7cc2259 each found Method 0786028f4b09 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-235",
+    "family": "expectations",
+    "claim": "Method 0f923e79ef43 improves accuracy over the baseline on Task 9d94abb7a406.",
+    "report": "The team expects Method 0f923e79ef43 to beat the baseline on Task 9d94abb7a406, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-385",
+    "family": "subgroup",
+    "claim": "Method baa9f40d7f63 improves accuracy over the baseline on Task 53e642845736.",
+    "report": "On Task 53e642845736, Method baa9f40d7f63 achieved 58% accuracy and the baseline achieved 66%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-299",
+    "family": "negation",
+    "claim": "Method 14aa2b5b863e improves accuracy over the baseline on Task 82ae75411555.",
+    "report": "The team did not test accuracy for Method 14aa2b5b863e on Task 82ae75411555.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-179",
+    "family": "uncertainty",
+    "claim": "Method f33ac730eee1 improves accuracy over the baseline on Task c5096943f3bc.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task c5096943f3bc found Method f33ac730eee1 worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-58",
+    "family": "counts",
+    "claim": "Method ab0a337653f4 improves accuracy over the baseline on Task 2c689a8c4a97.",
+    "report": "On Task 2c689a8c4a97, the baseline answered 67 of 100 questions correctly. Method ab0a337653f4 answered 58 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-249",
+    "family": "before_after",
+    "claim": "Method 42eb62e23ecb improves accuracy over the baseline on Task 5277f99a83f3.",
+    "report": "The same Task 5277f99a83f3 comparison changed accuracy from the baseline of 50% to 47% with Method 42eb62e23ecb.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-42",
+    "family": "error_rates",
+    "claim": "Method 6e342d91cd4f improves accuracy over the baseline on Task 5d6290808c0a.",
+    "report": "Accuracy for Method 6e342d91cd4f on Task 5d6290808c0a was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-37",
+    "family": "before_after",
+    "claim": "Method 1dfc2ae09534 improves accuracy over the baseline on Task ca719ca587dd.",
+    "report": "The same Task ca719ca587dd comparison changed accuracy from the baseline of 50% to 57% with Method 1dfc2ae09534.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-317",
+    "family": "repeated_tests",
+    "claim": "Method 746b93fe7b40 improves accuracy over the baseline on Task e15100c4c729.",
+    "report": "Accuracy for Method 746b93fe7b40 on Task e15100c4c729 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-78",
+    "family": "percentages",
+    "claim": "Method 4f531d7bf784 improves accuracy over the baseline on Task acf698760536.",
+    "report": "Accuracy for Method 4f531d7bf784 on Task acf698760536 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-333",
+    "family": "target_distractor",
+    "claim": "Method 2d3f0e1e4899 improves accuracy over the baseline on Task 12148816d537.",
+    "report": "Another method achieved 71% accuracy on Task 12148816d537. For the requested method: On Task 12148816d537, Method 2d3f0e1e4899 achieved 65% accuracy and the baseline achieved 68%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-380",
+    "family": "counts",
+    "claim": "Method 99637c613775 improves accuracy over the baseline on Task fde00f6d6a61.",
+    "report": "On Task fde00f6d6a61, the baseline answered 51 of 100 questions correctly. Method 99637c613775 answered 59 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-69",
+    "family": "superseded",
+    "claim": "Method 5f934dae79e6 improves accuracy over the baseline on Task d29a15fb3159.",
+    "report": "An earlier accuracy result for Method 5f934dae79e6 on Task d29a15fb3159 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-313",
+    "family": "before_after",
+    "claim": "Method 2360761feac7 improves accuracy over the baseline on Task f3aa8605e125.",
+    "report": "Accuracy for Method 2360761feac7 on Task f3aa8605e125 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-40",
+    "family": "irrelevant_metric",
+    "claim": "Method 6415449f8a49 improves accuracy over the baseline on Task 4ff7c061db50.",
+    "report": "Method 6415449f8a49 used less memory and ran faster. On Task 4ff7c061db50, Method 6415449f8a49 achieved 45% accuracy and the baseline achieved 54%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-157",
+    "family": "subgroup",
+    "claim": "Method 76f65b08e476 improves accuracy over the baseline on Task 1e014e22552d.",
+    "report": "Method 76f65b08e476 improved on a different test; Task 1e014e22552d has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-246",
+    "family": "subgroup",
+    "claim": "Method b7f2378edcb8 improves accuracy over the baseline on Task 1fcfbf0fb517.",
+    "report": "On Task 1fcfbf0fb517, Method b7f2378edcb8 achieved 69% accuracy and the baseline achieved 60%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-306",
+    "family": "superseded",
+    "claim": "Method f60326b7a8f6 improves accuracy over the baseline on Task eaa972aacce1.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task eaa972aacce1, Method f60326b7a8f6 achieved 75% accuracy and the baseline achieved 70%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-46",
+    "family": "percentages",
+    "claim": "Method 7dc6ab2bbc2a improves accuracy over the baseline on Task 87efc6f5510e.",
+    "report": "On Task 87efc6f5510e, Method 7dc6ab2bbc2a achieved 54% accuracy and the baseline achieved 63%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-274",
+    "family": "negation",
+    "claim": "Method f3fb17d48d65 improves accuracy over the baseline on Task 1f12bafcec88.",
+    "report": "The team did not test accuracy for Method f3fb17d48d65 on Task 1f12bafcec88.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-345",
+    "family": "percentages",
+    "claim": "Method 1f515ae95da0 improves accuracy over the baseline on Task 594f268f90b9.",
+    "report": "Accuracy for Method 1f515ae95da0 on Task 594f268f90b9 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-227",
+    "family": "superseded",
+    "claim": "Method c9c394feb45a improves accuracy over the baseline on Task 45cbdf9324fa.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task 45cbdf9324fa, Method c9c394feb45a achieved 70% accuracy and the baseline achieved 67%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-186",
+    "family": "counts",
+    "claim": "Method 4e2c78edfa56 improves accuracy over the baseline on Task 64e7ceb28762.",
+    "report": "On Task 64e7ceb28762, the baseline answered 53 of 100 questions correctly. Method 4e2c78edfa56 answered 62 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-76",
+    "family": "irrelevant_metric",
+    "claim": "Method 9a8a0858cd03 improves accuracy over the baseline on Task 738230c10957.",
+    "report": "Method 9a8a0858cd03 ran faster on Task 738230c10957, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-286",
+    "family": "negation",
+    "claim": "Method 2548b318ecf6 improves accuracy over the baseline on Task 52c7d5e72a16.",
+    "report": "The team did not test accuracy for Method 2548b318ecf6 on Task 52c7d5e72a16.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-47",
+    "family": "percentages",
+    "claim": "Method 36d91557dee4 improves accuracy over the baseline on Task 01a621690f6e.",
+    "report": "Accuracy for Method 36d91557dee4 on Task 01a621690f6e was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-75",
+    "family": "target_distractor",
+    "claim": "Method 331daefda388 improves accuracy over the baseline on Task 47b9747b663d.",
+    "report": "Another method achieved 59% accuracy on Task 47b9747b663d. For the requested method: On Task 47b9747b663d, Method 331daefda388 achieved 43% accuracy and the baseline achieved 51%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-330",
+    "family": "percentages",
+    "claim": "Method 3272ba788933 improves accuracy over the baseline on Task 1a2ef3added3.",
+    "report": "Accuracy for Method 3272ba788933 on Task 1a2ef3added3 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-401",
+    "family": "target_distractor",
+    "claim": "Method bd0571a96ee8 improves accuracy over the baseline on Task 8758e3e2b6a2.",
+    "report": "Another method beat the baseline on Task 8758e3e2b6a2. Method bd0571a96ee8 was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-280",
+    "family": "superseded",
+    "claim": "Method a70188bb4436 improves accuracy over the baseline on Task 15f39cfb10e1.",
+    "report": "An earlier accuracy result for Method a70188bb4436 on Task 15f39cfb10e1 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-252",
+    "family": "counts",
+    "claim": "Method ac257d5a0399 improves accuracy over the baseline on Task 39ec860e7080.",
+    "report": "Accuracy for Method ac257d5a0399 on Task 39ec860e7080 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-264",
+    "family": "error_rates",
+    "claim": "Method dd3ca8736356 improves accuracy over the baseline on Task 88a811ce7cb3.",
+    "report": "On Task 88a811ce7cb3, the baseline made 29 errors in 100 answers. Method dd3ca8736356 made 23 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-300",
+    "family": "error_rates",
+    "claim": "Method 9bccc9f4f927 improves accuracy over the baseline on Task ae5d68f10d2d.",
+    "report": "On Task ae5d68f10d2d, the baseline made 40 errors in 100 answers. Method 9bccc9f4f927 made 33 errors in 100 answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-61",
+    "family": "repeated_tests",
+    "claim": "Method 23fc6318d9ac improves accuracy over the baseline on Task 3215f28d609c.",
+    "report": "Accuracy for Method 23fc6318d9ac on Task 3215f28d609c was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-413",
+    "family": "target_distractor",
+    "claim": "Method b3c561f78324 improves accuracy over the baseline on Task 9b4607b03cbc.",
+    "report": "Another method achieved 68% accuracy on Task 9b4607b03cbc. For the requested method: On Task 9b4607b03cbc, Method b3c561f78324 achieved 68% accuracy and the baseline achieved 59%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-82",
+    "family": "percentages",
+    "claim": "Method 6b00003745e7 improves accuracy over the baseline on Task 784d98801c16.",
+    "report": "On Task 784d98801c16, Method 6b00003745e7 achieved 55% accuracy and the baseline achieved 61%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-67",
+    "family": "superseded",
+    "claim": "Method 83d3076bc4cd improves accuracy over the baseline on Task 353b84da1522.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 353b84da1522, Method 83d3076bc4cd achieved 47% accuracy and the baseline achieved 52%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-63",
+    "family": "target_distractor",
+    "claim": "Method 715cca21e18b improves accuracy over the baseline on Task 48fff7c595c4.",
+    "report": "Another method beat the baseline on Task 48fff7c595c4. Method 715cca21e18b was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-408",
+    "family": "repeated_tests",
+    "claim": "Method 65e3dc497314 improves accuracy over the baseline on Task 1da161194d6a.",
+    "report": "Accuracy for Method 65e3dc497314 on Task 1da161194d6a was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-369",
+    "family": "target_distractor",
+    "claim": "Method f70365abdfc3 improves accuracy over the baseline on Task 306db848a556.",
+    "report": "Another method achieved 66% accuracy on Task 306db848a556. For the requested method: On Task 306db848a556, Method f70365abdfc3 achieved 48% accuracy and the baseline achieved 57%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-271",
+    "family": "before_after",
+    "claim": "Method c4a6cc4a48a3 improves accuracy over the baseline on Task 4e592e78573b.",
+    "report": "The same Task 4e592e78573b comparison changed accuracy from the baseline of 73% to 67% with Method c4a6cc4a48a3.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-245",
+    "family": "before_after",
+    "claim": "Method 05e11f42fbdf improves accuracy over the baseline on Task 26547168546b.",
+    "report": "The same Task 26547168546b comparison changed accuracy from the baseline of 59% to 67% with Method 05e11f42fbdf.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-409",
+    "family": "uncertainty",
+    "claim": "Method e93be2496250 improves accuracy over the baseline on Task dea75239a4ae.",
+    "report": "No accuracy estimates are available for Method e93be2496250 or the baseline on Task dea75239a4ae; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-420",
+    "family": "before_after",
+    "claim": "Method 7f3c693e8828 improves accuracy over the baseline on Task 464d68fb8ec6.",
+    "report": "The same Task 464d68fb8ec6 comparison changed accuracy from the baseline of 75% to 83% with Method 7f3c693e8828.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-224",
+    "family": "expectations",
+    "claim": "Method d3e40f0dbad9 improves accuracy over the baseline on Task 8189e7ec643b.",
+    "report": "The team expected Method d3e40f0dbad9 to be better. Actual results: On Task 8189e7ec643b, Method d3e40f0dbad9 achieved 64% accuracy and the baseline achieved 67%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-384",
+    "family": "irrelevant_metric",
+    "claim": "Method 1b69bc4b50f9 improves accuracy over the baseline on Task 6e8257db2b29.",
+    "report": "Method 1b69bc4b50f9 used less memory and ran faster. On Task 6e8257db2b29, Method 1b69bc4b50f9 achieved 61% accuracy and the baseline achieved 55%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-122",
+    "family": "superseded",
+    "claim": "Method 4db5426130ab improves accuracy over the baseline on Task 1ae7e0f1c1ad.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task 1ae7e0f1c1ad, Method 4db5426130ab achieved 72% accuracy and the baseline achieved 68%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-378",
+    "family": "percentages",
+    "claim": "Method 1f2428ac7330 improves accuracy over the baseline on Task d72b4bfacce5.",
+    "report": "On Task d72b4bfacce5, Method 1f2428ac7330 achieved 65% accuracy and the baseline achieved 61%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-343",
+    "family": "subgroup",
+    "claim": "Method e0892eb5f551 improves accuracy over the baseline on Task d991a3818177.",
+    "report": "On Task d991a3818177, Method e0892eb5f551 achieved 78% accuracy and the baseline achieved 70%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-234",
+    "family": "target_distractor",
+    "claim": "Method 7bde0b794786 improves accuracy over the baseline on Task f6d6ef9ec8fd.",
+    "report": "Another method achieved 59% accuracy on Task f6d6ef9ec8fd. For the requested method: On Task f6d6ef9ec8fd, Method 7bde0b794786 achieved 41% accuracy and the baseline achieved 50%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-251",
+    "family": "negation",
+    "claim": "Method d6af27c16b74 improves accuracy over the baseline on Task b79ecebdba8b.",
+    "report": "Method d6af27c16b74 was not merely faster: measured accuracy on Task b79ecebdba8b improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-194",
+    "family": "subgroup",
+    "claim": "Method 9022f36e9042 improves accuracy over the baseline on Task 0effeb47d93b.",
+    "report": "On Task 0effeb47d93b, Method 9022f36e9042 achieved 54% accuracy and the baseline achieved 63%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-414",
+    "family": "counts",
+    "claim": "Method 79cf5b725014 improves accuracy over the baseline on Task 99f807382a30.",
+    "report": "On Task 99f807382a30, the baseline answered 76 of 100 questions correctly. Method 79cf5b725014 answered 68 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-410",
+    "family": "target_distractor",
+    "claim": "Method b38e5a627c33 improves accuracy over the baseline on Task f3d9ef471eed.",
+    "report": "Another method achieved 83% accuracy on Task f3d9ef471eed. For the requested method: On Task f3d9ef471eed, Method b38e5a627c33 achieved 83% accuracy and the baseline achieved 79%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-114",
+    "family": "target_distractor",
+    "claim": "Method fc92cb5fcd85 improves accuracy over the baseline on Task 6b0ce0acb64c.",
+    "report": "Another method achieved 57% accuracy on Task 6b0ce0acb64c. For the requested method: On Task 6b0ce0acb64c, Method fc92cb5fcd85 achieved 49% accuracy and the baseline achieved 53%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-107",
+    "family": "irrelevant_metric",
+    "claim": "Method 5dc0554280ae improves accuracy over the baseline on Task cf780b68e221.",
+    "report": "Method 5dc0554280ae used less memory and ran faster. On Task cf780b68e221, Method 5dc0554280ae achieved 67% accuracy and the baseline achieved 73%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-298",
+    "family": "repeated_tests",
+    "claim": "Method f217e641a2e0 improves accuracy over the baseline on Task 1c1367a86f90.",
+    "report": "Two completed evaluations on Task 1c1367a86f90 each found Method f217e641a2e0 had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-62",
+    "family": "superseded",
+    "claim": "Method 345c8565c781 improves accuracy over the baseline on Task fc3373211c2c.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task fc3373211c2c, Method 345c8565c781 achieved 49% accuracy and the baseline achieved 56%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-418",
+    "family": "uncertainty",
+    "claim": "Method dd4faac9ba0b improves accuracy over the baseline on Task bf2e214b7b1a.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task bf2e214b7b1a found Method dd4faac9ba0b better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-256",
+    "family": "expectations",
+    "claim": "Method 48c42688e83d improves accuracy over the baseline on Task 606d464b271a.",
+    "report": "The team expected Method 48c42688e83d to be better. Actual results: On Task 606d464b271a, Method 48c42688e83d achieved 46% accuracy and the baseline achieved 53%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-260",
+    "family": "uncertainty",
+    "claim": "Method e1f328b429fd improves accuracy over the baseline on Task c0e41a9e0d55.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task c0e41a9e0d55 found Method e1f328b429fd better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-143",
+    "family": "uncertainty",
+    "claim": "Method 5d3542c31197 improves accuracy over the baseline on Task 4068d92f1f3b.",
+    "report": "No accuracy estimates are available for Method 5d3542c31197 or the baseline on Task 4068d92f1f3b; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-291",
+    "family": "error_rates",
+    "claim": "Method 9d3e292a8168 improves accuracy over the baseline on Task 9a0d205e6284.",
+    "report": "On Task 9a0d205e6284, the baseline made 26 errors in 100 answers. Method 9d3e292a8168 made 34 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-214",
+    "family": "negation",
+    "claim": "Method 31149c809b62 improves accuracy over the baseline on Task d3333bf2c3ed.",
+    "report": "Method 31149c809b62 was not merely faster: measured accuracy on Task d3333bf2c3ed improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-3",
+    "family": "negation",
+    "claim": "Method c15cafcc04bd improves accuracy over the baseline on Task 2807f072b6e5.",
+    "report": "Method c15cafcc04bd did not improve accuracy over the baseline on Task 2807f072b6e5; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-193",
+    "family": "superseded",
+    "claim": "Method 0c5baa9af8a6 improves accuracy over the baseline on Task 2faa48012ba1.",
+    "report": "An earlier accuracy result for Method 0c5baa9af8a6 on Task 2faa48012ba1 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-125",
+    "family": "superseded",
+    "claim": "Method 314cf07449b6 improves accuracy over the baseline on Task 4a9a807219e4.",
+    "report": "An earlier accuracy result for Method 314cf07449b6 on Task 4a9a807219e4 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-111",
+    "family": "target_distractor",
+    "claim": "Method 4c9c4dda0438 improves accuracy over the baseline on Task 730ab6c3cdd7.",
+    "report": "Another method achieved 73% accuracy on Task 730ab6c3cdd7. For the requested method: On Task 730ab6c3cdd7, Method 4c9c4dda0438 achieved 55% accuracy and the baseline achieved 64%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-160",
+    "family": "counts",
+    "claim": "Method c89bba6c0c97 improves accuracy over the baseline on Task e207ad1f970d.",
+    "report": "On Task e207ad1f970d, the baseline answered 79 of 100 questions correctly. Method c89bba6c0c97 answered 75 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-365",
+    "family": "error_rates",
+    "claim": "Method d4f27349e3fe improves accuracy over the baseline on Task d69ba7015120.",
+    "report": "On Task d69ba7015120, the baseline made 42 errors in 100 answers. Method d4f27349e3fe made 49 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-339",
+    "family": "subgroup",
+    "claim": "Method 284736c35b13 improves accuracy over the baseline on Task 4688faeed776.",
+    "report": "On Task 4688faeed776, Method 284736c35b13 achieved 61% accuracy and the baseline achieved 69%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-406",
+    "family": "negation",
+    "claim": "Method c7be54bc0878 improves accuracy over the baseline on Task 549581471243.",
+    "report": "Method c7be54bc0878 was not merely faster: measured accuracy on Task 549581471243 improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-84",
+    "family": "counts",
+    "claim": "Method e281ef0d744d improves accuracy over the baseline on Task e737168c41d4.",
+    "report": "On Task e737168c41d4, the baseline answered 51 of 100 questions correctly. Method e281ef0d744d answered 55 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-156",
+    "family": "irrelevant_metric",
+    "claim": "Method 1f23628fa801 improves accuracy over the baseline on Task 4827960386bb.",
+    "report": "Method 1f23628fa801 used less memory and ran faster. On Task 4827960386bb, Method 1f23628fa801 achieved 60% accuracy and the baseline achieved 53%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-146",
+    "family": "negation",
+    "claim": "Method 16a72c9d45c3 improves accuracy over the baseline on Task 9804eec1c86d.",
+    "report": "Method 16a72c9d45c3 was not merely faster: measured accuracy on Task 9804eec1c86d improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-393",
+    "family": "irrelevant_metric",
+    "claim": "Method e6b7218c48db improves accuracy over the baseline on Task 560a0e690d14.",
+    "report": "Method e6b7218c48db used less memory and ran faster. On Task 560a0e690d14, Method e6b7218c48db achieved 65% accuracy and the baseline achieved 58%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-282",
+    "family": "irrelevant_metric",
+    "claim": "Method 956c526e662e improves accuracy over the baseline on Task 86c22f72e8c0.",
+    "report": "Method 956c526e662e used less memory and ran faster. On Task 86c22f72e8c0, Method 956c526e662e achieved 67% accuracy and the baseline achieved 64%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-189",
+    "family": "expectations",
+    "claim": "Method 50182cdac95f improves accuracy over the baseline on Task ecdad4af596e.",
+    "report": "The team expected Method 50182cdac95f to be worse. Actual results: On Task ecdad4af596e, Method 50182cdac95f achieved 61% accuracy and the baseline achieved 54%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-49",
+    "family": "percentages",
+    "claim": "Method ea6e9731e609 improves accuracy over the baseline on Task a0250bdf483f.",
+    "report": "On Task a0250bdf483f, Method ea6e9731e609 achieved 60% accuracy and the baseline achieved 55%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-338",
+    "family": "superseded",
+    "claim": "Method a07e86ae9fe0 improves accuracy over the baseline on Task 2e96e47e73ce.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task 2e96e47e73ce, Method a07e86ae9fe0 achieved 66% accuracy and the baseline achieved 59%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-357",
+    "family": "before_after",
+    "claim": "Method db6352b6886c improves accuracy over the baseline on Task 6115f5218502.",
+    "report": "The same Task 6115f5218502 comparison changed accuracy from the baseline of 50% to 43% with Method db6352b6886c.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-285",
+    "family": "target_distractor",
+    "claim": "Method 5db79dd42f21 improves accuracy over the baseline on Task cbd1a006b92a.",
+    "report": "Another method achieved 60% accuracy on Task cbd1a006b92a. For the requested method: On Task cbd1a006b92a, Method 5db79dd42f21 achieved 60% accuracy and the baseline achieved 56%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-31",
+    "family": "irrelevant_metric",
+    "claim": "Method afd441c0d1d4 improves accuracy over the baseline on Task 4bbc408be3b7.",
+    "report": "Method afd441c0d1d4 ran faster on Task 4bbc408be3b7, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-135",
+    "family": "target_distractor",
+    "claim": "Method 06e12c5a3c6d improves accuracy over the baseline on Task f3fdebae1162.",
+    "report": "Another method achieved 69% accuracy on Task f3fdebae1162. For the requested method: On Task f3fdebae1162, Method 06e12c5a3c6d achieved 69% accuracy and the baseline achieved 63%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-367",
+    "family": "negation",
+    "claim": "Method f99b2b6fa356 improves accuracy over the baseline on Task 7958dc348642.",
+    "report": "Method f99b2b6fa356 was not merely faster: measured accuracy on Task 7958dc348642 improved over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-109",
+    "family": "irrelevant_metric",
+    "claim": "Method bfe9b6c2f8d8 improves accuracy over the baseline on Task 532ab3aa4a0b.",
+    "report": "Method bfe9b6c2f8d8 used less memory and ran faster. On Task 532ab3aa4a0b, Method bfe9b6c2f8d8 achieved 56% accuracy and the baseline achieved 60%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-148",
+    "family": "counts",
+    "claim": "Method 6d1900f86b65 improves accuracy over the baseline on Task f6fce3c5a37d.",
+    "report": "On Task f6fce3c5a37d, the baseline answered 56 of 100 questions correctly. Method 6d1900f86b65 answered 63 of 100 correctly.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-118",
+    "family": "subgroup",
+    "claim": "Method b945e16b56f4 improves accuracy over the baseline on Task c997e937c806.",
+    "report": "Method b945e16b56f4 improved on a different test; Task c997e937c806 has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-170",
+    "family": "before_after",
+    "claim": "Method 7d6d787bb106 improves accuracy over the baseline on Task a2193b71ab48.",
+    "report": "The same Task a2193b71ab48 comparison changed accuracy from the baseline of 54% to 47% with Method 7d6d787bb106.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-53",
+    "family": "irrelevant_metric",
+    "claim": "Method a4c532987247 improves accuracy over the baseline on Task c9ad774d9352.",
+    "report": "Method a4c532987247 ran faster on Task c9ad774d9352, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-8",
+    "family": "counts",
+    "claim": "Method 3fa2fbcbf393 improves accuracy over the baseline on Task b17f2b6222a2.",
+    "report": "Accuracy for Method 3fa2fbcbf393 on Task b17f2b6222a2 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-27",
+    "family": "repeated_tests",
+    "claim": "Method 97a4578e7617 improves accuracy over the baseline on Task 7f32c2e4c7f9.",
+    "report": "Accuracy for Method 97a4578e7617 on Task 7f32c2e4c7f9 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-104",
+    "family": "subgroup",
+    "claim": "Method 1c68d51e2292 improves accuracy over the baseline on Task 57188a86583b.",
+    "report": "On Task 57188a86583b, Method 1c68d51e2292 achieved 64% accuracy and the baseline achieved 68%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-328",
+    "family": "repeated_tests",
+    "claim": "Method 7ee3abbcacd4 improves accuracy over the baseline on Task 174e4073d396.",
+    "report": "Two completed evaluations on Task 174e4073d396 each found Method 7ee3abbcacd4 had higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-106",
+    "family": "expectations",
+    "claim": "Method 283cde30f546 improves accuracy over the baseline on Task 61ee6940b8c5.",
+    "report": "The team expected Method 283cde30f546 to be better. Actual results: On Task 61ee6940b8c5, Method 283cde30f546 achieved 52% accuracy and the baseline achieved 58%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-28",
+    "family": "percentages",
+    "claim": "Method e6c3d5ec6a67 improves accuracy over the baseline on Task c92ff72b2bfb.",
+    "report": "On Task c92ff72b2bfb, Method e6c3d5ec6a67 achieved 80% accuracy and the baseline achieved 76%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-1",
+    "family": "superseded",
+    "claim": "Method b9b869deb450 improves accuracy over the baseline on Task 2bc672aadff4.",
+    "report": "An earlier accuracy result for Method b9b869deb450 on Task 2bc672aadff4 was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-354",
+    "family": "before_after",
+    "claim": "Method 88ab6077cb38 improves accuracy over the baseline on Task 9bd1a5cfbd67.",
+    "report": "Accuracy for Method 88ab6077cb38 on Task 9bd1a5cfbd67 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-161",
+    "family": "before_after",
+    "claim": "Method fa3fb187e7b8 improves accuracy over the baseline on Task 5fdaad0d974b.",
+    "report": "Accuracy for Method fa3fb187e7b8 on Task 5fdaad0d974b was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-86",
+    "family": "irrelevant_metric",
+    "claim": "Method 0f82b7c2b6f5 improves accuracy over the baseline on Task acc64d6713fc.",
+    "report": "Method 0f82b7c2b6f5 used less memory and ran faster. On Task acc64d6713fc, Method 0f82b7c2b6f5 achieved 51% accuracy and the baseline achieved 59%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-379",
+    "family": "before_after",
+    "claim": "Method 4fb8e17d0f27 improves accuracy over the baseline on Task db58627b0e4d.",
+    "report": "The same Task db58627b0e4d comparison changed accuracy from the baseline of 63% to 67% with Method 4fb8e17d0f27.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-312",
+    "family": "target_distractor",
+    "claim": "Method a1a665830878 improves accuracy over the baseline on Task ebfa0dddf511.",
+    "report": "Another method achieved 73% accuracy on Task ebfa0dddf511. For the requested method: On Task ebfa0dddf511, Method a1a665830878 achieved 73% accuracy and the baseline achieved 69%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-309",
+    "family": "percentages",
+    "claim": "Method 240229d2f2b9 improves accuracy over the baseline on Task e984de4c3e71.",
+    "report": "On Task e984de4c3e71, Method 240229d2f2b9 achieved 74% accuracy and the baseline achieved 69%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-10",
+    "family": "target_distractor",
+    "claim": "Method 1877e67d987f improves accuracy over the baseline on Task b97833d5f1c3.",
+    "report": "Another method achieved 75% accuracy on Task b97833d5f1c3. For the requested method: On Task b97833d5f1c3, Method 1877e67d987f achieved 65% accuracy and the baseline achieved 70%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-222",
+    "family": "negation",
+    "claim": "Method 480cde686f36 improves accuracy over the baseline on Task 4d0c8a644591.",
+    "report": "The team did not test accuracy for Method 480cde686f36 on Task 4d0c8a644591.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-96",
+    "family": "error_rates",
+    "claim": "Method 88a2c71739ea improves accuracy over the baseline on Task ecb41c690a62.",
+    "report": "On Task ecb41c690a62, the baseline made 30 errors in 100 answers. Method 88a2c71739ea made 35 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-399",
+    "family": "expectations",
+    "claim": "Method 036e52994475 improves accuracy over the baseline on Task 6e8a9249e935.",
+    "report": "The team expects Method 036e52994475 to beat the baseline on Task 6e8a9249e935, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-324",
+    "family": "repeated_tests",
+    "claim": "Method 6b203a076805 improves accuracy over the baseline on Task e83d1f14b458.",
+    "report": "Two completed evaluations on Task e83d1f14b458 each found Method 6b203a076805 had lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-5",
+    "family": "uncertainty",
+    "claim": "Method 80aed083642a improves accuracy over the baseline on Task 898ef1f3ce45.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 898ef1f3ce45 found Method 80aed083642a worse than baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-344",
+    "family": "counts",
+    "claim": "Method c18f3c60f25b improves accuracy over the baseline on Task 5f0dec86e23f.",
+    "report": "On Task 5f0dec86e23f, the baseline answered 58 of 100 questions correctly. Method c18f3c60f25b answered 50 of 100 correctly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-158",
+    "family": "subgroup",
+    "claim": "Method a0590c1949ec improves accuracy over the baseline on Task 58c15acec2cd.",
+    "report": "Method a0590c1949ec improved on a different test; Task 58c15acec2cd has not been evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-294",
+    "family": "subgroup",
+    "claim": "Method 66d2dbfee359 improves accuracy over the baseline on Task 7ff561706cfa.",
+    "report": "On Task 7ff561706cfa, Method 66d2dbfee359 achieved 67% accuracy and the baseline achieved 76%. A different test showed the opposite result.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-34",
+    "family": "superseded",
+    "claim": "Method 7393c71229a5 improves accuracy over the baseline on Task d21318f0fd52.",
+    "report": "A previous claim of worse accuracy was withdrawn as erroneous. The corrected comparison is: On Task d21318f0fd52, Method 7393c71229a5 achieved 80% accuracy and the baseline achieved 76%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-352",
+    "family": "irrelevant_metric",
+    "claim": "Method fab924647fc1 improves accuracy over the baseline on Task ab17f1230c6f.",
+    "report": "Method fab924647fc1 ran faster on Task ab17f1230c6f, but accuracy was not evaluated.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-39",
+    "family": "expectations",
+    "claim": "Method 2f8f12aa55f8 improves accuracy over the baseline on Task 42798765a83f.",
+    "report": "The team expects Method 2f8f12aa55f8 to beat the baseline on Task 42798765a83f, but no accuracy experiment has run.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-80",
+    "family": "expectations",
+    "claim": "Method 718f8dd93fdb improves accuracy over the baseline on Task ee797c825247.",
+    "report": "The team expected Method 718f8dd93fdb to be better. Actual results: On Task ee797c825247, Method 718f8dd93fdb achieved 48% accuracy and the baseline achieved 56%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-207",
+    "family": "before_after",
+    "claim": "Method b97900404b45 improves accuracy over the baseline on Task 2747ccbc1f21.",
+    "report": "Accuracy for Method b97900404b45 on Task 2747ccbc1f21 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-381",
+    "family": "repeated_tests",
+    "claim": "Method d6f44de8639b improves accuracy over the baseline on Task 762fbb9b1633.",
+    "report": "Accuracy for Method d6f44de8639b on Task 762fbb9b1633 was not measured.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-66",
+    "family": "uncertainty",
+    "claim": "Method 04198e30a6be improves accuracy over the baseline on Task 4fb207b7f033.",
+    "report": "Although the team was uncertain before testing, the completed accuracy comparison on Task 4fb207b7f033 found Method 04198e30a6be better than baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-240",
+    "family": "superseded",
+    "claim": "Method ead91abbd084 improves accuracy over the baseline on Task 33f1d36113b4.",
+    "report": "A previous claim of better accuracy was withdrawn as erroneous. The corrected comparison is: On Task 33f1d36113b4, Method ead91abbd084 achieved 62% accuracy and the baseline achieved 66%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-12",
+    "family": "uncertainty",
+    "claim": "Method e8c49a332904 improves accuracy over the baseline on Task f763bf56f526.",
+    "report": "No accuracy estimates are available for Method e8c49a332904 or the baseline on Task f763bf56f526; investigators are uncertain which is better.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-141",
+    "family": "irrelevant_metric",
+    "claim": "Method bc8ae0366d34 improves accuracy over the baseline on Task ecf927b3fe64.",
+    "report": "Method bc8ae0366d34 used less memory and ran faster. On Task ecf927b3fe64, Method bc8ae0366d34 achieved 65% accuracy and the baseline achieved 72%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-163",
+    "family": "target_distractor",
+    "claim": "Method cb95e24df720 improves accuracy over the baseline on Task 397946cd36b7.",
+    "report": "Another method achieved 57% accuracy on Task 397946cd36b7. For the requested method: On Task 397946cd36b7, Method cb95e24df720 achieved 57% accuracy and the baseline achieved 50%.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S1-263",
+    "family": "superseded",
+    "claim": "Method ed6d9b87238d improves accuracy over the baseline on Task acb05aa26cce.",
+    "report": "An earlier accuracy result for Method ed6d9b87238d on Task acb05aa26cce was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-427",
+    "family": "superseded",
+    "claim": "Method 60600f5b9fb6 improves accuracy over the baseline on Task aed4ab7ae7de.",
+    "report": "An earlier accuracy result for Method 60600f5b9fb6 on Task aed4ab7ae7de was withdrawn as erroneous. There is no replacement measurement.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S1-329",
+    "family": "negation",
+    "claim": "Method 375e0de0eabf improves accuracy over the baseline on Task d65f4194fdd1.",
+    "report": "Method 375e0de0eabf did not improve accuracy over the baseline on Task d65f4194fdd1; measured accuracy was unchanged.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-88",
+    "family": "error_rates",
+    "claim": "Method a710941b8978 improves accuracy over the baseline on Task 95ca3369d4de.",
+    "report": "On Task 95ca3369d4de, the baseline made 50 errors in 100 answers. Method a710941b8978 made 53 errors in 100 answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-221",
+    "family": "target_distractor",
+    "claim": "Method 97d3ebf4073b improves accuracy over the baseline on Task ffcd8718fa00.",
+    "report": "Another method achieved 84% accuracy on Task ffcd8718fa00. For the requested method: On Task ffcd8718fa00, Method 97d3ebf4073b achieved 66% accuracy and the baseline achieved 75%.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S1-121",
+    "family": "subgroup",
+    "claim": "Method 2c73f8ba4732 improves accuracy over the baseline on Task 1630b296c8aa.",
+    "report": "On Task 1630b296c8aa, Method 2c73f8ba4732 achieved 82% accuracy and the baseline achieved 74%. A different test showed the opposite result.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  }
+]

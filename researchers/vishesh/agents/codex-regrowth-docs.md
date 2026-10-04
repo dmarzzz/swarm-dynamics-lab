@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: idle
 task: healing-c4-selective
-doing: "Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound"
-updated: 2026-10-04T19:48:28.933993+00:00
+doing: "C6 finished: Haiku–Jev main reviewed, finite negative result published, ledger restored and claim released; FINISH / PARK"
+updated: 2026-10-04T20:43:34.476809+00:00
 ---
 
 ## Notes

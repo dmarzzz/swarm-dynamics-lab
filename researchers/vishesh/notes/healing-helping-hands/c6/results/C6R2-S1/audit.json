@@ -1,0 +1,397 @@
+{
+  "all_payloads_reconstructed": true,
+  "all_raw_labels_reconstructed": true,
+  "all_scores_reconstructed": true,
+  "assigned_cases": 432,
+  "completed_cases": 432,
+  "completed_calls": 1296,
+  "cost_usd": 0.32713194399999984,
+  "component_cost_usd": {
+    "haiku": 0.3182769999999998,
+    "jev": 0.00885494400000001
+  },
+  "component_total_tokens": {
+    "haiku": 282545,
+    "jev": 229552
+  },
+  "component_seconds": {
+    "haiku": 701.1196391582489,
+    "jev": 91.75386333465576
+  },
+  "source": "204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb",
+  "miss_count": 29,
+  "misses": [
+    {
+      "case": "C6R2-S1-361",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 4b18a182009a improves accuracy over the baseline on Task befdac16c719.",
+      "report": "On Task befdac16c719, Method 4b18a182009a achieved 73% accuracy and the baseline achieved 64%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-361",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 4b18a182009a improves accuracy over the baseline on Task befdac16c719.",
+      "report": "On Task befdac16c719, Method 4b18a182009a achieved 73% accuracy and the baseline achieved 64%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-426",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 7aa67d9e016b improves accuracy over the baseline on Task 4e9ea0485f81.",
+      "report": "On Task 4e9ea0485f81, Method 7aa67d9e016b achieved 69% accuracy and the baseline achieved 65%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-426",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 7aa67d9e016b improves accuracy over the baseline on Task 4e9ea0485f81.",
+      "report": "On Task 4e9ea0485f81, Method 7aa67d9e016b achieved 69% accuracy and the baseline achieved 65%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-218",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method b881cf3456aa improves accuracy over the baseline on Task 177b15f15c54.",
+      "report": "Method b881cf3456aa improved on a different test; Task 177b15f15c54 has not been evaluated.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S1-74",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method e8dc43b4c3d8 improves accuracy over the baseline on Task 713bdb613069.",
+      "report": "On Task 713bdb613069, Method e8dc43b4c3d8 achieved 81% accuracy and the baseline achieved 78%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-74",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method e8dc43b4c3d8 improves accuracy over the baseline on Task 713bdb613069.",
+      "report": "On Task 713bdb613069, Method e8dc43b4c3d8 achieved 81% accuracy and the baseline achieved 78%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-166",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 8e13f7d4c67c improves accuracy over the baseline on Task 4cc3fbc2cdc9.",
+      "report": "On Task 4cc3fbc2cdc9, Method 8e13f7d4c67c achieved 64% accuracy and the baseline achieved 58%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-166",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 8e13f7d4c67c improves accuracy over the baseline on Task 4cc3fbc2cdc9.",
+      "report": "On Task 4cc3fbc2cdc9, Method 8e13f7d4c67c achieved 64% accuracy and the baseline achieved 58%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-349",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method e835cbc1c468 improves accuracy over the baseline on Task 5120259b38f6.",
+      "report": "On Task 5120259b38f6, Method e835cbc1c468 achieved 82% accuracy and the baseline achieved 75%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-349",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method e835cbc1c468 improves accuracy over the baseline on Task 5120259b38f6.",
+      "report": "On Task 5120259b38f6, Method e835cbc1c468 achieved 82% accuracy and the baseline achieved 75%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-11",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 03c903a1fdd2 improves accuracy over the baseline on Task 2ea2d65d2205.",
+      "report": "On Task 2ea2d65d2205, Method 03c903a1fdd2 achieved 76% accuracy and the baseline achieved 72%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-11",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 03c903a1fdd2 improves accuracy over the baseline on Task 2ea2d65d2205.",
+      "report": "On Task 2ea2d65d2205, Method 03c903a1fdd2 achieved 76% accuracy and the baseline achieved 72%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-68",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 617411c55858 improves accuracy over the baseline on Task 4104b595005a.",
+      "report": "On Task 4104b595005a, Method 617411c55858 achieved 78% accuracy and the baseline achieved 75%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-68",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 617411c55858 improves accuracy over the baseline on Task 4104b595005a.",
+      "report": "On Task 4104b595005a, Method 617411c55858 achieved 78% accuracy and the baseline achieved 75%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-0",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 271a6ebd4fd5 improves accuracy over the baseline on Task 0e9ef5eebcae.",
+      "report": "On Task 0e9ef5eebcae, Method 271a6ebd4fd5 achieved 61% accuracy and the baseline achieved 57%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-0",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 271a6ebd4fd5 improves accuracy over the baseline on Task 0e9ef5eebcae.",
+      "report": "On Task 0e9ef5eebcae, Method 271a6ebd4fd5 achieved 61% accuracy and the baseline achieved 57%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-337",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 36df23d45684 improves accuracy over the baseline on Task 4522abd34bf1.",
+      "report": "On Task 4522abd34bf1, Method 36df23d45684 achieved 87% accuracy and the baseline achieved 79%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-337",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 36df23d45684 improves accuracy over the baseline on Task 4522abd34bf1.",
+      "report": "On Task 4522abd34bf1, Method 36df23d45684 achieved 87% accuracy and the baseline achieved 79%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-246",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method b7f2378edcb8 improves accuracy over the baseline on Task 1fcfbf0fb517.",
+      "report": "On Task 1fcfbf0fb517, Method b7f2378edcb8 achieved 69% accuracy and the baseline achieved 60%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-246",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method b7f2378edcb8 improves accuracy over the baseline on Task 1fcfbf0fb517.",
+      "report": "On Task 1fcfbf0fb517, Method b7f2378edcb8 achieved 69% accuracy and the baseline achieved 60%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-343",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method e0892eb5f551 improves accuracy over the baseline on Task d991a3818177.",
+      "report": "On Task d991a3818177, Method e0892eb5f551 achieved 78% accuracy and the baseline achieved 70%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-343",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method e0892eb5f551 improves accuracy over the baseline on Task d991a3818177.",
+      "report": "On Task d991a3818177, Method e0892eb5f551 achieved 78% accuracy and the baseline achieved 70%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-158",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method a0590c1949ec improves accuracy over the baseline on Task 58c15acec2cd.",
+      "report": "Method a0590c1949ec improved on a different test; Task 58c15acec2cd has not been evaluated.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S1-263",
+      "variant": "a",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method ed6d9b87238d improves accuracy over the baseline on Task acb05aa26cce.",
+      "report": "An earlier accuracy result for Method ed6d9b87238d on Task acb05aa26cce was withdrawn as erroneous. There is no replacement measurement.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S1-263",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method ed6d9b87238d improves accuracy over the baseline on Task acb05aa26cce.",
+      "report": "An earlier accuracy result for Method ed6d9b87238d on Task acb05aa26cce was withdrawn as erroneous. There is no replacement measurement.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S1-427",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method 60600f5b9fb6 improves accuracy over the baseline on Task aed4ab7ae7de.",
+      "report": "An earlier accuracy result for Method 60600f5b9fb6 on Task aed4ab7ae7de was withdrawn as erroneous. There is no replacement measurement.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S1-121",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 2c73f8ba4732 improves accuracy over the baseline on Task 1630b296c8aa.",
+      "report": "On Task 1630b296c8aa, Method 2c73f8ba4732 achieved 82% accuracy and the baseline achieved 74%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-121",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "UNCERTAIN",
+      "claim": "Method 2c73f8ba4732 improves accuracy over the baseline on Task 1630b296c8aa.",
+      "report": "On Task 1630b296c8aa, Method 2c73f8ba4732 achieved 82% accuracy and the baseline achieved 74%. A different test showed the opposite result.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    }
+  ],
+  "qualification": null,
+  "matched_successes": [
+    {
+      "case": "C6R2-S1-376",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "SUPPORT",
+      "claim": "Method 56d5a51178f9 improves accuracy over the baseline on Task 60d92e2a41bc.",
+      "report": "Another method achieved 78% accuracy on Task 60d92e2a41bc. For the requested method: On Task 60d92e2a41bc, Method 56d5a51178f9 achieved 78% accuracy and the baseline achieved 74%.",
+      "raw_answer": "{\"label\": \"SUPPORT\"}"
+    },
+    {
+      "case": "C6R2-S1-376",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "SUPPORT",
+      "claim": "Method 56d5a51178f9 improves accuracy over the baseline on Task 60d92e2a41bc.",
+      "report": "Another method achieved 78% accuracy on Task 60d92e2a41bc. For the requested method: On Task 60d92e2a41bc, Method 56d5a51178f9 achieved 78% accuracy and the baseline achieved 74%.",
+      "raw_answer": "{\"label\": \"SUPPORT\"}"
+    },
+    {
+      "case": "C6R2-S1-376",
+      "variant": "jev",
+      "truth": "SUPPORT",
+      "actual": "SUPPORT",
+      "claim": "Method 56d5a51178f9 improves accuracy over the baseline on Task 60d92e2a41bc.",
+      "report": "Another method achieved 78% accuracy on Task 60d92e2a41bc. For the requested method: On Task 60d92e2a41bc, Method 56d5a51178f9 achieved 78% accuracy and the baseline achieved 74%.",
+      "raw_answer": {
+        "type": "choice",
+        "choice": "SUPPORT",
+        "probabilities": {
+          "SUPPORT": 1,
+          "REFUTE": 0,
+          "UNCERTAIN": 0
+        },
+        "confidence": 1
+      }
+    },
+    {
+      "case": "C6R2-S1-320",
+      "variant": "a",
+      "truth": "REFUTE",
+      "actual": "REFUTE",
+      "claim": "Method 48996edf3b5e improves accuracy over the baseline on Task be3067669cfd.",
+      "report": "On Task be3067669cfd, the baseline made 40 errors in 100 answers. Method 48996edf3b5e made 46 errors in 100 answers.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S1-320",
+      "variant": "b",
+      "truth": "REFUTE",
+      "actual": "REFUTE",
+      "claim": "Method 48996edf3b5e improves accuracy over the baseline on Task be3067669cfd.",
+      "report": "On Task be3067669cfd, the baseline made 40 errors in 100 answers. Method 48996edf3b5e made 46 errors in 100 answers.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S1-320",
+      "variant": "jev",
+      "truth": "REFUTE",
+      "actual": "REFUTE",
+      "claim": "Method 48996edf3b5e improves accuracy over the baseline on Task be3067669cfd.",
+      "report": "On Task be3067669cfd, the baseline made 40 errors in 100 answers. Method 48996edf3b5e made 46 errors in 100 answers.",
+      "raw_answer": {
+        "type": "choice",
+        "choice": "REFUTE",
+        "probabilities": {
+          "UNCERTAIN": 0,
+          "SUPPORT": 0,
+          "REFUTE": 1
+        },
+        "confidence": 1
+      }
+    },
+    {
+      "case": "C6R2-S1-120",
+      "variant": "a",
+      "truth": "UNCERTAIN",
+      "actual": "UNCERTAIN",
+      "claim": "Method 62672bafdf03 improves accuracy over the baseline on Task 7512d1404484.",
+      "report": "The team expects Method 62672bafdf03 to beat the baseline on Task 7512d1404484, but no accuracy experiment has run.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-120",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "UNCERTAIN",
+      "claim": "Method 62672bafdf03 improves accuracy over the baseline on Task 7512d1404484.",
+      "report": "The team expects Method 62672bafdf03 to beat the baseline on Task 7512d1404484, but no accuracy experiment has run.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S1-120",
+      "variant": "jev",
+      "truth": "UNCERTAIN",
+      "actual": "UNCERTAIN",
+      "claim": "Method 62672bafdf03 improves accuracy over the baseline on Task 7512d1404484.",
+      "report": "The team expects Method 62672bafdf03 to beat the baseline on Task 7512d1404484, but no accuracy experiment has run.",
+      "raw_answer": {
+        "type": "choice",
+        "choice": "UNCERTAIN",
+        "probabilities": {
+          "REFUTE": 0,
+          "SUPPORT": 0,
+          "UNCERTAIN": 1
+        },
+        "confidence": 1
+      }
+    }
+  ]
+}

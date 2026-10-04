@@ -1,0 +1,13 @@
+{
+  "historical_entries_unchanged": 2731,
+  "total_reservations": 4254,
+  "settled_usd": 0.428065318,
+  "unresolved_usd": 0.001344,
+  "C6_exposure_usd": 0.37606642,
+  "C6_requests": 1523,
+  "cumulative_cap_usd": 50,
+  "remaining_usd": 49.570590681999995,
+  "remote_dispatch_disabled": true,
+  "original_ledger_restored": true,
+  "sha256": "33cb95c3193e60b9e90a4203d3db51253b7df4782a5e1cd3c5fff744e3fc542e"
+}

@@ -1,0 +1,159 @@
+{
+  "all_family_arithmetic_reconstructed": true,
+  "visible_label_checks": 432,
+  "label_mismatches": 0,
+  "correct": {
+    "qwen": 419,
+    "haiku_b": 416,
+    "jev": 432,
+    "cascade": 419,
+    "matched": 419
+  },
+  "families": {
+    "before_after": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "counts": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "error_rates": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "expectations": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "irrelevant_metric": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "negation": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "percentages": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "repeated_tests": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "subgroup": {
+      "cases": 36,
+      "referrals": 2,
+      "correct": {
+        "qwen": 24,
+        "haiku_b": 22,
+        "jev": 36,
+        "cascade": 24,
+        "matched": 24
+      },
+      "analytic_random_expected_error": 0.3148148148148148
+    },
+    "superseded": {
+      "cases": 36,
+      "referrals": 1,
+      "correct": {
+        "qwen": 35,
+        "haiku_b": 34,
+        "jev": 36,
+        "cascade": 35,
+        "matched": 35
+      },
+      "analytic_random_expected_error": 0.027006172839506185
+    },
+    "target_distractor": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    },
+    "uncertainty": {
+      "cases": 36,
+      "referrals": 0,
+      "correct": {
+        "qwen": 36,
+        "haiku_b": 36,
+        "jev": 36,
+        "cascade": 36,
+        "matched": 36
+      },
+      "analytic_random_expected_error": 0.0
+    }
+  },
+  "independence": "same-author separate implementation; no external adjudication"
+}

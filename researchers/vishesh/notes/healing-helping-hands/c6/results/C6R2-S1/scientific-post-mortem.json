@@ -1,0 +1,64 @@
+{
+  "status": "reviewed",
+  "assessor": "vishesh/codex-regrowth-docs",
+  "independent_review": false,
+  "evidence": "../../C6R2-S1-POST.md",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "assessment": "Fixed accuracy/referral/cost conjunction; valid adverse result."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "limited",
+      "assessment": "12 authored synthetic families;12 SUPPORT cases have ambiguousother-testscope; frozen scores preserved and sensitivity reported."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "assessment": "Always-Jev, HaikuA/B, fixed same-count random and analytic random; grammar parser exposes ceiling."
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "assessment": "Qualification passed; main A419/B416/Jev432 against frozen labels, with semantic caveat."
+    },
+    {
+      "dimension": "measurement",
+      "status": "limited",
+      "assessment": "All1296tapes and separate arithmetic reconstructed; all29misses read; gold convention not independently adjudicated."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "limited",
+      "assessment": "12 authoredblocks,432nestedcases; no populationCI or noninferiority claim."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "assessment": "Stateless exact projections, no evaluator fields; two dependent order variants."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "assessment": "432assigned/completed,1296validcalls; zero missing/retries/exclusions."
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "assessment": "MainUSD0.327131944; allC6USD0.376066420; originalhistory/uncertaintycarried,within50cumulative/3C6."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "limited",
+      "assessment": "Frozen204cfc5eandfulltapes; advertisedrevision and servedalias separated; hostedbackendnotguaranteedimmutable."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "assessment": "Saved-data replay and confusion/error/cost/familyplots; axes visuallychecked; actual response order, no simulated swarm."
+    }
+  ],
+  "next_action": "FINISH / PARK; reconcile resources and publish, no successor"
+}

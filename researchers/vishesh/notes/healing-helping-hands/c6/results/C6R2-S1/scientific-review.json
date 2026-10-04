@@ -1,0 +1,12 @@
+{
+  "reviewed": true,
+  "qualified": true,
+  "source": "204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb",
+  "all_payloads_reconstructed": true,
+  "all_misses_reviewed": true,
+  "manual_review": "All29wrongactor answers and9matchedsuccessfulanswers read with claim/report evidence; all1296payloads/rawlabels/scores reconstructed.",
+  "finding": "Frozen-label A419/B416/Jev432; cascade419, matched419; disagreement misses all13Aerrors. Cost35.95xalwaysJev. Twelve shared misses have wording ambiguity.",
+  "limitations": "12authoredfamilies, dependentnestedcases; same-author review; ambiguousdifferent-test wording; no generalization.",
+  "disposition": "FINISH / PARK; no further dispatch.",
+  "public_tldr": "TLDR: C6R2-S1 completed432/432cases,1296calls,zeroexecutionfailures. Haiku A419/B416/Jev432 correct on frozen labels; agreement routing419,matchedrandom419. Only3referrals; caught0/13Aerrors. Derivedcascadecost35.95xalwaysJev; useful-policycriteriafail. Twelve shared misses involve ambiguous different-test wording, so do not generalize the accuracy gap. Synthetic12-familytest,not200-agentcooperation. MainAPIUSD0.327132; allpriorfailuresretained. Plan preregistered; FINISH/PARK."
+}
