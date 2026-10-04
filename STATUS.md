@@ -369,10 +369,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:21:59.245134+00:00 | Packet-study v2 case-ready for controlled scope; no native qualification or admission |
 | vishesh/codex-methods | idle |  | 2026-10-04 18:18:22.325483+00:00 | D1 diagnostic reviewed and published; three valid calls, slow-call stop, host released; qualification closed; no successor |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc8-live | 2026-10-04 18:12:29.707680+00:00 | PC8 Q0 closed and reviewed; failed qualification, S1 unrun; parser defect repaired retrospectively; allocation released; FINISH / PARK |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-design | 2026-10-04 18:12:07.337384+00:00 | Drafting the RD5 successor on reliable reopening and validating context controls offline; no native dispatch. |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:08:12.715614+00:00 | Claim-fidelity case design complete; native progression needs strong baseline and varied corpus |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
