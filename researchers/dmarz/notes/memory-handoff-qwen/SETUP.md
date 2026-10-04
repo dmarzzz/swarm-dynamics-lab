@@ -65,6 +65,16 @@ Operations entry: manual, through the generic private launcher named in [RUN.md]
 
 Attempt 001's gates: G3 passed (launched by dmarz/fleet-monitor at `0d54225c`, run request 275); G4 failed (Q0 19 of 24 supported); G5 done by dmarz/pipeline ([post-mortem](reviews/chain-001-post.md), [records](records/README.md)). The gate table above this section is the attempt-001 record as written before its run.
 
+## Chain 003 (gpt-6-luna), gate evidence
+
+| Gate | Status | Evidence, timestamp and assessor | Blocker / next action |
+|---|---|---|---|
+| G1 Plan written before implementation | pass | Preregistration section "Second model: gpt-6-luna" pushed at `0a581405` before the chain's code; amendment (set a, chain 003, launch form) before any call to the model; 2026-10-04, dmarz/pipeline-memory | none |
+| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, at code commit `c2717f74`, source hash `caf5d773…`: selftest 129 of 129; offline S0 192 of 192 with 25 of 25 invariants; manifest check equal; rehearsal 47 of 47 checks in 126 s (both configurations' chains on one hub; OpenAI quota stop and resume). Details in [reviews/chain-003-pre.md](reviews/chain-003-pre.md) | Not tested: Python 3.12, the real hub, the launcher, any response of the OpenAI API |
+| G3 Current attempt admission | pending | [Pre-run review of chain 003](reviews/chain-003-pre.md) on main; `READY.yaml` names it, provider `openai`, `ledger: fresh` | The fleet monitor's same-researcher check, the queue entry, a fresh server claim, the OpenAI quota check |
+| G4 Qualification before scientific escalation | pending | chain 003 has not run | P0 and Q0 on fixture set a; a stop ends this chain |
+| G5 Reconciliation and closeout | pending | chain 003 has not run | `verify`, post-mortem, results section |
+
 ## Attempt and repair history
 
 No attempt exists. Offline checks on the build machine are software checks, not attempts: the offline S0 and the rehearsal wrote only to temporary directories, which were deleted, and reported to no real hub.
@@ -75,6 +85,7 @@ History before the pin, all on 2026-10-04 and before any run: plan `bee94550`; i
 |---|---|---|---|---|
 | 001 / none | S0, P0, Q0 at source hash `b4ab9025…` | [chain-001-pre](reviews/chain-001-pre.md); hub runs `95d12801`, `bc8748ab`, `908c3129` | S0 192/192/192/192/192; P0 1/1/1/1/1; Q0 23/23/23/23/23 (gate over 24: 19 supported); S1 not queued | [chain-001-post](reviews/chain-001-post.md): stopped at the qualification gate; a result; one repair allowed |
 | 002 / 001 | S0, P0, Q0, S1 at source hash `10f51d2c…` | [chain-002-pre](reviews/chain-002-pre.md); launch commit `5831e534`; hub runs `6e5badb7`, `94e45249`, `43926309`, `5a6fec17` | S0 192/192/192/192/n.a.; P0 1/1/1/1/1; Q0 23/23/23/23/23 (gate over 24: 24 supported); S1 576/576/576/576/576 | [chain-002-post](reviews/chain-002-post.md): complete valid result; [RESULTS](RESULTS.md) |
+| 003 (gpt-6-luna) / 001 | S0, P0, Q0, S1 at source hash `caf5d773…` | [chain-003-pre](reviews/chain-003-pre.md) | not run | pending |
 
 ## Closeout
 

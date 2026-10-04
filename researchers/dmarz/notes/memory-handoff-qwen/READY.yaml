@@ -1,0 +1,15 @@
+contract: ready-chain-v1
+study: memory-handoff-qwen
+experiment: memory-handoff-qwen
+stages: [S0, P0, Q0, S1]
+provider: openai
+model: gpt-6-luna
+effort: low
+max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
+max_calls_total: 600
+usd_cap: 5
+chain_timeout_seconds: 7800
+selftests: 129
+source_hash: caf5d773dec0e0c50e99d40088a63349b1f0e3380939c80495e1d00ab6fcc4ba
+review: reviews/chain-003-pre.md
+ledger: fresh

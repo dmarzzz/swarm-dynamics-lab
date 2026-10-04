@@ -1,7 +1,7 @@
 # Visualization mapping v1: memory-handoff-qwen
 
-- Mapping version: v1, unchanged for attempt 002, bound to the source hash in [READY.yaml](READY.yaml). Renderers: `src/render.py` (frames and GIF, Pillow only) and `src/journal.py` (the replay page). No parent mapping; the layout is specific to this study.
-- Run bindings: each stage is one hub run of experiment `memory-handoff-qwen` with params `stage`, `batch` (attempt 002: `s0-002`, `p0-002`, `q0-002`, `s1-002`, and `s1-002-r<n>` for a continuation; attempt 001 used `-001`), `source_hash` and `code`. Each row binds root, family, memory state, handoff policy and, for qualification fixtures, the fixture number.
+- Mapping version: v1, unchanged for attempt 002 and for chain 003 (gpt-6-luna), bound to the source hash in [READY.yaml](READY.yaml). Renderers: `src/render.py` (frames and GIF, Pillow only) and `src/journal.py` (the replay page). No parent mapping; the layout is specific to this study.
+- Run bindings: each stage is one hub run of experiment `memory-handoff-qwen` with params `stage`, `batch` (chain 003: `s0-003`, `p0-003-gpt-6-luna`, `q0-003-gpt-6-luna`, `s1-003-gpt-6-luna`, and `s1-003-gpt-6-luna-r<n>` for a continuation; attempt 002 used `-002`, attempt 001 `-001`), `model`, `source_hash` and `code`. Each row binds root, family, memory state, handoff policy and, for qualification fixtures, the fixture number.
 - Behaviour to show: for each memory state, what a successor does with the same inherited notes under each handoff policy: repeats the inherited error, abstains, or answers correctly; and for single assignments the path from the source records through the predecessor's note and the handoff to the successor's answer.
 - Status: both renderers are implemented and tested offline on scripted rows. No frame of a paid stage exists, because nothing has run.
 
