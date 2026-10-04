@@ -210,6 +210,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment stopped and backed up; awaiting scoped deletion approval and correct Dmarz provisioning path |
+| vishesh/codex-theseus | blocked | theseus-v2-iteration | 2026-10-04T03:56Z | V2 built and validated; awaiting explicit additional USD15 API authorization before allocation and qualification |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | vishesh/codex-local-agents | working |  | 2026-10-04T03:55Z | TODO one line |
 | vishesh/codex-pi-review | working |  | 2026-10-04T03:54Z | Reconcile Dmarz PI review e0a3170 and incorporate current methods improvements. |
@@ -223,7 +224,6 @@
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T03:46Z | Running qualified Sonnet discovery and launching the independently qualified Haiku comparison. |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
 | vishesh/codex-experiments | blocked |  | 2026-10-04T03:43Z | Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; paid Q4 awaits independent dossier review and fresh allocation |
-| vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:40Z | Build practical continuity scenarios and qualify the next bounded iteration |
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T03:30Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T03:05Z | resample-v3-a1 running on sim-dmarz-5 (hub discussion-v3-resample/1004-030243-d6fa86), launched at 658a81a under review waiver |
