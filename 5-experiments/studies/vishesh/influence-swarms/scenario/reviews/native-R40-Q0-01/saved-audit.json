@@ -1,0 +1,706 @@
+{
+  "attempt": "native-R40-Q0-01",
+  "exact_wires": 604,
+  "valid_outputs_reproduced": 517,
+  "records_and_assessment_reproduced": true,
+  "costs_reconciled": true,
+  "invalids": [
+    {
+      "ordinal": 15,
+      "category": "local_structure",
+      "characters": 979,
+      "trailing_whitespace": 0,
+      "root": "r40-development-scope-0/repeat-0",
+      "node": "truthful/large-technical-00/initial"
+    },
+    {
+      "ordinal": 16,
+      "category": "local_structure",
+      "characters": 980,
+      "trailing_whitespace": 0,
+      "root": "r40-development-scope-0/repeat-0",
+      "node": "truthful/large-technical-01/initial"
+    },
+    {
+      "ordinal": 40,
+      "category": "length",
+      "characters": 11322,
+      "trailing_whitespace": 10086,
+      "root": "r40-development-migration-5/repeat-0",
+      "node": "truthful/large-commercial-00/initial"
+    },
+    {
+      "ordinal": 46,
+      "category": "local_structure",
+      "characters": 1278,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-commercial-01/initial"
+    },
+    {
+      "ordinal": 50,
+      "category": "local_structure",
+      "characters": 1259,
+      "trailing_whitespace": 0,
+      "root": "r40-development-near_tie-6/repeat-0",
+      "node": "truthful/large-commercial-01/initial"
+    },
+    {
+      "ordinal": 52,
+      "category": "local_structure",
+      "characters": 1269,
+      "trailing_whitespace": 0,
+      "root": "r40-development-evidence_gap-8/repeat-0",
+      "node": "truthful/large-commercial-01/initial"
+    },
+    {
+      "ordinal": 63,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-commercial-03/initial"
+    },
+    {
+      "ordinal": 77,
+      "category": "local_structure",
+      "characters": 1260,
+      "trailing_whitespace": 0,
+      "root": "r40-development-near_tie-6/repeat-0",
+      "node": "truthful/large-commercial-04/initial"
+    },
+    {
+      "ordinal": 78,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-commercial-04/initial"
+    },
+    {
+      "ordinal": 88,
+      "category": "local_structure",
+      "characters": 1236,
+      "trailing_whitespace": 0,
+      "root": "r40-development-evidence_gap-8/repeat-0",
+      "node": "truthful/large-commercial-05/initial"
+    },
+    {
+      "ordinal": 91,
+      "category": "local_structure",
+      "characters": 1280,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-commercial-06/initial"
+    },
+    {
+      "ordinal": 99,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-commercial-07/initial"
+    },
+    {
+      "ordinal": 104,
+      "category": "local_structure",
+      "characters": 1260,
+      "trailing_whitespace": 0,
+      "root": "r40-development-near_tie-6/repeat-0",
+      "node": "truthful/large-commercial-07/initial"
+    },
+    {
+      "ordinal": 124,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-commercial-09/initial"
+    },
+    {
+      "ordinal": 127,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-commercial-10/initial"
+    },
+    {
+      "ordinal": 139,
+      "category": "local_structure",
+      "characters": 996,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-00/initial"
+    },
+    {
+      "ordinal": 145,
+      "category": "local_structure",
+      "characters": 998,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-technical-00/initial"
+    },
+    {
+      "ordinal": 148,
+      "category": "local_structure",
+      "characters": 996,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-01/initial"
+    },
+    {
+      "ordinal": 151,
+      "category": "local_structure",
+      "characters": 990,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-technical-00/initial"
+    },
+    {
+      "ordinal": 155,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-01/initial"
+    },
+    {
+      "ordinal": 157,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-02/initial"
+    },
+    {
+      "ordinal": 161,
+      "category": "local_structure",
+      "characters": 995,
+      "trailing_whitespace": 0,
+      "root": "r40-development-evidence_gap-8/repeat-0",
+      "node": "truthful/large-technical-01/initial"
+    },
+    {
+      "ordinal": 163,
+      "category": "local_structure",
+      "characters": 999,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-technical-02/initial"
+    },
+    {
+      "ordinal": 164,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-02/initial"
+    },
+    {
+      "ordinal": 166,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-03/initial"
+    },
+    {
+      "ordinal": 173,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-03/initial"
+    },
+    {
+      "ordinal": 181,
+      "category": "local_structure",
+      "characters": 1002,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-technical-04/initial"
+    },
+    {
+      "ordinal": 182,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-04/initial"
+    },
+    {
+      "ordinal": 184,
+      "category": "local_structure",
+      "characters": 996,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-05/initial"
+    },
+    {
+      "ordinal": 191,
+      "category": "local_structure",
+      "characters": 996,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-05/initial"
+    },
+    {
+      "ordinal": 193,
+      "category": "local_structure",
+      "characters": 994,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-06/initial"
+    },
+    {
+      "ordinal": 199,
+      "category": "local_structure",
+      "characters": 999,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-technical-06/initial"
+    },
+    {
+      "ordinal": 200,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-06/initial"
+    },
+    {
+      "ordinal": 202,
+      "category": "local_structure",
+      "characters": 996,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-07/initial"
+    },
+    {
+      "ordinal": 203,
+      "category": "local_structure",
+      "characters": 993,
+      "trailing_whitespace": 0,
+      "root": "r40-development-migration-5/repeat-0",
+      "node": "truthful/large-technical-06/initial"
+    },
+    {
+      "ordinal": 208,
+      "category": "local_structure",
+      "characters": 999,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-technical-07/initial"
+    },
+    {
+      "ordinal": 209,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-07/initial"
+    },
+    {
+      "ordinal": 211,
+      "category": "local_structure",
+      "characters": 995,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-08/initial"
+    },
+    {
+      "ordinal": 218,
+      "category": "local_structure",
+      "characters": 993,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-08/initial"
+    },
+    {
+      "ordinal": 220,
+      "category": "local_structure",
+      "characters": 996,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-09/initial"
+    },
+    {
+      "ordinal": 226,
+      "category": "local_structure",
+      "characters": 999,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-technical-09/initial"
+    },
+    {
+      "ordinal": 227,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-09/initial"
+    },
+    {
+      "ordinal": 229,
+      "category": "local_structure",
+      "characters": 996,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-technical-10/initial"
+    },
+    {
+      "ordinal": 235,
+      "category": "local_structure",
+      "characters": 999,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-technical-10/initial"
+    },
+    {
+      "ordinal": 236,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-10/initial"
+    },
+    {
+      "ordinal": 245,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-technical-11/initial"
+    },
+    {
+      "ordinal": 257,
+      "category": "local_structure",
+      "characters": 962,
+      "trailing_whitespace": 0,
+      "root": "r40-development-migration-5/repeat-0",
+      "node": "truthful/large-deployment-00/initial"
+    },
+    {
+      "ordinal": 263,
+      "category": "local_structure",
+      "characters": 965,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-deployment-01/initial"
+    },
+    {
+      "ordinal": 264,
+      "category": "local_structure",
+      "characters": 961,
+      "trailing_whitespace": 0,
+      "root": "r40-development-unit_price-3/repeat-0",
+      "node": "truthful/large-deployment-01/initial"
+    },
+    {
+      "ordinal": 265,
+      "category": "local_structure",
+      "characters": 965,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-deployment-02/initial"
+    },
+    {
+      "ordinal": 274,
+      "category": "local_structure",
+      "characters": 958,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-deployment-03/initial"
+    },
+    {
+      "ordinal": 277,
+      "category": "local_structure",
+      "characters": 1009,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-deployment-02/initial"
+    },
+    {
+      "ordinal": 281,
+      "category": "local_structure",
+      "characters": 964,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-deployment-03/initial"
+    },
+    {
+      "ordinal": 283,
+      "category": "local_structure",
+      "characters": 967,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-deployment-04/initial"
+    },
+    {
+      "ordinal": 316,
+      "category": "local_structure",
+      "characters": 970,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-deployment-07/initial"
+    },
+    {
+      "ordinal": 319,
+      "category": "local_structure",
+      "characters": 969,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-deployment-08/initial"
+    },
+    {
+      "ordinal": 322,
+      "category": "local_structure",
+      "characters": 957,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-deployment-07/initial"
+    },
+    {
+      "ordinal": 326,
+      "category": "local_structure",
+      "characters": 951,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-deployment-08/initial"
+    },
+    {
+      "ordinal": 362,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-commercial-00/revision"
+    },
+    {
+      "ordinal": 365,
+      "category": "local_structure",
+      "characters": 1280,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-commercial-01/revision"
+    },
+    {
+      "ordinal": 367,
+      "category": "local_structure",
+      "characters": 1259,
+      "trailing_whitespace": 0,
+      "root": "r40-development-near_tie-6/repeat-0",
+      "node": "truthful/large-commercial-10/revision"
+    },
+    {
+      "ordinal": 368,
+      "category": "local_structure",
+      "characters": 1262,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-commercial-00/revision"
+    },
+    {
+      "ordinal": 371,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-commercial-01/revision"
+    },
+    {
+      "ordinal": 374,
+      "category": "local_structure",
+      "characters": 1281,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-commercial-02/revision"
+    },
+    {
+      "ordinal": 377,
+      "category": "local_structure",
+      "characters": 1261,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-commercial-01/revision"
+    },
+    {
+      "ordinal": 380,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-weighted_pilot-1/repeat-0",
+      "node": "truthful/large-commercial-05/revision"
+    },
+    {
+      "ordinal": 387,
+      "category": "local_structure",
+      "characters": 1292,
+      "trailing_whitespace": 0,
+      "root": "r40-development-evidence_gap-8/repeat-0",
+      "node": "truthful/large-commercial-08/revision"
+    },
+    {
+      "ordinal": 395,
+      "category": "local_structure",
+      "characters": 1261,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-commercial-06/revision"
+    },
+    {
+      "ordinal": 405,
+      "category": "local_structure",
+      "characters": 1264,
+      "trailing_whitespace": 0,
+      "root": "r40-development-evidence_gap-8/repeat-0",
+      "node": "truthful/large-commercial-10/revision"
+    },
+    {
+      "ordinal": 410,
+      "category": "local_structure",
+      "characters": 1281,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-commercial-06/revision"
+    },
+    {
+      "ordinal": 413,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-commercial-11/revision"
+    },
+    {
+      "ordinal": 422,
+      "category": "local_structure",
+      "characters": 987,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-technical-02/revision"
+    },
+    {
+      "ordinal": 426,
+      "category": "local_structure",
+      "characters": 969,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-deployment-06/revision"
+    },
+    {
+      "ordinal": 431,
+      "category": "local_structure",
+      "characters": 986,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-technical-03/revision"
+    },
+    {
+      "ordinal": 435,
+      "category": "local_structure",
+      "characters": 968,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/large-deployment-10/revision"
+    },
+    {
+      "ordinal": 447,
+      "category": "local_structure",
+      "characters": 1284,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-commercial-11/revision"
+    },
+    {
+      "ordinal": 456,
+      "category": "local_structure",
+      "characters": 966,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-deployment-00/revision"
+    },
+    {
+      "ordinal": 463,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/small-technical"
+    },
+    {
+      "ordinal": 472,
+      "category": "local_structure",
+      "characters": 969,
+      "trailing_whitespace": 0,
+      "root": "r40-development-supersession-2/repeat-0",
+      "node": "truthful/small-deployment"
+    },
+    {
+      "ordinal": 477,
+      "category": "local_structure",
+      "characters": 982,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-technical-08/revision"
+    },
+    {
+      "ordinal": 483,
+      "category": "local_structure",
+      "characters": 964,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/large-deployment-11/revision"
+    },
+    {
+      "ordinal": 495,
+      "category": "local_structure",
+      "characters": 990,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/large-technical-10/revision"
+    },
+    {
+      "ordinal": 501,
+      "category": "local_structure",
+      "characters": 997,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/small-technical"
+    },
+    {
+      "ordinal": 510,
+      "category": "local_structure",
+      "characters": 964,
+      "trailing_whitespace": 0,
+      "root": "r40-development-overage-4/repeat-0",
+      "node": "truthful/small-deployment"
+    },
+    {
+      "ordinal": 532,
+      "category": "local_structure",
+      "characters": 959,
+      "trailing_whitespace": 0,
+      "root": "r40-development-near_tie-6/repeat-0",
+      "node": "truthful/large-deployment-04/revision"
+    },
+    {
+      "ordinal": 552,
+      "category": "local_structure",
+      "characters": 1266,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/small-commercial"
+    },
+    {
+      "ordinal": 561,
+      "category": "local_structure",
+      "characters": 987,
+      "trailing_whitespace": 0,
+      "root": "r40-development-genuine_value-7/repeat-0",
+      "node": "truthful/small-technical"
+    }
+  ],
+  "new_model_calls": 0
+}

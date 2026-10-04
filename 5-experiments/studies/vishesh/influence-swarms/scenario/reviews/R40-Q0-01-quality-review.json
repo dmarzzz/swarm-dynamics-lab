@@ -1,0 +1,226 @@
+{
+  "assessor": "owning session; same-author audit",
+  "date": "2026-10-04T23:57:41.076942+00:00",
+  "attempt": "native-R40-Q0-01",
+  "evidence_revision": "ed0cc651de0e398fdc42f80afe7b26785f46a040",
+  "decision": "repair_one_bounded_interface_cycle",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Truthful interface qualification precedes the matched false-clause main; no treatment effect claimed.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Checker agenda created competing scope cues in specialist/generalist observations; authored source realism remains limited.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ],
+      "next_action": "Prepare the one prospective interface repair; preserve missing endpoints and do not launch old main.",
+      "acceptance_check": "Exact identity/context isolation offline tests, finite diagnostic, then full unchanged27/27native final qualification before main; close if repair fails."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Only truthful qualification ran; no false-clause comparison or large-team endpoint is observed.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ],
+      "next_action": "Prepare the one prospective interface repair; preserve missing endpoints and do not launch old main.",
+      "acceptance_check": "Exact identity/context isolation offline tests, finite diagnostic, then full unchanged27/27native final qualification before main; close if repair fails."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "517/604valid,87format failures;0/9large finals.15observed finals acceptable does not satisfy27/27qualification.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ],
+      "next_action": "Prepare the one prospective interface repair; preserve missing endpoints and do not launch old main.",
+      "acceptance_check": "Exact identity/context isolation offline tests, finite diagnostic, then full unchanged27/27native final qualification before main; close if repair fails."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All604exact wires/517outputs/records/scores replayed; all87failures/23mismatched reports/15final rationales inspected.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Nine authored development configurations,27assigned finals,15observed; feasibility only, no population CI.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Exact frozen context retained, but checker agenda visible to all roles plausibly displaced required scopes; no hidden gold/operator memory.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ],
+      "next_action": "Prepare the one prospective interface repair; preserve missing endpoints and do not launch old main.",
+      "acceptance_check": "Exact identity/context isolation offline tests, finite diagnostic, then full unchanged27/27native final qualification before main; close if repair fails."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "604returned,517valid,87known failures,152blocked; all756assignments retained; no unknown usage/retry.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Actual.29668575,newreserved3.440384,original23.070816/3533 under50; existing finite hosting unchanged; workers stopped.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source/manifest, deployed19tests, exact saved-wire/parent/response/assessment/ledger audit.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Published workflow table retains0/9large observed and12missing final endpoints; no fabricated influence animation.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/summary.json",
+          "sha256": "037fe2ab78505643a8c8346cc44c162a77de10ca8182218d7f8c0bce11953822"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/semantic-summary.json",
+          "sha256": "3f3a2d8ed1f57f1b712c1c628b7e4ba559d8aa2103d48024a34826ddb86dabcf"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R40-Q0-01/saved-audit.json",
+          "sha256": "5fe28c62418f5a15fd909bdb2465ab53cb6b3cb726c819fdbf1a58d65bc37a30"
+        }
+      ]
+    }
+  ]
+}

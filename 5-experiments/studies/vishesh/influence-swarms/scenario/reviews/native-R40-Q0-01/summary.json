@@ -1,0 +1,1 @@
+{"actual_usd":0.29668575,"all_nodes_observed":false,"attempt":"native-R40-Q0-01","blocked_nodes":152,"budget_after":[50.0,23.070816000000406,3533],"calls":604,"complete":true,"failure":null,"known_format_failures":87,"new_reserved_usd":3.440384,"reported_usd":0.29668575,"retries":0,"stage":"R40-Q0","unstarted_calls":152,"usage_missing":0,"valid_calls":517}
