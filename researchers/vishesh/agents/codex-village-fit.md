@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: working
+state: blocked
 task: null
-doing: Preparing both approved Telephone native scopes.
+doing: Telephone A0 ready and queued; central start pending. V0 source pilot prepared; no native outputs yet.
 updated: 2026-10-04T18:31Z
 ---
 
