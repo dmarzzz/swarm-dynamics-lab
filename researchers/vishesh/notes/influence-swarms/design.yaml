@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "attempt": "quality-01",
+  "parent_attempt": "external-influence-v2/38908910",
+  "status": "diagnostic-only until fresh qualification; dedicated allocation required",
+  "primary_candidate": {
+    "domain": "procurement",
+    "world": "misleading",
+    "dose": 8,
+    "n_agents": 9,
+    "verification": "fresh",
+    "contrast": [
+      "targeted_check",
+      "random_check"
+    ],
+    "metric": "harmful_target"
+  },
+  "stages": {
+    "S0": [
+      {
+        "domains": [
+          "procurement",
+          "dependency",
+          "travel"
+        ],
+        "tasks": [
+          7200
+        ],
+        "worlds": [
+          "clean",
+          "superior"
+        ],
+        "arms": [
+          "random_check",
+          "targeted_check"
+        ],
+        "n_agents": [
+          9
+        ],
+        "doses": [
+          2
+        ],
+        "verification": [
+          "fresh"
+        ],
+        "seeds": [
+          23
+        ]
+      }
+    ],
+    "S1": [
+      {
+        "domains": [
+          "procurement"
+        ],
+        "tasks": [
+          7300,
+          7301,
+          7302
+        ],
+        "worlds": [
+          "misleading"
+        ],
+        "arms": [
+          "random_check",
+          "targeted_check"
+        ],
+        "n_agents": [
+          9
+        ],
+        "doses": [
+          2,
+          8
+        ],
+        "verification": [
+          "fresh"
+        ],
+        "seeds": [
+          23
+        ]
+      }
+    ],
+    "engineering": [
+      {
+        "domains": [
+          "procurement",
+          "dependency",
+          "travel"
+        ],
+        "tasks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "worlds": [
+          "clean",
+          "misleading",
+          "syndication",
+          "superior"
+        ],
+        "arms": [
+          "private_review",
+          "discussion",
+          "random_check",
+          "targeted_check",
+          "targeted_provenance"
+        ],
+        "n_agents": [
+          9
+        ],
+        "doses": [
+          2,
+          4,
+          8
+        ],
+        "verification": [
+          "fresh"
+        ],
+        "seeds": [
+          23
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+# Agent contracts and reproducibility
+
+Version scorecard-v1. Canonical prompts and validators are in src/protocol.py; model transport/schema is in src/provider.py. Report raw JSON before validation; never silently repair an invalid scientific answer. All contexts are freshly serialized and each task/arm has independent state.
+
+| Actor | Inputs and authority | Output and constraint |
+|---|---|---|
+| A1–A6 analysts | Trusted brief, assigned documents, per-document cost arithmetic; then own initial report or synchronous peer snapshot according to arm. Roles: workload, cost, eligibility/security, performance, integration, evidence. | Exactly four candidate estimates: cost in scenario workload dollars, quality 0–100, latency in scenario units, requirements_met boolean, 1–2 observed citation IDs. Finite nonnegative numbers; no invented candidate/citation. |
+| V1–V2 check interpreters | One selected candidate/package and current/stale/unavailable fixture result. Commercial package contains cost only; technical contains quality/latency/requirements. | available plus bounded numerical/boolean fields. Only fields in the package enter the ledger; stale/unavailable cannot become current through an assertion. |
+| C1 chair | Canonical scorecard with explicit eligible flag, utility and scoped check updates; no stale contradictory peer vote summaries | Model proposal and confidence are recorded. The same deterministic max-utility/eligibility rule commits the final decision in every arm. This is decision-rule enforcement, not improved model reasoning. |
+
+Nine model identities share one base model; this does not demonstrate expertise or independent errors. A seed controls fixture values, allocation, ordering and random-check choice only. It does not seed Anthropic sampling or guarantee identical API outputs. Reproduce with the model/config/source/protocol/request hashes and Python/platform metadata. Exact raw-response replay is deterministic; a fresh provider run is an independent replication, with drift reported.
+
+The cost tool is a pure parser/calculator over the supplied document text and brief. It has no access to hidden truth. It can calculate the arithmetic of a false quote correctly. The independent verification tool is still an idealized fixture, not a live supplier/API call; stale/unavailable controls expose part of this boundary. Numeric source support is distinct from truth. Evaluator colors/ground truth are rendered only after commitment and never re-enter a prompt.
+
+Logical schedule: six initial responses → locked snapshot → six revisions → two scoped checks → normalized ledger → chair proposal → enforced choice → evaluator. Fifteen logical calls; at most one additional attempt for explicitly transient HTTP 429/502/503/504. Each attempt reserves spend. No retries for auth, schema, parse, refusal, bad choice, truncated response, or budget exhaustion. Agent labels and call indices are stable; temporal claims use recorded monotonic timestamps where available.

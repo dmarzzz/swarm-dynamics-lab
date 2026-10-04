@@ -1,0 +1,12 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "input_usd_per_million": 1,
+  "output_usd_per_million": 5,
+  "max_output_tokens": 1024,
+  "max_input_bytes": 12000,
+  "timeout_seconds": 60,
+  "total_api_cap_usd": 8,
+  "qualified_nonreasoning_endpoint": true,
+  "pricing_verified_date": "2026-10-03",
+  "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+}
