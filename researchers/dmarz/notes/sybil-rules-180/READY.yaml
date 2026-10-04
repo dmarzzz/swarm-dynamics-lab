@@ -8,13 +8,16 @@ provider: openrouter
 model: qwen/qwen3.7-flash
 # The launcher requires an effort field; the frozen request disables reasoning (design.yaml request_template).
 effort: low
-# Attempt 002, Qwen configuration. The study's model ladder (design.yaml `models`) also declares an OpenAI entry; it is
-# added here with its own review when its code commit pins it.
-review: reviews/chain-002-pre.md
+# Attempt 002. The Qwen configuration (chain-002) failed Q0 and is closed; this file now admits the gpt-6-sol
+# configuration (chain-003): launch with --model gpt-6-sol. Per-model dollar caps are in design.yaml `models`
+# (Qwen USD 5, gpt-6-sol USD 150); usd_cap below is the larger.
+model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]
+providers: {qwen/qwen3.7-flash: openrouter, gpt-6-sol: openai}
+review: reviews/chain-003-pre.md
 max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192}
 max_reissued_calls: 360
 max_calls_total: 8478
-usd_cap: 5
+usd_cap: 150
 chain_timeout_seconds: 32400
-selftests: 60
-source_hash: 15bef708d3e9ae42558dfbe7597e52bd54df5122daca31f2481a81b3b2d307c9
+selftests: 89
+source_hash: 17665ae01f3291848e57cd54b745f75afc5249eb8a3edc6543f9c7d94aa3810c

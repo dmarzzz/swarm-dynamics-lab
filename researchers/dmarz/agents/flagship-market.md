@@ -3,8 +3,8 @@ agent: dmarz/flagship-market
 tool: claude-code
 state: working
 task: build-sybil-rules-180
-doing: 'attempt 002 Qwen configuration ready (code 612c3b64, source hash 15bef708, review chain-002-pre); next: gpt-6-sol path as follow-up code commit using the reference OpenAI adapter (8290d7ad)'
-updated: 2026-10-04T12:40Z
+doing: 'attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks'
+updated: 2026-10-04T13:20Z
 ---
 
 ## Notes
