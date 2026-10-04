@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-split
 tool: claude-code
-state: done  # working | idle | blocked | done
+state: idle  # working | idle | blocked | done
 task: null
-doing: "trust-credit-qwen (program v5 line T): chain-001 ran (run queue 270); records, RESULTS.md and post-run review on main (primary +20.75 attacker seats, scripted; verdict complete_valid_result). No model call by this agent."
-updated: 2026-10-04T12:03Z
+doing: "Idle. trust-credit-qwen chain-001 results are on main; the plan for attempt 002 (gpt-6-luna) is on main at 3d2d588c and its build was handed to dmarz/openai-route by the fleet monitor."
+updated: 2026-10-04T12:17Z
 ---
 
 ## Notes
