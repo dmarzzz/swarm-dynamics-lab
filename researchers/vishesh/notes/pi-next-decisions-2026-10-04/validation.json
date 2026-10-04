@@ -1,0 +1,40 @@
+{
+  "assessed_at": "2026-10-04T14:37:59.814255+00:00",
+  "scope": "Documentation and navigation integration; no new model calls, native runs, source changes or independent replication.",
+  "checks": {
+    "repository_check": {
+      "errors": 0,
+      "preexisting_missing_citation_warnings": 5
+    },
+    "operations_registry": {
+      "valid": true,
+      "studies": 13
+    },
+    "existing_successor_approval_tests": {
+      "passed": 8
+    },
+    "existing_operations_tests": {
+      "passed": 14
+    },
+    "pinned_repository_inputs": {
+      "verified": 21
+    },
+    "external_source_fingerprints": {
+      "verified": 2
+    },
+    "new_or_changed_relative_links": {
+      "resolved": 55
+    },
+    "selected_file_secret_scan": {
+      "findings": 0
+    },
+    "git_diff_whitespace": {
+      "passed": true
+    }
+  },
+  "limitations": [
+    "Source claims were selectively reconciled against retained repository evidence, not independently replicated.",
+    "Native workers, live allocations, private approvals and current provider state were not inspected.",
+    "Planning annotations do not add automatic scoring or change existing approval contracts."
+  ]
+}

@@ -41,6 +41,14 @@ Classify the issue before acting:
 
 Maintain an issue ledger with evidence, cause confidence, owner, change and acceptance check. A proposed fix does not close an issue. Preserve earlier attempts and their denominators; a retry or amended diagnostic is not an independent replacement observation. Never relabel failed qualification, tune on a held-out result and call it fresh, or lower a threshold to turn a failed screen into a pass.
 
+## Choose whether another run is useful
+
+Before selecting a successor, choose **finish/report**, **analyze saved data**, **one bounded discriminator**, or **park**. These are planning dispositions, not new runner verdicts or commands. Finish required closeout in every case; preserve currently approved work within its exact scope. The [study-by-study PI decisions](../../researchers/vishesh/notes/pi-next-decisions-2026-10-04/README.md) show examples reconciled with a pinned evidence cutoff.
+
+A new run should name what is empirically unknown, how support/null/adverse/inconclusive outcomes change a decision, and why existing traces or a simpler method cannot resolve it. Distinguish collective interaction from independent re-evaluation or resampling; compare the strongest relevant simple controller under the resources appropriate to the question. Programmed mechanisms are useful tests when labelled, but do not demonstrate model behavior by themselves.
+
+Count preparation, reporting and operator attention alongside financial exposure. Repeated qualification failure triggers a cause assessment and a bounded repair/stop decision, not indefinite prompt rerolling. Transport failure is not semantic incapacity; neither justifies inventing observations or a universal fixed failure count. Prioritize prior-art work that could change the selected design without claiming a broader survey is complete.
+
 ## Prepare a concrete next-run proposal
 
 Use [next-run-plan.md](templates/next-run-plan.md). Choose one design rather than listing unresolved alternatives for the owner to assemble. State the intervention, strongest relevant comparator, independent unit, scenario strata, holdouts, sample allocation and its rationale. Name a useful effect or precision target; use pilot variability where available, or declare feasibility-only scope and uncertain power. There is no universal minimum n, and more agents or calls do not create independent tasks.

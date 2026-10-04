@@ -80,3 +80,7 @@ The initial 0.6B configuration failed required candidate coverage. The first 1.7
 Read the [full local results and limitations](local-agents/RESULTS.md), [original local plan](local-agents/PLAN.md), [prospective repair plan](local-agents/PLAN-v2.md), [recorded animation](local-agents/evidence/S1/replay.gif), [downloadable interactive replay](local-agents/evidence/S1/replay.html), and [evidence index](local-agents/evidence/index.json). Lower known harmful-target selection (22 local, with two unknown, versus 28 historical) came alongside lower correctness and higher regret; it is not an overall robustness win.
 
 ![Local and historical same-case comparison](local-agents/comparison.png)
+
+## PI next decision — 2026-10-04
+
+[Design disposition](DESIGN-TRANSFER.md): **analyze existing traces; park further saturated-dose collection**. Historical results and current launch authority remain separate.

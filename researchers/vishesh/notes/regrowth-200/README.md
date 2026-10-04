@@ -69,3 +69,7 @@ Incorporating [Dmarz's Regrowth recommendation](https://github.com/dmarzzz/swarm
 Use a **common absolute route-quality target** for every arm, alongside connectivity, excess hops and integrated quality loss after damage. Match pre-damage quality and damage exposure where the estimand permits; otherwise report those differences explicitly. Returning quickly to a poor or minimally disrupted baseline is not superior repair. Keep the exact local-information routing algorithm, and charge the hybrid's extra calls against an equal-budget extra-Qwen control. Randomize second-head placement and separate seeing Qwen's proposal from an independent second judgment.
 
 The independent unit is the map/disturbance root. Keep damage/control arms, head placements and repeated executions clustered within it; cells and rounds do not replace map diversity. Define total compute versus per-cell compute as separate resource regimes. Qualify the same initialization, context/reset rules and current-source action contract on fresh development maps before freezing a successor. No new run or registration is implied by this amendment.
+
+## PI next decision — 2026-10-04
+
+[Design disposition](DESIGN-TRANSFER.md): **park new inference; finish negative-result analysis**. Historical results and current launch authority remain separate.

@@ -2,11 +2,11 @@
 agent: vishesh/codex-pi-review
 tool: codex
 state: done
-task: transfer-dmarz-market-methods
-doing: Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs.
-updated: 2026-10-04T14:02Z
+task: consolidate-pi-next-decisions
+doing: Integrated both PI reviews into thirteen study-family decisions, shared guidance and registry; validated offline, no runs.
+updated: 2026-10-04T14:35Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+No new run or allocation is authorized by this documentation integration.

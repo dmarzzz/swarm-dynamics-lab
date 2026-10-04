@@ -13,3 +13,16 @@
 **Recommended next decision:** First complete the approved S0-02 scope if the owner approves it. A later economy-style specialization comparison needs its own sample/precision and cumulative resource plan; one 180-agent economy would still be n=1.
 
 Source evidence: [M1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/market-split-opus/RESULTS.md), [P1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-rules-180/README.md), [M7](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/trust-credit-qwen/RESULTS.md), [D4](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/soc07-private-judgments/reviews/s1l-post.md). Transfer is an inference across tasks, not demonstrated efficacy here. Complete the existing run-quality assessment and concrete next-run proposal before experimental implementation; resolve exact sample allocation, precision/feasibility rationale, holdouts, stops, worst-case cumulative costs and machine need. Offline preparation may continue; obtain owner approval of any changed run scope before allocation or launch. Existing unchanged explicit approval need not be requested twice. Researcher review remains optional for Vishesh-owned studies.
+
+## PI decision for the next session
+
+**Prepare S0-02 owner decision; park efficacy expansion.** Reconciled at `22834c84`; [evidence](SETUP.md), [combined PI dispositions](../pi-next-decisions-2026-10-04/README.md). This is a planning decision, not a live worker/claim check.
+
+| Item | Decision |
+|---|---|
+| First action | Reuse the prepared 63-check relay repair and complete reviewable S0-02 evidence. Do not interpret S0-01 transport failures as model inability or start S1 from passing unit tests. |
+| Empirically unknown | After valid role qualification, does learned specialization beat ordinary caching/static roles over the full adaptation and recovery lifecycle? |
+| Outcomes that change our decision | If qualification passes, only prepare the next separately admitted scope; if caching/static specialization matches adaptation, keep it; if infrastructure fails, preserve uncertain spend and diagnose offline; if adaptation is brittle or inconclusive, withhold the efficacy claim. |
+| Why simpler/existing evidence is not enough | Generalists, caching, static specialists and later central adaptation, with conserved compute/access/storage and migration delay. |
+| What the collective contributes | Shared services must produce useful interdependent work, not merely move labels or cache already identical answers. Restored capacity must validate, not just respawn. |
+| Boundaries and stopping | S0-02 approval remains pending under original USD2 authority and unresolved exposure. A paid attempt count alone is not the criterion for abandoning a question; require a distinct justified repair and stopping limit. |

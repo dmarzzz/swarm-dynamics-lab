@@ -21,9 +21,9 @@ Every `gap` or `unknown` needs a `next_action` and an `acceptance_check`. Distin
 
 | Dimension | What a pass must establish | Typical gap or unknown |
 |---|---|---|
-| `question` | A primary question, intended decision, contrast, claim boundary and falsifying/null outcome are explicit. | Several mechanisms bundled into one headline; an observed result replaces the original prediction. |
+| `question` | A primary question, empirical unknown, outcome-dependent decision, contrast and claim boundary are explicit; explain why existing evidence or a simpler method is insufficient. | Several mechanisms bundled into one headline; an observed result replaces the original prediction. |
 | `scenarios` | Tasks exercise the proposed mechanism with meaningful challenge, useful baselines, relevant strata and disclosed realism limits. | Ceiling/floor tasks, copied semantic templates, artificial costs presented as real, or difficulty created only by unusable instructions. |
-| `controls` | Manipulation occurred; clean and adverse controls discriminate; comparator information and resources support the declared estimand. | More evidence/compute changes with treatment, impossible baseline, ineffective intervention, or hidden oracle assistance. |
+| `controls` | Manipulation occurred; clean and adverse controls discriminate; comparator information/resources support the estimand. For collective claims, isolate the relevant interaction from re-evaluation/resampling and use a strong simple-controller reference. | More evidence/compute changes with treatment, impossible baseline, ineffective intervention, or hidden oracle assistance. |
 | `capability` | Required agents, tools and interfaces meet the prespecified clean-task and response-contract criteria on appropriate qualification inputs. | Schema validity mistaken for competence; healthy restraint without repair ability; diagnostic success used as broad qualification. |
 | `measurement` | Endpoint, denominator, scorer and uncertainty match the question; saved decisions support recomputation and relevant sensitivity checks. | Wrong truth/version, label leakage, invalid-versus-wrong confusion, selective exclusions or an interval interpreted beyond its sample. |
 | `sample_size` | Independent units, pairing/clustering, allocation and missingness are explicit; sample size fits a precision/effect objective or a candid feasibility scope. | Agent/call/branch counts treated as independent n; arbitrary enlargement; rare failures absent from a tiny pilot. |
@@ -33,7 +33,7 @@ Every `gap` or `unknown` needs a `next_action` and an `acceptance_check`. Distin
 | `reproducibility` | Source/configuration/input/runtime provenance and exact commands reconstruct the instrument; retained evidence replays within its stated boundary. | Unresolvable hashes, overwritten outputs, unpinned effective dependencies, or identical seeds claimed to guarantee hosted answers. |
 | `visualization` | Tables/plots/replays agree with recorded evidence, expose uncertainty and missingness, and separate scripted from native outcomes. | Selected frames imply complete history, missing values appear as zero, denominators vanish, or decoration suggests an unmeasured mechanism. |
 
-Use small reference calculations, semantic fault tests and artifact replay to resolve instrument questions before further collection. No new service or universal test count is required. Independent authorship or replication can strengthen evidence, but do not claim it for same-agent checks.
+Use small reference calculations, semantic fault tests and artifact replay to resolve instrument questions before further collection. Trace initial evidence through interpretation, advice, action and outcome across the full eligible cohort; label saved-data diagnosis retrospective. For memory interventions, separate resistance, persistence, recovery and legitimate knowledge lost. State native actor counts separately from programmed population size. No new service or universal test count is required. Independent authorship or replication can strengthen evidence, but do not claim it for same-agent checks.
 
 ## Translate the review into a decision
 

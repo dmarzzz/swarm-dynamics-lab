@@ -13,3 +13,16 @@
 **Recommended next decision:** Keep the queued native Q0 contract unchanged. Apply these distinctions in its closeout; a failed checker needs a new prospective proposal, not lowered qualification floors.
 
 Source evidence: [M3](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md), [M4](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-newcomer-opus/RESULTS.md), [M6](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scale-opus/RESULTS.md), [D1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/verify-cost-qwen/reviews/chain-002-post.md). Transfer is an inference across tasks, not demonstrated efficacy here. Complete the existing run-quality assessment and concrete next-run proposal before experimental implementation; resolve exact sample allocation, precision/feasibility rationale, holdouts, stops, worst-case cumulative costs and machine need. Offline preparation may continue; obtain owner approval of any changed run scope before allocation or launch. Existing unchanged explicit approval need not be requested twice. Researcher review remains optional for Vishesh-owned studies.
+
+## PI decision for the next session
+
+**Finish v6; close v7 route; preserve queued v8 qualification.** Reconciled at `22834c84`; [evidence](SETUP.md), [combined PI dispositions](../pi-next-decisions-2026-10-04/README.md). This is a planning decision, not a live worker/claim check.
+
+| Item | Decision |
+|---|---|
+| First action | Read the latest native v8 queue/attempt before collection. Mine existing v4 ballots only as retrospective dependence diagnostics; preserve v6 held-out report and v7 failed qualification. Do not recollect those datasets to seek a favorable committee effect. |
+| Empirically unknown | Can a competent independent field checker detect errors that same-engine agreement misses, cheaply enough to improve acceptance/referral? |
+| Outcomes that change our decision | If fresh v8 qualification passes, assess the already specified S1 admission separately; if simple routing/one reader matches it, prefer that; if the checker adds confident errors, stop that checker; transport or unscorable labels remain separate uncertainty. |
+| Why simpler/existing evidence is not enough | Strong confidence/single-reader, always-check, same-count random checking and measured oracle headroom. Analyze estimator artifacts before blaming agents. |
+| What the collective contributes | Multiple OCR configurations or role labels do not create independent evidence. Native LLM judgments, tool outputs and replayed policies have different denominators. |
+| Boundaries and stopping | No changes to the queued Q0 packet. Test stop AND continue only where the architecture uses adaptive stopping. Vendor/layout clustering and actual check cost belong in any new field-study plan. |

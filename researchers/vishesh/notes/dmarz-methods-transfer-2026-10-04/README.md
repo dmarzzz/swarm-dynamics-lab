@@ -81,3 +81,7 @@ The linked notes are integrated into each owned study's navigation. They are pro
 | [Poietic](../poietic-agents/DESIGN-TRANSFER.md) | Resource conservation when capabilities split; account for idle transfer, caching, queueing and restoration |
 
 **Recommended order:** finish existing saved-data diagnosis; then choose one bounded semantic qualification proposal in a blocked lane, or the already drafted Healing C4 routing question. Defer broad model grids and another large market simulation unless they resolve a specific remaining decision. Exact n, precision rationale, qualification allocation, current price/cumulative exposure and machine need belong in the chosen study's concrete owner-approved next-run plan. This review supplies no new launch or provisioning authority.
+
+## Combined next-step decisions
+
+[The consolidated PI decision table](../pi-next-decisions-2026-10-04/README.md) incorporates the separately supplied portfolio review, reconciles newer study records and supplies concrete outcome-dependent next steps. The source-pinned arithmetic and evidence judgments above retain their original cutoff.

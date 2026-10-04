@@ -45,5 +45,22 @@
     "cumulative_budget_ref": "",
     "machine_requirements": "",
     "allocation_required": null
+  },
+  "research_value": {
+    "empirically_unknown": "",
+    "decision_by_outcome": {
+      "support": "",
+      "null": "",
+      "adverse": "",
+      "inconclusive": ""
+    },
+    "why_existing_data_or_simpler_method_is_insufficient": "",
+    "collective_contribution": ""
+  },
+  "effort_estimate_hours": {
+    "preparation": null,
+    "analysis_reporting": null,
+    "operator": null,
+    "assumptions": ""
   }
 }

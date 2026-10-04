@@ -114,7 +114,7 @@ The templates start unresolved/pending and cannot admit a run. New evidence, cha
 
 Reconcile assigned, started, terminal, graded and analyzed counts, including partial and unstarted units. Keep execution, response validity, qualification, scientific conclusion, process compliance and artifact delivery separate. Link the post-mortem, durable evidence and actual cost from `SETUP.md`; update the [confidence and sample-size metadata](../../experiments/EVIDENCE-METADATA.md) after analysis. Release only this experiment's resources after artifact readback and the applicable owner workflow.
 
-The next action should name a concrete operation and its missing evidence. Refresh the registry's checked revision/time and links when that decision changes. Neither this registry nor a historic successful run establishes present authority to spend, provision or deploy.
+The next action should name a concrete operation and its missing evidence. For the current portfolio, consult [the consolidated PI next decisions](../../researchers/vishesh/notes/pi-next-decisions-2026-10-04/README.md) and each study’s DESIGN-TRANSFER note; then reconcile later native evidence before acting. Refresh the registry's checked revision/time and links when that decision changes. Neither this registry nor a historic successful run establishes present authority to spend, provision or deploy.
 
 ## Troubleshoot from retained evidence
 

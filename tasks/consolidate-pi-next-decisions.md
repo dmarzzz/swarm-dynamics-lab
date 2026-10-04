@@ -21,6 +21,6 @@ Incorporate accepted lessons from the Dmarz transfer review and the separate por
 
 ## Done when
 
-- [ ] Reconcile review inputs against current study evidence and record accepted, adapted and rejected recommendations.
-- [ ] Give every owned study a concrete next decision, useful outcome branches, cheap prior analysis and stopping conditions.
-- [ ] Update shared/local planning guidance, validate, commit and push as Cytonomy without launching experiments.
+- [x] Reconcile review inputs against current study evidence and record accepted, adapted and rejected recommendations.
+- [x] Give every owned study a concrete next decision, useful outcome branches, cheap prior analysis and stopping conditions.
+- [x] Update shared/local planning guidance, validate, commit and push as Cytonomy without launching experiments.

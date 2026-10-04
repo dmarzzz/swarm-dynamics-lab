@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/ITERATION-3-POST.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read SETUP.md and the preceding native post-mortem; resolve applicable research gates and freeze the prospective S1 instrument before seeking current admission.",
+      "checked_at": "2026-10-04T14:31:29.036290+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Analyze; stop current qualification lineage. Read researchers/vishesh/notes/decision-models/quorum-of-mirrors/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -22,9 +22,9 @@
       "setup_path": "researchers/vishesh/notes/phantom-coast/pc5/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc5/reviews/S1-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "PC-4 and PC-5 complete; read the PC-5 scientific handoff and retained reliable-source regression. No new native run scheduled; any successor requires prospective plan and current admission within original cumulative cap.",
+      "checked_at": "2026-10-04T14:31:29.036358+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Analyze existing evidence; defer duplicate grid. Read researchers/vishesh/notes/phantom-coast/pc5/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -32,12 +32,12 @@
       "title": "Right Dissenter",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/dissent",
-      "setup_path": "researchers/vishesh/notes/dissent/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/dissent/reviews/Q1-SETUP-POST.md",
+      "setup_path": "researchers/vishesh/notes/dissent/rd5/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/dissent/rd4/reviews/S4-C2-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the account-boundary correction and setup post-mortem; resolve the approved allocation path before considering a fresh qualification attempt.",
+      "checked_at": "2026-10-04T14:31:29.036359+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Reconcile and preserve approved RD5 scope. Read researchers/vishesh/notes/dissent/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -45,12 +45,12 @@
       "title": "Optimal Swarm Size",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/optimal-swarm-size",
-      "setup_path": null,
-      "postmortem_path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q1-setup-post.md",
+      "setup_path": "researchers/vishesh/notes/optimal-swarm-size/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a6-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Create or link the current SETUP.md, reconcile later records with the setup post-mortem, then verify current research, provider and allocation evidence.",
+      "checked_at": "2026-10-04T14:31:29.036361+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Analyze; park broad N sweep. Read researchers/vishesh/notes/optimal-swarm-size/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -61,9 +61,9 @@
       "setup_path": null,
       "postmortem_path": null,
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Select one explicit question from the research shortlist and write its prospective setup record before experimental implementation.",
+      "checked_at": "2026-10-04T14:31:29.036362+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Park broad question-bank expansion; focus Poietic. Read researchers/vishesh/notes/heterogeneous-swarms/DESIGN-TRANSFER.md (PI decision for the next session), then the selected Poietic study\u2019s latest closeout and authoritative SETUP (this question bank has no native run). Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -74,9 +74,9 @@
       "setup_path": "researchers/vishesh/notes/swarm-of-theseus/v2/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-repair-post.md",
       "adapter": "theseus-v2",
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the failed qualification and closeout; a new diagnostic needs a prospective amendment and current admission. Adapter availability does not authorize another S0 or S1.",
+      "checked_at": "2026-10-04T14:31:29.036364+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Repair offline; hold turnover pilot. Read researchers/vishesh/notes/swarm-of-theseus/v2/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -87,9 +87,9 @@
       "setup_path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Finish verified dedicated-host provisioning, register the pinned A3 public plan, then queue bounded dispatch with the preserved cumulative ledger.",
+      "checked_at": "2026-10-04T14:31:29.036365+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Reconcile existing A3 scope; defer architecture expansion. Read researchers/vishesh/notes/immune-response-v3/evidence-study/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -100,9 +100,9 @@
       "setup_path": "researchers/vishesh/notes/influence-swarms/scenario/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T06:30:00Z",
-      "checked_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
-      "next_action": "D5 prepared, not launched: 59 tests and 24/24 scripted decisions pass. Read RUN-D5.md; obtain fresh dedicated-host, preserved-budget and secure-dispatch admission when launch is requested. Researcher review optional. D3 remains latest native result; D4/S1 unrun.",
+      "checked_at": "2026-10-04T14:31:29.036365+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Assess prepared D5; park new attack harness. Read researchers/vishesh/notes/influence-swarms/scenario/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -110,12 +110,12 @@
       "title": "Healing Helping Hands",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/healing-helping-hands",
-      "setup_path": "researchers/vishesh/notes/healing-helping-hands/composite/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/healing-helping-hands/practical/POST-02.md",
+      "setup_path": "researchers/vishesh/notes/healing-helping-hands/c4/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/healing-helping-hands/composite/C3-S1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the composite setup record and preceding practical post-mortem; reconcile any later attempt and obtain current stage admission before collection.",
+      "checked_at": "2026-10-04T14:31:29.036366+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Finish C3 reporting; prepare C4 decision. Read researchers/vishesh/notes/healing-helping-hands/c4/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -124,11 +124,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/antsy-receipt-v6",
       "setup_path": null,
-      "postmortem_path": "researchers/vishesh/notes/antsy-receipt-v6/reviews/E0-reparse-post.md",
+      "postmortem_path": "researchers/vishesh/notes/antsy-receipt-v6/reviews/S1-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Create or link the current setup record; reconcile the parser repair and any subsequent held-out measurements before deciding on a new experiment. Trace replay does not create a fresh sample.",
+      "checked_at": "2026-10-04T14:31:29.036368+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Finish/retain the completed 50-receipt report (47 scorable); do not rerun used test receipts. See researchers/vishesh/notes/antsy-targeted-v8/DESIGN-TRANSFER.md for the successor decision. Historical S1 post-mortem supersedes the E0 parser-review navigation.",
       "next_run_approval": "owner"
     },
     {
@@ -139,9 +139,9 @@
       "setup_path": "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/antsy-diversity-v7/reviews/S0-repair-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T06:27:00.898397+00:00",
-      "checked_commit": "5114250e7340013a5da852ed0918b47227413570",
-      "next_action": "Qualification failed despite100 valid calls. Read the competence/cost audit; a successor needs competent perception controls, a prospective amendment and fresh qualification. S1 unrun.",
+      "checked_at": "2026-10-04T14:31:29.036369+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Stop this failed qualification route; preserve 100 valid calls and per-family competence failure. Read researchers/vishesh/notes/antsy-targeted-v8/DESIGN-TRANSFER.md before any successor; v8 is separate fresh qualification, not a v7 pass.",
       "next_run_approval": "owner"
     },
     {
@@ -152,9 +152,9 @@
       "setup_path": "researchers/vishesh/notes/antsy-targeted-v8/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/development-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T08:09:38.853015+00:00",
-      "checked_commit": "a3919814c9b6ed6cec4b7d4b6fb801d190620ba1",
-      "next_action": "Native Q0 packet submitted through orbital queue. Follow DISPATCH.md; host/runtime/public-page admission and fresh qualification remain pending. No automatic S1.",
+      "checked_at": "2026-10-04T14:31:29.036370+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Inspect the existing queued v8 Q0 attempt and DISPATCH.md; preserve its frozen packet and do not auto-launch S1. Read researchers/vishesh/notes/antsy-targeted-v8/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
       "next_run_approval": "owner"
     },
     {
@@ -165,9 +165,9 @@
       "setup_path": "researchers/vishesh/notes/poietic-agents/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/S0-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T08:59:46.907094+00:00",
-      "checked_commit": "a61a004c8db5bb69c7fb804b0a558fef102d6c25",
-      "next_action": "G6: owner decision on concrete S0-02 repair; then fresh G3 admission with original cumulative ledger/deadline. S0-01 closed after instrument failure; no model qualifies."
+      "checked_at": "2026-10-04T14:31:29.036371+00:00",
+      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
+      "next_action": "Prepare S0-02 owner decision; park efficacy expansion. Read researchers/vishesh/notes/poietic-agents/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority."
     }
   ]
 }

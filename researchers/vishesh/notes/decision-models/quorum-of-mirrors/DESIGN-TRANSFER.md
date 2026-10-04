@@ -13,3 +13,16 @@
 **Recommended next decision:** First decide whether deterministic deduplication already meets the task. Any native successor must explain what remains for the model to solve.
 
 Source evidence: [M2](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-split-opus/RESULTS.md), [M3](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md), [D2](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/memory-handoff-qwen/reviews/chain-001-post.md). Transfer is an inference across tasks, not demonstrated efficacy here. Complete the existing run-quality assessment and concrete next-run proposal before experimental implementation; resolve exact sample allocation, precision/feasibility rationale, holdouts, stops, worst-case cumulative costs and machine need. Offline preparation may continue; obtain owner approval of any changed run scope before allocation or launch. Existing unchanged explicit approval need not be requested twice. Researcher review remains optional for Vishesh-owned studies.
+
+## PI decision for the next session
+
+**Analyze; stop current qualification lineage.** Reconciled at `22834c84`; [evidence](reviews/Q1-02-post.md), [combined PI dispositions](../../pi-next-decisions-2026-10-04/README.md). This is a planning decision, not a live worker/claim check.
+
+| Item | Decision |
+|---|---|
+| First action | Use the completed 0/8 conflict-screen audit; design only a small orthogonal prior-context × repeated/deduplicated-input diagnostic if a native reader is still needed. Do not launch M1/C1. |
+| Empirically unknown | Does misleading prior choice or report repetition drive the reader error? Current fixtures align those signals and cannot distinguish them. |
+| Outcomes that change our decision | If a prospectively qualified reader improves, consider a fresh matched-information comparison; if null/adverse, use exact deduplication for this grammar; if inconclusive, retain the blocked efficacy claim rather than retry until pass. |
+| Why simpler/existing evidence is not enough | Exact root-aware arithmetic already solves complete trusted-lineage cases. Historical S0 versus Q1 is not a matched causal comparison. |
+| What the collective contributes | Source sharing changes dependence; test native peer content against own re-evaluation only after the reader is competent. |
+| Boundaries and stopping | Consumed repair remains closed. A new diagnostic needs its own concrete plan, sample rationale and approval; existing finite fixture counts are not world n. |

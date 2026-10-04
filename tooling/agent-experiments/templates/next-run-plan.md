@@ -11,11 +11,14 @@ Status: **draft; owner update approval pending**. Follow [the review cycle](../R
 ## Why this run
 
 - Question, intended decision, primary contrast, comparator and supported claim if successful:
-- What the last run established; what remains uncertain or defective:
+- What the last run established; **empirically unknown** after existing evidence and exact/simpler analysis:
 - Earlier suggestions accepted, revised or rejected, with reasons/evidence:
 - Selected intervention and predicted consequence; strongest alternative explanation:
-- Useful null/adverse outcome, and what would falsify the proposed mechanism or repair:
-- Why this run adds information beyond replay, existing fixtures or a simpler policy:
+- **Decision by outcome:** what support, null, adverse and inconclusive results each change; what would falsify the proposed mechanism or repair:
+- **Why new collection:** why replay, existing traces, an exact calculation or a simpler policy cannot answer this question:
+- Collective contribution: which interaction/state/information makes this a collective question; strongest relevant single-agent or programmed baseline and matched resources:
+
+The companion JSON’s `research_value` and `effort_estimate_hours` fields are optional planning annotations for the owning assessment, not new automated gates. Existing approvals are not invalidated by a template update. When included in a proposal, annotations are covered by its full-content digest.
 
 ## Scenario and sample allocation
 
@@ -69,6 +72,7 @@ List each material instrument change before implementing the new experiment. Rev
 - Existing budget authority, cumulative cap, spend, unsettled exposure and remaining allowance:
 - Worst-case calls/tokens/cost/time across qualification, retries, comparison, scoring and supporting tools:
 - Incremental infrastructure cost and teardown limit; contingency already included in the cap:
+- Estimated preparation, analysis/reporting and operator hours, with assumptions; smallest stage whose result changes a decision:
 - Minimum machine count, CPU/GPU/RAM/storage/runtime, concurrency and expected duration; why existing authorized capacity suffices or not:
 - Intended approved-account provisioning/allocation route and verification evidence needed: [status/private reference only]
 - Exclusive claim and source/runtime/output verification required after approval:

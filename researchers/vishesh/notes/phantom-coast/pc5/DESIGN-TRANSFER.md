@@ -13,3 +13,16 @@
 **Recommended next decision:** Prefer a small, prospective semantic screen over duplicating the 768-choice candidate now. A different qualified configuration or a targeted unmatched regime would add more than repeating the same failed route.
 
 Source evidence: [D1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/verify-cost-qwen/reviews/chain-002-post.md), [M3](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c44f8d379263da734b1add8dcd/researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md). Transfer is an inference across tasks, not demonstrated efficacy here. Complete the existing run-quality assessment and concrete next-run proposal before experimental implementation; resolve exact sample allocation, precision/feasibility rationale, holdouts, stops, worst-case cumulative costs and machine need. Offline preparation may continue; obtain owner approval of any changed run scope before allocation or launch. Existing unchanged explicit approval need not be requested twice. Researcher review remains optional for Vishesh-owned studies.
+
+## PI decision for the next session
+
+**Analyze existing evidence; defer duplicate grid.** Reconciled at `22834c84`; [evidence](reviews/S1-A1-POST.md), [combined PI dispositions](../../pi-next-decisions-2026-10-04/README.md). This is a planning decision, not a live worker/claim check.
+
+| Item | Decision |
+|---|---|
+| First action | Combine the PC-5 reliable-source regression with Dmarz’s verify-cost failure analysis. Compare declared losses and selected actions from saved data before proposing more table/prose calls. |
+| Empirically unknown | Can a qualified configuration map risk to action without harming reliable-source decisions? Dmarz’s failed Qwen route does not answer the S1 representation contrast. |
+| Outcomes that change our decision | If fresh qualification succeeds in both risk strata, consider one focused comparison; if a simple policy matches it, prefer that policy; if capability fails or uncertainty is unresolved, stop that route without changing thresholds. |
+| Why simpler/existing evidence is not enough | Analytic minimum-loss, always-check and always-explore references; do not buy the same failed configuration’s full grid again. |
+| What the collective contributes | Later sampling feedback requires belief-dependent versus matched/random acquisition and corrective-evidence arrival time. Current one-step decisions are not a swarm cascade. |
+| Boundaries and stopping | The 768-choice candidate is not a default next action. Re-scope only under a prospective approved update; original cumulative cap and reliable-source protection persist. |
