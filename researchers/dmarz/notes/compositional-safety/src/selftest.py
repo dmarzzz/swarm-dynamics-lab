@@ -276,6 +276,39 @@ class Accounting(unittest.TestCase):
             self.assertNotIn('fake-secret-header',json.dumps(acc));self.assertNotIn('fake-key',json.dumps(acc))
             self.assertEqual(l.transact()['attempted_calls'],1);self.assertEqual(l.transact()['usage_reported_calls'],0)
 
+    def test_capacity_rejections_wait_and_resend_only_429_529(self):
+        import urllib.error
+        msg=json.dumps({'type':'error','error':{'type':'rate_limit_error','message':'This request would exceed your rate limit of 5,000,000 input tokens per minute (org: d89c3ec8-02a1-4879-aecd-1dd8966c741e, model: claude-opus-5-5).'}}).encode()
+        ok=json.dumps(dict(model=common.design()['model'],stop_reason='end_turn',content=[dict(type='text',text=json.dumps(dict(action='wait',message='')))],usage=dict(input_tokens=10,output_tokens=5))).encode()
+        def script(codes,headers=None):
+            seq=list(codes);bodies=[]
+            def opener(req,timeout):
+                bodies.append(req.data)
+                c=seq.pop(0) if seq else 200
+                if c==200:return io.BytesIO(ok)
+                raise urllib.error.HTTPError(req.full_url,c,'x',headers or {},io.BytesIO(msg))
+            return opener,bodies
+        for codes,headers,expect_wait in (([429],None,5.0),([529,429],None,15.0),([429],{'retry-after':'2'},2.0)):
+            opener,bodies=script(codes,headers);slept=[]
+            with tempfile.TemporaryDirectory() as td:
+                l=Ledger(Path(td)/'l.jsonl')
+                a,acc=Anthropic(l,opener=opener,key='k',workspace='w',sleep=slept.append).call({'actions':['wait']},'c')
+                self.assertEqual(a['action'],'wait');self.assertEqual(acc['capacity_retries'],len(codes));self.assertAlmostEqual(acc['capacity_wait_seconds'],expect_wait)
+                self.assertEqual(len(set(bodies)),1);self.assertEqual(len(bodies),len(codes)+1)
+                self.assertEqual(l.transact()['attempted_calls'],1);self.assertEqual(l.transact()['usage_reported_calls'],1)
+        opener,bodies=script([429]*20);slept=[]
+        with tempfile.TemporaryDirectory() as td:
+            with self.assertRaises(CallFailure) as caught:Anthropic(Ledger(Path(td)/'l.jsonl'),opener=opener,key='k',workspace='w',sleep=slept.append).call({'actions':['wait']},'c')
+        acc=caught.exception.accounting
+        self.assertEqual(caught.exception.category,'http_429');self.assertLessEqual(acc['capacity_wait_seconds'],common.design()['budget']['capacity_wait_seconds'])
+        self.assertLessEqual(len(bodies),common.design()['budget']['capacity_retries'])
+        self.assertIn('(org: <redacted>',acc['error_message']);self.assertNotIn('d89c3ec8',json.dumps(acc))
+        for code in (400,500):
+            opener,bodies=script([code]);slept=[]
+            with tempfile.TemporaryDirectory() as td:
+                with self.assertRaises(CallFailure) as caught:Anthropic(Ledger(Path(td)/'l.jsonl'),opener=opener,key='k',workspace='w',sleep=slept.append).call({'actions':['wait']},'c')
+            self.assertEqual(caught.exception.category,f'http_{code}');self.assertEqual(len(bodies),1);self.assertEqual(slept,[])
+
     def test_empty_refusal_retains_category_and_cost(self):
         def response(*args,**kwargs):
             return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='refusal',
@@ -391,14 +424,14 @@ class ClosedLoop(unittest.TestCase):
     def test_current_q0_fresh_structures_and_shape(self):
         rows=assignments('Q0')
         self.assertEqual(len(rows),24);self.assertEqual(len({json.dumps(r,sort_keys=True) for r in rows}),24)
-        self.assertEqual(sorted({r['task_id'] for r in rows}),[243,245,246])
+        self.assertEqual(sorted({r['task_id'] for r in rows}),[247,248,249])
         cells={}
         for r in rows:cells.setdefault((r['domain'],r['arm']),[]).append(r)
         self.assertEqual({k:len(v) for k,v in cells.items()},{(d,a):6 for d in ('D1','D2') for a in ('C','S')})
-        sent=[200,201,202,210,211,212,220,221,222,230,231,232,240,241,242,244,253,256,257,282,293,300]
+        sent=[200,201,202,210,211,212,220,221,222,230,231,232,240,241,242,243,244,245,246,253,256,257,282,293,300]
         self.assertFalse({r['task_id'] for r in rows}&set(sent))   # roots never sent to a model (structures may repeat; see q0-011-pre)
         fresh={(r['domain'],task(r['task_id'],r['domain'],r['variant'])['structure_sha256']) for r in rows}
-        self.assertEqual(len(fresh),5)
+        self.assertEqual(len(fresh),6)
         for r in rows:
             e=run_episode(task(r['task_id'],r['domain'],r['variant']),0,r['arm'],max_steps=40)
             self.assertTrue(e['validity']['ok']);self.assertEqual(e['evaluation']['completion'],1);self.assertEqual(e['evaluation']['violation'],0)
