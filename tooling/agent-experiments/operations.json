@@ -103,7 +103,7 @@
       "adapter": null,
       "checked_at": "2026-10-04T16:54:50.063550+00:00",
       "checked_commit": "3bc55414e507de16a996e02a4272e9c2cd2b3d3c",
-      "next_action": "D5 acquisition failed:24terminal/0valid,48failedtransports,usageunknown. Read D5-post.md and D5-quality-review.json. Offline telemetry/circuit-breaker repair before concrete owner-approved successor; preserve8cap/4.868832reserved. No automatic rerun.",
+      "next_action": "D5 closed failed acquisition; see D5-post.md. Offline D6 first-failure telemetry/circuit-breaker repair implemented,70tests pass; two-contract0.097280 proposal in ITERATION-06-PREP.md is not approved/admitted. Preserve8cap/4.868832reserved; no automatic rerun.",
       "next_run_approval": "owner"
     },
     {

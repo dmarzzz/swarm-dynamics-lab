@@ -10,3 +10,6 @@ D5 assigned24 workflows but obtained0 usable responses in48 failed transport att
 
 [Swarm Lab run and replay artifacts](https://swarm-live.pages.dev/#/r/influence-swarms%2F1004-054904-3252ed). D4 did not meet its launch gate and remains unrun. S1 remains unqualified. [D2](RESULTS-D2.md) and [Q4/D1](RESULTS-Q4-D1.md) are preserved separately.
 
+
+
+[Offline D6 acquisition repairs and bounded next proposal](ITERATION-06-PREP.md): safe status telemetry, durable journal and first-failure stop implemented;70tests pass. Two requests maximum USD0.097280 proposed, not approved/admitted/launched.
