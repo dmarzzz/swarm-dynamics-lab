@@ -62,33 +62,18 @@
      "uri": "researchers/dmarz/notes/sybil-scale-api/requirements.txt"
     },
     {
-     "digest": {
-      "sha256": "607b96bfff25b436756f8e1d6cdce5b7d9d352327e51c23d3839ad59730124b1"
-     },
      "uri": "data/sybil-scale-api/s1-001/summary.json"
     },
     {
-     "digest": {
-      "sha256": "2f6cc9de130c503da025d1edb63cad1b1da789afa2051c19ebfc706d8b67a23e"
-     },
      "uri": "data/sybil-scale-api/s1-001/episodes.jsonl.gz"
     },
     {
-     "digest": {
-      "sha256": "f7ad6319cbc9f438abf42712201acad83521bd5d3ca768bd22e41204c7dac8d3"
-     },
      "uri": "data/sybil-scale-api/s1-001/assignments.jsonl.gz"
     },
     {
-     "digest": {
-      "sha256": "e58cb103ab3b1ce26dcaba4263553708e34ac1d10dbc9f75993549b12cae2bfd"
-     },
      "uri": "data/sybil-scale-api/s1-001/worlds.jsonl.gz"
     },
     {
-     "digest": {
-      "sha256": "60034b763362845b5c947b26df61ee9a5e5af81e436fb613e8861065627cb396"
-     },
      "uri": "data/sybil-scale-api/s1-001/analysis.json"
     },
     {

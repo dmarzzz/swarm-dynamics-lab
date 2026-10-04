@@ -190,6 +190,17 @@ class InstrumentTests(unittest.TestCase):
             p=next((root/'events').glob('*.json'));p.unlink()
             self.assertFalse(summarize(root)['qualification_passed'])
 
+    def test_old_commands_separate_intent_from_validity(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td); (root/'events').mkdir()
+            (root/'manifest.json').write_text(json.dumps({'stage':'S1','assignments':assignments('S1')}))
+            _,es=trajectory(400,'migration',mode='old_commands')
+            for e in es:
+                (root/'events'/f"unit-{e['step']}.json").write_text(json.dumps(e))
+            m=summarize(root)['metrics']['migration:400']['rolling']
+            self.assertEqual(m['command_validity_per_assigned_member_case'],0)
+            self.assertEqual(m['intended_semantic_accuracy_per_assigned_member_case'],1)
+
     def test_corrupt_score_is_detected(self):
         _,es=trajectory();bad=copy.deepcopy(es[9]);bad['scores'][0]['correct']=not bad['scores'][0]['correct']
         self.assertNotEqual(bad['scores'],recompute(bad))

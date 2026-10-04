@@ -908,4 +908,58 @@ artifacts:
           - data/sybil-scale-api/s1-001/worlds.jsonl.gz
           - data/sybil-scale-api/s1-001/analysis.json
         commit: 1560dbfdc3fb7f21ef1772ff23fcfd07ef21a907-dirty
+  - id: vishesh-theseus-v2-assessment
+    category: content
+    type: doc
+    title: Swarm of Theseus v2 design and implementation assessment
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-assessment/vishesh-theseus-v2-assessment-v1.md
+        built_at: '2026-10-04T03:54:58Z'
+        by: vishesh/codex-theseus
+        session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Evaluate each one. Improve the design. Evaluate against the plan. Resolve any gaps or failures identified
+          in previous runs.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md
+          - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
+          - researchers/vishesh/notes/swarm-of-theseus/redesign/SOCIAL-GROUNDING.md
+        commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+  - id: vishesh-theseus-v2-unit-replay
+    category: content
+    type: doc
+    title: Swarm of Theseus v2 software fixture replay — not model evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-unit-replay/vishesh-theseus-v2-unit-replay-v1.html
+        built_at: '2026-10-04T03:54:59Z'
+        by: vishesh/codex-theseus
+        session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Build the improved three scenarios and show more animations, with evaluation quality preserved.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
+        commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+  - id: vishesh-theseus-v2-unit-frame
+    category: content
+    type: figure
+    title: Swarm of Theseus v2 software fixture frame — not model evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v1.png
+        built_at: '2026-10-04T03:54:59Z'
+        by: vishesh/codex-theseus
+        session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Build and verify a clear visual explanation of the improved experiment.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
+        commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
 requires: '1.2'

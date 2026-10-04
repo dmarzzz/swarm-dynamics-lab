@@ -67,6 +67,22 @@ def summarize(root):
               'audit_mismatches': audit_errors, 'provider_failures': dict(failures), 'validation_errors': dict(errors),
               'recorded_events': len(events), 'expected_events': sum(len(a['steps']) for a in manifest['assignments']),
               'process_compliance': 'see preflight receipts and outcomes; scientific validity is separate'}
+    starts = [json.loads(p.read_text()) for p in root.glob('calls/*-started.json')]
+    finishes = [json.loads(p.read_text()) for p in root.glob('calls/*-finished.json')]
+    result['call_accounting'] = {
+        'reserved_dispatches': len(starts), 'durable_results': len(finishes),
+        'unfinished_or_ambiguous': len(starts) - len(finishes),
+        'reserved_usd': sum(c['reserved_usd'] for c in starts),
+        'actual_usd_with_usage': sum(c.get('actual_usd') or 0 for c in finishes),
+        'usage_missing': len(starts) - sum(c.get('usage') is not None for c in finishes),
+        'input_tokens_known': sum((c.get('usage') or {}).get('input_tokens', 0) for c in finishes),
+        'output_tokens_known': sum((c.get('usage') or {}).get('output_tokens', 0) for c in finishes)}
+    result['archive_bytes'] = {
+        arm: [len(e['archive']['text'].encode()) for e in events if e.get('archive') and e['arm'] == arm]
+        for arm in ('acquisition', 'rolling', 'evidence', 'frozen', 'none')}
+    result['lineage_generations_at_endpoint'] = [
+        {'run': e['run'], 'generations': [m['generation'] for m in e['crew_after']]}
+        for e in events if e['kind'] == 'trajectory_step' and e['step'] == 9]
     if manifest['stage'].startswith('S0'):
         metrics = {}; passed = True
         for scenario in ('release', 'incident', 'migration'):

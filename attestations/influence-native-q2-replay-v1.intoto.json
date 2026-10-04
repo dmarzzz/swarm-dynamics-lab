@@ -20,57 +20,30 @@
      "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py"
     },
     {
-     "digest": {
-      "sha256": "1be7fce34eabce70fa9b6dfcaf0e7da3baae1a0d2e33771833e2cfeba83d1ae4"
-     },
      "uri": "data/influence-native/native-Q2-01/manifest.json"
     },
     {
-     "digest": {
-      "sha256": "00ad10c5743d5a2bf4d5fd0eaa839ce9f4d7e76c5767edab6935bc5743b51dbf"
-     },
      "uri": "data/influence-native/native-Q2-01/summary.json"
     },
     {
-     "digest": {
-      "sha256": "e09336dfbd4b7a8fb6a8694a3b49720572803f879cf9cf3771020d64274cb064"
-     },
      "uri": "data/influence-native/native-Q2-01/case-0.json"
     },
     {
-     "digest": {
-      "sha256": "cf441d16ae2e0c84e4b3afe9f7c8e250bc5a33f4cad713b75eda3eea646e7874"
-     },
      "uri": "data/influence-native/native-Q2-01/case-1.json"
     },
     {
-     "digest": {
-      "sha256": "da6cbfad8245ee54564b578756fbc8b8c7013a798441ddf890574148ca232151"
-     },
      "uri": "data/influence-native/native-Q2-01/case-2.json"
     },
     {
-     "digest": {
-      "sha256": "3a4c12af6fd845c3837e024934825c5600b013f72a5cb0bab354295fdb3858a2"
-     },
      "uri": "data/influence-native/native-Q2-01/events-0.jsonl"
     },
     {
-     "digest": {
-      "sha256": "70e786d0480b6f1878dbbab02a98dffbf13a80d66b665a7b1cbc1a4ca3243c3c"
-     },
      "uri": "data/influence-native/native-Q2-01/events-1.jsonl"
     },
     {
-     "digest": {
-      "sha256": "67ab6cadd74bd70390bb484bfef8a34993f612af51a0d52b0ba2a5bb28d1c460"
-     },
      "uri": "data/influence-native/native-Q2-01/events-2.jsonl"
     },
     {
-     "digest": {
-      "sha256": "511c07b18399a2e57fcef7b844dd84243e09e6c0c3885213327971dd8317f970"
-     },
      "uri": "data/influence-native/native-Q2-01/outcomes.json"
     },
     {
