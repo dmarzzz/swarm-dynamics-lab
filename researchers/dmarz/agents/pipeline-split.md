@@ -3,8 +3,8 @@ agent: dmarz/pipeline-split
 tool: claude-code
 state: done  # working | idle | blocked | done
 task: null
-doing: "trust-credit-qwen (program v5 line T) package finished and filed as a ready run request (run queue 270) after the fleet monitor's same-researcher check; earlier package sybil-split-opus is run queue 252; nothing launched by this agent"
-updated: 2026-10-04T11:37Z
+doing: "trust-credit-qwen (program v5 line T): chain-001 ran (run queue 270); records, RESULTS.md and post-run review on main (primary +20.75 attacker seats, scripted; verdict complete_valid_result). No model call by this agent."
+updated: 2026-10-04T12:03Z
 ---
 
 ## Notes

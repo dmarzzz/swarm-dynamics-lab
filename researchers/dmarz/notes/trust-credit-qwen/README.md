@@ -5,11 +5,11 @@
 
 Assessed 2026-10-04 by dmarz/pipeline-split; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Placing the credit of a passed check on the passed identity alone, instead of propagating it to neighbours, attenuates the rise in attacker seats between 32 and 108 coverage checks at 324 scripted identities. Basis: Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made.
-- **sample_size_summary:** Observed: none. Planned: 24 paired synthetic roots × 21 cells = 504 S1 calls (qwen3.7-flash) at 324 scripted identities and one synthesizer; 24 qualification calls on 8 roots. Roots are the independent units; the primary seat outcome is scripted.
+- **evidence_confidence:** **1/4** — In this simulator (324 scripted identities, coverage audit, strong checks), the rise in attacker seats between 32 and 108 checks appears when pass credit is propagated to neighbours and not when it is placed on the passed identity alone: contrast +20.75 seats (17.33 to 24.21), positive in 24 of 24 roots. Basis: Exploratory. The primary is a scripted admission outcome on one synthetic graph family, audit policy and fabrication; one model configuration answered the packets (qualified 24/24). Direct credit is not safer in level (19.6 against 4.4 attacker seats at 32 checks). Builder's own assessment; not independently reviewed or replicated.
+- **sample_size_summary:** Observed: 24 paired synthetic roots; 504/504 S1 outcomes (21 cells per root), 0 failed; 324 scripted identities per graph feeding one qwen3.7-flash synthesizer; separate qualification 24/24 on 8 roots. Roots are the independent units; the primary seat outcome is scripted, not a model output.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests, runbook and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-split on 2026-10-04 for the pipeline lead dmarz/pipeline.
+**Chain 001 ran once on 2026-10-04** (run queue 270, operator dmarz/fleet-monitor, server sim-dmarz-8): S0 216/216, P0 1/1, Q0 23/23, S1 504/504, no failed call, USD 0.052. Results are in [RESULTS.md](RESULTS.md), sanitized records in [records/](records/), the post-run review in [reviews/chain-001-post.md](reviews/chain-001-post.md). The plan below is kept as written before the run. Exploratory; owner dmarz; built by dmarz/pipeline-split on 2026-10-04 for the pipeline lead dmarz/pipeline. Same-researcher check only; not independently reviewed.
 
 This is line T of [research program v5](../overnight-program-2026-10-04/program.json) ([setup record of the program](../overnight-program-2026-10-04/SETUP.md), [selected model](../overnight-program-2026-10-04/selected-model.json)). It extends the instrument of [sybil-budget-api](../sybil-budget-api/RESULTS.md) at 324 identities and follows the [ready-chain contract](../pipeline/READY-CHAIN.md). It is not an accepted hypothesis and makes no novelty claim. S2 is disabled.
 
@@ -92,4 +92,11 @@ Missing model outcomes stay in their cell's denominator with bounds (each missin
 
 ## Results
 
-Not yet collected.
+Measured on 24 fresh roots; details and every stratum in [RESULTS.md](RESULTS.md).
+
+- The primary is computed by scripted admission, not by the model: **+20.75 attacker seats** (root-bootstrap interval +17.33 to +24.21), positive in 24 of 24 roots. From 32 to 108 checks under strong checking, attacker seats rise by 11.5 with propagated credit and fall by 9.2 with direct credit.
+- Direct credit is not safer in level: at 32 checks under strong checking it seats 19.6 attacker identities against 4.4 under propagated credit (more in 21 of 24 roots); at 108 checks 10.4 against 15.9.
+- Model answers on rare skills under strong checking: propagated 97.2%, 98.6%, 98.6% correct at 32, 64, 108 checks; direct 61.1%, 91.7%, 95.8%; anchors 40.3%, 66.7%, 95.8%. Under weak checks 35% to 49% correct under every rule. Clean endpoints 100% correct. Every wrong answer equals the fabricated value.
+- Qualification 24 of 24 exactly right. 528 calls, none failed.
+
+This is one synthetic task with scripted identities and one model configuration; no confirmatory claim is made.
