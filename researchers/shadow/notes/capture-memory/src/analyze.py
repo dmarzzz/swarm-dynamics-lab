@@ -81,7 +81,8 @@ def main():
     eps = [e for e in eps if e.get("stage") == a.stage]
     if not eps:
         sys.exit(f"no {a.stage} episodes")
-    arms = d["arms"]
+    st = d["stages"].get(a.stage, {})
+    arms = [x for x in d["arms"] if x in st.get("arms", d["arms"])]
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
     backends = sorted({e.get("backend") for e in eps})
@@ -259,6 +260,131 @@ def main():
             lo, hi = boot_ci(by_task)
             lines.append(f"| {world} dose {dose} | {m} | {br['metric']} | {mean([A[k][br['metric']] for k in common]):.3f} | "
                          f"{mean([B[k][br['metric']] for k in common]):.3f} | {mean(list(by_task.values())):+.3f} | [{lo:+.3f}, {hi:+.3f}] | {len(by_task)} |")
+
+    # ---- pilot section: per-memory dose from the stage, A0 vs A1, delta_original, traces, cost (model stages)
+    if st.get("doses_by_memory"):
+        dbm = st["doses_by_memory"]
+        H_T = int(next(iter(eps))["cfg"]["eval_round"])
+        lines += ["", f"## Pilot summary: each memory at its own dose ({dbm}), {len({e['task_id'] for e in eps})} tasks, cluster bootstrap over tasks", "",
+                  "Six tasks is a pilot, not a sample: the CIs below are percentile bootstraps over 6 clusters and are wide by construction. "
+                  "Capture is shared by the arms of an episode. `delta_original` = frac_original_T minus frac_original_at_removal "
+                  "(positive = came back, about zero = frozen, negative = kept sliding).", "",
+                  "| memory | dose | k | n | invalid | captured | latency med | arm | frac_orig_T (captured) | 95% CI | delta_original | 95% CI | recovered |",
+                  "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+        pilot = {}
+        for memory in sorted(dbm, key=mkey):
+            dose = dbm[memory]
+            world = st["worlds"][0]
+            by_arm = cells.get((world, dose, memory), {})
+            for arm in arms:
+                xs = by_arm.get(arm, [])
+                cap = [x for x in xs if x["evaluation"]["captured"]]
+                inv = invalid[((world, dose, memory), arm)]
+                def bt(metric, pool):
+                    by_task = defaultdict(list)
+                    for x in pool:
+                        by_task[x["task_id"]].append(float(x["evaluation"][metric]))
+                    by_task = {t: mean(v) for t, v in by_task.items()}
+                    return mean(list(by_task.values())), boot_ci(by_task)
+                fT, (flo, fhi) = bt("frac_original_T", cap) if cap else (float("nan"), (float("nan"), float("nan")))
+                dT, (dlo, dhi) = bt("delta_original", cap) if cap else (float("nan"), (float("nan"), float("nan")))
+                pilot[(memory, arm)] = {"n": len(xs), "captured": len(cap), "frac_T": fT, "frac_T_ci": (flo, fhi), "delta": dT, "delta_ci": (dlo, dhi)}
+                lat = _median([x["evaluation"]["capture_latency"] for x in cap])
+                lines.append(f"| {memory} | {dose} | {xs[0]['trajectory']['k'] if xs else '-'} | {len(xs)} | {inv} | {len(cap)}/{len(xs)} | {lat} | {arm} | "
+                             f"{fT:.3f} | [{flo:.2f}, {fhi:.2f}] | {dT:+.3f} | [{dlo:+.2f}, {dhi:+.2f}] | "
+                             f"{mean([x['evaluation']['recovered'] for x in cap]) if cap else float('nan'):.2f} |")
+        # A1 minus A0 per memory, paired per episode (same prefix)
+        lines += ["", "### Purge effect, A1_purge minus A0_no_purge, paired per episode (same prefix), captured episodes", "",
+                  "| memory | metric | A1 | A0 | diff | 95% CI | tasks |", "|---|---|---|---|---|---|---|"]
+        for memory in sorted(dbm, key=mkey):
+            dose, world = dbm[memory], st["worlds"][0]
+            A = {(e["task_id"], e["seed"]): e["evaluation"] for e in cells.get((world, dose, memory), {}).get("A1_purge", [])}
+            B = {(e["task_id"], e["seed"]): e["evaluation"] for e in cells.get((world, dose, memory), {}).get("A0_no_purge", [])}
+            common = [k for k in A if k in B and A[k]["captured"]]
+            for metric in ("frac_original_T", "delta_original"):
+                if not common:
+                    lines.append(f"| {memory} | {metric} | - | - | - | - | 0 |")
+                    continue
+                by_task = defaultdict(list)
+                for k in common:
+                    by_task[k[0]].append(float(A[k][metric]) - float(B[k][metric]))
+                by_task = {t: mean(v) for t, v in by_task.items()}
+                lo, hi = boot_ci(by_task)
+                lines.append(f"| {memory} | {metric} | {mean([A[k][metric] for k in common]):.3f} | {mean([B[k][metric] for k in common]):.3f} | "
+                             f"{mean(list(by_task.values())):+.3f} | [{lo:+.2f}, {hi:+.2f}] | {len(by_task)} |")
+        # full minus memory 1 under A1 (different doses, same tasks: between-condition over task clusters)
+        mems_p = sorted(dbm, key=mkey)
+        if len(mems_p) == 2:
+            m_lo, m_hi = mems_p
+            lines += ["", f"### Memory contrast under A1_purge: memory {m_hi} @ {dbm[m_hi]} minus memory {m_lo} @ {dbm[m_lo]} (captured under both; doses differ, so this is the per-memory-dose comparison the dose rule calls for)", "",
+                      "| metric | memory " + str(m_hi) + " | memory " + str(m_lo) + " | diff | 95% CI | tasks |", "|---|---|---|---|---|---|"]
+            world = st["worlds"][0]
+            A = {(e["task_id"], e["seed"]): e["evaluation"] for e in cells.get((world, dbm[m_hi], m_hi), {}).get("A1_purge", [])}
+            B = {(e["task_id"], e["seed"]): e["evaluation"] for e in cells.get((world, dbm[m_lo], m_lo), {}).get("A1_purge", [])}
+            common = [k for k in A if k in B and A[k]["captured"] and B[k]["captured"]]
+            for metric in ("frac_original_T", "delta_original", "frac_original_at_removal"):
+                if not common:
+                    lines.append(f"| {metric} | - | - | - | - | 0 |")
+                    continue
+                by_task = defaultdict(list)
+                for k in common:
+                    by_task[k[0]].append(float(A[k][metric]) - float(B[k][metric]))
+                by_task = {t: mean(v) for t, v in by_task.items()}
+                lo, hi = boot_ci(by_task)
+                lines.append(f"| {metric} | {mean([A[k][metric] for k in common]):.3f} | {mean([B[k][metric] for k in common]):.3f} | "
+                             f"{mean(list(by_task.values())):+.3f} | [{lo:+.2f}, {hi:+.2f}] | {len(by_task)} |")
+        # mean post-removal trace
+        pts = [1, 2, 3, 5, 10, 20, 30, 40, H_T]
+        lines += ["", "### Mean honest fraction on the original, by round after the intervention (captured episodes; round 0 = at removal)", "",
+                  "| memory | arm | n | " + " | ".join(f"r{r}" for r in [0] + pts) + " |", "|---|---|---|" + "---|" * (len(pts) + 1)]
+        for memory in sorted(dbm, key=mkey):
+            dose, world = dbm[memory], st["worlds"][0]
+            for arm in arms:
+                xs = [x for x in cells.get((world, dose, memory), {}).get(arm, []) if x["evaluation"]["captured"]]
+                if not xs:
+                    continue
+                vals = []
+                for r in [0] + pts:
+                    vals.append(mean([x["trajectory"]["series_original"][x["trajectory"]["removal_round"] - 1 + r]
+                                      for x in xs if len(x["trajectory"]["series_original"]) > x["trajectory"]["removal_round"] - 1 + r]))
+                lines.append(f"| {memory} | {arm} | {len(xs)} | " + " | ".join(f"{v:.2f}" for v in vals) + " |")
+        # per-episode rows
+        lines += ["", "### Per episode", "", "| task | words (orig / attack) | memory | captured | latency | frac at removal | A0 frac_T | A1 frac_T | A1 delta | calls (prefix + A0 + A1) | USD |", "|---|---|---|---|---|---|---|---|---|---|---|"]
+        for memory in sorted(dbm, key=mkey):
+            dose, world = dbm[memory], st["worlds"][0]
+            by_arm = cells.get((world, dose, memory), {})
+            A0 = {e["task_id"]: e for e in by_arm.get("A0_no_purge", [])}
+            A1 = {e["task_id"]: e for e in by_arm.get("A1_purge", [])}
+            for tid in sorted(set(A0) | set(A1)):
+                e = A1.get(tid) or A0.get(tid)
+                ev, tr = e["evaluation"], e["trajectory"]
+                c0, c1 = (A0.get(tid) or {}).get("cost_actual", {}), (A1.get(tid) or {}).get("cost_actual", {})
+                pre = e["cost_actual"].get("prefix", {})
+                calls = pre.get("calls", 0) + c0.get("model_calls", 0) + c1.get("model_calls", 0)
+                usd = pre.get("cost_usd", 0) + c0.get("cost_usd", 0) + c1.get("cost_usd", 0)
+                lines.append(f"| {tid} | {e['words'][str(1)] if str(1) in e['words'] else e['words'].get(1)} / {e['words'][str(-1)] if str(-1) in e['words'] else e['words'].get(-1)} | {memory} | {ev['captured']} | {ev['capture_latency']} | {ev['frac_original_at_removal']:.2f} | "
+                             f"{(A0[tid]['evaluation']['frac_original_T'] if tid in A0 else float('nan')):.2f} | {(A1[tid]['evaluation']['frac_original_T'] if tid in A1 else float('nan')):.2f} | "
+                             f"{(A1[tid]['evaluation']['delta_original'] if tid in A1 else float('nan')):+.2f} | {calls} | {usd:.5f} |")
+    # ---- spend (any non-scripted backend)
+    if backends != ["scripted"]:
+        calls = toks_in = toks_out = usd = fuzzy = reask = pfail = 0
+        seen_prefix = set()
+        for e in eps:
+            c = e["cost_actual"]
+            calls += c.get("model_calls", 0); toks_in += c.get("prompt_tokens", 0); toks_out += c.get("completion_tokens", 0)
+            usd += c.get("cost_usd", 0); fuzzy += c.get("fuzzy_parses", 0); reask += c.get("parse_retries", 0); pfail += c.get("parse_failures", 0)
+            key = (e["task_id"], e["seed"], e["world"], e["dose"], str(e["memory"]))
+            if key not in seen_prefix and c.get("prefix"):
+                seen_prefix.add(key)
+                pfx = c["prefix"]
+                calls += pfx.get("calls", 0); toks_in += pfx.get("prompt_tokens", 0); toks_out += pfx.get("completion_tokens", 0)
+                usd += pfx.get("cost_usd", 0); fuzzy += pfx.get("fuzzy_parses", 0); reask += pfx.get("parse_retries", 0); pfail += pfx.get("parse_failures", 0)
+        lines += ["", "## Spend (from the provider's usage fields on every call)", "",
+                  f"- model calls: {calls} (prefix counted once per episode)",
+                  f"- prompt tokens: {toks_in}, completion tokens: {toks_out}, mean prompt {toks_in / max(1, calls):.0f} tokens/call",
+                  f"- actual cost: {usd:.4f} USD (OpenRouter `usage.cost`)",
+                  f"- parse: {fuzzy} fuzzy accepts (edit distance 1), {reask} re-asks, {pfail} unparseable after re-ask; call-level clean-parse rate {1 - (fuzzy + reask + pfail) / max(1, calls):.4f}",
+                  f"- invalid episodes: {sum(invalid.values())} of {len(eps)} records"]
 
     lines += ["", "Invalid episodes per cell and arm are in the CSV; none are dropped or retried.",
               "Capture is decided before removal and shared by all arms of an episode, so 'captured' is the same across arms of a cell.",

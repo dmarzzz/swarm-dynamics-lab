@@ -119,6 +119,15 @@ Scripted result (results/S1b.md): W1_INSIDE 0.42 / 0.42 / 0.42 / **0.54** for me
 (full: 0.90 [0.85, 0.94] captured within 200); W2_OUTSIDE 0.42 / 0.46 / 0.54 / 0.83 (memory 5 at 0.46 is
 0.81 [0.74, 0.86], CI lower bound below the target; full at 0.83 leaves 4 honest agents).
 
+## 11. S2_pilot (2026-10-04, real model, dev tasks, on Shadow's GO)
+
+Not the S2 of section 4: a bounded pilot of the memory 1 versus full contrast on one open 8B model, with the
+scripted dose-rule doses carried over (0.42 / 0.54 at N = 12) because the model-side sweep of section 10 was not
+run first. No primary is declared for it (design.yaml `primary_contrast.pilot_note`). It reports `frac_original_T`
+and `delta_original` under A1_purge per memory, A0 alongside, capture rate and latency, a cluster bootstrap over
+6 tasks, and the actual spend. Gate: Q0 validity >= 0.90 on the hub before the pilot is queued. Results in
+`results/S2.md`. Deviations from this document are listed there and in `reviews/S2_pilot-post.md`.
+
 ## Amendments
 
 - **2026-10-04, after S1b was inspected.** Honest floor: dose* must leave at least 10 honest agents
@@ -130,3 +139,8 @@ Scripted result (results/S1b.md): W1_INSIDE 0.42 / 0.42 / 0.42 / **0.54** for me
   removal (about 0.25 on the original before and after), so `frac_original_T` alone cannot tell "came back"
   from "never moved". Both diagnostics already exist per episode; this only promotes the difference. The
   primary (H2) is unchanged.
+- **2026-10-04, after S2_pilot.** The scripted "freeze" regime for full memory (S1b, N = 24, entrench 20) does not
+  appear at N = 12 / entrench 10 even for the scripted rule (`src/pilot_reference.py`); it depends on the depth of
+  banked history, not on unbounded memory alone. Any model test of the freeze needs the longer entrench phase.
+- **2026-10-04, after S2_pilot.** Section 7's per-pair (beta, h) fit is now a hard prerequisite: two of six pilot
+  pairs did not capture at memory 1 because of the model's string prior.

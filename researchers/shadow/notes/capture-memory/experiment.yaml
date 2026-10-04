@@ -1,18 +1,19 @@
 {
   "id": "capture-memory",
   "title": "Capture and memory: does a purged swarm return? (exploratory, scripted)",
-  "description": "Binary convention, N=24, random pairwise encounters. A committed minority above the tipping dose captures the population; it is then removed perfectly. Swept factor: agent memory window (1, 5, 20, full). Arms: no purge, purge, purge plus memory wipe. Scripted tanh policy (de-marzo-2026-conformity form over a FIFO memory as in magistrali-2026-aligned); no LLM has run. Hunch under researchers/shadow/notes, not an accepted hypothesis (PR 82).",
+  "description": "Binary convention, N=24, random pairwise encounters. A committed minority above the tipping dose captures the population; it is then removed perfectly. Swept factor: agent memory window (1, 5, 20, full). Arms: no purge, purge, purge plus memory wipe. Scripted tanh policy (de-marzo-2026-conformity form over a FIFO memory as in magistrali-2026-aligned) for S0/S1/S1b; one open 8B model (Q0, S2_pilot, 2026-10-04, dev tasks, capped). Hunch under researchers/shadow/notes, hypothesis shadow-capture-memory is proposed, not accepted.",
   "owner": "shadow",
   "params": {
-    "stage": {"type": "str", "description": "S0 clean validation | S1 development | S1b dose sweep, 400-round takeover cap (no S2 before acceptance)", "role": "stage"},
+    "stage": {"type": "str", "description": "S0 clean validation | S1 development | S1b dose sweep | Q0 model qualification | S2_pilot real-model pilot, dev tasks (no holdout S2 before acceptance)", "role": "stage"},
     "world": {"type": "str", "description": "W0_CLEAN | W1_INSIDE (metastable pair) | W2_OUTSIDE (regime control)", "role": "condition"},
     "dose": {"type": "float", "description": "committed fraction of N replaced at the end of entrench", "role": "condition"},
     "memory": {"type": "str", "description": "agent memory window: 1 | 5 | 20 | full", "role": "condition", "label": "memory window"},
     "tasks": {"type": "str", "description": "task id range, e.g. 0-24 (the task is the cluster unit)", "role": "replicate"},
     "seeds": {"type": "list", "description": "fixed seed list from design.yaml", "role": "replicate"},
-    "backend": {"type": "str", "description": "scripted | http (http never run yet)", "role": "fixed"}
+    "backend": {"type": "str", "description": "scripted | http (http = one open model via src/model.py, Q0/S2_pilot only)", "role": "fixed"},
+    "go": {"type": "str", "description": "model stages: who gave the GO and when", "role": "fixed"}
   },
-  "metrics": ["captured", "captured_100", "captured_200", "frac_T_A0_no_purge", "frac_T_A1_purge", "frac_T_A2_purge_wipe", "rec_A1_purge", "rec_A2_purge_wipe", "wipe_minus_purge", "episodes", "invalid"],
+  "metrics": ["captured", "captured_100", "captured_200", "frac_T_A0_no_purge", "frac_T_A1_purge", "frac_T_A2_purge_wipe", "rec_A1_purge", "rec_A2_purge_wipe", "wipe_minus_purge", "episodes", "invalid", "validity", "model_calls", "prompt_tokens", "completion_tokens", "cost_usd", "parse_failures", "fuzzy_parses", "parse_retries", "call_parse_rate"],
   "primary_metric": "frac_T_A1_purge",
   "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/notes/capture-memory"
 }
