@@ -46,7 +46,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:29Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:17Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:27Z | Launch bounded Phantom Coast native pilot |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:29Z | Design Poietic Agents from the self-differentiating swarm research |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:27Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:15Z | Ship the neutral-agent market-splitting pilot |
@@ -164,6 +163,7 @@
 | [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:58Z | Deploy and start the operator-authorized v3 model qualification |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
+| [phantom-coast-live](tasks/phantom-coast-live.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:31Z | Launch bounded Phantom Coast native pilot |
 | [phantom-coast-pc1](tasks/phantom-coast-pc1.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:45Z | Develop Phantom Coast PC-1 plan and offline instrument |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
 | [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:00Z | Plan the next discussion benchmark diagnostic and offline orchestration |
@@ -249,7 +249,7 @@
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-phantom-coast | done | phantom-coast-live | 2026-10-04 04:29:32+00:00 | Q0 and S0 complete; valid null, USD0.162723246; results published and host released |
 | vishesh/codex-quorum-mirrors | done |  | 2026-10-04 04:28:00.449691+00:00 | Iteration 3 published; S1 pending research gates and review-quorum-mirrors-qm3 |
-| vishesh/codex-decision-models | blocked | right-dissenter-live-study | 2026-10-04 04:27:46.239298+00:00 | Q0 failed 12/18; Q1 ready in software but blocked on verified Dmarz-account allocation. Wrong-account host deleted; cap remains approved. |
+| vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04 04:27:46.239298+00:00 | Recovered verified idle Dmarz fleet host sim-shadow, exclusive claim through 05:30Z; deploying Q1 under original approved cap. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
