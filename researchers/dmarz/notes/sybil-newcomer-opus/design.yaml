@@ -1,0 +1,55 @@
+version: 1
+experiment: sybil-newcomer-opus
+status: exploratory-model-replication  # Opus 5.5 configuration; see request below
+model: claude-opus-5-5
+request:  # Opus 5.5 accepts no temperature/top_p/top_k and cannot disable thinking
+  effort: low
+  thinking: omitted  # model default; thinking blocks are filtered and never stored as answers
+  max_answer_chars: 2000  # visible JSON answer limit enforced on the text block
+replicates: sybil-newcomer-api  # Haiku cohort; identical worlds, paired by assignment id, never pooled
+also_compare: sybil-newcomer-sonnet  # Sonnet 4.6 cohort; same assignments; separate cohort
+arms: [random, reputation, renewal]
+identities: [1, 4, 16]
+strategies: [clean, sleeper, relapse]
+observed_rounds: [4, 5, 8]
+cfg:
+  rounds: 8
+  honest_veterans: 18
+  honest_newcomers: 6
+  attacker_messages: 16
+  audit_checks: 4
+  report_slots: 12
+  true_audit_pass: 0.95
+  false_audit_pass: 0.05
+worlds: [7100, 7101, 7102, 7103, 7104, 7105, 7106, 7107, 7108, 7109, 7110, 7111, 7112, 7113, 7114, 7115, 7116, 7117, 7118, 7119, 7120, 7121, 7122, 7123]
+engineering_worlds: [6900, 6901]
+qualification_worlds: [7000, 7001, 7002, 7003, 7004, 7005]
+stages:
+  S0: {backend: scripted}
+  Q0: {backend: anthropic}
+  S1: {backend: anthropic}
+  S2: {enabled: false, reserved_task_range: [12000, 12999]}
+qualification: {fact_accuracy: 0.95, exact_packet_rate: 0.90, missing_abstention: 1.0}
+budget:
+  aggregate_usd: 400
+  max_attempted_calls: 2050
+  max_output_tokens: 4000
+  max_input_bytes: 20000
+  request_timeout_seconds: 180
+  stage_timeout_seconds: 21600
+  retries: 0
+  workers: 2
+  input_usd_per_million: 4
+  output_usd_per_million: 20
+primary_contrast:
+  metric: rare_accuracy
+  strategy: sleeper
+  identities: 16
+  round: 8
+  arms: [renewal, reputation]
+  useful_difference_pp: 10
+  inference: descriptive paired-world bootstrap, exploratory only
+stress_test:
+  strategy: relapse
+  attack_rounds: [4, 7, 8]
+  status: predeclared unseen-by-model stress test, not independent confirmatory holdout
