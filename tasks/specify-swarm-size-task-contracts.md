@@ -3,14 +3,16 @@ id: specify-swarm-size-task-contracts
 type: task
 title: Specify swarm-size task contracts and qualification gates
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-idea-scores
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T02:54Z
+updated: 2026-10-04T02:54Z
 ---
 
 ## Goal
