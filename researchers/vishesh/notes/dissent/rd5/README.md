@@ -1,5 +1,7 @@
 # Right Dissenter RD5: the right to reopen
 
+Current execution status: [owner-approved RD5 launch](RUN-STATUS.md).
+
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 

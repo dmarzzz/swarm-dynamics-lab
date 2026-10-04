@@ -1,6 +1,6 @@
 # Right Dissenter RD5 setup record
 
-**Implemented and checked offline; next-run preparation complete; no native stage admitted or started.** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
+**Owner-approved execution now prepared; see [current launch status](RUN-STATUS.md). No native outcome yet.** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
 
 Question: when does remembering unresolved evidence and protecting a future check help, and when does it delay an urgent decision? Primary B2 reserve versus B1 memory; secondary B1 versus B0 bounded always-check. [Plan](PLAN.md), [amendment](AMENDMENT-01.md), [ready package](READY.md), [previous cohort](../rd4/REPORT.md).
 
@@ -9,9 +9,9 @@ Question: when does remembering unresolved evidence and protecting a future chec
 | G0 question/prior art | scoped exploratory | RD4 post-mortems, failure decomposition, existing source/Twitter map, Hay/Tan primary references. No completed novelty survey or accepted hypothesis claimed. |
 | G1 design before code | complete | Amendment published at `10e6b4d775c8409c1a9817ad633f0f6f84ae3c40` before code. All H5 mechanisms now share one domain. |
 | G2 instrument | offline checks passed | 61 development tests; state/resource separation, frozen input adapter, policies, transport and replay. [Validation](validation/VALIDATION.json). |
-| G3 admission | prepared; runtime evidence pending | Frozen packet manifest, registration file and pre-assessments. Fresh public hub/page verification, exclusive approved fleet/account claim, route, source/runtime and original budget receipts required immediately before dispatch. |
+| G3 admission | operational preparation verified; central dispatch pending | Public page, approved-account dedicated allocation, deployed source/tests, original ledger and actual relay health verified. Worker admission must remain fresh at central dispatch. |
 | G4 qualification | not run | Q5 maximum 24 calls; 12/12 valid/correct cards and 24/24 valid completed requests required. Old Q4 does not qualify this source. |
-| G5 closeout | no new run | Zero native calls; no fleet host or worker allocated. |
+| G5 closeout | pending execution | Zero native calls; dedicated allocation active, relay verified, worker not started. |
 
 ## Definitions and access
 
