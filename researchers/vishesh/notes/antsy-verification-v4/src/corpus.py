@@ -1,7 +1,6 @@
 """Measure OCR on externally authored, revision-pinned CORD receipts."""
 import argparse,collections,csv,hashlib,io,json,os,re,subprocess,time,urllib.request
 from pathlib import Path
-import pyarrow.parquet as pq
 from PIL import Image
 
 REV='7f0115a4b758a71d6473b8d085751692da2fef98'
@@ -31,6 +30,7 @@ def score(lines,words,height):
     return {'recall':sum(r['matched'] for r in region)/total if total else None,'regions':[r['matched']/r['target'] if r['target'] else None for r in region],'denominators':[r['target'] for r in region],'line_details':details,'total_field_exact':all(r['exact'] for r in details if r['category']=='total.total_price') if any(r['category']=='total.total_price' for r in details) else None}
 
 def main():
+    import pyarrow.parquet as pq
     ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();a.out.mkdir(parents=True,exist_ok=False)
     manifest={'dataset':'naver-clova-ix/cord-v2','revision':REV,'split':'validation','assigned_ids':list(range(100)),'complete':False,'license':'CC-BY-4.0','psm':MODES,'languages':'ind+eng','tesseract':subprocess.check_output(['tesseract','--version'],text=True).splitlines()[0]}
     (a.out/'manifest.json').write_text(json.dumps(manifest,indent=2))
