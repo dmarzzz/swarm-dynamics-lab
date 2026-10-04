@@ -23,5 +23,6 @@
       "s1-a1"
     ]
   ],
-  "allocation_release": "pending artifact readback"
+  "allocation_release": "merged",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/242"
 }
