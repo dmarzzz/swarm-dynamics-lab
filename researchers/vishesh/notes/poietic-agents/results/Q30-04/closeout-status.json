@@ -8,5 +8,7 @@
   "native_collective_independent_n": 0,
   "fresh_collective_replications": 0,
   "resources": "claim438 released439; no workers, relays, tunnels or in-flight calls",
-  "scope": "No new collection from closeout"
+  "scope": "No new collection from closeout",
+  "public_closeout_rendered_verified": true,
+  "public_closeout_checked_utc": "2026-10-04T21:22:16.862759+00:00"
 }
