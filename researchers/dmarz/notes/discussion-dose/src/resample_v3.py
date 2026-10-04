@@ -237,14 +237,19 @@ def audit(directory):
 
 
 def approved_model_config(path, rounds):
-    """Same gate as v3: approved manifest, hashed review evidence, matching sources (v3 + sidecar)."""
+    """Approved manifest, hashed evidence files, matching sources (v3 + sidecar).
+
+    Evidence is either `independent_review` (a passed non-dmarz review) or `review_waiver` (a dated owner decision to
+    launch without one). The field name records which, so a waiver is never presented as a review.
+    """
     if path is None: raise ValueError('paid launch requires a separately reviewed launch manifest')
     launch = strict_json(path.read_text())
-    required = {'status', 'source_hashes', 'rounds', 'v2_results_review', 'independent_review', 'model_config'}
+    gate = 'independent_review' if 'independent_review' in launch else 'review_waiver'
+    required = {'status', 'source_hashes', 'rounds', 'v2_results_review', gate, 'model_config'}
     if set(launch) != required or launch['status'] != 'approved': raise ValueError('launch manifest is not approved')
     if launch['rounds'] != rounds or launch['source_hashes'] != source_hashes():
         raise ValueError('launch manifest does not match this source/configuration')
-    for name in ('v2_results_review', 'independent_review'):
+    for name in ('v2_results_review', gate):
         proof = launch[name]
         if type(proof) is not dict or set(proof) != {'path', 'sha256'}: raise ValueError('review evidence must identify a file and digest')
         if hashlib.sha256((path.parent / proof['path']).resolve().read_bytes()).hexdigest() != proof['sha256']:
