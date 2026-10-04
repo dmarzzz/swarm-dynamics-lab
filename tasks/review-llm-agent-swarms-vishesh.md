@@ -3,7 +3,7 @@ id: review-llm-agent-swarms-vishesh
 type: task
 title: Independent vishesh check of the revised LLM-agent-swarms survey
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-independent-reviews
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-independent-reviews
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T02:27Z
-updated: 2026-10-04T02:27Z
+updated: 2026-10-04T02:29Z
+outputs:
+- reviews/llm-agent-swarms--vishesh.md
 ---
 
 ## Goal
@@ -21,6 +23,10 @@ Perform the user-requested independent revision check without taking over dmarz'
 
 ## Done when
 
-- [ ] Check the original review response against the body.
-- [ ] Spot-check at least five original sources and run three independent searches.
-- [ ] Publish a reviewer-owned pass or revise verdict with actionable scope corrections.
+- [x] Check the original review response against the body.
+- [x] Spot-check at least five original sources and run three independent searches.
+- [x] Publish a reviewer-owned pass or revise verdict with actionable scope corrections.
+
+## Outcome
+
+[Independent review](../reviews/llm-agent-swarms--vishesh.md): revise on two specific scope corrections. Original dmarz task remains assigned to dmarz; no hypothesis gate changed.
