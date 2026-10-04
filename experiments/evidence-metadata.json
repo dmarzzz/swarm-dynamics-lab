@@ -1792,6 +1792,35 @@
       "status_at_assessment": "planned_s0_local_passed",
       "assessor": "dmarz/scale-opus",
       "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-scarcity-opus",
+      "title": "Does Sybil-resistant accuracy depend on repeated knowledge? (Opus 5.5)",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scarcity-opus/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scarcity-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scarcity-opus/experiment.yaml"
+      ],
+      "assessor": "dmarz/pipeline-scarcity",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Reducing the truthful carriers of each rare fact from 81 to 1, at fixed population, graph, audits and admission, lowers the specialist accuracy of an Opus 5.5 synthesizer.",
+        "rationale": "Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made."
+      },
+      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic world roots \u00d7 60 conditions = 1,440 S1 calls at 972 simulated identities and one synthesizer; separate Q0 of 48 calls on 8 roots and a one-call probe. Roots are the independent units, not calls or identities.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scarcity-opus/README.md",
+        "researchers/dmarz/notes/sybil-scarcity-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-scarcity-opus/design.yaml",
+        "researchers/dmarz/notes/sybil-scarcity-opus/AMENDMENTS.md",
+        "researchers/dmarz/notes/sybil-scarcity-opus/experiment.yaml"
+      ],
+      "status_at_assessment": "prepared_unrun"
     }
   ],
   "source_sha256": {
