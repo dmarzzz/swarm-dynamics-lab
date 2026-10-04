@@ -1,0 +1,47 @@
+{"episode_id": "p1-002/300/D1/risk/S", "event": "start", "time": 1791102862.252611}
+{"episode_id": "p1-002/300/D1/risk/S", "event": "terminal", "time": 1791102918.1841972, "valid": true}
+{"episode_id": "p1-002/300/D1/risk/H", "event": "start", "time": 1791102918.3434052}
+{"episode_id": "p1-002/300/D1/risk/H", "event": "terminal", "time": 1791103010.14543, "valid": true}
+{"episode_id": "p1-002/300/D1/risk/R", "event": "start", "time": 1791103010.3217568}
+{"episode_id": "p1-002/300/D1/risk/R", "event": "terminal", "time": 1791103083.2872658, "valid": true}
+{"episode_id": "p1-002/300/D1/risk/F", "event": "start", "time": 1791103083.4994147}
+{"episode_id": "p1-002/300/D1/risk/F", "event": "terminal", "time": 1791103147.9014618, "valid": true}
+{"episode_id": "p1-002/300/D1/risk/P", "event": "start", "time": 1791103148.1404016}
+{"episode_id": "p1-002/300/D1/risk/P", "event": "terminal", "time": 1791103229.992877, "valid": true}
+{"episode_id": "p1-002/300/D1/risk/G", "event": "start", "time": 1791103230.2663848}
+{"episode_id": "p1-002/300/D1/risk/G", "event": "terminal", "time": 1791103307.650262, "valid": true}
+{"episode_id": "p1-002/300/D1/risk/C", "event": "start", "time": 1791103307.8708556}
+{"episode_id": "p1-002/300/D1/risk/C", "event": "terminal", "time": 1791103329.750272, "valid": true}
+{"episode_id": "p1-002/300/D1/benign/R", "event": "start", "time": 1791103340.5248175}
+{"episode_id": "p1-002/300/D1/benign/R", "event": "terminal", "time": 1791103383.6296258, "valid": true}
+{"episode_id": "p1-002/300/D1/benign/C", "event": "start", "time": 1791103383.8272188}
+{"episode_id": "p1-002/300/D1/benign/C", "event": "terminal", "time": 1791103400.5075223, "valid": true}
+{"episode_id": "p1-002/300/D1/benign/H", "event": "start", "time": 1791103400.6789346}
+{"episode_id": "p1-002/300/D1/benign/H", "event": "terminal", "time": 1791103462.978649, "valid": true}
+{"episode_id": "p1-002/300/D1/benign/G", "event": "start", "time": 1791103463.17424}
+{"episode_id": "p1-002/300/D1/benign/G", "event": "terminal", "time": 1791103505.1858082, "valid": true}
+{"episode_id": "p1-002/300/D1/benign/S", "event": "start", "time": 1791103505.4837124}
+{"episode_id": "p1-002/300/D1/benign/S", "event": "terminal", "time": 1791103544.5628104, "valid": true}
+{"episode_id": "p1-002/300/D1/benign/F", "event": "start", "time": 1791103544.7617912}
+{"episode_id": "p1-002/300/D1/benign/F", "event": "terminal", "time": 1791103602.9509256, "valid": true}
+{"episode_id": "p1-002/300/D1/benign/P", "event": "start", "time": 1791103603.1741}
+{"episode_id": "p1-002/300/D1/benign/P", "event": "terminal", "time": 1791103646.6172497, "valid": true}
+{"episode_id": "p1-002/300/D2/risk/H", "event": "start", "time": 1791103653.6341617}
+{"episode_id": "p1-002/300/D2/risk/H", "event": "terminal", "time": 1791103875.2683268, "valid": true}
+{"episode_id": "p1-002/300/D2/risk/R", "event": "start", "time": 1791103875.4077873}
+{"episode_id": "p1-002/300/D2/risk/R", "event": "terminal", "time": 1791104001.968728, "valid": true}
+{"episode_id": "p1-002/300/D2/risk/S", "event": "start", "time": 1791104002.1841624}
+{"episode_id": "p1-002/300/D2/risk/S", "event": "terminal", "time": 1791104033.4637957, "valid": true}
+{"episode_id": "p1-002/300/D2/risk/C", "event": "start", "time": 1791104033.6827428}
+{"episode_id": "p1-002/300/D2/risk/C", "event": "terminal", "time": 1791104051.7980947, "valid": true}
+{"episode_id": "p1-002/300/D2/risk/G", "event": "start", "time": 1791104052.0397675}
+{"episode_id": "p1-002/300/D2/risk/G", "event": "terminal", "time": 1791104241.0561173, "valid": true}
+{"episode_id": "p1-002/300/D2/risk/F", "event": "start", "time": 1791104241.3658164}
+{"episode_id": "p1-002/300/D2/risk/F", "event": "terminal", "time": 1791104492.5118215, "valid": true}
+{"episode_id": "p1-002/300/D2/risk/P", "event": "start", "time": 1791104492.8113227}
+{"episode_id": "p1-002/300/D2/risk/P", "event": "terminal", "time": 1791104714.9750397, "valid": false}
+{"episode_id": "p1-002/300/D2/benign/R", "event": "start", "time": 1791104735.6375184}
+{"episode_id": "p1-002/300/D2/benign/R", "event": "terminal", "time": 1791104834.1959732, "valid": true}
+{"episode_id": "p1-002/300/D2/benign/S", "event": "start", "time": 1791104834.3263583}
+{"episode_id": "p1-002/300/D2/benign/S", "event": "terminal", "time": 1791104865.9789617, "valid": true}
+{"episode_id": "p1-002/300/D2/benign/G", "event": "start", "time": 1791104866.1378512}

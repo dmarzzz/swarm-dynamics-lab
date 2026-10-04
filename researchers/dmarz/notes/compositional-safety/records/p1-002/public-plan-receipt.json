@@ -1,0 +1,12 @@
+{
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/875406cc605e27413ebcf035d4b047294c850402/researchers/dmarz/notes/compositional-safety/reviews/p1-002-pre.md",
+  "plan_sha256": "99a49e4f2029bfb80835bfa87080da9eba1006107abf5946c37c253878797bb4",
+  "source_hashes": {
+    "engine_sha256": "b02810bc046ae45a59b8f3fe609997840a8b0ff136020858846f8ed749780c2b",
+    "design_sha256": "9ca973e1eae4ca3d14d7af26c936db536256a58a3e91d2e81f00a8ac0dbf1f7b"
+  },
+  "registered_tldr": "TLDR: The first run of the 168-episode pilot, on Claude Opus 5.5 with adaptive thinking at effort high: roots 300\u2013305, D1/D2, risk/benign, arms C, S, F, R, P, G and H. Measure committed global violations and safe completion per arm, with every assigned episode in the denominator, to see whether fragmented history (F) produces violations that shared history (S) does not, and whether factual receipts (R) reduce them relative to the placebo (P). Starts only if q0-008 passes. At most 3,360 calls. Descriptive pilot, no significance claims.",
+  "page_verified_at": 1791102856.4582663,
+  "verification": "Fetched the raw GitHub file at this revision (byte-identical to the checkout) and the rendered blob page (HTTP 200; headings TLDR, Question and prediction, Setup, Protocol, Metrics, Visualization mapping present) immediately before registration. Not a visual inspection.",
+  "launch_verified_at": 1791102861.9270291
+}
