@@ -3,14 +3,18 @@ id: heterogeneous-biological-frontiers
 type: task
 title: Biological frontiers for heterogeneous swarms grounded in X discussions
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-heterogeneous
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-heterogeneous
 depends_on: []
-topics: [llm-agent-swarms, collective-decision]
+topics:
+- llm-agent-swarms
+- collective-decision
+claimed_at: 2026-10-04T02:47Z
+updated: 2026-10-04T02:47Z
 ---
 
 ## Goal
