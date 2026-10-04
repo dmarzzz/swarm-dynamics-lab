@@ -3,7 +3,7 @@ id: update-experiment-budget-defaults
 type: task
 title: Update default and promising-study budget tiers
 kind: admin
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T20:15Z
-updated: 2026-10-04T20:15Z
+updated: 2026-10-04T20:16Z
+outputs:
+- AGENTS.md
+- tooling/agent-experiments/EXPERIMENT-SETUP.md
 ---
 
 ## Goal
