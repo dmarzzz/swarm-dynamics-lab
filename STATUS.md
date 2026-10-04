@@ -164,13 +164,13 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:16Z | Building Antsy from real receipt OCR and budgeted verification |
+| dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:10Z | Shipped v3; 74 checks passed and 636 saved requests replayed; independent review and model launch pending |
+| vishesh/codex-idea-scores | working | score-research-ideas | 2026-10-04T02:09Z | Implement researcher rubric scores across all research ideas |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:06Z | Exclusive sim-dmarz-3 allocated; native launch awaits approval for USD 8 budget increase |
 | dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T02:04Z | API qualification passed 24/24; deploying the fixed 192-call pilot; aggregate USD 5 cap and same persistent ledger |
 | dmarz/patchwork-hypotheses | done | add-patchwork-hypotheses | 2026-10-04T02:03Z | Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests |
 | dmarz/market-split | done | build-market-split | 2026-10-04T02:02Z | Completed 450 valid scripted episodes and verified replay; plan filed, claim released, temporary server destroyed. API remains disabled. |
 | dmarz/private-control | done |  | 2026-10-04T02:00Z | pc-H4 done (d0725be0, qualified, private_contrast -0.33); post-mortem reviews/pc-H4-a1-post.md |
-| dmarz/discussion-bench-v3 | working | build-discussion-benchmark-v3 | 2026-10-04T01:49Z | Building the offline v3 benchmark, with paid runs and holdout release deferred |
-| vishesh/codex-idea-scores | working |  | 2026-10-04T01:49Z | Implement researcher rubric scores across all research ideas |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
 | vishesh/codex-experiments | working | influence-quality-review | 2026-10-04T00:54Z | Auditing historical evidence, delivering measured replay and testing a separately versioned decision-architecture repair |
