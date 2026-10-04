@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split
 tool: codex
-state: working
+state: done
 task: run-market-split-api
-doing: Final three original Sonnet S1 assignments running serially after 30 valid episodes and 720-call exact replay; reporting next. Haiku closed, next plan unstarted.
-updated: 2026-10-04T05:57Z
+doing: Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted.
+updated: 2026-10-04T06:55Z
 ---
 
 ## Notes

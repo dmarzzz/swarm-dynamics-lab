@@ -19,3 +19,18 @@ S1-001 launched2026-10-04T02:28Z from22557dc:18 assignments,36episodes,864calls 
 2026-10-04T03:24Z: Sonnet V5 Q0-005 passed4/4 with minimum99.9879%reference and exact32-action replay;aggregate544calls/$1.437325 before discovery. S1-002 queued18bundles36episodes and started two finite9-bundle workers from67ad585. First enqueue preparation encountered a transient hub GET502 before any assignment/model call;retry of that read-only preparation succeeded with the same untouched attempt ID,not a provider retry. Source/design remain657a77e7/230ef6ac. Claim PR72 merged:exclusive sim-dmarz-2 through06:22:34Z,explicitly includes parallel Haiku qualification and at most4workers total. Independent comparison remains gated.
 
 2026-10-04 03:50 UTC: first completed firm-rule Sonnet S1-002 bundle (market 40, seed 41, run 139d8f744ae9) is valid with all seven artifact hashes and 24-frame replay verified. Dynamic arm registered at round 2; its final-action note explicitly connected splitting to the HHI threshold and fines. The frozen sustained evasion criterion passed. Dynamic profit 42817.567436 versus locked 36902.997537, a descriptive paired difference of 5914.569899. This is an interim single-market observation, not the complete cohort estimate. No tuning or rerun follows this outcome. The measured replay is verified in the public browser.
+
+
+## Completed closeout, 2026-10-04 06:55 UTC
+
+The original Sonnet S1-002 cohort is complete:18/18bundles,36/36valid episodes,864priced calls/$14.125788. Study lifetime1408priced calls/$15.563113, zero pending reservations. Final inspection finds no model worker, no STOP and no remaining assignment; no successor was dispatched. All126run and8analysis artifacts were downloaded and hash-matched; full36episode/864action replay matches in the pinned runtime. Private ledger recovered before release; public archive member hashes verified.
+
+Results, analysis, post-mortem, figure and complete action/episode records were pushed at e84428d59d278ce9837d9111f2b9047cf53a0fbb. Evidence metadata was updated at18a520695d2ffb93f022854a0f044b32a1b1064b to2/4 for the narrow completed comparison, assessed by the owner. The hub registration pins that immutable README. Analysis run market-split-api/s1-002-analysis uses0new model calls/$0new spend;864observed calls/$14.125788 are separate metrics, avoiding cost duplication.
+
+Browser verification: completed description, all three V5 cells6/6, analysis marked done,1800×1100summary image visibly loaded, and task40firm replay advancing from round4to24at1080×720. Its endpoints show approximately42,818versus36,903credits and641versus1,288fines, matching saved records. The overall Needs attention badge and26/36discovery count include historical failed/cancelled V2 work; they are retained honestly and are not the V5 denominator.
+
+Exclusive claim dmarz-market-split-api released at06:54:24UTC after archival (private agentops PR190 merged); hub active-claim view confirms release. Existing sim-dmarz-2 is preserved. Haiku's earlier claim release, temporary-host destruction and inventory reconciliation are complete (private PRs148/150/156); its234calls/$1.908032 and failed reliability outcomes remain published separately.
+
+Final project-wide strict artifact check: one pre-existing missing discussion-memory-v3-film file, zero warnings; all Sonnet files and archive members are present and verified. Existing foreign provenance was preserved. This limitation does not conceal missing study data. See report/s1-002/closeout.json.
+
+The next Haiku diagnostic plan remains published and unstarted. No repair, model, stage, replacement, expansion or new experiment follows this closeout. Disable the task follow-up after final publication.
