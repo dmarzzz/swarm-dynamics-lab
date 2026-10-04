@@ -7,3 +7,7 @@ Frozen public source: `a3919814c9b6ed6cec4b7d4b6fb801d190620ba1`. All four immut
 Only `antsy-targeted-v8/Q0-attempt-1` is requested:20 fresh train60–79 receipts,40 OCR calls maximum,zero hosted-model calls and zero new billable infrastructure. The orchestrator must verify idle exclusive approved-team allocation, stage exact runtime/models, inspect the registered live page and admit dispatch. Do not mark queued work running or use the old v7 page as a v8 result.
 
 Next action: follow the run-queue acceptance/result, resolve any actual setup failure without hidden native retries, then publish the Q0 post-mortem, sanitized artifacts and claim closeout. The request prohibits automatic S1 or changing qualification thresholds.
+
+## Reconciliation after portfolio continuation
+
+The existing request is still open and unacknowledged; live hub inspection found no v8 run. sim-vishesh is now an already-trusted idle candidate, subject to refreshed exclusive allocation by the dispatcher. No first-use key acceptance, new machine or duplicate request is needed. Central orbital dispatch remains required. See [readiness review](reviews/Q0-readiness-review.md) and [sanitized reconciliation](results/dispatch-reconciliation.json). Six additional offline audit tests pass; the frozen execution revision is unchanged.

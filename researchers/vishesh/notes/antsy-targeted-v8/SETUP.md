@@ -8,8 +8,8 @@ Owner/operator: vishesh/codex-methods. Same-author assessment. Exploratory owned
 |---|---|---|
 | G0 Question and scope |pass for development|V7 competence/cost failure motivates field extraction plus useful complementary perception; not an LLM study |
 | G1 Plan before implementation |pass|PLAN committed/published before src; AMENDMENT-01 records rejected Tesseract checker after used-data diagnosis |
-| G2 Instrument |partial|18 offline tests and two reproducible saved-data analyses pass; EasyOCR normalization adapter only, not a native launcher or qualified engine |
-| G3 Current native admission |not prepared|No allocation, no native registration, no model loading, no call/spend reservation in this work unit |
+| G2 Instrument |offline prepared; native unverified|31 frozen runner tests plus6 reporting audit tests pass; native runner implemented, host-side dependency/model verification pending |
+| G3 Current native admission |blocked on dispatch|Existing queue request remains unacknowledged; no v8 allocation or worker; an already-trusted idle host was identified but must be rechecked |
 | G4 Fresh qualification |unrun|Pin and stage exact EasyOCR/PyTorch/runtime/model hashes; qualify selected workers on fresh train60–79 after admission |
 | G5 Development closeout |pass|Both prototypes and replay artifacts retained; unsafe fallback rejected; no fleet resources allocated or new calls made |
 
@@ -27,7 +27,7 @@ Fresh Q0 train60–79; one proposed repair80–99; S1 test50–99 remains unopen
 |---|---|
 | Offline validation |`python -m unittest discover -s researchers/vishesh/notes/antsy-targeted-v8/src -p 'test_*.py'` |
 | Saved-data analysis |`src/replay.py --raw <private-saved-OCR> --records <v7-S0-repair-records.jsonl> --out <new-report.json>`; explicit allowlist train40–59; refuses overwrite; no OCR calls |
-| Native prepare/dispatch |Not implemented or admitted; requires exact model/runtime pins, bounded development/qualification pre-review, immutable public registration/page verification, current dedicated approved-team allocation and cumulative budget/call reservation |
+| Native prepare/dispatch |Implemented and queued at frozen a3919814; not admitted. Follow private operator packet and current central-dispatch rule; do not infer running from a queue entry |
 | Resume |No native attempt exists; preserve analyses and use a new name for each subsequent report |
 | Closeout |No native workers or fleet claim created; publish scoped development results and retain failed prototype |
 
@@ -40,3 +40,7 @@ Next action: prepare the stronger checker candidate and its pinned native instru
 Owner requested the next run. [NATIVE-Q0.md](NATIVE-Q0.md) and [Q0-pre](reviews/Q0-pre.md) prospectively bind the next attempt; qualification thresholds and data split are unchanged. Native runner, pixel-only worker, package/model inspections, official asset staging, paired evaluator and measured trajectory renderer are implemented. Thirty-one offline checks pass, including mocked full40-call completion, first-call failure/unstarted accounting, duplicate hub attempt rejection, stale/source/runtime/allocation/cap gates, threshold boundaries and image/GIF encoding. Mocked fixtures are software checks, never native evidence.
 
 G2 is ready for host-side dependency verification. G3 remains pending until orbital-one stages the two environments, freezes transitive package/model SHA256, registers/verifies the immutable page and records a fresh idle exclusive approved-team allocation plus zero incremental charge receipt. Private launcher: `scripts/run-antsy-v8.py` in agentops; procedure `docs/antsy-v8-launch.md`. No laptop dispatch; no credentials required beyond host-local reporting. G4 is unrun. Only Q0-attempt-1 is executable; no automatic repair or S1. Any setup failure must be fixed/reconciled before submitting a replacement attempt; native failures retain their journal.
+
+## Portfolio iteration readiness assessment
+
+[Q0-readiness-review](reviews/Q0-readiness-review.md) is the latest scientific readiness review, with eleven hashed-evidence dimensions and an offline saved-result audit. It is not a native post-mortem. The exact queued Q0 instrument is unchanged. Native counts remain0 started/0 valid of40 planned OCR calls on20 planned receipts; zero incremental charges. Dispatch remains with orbital-one; no idle allocation is held.

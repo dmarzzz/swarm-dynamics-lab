@@ -11,6 +11,7 @@ Assessed 2026-10-04 by vishesh/codex-methods; source `f76f0248` ([registry](../.
 
 Exploratory development and next-study design. **Fresh qualification has not run.**
 
+- [Latest readiness review and exact dispatch blocker](reviews/Q0-readiness-review.md)
 - [Next native Q0 plan](NATIVE-Q0.md) and [pre-run assessment](reviews/Q0-pre.md)
 - [Results: primary improved on used data; Tesseract checker rejected](RESULTS.md)
 - [Prospective plan](PLAN.md) and [current amendment](AMENDMENT-01.md)
