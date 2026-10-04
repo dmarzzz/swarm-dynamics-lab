@@ -1,3 +1,5 @@
+> **Current disposition (2026-10-04): close the saved-data cycle; park D1.** [Decision-value audit and eleven-dimension assessment](analysis/pi-cycle/RESULTS.md) reconcile 16 valid Q1-02 responses, 0/8 graded correct, and complete report/prior confounding. Nine new offline tests and 5,488 software configurations verify the scoped exact rule. No new native calls, allocation or budget reset; no owner action required. Further inference lacks practical decision value on this grammar. Older launch-preparation statements below are historical.
+
 > Current update (2026-10-04): Q1-02 completed with 16 valid responses and 0/8 graded correct. The proposed successor is [D1](d1/PLAN.md), with [completed assessment and runbook](d1/RUNBOOK.md). Offline preparation is complete; the current runbook requires the concrete material-design decision before allocation or calls. Researcher review remains waived. The older Q1/M1/C1 progression below is historical and does not admit another launch.
 
 # Experiment setup record: Quorum of Mirrors, iteration 3

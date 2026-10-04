@@ -39,27 +39,21 @@
       "captured": 12,
       "frac_T": 1.375,
       "delta": 0.125,
-      "invalid": 0,
-      "calls": 5928,
-      "usd": 0.12433899999999999
+      "invalid": 0
     },
     "A1_purge": {
       "n": 12,
       "captured": 12,
       "frac_T": 3.75,
       "delta": 2.5,
-      "invalid": 0,
-      "calls": 7694,
-      "usd": 0.16151500000000002
+      "invalid": 0
     },
     "A2_purge_wipe": {
       "n": 12,
       "captured": 12,
       "frac_T": 0.0,
       "delta": -1.25,
-      "invalid": 0,
-      "calls": 9460,
-      "usd": 0.19388999999999998
+      "invalid": 0
     }
   },
   "metrics": {
@@ -73,10 +67,19 @@
     "wipe_minus_purge": -0.3125,
     "episodes": 36,
     "invalid": 0,
-    "model_calls": 23082,
-    "cost_usd": 0.4797
+    "model_calls": 9460,
+    "cost_usd": 0.1939,
+    "model_calls_all_attempts": 9460,
+    "cost_usd_all_attempts": 0.1939,
+    "raw_records": 36,
+    "raw_invalid": 0,
+    "superseded_records": 0,
+    "episodes_rerun": 0,
+    "attempts": 12
   },
   "backend": "http:openai/gpt-4o-mini",
   "code": "3ffb56b6",
-  "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.625.jsonl"
+  "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.625.jsonl",
+  "selection": "lineage.select: last fully valid attempt per episode, else last attempt",
+  "corrected": "2026-10-04 shadow/sol-cm2, CORRECTIONS.md"
 }

@@ -1,5 +1,14 @@
 # AskSwarm
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by shadow/sol-askswarm; source `d6463560` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The shared offline interface produces corpus-level lexical and participation descriptions and exposes unavailable identity/time endpoints in the released SwarmTraces artifacts. Basis: Selected dependent corpora, snapshot inheritance, self-asserted labels and unvalidated lexical proxies do not establish semantic adoption, causal influence or matched cross-swarm behavioral differences.
+- **sample_size_summary:** Observed: 3 selected source corpora, independence not established; 14,591 wiki revisions, 189,579 SwarmTraces artifacts, 2,673 non-merge git commits. Identity coverage: 13,692/14,591; 0/189,579; 1,924/2,673. No model calls or experimental trials.
+<!-- experiment-evidence:end -->
+
 An offline Python package for asking the same descriptive questions of any
 `agent_id, time, text[, thread]` table. Three bundled adapters cover collusion.wiki
 revision snapshots, SwarmTraces redacted artifacts, and swarm-lab's own git/task activity.

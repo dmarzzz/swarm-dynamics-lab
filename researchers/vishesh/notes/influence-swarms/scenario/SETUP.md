@@ -1,19 +1,19 @@
-# Current setup: iteration 5 preparation
+# Current setup: D5 not started; dispatch blocked
 
 [Runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) · [D5 plan](ITERATION-05.md) · [pre-assessment](reviews/native-D5-01-pre.md) · [operator handoff](RUN-D5.md) · [previous post-mortem](reviews/native-D3-01-post.md).
 
-The owner requested implementation and readiness, not launch. Cited typed facts, synthetic-excerpt alignment, fixed buyer policy and a separate authorization output are implemented. No new credential access, machine claim or model call. Researcher review is optional under the current owner runbook.
+The owner approved unchanged D5 live execution. Reconciliation confirms no D5 native dispatch or model call. The expired allocation has been released; current central dispatch and runtime admission are missing. The separate direct-dispatch exception remains unresolved. Researcher review is optional. [Current handoff](RUN-HANDOFF.md), [not-started closeout](reviews/D5-not-started-post.md), [D3 scientific assessment](reviews/D3-quality-review.md).
 
 | Gate | Current state |
 |---|---|
 | G0 | Diagnostic only; external-influence claim remains unqualified. |
 | G1 | Prospective ITERATION-05.md written before implementation. |
 | G2 | Pass: 59 scenario tests; published-source scripted rehearsal 24/24 valid, 48 scripted calls, zero model calls. See RUN-D5.md and reviews/D5-readiness.json. |
-| G3 | Intentionally not admitted: no current host claim or runtime receipt. Refresh source/public plan, remaining existing quota and secure fleet admission immediately before a requested run. |
+| G3 | Blocked: central request not taken up; previous allocation/handoff expired. Coordinate authorized dispatch before fresh allocation/admission; do not infer the direct-dispatch exception. |
 | G4 | D3 failed; D4 unrun; D5 does not automatically qualify S1. |
-| G5 | Preparation closeout only; no new native outcomes. |
+| G5 | Not-started request closeout and eleven-dimension assessment complete. D3 scientific review complete; no native D5 result. |
 
-Keep the original USD8 subledger and cumulative reservations. D5’s conservative envelope is USD4.669440; last known remainder USD4.821680 is historical, not live authorization evidence. Next action after preparation: fresh operational admission for the published D5 packet when launch is requested. Do not rerun old cohorts or add a review bottleneck.
+Keep the original USD8 subledger and cumulative reservations. D5’s conservative envelope is USD4.669440; last known remainder USD4.821680 is historical, not live authorization evidence. Next action: coordinate an actual authorized central dispatch window, then fresh admission for the unchanged approved D5 packet. Do not rerun old cohorts or add a review bottleneck.
 
 ## Historical setup records
 

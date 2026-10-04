@@ -1,0 +1,159 @@
+{
+  "analysis_type": "retrospective_saved_data",
+  "model_calls": 0,
+  "independent_development_clusters": 6,
+  "native_D3_calls": 30,
+  "native_D3_valid_decisions": 18,
+  "confusion": [
+    {
+      "source": "FAIL",
+      "model": "FAIL",
+      "count": 3
+    },
+    {
+      "source": "PASS",
+      "model": "FAIL",
+      "count": 13
+    },
+    {
+      "source": "PASS",
+      "model": "PASS",
+      "count": 67
+    },
+    {
+      "source": "UNKNOWN",
+      "model": "FAIL",
+      "count": 1
+    },
+    {
+      "source": "UNKNOWN",
+      "model": "UNKNOWN",
+      "count": 6
+    }
+  ],
+  "errors_by_requirement": {
+    "deployment_scope": 1,
+    "rollout_deadline": 2,
+    "service_coverage": 6,
+    "software_budget": 5
+  },
+  "reviewer_acceptable": 3,
+  "chair_acceptable": 4,
+  "conversions": {
+    "changed_to_correct_action": 1,
+    "unchanged": 3,
+    "changed_to_incorrect_action": 2
+  },
+  "unnecessary_deferrals": 2,
+  "narrative_authorization_acceptable": null,
+  "narrative_authorization_reason": "not applied; legacy zero is not an observed failure",
+  "typed_extraction_accuracy": null,
+  "typed_extraction_reason": "not instrumented in D3",
+  "causal_peer_or_gate_effect": "not identified by these provisional-to-final transitions",
+  "cases": [
+    {
+      "case_id": "regional-no-approval",
+      "reviewer_provisional_choice": "Birch",
+      "reviewer_choice_acceptable": false,
+      "standard_chair_choice": "DEFER",
+      "consistency_chair_choice": "DEFER",
+      "chair_acceptable": true,
+      "source_acceptable": [
+        "DEFER"
+      ],
+      "correct_statuses": 13,
+      "status_denominator": 15,
+      "conversion": "changed_to_correct_action",
+      "unnecessary_deferral": false
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "reviewer_provisional_choice": "DEFER",
+      "reviewer_choice_acceptable": true,
+      "standard_chair_choice": "DEFER",
+      "consistency_chair_choice": "DEFER",
+      "chair_acceptable": true,
+      "source_acceptable": [
+        "DEFER"
+      ],
+      "correct_statuses": 14,
+      "status_denominator": 15,
+      "conversion": "unchanged",
+      "unnecessary_deferral": false
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "reviewer_provisional_choice": "Cobalt",
+      "reviewer_choice_acceptable": false,
+      "standard_chair_choice": "DEFER",
+      "consistency_chair_choice": "DEFER",
+      "chair_acceptable": false,
+      "source_acceptable": [
+        "Aster"
+      ],
+      "correct_statuses": 12,
+      "status_denominator": 15,
+      "conversion": "changed_to_incorrect_action",
+      "unnecessary_deferral": true
+    },
+    {
+      "case_id": "export-approved-option",
+      "reviewer_provisional_choice": "Aster",
+      "reviewer_choice_acceptable": false,
+      "standard_chair_choice": "DEFER",
+      "consistency_chair_choice": "DEFER",
+      "chair_acceptable": false,
+      "source_acceptable": [
+        "Birch"
+      ],
+      "correct_statuses": 13,
+      "status_denominator": 15,
+      "conversion": "changed_to_incorrect_action",
+      "unnecessary_deferral": true
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "reviewer_provisional_choice": "Cobalt",
+      "reviewer_choice_acceptable": true,
+      "standard_chair_choice": "Cobalt",
+      "consistency_chair_choice": "Cobalt",
+      "chair_acceptable": true,
+      "source_acceptable": [
+        "Cobalt"
+      ],
+      "correct_statuses": 11,
+      "status_denominator": 15,
+      "conversion": "unchanged",
+      "unnecessary_deferral": false
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "reviewer_provisional_choice": "Aster",
+      "reviewer_choice_acceptable": true,
+      "standard_chair_choice": "Aster",
+      "consistency_chair_choice": "Aster",
+      "chair_acceptable": true,
+      "source_acceptable": [
+        "Aster"
+      ],
+      "correct_statuses": 13,
+      "status_denominator": 15,
+      "conversion": "unchanged",
+      "unnecessary_deferral": false
+    }
+  ],
+  "evidence": [
+    {
+      "path": "reviews/native-D3-01-audit.json",
+      "sha256": "a9189bb76c611cc29e42254a8909a3f3f1eda066fb227ad93c9094adcff97fd4"
+    },
+    {
+      "path": "reviews/native-D3-01-reconciliation.json",
+      "sha256": "6afe925c6ded228c7fb4b0e4c5a11f5ae205d46e14ffcb4f4eaac87e4c568cd8"
+    },
+    {
+      "path": "reviews/native-D3-01-summary.json",
+      "sha256": "61300acb5c3864cac9d5737015f217735b876778f814b97624717436dc4fa9c1"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "attempt": "rd5-q5-a1-dispatch",
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_at": "2026-10-04T15:28:09.469204+00:00",
+  "parent_handoff_sha256": "fb34465b3d839827ac5dc3313c5afefaa83a8d2449b60f8e57cbdf85f6dbd364",
+  "verdict": "blocked",
+  "outcome_interpretation": "Operational non-dispatch, not a failed qualification or native treatment result. Ready scientific scope remains approved; central acknowledgement, fresh allocation and receipts are still required.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The approved reserve-versus-memory question and outcome-dependent decision remain explicit; this activation supplies no outcome.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/ACTIVATION-02.md",
+          "sha256": "1dab9264514e4446df20ceb070718cf6dbb34a11cea82a85b28ada2f7e783228"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "The unchanged finite mechanism design states six authored roots, one H5 domain, known timing and the urgent-early falsifier. This passes scoped design disclosure, not external validity.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
+          "sha256": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/ACTIVATION-02.md",
+          "sha256": "1dab9264514e4446df20ceb070718cf6dbb34a11cea82a85b28ada2f7e783228"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "B0/B1/B2 and raw/card comparisons are specified, but no native manipulation or contrast occurred.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
+          "sha256": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf"
+        }
+      ],
+      "next_action": "Execute unchanged Q5 and conditional H5 through admitted central dispatch.",
+      "acceptance_check": "Native controls must reconcile to the frozen manifest; report urgent harm separately."
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "No native response exists; 61 offline checks do not qualify Jev.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
+          "sha256": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/validation.json",
+          "sha256": "506cedf0a490edc39a514f1891caa896e88c8894383182de7a7684c6d9869526"
+        }
+      ],
+      "next_action": "Complete the already approved Q5 gate before H5.",
+      "acceptance_check": "12/12 card choices correct and all24 requests valid/complete, with source-bound bundle audit."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Every frozen Q5 slot remains unstarted. Qualification is null, not false, and zero wrong responses is not scored as accuracy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
+          "sha256": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/manifest.json",
+          "sha256": "083d10f244fd0d8fd037e439006541f36a4883320e4d669f53aca0861a42690b"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Observed native sample is zero. Q5 has12 authored paired packets; H5 has6 authored roots and72 dependent decisions; feasibility scope claims no population precision.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/ACTIVATION-02.md",
+          "sha256": "1dab9264514e4446df20ceb070718cf6dbb34a11cea82a85b28ada2f7e783228"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
+          "sha256": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "not_applicable",
+      "finding": "No experimental worker or inference started, so no effective model context was delivered. Frozen actor-context definitions remain unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/remote-reconciliation.json",
+          "sha256": "620c883fc825d68c9e42113726b3f28ec5d08a2cb63bfda538924c1057d9946e"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/ledger-reconciliation.json",
+          "sha256": "9c3fd935e5560232b83d8bbb883780c5766e42b2cefffd4e5bada941a7e49329"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Canonical ledger, stopped transport and remote absence checks agree on zero RD5 dispatches. Historical calls and the A1 activation fence remain intact.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/ledger-reconciliation.json",
+          "sha256": "9c3fd935e5560232b83d8bbb883780c5766e42b2cefffd4e5bada941a7e49329"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/transport-closeout.json",
+          "sha256": "21580b97777e45649566c0a622a25ca690c5b15b6631b53edded9dbad4a2bbee"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/remote-reconciliation.json",
+          "sha256": "620c883fc825d68c9e42113726b3f28ec5d08a2cb63bfda538924c1057d9946e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Unused allocation preceded central acknowledgement and its explicit release was delayed. Conservative cost windows are retained; historical invoices are unavailable.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/resources.json",
+          "sha256": "03b57ad14d826703146623c6b74b99fa4e4bf16c0455715141faa356f0b4f2ce"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A1-DISPATCH-POST.md",
+          "sha256": "9206b1b8c7bd872154c3ab486e86813fb139d59cd0ccb1cba003fb4a084b6598"
+        }
+      ],
+      "next_action": "Obtain central acknowledgement before new allocation, preserve the conservative envelope and reconcile any later invoice.",
+      "acceptance_check": "Fresh exclusive allocation and current price must fit original USD1 infrastructure cap; no idle claim or new allowance."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Both prepared packets match unchanged source; all61 scientific tests and5 activation tests pass. Renewal rejects prior ambiguous starts rather than clearing evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/validation.json",
+          "sha256": "506cedf0a490edc39a514f1891caa896e88c8894383182de7a7684c6d9869526"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/spec/preparation-manifest.json",
+          "sha256": "3b92cc752efd0a70a4c0d93a2b08192a59e9d18e2a400f6aaa9413d6bd7eef20"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/ACTIVATION-02.md",
+          "sha256": "1dab9264514e4446df20ceb070718cf6dbb34a11cea82a85b28ada2f7e783228"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "The inspected operational figure shows24 unstarted slots and zero native execution; it plots no accuracy or treatment effect. No native artifact upload/readback is claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/dispatch-closeout.png",
+          "sha256": "6d8bc14a4987e6c9f56a05a5252c739da26cef9bb98a77b8fa270f8c48cd023f"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/activation-a1/summary.json",
+          "sha256": "f5a7268d4aa94970b4470ab225a2ff3f805bf8d4e7d0d4534cc8afa1b1e222cf"
+        }
+      ]
+    }
+  ]
+}

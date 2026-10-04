@@ -1,0 +1,578 @@
+[
+  {
+    "seed": 1900,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1901,
+    "reliability": 0.8,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1902,
+    "reliability": 0.8,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1903,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1904,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1905,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1906,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1907,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1908,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1909,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1910,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1911,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": false,
+    "delta": 0.05,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1912,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1913,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1914,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1915,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1916,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": false,
+    "delta": 0.05,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1917,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1918,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": false,
+    "delta": 0.05,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1919,
+    "reliability": 0.8,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1920,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": false,
+    "delta": 0.05,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1921,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1922,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1923,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1924,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1925,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1926,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": false,
+    "delta": 0.05,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1927,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": false,
+    "delta": 0.05,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1928,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1929,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1930,
+    "reliability": 0.8,
+    "legacy": true,
+    "explicit": false,
+    "delta": 0.05,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1931,
+    "reliability": 0.8,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1900,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1901,
+    "reliability": 0.2,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1902,
+    "reliability": 0.2,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1903,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1904,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1905,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1906,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1907,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1908,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1909,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1910,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1911,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1912,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1913,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1914,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1915,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1916,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1917,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1918,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1919,
+    "reliability": 0.2,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1920,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1921,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1922,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1923,
+    "reliability": 0.2,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": true,
+    "label": "WATER"
+  },
+  {
+    "seed": 1924,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1925,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1926,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1927,
+    "reliability": 0.2,
+    "legacy": true,
+    "explicit": true,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1928,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "LAND"
+  },
+  {
+    "seed": 1929,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": false,
+    "label": "WATER"
+  },
+  {
+    "seed": 1930,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": true,
+    "delta": -0.55,
+    "report_first": true,
+    "label": "LAND"
+  },
+  {
+    "seed": 1931,
+    "reliability": 0.2,
+    "legacy": false,
+    "explicit": false,
+    "delta": 0.0,
+    "report_first": false,
+    "label": "WATER"
+  }
+]

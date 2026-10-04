@@ -36,7 +36,10 @@ class WorktreeDoneTest(unittest.TestCase):
             (reader / 'local.md').write_text('local')
             args = argparse.Namespace(entries=['library/published.md', 'local.md'], force=False,
                                       agent='test/worker', issue='1', skipped=None)
-            with patch.object(batches, 'ROOT', reader), patch.object(batches, 'gh') as gh:
+            claimed = {'state': 'OPEN', 'labels': [{'name': 'claimed'}], 'comments': [
+                {'body': 'claimed by `test/worker`', 'createdAt': '2026-10-04T12:00:00Z'}]}
+            with patch.object(batches, 'ROOT', reader), patch.object(batches, 'gh') as gh, \
+                 patch.object(batches, 'issue', return_value=claimed):
                 self.assertEqual(batches.cmd_done(args), 0)
                 self.assertEqual(gh.call_count, 3)
                 self.assertFalse((reader / 'library/published.md').exists())

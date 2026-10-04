@@ -26,8 +26,8 @@ CAND = ROOT / "candidates"
 MAP = CAND / "ISSUES.tsv"  # batch-id \t issue-number \t issue-url
 REPO = "dmarzzz/swarm-lab"
 STALE_MIN = 90  # touch every 30 min; three missed touches and the batch is up for grabs
-LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "web": "library/blogs/", "code": "library/code/", "paper": "library/papers/"}
-NEW_KIND = {"x": "thread", "blog": "blog", "web": "blog", "code": "code", "paper": "paper"}
+LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "web": "library/blogs/", "code": "library/code/", "paper": "library/papers/", "talk": "library/talks/"}
+NEW_KIND = {"x": "thread", "blog": "blog", "web": "blog", "code": "code", "paper": "paper", "talk": "talk"}
 
 
 def gh(*args, inp=None) -> str:
@@ -182,6 +182,33 @@ def is_stale(i: dict) -> bool:
     return (now_utc() - last_activity(i)) > dt.timedelta(minutes=STALE_MIN)
 
 
+def claim_holder(i: dict) -> str | None:
+    """Replay claim arbitration; only the current holder can end its claim."""
+    winner, last_reclaim = None, None
+    for c in sorted(i.get("comments", []), key=lambda c: c["createdAt"]):
+        body = c["body"]
+        at = dt.datetime.fromisoformat(c["createdAt"].replace("Z", "+00:00"))
+        if m := re.match(r"^(?:released by|done by) `([^`]+)`", body):
+            if m.group(1) == winner:
+                winner, last_reclaim = None, None
+        elif m := re.match(r"^reclaimed.*? by `([^`]+)`", body):
+            if last_reclaim is None or (at - last_reclaim).total_seconds() > 120:
+                winner = m.group(1)
+            last_reclaim = at
+        elif m := re.match(r"^claimed by `([^`]+)`", body):
+            if winner is None:
+                winner = m.group(1)
+    return winner
+
+
+def require_holder(a):
+    i = issue(a.issue)
+    holder = claim_holder(i)
+    if (i["state"] != "OPEN" or "claimed" not in {l["name"] for l in i["labels"]}
+            or holder != a.agent):
+        sys.exit(f"#{a.issue}: {a.agent} is not the active holder ({holder or 'none'}); claim it first")
+
+
 def cmd_claim(a):
     i = issue(a.issue)
     if i["state"] != "OPEN":
@@ -198,19 +225,7 @@ def cmd_claim(a):
     # reclaim takes over a stale holder, and reclaims within 2 minutes of each other are a race the first wins.
     import time
     time.sleep(3)
-    cs = sorted(issue(a.issue).get("comments", []), key=lambda c: c["createdAt"])
-    winner, last_reclaim = None, None
-    for c in cs:
-        body, at = c["body"], dt.datetime.fromisoformat(c["createdAt"].replace("Z", "+00:00"))
-        if re.match(r"^(released by|done by)", body):
-            winner, last_reclaim = None, None
-        elif m := re.match(r"^reclaimed.*? by `([^`]+)`", body):
-            if last_reclaim is None or (at - last_reclaim).total_seconds() > 120:
-                winner = m.group(1)
-            last_reclaim = at
-        elif m := re.match(r"^claimed by `([^`]+)`", body):
-            if winner is None:
-                winner = m.group(1)
+    winner = claim_holder(issue(a.issue))
     if winner and winner != a.agent:
         gh("issue", "comment", a.issue, "-R", REPO, "--body", f"`{a.agent}` backing off: `{winner}` claimed first")
         sys.exit(f"#{a.issue}: {winner} claimed it first; pick another batch")
@@ -219,11 +234,13 @@ def cmd_claim(a):
 
 
 def cmd_touch(a):
+    require_holder(a)
     gh("issue", "comment", a.issue, "-R", REPO, "--body", f"still on it, `{a.agent}` {now_utc():%H:%M}Z" + (f": {a.note}" if a.note else ""))
     return 0
 
 
 def cmd_done(a):
+    require_holder(a)
     # Writers may have committed their entries in a different worktree. Refresh
     # main once, then accept either this checkout or the published git object.
     fetched = subprocess.run(["git", "fetch", "origin", "main"], cwd=ROOT,
@@ -243,6 +260,8 @@ def cmd_done(a):
     body = [f"done by `{a.agent}` at {now_utc():%Y-%m-%d %H:%M}Z", "", "Entries:"] + [f"- `{e}`" for e in a.entries]
     if a.skipped:
         body += ["", f"Skipped: {a.skipped}"]
+    # Fetch/validation may take time; check again immediately before mutation.
+    require_holder(a)
     gh("issue", "comment", a.issue, "-R", REPO, "--body", "\n".join(body))
     gh("issue", "edit", a.issue, "-R", REPO, "--remove-label", "claimed")
     gh("issue", "close", a.issue, "-R", REPO, "--reason", "completed")
@@ -251,6 +270,7 @@ def cmd_done(a):
 
 
 def cmd_release(a):
+    require_holder(a)
     gh("issue", "comment", a.issue, "-R", REPO, "--body", f"released by `{a.agent}`: {a.note}")
     gh("issue", "edit", a.issue, "-R", REPO, "--remove-label", "claimed", "--remove-assignee", "@me")
     print(f"#{a.issue} released")

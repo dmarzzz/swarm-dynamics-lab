@@ -2,7 +2,7 @@
 
 Required workflow: [experiment setup](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md), [machine allocation](../../experiment-machine-workflow.md).
 
-Current state: **offline preparation; owner update approval pending**. This is not an experimental attempt or failed run. There is no claimed machine, loaded model, copied credential, provider probe or paid call. C3 remains the latest completed run. Independent-researcher review is waived, not passed.
+Current state: **approved; native integration complete, current deployment admission pending**. This is not an experimental attempt or failed run. There is no claimed machine, loaded model, copied credential, provider probe or paid call. C3 remains the latest completed run. Independent-researcher review is waived, not passed.
 
 Completed: C3 PI-style critique; prospective question, primary contrasts, 12-family sample and fixed stopping design; claim-visible Qwen request; option-order-only variant; truth-blind routing; matched-referral and analytic-random controls; assigned/missing scoring; qualification thresholds; admission contract. Twelve offline tests pass. Only explicitly labeled DEV fixtures and handcrafted assertions were used; S0/S1 assignments have not been materialized or model-tested. See `offline-validation.json` for source hashes.
 
@@ -20,3 +20,8 @@ After that decision:
 6. S1 requires qualified identical scientific source, untouched assignments, current public plan/claim and projected spend/runtime within original and incremental caps. A missing condition means no dispatch.
 7. Audit raw records against routing decisions and independent arithmetic reference; publish all family outcomes, cost accounting and measured visuals. Run `scripts/experiment.py finalize healing-helping-hands --attempt c4-s1 --results <repo-relative-saved-directory> --outcome <actual-outcome>` and complete the scientific rubric separately.
 8. Verify archive and original ledger reconciliation, stop only this study's workers, release claim through agentops and attach its PR. Preserve failures. A valid null can terminate this line; a material successor requires its own concrete plan decision.
+
+
+## Current integration, superseding historical pending status
+
+Owner direction now explicitly covers this bounded C4 scope and call-envelope increase; see owner-approval.json. Worker, worker-local relay, supervisor, original-plus-incremental transactional reservation, audit and measured renderer are implemented. Twenty offline tests pass, including original/incremental cap enforcement, duplicate dispatch, Qwen no-retry and Jev GET-only recovery. No future assignments or model responses were used in those tests. Native admission, deployed source/runtime checks, public registration and qualification remain mandatory before S1. DESIGN-TRANSFER advice is accepted without changing thresholds or adding a capacity sweep.

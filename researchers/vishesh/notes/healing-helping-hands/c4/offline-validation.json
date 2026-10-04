@@ -1,19 +1,27 @@
 {
+  "checked_at": "2026-10-04T15:23:10.461187+00:00",
   "status": "offline_pass",
-  "tests": 12,
+  "tests": 20,
   "model_calls": 0,
   "experimental_assignments_materialized": false,
-  "native_launch_ready": false,
-  "owner_update_approval": "pending",
-  "plan_sha256": "2482e2d6fc4ddb9016f2bc2f3a80ff1d503adc36208788288b92e3fb5fb8c9dd",
-  "checked_at": "2026-10-04T08:50:15.306820+00:00",
+  "plan_sha256": "fb20b2c67f88e41d8c645986074c28e4fbee4cea848e99c392a2890ef4e4e09f",
+  "owner_approval": "recorded",
+  "native_launch_ready": "pending current account/claim/runtime/public receipts",
+  "original_ledger": {
+    "entries": 2179,
+    "completed_usd": 0.040890822,
+    "uncertain_usd": 0.001344
+  },
   "source_hashes": {
     "scenarios.py": "788366224377a75a5a94f055a1aa44e947ef0c8cab77b11c17b7839db808f341",
+    "worker.py": "3d865eafb3dbb01b97c9f19289590c65d15f37d52e10e35768c7edab9b2e7448",
+    "audit.py": "53c18ca161bc1d2a6a3ce8cff34d87aa3642ee7ffb0e4b2397f386a18d8c867f",
+    "render.py": "c03f9b31913b47f8917447d164fa7f67e3326a05f83970cd10c6dfda957c78e1",
+    "runtime.py": "162ad1ce3c2d4330e40c2fedf6388e52ca8584229f91169450c848b76f1e3044",
     "test_contract.py": "aa46f7bd8323f5bbee42f47902db2275466d7d6680f462cc3b1a893f0605536e",
-    "contract.py": "49e0d2166b84b4d3af1d912c4621f4f97328b066c26f4bb2c04d69f7da236c23"
-  },
-  "limitations": [
-    "Native relay/worker budget and admission integration remains unimplemented; do not launch C3 with C4 receipts.",
-    "Synthetic DEV fixtures only; no new experimental evidence."
-  ]
+    "relay.py": "fdf3231bcde8356f789c0b9dd9c310aad0db0fe8e359aa14cd48b547e13614de",
+    "contract.py": "6e614cf6759797f82405959ac7e9ffb156042267e29c6e9843adeb39a5a508fd",
+    "supervise.py": "0128591caaa8175499e0acef72719ae1228da75976093969b09bb3caedc9e56b",
+    "test_native.py": "39b78a06345920089a3109e3795bfbab8de4a05d375014defb47e8e34c002e6a"
+  }
 }

@@ -1,0 +1,8 @@
+scripts/batches.py:101:14: f-string is missing placeholders
+scripts/batches.py:132:15: f-string is missing placeholders
+scripts/test_experiment_operations.py:9:1: 'sqlite3' imported but unused
+scripts/test_experiment_operations.py:229:9: local variable 'packet' is assigned to but never used
+scripts/collect.py:30:1: 'hashlib' imported but unused
+scripts/test_experiment_closeout.py:5:1: 'pathlib.Path' imported but unused
+scripts/test_experiment_theseus.py:3:1: 'importlib.util' imported but unused
+scripts/experiment_evidence.py:160:14: f-string is missing placeholders

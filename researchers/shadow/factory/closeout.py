@@ -33,7 +33,7 @@ def update_evidence():
             status_at_assessment=s['status']))
     ids={r['id'] for r in own}
     reg['studies']=[r for r in reg['studies'] if r['id'] not in ids]+own
-    f.dump(path,reg)
+    path.write_text(json.dumps(reg,indent=2)+'\n')
     subprocess.run([sys.executable,'scripts/experiment_evidence.py','--write'],cwd=f.REPO,check=True)
     print('evidence rows:',len(own))
 

@@ -1,0 +1,18 @@
+{
+  "assessed_at": "2026-10-04T15:27:23.070989+00:00",
+  "cycle": "saved_data_review_pc6_parked",
+  "native_attempt": null,
+  "native_calls": 0,
+  "new_spend_usd": 0,
+  "new_machine": false,
+  "new_claim": false,
+  "credential_transfer": false,
+  "known_api_usd": 0.845052138,
+  "conservative_exposure_usd": 0.857148138,
+  "historical_unknown_calls": 9,
+  "predecessor_sha256": "2b1eac517c9cb8aabc13fd5f3bdf5e5ac4710cb56511b87dbe12f12c94e04909",
+  "predecessor_open_calls": 0,
+  "public_registration": "not performed; no native run",
+  "scientific_decision": "complete_valid_result",
+  "successor": "parked_no_decision_value"
+}

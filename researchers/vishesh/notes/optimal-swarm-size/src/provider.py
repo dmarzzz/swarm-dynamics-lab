@@ -87,6 +87,9 @@ class Provider:
         self.journal({'kind':'reservation','call':call_id,'maximum_microdollars':bound,
                       'response_contract':cfg['response_contract'],
                       'schema_sha256':hashlib.sha256(json.dumps(payload['output_config']['format']['schema'],sort_keys=True).encode()).hexdigest() if 'output_config' in payload else None})
+        self.journal({'kind':'request_context','actor':actor,'phase':phase,'item':item,
+                      'sha256':hashlib.sha256(json.dumps(payload).encode()).hexdigest(),
+                      'bytes':len(json.dumps(payload).encode())})
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('deadline_before_dispatch')
         ctx=multiprocessing.get_context('spawn');parent,child=ctx.Pipe(duplex=False)

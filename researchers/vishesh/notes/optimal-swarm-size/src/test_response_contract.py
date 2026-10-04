@@ -114,3 +114,7 @@ class Contract(unittest.TestCase):
             self.assertEqual(payload['output_config']['format']['schema'],schema_for(public,'plan'))
             self.assertEqual(len(events[0]['schema_sha256']),64)
             self.assertEqual(events[0]['response_contract'],VERSION)
+            import hashlib
+            context_event=next(e for e in events if e['kind']=='request_context')
+            self.assertEqual(context_event['sha256'],hashlib.sha256(json.dumps(payload).encode()).hexdigest())
+            self.assertEqual(context_event['bytes'],len(json.dumps(payload).encode()))

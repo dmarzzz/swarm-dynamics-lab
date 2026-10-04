@@ -28,20 +28,20 @@ We have not established that source-aware instructions improve a model, that dis
 
 **Explore the evidence:** [all 16 saved cases](analysis/iteration-3/cases.html) (download/open the HTML for interaction), [auditable comparison data](analysis/iteration-3/comparisons.json), [results and plan evaluation](RESULTS.md). The explorer shows all nine reports, their three visible roots, both voting rules and both actual model responses; it invents no swarm dialogue.
 
-## What the next iteration changes
+## Current decision: use the rule and close this cycle
 
-The Q1 failure cannot tell us whether the model followed copied reports or misleading prior choices: both pointed to the same wrong answer. Its self-review wording was also ambiguous. The new [D1 plan](d1/PLAN.md) separates those factors and makes the reports primary in every instruction.
+The [saved-data decision audit](analysis/pi-cycle/RESULTS.md) confirms the model's 0/8 result but cannot distinguish copied reports from misleading prior choices: both majorities point to the same wrong answer in all eight graded cases. That mechanism remains unresolved.
 
-First, eight clean three-source questions check basic capability. If that passes, 160 calls compare raw versus deduplicated reports with no prior choice, correct/wrong self choices, and correct/wrong peer choices. The practical question is whether normalizing sources in code improves model decisions, and whether prior choices undermine that improvement. These are fixed synthetic patterns with two repetitions, not independent real-world trials or an interacting swarm.
+For this grammar, source deduplication followed by exact arithmetic already determines the answer. Nine new tests and 5,488 exhaustive software configurations verify the rule's declared scope and refusal boundaries; these are not additional model trials. [Inspect every graded case](analysis/pi-cycle/cases.html).
 
-**Status: offline preparation complete; material design decision pending; no new machine or model calls.** [The review and runnable handoff](d1/RUNBOOK.md) explain the evidence, gates and commands. Researcher review remains waived. The maximum 168 new calls reserve $0.225792 within the existing cumulative $1 API budget; no replenishment. Historical Q1/M1/C1 plans remain available but are not the next launch path.
+**The prepared D1 diagnostic is parked, with zero new calls.** Whether deduplication helps the model, priors harm it, or qualification fails, the practical choice remains exact source arithmetic. D1 would add explanation without changing that decision. No M1/C1 or replacement qualification is launched. Unknown/false provenance, semantic matching and real-world generalization remain outside the evidence; native swarm-efficacy confidence remains 1/4.
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
 Assessed 2026-10-04 by vishesh/codex-quorum-mirrors; source `be37f8b4` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy.
+- **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy. Saved-data audit confirms report/prior-majority confounding in all eight graded cases. Exact-rule software verification is not native evidence; D1 is parked because its outcomes do not change the current engineering decision.
 - **sample_size_summary:** S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.
 <!-- experiment-evidence:end -->
 

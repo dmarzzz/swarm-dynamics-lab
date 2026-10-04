@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: idle
-task: healing-qwen-jev
-doing: "C4 PI review and policy tests complete; concrete plan approval pending before allocation; no new inference"
-updated: 2026-10-04T08:50Z
+state: working
+task: healing-c4-selective
+doing: "C4 authorized integration complete; validating native admission for one bounded cycle"
+updated: 2026-10-04T15:23Z
 ---
 
 ## Notes

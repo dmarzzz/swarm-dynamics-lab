@@ -1,23 +1,21 @@
-# Right Dissenter RD5 launch status
+# Right Dissenter RD5 current execution status
 
-The owner approved the frozen Q5 qualification and conditional H5 pilot on 2026 October 04. The original cumulative USD 2 cap and ledger remain unchanged. This is execution of the prepared design, not a new scientific revision.
+**Blocked before native execution.** Reconciled 2026-10-04 at 15:24 UTC:24 frozen Q5 requests,0 started,0 valid responses,24 unstarted. Zero RD5 provider calls and zero model tokens/charges. H5 is not admitted. Qualification is unknown, not failed. [Dispatch post-mortem](reviews/Q5-A1-DISPATCH-POST.md), [structured review](reviews/Q5-A1-DISPATCH-QUALITY.json), [status figure](results/activation-a1/dispatch-closeout.png).
 
-The dedicated existing Dmarz fleet machine is exclusively allocated for two hours. Account matching, idle workload, exact source and 61 deployed offline tests passed. The public hub now displays the immutable amendment, registered TLDR and protocol. No model result is implied by these checks.
+The first local relay expired at 09:14 UTC. A trusted read-only check at 15:19 found no RD5 worker, dispatch marker or result directory. Its expired allocation was explicitly released at 15:20. The earlier ready status was historical and must not be used for admission. No new host or relay is held.
 
-Scientific source is `27d63232559a2b6ccd9e317b1af5786b32c383bc`. The frozen instrument SHA256 is `bbc48f9ca679397895b2c3a0def9aa9e9a969e923f31ab97341d383e261fffa4`; updated proposal SHA256 is `90f6fb2d4a096d7144ff7e31f0a648ec3487025c76058cbec0ea6d46859e2b68`. [Preparation hashes](spec/preparation-manifest.json) and [prospective amendment](AMENDMENT-01.md) retain the full design.
+## Approved scope and next action
 
-## Dispatch and accounting
+Owner approval already covers Q5 and conditional H5 under the original cumulative cap. The direct-from-laptop exception remains unresolved; this review does not invent it or repeat a generic approval question. The authorized central queue still has no acknowledgement. **Obtain a confirmed central launch slot, then fresh dedicated allocation, current receipts and actual remote health; activate Q5-A2 once.** The private request has been corrected to block stale dispatch.
 
-The refreshed fleet workflow requires central dispatch from orbital-one. A concrete private run request and bounded worker wrapper are published. The local relay consumes the protected credential and original ledger; the worker receives only frozen requests over an encrypted loopback forward. Actual packet-bound health has passed through that forward. The wrapper preserves the scientific source, refusal of duplicate starts, fresh admission and a 30-minute deadline. No provider credential or duplicate ledger is deployed.
+[Operational renewal](ACTIVATION-02.md) was published before the external-wrapper change. Five new activation/fault checks pass; all 61 scientific offline checks pass and both prepared packets validate unchanged. Old/new activations share a stage lock; prior markers/results block a renamed dispatch. The original A1 relay fence and all historical provider calls stay intact. No native response is retried or resampled.
 
-At dispatch preparation there are zero RD5 calls. Historical accounting is 428 calls, USD 0.016620450 settled plus USD 0.004032 unresolved exposure. Q5 allows 24 new calls; H5 allows 36 only after Q5 passes. The lifetime hard stop is 488; twelve calls are unallocated. The two-hour allocation reserves at most USD 0.14286 at the verified hourly rate. Historical estimated compute USD 0.011643 is retained; previous borrowed-fleet invoices remain unavailable.
+Scientific source remains `27d63232559a2b6ccd9e317b1af5786b32c383bc`; the original [immutable amendment](https://github.com/dmarzzz/swarm-lab/blob/10e6b4d775c8409c1a9817ad633f0f6f84ae3c40/researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md) remains registered. Q5 allows 24 calls and needs 12/12 correct cards plus 24/24 valid complete responses. H5 allows 36 only after the real Q5 bundle audit and post-mortem. It compares 6 authored roots across 3 policies and 4 epochs:72 dependent decisions, with urgent delay reported separately.
 
-## Stage decisions
+## Cumulative accounting
 
-Q5 must produce 24 valid native responses and all twelve card answers must be correct. Raw answers remain diagnostic. The result audit recomputes the gate from saved requests, responses and assignments; a summary alone is insufficient. Failed qualification ends this sequence without H5 or automatic repair calls.
+428 historical provider calls remain: USD 0.016620450 settled plus USD 0.004032 unresolved = USD 0.020652450 committed. Maximum 60 RD5 calls; lifetime stop 488; 12 calls unallocated. Original USD 2 authority remains USD 1 API plus USD 1 infrastructure.
 
-Only after a passing Q5 audit, completed post-mortem and new stage-specific admission may H5 start. Its primary contrast is reserve versus memory, with six paired authored roots and 24 dependent decisions per arm. Report urgent delay alongside late recovery. An adverse result may complete the study.
+The conservative infrastructure estimate is USD 0.690783567, including historical wrong-account compute and the unused RD5 allocation through explicit release. Prior invoices remain unavailable; this is an estimate, not a settled bill. A renewed 90-minute allocation at the last verified rate would bring that envelope to USD 0.797928567, subject to fresh verification. [Full resource assumptions](results/activation-a1/resources.json).
 
-Current status at 2026-10-04 08:45 UTC: central launch requested, relay verified, worker not yet started. Private operational receipts retain precise timestamps, claim, source, account and budget evidence. Next action is one centrally dispatched Q5 worker, followed by complete reconciliation, artifact readback and scientific assessment.
-
-At 09:00 UTC the central request remains unacknowledged. An explicit owner exception to the fleet dispatch rule has been requested; no exception is assumed from silence. The current relay lease expires around 09:14 UTC, and stale admission must not be reused. No worker or paid call has started.
+The offline finalize hook and eleven-dimension scientific assessment close the expired activation. No native post-mortem or model-effect claim is fabricated. One admitted native cycle remains dependent on the exact external launch blocker above.

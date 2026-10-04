@@ -1,0 +1,56 @@
+{
+  "design": "PC-6",
+  "stage": "Q0",
+  "attempt": "q0-a1",
+  "source_commit": null,
+  "instrument": null,
+  "assignment_sha256": null,
+  "research_scope_admitted": false,
+  "authorization": "phantom-coast-usd5-20261004",
+  "prior_spend_nano": 857148138,
+  "api_cap_nano": 4000000000,
+  "max_calls": 48,
+  "checked_utc": null,
+  "claim_until": null,
+  "deadline": null,
+  "host": null,
+  "model": "typesafe/jev-1.13-20260917",
+  "ledger_path": null,
+  "ledger_sha256": null,
+  "predecessor_sha256": null,
+  "plan_url": null,
+  "plan_sha256": null,
+  "run_tldr": null,
+  "qualification_directory": null,
+  "qualification_hashes": null,
+  "research_scope": {
+    "path": null,
+    "sha256": null
+  },
+  "pre_assessment": {
+    "path": null,
+    "sha256": null
+  },
+  "page_verification": {
+    "path": null,
+    "sha256": null
+  },
+  "allocation": {
+    "path": null,
+    "sha256": null
+  },
+  "budget_lineage": {
+    "path": null,
+    "sha256": null
+  },
+  "runtime": {
+    "path": null,
+    "sha256": null
+  },
+  "predecessor_fenced": false,
+  "predecessor_reconciled": false,
+  "single_ledger_authority": false,
+  "exclusive_allocation": false,
+  "approved_mars_fleet": false,
+  "rendered_page_verified": false
+}

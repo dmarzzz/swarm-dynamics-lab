@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: idle
+state: blocked
 task: build-swarm-size-qualification
-doing: Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued
-updated: 2026-10-04T09:02Z
+doing: Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved
+updated: 2026-10-04T15:25Z
 ---
 
 ## Notes

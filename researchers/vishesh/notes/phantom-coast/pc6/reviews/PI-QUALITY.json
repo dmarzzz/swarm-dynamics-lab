@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "attempt": "saved-data-review-no-new-attempt",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T15:27:23.070989+00:00",
+  "verdict": "complete_valid_result",
+  "independent_review": false,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "gap",
+      "finding": "PC6 pass/fail leaves the same practical decision; screen parked.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ],
+      "next_action": "Keep PC6 parked; specify a decision-relevant application before proposing native work.",
+      "acceptance_check": "Prospective outcome-dependent decision and scenario-relevant semantic controls; do not reopen based on remaining budget."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Two repeated arithmetic tasks do not establish useful real-world planning.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ],
+      "next_action": "Keep PC6 parked; specify a decision-relevant application before proposing native work.",
+      "acceptance_check": "Prospective outcome-dependent decision and scenario-relevant semantic controls; do not reopen based on remaining budget."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Strong simple-controller counterfactuals added without claiming new model evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "PC5 explicit remains suboptimal19/64; parse success is insufficient.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ],
+      "next_action": "Keep PC6 parked; specify a decision-relevant application before proposing native work.",
+      "acceptance_check": "Prospective outcome-dependent decision and scenario-relevant semantic controls; do not reopen based on remaining budget."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Saved selected-cell regret and paired changes recomputed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "32 PC5 roots/128 choices; separate12 Qwen roots/24 choices; zeroPC6.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Original saved request reconstruction audited; no new model input.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Full prior trace audit and portable hash matching passed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Zero new dispatch/spend/allocation; predecessor read-only closed ledger verified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Saved rows, code, source hashes and ten checks retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Rendered cohort-separated plot inspected against numeric outputs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/prior-analysis.json",
+          "sha256": "ee476e540969df817abebe799d7d764413cbd83d83b05e8d243b6eee9124dc29"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/PC5-REAUDIT.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/CLOSEOUT.json",
+          "sha256": "624c82b3766c2c5da54d3cf1d65cbda2344c0ca43752c98a802fa824bcd3b8df"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/results/VISUAL-QA.json",
+          "sha256": "55c5b78243457b1970d22cfdfa79ed9d7b64fa77ba76bd050f7b72f032e9f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+          "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e"
+        }
+      ]
+    }
+  ]
+}

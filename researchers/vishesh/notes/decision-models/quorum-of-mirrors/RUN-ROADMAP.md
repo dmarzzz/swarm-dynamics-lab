@@ -1,3 +1,5 @@
+> Current decision: **D1 parked; no further native run in this cycle.** See [decision audit](analysis/pi-cycle/RESULTS.md). Read earlier preparation/approval text below as historical.
+
 > Current update (2026-10-04): Q1-02 completed with 16 valid responses and 0/8 graded correct. The proposed successor is [D1](d1/PLAN.md), with [completed assessment and runbook](d1/RUNBOOK.md). Offline preparation is complete; the current runbook requires the concrete material-design decision before allocation or calls. Researcher review remains waived. The older Q1/M1/C1 progression below is historical and does not admit another launch.
 
 # Quorum progression: earn the next run
