@@ -1,0 +1,15 @@
+{
+  "native_calls": 0,
+  "scope": "offline before native collection",
+  "tests": {
+    "panel": 12,
+    "shared_receipts": 14
+  },
+  "source_hashes": {
+    "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/src/design.py": "6c338d8310b4e92a0f032ab58f047abfa810da250f13674da34e2913db32104f",
+    "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/src/prepare.py": "b501064637e9a7b303951eaa91c8b410ac56815049d73d6decc72e5f8ac12c00",
+    "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/src/relay.py": "2e06db32035b72d47140dfb4b5c860006169ea0f32cf8eaf29a3af2dbf7d5730",
+    "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/src/run.py": "2150e5980e559e4f2fe7448cf00d68eb117b79b6130260f380bc5ea3c970a839",
+    "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/src/test_panel.py": "18bafb7ef1a7bb4304592f756f3bdc5f7256054b99f17442b3b4ab77afb5d1e9"
+  }
+}
