@@ -3,7 +3,7 @@ id: integrate-top10-portfolio-feedback
 type: task
 title: Integrate top-ten portfolio feedback into owned experimental plans
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T20:05Z
-updated: 2026-10-04T20:05Z
+updated: 2026-10-04T20:13Z
+outputs:
+- researchers/vishesh/notes/top10-integration-2026-10-04/README.md
+- tooling/agent-experiments/SCALE-AND-CLAIMS.md
 ---
 
 ## Goal
@@ -24,3 +27,7 @@ Integrate the owner-supplied top-ten portfolio review into owned-study design co
 - Every full-page and below-line source entry has a disposition.
 - Owned-study plans link concrete scale/evaluation/demo improvements and current evidence.
 - Shared guidance distinguishes presentation priority from scientific confidence; checks pass and updates are pushed.
+
+## Coverage note
+
+Published09ca4d73: all24 source entries mapped (14full,10short),13 existing study proposal additions plus Telephone, and shared scale/claim guidance. Current A8/RD6/O2 and approved T1/Antsy/Influence/Poietic scopes reconciled againstd2b33c0c. Other-owner study files and frozen packets unchanged.180local links and prior229-item coverage pass; lab.py check0errors,5pre-existing warnings. No new runs or resource allocations.
