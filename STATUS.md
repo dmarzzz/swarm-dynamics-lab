@@ -45,7 +45,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-pc12-wide](tasks/phantom-coast-pc12-wide.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:35Z | Wide sourced-evidence diagnostic for Phantom Coast |
-| [refresh-review-action-guidance](tasks/refresh-review-action-guidance.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:33Z | Refresh review actions against latest experiment evidence |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -241,6 +240,7 @@
 | [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:51Z | Refine swarm-size coordination and policy evaluation design |
 | [refine-swarm-size-question](tasks/refine-swarm-size-question.md) | done | p1 | question | vishesh/codex-idea-scores | vishesh | 2026-10-04T18:11Z | Refine swarm-size definitions, novelty, realistic cases and baselines |
 | [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | done | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:25Z | Reflect on the original discussion dose pilot before running more |
+| [refresh-review-action-guidance](tasks/refresh-review-action-guidance.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:38Z | Refresh review actions against latest experiment evidence |
 | [regrowth-plan-registration](tasks/regrowth-plan-registration.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:15Z | Repair missing Regrowth plan registration and publish experiment TLDRs |
 | [review-atlas-project-connections](tasks/review-atlas-project-connections.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:17Z | Review question atlas and connect research context to sixteen project briefs |
 | [review-biology-and-visual-promise](tasks/review-biology-and-visual-promise.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:08Z | Review research candidates for biological precedent and visualization value |
@@ -327,8 +327,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | working | refresh-review-action-guidance | 2026-10-04T20:35Z | Refreshing current review actions against native closeouts and successor plans; original source recommendations retained. |
 | vishesh/codex-theseus | idle |  | 2026-10-04T20:30Z | SOL50 qualification closed; concrete Q2 repair ready for owner decision |
-| vishesh/codex-pi-review | done | reconcile-study-review-revision | 2026-10-04T20:24Z | Published revised study review across 15 notes; preserved 229 IDs and checked key counts from saved records. |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T20:24Z | Telephone A1 completed and reviewed; semantic qualification failed, V0 unstarted; sequence parked. |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
