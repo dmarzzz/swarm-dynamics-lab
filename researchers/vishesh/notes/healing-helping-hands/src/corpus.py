@@ -24,9 +24,10 @@ def make(seed):
  return {'seed':seed,'claims':claims,'roots':roots,'docs':docs,'withdrawn':withdrawn,'erased':erased,'heads':heads,'recipients':recipients}
 def observation(corpus,doc):return {'claim':corpus['claims'][doc['claim']],'report':doc['text']}
 def qualification():
- r=random.Random(8000);out=[]
+ r=random.Random(8001);out=[]
  for label in LABELS:
-  for i in range(10):
-   method=f'procedure {i+31}';outcome='classification accuracy'
-   out.append({'claim':f'{method.capitalize()} improves {outcome}.','report':TEMPLATES[label][i%3].format(method=method,outcome=outcome),'expected':label})
+  for i in range(20):
+   method=f'procedure {i+131}';outcome='classification accuracy'
+   templates=TEMPLATES[label]+{'SUPPORT':['An improvement in {outcome} was observed with {method}.'],'REFUTE':['Using {method} produced no gain in {outcome}.'],'UNCERTAIN':['The effect of {method} on {outcome} remains unevaluated.']}[label]
+   out.append({'claim':f'{method.capitalize()} improves {outcome}.','report':templates[i%4].format(method=method,outcome=outcome),'expected':label})
  r.shuffle(out);return out

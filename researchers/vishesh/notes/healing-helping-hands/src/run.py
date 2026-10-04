@@ -42,12 +42,12 @@ def qualify(journal,backend,name):
   for i,x in enumerate(qualification()):
    obs={k:x[k] for k in ('claim','report')};label=journal.call(backend,name,obs,i,{'stage':'qualification','case':i});records.append({'case':i,'expected':x['expected'],'label':label})
  except Exception as e:return {'status':'failed','reason':type(e).__name__,'records':records}
- per={k:sum(r['label']==k for r in records if r['expected']==k)/10 for k in LABELS};accuracy=sum(r['label']==r['expected'] for r in records)/30
+ per={k:sum(r['label']==k for r in records if r['expected']==k)/20 for k in LABELS};accuracy=sum(r['label']==r['expected'] for r in records)/60
  return {'status':'passed' if accuracy>=.85 and min(per.values())>=.7 else 'failed','accuracy':accuracy,'per_label':per,'records':records}
 
 def execute(out,receipt,algorithm_only=False):
  source=source_check(receipt['commit']);out.mkdir(parents=True,exist_ok=False);write(out/'plan-receipt.json',receipt)
- assignments=[{'id':f'{s}-{a}-{p}-{e}','seed':s,'arm':a,'policy':p,'scenario':e,'status':'planned'} for s in (8101,8102,8103) for a in ARMS for p in POLICIES for e in SCENARIOS]
+ assignments=[{'id':f'{s}-{a}-{p}-{e}','seed':s,'arm':a,'policy':p,'scenario':e,'status':'planned'} for s in (8201,8202,8203) for a in ARMS for p in POLICIES for e in SCENARIOS]
  started=time.monotonic();budget=Budget(started+1800);journal=Journal(out/'calls.jsonl',budget)
  manifest={'experiment':'healing-helping-hands','status':'running','plan':receipt,'source_hashes':source,'python':sys.version,'platform':platform.platform(),'assignments':assignments,'started_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'model_stage':'exact-only' if algorithm_only else 'qualification-and-pilot'};write(out/'manifest.json',manifest)
  q=l=None;qual={};results=[]
@@ -64,7 +64,7 @@ def execute(out,receipt,algorithm_only=False):
     write(out/'qualification.json',qual);print(json.dumps({'qualification':name,**{k:v for k,v in qual[name].items() if k!='records'}}),flush=True)
   model_enabled=not algorithm_only and qual.get('qwen',{}).get('status')=='passed'
   laya_enabled=model_enabled and qual.get('laya',{}).get('status')=='passed'
-  for seed in (8101,8102,8103):
+  for seed in (8201,8202,8203):
    c=make(seed);write(out/f'corpus-{seed}.json',c);tapes={'exact':[d['label'] for d in c['docs']]};tape_failure=None
    if model_enabled:
     try:

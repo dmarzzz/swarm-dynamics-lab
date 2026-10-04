@@ -10,7 +10,7 @@ class Tests(unittest.TestCase):
  def test_fixture_balance_and_blindness(self):
   self.assertEqual(len(self.c['docs']),200);self.assertEqual(len(self.c['heads']),20);self.assertEqual(len(set(i%20 for i in self.c['heads'])),20)
   self.assertEqual(set(observation(self.c,self.c['docs'][0])),{'claim','report'})
-  self.assertEqual(collections.Counter(x['expected'] for x in qualification()),dict.fromkeys(LABELS,10))
+  self.assertEqual(collections.Counter(x['expected'] for x in qualification()),dict.fromkeys(LABELS,20))
  def test_deduplicate_and_no_cross_claim(self):
   d=self.c['docs'];root=d[0]['root'];copy=next(x['id'] for x in d if x['root']==root and x['id']!=0)
   self.assertEqual(ledger({0,copy,1},set(),0,d,self.tape),ledger({0},set(),0,d,self.tape))

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": "2.1",
   "population": 200,
   "identity": "one scout per document; claim assignment is agent_id modulo 20",
   "models": {
@@ -11,7 +11,17 @@
       "thinking": false,
       "context_tokens": 2048,
       "output_tokens": 32,
-      "timeout_seconds": 30
+      "timeout_seconds": 30,
+      "response_schema": [
+        "IMPROVED",
+        "NOT_IMPROVED",
+        "NOT_MEASURED"
+      ],
+      "label_mapping": {
+        "IMPROVED": "SUPPORT",
+        "NOT_IMPROVED": "REFUTE",
+        "NOT_MEASURED": "UNCERTAIN"
+      }
     },
     "laya": {
       "model": "convaiinnovations/laya",
