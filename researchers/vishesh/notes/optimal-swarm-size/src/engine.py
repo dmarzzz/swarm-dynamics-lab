@@ -35,7 +35,7 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
     start=time.monotonic();deadline=start+deadline_s;work_deadline=deadline-integration_reserve_s
     histories=[[{'role':'system','content':'Solve the supplied synthetic task. Return raw JSON only, with no Markdown code fences or commentary. You have no evaluator access.'},
                 {'role':'user','content':json.dumps(public,sort_keys=True)}] for _ in range(n)]
-    used=set();completed={};failures=[];fatal_stop=threading.Event()
+    used=set();completed={};deps={};failures=[];fatal_stop=threading.Event()
     def emit(kind,**fields):event({'t':time.monotonic()-start,'kind':kind,**fields})
     def turn(actor,phase,prompt,until,item=None):
         if fatal_stop.is_set():raise SafeFailure('transport_failed')
@@ -118,4 +118,4 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
         artifact=None;failure=safe_code(exc) if isinstance(exc,(SafeFailure,TimeoutError)) else 'malformed_output'
     elapsed=time.monotonic()-start
     emit('terminal',failure=failure,elapsed_s=elapsed)
-    return {'artifact':artifact,'elapsed_s':elapsed,'failure':failure,'fatal':bool(failure and SafeFailure(failure).fatal),'work_failures':failures,'configured_n':n,'used_contexts':sorted(used),'completed_items':len(completed)}
+    return {'artifact':artifact,'elapsed_s':elapsed,'failure':failure,'fatal':bool(failure and SafeFailure(failure).fatal),'work_failures':failures,'configured_n':n,'used_contexts':sorted(used),'completed_items':len(completed),'work_artifacts':copy.deepcopy(completed),'plan_dependencies':copy.deepcopy(deps)}
