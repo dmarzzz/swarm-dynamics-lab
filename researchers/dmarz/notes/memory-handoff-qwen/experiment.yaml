@@ -6,6 +6,8 @@ description: One fresh successor per assignment inherits a predecessor's notes i
   (raw inheritance, metadata-only origin and version resolution, content-bound retrieval of
   the cited records, reset). 24 roots x 6 states x 4 policies = 576 calls of qwen/qwen3.7-flash
   (OpenRouter, Alibaba, reasoning disabled). Research program v5, line M. Exploratory.
+  Attempt 002, the one permitted repair, asks the successor to list the records it relies on
+  before the value.
 owner: dmarz
 params:
   stage:
@@ -43,5 +45,8 @@ metrics:
 - billing_pauses
 - billing_pause_seconds
 - billing_affected_calls
+- work_malformed
+- listing_matches_message
+- follows_from_own_listing
 primary_metric: inherited_error_content_minus_metadata
 url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/memory-handoff-qwen

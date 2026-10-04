@@ -105,6 +105,30 @@ def load_probe_row(sr=None):
     return rows[0]
 
 
+WORK_FLAGS = ('value_as_float', 'value_as_string', 'duplicate_sources', 'sources_null', 'work_malformed', 'work_before_value',
+              'current_as_string')
+WORK_REPORT = ('listing_given', 'listing_matches_message', 'follows_from_own_listing', 'counting_values_consistent',
+               'distinct_origins_consistent')
+
+
+def work_totals(rows):
+    """Counts over completed rows of the tolerated answer variants and of what the working fields
+    show. Reported, never gated."""
+    done = [r for r in rows if r['status'] == 'completed']
+    out = {'answers': len(done)}
+    for k in WORK_FLAGS:
+        out[k] = sum(int(bool((r.get('tolerated') or {}).get(k))) for r in done)
+    out['extra_keys'] = sum(int(bool((r.get('tolerated') or {}).get('extra_keys'))) for r in done)
+    out['work_missing'] = sum(int(bool((r.get('tolerated') or {}).get('work_missing'))) for r in done)
+    for k in WORK_REPORT:
+        out[k] = sum(int((r.get('work_report') or {}).get(k) == 1) for r in done)
+    out['supported_and_follows_own_listing'] = sum(
+        int(r['evaluation']['supported'] == 1 and (r.get('work_report') or {}).get('follows_from_own_listing') == 1) for r in done)
+    out['unsupported_but_follows_own_listing'] = sum(
+        int(r['evaluation']['supported'] == 0 and (r.get('work_report') or {}).get('follows_from_own_listing') == 1) for r in done)
+    return out
+
+
 def replay_units(everything, rows):
     by_id = {r['id']: r for r in rows}; out = []
     for a in everything:
@@ -205,11 +229,12 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
             log_book.emit('handoff', id=a['id'], state=a['state'], policy=a['policy'], packet_hash=a['packet_hash'], retrieval=r['retrieval'])
             log_book.emit('call_start', id=a['id'], call_id=call_id, packet_hash=a['packet_hash']); started = True
             if scripted:
-                answer = study.scripted(a); accounting = dict(SCRIPTED_ACCOUNT)
+                full = study.scripted(a); accounting = dict(SCRIPTED_ACCOUNT)
             else:
-                answer, accounting = backend.call(study.SYSTEM, study.user_text(packet), call_id, study.validate)
-            r.update(answer=answer, accounting=accounting, evaluation=study.evaluate(a, answer), status='completed')
-            log_book.emit('call_response', id=a['id'], call_id=call_id, answer=answer,
+                full, accounting = backend.call(study.SYSTEM, study.user_text(packet), call_id, study.validate)
+            r.update(**study.stored(full), accounting=accounting, work_report=sim.work_report(packet, full),
+                     evaluation=study.evaluate(a, full), status='completed')
+            log_book.emit('call_response', id=a['id'], call_id=call_id, answer=r['answer'],
                           usage={k: accounting.get(k) for k in ('input_tokens', 'output_tokens', 'actual_usd', 'attempts')})
         except provider.CallFailure as exc:
             r.update(error=exc.category, accounting=exc.accounting)
@@ -356,6 +381,7 @@ def summarize(p, rows, total, invariants, probe, control, elapsed, initial, fina
                'request_bytes_max': max([r['request_bytes'] for r in rows] or [0]),
                'stage_units': {'assigned': len(everyone), **{s: count(everyone, s) for s in ('completed', 'failed', 'not_started')}},
                'continuation': None if units is None else {'units': total, 'earlier_rows': len(prior)},
+               'work': work_totals(rows),
                'study_accounting': final, 'initial_study_accounting': initial}
     if stage == 'P0' and rows and rows[0].get('accounting'):
         acc = rows[0]['accounting']       # the raw response metadata of the probe call
@@ -376,6 +402,8 @@ def hub_metrics(summary):
     for k in ('qualification_passed', 'tokens_per_byte_max', 'cost_per_call_usd', 'max_output_tokens_per_call'):
         if summary.get(k) is not None: m[k] = summary[k]
     m.update(summary.get('headline') or {})
+    for k in ('work_malformed', 'listing_matches_message', 'follows_from_own_listing'):
+        m[k] = summary['work'][k]
     for k, v in (summary.get('probe_response') or {}).items():       # the hub stores numbers; the names go into the run's message
         if isinstance(v, (int, float)) and not isinstance(v, bool): m['probe_' + k] = v
     return m
