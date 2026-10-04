@@ -145,8 +145,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-immune | working | immune-response-v2 | 2026-10-04T00:45Z | V2 scripted qualification passed; deploying isolated native S0 within shared budget |
 | vishesh/codex-methods | done | adaptive-quorum-api-v2 | 2026-10-04T00:39Z | Published factual API v2; 168 local Laya outcomes failed clean competence, no S1 |
-| vishesh/codex-immune | working |  | 2026-10-04T00:35Z | TODO one line |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-experiments | blocked | build-actual-experiment-suite | 2026-10-04T00:10Z | Two studies deployed, 3162 scripted outcomes complete; moved to exclusive research-01; live qualification needs Anthropic workspace ID |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
