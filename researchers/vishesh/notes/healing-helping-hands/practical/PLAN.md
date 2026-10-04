@@ -4,13 +4,13 @@
 
 Can 200 local evidence curators keep a shared knowledge base current when sources retract findings, new evidence arrives, source lineage is unreliable, or the central index is temporarily unreachable? Compare the same recorded semantic outputs with ordinary central indexes and local sharing. This is a **scripted architecture diagnostic using saved Jev outputs**, not a fresh model evaluation, a new real-paper corpus, or evidence that Qwen/Laya now qualify.
 
-## Decision and feedback
+## Question and prediction
 
-Parent: [pilot-03 post-mortem](../reviews/pilot-03-post.md). New feedback: [PI next experiments, Conditional B](../../../dmarz/notes/next-experiments-2026-10-04/README.md) (repository path: researchers/dmarz/notes/next-experiments-2026-10-04/README.md). That review requests central append-only controls, matched extraction and source budgets, benign learning, incomplete/misleading lineage, integrated incorrect-or-missing claims and update-retention guardrails. The old pilot's perfect semantic reference and programmed propagation are acknowledged, not relabeled as autonomy. The present design adds an even stronger central version-aware comparator.
+Parent: [pilot-03 post-mortem](../reviews/pilot-03-post.md). New feedback: [PI next experiments, Conditional B](../../../../dmarz/notes/next-experiments-2026-10-04/README.md) (repository path: researchers/dmarz/notes/next-experiments-2026-10-04/README.md). That review requests central append-only controls, matched extraction and source budgets, benign learning, incomplete/misleading lineage, integrated incorrect-or-missing claims and update-retention guardrails. The old pilot's perfect semantic reference and programmed propagation are acknowledged, not relabeled as autonomy. The present design adds an even stronger central version-aware comparator.
 
 Practical interpretation: choose a synchronization policy for an evidence index. We do not claim new research novelty, human-verified scientific truth, a fresh semantic generalization result, or a cost advantage from 200 agents. This S0 engineering diagnostic does not bypass the lab's independent research-review gates.
 
-## Protocol frozen before implementation
+## Protocol
 
 Attempt `practical-01`, parent `pilot-03`. Inputs are the three saved corpora and Jev extraction tapes for seeds 8701–8703; record file SHA-256 and parent source 46678b2b99936383d01b268075e0ae2cf8b405fc. No new inference or model credentials. Held-out seeds 8301–8310 remain unopened. For each corpus use two prespecified placement seeds, corpus seed + 10000 and + 20000. Shuffle the same 200 document-to-curator assignments once per layout and reuse them in every arm/scenario.
 
@@ -39,7 +39,7 @@ Six scenarios, with benign R4 release in every scenario:
 
 At round 10 release new documents and inject notices before communication. At round 20 restore central connectivity; retain queued uploads. Record pre-communication event snapshots at 10 and 20. Run 30 synchronous rounds (0–29), with ingress then communication then scoring. Central systems can upload all pending own observations and read their query claim in one logical round when reachable; this deliberately strong low-latency baseline is not latency-matched to mesh hops. Every peer directed edge sends at most four previously unseen records per round, notices before documents, stable ID order, synchronous delivery. Track actual transmitted item copies; central upload plus query-response item copies count as traffic, peer transmissions likewise. Do not claim equal traffic or actual network bandwidth: report the tradeoff. Both architectures receive the same exogenous evidence/update budget; total model calls are zero.
 
-## Design and measurements
+## Metrics
 
 180 assignments = 3 known corpus tapes × 2 layouts × 6 scenarios × 5 arms. Corpus is the semantic cluster; layouts are sensitivity repeats, not six independent semantic replications. Agents, claims and rounds are dependent observations. Report per-corpus means over its layouts, then mean/range over three corpora; no confidence interval or significance claim.
 
@@ -48,6 +48,10 @@ Primary endpoint: mean fraction of curator queries incorrect **or missing all us
 Secondary/guardrails: atlas accuracy (majority of ten curators per claim), stale-citation fraction and count, false invalidations of active source roots, valid-source coverage, learned-R4 retention among curators querying its claim, abstention, traffic item copies, and first post-event round beginning three consecutive rounds with >=95% correct nonmissing curator queries. If threshold never reached, report null, not zero. Scoring uses evaluator truth only after actor state has advanced. Correct-but-missing answers must not inflate success.
 
 Useful-effect rule adopted as a descriptive diagnostic: >=20% relative primary error reduction versus central-append **and** at most 3 percentage points lower final R4 retention. Always state absolute difference; relative improvement is undefined when baseline error is zero. This rule is not a scientific promotion gate. A strong central baseline winning is useful evidence. Failure under missing lineage is a scope boundary, not justification to fabricate target identities. Report effect on gold and source availability so ineffective events cannot masquerade as robustness.
+
+## Setup
+
+Standard-library Python, one bounded worker on freshly allocated sim-vishesh (claim vishesh-healing-practical-01, fleet PR 76). Source and input hashes are frozen and checked. No model is initialized. See the pre-run assessment for test results and exact command.
 
 ## Acceptance and repair
 

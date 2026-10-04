@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: done
-task: antsy-verification-v4
-doing: Completed paired real-receipt pilot, negative-result assessment and measured replays
-updated: 2026-10-04T02:54Z
+state: working
+task: antsy-verification-v5
+doing: Repairing null QA semantics and cost-aware verification after fresh feedback
+updated: 2026-10-04T03:42Z
 ---
 
 ## Notes

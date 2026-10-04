@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: idle
-task: healing-helping-hands-v2
-doing: Review and reference pilot published; original Qwen heterogeneous claim remains unqualified
+state: working
+task: healing-practical-repair
+doing: Build the prospective practical repair comparison using saved extraction tapes
 updated: 2026-10-04T02:51Z
 ---
 

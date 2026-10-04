@@ -1,0 +1,22 @@
+{
+  "kind": "offline unit validation, not an experiment run",
+  "date_utc": "2026-10-04T03:39:05.889213+00:00",
+  "tests": 14,
+  "passed": 14,
+  "command": "python3 -m unittest discover -s researchers/vishesh/notes/decision-models/quorum-of-mirrors -p 'test_*.py' -v",
+  "exit_code": 0,
+  "model_calls": 0,
+  "spend": 0,
+  "initial_upstream": "c1aca0b29b7f5fca0e84f32aef0373563341fde3",
+  "plan_before_implementation_commit": "f4e8aff",
+  "sha256": {
+    "PLAN.md": "520269fdc361d176ae32d2cea84fd0b3c29282a3f70ad527fbab63fc14066d00",
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "test_reference.py": "74e0778fa596656faa09167cf506d754c3e5e4f107a96ee40e4602423623f0e0",
+    "README.md": "f311fe499d61020f277cae7970cef3d0a88c4c0dc681474987b7ce01daaf80b4",
+    "REVIEW.md": "4372ead2ac201d87a173876f5aaeb19957658704cfd355dbd023e3bde7d3c6ca"
+  },
+  "native_qualification": "not attempted",
+  "research_gate": "incomplete",
+  "public_run_registration": "not performed"
+}

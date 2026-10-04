@@ -4,7 +4,7 @@ tool: codex
 state: working
 task: right-dissenter-live-study
 doing: Preparing RD-2 live qualification and dedicated deployment; study cap pending
-updated: '2026-10-04T03:51:00Z'
+updated: '2026-10-04T03:43:19Z'
 ---
 
 ## Notes
