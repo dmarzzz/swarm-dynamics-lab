@@ -4,7 +4,7 @@ Owner Vishesh; operator codex-phantom-coast. Current disposition RUN preparation
 
 G0: useful role is report interpretation feeding exact decisions; parser/oracle controls and futility prevent another supplied-minimum test.
 G1: prospective PLAN written before implementation.
-G2: pending implementation/offline checks.
+G2: ten offline checks pass on development fixtures; structured gold/provenance, parser clean fixtures, safe answer retention, no truth leakage, semantic/futility gates, failures/denominators, duplicate and cumulative budget checked. Full offline plot/audit prepared.
 G3: pending immutable public registration, rendered page, exact source/runtime, fresh exclusive approved-fleet allocation, closed ledger lineage and current admission.
 G4: Q0 semantic and reliable-evidence gates in PLAN; no threshold changes or repair run.
 G5: pending scientific/operational closeout and resource release.
