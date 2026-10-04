@@ -44,7 +44,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [pi-research-refresh-2026-10-04](tasks/pi-research-refresh-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:29Z | Refresh active-study research and actionable next decisions |
-| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T16:15Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -70,6 +69,7 @@
 | [healing-c4-selective](tasks/healing-c4-selective.md) | open | p1 | build |  | vishesh | 2026-10-04T15:35Z | Prepare and qualify C4 selective helping |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T15:30Z | Run the revised procurement influence experiment |
+| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T16:30Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
@@ -284,7 +284,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-heterogeneous | working | qualify-poietic-agents-s0 | 2026-10-04T16:20Z | Preparing owner-directed S0-02 central dispatch;81 offline checks, retained cumulative budget |
+| vishesh/codex-heterogeneous | blocked |  | 2026-10-04T16:20Z | S0-02 prepared and public plan verified;81 checks; awaiting current dispatch coordination |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:57Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
