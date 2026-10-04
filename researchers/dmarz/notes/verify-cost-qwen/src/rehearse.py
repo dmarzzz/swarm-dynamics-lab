@@ -96,9 +96,10 @@ class Stub:
       fail_from       every message from this ordinal on returns HTTP 500
       credit_from     once this many messages minus one have been counted, every request returns a credit error"""
 
-    def __init__(self, mode, credit_first=0, fail_messages=(), fail_from=None, credit_from=None):
+    def __init__(self, mode, credit_first=0, fail_messages=(), fail_from=None, credit_from=None, mutate=None):
         assert mode in ('optimal', 'always_first')
         self.mode = mode; self.lock = threading.Lock(); self.requests = 0; self.messages = 0; self.answered = 0
+        self.mutate = mutate          # selftest only: (message ordinal, response) -> response, to return malformed answers
         self.credit_first = credit_first; self.fail_messages = set(fail_messages); self.fail_from = fail_from; self.credit_from = credit_from
 
     def __call__(self, request, timeout=None):
@@ -119,12 +120,13 @@ class Stub:
         with self.lock: self.answered += 1
         system, user = (m['content'] for m in body['messages'])
         tokens = max(1, (len(system) + len(user)) // 3)
-        return Response(json.dumps({
+        payload = {
             'id': 'gen-rehearsal', 'object': 'chat.completion', 'model': study.design()['canonical_model'], 'provider': 'Alibaba',
             'choices': [{'index': 0, 'finish_reason': 'stop', 'native_finish_reason': 'stop',
                          'message': {'role': 'assistant', 'content': json.dumps(reference_answer(user, self.mode)), 'refusal': None, 'reasoning': None}}],
             'usage': {'prompt_tokens': tokens, 'completion_tokens': 9, 'total_tokens': tokens + 9,
-                      'completion_tokens_details': {'reasoning_tokens': 0}}}).encode())
+                      'completion_tokens_details': {'reasoning_tokens': 0}}}
+        return Response(json.dumps(self.mutate(n, payload) if self.mutate else payload).encode())
 
 
 def free_port():

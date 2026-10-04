@@ -357,17 +357,24 @@ def scripted_qualification(rows):
     return {g: qualification([r for r in rows if r['kind'] == 'qualification' and r['set'] == g]) for g in ('a', 'b')}
 
 
+PROBE_METADATA = ('response_model', 'response_provider', 'response_id', 'finish_reason', 'reasoning_tokens', 'latency_seconds',
+                  'provider_reported_usd', 'computed_usd', 'actual_usd', 'reserved_usd', 'input_tokens', 'output_tokens', 'request_bytes', 'attempts')
+
+
 def probe_gate(rows):
     """P0 checks the interface. A completed row means the adapter accepted the response: it parsed, the model
-    slug and provider matched, usage was reported, the finish reason was `stop`, no reasoning tokens were
-    billed, and the answer passed local validation. Whether the choice is optimal counts in Q0's gate."""
-    ok = len(rows) == 1 and rows[0]['status'] == 'completed' and rows[0]['id'] == _assignments('P0')[0]['id']
-    out = {'passed': bool(ok)}
-    if ok:
-        acc = rows[0].get('accounting') or {}
-        if acc.get('input_tokens'):
-            out.update(input_tokens=acc['input_tokens'], content_bytes=rows[0]['content_bytes'],
-                       tokens_per_byte=acc['input_tokens'] / rows[0]['content_bytes'])
+    slug matched, usage was reported, the finish reason was `stop`, no reasoning tokens were billed, and the
+    answer passed local validation. The adapter accepts a response that names no provider; this gate does
+    not: the response must name the pinned provider. Whether the choice is optimal counts in Q0's gate.
+    The raw response metadata of the one call is returned for the summary."""
+    out = {'passed': False}
+    if len(rows) != 1 or rows[0]['id'] != _assignments('P0')[0]['id']: return out
+    acc = rows[0].get('accounting') or {}
+    out.update({k: acc.get(k) for k in PROBE_METADATA}, content_bytes=rows[0]['content_bytes'])
+    served = acc.get('response_provider')
+    out['provider_is_pinned'] = isinstance(served, str) and design()['provider'] in served.lower()
+    if acc.get('input_tokens'): out['tokens_per_byte'] = acc['input_tokens'] / rows[0]['content_bytes']
+    out['passed'] = bool(rows[0]['status'] == 'completed' and out['provider_is_pinned'])
     return out
 
 
