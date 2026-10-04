@@ -66,3 +66,8 @@ Retain assignment/start/end IDs, model settings, full delivered actor-only input
 ## Current disposition
 
 DECISION NEEDED on this concrete material successor: six-claim qualification followed conditionally by an eight-cluster 1/6/60-agent pilot, maximum 1594 calls and USD45.39712 new API charges within the standing USD50 cumulative tier. No run launched. Corpus quality completion and native instrument/admission remain mandatory before calls. The owner’s broad scaling direction is retained; this request is the concrete updated-plan decision required by the workspace completion policy, not another budget or researcher-review request. Researcher sign-off is not required. Published prior results remain unchanged.
+
+
+## PI advisory follow-up
+
+[Assessment and offline repairs](PI-RESPONSE.md): nested actor/gold fields now removed; semantic URL query identity preserved;29 development candidates and1,394 transitively connected rows excluded by a conservative metadata audit.17 offline checks pass. Metadata groups are not verified independent events. Packet-support/content and event-group audits, exact native fork runtime and admission still block launch. PI feedback supplies no owner approval; the concrete owner decision remains pending.

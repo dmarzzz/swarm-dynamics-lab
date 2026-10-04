@@ -1,7 +1,7 @@
 """Offline candidate preparation. Does not label, call models or admit a run."""
 import argparse, collections, hashlib, json, re
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qsl, urlencode
 LABELS=('Supported','Refuted','Not Enough Evidence','Conflicting Evidence/Cherrypicking')
 def digest(x):return hashlib.sha256(x).hexdigest()
 def norm(s):return re.sub(r'\W+',' ',s.casefold()).strip()
@@ -13,7 +13,10 @@ def unwrap(u):
  return u
 def host(u):return (urlsplit(unwrap(u)).hostname or '').removeprefix('www.')
 def urlkey(u):
- p=urlsplit(unwrap(u));return host(u)+p.path.rstrip('/')
+ p=urlsplit(unwrap(u))
+ # Preserve semantic query parameters (e.g. distinct Senate vote IDs).
+ query=urlencode(sorted((k,v) for k,v in parse_qsl(p.query,keep_blank_values=True) if not k.lower().startswith('utm_') and k.lower() not in ('fbclid','gclid')))
+ return host(u)+p.path.rstrip('/')+('?' + query if query else '')
 def convert(row,index,blocked_hosts=()):
  if row['label'] not in LABELS:return None,'unsupported_label'
  if len(row['questions'])<2:return None,'fewer_than_two_questions'

@@ -4,7 +4,11 @@ from decimal import Decimal
 import hashlib,json
 LABELS={'Supported','Refuted','Not Enough Evidence','Conflicting Evidence/Cherrypicking'}
 def actor_only(case):
- return {k:case[k] for k in ('case_id','claim','claim_date','evidence')}
+ out={k:case[k] for k in ('case_id','claim','claim_date')}
+ fields=('evidence_id','question','answer','explanation','document_id','source_host')
+ out['evidence']=[{k:e[k] for k in fields} for e in case['evidence']]
+ # Deep copy prevents later evaluator-side mutations entering actor context.
+ return json.loads(json.dumps(out))
 def validate_answer(answer,actor):
  if set(answer)!={'verdict','confidence','citations','unresolved','justification'}:raise ValueError('schema')
  if answer['verdict'] not in LABELS:raise ValueError('verdict')

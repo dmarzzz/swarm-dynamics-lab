@@ -88,3 +88,8 @@ SP-02 quote-only repair qualification passed: 40/40 valid calls; 120/120 source 
 ## R60 scale-up preparation
 
 Prepared concrete1/6/60 GPT-6 Sol comparison with shared-checkpoint exchange/private controls. Downloaded source-pinned externally annotated AVeriTeC data; audited24 development candidates, preserved12 quarantines and4 limitations, repaired intake leakage/provenance filters.13 offline checks pass.1594-call envelopeUSD45.39712 API fits prospective standingUSD50 tier including original exposure/infrastructure bounds. No native calls or allocation. Concrete updated-plan decision and remaining corpus/runtime gates recorded in SETUP; no independent human reannotation claimed.
+
+
+## Advisory PI follow-up
+
+Fixed nested actor/gold leakage and URL query identity in offline R60 preparation.17 checks pass; conservative full-source metadata grouping excludes29 development candidates and1,394 linked rows. Shared generic pages cause large components; semantic event independence and packet support remain unproven. PI response preserves concrete owner-decision requirement, all comparison controls and feasibility-only interpretation. No calls/spend/allocation.

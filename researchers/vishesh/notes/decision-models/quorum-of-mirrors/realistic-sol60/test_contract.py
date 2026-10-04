@@ -45,3 +45,22 @@ class IntakeChecks(unittest.TestCase):
   row={'label':'Supported','claim':'x','claim_date':None,'questions':[{'question':'q','answers':[{'answer':'a','source_url':'https://google.com/search?q=answer','source_medium':'web text'}]}]*3}
   self.assertEqual(convert(row,0)[1],'placeholder_or_search_source')
   row['questions'][0]['question']='';self.assertEqual(convert(row,0)[1],'empty_question')
+
+class PIFeedbackChecks(unittest.TestCase):
+ def test_semantic_query_not_merged(self):
+  from prepare_cases import urlkey
+  self.assertNotEqual(urlkey('https://x.test/vote?id=1'),urlkey('https://x.test/vote?id=2'))
+  self.assertEqual(urlkey('https://x.test/vote?id=1&utm_source=z'),urlkey('https://x.test/vote?id=1'))
+ def test_nested_gold_removed_and_copy_isolated(self):
+  case={'case_id':'x','claim':'c','claim_date':None,'label':'SECRET','evidence':[dict(evidence_id='e',question='q',answer='a',explanation='',document_id='d',source_host='x',label='SECRET',justification='SECRET',source_url='https://x/SECRET')]}
+  actor=actor_only(case);self.assertNotIn('SECRET',json.dumps(actor))
+  case['evidence'][0]['answer']='SECRET';self.assertEqual(actor['evidence'][0]['answer'],'a')
+ def test_transitive_exposure(self):
+  from group_audit import groups
+  def r(c,article,doc):return {'claim':c,'fact_checking_article':article,'questions':[{'answers':[{'source_url':doc}]}]}
+  g=groups({'a':r('one','https://x/a','https://s/1'),'b':r('two','https://x/a','https://s/2'),'c':r('three','https://x/c','https://s/2'),'d':r('four','https://x/d','https://s/3')})
+  self.assertEqual(g['a'],g['c']);self.assertNotEqual(g['a'],g['d'])
+ def test_archive_cross_split_group(self):
+  from group_audit import groups
+  g=groups({'train:1':{'claim':'Same claim!','fact_checking_article':'https://x/a'},'dev:4':{'claim':'same claim','fact_checking_article':'https://y/b'}})
+  self.assertEqual(g['train:1'],g['dev:4'])

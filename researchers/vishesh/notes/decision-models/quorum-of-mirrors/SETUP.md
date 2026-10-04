@@ -1,3 +1,7 @@
+## PI advisory update — R60 still unrun
+
+[PI response](realistic-sol60/PI-RESPONSE.md):17 offline checks pass after nested actor/gold isolation and document-identity repairs. All29 unique development candidates are excluded from fresh use; metadata grouping also excludes linked records, without claiming event independence. Corpus support/semantic grouping and native runtime admission remain unresolved. Concrete owner approval of the six-claim qualification/conditional eight-cluster1/6/60-agent pilot remains pending; advisory PI feedback is not approval. No new call, charge, ledger change or machine allocation.
+
 ## Current: R60 concrete scale-up proposal
 
 **DECISION NEEDED — native unrun.** [R60 plan](realistic-sol60/PLAN.md) prepares externally human-labeled evidence-assisted claims and1/6/60 GPT-6 Sol agents. [Case audit](realistic-sol60/CASE-AUDIT.md):24 initial candidates read,8 useful development controls,4 limited,12 quarantined; repaired intake prepared24 candidates. [Envelope](realistic-sol60/budget-envelope.json):1594 maximum calls,USD45.39712 new API bound,USD48.51465496 conservative cumulative bound under the standingUSD50 promising tier (ledger amendment not yet applied).13 offline checks passed. Broad owner scaling direction recorded; concrete scope decision precedes launch. No machine, model calls, new charge or ledger reset. Native reader/fork runner and final corpus admission still required. Historical SP-02 remains qualified only for its grammar.

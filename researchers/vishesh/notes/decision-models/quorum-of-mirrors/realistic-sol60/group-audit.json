@@ -1,0 +1,55 @@
+{
+  "status": "metadata_audit_only_not_event_independence",
+  "native_calls": 0,
+  "source_sha256": {
+    "train": "ae5eda7c42ddf1695ef185a7ba1bc716928f5adf57103e4f78aae5f9afe00f9c",
+    "dev": "499793726b4a5406780928a3d9dedc48d6dd53de778f22437d129cacdb08e300"
+  },
+  "rows": 3568,
+  "components": 1784,
+  "largest_component": 1343,
+  "development_rows_excluded": 29,
+  "transitively_excluded_rows": 1394,
+  "remaining_rows_by_split": {
+    "train": 1823,
+    "dev": 351
+  },
+  "development_source_indices": [
+    "train:1180",
+    "train:1209",
+    "train:1244",
+    "train:1359",
+    "train:146",
+    "train:1479",
+    "train:1515",
+    "train:1626",
+    "train:1758",
+    "train:19",
+    "train:1932",
+    "train:1955",
+    "train:2161",
+    "train:2784",
+    "train:2809",
+    "train:2885",
+    "train:2944",
+    "train:3051",
+    "train:3058",
+    "train:387",
+    "train:438",
+    "train:477",
+    "train:535",
+    "train:577",
+    "train:592",
+    "train:714",
+    "train:8",
+    "train:814",
+    "train:896"
+  ],
+  "rule": "Connected components over normalized claim, canonical fact-check article, and canonical evidence document; archive aliases normalized, semantic query parameters preserved.",
+  "limitations": [
+    "Shared generic reference pages can over-group unrelated events.",
+    "Different documents about the same event can remain separate; semantic event audit still required.",
+    "No qualification or evaluation cases selected or opened in this audit.",
+    "No label support, model access, approval or launch admission implied."
+  ]
+}
