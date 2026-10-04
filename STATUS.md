@@ -46,7 +46,6 @@
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:41Z | Qualify the repaired immune-response contract on a dedicated host |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:31Z | Run the revised procurement influence experiment |
 | [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:38Z | Deploy and start the operator-authorized v3 model qualification |
-| [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | claimed | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:49Z | Refine swarm-size coordination and policy evaluation design |
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | claimed | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:50Z | Independently review the implemented discussion and memory benchmark v3 |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:50Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -142,6 +141,7 @@
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
+| [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:51Z | Refine swarm-size coordination and policy evaluation design |
 | [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | done | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:25Z | Reflect on the original discussion dose pilot before running more |
 | [regrowth-plan-registration](tasks/regrowth-plan-registration.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:15Z | Repair missing Regrowth plan registration and publish experiment TLDRs |
 | [review-atlas-project-connections](tasks/review-atlas-project-connections.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:17Z | Review question atlas and connect research context to sixteen project briefs |
@@ -184,7 +184,7 @@
 |---|---|---|---|---|
 | dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T03:25Z | v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch |
 | vishesh/codex-theseus | working | theseus-critical-redesign | 2026-10-04T03:00Z | Critically review SOC-24 and design a stronger causal test |
-| vishesh/codex-idea-scores | done | design-conditional-swarm-size | 2026-10-04T02:50Z | Completed the EX-25 resource-constrained swarm-size design draft |
+| vishesh/codex-idea-scores | working | refine-swarm-size-protocol | 2026-10-04T02:50Z | Refining EX-25 coordination, overhead accounting and timed policy evaluation |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:49Z | Identity scaling deployed; scripted264/264; API qualification64calls returned; verifying before2400comparison calls |
 | vishesh/codex-heterogeneous | working | heterogeneous-biological-frontiers | 2026-10-04T02:47Z | Revising the heterogeneous shortlist through X research and evolutionary biology |
 | vishesh/codex-decision-models | done | decision-model-research | 2026-10-04T02:38Z | Completed initial scan, fifteen scored hunches and five design sketches; formal survey remains in progress |
