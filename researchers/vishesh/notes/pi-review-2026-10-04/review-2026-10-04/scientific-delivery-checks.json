@@ -1,0 +1,28 @@
+{
+  "named_projects": 10,
+  "study_version_reviews": 21,
+  "scenario_condition_assessments": 110,
+  "original_proposals": 16,
+  "cross_cutting_areas": 8,
+  "unique_ids": true,
+  "required_fields": true,
+  "coverage_mapping_complete": true,
+  "source_inputs": {
+    "scientific-root.json": "bddce3ecf83849583d077ae25b4688df5fb61fe37cf41b7a8fe25cd5f50c3672",
+    "scientific-phantom-quorum.json": "719cc6a50750b657c56d6fd00da8212816dabd52e4a4fcc8871a85fdd405ecff",
+    "scientific-regrowth-avalon.json": "324ef4455272504f484815ed65e26dae6687eaac55e26088ec193247f74e602a",
+    "scientific-sizing.json": "094ebe52d2dc229edc4f35da1d934f1eb194ffb944a726d98584781b7ce65151",
+    "scientific-theseus-healing.json": "22485987fa36f7ac9fe1016477e46c2f453b40306521ba9e52aefe7bd10dc54f",
+    "scientific-immune-guide.json": "a3619395fe806b0409e9e9894701521e6e8b215421231a403ec5b2fe47a10544",
+    "scientific-heterogeneous.json": "5fdf63b1d7f6c585ab9c1912a9f83f6798c99b00bcffda2888601158fa10690c",
+    "scientific-portfolio.json": "dd056f6f64dcaafa55d501cfb1081c12f26b6ea72fdbbbd304f397f74cf181b4",
+    "scientific-synthesis.json": "2e673f66b2e2b86abacb996619b68d53e4777cbcf49cf2de1afb7c995d213d33"
+  },
+  "interpretation": "Structural checks only. Browser verification is recorded separately. Scientific recommendations are not executed experiments.",
+  "local_link_errors": [],
+  "duplicate_html_ids": 0,
+  "browser_checks": "scientific-presentation-checks.json",
+  "visual_inspection": "Desktop, mobile and expanded-review screenshots inspected; readable hierarchy, no clipping or overflow. Final prose-only copyedit after browser check.",
+  "scope": "All ten named projects reviewed at stated cutoffs. Phantom PC-1 plan delta only; concurrent clone and in-progress implementation not a full additional repo audit.",
+  "publication_note": "Original checks apply to the local report. Publication link adaptation is checked separately in publication-checks.json. No experimental runner is launched by publication."
+}

@@ -1,0 +1,642 @@
+{
+  "scope": "27 root/presentation/research files in frozen snapshot",
+  "findings": [
+    {
+      "id": "ROOT-01",
+      "severity": "P2",
+      "title": "Project cards combine different experiments under one apparent proposal",
+      "project": "dossier",
+      "evidence": [
+        {
+          "path": "dossier-src/original-build.py",
+          "line": 58,
+          "detail": "Commons tests a publication gate; its later contribution paragraph tests attribution/incentives."
+        },
+        {
+          "path": "dossier-src/research.py",
+          "line": 16,
+          "detail": "Research overlays add new prospective mechanisms to cards whose original design remains observational; this also affects Memory, Leadership, Culture and Coordination."
+        },
+        {
+          "path": "dossier-src/build.py",
+          "line": 12,
+          "detail": "Both sets of fields are rendered in one card."
+        }
+      ],
+      "impact": "A reader cannot tell which intervention, outcome and minimum deliverable to execute. Good ideas lose falsifiability when observational discovery and causal testing are presented as one design.",
+      "recommendation": "Give each card one primary question, unit, manipulation, comparator, endpoint and stop/go criterion. Label any observational precursor or follow-on separately. Use the proposal decisions in this review to select a canonical version; generate all card sections from that one record.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "ROOT-02",
+      "severity": "P2",
+      "title": "Illustrative numbers look more empirical than the explanation they support",
+      "project": "influence-guide",
+      "evidence": [
+        {
+          "path": "swarm-influence-guide.html",
+          "line": 26,
+          "detail": "The guide explicitly labels 1,000 tasks and all aggregate counts hypothetical."
+        },
+        {
+          "path": "swarm-influence-guide.html",
+          "line": 28,
+          "detail": "Large 95.0% display means target selection, whereas the paired 99.0% display means task accuracy; influenced task accuracy is 38.3% in smaller text."
+        }
+      ],
+      "impact": "The disclaimer is honest, but the strongest visual cues compare different endpoints and invite a remembered efficacy claim. None of these counts is evidence of an observed attack.",
+      "recommendation": "Use one worked route decision as the main illustration. If aggregate invented counts remain, put the same endpoint on both cards, label every value hypothetical, and avoid their reuse in empirical summaries. The current invented figures should not enter a result table.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "ROOT-03",
+      "severity": "P2",
+      "title": "Verification contrast in the numeric surrogate bundles checking with aggregation",
+      "project": "seo-guide",
+      "evidence": [
+        {
+          "path": "seo-guide-src/simulation.js",
+          "line": 29,
+          "detail": "Discussion produces score vectors, then uses plurality of agent argmax choices."
+        },
+        {
+          "path": "seo-guide-src/simulation.js",
+          "line": 32,
+          "detail": "Verification changes two candidate scores and selects the group mean argmax."
+        },
+        {
+          "path": "seo-guide-src/body.html",
+          "line": 67,
+          "detail": "The detailed assumptions already disclose the aggregation confound."
+        }
+      ],
+      "impact": "The existing random-versus-focused comparison isolates allocation under the toy assumptions. Discussion-versus-verification cannot identify the causal effect of checking, and the same-source skeptic is identical by construction.",
+      "recommendation": "Keep the disclosed limitation beside the visible result bars. In a separately planned surrogate revision, add a mean-score no-check control and hold aggregation fixed. Call the skeptic arm a no-new-information control rather than a simulated language-model critic. Preserve the current version as an illustration.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "ROOT-04",
+      "severity": "P2",
+      "title": "Three discussion iterations do not create evolving propagation in the surrogate",
+      "project": "seo-guide",
+      "evidence": [
+        {
+          "path": "seo-guide-src/simulation.js",
+          "line": 29,
+          "detail": "Every iteration mixes fixed original bad[i] with mean(discussed). The group mean is invariant under this update."
+        }
+      ],
+      "impact": "Up to floating-point roundoff, the first update is the fixed point; rounds two and three repeat the same state. This is a static averaging demonstration, not a simulation of three rounds of evidence exchange.",
+      "recommendation": "Describe the current mechanism as one mixing update. If temporal diffusion is the hypothesis, specify an explicit local adjacency/update rule and manipulation check in a new plan before changing the simulator. Do not infer cascade depth or discussion convergence from these rounds.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "ROOT-05",
+      "severity": "P2",
+      "title": "The proposed large factorial should follow mechanism qualification",
+      "project": "seo-guide",
+      "evidence": [
+        {
+          "path": "seo-guide-src/body.html",
+          "line": 77,
+          "detail": "The core proposal is 2 corpora × 6 protocols × 1,000 cases = 12,000 group episodes; the text properly says proposed and requires a pilot."
+        }
+      ],
+      "impact": "The design has thoughtful controls, but that scale consumes integration and inference before the independent-verification mechanism is established. A nominal 1,000 tasks does not determine precision of paired clustered regret differences.",
+      "recommendation": "Start with focused checks versus random checks under identical aggregation, plus no-check and clean controls needed to interpret them. Qualify the independent measurement channel and freeze the attacker/evaluator split. Use pilot world-level variance, minimum useful improvement, clean non-inferiority and cost ceiling to size the held-out study. Add additional protocol questions only after this contrast is interpretable.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "ROOT-06",
+      "severity": "P3",
+      "title": "Duplicate string matching attached the wrong biology caption to project cards",
+      "project": "dossier",
+      "evidence": [
+        {
+          "path": "dossier-src/prism.py",
+          "line": 16,
+          "detail": "Original replacement matched a shared hour-estimate string, so the first replacement changed all cards with that estimate."
+        },
+        {
+          "path": "dossier-src/build.py",
+          "line": 19,
+          "detail": "Now emits a unique data-project-assessment slug for each card."
+        }
+      ],
+      "impact": "Several cards displayed an unrelated biological analogy, reducing confidence in the project taxonomy despite otherwise polished visuals.",
+      "recommendation": "Match by project slug, keep one replacement per card, and validate all 16 generated labels against their source brief. Fixed and generated dossier rebuilt in this review.",
+      "confidence": "high",
+      "status": "fixed; all 16 mappings verified"
+    },
+    {
+      "id": "ROOT-07",
+      "severity": "P3",
+      "title": "Repository entry point does not distinguish the planning snapshot from executed work",
+      "project": "workspace",
+      "evidence": [
+        {
+          "path": "grove-hackathon-context.md",
+          "line": 1,
+          "detail": "Historical handoff describes a planning state predating the current experiment folders."
+        },
+        {
+          "path": "AGENTS.md",
+          "line": 5,
+          "detail": "The current owner requirement needs a visible entry point for future work."
+        }
+      ],
+      "impact": "New collaborators can confuse historical plans, scripted engineering controls, qualified model pilots and active exports.",
+      "recommendation": "Add a current repository index with evidence class, scope/cutoff, links to each result and agent lifecycle standard. Preserve the old context as historical rather than rewriting its narrative.",
+      "confidence": "high",
+      "status": "fixed with README.md; original handoff preserved"
+    },
+    {
+      "id": "ROOT-08",
+      "severity": "P3",
+      "title": "Visual test scripts assume the author’s machine",
+      "project": "presentation-tooling",
+      "evidence": [
+        {
+          "path": "dossier-src/check-prism.cjs",
+          "line": 1,
+          "detail": "Browser dependency and output locations are machine-specific."
+        },
+        {
+          "path": "seo-guide-src/check.cjs",
+          "line": 1,
+          "detail": "Same local Playwright/browser assumptions; no portable package manifest in this presentation source."
+        }
+      ],
+      "impact": "The HTML is portable and self-contained, but another reviewer cannot readily run the same presentation checks from the checkout alone.",
+      "recommendation": "Document one local QA command with configurable browser/runtime paths or a small dev dependency manifest. Keep it separate from experimental dependencies; a container or CI service is unnecessary.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "ROOT-09",
+      "severity": "P3",
+      "title": "Editorial fit tags and estimates are weak decision aids",
+      "project": "dossier",
+      "evidence": [
+        {
+          "path": "dossier-src/research.py",
+          "line": 1,
+          "detail": "Fifteen of sixteen proposals receive Strong fit; time estimates assume familiar tools and ready data."
+        },
+        {
+          "path": "dossier-src/build.py",
+          "line": 43,
+          "detail": "Tags are explicitly editorial and estimates qualified, which is good practice."
+        }
+      ],
+      "impact": "Nearly uniform positive labels do little to prioritize scarce effort. A polished browser demo should not be mistaken for a feasible confirmatory study inside the estimated hours.",
+      "recommendation": "Rank by identifiable contrast, available evidence, implementation readiness, qualification risk and minimum decisive deliverable. Separate demo completion from research completion. Keep 1–2 active mechanisms and park the rest.",
+      "confidence": "high",
+      "status": "open"
+    }
+  ],
+  "coverage": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 869,
+      "sha256": "8b8238628022286e7c1df271748f0f77f6885ebeaba72f3626b25989adb7851e",
+      "suffix": ".md",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": [
+        "ROOT-07"
+      ]
+    },
+    {
+      "path": "agent-swarm-influence-research.md",
+      "bytes": 12521,
+      "sha256": "768a75e162293f204cad25b9872ffb95c29a05b520560774bbd586e14a653027",
+      "suffix": ".md",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/baseline.html",
+      "bytes": 115174,
+      "sha256": "5c0b3b6eabc80699e951422cfb1d117bb9574ec8de0f44a31a2be7d6652c90fb",
+      "suffix": ".html",
+      "format_check": "not_applicable",
+      "mode": "generated baseline: unique substantive content reviewed through original-build.py; extracted text and generated structure cross-checked",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/build.py",
+      "bytes": 11626,
+      "sha256": "f29a33db32e2933a525f513872490615aa86d8e8a58b14b8c7ad766d3fd1c9fb",
+      "suffix": ".py",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": [
+        "ROOT-01",
+        "ROOT-06",
+        "ROOT-09"
+      ]
+    },
+    {
+      "path": "dossier-src/check-boundaries.cjs",
+      "bytes": 2711,
+      "sha256": "30122354e80b77c21cb3257a1a9b2e339b98fd91c4e49d09c2c53613bc4ba1f3",
+      "suffix": ".cjs",
+      "format_check": "not_applicable",
+      "mode": "source review; primary current browser regression commands executed where applicable",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/check-prism.cjs",
+      "bytes": 2175,
+      "sha256": "1b9cca910eec5a46c0bacd8730905b434b4661c242d0ef2f9ab97d5f72c7a277",
+      "suffix": ".cjs",
+      "format_check": "not_applicable",
+      "mode": "source review; primary current browser regression commands executed where applicable",
+      "finding_ids": [
+        "ROOT-08"
+      ]
+    },
+    {
+      "path": "dossier-src/check.cjs",
+      "bytes": 3232,
+      "sha256": "93aeda5d986eb6e81d325231ce76cb26fd4b9407e87d4685fee43196c1002270",
+      "suffix": ".cjs",
+      "format_check": "not_applicable",
+      "mode": "source review; primary current browser regression commands executed where applicable",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/demos.js",
+      "bytes": 29935,
+      "sha256": "d9b7a317b3732182fb50aa4546f4e580fe934c39f6dca386dcf5875515721f55",
+      "suffix": ".js",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/motif_icons.py",
+      "bytes": 1530,
+      "sha256": "85744921a4d6dffedba0eedea4ada5c103e69fba769a5a1fc9f69ccc48095d50",
+      "suffix": ".py",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/original-build.py",
+      "bytes": 67951,
+      "sha256": "6d79f7b02570f3efc701365eeedf1c450f56ca3463d027ecb3261ced47f01052",
+      "suffix": ".py",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": [
+        "ROOT-01"
+      ]
+    },
+    {
+      "path": "dossier-src/prism.css",
+      "bytes": 8907,
+      "sha256": "9f288f48860280a8b76b5bf684a7628bad7dff48a7ce3b0593328f3f37a9c746",
+      "suffix": ".css",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/prism.js",
+      "bytes": 8941,
+      "sha256": "6aa3da059f1c8f4ae8ff8afd484d4c8300df26bec3233a0cc94d35dd5abe0be0",
+      "suffix": ".js",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "dossier-src/prism.py",
+      "bytes": 5329,
+      "sha256": "e2c6d3584eec837bb05c889413bb6c0624e715aa7f9dc739fad1e71d023379c3",
+      "suffix": ".py",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": [
+        "ROOT-06"
+      ]
+    },
+    {
+      "path": "dossier-src/research.py",
+      "bytes": 20605,
+      "sha256": "f88aadd44cda3663a77e7d2f24915022dbaaa8d47519e21048caa50ce5854570",
+      "suffix": ".py",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": [
+        "ROOT-01",
+        "ROOT-09"
+      ]
+    },
+    {
+      "path": "dossier-src/theme.css",
+      "bytes": 8058,
+      "sha256": "8e9632d79d9445dc1b98a482486ba4f6b7e385b5d6393f2a5029c310f7712110",
+      "suffix": ".css",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "grove-hackathon-context.md",
+      "bytes": 7294,
+      "sha256": "c554f410ed3c0d8377b7c760a97cba9d55ec7998fe85807ef2f91ed100c0d0ea",
+      "suffix": ".md",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": [
+        "ROOT-07"
+      ]
+    },
+    {
+      "path": "seo-guide-src/app.js",
+      "bytes": 11517,
+      "sha256": "4ceb22f6f2c529b00f96bb9b571969db714b1207aaaafc100b4012b8dc2ba2f2",
+      "suffix": ".js",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "seo-guide-src/body.html",
+      "bytes": 58612,
+      "sha256": "65c0c10c712241ee755fb744e8a7df48dde1bf16d7b53da1e25fb58479a8453b",
+      "suffix": ".html",
+      "format_check": "not_applicable",
+      "mode": "full substantive rendered text/source; generated duplicate sections cross-checked",
+      "finding_ids": [
+        "ROOT-03",
+        "ROOT-05"
+      ]
+    },
+    {
+      "path": "seo-guide-src/build.py",
+      "bytes": 2391,
+      "sha256": "d6a609cb54675c9576798eb814c27aac04b0a092c3e1a6d2adda113a0a854e72",
+      "suffix": ".py",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "seo-guide-src/check.cjs",
+      "bytes": 4775,
+      "sha256": "74467bc99e81778170be80bc48c026911deeb9d4bb140fea58f042f5f068262b",
+      "suffix": ".cjs",
+      "format_check": "not_applicable",
+      "mode": "source review; primary current browser regression commands executed where applicable",
+      "finding_ids": [
+        "ROOT-08"
+      ]
+    },
+    {
+      "path": "seo-guide-src/minimal.html",
+      "bytes": 11941,
+      "sha256": "25486a4d0fb55e3b1009923b20e48726d8df7abed6e5f79ff1c6f1c1e9a6d5dc",
+      "suffix": ".html",
+      "format_check": "not_applicable",
+      "mode": "full substantive rendered text/source; generated duplicate sections cross-checked",
+      "finding_ids": []
+    },
+    {
+      "path": "seo-guide-src/references.json",
+      "bytes": 10433,
+      "sha256": "4cc5c60777c779d67f5b3f8532b37bb38fdc90f7ffc486f54830e9de4921021d",
+      "suffix": ".json",
+      "format_check": "valid",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "seo-guide-src/simulation.js",
+      "bytes": 4099,
+      "sha256": "f0e464010c2b3451ff80bf5f79383dbdf4f397f0fd0443d1b12d123afb467bc5",
+      "suffix": ".js",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": [
+        "ROOT-03",
+        "ROOT-04"
+      ]
+    },
+    {
+      "path": "seo-guide-src/style.css",
+      "bytes": 14091,
+      "sha256": "33dc0d9dd8b4524674b04d7fe2b94e038e6b466992d6d534bcb47752e9540313",
+      "suffix": ".css",
+      "format_check": "not_applicable",
+      "mode": "full prose/source review",
+      "finding_ids": []
+    },
+    {
+      "path": "swarm-ecology-dossier.html",
+      "bytes": 216652,
+      "sha256": "b181672de3ae245fee0b7f5371095dcbe285500fc75870340d4597112b2f7867",
+      "suffix": ".html",
+      "format_check": "not_applicable",
+      "mode": "full substantive rendered text/source; generated duplicate sections cross-checked",
+      "finding_ids": []
+    },
+    {
+      "path": "swarm-influence-guide.html",
+      "bytes": 23616,
+      "sha256": "0c268072036f111fe3e3dbd206d6db33173d6ff5209aee80698ca4ca7ffe2538",
+      "suffix": ".html",
+      "format_check": "not_applicable",
+      "mode": "full substantive rendered text/source; generated duplicate sections cross-checked",
+      "finding_ids": [
+        "ROOT-02"
+      ]
+    },
+    {
+      "path": "swarm-seo-poisoning-mega-guide.html",
+      "bytes": 113304,
+      "sha256": "61dfec8e74c75d0ae40ce5c5b4f80af4d3c2c726110b7c791665c22aa2482c26",
+      "suffix": ".html",
+      "format_check": "not_applicable",
+      "mode": "full substantive rendered text/source; generated duplicate sections cross-checked",
+      "finding_ids": []
+    }
+  ],
+  "proposals": [
+    {
+      "name": "Collective Sensing",
+      "decision": "Advance as a narrow mechanism study",
+      "question": "Does source-aware aggregation resist duplicated evidence at fixed information and communication budget?",
+      "comparison": "Source-naive vs source-aware aggregation of the same delivered messages on one fixed network, with independent-origin and duplicated-origin blocks. Silent ensemble is a secondary baseline.",
+      "endpoint": "Paired world decision loss; correctness separate from agreement.",
+      "risk": "Correlated sources, repeated claims, order and degree; use exact evidence-counting baseline.",
+      "minimum": "A task generator and one qualified model; then held-out worlds. The scripted guide is a harness demonstration."
+    },
+    {
+      "name": "The Commons",
+      "decision": "Choose one rule",
+      "question": "Does an evidence gate improve useful output under unreliable contributions?",
+      "comparison": "Immediate release vs evidence-required release; same contribution stream and total budget.",
+      "endpoint": "Verified useful artifacts per total cost, with good work delayed.",
+      "risk": "Do not also change incentives or attribution; distinguish introduced error from emergent cheating.",
+      "minimum": "Two release policies and clean/contaminated inputs; postpone attribution-credit study."
+    },
+    {
+      "name": "Regrowth",
+      "decision": "Reframe around a real capability gap",
+      "question": "Does a specified repair mechanism restore scored function after measurable damage?",
+      "comparison": "Exact local algorithm, model policy and matched extra-compute control.",
+      "endpoint": "Certificate validity and separately defined delivery/route stretch; recovery loss area.",
+      "risk": "The current numeric argmin strongly favors algorithmic control; one map cannot estimate generality.",
+      "minimum": "Publish the informative negative pilot; choose a task needing semantic decisions before more model spend."
+    },
+    {
+      "name": "Quorum",
+      "decision": "Strong small candidate",
+      "question": "Does a model distinguish repeated source copies from independent evidence?",
+      "comparison": "One repeated source, multiple messengers of one source, distinct observations; matched text and order.",
+      "endpoint": "False adoption on known-truth tasks; true adoption reported too.",
+      "risk": "Shared upstream origins, duplicated private evidence and persona cues.",
+      "minimum": "Use the existing individual-exposure design. A swarm quorum policy is a separate follow-on."
+    },
+    {
+      "name": "Diversity & Resilience",
+      "decision": "Defer until baseline is stable",
+      "question": "Does the second policy correct first-policy errors at matched resource use?",
+      "comparison": "Same-model repeat vs heterogeneous blinded assessment, with randomized positions.",
+      "endpoint": "Conditional correction and new-error rates; group utility/cost.",
+      "risk": "Shared weights/sources; capability and price; blinding does not ensure independent errors.",
+      "minimum": "Qualify both interfaces on the same held-out language families before a swarm."
+    },
+    {
+      "name": "Telephone",
+      "decision": "Advance if complete traces exist",
+      "question": "Can a reviewer reconstruct where certainty changed in a claim lineage?",
+      "comparison": "Reviewed lineage viewer vs search/basic summary on a second held-out episode.",
+      "endpoint": "Supported-link precision, answer correctness and reviewer time.",
+      "risk": "Unobserved access/common sources; graph edges require evidence labels.",
+      "minimum": "One excellent case and a small blind annotation exercise, not a large auto-generated graph."
+    },
+    {
+      "name": "Whistleblowing That Works",
+      "decision": "Narrow to response mechanism",
+      "question": "Does a structured evidence report improve verified correction without false intervention?",
+      "comparison": "Same incidents and alerts, ordinary warning vs structured evidence packet; hold reviewer response policy and available evidence fixed.",
+      "endpoint": "Correct repairs, clean-case interruptions and total review cost.",
+      "risk": "Detection, reporting, acknowledgment and remedy are separate stages.",
+      "minimum": "Use one objective invalid artifact and matched clean cases; avoid adding a constitution."
+    },
+    {
+      "name": "Memory Aftercare",
+      "decision": "Prefer prospective test",
+      "question": "Does explicit supersession prevent recurrence after a valid correction?",
+      "comparison": "Same frozen memory, append-only correction vs supersession; equal retrieval budget.",
+      "endpoint": "Held-out stale-fact recurrence, preserved valid knowledge and cost.",
+      "risk": "Derived summaries, retrieval misses, legitimate updates and exposure opportunities.",
+      "minimum": "One fact graph with one correction; observational episodes become motivation, not causal evidence."
+    },
+    {
+      "name": "The Swarm Casefile",
+      "decision": "Good tool contribution",
+      "question": "Does an evidence-linked casefile improve incident reconstruction?",
+      "comparison": "Casefile vs ordinary search plus summary, same bounded archive.",
+      "endpoint": "Supported-answer accuracy, missing critical facts and time.",
+      "risk": "Reviewer familiarity, fixed answer key, unknowns and contradictory evidence.",
+      "minimum": "Ten concrete questions, one export and one held-out case; reuse existing inspection tools."
+    },
+    {
+      "name": "Who Actually Leads?",
+      "decision": "Separate observation from intervention",
+      "question": "Does withholding a specific message alter subsequent decisions?",
+      "comparison": "Paired synthetic worlds with message delivered/withheld; neutral removal control if appropriate.",
+      "endpoint": "World utility and changed decision probability.",
+      "risk": "Timing, downstream history, message selection and dependency; centrality is not causality.",
+      "minimum": "Freeze one intervention on a synthetic task. Keep real-trace adoption ranking explicitly descriptive."
+    },
+    {
+      "name": "Dissent That Helps",
+      "decision": "Center independent evidence",
+      "question": "Does an evidence-constrained critic outperform a generic critic?",
+      "comparison": "Evidence-constrained critic vs generic critic as the primary contrast; same independent checks without a critic and no-critic/no-check controls. Fixed final aggregation and accounted cost.",
+      "endpoint": "Corrections of wrong answers and damage to right ones, per cost.",
+      "risk": "Extra compute, additional information and adjudication rules.",
+      "minimum": "One task with a checkable contradiction; no always-disagree persona as a stand-in for useful review."
+    },
+    {
+      "name": "Inherited Culture",
+      "decision": "Continue Theseus with harder transfer",
+      "question": "Does interactive handoff help when information supply is equal?",
+      "comparison": "Written copy vs bounded interaction vs no inheritance; same outgoing notebook.",
+      "endpoint": "Task accuracy after full turnover; arbitrary convention retention separately.",
+      "risk": "Four repeated cases, prompt-supplied truth, note lengths and inherited shared history.",
+      "minimum": "Sample new task instances within mapping blocks; retain all per-world paired effects."
+    },
+    {
+      "name": "Coordination Tax",
+      "decision": "Good diagnostic, then causal test",
+      "question": "At what communication allowance does quality stop improving per cost?",
+      "comparison": "Solo and sparse/shared protocols with the same task and aggregate budget.",
+      "endpoint": "Quality-cost frontier and duplicated verified work.",
+      "risk": "Model capability, useful tokens vs raw messages, concurrent latency.",
+      "minimum": "Start with profiler labels reviewed on one task; a descriptive timeline alone is not a causal frontier."
+    },
+    {
+      "name": "Swarm Discovery Triage",
+      "decision": "Park until data and labels exist",
+      "question": "Does transparent ranking improve candidate review precision/time?",
+      "comparison": "Fixed redacted archive; ranker vs random and keyword baseline.",
+      "endpoint": "Precision at a fixed review budget, with ordinary automation negatives.",
+      "risk": "Selection bias in known incidents and attribution uncertainty.",
+      "minimum": "One held-out archive partition; never depend on discovering a new swarm to finish."
+    },
+    {
+      "name": "Agent Institution Bench",
+      "decision": "Fold into Commons or reporting",
+      "question": "Does one quarantine/appeal rule improve valid artifact delivery?",
+      "comparison": "No review vs one fixed review rule, with clean and contaminated contributions.",
+      "endpoint": "Valid output, false quarantine, delay and adjudication cost.",
+      "risk": "Bundled sanctions, reporting and incentives; reviewer oracle access.",
+      "minimum": "One auditable rule. Merge overlapping infrastructure with Commons/Whistleblowing rather than build three platforms."
+    },
+    {
+      "name": "NCA Observatory",
+      "decision": "Reproduction only unless baseline ready",
+      "question": "Can a documented local-rule model reproduce a specified recovery curve?",
+      "comparison": "Pinned source/weights and matched undamaged/damaged rollouts.",
+      "endpoint": "Task function and post-damage loss, compute included.",
+      "risk": "Classical CA is not trained NCA; neither is a language-agent swarm.",
+      "minimum": "Establish runnable published baseline first; otherwise keep as architectural inspiration."
+    }
+  ],
+  "positives": [
+    "Source/illustration/proposal boundaries are often unusually explicit; preserve them.",
+    "Dossier and SEO visuals are already polished, responsive and keyboard-aware, with reduced-motion/print support.",
+    "The SEO proposal contains independent checks, clean controls, cost and clustering cautions; tighten the first estimand rather than discard it."
+  ],
+  "verification": {
+    "dossier_browser": {
+      "errors": [],
+      "artworks": 32,
+      "mobile_panels": 16,
+      "motion_pause": true
+    },
+    "dossier_caption_mapping": "16/16 after fix",
+    "seo_browser": "8 tabs, deterministic seed, 8 edge cases, no mobile overflow, export and 8 print panels passed",
+    "scope": "Browser tests and numeric surrogate regression checks only; no new Swarm Lab/model experiments"
+  },
+  "limitations": [
+    "Not every linked reference was re-read in full; primary-source checks were targeted. Reading depth of new research is recorded individually.",
+    "Generated content was checked through sources and substantive extracted text; duplicated generated bytes are not claimed as independent manual review.",
+    "Existing screenshots were sampled on desktop/mobile, not every animation frame or every possible browser."
+  ]
+}

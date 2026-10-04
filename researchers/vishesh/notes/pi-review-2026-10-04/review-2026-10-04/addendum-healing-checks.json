@@ -1,0 +1,107 @@
+{
+  "assignments": 180,
+  "completed": 72,
+  "not_run": 108,
+  "frames_reconciled": 1728,
+  "completed_by_arm": {
+    "exact": 36,
+    "jev": 36
+  },
+  "calls_started": 660,
+  "calls_terminal": 660,
+  "calls_by_stage": {
+    "qualification": 60,
+    "pilot": 600
+  },
+  "call_failures": 0,
+  "actual_usd": 0.011912292,
+  "input_tokens": 283626,
+  "served_model": {
+    "typesafe/jev-1.13-20260917": 660
+  },
+  "provider": {
+    "TypeSafe": 660
+  },
+  "jev_matches_exact_tapes": {
+    "8701": true,
+    "8702": true,
+    "8703": true
+  },
+  "site_worlds": 180,
+  "site_default": "jev",
+  "recorded_tape_replays": 72,
+  "replay_mismatches": [],
+  "combined_mean_error_delta": -0.28095238095238095,
+  "combined_range_error_delta": [
+    -0.30357142857142855,
+    -0.2500000000000001
+  ],
+  "withdrawal_mean_error_delta": -0.28095238095238095,
+  "erasure_checks": [
+    {
+      "seed": 8701,
+      "preexchange_empty": 40,
+      "preexchange_local_accuracy": 0.88,
+      "preexchange_atlas_accuracy": 0.85,
+      "preexchange_coverage": 0.84,
+      "first_exchange_atlas": 0.95,
+      "first_exchange_coverage": 0.93,
+      "noevent_first_exchange_coverage": 1.0,
+      "erasure_error_delta": 0.003571428571428575,
+      "recovery_rounds": 0
+    },
+    {
+      "seed": 8702,
+      "preexchange_empty": 40,
+      "preexchange_local_accuracy": 0.88,
+      "preexchange_atlas_accuracy": 0.85,
+      "preexchange_coverage": 0.84,
+      "first_exchange_atlas": 0.95,
+      "first_exchange_coverage": 0.94,
+      "noevent_first_exchange_coverage": 1.0,
+      "erasure_error_delta": 0.003571428571428575,
+      "recovery_rounds": 0
+    },
+    {
+      "seed": 8703,
+      "preexchange_empty": 40,
+      "preexchange_local_accuracy": 0.88,
+      "preexchange_atlas_accuracy": 0.85,
+      "preexchange_coverage": 0.84,
+      "first_exchange_atlas": 0.95,
+      "first_exchange_coverage": 0.93,
+      "noevent_first_exchange_coverage": 1.0,
+      "erasure_error_delta": 0.003571428571428575,
+      "recovery_rounds": 0
+    }
+  ],
+  "artifact_hashes": {
+    "final.png": true,
+    "event.png": true,
+    "index.html": true,
+    "outcomes.png": true,
+    "initial.png": true,
+    "recovery.gif": true,
+    "diagnostic-03-qualification.png": true,
+    "pilot-02-qualification.png": true,
+    "data.js": true,
+    "pilot-01-qualification.png": true,
+    "jev-qualification-01-qualification.png": true,
+    "paired-effects.json": true,
+    "replay.zip": false,
+    "diagnostic-04-qualification.png": true
+  },
+  "source_hash_matches": {
+    "README.md": true,
+    "reviews/pilot-03-pre.md": true,
+    "src/sim.py": true,
+    "src/run_reference.py": true,
+    "src/reference.py": true
+  },
+  "issues": [
+    {
+      "path": "/tmp/grove-review-2026-10-04-addendum/healing-helping-hands/site/replay.zip",
+      "issue": "artifact manifest mismatch"
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 The experiment harness owns allocation, resets, observation delivery, action execution, budgets, logs and scoring. Agent orchestration is one component. A workflow library alone does not define the experimental unit or make experiments reproducible.
 
+Use the [agent lifecycle runbook](AGENT-LIFECYCLE.md) to turn the definition, context/access and run templates into a checked initial state and explicit memory/reset policy. It distinguishes recommended production gates from implemented toy checks, including the required public-plan gate before every Swarm Lab run.
+
 ## Choose the smallest appropriate foundation
 
 Capabilities below were checked against official documentation on 2026-10-03. Pin a tested release; documentation tagged “latest” is not a version lock. No external framework was installed or benchmarked for this package.

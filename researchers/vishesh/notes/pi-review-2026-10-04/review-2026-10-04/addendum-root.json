@@ -1,0 +1,36 @@
+{
+  "scope": "Two root/additional ledger files in addendum",
+  "coverage": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1268,
+      "sha256": "e26658893c8272dee4920794e7fcfbff18b23da2434efed7b9cc3426d6acfbe0",
+      "mode": "full instruction review; added deployment-ownership rule observed; no deployment performed"
+    },
+    {
+      "path": "local-run-records/antsy-verification-v4/jev-budget-final.json",
+      "bytes": 422176,
+      "sha256": "8cc09660d40c6233feefefcce49374a21e26c24008fcc4bd038a0966a7118827",
+      "mode": "all977 ledger records parsed locally; allowlisted aggregate cost/status reconciliation; error/diagnostic bodies not disclosed"
+    }
+  ],
+  "findings": [],
+  "budget_check": {
+    "records": 977,
+    "statuses": {
+      "complete": 975,
+      "failed_or_uncertain": 2
+    },
+    "sum_reported_cost_usd": 0.019975452,
+    "declared_actual_usd": 0.01997545199999986,
+    "missing_cost_records": 2,
+    "reserved_usd": 1.3130880000000102,
+    "limit_usd": 5.0,
+    "reported_cost_reconciles": true,
+    "recorded_limit_respected": true
+  },
+  "limitations": [
+    "Two failed_or_uncertain entries lack cost; total is reported usage, not a fully settled provider invoice. Keep reservations until their billability is reconciled.",
+    "Budget ledger checks accounting only; no corresponding full experiment source/outcome audit is implied."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "cutoff_utc": "2026-10-04T03:23:55.191217+00:00",
+  "source_head": "a515aed7a85a6387564a8fe883586e87d254a794",
+  "working_tree_status": "",
+  "files": [
+    {
+      "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/README.md",
+      "sha256": "ce52d33c346fb4f123d2f9b489df22e6362b5c61899487f0293798b739acb9ef",
+      "bytes": 3889
+    },
+    {
+      "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/DESIGNS.md",
+      "sha256": "501f1af80973d884e9f293024cf9779e8128a69b6d58e7b0b0ae7fafe1864248",
+      "bytes": 14371
+    },
+    {
+      "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/REVIEW.md",
+      "sha256": "f9e8f7276b3dec8d69e1435ec55b8656a1e9d0ee684dd08031d3951fe227b121",
+      "bytes": 2818
+    },
+    {
+      "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/QUESTION-BANK.md",
+      "sha256": "876245bdcf5fc009054485e7bf10f5478329744a532bef0a3550657230029f48",
+      "bytes": 17352
+    },
+    {
+      "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/LITERATURE.md",
+      "sha256": "77da91af5c6ea58556f06638fe92dae271a288903d6daf18fe7073f75d923d98",
+      "bytes": 6052
+    }
+  ]
+}
