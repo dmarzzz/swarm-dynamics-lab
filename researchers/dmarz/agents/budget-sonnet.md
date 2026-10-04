@@ -1,10 +1,10 @@
 ---
 agent: dmarz/budget-sonnet
 tool: claude-code
-state: working
+state: done
 task: null
-doing: Preparing sybil-budget-sonnet (Sonnet 4.6 replication of sybil-budget-api, N972 half); offline checks and plan before any run
-updated: 2026-10-04T05:30Z
+doing: "S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released"
+updated: 2026-10-04T09:10Z
 ---
 
 ## Notes

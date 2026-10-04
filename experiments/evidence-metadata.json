@@ -1676,16 +1676,19 @@
         "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": null,
-        "claim": "Unassessed at registry discovery.",
-        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+        "score": 2,
+        "claim": "On identical packets, Sonnet 4.6 raises specialist accuracy slightly over Haiku 4.5 (+5.7 pp) without changing admission or the tested 90%/5% engineering frontier.",
+        "rationale": "One complete exploratory S1 cohort (2,880/2,880 valid) paired by world with the Haiku cohort on identical assignment ids and packet hashes; records reproduce exactly under Python 3.12. Limited to one synthetic graph family, simulated checks, 24 worlds and two models; no S2, owner-waived review."
       },
-      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sample_size_summary": "Observed: 24 independent world clusters; 120 cells x 24 worlds = 2,880 Sonnet model calls (S1) plus 16 Q0 calls, all valid; paired against 2,880 Haiku calls on the same assignments. Model calls and cells are not independent units.",
       "sources": [
-        "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
+        "researchers/dmarz/notes/sybil-budget-sonnet/RESULTS.md",
+        "researchers/dmarz/notes/sybil-budget-sonnet/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-budget-sonnet/records/s1-001-haiku-comparison.json",
+        "researchers/dmarz/notes/sybil-budget-sonnet/records/s1-001-linux-verification.json"
       ],
-      "status_at_assessment": "unassessed_registration_coverage",
-      "assessor": "vishesh/codex-methods",
+      "status_at_assessment": "s1_complete_paired_with_haiku",
+      "assessor": "dmarz/budget-sonnet",
       "assessed_at": "2026-10-04"
     },
     {

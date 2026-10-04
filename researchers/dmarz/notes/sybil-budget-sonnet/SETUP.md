@@ -17,9 +17,9 @@ Status: prospective setup record, started before any run of this study. Follows 
 | G0 Question and applicable research gates | waived by owner | 2026-10-04 ~05:40Z in the operating session (dmarz/orchestrator-2): proposed "I waive cross-researcher review for sybil-newcomer-sonnet, sybil-scale-sonnet and sybil-budget-sonnet ..."; dmarz replied "Yes I approved go for it", then "Go go go". Spend: dmarz chose "Stop worrying about spend" (full 120-cell grid). Owner waiver only; no independent review performed. | none |
 | G1 Plan written before implementation | pass | README (TLDR/Question/Setup/Protocol/Metrics), preregistration.md, design.yaml committed before any fleet or paid run | none |
 | G2 Instrument and offline checks | pass | 10/10 selftests; [local S0-002 post](reviews/s0-local-002-post.md) 256/256 valid; full parity receipt `reporting/parity-receipt.json` | none |
-| G3 Current attempt admission | per attempt | stage pre-runs in `reviews/`; plan receipts `reviews/*-plan-receipt.json`; claim `dmarz-sybil-budget-sonnet` | repeat before each stage |
-| G4 Qualification before scientific escalation | pending | fleet S0 then Q0 at the same source hash | Q0 must pass before S1 |
-| G5 Reconciliation and closeout | pending | post-mortems, verify receipt, claim release | after S1 |
+| G3 Current attempt admission | pass | stage pre-runs in `reviews/`; plan receipts `reviews/*-plan-receipt.json`; claim `dmarz-sybil-budget-sonnet` | repeat before each stage |
+| G4 Qualification before scientific escalation | pass | fleet S0 256/256 ([post](reviews/fleet-s0-001-post.md)); Q0 16/16 ([post](reviews/q0-001-post.md)) at source hash 5cbe54cb… | none |
+| G5 Reconciliation and closeout | pass | S1 2,880/2,880 valid, USD 118.85 study total; [post-mortem](reviews/s1-001-post.md), [RESULTS](RESULTS.md), [Linux verification](records/s1-001-linux-verification.json); claim released agentops PR #235 (2026-10-04 ~08:45Z) | none |
 
 ## Design and instrument index
 
