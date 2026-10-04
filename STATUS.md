@@ -38,7 +38,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:09Z | Build and evaluate real receipt-total checking with fresh data |
+| [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:29Z | Build and evaluate real receipt-total checking with fresh data |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T04:08Z | Ship the compositional safety benchmark and qualification |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T04:15Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
@@ -48,7 +48,7 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:17Z | Run the revised procurement influence experiment |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:27Z | Launch bounded Phantom Coast native pilot |
-| [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:08Z | Design Poietic Agents from the self-differentiating swarm research |
+| [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:29Z | Design Poietic Agents from the self-differentiating swarm research |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:27Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:15Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
