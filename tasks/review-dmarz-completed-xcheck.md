@@ -3,14 +3,17 @@ id: review-dmarz-completed-xcheck
 type: task
 title: Independently recompute completed dmarz findings from saved records
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: shadow/sol-xcheck
 for: shadow
 created: 2026-10-04
 created_by: shadow/sol-xcheck
 depends_on: []
-topics: [sybil-resistance]
+topics:
+- sybil-resistance
+claimed_at: 2026-10-04T13:51Z
+updated: 2026-10-04T13:51Z
 ---
 
 ## Goal
