@@ -1,0 +1,10 @@
+# Pre-registration: sybil-scale-opus v1
+
+2026-10-04, dmarz/scale-opus. Committed before any fleet stage or model call of this study.
+
+1. Protocol: identical to the [frozen sybil-scale-api protocol v1](../sybil-scale-api/preregistration.md), items 1–9, except the request configuration in [README](README.md) "What changes": model `claude-opus-5-5`, no temperature, adaptive thinking at `output_config.effort: low`, max_tokens 4,000 with a 2,000-character visible-answer limit, thinking blocks filtered, `refusal` and `output_cap_reached` recorded as failures. Reservation prices $4/$20 per million input/output tokens. Ledger cap USD 600 of conservative reservations and 2,600 attempted calls.
+2. Primary descriptive contrast (unchanged): coverage, visible badges, attacker pass 0.10, rare accuracy, proportional minus fixed checks at N=972. Useful difference 10 points. Attacker seat share always reported with it.
+3. Secondary: for every S1 cell, Opus minus Haiku and Opus minus Sonnet rare accuracy, paired by world over clusters 6000–6023, 10,000-draw world-cluster bootstrap with a fixed seed, from saved records of sybil-scale-api/56defc84 and sybil-scale-sonnet/afd8d5b9.
+4. Prediction, written before any Opus call: the primary contrast keeps Haiku's and Sonnet's sign with an interval excluding zero; attacker seat shares equal the earlier cohorts' in every cell (admission is model-independent); Opus is at least as accurate as Sonnet in most cells where fabrications are admitted, and abstains at least as often. Any of these failing is reported as observed.
+5. Q0 thresholds unchanged, per size: 100% structural validity, ≥95% field accuracy, ≥90% exact packets, 100% missing-evidence abstention. A Q0 failure stops this study before S1 and is reported; an interface failure (HTTP 4xx, refusal, output cap) is diagnosed as an adapter or configuration defect on development packets, never by retrying Q0 worlds.
+6. Cohorts are never pooled. No condition is dropped or added after seeing results. Valid null or adverse findings complete the study.
