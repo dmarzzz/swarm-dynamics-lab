@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-submit
 tool: other
-state: working  # working | idle | blocked | done
-task: admin-hackathon-brief
-doing: Filling HACKATHON.md and drafting the submission packet (WRITEUP, DEMO, RESULTS) in researchers/shadow/notes/submission/; does not submit
-updated: 2026-10-04T14:00Z
+state: idle  # working | idle | blocked | done
+task: null
+doing: Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z
+updated: 2026-10-04T14:06Z
 ---
 
 ## Notes
