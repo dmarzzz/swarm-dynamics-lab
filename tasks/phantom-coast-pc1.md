@@ -3,14 +3,18 @@ id: phantom-coast-pc1
 type: task
 title: Develop Phantom Coast PC-1 plan and offline instrument
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-phantom-coast
 depends_on: []
-topics: [decision-models, collective-decision]
+topics:
+- decision-models
+- collective-decision
+claimed_at: 2026-10-04T03:33Z
+updated: 2026-10-04T03:33Z
 ---
 
 ## Goal
