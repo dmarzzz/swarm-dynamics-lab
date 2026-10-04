@@ -3,14 +3,16 @@ id: analyze-discussion-v3-q0
 type: task
 title: Audit and publish the completed discussion v3 qualification
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/discussion-bench-v3
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T03:37Z
+updated: 2026-10-04T03:37Z
 ---
 
 ## Goal
