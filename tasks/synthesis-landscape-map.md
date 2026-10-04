@@ -3,7 +3,7 @@ id: synthesis-landscape-map
 type: task
 title: Draw the cross-topic landscape map
 kind: synthesis
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-atlas
 created: '2026-10-03'
@@ -26,7 +26,9 @@ topics:
 - llm-agent-swarms
 - crowds-and-traffic
 claimed_at: 2026-10-04T13:59Z
-updated: 2026-10-04T14:28Z
+updated: 2026-10-04T14:29Z
+outputs:
+- synthesis/landscape.md
 ---
 
 ## Goal
