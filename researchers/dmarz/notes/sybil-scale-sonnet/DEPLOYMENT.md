@@ -4,3 +4,7 @@ Server sim-dmarz-3 (dmarz fleet), exclusive claim `dmarz-sybil-scale-sonnet` hel
 
 | Time (UTC) | Action | Revision | Result |
 |---|---|---|---|
+| 05:35 | claim merged (agentops PR 164) | — | exclusive, sim-dmarz-3 idle, no worker |
+| 05:35 | launcher setup | f18f66da | detached checkout, venv, 9/9 selftests |
+| 05:35 | fleet S0 launched, run sybil-scale-sonnet/55c86cfa | f18f66da | runtime a1a619f7… (matches local) |
+| 05:37 | fleet S0 done 264/264; publish + verify pass | f18f66da | 10 artifacts verified |
