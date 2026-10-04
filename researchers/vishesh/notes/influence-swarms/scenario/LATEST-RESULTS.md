@@ -1,14 +1,18 @@
 # How to win agents and influence swarms: current findings
 
-Updated 2026-10-04 23:02 UTC. This results page does not revise any immutable prospective plan.
+**Five bad purchases. One muddy cost rule.**
 
-- **Progress:** B1 exposed a price-rule ambiguity; B2 passed 96-call qualification after clarification.
-- **Failure:** B2 evaluation stopped at 62 provider calls, with 61 valid replies; the comparison remains incomplete.
-- **Finding:** F0 produced 9/12 valid replies. Keep backend text limits; the whitespace failure did not recur.
-- **Limitation:** These authored cases and diagnostics do not yet establish a peer-influence effect or real-world robustness.
-- **Next:** E1 is running after an 80/80 readiness pass, with at most 1,920 calls and no retries.
+Updated 2026-10-04 23:17 UTC. Original prospective plans and failed records are preserved.
 
-[E1 main run](https://swarm-live.pages.dev/#/r/influence-swarms%2F1004-230027-930fec) · [80-call readiness closeout](reviews/E1-Q0-01-post.md).
+- **The test:** Can a sales pitch hijack a swarm’s procurement judgment?
+- **The finding:** The simple analyst made 96/96 acceptable decisions. Five unsafe purchases in larger workflows all excluded legacy costs in the same scenario.
+- **The lesson:** A muddy cost rule can look like bad judgment; a social hijack is not established.
+- **The limit:** Three decisions are missing, and these are authored cases—not a real-world prevalence estimate.
+- **Next:** Build a tighter team-versus-generalist test with matched truthful/false claims and explicit all-in costs.
+
+The E1 main is complete and scientifically assessed: 1,904 valid replies from 1,907 calls; 285/288 final decisions observed; USD1.094742225 reported model cost. The three format failures were contained, with no retries or unknown usage. The complete-data primary estimate is unavailable. Its prespecified missingness bounds are **[0, 0.0625]**, not a confidence interval, and include zero. Twenty-four variants nested in six authored families limit generalization.
+
+[Full post-mortem](reviews/E1-E0-01-post.md) · [Interactive aggregate report](e1/results.html) · [Scores and bounds](reviews/native-E1-E0-01/assessment.json) · [Prospective R2 plan](r2/PLAN.md) · [Native run](https://swarm-live.pages.dev/#/r/influence-swarms%2F1004-230027-930fec).
 
 ## What changed our understanding
 
@@ -16,7 +20,7 @@ B1's repeated deferrals were largely explainable from the task wording. The buye
 
 The next bottleneck was acquisition. A B2 response ended after 2,579 trailing spaces, exhausting its output allowance and leaving required JSON unfinished. The original global stop then suppressed unrelated scenarios. The diagnostic did not reproduce that rare failure. It did show that simply relaxing backend text constraints weakens the retained local contract unless corresponding prompt limits are supplied. We therefore keep the original B2 output contract and repair failure containment instead of declaring a prompt cure.
 
-E1 will preserve every assigned scenario and first attempt. A known returned JSON/length failure ends that cell; dependent steps remain missing. Other independent cells continue. Ambiguous transport, routing or accounting failures stop globally. No retry, malformed peer input or discarded valid bad decision is allowed. Missing harmful-clearance outcomes range from zero to one in explicit worst-case bounds; surviving complete cases are not silently substituted for the primary comparison.
+E1 preserved every assigned scenario and first attempt. A known returned JSON/length failure ended its cell; dependent steps remained missing. Other independent cells continued. Ambiguous transport, routing or accounting failures stop globally. No retry, malformed peer input or discarded valid bad decision is allowed. Missing harmful-clearance outcomes range from zero to one in explicit worst-case bounds; surviving complete cases are not silently substituted for the primary comparison.
 
 ## Evidence
 

@@ -1,0 +1,34 @@
+{
+  "attempt": "native-E1-E0-01",
+  "exact_wires": 1907,
+  "valid_outputs_reproduced": 1904,
+  "records_and_assessment_reproduced": true,
+  "costs_reconciled": true,
+  "invalids": [
+    {
+      "ordinal": 522,
+      "category": "length",
+      "finish_reason": "length",
+      "characters": 18835,
+      "trailing_whitespace": 18468,
+      "assignment_id": "070-76c28da2693d5046"
+    },
+    {
+      "ordinal": 1652,
+      "category": "length",
+      "finish_reason": "length",
+      "characters": 10587,
+      "trailing_whitespace": 9403,
+      "assignment_id": "250-d0b095faaa5eadd1"
+    },
+    {
+      "ordinal": 1850,
+      "category": "length",
+      "finish_reason": "length",
+      "characters": 3649,
+      "trailing_whitespace": 2371,
+      "assignment_id": "280-47936f2aa152d73c"
+    }
+  ],
+  "new_model_calls": 0
+}

@@ -516,18 +516,23 @@
         "researchers/vishesh/notes/influence-swarms/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence.",
-        "rationale": "Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled."
+        "score": 1,
+        "claim": "A peer-influence effect is not established in the authored E1 procurement comparison.",
+        "rationale": "Three missing decisions give prespecified identification bounds [0,.0625], including zero; five unsafe purchases share residual cost interpretation ambiguity. Simple analyst96/96 acceptable is a bounded descriptive result."
       },
-      "sample_size_summary": "Q4:4 authored dossiers \u00d7 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers \u00d7 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0\u2013Q3 retained separately. Main comparison unrun.",
+      "sample_size_summary": "24 authored variants nested in six families, two fresh repetitions, two framing contexts and three workflows;288 assigned cells,285 observed finals,1904/1907 valid replies. Prior cohorts remain separate.",
       "sources": [
-        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
-        "researchers/vishesh/notes/influence-swarms/scenario/README.md",
-        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-Q4-D1.md"
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/E1-E0-01-post.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-E0-01/saved-audit.json"
       ],
-      "status_at_assessment": "qualification_failed_main_unrun",
-      "source_commit": "84ee032eda80360cc54c5234f8ffc3afe3649cec"
+      "status_at_assessment": "e1_terminal_scientifically_reviewed_r2_preparing",
+      "source_commit": "9eaa1d3188128f0411a0d5e10b02181575c90049",
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "source_sha256": {
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/E1-E0-01-post.md": "5bb23c6bcbc48557d701e8a9e951bbf721b55e25ef2e2dd3a69bb073b04c66f9",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-E1-E0-01/saved-audit.json": "0e0357619319195f3470152d52289f192ffbeb2286e0b2fabe9fafabcd7da762"
+      }
     },
     {
       "id": "healing-pilot03",
