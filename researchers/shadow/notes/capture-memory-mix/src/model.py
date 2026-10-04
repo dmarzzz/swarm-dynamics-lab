@@ -143,7 +143,7 @@ class HTTPPolicy:
         req = urllib.request.Request(self.base + "/chat/completions", data=raw, headers={
             "Content-Type": "application/json", "Authorization": "Bearer " + self.key,
             "HTTP-Referer": "https://github.com/dmarzzz/swarm-lab", "X-Title": "swarm-lab capture-memory-mix"})
-        last = None
+        last, resp = None, None
         for attempt in range(self.retries):
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:

@@ -14,7 +14,7 @@ COMMON='"n_agents":16,"entrench_rounds":5,"takeover_max_rounds":60,"recovery_rou
 for MEM in "${MEMS[@]}"; do
   TAG=$(echo "$MEM" | sed 's#[/:@]#-#g')
   CELLS="[{\"world\":\"W1_INSIDE\",\"dose\":0.5,\"memory\":\"$MEM\",\"tasks\":\"$TASKS\",\"seeds\":[1],\"arms\":[\"A0_no_purge\",\"A1_purge\",\"A2_purge_wipe\"],\"cfg_overrides\":{$COMMON}}]"
-  CFG="{\"model\":\"$MODEL\",\"max_cost_usd\":10,\"concurrency\":8,\"input_usd_per_million\":0.1,\"output_usd_per_million\":0.4,\"timeout\":90,\"call_log\":\"$OUT/calls-$TAG.jsonl\"}"
+  CFG="{\"model\":\"$MODEL\",\"max_cost_usd\":10,\"concurrency\":6,\"input_usd_per_million\":0.1,\"output_usd_per_million\":0.4,\"timeout\":90,\"retries\":6,\"call_log\":\"$OUT/calls-$TAG.jsonl\"}"
   SWARM_MODEL_CONFIG="$CFG" setsid nohup python3 -u src/worker.py --pilot "$OUT" --backend http --pilot-cells "$CELLS" > "$OUT/cell-$TAG.log" 2>&1 < /dev/null &
   echo "started cell $MEM tasks $TASKS pid $!"
 done
