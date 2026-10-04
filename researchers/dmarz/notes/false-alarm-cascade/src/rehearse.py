@@ -2,7 +2,7 @@
 
     python3 src/rehearse.py --hub-dir <dir with hub.py and swarm_report.py>
 
-Runs the chain six times, each on a fresh hub, in fresh temporary result and ledger directories:
+Runs on the ladder's default model (gpt-6-sol, OpenAI path) unless noted. Runs the chain six times, each on a fresh hub, in fresh temporary result and ledger directories:
   (a) S0, P0, Q0, S1 to completion with a stub that answers every call by the private-evidence
       reference policy (and posts claims by the scripted rule), then `chain verify`;
   (b) with a stub that skips on any suspicious inspection, which must fail Q0, stop the chain with
@@ -11,11 +11,14 @@ Runs the chain six times, each on a fresh hub, in fresh temporary result and led
       S1 ends done with one failed episode and the primary contrast reported as bounds;
   (d) with an HTTP 500 in every 40th S1 call: the fourth failed episode exceeds the limit of 3,
       dispatch stops and S1 ends failed;
-  (e) with a credit-balance error three times and then a healthy provider: one pause, no failed
+  (e) with a billing error (OpenAI: HTTP 429 insufficient_quota) three times and then a healthy provider: one pause, no failed
       row, S1 done;
-  (f) with a credit-balance error that does not end: S1 stops with provider_credit_balance_low and
+  (f) with a billing error that does not end: S1 stops with the adapter's billing-stop category and
       the unfinished rows not started; then `chain resume` with a healthy stub completes S1, and
-      the analysis and `verify` see every row exactly once.
+      the analysis and `verify` see every row exactly once;
+  (g) the ladder: (f)'s billing stop on the first rung (gpt-6-sol), then P0 -> Q0 -> S1 on the
+      second rung (claude-opus-5-5) on the same hub and source hash, with its own results directory
+      and ledger as the launcher's --model gives it; its Q0 is refused before its own P0 exists.
 
 The stub reads the request exactly as the provider sends it, so each later round's answer depends
 on the board that earlier stub answers produced. It refuses any hub that is not on 127.0.0.1 and
@@ -45,6 +48,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import analyze
 import chain
 import coordinator
+import openai_provider
 import provider
 import study
 import worker
@@ -65,15 +69,26 @@ CREDIT_BODY = json.dumps({'type': 'error', 'error': {
     'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}}).encode()
 
 
+# OpenAI reports an exhausted quota as HTTP 429 `insufficient_quota` (reference adapter docstring).
+QUOTA_BODY = json.dumps({'error': {'message': 'You exceeded your current quota, please check your plan and billing details.',
+                                   'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}).encode()
+# A non-retryable failure on the OpenAI path (HTTP 500 is re-sent there under the transport rule).
+OPENAI_FAIL_STATUS = 400
+
+
 class Stub:
-    """Stands in for the model endpoint. Answers count_tokens and messages requests in the real
-    response shape: a thinking block before one text block, model id, stop reason and usage.
+    """Stands in for the model endpoint of either provider, chosen by the request's URL.
+    Anthropic: answers count_tokens and messages requests in the real response shape: a thinking
+    block before one text block, model id, stop reason and usage. OpenAI: answers Chat Completions
+    requests with one choice, finish_reason stop, and usage with reasoning and cache-write tokens.
 
     mode 'private': the private-evidence reference decision for the packet in the request, with
                     claims by the scripted rule.
     mode 'jumpy':   skip on any suspicious inspection (an over-cautious agent); fails Q0.
-    `fail`:   a function of the messages request's ordinal; True answers it with HTTP 500.
-    `credit`: a function of the ordinal; True answers it with the HTTP 400 credit-balance error.
+    `fail`:   a function of the messages request's ordinal; True answers it with HTTP 500 (Anthropic)
+              or HTTP 400 (OpenAI, where 500 is re-sent by the transport rule).
+    `credit`: a function of the ordinal; True answers it with the HTTP 400 credit-balance error
+              (Anthropic) or the HTTP 429 insufficient_quota error (OpenAI).
     """
     def __init__(self, mode='private', output_tokens=600, fail=None, credit=None, hold=0.002):
         self.mode, self.output_tokens, self.fail, self.credit, self.hold = mode, output_tokens, fail, credit, hold
@@ -84,6 +99,8 @@ class Stub:
 
     def __call__(self, request, timeout=None):
         url = request.full_url
+        if url == openai_provider.URL:
+            return self.openai(request)
         if url not in (provider.COUNT_URL, provider.MESSAGES_URL):
             raise AssertionError('stub_unexpected_url')
         headers = {k.lower(): v for k, v in request.header_items()}
@@ -131,6 +148,56 @@ class Stub:
             'stop_reason': 'end_turn', 'stop_sequence': None,
             'usage': {'input_tokens': tokens, 'output_tokens': self.output_tokens,
                       'cache_creation_input_tokens': 0, 'cache_read_input_tokens': 0}}).encode())
+
+
+    def openai(self, request):
+        url = request.full_url
+        headers = {k.lower(): v for k, v in request.header_items()}
+        if not str(headers.get('authorization', '')).startswith('Bearer ') or 'x-api-key' in headers:
+            raise AssertionError('stub_missing_headers')
+        body = json.loads(request.data)
+        template = provider.openai_config()['request_template']
+        if list(body) != list(openai_provider.BODY_KEYS) or {k: body[k] for k in template} != template:
+            raise AssertionError('stub_openai_body')
+        if [m['role'] for m in body['messages']] != ['system', 'user'] or body['messages'][0]['content'] != study.SYSTEM \
+                or body['response_format']['json_schema']['schema'] != study.schema():
+            raise AssertionError('stub_prompt_or_schema')
+        packet = json.loads(body['messages'][1]['content'])
+        tokens = len(request.data) // 3
+        with self.lock:
+            self.models.add(body['model'])
+            self.message_calls += 1
+            n = self.message_calls
+            self.in_flight += 1
+            self.max_in_flight = max(self.max_in_flight, self.in_flight)
+        try:
+            time.sleep(self.hold)
+            if self.credit and self.credit(n):
+                with self.lock:
+                    self.credit_errors += 1
+                raise urllib.error.HTTPError(url, 429, 'Too Many Requests', {'x-request-id': f'req_stub_{n:06d}'}, io.BytesIO(QUOTA_BODY))
+            if self.fail and self.fail(n):
+                raise urllib.error.HTTPError(url, OPENAI_FAIL_STATUS, 'stub failure', {'x-request-id': f'req_stub_{n:06d}'},
+                                             io.BytesIO(b'{"error": {"message": "stub failure", "type": "invalid_request_error"}}'))
+            answer = study.jumpy_answer(packet) if self.mode == 'jumpy' else study.scripted_answer(packet, 'private', True)
+            answer['rationale'] = 'Stub answer from own inspection counts.'
+        finally:
+            with self.lock:
+                self.in_flight -= 1
+        with self.lock:
+            self.answered += 1
+        return _Response(json.dumps({
+            'id': f'chatcmpl_stub_{n:06d}', 'object': 'chat.completion', 'model': body['model'],
+            'choices': [{'index': 0, 'finish_reason': 'stop',
+                         'message': {'role': 'assistant', 'content': json.dumps(answer), 'refusal': None}}],
+            'usage': {'prompt_tokens': tokens, 'completion_tokens': self.output_tokens,
+                      'prompt_tokens_details': {'cached_tokens': 0, 'cache_write_tokens': tokens},
+                      'completion_tokens_details': {'reasoning_tokens': self.output_tokens - 150}}}).encode())
+
+
+def fail_status():
+    """The HTTP status the stub's `fail` answers with on the attempt model's provider."""
+    return OPENAI_FAIL_STATUS if study.provider_name() == 'openai' else 500
 
 
 def no_wait(seconds):
@@ -203,7 +270,7 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False, resume_with=Non
             code = chain.run_chain(stages, sr, base / 'results', ledger_path, opener=stub, sleep=no_wait)
             elapsed = time.monotonic() - started
             status = chain.read_status(base / 'results')
-            out = {'exit': code, 'seconds': elapsed, 'status': status, 'runs': stage_runs(sr),
+            out = {'exit': code, 'seconds': elapsed, 'status': status, 'runs': stage_runs(sr), 'models': set(stub.models),
                    'stub_messages': stub.message_calls, 'stub_counts': stub.count_calls,
                    'max_in_flight': stub.max_in_flight, 'credit_errors': stub.credit_errors,
                    'ledger': provider.Ledger(ledger_path).transact(), 'replay_refused': None, 'verify': None}
@@ -253,6 +320,7 @@ def ladder_scenario(sr, hub_dir, tmp, stages, credit_from):
     base = tmp / 'g'
     base.mkdir()
     ladder = study.design()['model_ladder']
+    launcher_tag = '-' + ladder[1].replace('claude-', '')       # the launcher's path tag for a later ladder model
     with (base / 'hub.log').open('w') as log:
         proc = start_hub(hub_dir, base / 'hubdata', log)
         try:
@@ -271,12 +339,12 @@ def ladder_scenario(sr, hub_dir, tmp, stages, credit_from):
                 except ValueError as exc:
                     cross_refused = str(exc).startswith('exact_runtime_qualification_required')
                 second_stub = Stub('private')
-                second = chain.run_chain(stages[1:], sr, base / 'results-opus-5',
-                                         base / 'accounting' / 'ledger-opus-5.jsonl', opener=second_stub, sleep=no_wait)
-                status = chain.read_status(base / 'results-opus-5')
+                second = chain.run_chain(stages[1:], sr, base / ('results' + launcher_tag),
+                                         base / 'accounting' / ('ledger' + launcher_tag + '.jsonl'), opener=second_stub, sleep=no_wait)
+                status = chain.read_status(base / ('results' + launcher_tag))
                 entries = chain.stage_entries(status or {}, 'S1')
                 rows = analyze.read_rows(Path(entries[0]['results_dir']) / 'episodes.jsonl.gz') if entries else []
-                ledger2 = provider.Ledger(base / 'accounting' / 'ledger-opus-5.jsonl').transact()
+                ledger2 = provider.Ledger(base / 'accounting' / ('ledger' + launcher_tag + '.jsonl')).transact()
             finally:
                 os.environ.pop('STUDY_MODEL', None)
             ledger1 = provider.Ledger(base / 'accounting' / 'ledger.jsonl').transact()
@@ -306,7 +374,11 @@ def main(argv=None):
     # The client reads these; nothing points outside this machine and the model key is a dummy.
     os.environ.update(SWARM_HUB_URL=f'http://{LOCAL}:1', SWARM_HUB_TOKEN='unset-until-hub-starts',
                       SWARM_SOURCE='rehearsal/local', SWARM_SPOOL=str(tmp / 'spool'), SWARM_NO_AUTO_REFRESH='1',
-                      SWARM_MODEL_API_KEY='rehearsal-stub-not-a-key', SWARM_MODEL_WORKSPACE_ID='rehearsal-stub')
+                      SWARM_MODEL_API_KEY='rehearsal-stub-not-a-key', SWARM_MODEL_WORKSPACE_ID='rehearsal-stub',
+                      SWARM_OPENAI_API_KEY='rehearsal-stub-not-a-key')
+    # The rehearsal runs the ladder's default model (the first rung) unless told otherwise.
+    for name in ('STUDY_MODEL', 'STUDY_PROVIDER', 'STUDY_REPLICATION'):
+        os.environ.pop(name, None)
     os.environ.pop(provider.LEDGER_ENV, None)
     os.environ.pop('STUDY_RESULTS_DIR', None)
     block_network()
@@ -322,6 +394,8 @@ def main(argv=None):
     per_round = len(d['world']['members']) - 1
     s1_rows = budget['max_calls']['S1']
     after = d['windows']['after_correction']
+    model, stop_name = study.model(), (openai_provider.BILLING_STOP if study.provider_name() == 'openai' else provider.CREDIT_STOP)
+    s1_batch = study.params('S1')['batch']
     checks = {}
 
     def metrics(run, stage):
@@ -339,6 +413,12 @@ def main(argv=None):
         checks['a_calls_per_stage'] = {s: metrics(a_run, s).get('model_calls') for s in stages} == budget['max_calls']
         checks['a_gates_passed'] = all(metrics(a_run, s).get('qualification_passed') == 1 for s in stages[:3])
         checks['a_ledger_total_calls'] = a_run['ledger']['attempted_calls'] == budget['max_attempted_calls'] == a_run['stub_messages']
+        checks['a_every_request_on_the_attempt_model'] = a_run['models'] == {model}
+        if study.provider_name() == 'openai':
+            # Computed cost at the pinned prices: the stub reports every prompt token as a cache write.
+            p_ = study.prices()
+            want = (a_run['ledger']['input_tokens'] * p_['cache_write'] + a_run['ledger']['output_tokens'] * p_['output']) / 1e6
+            checks['a_cost_computed_at_pinned_prices'] = 0 <= a_run['ledger']['actual_usd'] - want <= budget['max_attempted_calls'] / 1e6
         checks['a_verify_ok'] = bool(a_run['verify'] and a_run['verify']['ok'])
         checks['a_replay_refused'] = a_run['replay_refused'] is True
         checks['a_resume_refused_without_credit_stop'] = a_run['resume_refused'] is True
@@ -374,8 +454,8 @@ def main(argv=None):
         failed = [r for r in rows if r['status'] == 'failed']
         s1 = metrics(c_run, 'S1')
         checks['c_exit_zero_and_s1_done'] = c_run['exit'] == 0 and c_run['runs'].get('S1', {}).get('status') == 'done'
-        checks['c_one_failed_call_with_evidence'] = (len(failed) == 1 and failed[0].get('error') == 'http_500'
-                                                     and failed[0]['accounting'].get('http_status') == 500
+        checks['c_one_failed_call_with_evidence'] = (len(failed) == 1 and failed[0].get('error') == f'http_{fail_status()}'
+                                                     and failed[0]['accounting'].get('http_status') == fail_status()
                                                      and 'stub failure' in failed[0]['accounting'].get('error_body', '')
                                                      and failed[0]['accounting'].get('request_id', '').startswith('req_stub_'))
         episode = failed[0]['episode'] if failed else None
@@ -432,15 +512,18 @@ def main(argv=None):
         rows = f_run['s1_rows'] or []
         interrupted = [r for r in rows if r.get('interrupted')]
         runs = {(r.get('params') or {}).get('batch'): r for r in f_run['resume']['runs']}
-        first_run, second_run = runs.get('s1-001', {}), runs.get('s1-001-r1', {})
+        first_run, second_run = runs.get(s1_batch, {}), runs.get(s1_batch + '-r1', {})
         merged = f_run['resume']['merged'] or []
         checks['f_stage_stopped_for_credit'] = (f_run['exit'] == chain.EXIT_STOPPED and first_run.get('status') == 'failed'
                                                 and (first_run.get('metrics') or {}).get('billing_stop') == 1
-                                                and 'provider_credit_balance_low' in (first_run.get('message') or ''))
+                                                and stop_name in (first_run.get('message') or '')
+                                                and (f_run['status'] or {}).get('stages', {}).get('S1', {}).get('reason') == stop_name)
         checks['f_rows_not_started_not_failed'] = (len(rows) == s1_rows and count(rows, 'failed') == 0 and len(interrupted) >= 1
                                                    and all(r['status'] == 'not_started' and r['accounting'].get('voided') for r in interrupted if r['accounting'].get('attempts'))
                                                    and (first_run.get('metrics') or {}).get('failed_episodes') == 0)
-        checks['f_slow_schedule_followed'] = any(r['accounting'].get('billing_wait_seconds') == budget['billing_outage']['max_wait_seconds'] for r in interrupted)
+        outage = budget['billing_outage']
+        checks['f_slow_schedule_followed'] = any(outage['max_wait_seconds'] <= (r['accounting'].get('billing_wait_seconds') or 0)
+                                                 < outage['max_wait_seconds'] + outage['retry_every_seconds'] for r in interrupted)
         checks['f_resume_completes'] = (f_run['resume']['exit'] == 0 and second_run.get('status') == 'done'
                                         and (f_run['resume']['status'] or {}).get('state') == 'completed')
         checks['f_continuation_holds_exactly_the_not_started_rows'] = (
@@ -463,12 +546,12 @@ def main(argv=None):
         tag = study.model_tag(ladder[1])
         second = [by_batch.get(f'{s.lower()}-{d["attempt"]}{tag}', {}) for s in stages[1:]]
         checks['g_first_rung_stopped_for_credit'] = (g_run['first_exit'] == chain.EXIT_STOPPED
-                                                     and (by_batch.get('s1-001', {}).get('metrics') or {}).get('billing_stop') == 1
+                                                     and (by_batch.get(s1_batch, {}).get('metrics') or {}).get('billing_stop') == 1
                                                      and g_run['first_models'] == {ladder[0]})
         checks['g_cross_model_qualification_refused'] = g_run['cross_refused'] is True
         checks['g_second_rung_completes'] = (g_run['second_exit'] == 0 and all(r.get('status') == 'done' for r in second)
                                              and all((r.get('params') or {}).get('model') == ladder[1] for r in second))
-        checks['g_second_rung_own_batches_and_ledger'] = (tag == '-opus-5' and g_run['ledger2']['attempted_calls'] == budget['max_attempted_calls']
+        checks['g_second_rung_own_batches_and_ledger'] = (tag == study.model_tag(ladder[1]) != study.model_tag(ladder[0]) and g_run['ledger2']['attempted_calls'] == budget['max_attempted_calls']
                                                           and g_run['second_messages'] == budget['max_attempted_calls']
                                                           and g_run['second_models'] == {ladder[1]})
         checks['g_rows_name_their_model'] = (len(g_run['rows']) == s1_rows and all(r.get('model') == ladder[1] for r in g_run['rows']))

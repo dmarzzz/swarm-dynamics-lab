@@ -138,7 +138,7 @@ def frame(rows, total, stage, elapsed=0, accounting=None):
         _grid(dr, text, rows, d, stage)
     a = accounting or {}
     stage_cost = sum((r.get('accounting') or {}).get('actual_usd', 0) for r in rows)
-    text(60, 1100, f'Stage cost ${stage_cost:.4f} | study settled ${a.get("actual_usd", 0):.4f} | committed ${a.get("committed_usd", 0):.2f} of ${d["budget"]["aggregate_usd"]} cap | calls {a.get("attempted_calls", 0)}/{d["budget"]["max_attempted_calls"]}', 21, COLORS['TA'])
+    text(60, 1100, f'Stage cost ${stage_cost:.4f} | study settled ${a.get("actual_usd", 0):.4f} | committed ${a.get("committed_usd", 0):.2f} of ${a.get("cap_usd", d["budget"]["aggregate_usd"])} cap | calls {a.get("attempted_calls", 0)}/{d["budget"]["max_attempted_calls"]}', 21, COLORS['TA'])
     text(60, 1134, 'A point is drawn only where completed rows exist: pending, failed and not-started calls are never shown as zero. Truth is used by the evaluator only.', 19, MUTED)
     text(60, 1162, 'Synthetic resources; the sixth member posts by design. Roots are the units; agents, rounds and calls are not independent samples.', 19, MUTED)
     return im
@@ -206,7 +206,8 @@ def _grid(dr, text, rows, d, stage):
     x = _legend(dr, text, 60, 192, d['conditions'])
     text(x + 10, 192, 'X: real resource falsely accused in FA, FA+C.  H: honeypot truly accused in TA, TA+C.', 19, MUTED)
 
-    label = 'model agents' if stage == 'S1' else f'{actor} script'
+    models = sorted({r['model'] for r in rows if r.get('model') and r.get('model') != 'scripted'})
+    label = (', '.join(models) or 'model') + ' agents' if stage == 'S1' else f'{actor} script'
     _lines(dr, text, (110, 290, 600, 270), f'Use of X by round ({label})', round_rates(rows, actor, 'use_x'), ('C0', 'FA', 'FA+C'), rounds)
     _lines(dr, text, (830, 290, 600, 270), f'Use of H by round ({label})', round_rates(rows, actor, 'use_h'), ('C0', 'TA', 'TA+C'), rounds)
 

@@ -61,23 +61,48 @@ def design():
 
 
 def model():
-    """The model of this attempt: STUDY_MODEL (set by the launcher's --model), else the first rung."""
+    """The model of this attempt: STUDY_MODEL (set by the launcher's --model), else the first rung.
+    STUDY_PROVIDER, when the launcher sets it, must be that model's pre-registered provider."""
     d = design()
     m = os.environ.get('STUDY_MODEL') or d['model_ladder'][0]
     if m not in d['model_ladder']:
         raise ValueError('model_not_in_ladder')
+    wanted = os.environ.get('STUDY_PROVIDER')
+    if wanted and wanted != d['models'][m]['provider']:
+        raise ValueError('provider_does_not_match_model')
     return m
 
 
+def provider_name(m=None):
+    """'anthropic' or 'openai': the pre-registered provider of a ladder model. Also the paid stages' backend."""
+    return design()['models'][m or model()]['provider']
+
+
 def model_tag(m=None):
-    """'' for the first rung; '-<id without claude->' for any other, appended to batch names."""
-    m = m or model()
-    return '' if m == design()['model_ladder'][0] else '-' + m[len('claude-'):] if m.startswith('claude-') else '-' + m
+    """The batch-name suffix of a model: '' for claude-opus-5-5 (the original first rung keeps its
+    batch names), '-<tag>' for every other model, e.g. '-gpt-6-sol', '-opus-5'."""
+    tag = design()['models'][m or model()]['tag']
+    return '-' + tag if tag else ''
 
 
 def prices(m=None):
-    """Per-million input and output prices of a model in the ladder."""
-    return design()['models'][m or model()]
+    """Prices of a model in the ladder: per-million input and output (Anthropic) or the OpenAI
+    adapter's price row (input, cached_input, cache_write, output)."""
+    entry = design()['models'][m or model()]
+    return entry['budget']['prices'] if entry['provider'] == 'openai' else {
+        k: entry[k] for k in ('input_usd_per_million', 'output_usd_per_million')}
+
+
+def budget(m=None):
+    """The shared budget with the model's own overrides (dollar cap, output allowance, retry rule).
+    Call caps, gates, timeouts, failure limit and load are shared and never overridden."""
+    d = design()
+    merged = dict(d['budget'])
+    merged.update(d['models'][m or model()].get('budget') or {})
+    for key in ('max_calls', 'max_attempted_calls', 'max_failed', 'episode_workers', 'fixture_workers', 'workers',
+                'billing_outage', 'stage_timeout_seconds', 'chain_timeout_seconds', 'max_transport_attempts'):
+        assert merged[key] == d['budget'][key], key
+    return merged
 
 
 def world_cfg():
@@ -140,7 +165,7 @@ def params(stage, continuation=0):
     m = 'scripted' if stage == 'S0' else model()
     tag = '' if stage == 'S0' else model_tag(m)
     batch = f'{stage.lower()}-{design()["attempt"]}{tag}' + (f'-r{continuation}' if continuation else '')
-    return dict(stage=stage, backend='scripted' if stage == 'S0' else 'anthropic', model=m,
+    return dict(stage=stage, backend='scripted' if stage == 'S0' else provider_name(m), model=m,
                 batch=batch, source_hash=source_hash(), code=code_revision())
 
 
