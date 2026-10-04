@@ -1,7 +1,7 @@
 {
   "PLAN.md": "cccc36de84e2304145b1731d989a0524b9cfd13c140e010c78e37765b20ba478",
   "PRE-RUN.md": "0645e610f26bbf0a01f7a8323b5b3d49d998762fc4686fe74f6a911a066a82f9",
-  "SCORING.md": "c09dfc24a917b146a6ecf1146f12ccf105e89396ff85358e31c1b637574cee51",
+  "SCORING.md": "7a6376251ab76fbae14bd9d7fa5ae431a48f74e8a7678d168d9e8b46f82de3b6",
   "prepared/actors.json": "cfa68090f1a0c79d421ae9c0de1173d2629b4ecb8b0957bcc80b0a22ab96b0d9",
   "prepared/assignments.json": "7a76214d570a4f27b7df4a0cdb28961e1726b9d8a05396a80124685d5c0d54bf",
   "prepared/envelope.json": "2a5ab3395dc021f47f0ccccd667358f9e4ef30f6b5d117e0b190480dcebeaa6e",
@@ -15,6 +15,6 @@
   "src/corpus.py": "a7bc38074b9a5e7a0d6b3b9d928c724d48fde636967efe16bdc958da47371bd3",
   "src/native.py": "c1fd00ff65b3c158e4ac24d2d1b3b92681cb51483988e88a077af9a8e6eb48a0",
   "src/prepare.py": "9af486c033509d35dedac982f9a3da27758428ff5023a76016eda6289223e09a",
-  "src/report.py": "de3c6132d165e53b7016f375a176ba5836ef332f5e989fbc88a12c688bd4a0d1",
+  "src/report.py": "8803e8f72d529c0d16ec51c8071c1e81f987310d3503b6a6728f5a41ce7abc0d",
   "tests/test_b3.py": "4951a72e44b3a42da2d24175103f582ccc198f6481ad63288a8bf01c38773ad8"
 }

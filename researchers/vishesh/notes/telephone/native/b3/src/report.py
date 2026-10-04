@@ -27,7 +27,7 @@ def analyze(p,out,gold):
                 if receipt['request_sha256']!=sha(req) or receipt['response_sha256']!=sha(raw) or receipt['parent_response_sha256']!=(None if a['parent']is None else hashes[a['parent']]):raise ValueError('receipt_hash')
                 r.update(status='valid',output=obj,response_sha256=sha(raw))
                 if a['role']=='reader':
-                    truth=gold[a['case_id']]['answer'];r.update(truth=truth,correct=obj['answer']==truth,false_certainty=truth=='UNKNOWN' and obj['answer']!='UNKNOWN',abstained=obj['answer']=='UNKNOWN')
+                    truth=gold[a['case_id']]['answer'];r.update(truth=truth,correct=obj['answer']==truth,false_certainty=truth=='UNKNOWN' and obj['answer']!='UNKNOWN',abstained=obj['answer']=='UNKNOWN',unsupported_affirmative=truth=='NO' and obj['answer']=='YES',missed_supported_affirmative=truth=='YES' and obj['answer']=='NO')
             except Exception as e:r.update(status='invalid',failure_type=type(e).__name__)
         elif (out/(a['id']+'.started.json')).exists():r['status']='started_missing'
         rows.append(r)
@@ -35,7 +35,7 @@ def analyze(p,out,gold):
     for block in (1,2):
         for arm in ('P','R'):
             rr=[r for r in readers if r['block']==block and r['arm']==arm];valid=sum(r['status']=='valid' for r in rr);correct=sum(r['correct']is True for r in rr)
-            cells.append({'block':block,'arm':arm,'assigned':len(rr),'valid':valid,'correct':correct,'missing_or_invalid':len(rr)-valid,'all_assigned_accuracy_bounds':[correct/len(rr),(correct+len(rr)-valid)/len(rr)],'false_certainty':sum(r['false_certainty']is True for r in rr)})
+            cells.append({'block':block,'arm':arm,'assigned':len(rr),'valid':valid,'correct':correct,'missing_or_invalid':len(rr)-valid,'all_assigned_accuracy_bounds':[correct/len(rr),(correct+len(rr)-valid)/len(rr)],'false_certainty':sum(r['false_certainty']is True for r in rr),'unsupported_affirmatives':sum(r.get('unsupported_affirmative')is True for r in rr),'missed_supported_affirmatives':sum(r.get('missed_supported_affirmative')is True for r in rr)})
         for cid in gold:
             pp=[r for r in readers if r['block']==block and r['case_id']==cid];by={r['arm']:r for r in pp}
             pairs.append({'block':block,'case_id':cid,'R_minus_P':int(by['R']['correct'])-int(by['P']['correct']) if all(by[x]['correct']is not None for x in ('P','R')) else None})
@@ -54,6 +54,6 @@ def analyze(p,out,gold):
         for arm in ('P','R'):
             rr=[r for r in readers if r['case_id']==cid and r['arm']==arm];answers=[r.get('output',{}).get('answer') for r in rr]
             disagreement.append({'case_id':cid,'arm':arm,'answers':answers,'disagrees':len(set(answers))>1 if None not in answers else None})
-    return {'native_assignments':len(rows),'reader_assignments':len(readers),'worlds':24,'shared_families':8,'independent_family_warning':'Two repeats and two policies are nested; eight authored templates constrain generalization.','cells':cells,'paired_differences':pairs,'source_available_competence':competence,'repeat_disagreement':disagreement,'audit_required_ids':[r['id'] for r in audit],'audit_max':32,'audit_complete':False,'rows':rows}
+    return {'native_assignments':len(rows),'reader_assignments':len(readers),'worlds':24,'shared_families':8,'independent_family_warning':'Two repeats and two policies are nested; eight authored templates constrain generalization.','cells':cells,'paired_differences':pairs,'source_available_competence':competence,'repeat_disagreement':disagreement,'audit_required_ids':[r['id'] for r in audit],'audit_max':32,'audit_categories':['provenance','temporal_version','uncertainty','dependencies','conditional_constraints'],'audit_complete':False,'rows':rows}
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('out');ap.add_argument('--gold',required=True);args=ap.parse_args();p=json.loads((Path(args.out)/'packet.json').read_text());r=analyze(p,args.out,json.loads(Path(args.gold).read_text()));print(json.dumps(r,indent=2))

@@ -27,3 +27,10 @@ After deterministic scoring, partition valid reader outputs by eight families an
 | Holdouts | All24 worlds are inspected development material frozen before outputs. No untouched holdout or broad generalization claim. |
 
 Case readiness is separate from route qualification, launch admission and scientific success. If both policies remain at ceiling, report the useful null rather than automatically making the cases harder.
+
+
+## Prospective context-loss and implication annotation
+
+Before native collection, classify the fixed semantic audit by provenance (origin/receipt identity), temporal/version qualification, uncertainty (missing versus negative evidence), dependencies (shared acquisition or conjunctive requirements), and conditional constraints (scope and prerequisites). For each selected final handoff, compare with the original source and label each applicable category retained, lost, ambiguous or not applicable, quoting source and handoff spans. These are semantic annotations on the bounded sample, not automatically inferred from an incorrect answer. One handoff may have multiple losses.
+
+Distinguish a correct final answer with damaged context from an incorrect answer with retained context. Report unsupported affirmative answers on NO roots, false certainty on UNKNOWN roots, and missed supported affirmatives (NO on YES roots) separately. These last errors may block a legitimate action only where the frozen question and evidence actually imply that action; report that as a stated-decision implication, never an observed action. Audit any explicit unsafe recommendation/commitment in the reader explanation against the source; do not call a wrong answer an executed action. This task measures answer and stated-commitment implications, not real tool execution, deployment harm or a causal mediation effect. Preserve ambiguous labels and all deficient families. No new cases, calls, actor fields or decision-based stopping are introduced by this annotation clarification.
