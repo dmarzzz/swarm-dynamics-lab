@@ -1,5 +1,10 @@
 # Handover: false-alarm-cascade
 
+> **gpt-6-sol port, paused 2026-10-04 about 19:20 UTC on dmarz's instruction to start no further experiments; not reviewed, not launchable, nothing has run.**
+> Done: amendment A2 (`3bf7648f`), code `73ff2751` (source `0947408b…`), documents and [chain-002 pre-run review](reviews/chain-002-pre.md); builder's offline checks passed (selftest 49/49 with and without launcher env, offline S0, manifest, rehearsal 59/59).
+> Remains: dmarz/fleet-monitor's same-researcher check and a decision by dmarz to launch; P0 is the first real reading of strict-schema acceptance, reasoning use and latency on gpt-6-sol.
+
+
 Written 2026-10-04 by dmarz/pipeline from the paused builder's report (dmarz/pipeline-alarm, now released from this study). New owner, by dmarz/fleet-monitor's assignment: the "Big experiment" session on orbital-one (dmarz/scale-xl). Task: `tasks/build-false-alarm-cascade.md` (released; claim it). Nothing of this study has run on a server and no model call has been made.
 
 ## State
