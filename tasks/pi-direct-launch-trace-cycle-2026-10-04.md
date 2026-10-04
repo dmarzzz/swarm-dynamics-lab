@@ -3,7 +3,7 @@ id: pi-direct-launch-trace-cycle-2026-10-04
 type: task
 title: Apply direct-launch authorization and review native traces
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T16:38Z
-updated: 2026-10-04T16:58Z
+updated: 2026-10-04T17:18Z
+outputs:
+- researchers/vishesh/notes/pi-direct-launch-trace-cycle-2026-10-04/README.md
 ---
 
 ## Goal
