@@ -1,0 +1,12 @@
+{
+  "sha256": "08605e50f77d4e4f09d1e4489a931ae2592cdae1ece0efda3d50b852d06787fa",
+  "worlds": 10,
+  "roots": 6,
+  "opened_for_development": false,
+  "generated_by": "prepare.py seal",
+  "source_sha256": "8e0e400c7f9abe8db322deb3017ec64aef609cb45b463cec57f5cd6b4e0f5f5e",
+  "generator_sha256": "ce8ebeb82d6069478b0ce4c33c861cc7b7cc1979301b7989cf71ce2261cdb1b8",
+  "limitation": "New random fixtures from shared generator, not independent mechanisms or external validation.",
+  "custody": "Private local file; path retained in local operations context only.",
+  "evaluation_authorized": false
+}

@@ -1,0 +1,1249 @@
+{
+  "stage": "verification-loop-development",
+  "native_dispatch_enabled": false,
+  "model": "anthropic/claude-opus-4.6",
+  "model_qualification": "pending_native",
+  "worlds": [
+    {
+      "id": "worker_crash-17001-success",
+      "kind": "worker_crash",
+      "fixture": {
+        "case": "worker_crash",
+        "seed": 17001,
+        "alias": {
+          "gateway": "archive-92",
+          "worker": "compute-60",
+          "store": "queue-16"
+        },
+        "deployed": {
+          "gateway": 27,
+          "worker": 18,
+          "store": 4
+        },
+        "data": "format-189",
+        "feature": "batch-244",
+        "revision": 12,
+        "catalog": {
+          "gateway": {
+            "10": {
+              "requires_rpc": "wire-152",
+              "features": [
+                "basic-194"
+              ]
+            },
+            "27": {
+              "requires_rpc": "wire-251",
+              "features": [
+                "basic-194",
+                "batch-244"
+              ]
+            }
+          },
+          "worker": {
+            "13": {
+              "rpc": "wire-152",
+              "reads": [
+                "format-189"
+              ]
+            },
+            "18": {
+              "rpc": "wire-251",
+              "reads": [
+                "format-189",
+                "format-222"
+              ]
+            },
+            "24": {
+              "rpc": "wire-251",
+              "reads": [
+                "format-222"
+              ]
+            }
+          },
+          "store": {
+            "4": {
+              "format": "format-189"
+            },
+            "37": {
+              "format": "format-222"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 27,
+          "worker": 18,
+          "store": 4
+        },
+        "live": {
+          "gateway": true,
+          "worker": false,
+          "store": true
+        },
+        "epoch": 49,
+        "probe": {
+          "epoch": 49,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": false
+          },
+          "live": {
+            "gateway": true,
+            "worker": false,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "worker_crash",
+      "mode": "success"
+    },
+    {
+      "id": "worker_crash-17001-failed_first",
+      "kind": "worker_crash",
+      "fixture": {
+        "case": "worker_crash",
+        "seed": 17001,
+        "alias": {
+          "gateway": "archive-92",
+          "worker": "compute-60",
+          "store": "queue-16"
+        },
+        "deployed": {
+          "gateway": 27,
+          "worker": 18,
+          "store": 4
+        },
+        "data": "format-189",
+        "feature": "batch-244",
+        "revision": 12,
+        "catalog": {
+          "gateway": {
+            "10": {
+              "requires_rpc": "wire-152",
+              "features": [
+                "basic-194"
+              ]
+            },
+            "27": {
+              "requires_rpc": "wire-251",
+              "features": [
+                "basic-194",
+                "batch-244"
+              ]
+            }
+          },
+          "worker": {
+            "13": {
+              "rpc": "wire-152",
+              "reads": [
+                "format-189"
+              ]
+            },
+            "18": {
+              "rpc": "wire-251",
+              "reads": [
+                "format-189",
+                "format-222"
+              ]
+            },
+            "24": {
+              "rpc": "wire-251",
+              "reads": [
+                "format-222"
+              ]
+            }
+          },
+          "store": {
+            "4": {
+              "format": "format-189"
+            },
+            "37": {
+              "format": "format-222"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 27,
+          "worker": 18,
+          "store": 4
+        },
+        "live": {
+          "gateway": true,
+          "worker": false,
+          "store": true
+        },
+        "epoch": 49,
+        "probe": {
+          "epoch": 49,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": false
+          },
+          "live": {
+            "gateway": true,
+            "worker": false,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "worker_crash",
+      "mode": "failed_first"
+    },
+    {
+      "id": "worker_crash-17001-delayed",
+      "kind": "worker_crash",
+      "fixture": {
+        "case": "worker_crash",
+        "seed": 17001,
+        "alias": {
+          "gateway": "archive-92",
+          "worker": "compute-60",
+          "store": "queue-16"
+        },
+        "deployed": {
+          "gateway": 27,
+          "worker": 18,
+          "store": 4
+        },
+        "data": "format-189",
+        "feature": "batch-244",
+        "revision": 12,
+        "catalog": {
+          "gateway": {
+            "10": {
+              "requires_rpc": "wire-152",
+              "features": [
+                "basic-194"
+              ]
+            },
+            "27": {
+              "requires_rpc": "wire-251",
+              "features": [
+                "basic-194",
+                "batch-244"
+              ]
+            }
+          },
+          "worker": {
+            "13": {
+              "rpc": "wire-152",
+              "reads": [
+                "format-189"
+              ]
+            },
+            "18": {
+              "rpc": "wire-251",
+              "reads": [
+                "format-189",
+                "format-222"
+              ]
+            },
+            "24": {
+              "rpc": "wire-251",
+              "reads": [
+                "format-222"
+              ]
+            }
+          },
+          "store": {
+            "4": {
+              "format": "format-189"
+            },
+            "37": {
+              "format": "format-222"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 27,
+          "worker": 18,
+          "store": 4
+        },
+        "live": {
+          "gateway": true,
+          "worker": false,
+          "store": true
+        },
+        "epoch": 49,
+        "probe": {
+          "epoch": 49,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": false
+          },
+          "live": {
+            "gateway": true,
+            "worker": false,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "worker_crash",
+      "mode": "delayed"
+    },
+    {
+      "id": "gateway_crash-17001-success",
+      "kind": "gateway_crash",
+      "fixture": {
+        "case": "gateway_crash",
+        "seed": 17038,
+        "alias": {
+          "gateway": "edge-75",
+          "worker": "billing-93",
+          "store": "archive-79"
+        },
+        "deployed": {
+          "gateway": 16,
+          "worker": 33,
+          "store": 8
+        },
+        "data": "format-132",
+        "feature": "batch-259",
+        "revision": 7,
+        "catalog": {
+          "gateway": {
+            "28": {
+              "requires_rpc": "wire-124",
+              "features": [
+                "basic-145"
+              ]
+            },
+            "16": {
+              "requires_rpc": "wire-258",
+              "features": [
+                "basic-145",
+                "batch-259"
+              ]
+            }
+          },
+          "worker": {
+            "36": {
+              "rpc": "wire-124",
+              "reads": [
+                "format-132"
+              ]
+            },
+            "33": {
+              "rpc": "wire-258",
+              "reads": [
+                "format-132",
+                "format-247"
+              ]
+            },
+            "30": {
+              "rpc": "wire-258",
+              "reads": [
+                "format-247"
+              ]
+            }
+          },
+          "store": {
+            "8": {
+              "format": "format-132"
+            },
+            "31": {
+              "format": "format-247"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 16,
+          "worker": 33,
+          "store": 8
+        },
+        "live": {
+          "gateway": false,
+          "worker": true,
+          "store": true
+        },
+        "epoch": 48,
+        "probe": {
+          "epoch": 48,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": false
+          },
+          "live": {
+            "gateway": false,
+            "worker": true,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "gateway_crash",
+      "mode": "success"
+    },
+    {
+      "id": "gateway_crash-17001-failed_first",
+      "kind": "gateway_crash",
+      "fixture": {
+        "case": "gateway_crash",
+        "seed": 17038,
+        "alias": {
+          "gateway": "edge-75",
+          "worker": "billing-93",
+          "store": "archive-79"
+        },
+        "deployed": {
+          "gateway": 16,
+          "worker": 33,
+          "store": 8
+        },
+        "data": "format-132",
+        "feature": "batch-259",
+        "revision": 7,
+        "catalog": {
+          "gateway": {
+            "28": {
+              "requires_rpc": "wire-124",
+              "features": [
+                "basic-145"
+              ]
+            },
+            "16": {
+              "requires_rpc": "wire-258",
+              "features": [
+                "basic-145",
+                "batch-259"
+              ]
+            }
+          },
+          "worker": {
+            "36": {
+              "rpc": "wire-124",
+              "reads": [
+                "format-132"
+              ]
+            },
+            "33": {
+              "rpc": "wire-258",
+              "reads": [
+                "format-132",
+                "format-247"
+              ]
+            },
+            "30": {
+              "rpc": "wire-258",
+              "reads": [
+                "format-247"
+              ]
+            }
+          },
+          "store": {
+            "8": {
+              "format": "format-132"
+            },
+            "31": {
+              "format": "format-247"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 16,
+          "worker": 33,
+          "store": 8
+        },
+        "live": {
+          "gateway": false,
+          "worker": true,
+          "store": true
+        },
+        "epoch": 48,
+        "probe": {
+          "epoch": 48,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": false
+          },
+          "live": {
+            "gateway": false,
+            "worker": true,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "gateway_crash",
+      "mode": "failed_first"
+    },
+    {
+      "id": "gateway_crash-17001-delayed",
+      "kind": "gateway_crash",
+      "fixture": {
+        "case": "gateway_crash",
+        "seed": 17038,
+        "alias": {
+          "gateway": "edge-75",
+          "worker": "billing-93",
+          "store": "archive-79"
+        },
+        "deployed": {
+          "gateway": 16,
+          "worker": 33,
+          "store": 8
+        },
+        "data": "format-132",
+        "feature": "batch-259",
+        "revision": 7,
+        "catalog": {
+          "gateway": {
+            "28": {
+              "requires_rpc": "wire-124",
+              "features": [
+                "basic-145"
+              ]
+            },
+            "16": {
+              "requires_rpc": "wire-258",
+              "features": [
+                "basic-145",
+                "batch-259"
+              ]
+            }
+          },
+          "worker": {
+            "36": {
+              "rpc": "wire-124",
+              "reads": [
+                "format-132"
+              ]
+            },
+            "33": {
+              "rpc": "wire-258",
+              "reads": [
+                "format-132",
+                "format-247"
+              ]
+            },
+            "30": {
+              "rpc": "wire-258",
+              "reads": [
+                "format-247"
+              ]
+            }
+          },
+          "store": {
+            "8": {
+              "format": "format-132"
+            },
+            "31": {
+              "format": "format-247"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 16,
+          "worker": 33,
+          "store": 8
+        },
+        "live": {
+          "gateway": false,
+          "worker": true,
+          "store": true
+        },
+        "epoch": 48,
+        "probe": {
+          "epoch": 48,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": false
+          },
+          "live": {
+            "gateway": false,
+            "worker": true,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "gateway_crash",
+      "mode": "delayed"
+    },
+    {
+      "id": "rpc-17001-success",
+      "kind": "configuration",
+      "fixture": {
+        "case": "configuration",
+        "seed": 17075,
+        "alias": {
+          "gateway": "ingress-21",
+          "worker": "edge-51",
+          "store": "ledger-18"
+        },
+        "deployed": {
+          "gateway": 16,
+          "worker": 14,
+          "store": 17
+        },
+        "data": "format-114",
+        "feature": "batch-270",
+        "revision": 9,
+        "catalog": {
+          "gateway": {
+            "18": {
+              "requires_rpc": "wire-153",
+              "features": [
+                "basic-180"
+              ]
+            },
+            "16": {
+              "requires_rpc": "wire-249",
+              "features": [
+                "basic-180",
+                "batch-270"
+              ]
+            }
+          },
+          "worker": {
+            "14": {
+              "rpc": "wire-153",
+              "reads": [
+                "format-114"
+              ]
+            },
+            "19": {
+              "rpc": "wire-249",
+              "reads": [
+                "format-114",
+                "format-267"
+              ]
+            },
+            "27": {
+              "rpc": "wire-249",
+              "reads": [
+                "format-267"
+              ]
+            }
+          },
+          "store": {
+            "17": {
+              "format": "format-114"
+            },
+            "30": {
+              "format": "format-267"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 16,
+          "worker": 14,
+          "store": 17
+        },
+        "live": {
+          "gateway": true,
+          "worker": true,
+          "store": true
+        },
+        "epoch": 39,
+        "probe": {
+          "epoch": 39,
+          "checks": {
+            "rpc_compatible": false,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": true
+          },
+          "live": {
+            "gateway": true,
+            "worker": true,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "rpc",
+      "mode": "success"
+    },
+    {
+      "id": "data-17001-success",
+      "kind": "healthy",
+      "fixture": {
+        "case": "healthy",
+        "seed": 17112,
+        "alias": {
+          "gateway": "queue-69",
+          "worker": "ledger-12",
+          "store": "compute-30"
+        },
+        "deployed": {
+          "gateway": 10,
+          "worker": 14,
+          "store": 30
+        },
+        "data": "format-185",
+        "feature": "batch-275",
+        "revision": 11,
+        "catalog": {
+          "gateway": {
+            "5": {
+              "requires_rpc": "wire-134",
+              "features": [
+                "basic-197"
+              ]
+            },
+            "10": {
+              "requires_rpc": "wire-253",
+              "features": [
+                "basic-197",
+                "batch-275"
+              ]
+            }
+          },
+          "worker": {
+            "4": {
+              "rpc": "wire-134",
+              "reads": [
+                "format-185"
+              ]
+            },
+            "14": {
+              "rpc": "wire-253",
+              "reads": [
+                "format-185",
+                "format-250"
+              ]
+            },
+            "26": {
+              "rpc": "wire-253",
+              "reads": [
+                "format-250"
+              ]
+            }
+          },
+          "store": {
+            "30": {
+              "format": "format-185"
+            },
+            "20": {
+              "format": "format-250"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 10,
+          "worker": 26,
+          "store": 30
+        },
+        "live": {
+          "gateway": true,
+          "worker": true,
+          "store": true
+        },
+        "epoch": 44,
+        "probe": {
+          "epoch": 44,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": false,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": true
+          },
+          "live": {
+            "gateway": true,
+            "worker": true,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "data",
+      "mode": "success"
+    },
+    {
+      "id": "healthy-17001-success",
+      "kind": "healthy",
+      "fixture": {
+        "case": "healthy",
+        "seed": 17149,
+        "alias": {
+          "gateway": "edge-74",
+          "worker": "archive-21",
+          "store": "catalog-50"
+        },
+        "deployed": {
+          "gateway": 26,
+          "worker": 37,
+          "store": 24
+        },
+        "data": "format-186",
+        "feature": "batch-215",
+        "revision": 13,
+        "catalog": {
+          "gateway": {
+            "11": {
+              "requires_rpc": "wire-150",
+              "features": [
+                "basic-112"
+              ]
+            },
+            "26": {
+              "requires_rpc": "wire-205",
+              "features": [
+                "basic-112",
+                "batch-215"
+              ]
+            }
+          },
+          "worker": {
+            "5": {
+              "rpc": "wire-150",
+              "reads": [
+                "format-186"
+              ]
+            },
+            "37": {
+              "rpc": "wire-205",
+              "reads": [
+                "format-186",
+                "format-208"
+              ]
+            },
+            "6": {
+              "rpc": "wire-205",
+              "reads": [
+                "format-208"
+              ]
+            }
+          },
+          "store": {
+            "24": {
+              "format": "format-186"
+            },
+            "5": {
+              "format": "format-208"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 26,
+          "worker": 37,
+          "store": 24
+        },
+        "live": {
+          "gateway": true,
+          "worker": true,
+          "store": true
+        },
+        "epoch": 32,
+        "probe": {
+          "epoch": 32,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": true
+          },
+          "live": {
+            "gateway": true,
+            "worker": true,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "healthy",
+      "mode": "success"
+    },
+    {
+      "id": "healthy_expanded-17001-success",
+      "kind": "healthy_expanded",
+      "fixture": {
+        "case": "healthy_expanded",
+        "seed": 17186,
+        "alias": {
+          "gateway": "billing-27",
+          "worker": "compute-25",
+          "store": "archive-95"
+        },
+        "deployed": {
+          "gateway": 12,
+          "worker": 17,
+          "store": 39
+        },
+        "data": "format-276",
+        "feature": "batch-236",
+        "revision": 8,
+        "catalog": {
+          "gateway": {
+            "27": {
+              "requires_rpc": "wire-105",
+              "features": [
+                "basic-171"
+              ]
+            },
+            "12": {
+              "requires_rpc": "wire-216",
+              "features": [
+                "basic-171",
+                "batch-236"
+              ]
+            }
+          },
+          "worker": {
+            "5": {
+              "rpc": "wire-105",
+              "reads": [
+                "format-100"
+              ]
+            },
+            "17": {
+              "rpc": "wire-216",
+              "reads": [
+                "format-100",
+                "format-276"
+              ]
+            },
+            "20": {
+              "rpc": "wire-216",
+              "reads": [
+                "format-276"
+              ]
+            }
+          },
+          "store": {
+            "7": {
+              "format": "format-100"
+            },
+            "39": {
+              "format": "format-276"
+            }
+          }
+        }
+      },
+      "initial": {
+        "deployed": {
+          "gateway": 12,
+          "worker": 17,
+          "store": 39
+        },
+        "live": {
+          "gateway": true,
+          "worker": true,
+          "store": true
+        },
+        "epoch": 23,
+        "probe": {
+          "epoch": 23,
+          "checks": {
+            "rpc_compatible": true,
+            "data_readable": true,
+            "storage_format": true,
+            "requested_feature": true,
+            "processes_live": true
+          },
+          "live": {
+            "gateway": true,
+            "worker": true,
+            "store": true
+          }
+        },
+        "operation": null,
+        "attempts": 0,
+        "obligation": false,
+        "last_mutation": null,
+        "verified_epoch": null
+      },
+      "root": "healthy_expanded",
+      "mode": "success"
+    }
+  ],
+  "assignments": [
+    {
+      "case": "worker_crash-17001-success",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "worker_crash-17001-success",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "worker_crash-17001-success",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "worker_crash-17001-success",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "worker_crash-17001-failed_first",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "worker_crash-17001-failed_first",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "worker_crash-17001-failed_first",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "worker_crash-17001-failed_first",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "worker_crash-17001-delayed",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "worker_crash-17001-delayed",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "worker_crash-17001-delayed",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "worker_crash-17001-delayed",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "gateway_crash-17001-success",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "gateway_crash-17001-success",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "gateway_crash-17001-success",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "gateway_crash-17001-success",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "gateway_crash-17001-failed_first",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "gateway_crash-17001-failed_first",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "gateway_crash-17001-failed_first",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "gateway_crash-17001-failed_first",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "gateway_crash-17001-delayed",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "gateway_crash-17001-delayed",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "gateway_crash-17001-delayed",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "gateway_crash-17001-delayed",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "rpc-17001-success",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "rpc-17001-success",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "rpc-17001-success",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "rpc-17001-success",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "data-17001-success",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "data-17001-success",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "data-17001-success",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "data-17001-success",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "healthy-17001-success",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "healthy-17001-success",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "healthy-17001-success",
+      "repeat": 2,
+      "arm": "guard"
+    },
+    {
+      "case": "healthy-17001-success",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "healthy_expanded-17001-success",
+      "repeat": 1,
+      "arm": "guard"
+    },
+    {
+      "case": "healthy_expanded-17001-success",
+      "repeat": 1,
+      "arm": "verification_required"
+    },
+    {
+      "case": "healthy_expanded-17001-success",
+      "repeat": 2,
+      "arm": "verification_required"
+    },
+    {
+      "case": "healthy_expanded-17001-success",
+      "repeat": 2,
+      "arm": "guard"
+    }
+  ],
+  "task_roots": 6,
+  "branch_worlds": 10,
+  "episodes": 40,
+  "ticks_per_episode": 4,
+  "calls_per_tick": 2,
+  "max_calls": 320,
+  "max_request_usd": 0.05536,
+  "model_max_usd": 17.7152,
+  "prior_reserved_usd": 15.524695,
+  "current_model_cap_usd": 16.877155,
+  "required_model_cap_usd": 33.239895,
+  "infrastructure_authorized": false,
+  "plan_sha256": "85edac3f2d305ab339f26e9f3e72a43f39955431ad28c7599a1d3ce831341983",
+  "source_sha256": {
+    "loop_instrument.py": "2dd20baaf49074358a61b57faa8b9cc4288756367d4dbdea0d14fe344d25f12f",
+    "loop_world.py": "ce8ebeb82d6069478b0ce4c33c861cc7b7cc1979301b7989cf71ce2261cdb1b8",
+    "prepare.py": "8e0e400c7f9abe8db322deb3017ec64aef609cb45b463cec57f5cd6b4e0f5f5e",
+    "test_loop.py": "7c2bfcdeebe1a770bd67660f565ec90b2cdce1c8244c2d51afb9ada6408536a6"
+  }
+}

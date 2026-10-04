@@ -1,0 +1,411 @@
+{
+  "status": "offline_checks_passed_native_pending",
+  "tests": 14,
+  "scripted_feasibility_episodes": 800,
+  "development_seeds": 40,
+  "native_calls": 0,
+  "max_tested_wire_bytes": 6209,
+  "not_exhaustive_history_enumeration": true,
+  "reference_examples": [
+    {
+      "case": "worker_crash-17001-success",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 3
+    },
+    {
+      "case": "worker_crash-17001-success",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 1,
+      "served": 3
+    },
+    {
+      "case": "worker_crash-17001-failed_first",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "deploy",
+        "inspect"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 1
+    },
+    {
+      "case": "worker_crash-17001-failed_first",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "deploy",
+        "inspect"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 2,
+      "served": 1
+    },
+    {
+      "case": "worker_crash-17001-delayed",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "inspect",
+        "wait"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 2
+    },
+    {
+      "case": "worker_crash-17001-delayed",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "inspect",
+        "wait"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 2,
+      "served": 2
+    },
+    {
+      "case": "gateway_crash-17001-success",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 3
+    },
+    {
+      "case": "gateway_crash-17001-success",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 1,
+      "served": 3
+    },
+    {
+      "case": "gateway_crash-17001-failed_first",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "deploy",
+        "inspect"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 1
+    },
+    {
+      "case": "gateway_crash-17001-failed_first",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "deploy",
+        "inspect"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 2,
+      "served": 1
+    },
+    {
+      "case": "gateway_crash-17001-delayed",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "inspect",
+        "wait"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 2
+    },
+    {
+      "case": "gateway_crash-17001-delayed",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "inspect",
+        "wait"
+      ],
+      "healthy": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "forced_inspections": 2,
+      "served": 2
+    },
+    {
+      "case": "rpc-17001-success",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 3
+    },
+    {
+      "case": "rpc-17001-success",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 1,
+      "served": 3
+    },
+    {
+      "case": "data-17001-success",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 3
+    },
+    {
+      "case": "data-17001-success",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "deploy",
+        "inspect",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 1,
+      "served": 3
+    },
+    {
+      "case": "healthy-17001-success",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 4
+    },
+    {
+      "case": "healthy-17001-success",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 4
+    },
+    {
+      "case": "healthy_expanded-17001-success",
+      "arm": "guard",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 4
+    },
+    {
+      "case": "healthy_expanded-17001-success",
+      "arm": "verification_required",
+      "architecture_pass": true,
+      "proposal_pass": true,
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ],
+      "healthy": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "forced_inspections": 0,
+      "served": 4
+    }
+  ]
+}
