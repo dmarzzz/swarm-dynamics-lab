@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-bench-v3
 tool: codex
-state: working
-task: fix-discussion-review-findings
-doing: Addressing Vishesh's retrospective findings in v3 with offline regression checks; no model launch
-updated: 2026-10-04T02:28Z
+state: done
+task: null
+doing: Shipped review repairs; 84 checks passed and 636 requests replayed; amended independent review pending
+updated: 2026-10-04T02:35Z
 ---
 
 ## Notes

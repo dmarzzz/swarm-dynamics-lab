@@ -10,9 +10,9 @@ def audit(root):
         row=json.loads((p/'outcome.json').read_text());events=[json.loads(l) for l in (p/'events.jsonl').read_text().splitlines()]
         checked+=1;requests=[e for e in events if e['kind']=='request'];frames=[e for e in events if e['kind']=='frame']
         total_frames+=len(frames)
-        if row['status']!='completed':issues.append([key,'failed_outcome']);continue
-        if len(requests)!=24 or len(frames)!=6:issues.append([key,'call_or_frame_count'])
-        for t in range(6):
+        if row['status']!='completed':issues.append([key,'failed_outcome'])
+        if row['status']=='completed' and (len(requests)!=24 or len(frames)!=6):issues.append([key,'call_or_frame_count'])
+        for t in [f["step"] for f in frames]:
             req=[e for e in requests if e['step']==t and e['operation']=='solve']
             ans=[e['output'] for e in events if e['kind']=='response' and e['step']==t and e['operation']=='solve']
             if len(req)!=3 or len(ans)!=3:issues.append([key,t,'missing_actor']);continue

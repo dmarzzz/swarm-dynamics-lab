@@ -40,8 +40,9 @@
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:30Z | Ship the compositional safety benchmark and qualification |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [decision-model-research](tasks/decision-model-research.md) | claimed | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:17Z | Jev decision boundaries and collective robustness research |
+| [design-conditional-swarm-size](tasks/design-conditional-swarm-size.md) | claimed | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:36Z | Develop the conditional optimal swarm-size study design |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:19Z | Review and rebuild Healing Helping Hands as an evidence atlas |
-| [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:12Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
+| [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:35Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:05Z | Qualify the repaired immune-response contract on a dedicated host |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:31Z | Run the revised procurement influence experiment |
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | claimed | p1 | review | shadow/sol-rev |  | 2026-10-04T02:17Z | Independently review the implemented discussion and memory benchmark v3 |
@@ -174,12 +175,12 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/private-control | working | build-v3-resample-control | 2026-10-04T02:40Z | building the v3 resampling-only control sidecar (new files only); launch waits on shadow's v3 review |
+| dmarz/private-control |  |  |  |  |
+| dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:35Z | Shipped review repairs; 84 checks passed and 636 requests replayed; amended independent review pending |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:31Z | Published original design and survey revision reviews plus static v3 follow-through; full v3 review remains with shadow/sol-rev. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:29Z | Building and validating identity-size follow-up; scripted before API; exclusive fleet deployment |
-| dmarz/discussion-bench-v3 | working | fix-discussion-review-findings | 2026-10-04T02:28Z | Addressing Vishesh's retrospective findings in v3 with offline regression checks; no model launch |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:20Z | New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | vishesh/codex-decision-models | working |  | 2026-10-04T02:16Z | TODO one line |
