@@ -47,4 +47,14 @@ class Tests(unittest.TestCase):
   from admission import Admission
   for c in ({},{'design':'PC-6','stage':'S1','attempt':'q0-a1'},{'design':'PC-6','stage':'Q0','attempt':'q0-a1','source_commit':'0'*40}):
    with self.assertRaises(ValueError):Admission(c,c.get('stage','Q0'),lambda *a: (_ for _ in ()).throw(AssertionError('public check reached before source gate')))
+ def test_simple_controller(self):
+  from simple_policy import choose
+  for p in (0,.2,.5,.8,1):
+   for u in (0,.08,.25,.9,1):
+    selected=choose('r','u',p,u);self.assertEqual(u if selected=='r' else 1-p,min(u,1-p))
+  for p in (float('nan'),float('inf'),-.1,1.1,True):
+   with self.assertRaises(ValueError):choose('r','u',p)
+ def test_parked_entry_cannot_read_credential(self):
+  from run import run
+  with self.assertRaisesRegex(ValueError,'pc6_parked'):run(Path('/nonexistent/config'),Path('/nonexistent/output'),Path('/nonexistent/credential'))
 if __name__=='__main__':unittest.main()

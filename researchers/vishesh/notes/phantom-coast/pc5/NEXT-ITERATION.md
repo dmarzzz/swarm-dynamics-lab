@@ -1,3 +1,5 @@
+> Superseded by the [PC6 PI decision](../pc6/reviews/PI-POST.md): no duplicate grid or native successor is currently justified. This historical proposal is not launch authority.
+
 # Proposed next diagnostic: risk and utility as explicit inputs
 
 Written after PC-5; this is a proposal, not a preregistration or launch authority. PC-4 and PC-5 are complete, and no additional worker or paid cohort is scheduled.

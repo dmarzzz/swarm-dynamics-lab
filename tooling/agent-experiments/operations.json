@@ -19,12 +19,12 @@
       "title": "Phantom Coast",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
-      "setup_path": "researchers/vishesh/notes/phantom-coast/pc5/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc5/reviews/S1-A1-POST.md",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/pc6/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
       "adapter": null,
       "checked_at": "2026-10-04T14:31:29.036358+00:00",
       "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "Analyze existing evidence; defer duplicate grid. Read researchers/vishesh/notes/phantom-coast/pc5/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
+      "next_action": "PC6 parked before native dispatch for insufficient decision value. Saved-data PI review complete; latest native cohort remains PC5. Read pc6/SETUP.md and PI-POST.md; no automatic successor or768-choice grid. Original cumulative exposure .857148138 retained.",
       "next_run_approval": "owner"
     },
     {
