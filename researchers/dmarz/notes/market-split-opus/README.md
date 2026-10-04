@@ -3,15 +3,15 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/market-split-opus; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/market-split-opus; source `b097331b` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Claude Opus 5.5 reproduces the Sonnet pilot's firm-splitting contrast on six fresh markets. Basis: No model call has been made. Only a scripted rehearsal of the copied instrument is planned or run at this assessment; it is a software check and gives no evidence about model behavior.
-- **sample_size_summary:** Observed: none. Planned: 6 fresh paired market tasks, 3 regulators x 2 arms = 36 episodes / 864 calls, after a 6-call mechanics probe and a 2-market, 4-episode qualification. One model owner, two scripted rivals.
+- **evidence_confidence:** **2/4** — In the completed six-market Opus 5.5 replication, the neutral flexible agent selected sustained firm splitting in 6/6 firm-regulated markets and 0/6 owner-regulated or unregulated markets. Basis: One qualified configuration, paired regulatory controls, all 36 valid outcomes, 902 priced calls and exact trace replay support this narrow comparison. Six fresh draws from the pilot's market generator, one sampling realization per cell, rules stated in the prompt, same-researcher review only and request settings that differ from the Sonnet pilot limit the claim.
+- **sample_size_summary:** Observed: 6 fresh paired market tasks; 36/36 episodes valid, 0 missing/replaced; one Opus owner and two scripted rivals, 864 calls. Separate Q0: 2 markets/4 episodes; I0: 6 calls. Sonnet pilot (6 other tasks) is a separate cohort, not pooled.
 <!-- experiment-evidence:end -->
 
 Exploratory replication of the [Sonnet market-splitting pilot](../market-split-api/RESULTS.md) with a stronger model on market tasks no model has seen. Owner: dmarz/market-split-opus. Reviewer: dmarz/fleet-monitor, the same researcher; dmarz waived cross-researcher review for this run, so no independent review has taken place. [Live experiment](https://swarm-live.pages.dev/#/x/market-split-opus) · [frozen protocol](preregistration.md) · [setup record](SETUP.md) · [deployment record](deployment.md) · [reviews](reviews/).
 
-**Status, 2026-10-04:** the scripted rehearsal passed ([post-mortem](reviews/s0-fleet-001-post.md): 6/6 bundles, 12/12 valid scripted episodes, zero model calls). The reviewer gave the go for the paid stages with one amendment, a higher dollar cap ([verdict](reviews/phase2-go.md), [pre-run review](reviews/phase2-pre.md)). The interface probe passed 6/6 ([post-mortem](reviews/i0-001-post.md)) and the profit qualification passed 4/4 at 100% of the reference ([post-mortem](reviews/q0-001-post.md)); 38 calls, USD 0.39. The comparison `s1-001` is running; no comparison result exists yet.
+**Status, 2026-10-04: complete.** Opus 5.5 registered a second firm and met the frozen evasion criterion in 6/6 firm-regulated markets, 0/6 owner-regulated and 0/6 unregulated, on six fresh markets: the Sonnet pilot's result replicates with this configuration. 36/36 episodes valid; 902 calls and USD 15.34 for the whole study. [Results and comparison with the pilot](RESULTS.md) · [post-run review](reviews/s1-001-post.md). Earlier stages: scripted rehearsal ([post-mortem](reviews/s0-fleet-002-post.md)), interface probe 6/6 ([post-mortem](reviews/i0-001-post.md)), profit qualification 4/4 ([post-mortem](reviews/q0-001-post.md)). Reviewer's go and the one amendment: [verdict](reviews/phase2-go.md).
 
 ## TLDR
 

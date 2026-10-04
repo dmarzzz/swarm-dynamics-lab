@@ -1,0 +1,10 @@
+{
+  "members": {
+    "calls.jsonl": "9a2966b73d34d5279809d595e556d4abd0ed0caffc44a83183b3e54cf20b73b8",
+    "episode-results.csv": "09ff1ce7cfcff1352a35a37e8cf68996d48643940f58b59e162d395eac3c4add",
+    "episodes.jsonl": "726ed111e9ed266155f740df6f17aa38af4134bb05a6cf2389baca22e8b20cc7",
+    "provenance.json": "df1ab9f8f79522a4b599cc6cd91d02da95408d4ca32e946c5a7fb4c9f3059a3a",
+    "run-receipts.json": "407effd084b55a64f74a453f2c07388d415bdd21e35c64a308615a893d49f2fe"
+  },
+  "records.zip": "98a39caa04961889059671937aa8b8ef752e31cc549c0e63cf11b949f0a21167"
+}

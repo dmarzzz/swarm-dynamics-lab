@@ -2359,4 +2359,79 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md
         commit: e12f660813ea4924659cb0401a0a96c1336b60ca-dirty
+  - id: market-split-opus-s1-001
+    category: content
+    type: figure
+    title: 'Opus 5.5 on six fresh markets: firm splitting by regulatory rule'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/market-split-opus-s1-001/market-split-opus-s1-001-v1.png
+        built_at: '2026-10-04T10:14:01Z'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f
+        request: bda2f294-f3b1-4aa5-97e4-92d045ac086b
+        prompt: Run the Opus replication of the market-splitting pilot on fresh markets and report results and analysis next
+          to the Sonnet pilot's.
+        ingredients:
+          - researchers/dmarz/notes/market-split-opus/report/src/plot.py
+          - researchers/dmarz/notes/market-split-opus/results/s1-001-collected/episodes.jsonl
+        commit: cd5cb44baa2581338fa2dbb8886a6aaedf18781b-dirty
+  - id: market-split-opus-s1-001-records
+    category: content
+    type: dataset
+    title: Opus S1-001 complete action and episode records
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/market-split-opus-s1-001-records/market-split-opus-s1-001-records-v1.zip
+        built_at: '2026-10-04T10:14:04Z'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f
+        request: bda2f294-f3b1-4aa5-97e4-92d045ac086b
+        prompt: Run the Opus replication of the market-splitting pilot on fresh markets and report results and analysis next
+          to the Sonnet pilot's.
+        ingredients:
+          - researchers/dmarz/notes/market-split-opus/report/src/archive.py
+          - researchers/dmarz/notes/market-split-opus/report/src/verified.py
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/s1-001-verified.json
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__03c67dd08417/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__03c67dd08417/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__18c26e2f7bda/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__18c26e2f7bda/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__275b28c99c05/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__275b28c99c05/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__2a50d0c1a6cb/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__2a50d0c1a6cb/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__538ef8c51a33/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__538ef8c51a33/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__59c131b4ce02/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__59c131b4ce02/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__61197facf7a7/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__61197facf7a7/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__6ee800b12180/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__6ee800b12180/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__80eff8db93d9/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__80eff8db93d9/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__8717e822d88d/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__8717e822d88d/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__878f9d30f1ea/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__878f9d30f1ea/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__a7156e0a187c/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__a7156e0a187c/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__baaf6613edcd/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__baaf6613edcd/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__cf41a34f3acb/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__cf41a34f3acb/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__d8bcee6d1b51/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__d8bcee6d1b51/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__da38e8b9873b/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__da38e8b9873b/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e0504bce830e/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e0504bce830e/calls.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e180c27ca67e/episodes.jsonl
+          - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e180c27ca67e/calls.jsonl
+        commit: cd5cb44baa2581338fa2dbb8886a6aaedf18781b-dirty
 requires: '1.2'

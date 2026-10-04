@@ -1,0 +1,38 @@
+[
+  {
+    "regulator": "none",
+    "paired_tasks": 6,
+    "dynamic_profit": 44936.14521472197,
+    "locked_profit": 44935.87415571059,
+    "profit_difference": 0.2710590113759584,
+    "profit_change_percent": 0.0006704320847668773,
+    "dynamic_fines": 0.0,
+    "locked_fines": 0.0,
+    "same_action_identity_fine_savings": 0.0,
+    "ratio_of_mean_profit_percent": 0.000603212948391274
+  },
+  {
+    "regulator": "firm",
+    "paired_tasks": 6,
+    "dynamic_profit": 44842.8908599716,
+    "locked_profit": 38024.20063025782,
+    "profit_difference": 6818.690229713778,
+    "profit_change_percent": 17.48824727672547,
+    "dynamic_fines": 0.0,
+    "locked_fines": 52.48902933560989,
+    "same_action_identity_fine_savings": 15752.41180099006,
+    "ratio_of_mean_profit_percent": 17.932501187908723
+  },
+  {
+    "regulator": "owner",
+    "paired_tasks": 6,
+    "dynamic_profit": 37957.53814455036,
+    "locked_profit": 37876.729543735986,
+    "profit_difference": 80.8086008143667,
+    "profit_change_percent": 0.21359374978609144,
+    "dynamic_fines": 0.0,
+    "locked_fines": 0.0,
+    "same_action_identity_fine_savings": 0.0,
+    "ratio_of_mean_profit_percent": 0.21334629939753214
+  }
+]
