@@ -1,8 +1,8 @@
 # Poietic Agents
 
-**Prospective design v0.1 · 4 October 2026 UTC · vishesh/codex-heterogeneous · HX-31**
+**Prospective design and qualification package v0.2 · 4 October 2026 UTC · vishesh/codex-heterogeneous · HX-31**
 
-An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains an exploratory design pending independent review, qualification and the formal prior-art gate. There are no Poietic Agents results or launched workers.
+An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains exploratory. The independent researcher review has been received and its three measurement changes are implemented; native qualification and the formal prior-art gate remain open. There are no Poietic Agents results or launched workers.
 
 ## TLDR
 
@@ -22,7 +22,7 @@ The first workload is a fictional operations desk. Agents answer recurring stock
 
 S1 starts with six persistent agent identities, eight epochs and six jobs per epoch. Four independent workload roots are paired across four arms. Each agent begins with identical resources in the adaptive arm; job assignments and observed history can subsequently differ. The larger prospective study uses twelve agents, longer horizons and additional controls, after S1 informs feasibility and precision.
 
-Exact model IDs, backend revisions and measured tariffs must be pinned before native qualification. The intended ladder is a capable generalist, a cheaper generative model such as Haiku or Qwen, and an optional Jev typed-choice component. Jev is eligible only for a separately qualified finite-choice subtask. It is not assumed capable of arbitrary tool use or free-form reasoning.
+The pinned candidate ladder is Haiku 4.5 through Anthropic, Qwen3 8B through Alibaba, and Jev 1.13 through TypeSafe, using provider-specific OpenRouter routes. [Models and tariffs](models.json) record exact requested IDs and catalog backend revisions; these are not yet qualified execution receipts. Jev is eligible only for a separately qualified finite-choice subtask. It is not assumed capable of arbitrary tool use or free-form reasoning.
 
 ## Protocol
 
@@ -40,6 +40,8 @@ In S1, epochs 1–2 acquire experience, 3–4 measure stable operation, and 5–
 
 No actor is told to become a server or rewarded for looking heterogeneous. Each gets the same operational objective. A deterministic controller validates proposed changes and enforces budgets; it does not nominate specialist roles. Changes take effect at epoch boundaries. All unsuccessful proposals and their costs remain in the record.
 
+The next step is a 144-request S0 qualification across three contracts, at most 288 physical requests including eligible transport retries. At the pinned tariffs the worst permitted API requests total $1.447723008; the requested $5 API allowance leaves bounded repair room. The proposed infrastructure cap is $2. Neither allowance is recorded as approved. No machine is held while authorization is pending.
+
 Read the [full protocol](PROTOCOL.md), [machine-readable design](design.yaml), [agent and context contracts](contracts.json), [visualization mapping](VISUALIZATION.md), [first qualification assessment](reviews/S0-01-pre.md), and [execution handoff](RUNBOOK.md).
 
 ## Metrics
@@ -52,6 +54,6 @@ For a later confirmatory claim, the proposed practical threshold is at least 20%
 
 ## Current status
 
-The owner selected the project and its name. The written design is ready for critique. [Launch state](launch-state.json) distinguishes design publication, independent review, model qualification, spending authorization, dedicated allocation and S2 research acceptance. Public registration of the design creates no queued run. S0/S1 may proceed under the exploratory worker workflow once their concrete execution gates pass; S2 also requires the formal survey and hypothesis reviews.
+The owner selected the project and its name. [Dmarz’s independent review](../../../dmarz/notes/inbox-reviews-2026-10-04-round2/poietic-review.md) is resolved in the [prospective amendment](AMENDMENTS.md): fixed arrivals include adaptation delay; ordinary caches may reuse derived computation; recovery/advance criteria and quotas are explicit. The offline instrument and gated S0 launcher are implemented; [validation](VALIDATION.json) records software checks, not model competence. [Setup status](SETUP.md) and [launch instructions](RUNBOOK.md) name the remaining gates. [Launch state](launch-state.json) distinguishes design publication, independent review, model qualification, spending authorization, dedicated allocation and S2 research acceptance. Public registration of the design creates no queued run. S0/S1 may proceed under the exploratory worker workflow once their concrete execution gates pass; S2 also requires the formal survey and hypothesis reviews.
 
 The central decision after development is whether Poietic Agents adds enough beyond caching and static specialization to justify a larger study. If it does not, stop and recommend the simpler system.

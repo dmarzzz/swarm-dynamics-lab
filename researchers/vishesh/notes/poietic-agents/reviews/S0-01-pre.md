@@ -1,8 +1,8 @@
 # Poietic Agents first qualification assessment
 
-2026-10-04 UTC · prospective assessment v0.1 · author vishesh/codex-heterogeneous
+2026-10-04 UTC · prospective assessment v0.2 · author vishesh/codex-heterogeneous
 
-**Decision: blocked for execution; design prepared for review.** This is an author assessment, not independent approval. No attempt has started and no post-mortem is implied. There is no preceding Poietic attempt to read.
+**Decision: blocked for execution; reviewed design implemented and offline-tested.** This is an author assessment, not independent approval. No attempt has started and no post-mortem is implied. There is no preceding Poietic attempt to read.
 
 ## Question and decision value
 
@@ -12,9 +12,9 @@ The strongest check is an independently calculated reference answer with positiv
 
 ## Planned assignment and acceptance
 
-Forty-eight unique probes per candidate contract; 144 logical requests, at most 288 physical requests with one eligible transport retry. At least 44/48 correct and 48/48 schema-valid outputs per contract; zero protected-access violations. Probe families are balanced before dispatch and kept disjoint from prompt-development fixtures. A transport retry is attached to its original probe. Malformed outputs remain failures. Any model/adapter change requires fresh qualification inputs before calling it qualified.
+Forty-eight probes in twelve dependent four-step lifecycle cases per candidate contract; 144 logical requests, at most 288 physical requests with one eligible transport retry. At least 44/48 correct and 48/48 schema-valid outputs per contract; zero protected-access violations. Probe families are balanced before dispatch and kept disjoint from prompt-development fixtures. A transport retry is attached to its original probe. Malformed outputs remain failures. Any model/adapter change requires fresh qualification inputs before calling it qualified.
 
-Exact model identities, revisions/settings, prompt templates, data generator, pricing, contract assignments, evaluator and code hashes are not yet resolved. They must be added in a new version before dispatch; this assessment cannot stand in for that freeze. The [design](../design.yaml) fixes intended stage ceilings and split namespaces, not a runnable backend configuration.
+Exact candidate routes and tariffs are pinned in [models.json](../models.json); the source, private scorer, context builder, assignment IDs, native adapter and gated S0 launcher now exist. [Validation](../VALIDATION.json) records 47 passing offline checks. [Scenario contract](../SCENARIOS.md) defines the twelve four-step cases per role. Haiku and Qwen generate actions; Jev selects finite supplied actions. No native competence is claimed. The final deployment source/assignment/admission receipt must still be frozen on the dedicated host before dispatch.
 
 ## Design risks and required checks
 
@@ -22,16 +22,20 @@ Exact model identities, revisions/settings, prompt templates, data generator, pr
 - Verify each contract is actually implemented by its designated backend. Jev receives typed choices; no hidden generative fallback.
 - Meter all usage and retries with atomic reservation; stop rather than exceed the shared allowance.
 - Record initialization and effective context/tool receipts. Denied access is enforced by the adapter.
-- Run the [visualization acceptance checks](../VISUALIZATION.md) on a labeled fixture before native calls. No renderer exists yet.
+- Run the [visualization acceptance checks](../VISUALIZATION.md) on a labeled fixture before native calls. The 1600-pixel PNG fixture and interactive event replay were visually checked; both are labeled scripted.
 
 ## Resource and launch gates
 
-Proposed limits: $5 model API, $2 infrastructure, two hours, one worker and at most two concurrent requests. These are requested planning ceilings, not an authorization. Current spend authorization for Poietic Agents is zero. Local offline document/contract checks require no model, host or credentials.
+Proposed limits: $5 model API, $2 infrastructure, two hours, one worker and one concurrent request (within the original at-most-two limit). These are requested planning ceilings, not an authorization. Current spend authorization for Poietic Agents is zero. Local offline document/contract checks require no model, host or credentials.
 
-Required before launch: resolved and qualified implementation; independent design/measurement review; exact request and budget manifest; authorized credential aliases; public immutable plan/TLDR registration with successful preflight; fresh exclusive allocation from Dmarz's authorized fleet; deployment/source receipt; and an effective stop/reconcile path. Formal confirmation additionally needs the prior-art and hypothesis gates. The exploratory worker allowance does not imply S2 acceptance.
+Completed before launch preparation: prospective implementation plan, one independent design review with P1–P3 resolution, 47 offline checks, exact model/request caps and no-native-call preparation command. Still required before launch: study-specific budget authority, authorized credential aliases; public immutable plan/TLDR registration with successful preflight; fresh exclusive allocation from Dmarz's authorized fleet; deployment/source receipt; and an effective stop/reconcile path. Formal confirmation additionally needs the prior-art and hypothesis gates. The exploratory worker allowance does not imply S2 acceptance.
 
 No server is claimed merely to wait for design review. Any future provisioning must verify the approved account/team and infrastructure state privately. Existing hosts and budgets from other studies confer no permission here.
 
 ## Handoff after a future attempt
 
 Reconcile assignments, starts, terminal outcomes, scoring and spend; write `S0-01-post.md` even for a setup failure. Classify instrument defects, competence failures and valid outcomes separately. Preserve failures, make bounded repairs within the same authority, and test repaired behavior on a fresh namespace. Advance only the contracts that meet their declared checks; record an explicit design amendment if the executor ladder changes.
+
+## Visualization mapping v0.2
+
+Each S0 contract gets its own condition-specific run and progress counts out of 48; one shared budget covers all three. Save PNG after each lifecycle case and final 1600×720 frame, plus all raw sanitized responses and assignments. Context and model receipts stay linked to request IDs. Reconcile every upload acknowledgement/readback separately from competence. The fixed-grid HTML replay demonstrates software transitions only; it is not a native outcome. Current maximum reserved API total for all 288 requests at pinned rates is $1.447723008; the proposed $5 allowance is not automatically granted.
