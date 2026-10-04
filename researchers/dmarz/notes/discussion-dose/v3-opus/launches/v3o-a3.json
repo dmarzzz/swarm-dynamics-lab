@@ -1,0 +1,63 @@
+{
+  "configuration": {
+    "attempt_cap": "planned calls + max(10, planned calls // 10)",
+    "credit_halt": "after one provider_credit_balance_low failure (recorded as a provider failure) the next dispatch halts the stage; never retried",
+    "dispatch_order": "clean-first: per world clean acquisition, report snapshot, reports-only arm and clean full-evidence diagnostic; early gate after those 66 calls; then remaining clean arms, attacked exposures, memory fixtures",
+    "effort": "high",
+    "input_usd_per_million": 4,
+    "max_input_bytes": 60000,
+    "max_output_tokens": 16000,
+    "model": "claude-opus-5-5",
+    "output_usd_per_million": 20,
+    "refusal": "stop_reason refusal counted separately (public reason provider_schema_refusal)",
+    "server_fallbacks": "disabled",
+    "temperature": "omitted: rejected by claude-opus-5-5",
+    "thinking": "adaptive (cannot be disabled on claude-opus-5-5)",
+    "timeout": 600,
+    "transport_retries": "at most 2 per logical call, only HTTP 429/529 (model not run), within the 600 s request timeout; every attempt reserved and counted against the attempt cap; model answers never retried",
+    "visible_answer_max_chars": 8000
+  },
+  "experiment": "discussion-v3-opus",
+  "model": "claude-opus-5-5",
+  "owner_authorization": {
+    "path": "../OWNER-AUTHORIZATION.md",
+    "sha256": "60d14fc23c216b1c5599a18c9cf01a62710e330777e9f8cc5815333e1471a7cb"
+  },
+  "q0_gate": {
+    "batch": "v3o-a2-q0",
+    "run": "discussion-v3-opus/v3o-a2-q0",
+    "summary_path": "../records/v3o-a2-q0/summary.json",
+    "summary_sha256": "26cd713ae4616998539614d48e61217b163209fbf10414e0da2cec336d65264d"
+  },
+  "source_hashes": {
+    "bench_v3/__init__.py": "3c5fe43228d361bcf91c582c907545ba65ce7badf65b29f6941beb628e633d72",
+    "bench_v3/analysis.py": "dd97d3831607834c91d64ddc4469848034302a22aa4e08434b3174b86e317e7e",
+    "bench_v3/cli.py": "a419454733eae61fe50cc5d2e4de4c1db2679e559e9084b4d1f49b7acc13ac53",
+    "bench_v3/contracts.py": "d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7",
+    "bench_v3/evidence.py": "f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc",
+    "bench_v3/failures.py": "68934060f5a7054ef33ca28c1b99b254c95671c3683131c943accd9e5b2ab79e",
+    "bench_v3/hub_worker.py": "74ba406c142c5786b0e9c473020d39fb69552c30051c2572fbc7e236ab3e6d47",
+    "bench_v3/journal.py": "133569662d073f4d461843fea4c8492d863843366e18d6ac8987e65568a89518",
+    "bench_v3/policies.py": "7eb0ddb3e8d520754aac18eb62fb96714ee28829bc9139f516c50d69198e3cd9",
+    "bench_v3/portable_audit.py": "b7ae38ac9a93822d1457a5494fac9bd45d590d8f3fcefcbc67ea4b362508c880",
+    "bench_v3/replay_view.py": "ff5a658976e685cb5bc1f5be0828a585849c934e0b07b2db195b0d8f51a241e1",
+    "bench_v3/runner.py": "22edc2e874ed7ccacd19bcc815a79b3a28617867dd8c82a89c5966f2273a5351",
+    "bench_v3/scoring.py": "6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4",
+    "bench_v3/selftest.py": "12b8b2d94696322fbb5f38bdf407a868525641745ed73388110d6af86cccec48",
+    "bench_v3/worlds.py": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
+    "bench_v3_opus.py": "bdc9592f97bdd0e3917c93ea0d0567afd5e065ac6b56db3fd71318ca89a5a35b",
+    "providers.py": "22a2e672aeb168ab630bcc65ca2eb9838be910f332820b221720ffa09d82d500",
+    "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
+  },
+  "stages": {
+    "q0": {
+      "max_calls": 636,
+      "max_cost_usd": 400
+    },
+    "s1": {
+      "max_calls": 2436,
+      "max_cost_usd": 1500
+    }
+  },
+  "status": "owner-waived-opus-chain"
+}

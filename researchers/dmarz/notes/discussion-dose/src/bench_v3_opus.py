@@ -49,9 +49,12 @@ ROUNDS = 3
 STAGES = {
     # Fresh namespaces, disjoint from dev 10002-10007, tests 10101-10160, Q0 20001-20006,
     # holdout 30000-30023 (closed), sidecar 40001-40012, Q1 50001-50006, D1-Opus 52001-52012.
+    # 2026-10-04 amendment (attempt v3o-a3): S1 moves to fresh worlds 54201-54224. Worlds 54101-54124 were
+    # partly consumed by the stopped attempt v3o-a2 S1 (provider credit-balance outage) and are retired.
     'q0': {'worlds': list(range(54001, 54007)), 'resolvable': 3},
-    's1': {'worlds': list(range(54101, 54125)), 'resolvable': 12},
+    's1': {'worlds': list(range(54201, 54225)), 'resolvable': 12},
 }
+RETIRED_WORLDS = set(range(54101, 54125))  # v3o-a2 S1, stopped 2026-10-04 10:14Z; never reused
 CONFIG = {'model': MODEL, 'temperature': 'omitted: rejected by claude-opus-5-5',
           'thinking': 'adaptive (cannot be disabled on claude-opus-5-5)', 'effort': EFFORT,
           'max_output_tokens': MAX_OUTPUT_TOKENS, 'visible_answer_max_chars': VISIBLE_ANSWER_MAX_CHARS,
@@ -61,12 +64,14 @@ CONFIG = {'model': MODEL, 'temperature': 'omitted: rejected by claude-opus-5-5',
           'dispatch_order': 'clean-first: per world clean acquisition, report snapshot, reports-only arm and clean full-evidence diagnostic; early gate after those 66 calls; then remaining clean arms, attacked exposures, memory fixtures',
           'server_fallbacks': 'disabled',
           'refusal': 'stop_reason refusal counted separately (public reason provider_schema_refusal)',
+          'credit_halt': 'after one provider_credit_balance_low failure (recorded as a provider failure) the next dispatch halts the stage; never retried',
           'input_usd_per_million': RATES[0], 'output_usd_per_million': RATES[1]}
 
 
 def stage_cases(stage):
     spec = STAGES[stage]
-    reserved = set(SPLITS['holdout']) | set(range(50001, 50007)) | set(range(52001, 52013)) | set(range(40001, 40013))
+    reserved = (set(SPLITS['holdout']) | set(range(50001, 50007)) | set(range(52001, 52013)) | set(range(40001, 40013))
+                | RETIRED_WORLDS | (set(range(54001, 54007)) if stage == 's1' else set()))
     if reserved & set(spec['worlds']): raise ValueError('reserved world namespace')
     return [make_case(w, 'resolvable' if i < spec['resolvable'] else 'ambiguous') for i, w in enumerate(spec['worlds'])]
 
@@ -80,6 +85,11 @@ def source_hashes():
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
 
 
+class CreditHalt(BaseException):
+    """Stops a stage after a provider credit-balance failure. BaseException so the runner's per-call handler
+    (which records ordinary provider failures and continues) cannot absorb it."""
+
+
 class Opus(Anthropic):
     """Native Messages API for claude-opus-5-5, ported from the passed D1-Opus adapter."""
     def __init__(self, max_calls, max_cost_usd):
@@ -89,7 +99,7 @@ class Opus(Anthropic):
                          input_usd_per_million=RATES[0], output_usd_per_million=RATES[1])
         self.refusals = 0; self.model_mismatches = 0; self.last_stop_reason = None
         self.attempts = 0; self.max_attempts = max_calls + max(10, max_calls // 10); self.transport_retries = 0
-        self.sleep = time.sleep
+        self.sleep = time.sleep; self.credit_failures = 0
 
     RETRYABLE = (429, 529)
     MAX_RETRIES = 2
@@ -126,6 +136,7 @@ class Opus(Anthropic):
 
     def complete(self, request):
         self.last_usage = {}; self.last_response_text = None; self.last_model = None; self.last_stop_reason = None
+        if self.credit_failures: raise CreditHalt('provider_credit_balance_low')  # halt before dispatching again
         if self.calls >= self.max_calls: raise ProviderFailure('call budget exhausted', 'provider_local_limit')
         if len(json.dumps(request, sort_keys=True).encode()) > self.max_input_bytes:
             raise ProviderFailure('input byte budget exceeded', 'provider_local_limit')
@@ -167,6 +178,7 @@ class Opus(Anthropic):
                 error = json.loads(e.read(16384)).get('error', {})
                 if e.code == 400 and 'credit balance is too low' in error.get('message', '').lower(): reason = 'provider_credit_balance_low'
             except Exception: pass
+            if reason == 'provider_credit_balance_low': self.credit_failures += 1
             raise ProviderFailure(f'provider HTTP {e.code}', public_reason=reason, http_status=e.code) from None
         except ProviderFailure: raise
         except Exception as e:
@@ -177,7 +189,8 @@ class Opus(Anthropic):
                 'cost_usd': round(self.actual_cost_usd, 6), 'reserved_usd': round(self.reserved_usd, 6),
                 'usage_missing_calls': self.usage_missing_calls, 'refusals': self.refusals,
                 'model_mismatches': self.model_mismatches, 'attempts': self.attempts,
-                'max_attempts': self.max_attempts, 'transport_retries': self.transport_retries}
+                'max_attempts': self.max_attempts, 'transport_retries': self.transport_retries,
+                'credit_failures': getattr(self, 'credit_failures', 0)}
 
 
 class GateStop(Exception):
@@ -329,7 +342,7 @@ def load_launch(path):
     """Owner-authorized launch record: exact source, stage caps and the waiver evidence file digest."""
     launch = strict_json(Path(path).read_text())
     required = {'status', 'experiment', 'model', 'configuration', 'source_hashes', 'stages', 'owner_authorization'}
-    if set(launch) != required or launch['status'] != 'owner-waived-opus-chain' or launch['experiment'] != EXPERIMENT:
+    if set(launch) - {'q0_gate'} != required or launch['status'] != 'owner-waived-opus-chain' or launch['experiment'] != EXPERIMENT:
         raise ValueError('launch record is not an owner-authorized Opus chain')
     if launch['model'] != MODEL or launch['configuration'] != CONFIG: raise ValueError('configuration differs from source')
     if launch['source_hashes'] != source_hashes(): raise ValueError('launch record does not match this source')
@@ -340,6 +353,13 @@ def load_launch(path):
     proof = launch['owner_authorization']
     evidence = (Path(path).parent / proof['path']).resolve()
     if hashlib.sha256(evidence.read_bytes()).hexdigest() != proof['sha256']: raise ValueError('authorization evidence hash mismatch')
+    if 'q0_gate' in launch:
+        gate = launch['q0_gate']
+        if set(gate) != {'batch', 'run', 'summary_path', 'summary_sha256'}: raise ValueError('bad q0_gate record')
+        summary_file = (Path(path).parent / gate['summary_path']).resolve()
+        if hashlib.sha256(summary_file.read_bytes()).hexdigest() != gate['summary_sha256']: raise ValueError('q0 gate summary hash mismatch')
+        q = strict_json(summary_file.read_text())['qualification']
+        if not (q['model_qualified'] is True and q['execution_complete'] is True): raise ValueError('recorded Q0 did not pass')
     return launch
 
 
@@ -440,9 +460,11 @@ def run_probe(provider, outdir):
     return ok, record
 
 
-def chain(sr, launch_path, outdir, prefix, scripted=False):
-    """probe -> Q0 -> (gate) -> S1. Stops at the first failed software gate; never retries."""
+def chain(sr, launch_path, outdir, prefix, scripted=False, s1_only=False):
+    """probe -> Q0 -> (gate) -> S1. Stops at the first failed software gate; never retries.
+    s1_only: probe -> S1, admitted by the passed Q0 recorded in the launch record's q0_gate (hash-checked)."""
     launch = load_launch(launch_path)
+    if s1_only and 'q0_gate' not in launch: raise ValueError('s1_only requires a q0_gate in the launch record')
     outdir.mkdir(parents=True, exist_ok=True)
     state = {'started_utc': datetime.now(timezone.utc).isoformat(), 'prefix': prefix, 'stages': {}}
     def save():
@@ -452,7 +474,9 @@ def chain(sr, launch_path, outdir, prefix, scripted=False):
         state['probe'] = {'ok': ok, 'status': record['status'], 'cost_usd': record['accounting'].get('cost_usd')}; save()
         if not ok:
             state['stopped'] = 'probe failed'; save(); return state
-    for stage in ('q0', 's1'):
+    if s1_only:
+        state['q0_gate'] = launch['q0_gate']; save()
+    for stage in (('s1',) if s1_only else ('q0', 's1')):
         caps = launch['stages'][stage]
         provider = Scripted() if scripted else Opus(caps['max_calls'], caps['max_cost_usd'])
         batch = f'{prefix}-{stage}'
@@ -475,7 +499,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     p = sub.add_parser('chain'); p.add_argument('--launch', type=Path, required=True); p.add_argument('--outdir', type=Path, required=True)
-    p.add_argument('--prefix', required=True); p.add_argument('--scripted', action='store_true')
+    p.add_argument('--prefix', required=True); p.add_argument('--scripted', action='store_true'); p.add_argument('--s1-only', action='store_true')
     p = sub.add_parser('audit'); p.add_argument('directory', type=Path)
     p = sub.add_parser('plan')
     args = parser.parse_args(argv)
@@ -486,7 +510,7 @@ def main(argv=None):
     if args.command == 'audit':
         print(json.dumps(audit(args.directory), indent=2)); return 0
     import swarm_report as sr
-    print(json.dumps(chain(sr, args.launch, args.outdir, args.prefix, scripted=args.scripted), indent=2, sort_keys=True))
+    print(json.dumps(chain(sr, args.launch, args.outdir, args.prefix, scripted=args.scripted, s1_only=args.s1_only), indent=2, sort_keys=True))
     return 0
 
 

@@ -1,0 +1,22 @@
+{
+  "attempt": "v3o-a2",
+  "stage": "s1",
+  "hub_run": "discussion-v3-opus/v3o-a2-s1",
+  "hub_status": "failed (set by operator dmarz/orchestrator-2 at about 10:16Z with an explanatory message)",
+  "worlds": "54101-54124 (retired; never reused)",
+  "planned_calls": 2436,
+  "call_starts": 292,
+  "responses": 230,
+  "provider_failures": 61,
+  "provider_failure_reasons": {"provider_credit_balance_low": 61},
+  "failure_call_index_range": [205, 265],
+  "failure_window_utc": "about 10:07 to 10:11",
+  "unresolved_call_starts": ["c000291 (in flight at SIGTERM; dispatch and billing unknown)"],
+  "terminal_cases": 50,
+  "measured_input_tokens": 1237693,
+  "measured_output_tokens": 92894,
+  "measured_cost_usd": 6.808652,
+  "stopped_utc": "2026-10-04T10:14:26Z",
+  "stop_method": "SIGTERM to the chain process by dmarz/orchestrator-2; journal ends with a call_start, no complete event",
+  "raw_records": "journal and chain log preserved off-server in git-ignored data/ of the operator worktree and on sim-dmarz-9 under the study's results directory"
+}
