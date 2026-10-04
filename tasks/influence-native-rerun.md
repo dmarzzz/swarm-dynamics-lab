@@ -30,3 +30,5 @@ Implement native bounded collection, qualify the redesigned procurement study an
 ## Coverage note
 
 Four native attempts published with immutable evidence, measured GIF/HTML replays and post-mortems. Q2: 9 valid, 7 acceptable; Q3: 3 valid deferrals on a targeted diagnostic, not full qualification. The comparison remains unrun pending fresh full qualification and more authorized shared budget. Dedicated worker is stopped; claim release requested. See scenario/RESULTS.md.
+
+Iteration 2: fresh pull and PI feedback incorporated; four new Q4 dossiers, selected-deployment approval control, answer-label counterbalance, exact Q4 gate and missingness-aware paired analysis. 24 tests pass, 12/12 scripted decisions acceptable. No new model result. Native collection requires additional authorized shared budget, independent dossier review (review-influence-q4-dossiers), and fresh dedicated allocation. See scenario/ITERATION-02.md.
