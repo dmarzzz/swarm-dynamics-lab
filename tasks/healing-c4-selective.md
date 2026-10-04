@@ -29,3 +29,8 @@ Review C3 and prepare the concrete C4 selective-referral revision, preserving ne
 - Obtain owner decision on material C4 scope and +492 request envelope.
 - Complete native launcher integration, public admission and dedicated allocation before qualification.
 - If qualified and admitted, execute S1, audit, visualize, post-mortem and release resources.
+
+
+## C5 automatic continuation closeout
+
+The separately approved C5 continuation is complete: [main post-mortem](../researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md), [qualification](../researchers/vishesh/notes/healing-helping-hands/c5/S0-POST.md), [resource reconciliation](../researchers/vishesh/notes/healing-helping-hands/c5/RESOURCE-CLOSEOUT.json). All492cases/1476calls completed; the routing criterion failed. FINISH / PARK; no successor.

@@ -112,11 +112,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/healing-helping-hands",
       "setup_path": "researchers/vishesh/notes/healing-helping-hands/c4/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/healing-helping-hands/composite/C3-S1-POST.md",
+      "postmortem_path": "researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T14:31:29.036366+00:00",
-      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "Finish C3 reporting; prepare C4 decision. Read researchers/vishesh/notes/healing-helping-hands/c4/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
+      "checked_at": "2026-10-04T19:48:28.933993+00:00",
+      "checked_commit": "179b1cca28a2b45b07850f0fae4b13767a871619",
+      "next_action": "FINISH / PARK C5. Automatic S0/S1 complete and scientifically reviewed;234/432cascade errors vs0Jev, no successor. Read c5/S1-POST.md and RESOURCE-CLOSEOUT.json. Original ledger restored and exclusive allocation released; remaining dollars are not new launch authority.",
       "next_run_approval": "owner"
     },
     {

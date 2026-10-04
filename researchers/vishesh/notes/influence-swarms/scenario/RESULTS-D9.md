@@ -1,5 +1,14 @@
 # D9: transport recovered; evidence quoting is the bottleneck
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-experiments; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — On five contract-valid inspected development responses, exact-quote failures discarded correct facts and produced false uncertainty. Basis: Native screen5/6valid;180/180correct raw values but98aligned and41/75correct checks. Citation-bound saved-data analysis75/75is retrospective, not native behavior or general robustness. Provider recovery and format repair are separate acquisition evidence.
+- **sample_size_summary:** Six inspected case clusters in initial screen,5valid/1invalid; nine physical calls across acquisition/repair and qualification, not nine independent cases. No chair or broader influence contrast ran.
+<!-- experiment-evidence:end -->
+
 The diagnostic campaign found a usable typed-output configuration and a substantive reason not to repeat the full experiment unchanged. On five valid development responses, the model extracted **180/180 fact values correctly**, but inaccurate quotations caused the strict verifier to admit only **98/180 values** and produce **41/75 correct policy checks**. The pipeline was manufacturing false uncertainty after successful extraction.
 
 This is a narrow development finding. The cases are synthetic and previously inspected. It does not establish influence resistance, general extraction accuracy or reliable deployment behavior.

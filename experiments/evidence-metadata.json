@@ -3766,6 +3766,32 @@
         "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md"
       ],
       "status_at_assessment": "diagnostics_closed_changed_provenance_proposal_not_launched"
+    },
+    {
+      "id": "healing-c5-s1",
+      "title": "Healing C5 selective routing",
+      "documents": [
+        "researchers/vishesh/notes/healing-helping-hands/c5/README.md"
+      ],
+      "experiment_ids": [
+        "healing-helping-hands"
+      ],
+      "registration_paths": [],
+      "assessor": "vishesh/codex-regrowth-docs",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "This frozen agreement-only Qwen/Jev router fails its finite-fixture safety criterion despite a small matched-random advantage.",
+        "rationale": "Complete432paired instances, competent Jev control, full trace/label reconstruction and prespecified comparisons; synthetic dependent templates, one configuration and same-author audit limit transfer."
+      },
+      "sample_size_summary": "12 authored semantic families \u00d736 nested synthetic instances;432/432 main cases,1296 calls,0failures. Separate S0:60instances/180calls. Not432 independent language tasks or200 native cooperating agents.",
+      "sources": [
+        "researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md",
+        "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S1/audit.json",
+        "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S1/scientific-post-mortem.json"
+      ],
+      "source_commit": "179b1cca28a2b45b07850f0fae4b13767a871619",
+      "status_at_assessment": "completed_valid_adverse_FINISH_PARK"
     }
   ],
   "source_sha256": {

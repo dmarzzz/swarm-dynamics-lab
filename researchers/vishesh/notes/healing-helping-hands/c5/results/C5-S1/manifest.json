@@ -1,0 +1,62 @@
+{
+  "attempt": "C5-S1",
+  "stage": "S1",
+  "status": "completed",
+  "source_hashes": {
+    "researchers/vishesh/notes/healing-helping-hands/c5/runtime.py": "2038b8a03ae71d52fec7ac355ea37ab7d7278d19a1f0a2a3f35967b2939df696",
+    "researchers/vishesh/notes/healing-helping-hands/c5/test_contract.py": "8cfc81f0ab9ae819a7f960e73a2600c1e8601b17da78e7804e2dddb4ed2b9b0d",
+    "researchers/vishesh/notes/healing-helping-hands/c5/test_advance.py": "e71ececebf5b1b9d816269c90bbf8078b1217b74299a1e4fcb79620a80f377ee",
+    "researchers/vishesh/notes/healing-helping-hands/c5/audit.py": "45fd50384c62aea563c53b77c87c39bbee39180e973b8c9a8f62ee80f03d835c",
+    "researchers/vishesh/notes/healing-helping-hands/c5/supervise.py": "0128591caaa8175499e0acef72719ae1228da75976093969b09bb3caedc9e56b",
+    "researchers/vishesh/notes/healing-helping-hands/c5/relay.py": "e24270cfbba1f9f19ba43892de784a7883437a6adac8285775ba1b209dff3bfd",
+    "researchers/vishesh/notes/healing-helping-hands/c5/scenarios.py": "c693d7984aac28eaf8a860c90dfffc44f2018dbd9c6066f926e3ffbd5551664d",
+    "researchers/vishesh/notes/healing-helping-hands/c5/contract.py": "6e70020c1d81ac640a2024fadf37df8e91cb4189961a68350eb125b94975d7ec",
+    "researchers/vishesh/notes/healing-helping-hands/c5/worker.py": "3b9b4e2013b34d1bcb93ee95a484ef62d58f1acfb67ce52bf95a01ad41d59785",
+    "researchers/vishesh/notes/healing-helping-hands/c5/render.py": "73aea7012b54c0fc936a7014bcb928d08431f6e595080a058eae472a45f4ec1e",
+    "researchers/vishesh/notes/healing-helping-hands/c5/test_context.py": "16285405e4991c10701c946fee4db35d2a14dec8400ad90dab0ddae672360f77",
+    "researchers/vishesh/notes/healing-helping-hands/c5/advance.py": "6986b5d9d8af5eedabe73ec8ef95b8b19457693e96e895ced616a339b6a37d1c",
+    "researchers/vishesh/notes/healing-helping-hands/c5/test_native.py": "12437d81885b86bc419f34e1af8526cd4264b281902531cc1afe8922aa5d218d",
+    "researchers/vishesh/notes/healing-helping-hands/c4/scenarios.py": "788366224377a75a5a94f055a1aa44e947ef0c8cab77b11c17b7839db808f341",
+    "researchers/vishesh/notes/healing-helping-hands/src/jev.py": "e18030f9a73b409e0b7b2c1c5b5d4e4907b71aa3aaea72cc5ef0ab2cf5298ede",
+    "researchers/vishesh/notes/healing-helping-hands/src/jev_relay.py": "8d9ec958e7f2d63a45cd9e7913a90c17a542adb18cf2765ead9eb8d201cc5ecb",
+    "researchers/vishesh/notes/healing-helping-hands/src/providers.py": "1d020c4509904760a765ed2928ff6965a43b89781ef7a960b02624ccafe8bdee",
+    "researchers/vishesh/notes/healing-helping-hands/practical/reporting.py": "3b75a9f8a7dc12fd9b6822f8f314b1808894f3565ffe2e7b07917a156d8e8528",
+    "researchers/vishesh/notes/experiment-documentation/public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "plan": {
+    "experiment": "healing-helping-hands",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/179b1cca28a2b45b07850f0fae4b13767a871619/researchers/vishesh/notes/healing-helping-hands/c5/PLAN.md",
+    "commit": "179b1cca28a2b45b07850f0fae4b13767a871619",
+    "plan_sha256": "2e0daf39e9ec6f1895d225be26589777ecc0473d2177f140c85dd971ef38fac1",
+    "registered_tldr": "TLDR: C5 tests whether Qwen0.6B option-order disagreement identifies reports needing Jev. First qualify60 metadata-blind synthetic instances, then automatically evaluate432 instances across12 authored families if trace/scientific and budget gates pass. Compare agreement routing with always-Jev, Qwen alone and equal-count random referrals. Measure absolute error, wrong accepted answers, referrals and actual cost; both Qwen passes count. Synthetic dependent templates do not establish real-world safety or200-agent cooperation. C4 label-leakage failure remains preserved. C5 is prospectively registered; no outcomes yet.",
+    "run_tldr": "TLDR: C5-S1 option-order agreement referral versus always-Jev, Qwen-only and same-count random referral; measure absolute error, missed errors and derived consultations on synthetic report families.",
+    "checked_utc": "2026-10-04T19:19:26.635542+00:00"
+  },
+  "calls": {
+    "qwen": 864,
+    "jev": 432
+  },
+  "qwen_metadata": {
+    "name": "qwen3:0.6b",
+    "model": "qwen3:0.6b",
+    "modified_at": "2026-10-04T19:06:18.46967349Z",
+    "size": 522653767,
+    "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M"
+    }
+  },
+  "host": "sim-vishesh",
+  "claim": "vishesh-healing-c5",
+  "seconds": 1261.283094583996,
+  "observation_counts": {
+    "completed": 432
+  }
+}

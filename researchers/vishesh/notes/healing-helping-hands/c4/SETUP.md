@@ -59,3 +59,10 @@ Original dollars/reservations remain: USD0.10 cumulative, USD0.03 shared C4/C5 r
 ## C5 qualification complete; conditional main running
 
 C5-S0 completed60cases/180calls without execution failure. Same-author raw-payload/score audit and authored scientific review qualified the instrument: Jev60/60; Qwen A37/60 and B36/60, with23wrong agreements and1disagreement. The qualification gate permits adverse Qwen performance; no thresholds or cases changed. [S0 post-mortem](../c5/S0-POST.md) and [evidence-linked rubric](../c5/results/C5-S0/scientific-post-mortem.json) record the limits. The approved automatic432-case S1 was dispatched once through `advance.py` after fresh account/claim/public-plan/source/budget checks. Native source179b1cca28a2b45b07850f0fae4b13767a871619;37native offline checks. Private dispatcher repair357 merged. No S1 outcome is implied yet. Original ledger remains the sole remote authority, with all2239 historical entries plus60C5S0 reservations.
+
+
+## C5 chain completed and reviewed — final state
+
+[Main post-mortem](../c5/S1-POST.md) supersedes the running status above. S0:60cases/180calls; automatic S1:432cases/1296calls; zero execution failures. Main Jev432correct, cascade198correct, matched193correct;234 wrong agreements and23referrals. All1296 main payloads/labels/scores reconstructed;432 reference labels match;69response-pattern exemplars/207visible answers inspected. Eleven-dimension authored review complete. This is a valid adverse finite-config result, not a failed execution. FINISH / PARK; no successor.
+
+C5API0.009981426; original2731entry ledger restored with all2239historical entries unchanged, settled0.051998898 plus0.001344 historical unknown exposure. S0/S1 archives uploaded and download hashes verified. Dedicated container and services stopped, ephemeral key absent, claim release382 merged. Public TLDR and primary metrics updated. UI protocol-cache fix368 merged for Dmarz/CD; no personal Cloudflare deployment. The broad archive upload was initially stopped by platform review; an exact file/payload allowlist and content validation resolved the exposure concern before successful publication.

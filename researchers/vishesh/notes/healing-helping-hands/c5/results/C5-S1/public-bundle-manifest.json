@@ -1,0 +1,112 @@
+{
+  "scope": "Public C5-S1 synthetic experiment evidence and authored reports only; no ledger, credential, admission, operator transcript or owner prompt.",
+  "destination": "existing registered Swarm Lab run healing-helping-hands/C5-S1 using authorized server SDK",
+  "authorization": "Approved C5 PLAN protocol5 requires publication of outcomes/visuals and archive download verification; actor inputs are declared synthetic fixtures, not owner/operator prompts.",
+  "verified_starts": 1296,
+  "verified_completions": 1296,
+  "all_actor_payloads_match_frozen_contract": true,
+  "raw_response_keys_allowlisted": true,
+  "restricted_string_and_url_check_passed": true,
+  "files": [
+    {
+      "path": "C5-S1/POST-MORTEM.md",
+      "sha256": "42e44baa84858375c7e96fa76cd78247e083e6b788875419b91d6c295a633534",
+      "bytes": 7117
+    },
+    {
+      "path": "C5-S1/audit.json",
+      "sha256": "e76e01f0bc2a8e9b7b0ae7b080f00218fed9c5e7b0a333cbc3c814eab8669681",
+      "bytes": 652
+    },
+    {
+      "path": "C5-S1/calls.jsonl",
+      "sha256": "7801c3ced4c4cc1668bc070ca53f0d0a7d8bf47bfd6db0c0040541a7c356afce",
+      "bytes": 2133727
+    },
+    {
+      "path": "C5-S1/cost-reconciliation.json",
+      "sha256": "55c6854835de0079ab5ab7c61b9a2bf328b35517a0c46b8b9443223f20596846",
+      "bytes": 270
+    },
+    {
+      "path": "C5-S1/label-audit.json",
+      "sha256": "327f6d34aefb5cbbd55ab67501200ef888c4c8982c1375d3c59eac309fc90602",
+      "bytes": 55362
+    },
+    {
+      "path": "C5-S1/manifest.json",
+      "sha256": "5ce5f81edbfb02d26408dc38f043d86f7b7754571ff8f4ab534db6eec1562db8",
+      "bytes": 4656
+    },
+    {
+      "path": "C5-S1/observations.json",
+      "sha256": "d71885ada7c767b8fd85181bd2757dfedda1e2d726a3bd835e7ea4e415f31aea",
+      "bytes": 188895
+    },
+    {
+      "path": "C5-S1/reviewed-pattern-ids.json",
+      "sha256": "89eeb659b426ba4b0daa6de5bbee46f5a213de7e3394bb2a295cc626686808cf",
+      "bytes": 1019
+    },
+    {
+      "path": "C5-S1/scientific-post-mortem.json",
+      "sha256": "9eddf4bbce101ed03f0bcaac47f1e2efaa18399001cca8a4b9aab0fe3aadf9de",
+      "bytes": 6188
+    },
+    {
+      "path": "C5-S1/scientific-review.json",
+      "sha256": "c744c7e0470fa9e3ba06b4edfce60ca46642c967526520a53a15233951f59da8",
+      "bytes": 5649
+    },
+    {
+      "path": "C5-S1/summary.json",
+      "sha256": "b9ddea67ba9e240b9b5066cde8a08a7216ac8f65f74bfdb166eedeafff142ddc",
+      "bytes": 210941
+    },
+    {
+      "path": "C5-S1/transport-receipt.json",
+      "sha256": "543446467d7b05d320960dfef8278143fb583a09dfdfbbd71271f5805474387f",
+      "bytes": 114
+    },
+    {
+      "path": "C5-S1/operations/handoff.json",
+      "sha256": "6101eef50304b453e8fecf8618a4eddc37e2423bc9ba3ed859a695254da3241b",
+      "bytes": 4348
+    },
+    {
+      "path": "C5-S1/operations/COMPLETE.json",
+      "sha256": "14822e0fc4b02e26a17dc0276ab7ebf63dea99dc99d4ba7b1632b4f60756cefa",
+      "bytes": 294
+    },
+    {
+      "path": "C5-S1/operations/POST-MORTEM.md",
+      "sha256": "ddde6a63a06e69ea1e9ea80f863666f5078b13beb76bd580b0e742c297b63a1c",
+      "bytes": 4190
+    },
+    {
+      "path": "C5-S1-figures/outcomes.png",
+      "sha256": "9c66b6d4dc950d67cc4278f27373148c838c8b01e959a2469eb28448abcef3bb",
+      "bytes": 88480
+    },
+    {
+      "path": "C5-S1-figures/diagnostics.json",
+      "sha256": "af83857ad56893d4a1a70665670db5ea1b461aa2cf0d8ee2df0e1edfb86b9d5d",
+      "bytes": 2343
+    },
+    {
+      "path": "C5-S1-figures/family-errors.png",
+      "sha256": "4f304847e14012ec7f4250c24dc01bfe123b774e88236f328140da7c53700607",
+      "bytes": 112434
+    },
+    {
+      "path": "C5-S1-figures/replay.html",
+      "sha256": "911be4b68529997bad5a54ad0b1b89a575a819fa5efe1add5bf856f15b9d6627",
+      "bytes": 275581
+    },
+    {
+      "path": "C5-S1-figures/replay-reviewed.html",
+      "sha256": "3470f06d8dfc5b8907e6c9a16c6c4980bd6777588903f89b0ad97bdd30840fe4",
+      "bytes": 275618
+    }
+  ]
+}

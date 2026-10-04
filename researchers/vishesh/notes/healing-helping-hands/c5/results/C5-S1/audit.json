@@ -1,0 +1,30 @@
+{
+  "same_author_audit": true,
+  "attempt": "C5-S1",
+  "status": "completed",
+  "assigned": 432,
+  "completed": 432,
+  "starts": 1296,
+  "terminal": 1296,
+  "completed_calls": 1296,
+  "rejected_responses_retained": 0,
+  "failed_calls_without_response": 0,
+  "cost_usd": 0.00885099600000002,
+  "tokens": {
+    "input_tokens": 336696,
+    "output_tokens": 29086
+  },
+  "seconds_by_component": {
+    "jev": 99.58032976099639,
+    "qwen": 1147.8994574168173
+  },
+  "complete_case_wrong": {
+    "a": 250,
+    "b": 245,
+    "jev": 0
+  },
+  "accepted_wrong": 234,
+  "referrals": 23,
+  "all_payload_hashes_verified": true,
+  "all_scores_reconstructed": true
+}

@@ -1,0 +1,2601 @@
+{
+  "same_author_reference_audit": true,
+  "scope": "Retrospective finite authored report label/number validation, not independent human labeling or external validity.",
+  "observations_sha256": "d71885ada7c767b8fd85181bd2757dfedda1e2d726a3bd835e7ea4e415f31aea",
+  "checked": 432,
+  "mismatches": 0,
+  "results": [
+    {
+      "id": "C5-S1-33",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-156",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-312",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-148",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-306",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-310",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-62",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-254",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-152",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-316",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-364",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-140",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-48",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-141",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-347",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-61",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-245",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-114",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-182",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-6",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-52",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-49",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-294",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-35",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-268",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-320",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-405",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-235",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-126",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-292",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-217",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-127",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-425",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-19",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-356",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-243",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-23",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-270",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-88",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-185",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-1",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-345",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-113",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-400",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-359",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-383",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-68",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-326",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-327",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-50",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-375",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-0",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-354",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-331",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-229",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-116",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-233",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-3",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-335",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-167",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-273",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-274",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-402",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-323",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-108",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-20",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-194",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-339",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-279",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-226",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-74",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-252",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-295",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-11",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-202",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-46",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-271",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-200",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-283",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-70",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-32",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-293",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-427",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-418",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-401",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-288",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-91",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-173",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-171",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-338",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-178",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-322",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-7",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-71",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-305",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-246",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-350",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-231",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-97",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-203",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-303",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-296",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-319",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-85",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-107",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-256",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-109",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-133",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-406",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-329",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-198",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-2",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-363",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-147",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-77",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-120",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-230",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-215",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-388",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-257",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-344",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-352",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-4",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-10",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-27",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-100",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-132",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-196",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-121",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-44",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-8",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-144",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-367",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-241",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-64",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-45",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-207",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-264",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-151",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-419",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-416",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-220",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-398",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-413",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-426",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-34",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-250",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-204",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-368",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-221",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-211",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-39",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-403",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-42",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-258",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-30",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-81",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-53",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-183",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-43",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-104",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-174",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-180",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-56",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-282",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-161",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-216",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-361",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-420",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-106",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-128",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-272",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-145",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-26",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-82",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-17",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-240",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-9",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-168",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-166",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-58",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-242",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-102",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-409",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-175",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-224",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-149",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-124",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-84",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-162",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-334",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-301",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-362",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-12",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-239",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-317",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-386",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-125",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-300",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-22",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-269",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-404",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-123",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-139",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-253",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-199",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-24",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-191",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-29",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-353",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-389",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-5",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-205",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-154",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-159",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-57",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-208",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-31",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-142",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-394",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-213",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-164",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-158",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-385",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-380",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-313",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-111",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-376",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-190",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-236",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-155",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-360",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-259",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-341",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-163",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-237",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-238",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-349",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-83",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-188",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-408",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-210",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-117",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-99",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-118",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-18",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-390",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-382",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-232",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-25",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-337",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-248",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-21",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-397",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-76",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-275",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-186",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-351",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-311",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-340",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-431",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-263",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-177",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-206",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-131",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-59",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-13",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-410",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-184",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-372",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-110",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-90",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-299",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-393",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-424",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-143",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-40",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-193",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-135",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-134",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-381",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-227",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-115",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-28",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-374",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-160",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-280",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-80",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-369",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-365",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-265",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-225",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-218",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-153",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-98",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-302",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-357",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-266",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-38",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-321",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-307",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-138",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-284",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-201",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-421",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-290",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-358",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-342",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-78",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-251",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-36",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-399",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-129",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-277",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-55",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-105",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-67",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-112",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-75",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-219",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-96",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-247",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-286",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-423",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-63",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-60",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-415",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-41",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-260",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-417",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-343",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-348",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-262",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-297",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-276",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-298",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-255",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-429",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-181",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-179",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-51",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-169",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-332",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-222",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-391",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-395",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-318",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-371",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-95",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-411",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-89",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-422",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-195",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-330",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-333",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-192",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-309",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-407",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-428",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-291",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-69",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-65",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-315",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-79",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-137",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-384",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-87",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-392",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-412",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-47",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-212",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-278",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-54",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-15",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-328",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-281",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-430",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-86",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-223",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-373",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-261",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-119",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-103",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-336",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-414",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-387",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-197",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-370",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-396",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-189",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-324",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-285",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-94",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-176",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-16",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-244",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-66",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-37",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-355",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-366",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-73",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-122",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-157",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-377",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-172",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-249",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-146",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-325",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-234",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-136",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-187",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-92",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-287",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-379",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-209",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-101",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-378",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-214",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-130",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-304",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-346",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-267",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-228",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-72",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-308",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-289",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-314",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-150",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-170",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-165",
+      "derived_label": "UNCERTAIN",
+      "stored_label": "UNCERTAIN",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-93",
+      "derived_label": "SUPPORT",
+      "stored_label": "SUPPORT",
+      "matches": true
+    },
+    {
+      "id": "C5-S1-14",
+      "derived_label": "REFUTE",
+      "stored_label": "REFUTE",
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-04T19:48:28.933993+00:00",
+  "services_stopped": true,
+  "dedicated_ollama_stopped": true,
+  "ephemeral_credential_absent": true,
+  "remote_ledger_closed": true,
+  "original_ledger_restored": true,
+  "claim_released": true,
+  "release_record": "private agentops PR382 merged",
+  "successor_authorized": false,
+  "decision": "FINISH / PARK"
+}
