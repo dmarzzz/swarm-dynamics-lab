@@ -27,6 +27,25 @@ Status: **scientific review unresolved** until the owning session completes this
 
 Unknown actual usage is not zero. An unknown effect is not a zero effect. Preserve all earlier attempts and distinguish genuinely new units from retries, branches and repeated scoring.
 
+## Native trace audit
+
+| Artifact | Expected units | Retained / inspected | Missing or excluded and why | Source / hash |
+|---|---|---|---|---|
+| Effective experimental input/context and memory lineage | | | | |
+| Visible response and parsed action | | | | |
+| Tool/environment transition and independent grade | | | | |
+| Transport, usage and terminal receipt | | | | |
+
+| Case/root/arm and trace reference | Expected versus observed | First observable divergence | Alternative explanation / cause confidence | Repair or discriminating test and acceptance |
+|---|---|---|---|---|
+
+- Every qualification miss inspected; main-stage audit coverage and matched-success selection:
+- Full-cohort invariants checked; missing traces and conclusions they prevent:
+- Saved-data scoring/reporting repairs versus prospective changes to actor/scenario:
+- Safe artifact readback verified; private operator transcripts excluded:
+
+Follow [native trace review](../RUN-REVIEW.md#review-the-native-traces-before-choosing-a-repair). Visible intermediate calculations are model outputs, not verified explanations of internal reasoning.
+
 ## Interpret the result
 
 - Primary contrast, effect estimate, independent n, uncertainty and practical threshold:
