@@ -3,7 +3,7 @@ id: clarify-pi-review-visual-guide
 type: task
 title: Clarify the PI review visual guide
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T05:01Z
-updated: 2026-10-04T05:01Z
+updated: 2026-10-04T05:53Z
+outputs:
+- researchers/vishesh/notes/pi-review-guide-2026-10-04/README.md
+- researchers/vishesh/notes/pi-review-guide-2026-10-04/index.html
+- researchers/vishesh/notes/pi-review-guide-2026-10-04/checks.json
 ---
 
 ## Goal
@@ -21,6 +25,7 @@ Present the existing dated PI review as a concise dark-theme decision guide: ten
 
 ## Done when
 
-- [ ] Publish a clear dark-only overview and concise project options.
-- [ ] Preserve all detailed scientific reviews and original evidence provenance.
-- [ ] Verify browser interactions, readable layout and repository checks; update navigation.
+- [x] Publish a clear dark-only overview and concise project options.
+- [x] Preserve all detailed scientific reviews and original evidence provenance.
+- [x] Check coverage, source integrity, syntax, links and repository validity; update both entry points.
+- Browser rendering/interactions remain unverified: local-file preview was blocked by browser security policy. Static checks and the verification limitation are recorded in checks.json.

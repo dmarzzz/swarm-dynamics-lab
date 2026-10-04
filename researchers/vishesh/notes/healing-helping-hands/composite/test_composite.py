@@ -1,13 +1,20 @@
 """Offline contract/fault checks, not model evidence."""
 import unittest,copy,sqlite3
 from contextlib import closing
-from definition import cases,request,assess,ARMS,LABELS,digest
+from definition import cases,request,assess,ARMS,LABELS,digest,ATTEMPT,REQUEST_TIMEOUT,UPSTREAM_TIMEOUT
 from worker import admission
-from relay import payloads
+from relay import payloads,safe_error
 from jev_relay import reserve
 
 class Contract(unittest.TestCase):
  def rows(self):return [{**c,'labels':{a:c['expected'] for a in ARMS}} for c in cases()]
+ def test_transport_margin_and_fresh_namespace(self):
+  self.assertGreater(REQUEST_TIMEOUT,UPSTREAM_TIMEOUT+10);self.assertEqual(ATTEMPT,"C2")
+  self.assertTrue(all(x["id"].startswith("C2-") for x in cases()))
+ def test_error_diagnostics_exclude_secret_messages(self):
+  import urllib.error
+  e=urllib.error.URLError(TimeoutError('secret-value-must-not-appear'))
+  self.assertEqual(safe_error(e),{'error_type':'URLError','cause_type':'TimeoutError'})
  def test_balanced_unique(self):
   c=cases();self.assertEqual(len({x['id'] for x in c}),60)
   for k in LABELS:self.assertEqual(sum(x['expected']==k for x in c),20)
@@ -32,7 +39,7 @@ class Contract(unittest.TestCase):
  def test_allowed_payloads_cover_all_proposals(self):
   a=payloads('S0');self.assertEqual(len(a),240)
   for i,c in enumerate(cases()):
-   for proposal in (None,*LABELS):self.assertIn(digest(request(c,i,'C1-S0',proposal)),a)
+   for proposal in (None,*LABELS):self.assertIn(digest(request(c,i,ATTEMPT+'-S0',proposal)),a)
  def good_admission(self):return dict(stage='S0',decision='diagnostic-only',checked_epoch=1000,exclusive_claim_verified=True,workload_verified=True,budget_verified=True,page_verified=True,claim_expires_epoch=3000,cumulative_usd_cap=.1,remaining_usd=.08,host='fixture',claim_id='fixture')
  def test_admission_pass(self):self.assertTrue(admission(self.good_admission(),'S0',1000))
  def test_expired_and_missing_admission(self):

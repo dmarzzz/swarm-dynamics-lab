@@ -1,8 +1,18 @@
 import json
 from pathlib import Path
 import unittest
-from run_qualification import launch_errors
+from run_qualification import launch_errors,assignments_for
 class Launch(unittest.TestCase):
+    def test_attempt_identity_preserves_tasks_and_separates_calls(self):
+        old=assignments_for({});new=assignments_for({'attempt_id':'q-a2'})
+        self.assertEqual(len(new),16)
+        self.assertTrue(set(r['id'] for r in old).isdisjoint(r['id'] for r in new))
+        for before,after in zip(old,new):
+            self.assertEqual(after['parent_id'],before['id'])
+            for k in ('root_id','root','family','structure','n'):
+                self.assertEqual(before[k],after[k])
+        with self.assertRaises(ValueError):assignments_for({'attempt_id':'../old'})
+
     def test_draft_cannot_launch(self):
         cfg=json.loads((Path(__file__).parent.parent/'qualification-config.json').read_text())
         errors=launch_errors(cfg)

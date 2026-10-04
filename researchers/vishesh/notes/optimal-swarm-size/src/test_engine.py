@@ -4,6 +4,18 @@ from engine import execute,validate_plan
 from tasks import generate,reference_answer,evaluate
 
 class Engine(unittest.TestCase):
+    def test_fenced_json_remains_invalid_and_is_diagnosable(self):
+        task=generate('evidence','parallel',0);events=[];prompts=[]
+        def fenced(messages,*args):
+            prompts.append(messages);return '```json\n{}\n```'
+        result=execute(task.public,1,1,10,2,fenced,events.append)
+        self.assertEqual(result['failure'],'malformed_output')
+        self.assertEqual(len(prompts),2)
+        self.assertIn('no Markdown code fences',prompts[0][0]['content'])
+        formats=[e for e in events if e['kind']=='response_format']
+        self.assertEqual(len(formats),2)
+        self.assertTrue(all(e['fenced'] and not e['valid_json'] for e in formats))
+
     def test_plan_validation(self):
         for plan in ({'dependencies':{'a':['b'],'b':['a']}},{'dependencies':{'a':['a'],'b':[]}},{'dependencies':{'a':[]}}):
             with self.assertRaises(ValueError):validate_plan(plan,['a','b'])

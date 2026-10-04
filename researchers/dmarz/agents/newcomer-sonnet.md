@@ -1,10 +1,10 @@
 ---
 agent: dmarz/newcomer-sonnet
 tool: claude-code
-state: blocked  # working | idle | blocked | done
+state: working
 task: null
-doing: "sybil-newcomer-sonnet: fleet S0 passed (b8f340a9); Q0 blocked until dmarz waives cross-review or another researcher reviews"
-updated: 2026-10-04T05:45Z
+doing: Owner waived review; launching Q0 then S1 on sim-dmarz-5
+updated: 2026-10-04T06:00Z
 ---
 
 ## Notes

@@ -1676,3 +1676,41 @@ artifacts:
           - /System/Library/Fonts/Supplemental/Arial.ttf
         commit: e2a0135c148f811ae95d74b56a844f7a5978e611-dirty
 requires: '1.2'
+  - id: influence-candidate-checks-results
+    category: content
+    type: figure
+    title: 'Complete checks, inaccurate blockers: six-case decision diagnostic'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-candidate-checks-results/influence-candidate-checks-results-v1.png
+        built_at: '2026-10-04T05:54:11Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Investigate complete candidate checks and consistent acknowledgement of blockers.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/render_checks.py
+          - data/influence-native/native-D3-01/outcomes.json
+          - data/influence-native/native-D3-01/summary.json
+        commit: 8087faf9fd3399c30774ad71e8f95dcdaa576215-dirty
+  - id: influence-candidate-checks-replay
+    category: content
+    type: doc
+    title: 'Candidate checks: model versus source and recorded decision replay'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-candidate-checks-replay/influence-candidate-checks-replay-v1.html
+        built_at: '2026-10-04T05:54:11Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Make every candidate check and actual decision auditable in a measured replay.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/render_checks.py
+          - data/influence-native/native-D3-01/audit.json
+          - data/influence-native/native-D3-01/outcomes.json
+          - data/influence-native/native-D3-01/summary.json
+        commit: 8087faf9fd3399c30774ad71e8f95dcdaa576215-dirty
+requires: '1.2'

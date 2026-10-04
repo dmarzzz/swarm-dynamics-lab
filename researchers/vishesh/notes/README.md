@@ -6,6 +6,8 @@ This collection documents candidate work on swarm evidence, communication, share
 
 ## Start here
 
+[PI review decision guide](pi-review-guide-2026-10-04/README.md): dark visual overview of all ten projects, explicit green/yellow/red judgments, concise limitations and three next-step options per project. Full scientific assessments remain available in the same page.
+
 [Experiment operations](../../../tooling/agent-experiments/OPERATIONS.md): one registry and command interface for finding study state, preparing iterations and operating supported adapters. Start with `python3 scripts/experiment.py list`; adapter coverage and current admission remain separate.
 
 [Experiment confidence and sample sizes](../../../experiments/EVIDENCE.md): dated evidence scores and independent sample-size summaries for each study and distinct cohort, with [scoring rules](../../../experiments/EVIDENCE-METADATA.md).

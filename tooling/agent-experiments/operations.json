@@ -90,12 +90,12 @@
       "title": "How to win agents and influence swarms",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/influence-swarms/scenario",
-      "setup_path": null,
-      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D1-01-post.md",
+      "setup_path": "researchers/vishesh/notes/influence-swarms/scenario/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read LATEST-RESULTS.md and the diagnostic post-mortem; qualify a prospectively amended architecture before comparison. Preserve the satisfied single researcher review and its scope."
+      "checked_at": "2026-10-04T05:53:59Z",
+      "checked_commit": "8087faf9fd3399c30774ad71e8f95dcdaa576215",
+      "next_action": "D3 complete; coverage90/90 but accuracy76/90, all arms4/6; D4 and S1 unrun. Prospectively test typed factual extraction and fixed policy comparisons, with a matched inherited-report ablation; retain one satisfied researcher review."
     },
     {
       "id": "healing-helping-hands",

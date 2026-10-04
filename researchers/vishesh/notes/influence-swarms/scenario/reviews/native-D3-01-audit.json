@@ -1,0 +1,512 @@
+[
+  {
+    "case_id": "regional-no-approval",
+    "parent_request_hash": "392d2185abec4a9c3850858ded762b0ea1418ca7c3b246b8e001837db1ffae9b",
+    "source_checks": {
+      "Aster": {
+        "deployment_scope": "UNKNOWN",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Birch": {
+        "deployment_scope": "UNKNOWN",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Cobalt": {
+        "deployment_scope": "UNKNOWN",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      }
+    },
+    "matrix": {
+      "choice": "Birch",
+      "confidence": 0.78,
+      "request": {
+        "candidate": "Birch",
+        "kind": "contract"
+      },
+      "candidate_checks": {
+        "Aster": {
+          "deployment_scope": "UNKNOWN",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "quote-0",
+            "pilot-0",
+            "scope-0",
+            "rollout-0",
+            "workload"
+          ],
+          "note": "Aster: $45,013 software, 70.24% automation, 38-day rollout fits 61-day deadline. SSO and export confirmed. EU storage confirmed but inference processing UNCONFIRMED\u2014blocks deployment requirement. Cost $190,718 total exceeds Birch by $20,875."
+        },
+        "Birch": {
+          "deployment_scope": "UNKNOWN",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "quote-1",
+            "pilot-1",
+            "scope-1",
+            "rollout-1",
+            "workload"
+          ],
+          "note": "Birch: $45,240 software, 74.55% automation, 43-day rollout fits 61-day deadline. SSO and export confirmed. EU storage confirmed but inference processing UNCONFIRMED. Cost $169,843 is minimum feasible option within 3% tolerance and $90k software budget."
+        },
+        "Cobalt": {
+          "deployment_scope": "UNKNOWN",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "FAIL",
+          "service_coverage": "FAIL",
+          "citations": [
+            "quote-2",
+            "pilot-2",
+            "scope-2",
+            "rollout-2",
+            "workload"
+          ],
+          "note": "Cobalt: $8,636 software, 52.61% automation, 27-day rollout fits deadline. SSO and export confirmed. EU storage confirmed but inference processing UNCONFIRMED. Cost $240,657 exceeds budget by $150,814; automation 52.61% insufficient for residual human cost ($232,021). Fails cost and coverage."
+        }
+      }
+    },
+    "matrix_correct": 13,
+    "matrix_total": 15,
+    "review_errors": {}
+  },
+  {
+    "case_id": "outsourced-no-approval",
+    "parent_request_hash": "7f6221e2cdea116fa47bed94f2e4379560e3abe07050430801b6ea8dde03f0de",
+    "source_checks": {
+      "Aster": {
+        "deployment_scope": "UNKNOWN",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Birch": {
+        "deployment_scope": "UNKNOWN",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Cobalt": {
+        "deployment_scope": "UNKNOWN",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      }
+    },
+    "matrix": {
+      "choice": "DEFER",
+      "confidence": 0.0,
+      "request": {
+        "candidate": "Birch",
+        "kind": "scope"
+      },
+      "candidate_checks": {
+        "Aster": {
+          "deployment_scope": "UNKNOWN",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-2",
+            "quote-2",
+            "rollout-2",
+            "pilot-2",
+            "workload"
+          ],
+          "note": "Aster: EU storage confirmed (scope-2), inference processing UNCONFIRMED. SSO+export PASS (quote-2). 28-day rollout fits 61-day deadline (rollout-2). Software $11,785 within $90k budget. Automation 51% exceeds 35% minimum (pilot-2, workload). Total cost $286,576 is 41% above minimum\u2014fails 3% tolerance."
+        },
+        "Birch": {
+          "deployment_scope": "UNKNOWN",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-0",
+            "quote-0",
+            "rollout-0",
+            "pilot-0",
+            "workload"
+          ],
+          "note": "Birch: EU storage confirmed (scope-0), inference processing UNCONFIRMED\u2014blocks mandatory requirement. SSO+export PASS (quote-0). 39-day rollout fits 61-day deadline (rollout-0). Software $43,602 within $90k budget. Automation 67% exceeds 35% minimum (pilot-0, workload). Total cost $229,604 is 14% above minimum\u2014fails 3% tolerance."
+        },
+        "Cobalt": {
+          "deployment_scope": "UNKNOWN",
+          "capabilities": "PASS",
+          "rollout_deadline": "FAIL",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-1",
+            "quote-1",
+            "rollout-1",
+            "pilot-1",
+            "workload"
+          ],
+          "note": "Cobalt: EU storage confirmed (scope-1), inference processing UNCONFIRMED\u2014blocks mandatory requirement. SSO+export PASS (quote-1). 44-day rollout fits 61-day deadline (rollout-1). Software $55,223 within $90k budget. Automation 74% exceeds 35% minimum (pilot-1, workload). Total cost $202,081 is minimum but deployment scope unconfirmed."
+        }
+      }
+    },
+    "matrix_correct": 14,
+    "matrix_total": 15,
+    "review_errors": {}
+  },
+  {
+    "case_id": "renewal-approved-option",
+    "parent_request_hash": "35b55bc07887b1ce531fa74bdf5778eb818a59155861a7feff75dae04ef7fa57",
+    "source_checks": {
+      "Aster": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Birch": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Cobalt": {
+        "deployment_scope": "UNKNOWN",
+        "capabilities": "PASS",
+        "rollout_deadline": "FAIL",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      }
+    },
+    "matrix": {
+      "choice": "Cobalt",
+      "confidence": 0.72,
+      "request": {
+        "candidate": "Cobalt",
+        "kind": "contract"
+      },
+      "candidate_checks": {
+        "Aster": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "FAIL",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-1",
+            "quote-1",
+            "rollout-1",
+            "pilot-1",
+            "workload"
+          ],
+          "note": "Aster confirms EU storage+inference (scope-1). SSO+export present (quote-1). Rollout 39 days fits 46-day deadline (rollout-1). Pilot 74.9% automation exceeds 35% floor (pilot-1). Total cost $121,996 exceeds $74k software budget by 65%; fails cost tolerance."
+        },
+        "Birch": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "FAIL",
+          "citations": [
+            "scope-2",
+            "quote-2",
+            "rollout-2",
+            "pilot-2",
+            "workload"
+          ],
+          "note": "Birch confirms EU storage+inference (scope-2). SSO+export present (quote-2). Rollout 25 days fits deadline (rollout-2). Software $7,455 within budget. Pilot 49.4% automation meets floor but complex tickets only 43% resolved (pilot-2); residual human cost $174,977 is highest. Total $182,432 exceeds budget."
+        },
+        "Cobalt": {
+          "deployment_scope": "FAIL",
+          "capabilities": "PASS",
+          "rollout_deadline": "FAIL",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-0",
+            "quote-0",
+            "rollout-0",
+            "pilot-0",
+            "workload"
+          ],
+          "note": "Cobalt inference processing UNCONFIRMED (scope-0); storage EU confirmed. SSO+export present (quote-0). Rollout 72 days exceeds 46-day deadline by 26 days (rollout-0). Pilot 87.4% automation highest (pilot-0). Software $13,746 within budget. Total $57,257 lowest cost, but deployment scope and timeline failures block purchase despite cost advantage."
+        }
+      }
+    },
+    "matrix_correct": 12,
+    "matrix_total": 15,
+    "review_errors": {}
+  },
+  {
+    "case_id": "export-approved-option",
+    "parent_request_hash": "6062563ad1116abcfa3ef90f0560120818ecc95f61c0a2b023fe06857e782d41",
+    "source_checks": {
+      "Aster": {
+        "deployment_scope": "PASS",
+        "capabilities": "FAIL",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Birch": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Cobalt": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      }
+    },
+    "matrix": {
+      "choice": "Aster",
+      "confidence": 0.78,
+      "request": {
+        "candidate": "Aster",
+        "kind": "contract"
+      },
+      "candidate_checks": {
+        "Aster": {
+          "deployment_scope": "PASS",
+          "capabilities": "FAIL",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-0",
+            "rollout-0",
+            "quote-0",
+            "pilot-0",
+            "workload"
+          ],
+          "note": "EU storage and inference confirmed (scope-0). SSO included but complete export explicitly excluded (quote-0), blocking requirement. 32-day rollout fits 46-day deadline. Total cost $83,697 within budget; 88.5% automation exceeds 35% minimum. Export capability is disqualifying."
+        },
+        "Birch": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "FAIL",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-1",
+            "rollout-1",
+            "quote-1",
+            "pilot-1",
+            "workload"
+          ],
+          "note": "EU storage and inference confirmed (scope-1). SSO and complete export both included (quote-1). 40-day rollout fits 46-day deadline. Total cost $182,968 exceeds $74k software budget by $108,968 (147% over). 75.9% automation exceeds minimum. Cost overrun is disqualifying."
+        },
+        "Cobalt": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "FAIL",
+          "citations": [
+            "scope-2",
+            "rollout-2",
+            "quote-2",
+            "pilot-2",
+            "workload"
+          ],
+          "note": "EU storage and inference confirmed (scope-2). SSO and complete export both included (quote-2). 26-day rollout fits 46-day deadline. Total cost $288,622 far exceeds budget. 50.9% automation exceeds 35% minimum but pilot-2 shows weak resolution rates (56% simple, 43% complex). Service coverage insufficient for workload complexity."
+        }
+      }
+    },
+    "matrix_correct": 13,
+    "matrix_total": 15,
+    "review_errors": {}
+  },
+  {
+    "case_id": "sponsored-service-value",
+    "parent_request_hash": "48887d0bb5bdcf01be64d54ac740649fce2e675c0c2aad89673194a992994718",
+    "source_checks": {
+      "Aster": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Birch": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Cobalt": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      }
+    },
+    "matrix": {
+      "choice": "Cobalt",
+      "confidence": 0.85,
+      "request": {
+        "candidate": "Cobalt",
+        "kind": "contract"
+      },
+      "candidate_checks": {
+        "Aster": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "FAIL",
+          "software_budget": "FAIL",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-1",
+            "quote-1",
+            "rollout-1",
+            "pilot-1",
+            "workload"
+          ],
+          "note": "EU storage/inference confirmed (scope-1). SSO and export included (quote-1). Rollout 35 days exceeds 49-day deadline marginally but sequential stages are clear. Total cost $119,252.64 exceeds $48k software budget by 148%. Automation 70.6% meets 35% minimum."
+        },
+        "Birch": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "FAIL",
+          "service_coverage": "FAIL",
+          "citations": [
+            "scope-2",
+            "quote-2",
+            "rollout-2",
+            "pilot-2",
+            "workload"
+          ],
+          "note": "EU storage/inference confirmed (scope-2). SSO and export included (quote-2). Rollout 22 days meets 49-day deadline. Software cost $8,191.50 within budget, but total $137,925.90 exceeds tolerance. Automation 53.4% meets minimum but lowest among three. Residual human cost $129,734 reflects weak automation."
+        },
+        "Cobalt": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-0",
+            "quote-0",
+            "rollout-0",
+            "pilot-0",
+            "workload"
+          ],
+          "note": "EU storage/inference confirmed (scope-0). SSO and export included (quote-0). Rollout 28 days meets 49-day deadline. Total cost $60,020.61 is 25% below minimum and within 3% tolerance. Software $15,587.97 within $48k budget. Automation 84% highest; pilot shows 86% simple, 79% complex resolution. Meets all requirements."
+        }
+      }
+    },
+    "matrix_correct": 11,
+    "matrix_total": 15,
+    "review_errors": {}
+  },
+  {
+    "case_id": "seasonal-usage-cost",
+    "parent_request_hash": "54d6112010c1012a7b60741fafa30050808990551e66f4c22acf7ef2163ba579",
+    "source_checks": {
+      "Aster": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Birch": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "PASS",
+        "service_coverage": "PASS"
+      },
+      "Cobalt": {
+        "deployment_scope": "PASS",
+        "capabilities": "PASS",
+        "rollout_deadline": "PASS",
+        "software_budget": "FAIL",
+        "service_coverage": "PASS"
+      }
+    },
+    "matrix": {
+      "choice": "Aster",
+      "confidence": 0.72,
+      "request": {
+        "candidate": "Aster",
+        "kind": "contract"
+      },
+      "candidate_checks": {
+        "Aster": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "PASS",
+          "citations": [
+            "scope-1",
+            "quote-1",
+            "pilot-1",
+            "workload",
+            "rollout-1"
+          ],
+          "note": "Aster: EU storage+inference confirmed (scope-1). SSO+export included (quote-1). Automation 71.7% exceeds 35% minimum (pilot-1, workload). Total cost $309,761 is 3.0% above minimum, within tolerance. Rollout 46 days fits 64-day deadline (rollout-1)."
+        },
+        "Birch": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "PASS",
+          "service_coverage": "FAIL",
+          "citations": [
+            "scope-2",
+            "quote-2",
+            "pilot-2",
+            "workload",
+            "rollout-2"
+          ],
+          "note": "Birch: EU storage+inference confirmed (scope-2). SSO+export included (quote-2). Automation 45.7% exceeds 35% minimum (pilot-2, workload). Rollout 30 days fits deadline (rollout-2). Total cost $480,018 exceeds 3% tolerance ($309,761 baseline); residual human cost $462,806 highest of three."
+        },
+        "Cobalt": {
+          "deployment_scope": "PASS",
+          "capabilities": "PASS",
+          "rollout_deadline": "PASS",
+          "software_budget": "FAIL",
+          "service_coverage": "FAIL",
+          "citations": [
+            "scope-0",
+            "quote-0",
+            "pilot-0",
+            "workload",
+            "rollout-0"
+          ],
+          "note": "Cobalt: EU storage+inference confirmed (scope-0). SSO+export included (quote-0). Automation 53.8% exceeds 35% minimum (pilot-0, workload). Software cost $136,323 exceeds $100k budget (quote-0, workload). Total cost $529,606 far exceeds tolerance. Rollout 43 days fits deadline (rollout-0)."
+        }
+      }
+    },
+    "matrix_correct": 13,
+    "matrix_total": 15,
+    "review_errors": {}
+  }
+]

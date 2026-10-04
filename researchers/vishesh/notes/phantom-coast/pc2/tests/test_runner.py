@@ -110,8 +110,8 @@ class Gate(unittest.TestCase):
         proof=self.p/'proof';proof.write_text('Fixture attestation only. Never live admission.')
         ref={'path':str(proof),'sha256':hashlib.sha256(proof.read_bytes()).hexdigest()}
         ledger=self.p/'ledger';ledger.write_bytes(b'fixture')
-        self.c=dict(design='PC-2',stage='Q0',attempt='q0-a1',source_commit='head',instrument=fingerprint(),assignment_sha256=digest(schedule('Q0')),researcher_review_passed=True,reviewer_researcher='fixture-reviewer',research_scope_admitted=True,authorization='phantom-coast-usd5-20261004',prior_spend_nano=162723246,api_cap_nano=4000000000,max_calls=1816,checked_utc=self.now.isoformat(),claim_until=(self.now+datetime.timedelta(hours=2)).isoformat(),deadline=(self.now+datetime.timedelta(hours=2)).isoformat(),model=SNAPSHOT,ledger_path=str(ledger),ledger_sha256=hashlib.sha256(ledger.read_bytes()).hexdigest())
-        for name in ('researcher_review','research_scope','pre_assessment','page_verification','allocation','budget_lineage','runtime'):self.c[name]=ref
+        self.c=dict(design='PC-2',stage='Q0',attempt='q0-a1',source_commit='head',instrument=fingerprint(),assignment_sha256=digest(schedule('Q0')),research_scope_admitted=True,authorization='phantom-coast-usd5-20261004',prior_spend_nano=162723246,api_cap_nano=4000000000,max_calls=1816,checked_utc=self.now.isoformat(),claim_until=(self.now+datetime.timedelta(hours=2)).isoformat(),deadline=(self.now+datetime.timedelta(hours=2)).isoformat(),model=SNAPSHOT,ledger_path=str(ledger),ledger_sha256=hashlib.sha256(ledger.read_bytes()).hexdigest())
+        for name in ('research_scope','pre_assessment','page_verification','allocation','budget_lineage','runtime'):self.c[name]=ref
         for flag in ('predecessor_fenced','predecessor_reconciled','single_ledger_authority','exclusive_allocation','approved_mars_fleet','rendered_page_verified'):self.c[flag]=True
         from admission import BASE
         self.c.update(plan_url='fixture-plan',plan_sha256=hashlib.sha256((BASE/'PLAN.md').read_bytes()).hexdigest(),run_tldr='fixture only')
@@ -120,13 +120,13 @@ class Gate(unittest.TestCase):
         c=c or self.c
         with patch('admission.subprocess.check_output',return_value='head'):
             return Admission(c,'Q0',public or (lambda *a:dict(url=c['plan_url'],plan_sha256=c['plan_sha256'])),self.now)
-    def test_source_budget_review_allocation_are_enforced(self):
-        for key,value in [('instrument',{}),('source_commit','wrong'),('assignment_sha256','wrong'),('reviewer_researcher','vishesh'),('researcher_review_passed',False),('research_scope_admitted',False),('exclusive_allocation',False),('prior_spend_nano',0),('max_calls',2000),('single_ledger_authority',False),('approved_mars_fleet',False),('rendered_page_verified',False)]:
+    def test_source_budget_scope_allocation_are_enforced(self):
+        for key,value in [('instrument',{}),('source_commit','wrong'),('assignment_sha256','wrong'),('research_scope_admitted',False),('exclusive_allocation',False),('prior_spend_nano',0),('max_calls',2000),('single_ledger_authority',False),('approved_mars_fleet',False),('rendered_page_verified',False)]:
             c=copy.deepcopy(self.c);c[key]=value
             with self.subTest(key=key),self.assertRaises(ValueError):self.admit(c)
     def test_expired_short_stale_and_tampered_evidence(self):
         import datetime
-        for key,value in [('checked_utc',(self.now-datetime.timedelta(minutes=6)).isoformat()),('claim_until',self.now.isoformat()),('ledger_sha256','wrong'),('researcher_review',{'path':str(self.p/'proof'),'sha256':'wrong'})]:
+        for key,value in [('checked_utc',(self.now-datetime.timedelta(minutes=6)).isoformat()),('claim_until',self.now.isoformat()),('ledger_sha256','wrong'),('research_scope',{'path':str(self.p/'proof'),'sha256':'wrong'})]:
             c=copy.deepcopy(self.c);c[key]=value
             with self.subTest(key=key),self.assertRaises(ValueError):self.admit(c)
     def test_public_mismatch_and_network_failure_block(self):
@@ -194,3 +194,17 @@ class Qualification(unittest.TestCase):
             self.assertEqual(qualified(rows,worlds)['qualification_passed'],i==0)
         rows[0]['status']='failed';self.assertFalse(qualified(rows,worlds)['qualification_passed'])
         with self.assertRaises(ValueError):qualified(rows[:-1],worlds)
+
+class OptionalReview(unittest.TestCase):
+    setUp=Gate.setUp
+    tearDown=Gate.tearDown
+    admit=Gate.admit
+    def test_researcher_review_fields_not_required(self):
+        self.assertNotIn('researcher_review',self.c)
+        self.assertNotIn('researcher_review_passed',self.c)
+        self.assertNotIn('reviewer_researcher',self.c)
+        self.assertTrue(self.admit().allows(400))
+    def test_old_negative_review_flags_do_not_reintroduce_gate(self):
+        c=copy.deepcopy(self.c)
+        c.update(researcher_review_passed=False,reviewer_researcher='vishesh')
+        self.assertTrue(self.admit(c).allows(400))

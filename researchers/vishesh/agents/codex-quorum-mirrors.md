@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: working
-task: quorum-mirrors-research-gates
-doing: Preparing reviewed Q1 instrument; native dispatch remains research-gated
-updated: '2026-10-04T04:49:44.958777+00:00'
+state: idle
+task: null
+doing: Q1 instrument published; research acceptance and operator registration remain open
+updated: 2026-10-04T05:52:35.885234+00:00
 ---
 
 ## Notes

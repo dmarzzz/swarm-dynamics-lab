@@ -50,3 +50,7 @@ PC-V3 proposal: two matched report conditions side-by-side, evaluator truth sepa
 ## Scope and review
 
 Actual terrain change, noisy direct sensors, adversarial source identity, distributed private sensing, larger topologies and real geography are deferred. The question is useful even if competent actors never fall into a trap. This plan follows the reviewed flagship recommendation while avoiding imposed avoidance and a free-information rescue. It is not an accepted formal hypothesis or a claim that the pending launch gates passed.
+
+## Launch process amendment, 2026-10-04 UTC
+
+The owner explicitly directed proceeding with this run after making researcher review optional. The independent-review requirements above are superseded by reviews/REVIEW-POLICY-AMENDMENT.md; no researcher approval is a launch prerequisite. Original published revisions remain historical. All scientific settings, qualification thresholds and missing-data rules are unchanged. The previous USD 5 total authorization remains in effect, with USD 0.162723246 already spent and the USD 4 API / USD 1 infrastructure split preserved. The new general USD 2 default does not replace this explicit budget. The operator documents exploratory scope without claiming formal hypothesis acceptance, verifies current public registration and exclusive approved fleet allocation, and runs Q0 before deciding whether S1 is eligible.
