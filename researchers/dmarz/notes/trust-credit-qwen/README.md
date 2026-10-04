@@ -5,11 +5,11 @@
 
 Assessed 2026-10-04 by dmarz/pipeline-split; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Placing the credit of a passed check on the passed identity alone, instead of propagating it to neighbours, attenuates the rise in attacker seats between 32 and 108 coverage checks at 324 scripted identities. Basis: Unrun. Plan and frozen design only; no stage has run on a server and no model call has been made.
+- **evidence_confidence:** **0/4** — Placing the credit of a passed check on the passed identity alone, instead of propagating it to neighbours, attenuates the rise in attacker seats between 32 and 108 coverage checks at 324 scripted identities. Basis: Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made.
 - **sample_size_summary:** Observed: none. Planned: 24 paired synthetic roots × 21 cells = 504 S1 calls (qwen3.7-flash) at 324 scripted identities and one synthesizer; 24 qualification calls on 8 roots. Roots are the independent units; the primary seat outcome is scripted.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory is a prospective plan and, once the code lands, a launch-ready package. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-split on 2026-10-04 for the pipeline lead dmarz/pipeline.
+**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests, runbook and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-split on 2026-10-04 for the pipeline lead dmarz/pipeline.
 
 This is line T of [research program v5](../overnight-program-2026-10-04/program.json) ([setup record of the program](../overnight-program-2026-10-04/SETUP.md), [selected model](../overnight-program-2026-10-04/selected-model.json)). It extends the instrument of [sybil-budget-api](../sybil-budget-api/RESULTS.md) at 324 identities and follows the [ready-chain contract](../pipeline/READY-CHAIN.md). It is not an accepted hypothesis and makes no novelty claim. S2 is disabled.
 
@@ -55,7 +55,7 @@ The top 162 scores are seated, ties broken by identity name. The pass-credit mas
 
 ## Protocol
 
-[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md).
+[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md), [runbook](RUN.md), [visual mapping](VISUALIZATION.md), [pre-run review](reviews/chain-001-pre.md), [launcher summary](READY.yaml), [assignment manifest](manifest.json).
 
 | Stage | Batch | Calls | What it does | Passes when |
 |---|---|---|---|---|
@@ -66,7 +66,7 @@ The top 162 scores are seated, ties broken by identity name. The pass-credit mas
 
 Fixtures: 8 development roots × `full` (18 specialists per rare skill), `sparse` (two per rare skill) and `missing` (one rare skill has no report). All are clean packets of 162 reports in the comparison's format. A second, disjoint set of 24 fixtures is frozen now for the one bounded repair the program allows.
 
-Before S1 the chain stops if the tokens per byte measured in P0 would put the largest S1 request over 8,000 tokens (`input_ceiling_projection`), or if S1's projected cost exceeds what is left under the dollar cap (`projection_exceeds_cap`).
+Before Q0 and again before S1 the chain stops if the tokens per byte measured so far would put the stage's largest request over 8,000 tokens (`input_ceiling_projection`); before S1 it also stops if S1's projected cost exceeds what is left under the dollar cap (`projection_exceeds_cap`).
 
 Failure handling: a failed call in S1 is recorded with its HTTP status and response body and dispatch continues until more than 6 calls have failed; integrity failures stop at once; a billing outage pauses the stage and, if it outlasts 20 minutes, stops it in a state that `chain.py resume` can continue.
 
@@ -76,7 +76,7 @@ Roots (all below 10000): engineering 4481-4488, qualification 4591-4598, repair 
 
 Primary: as above, in seats, with the mean over 24 roots, a root-bootstrap interval (10,000 draws, seed 20261004) and the per-root values. It is computed from scripted admission and is therefore complete whatever happens to model calls.
 
-Reported beside it for every rule, budget and strength: attacker seats and seat share; honest-specialist retention; truth availability (rare skills with at least one honest report admitted) and truth plurality (rare skills where honest reports outnumber the controller's); the model's rare-skill answers as correct, wrong or abstained; the same for the reference plurality rule; the clean endpoints. The same attenuation contrast is reported for weak checks, for `anchors` in place of `direct`, and at 64 checks.
+Reported beside it for every rule, budget and strength: attacker seats and seat share; honest-specialist retention; truth availability (rare skills with at least one true report admitted) and truth plurality (rare skills where true reports outnumber fabricated ones); the model's rare-skill answers as correct, wrong or abstained; the same for the reference plurality rule; the clean endpoints. The same attenuation contrast is reported for weak checks, for `anchors` in place of `direct`, and at 64 checks.
 
 Missing model outcomes stay in their cell's denominator with bounds (each missing answer counted as all wrong or all right); complete-case values are shown with their denominators. Nothing is dropped, imputed or re-run.
 
