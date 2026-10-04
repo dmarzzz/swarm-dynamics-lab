@@ -145,3 +145,7 @@ Authenticated metadata access verified at source revision 838b4150. Read card/sc
 ## Owner directed OpenRouter migration
 
 Recorded explicit provider/credential migration approval for direct-Anthropic429-blocked scopes. Forwarded implementation to Influence, Immune, Theseus and Optimal Swarm Size owning tasks. Existing budgets, unknown charges, public plans and qualification remain binding; direct-route recovery is no longer the migration's blocker. Local credential metadata verified without reading/printing values. Root made no paid call or allocation and does not claim that sending instructions completes each native adapter change.
+
+## Prepared-study launch pass, 19:12 UTC
+
+Applied owner go-ahead to the concrete waiting Influence D8, Healing C5, Optimal Size O1/Q-A7 and Right Dissenter reopening scopes within original cumulative envelopes. The ready-launch wave note separates dispatched calls from deployment and unfinished designs. Influence executed two requests and stopped on a typed-request HTTP400 after a valid matrix answer; closeout pending. Theseus A2 completed196 calls and scientific review, then released its allocation. Healing preflight caught a stale C4 public-plan suffix before any C5 calls; the owning task is repairing and revalidating the same C5 scope. No duplicate root dispatcher, new monetary allowance or unprepared successor.
