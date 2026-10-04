@@ -70,7 +70,8 @@ git clone https://github.com/dmarzzz/swarm-lab /srv/swarm/swarm-lab 2>/dev/null;
 cd experiments/<id>
 python3 src/coordinator.py register          # once
 python3 src/coordinator.py stage S0          # clean-task validation
-./run-workers.sh                             # one worker per core, in tmux "workers"
+./run-workers.sh                             # one self-restarting worker per core, in tmux "workers"
+                                             # add --at-boot to bring them back after a reboot
 ```
 Watch the hub dashboard. S0 must show the clean task done (both arms commit and are mostly right). If
 not, fix the simulator before going on.
@@ -110,6 +111,7 @@ with `tmux kill-session -t workers`. File figures that leave the team through `.
 | Protocol and Metrics before the first run (AGENTS.md *Experiments*) | step 2 and step 8 |
 | Report every run including failures | the hub keeps every run; `analyze` counts invalid episodes |
 | Rerunnable by someone else's agent | seeds + `code` commit + `prereg` commit on every record |
+| No run lost overnight | reports spool locally while the hub is down and replay in order; a silent run is re-queued after 20 min (max 3 attempts); workers restart themselves (`run-workers.sh`, `--at-boot`) |
 
 ## What the toy shows (S1, dev tasks)
 
