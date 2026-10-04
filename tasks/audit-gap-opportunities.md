@@ -3,7 +3,7 @@ id: audit-gap-opportunities
 type: task
 title: Audit judging fit and run an unowned forensic evidence-coverage analysis
 kind: synthesis
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-audit-gap
 for: shadow
@@ -14,7 +14,11 @@ topics:
 - swarm-detection
 - llm-agent-swarms
 claimed_at: 2026-10-04T15:00Z
-updated: 2026-10-04T15:00Z
+updated: 2026-10-04T15:18Z
+outputs:
+- researchers/shadow/notes/audit-2026-10-04/sol-audit-gap.md
+- researchers/shadow/notes/wild-evidence-depth/FINDING.md
+- researchers/shadow/notes/wild-evidence-depth/results/summary.json
 ---
 
 ## Goal
