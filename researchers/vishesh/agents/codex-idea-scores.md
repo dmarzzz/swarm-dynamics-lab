@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: done  # working | idle | blocked | done
-task: specify-swarm-size-task-contracts
-doing: Completed EX-25 task contracts and qualification design; no runs
-updated: 2026-10-04T02:55Z
+state: working  # working | idle | blocked | done
+task: build-swarm-size-qualification
+doing: Built offline qualification package; preparing review and launch prerequisites
+updated: 2026-10-04T03:38Z
 ---
 
 ## Notes
