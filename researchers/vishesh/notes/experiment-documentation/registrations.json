@@ -1,0 +1,38 @@
+[
+  {
+    "id": "regrowth-200",
+    "path": "researchers/vishesh/notes/regrowth-200/README.md",
+    "folder": "regrowth-200",
+    "description": "TLDR: Can 200 local agents rebuild routes after a door closes and 16 memories are erased? Compare Qwen3 0.6B, Qwen plus 20 Laya heads, and exact local routing, each with and without damage. Measure valid paths, shortest paths, recovery time and compute. One-map exploratory pilot; the missing public plan registration is a recorded process failure, repaired retrospectively."
+  },
+  {
+    "id": "external-influence-v2",
+    "path": "researchers/vishesh/notes/external-influence-v2/README.md",
+    "folder": "external-influence-v2",
+    "description": "TLDR: Can nine agents choose correctly when an outsider edits the evidence they read? Compare private review, discussion, random checks, targeted checks and source-lineage handling at matched call slots. Procurement is primary; dependency selection and travel are transfer probes. Measure harmful choices, correctness and regret on fictional fixtures. Qualification and scripted runs do not establish attack resistance."
+  },
+  {
+    "id": "immune-response",
+    "path": "researchers/vishesh/notes/actual-experiments/immune-response/README.md",
+    "folder": "actual-experiments/immune-response",
+    "description": "TLDR: After a bad record contaminates a swarm, is repairing private memories enough, or must the shared store also be repaired? Compare Q11 with Q10F, holding private repair and stale-record blocking fixed. Eight actors face returning stale data and a later genuine update; measure correct mock-deployment, recovery and relapse. Oracle incident labels make this a repair-mechanism test, not autonomous detection."
+  },
+  {
+    "id": "adaptive-quorum-api-v2",
+    "path": "researchers/vishesh/notes/adaptive-quorum-v2/README.md",
+    "folder": "adaptive-quorum-v2",
+    "description": "TLDR: Can lowering an evidence quorum near a deadline help agents choose a suitable document-extraction API? Five or nine scouts evaluate conflicting synthetic evidence; compare adaptive and fixed stopping, ordinary majority, deadline voting and central solvers, with targeted versus random test controls. Measure correct eligible choice, violations, abstention, loss and cost. Clean qualification is a competence test, not evidence that adaptive quorum helps."
+  },
+  {
+    "id": "external-influence",
+    "path": "researchers/vishesh/notes/actual-experiments/external-influence/README.md",
+    "folder": "actual-experiments/external-influence",
+    "description": "TLDR: Can an outsider steer a swarm toward the wrong fictional invoice provider by changing its evidence? Compare independent assessment, discussion, criticism, source-root handling, and targeted versus random checking. Measure harmful selection, correctness, eligibility and regret against known fixture truth. Clean model qualification only tests task competence; scripted runs only check the instrument."
+  },
+  {
+    "id": "adaptive-quorum",
+    "path": "researchers/vishesh/notes/adaptive-quorum/README.md",
+    "folder": "adaptive-quorum",
+    "description": "TLDR: When should five scouts commit to an API choice as a deadline approaches? Compare majority, fixed evidence quorum, a reduced final-round quorum and a central solver on shared recommendation tapes. Measure correctness, false commitment and delay. This tests a stopping rule on a fixed evidence schedule, not autonomous API research; a tied pilot does not show an adaptive advantage."
+  }
+]

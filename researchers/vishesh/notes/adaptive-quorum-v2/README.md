@@ -1,5 +1,9 @@
 # API procurement under urgency: adaptive quorum v2
 
+## TLDR
+
+Can lowering an evidence quorum near a deadline help agents choose a suitable document-extraction API? Five or nine scouts evaluate conflicting synthetic evidence; compare adaptive and fixed stopping, ordinary majority, deadline voting and central solvers, with targeted versus random test controls. Measure correct eligible choice, violations, abstention, loss and cost. Clean qualification is a competence test, not evidence that adaptive quorum helps.
+
 **Exploratory instrument, not an accepted hypothesis.** Replaces the recommendation-counting task in [v1](../adaptive-quorum/README.md) with choosing a document-extraction API from factual evidence. No real documents or customer data are sent to providers. Laya runs locally; Jev via OpenRouter remains deferred.
 
 The first pilot asked when five agents should stop accumulating recommendations. All evidence arrived on a fixed schedule, and the central solver was forced to stop at its first answer. That qualified the implementation but was a weak test of adaptation. Version 2 changes the task, controls, evidence timing and evaluation; results cannot be pooled with v1.
@@ -49,3 +53,7 @@ All-assigned correct selection, loss, constraint violations, abstentions, false 
 ## Run review and repair status
 
 [Retrospective S0 post-mortem](reviews/S0-attempt-1-post.md) tracks unresolved capability and design issues. Publication completed; qualification remains failed. Future attempts follow the shared pre-run/post-run repair cycle and preserve this attempt.
+
+## Question and prediction
+
+Does reducing a provenance quorum near the deadline improve decisions without increasing hard-constraint violations? The verification comparison separately asks whether targeted tests help more than random tests.
