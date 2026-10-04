@@ -41,7 +41,7 @@
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T09:29Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [build-false-alarm-cascade](tasks/build-false-alarm-cascade.md) | claimed | p1 | build | dmarz/pipeline-alarm | dmarz | 2026-10-04T08:07Z | Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready |
 | [build-quota-splitting](tasks/build-quota-splitting.md) | claimed | p1 | build | dmarz/pipeline-quota | dmarz | 2026-10-04T09:27Z | Prepare the quota-splitting experiment (agent-budgets hunch B2) on Opus 5.5 to launch-ready |
-| [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
+| [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
