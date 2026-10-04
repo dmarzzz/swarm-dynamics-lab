@@ -88,7 +88,12 @@ def run_chain(stages, sr=None, opener=None):
     if sr is None:
         import swarm_report as sr
     budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
-    status = read_status() or {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'stages': {}}
+    status = read_status()
+    if status and status.get('source_hash') != study.source_hash():
+        # records of another source version are kept beside the new status, never mixed into it
+        os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("source_hash"))[:12]}.json'))
+        status = None
+    status = status or {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'stages': {}}
     status.update(state='running', source_hash=study.source_hash(), code=study.code_revision(), requested=stages,
                   started=status.get('started') or now(), stopped_stage=None, reason=None)
     write_status(status)

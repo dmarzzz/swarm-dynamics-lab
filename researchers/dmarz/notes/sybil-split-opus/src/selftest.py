@@ -414,6 +414,12 @@ class Tests(unittest.TestCase):
             self.assertEqual((b['input_usd_per_million'], b['output_usd_per_million']), (4, 20))
             self.assertEqual(acct['reserved_usd'], ((int(1000 * 1.02) + 64) * 4 + 8000 * 20) / 1e6)
             for word in ('attacker', 'fabricated value for', 'truth', 'k =', 'split'): self.assertNotIn(word, provider.SYSTEM.replace('a fabricated value.', ''))
+            # the sybil-scale-xl prompt plus exactly one sentence
+            added = 'Each report row names the identity that submitted it, and one identity may submit several rows.\n'
+            self.assertEqual(provider.SYSTEM.count(added), 1)
+            import hashlib
+            self.assertEqual(hashlib.sha256(provider.SYSTEM.replace(added, '').encode()).hexdigest(),
+                             '29a224aa216e13c41f7ae41c32ec45ab7e5f7274dc33ebd2ef0ce19ff6774d1c')
 
     def test_thinking_and_redacted_thinking_blocks_are_dropped(self):
         with tempfile.TemporaryDirectory() as td:
@@ -583,6 +589,17 @@ class Tests(unittest.TestCase):
             self.assertEqual(set(worker.ARTIFACTS) - set(run.uploads), set())
             self.assertEqual(summary['study_accounting']['attempted_calls'], 60)
 
+    def test_structural_violation_blocks_every_call_of_a_paid_stage(self):
+        run = FakeRun('x/q0', study.params('Q0')); stub = rehearse.Stub('plurality')
+        with tempfile.TemporaryDirectory() as td, patch.object(study, 'check_invariants', return_value=['ring:5139:full:row_count']), \
+                patch.dict(os.environ, {'STUDY_BUDGET_LEDGER': str(Path(td) / 'ledger'), 'SWARM_MODEL_API_KEY': 'k', 'SWARM_MODEL_WORKSPACE_ID': 'w'}):
+            with self.assertRaises(worker.StageFailed) as ctx: worker.execute(study.params('Q0'), Path(td) / 'out', run, opener=stub)
+            summary = json.loads((Path(td) / 'out' / 'summary.json').read_text())
+        self.assertEqual((str(ctx.exception), stub.messages, stub.counts), ('invariant_violations', 0, 0))
+        self.assertEqual((summary['not_started'], summary['model_calls'], summary['qualification_passed']), (60, 0, 0))
+        self.assertEqual((run.final[0], run.final[1]['invalid'], run.final[1]['model_calls']), ('fail', 60, 0))
+        self.assertEqual(study.check_invariants('P0'), []); self.assertEqual(study.check_invariants('Q0'), [])
+
     def test_internal_error_still_closes_the_run_with_metrics(self):
         run = FakeRun('x/1', study.params('S1'))
         with tempfile.TemporaryDirectory() as td, patch.object(study, 'assignments', side_effect=RuntimeError('boom')):
@@ -662,6 +679,15 @@ class Tests(unittest.TestCase):
         self.assertEqual((code, status['state'], status['stopped_stage'], status['reason'], executed),
                          (3, 'stopped_at_gate', 'P0', 'exact_runtime_qualification_required', []))
         self.assertEqual(hub.rows, [])
+
+    def test_chain_status_of_another_source_version_is_set_aside(self):
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_RESULTS_DIR': td}), patch('sys.stdout', io.StringIO()):
+            os.environ.pop('STUDY_BUDGET_LEDGER', None)
+            chain.write_status({'source_hash': 'an-older-source', 'stages': {'S0': {'status': 'done', 'run': 'old/1'}}, 'state': 'completed'})
+            code = chain.run_chain(['P0'], sr=FakeHub()); status = chain.read_status()
+            kept = json.loads((Path(td) / 'chain-status-an-older-sou.json').read_text())
+        self.assertEqual((code, status['state'], list(status['stages']), status['source_hash']), (3, 'stopped_at_gate', ['P0'], study.source_hash()))
+        self.assertEqual(kept['stages']['S0']['run'], 'old/1')
 
     def test_projection_gate_stops_before_s1(self):
         # Q0 at USD 0.10 per call projects 2,688 x 0.10 > USD 190
