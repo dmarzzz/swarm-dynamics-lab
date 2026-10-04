@@ -466,14 +466,29 @@ class ClosedLoop(unittest.TestCase):
             calls=[]
             def execute(stage,attempt,qualification=None):
                 calls.append((stage,attempt,qualification));return q0_summary if stage=='Q0' else dict(stage='P1')
-            out=chain('q0-x','p1-x',execute=execute,register=lambda a:calls.append(('register',a)),log=lambda m:None)
+            out=chain('q0-x','p1-x',execute=execute,register=lambda a:calls.append(('register',a)) or a,wait=lambda r:calls.append(('wait',r)),log=lambda m:None)
             return out,calls
         ok=dict(qualification_pass=True,recorded=24,assigned=24)
         out,calls=run(ok)
-        self.assertEqual(calls,[('register','q0-x'),('Q0','q0-x',None),('register','p1-x'),('P1','p1-x',str(common.ROOT/'results'/'q0-x'))]);self.assertIsNone(out['stopped'])
+        self.assertEqual(calls,[('register','q0-x'),('wait','q0-x'),('Q0','q0-x',None),('register','p1-x'),('wait','p1-x'),('P1','p1-x',str(common.ROOT/'results'/'q0-x'))]);self.assertIsNone(out['stopped'])
         for bad in (dict(ok,qualification_pass=False),dict(ok,qualification_pass=None),dict(ok,recorded=23)):
             out,calls=run(bad)
-            self.assertEqual(out['stopped'],'q0_gate_failed');self.assertEqual([c[0] for c in calls],['register','Q0']);self.assertIsNone(out['p1'])
+            self.assertEqual(out['stopped'],'q0_gate_failed');self.assertEqual([c[0] for c in calls],['register','wait','Q0']);self.assertIsNone(out['p1'])
+
+    def test_chain_waits_for_public_registration(self):
+        from chain import wait_public
+        receipt=dict(url='u-new',registered_tldr='TLDR: new')
+        reads=[]
+        def getter(url):
+            reads.append(url);d=('u-new','TLDR: new') if len(reads)>=3 else ('u-old','TLDR: old')
+            return json.dumps({'experiments':[dict(id=common.EXP,url=d[0],description=d[1])]})
+        t=[0.0]
+        self.assertTrue(wait_public(receipt,getter=getter,timeout=120,pause=5,clock=lambda:t[0],sleep=lambda s:t.__setitem__(0,t[0]+s)))
+        self.assertEqual(len(reads),3)
+        t=[0.0]
+        with self.assertRaisesRegex(ValueError,'public_registration_not_visible'):
+            wait_public(receipt,getter=lambda u:json.dumps({'experiments':[]}),timeout=20,pause=5,clock=lambda:t[0],sleep=lambda s:t.__setitem__(0,t[0]+s))
+        self.assertGreaterEqual(t[0],20)
 
     def test_register_binds_raw_page_hub_and_receipt(self):
         import register as reg
