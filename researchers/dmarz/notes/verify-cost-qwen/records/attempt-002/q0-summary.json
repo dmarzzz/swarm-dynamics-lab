@@ -1,0 +1,157 @@
+{
+  "analyzed": 23,
+  "answered_calls": 23,
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0,
+  "calibration": null,
+  "choice_contradicts_own_costs": 1,
+  "content_bytes_mean": 2202.782608695652,
+  "continuation": null,
+  "cost_usd": 0.000646,
+  "elapsed_seconds": 6.800598121999428,
+  "episodes": 23,
+  "errors": [],
+  "experiment": "verify-cost-qwen",
+  "failed": 0,
+  "failed_in_stage": 0,
+  "graded": 23,
+  "initial_study_accounting": {
+    "actual_usd": 2.8e-05,
+    "attempted_calls": 1,
+    "calls_by_batch": {
+      "p0-002": 1
+    },
+    "calls_by_stage": {
+      "P0": 1
+    },
+    "cap_calls": 600,
+    "cap_transport_attempts": 760,
+    "cap_usd": 2,
+    "committed_usd": 2.8e-05,
+    "input_tokens": 761,
+    "output_tokens": 36,
+    "reserved_usd": 0.002077,
+    "transport_attempts": 1,
+    "usage_reported_calls": 1,
+    "voided_calls": 0
+  },
+  "input_tokens": 17503,
+  "invalid": 0,
+  "invariant_violations": [],
+  "largest_request_bytes": 2602,
+  "max_failed": null,
+  "model_calls": 23,
+  "not_started": 0,
+  "output_tokens": 878,
+  "params": {
+    "backend": "openrouter",
+    "batch": "q0-002",
+    "code": "7e04308638dbc4db2838bbb22e27f13d51ddc52f",
+    "source_hash": "ef40246d5f7790898ed120146d9c873c7af2fe70bd2aed4ad4c8e6eea0970fd1",
+    "stage": "Q0"
+  },
+  "passed": false,
+  "planned": 23,
+  "probe": null,
+  "qualification": {
+    "assigned": 24,
+    "misses": [
+      "qb-2900-e92-u08-prose",
+      "qb-2904-e98-u02-prose",
+      "qb-2906-e04-u92-prose",
+      "qb-2907-e08-u82-prose",
+      "qb-2908-e02-u68-prose",
+      "qb-2910-e06-u72-prose",
+      "qb-2900-e92-u08-table",
+      "qb-2905-e75-u06-table",
+      "qb-2904-e98-u02-table",
+      "qb-2906-e04-u92-table",
+      "qb-2907-e08-u82-table",
+      "qb-2909-e12-u88-table",
+      "qb-2908-e02-u68-table",
+      "qb-2911-e07-u97-table"
+    ],
+    "passed": false,
+    "prose": {
+      "assigned": 12,
+      "optimal": 6,
+      "valid": 12
+    },
+    "sets": [
+      "b"
+    ],
+    "table": {
+      "assigned": 12,
+      "optimal": 4,
+      "valid": 12
+    },
+    "valid": 24
+  },
+  "qualification_passed": 0,
+  "reason": "gate_failed",
+  "regret_prose": null,
+  "regret_table": null,
+  "reporting_errors": [],
+  "resumable": false,
+  "stage_units": {
+    "assigned": 23,
+    "completed": 23,
+    "failed": 0,
+    "not_started": 0
+  },
+  "started": 23,
+  "stop_reason": null,
+  "study_accounting": {
+    "actual_usd": 0.000674,
+    "attempted_calls": 24,
+    "calls_by_batch": {
+      "p0-002": 1,
+      "q0-002": 23
+    },
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 23
+    },
+    "cap_calls": 600,
+    "cap_transport_attempts": 760,
+    "cap_usd": 2,
+    "committed_usd": 0.000674,
+    "input_tokens": 18264,
+    "output_tokens": 914,
+    "reserved_usd": 0.049546,
+    "transport_attempts": 24,
+    "usage_reported_calls": 24,
+    "voided_calls": 0
+  },
+  "table_minus_prose_bounds": null,
+  "table_minus_prose_regret": null,
+  "terminal": 23,
+  "transport_attempts": 23,
+  "visualization": {
+    "mapping": "v1",
+    "replay_frames": 8
+  },
+  "voided_reservations": 0,
+  "work": {
+    "both_correct": 8,
+    "both_written": 23,
+    "checked": 23,
+    "choice_contradicts_own_costs": 1,
+    "max_abs_error": 1.66,
+    "mean_abs_error_check": 0.5560869565217391,
+    "mean_abs_error_explore": 0.5352173913043479,
+    "own_costs_favour_the_optimum": 9,
+    "own_costs_tied": 0,
+    "tolerated": {
+      "cost_keys_respaced": 0,
+      "costs_as_strings": 0,
+      "extra_keys": 0,
+      "inspect_before_cost": 0,
+      "inspect_respaced": 0
+    },
+    "valid": 23,
+    "work_malformed": 0
+  },
+  "work_malformed": 0
+}
