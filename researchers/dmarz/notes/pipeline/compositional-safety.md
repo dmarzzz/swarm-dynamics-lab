@@ -1,6 +1,6 @@
 # compositional-safety: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T08:17Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T08:25Z.
 
 ## 1. Results so far
 
@@ -17,16 +17,18 @@ q0-007 (Opus 5.5, adaptive thinking, effort high, 4,096 output cap) finished at 
 
 What the defect is, from the v9 code on main (`src/provider.py` line 43): the `settled_usd` figure rebuilds the set of answered call ids once per reserve event, so each ledger transaction costs reserves x events operations. With 2,142 reserves already in the ledger that is about 0.35 s per transaction on a laptop (my timing of the same expression), rising to about 0.9 s at 3,500 reserves and 2.8 s at 5,500, several times per model call. It shows in the run: bundles 1 and 2 took about 65 s each, bundles 3 and 4 about 4 minutes each. P1 would have slowed further as the ledger grew and could have hit the stage limit. No other dmarz study has this expression (searched every `provider.py` and `budget.py` under `notes/`).
 
-Consequence for the chain: the fix edits `src/provider.py`, so the engine hash changes and q0-008's partial result cannot qualify P1. A fresh Q0 (q0-009) is needed. Root 257 is used (8 episodes) and root 282 was touched (one episode started), so it needs three more unused roots, or a written decision that 282 and 293 remain fresh because no episode on them completed.
+What happened next (operator's commits on main): the ledger total is now computed in one pass (fed626af, 08:17Z, with a timing regression test). q0-009 then hit an admission race with zero model calls (the chain started before the public registration was readable; fixed at 68655a9b so the chain waits for it). `q0-010` is the live attempt: running since about 08:23Z, first bundle 257/D1/risk. `p1-002` now qualifies from q0-010.
 
-- q0-009: about 13 minutes at q0-007's pace once the ledger read is linear. Forecast: pass (q0-007 24 of 24, q0-008 8 of 8 before the stop).
+Three Q0 attempts (q0-008, q0-009, q0-010) between 08:02Z and 08:23Z produced 8 scored episodes; the time went to two execution defects in code written at 08:00Z, not to the model.
+
+- q0-010: about 13 minutes at q0-007's pace now that the ledger read is linear, so about 08:37Z. Forecast: pass (q0-007 24 of 24, q0-008 8 of 8 before the stop).
 - P1 after it: unchanged from below.
 
 ## 3. Next run
 
-**If q0-009 passes:** P1 starts automatically from the chain.
+**If q0-010 passes:** P1 starts automatically from the chain.
 
-**If q0-009 fails:** the chain stops and P1 does not run. Before another Q0, read the failing episodes' turns: with q0-007 at 24 of 24, a failure on roots 257, 282 or 293 points at a task structure, not the request shape. A third Q0 needs fresh roots again. Do not change effort or caps in response; that changes the design hash and the comparison with q0-007.
+**If q0-010 fails:** the chain stops and P1 does not run. Before another Q0, read the failing episodes' turns: with q0-007 at 24 of 24, a failure on roots 257, 282 or 293 points at a task structure, not the request shape. A third Q0 needs fresh roots again. Do not change effort or caps in response; that changes the design hash and the comparison with q0-007.
 
 **If P1 stops on the 3,360-call cap or the stage limit:** that would mean the fragmented arms run close to the 40-turn limit. Episodes not reached are recorded as assigned failures; check whether whole bundles are missing before reading any arm contrast.
 
@@ -40,6 +42,7 @@ Consequence for the chain: the fix edits `src/provider.py`, so the engine hash c
 
 ## 4. Design notes for later runs
 
+- The v9 chain code was written and launched within about five minutes and carried two execution defects (a quadratic ledger total, an admission race). Both were caught by watching the first bundles. A rehearsal of the chain against a copy of the real ledger (2,142 entries), not an empty one, would have shown the first before any paid call.
 - Q0 used 178 of 480 allowed calls and 12.6 minutes. Its setup (plan, registration, admission, checks on two machines) took longer than the run. The q0-008 to p1-002 chain removes the wait between them.
 - P1 has seven arms (C, S, F, R, P, G, H) and 168 episodes. Q0 only exercises C and S, so the first evidence about turn counts in the fragmented arms arrives inside P1. Size the call cap and the timeout for the worst arm, not for C and S.
 - Arm order is seeded and every assigned episode stays in the denominator, so a budget stop partway produces unbalanced arms. A stop at a bundle boundary would be less damaging than a stop mid-bundle.
