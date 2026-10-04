@@ -1,0 +1,19 @@
+{
+  "status": "approved",
+  "scope": "C5 S0 and conditional automatic S1 only",
+  "authority": "Direct owner instruction in the owning Healing task on 2026-10-04",
+  "paraphrase": "Owner approved correcting the absence of an automatic main run and the approvals needed for this bounded continuation.",
+  "plan_sha256": "2e0daf39e9ec6f1895d225be26589777ecc0473d2177f140c85dd971ef38fac1",
+  "qualification_cases": 60,
+  "main_cases": 432,
+  "max_qwen_calls": 984,
+  "max_jev_calls": 492,
+  "cumulative_call_cap": 2731,
+  "cumulative_usd_cap": 0.1,
+  "repair_cycle_usd_cap": 0.03,
+  "prior_cycle_cost_usd": 0.00112665,
+  "new_paid_vm_authorized": false,
+  "automatic_main": true,
+  "automatic_retries": false,
+  "material_successors": false
+}

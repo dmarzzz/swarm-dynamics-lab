@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-04T18:05:10.929528+00:00",
+  "tests_passed": 36,
+  "test_command": "python3 -m unittest discover -s researchers/vishesh/notes/healing-helping-hands/c5 -p 'test_*.py'",
+  "model_calls": 0,
+  "future_assignment_sets_materialized": false,
+  "coverage": [
+    "complete serialized actor input invariance under evaluator-only metadata mutation",
+    "opaque identifiers independent of label and family",
+    "development numeric truth checked from evidence",
+    "option-order-only contrast",
+    "S1 fail-closed scientific review, source and budget gates",
+    "duplicate stage dispatch refused",
+    "C4 cost included in C5 repair-cycle reservation cap",
+    "GET-only transport recovery; no paid retry"
+  ],
+  "scope": "Offline development and fault fixtures, not native qualification"
+}

@@ -45,3 +45,12 @@ See [trace readiness](TRACE-READINESS.md) for the prospective rejected-response 
 ## Latest outcome: C4-S0 invalid qualification
 
 C4-S0 executed all60reports/180calls, but native trace review found expected-label leakage. Numerical gate passed; scientific qualification is invalid. S1 was withheld. Evidence archived/hash-verified, original ledger reconciled, workers stopped and allocation released. See [complete post-mortem](S0-POST.md) and [offline C5 proposal](../c5/PLAN.md). No successor is approved or running.
+
+
+## Current approved continuation: C5 S0 → automatic S1
+
+The owner approved removing the qualification-only limitation in the owning task on 2026-10-04. [C5 plan](../c5/PLAN.md) now covers 60 qualification instances followed automatically by 432 main-stage instances if scientific qualification, trace integrity and fresh admission pass. [Recorded approval](../c5/owner-approval.json) binds the plan digest. No new owner/researcher sign-off is needed between these stages.
+
+C5 now has separate native worker/relay/supervisor/auditor code and an `advance.py` entry point. Both that entry point and the shared C5 S1 preflight enforce completed authored trace review and independently reconstruct parent evidence. The operator runs S0, completes its trace review, refreshes S1 operational admission, and calls `advance.py` with the original ledger/authority and ephemeral credential; this is an autonomous operator step, not another approval request. Failed qualification, contamination or insufficient resources stops the chain. Thirty-six offline tests pass; these are not native qualification.
+
+Original dollars/reservations remain: USD0.10 cumulative, USD0.03 shared C4/C5 repair cycle, prior C4 cost carried. Request ceiling is approved at2,731 to include the60 already consumed C4 slots and the full492-call C5 chain. Existing dedicated approved-account machine only; no new paid VM. Freeze/register exact C5 source and verify fresh allocation/runtime/ledger before any call. No C5 model call or resource allocation occurred in this revision. C4 remains invalid and unchanged.

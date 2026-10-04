@@ -1,9 +1,9 @@
 """Offline development inputs only; neither C5 assignments nor model calls are generated."""
-import unittest,sys,json,importlib.util
+import unittest,sys,json,importlib.util,re
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 spec=importlib.util.spec_from_file_location('c5_scenarios',HERE/'scenarios.py');scenarios=importlib.util.module_from_spec(spec);spec.loader.exec_module(scenarios)
-sys.path.insert(0,str(HERE.parent/'c4'))
+sys.path.insert(0,str(HERE))
 from contract import qwen_payload
 sys.path.insert(0,str(HERE.parent/'src'))
 from jev import request
@@ -36,6 +36,30 @@ class ContextTests(unittest.TestCase):
             for label in ('SUPPORT','REFUTE'):
                 self.assertIn('baseline',scenarios.fixture(label,900+i)['report'])
             self.assertTrue(any(x in scenarios.fixture('UNCERTAIN',900+i)['report'] for x in ('never tested','no accuracy result','without accuracy','planned')))
-    def test_no_automatic_main_stage(self):
-        with self.assertRaises(ValueError):scenarios.assignments('S1')
+    def test_main_metadata_and_semantic_contrast(self):
+        for family in scenarios.FAMILIES:
+            rows=[scenarios.main_fixture(family,label,900,'development',901) for label in scenarios.LABELS]
+            self.assertEqual(len({r['claim'] for r in rows}),1)
+            self.assertEqual(len({r['report'] for r in rows}),3)
+            for row in rows:
+                visible=row['claim']+' '+row['report']
+                for token in (*scenarios.LABELS,'development','Method development-'+family):self.assertNotIn(token,visible)
+                changed={**row,'id':'HIDDEN','family':'HIDDEN','expected':'HIDDEN'}
+                self.assertEqual(request(row,1,'development'),request(changed,1,'development'))
+                for variant in (0,1):self.assertEqual(qwen_payload(row,variant),qwen_payload(changed,variant))
+    def test_numeric_family_truth_from_development_evidence(self):
+        for family in ('counts','percentages','error_rates','before_after'):
+            for label in ('SUPPORT','REFUTE'):
+                r=scenarios.main_fixture(family,label,900,'development',902);text=r['report']
+                if family=='counts':
+                    baseline,method=map(int,re.findall(r'answered (\d+) of 100',text));better=method>baseline
+                elif family=='error_rates':
+                    baseline,method=map(int,re.findall(r'made (\d+) errors',text));better=method<baseline
+                elif family=='before_after':
+                    baseline,method=map(int,re.findall(r'(\d+)%',text));better=method>baseline
+                else:
+                    method,baseline=map(int,re.findall(r'(\d+)%',text));better=method>baseline
+                self.assertEqual(better,label=='SUPPORT')
+    def test_unknown_stage_rejected(self):
+        with self.assertRaises(ValueError):scenarios.assignments('S2')
 if __name__=='__main__':unittest.main()
