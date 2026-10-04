@@ -1,6 +1,6 @@
-# Separate-agent readback of attempt 1
+# Successor operator readback of attempt 1
 
-Reviewer: Sol factory successor agent, session075cecdc-749a-4fdf-ac74-ca254e422bba, 2026-10-04. This is a distinct execution/review session from the builder of attempt1, not independent human/researcher review.
+Reviewer: Sol factory successor agent, session075cecdc-749a-4fdf-ac74-ca254e422bba, 2026-10-04. This is a distinct execution session but retains the same factory owner identity. It does not satisfy the separate-agent review task by itself and is not independent human/researcher review. A distinct CLI reviewer was requested as shadow/sol-factory-check, but its existing authentication failed before review. No independent verdict is claimed. A separate review has been requested through the coordinating agent; a dated verdict must be available before launch.
 
 Read POSTMORTEM.md, PI-REVIEW-RESPONSE.md, HANDOFF.md, frozen SPEC.md, saved admission/init/outcomes and recomputation. Ran the standard-library checker against saved attempt1 records:2026 checks pass,2 initialized HTTP requests,0 valid answers, prior factory liabilityUSD1.851345, attempt1 unknown liabilityUSD0.044376. The checker was authored by the historical builder; running it in a separate agent session does not create independent software implementation authorship.
 
