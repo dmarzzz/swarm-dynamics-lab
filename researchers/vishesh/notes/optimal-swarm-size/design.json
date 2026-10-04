@@ -1,5 +1,5 @@
 {
-  "schema": "swarm-size-design-draft-v1",
+  "schema": "swarm-size-design-draft-v2",
   "status": "exploratory design; not approved or registered for execution",
   "question": "EX-25",
   "owner": "vishesh/codex-idea-scores",
@@ -57,6 +57,16 @@
       "episodes": 640
     },
     {
+      "id": "transfer-policy-evaluation",
+      "families": 1,
+      "structures": 2,
+      "profiles": 4,
+      "policies": 4,
+      "roots": 8,
+      "samples": 2,
+      "episodes": 512
+    },
+    {
       "id": "optional-memory-hardware",
       "families": 2,
       "structures": 2,
@@ -67,8 +77,8 @@
       "episodes": 1280
     }
   ],
-  "core_total_episodes": 2000,
-  "with_optional_total_episodes": 3280,
+  "core_total_episodes": 2512,
+  "with_optional_total_episodes": 3792,
   "launch": {
     "authorized": false,
     "model": null,
@@ -85,5 +95,39 @@
     "Model invocations per episode are not fixed by these counts.",
     "Eight roots per cell are exploratory, not powered confirmation of a five-point tolerance.",
     "API client memory is not provider VRAM."
-  ]
+  ],
+  "protocol_addendum": "PROTOCOL.md",
+  "core_root_split": {
+    "fit_per_family_structure": 4,
+    "validation_per_family_structure": 4,
+    "refit_after_validation": false
+  },
+  "coordination": {
+    "architecture": "centralized with working coordinator",
+    "roster_fixed": true,
+    "scheduler": "stable ready-item order; no hidden reasoning",
+    "aggregate_budget_atomic": true,
+    "planning_repair_attempts_max": 1,
+    "turn_output_ceiling": null,
+    "tool_limits": null,
+    "tool_concurrency": null,
+    "work_item_limit": null,
+    "ledger_retrieval_limit": null,
+    "initialization_requirements": null,
+    "integration_time_reserve": null,
+    "integration_token_reserve": null,
+    "context_truncation_policy": null
+  },
+  "policy_evaluation": {
+    "arms": [
+      "single-agent",
+      "development-best-fixed",
+      "capacity-heuristic",
+      "conditional-selector"
+    ],
+    "fresh_execution": true,
+    "clock_starts_before_selection": true,
+    "refusals_in_denominator": true,
+    "transfer_sweep_sealed_until_policies_complete": true
+  }
 }

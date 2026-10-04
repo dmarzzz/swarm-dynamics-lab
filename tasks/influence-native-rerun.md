@@ -3,16 +3,17 @@ id: influence-native-rerun
 type: task
 title: Run the revised procurement influence experiment
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-experiments
+owner: null
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-claimed_at: 2026-10-04T02:31Z
 updated: 2026-10-04T02:51Z
+history:
+- '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
 ---
 
 ## Goal
@@ -21,6 +22,10 @@ Implement native bounded collection, qualify the redesigned procurement study an
 
 ## Done when
 
-- [ ] Freeze and test native runner and fresh qualification cases.
-- [ ] Run qualification and diagnose any failures without replacing original outcomes.
+- [x] Freeze and test native runner and fresh qualification cases.
+- [x] Run qualification and diagnose any failures without replacing original outcomes.
 - [ ] Run the eligible bounded comparison, publish measured replay and post-mortem, and release the dedicated allocation.
+
+## Coverage note
+
+Four native attempts published with immutable evidence, measured GIF/HTML replays and post-mortems. Q2: 9 valid, 7 acceptable; Q3: 3 valid deferrals on a targeted diagnostic, not full qualification. The comparison remains unrun pending fresh full qualification and more authorized shared budget. Dedicated worker is stopped; claim release requested. See scenario/RESULTS.md.

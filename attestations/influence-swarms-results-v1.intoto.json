@@ -19,6 +19,9 @@
      "uri": "researchers/vishesh/notes/external-influence-v2/analysis/render.py"
     },
     {
+     "digest": {
+      "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9"
+     },
      "uri": "data/external-influence-v2/audit.json"
     },
     {

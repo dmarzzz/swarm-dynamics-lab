@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "stage": "Q2",
+    "planned": 9,
+    "terminal": 9,
+    "valid": 9,
+    "invalid": 0,
+    "acceptable": 7,
+    "qualified": false,
+    "calls": 42,
+    "input_tokens": 80658,
+    "output_tokens": 7624,
+    "actual_usd": 0.11877800000000001,
+    "usage_missing": 0,
+    "seconds": 138.06,
+    "source_signature": "92cab9fc7e71472b32c925cc0a3e1881819831f59f31e2548e8fd1d4e31d7cbf",
+    "report_errors": [],
+    "outcomes_hash": "b0af769f77b97b107ac3de1eafb4121b377326b3ad76315f894dd3565c5eff64"
+  },
+  "case_worlds": 3,
+  "distinct_case_ids": 3,
+  "paired_chairs": [
+    {
+      "case": "usage_cliff-6",
+      "world": "clean",
+      "both_valid": true,
+      "same_choice": true,
+      "ballots_minus_evidence_harm": 0
+    },
+    {
+      "case": "genuine_value-6",
+      "world": "promotion",
+      "both_valid": true,
+      "same_choice": true,
+      "ballots_minus_evidence_harm": 0
+    },
+    {
+      "case": "evidence_gap-6",
+      "world": "clean",
+      "both_valid": true,
+      "same_choice": true,
+      "ballots_minus_evidence_harm": 0
+    }
+  ],
+  "per_arm": {
+    "team_ballots": {
+      "assigned": 3,
+      "valid": 3,
+      "acceptable": 2,
+      "choices": [
+        "Birch",
+        "Cobalt",
+        "Birch"
+      ],
+      "absolute_cost_errors_usd": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "team_evidence": {
+      "assigned": 3,
+      "valid": 3,
+      "acceptable": 2,
+      "choices": [
+        "Birch",
+        "Cobalt",
+        "Birch"
+      ],
+      "absolute_cost_errors_usd": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "solo": {
+      "assigned": 3,
+      "valid": 3,
+      "acceptable": 3,
+      "choices": [
+        "Birch",
+        "Cobalt",
+        "DEFER"
+      ],
+      "absolute_cost_errors_usd": [
+        0.0,
+        0.0,
+        null
+      ]
+    }
+  },
+  "inference": "Descriptive paired pilot only. Shared prefixes and reused buyer worlds are not independent replicates. No p-value or population confidence interval."
+}

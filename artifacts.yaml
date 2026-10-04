@@ -574,4 +574,68 @@ artifacts:
           - data/theseus-inputs/S1-a1/summary.json
         commit: 2c81f6acc2e051ee9b33aec61f8efdd1f1580663-dirty
         public: true
+  - id: influence-native-q2-results
+    category: content
+    type: figure
+    title: 'Procurement qualification: seven acceptable, two adverse decisions'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-native-q2-results/influence-native-q2-results-v1.png
+        built_at: '2026-10-04T02:48:56Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Take all of these and come up with a set of changes and improvements to the experiment. Go ahead and make
+          them and then rerun it.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py
+          - data/influence-native/native-Q2-01/outcomes.json
+          - data/influence-native/native-Q2-01/summary.json
+        commit: 4fcf12c4ca2beba0e4f4ea50309f5053ff36d406-dirty
+  - id: influence-native-q2-replay
+    category: content
+    type: doc
+    title: 'Measured procurement decisions: interactive Q2 replay'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-native-q2-replay/influence-native-q2-replay-v1.html
+        built_at: '2026-10-04T02:49:09Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Take all of these and come up with a set of changes and improvements to the experiment. Go ahead and make
+          them and then rerun it.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py
+          - data/influence-native/native-Q2-01/manifest.json
+          - data/influence-native/native-Q2-01/summary.json
+          - data/influence-native/native-Q2-01/case-0.json
+          - data/influence-native/native-Q2-01/case-1.json
+          - data/influence-native/native-Q2-01/case-2.json
+          - data/influence-native/native-Q2-01/events-0.jsonl
+          - data/influence-native/native-Q2-01/events-1.jsonl
+          - data/influence-native/native-Q2-01/events-2.jsonl
+          - data/influence-native/native-Q2-01/outcomes.json
+        commit: 4fcf12c4ca2beba0e4f4ea50309f5053ff36d406-dirty
+  - id: influence-native-q2-film
+    category: content
+    type: film
+    title: When evidence does not reach the purchase decision
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-native-q2-film/influence-native-q2-film-v1.mp4
+        built_at: '2026-10-04T02:49:09Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Take all of these and come up with a set of changes and improvements to the experiment. Go ahead and make
+          them and then rerun it.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/animate_native.py
+          - data/influence-native/native-Q2-01/case-2.json
+          - data/influence-native/native-Q2-01/events-2.jsonl
+        commit: 4fcf12c4ca2beba0e4f4ea50309f5053ff36d406-dirty
 requires: '1.2'

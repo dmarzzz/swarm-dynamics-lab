@@ -4,7 +4,9 @@
 
 The [procurement scenario redesign](scenario/README.md) supersedes the proposed quality-01 scientific sweep. It tests evidence integration with model decision authority intact, includes a cheaper solo baseline, and grounds errors in workload costs and named constraints. The score-enforcement implementation below is retained as an engineering branch, not proof of improved reasoning.
 
-## TLDR
+The revised native pilot has now run: [measured results and limitations](scenario/RESULTS.md). Q2 produced seven acceptable and two adverse decisions; Q3 passed a targeted decision-wording diagnostic. The full paired influence study is still unqualified.
+
+## Archived engineering proposal
 
 Outside evidence can mislead a nine-agent team even when its verifiers return correct facts. This prospective repair makes verification update an explicit decision ledger, applies the same final rule in every arm, and records the model chair's proposal separately. Historical results and the measured replay are in [the v2 audit](../external-influence-v2/reviews/quality-post.md). This version is **offline-tested, not live-qualified**; fresh dedicated allocation is required.
 
