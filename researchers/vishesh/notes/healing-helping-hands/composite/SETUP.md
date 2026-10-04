@@ -9,7 +9,7 @@ Follow [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-S
 | G0 | pass for bounded instrument scope | User directive and PLAN.md scope; previous practical/POST-02.md | No formal promotion |
 | G1 | pass | PLAN.md written before composite implementation, 2026-10-04 UTC | Commit |
 | G2 | pass, runtime checks pending | 16 composite + 44 existing offline checks; S0-PRE.md | Verify deployed runtime |
-| G3 S0 | blocked | Initial public C1 plan/TLDR verified; allocation refused due existing claim; S0-PRE.md | Resolve exclusive allocation, freeze/register instrument |
+| G3 S0 | admission in progress | Dedicated sim-healing-c1 created on verified account; exclusive claim merged; S0-PRE.md | Finish runtime checks and register amended plan before inference |
 | G4 | pending | No composite observations yet | Run S0 after G3 |
 | G5 | pending | No execution yet | Reconcile and close |
 
@@ -23,4 +23,4 @@ No C1 attempts started. Previous practical-02 is complete and adverse to swarm s
 
 ## Closeout
 
-Pending execution, qualification, reconciliation, visual audit, costs, durable uploads and release. Current gate G2; next action implement and test the frozen C1 design.
+Pending execution, qualification, reconciliation, visual audit, costs, durable uploads and release. Current gate G3; next action finish deployed runtime checks, register amended plan and admit S0.

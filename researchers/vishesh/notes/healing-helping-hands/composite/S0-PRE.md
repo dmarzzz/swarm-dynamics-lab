@@ -1,6 +1,6 @@
 # C1-S0 pre-run assessment
 
-2026-10-04 UTC. Self-assessment by vishesh/codex-regrowth-docs. **Blocked on fresh exclusive machine allocation; diagnostic-only once current admission evidence is complete.** No model observations have been collected. Previous post-mortem: ../practical/POST-02.md, read before design.
+2026-10-04 UTC. Self-assessment by vishesh/codex-regrowth-docs. **Diagnostic-only, subject to fresh runtime, public-page and budget receipts before dispatch.** No model observations have been collected. Previous post-mortem: ../practical/POST-02.md, read before design.
 
 ## Decision and design
 
@@ -25,3 +25,7 @@ Run ID healing-helping-hands/C1-S0, paired three-model screen. Live acknowledged
 ## Remaining admission actions
 
 Fresh exclusive fleet claim, deployed source/dependency/model-digest checks, current shared budget receipt, immutable exact-source registration/readback, final go/no-go and five-minute admission receipt. Research-01 was read-only checked idle, but agentops refused the new claim because another experiment's expired claim still has status running. Do not override that claim or launch without resolution. No claim was created and no model/server was started. User was asked whether to retain fleet requirement or explicitly permit this run on the Mac; no exception is presumed.
+
+## Allocation amendment before C1 inference
+
+The user explicitly authorized new machines on Dmarz's established account. Newly installed credential matched all 12 known fleet hosts; account active. Only sim-healing-c1 was created from the original empty Vishesh infrastructure state. Fresh exclusive claim vishesh-healing-qwen-jev-c1 merged through fleet PR 145, three-hour expiry; provisioning PR 143 merged. Runtime setup is in progress. This supersedes the historical allocation blocker and withdraws the obsolete provisioning request. Model calls remain zero for C1. Refresh and record claim, idle workload, exact deployed source, model digest, public plan and cumulative ledger immediately before worker dispatch.
