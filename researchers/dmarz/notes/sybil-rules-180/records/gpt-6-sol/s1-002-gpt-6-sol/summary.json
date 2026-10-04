@@ -1,0 +1,121 @@
+{
+ "accepted": 7554,
+ "asked": 7560,
+ "billing": {
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0
+ },
+ "cost_usd": 51.266275,
+ "detail": {
+  "branches": {
+   "A": {
+    "ended": "2026-10-04T13:18:03Z",
+    "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+    "rounds": 10,
+    "started": "2026-10-04T13:06:54Z",
+    "status": "completed",
+    "void_rounds": 3
+   },
+   "A2": {
+    "ended": "2026-10-04T13:28:52Z",
+    "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+    "rounds": 10,
+    "started": "2026-10-04T13:18:03Z",
+    "status": "completed",
+    "void_rounds": 3
+   },
+   "B": {
+    "ended": "2026-10-04T13:06:54Z",
+    "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+    "rounds": 10,
+    "started": "2026-10-04T12:57:51Z",
+    "status": "completed",
+    "void_rounds": 0
+   },
+   "C": {
+    "ended": "2026-10-04T12:57:51Z",
+    "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+    "rounds": 10,
+    "started": "2026-10-04T12:49:09Z",
+    "status": "completed",
+    "void_rounds": 0
+   }
+  },
+  "checkpoint_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+  "checkpoint_round": 2,
+  "hosts": null,
+  "passed": true,
+  "warmup": {
+   "rounds": 2,
+   "status": "completed",
+   "void_rounds": 0
+  }
+ },
+ "dropped_zero_orders": 0,
+ "elapsed_seconds": 2485.3909738609946,
+ "failed_calls": 0,
+ "failure": null,
+ "frame_counts_match_analysis": true,
+ "gate": {
+  "passed": true
+ },
+ "hosts": [
+  "sim-dmarz-10",
+  "sim-dmarz-2",
+  "sim-dmarz-8"
+ ],
+ "in_flight_per_host": 3,
+ "input_tokens": 16409148,
+ "internal_error": null,
+ "max_prompt_tokens": 2648,
+ "model_calls": 7560,
+ "normalizations": 0,
+ "normalized": {},
+ "not_started": 0,
+ "output_tokens": 1103064,
+ "params": {
+  "backend": "openrouter",
+  "batch": "s1-002-gpt-6-sol",
+  "code": "0f0d91ce76c8876c0c8bef61f65f7299bebca971",
+  "model": "gpt-6-sol",
+  "source_hash": "17665ae01f3291848e57cd54b745f75afc5249eb8a3edc6543f9c7d94aa3810c",
+  "stage": "S1"
+ },
+ "planned": 7560,
+ "rejected_commands": 1,
+ "replay_frames": 42,
+ "reporting_errors": [],
+ "study_accounting": {
+  "actual_usd": 53.907218,
+  "attempted_calls": 7926,
+  "calls_by_stage": {
+   "P0": 1,
+   "Q0": 185,
+   "S1": 7560,
+   "X0": 180
+  },
+  "cap_calls": 8478,
+  "cap_transport_attempts": 9800,
+  "cap_usd": 150,
+  "committed_usd": 53.907218,
+  "input_tokens": 17269588,
+  "output_tokens": 1152095,
+  "reserved_usd": 325.109469,
+  "transport_attempts": 7926,
+  "usage_reported_calls": 7926
+ },
+ "transport": {
+  "dead_slots": [],
+  "events": [],
+  "hub_errors": 1,
+  "lost_calls_after_reissue": 0,
+  "lost_tasks": 0,
+  "reissue_refused": null,
+  "reissued_calls": 0,
+  "rerouted_calls": 0,
+  "tasks": 172
+ },
+ "transport_attempts": 7560,
+ "void": 6
+}

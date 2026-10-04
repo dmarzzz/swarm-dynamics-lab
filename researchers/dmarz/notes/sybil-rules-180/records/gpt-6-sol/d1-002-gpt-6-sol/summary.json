@@ -1,0 +1,82 @@
+{
+ "accepted": 192,
+ "asked": 192,
+ "billing": {
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0
+ },
+ "cost_usd": 1.499078,
+ "detail": {
+  "cue_character_increment": 698,
+  "cue_input_token_increment": 209.41666666666674,
+  "episodes": 24,
+  "passed": true,
+  "rounds": 8
+ },
+ "dropped_zero_orders": 0,
+ "elapsed_seconds": 142.28601252099907,
+ "failed_calls": 0,
+ "failure": null,
+ "gate": {
+  "passed": true
+ },
+ "hosts": [
+  "sim-dmarz-10",
+  "sim-dmarz-2",
+  "sim-dmarz-8"
+ ],
+ "in_flight_per_host": 3,
+ "input_tokens": 388326,
+ "internal_error": null,
+ "max_prompt_tokens": 2491,
+ "model_calls": 192,
+ "normalizations": 0,
+ "normalized": {},
+ "not_started": 0,
+ "output_tokens": 52851,
+ "params": {
+  "backend": "openrouter",
+  "batch": "d1-002-gpt-6-sol",
+  "code": "0f0d91ce76c8876c0c8bef61f65f7299bebca971",
+  "model": "gpt-6-sol",
+  "source_hash": "17665ae01f3291848e57cd54b745f75afc5249eb8a3edc6543f9c7d94aa3810c",
+  "stage": "D1"
+ },
+ "planned": 192,
+ "rejected_commands": 0,
+ "reporting_errors": [],
+ "study_accounting": {
+  "actual_usd": 55.406296,
+  "attempted_calls": 8118,
+  "calls_by_stage": {
+   "D1": 192,
+   "P0": 1,
+   "Q0": 185,
+   "S1": 7560,
+   "X0": 180
+  },
+  "cap_calls": 8478,
+  "cap_transport_attempts": 9800,
+  "cap_usd": 150,
+  "committed_usd": 55.406296,
+  "input_tokens": 17657914,
+  "output_tokens": 1204946,
+  "reserved_usd": 332.75094,
+  "transport_attempts": 8118,
+  "usage_reported_calls": 8118
+ },
+ "transport": {
+  "dead_slots": [],
+  "events": [],
+  "hub_errors": 1,
+  "lost_calls_after_reissue": 0,
+  "lost_tasks": 0,
+  "reissue_refused": null,
+  "reissued_calls": 0,
+  "rerouted_calls": 0,
+  "tasks": 196
+ },
+ "transport_attempts": 192,
+ "void": 0
+}
