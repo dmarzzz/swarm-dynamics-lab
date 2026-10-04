@@ -1,5 +1,7 @@
 # Trace-backed improvement for the research swarm
 
+**Headline interface, v0.2 draft:** [Swarm Trace and Bundle Protocol](../rsi/TRACE-SPEC.md) specifies public envelopes, sealed content, OTel mappings and a PBS-style market for bounded improvement bundles. It includes three safely projected real pool records, a JSON Schema and an offline bundle demonstration. This research-loop design remains the quality/anti-gaming foundation. The new interface is proposed on `shadow/rsi`, not deployed or authorized for spending.
+
 **Decision:** improve the lab's research procedure, not its ability to produce more confident prose. Start with short versioned worker briefs and executable preflight checks. Learn from actual failed work, test a candidate against an unchanged baseline on fresh assignments, and let a separate reviewer decide whether it is better. No weight training, unrestricted self-modification or automatic spending.
 
 **Status, 2026-10-04:** an offline, privacy-minimized collector and one trace-observability repair are implemented here. The collector normalized ten explicitly selected research sessions. A frozen four-lane replay improved recognition of explicit nonzero command exits from **0/40 to 40/40**, with **0/702** new flags on clean zero exits. This is a real improvement to the measurement pipeline, **not evidence that the research agents became better researchers**. No model calls, paid or otherwise, were launched by these scripts. Independent research evaluation and policy promotion remain blocked.

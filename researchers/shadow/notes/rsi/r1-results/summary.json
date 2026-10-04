@@ -1,0 +1,61 @@
+{
+  "baseline": {
+    "assigned": 195,
+    "passed": 75
+  },
+  "candidates": [
+    {
+      "accepted": true,
+      "assigned": 195,
+      "bundle_id": "bundle-r1-lineage-repair",
+      "failed_checks": {},
+      "gain_bps": 6153,
+      "passed": 195,
+      "reason": "all-accounting-checks-pass"
+    },
+    {
+      "accepted": false,
+      "assigned": 195,
+      "bundle_id": "bundle-r1-clamp-shortcut",
+      "failed_checks": {
+        "first_attempt_valid_records": 15,
+        "invalid_records": 15,
+        "invalid_then_valid_logical_records": 15,
+        "physical_ids": 15,
+        "physical_records": 15,
+        "selected_ids": 15,
+        "selection_rule": 15,
+        "superseded_records": 15
+      },
+      "gain_bps": 0,
+      "passed": 75,
+      "reason": "incomplete-attempt-accounting"
+    }
+  ],
+  "credit_units": 1000,
+  "envelopes": 566,
+  "independent_review": false,
+  "mode": "offline-saved-data-repair",
+  "new_model_calls": 0,
+  "policy_call_population": 12389,
+  "pool_envelopes": 3,
+  "reporting_groups": 15,
+  "scientific_effect_measured": false,
+  "settled_microusd": 0,
+  "source_counts": {
+    "episode": 327,
+    "policy-call": 80,
+    "public-workflow-step": 156
+  },
+  "source_root": "c0d8b56433cf13418eb16ccde7ac397068280472c0d1ab4b7100f11c98d3ba82",
+  "totals": {
+    "first_attempt_valid_records": 54,
+    "invalid_records": 127,
+    "invalid_then_valid_logical_records": 124,
+    "logical_records": 180,
+    "physical_records": 327,
+    "selected_captured_records": 178,
+    "selected_valid_records": 178,
+    "superseded_records": 147
+  }
+}

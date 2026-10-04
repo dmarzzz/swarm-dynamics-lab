@@ -1,0 +1,266 @@
+{
+  "bundle": {
+    "schema_version": "swarm-trace/0.2.0",
+    "record_type": "bundle",
+    "bundle_id": "bundle-null-preservation",
+    "searcher_id": "searcher-metadata",
+    "searcher_principal_id": "principal-metadata",
+    "opportunity_id": "metadata-contract-001",
+    "mode": "offline-demo",
+    "kind": "fix",
+    "trigger_event_ids": [
+      "event-2a6f5269024c13e32ec6fd34"
+    ],
+    "source_event_hashes": [
+      "644b6ad2a2ac3a5acaf859b5c77cbab7b330937b37dfbede15bd302ffe55f51d"
+    ],
+    "inclusion": {
+      "epoch_min": 1,
+      "epoch_max": 1,
+      "after_release": false,
+      "task_version_hash": "e322beebfcf3c9cba06bb31c77b59a640b700ac0600782c9a7fc3de5cc628f79"
+    },
+    "body": [
+      {
+        "action_id": "check-contract",
+        "operation": "offline-check",
+        "depends_on": [],
+        "artifact_hash": "45f3cad856aed66435f3d2644bacd7b71d0f5e335c219a879a9da6489e428f66",
+        "failure_policy": "abort-publication"
+      },
+      {
+        "action_id": "propose-fix",
+        "operation": "propose-brief",
+        "depends_on": [
+          "check-contract"
+        ],
+        "artifact_hash": "45f3cad856aed66435f3d2644bacd7b71d0f5e335c219a879a9da6489e428f66",
+        "failure_policy": "abort-publication"
+      }
+    ],
+    "read_set": [
+      "event-2a6f5269024c13e32ec6fd34"
+    ],
+    "write_set": [
+      "candidate/metadata-contract"
+    ],
+    "permitted_builders": [
+      "builder-offline-demo"
+    ],
+    "budget": {
+      "max_model_calls": 0,
+      "max_microusd": 0,
+      "max_runtime_ms": 1000
+    },
+    "valuation": {
+      "metric_id": "typed-missingness",
+      "rubric_hash": "86375cb737fd20e39f50e62f8bc2f1ad3b4a0823019d0de8910ccd633e6c6dcb",
+      "baseline_artifact_hash": "8fdb2854e5ff9a4ea621fb92fc29664b5807b2f9694cd035189fc56a8d1c321e",
+      "claimed_gain_bps": 5000,
+      "requested_bounty_microusd": 1000000
+    },
+    "rebates": {
+      "trace_originator_bps": 2000,
+      "searcher_bps": 6000,
+      "builder_bps": 1000,
+      "evaluator_bps": 1000
+    },
+    "orderflow_bid": {
+      "funded_microusd": 0,
+      "escrow_receipt_hash": null
+    },
+    "capabilities": {
+      "network": false,
+      "paid_calls": false,
+      "publish_raw": false,
+      "write_scope": "isolated-candidate"
+    },
+    "nonce": "1111111111111111111111111111111111111111111111111111111111111111",
+    "integrity": {
+      "record_hash": "28f9a25194f7898ed4da5bd63b78d167f034a863f090e8ef9cc65193d7088c01",
+      "previous_event_hash": null,
+      "signature": null
+    }
+  },
+  "competitor": {
+    "schema_version": "swarm-trace/0.2.0",
+    "record_type": "bundle",
+    "bundle_id": "bundle-overclaim",
+    "searcher_id": "searcher-overclaim",
+    "searcher_principal_id": "principal-overclaim",
+    "opportunity_id": "metadata-contract-001",
+    "mode": "offline-demo",
+    "kind": "fix",
+    "trigger_event_ids": [
+      "event-2a6f5269024c13e32ec6fd34"
+    ],
+    "source_event_hashes": [
+      "644b6ad2a2ac3a5acaf859b5c77cbab7b330937b37dfbede15bd302ffe55f51d"
+    ],
+    "inclusion": {
+      "epoch_min": 1,
+      "epoch_max": 1,
+      "after_release": false,
+      "task_version_hash": "e322beebfcf3c9cba06bb31c77b59a640b700ac0600782c9a7fc3de5cc628f79"
+    },
+    "body": [
+      {
+        "action_id": "check-contract",
+        "operation": "offline-check",
+        "depends_on": [],
+        "artifact_hash": "45f3cad856aed66435f3d2644bacd7b71d0f5e335c219a879a9da6489e428f66",
+        "failure_policy": "abort-publication"
+      },
+      {
+        "action_id": "propose-fix",
+        "operation": "propose-brief",
+        "depends_on": [
+          "check-contract"
+        ],
+        "artifact_hash": "45f3cad856aed66435f3d2644bacd7b71d0f5e335c219a879a9da6489e428f66",
+        "failure_policy": "abort-publication"
+      }
+    ],
+    "read_set": [
+      "event-2a6f5269024c13e32ec6fd34"
+    ],
+    "write_set": [
+      "candidate/metadata-contract"
+    ],
+    "permitted_builders": [
+      "builder-offline-demo"
+    ],
+    "budget": {
+      "max_model_calls": 0,
+      "max_microusd": 0,
+      "max_runtime_ms": 1000
+    },
+    "valuation": {
+      "metric_id": "typed-missingness",
+      "rubric_hash": "86375cb737fd20e39f50e62f8bc2f1ad3b4a0823019d0de8910ccd633e6c6dcb",
+      "baseline_artifact_hash": "8fdb2854e5ff9a4ea621fb92fc29664b5807b2f9694cd035189fc56a8d1c321e",
+      "claimed_gain_bps": 10000,
+      "requested_bounty_microusd": 1000000
+    },
+    "rebates": {
+      "trace_originator_bps": 2000,
+      "searcher_bps": 6000,
+      "builder_bps": 1000,
+      "evaluator_bps": 1000
+    },
+    "orderflow_bid": {
+      "funded_microusd": 0,
+      "escrow_receipt_hash": null
+    },
+    "capabilities": {
+      "network": false,
+      "paid_calls": false,
+      "publish_raw": false,
+      "write_scope": "isolated-candidate"
+    },
+    "nonce": "2222222222222222222222222222222222222222222222222222222222222222",
+    "integrity": {
+      "record_hash": "5d99c150830606e2c7cbf379d010fbfd42f4be03a6ca9cf7453e408f3bef33a5",
+      "previous_event_hash": null,
+      "signature": null
+    }
+  },
+  "controller_policy": {
+    "opportunity_id": "metadata-contract-001",
+    "builder_id": "builder-offline-demo",
+    "reviewer_id": "reviewer-fixture",
+    "epoch": 1,
+    "task_version_hash": "e322beebfcf3c9cba06bb31c77b59a640b700ac0600782c9a7fc3de5cc628f79",
+    "max_runtime_ms": 1000,
+    "bounty_cap_microusd": 1000000,
+    "rubric_hash": "86375cb737fd20e39f50e62f8bc2f1ad3b4a0823019d0de8910ccd633e6c6dcb",
+    "metric_id": "typed-missingness",
+    "baseline_artifact_hash": "8fdb2854e5ff9a4ea621fb92fc29664b5807b2f9694cd035189fc56a8d1c321e",
+    "gain_value_microusd": 4000000
+  },
+  "evaluations": {
+    "bundle-null-preservation": {
+      "bundle_hash": "28f9a25194f7898ed4da5bd63b78d167f034a863f090e8ef9cc65193d7088c01",
+      "reviewer_id": "reviewer-fixture",
+      "rubric_hash": "86375cb737fd20e39f50e62f8bc2f1ad3b4a0823019d0de8910ccd633e6c6dcb",
+      "baseline_bps": 5000,
+      "candidate_bps": 10000,
+      "review_passed": true,
+      "guardrails_passed": true
+    },
+    "bundle-overclaim": {
+      "bundle_hash": "5d99c150830606e2c7cbf379d010fbfd42f4be03a6ca9cf7453e408f3bef33a5",
+      "reviewer_id": "reviewer-fixture",
+      "rubric_hash": "86375cb737fd20e39f50e62f8bc2f1ad3b4a0823019d0de8910ccd633e6c6dcb",
+      "baseline_bps": 5000,
+      "candidate_bps": 5000,
+      "review_passed": false,
+      "guardrails_passed": true
+    }
+  },
+  "evaluation_fixture": {
+    "cases": [
+      {
+        "field": "billed_microusd",
+        "input": null,
+        "expected": null
+      },
+      {
+        "field": "billed_microusd",
+        "input": 0,
+        "expected": 0
+      },
+      {
+        "field": "tool_calls",
+        "input": null,
+        "expected": null
+      },
+      {
+        "field": "tool_calls",
+        "input": [],
+        "expected": []
+      }
+    ],
+    "baseline_outputs": [
+      0,
+      0,
+      [],
+      []
+    ],
+    "candidate_outputs": [
+      null,
+      0,
+      null,
+      []
+    ],
+    "patch": {
+      "action": "preserve-unknown-not-zero",
+      "checks": [
+        "missing-cost-is-null",
+        "known-zero-is-zero",
+        "missing-tools-is-null",
+        "observed-empty-tools-is-empty"
+      ]
+    }
+  },
+  "result": {
+    "winner": "bundle-null-preservation",
+    "evaluated_gain_bps": 5000,
+    "controller_net_value_microusd": 1000000,
+    "rejected": [
+      {
+        "bundle_id": "bundle-overclaim",
+        "reason": "review or guardrail failed"
+      }
+    ],
+    "hypothetical_bounty_split_microusd": {
+      "trace_originator_bps": 200000,
+      "searcher_bps": 600000,
+      "builder_bps": 100000,
+      "evaluator_bps": 100000
+    },
+    "settled_microusd": 0,
+    "mode": "offline-demo-no-payments"
+  },
+  "provenance": "real imported envelope; synthetic developer-owned evaluation, unsigned, no live inclusion or payment"
+}

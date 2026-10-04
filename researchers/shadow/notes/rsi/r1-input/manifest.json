@@ -1,0 +1,87 @@
+{
+  "derived": {
+    "projections.json": "c110939caccb808e71b34046d53dd9b22cfd9792e1699b21e115aef0490e62a9",
+    "public-events.jsonl": "a1ee7c95dad39c0ae4e444b7769f5a0ab57fbb2ea6a1e0856c58dc67d5df35c6"
+  },
+  "plan_sha256": "67d4c1908bd4025b7ff90602f0035c7d6419580efbb723e7b5adb95f814de23a",
+  "policy_call_sampling": "first-16-records-per-file-not-random",
+  "pool": {
+    "game_call_join": "unavailable",
+    "path": "pool-events.jsonl",
+    "rows": 3,
+    "scope": "full-approved-capture-memory-task-in-structured-user-message",
+    "sha256": "1c3256966af755d495759e2423c5ee3996d658ac228d815f22d2a0ea8a936a0b"
+  },
+  "private_raw_exported": false,
+  "source_revision": "bb0965687cbc8ddc8ce566c31b0d3d2ff1f0fccc",
+  "sources": [
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp3/MP_W1_INSIDE_d0.5_m1.jsonl",
+      "role": "episode",
+      "rows": 72,
+      "sha256": "256e5bc1167cc401f1389963dacb998f35c3d0c68af935a27213ca590e8ece73"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp3/MP_W1_INSIDE_d0.5_mfull.jsonl",
+      "role": "episode",
+      "rows": 63,
+      "sha256": "aaeeda9684f9cd68c6abf67aa9352e9196eaea7547df1fa881b4ece890beea63"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp3/MP_W1_INSIDE_d0.5_mmix-1-full_f0.5.jsonl",
+      "role": "episode",
+      "rows": 60,
+      "sha256": "4257777cfca32937082287ae40632311364db41876f57d71282b2e49ffbfdf6e"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp3/MP_W1_INSIDE_d0.5_mmix-1-full_f0.75.jsonl",
+      "role": "episode",
+      "rows": 63,
+      "sha256": "64d5988774f620443a2cec647b9e3c881bf77a40b2bb930c5f00e4a978ce14fb"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp3/MP_W1_INSIDE_d0.5_mmix-1-full_f0.875.jsonl",
+      "role": "episode",
+      "rows": 69,
+      "sha256": "d4ddab745f194588f2acc9a189350fde7ffaf24d34c8b99580fdec8496f7b1f1"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp2/calls-1.jsonl",
+      "role": "policy-call",
+      "rows": 2450,
+      "sha256": "24f7257376cb0d41007489ef44f4282b6749ca918cdcc3b9fb3f63f3359bb621"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp2/calls-full.jsonl",
+      "role": "policy-call",
+      "rows": 2320,
+      "sha256": "83582a9778ed3e6b4f4687dd9652f128537375f99ac62afcb91bdeb91098a3ac"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp2/calls-mix-1-full-0.5.jsonl",
+      "role": "policy-call",
+      "rows": 2974,
+      "sha256": "b636d0ad3583418f2b54f1c815289530cf26d3535f54619cbe18bef0d9d15cba"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp2/calls-mix-1-full-0.75.jsonl",
+      "role": "policy-call",
+      "rows": 2309,
+      "sha256": "0152238b31606dc60d8cd7b4cecea000e2211db1fe4cbca175ab0379af8e1a49"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory-mix/results/pilot-mp2/calls-mix-1-full-0.875.jsonl",
+      "role": "policy-call",
+      "rows": 2336,
+      "sha256": "e0b46965f093bc17e35ec5fa0dc424f68d67d06653def2a55920c41de8dafd88"
+    },
+    {
+      "path": "researchers/dmarz/notes/compositional-safety/records/q0-011/trace.jsonl.gz",
+      "role": "public-workflow-step",
+      "rows": 156,
+      "sha256": "9335bf36240a0b64a44110253b6aaf194db91251c4ab00406ff67eb5744100a5"
+    }
+  ],
+  "time_semantics": "coarse-import-batch-not-source-execution",
+  "version": "r1-input/1"
+}
