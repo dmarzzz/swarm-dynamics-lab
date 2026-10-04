@@ -6,10 +6,10 @@
 Assessed 2026-10-04 by vishesh/codex-idea-scores; source snapshots shown per cohort ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 **Optimal swarm size under task and resource constraints** (`optimal-swarm-size`)
-Source: `cc91c560`.
+Source: `0108574a`.
 
 - **evidence_confidence:** **0/4** — Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints. Basis: Native qualification and stage diagnostics now exist, but no conditional launch rule has been fit or tested. Failures and engineering readiness do not establish optimal-size efficacy.
-- **sample_size_summary:** Observed: Q-A4 16, Q-A5 8, Q-A6 8, Q-A7 8 development episodes; O1 12 authored outage episodes; O2 10 episodes from one endpoint template. Conditional optimal-size policy remains untested; cohorts must not be pooled.
+- **sample_size_summary:** Observed: Q-A4 16, Q-A5 8, Q-A6 8, Q-A7 8 development episodes; O1 12 authored outage episodes; O2 10 episodes from one endpoint template. Conditional optimal-size policy remains untested; cohorts must not be pooled. Incident Q1:9 authored development variants across3 templates,39 native calls,5/9 correct; no independent held-out incident population.
 
 **Optimal swarm size — Q-A5 worker-stage diagnostic** (`optimal-swarm-size-q-a5`)
 Source: `3331c6c6`.
