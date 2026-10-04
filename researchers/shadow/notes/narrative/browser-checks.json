@@ -6,6 +6,7 @@
     ],
     "errors": [],
     "score_parity": true,
+    "score_edit_and_reset": true,
     "search": true,
     "keyboard_graph": true,
     "no_document_overflow": true
@@ -17,6 +18,7 @@
     ],
     "errors": [],
     "score_parity": true,
+    "score_edit_and_reset": true,
     "search": true,
     "keyboard_graph": true,
     "no_document_overflow": true
