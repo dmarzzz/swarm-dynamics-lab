@@ -1,0 +1,29 @@
+test_absent_case_keeps_manifest_denominator (test_iteration.IterationTests) ... ok
+test_case_file_is_part_of_source_signature (test_iteration.IterationTests) ... ok
+test_gate_rejects_targeted_or_incomplete_qualification (test_iteration.IterationTests) ... ok
+test_missing_pair_is_unidentified_not_zero (test_iteration.IterationTests) ... ok
+test_new_dossiers_choose_or_defer_for_named_reasons (test_iteration.IterationTests) ... ok
+test_qualifier_is_not_just_a_profile_change (test_iteration.IterationTests) ... ok
+test_valid_zero_and_invalid_bounds_are_distinct (test_iteration.IterationTests) ... ok
+test_all_reports_fit_initial_envelope (test_scenario.ScenarioTests) ... ok
+test_checks_retrieve_actual_records (test_scenario.ScenarioTests) ... ok
+test_forged_and_nonfinite_output_rejected (test_scenario.ScenarioTests) ... ok
+test_forks_share_facts_but_not_votes (test_scenario.ScenarioTests) ... ok
+test_genuine_value_does_not_reward_blanket_rejection (test_scenario.ScenarioTests) ... ok
+test_manual_cost_example (test_scenario.ScenarioTests) ... ok
+test_meaningful_multisource_findings_are_not_style_failures (test_scenario.ScenarioTests) ... ok
+test_missing_scope_is_not_false_certainty (test_scenario.ScenarioTests) ... ok
+test_named_constraints (test_scenario.ScenarioTests) ... ok
+test_native_schema_matches_confidence_and_citation_contract (test_scenario.ScenarioTests) ... ok
+test_outcome_is_not_overwritten (test_scenario.ScenarioTests) ... ok
+test_partial_dossier_does_not_get_hidden_facts (test_scenario.ScenarioTests) ... ok
+test_prefix_failure_keeps_denominator (test_scenario.ScenarioTests) ... ok
+test_reference_uses_documents_and_matches_evaluator (test_scenario.ScenarioTests) ... ok
+test_sensitivity_is_visible (test_scenario.ScenarioTests) ... ok
+test_worksheet_uses_visible_sources_without_recommendation (test_scenario.ScenarioTests) ... ok
+test_worlds_change_only_comparison_text (test_scenario.ScenarioTests) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.190s
+
+OK

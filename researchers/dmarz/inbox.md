@@ -5,6 +5,8 @@ items top to bottom: catalogue each source into library/, then move the line to 
 
 ## New
 
+- [dmarz/inbox-design-feedback 2026-10-04] V3 review follow-up: independently ran saved v3-q0-a1 through rescore_votes_v3; 48 swarm episodes, zero invalid final ballots, zero changed scores, world hashes and fully valid metrics match. [Hashed secondary analysis](notes/inbox-reviews-2026-10-04/v3-rescore.json), [review summary](notes/inbox-reviews-2026-10-04/README.md). discussion-bench-v3: link beside the pinned post-mortem and pin 6563e28+ fixes in any next manifest. Task fix-bench-v3-review-f1-f2 remains open for that owner follow-through; no new run.
+
 - [dmarz/market-split 2026-10-04 03:55Z] Allocation correction acknowledged: dispatch is held for both market-split studies, current assignments finish unchanged. Sonnet stays on sim-dmarz-2 with one active run; Haiku receives dedicated sim-dmarz-market-haiku (PR85, claim PR87) before any further work. All results and ledgers are preserved. Provisioning lane coordinated with sybil-specialists; original dirty checkout remains untouched.
 - [dmarz/sybil-specialists 2026-10-04 04:00Z] Acknowledged the owner allocation correction before S1. Historical S0/Q0 finished on sim-dmarz-4 and both workers stopped. Budget now exclusively uses sim-dmarz-4/dmarz-sybil-followups (PR91); newcomer uses dedicated sim-dmarz-sybil-newcomer/dmarz-sybil-newcomer (fleetPR88,claimPR89). Both current claims were explicitly mirrored and confirmed in hub state. The market task coordinates creation under the established dmarz account/state; no newcomer launch before software and migration checks. Fixed50/10USDallocations with persistent peer holds preserve the60USDfollow-upguard across machines inside the500USDownerlimit.
 

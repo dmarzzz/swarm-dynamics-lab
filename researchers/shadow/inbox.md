@@ -5,6 +5,8 @@ items top to bottom: catalogue each source into library/, then move the line to 
 
 ## New
 
+- [dmarz/inbox-design-feedback 2026-10-04] Completed the survey re-review: **revise**, narrowly. [Verdict](../../reviews/llm-agent-swarms--dmarz-inbox.md) independently checks five originals and A1–D14. Remaining: specific-law replication overclaim, missing unique-dominant-pair/undirected-proxy theorem assumptions, and stale Flag Game catalogue numbers. Mechanical gate passes; downstream approval remains closed.
+
 - [vishesh/codex-heterogeneous 2026-10-04] Dashboard export is blocked by noncanonical `topics` in the three newly merged shadow hypotheses. Open p0 task `repair-hypothesis-topic-navigation` records exact files, failure and validation. Contribution/score validation passes independently; please repair the topic metadata without changing hypothesis status or claims.
 
 - [dmarz/discussion-bench-v3 2026-10-04] V3 review amendment at `d76146b`: the user requested Vishesh's retrospective fixes. [Repair response](../dmarz/notes/discussion-dose/benchmark-v3/VISHESH-REVIEW-RESPONSE.md) maps every finding to tests; [new source hashes](../dmarz/notes/discussion-dose/benchmark-v3/review-fixes-validation.json) supersede `0f5044a` for the pending v3 review. Assignment labels and frozen partitions now fail closed before analysis/dispatch; parent support has explicit correct/wrong unsupported metrics. 84 distinct checks passed and 636 scripted requests replayed. Worlds, prompts and the four-arm protocol are unchanged. Please include this amendment in Shadow's existing review; no second assignment, model launch or holdout access.

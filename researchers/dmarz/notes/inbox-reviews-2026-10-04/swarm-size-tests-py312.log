@@ -1,0 +1,36 @@
+test_race_persistence_and_unknown_charges (test_budget.Reservations.test_race_persistence_and_unknown_charges) ... ok
+test_shared_stage_cap_and_overrun (test_budget.Reservations.test_shared_stage_cap_and_overrun) ... ok
+test_twenty_dollars_shared_across_stages (test_budget.Reservations.test_twenty_dollars_shared_across_stages) ... ok
+test_invalid_plan_repaired_once (test_engine.Engine.test_invalid_plan_repaired_once) ... ok
+test_plan_validation (test_engine.Engine.test_plan_validation) ... ok
+test_provider_error_preserved (test_engine.Engine.test_provider_error_preserved) ... ok
+test_scripted_transport_all_sizes (test_engine.Engine.test_scripted_transport_all_sizes) ... ok
+test_transport_value_error_is_not_retried (test_engine.Engine.test_transport_value_error_is_not_retried) ... ok
+test_admission_failure_reconciles_all (test_failures.Failures.test_admission_failure_reconciles_all) ... ok
+test_allowlisted_codes_and_no_plan_retries (test_failures.Failures.test_allowlisted_codes_and_no_plan_retries) ... ok
+test_fatal_transport_stops_batch (test_failures.Failures.test_fatal_transport_stops_batch) ... ok
+test_fatal_work_error_stops_integration (test_failures.Failures.test_fatal_work_error_stops_integration) ... ok
+test_progress_fault_does_not_abort_model (test_failures.Failures.test_progress_fault_does_not_abort_model) ... ok
+test_upload_fault_preserves_outcome_stops_batch (test_failures.Failures.test_upload_fault_preserves_outcome_stops_batch) ... ok
+test_cap_cannot_exceed_authorization (test_launch.Launch.test_cap_cannot_exceed_authorization) ... ok
+test_config_cannot_raise_recorded_allowance (test_launch.Launch.test_config_cannot_raise_recorded_allowance) ... ok
+test_draft_cannot_launch (test_launch.Launch.test_draft_cannot_launch) ... ok
+test_http_timeout_and_missing_credential_are_safe (test_provider.ChildBoundary.test_http_timeout_and_missing_credential_are_safe) ... ok
+test_conservative_rounding (test_provider.Money.test_conservative_rounding) ... ok
+test_recorded_intervals_missing_ends_and_escaping (test_replay.Replay.test_recorded_intervals_missing_ends_and_escaping) ... ok
+test_public_tldr_verified_before_execution (test_reporting.Reporting.test_public_tldr_verified_before_execution) ... ok
+test_unacknowledged_publication_is_retained (test_reporting.Reporting.test_unacknowledged_publication_is_retained) ... ok
+test_wrong_public_tldr_fails_closed (test_reporting.Reporting.test_wrong_public_tldr_fails_closed) ... ok
+test_equivalent_repair_and_constant_cheat (test_tasks.Fixtures.test_equivalent_repair_and_constant_cheat) ... ok
+test_every_reference_and_broken_repository (test_tasks.Fixtures.test_every_reference_and_broken_repository) ... ok
+test_evidence_mutations (test_tasks.Fixtures.test_evidence_mutations) ... ok
+test_forbidden_python (test_tasks.Fixtures.test_forbidden_python) ... ok
+test_matched_coefficients_and_graph (test_tasks.Fixtures.test_matched_coefficients_and_graph) ... ok
+test_outcome_boundaries (test_tasks.Fixtures.test_outcome_boundaries) ... ok
+test_roots_and_sizes (test_tasks.Fixtures.test_roots_and_sizes) ... ok
+test_strict_json (test_tasks.Fixtures.test_strict_json) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.517s
+
+OK

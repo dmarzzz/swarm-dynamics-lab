@@ -1,0 +1,77 @@
+{
+  "derivations": [
+    {
+      "family": "evidence",
+      "structure": "parallel",
+      "opening": 6,
+      "first": 13,
+      "last": 15,
+      "first_rule": "item_00 = opening * a_0 + b_0",
+      "records_first": {
+        "a_0": 1,
+        "b_0": 7
+      },
+      "mutations_accepted": {
+        "wrong_value": false,
+        "missing_support": false,
+        "boolean": false,
+        "extra_source": false
+      },
+      "truth_mutation_prompts_unchanged": true,
+      "late_correct_accepted": false
+    },
+    {
+      "family": "repository",
+      "structure": "parallel",
+      "first_spec": "Return (x * 1) + 4 for every integer x from -100 through 100.",
+      "second_spec": "Return (x * 3) + 2 for every integer x from -100 through 100.",
+      "checks": {
+        "broken_passes": false,
+        "constant_passes": false,
+        "extra_file_passes": false,
+        "equivalent_passes": true
+      }
+    },
+    {
+      "family": "evidence",
+      "structure": "chain",
+      "opening": 6,
+      "first": 13,
+      "last": 27004,
+      "first_rule": "item_00 = opening * a_0 + b_0",
+      "records_first": {
+        "a_0": 1,
+        "b_0": 7
+      },
+      "mutations_accepted": {
+        "wrong_value": false,
+        "missing_support": false,
+        "boolean": false,
+        "extra_source": false
+      },
+      "truth_mutation_prompts_unchanged": true,
+      "late_correct_accepted": false
+    },
+    {
+      "family": "repository",
+      "structure": "chain",
+      "first_spec": "Return (x * 1) + 4 for every integer x from -100 through 100.",
+      "second_spec": "Return (item_00(x) * 3) + 2 for every integer x from -100 through 100.",
+      "checks": {
+        "broken_passes": false,
+        "constant_passes": false,
+        "extra_file_passes": false,
+        "equivalent_passes": true
+      }
+    }
+  ],
+  "chain_edges_removed_accepted": true,
+  "race": {
+    "attempted": 24,
+    "admitted": 3,
+    "exposure": 90,
+    "cap": 100
+  },
+  "reservation_microdollars": 425584,
+  "api_calls": 0
+}
