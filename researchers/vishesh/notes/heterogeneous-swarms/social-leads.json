@@ -1,0 +1,43 @@
+{
+  "schema": "heterogeneous-social-leads-v1",
+  "accessed": "2026-10-04",
+  "sources": [
+    {
+      "url": "https://x.com/denisyarats/status/2102252088067850507",
+      "author": "@denisyarats",
+      "published": "2026-09-21",
+      "access": "expanded root in browser",
+      "evidence": "firsthand build claim; linked code opened",
+      "idea_links": [
+        "HX-19",
+        "HX-06"
+      ]
+    },
+    {
+      "url": "https://x.com/tenobrus/status/2101945490656973245",
+      "author": "@tenobrus",
+      "published": "2026-09-21",
+      "access": "root post directly opened in browser",
+      "evidence": "skeptical opinion, no performance inference",
+      "idea_links": [
+        "HX-28",
+        "HX-04"
+      ]
+    },
+    {
+      "url": "https://x.com/Hydra_Swarm/status/2106562626729980221",
+      "author": "@Hydra_Swarm",
+      "published": "2026-10-03",
+      "access": "complete root text in latest search; video not watched",
+      "evidence": "product promotion, unverified efficacy",
+      "idea_links": [
+        "HX-09",
+        "HX-24"
+      ]
+    }
+  ],
+  "inherited_library_ids": [
+    "x-junlinwang3-2044821251022008577",
+    "x-arankomatsuzaki-1799986416077951460"
+  ]
+}

@@ -22,5 +22,11 @@
     "owner": "vishesh/codex-decision-models",
     "path": "researchers/vishesh/notes/decision-models/ideas.json",
     "collection": "ideas"
+  },
+  {
+    "id": "HX",
+    "owner": "vishesh/codex-heterogeneous",
+    "path": "researchers/vishesh/notes/heterogeneous-swarms/questions.json",
+    "collection": "ideas"
   }
 ]
