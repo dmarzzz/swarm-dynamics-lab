@@ -23,7 +23,7 @@ def stage_entry(rows):
 
 def build():
     entries = {stage: stage_entry(study.assignments(stage)) for stage in study.STAGES}
-    return {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'attempt': study.attempt(),
+    return {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'attempt': study.design()['attempt'],
             'digest': study.digest([(s, entries[s]['digest']) for s in ENTRIES]), 'stages': entries}
 
 

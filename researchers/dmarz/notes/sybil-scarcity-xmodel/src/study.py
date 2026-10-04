@@ -104,9 +104,11 @@ def code_revision():
         return 'unknown'
 
 
-def attempt():
-    a = design()['attempt']
-    assert a == '001', 'one attempt per model: a failed qualification is the result and is not repaired'
+def attempt(m=None):
+    """The attempt of a model's chain: the model's own `attempt` if set, else the study's. gpt-6-sol is
+    '002' because its attempt 001 was stopped by the operator during S0, before any model call."""
+    a = design()['models'][m or model()].get('attempt') or design()['attempt']
+    assert a in ('001', '002'), 'a failed qualification is the result and is not repaired'
     return a
 
 
@@ -158,7 +160,7 @@ def hub_experiment(m=None):
 
 def batch(stage, m=None):
     """Every batch carries the model tag, S0 included: each model's chain is complete on its own."""
-    return f'{stage.lower()}-{attempt()}-{tag(m)}'
+    return f'{stage.lower()}-{attempt(m)}-{tag(m)}'
 
 
 def params(stage):

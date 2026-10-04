@@ -42,6 +42,9 @@ models:
     # pre-registered in the first commit are unchanged: reasoning_effort low (recorded in every row),
     # max_completion_tokens 2000, JSON-object mode, 2 requests in flight, cap USD 150.
     canonical_model: gpt-6-sol
+    # Fresh batch names: attempt 001 of this model (code 9461ba1c) failed the launcher's setup because the
+    # selftests read STUDY_MODEL; the operator stopped its chain during S0, before any model call.
+    attempt: '002'
     request_template:              # the reference OpenAI adapter's body: exactly these keys plus messages
       model: gpt-6-sol
       reasoning_effort: low

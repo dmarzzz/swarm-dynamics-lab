@@ -18,6 +18,10 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+# The suite is independent of the launched model: the launcher's setup runs it with STUDY_MODEL and
+# STUDY_PROVIDER set. Tests exercise the first model unless they pin another one explicitly.
+for _name in ('STUDY_MODEL', 'STUDY_PROVIDER'):
+    os.environ.pop(_name, None)
 
 import analyze      # noqa: E402
 import chain        # noqa: E402
@@ -276,7 +280,7 @@ class Models(unittest.TestCase):
         with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5-5'}), self.assertRaises(ValueError) as ctx: study.model()
         self.assertEqual(str(ctx.exception), 'model_not_in_ladder')
         with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_RESULTS_DIR': '/r'}):
-            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001-sol', 'p0-001-sol', 'q0-001-sol', 's1-001-sol'])
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-002-sol', 'p0-002-sol', 'q0-002-sol', 's1-002-sol'])
             self.assertEqual((study.hub_experiment(), study.params('P0')['backend'], study.route(), study.ledger_path('/l/ledger.jsonl'), str(study.results_dir())),
                              ('sybil-scarcity-xmodel-sol', 'openai', openai_provider, '/l/ledger-sol.jsonl', '/r/sol'))
 
@@ -425,15 +429,15 @@ class WorkerRules(unittest.TestCase):
                 done = [r for r in rows if r['status'] == 'completed']
                 self.assertTrue(all(r['accounting']['reasoning_tokens'] == 300 and r['accounting']['cost_source'] == 'computed_from_pinned_prices' for r in done))
                 stub.restore(); units = [r['id'] for r in rows if r['status'] == 'not_started']
-                p = dict(study.params('S1'), batch='s1-001-sol-r1', continuation=1)
+                p = dict(study.params('S1'), batch='s1-002-sol-r1', continuation=1)
                 run2, summary2, rows2, _, _, _ = self.run_s1(stub, units=units, prior=rows, params=p, ledger_dir=shared, config=config)
                 self.assertEqual((summary2['graded'], summary2['passed']), (14, True))
                 end = openai_provider.Ledger(Path(shared) / 'ledger-sol.jsonl', config['budget']).transact()
-                self.assertEqual((end['calls_by_batch']['s1-001-sol'], end['usage_reported_calls']), (24, 24))
+                self.assertEqual((end['calls_by_batch']['s1-002-sol'], end['usage_reported_calls']), (24, 24))
         hub = FakeHub()
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_RESULTS_DIR': td, 'STUDY_MODEL': 'gpt-6-sol'}):
             chain.write_status({'source_hash': study.source_hash(), 'state': 'stopped_at_gate', 'stopped_stage': 'S1',
-                                'reason': 'provider_billing_stopped', 'stages': {'S1': {'batch': 's1-001-sol'}}})
+                                'reason': 'provider_billing_stopped', 'stages': {'S1': {'batch': 's1-002-sol'}}})
             out = io.StringIO()
             with patch('sys.stdout', out): code = chain.resume(sr=hub)
         self.assertNotEqual(json.loads(out.getvalue().strip().splitlines()[-1]).get('reason'), 'last_stop_was_not_a_billing_stop_of_S1')
