@@ -4,7 +4,24 @@ experiment: sybil-scarcity-synth
 status: exploratory
 follow_up_of: ../sybil-scarcity-opus/RESULTS.md
 attempt: '001'
+# Model ladder (required by dmarz/fleet-monitor, 2026-10-04). One model per attempt, chosen by the
+# environment variable STUDY_MODEL (default: the first entry). Each model has its own prices, batch
+# names, probe, qualification, ledger file and results directory. Models are never pooled.
 model: claude-opus-5-5
+model_ladder:
+- claude-opus-5-5
+- claude-opus-5
+models:
+  claude-opus-5-5:
+    input_usd_per_million: 4
+    output_usd_per_million: 20
+    efforts: [low, medium, high, xhigh, max]
+    thinking: always on; the request never carries a thinking field
+  claude-opus-5:
+    input_usd_per_million: 5
+    output_usd_per_million: 25
+    efforts: [low, medium, high, xhigh, max]
+    thinking: on by default; the request never carries a thinking field
 # READY.yaml carries one effort word (low). Effort is an arm factor here: see `efforts`.
 effort: low
 population: 972
@@ -150,7 +167,7 @@ budget:
     Q0: 48
     S1: 960
   max_attempted_calls: 1009
-  aggregate_usd: 190
+  aggregate_usd: 240
   max_output_tokens: 16000
   max_answer_chars: 500
   max_input_bytes: 240000
@@ -185,8 +202,6 @@ budget:
     stop_category: provider_credit_balance_low
   max_transport_attempts: 1300
   workers: 2
-  input_usd_per_million: 4
-  output_usd_per_million: 20
 primary_contrast:
   metric: rare_fabricated
   contrast: prompt base minus prompt rule
