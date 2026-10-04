@@ -66,3 +66,6 @@ class PilotTests(unittest.TestCase):
      allowed=i['wire_body']['response_format']['json_schema']['schema']['properties']['findings']['items']['properties']['citations']['items']['enum'];a['findings']=[{'claim':'x'*300,'citations':allowed[:13]} for _ in range(3)]
     p.accept(i,p.check(i,response(i,a)))
    self.assertTrue(p.complete)
+ def test_manifest_roundtrip_matches_frozen_packet(self):
+  import scale_pilot_run as run
+  for stage in sp.CONFIGS:self.assertEqual(run.build(stage),json.loads((BASE/f'reviews/{stage}-packet.json').read_text()))
