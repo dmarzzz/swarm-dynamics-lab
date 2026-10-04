@@ -1,6 +1,6 @@
 # sybil-scale-xl: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz, claim `dmarz-sybil-scale-xl` to 20:03Z. Amendment A1 (Opus 5.5, effort low, trimmed design). Not a review. Last updated 2026-10-04T08:25Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz, claim `dmarz-sybil-scale-xl` to 20:03Z. Amendment A1 (Opus 5.5, effort low, trimmed design). Not a review. Last updated 2026-10-04T10:14Z.
 
 ## 1. Results so far
 
@@ -12,20 +12,25 @@ Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz,
 
 The operator stopped `s1-a1` during input preparation (hub status failed, KeyboardInterrupt, 0 calls, no cost) and committed amendment A2 (commit 4217f29b): a call that gets HTTP 429 or 529 is retried at most twice, after 20 s and 60 s; every other failure still stops dispatch. Nothing scientific changes. Because the source hash changes, the chain restarts as batch a2: S0 `s0-a2` (run b7e6407c) has been running since about 08:23Z, then Q0 `q0-a2` (about USD 10 more), then S1.
 
+### 10:01Z to 10:10Z: S1 `s1-a2` ran and stopped at 481 of 576
+
+The worker was paused from 09:37Z to 09:55Z (fleet monitor's decision, to keep it off scarcity's S1 under the 5M input-tokens-per-minute limit measured at 09:20Z). Input preparation then finished and the first call was at 10:01:39Z.
+
+- 481 completed, 1 failed, 94 not started. USD 194.78, 48.53M input tokens, 537 seconds of calls. Hub status: failed.
+- Throughput: 5.8M input tokens per minute for the first five and a half minutes (61 to 66 calls per minute, latency 3.5 s), then the first 429s at about 10:07:30Z. 8 calls drew a 429; all 8 cleared on the first 20-second retry; none reached the second. Average over the whole stage 5.42M per minute.
+- **The stop was not the rate limit.** The failed call is `count_http_400` at 10:10:36Z (N=972, random, 4 checks, pass 0.9, world 6001). In the same two minutes discussion-v3-opus recorded 61 `provider_credit_balance_low` failures; a credit error is an HTTP 400. The account's credit ran out for a few minutes and one count_tokens request caught it. Amendment A2's retry covers 429 and 529 only.
+- Missing: 26 calls at N=972 (plus the failed one), 34 at N=2,916, 34 at N=8,748. 1 of 24 cells has all 24 worlds; the worst has 17. Primary contrast cells (N=8,748, coverage, pass 0.1): 22 of 24 worlds with fixed checks, 20 of 24 with proportional checks.
+
 ## 2. Gate forecast
 
-- Timeline for batch a2, from batch a1's timings: S0 about 8 minutes (to about 08:31Z), Q0 about 1 minute plus its input preparation, then S1 input preparation of 40 to 50 minutes, so the first S1 model call was expected around 09:20Z to 09:30Z. Measured at 09:11Z: N=8,748 preparation is at world 6009 of 6000-6023 and takes about 2.4 minutes per world, so the first model call is now about 09:45Z. S1 input preparation is about 70 minutes in this batch.
-- S1 has no pass gate; it ends when 576 calls are terminal or the ledger stops dispatch at USD 330.
-- Cost: Q0's USD 9.85 is at the top of the amendment's USD 7 to 10 estimate. Scaling the amendment's S1 estimate the same way gives about USD 235 to 245 for S1 and about USD 250 in total, under the USD 330 cap. This is my projection from one number, not a measurement; the per-size cost will be visible once S1 reports.
-- Time: input preparation is the long pole so far. If N=8,748 scales as the first two sizes did (about three times longer per step), the first model call is around 08:35Z to 08:45Z. Model time after that is unknown until answers land. Q0's 24 calls finishing inside a minute means calls run concurrently; if S1 keeps that pace the model part is well under an hour, unless the provider's input-token rate limit throttles the 4,374-report packets.
+No stage is running. Nothing to forecast until the operator picks a repair.
 
 ## 3. Next run
 
-**If S1 completes (576 of 576):** close-out is analysis and post-mortem; the study has no further stage. Nothing follows on this server unless a successor is planned now. Candidates already written down: proposal 3 (fixed attacker resources, identity splitting) in `notes/next-experiments-2026-10-04/README.md`, which both finished Sonnet replications name as the informative next step.
-
-**If S1 stops early on the USD 330 cap:** the cap is in `design.yaml`, which is part of `source_hash` (`src/study.py` line 22), so raising it means a new batch with fresh S0 and Q0. Check which cells are missing before deciding: the primary contrast is at N=8,748 and those are the most expensive calls.
-
-**If S1 stops on a failure:** one failed call stops new dispatch (`src/worker.py` line 59) and there are no retries, so a single HTTP 429 or 529 ends the stage with the remaining assignments not started. Four requests are in flight and the largest packets are about 200,000 tokens, so a rate limit on input tokens per minute is the likeliest cause; Q0 ran 24 such calls in a minute without one. Other declared categories: `nonterminal_output` (thinking used the 8,000-token room) and `refusal`. For a rate-limit stop the repair is lower concurrency or a retry on 429 and 529 ([LESSONS.md](LESSONS.md) item 8); either is a new batch with fresh S0 and Q0 and another 45 minutes of input preparation unless the built inputs are reused. Decide now whether a resume of the not-started assignments at the same source hash is acceptable, because that is the only repair that does not repeat the paid calls.
+- **Resume (cheapest):** dispatch only the 95 unfinished assignments at the same source hash. About USD 41 and two minutes of calls; the inputs are already built. The failed call was an account-level error, not a packet or instrument problem, so the resumed rows are the same measurement. It needs a dated note that the cohort was completed in two sittings, and the credit balance confirmed first.
+- **New batch:** S0, Q0 (USD 10), about 70 minutes of input preparation and USD 236.
+- **Close as is:** report the primary contrast on the complete pairs with the missing rows shown in the denominator.
+- For any of them: the stage draws 5.8M tokens per minute, above the limit. From a full bucket that lasts about five minutes; the resume is short enough to fit, a full S1 is not, and every lane without a retry rule takes invalid calls while it runs (compositional-safety lost four episodes to `http_429` at 10:06Z to 10:07Z).
 
 ## 4. Design notes for later runs
 
