@@ -3,14 +3,16 @@ id: antsy-v8-native-qualification
 type: task
 title: Prepare and launch fresh Antsy v8 OCR qualification
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T08:01Z
+updated: 2026-10-04T08:01Z
 ---
 
 ## Goal
