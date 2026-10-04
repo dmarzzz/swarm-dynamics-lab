@@ -69,6 +69,7 @@
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | open | p1 | build |  | dmarz | 2026-10-04T04:41Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
+| [healing-c4-selective](tasks/healing-c4-selective.md) | open | p1 | build |  | vishesh |  | Prepare and qualify C4 selective helping |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
@@ -260,10 +261,10 @@
 |---|---|---|---|---|
 | vishesh/codex-idea-scores | working | build-swarm-size-qualification | 2026-10-04T08:51Z | Q-A5 analyzed; implementing Q-A6 matched-roster pilot within original $20 ledger |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:50Z | sybil-scarcity-opus package pushed for the lead's review: code pinned at 36a03510 (selftest 33 OK, offline S0 168/168, rehearsal passed), pre-run review chain-001 on main; nothing launched, no model call |
+| vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:50Z | C4 PI review and policy tests complete; concrete plan approval pending before allocation; no new inference |
 | dmarz/market-split-film | done |  | 2026-10-04T08:45Z | filed the explainer film for the finished Sonnet market-split pilot s1-002 (reads the filed records only; no model calls, no edits to market-split-api or market-split-opus) |
 | vishesh/codex-theseus | working | theseus-d2-run | 2026-10-04T08:45Z | PI critique, D2 instrument validation and bounded execution |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T08:40Z | sybil-split-opus: prospective plan and frozen design pushed; implementing code, offline tests, scripted stage and rehearsal; no launch, no model call |
-| vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:36Z | C3 complete: 600 reports, 270 worlds, zero transport failures; measured null composite benefit published; machine stopped |
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
 | dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
 | dmarz/always-five-doc | done |  | 2026-10-04T08:22Z | Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned |
