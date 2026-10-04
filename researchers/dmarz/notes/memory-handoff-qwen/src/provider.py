@@ -1,5 +1,10 @@
 """Reference OpenRouter adapter and study ledger for ready-chain studies (program v5, 2026-10-04).
 
+memory-handoff-qwen copy: identical to researchers/dmarz/notes/pipeline/reference/openrouter_provider.py
+(sha256 86d0739e...) except one change, made 2026-10-04 before any run: the answer text is parsed with
+duplicate JSON keys rejected (category invalid_json), as preregistration item 11 requires. The reference
+tests (test_openrouter_provider.py, an unmodified copy) run against this file in src/selftest.py.
+
 Copy this file into a study's `src/` (it is then covered by the study's source hash) and pass the
 study's frozen configuration to it. It imports nothing from a study. Written by dmarz/pipeline at
 dmarz/fleet-monitor's request; tests are in `test_openrouter_provider.py` beside it.
@@ -56,6 +61,16 @@ INTEGRITY = ('duplicate_call_refused', 'stage_call_cap_reached', 'study_call_cap
              'aggregate_budget_exhausted', 'attempt_without_reservation', 'transport_attempt_cap_reached',
              'model_mismatch', 'provider_mismatch', 'reservation_bound_breached', 'missing_credential_alias')
 BODY_KEPT = 2000
+
+
+def _no_duplicate_keys(pairs):
+    """object_pairs_hook: a JSON object that repeats a key is not a valid answer."""
+    out = {}
+    for key, value in pairs:
+        if key in out:
+            raise ValueError('duplicate JSON key')
+        out[key] = value
+    return out
 
 
 class CallFailure(Exception):
@@ -377,7 +392,7 @@ class OpenRouter:
         if len(text) > self.b['max_visible_chars']:
             raise CallFailure('answer_too_long', account)
         try:
-            obj = json.loads(text)
+            obj = json.loads(text, object_pairs_hook=_no_duplicate_keys)
         except Exception:
             account['answer_text'] = text[:BODY_KEPT]
             raise CallFailure('invalid_json', account) from None
