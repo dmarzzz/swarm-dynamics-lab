@@ -1,6 +1,6 @@
 # Experiment setup record: memory-handoff-qwen / attempts 001 and 002
 
-Status: attempt 001 ran and stopped at the qualification gate; attempt 002 is prepared and has not run. This record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-memory.
+Status: attempt 001 ran and stopped at the qualification gate; attempt 002 ran to completion (results in RESULTS.md); chain 003 on gpt-6-luna is being prepared and has not run. This record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-memory.
 
 ## Ownership and question
 
@@ -59,9 +59,9 @@ Operations entry: manual, through the generic private launcher named in [RUN.md]
 |---|---|---|---|
 | G1 Plan written before implementation | pass | Preregistration section "Attempt 002" pushed at `415d26a8` before any attempt-002 code; 2026-10-04, dmarz/pipeline-memory | none |
 | G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, at code commit `3f1b0b98`, source hash `10f51d2c…`: selftest 88 of 88; offline S0 192 of 192 with 25 of 25 invariants; manifest check equal; rehearsal 36 of 36 checks in 93 s. Details in [reviews/chain-002-pre.md](reviews/chain-002-pre.md) | Not tested: Python 3.12, the real hub, the launcher, how the model writes the working fields |
-| G3 Current attempt admission | pending | [Pre-run review of attempt 002](reviews/chain-002-pre.md) on main; `READY.yaml` names it and declares `ledger: fresh` | The fleet monitor's same-researcher check, the queue entry, a fresh server claim |
-| G4 Qualification before scientific escalation | pending | attempt 002 has not run | P0 and Q0 on fixture set b; a second stop ends the line |
-| G5 Reconciliation and closeout | pending | attempt 002 has not run | `verify`, post-mortem |
+| G3 Current attempt admission | pass | [Pre-run review of attempt 002](reviews/chain-002-pre.md) on main; launched by dmarz/fleet-monitor at `5831e534` on sim-dmarz-13 after its same-researcher check; 2026-10-04 12:40Z | none |
+| G4 Qualification before scientific escalation | pass | P0 1/1; Q0 gate 24 of 24 valid and supported on fixture set b; chain gates (software); 2026-10-04 | none |
+| G5 Reconciliation and closeout | pass, with one item not done by the builder | S1 576/576 reconciled; rows recomputed (15 of 15 checks, [records](records/attempt-002/)); [post-mortem](reviews/chain-002-post.md); [RESULTS](RESULTS.md); claim released by the operator; 2026-10-04, dmarz/pipeline-memory | Hub artifact checksums (`verify` on the server) and the frames were not checked by the builder |
 
 Attempt 001's gates: G3 passed (launched by dmarz/fleet-monitor at `0d54225c`, run request 275); G4 failed (Q0 19 of 24 supported); G5 done by dmarz/pipeline ([post-mortem](reviews/chain-001-post.md), [records](records/README.md)). The gate table above this section is the attempt-001 record as written before its run.
 
@@ -74,8 +74,8 @@ History before the pin, all on 2026-10-04 and before any run: plan `bee94550`; i
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
 | 001 / none | S0, P0, Q0 at source hash `b4ab9025…` | [chain-001-pre](reviews/chain-001-pre.md); hub runs `95d12801`, `bc8748ab`, `908c3129` | S0 192/192/192/192/192; P0 1/1/1/1/1; Q0 23/23/23/23/23 (gate over 24: 19 supported); S1 not queued | [chain-001-post](reviews/chain-001-post.md): stopped at the qualification gate; a result; one repair allowed |
-| 002 / 001 | S0, P0, Q0, S1 at source hash `10f51d2c…` | [chain-002-pre](reviews/chain-002-pre.md) | not run | pending |
+| 002 / 001 | S0, P0, Q0, S1 at source hash `10f51d2c…` | [chain-002-pre](reviews/chain-002-pre.md); launch commit `5831e534`; hub runs `6e5badb7`, `94e45249`, `43926309`, `5a6fec17` | S0 192/192/192/192/n.a.; P0 1/1/1/1/1; Q0 23/23/23/23/23 (gate over 24: 24 supported); S1 576/576/576/576/576 | [chain-002-post](reviews/chain-002-post.md): complete valid result; [RESULTS](RESULTS.md) |
 
 ## Closeout
 
-Attempt 001: closed by dmarz/pipeline (post-mortem and records linked above); spend USD 0.000684, 24 calls. Attempt 002: not applicable, it has not run.
+Attempt 001: closed by dmarz/pipeline (post-mortem and records linked above); spend USD 0.000684, 24 calls. Attempt 002: closed by dmarz/pipeline-memory (post-mortem, results and records linked above); spend USD 0.026099, 600 calls; decision complete-valid-result. Study total USD 0.026783 of two separate USD 2 ledgers.

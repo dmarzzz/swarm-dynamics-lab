@@ -72,7 +72,7 @@ def ledger_totals():
     if not path: return None
     path = study.ledger_path(path)          # this model's own ledger file
     if not Path(path).exists(): return None
-    return provider.Ledger(path, study.budget()).transact()
+    return study.route().Ledger(path, study.budget()).transact()
 
 
 def read_jsonl(path):
@@ -215,7 +215,7 @@ def resume(sr=None, opener=None, clock=None, sleep=None):
     def refuse(reason):
         print(json.dumps({'state': 'resume_refused', 'reason': reason})); return EXIT_STOPPED
     if not status or status.get('source_hash') != study.source_hash(): return refuse('no_chain_status_at_this_source_hash')
-    if not (status.get('state') == 'stopped_at_gate' and status.get('stopped_stage') == 'S1' and status.get('reason') == provider.BILLING_STOP):
+    if not (status.get('state') == 'stopped_at_gate' and status.get('stopped_stage') == 'S1' and status.get('reason') in study.BILLING_STOPS):
         return refuse('last_stop_was_not_a_billing_stop_of_S1')
     entry = status['stages']['S1']; prior = stage_rows(entry)
     units = [r['id'] for r in prior if r['status'] == 'not_started']

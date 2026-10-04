@@ -41,7 +41,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T16:45Z | Build a cited narrative convergence map across the three researchers |
+| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T17:31Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T17:18Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
@@ -288,13 +288,14 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/pipeline-memory | working |  | 2026-10-04T17:32Z | memory-handoff-qwen: attempt 002 results, post-mortem and records on main; now finishing chain 003 (gpt-6-luna, original answer format, set a) from work-in-progress a5bd1a66; no launch, no model call |
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T17:30Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:29Z | verify-cost-qwen chain 003 (gpt-6-luna, original attempt-001 instrument, set a) pinned: code c74da5bc, source hash b1b15d25, 123 selftests, READY.yaml provider openai, review reviews/chain-003-pre.md, ledger fresh; waiting for dmarz/fleet-monitor. Qwen attempts 001 and 002 both stopped at Q0. No launch, no model call by this builder |
 | vishesh/codex-pi-review | idle | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T17:24Z | Direct cycle coordinated and repairs reviewed; Right Dissenter H5 finished adversely; final owning-task publication is pending. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T17:16Z | C4 S0 scientifically invalid from label leakage; full postmortem published, machine released; tested C5 proposal awaits changed-plan decision |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T17:05Z | S0-02 closed; strict format failure; offline repair validated; successor decision pending |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T16:55Z | D5 executed and failed acquisition; all24 assignments audited,48 failed transports,0responses; post-mortem complete and allocation released |
 | vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T16:55Z | A1 closed after first HTTP429; no responses or retry; host released PR309 |
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T16:44Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
 | shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
 | shadow/sol-audit-team | done | sol-audit-team | 2026-10-04T15:51Z | Completed frozen-PI delta, legacy gate probes, and exhaustive ready-chain inventory |
@@ -309,13 +310,12 @@
 | vishesh/fm-security-review | done | review-fork-merge-security | 2026-10-04T14:38Z | Review task complete; revise verdict published with source checks, three searches and correction groups R1-R4. |
 | shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
 | shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
+| dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T14:10Z | sybil-rules-180 complete: gpt-6-sol run analysed (RESULTS.md, post-mortems chain-001/002/003, records, artifacts, evidence row 2); Qwen did not qualify |
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
-| dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
-| dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
+| dmarz/openai-route | done |  | 2026-10-04T13:40Z | trust-credit-qwen attempt 002 results, post-run review and records on main; reference README corrected from live responses |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T13:05Z | sybil-scarcity-xmodel: Qwen chain ready (code 2753b03d, source hash 06cbd97e, review reviews/chain-001-pre.md); next: gpt-6-sol path (reference OpenAI adapter, price row, tests, own review); no launch, no model call. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T12:37Z | sybil-split-xmodel package ready (code 0ca09f04, source hash ebfb2bc3); pre-run review on main; rehearsals passed for both models; awaiting the fleet monitor's same-researcher check; nothing launched |
-| dmarz/pipeline-memory | working |  | 2026-10-04T12:28Z | memory-handoff-qwen attempt 002 pinned for the same-researcher check: code commit 3f1b0b98, source hash 10f51d2c, review reviews/chain-002-pre.md; next: the gpt-6-luna second-model follow-up (attempt 003 review) as its own commit; no launch, no model call |
 | dmarz/pipeline-split | idle |  | 2026-10-04T12:17Z | Idle. trust-credit-qwen chain-001 results are on main; the plan for attempt 002 (gpt-6-luna) is on main at 3d2d588c and its build was handed to dmarz/openai-route by the fleet monitor. |
 | dmarz/scale-opus | done |  | 2026-10-04T11:50Z | sybil-scale-opus closed out; S1 79bb3882 2400/2400 valid, primary +100.0 pp; Opus abstains on 31% of rare fields; claim released |
 | dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:45Z | build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check |

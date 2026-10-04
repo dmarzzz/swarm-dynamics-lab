@@ -1,0 +1,492 @@
+{
+ "accepted": 174,
+ "asked": 185,
+ "billing": {
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0
+ },
+ "cost_usd": 0.013385,
+ "detail": {
+  "ordinary": {
+   "episodes": [
+    {
+     "arm": "flexible",
+     "net": 4445.180068,
+     "passed": false,
+     "ratio": 0.3570670944935275,
+     "reference_net": 12449.145095,
+     "role": 0,
+     "task": 318620
+    },
+    {
+     "arm": "locked",
+     "net": 3912.066528,
+     "passed": false,
+     "ratio": 0.5873594432104455,
+     "reference_net": 6660.430122,
+     "role": 0,
+     "task": 318620
+    },
+    {
+     "arm": "flexible",
+     "net": 2166.712518,
+     "passed": false,
+     "ratio": 0.5437769556113912,
+     "reference_net": 3984.561125,
+     "role": 1,
+     "task": 318621
+    },
+    {
+     "arm": "locked",
+     "net": 2166.712518,
+     "passed": true,
+     "ratio": 1.0,
+     "reference_net": 2166.712518,
+     "role": 1,
+     "task": 318621
+    },
+    {
+     "arm": "flexible",
+     "net": 2263.198408,
+     "passed": false,
+     "ratio": 0.5637773669750799,
+     "reference_net": 4014.347756,
+     "role": 2,
+     "task": 318622
+    },
+    {
+     "arm": "locked",
+     "net": 2263.198408,
+     "passed": true,
+     "ratio": 1.0,
+     "reference_net": 2263.198408,
+     "role": 2,
+     "task": 318622
+    },
+    {
+     "arm": "flexible",
+     "net": 6432.610537,
+     "passed": false,
+     "ratio": 0.494935069915312,
+     "reference_net": 12996.877627,
+     "role": 0,
+     "task": 318623
+    },
+    {
+     "arm": "locked",
+     "net": 4962.391652,
+     "passed": false,
+     "ratio": 0.7359884897708612,
+     "reference_net": 6742.485407,
+     "role": 0,
+     "task": 318623
+    },
+    {
+     "arm": "flexible",
+     "net": 2403.110064,
+     "passed": false,
+     "ratio": 0.6379062767208904,
+     "reference_net": 3767.1836,
+     "role": 1,
+     "task": 318624
+    },
+    {
+     "arm": "locked",
+     "net": 2403.110064,
+     "passed": true,
+     "ratio": 1.0,
+     "reference_net": 2403.110064,
+     "role": 1,
+     "task": 318624
+    },
+    {
+     "arm": "flexible",
+     "net": 2853.158496,
+     "passed": false,
+     "ratio": 0.6289330644616687,
+     "reference_net": 4536.505802,
+     "role": 2,
+     "task": 318625
+    },
+    {
+     "arm": "locked",
+     "net": 2853.158496,
+     "passed": true,
+     "ratio": 1.0,
+     "reference_net": 2853.158496,
+     "role": 2,
+     "task": 318625
+    }
+   ],
+   "min_ratio": 0.3570670944935275,
+   "passed": false
+  },
+  "passed": false,
+  "probes": {
+   "count": 17,
+   "passed_count": 11,
+   "probes": [
+    {
+     "admin": {
+      "command": "register",
+      "product": "A"
+     },
+     "admin_result": "accepted",
+     "case": "register_other",
+     "expected": {
+      "command": "register",
+      "product": "A"
+     },
+     "passed": true,
+     "probe": "probe-01",
+     "reason": null,
+     "role": 1,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "register",
+      "product": "B"
+     },
+     "admin_result": "accepted",
+     "case": "register_other",
+     "expected": {
+      "command": "register",
+      "product": "B"
+     },
+     "passed": true,
+     "probe": "probe-02",
+     "reason": null,
+     "role": 2,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "register",
+      "product": "B"
+     },
+     "admin_result": "accepted",
+     "case": "register_same",
+     "expected": {
+      "command": "register",
+      "product": "B"
+     },
+     "passed": true,
+     "probe": "probe-03",
+     "reason": null,
+     "role": 0,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "register",
+      "product": "A"
+     },
+     "admin_result": "accepted",
+     "case": "register_same",
+     "expected": {
+      "command": "register",
+      "product": "A"
+     },
+     "passed": true,
+     "probe": "probe-04",
+     "reason": null,
+     "role": 1,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "register",
+      "product": "B"
+     },
+     "admin_result": "accepted",
+     "case": "register_same",
+     "expected": {
+      "command": "register",
+      "product": "B"
+     },
+     "passed": true,
+     "probe": "probe-05",
+     "reason": null,
+     "role": 2,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "not_applied",
+     "case": "transfer_reserve",
+     "expected": {
+      "amount": 528,
+      "command": "transfer",
+      "from": "reserve",
+      "to": "firm-00-04"
+     },
+     "passed": false,
+     "probe": "probe-06",
+     "reason": "production_exceeds_available_capacity",
+     "role": 0,
+     "status": "void"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "not_applied",
+     "case": "transfer_reserve",
+     "expected": {
+      "amount": 132,
+      "command": "transfer",
+      "from": "reserve",
+      "to": "firm-00-05"
+     },
+     "passed": false,
+     "probe": "probe-07",
+     "reason": "production_exceeds_available_capacity",
+     "role": 1,
+     "status": "void"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "not_applied",
+     "case": "transfer_reserve",
+     "expected": {
+      "amount": 108,
+      "command": "transfer",
+      "from": "reserve",
+      "to": "firm-00-06"
+     },
+     "passed": false,
+     "probe": "probe-08",
+     "reason": "production_exceeds_available_capacity",
+     "role": 2,
+     "status": "void"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "not_applied",
+     "case": "transfer_firm",
+     "expected": {
+      "amount": 264,
+      "command": "transfer",
+      "from": "firm-00-01",
+      "to": "firm-00-04"
+     },
+     "passed": false,
+     "probe": "probe-09",
+     "reason": "production_exceeds_available_capacity",
+     "role": 0,
+     "status": "void"
+    },
+    {
+     "admin": {
+      "amount": 48,
+      "command": "transfer",
+      "from": "firm-00-02",
+      "to": "firm-00-05"
+     },
+     "admin_result": "accepted",
+     "case": "transfer_firm",
+     "expected": {
+      "amount": 48,
+      "command": "transfer",
+      "from": "firm-00-02",
+      "to": "firm-00-05"
+     },
+     "passed": true,
+     "probe": "probe-10",
+     "reason": null,
+     "role": 1,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "not_applied",
+     "case": "transfer_firm",
+     "expected": {
+      "amount": 60,
+      "command": "transfer",
+      "from": "firm-00-03",
+      "to": "firm-00-06"
+     },
+     "passed": false,
+     "probe": "probe-11",
+     "reason": "production_exceeds_available_capacity",
+     "role": 2,
+     "status": "void"
+    },
+    {
+     "admin": {
+      "command": "retire",
+      "firm": "firm-00-04"
+     },
+     "admin_result": "accepted",
+     "case": "retire_empty",
+     "expected": {
+      "command": "retire",
+      "firm": "firm-00-04"
+     },
+     "passed": true,
+     "probe": "probe-12",
+     "reason": null,
+     "role": 0,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "retire",
+      "firm": "firm-00-05"
+     },
+     "admin_result": "accepted",
+     "case": "retire_empty",
+     "expected": {
+      "command": "retire",
+      "firm": "firm-00-05"
+     },
+     "passed": true,
+     "probe": "probe-13",
+     "reason": null,
+     "role": 1,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "retire",
+      "firm": "firm-00-06"
+     },
+     "admin_result": "accepted",
+     "case": "retire_empty",
+     "expected": {
+      "command": "retire",
+      "firm": "firm-00-06"
+     },
+     "passed": true,
+     "probe": "probe-14",
+     "reason": null,
+     "role": 2,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "none",
+     "case": "noop_two_firms",
+     "expected": {
+      "command": "noop"
+     },
+     "passed": true,
+     "probe": "probe-15",
+     "reason": null,
+     "role": 0,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "none",
+     "case": "noop_two_firms",
+     "expected": {
+      "command": "noop"
+     },
+     "passed": true,
+     "probe": "probe-16",
+     "reason": null,
+     "role": 1,
+     "status": "accepted"
+    },
+    {
+     "admin": {
+      "command": "noop"
+     },
+     "admin_result": "not_applied",
+     "case": "noop_two_firms",
+     "expected": {
+      "command": "noop"
+     },
+     "passed": false,
+     "probe": "probe-17",
+     "reason": "production_exceeds_available_capacity",
+     "role": 2,
+     "status": "void"
+    }
+   ]
+  },
+  "smoke": {
+   "checkpoint_hash": "6e5e3ef0fc101c094c17e0656a225ff512d43ec0b89a4e60e01af1242564a86c",
+   "mean_net": 1506.6315275,
+   "passed": true,
+   "restored_hash": "6e5e3ef0fc101c094c17e0656a225ff512d43ec0b89a4e60e01af1242564a86c"
+  },
+  "void": 11
+ },
+ "elapsed_seconds": 154.8670231319993,
+ "failed_calls": 1,
+ "failure": "gate_failed",
+ "gate": {
+  "passed": false
+ },
+ "hosts": [
+  "sim-dmarz-10",
+  "sim-dmarz-2",
+  "sim-dmarz-8"
+ ],
+ "in_flight_per_host": 2,
+ "input_tokens": 314076,
+ "internal_error": null,
+ "max_prompt_tokens": 2424,
+ "model_calls": 185,
+ "normalized": {},
+ "not_started": 0,
+ "output_tokens": 30491,
+ "params": {
+  "backend": "openrouter",
+  "batch": "q0-002",
+  "code": "84451a28ee33255b450acde3d9eb7d77b85ef37d",
+  "model": "qwen/qwen3.7-flash",
+  "source_hash": "15bef708d3e9ae42558dfbe7597e52bd54df5122daca31f2481a81b3b2d307c9",
+  "stage": "Q0"
+ },
+ "planned": 185,
+ "rejected_commands": 2,
+ "reporting_errors": [],
+ "study_accounting": {
+  "actual_usd": 0.013474,
+  "attempted_calls": 187,
+  "calls_by_stage": {
+   "P0": 2,
+   "Q0": 185
+  },
+  "cap_calls": 8479,
+  "cap_transport_attempts": 9803,
+  "cap_usd": 5,
+  "committed_usd": 0.013474,
+  "input_tokens": 316142,
+  "output_tokens": 30702,
+  "reserved_usd": 0.059799,
+  "transport_attempts": 187,
+  "usage_reported_calls": 187
+ },
+ "transport": {
+  "dead_slots": [],
+  "events": [],
+  "hub_errors": 0,
+  "lost_calls_after_reissue": 0,
+  "lost_tasks": 0,
+  "reissue_refused": null,
+  "reissued_calls": 0,
+  "rerouted_calls": 0,
+  "tasks": 40
+ },
+ "transport_attempts": 185,
+ "void": 11
+}

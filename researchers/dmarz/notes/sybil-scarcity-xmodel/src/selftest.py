@@ -29,11 +29,17 @@ import render       # noqa: E402
 import study        # noqa: E402
 import worker       # noqa: E402
 from test_provider import Request, Answers, Transport, Billing, LedgerRules  # noqa: E402,F401  (the adapter's own tests)
+import openai_provider  # noqa: E402
+import test_openai_provider as _toa  # noqa: E402
+# the OpenAI reference adapter's own tests, under distinct names
+OpenAIRequest, OpenAICost, OpenAIAnswers, OpenAITransport = _toa.Request, _toa.Cost, _toa.Answers, _toa.Transport
+OpenAIBilling, OpenAIStubServer, OpenAILedgerRules = _toa.Billing, _toa.StubServer, _toa.LedgerRules
 
 D = study.design(); B = study.budget(); SPEC = study.spec(); PD = study.parent_design()
 KEY = 'sk-or-test-SECRET-0123456789'
 REFERENCE = Path(__file__).resolve().parents[2] / 'pipeline' / 'reference'
 _cache = {}
+QWEN_FROZEN = 'ff8c2ad3d250e2117636e88d5438c946c23945155c51f94f086372cc06cbdd4f'
 
 
 def scripted_rows(stage):
@@ -267,9 +273,39 @@ class Models(unittest.TestCase):
                              ('sybil-scarcity-xmodel-qwen', 'qwen/qwen3.7-flash', 'openrouter', 'scripted'))
             self.assertEqual((study.ledger_path('/l/ledger.jsonl'), str(study.results_dir())), ('/l/ledger-qwen.jsonl', '/r/qwen'))
         os.environ.pop('STUDY_MODEL', None); self.assertEqual(study.model(), 'qwen/qwen3.7-flash')
-        for m, reason in (('gpt-6-sol', 'model_not_ready'), ('claude-opus-5-5', 'model_not_in_ladder')):
-            with patch.dict(os.environ, {'STUDY_MODEL': m}), self.assertRaises(ValueError) as ctx: study.model()
-            self.assertEqual(str(ctx.exception), reason)
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5-5'}), self.assertRaises(ValueError) as ctx: study.model()
+        self.assertEqual(str(ctx.exception), 'model_not_in_ladder')
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_RESULTS_DIR': '/r'}):
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001-sol', 'p0-001-sol', 'q0-001-sol', 's1-001-sol'])
+            self.assertEqual((study.hub_experiment(), study.params('P0')['backend'], study.route(), study.ledger_path('/l/ledger.jsonl'), str(study.results_dir())),
+                             ('sybil-scarcity-xmodel-sol', 'openai', openai_provider, '/l/ledger-sol.jsonl', '/r/sol'))
+
+    def test_qwen_configuration_is_unchanged_from_the_first_code_commit(self):
+        # the Qwen chain launched at code commit 2753b03d; its request, caps and prices must not move
+        s = D['models']['qwen/qwen3.7-flash']
+        self.assertEqual(study.digest([s, D['budget'], D['parent'], D['primary_contrast'], D['analysis']]), QWEN_FROZEN)
+
+    def test_gpt6_sol_configuration_passes_the_reference_adapter_and_its_arithmetic(self):
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol'}):
+            c = study.adapter_config(); b = c['budget']
+            self.assertIs(openai_provider.check_config(c), c)
+            self.assertEqual(c['request_template'], {'model': 'gpt-6-sol', 'reasoning_effort': 'low', 'max_completion_tokens': 2000,
+                                                     'response_format': {'type': 'json_object'}})
+            self.assertEqual(dict(b['prices']), openai_provider.PRICES['gpt-6-sol']); self.assertEqual((b['aggregate_usd'], b['workers']), (150, 2))
+            self.assertEqual(b['retry']['retryable_http_status'], [429, 500, 502, 503, 504])
+            p = b['prices']; largest = manifest.load()['stages']['S1']['max_request_bytes'] + 200        # sol body is a few bytes longer
+            reserve = (largest * max(p['input'], p['cache_write']) + b['max_output_tokens'] * p['output']) * b['reservation_margin'] / 1e6
+            self.assertLess(reserve, 0.35)                                                               # about USD 0.33 per call
+            self.assertLess(reserve * (b['workers'] + b['max_failed']), 0.05 * b['aggregate_usd'])      # open + unsettled failed calls
+            expected_high = b['max_attempted_calls'] * (24000 * p['cache_write'] + 600 * p['output']) / 1e6
+            self.assertLess(expected_high, b['aggregate_usd'])                                          # USD 98 at the cache-write bound
+            self.assertLessEqual(largest * 0.7, b['max_input_tokens'])
+            with patch.dict(os.environ, {openai_provider.KEY_ENV: 'sk-proj-test'}):
+                api = study.make_backend(None, c)
+                a = study.assignments('P0')[0]; body = api.body(study.SYSTEM, study.user_text(a['packet']))
+            self.assertEqual(list(body), list(openai_provider.BODY_KEYS)); self.assertEqual(body['messages'][1]['content'], study.actor_text(a['packet']))
+            self.assertIn('json', study.SYSTEM.lower())
+        self.assertEqual(sha(Path(__file__).resolve().parent / 'openai_provider.py'), sha(REFERENCE / 'openai_provider.py'))
 
     def test_budget_arithmetic(self):
         self.assertEqual(B['max_failed'], max(3, math.ceil(0.01 * B['max_calls']['S1'])))
@@ -375,6 +411,32 @@ class WorkerRules(unittest.TestCase):
                 summary = json.loads((Path(td) / 'out' / 'summary.json').read_text())
             self.assertEqual(run.final[0], want)
             if want == 'done': self.assertEqual((summary['qualification']['structurally_valid'], run.final[1]['model_calls']), (48, 48))
+
+    def test_gpt6_sol_stage_runs_through_the_openai_adapter_and_a_billing_stop_is_resumable(self):
+        clock = rehearse.FakeClock()
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol', openai_provider.KEY_ENV: KEY}):
+            config = study.adapter_config()
+            config = dict(config, budget=dict(config['budget'], max_calls=dict(config['budget']['max_calls'], S1=24), max_attempted_calls=24))
+            stub = rehearse.Stub('reference', credit_after=10)
+            with tempfile.TemporaryDirectory() as shared:
+                run, summary, rows, analysis, leaked, ledgers = self.run_s1(stub, clock=clock, expect_fail='provider_billing_stopped', ledger_dir=shared, config=config)
+                self.assertEqual((summary['failed'], summary['resumable'], summary['model_calls'], ledgers), (0, 1, 10, ['ledger-sol.jsonl']))
+                self.assertTrue(all(r['model'] == 'gpt-6-sol' for r in rows)); self.assertFalse(leaked)
+                done = [r for r in rows if r['status'] == 'completed']
+                self.assertTrue(all(r['accounting']['reasoning_tokens'] == 300 and r['accounting']['cost_source'] == 'computed_from_pinned_prices' for r in done))
+                stub.restore(); units = [r['id'] for r in rows if r['status'] == 'not_started']
+                p = dict(study.params('S1'), batch='s1-001-sol-r1', continuation=1)
+                run2, summary2, rows2, _, _, _ = self.run_s1(stub, units=units, prior=rows, params=p, ledger_dir=shared, config=config)
+                self.assertEqual((summary2['graded'], summary2['passed']), (14, True))
+                end = openai_provider.Ledger(Path(shared) / 'ledger-sol.jsonl', config['budget']).transact()
+                self.assertEqual((end['calls_by_batch']['s1-001-sol'], end['usage_reported_calls']), (24, 24))
+        hub = FakeHub()
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_RESULTS_DIR': td, 'STUDY_MODEL': 'gpt-6-sol'}):
+            chain.write_status({'source_hash': study.source_hash(), 'state': 'stopped_at_gate', 'stopped_stage': 'S1',
+                                'reason': 'provider_billing_stopped', 'stages': {'S1': {'batch': 's1-001-sol'}}})
+            out = io.StringIO()
+            with patch('sys.stdout', out): code = chain.resume(sr=hub)
+        self.assertNotEqual(json.loads(out.getvalue().strip().splitlines()[-1]).get('reason'), 'last_stop_was_not_a_billing_stop_of_S1')
 
     def test_structural_violation_blocks_every_call(self):
         run = FakeRun('x/s1', study.params('S1')); model = Model()

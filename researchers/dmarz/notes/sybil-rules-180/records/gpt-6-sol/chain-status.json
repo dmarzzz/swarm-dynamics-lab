@@ -1,0 +1,364 @@
+{
+  "budget": {
+    "max_calls": {
+      "D1": 192,
+      "P0": 1,
+      "Q0": 185,
+      "REISSUE": 360,
+      "S0": 0,
+      "S1": 7560,
+      "X0": 180
+    },
+    "max_calls_total": 8478,
+    "usd_cap": 150
+  },
+  "code": "0f0d91ce76c8876c0c8bef61f65f7299bebca971",
+  "distinct_hosts": true,
+  "ended": "2026-10-04T13:31:40Z",
+  "experiment": "sybil-rules-180",
+  "model": "gpt-6-sol",
+  "requested": [
+    "S0",
+    "P0",
+    "Q0",
+    "X0",
+    "S1",
+    "D1"
+  ],
+  "source_hash": "17665ae01f3291848e57cd54b745f75afc5249eb8a3edc6543f9c7d94aa3810c",
+  "stages": {
+    "D1": {
+      "accepted": 192,
+      "asked": 192,
+      "batch": "d1-002-gpt-6-sol",
+      "billing": {
+        "billing_affected_calls": 0,
+        "billing_pause_seconds": 0.0,
+        "billing_pauses": 0
+      },
+      "calls": 192,
+      "cost_usd": 1.499078,
+      "dropped_zero_orders": 0,
+      "elapsed_seconds": 142.28601252099907,
+      "ended": "2026-10-04T13:31:40Z",
+      "gate_passed": true,
+      "hosts": [
+        "sim-dmarz-10",
+        "sim-dmarz-2",
+        "sim-dmarz-8"
+      ],
+      "in_flight_per_host": 3,
+      "input_tokens": 388326,
+      "normalizations": 0,
+      "normalized": {},
+      "output_tokens": 52851,
+      "planned": 192,
+      "rejected_commands": 0,
+      "results_dir": "/srv/swarm/sybil-rules-180/results-gpt-6-sol/sybil-rules-180__d1-002-gpt-6-sol",
+      "run": "sybil-rules-180/d1-002-gpt-6-sol",
+      "started": "2026-10-04T13:29:17Z",
+      "status": "done",
+      "transport": {
+        "dead_slots": [],
+        "hub_errors": 1,
+        "lost_calls_after_reissue": 0,
+        "lost_tasks": 0,
+        "reissue_refused": null,
+        "reissued_calls": 0,
+        "rerouted_calls": 0,
+        "tasks": 196
+      },
+      "transport_attempts": 192,
+      "void": 0
+    },
+    "P0": {
+      "accepted": 1,
+      "asked": 1,
+      "batch": "p0-002-gpt-6-sol",
+      "billing": {
+        "billing_affected_calls": 0,
+        "billing_pause_seconds": 0.0,
+        "billing_pauses": 0
+      },
+      "calls": 1,
+      "cost_usd": 0.004149,
+      "dropped_zero_orders": 0,
+      "elapsed_seconds": 6.269145368001773,
+      "ended": "2026-10-04T12:44:29Z",
+      "gate_passed": true,
+      "hosts": [
+        "sim-dmarz-10",
+        "sim-dmarz-2",
+        "sim-dmarz-8"
+      ],
+      "in_flight_per_host": null,
+      "input_tokens": 1136,
+      "measurement": {
+        "actual_usd": 0.004149,
+        "attempts": 1,
+        "computed_usd": 0.0041485,
+        "error_body": null,
+        "finish_reason": "stop",
+        "http_status": null,
+        "input_tokens": 1136,
+        "latency_seconds": 5.369165518000955,
+        "output_tokens": 131,
+        "provider_reported_usd": null,
+        "reasoning_tokens": 72,
+        "request_bytes": 5220,
+        "reserved_usd": 0.03305,
+        "response_id": "chatcmpl-EVFrmO2NCMKCh5Kspm0o7J848rbni",
+        "response_meta": null,
+        "response_model": "gpt-6-sol",
+        "response_provider": null
+      },
+      "normalizations": 0,
+      "normalized": {},
+      "output_tokens": 131,
+      "planned": 1,
+      "rejected_commands": 0,
+      "results_dir": "/srv/swarm/sybil-rules-180/results-gpt-6-sol/sybil-rules-180__p0-002-gpt-6-sol",
+      "run": "sybil-rules-180/p0-002-gpt-6-sol",
+      "started": "2026-10-04T12:44:19Z",
+      "status": "done",
+      "transport": {
+        "dead_slots": [],
+        "hub_errors": 0,
+        "lost_calls_after_reissue": 0,
+        "lost_tasks": 0,
+        "reissue_refused": null,
+        "reissued_calls": 0,
+        "rerouted_calls": 0,
+        "tasks": 1
+      },
+      "transport_attempts": 1,
+      "void": 0
+    },
+    "Q0": {
+      "accepted": 185,
+      "asked": 185,
+      "batch": "q0-002-gpt-6-sol",
+      "billing": {
+        "billing_affected_calls": 0,
+        "billing_pause_seconds": 0.0,
+        "billing_pauses": 0
+      },
+      "calls": 185,
+      "cost_usd": 1.021149,
+      "dropped_zero_orders": 0,
+      "elapsed_seconds": 119.07102206600393,
+      "ended": "2026-10-04T12:46:29Z",
+      "gate_passed": true,
+      "hosts": [
+        "sim-dmarz-10",
+        "sim-dmarz-2",
+        "sim-dmarz-8"
+      ],
+      "in_flight_per_host": null,
+      "input_tokens": 310477,
+      "normalizations": 0,
+      "normalized": {},
+      "output_tokens": 24518,
+      "planned": 185,
+      "rejected_commands": 0,
+      "results_dir": "/srv/swarm/sybil-rules-180/results-gpt-6-sol/sybil-rules-180__q0-002-gpt-6-sol",
+      "run": "sybil-rules-180/q0-002-gpt-6-sol",
+      "started": "2026-10-04T12:44:29Z",
+      "status": "done",
+      "transport": {
+        "dead_slots": [],
+        "hub_errors": 0,
+        "lost_calls_after_reissue": 0,
+        "lost_tasks": 0,
+        "reissue_refused": null,
+        "reissued_calls": 0,
+        "rerouted_calls": 0,
+        "tasks": 40
+      },
+      "transport_attempts": 185,
+      "void": 0
+    },
+    "S0": {
+      "accepted": 8118,
+      "asked": 8118,
+      "batch": "s0-002-gpt-6-sol",
+      "billing": null,
+      "calls": 0,
+      "cost_usd": 0.0,
+      "dropped_zero_orders": 0,
+      "elapsed_seconds": 13.129205509001622,
+      "ended": "2026-10-04T12:44:19Z",
+      "gate_passed": true,
+      "hosts": null,
+      "in_flight_per_host": null,
+      "input_tokens": 0,
+      "normalizations": 0,
+      "normalized": {},
+      "output_tokens": 0,
+      "planned": 8118,
+      "rejected_commands": 0,
+      "results_dir": "/srv/swarm/sybil-rules-180/results-gpt-6-sol/sybil-rules-180__s0-002-gpt-6-sol",
+      "run": "sybil-rules-180/s0-002-gpt-6-sol",
+      "started": "2026-10-04T12:43:42Z",
+      "status": "done",
+      "transport": null,
+      "transport_attempts": 0,
+      "void": 0
+    },
+    "S1": {
+      "accepted": 7554,
+      "asked": 7560,
+      "batch": "s1-002-gpt-6-sol",
+      "billing": {
+        "billing_affected_calls": 0,
+        "billing_pause_seconds": 0.0,
+        "billing_pauses": 0
+      },
+      "branches": {
+        "A": {
+          "ended": "2026-10-04T13:18:03Z",
+          "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+          "rounds": 10,
+          "started": "2026-10-04T13:06:54Z",
+          "status": "completed",
+          "void_rounds": 3
+        },
+        "A2": {
+          "ended": "2026-10-04T13:28:52Z",
+          "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+          "rounds": 10,
+          "started": "2026-10-04T13:18:03Z",
+          "status": "completed",
+          "void_rounds": 3
+        },
+        "B": {
+          "ended": "2026-10-04T13:06:54Z",
+          "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+          "rounds": 10,
+          "started": "2026-10-04T12:57:51Z",
+          "status": "completed",
+          "void_rounds": 0
+        },
+        "C": {
+          "ended": "2026-10-04T12:57:51Z",
+          "restored_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+          "rounds": 10,
+          "started": "2026-10-04T12:49:09Z",
+          "status": "completed",
+          "void_rounds": 0
+        }
+      },
+      "calls": 7560,
+      "checkpoint_hash": "557811c679f51fda9012d7486074fbf477e881ecb27be4e4cce5d8fecee4e998",
+      "cost_usd": 51.266275,
+      "dropped_zero_orders": 0,
+      "elapsed_seconds": 2485.3909738609946,
+      "ended": "2026-10-04T13:29:17Z",
+      "gate_passed": true,
+      "hosts": [
+        "sim-dmarz-10",
+        "sim-dmarz-2",
+        "sim-dmarz-8"
+      ],
+      "in_flight_per_host": 3,
+      "input_tokens": 16409148,
+      "normalizations": 0,
+      "normalized": {},
+      "output_tokens": 1103064,
+      "planned": 7560,
+      "projection": {
+        "calls": 7752,
+        "committed_usd": 2.640943,
+        "mean_cost_usd": 0.008975805555555556,
+        "passed": true,
+        "projected_usd": 69.58044466666668,
+        "remaining_cap_usd": 147.359057
+      },
+      "rejected_commands": 1,
+      "results_dir": "/srv/swarm/sybil-rules-180/results-gpt-6-sol/sybil-rules-180__s1-002-gpt-6-sol",
+      "run": "sybil-rules-180/s1-002-gpt-6-sol",
+      "started": "2026-10-04T12:47:28Z",
+      "status": "done",
+      "transport": {
+        "dead_slots": [],
+        "hub_errors": 1,
+        "lost_calls_after_reissue": 0,
+        "lost_tasks": 0,
+        "reissue_refused": null,
+        "reissued_calls": 0,
+        "rerouted_calls": 0,
+        "tasks": 172
+      },
+      "transport_attempts": 7560,
+      "void": 6,
+      "warmup": {
+        "rounds": 2,
+        "status": "completed",
+        "void_rounds": 0
+      }
+    },
+    "X0": {
+      "accepted": 180,
+      "asked": 180,
+      "batch": "x0-002-gpt-6-sol",
+      "billing": {
+        "billing_affected_calls": 0,
+        "billing_pause_seconds": 0.0,
+        "billing_pauses": 0
+      },
+      "calls": 180,
+      "calls_per_second": 3.1553691131962878,
+      "cost_usd": 1.615645,
+      "dropped_zero_orders": 0,
+      "elapsed_seconds": 58.234461783998995,
+      "ended": "2026-10-04T12:47:28Z",
+      "gate_passed": true,
+      "hosts": [
+        "sim-dmarz-10",
+        "sim-dmarz-2",
+        "sim-dmarz-8"
+      ],
+      "in_flight_per_host": null,
+      "in_flight_selected": 3,
+      "input_tokens": 548827,
+      "max_prompt_tokens": 3052,
+      "normalizations": 0,
+      "normalized": {},
+      "output_tokens": 24382,
+      "planned": 180,
+      "planning_marker_met": true,
+      "projected_s1_seconds": 3246.89525979021,
+      "rejected_commands": 0,
+      "results_dir": "/srv/swarm/sybil-rules-180/results-gpt-6-sol/sybil-rules-180__x0-002-gpt-6-sol",
+      "run": "sybil-rules-180/x0-002-gpt-6-sol",
+      "started": "2026-10-04T12:46:29Z",
+      "status": "done",
+      "transport": {
+        "dead_slots": [],
+        "hub_errors": 0,
+        "lost_calls_after_reissue": 0,
+        "lost_tasks": 0,
+        "reissue_refused": null,
+        "reissued_calls": 0,
+        "rerouted_calls": 0,
+        "tasks": 46
+      },
+      "transport_attempts": 180,
+      "valid_actions": 180,
+      "void": 0
+    }
+  },
+  "started": "2026-10-04T12:43:42Z",
+  "state": "completed",
+  "updated": "2026-10-04T13:31:40Z",
+  "worker_hosts": [
+    "sim-dmarz-10",
+    "sim-dmarz-2",
+    "sim-dmarz-8"
+  ],
+  "worker_sessions": [
+    "sybil-rules-180-gpt-6-sol/workers-002-p0-002-gpt-6-sol-w0",
+    "sybil-rules-180-gpt-6-sol/workers-002-p0-002-gpt-6-sol-w1",
+    "sybil-rules-180-gpt-6-sol/workers-002-p0-002-gpt-6-sol-w2"
+  ]
+}

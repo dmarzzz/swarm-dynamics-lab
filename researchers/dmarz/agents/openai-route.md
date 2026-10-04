@@ -1,10 +1,10 @@
 ---
 agent: dmarz/openai-route
 tool: claude-code
-state: working
+state: done
 task: null
-doing: trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md
-updated: 2026-10-04T13:05Z
+doing: trust-credit-qwen attempt 002 results, post-run review and records on main; reference README corrected from live responses
+updated: 2026-10-04T13:40Z
 ---
 
 ## Notes

@@ -3600,4 +3600,44 @@ artifacts:
           - researchers/shadow/notes/wild-identity/results/curves.csv
           - researchers/shadow/notes/wild-identity/results/summary.json
         commit: 6d0a2ebbf6e64c34c2498aab8cdc406c2b4446c9-dirty
+  - id: sybil-rules-180-final-frame
+    category: content
+    type: figure
+    title: 180-owner economy under three rules and a repeat (gpt-6-sol)
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/sybil-rules-180-final-frame/sybil-rules-180-final-frame-v1.png
+        built_at: '2026-10-04T17:34:16Z'
+        note: S1 final frame of sybil-rules-180 attempt 002, gpt-6-sol
+        by: claude
+        model: claude-fable-5-1
+        session: claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f
+        request: 21ea82dc-1a37-48b9-97a5-e28023c9b66e
+        prompt: ship the big agent swarm run as well as the rest of the research program from the other thread in codex
+        ingredients:
+          - researchers/dmarz/notes/sybil-rules-180/analysis/render_frames.py
+          - researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/s1-002-gpt-6-sol/rounds.jsonl.gz
+          - researchers/dmarz/notes/sybil-rules-180/src/render.py
+        commit: cb5b63bf74f6e4e7c67ce544a4d606dc2bcff2b6-dirty
+  - id: sybil-rules-180-d1-frame
+    category: content
+    type: figure
+    title: 'Cue diagnostic: neutral manual vs worked example, 12 pairs (gpt-6-sol)'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/sybil-rules-180-d1-frame/sybil-rules-180-d1-frame-v1.png
+        built_at: '2026-10-04T17:34:23Z'
+        note: D1 final frame of sybil-rules-180 attempt 002, gpt-6-sol
+        by: claude
+        model: claude-fable-5-1
+        session: claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f
+        request: 21ea82dc-1a37-48b9-97a5-e28023c9b66e
+        prompt: ship the big agent swarm run as well as the rest of the research program from the other thread in codex
+        ingredients:
+          - researchers/dmarz/notes/sybil-rules-180/analysis/render_frames.py
+          - researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/d1-002-gpt-6-sol/rounds.jsonl.gz
+          - researchers/dmarz/notes/sybil-rules-180/src/render.py
+        commit: cb5b63bf74f6e4e7c67ce544a4d606dc2bcff2b6-dirty
 requires: '1.2'

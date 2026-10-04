@@ -1,6 +1,6 @@
 """Build the sanitized records and print every number used in RESULTS.md from the saved rows.
 
-    python3 reporting/build_report.py <results directory of the run> [--verify <launcher verify json>] [--write]
+    python3 reporting/build_report.py <results directory of the run> [--verify <launcher verify json>] [--write] [--out records/attempt-002]
 
 Reads chain-status.json and each stage's saved files, regrades every row and recomputes totals and
 the analysis with the study's own code (src/), and with --write copies sanitized records into
@@ -32,6 +32,7 @@ def jl(path):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('results'); ap.add_argument('--verify'); ap.add_argument('--write', action='store_true')
+    ap.add_argument('--out', default='records', help='records directory relative to the study (attempt 002: records/attempt-002)')
     a = ap.parse_args(); base = Path(a.results); out = {}
     status = json.loads((base / 'chain-status.json').read_text())
     # Attempt 001 (qwen/qwen3.7-flash, code d3219ceb) and attempt 002 (gpt-6-luna) answered byte-identical packets;
@@ -106,7 +107,7 @@ def main():
                                                                                                      analyze.mean(x['attacker_seats_propagated'] for x in h if x['checks'] == b and x['attacker_pass'] == 0.1)] for b in d['check_budgets']}}
     out['ledger'] = status.get('ledger')
     if a.write:
-        rec = HERE / 'records'; rec.mkdir(exist_ok=True)
+        rec = HERE / a.out; rec.mkdir(parents=True, exist_ok=True)
         clean = json.loads(json.dumps(status))
         for e in clean['stages'].values(): e['directory'] = '<study-base>/results/' + os.path.basename(e['directory'])
         (rec / 'chain-status.json').write_text(json.dumps(clean, indent=2, sort_keys=True) + '\n')
