@@ -4077,10 +4077,7 @@
         "antsy-literal-v2",
         "antsy-literal-v2r"
       ],
-      "registration_paths": [
-        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2/PLAN.md",
-        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md"
-      ],
+      "registration_paths": [],
       "evidence_confidence": {
         "score": 1,
         "claim": "Literal+code recovered two baseline errors; checker added no accuracy on four qualification receipts.",
@@ -4090,12 +4087,14 @@
       "sources": [
         "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
         "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
-        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json"
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2/PLAN.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md"
       ],
       "status_at_assessment": "qualification_failed_evaluation_unrun",
       "assessor": "vishesh/codex-methods",
       "assessed_at": "2026-10-04",
-      "source_commit": "b3e139e7"
+      "source_commit": "fade325f683015819cbd97d43020d5d3a00b86f8"
     },
     {
       "id": "influence-scale-sol",
