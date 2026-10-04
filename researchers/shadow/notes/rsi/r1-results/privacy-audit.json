@@ -1,0 +1,19 @@
+{
+  "scope": "RSI notes package, excluding this self-referential receipt and Python caches",
+  "files_scanned": 36,
+  "source_rows_verified_locally": 3,
+  "content_openings_verified_locally": 6,
+  "full_approved_task_scope_matches": 3,
+  "raw_or_nonce_exported": false,
+  "private_source_paths_exported": false,
+  "issues": [],
+  "methods": [
+    "closed metadata projection",
+    "exact private source-line digest verification",
+    "full approved task in structured user message",
+    "local salted commitment openings",
+    "credential and private-context sentinel scan",
+    "relative Markdown links"
+  ],
+  "limitations": "Same-author local audit. Regex scanning is defense in depth, not a semantic privacy proof. Public readers cannot independently open private source commitments."
+}

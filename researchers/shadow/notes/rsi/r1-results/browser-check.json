@@ -1,0 +1,28 @@
+{
+  "browser": "chromium",
+  "checks": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "four_stages": true,
+      "no_horizontal_overflow": true,
+      "no_network": true,
+      "metrics_match": true,
+      "play_pause_and_next": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "four_stages": true,
+      "no_horizontal_overflow": true,
+      "no_network": true,
+      "metrics_match": true,
+      "play_pause_and_next": true
+    }
+  ],
+  "javascript_errors": []
+}

@@ -1,0 +1,22 @@
+{
+  "author": "shadow/sol-rsi2",
+  "files": {
+    "clamp-shortcut.json": "0bd854585bd0aeda76be4a696243db7d9abba78de93e50b2bf6ceb9c28b36345",
+    "lineage-repair.json": "f21d8c2b6d137bfc781c2649e53d9a649f11eadc6eea612c16ec785c434ca710",
+    "rubric.json": "d8eaa9291cc1ae3287dd62da98fd0f53406f6aba05d167d55b3f07332238d1c6"
+  },
+  "fresh_model_calls_by_demo": 0,
+  "generation": "current-operating-coding-agent-authored",
+  "inputs": {
+    "manifest_sha256": "dbf8b575ef4eccd53deb864921d1336b5b98db1581fd8cac32a8f7b9dd9f38e7",
+    "source_root": "c0d8b56433cf13418eb16ccde7ac397068280472c0d1ab4b7100f11c98d3ba82"
+  },
+  "not_claimed": [
+    "blind-discovery",
+    "independent-review",
+    "fresh-model-execution",
+    "paid-auction"
+  ],
+  "proposal_count": 2,
+  "reasoning": "Known report loses attempts after last-valid selection. Preserve full lineage and comparable numerator/denominator. Contrast with cosmetic clamping that conceals failed attempts."
+}

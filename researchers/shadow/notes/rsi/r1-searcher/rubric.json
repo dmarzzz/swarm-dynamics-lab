@@ -1,0 +1,30 @@
+{
+  "acceptance": "all-assigned-checks-and-positive-baseline-gain",
+  "baseline_policy": {
+    "accounting": "selected-only",
+    "capture": "selected",
+    "first_attempts": "omit",
+    "lineage": "omit"
+  },
+  "checks": [
+    "physical_records",
+    "invalid_records",
+    "logical_records",
+    "selected_valid_records",
+    "superseded_records",
+    "selected_captured_records",
+    "capture_denominator",
+    "capture_rate",
+    "selection_rule",
+    "physical_ids",
+    "selected_ids",
+    "first_attempt_valid_records",
+    "invalid_then_valid_logical_records"
+  ],
+  "independent_review": false,
+  "metric": "complete-attempt-accounting",
+  "payout_microusd": 0,
+  "scientific_promotion": false,
+  "selection": "last-valid-else-last-in-source-order",
+  "source_root": "c0d8b56433cf13418eb16ccde7ac397068280472c0d1ab4b7100f11c98d3ba82"
+}

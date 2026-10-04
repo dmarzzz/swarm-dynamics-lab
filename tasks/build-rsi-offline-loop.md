@@ -22,8 +22,8 @@ Continue the owner-requested RSI tooling demo on shadow/rsi. Import approved met
 
 ## Done when
 
-- [ ] A prospective engineering replay plan and source manifest are saved.
-- [ ] Real capture-memory records and explicitly scoped pool metadata become swarm-trace envelopes; public teammate trace import is included if usable.
-- [ ] The searcher supplies pinned declarative bundles, including a useful repair and a rejected alternative.
-- [ ] An offline builder recomputes decisions and conserving attribution credits against frozen records.
+- [x] A prospective engineering replay plan and source manifest are saved.
+- [x] Real capture-memory records and explicitly scoped pool metadata become swarm-trace envelopes; public teammate trace import is included if usable.
+- [x] The searcher supplies pinned declarative bundles, including a useful repair and a rejected alternative.
+- [x] An offline builder recomputes decisions and conserving attribution credits against frozen records.
 - [ ] Tests, limitations, privacy audit, DEMO.md and a pull request are published on shadow/rsi only.

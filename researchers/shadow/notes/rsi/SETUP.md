@@ -12,10 +12,10 @@ Owner: shadow. Operator/searcher/developer: shadow/sol-rsi2. No independent rese
 |---|---|---|
 | G0 question and research gates | offline scope only | Repair known reporting defects; no new scientific hypothesis. Formal scientific gates remain blocked. |
 | G1 plan before implementation | pass | REPLAY-PLAN-v2.md committed before R1 implementation, 2026-10-04, sol-rsi2. |
-| G2 instrument | pending | Implement hash-pinned input projection, declarative policies, reference accounting and unit controls. |
+| G2 instrument | pass, offline scope | 18 R1 unit tests, 14 protocol tests, source rederivation and full replay comparison; see R1-POSTMORTEM.md. |
 | G3 attempt admission | not applicable to offline saved-data tooling | No model dispatch, simulation sweep, fresh experiment or external service. The owner explicitly requested this replay. |
 | G4 qualification | blocked for science | Offline software tests do not qualify an agent/scientific intervention. |
-| G5 closeout | pending | Save all decisions, evidence, privacy receipt and post-mortem. |
+| G5 closeout | complete, offline scope | All decisions, per-group checks, related-party credit receipts and visual/privacy checks retained; see R1-POSTMORTEM.md. |
 
 ## Design and instrument index
 
@@ -27,8 +27,8 @@ Operations: manual offline package; not registered as a new dispatched study. In
 
 ## Attempt and repair history
 
-R0 remains preserved in ../rsi-loop/. R1 starts with plan-only status. Maintain all source records, including failures; source content never changes during evaluation. Instrument bugs and validation repairs belong in R1-POSTMORTEM.md rather than being called fresh scientific attempts.
+R0 remains preserved in ../rsi-loop/. R1 retains all 327 episode records, including 127 invalid records. Source content never changes during evaluation. One test-only JSON-key-order assertion was corrected; no metric, source or candidate changed. Complete evidence and reconciliation: [R1-POSTMORTEM.md](R1-POSTMORTEM.md).
 
 ## Closeout and successor handoff
 
-Current gate: G2. Exact next action: freeze public input bytes/digests, build typed projections and constrained proposal replay, then run offline controls. Zero authorized paid spend is consumed or requested. No persistent worker or fleet resource is launched. Finish with a PR; do not merge. Any subsequent fresh-model or scientific-effect evaluation requires a new plan and appropriate authorization/review.
+Current gate: G5 complete for offline tooling; G4 remains blocked for science. Exact next action: review [DEMO.md](DEMO.md) and run `python3 researchers/shadow/notes/rsi/replay_loop.py --verify`. Zero paid spend is consumed or requested. No persistent worker or fleet resource is launched. Branch-only PR; do not merge automatically. Any subsequent fresh-model or scientific-effect evaluation requires a new plan and appropriate authorization/review.

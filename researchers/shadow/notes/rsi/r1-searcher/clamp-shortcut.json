@@ -1,0 +1,103 @@
+{
+  "bundle": {
+    "body": [
+      {
+        "action_id": "replay-accounting",
+        "artifact_hash": "22638e14adf146aa062f9aa016c4d1cecb3d16bcb7e2f0315de43ac0199a2041",
+        "depends_on": [],
+        "failure_policy": "abort-publication",
+        "operation": "offline-check"
+      },
+      {
+        "action_id": "publish-report",
+        "artifact_hash": "22638e14adf146aa062f9aa016c4d1cecb3d16bcb7e2f0315de43ac0199a2041",
+        "depends_on": [
+          "replay-accounting"
+        ],
+        "failure_policy": "abort-publication",
+        "operation": "propose-brief"
+      }
+    ],
+    "budget": {
+      "max_microusd": 0,
+      "max_model_calls": 0,
+      "max_runtime_ms": 30000
+    },
+    "bundle_id": "bundle-r1-clamp-shortcut",
+    "capabilities": {
+      "network": false,
+      "paid_calls": false,
+      "publish_raw": false,
+      "write_scope": "isolated-candidate"
+    },
+    "inclusion": {
+      "after_release": true,
+      "epoch_max": 1,
+      "epoch_min": 1,
+      "task_version_hash": "c0d8b56433cf13418eb16ccde7ac397068280472c0d1ab4b7100f11c98d3ba82"
+    },
+    "integrity": {
+      "previous_event_hash": null,
+      "record_hash": "1982efb9eb539dbf5648d51d3f21a106e90c7b8bc8595b2f9ae1f67476df2a5a",
+      "signature": null
+    },
+    "kind": "fix",
+    "mode": "offline-demo",
+    "nonce": "3b5ba3907cd5d1719347647881e05ba0c22a797ab4f138f1a2275fd77808fae5",
+    "opportunity_id": "r1-reporting-repair",
+    "orderflow_bid": {
+      "escrow_receipt_hash": null,
+      "funded_microusd": 0
+    },
+    "permitted_builders": [
+      "builder-offline-demo"
+    ],
+    "read_set": [
+      "event-r1-579487ce6e372b135d7e464f",
+      "event-r1-2a5561dac0e41942549a11a3",
+      "event-r1-9fd7bc0be64ec74f1ad13ee1",
+      "event-r1-3142a5bb07f0f8dedd0605e5",
+      "event-r1-b059fc2111bf7855645898c0"
+    ],
+    "rebates": {
+      "builder_bps": 1000,
+      "evaluator_bps": 1000,
+      "searcher_bps": 6000,
+      "trace_originator_bps": 2000
+    },
+    "record_type": "bundle",
+    "schema_version": "swarm-trace/0.2.0",
+    "searcher_id": "shadow/sol-rsi2",
+    "searcher_principal_id": "shadow",
+    "source_event_hashes": [
+      "1a54f5245739ef2ea4d35233775923374aa6efb7477391542b35603f6570589b",
+      "2dc6505bd163189140f48f5ce21fc7e1c47954680dc96db4f23ed66033165d21",
+      "445e0658f3535699280ccb435d7ee45f44d4d3da3e1fc105784aafadd3be2e70",
+      "7a70cec4a073e249a3686949306eee020391d1f36da794a7e206600482178762",
+      "4eea9ef04c10f02639f4aeee08ae880bf57d5b3c73b65cfc8dd4d2ffb33e567e"
+    ],
+    "trigger_event_ids": [
+      "event-r1-579487ce6e372b135d7e464f",
+      "event-r1-2a5561dac0e41942549a11a3",
+      "event-r1-9fd7bc0be64ec74f1ad13ee1",
+      "event-r1-3142a5bb07f0f8dedd0605e5",
+      "event-r1-b059fc2111bf7855645898c0"
+    ],
+    "valuation": {
+      "baseline_artifact_hash": "1ebf0a315d6a4ae7342f81267a9ecbf55d6684ed81fb48cad276a7b13885c2c8",
+      "claimed_gain_bps": 10000,
+      "metric_id": "complete-attempt-accounting",
+      "requested_bounty_microusd": 0,
+      "rubric_hash": "d32732f3d4344ce7e5bbcee84246096b26370c1851746138cfe7c1038ff19b3c"
+    },
+    "write_set": [
+      "candidate/r1-accounting-report"
+    ]
+  },
+  "policy": {
+    "accounting": "selected-only",
+    "capture": "clamp-raw-over-selected",
+    "first_attempts": "omit",
+    "lineage": "omit"
+  }
+}
