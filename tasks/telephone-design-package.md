@@ -3,7 +3,7 @@ id: telephone-design-package
 type: task
 title: Develop Telephone exploratory design and resource guide
 kind: question
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-village-fit
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-village-fit
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T18:25Z
-updated: 2026-10-04T18:25Z
+updated: 2026-10-04T18:31Z
+outputs:
+- researchers/vishesh/notes/telephone/README.md
+- library/datasets/data-ai-village-2026.md
 ---
 
 ## Goal
