@@ -5784,6 +5784,99 @@
    "sha256": "7cf283bcb4890fb8b0fbc129d38a1414561c3e2c7784f805ad63f60935912656",
    "size_bytes": 31524
   },
+  "growth-pressure-200-plan@2": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791149952,
+     "sha256": "080655398a088e70477b7ba6acd52d08cd777ce1613da91f7706d6097b286b7d",
+     "size": 36746,
+     "uri": "researchers/dmarz/notes/growth-pressure-200/PLAN.md"
+    },
+    {
+     "mtime": 1791149952,
+     "sha256": "67a6b36e55083c81ed5cdb9e806f57cc78d988b50b363e2b35815d4ccbee255e",
+     "size": 5024,
+     "uri": "researchers/dmarz/notes/growth-pressure-200/design.json"
+    },
+    {
+     "mtime": 1791149952,
+     "sha256": "e710fb91ffc51eb1439e97b6d7d06db5a9b25edbfd3728dd747bdf8a264d2a91",
+     "size": 11384,
+     "uri": "researchers/dmarz/notes/growth-pressure-200/SETUP.md"
+    },
+    {
+     "mtime": 1791149952,
+     "sha256": "13a7273f443d3f174ecaafc18557743c1d9e9ee5b2b322782a3f3c7f344649a5",
+     "size": 4163,
+     "uri": "researchers/dmarz/notes/growth-pressure-200/AMENDMENT-02.md"
+    },
+    {
+     "mtime": 1791149952,
+     "sha256": "af2c7a1907cf9d73d2a9dd67f996870a94e59cfc8dd6e79281bcf5cf90e2fd52",
+     "size": 3935,
+     "uri": "researchers/dmarz/notes/growth-pressure-200/reviews/design-review-v2.md"
+    },
+    {
+     "mtime": 1791148899,
+     "sha256": "196c60da5399f0aedebb68ca1a6b9f176f0459d977f2a27708e832f92af1f357",
+     "size": 1079,
+     "uri": "researchers/dmarz/notes/growth-pressure-200/src/build_plan.py"
+    },
+    {
+     "mtime": 1791149952,
+     "sha256": "ccac18ead98bfc8611b7a21123beb0c6a109b9067b72830f573c294da0218c63",
+     "size": 10951,
+     "uri": "researchers/dmarz/notes/growth-pressure-200/src/check_plan.py"
+    },
+    {
+     "mtime": 1791148899,
+     "sha256": "7cf283bcb4890fb8b0fbc129d38a1414561c3e2c7784f805ad63f60935912656",
+     "size": 31524,
+     "uri": "artifacts/growth-pressure-200-plan/growth-pressure-200-plan-v1.md"
+    },
+    {
+     "mtime": 1791148055,
+     "sha256": "7d624a512771079d1dab11c9e19e19fb2cba648d26cbafaeda627177f4f7e38d",
+     "size": 15872,
+     "uri": "researchers/dmarz/notes/sybil-rules-180/RESULTS.md"
+    },
+    {
+     "mtime": 1791148055,
+     "sha256": "eb01514123f0a920ef1d1f3d2a58a0aa5b1b343ab73297548289b954c486c157",
+     "size": 8597,
+     "uri": "researchers/dmarz/notes/sybil-rules-180/design.yaml"
+    },
+    {
+     "mtime": 1791148056,
+     "sha256": "d7c40d80c5dd8519a001efb45ba8ed070a2ca75cc5ed03cccdbe1d3b94db9221",
+     "size": 2888,
+     "uri": "researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/s1-002-gpt-6-sol/summary.json"
+    },
+    {
+     "mtime": 1791148055,
+     "sha256": "81a3e60139485de4e4d131d06710c74bbd9853c0c099ee8a58f0b5a2ff415231",
+     "size": 2912,
+     "uri": "researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol-r1/s1-002-gpt-6-sol-r1/summary.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/2609.04170"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/2410.08948"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791149953,
+   "path": "artifacts/growth-pressure-200-plan/growth-pressure-200-plan-v2.md",
+   "prompt_sha256": "162cec4acdc73c0d8273f8d4c5480f8732454158857c14110fa6c7fb62dae797",
+   "sha256": "155afc5aec76ae663fc9482f98b17c1ad9c3b9e74511f9dea57b6824d9830c3d",
+   "size_bytes": 37463
+  },
   "healing-helping-hands-outcomes@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

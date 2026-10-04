@@ -13,3 +13,9 @@ Three same-researcher subagent reviews covered economics, wall time/cost and inf
 Worked in an isolated detached worktree. Used scoped commits with explicit fetch/rebase/push because the branch-dependent task/sync helper assumes a tracking branch; no shared task was claimed or reassigned. Next work is implementation and qualification under SETUP, not an automatic launch.
 
 Publication validation: plan arithmetic/local links passed; evidence metadata validation and 11 metadata tests passed; lab check reported zero errors (five pre-existing unresolved-library warnings); strict Flight Deck check clean. The required evidence renderer also refreshed stale generated blocks for Antsy literal-v2r and optimal-swarm-size from their owners’ existing registry entries; no authored analysis or experiment inputs in those studies changed.
+
+## Growth-pressure-200 v2 — owner-requested publication
+
+Replaced the unrun 0/1/4 dose ladder with a 2×2 design: zero/four assigned evaders crossed with peer messaging off/on. Three 200-owner batches provide 12 isolated paired markets, 24 focal owners per arm, 51,000 main and 3,096 qualification decisions; maximum 54,637 transport attempts. Five silent opening rounds preserve the common checkpoint. All owners receive the same neutral invitation and explicitly send or pass; no supplied enforcement argument or recruitment reward. Public economic observations remain visible in all arms.
+
+Primary D−B; secondary interaction (D−B)−(C−A). Same-researcher reviews checked inference, missingness, interaction-range bounds and resource arithmetic. Kept the one-hour conditional execution target; fewer market pairs reduce precision. Preserved v1 in Git and the filed v1 artifact, recorded AMENDMENT-02.md, and filed a separate v2 artifact through Flight Deck. Only documentation and offline arithmetic checks; no simulation, provider probe, infrastructure or spending.

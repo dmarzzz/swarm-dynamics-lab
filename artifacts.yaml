@@ -4944,6 +4944,32 @@ artifacts:
     type: doc
     title: 'Astra Ultra’s experiment plan: growth pressure and rule evasion'
     versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/growth-pressure-200-plan/growth-pressure-200-plan-v2.md
+        built_at: '2026-10-04T21:39:40Z'
+        note: 'V2 prospective amendment: zero/four assigned evaders crossed with messaging off/on, silent opening, neutral
+          communication invitation, 12 paired markets. Original v1 preserved; no runs launched.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10874-3409-7ff1-9671-5ea243883587
+        prompt: okay push this experiment plan and give me the link
+        ingredients:
+          - researchers/dmarz/notes/growth-pressure-200/PLAN.md
+          - researchers/dmarz/notes/growth-pressure-200/design.json
+          - researchers/dmarz/notes/growth-pressure-200/SETUP.md
+          - researchers/dmarz/notes/growth-pressure-200/AMENDMENT-02.md
+          - researchers/dmarz/notes/growth-pressure-200/reviews/design-review-v2.md
+          - researchers/dmarz/notes/growth-pressure-200/src/build_plan.py
+          - researchers/dmarz/notes/growth-pressure-200/src/check_plan.py
+          - artifacts/growth-pressure-200-plan/growth-pressure-200-plan-v1.md
+          - researchers/dmarz/notes/sybil-rules-180/RESULTS.md
+          - researchers/dmarz/notes/sybil-rules-180/design.yaml
+          - researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/s1-002-gpt-6-sol/summary.json
+          - researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol-r1/s1-002-gpt-6-sol-r1/summary.json
+          - https://arxiv.org/abs/2609.04170
+          - https://arxiv.org/abs/2410.08948
+        commit: 7372a2a3508e456f13cec0ddf0289e29257a595e-dirty
       - v: 1
         date: 2026-10-04
         path: artifacts/growth-pressure-200-plan/growth-pressure-200-plan-v1.md
