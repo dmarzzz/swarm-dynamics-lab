@@ -21,3 +21,7 @@ The earlier $5 API/$2 infrastructure planning proposal can be reduced to a propo
 ## S0-02 instrument repair, 2026-10-04 UTC
 
 S0-01 started 36 native calls and was interrupted after systemic relay HTTP 502 failures. All 144 assigned statuses and USD 0.479232 conservative API exposure are preserved in the post-mortem. The failed relay did not retain enough evidence to distinguish provider rejection from response parsing. S0-02 therefore preserves sanitized provider receipts before semantic parsing, settles valid usage independently, and stops on the first transport/contract failure. It uses fresh roots 300–347, original qualification thresholds, unchanged models/prompts and at most one physical call per assignment. Original budget, deadline and ledgers remain in force. See reviews/S0-02-pre.md, written before this repair. No S1 or S2 execution is authorized by the repair.
+
+### 2026-10-04: successor approval binding
+
+The current owner runbook requires approval of the concrete next-run proposal after failure. S0-02 remains pending; its admission binds the actual decision to the attempt, assignment and instrument hashes separately from the original unchanged budget authority. Two offline guards verify that budget approval alone and a mismatched instrument cannot admit the successor. No new native data has been collected.

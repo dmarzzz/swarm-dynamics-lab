@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "study_id": "poietic-agents",
+  "parent_handoff_sha256": "1f32451f3ec185fb3fd328cc7151827d5eaebd49043f70225f2512f0a0a9e59c",
+  "verdict": "repair",
+  "outcome_interpretation": "Native instrument failure; no model competence or swarm efficacy inference.",
+  "assessor": "vishesh/codex-heterogeneous",
+  "assessed_at": "2026-10-04T08:59:25.064917+00:00",
+  "attempt": "S0-01",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "S0 asked whether the three pinned interfaces satisfy the clean lifecycle contract, not whether adaptive specialization improves swarm efficiency.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/PROTOCOL.md",
+          "sha256": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "scenarios",
+      "status": "unknown",
+      "finding": "Planned twelve templated cases per role; native interpretability was lost at the relay before scenario behavior could be assessed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/PROTOCOL.md",
+          "sha256": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        }
+      ],
+      "next_action": "Preserve responses and repeat on disjoint cases without changing task semantics.",
+      "acceptance_check": "S0-02 response records support all declared fetch, answer, refresh and capability checks."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Expected-action reference exists, but no usable native action reached it; model behavior and protected-access restraint remain unobserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/PROTOCOL.md",
+          "sha256": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e"
+        }
+      ],
+      "next_action": "Run repaired fresh qualification only after approval.",
+      "acceptance_check": "Every role meets the original clean/action and protected-access thresholds."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Zero usable responses retained; no model qualifies. Generic HTTP 502 cannot diagnose model incompetence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        }
+      ],
+      "next_action": "Repair error retention and qualify fresh cases.",
+      "acceptance_check": "At least44/48 correct,48/48 valid and zero protected access per role."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Billing, model receipt and action validity were collapsed at one boundary, preventing causal diagnosis.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        }
+      ],
+      "next_action": "Separate billing settlement from response/action parsing and retain allowlisted receipts.",
+      "acceptance_check": "Offline boundary faults remain distinguishable and native receipt fields survive failures."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Qualification denominator is twelve dependent four-step cases per role; nine generalist cases started, zero swarm efficacy roots. All144 assigned outcomes retained. This is an engineering screen without population precision claims.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/PROTOCOL.md",
+          "sha256": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "agent_context",
+      "status": "unknown",
+      "finding": "Requested routes and context receipts exist, but served-model metadata was lost; matching actual execution cannot be confirmed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        }
+      ],
+      "next_action": "Retain served model/provider and context receipts before validation.",
+      "acceptance_check": "Every accepted response matches its pinned route and delivered-context identity."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "gap",
+      "finding": "All144 statuses reconcile:35 failed responses,one interrupted in-flight,108 unstarted. Original raw provider responses are irrecoverable.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/artifact-readback.json",
+          "sha256": "0c8e5fa4fe1bfe06b8e36883a9ac392d5a8dcca191c6b00f45b1d330e9cf4fa2"
+        }
+      ],
+      "next_action": "Preserve new provider receipts before semantic validation; retain this failed attempt separately.",
+      "acceptance_check": "One record per assignment and one durable preparse receipt or safe error per started call."
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "36 unresolved calls remain reserved at USD0.479232; released allocation lifetime plus API upper exposure stays below original USD2. Actual provider billing remains unknown.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/cost-closeout.json",
+          "sha256": "1d550b92efd2af1367e063cad877014c1d0be580da35c24f2d48fbb2629deb39"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Frozen deployed source and54 deployment checks identify the instrument, but missing provider responses prevent replaying its underlying failure.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        }
+      ],
+      "next_action": "Keep frozen S0-01 and archive repaired source and raw sanitized S0-02 receipts.",
+      "acceptance_check": "Saved receipts reproduce every validity, correctness and billing classification without new calls."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Final PNG was visually checked against144 assigned outcomes and the three contract counts; all copies passed hash readback. It labels qualification, not swarm efficacy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
+          "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/S0-01/artifact-readback.json",
+          "sha256": "0c8e5fa4fe1bfe06b8e36883a9ac392d5a8dcca191c6b00f45b1d330e9cf4fa2"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    }
+  ]
+}

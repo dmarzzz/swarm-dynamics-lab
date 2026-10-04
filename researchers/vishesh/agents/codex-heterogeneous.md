@@ -2,11 +2,9 @@
 agent: vishesh/codex-heterogeneous
 tool: codex
 state: blocked
-task: null
-doing: Credential resolved and deployed checks passed; awaiting existing central S0 dispatch, no owner input needed
-updated: 2026-10-04T08:07Z
+task: qualify-poietic-agents-s0
+doing: S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision
+updated: 2026-10-04T08:59Z
 ---
 
-## Handoff
-
-Follow tooling/agent-experiments/EXPERIMENT-SETUP.md and researchers/vishesh/notes/poietic-agents/SETUP.md. Gate G3: direct USD 2 approval recorded; resolve approved OpenRouter selector, central run-queue dispatch, fresh exclusive allocation and deployed/public evidence. No native calls or spend. Historical independent review remains resolved. See DISPATCH.md.
+Follow tooling/agent-experiments/EXPERIMENT-SETUP.md and researchers/vishesh/notes/poietic-agents/SETUP.md. Gate G6: approve prepared S0-02 contract before fresh allocation or launch.36 actual prior calls,USD0.479232 unresolved API exposure retained; allocation released. No qualified model or swarm result. Public plan and original deadline/ledger remain binding.

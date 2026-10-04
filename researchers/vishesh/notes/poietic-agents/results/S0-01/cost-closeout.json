@@ -1,0 +1,11 @@
+{
+  "allocation_released": true,
+  "allocated_infrastructure_usd": 0.07722376666666667,
+  "billing_basis": "allocation lifetime at verified hourly rate; provider invoice not retrieved",
+  "api_known_settled_usd": 0,
+  "api_actual_spend_usd": null,
+  "api_unresolved_exposure_usd": 0.479232,
+  "cumulative_cost_upper_usd": 0.5564557666666666,
+  "physical_calls": 36,
+  "original_budget_usd": 2
+}

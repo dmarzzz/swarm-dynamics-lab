@@ -1,24 +1,24 @@
 {
   "schema": "poietic-validation-v0.2",
-  "checked_utc": "2026-10-04T08:45:21.846309+00:00",
+  "checked_utc": "2026-10-04T09:00:38.612603+00:00",
   "assessor": "vishesh/codex-heterogeneous",
   "scope": "same-author offline S0-02 repair checks; not native qualification",
-  "tests_passed": 59,
+  "tests_passed": 63,
   "tests_failed": 0,
   "python": "3.13.13",
   "pillow": "11.3.0",
   "command": "python3 -m unittest discover -s researchers/vishesh/notes/poietic-agents/tests -v",
   "file_hashes": {
-    "AMENDMENTS.md": "33938205027aaf97640ba76d749a89f42c71c20693ff342831a092efbb72c887",
+    "AMENDMENTS.md": "981f5d91244a32107339fffc1ebddc20bab9c3198fef2faf02688d503fbeb939",
     "PROTOCOL.md": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e",
-    "README.md": "b5c2567b38c6d561506238439d73f8a043a8c36570b3af491327c35057e146a0",
+    "README.md": "61170312bcfa9ea85c11b694bfd890a9c732f0ba764d508834c3081918a4e978",
     "SCENARIOS.md": "6bdbf9bc45a68357808ef9313288794e495de3e4fb3ce3c1f282e3abcdc44bd5",
     "VISUALIZATION.md": "dd5f522bcf6d049e93073c9c082b1be8f97500372809f77f030055fd1491a8fe",
     "contracts.json": "b6abab79240b4df31a4944998f20f6212256be9441255f28c88dba47f6633f63",
     "design.yaml": "7c215680536728f0bb973be7b1de63a16475444dd0493069c4f98a37358887d7",
     "models.json": "0b3068d418b7bbf04281a7d10b66061ecc277cf8df5c95d857d2442eee1bab4b",
     "requirements.txt": "15f202acecff97bf2bd3cb126d800638771db9c20484c5d7a441e4098a82832c",
-    "src/admission.py": "9988e7ffac5b8f43baafba233bb653b1c0cd073ef661236bc6e783c39f7a9cc5",
+    "src/admission.py": "60ced354c672e46d91c04ea9b66a6487e081d60a65dce68f8b7315ea5687e437",
     "src/budget.py": "bde3cfd6270cfbd8392383316c48a8eb84431d345518502ddcb5fb8d7d1d339b",
     "src/common.py": "e3f39d17d06f89c93b78edcb1c0ca12c1ab6be5601d49f312d1a4e7cb6a71027",
     "src/engine.py": "bbaa579cfa275fdd6ebbc2da0461cc89ab96ec38dc353431ed8d0aeba18167f4",
@@ -27,21 +27,22 @@
     "src/lineage.py": "a2500040ed30ee029b5e4e10aa1aac99b28dd80ac3adc4a9178af4ba919963c9",
     "src/native.py": "161f34595efa43674f236403def9609962d9364819f919bf843e363f4af34352",
     "src/operators.py": "e728ceb4820564ae8eac1335237b03bd641628e0b50ab8391dbc1ed38a136fe5",
-    "src/prepare.py": "5bb2e779b56c894b6684f522042d5bc18eb486f793293f2dfff1c6c6b581c9b7",
+    "src/prepare.py": "36a9c5c861c4faf1caf13df60745813931d30199ca1c3adfcfeb504d71fafc12",
     "src/qualification.py": "999f5b174b39eb93a348aaff3c1a0eb46420759484b1ab41a166dca1c285929a",
     "src/relay.py": "6c5e96cf25bf88843ea97a094fad58f2e630a15447820fef5db0551d82f63f45",
     "src/render.py": "c420fbe18ba8b029797974bfceff8cc5db849060f68b901ec7803f3954cef8cb",
     "src/world.py": "f8be5acb5260f5edb0bda93a354facde9d89a3fa340ec75f1bb217c90c26e1bb",
-    "tests/test_instrument.py": "08fcc7d6ea8291d002b3126bd8b798bad6e423543f711f65384f58367bb9cb2f"
+    "tests/test_instrument.py": "0f3d931cfd96bcdf624754e0d420273a9948bed0b11bb836c654cffc923e02a3",
+    "tests/test_relay_boundary.py": "66a8dac91fa3547f8b8aa27f3f6d093083b16a37f8444217f98e671b3e3fe674"
   },
   "assignment_count": 144,
-  "assignment_sha256": "e960ce96ad56e31c488de181f857b6dc334e3922ed252312407024e3f73fb6c7",
+  "assignment_sha256": "66c90c3ec5443ecd8ed0ef3e9836c0960e6a590442ea8ad114d2b17321f6ffd1",
   "reserved_qualification_fixtures_generated": false,
   "S1_roots_opened": false,
   "S2_roots_opened": false,
   "model_calls": 0,
   "actual_api_spend_usd": 0,
-  "maximum_api_reserve_usd_at_pinned_prices": 1.447723008,
+  "maximum_api_reserve_usd_at_pinned_prices": 0.723861504,
   "visual_checks": {
     "png_dimensions": [
       1600,
@@ -52,14 +53,14 @@
     "fixture_label": "SCRIPTED - NOT MODEL EVIDENCE"
   },
   "known_limits": [
-    "Native provider responses and qualifications remain unobserved",
-    "Independent review is design-only; implementation checks are by author",
-    "S1 requires development-selected static baseline and stage admission; CLI only admits S0",
-    "Credential provenance and dedicated allocation are not inferred from working access"
+    "S0-02 has zero native responses; previous S0-01 had36 calls and failed observability, with full unresolved exposure retained separately.",
+    "63 instrument tests are author-run offline software checks;11 metadata tests separately passed.",
+    "S1 requires development-selected static baseline and stage admission; CLI admits only S0-02.",
+    "Global metadata coverage check has a preexisting unrelated missing registration for sybil-specialists-opus; owned metadata rendered without modifying its documents."
   ],
-  "authorized_total_cumulative_usd": 0,
-  "launch_smoke": "Candidate refuses dispatch without explicit authorization; no native calls",
+  "authorized_total_cumulative_usd": 2,
+  "launch_smoke": "Candidate rejects missing concrete owner update decision, budget, source, public plan and allocation; no native calls.",
   "credential_boundary": "local-only relay; worker contains no provider key or Authorization header",
-  "relay_health": "attempt/source/assignment/credential/deadline/unused-ledger binding precedes hub start; two tests pass",
+  "relay_health": "Expected36 prior calls/USD0.479232 exposure bound; no new unused-ledger authority.",
   "validation_note": "S0-02 roots 300\u2013347 unopened; prior S0-01 native failure retained separately."
 }

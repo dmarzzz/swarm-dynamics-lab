@@ -219,10 +219,17 @@ class AdmissionTests(unittest.TestCase):
           'public_plan':{'url':'https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/README.md','sha256':'b'*64},
           'run_tldr':'TLDR: unit fixture','condition_tldrs':{r:'TLDR: unit fixture' for r in ROLES}}
         self.c['page_verification']={'url':self.c['public_plan']['url'],'rendered':True,'checked_at':self.now}
+        self.c['owner_update_approval']={'approved':True,'attempt':'S0-02','decision_reference':'unit-fixture-only','assignment_sha256':self.c['assignment_sha256'],'instrument_sha256':digest(self.c['file_hashes'])}
     def test_complete_fixture_and_missing_budget(self):
         self.assertTrue(verify(self.c,self.now,actual_host='fixture')['ready'])
         self.c['authorization']['owner_approved']=False
         with self.assertRaisesRegex(ValueError,'budget_not_authorized'):verify(self.c,self.now,actual_host='fixture')
+    def test_budget_approval_does_not_approve_successor(self):
+        self.c['owner_update_approval']['approved']=False
+        with self.assertRaisesRegex(ValueError,'owner_update_approval'):verify(self.c,self.now,actual_host='fixture')
+    def test_owner_update_cannot_approve_different_instrument(self):
+        self.c['owner_update_approval']['instrument_sha256']='b'*64
+        with self.assertRaisesRegex(ValueError,'owner_update_approval'):verify(self.c,self.now,actual_host='fixture')
     def test_fault_admission_matrix(self):
         for section,key,value in [('allocation','checked_at',self.now-301),('allocation','exclusive',False),('allocation','workload_idle',False),('allocation','approved_account_verified',False),('allocation','expires_at',self.now+100),('credential','study_authorized',False),('page_verification','rendered',False)]:
             c=copy.deepcopy(self.c);c[section][key]=value
