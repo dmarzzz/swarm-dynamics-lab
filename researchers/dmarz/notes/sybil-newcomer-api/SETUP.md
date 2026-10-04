@@ -10,7 +10,7 @@
 - Primary contrast: renewal minus reputation specialist accuracy at round eight, sixteen controller identities, sleeper attack. The +10 percentage-point useful-effect marker and descriptive paired-world analysis were declared in [preregistration.md](preregistration.md).
 - Research status: exploratory instrument and S1 comparison in the owner's notes. Formal S2 is disabled; no completed novelty survey or formal hypothesis acceptance is asserted.
 - Prior local evidence: [sybil-scale-api results](../sybil-scale-api/RESULTS.md), where repeated specialist facts allowed high accuracy despite substantial honest-specialist rejection. This follow-up makes honest specialist knowledge scarce during attacks and fixes controller message/computation resources while identity count changes.
-- Current attempt: `sybil-newcomer-api/8def40e4`, S1, execution revision `e9db4c58a8847d2f54d60a8ff3cc70f81f58263e`. The parent reports collection running without errors at the time of this index. Final reconciliation, interpretation, artifacts and release are pending.
+- Current attempt: `sybil-newcomer-api/8def40e4`, S1, execution revision `e9db4c58a8847d2f54d60a8ff3cc70f81f58263e`. Collection and scientific verification are now complete: 1,944/1,944 valid observations, with no errors. Archival, claim release and temporary-host teardown are now verified; these completion updates are later than this index's original creation.
 
 ## Gate evidence
 
@@ -23,7 +23,7 @@ Statuses below describe what this retrospective index can substantiate. A pendin
 | G2 Instrument and offline checks | Pass for the frozen qualified instrument | [Eight-test evidence and final local S0](reviews/s0-local-003-post.md), [source tests](src/selftest.py), [visualization mapping](VISUALIZATION.md) | Maintain source fingerprint; material drift requires new qualification |
 | G3 S1 admission | Operational launch documented; complete public-plan preflight evidence pending in this index | [S1 preassessment](reviews/s1-001-pre.md), [budget preflight](../sybil-followups/budget-preflight.json), [dedicated-host checkpoint](../sybil-followups/dedicated-host-checkpoint.json), [deployment launch record](DEPLOYMENT.md) | Parent attaches any existing immutable-public-plan/content-hash/page-verification receipt; if absent before launch, preserve that historical process gap rather than backdate one |
 | G4 Qualification before S1 | Pass | [Fleet S0 post-mortem](reviews/fleet-s0-001-post.md), [Q0 post-mortem](reviews/q0-001-post.md), [Q0 recomputation receipt](records/q0-001-verification.json); both prior stages reverified on the S1 host | No remaining competence blocker at launch; passing clean packets does not predict scientific outcome |
-| G5 Reconciliation and closeout | Pending | S1 collecting; final assigned→terminal reconciliation, report and post-mortem do not yet exist | Parent completes raw/analysis/visual audit, durable publication, worker stop and claim release after collection |
+| G5 Reconciliation and closeout | Pass for scientific, visual, archive and resource closeout | [S1 post-mortem](reviews/s1-001-post.md), [full recomputation](verification-summary.json), [deployment closeout](DEPLOYMENT.md); 1,944/1,944, ledger/raw archives preserved, claim released, temporary host destroyed, figure filed | Parent publishes the generated inventory bookkeeping update; G3 historical receipt gap remains explicit |
 
 ## Design and instrument index
 
@@ -62,7 +62,7 @@ Statuses below describe what this retrospective index can substantiate. A pendin
 | s0-local-003 | Uncommitted scripted engineering | [Pre](reviews/s0-local-003-pre.md) | 198 / 198 / 198 / 198 / 198 | [Post](reviews/s0-local-003-post.md); advance to committed fleet S0 |
 | fleet-s0-001 / 68819f24 | Scripted fleet S0 | [Pre](reviews/fleet-s0-001-pre.md) | 198 / 198 / 198 / 198 / 198 | [Post](reviews/fleet-s0-001-post.md); advance to Q0 |
 | q0-001 / f7b78b41 | API Q0 | [Pre](reviews/q0-001-pre.md), [receipts](records/q0-001-summary.json) | 36 / 36 / 36 / 36 / 36 | [Post](reviews/q0-001-post.md); qualification passed |
-| s1-001 / 8def40e4 | API exploratory comparison | [Pre](reviews/s1-001-pre.md), [launch](DEPLOYMENT.md) | 1,944 assigned; final counts pending | Collection and G5 closeout pending |
+| s1-001 / 8def40e4 | API exploratory comparison | [Pre](reviews/s1-001-pre.md), [launch](DEPLOYMENT.md) | 1,944 / 1,944 / 1,944 / 1,944 / 1,944 | [Post](reviews/s1-001-post.md); complete valid result; archive, claim release and teardown verified |
 
 | Issue | Evidence/cause | Resolution or remaining limit |
 |---|---|---|
@@ -75,12 +75,16 @@ Statuses below describe what this retrospective index can substantiate. A pendin
 
 ## Closeout status
 
-- Execution: S1 running at this index; no final completion claim.
-- Response validity: Q0 36/36 valid/exact, zero errors; final S1 denominator pending.
+- Execution: S1 completed first attempt; worker exited; 1,944/1,944 observations.
+- Response validity: Q0 36/36 valid/exact and S1 1,944/1,944 valid; zero invalid, missing, duplicate or retried records.
 - Qualification: passed for the unchanged instrument, including re-verification after migration.
-- Scientific conclusion: pending complete S1 analysis; valid null/adverse findings will be retained.
+- Scientific conclusion: renewal improvement was not established: +8.3 points versus reputation (−2.8 to +19.4), and −5.6 versus random (−16.7 to +5.6). Adverse/null findings retained in [RESULTS.md](RESULTS.md).
 - Process compliance: independent review explicitly waived; formal status remains exploratory. This setup record is retrospective and G3 public-plan receipt coverage is incomplete in the index.
-- Reporting: S0/Q0 raw records and eleven artifacts per stage preserved; Q0 [raw-to-summary verification](records/q0-001-verification.json) and [public replay evidence](records/q0-001-artifact-receipt.json) available. Final S1 report, numeric/visual audit and release inventory pending.
-- Cost: Q0 $0.043560 actual, usage known for all 36 calls. S1 actual cost and total ledger reconciliation pending; permanent cross-host allocation holds are excluded from actual spend.
-- Resources: one active S1 run on the dedicated claimed host. Worker stop, upload completion and claim release remain pending; authorized owner handles any teardown.
-- Next action: parent collects all terminal outcomes, runs pinned-runtime recomputation/reporting and image audit, writes the S1 post-mortem, verifies durable public results, resolves any recorded defect without replacing valid adverse findings, then stops/releases only this study's resources. Any missing pre-launch plan receipt remains a historical process question rather than a new retrospective preregistration.
+- Reporting: S0/Q0 raw records and eleven artifacts per stage preserved; Q0 [raw-to-summary verification](records/q0-001-verification.json) and [public replay evidence](records/q0-001-artifact-receipt.json) available. The [S1 report](RESULTS.md), [numeric audit](verification-summary.json), and [public visual evidence](records/s1-001-artifact-receipt.json) are complete; raw records and hashed private ledgers/allocation are archived, final figure is filed, and resource release/teardown verified. Generated inventory publication is a parent bookkeeping follow-up.
+- Cost: Q0 $0.043560 plus S1 $3.088659 = $3.132219 actual, usage known for all 1,980 calls. Per-study ledger reconciled; permanent cross-host allocation holds are excluded from actual spend.
+- Resources: S1 worker exited; all eleven artifacts verified. Claim release PR130 and hub event 34510 confirmed no active claim. Temporary host destroyed under the reviewed five-resource plan, twelve other entries unchanged; fleet removal PR131 merged.
+- Next action: parent publishes final records and generated inventory bookkeeping. The final figure is filed and Flight Deck strict validation passed (thirty artifacts, zero errors/warnings). Missing pre-launch plan receipts remain historical process questions rather than retrospective preregistration; no model rerun is warranted by the adverse/inconclusive primary outcome.
+
+Final figure with project provenance: [sybil-newcomer-api-s1-v1.png](../../../../artifacts/sybil-newcomer-api-s1/sybil-newcomer-api-s1-v1.png).
+
+Final infrastructure receipt (2026-10-04 UTC): generated inventory PR132 merged as `751c72fbf2b7464e91de2f321f0a18a2aca2b365`; all other twelve entries unchanged. The newcomer allocation is fully closed. See [records/closeout.json](records/closeout.json).

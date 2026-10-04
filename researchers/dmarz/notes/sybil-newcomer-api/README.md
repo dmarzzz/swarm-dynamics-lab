@@ -55,7 +55,13 @@ This tests a small constructed information-selection problem, with a fixed audit
 
 ## Results
 
-Local zero-key engineering preparation passed all 198 assigned scripted observations and 36 exact clean qualification packets. API qualification and the 1,944-observation scientific comparison have not yet run at this handoff; the parent operator will add measured results after gated deployment.
+**S1 completed and verified: 1,944/1,944 observations across 24 paired worlds, with zero invalid or missing calls.** In the predeclared sixteen-identity sleeper condition at round eight, specialist accuracy was 26.4% with random audits, 20.8% with renewal and 12.5% with reputation audits.
+
+Renewal minus reputation was +8.3 percentage points (descriptive 95% paired-world interval −2.8 to +19.4). The point estimate is below the predeclared +10-point useful-effect marker, and uncertainty includes both zero and larger useful effects. Renewal minus equal-cost random auditing was −5.6 points (−16.7 to +5.6). These results do not establish an accuracy advantage for renewal.
+
+Only 25.0% of unique honest specialist reports survived admission under renewal; random retained 30.6% and reputation 23.6%. The low surviving truth availability shows that selection itself loses much of the needed information. The short three-round warm-up supplies only twelve total audits, so this tests sparsely established trust. Fixed-budget identity-count effects are mixed and uncertain; no universal amplification or resistance claim follows.
+
+[Full results](RESULTS.md), [all cell measurements](results-cells.csv), [complete analysis](results-summary.json), [verification receipt](verification-summary.json), and [S1 post-mortem](reviews/s1-001-post.md). Clean qualification passed 36/36 exact packets. Q0+S1 used 1,980 calls and cost **$3.132219 actual**, with usage known for every call. The final image and eight-frame replay were verified publicly; raw data and ledgers are archived, the claim is released, and the temporary dedicated host has been destroyed. Formal S2 remains disabled.
 
 ## Allocation correction — 2026-10-04 UTC
 
@@ -64,3 +70,11 @@ The owner's updated inbox requires a dedicated host for each experiment. S0 and 
 Across the separate hosts, the existing $60 bundle cap is partitioned into at most $50 total for sybil-budget-api and $10 total for sybil-newcomer-api. Both hosts retain the same settled 52-call checkpoint ($0.366548). The budget host permanently reserves the $10 peer allocation; the newcomer host permanently reserves the $50 peer allocation. Historical charges are not reset. Duplicating the settled checkpoint in both guard copies makes the aggregate bound stricter, rather than creating extra spending authority.
 
 These permanent peer reservations are inter-host allocations, not API charges, model calls or unknown-billing failures. Do not count them as actual experiment spending. Final actual cost is the sum of the separate per-study usage ledgers. Existing per-study conservative reservation/call limits still apply, with the new partition providing the tighter real-spend limit. The parent must verify the guard state and exclusive allocation before launch; this document does not claim that provisioning or migration is complete.
+
+## Verified closeout — 2026-10-04 UTC
+
+The parent verified durable local/hub S0/Q0/S1 evidence and private hashed archives of both ledgers and the allocation record. Claim dmarz-sybil-newcomer was released (agentops PR130; hub release event 34510), with no active claim remaining. The temporary sim-dmarz-sybil-newcomer host was destroyed through the established Dmarz backend/account using a reviewed saved plan limited to its five resources and inventory; twelve other host entries were unchanged. Fleet removal PR131 merged. Publication of the generated inventory update remains a parent bookkeeping step.
+
+The [filed final figure](../../../../artifacts/sybil-newcomer-api-s1/sybil-newcomer-api-s1-v1.png) preserves provenance in the project. Flight Deck strict validation passed with thirty artifacts, zero errors and zero warnings. The scientific result remains exploratory and the historical public-plan preflight evidence gap remains documented; closeout does not remove it.
+
+Final infrastructure receipt (2026-10-04 UTC): generated inventory PR132 merged as `751c72fbf2b7464e91de2f321f0a18a2aca2b365`; all other twelve entries unchanged. The newcomer allocation is fully closed. See [records/closeout.json](records/closeout.json).
