@@ -1,6 +1,6 @@
 {
-  "verified_utc": "2026-10-04T03:47:27.542583+00:00",
-  "software_checks": 49,
+  "verified_utc": "2026-10-04T04:11:39.517481+00:00",
+  "software_checks": 50,
   "native_calls": 0,
   "validation_scope": "Local tests, fake-provider integration, actor isolation and budget accounting; not native qualification",
   "files": {
@@ -11,11 +11,11 @@
     "researchers/vishesh/notes/dissent/src/live_design.py": "5d98b8015507dc82424f469cc80b4a758617b5da2d9dffe51c0413cc3fc268a0",
     "researchers/vishesh/notes/dissent/src/live_relay.py": "91116216fa344e6e37a1d88ef8bf634d3b33c21e17dc007903fab8a64b0a8c72",
     "researchers/vishesh/notes/dissent/src/live_render.py": "ab69e34346cfae82d6fdbfa5b3662c1cc39a159b01354038258bd71af09e780f",
-    "researchers/vishesh/notes/dissent/src/live_worker.py": "6a22049ce9be6dcb1ddc0a2bf833fae93573d611b2e917aa0d7887f0213f22f2",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "23aa1502e0ff20e0be95c5ecf5aa8cd5d140fe40c71931eed69b483d1a7ef3ec",
     "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
     "researchers/vishesh/notes/dissent/src/protocol.py": "637559e808c22c269ee2727069b629b47ad5f49fd8a2dd5f8309e2fe0419d195",
     "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
-    "researchers/vishesh/notes/dissent/tests/test_live.py": "42fe5f9276446d9b98eef833a2f6f458bcd8c77b9b882432bbf30a56b773f492",
+    "researchers/vishesh/notes/dissent/tests/test_live.py": "78fb3eea71a4752ba705ef42b4ac17b9ab93691f7619e92067ceb03815a172d1",
     "researchers/vishesh/notes/dissent/tests/test_protocol.py": "662a1efadeeb851055677b796b3d32afec4ed80fcf43cdd0826d8ce2bd20c2b8",
     "researchers/vishesh/notes/dissent/tests/test_study.py": "f6f68d08f4aa1d8042b702567fccce8ac5f30ab167cc89503e5ebf69d3240f5b",
     "researchers/vishesh/notes/dissent/LIVE-PLAN.md": "e306c0186c77fd8d60babc83bf78fb29f967c6d74c5672a8f17d7f4cb3a9d844",

@@ -36,3 +36,5 @@ RD-V2 in LIVE-PLAN.md. Q0 has no meaningful temporal protocol trajectory: live p
 ## Approved launch binding
 
 The owner approved USD 2 total and instructed creation/borrowing through Demars's fleet. Dedicated host `sim-right-dissenter`, exclusive claim `vishesh-right-dissenter` through 2026-10-04T10:06:57Z. Runtime source `6c85ab76c714d998e32e8275233e50bc5b17495a`; Q0 assignment SHA-256 `b5895268ce776aa5171887c88b49948cb6c3ba903642f551ed35354cdc2e7ba3`. One worker and 18 assigned private decisions; all existing qualification thresholds remain unchanged. See AUTHORIZATION.json and Q0-LAUNCH.json.
+
+Before dispatch, an additional interrupted-worker check was added: partial attempts now report failed execution to the hub while preserving all assigned denominators. Fifty offline checks pass. This changes status reporting only, not prompts, cases, policies, scoring or qualification thresholds. The deployment configuration supersedes the earlier source binding with the tested patch commit before any calls.

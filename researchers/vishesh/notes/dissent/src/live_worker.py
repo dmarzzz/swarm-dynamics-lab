@@ -106,7 +106,9 @@ def main(a):
         render(a.out)
         for p in a.out.iterdir():
             if p.is_file() and p.suffix in ('.json','.png','.gif'):quiet(run.artifact,str(p),p.name)
-        quiet(run.done,message='Completed exploratory '+a.stage+'; qualification '+str(report.get('qualification_passed','not applicable')),correct_all_assigned=(report.get('correct',sum(x.get('correct_completion',False) for x in rows)))/total,terminal=len(rows),cost_usd=report['cost_usd'])
+        finish=run.fail if report['missing'] else run.done
+        message=('Incomplete exploratory ' if report['missing'] else 'Completed exploratory ')+a.stage+'; qualification '+str(report.get('qualification_passed','not applicable'))
+        quiet(finish,message=message,correct_all_assigned=(report.get('correct',sum(x.get('correct_completion',False) for x in rows)))/total,terminal=len(rows),cost_usd=report['cost_usd'])
         print(json.dumps(report),flush=True)
     except Exception as e:
         quiet(run.fail,message='Study execution failed: '+type(e).__name__);raise

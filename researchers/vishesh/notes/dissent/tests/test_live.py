@@ -78,5 +78,22 @@ class LiveTests(unittest.TestCase):
                 self.assertEqual(s['terminal'],total);self.assertEqual(s['missing'],0)
                 if stage=='Q0':self.assertTrue(s['qualification_passed'])
                 else:self.assertEqual(s['by_arm']['exact-reference']['assigned_decisions'],60)
+    def test_stopped_worker_preserves_missing_and_fails_hub_run(self):
+        import live_worker,time
+        events=[]
+        class Failure:
+            def __init__(self,*a):self.started=time.monotonic();self.consecutive=0;self.calls=[];self.logical_calls=0
+            def __call__(self,*a):self.consecutive=5;raise live_worker.TransportFailure('attempt_stopped')
+        class Run:
+            def __enter__(self):return self
+            def progress(self,*a,**k):pass
+            def artifact(self,*a,**k):pass
+            def done(self,*a,**k):events.append('done')
+            def fail(self,*a,**k):events.append('fail')
+        with tempfile.TemporaryDirectory() as t:
+            out=Path(t)/'out';cfg=Path(t)/'cfg.json';cfg.write_text(json.dumps({'run_id':'unit-test','source_commit':'fixture','plan_url':'fixture','run_tldr':'Unit test only'}))
+            with patch.object(live_worker,'verify_config',return_value={}),patch.object(live_worker,'NativePolicy',Failure),patch.dict(sys.modules,{'swarm_report':types.SimpleNamespace(start=lambda *a,**k:Run()),'live_render':types.SimpleNamespace(render=lambda *a:None)}),contextlib.redirect_stdout(io.StringIO()):
+                live_worker.main(types.SimpleNamespace(stage='Q0',out=out,config=cfg))
+            s=json.loads((out/'summary.json').read_text());self.assertEqual(s['assigned'],18);self.assertEqual(s['terminal'],1);self.assertEqual(s['missing'],17);self.assertFalse(s['qualification_passed']);self.assertEqual(events,['fail'])
 
 if __name__=='__main__':unittest.main()
