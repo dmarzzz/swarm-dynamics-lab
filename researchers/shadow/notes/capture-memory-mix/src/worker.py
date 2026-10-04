@@ -5,7 +5,9 @@
     SWARM_SOURCE=shadow/sol-goal python3 src/worker.py --hub                  # take queued runs until empty
     python3 src/worker.py --pilot results/pilot-mp --backend http             # real-model pilot (design pilot_MP)
 
-Output: one JSON line per arm per episode, append-only. Failed episodes are recorded, never retried.
+Output: one JSON line per arm per episode, append-only. Invalid records are kept, never deleted. Corrected 2026-10-04
+(CORRECTIONS.md C2): the scripted stages never re-run anything, but a RESUMED pilot run re-runs every episode without a
+fully valid attempt, so pilot files can hold several attempts per episode; src/lineage.py selects and accounts for them.
 `--backend http` needs SWARM_MODEL_CONFIG (JSON) with model + max_cost_usd; the cap is clamped to USD 5 in model.py.
 """
 from __future__ import annotations
@@ -34,9 +36,11 @@ def code_commit() -> str | None:
 
 def metrics(stats: dict) -> dict:
     m = {}
-    tot = next(iter(stats.values()))["n"] if stats else 0
-    n_cap = sum(a["captured"] for a in stats.values()) / max(1, len(stats))
-    m["captured"] = round(n_cap / tot, 4) if tot else None
+    # Capture rate over VALID arm records (capture is decided before removal and shared by an episode's arms).
+    # Fixed 2026-10-04 (CORRECTIONS.md C4): this used to average captured counts over arms and divide by the FIRST
+    # arm's n, which exceeds 1 when arms have different numbers of valid records (MP3 f=3/4: 1.0606, MP2 L=1: 1.3333).
+    tot = sum(a["n"] for a in stats.values())
+    m["captured"] = round(sum(a["captured"] for a in stats.values()) / tot, 4) if tot else None
     for arm, a in stats.items():
         if a["n"]:
             m[f"frac_T_{arm}"] = round(a["frac_T"] / a["n"], 4)
@@ -64,9 +68,17 @@ def execute(p: dict, out: Path, policy, backend_name: str, progress=lambda *a, *
             if l.strip():
                 r = json.loads(l)
                 have.setdefault((r["task_id"], r["seed"]), []).append(r)
-    skip = {k for k, v in have.items() if len(v) >= len(arms) and all(x["validity"]["ok"] for x in v)}
+    # Fixed 2026-10-04 (CORRECTIONS.md C2): skip an episode once ANY attempt is fully valid (the old check needed every
+    # record ever written to be valid, so an episode with an invalid first attempt was re-run on every resume).
+    import lineage
+    best = {}
+    for k, v in have.items():
+        full = [a for att in lineage.attempts(v).values() for a in att if len(a) >= len(arms) and all(x["validity"]["ok"] for x in a)]
+        if full:
+            best[k] = full[-1]
+    skip = set(best)
     for k in skip:
-        for rec in have[k]:
+        for rec in best[k]:
             a = stats[rec["arm"]]
             e = rec["evaluation"]
             a["n"] += 1; a["captured"] += e["captured"]; a["frac_T"] += e["frac_original_T"]; a["delta"] += e["delta_original"]

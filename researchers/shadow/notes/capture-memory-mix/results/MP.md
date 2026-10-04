@@ -1,8 +1,8 @@
 # capture-memory-mix: MP results
 
-432 episode records, backends ['http:openai/gpt-4o-mini'], about 113464 model calls in these records; provider-reported spend on the shared ledger (all models, all pilot work) 3.9326 USD. Code commits: ['016104d9', '3ffb56b6', '492d762f'].
+432 selected arm records (459 raw records in the files, 13 of them invalid, 27 superseded by a later attempt of the same episode; see 'Attempt lineage' below), backends ['http:openai/gpt-4o-mini'], about 113464 model calls in the selected records; provider-reported spend on the shared ledger (all models, all pilot work, including superseded attempts) 3.9326 USD. Code commits: ['016104d9', '3ffb56b6', '492d762f'].
 
-Columns: captured = capture rate (shared by arms); frac@rem / frac_T = honest fraction on the original at removal and 50 rounds later (captured episodes); delta = frac_T minus frac@rem (0 = frozen, > 0 = returning); short_T / long_T = the same at round T split by memory kind; delta_long = return among the long-memory agents only.
+Columns: captured = capture rate (shared by arms); frac@rem / frac_T = honest fraction on the original at removal and 30 rounds later (eval_round in the records' cfg; captured episodes); delta = frac_T minus frac@rem (0 = frozen, > 0 = returning); short_T / long_T = the same at round T split by memory kind; delta_long = return among the long-memory agents only.
 
 ## Cells (captured episodes unless noted)
 
@@ -111,18 +111,33 @@ Declared primary: M1, W1_INSIDE, arm A1_purge, metric delta_original, family mix
 | W1_INSIDE | 0.5 | mix:1/full@0.9375 | 0.031 | 0.031 | +0.000 | [+0.000, +0.000] | 12 |
 | W1_INSIDE | 0.5 | mix:1/full@1 | 0.047 | 0.047 | +0.000 | [+0.000, +0.000] | 24 |
 
-## Mean honest fraction on the original after removal, A1_purge, captured episodes (rounds 1, 5, 10, 20, 30, 50, 80 after removal)
+## Mean honest fraction on the original after removal, A1_purge, captured episodes (rounds 1, 5, 10, 20, 30 after removal; recovery phase 40 rounds)
 
-| world | dose | memory | r1 | r5 | r10 | r20 | r30 | r50 | r80 | long r50 | short r50 |
+| world | dose | memory | r1 | r5 | r10 | r20 | r30 | long r30 | short r30 |
+|---|---|---|---|---|---|---|---|---|---|
+| W1_INSIDE | 0.5 | 1 | 0.047 | 0.047 | 0.047 | 0.047 | 0.047 | 0.047 | nan |
+| W1_INSIDE | 0.5 | full | 0.149 | 0.167 | 0.190 | 0.167 | 0.208 | 0.208 | nan |
+| W1_INSIDE | 0.5 | mix:1/full@0 | 0.149 | 0.167 | 0.190 | 0.167 | 0.208 | 0.208 | nan |
+| W1_INSIDE | 0.5 | mix:1/full@0.5 | 0.099 | 0.146 | 0.177 | 0.161 | 0.167 | 0.198 | 0.135 |
+| W1_INSIDE | 0.5 | mix:1/full@0.625 | 0.156 | 0.229 | 0.229 | 0.229 | 0.312 | 0.306 | 0.317 |
+| W1_INSIDE | 0.5 | mix:1/full@0.75 | 0.161 | 0.255 | 0.297 | 0.339 | 0.339 | 0.396 | 0.319 |
+| W1_INSIDE | 0.5 | mix:1/full@0.875 | 0.177 | 0.245 | 0.354 | 0.385 | 0.391 | 0.458 | 0.381 |
+| W1_INSIDE | 0.5 | mix:1/full@0.9375 | 0.031 | 0.031 | 0.031 | 0.031 | 0.031 | nan | 0.031 |
+| W1_INSIDE | 0.5 | mix:1/full@1 | 0.047 | 0.047 | 0.047 | 0.047 | 0.047 | 0.047 | nan |
+
+## Attempt lineage (raw records vs selected records)
+
+An attempt = one run of an episode's arms in the append-only file. Resumed workers re-ran every episode that did not already have all arms valid. Selection: last attempt with all arms valid, else last attempt. 'episodes multi valid' counts episodes with more than one fully valid attempt (selection then takes the last one; see CORRECTIONS.md for the first-attempt sensitivity check).
+
+| world | dose | memory | episodes | attempts | episodes rerun | episodes multi valid | raw records | raw invalid | superseded records | selected records | selected invalid |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| W1_INSIDE | 0.5 | 1 | 0.047 | 0.047 | 0.047 | 0.047 | 0.047 | | | 0.047 | nan |
-| W1_INSIDE | 0.5 | full | 0.149 | 0.167 | 0.190 | 0.167 | 0.208 | | | 0.196 | nan |
-| W1_INSIDE | 0.5 | mix:1/full@0 | 0.149 | 0.167 | 0.190 | 0.167 | 0.208 | | | 0.196 | nan |
-| W1_INSIDE | 0.5 | mix:1/full@0.5 | 0.099 | 0.146 | 0.177 | 0.161 | 0.167 | | | 0.250 | 0.188 |
-| W1_INSIDE | 0.5 | mix:1/full@0.625 | 0.156 | 0.229 | 0.229 | 0.229 | 0.312 | | | 0.222 | 0.267 |
-| W1_INSIDE | 0.5 | mix:1/full@0.75 | 0.161 | 0.255 | 0.297 | 0.339 | 0.339 | | | 0.333 | 0.368 |
-| W1_INSIDE | 0.5 | mix:1/full@0.875 | 0.177 | 0.245 | 0.354 | 0.385 | 0.391 | | | 0.458 | 0.411 |
-| W1_INSIDE | 0.5 | mix:1/full@0.9375 | 0.031 | 0.031 | 0.031 | 0.031 | 0.031 | | | nan | 0.031 |
-| W1_INSIDE | 0.5 | mix:1/full@1 | 0.047 | 0.047 | 0.047 | 0.047 | 0.047 | | | 0.047 | nan |
+| W1_INSIDE | 0.5 | 1 | 24 | 25 | 1 | 0 | 75 | 1 | 3 | 72 | 0 |
+| W1_INSIDE | 0.5 | full | 24 | 32 | 4 | 4 | 96 | 12 | 24 | 72 | 0 |
+| W1_INSIDE | 0.5 | mix:1/full@0.5 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 0 |
+| W1_INSIDE | 0.5 | mix:1/full@0.625 | 12 | 12 | 0 | 0 | 36 | 0 | 0 | 36 | 0 |
+| W1_INSIDE | 0.5 | mix:1/full@0.75 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 0 |
+| W1_INSIDE | 0.5 | mix:1/full@0.875 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 0 |
+| W1_INSIDE | 0.5 | mix:1/full@0.9375 | 12 | 12 | 0 | 0 | 36 | 0 | 0 | 36 | 0 |
+| **total** | | | **144** | **153** | **5** | **4** | **459** | **13** | **27** | **432** | **0** |
 
-Invalid episodes per cell and arm are in the CSV; none are dropped or retried. Capture is decided before removal and shared by the arms.
+Retry accounting: 27 of 459 raw records were superseded by a later attempt (resume re-runs after provider errors or interrupted runs); 0 selected records are invalid and are counted in the 'inv' column, not dropped silently. Capture is decided before removal and shared by the arms.

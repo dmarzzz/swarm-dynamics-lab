@@ -63,3 +63,8 @@ Scripted prediction at the model's fitted parameters is produced BEFORE the pilo
   qwen3-235b-a22b added in logprobs mode. Both use the same cells and rules.
 - 06:30Z: adapter bug (unbound `resp` after exhausted retries) found in the first qwen attempt; 79 invalid episodes
   kept in `results/pilot-mp3-attempt1` (git-ignored, on disk), the pilot restarted clean with more retries.
+- 2026-10-04 (shadow/sol-cm2, after dmarz's review; see CORRECTIONS.md): section 4 "never retried" holds for the
+  scripted stages only. The pilots ran a resumable worker that re-runs every episode without a fully valid attempt
+  (validity-triggered, outcome-blind). Selection rule, stated now and applied to all pilots: per episode, the last
+  attempt with every arm valid, else the last attempt (`src/lineage.py`); it selects exactly the records the earlier
+  per-arm dedup selected. Pilot captions corrected to the configured scoring round (30, not 50).
