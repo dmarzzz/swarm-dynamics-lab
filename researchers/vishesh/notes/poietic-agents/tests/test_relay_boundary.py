@@ -17,6 +17,9 @@ BASE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(BASE/'src'))
 import relay
 import diagnostic_relay
+import p30_relay,p30
+from budget import Budget
+from common import digest
 from common import canonical
 from native import request
 from qualification import make_case,probe
@@ -24,12 +27,14 @@ from qualification import make_case,probe
 class RelayBoundaryTests(unittest.TestCase):
     def run_boundary(self,provider_result,relay_module=relay):
         relay=relay_module
+        p30_stage=relay is p30_relay
         diagnostic=relay is diagnostic_relay
-        stage="D0-01" if diagnostic else "S0-02"
-        worker_module="diagnostic_launch" if diagnostic else "launch"
-        models=json.loads((BASE/'models.json').read_text())['models']
+        stage="Q30-01" if p30_stage else ("D0-01" if diagnostic else "S0-02")
+        worker_module="p30_launch" if p30_stage else ("diagnostic_launch" if diagnostic else "launch")
+        models=p30.models() if p30_stage else json.loads((BASE/'models.json').read_text())['models']
         state=make_case(0,development=True);packet=probe(state,0,'generalist')
         payload={'id':stage+':generalist:0:0:physical-0','role':'generalist','request':request(models['generalist'],packet['sections'])}
+        if p30_stage:payload['request']=p30.wire(models['generalist'],p30.probe(p30.make_case(0,development=True),0,'generalist')['sections'])
         current=time.time();deadline=current+120;clock=[current]
         original_server=relay.HTTPServer
         class OneRequest(original_server):
@@ -43,6 +48,11 @@ class RelayBoundaryTests(unittest.TestCase):
             root=Path(directory);key=root/'fixture-key';key.write_text('FAKE_UNIT_CREDENTIAL_NOT_USABLE');key.chmod(0o600)
             config=root/'config.json';config.write_text(json.dumps({'attempt':stage,'allocation':{'host':'fixture'},'authorization':{'deadline':deadline}}))
             port=root/'port';ledger=root/'budget.sqlite';errors=[]
+            if p30_stage:
+                cfg=json.loads(config.read_text());cfg['prior_budget']={'physical_calls':54,'exposure_nano':496781964};config.write_text(json.dumps(cfg))
+                b=Budget(ledger,digest(cfg['authorization']),'fixture',1_500_000_000,288,deadline)
+                for i in range(54):b.reserve('history-'+str(i),'fixture',496781911 if i==0 else 1);b.settle('history-'+str(i))
+                b.close()
             def target():
                 try:relay.serve(config,key,ledger,port)
                 except BaseException as exc:errors.append(type(exc).__name__)
@@ -55,9 +65,18 @@ class RelayBoundaryTests(unittest.TestCase):
                 connection.request('POST','/invoke',canonical(payload),{'Content-Type':'application/json'})
                 response=connection.getresponse();status=response.status;body=json.loads(response.read());connection.close();thread.join(3)
                 self.assertFalse(thread.is_alive());self.assertEqual(errors,[])
-            db=sqlite3.connect(ledger);charge=db.execute('SELECT settled,status FROM charges').fetchone();db.close()
+            db=sqlite3.connect(ledger);charge=db.execute('SELECT settled,status FROM charges WHERE id LIKE ?', (stage+':%',)).fetchone();db.close()
             saved=[json.loads(line) for line in (root/'provider-responses.jsonl').read_text().splitlines()]
             return status,body,charge,saved
+    def test_actual_q30_loopback_preserves_history_and_known_or_uncertain_charge(self):
+        c=p30.models()['generalist']
+        raw=dict(model=c['accepted_response_model_ids'][0],provider=c['provider_name'],choices=[dict(finish_reason='stop',message={'content':'invalid JSON'})],usage=dict(prompt_tokens=10,completion_tokens=5,cost=.000004))
+        status,body,charge,saved=self.run_boundary(raw,p30_relay)
+        self.assertEqual(status,200);self.assertEqual(charge,(4000,'known'));self.assertEqual(body,raw)
+        failure=urllib.error.HTTPError('https://provider.invalid',429,'fixture',{},io.BytesIO(b'{"error":{"code":429,"message":"private detail"}}'))
+        status,body,charge,saved=self.run_boundary(failure,p30_relay)
+        self.assertEqual(status,429);self.assertEqual(charge,(None,'uncertain'));self.assertNotIn('private detail',canonical(saved))
+
     def test_invalid_action_is_retained_and_known_usage_settled(self):
         c=json.loads((BASE/'models.json').read_text())['models']['generalist']
         raw={'model':c['accepted_response_model_ids'][0],'provider':c['provider_name'],'choices':[{'finish_reason':'stop','message':{'content':'invalid JSON'}}],'usage':{'prompt_tokens':10,'completion_tokens':5,'cost':.00004}}
