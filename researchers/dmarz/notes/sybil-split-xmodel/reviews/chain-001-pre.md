@@ -105,7 +105,15 @@
 - `python3 src/rehearse.py --hub-dir <copy of agentops main hub>`, once with `STUDY_MODEL=qwen/qwen3.7-flash` and once with `STUDY_MODEL=gpt-6-sol`. Each used a throwaway hub on 127.0.0.1 and an in-process stub in that provider's response shape; the stub rejects any body that is not exactly the frozen template plus messages.
   - (a) Full chain: S0, P0, Q0 and S1 `done` with 0 / 1 / 60 / 2,688 calls, and `chain verify` passed. Passed for both models.
   - (b) A never-abstaining stub: exit 3, `stopped_at_gate` at Q0 (`gate_failed`), and no S1 run on the hub. Passed for both models.
-  - (c) Billing stop, then `chain resume`, and (d) two failed S1 calls plus harmless-variant answers: results are in the follow-up note below.
+  - (c) Credit or quota runs out after 150 S1 calls and stays out:
+    - S1 stops with `provider_credit_balance_low` (Qwen; stub HTTP 402) or `provider_billing_stopped` (Sol; stub HTTP 429 `insufficient_quota`), with one billing pause and nothing failed.
+    - `chain resume` then runs `s1-001-<tag>-r1` with exactly the 2,538 units not started.
+    - Every unit is answered once, 4 reservations are voided, the S1 calls stay inside the exact 2,688 cap, and `chain verify` passes.
+  - (d) Two S1 calls fail and every answer is a harmless variant (fraction-form numbers, reversed key order, padding):
+    - P0 and Q0 pass, and S1 ends `done` with 2 failed and 2,686 valid.
+    - `chain verify` passes.
+    - On the OpenAI route the injected failure is HTTP 400, because that adapter re-sends 500.
+  - All 24 rehearsal checks passed for each model, in about 17 minutes per model. Stub token counts and dollars are not estimates of the real ones.
 - **Not tested:**
   - the live OpenRouter and OpenAI routes and the real hub;
   - the full suite under the server's Python;

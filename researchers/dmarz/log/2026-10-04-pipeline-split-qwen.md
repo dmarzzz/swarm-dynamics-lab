@@ -6,3 +6,4 @@
 - Harmless-variant audit: the validator now accepts 12.0 as 12 (JSON Schema integer semantics); strings, fences and extra keys stay invalid; tested through both adapters and a whole rehearsal chain.
 - Noticed: experiments/evidence-metadata.json on main has a duplicate `sybil-scale-opus` entry, so `experiment_evidence.py --write` refuses; rendered only this study's block with the script's own functions.
 - 12:27Z Full-chain rehearsals passed for both models (stub endpoints, local hub); remaining rehearsal chains running. Next: pin and report to the fleet monitor.
+- 12:37Z Rehearsals passed for both models (24 of 24 checks each). Review updated; task done; reported to the fleet monitor.
