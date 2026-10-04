@@ -40,7 +40,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T16:40Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T16:45Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-c4-selective](tasks/healing-c4-selective.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T16:45Z | Prepare and qualify C4 selective helping |
@@ -146,6 +145,7 @@
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
 | [antsy-targeted-v8](tasks/antsy-targeted-v8.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T07:03Z | Repair Antsy extraction and design targeted verification |
+| [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T16:53Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:55Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [antsy-verification-v5](tasks/antsy-verification-v5.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T03:51Z | Repair Antsy verification semantics and qualify cost-aware stopping |
 | [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
