@@ -3,7 +3,7 @@ agent: dmarz/compositional-opus
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: agentops run-queue 196
-doing: "compositional-safety chain q0-009 -> p1-002 (Opus 5.5) on sim-dmarz-5; q0-008 stopped for a ledger slowdown, repaired"
+doing: "compositional-safety chain q0-010 -> p1-002 (Opus 5.5) on sim-dmarz-5"
 updated: 2026-10-04T07:29Z
 ---
 
