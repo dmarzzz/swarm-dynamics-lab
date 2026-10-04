@@ -17,7 +17,7 @@ from admission import BASE, inventory, verify, verify_public, verify_relay_healt
 from budget import Budget
 from common import append, canonical, digest, save
 from native import request, response, reserve_nano, verify_catalog
-from qualification import ROLES, assignments, make_case, probe, apply, analyze
+from qualification import ROLES, assignments, make_case, probe, apply, analyze, complete_records
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -76,7 +76,7 @@ def run(config_path,out):
     try:
         # Three condition-specific run descriptions, one shared physical budget and assignment authority.
         for role in ROLES:
-            run_id=f'poietic-S0-01-{role}'
+            run_id=f'poietic-S0-02-{role}'
             params=dict(stage='S0',contract=role,source_commit=config['source_commit'],assignment_sha256=digest(assignments()))
             if quiet(sr.report,'start','poietic-agents',run_id,params=params,message=config['condition_tldrs'][role],strict=True) is not True:
                 raise ValueError('hub_start_unacknowledged')
@@ -87,14 +87,14 @@ def run(config_path,out):
                 state=make_case(case)
                 state['engine'].actors['agent-0'].model=role
                 for step in range(4):
-                    call_id=f'S0-01:{role}:{case}:{step}'
+                    call_id=f'S0-02:{role}:{case}:{step}'
                     row=dict(id=call_id,role=role,case=case,step=step,status='not_started',started=False)
                     if stop or time.time()>=auth['deadline']-45:
                         stop=stop or 'stage_deadline';records.append(row);continue
                     packet=probe(state,step,role)
                     req=request(contract,packet['sections'],packet['choices'])
                     row.update(request_sha256=digest(req),request=req,context_receipt=packet['context_receipt'])
-                    for attempt in range(2):
+                    for attempt in range(1):
                         physical_id=call_id+f':physical-{attempt}'
                         try:
                             budget.reserve(physical_id,digest(req),reserve_nano(contract))
@@ -118,10 +118,12 @@ def run(config_path,out):
                         except urllib.error.HTTPError as exc:
                             budget.settle(physical_id)
                             row['failure_code']='http_'+str(exc.code)
-                            # 429 is a rejected dispatch. Ambiguous timeout/5xx is never retried.
-                            if exc.code==429 and attempt==0:
+                            try:
+                                detail=json.loads(exc.read(32000));row['relay_diagnostic']={k:detail[k] for k in ('error_type','http_status','diagnostic_code','error_markers') if k in detail}
+                            except Exception:pass
+                            # S0-02 admits no retry; preserve every rejection and stop for diagnosis.
+                            if exc.code==429:
                                 append(out/'transport.jsonl',dict(id=physical_id,status='rejected_429',elapsed_s=time.monotonic()-began))
-                                continue
                         except Exception as exc:
                             # Settlement may already be known if only local action execution failed.
                             try: budget.settle(physical_id)
@@ -139,6 +141,8 @@ def run(config_path,out):
                         frame=out/f'frame-{role}-{case:02d}.png'
                         qualification_png(current,frame)
                         quiet(runs[role].artifact,str(frame),'live.png')
+                    if row.get('status') in ('failed','invalid'):
+                        stop='interface_failure_guard'
                     if row.get('protected_access_violation') or row.get('failure_code') in ('actual_route_mismatch','billing_exceeds_reserve'):
                         stop='integrity_guard'
         # Every assigned outcome, including unstarted ones, is present in the durable terminal record.
@@ -163,9 +167,11 @@ def run(config_path,out):
              process_compliance='admitted-S0-only',reporting=reporting,
              next_action='Owner reviews all retained failures, usage and interface controls before any escalation'))
         print(canonical({k:summary[k] for k in ('assigned','started','terminal','qualification_passed','stop_reason')}))
-    except Exception as exc:
-        have={r['id'] for r in records}
-        records.extend(dict(a,status='not_started',started=False) for a in assignments() if a['id'] not in have)
+    except BaseException as exc:
+        starts=[]
+        if (out/'call-starts.jsonl').exists():
+            starts=[json.loads(line)['logical_id'] for line in (out/'call-starts.jsonl').read_text().splitlines()]
+        records=complete_records(records,starts)
         save(out/'records.json',records)
         save(out/'failure.json',dict(error_type=type(exc).__name__,budget=budget.summary(),records_retained=len(records)))
         save(out/'post-mortem.json',dict(disposition='blocked-repair',error_type=type(exc).__name__,

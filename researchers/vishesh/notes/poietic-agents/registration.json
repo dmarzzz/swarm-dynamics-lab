@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Can identical agents discover and revise shared data services, shed redundant tools and skills, and use cheaper execution while preserving correct, fresh, on-time answers? Compare generalists, coherent raw/derived caching and static specialists; charge learning, communication and adaptation delays against fixed arrivals. Reviewed exploratory instrument; 54 offline checks pass. Next is bounded Haiku/Qwen/Jev qualification. No runs yet; Owner approved actual-model execution within USD 2 cumulative; approved credential and fresh central allocation remain launch gates.",
+  "description": "TLDR: Test whether initially identical agents can develop efficient shared data services and cheaper execution without losing fresh, correct answers. First native qualification stopped after 36 relay failures; 144 assigned outcomes are retained and no model or swarm effect is established. Prospective S0-02 retains provider receipts and stops on first interface failure, using fresh cases, original thresholds and the same USD2 cumulative cap. S1/S2 remain closed.",
   "params": {
     "stage": {
       "type": "str",

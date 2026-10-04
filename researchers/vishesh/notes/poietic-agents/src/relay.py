@@ -15,8 +15,8 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 from admission import BASE, verify, verify_public
 from budget import Budget
-from common import canonical, digest
-from native import reserve_nano, response, verify_catalog
+from common import canonical, digest, append
+from native import reserve_nano, usage_receipt, verify_catalog
 from qualification import assignments
 
 
@@ -24,7 +24,7 @@ def validate_payload(data, models):
     if not isinstance(data,dict) or set(data)!={'id','role','request'}:raise ValueError('relay_envelope')
     allowed={a['id']:a['role'] for a in assignments()}
     logical, separator, attempt=data['id'].rpartition(':physical-')
-    if not separator or attempt not in ('0','1') or logical not in allowed or allowed[logical]!=data['role']:
+    if not separator or attempt != '0' or logical not in allowed or allowed[logical]!=data['role']:
         raise ValueError('unassigned_request')
     c=models[data['role']];r=data['request']
     if r.get('model')!=c['requested_model_id'] or r.get('provider')!={'only':[c['provider_tag']],'allow_fallbacks':False}:
@@ -68,7 +68,7 @@ def serve(config_path,credential_file,ledger,port_file):
             summary=budget.summary()
             payload=canonical(dict(experiment='poietic-agents',attempt=config['attempt'],source_commit=config['source_commit'],
                 assignment_sha256=config['assignment_sha256'],credential_ready=bool(key),deadline=auth['deadline'],
-                api_cap_usd=1.5,physical_calls=summary['physical_calls'])).encode()
+                api_cap_usd=1.5,physical_calls=summary['physical_calls'],api_exposure_usd=summary['charged_upper_usd'])).encode()
             self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(payload)));self.end_headers();self.wfile.write(payload)
         def do_POST(self):
             status=400;result={'error_type':'request_refused'};reserved=False;physical_id=None
@@ -80,18 +80,33 @@ def serve(config_path,credential_file,ledger,port_file):
                 suffix='/api/alpha/decisions' if c['kind']=='decision' else '/api/v1/chat/completions'
                 req=urllib.request.Request('https://openrouter.ai'+suffix,canonical(data['request']).encode(),{'Authorization':'Bearer '+key,'Content-Type':'application/json'})
                 with opener.open(req,timeout=45) as r:raw=json.loads(r.read(1000000))
-                # Choices can be decoded safely from the supplied finite action strings.
-                choices={k:json.loads(v) for k,v in data['request']['questions']['action']['criteria'].items()} if c['kind']=='decision' else None
-                checked=response(raw,c,choices);budget.settle(physical_id,math.ceil(checked['usage']['cost_usd']*1e9));reserved=False
-                result={k:raw[k] for k in ('id','model','provider','choices','answers','usage') if k in raw};status=200
+                if key in canonical(raw): raise ValueError('credential_in_provider_response')
+                result={k:raw[k] for k in ('id','model','provider','choices','answers','usage') if k in raw}
+                append(ledger.parent/'provider-responses.jsonl',dict(id=physical_id,attempt=config['attempt'],utc=time.time(),http_status=200,response=result))
+                # Billing is independent of action/schema validity. Keep the response for worker diagnosis.
+                try:
+                    measured=usage_receipt(raw,c)
+                    budget.settle(physical_id,math.ceil(measured['cost_usd']*1e9));reserved=False
+                except (ValueError,KeyError,TypeError):
+                    budget.settle(physical_id);reserved=False
+                status=200
             except urllib.error.HTTPError as exc:
-                status=429 if exc.code==429 else 502;result={'error_type':'provider_http','http_status':exc.code}
-            except Exception as exc:result={'error_type':type(exc).__name__};status=502 if reserved else 400
+                status=429 if exc.code==429 else 502
+                result={'error_type':'provider_http','http_status':exc.code}
+                try:
+                    error=json.loads(exc.read(32000));message=str(error.get('error',{}).get('message','')).lower()
+                    result['error_markers']=[word for word in ('response_format','json','model','provider','unsupported','not found','credits','quota','rate','max_tokens','authentication','region','parameter','stream','valid') if word in message]
+                except Exception:pass
+                append(ledger.parent/'provider-responses.jsonl',dict(id=physical_id,attempt=config['attempt'],utc=time.time(),error=result))
+            except Exception as exc:
+                safe=str(exc) if isinstance(exc,ValueError) and str(exc).replace('_','').isalnum() else type(exc).__name__
+                result={'error_type':type(exc).__name__,'diagnostic_code':safe};status=502 if reserved else 400
+                append(ledger.parent/'provider-responses.jsonl',dict(id=physical_id,attempt=config['attempt'],utc=time.time(),error=result))
             finally:
                 if reserved:budget.settle(physical_id)
             data=canonical(result).encode();self.send_response(status);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
     server=HTTPServer(('127.0.0.1',0),Handler);server.timeout=1
-    port_file.write_text(str(server.server_port));print('Poietic local relay ready; 144 assigned IDs, 288 physical attempts maximum, USD 1.50 cumulative API cap.',flush=True)
+    port_file.write_text(str(server.server_port));print('Poietic local relay ready; 144 assigned IDs, 144 new physical attempts maximum, prior exposure retained, USD 1.50 cumulative API cap.',flush=True)
     try:
         while time.time()<auth['deadline']:server.handle_request()
     finally:server.server_close();budget.close();key=''

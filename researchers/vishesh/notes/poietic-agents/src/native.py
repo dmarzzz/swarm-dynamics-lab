@@ -34,9 +34,7 @@ def reserve_nano(contract):
                 Decimal(str(contract['output_usd_per_token']))*MAX_OUTPUT)*10**9).to_integral_value(rounding=ROUND_CEILING))
 
 
-def response(raw, contract, choices=None):
-    if not isinstance(raw,dict) or raw.get('model') not in contract['accepted_response_model_ids'] or raw.get('provider') != contract['provider_name']:
-        raise ValueError('actual_route_mismatch')
+def usage_receipt(raw,contract):
     usage = raw.get('usage', {})
     cost = usage.get('cost')
     in_key, out_key = ('input_tokens','output_tokens') if contract['kind']=='decision' else ('prompt_tokens','completion_tokens')
@@ -45,6 +43,13 @@ def response(raw, contract, choices=None):
         raise ValueError('token_usage')
     if type(cost) not in (int,float) or not math.isfinite(cost) or not 0 <= cost <= reserve_nano(contract)/1e9:
         raise ValueError('cost_usage')
+    return dict(input_tokens=inp,output_tokens=out,cost_usd=cost)
+
+
+def response(raw, contract, choices=None):
+    if not isinstance(raw,dict) or raw.get('model') not in contract['accepted_response_model_ids'] or raw.get('provider') != contract['provider_name']:
+        raise ValueError('actual_route_mismatch')
+    measured=usage_receipt(raw,contract)
     if contract['kind'] == 'decision':
         if set(raw.get('answers', {})) != {'action'}:
             raise ValueError('answer_set')
@@ -67,7 +72,7 @@ def response(raw, contract, choices=None):
     if not isinstance(action,dict): raise ValueError('action_object')
     return dict(action=action, actual_model=raw['model'], actual_provider=raw['provider'],
                 catalog_backend_revision=contract['backend_revision'], provider_response_hash=digest(raw),
-                usage=dict(input_tokens=inp,output_tokens=out,cost_usd=cost))
+                usage=measured)
 
 
 def verify_catalog(data, contract):
