@@ -267,8 +267,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
 | dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
-| dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T12:40Z | attempt 002 Qwen configuration ready (code 612c3b64, source hash 15bef708, review chain-002-pre); next: gpt-6-sol path as follow-up code commit using the reference OpenAI adapter (8290d7ad) |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T12:37Z | sybil-split-xmodel package ready (code 0ca09f04, source hash ebfb2bc3); pre-run review on main; rehearsals passed for both models; awaiting the fleet monitor's same-researcher check; nothing launched |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T12:35Z | Building sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on byte-identical packets): Qwen path to launch-ready first, then the gpt-6-sol path; no launch, no model call. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T12:28Z | memory-handoff-qwen attempt 002 pinned for the same-researcher check: code commit 3f1b0b98, source hash 10f51d2c, review reviews/chain-002-pre.md; next: the gpt-6-luna second-model follow-up (attempt 003 review) as its own commit; no launch, no model call |
