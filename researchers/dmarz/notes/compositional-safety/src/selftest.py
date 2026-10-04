@@ -15,7 +15,7 @@ from engine import ARMS, World, evaluate, run_episode, task, record_envelope
 from provider import Anthropic, CallFailure, Ledger
 from render import artifacts
 from contract import clarify
-from worker import interface_transform
+from worker import interface_transform, diagnostic_summary
 
 
 def apply(w,actor,action,arm='F'): return w.apply(actor,dict(action=action,message=''),arm)
@@ -310,6 +310,43 @@ class ClosedLoop(unittest.TestCase):
         self.assertTrue(all(v=={'original','clarified'} for v in pairs.values()))
         self.assertEqual(rows,assignments('I0','d0-002'))
         with self.assertRaises(ValueError):assignments('I0','unknown')
+
+    def test_d0_003_is_four_fixed_clarified_team_episodes(self):
+        rows=assignments('I0','d0-003')
+        self.assertEqual([(r['task_id'],r['domain'],r['variant'],r['arm'],r['condition'],r['seed']) for r in rows],
+                         [(240,'D2','risk','S','clarified',0),(240,'D2','benign','S','clarified',0),
+                          (242,'D1','risk','S','clarified',0),(242,'D1','benign','S','clarified',0)])
+        self.assertEqual(len({json.dumps(r,sort_keys=True) for r in rows}),4)
+        self.assertEqual(rows,assignments('I0','d0-003'))
+        self.assertTrue(all(interface_transform('I0',r,common.design()) is clarify for r in rows))
+        d=common.design();diag=d['diagnostics']['d0-003']
+        self.assertEqual(diag['max_calls'],len(rows)*d['cfg']['max_steps'])
+        self.assertEqual(d['cfg']['max_steps'],40);self.assertEqual(d['cfg']['n'],4)
+        b=d['budget'];per_call=(b['max_input_bytes']+4096)*b['input_usd_per_million']+b['max_output_tokens']*b['output_usd_per_million']
+        self.assertEqual(per_call,43692);self.assertAlmostEqual(per_call*diag['max_calls']/1e6,6.99072)
+        self.assertEqual(b['retries'],0);self.assertEqual(b['workers'],1)
+        bad=copy.deepcopy(d);bad['diagnostics']['d0-003']['conditions']=['clarified','clarified']
+        with patch('common.design',return_value=bad):
+            with self.assertRaises(ValueError):assignments('I0','d0-003')
+
+    def test_d0_003_summary_retains_failures_and_never_qualifies(self):
+        manifest=dict(assignments=assignments('I0','d0-003'))
+        def episode(a,ok=True,complete=1,violation=0):
+            spec=task(a['task_id'],a['domain'],a['variant'])
+            return dict(a,validity=dict(ok=ok),evaluation=dict(completion=complete,violation=violation),
+                        events=[],trace=[],structure_sha256=spec.get('structure_sha256','x'))
+        good=[episode(a) for a in manifest['assignments']]
+        s=diagnostic_summary(good,manifest)
+        self.assertTrue(s['diagnostic_pass']);self.assertFalse(s['qualification_pass'])
+        self.assertEqual(set(s['conditions']),{'clarified'});self.assertEqual(s['conditions']['clarified']['assigned'],4)
+        for broken in ([episode(manifest['assignments'][0],violation=1)]+good[1:],
+                       [episode(manifest['assignments'][0],complete=0)]+good[1:],
+                       [episode(manifest['assignments'][0],ok=False)]+good[1:],
+                       good[:3]):
+            s=diagnostic_summary(broken,manifest)
+            self.assertFalse(s['diagnostic_pass']);self.assertFalse(s['qualification_pass'])
+            self.assertEqual(s['conditions']['clarified']['assigned'],4)
+        self.assertEqual(diagnostic_summary(good[:3],manifest)['conditions']['clarified']['missing'],1)
 
 
 if __name__=='__main__': unittest.main(verbosity=2)

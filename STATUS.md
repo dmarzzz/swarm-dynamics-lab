@@ -41,7 +41,6 @@
 | [build-poietic-agents-instrument](tasks/build-poietic-agents-instrument.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:50Z | Build the Poietic Agents offline instrument and qualification package |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [clarify-pi-review-visual-guide](tasks/clarify-pi-review-visual-guide.md) | claimed | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T05:01Z | Clarify the PI review visual guide |
-| [deploy-discussion-v3-d1](tasks/deploy-discussion-v3-d1.md) | claimed | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T05:11Z | Deploy and preserve the bounded discussion v3 D1 diagnostic |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:52Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:56Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -144,6 +143,7 @@
 | [contribution-new-badges](tasks/contribution-new-badges.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T23:40Z | Show recent contributions and added project tags |
 | [decision-model-reimagination](tasks/decision-model-reimagination.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:52Z | Reimagine Phantom Coast and Quorum of Mirrors |
 | [decision-model-research](tasks/decision-model-research.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:38Z | Jev decision boundaries and collective robustness research |
+| [deploy-discussion-v3-d1](tasks/deploy-discussion-v3-d1.md) | done | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T05:19Z | Deploy and preserve the bounded discussion v3 D1 diagnostic |
 | [design-compositional-safety-study](tasks/design-compositional-safety-study.md) | done | p1 | synthesis | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:26Z | Design the Patchwork compositional safety study |
 | [design-conditional-swarm-size](tasks/design-conditional-swarm-size.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:40Z | Develop the conditional optimal swarm-size study design |
 | [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | done | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:06Z | Plan five shared-environment distributed-evidence studies |

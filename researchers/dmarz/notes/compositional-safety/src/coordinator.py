@@ -17,7 +17,8 @@ def assignments(stage, attempt=None):
         for case in diagnostic['cases']:
             if case['domain'] not in ('D1','D2') or case['task_id'] >= d['holdout_min_task_id']: raise ValueError('heldout_task')
             if case['arm'] not in ('C','S'): raise ValueError('diagnostic_arm')
-            conditions = ['original','clarified']
+            conditions = list(diagnostic.get('conditions', ['original','clarified']))
+            if not conditions or len(set(conditions)) != len(conditions) or set(conditions) - {'original','clarified'}: raise ValueError('diagnostic_conditions')
             random.Random(f'{attempt}:{case}').shuffle(conditions)
             rows += [dict(**case, condition=c, seed=0) for c in conditions]
         return rows
@@ -51,6 +52,7 @@ def prepare(stage, attempt, qualification=None):
            plan_url=registration['url'],registered_tldr=registration['registered_tldr'],
            qualification=str(qualification) if qualification else None)
     if stage=='I0': m['parent_attempt']=common.design()['diagnostics'][attempt]['parent_attempt']
+    m.update(model=common.design()['model'],inference=common.design().get('inference'))
     common.dump(out/'manifest.json',m)
     return out
 
