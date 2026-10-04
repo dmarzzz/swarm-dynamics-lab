@@ -1,0 +1,41 @@
+{
+  "stage": "D7",
+  "attempt": "native-D7-01",
+  "planned": 2,
+  "started": 1,
+  "terminal": 1,
+  "valid": 0,
+  "failed": 1,
+  "unstarted": 1,
+  "calls": 1,
+  "usage_missing": 0,
+  "observed_usage_cost_usd": 0.014422,
+  "actual_usd": 0.014422,
+  "new_reserved_usd": 0.04864,
+  "qualified": false,
+  "failures": [
+    {
+      "kind": "failure",
+      "attempt": 1,
+      "category": "contract",
+      "usage_known": true,
+      "actual_usd": 0.014422,
+      "retry_permitted": false
+    }
+  ],
+  "assignments": [
+    {
+      "arm": "matrix_inherited",
+      "status": "failed",
+      "category": "contract"
+    },
+    {
+      "arm": "typed_inherited",
+      "status": "unstarted"
+    }
+  ],
+  "run": "influence-swarms/1004-185452-ea3df2",
+  "source_commit": "abedc39236f22d397a0cae4906660f1b848e4287",
+  "packet_sha256": "359a1c4b130e2e6e775f2008b9832b5b5814828c90e95fb3fabd6095161a0747",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/abedc39236f22d397a0cae4906660f1b848e4287/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-07-ROUTE.md"
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d7-01",
+  "native_attempt_id": "native-D7-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T19:01:23.429049+00:00",
+  "verdict": "repair",
+  "outcome_interpretation": "OpenRouter acquisition succeeded; migration omitted structured schema, invalid output stops qualification. Offline D8 prepared, no successor authorized.",
+  "parent_handoff_sha256": "d108a8a32e2f349303abe8f484b6ebc3e56f6022c73ebe6588dfaf2e240567d2",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Bounded acquisition question answered partly: intended route returns a complete response; both-contract qualification fails.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "One inspected synthetic case tests acquisition, not realism or generalization.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "fail",
+      "finding": "Migration dropped original structured-output schema. Source pinning preserved defective wire; D8 exact schema regression repairs this offline.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ],
+      "next_action": "Review the concrete offline D8 schema-delivery repair and obtain the owner next-run decision before any fresh admission.",
+      "acceptance_check": "Original schema is delivered in the new wire; both contracts validate natively under a separately admitted bounded attempt."
+    },
+    {
+      "dimension": "capability",
+      "status": "fail",
+      "finding": "Matrix contract invalid; typed unstarted. No native output-contract or behavioral qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ],
+      "next_action": "Review the concrete offline D8 schema-delivery repair and obtain the owner next-run decision before any fresh admission.",
+      "acceptance_check": "Original schema is delivered in the new wire; both contracts validate natively under a separately admitted bounded attempt."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "One response, known usage/cost, exact JSON failure and unstarted second condition retained separately.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One observed acquisition from two planned dependent contract checks; no behavioral effect or reliability estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "fail",
+      "finding": "Scenario messages and intended model/provider preserved, but D6 output_config was omitted in D7 translation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ],
+      "next_action": "Review the concrete offline D8 schema-delivery repair and obtain the owner next-run decision before any fresh admission.",
+      "acceptance_check": "Original schema is delivered in the new wire; both contracts validate natively under a separately admitted bounded attempt."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All two assignments reconcile; request/response bodies and hashes retained, failed Markdown never rescored as valid JSON.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "One physical call cost0.014422, reservation0.048640. Original8cap/4.966112reserved/248calls preserved. Relay/worker closed and machine released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source abedc392, actual wire and provider mapping recorded; deterministic offline replay identifies JSONDecodeError atchar0. Hosted response not guaranteed repeatable.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Two-row status table agrees with acquisition, missing second assignment and measured cost. No animation implies nonexistent interaction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-audit.json",
+          "sha256": "c4c527e418682bba982af5989d36591f58b81f7f8b2f03110eeaed83dc0763d9"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
+          "sha256": "4f09abcb16f2f0de2b457c3ebfc7a3b4fedbdeed1459633ddf9e341608e9588e"
+        }
+      ]
+    }
+  ]
+}

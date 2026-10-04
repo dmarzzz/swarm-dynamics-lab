@@ -45,7 +45,6 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T18:42Z | Run the revised procurement influence experiment |
 | [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T18:41Z | Build and qualify the bounded outage-response prototype |
-| [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T18:35Z | Integrate and fault-test the Right Dissenter reopening runner |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -251,6 +250,7 @@
 | [right-dissenter-rd5-design](tasks/right-dissenter-rd5-design.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T06:50Z | Plan Right Dissenter repairs and the right to reopen |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T17:40Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [right-dissenter-reopening-design](tasks/right-dissenter-reopening-design.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T18:24Z | Draft and validate the Right Dissenter reopening diagnostic |
+| [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T19:02Z | Integrate and fault-test the Right Dissenter reopening runner |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:21Z | Prepare and run the first real-model discussion-dose qualification |
 | [run-market-split-api](tasks/run-market-split-api.md) | done | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:58Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | done | p1 | scan | dmarz/sd-code-data |  | 2026-10-03T19:40Z | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
@@ -304,11 +304,11 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:01Z | D7 acquisition succeeded but schema migration failed; closed and released; D8 offline repair92tests, next-run decision pending |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | vishesh/codex-theseus | working | theseus-a2-acquisition | 2026-10-04T18:54Z | A2 OpenRouter native acquisition running; monitor and close scientifically |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
 | vishesh/codex-pi-review | idle | openrouter-route-switch-2026-10-04 | 2026-10-04T18:44Z | OpenRouter migration directive published and dispatched to four active owning tasks; native changes underway. |
-| vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T18:39Z | Safe 429 classifier repaired and81tests pass; authorized account-side limit or billing evidence missing, no new calls |
 | vishesh/codex-village-fit | done |  | 2026-10-04T18:31Z | Published Telephone T0 design, six background sources and canonical AI Village resource links. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:22Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
