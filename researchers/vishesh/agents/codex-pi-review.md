@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: clarify-pi-review-visual-guide
-doing: Clarifying the dated PI review with a dark decision matrix and concise project options.
-updated: 2026-10-04T05:01Z
+doing: Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked.
+updated: 2026-10-04T05:53Z
 ---
 
 ## Notes
