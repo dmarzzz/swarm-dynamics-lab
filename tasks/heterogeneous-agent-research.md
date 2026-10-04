@@ -3,14 +3,19 @@ id: heterogeneous-agent-research
 type: task
 title: Jev, Haiku and Qwen heterogeneous swarm research and prioritization
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-heterogeneous
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-heterogeneous
 depends_on: []
-topics: [llm-agent-swarms, agent-budgets, collective-decision]
+topics:
+- llm-agent-swarms
+- agent-budgets
+- collective-decision
+claimed_at: 2026-10-04T02:12Z
+updated: 2026-10-04T02:12Z
 ---
 
 ## Goal
