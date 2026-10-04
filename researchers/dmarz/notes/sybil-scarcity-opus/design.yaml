@@ -133,8 +133,8 @@ budget:
   max_answer_chars: 500
   max_input_bytes: 240000
   request_timeout_seconds: 300
-  stage_timeout_seconds: 14400
-  chain_timeout_seconds: 18000
+  stage_timeout_seconds: 21600
+  chain_timeout_seconds: 25200
   retries: 0
   retry:
     transport_retries: 2
@@ -146,7 +146,7 @@ budget:
     - 6
     retry_after_cap_seconds: 20
   max_transport_attempts: 1640
-  workers: 4
+  workers: 2
   input_usd_per_million: 4
   output_usd_per_million: 20
 primary_contrast:
