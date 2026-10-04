@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: working
-task: theseus-institutional-transmission
-doing: publish validated institutional-transmission prototype and concrete T1-Q0 proposal
+state: idle
+task: null
+doing: institutional-transmission prototype published; concrete T1-Q0 decision pending
 updated: 2026-10-04T19:28Z
 ---
 

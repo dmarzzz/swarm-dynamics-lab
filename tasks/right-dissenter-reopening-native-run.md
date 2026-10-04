@@ -14,7 +14,7 @@ topics:
 - dissent
 - decision-models
 claimed_at: 2026-10-04T19:08Z
-updated: 2026-10-04T19:08Z
+updated: 2026-10-04T19:29Z
 ---
 
 ## Goal
