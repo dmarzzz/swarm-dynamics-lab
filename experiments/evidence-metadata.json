@@ -3638,21 +3638,23 @@
         "researchers/vishesh/notes/dissent/reopening/offline/validation.json",
         "researchers/vishesh/notes/dissent/reopening/next-run-plan.json",
         "researchers/vishesh/notes/dissent/reopening/OPERATOR.md",
-        "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json"
+        "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json",
+        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md"
       ],
       "source_sha256": {
-        "researchers/vishesh/notes/dissent/reopening/PLAN.md": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582",
+        "researchers/vishesh/notes/dissent/reopening/PLAN.md": "a6248ee9c68814753383228fbc4fbf653e548cf1db7c5f5afa39bb57b96a8f04",
         "researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md": "29c9ef1f1c7c85b64631305913331933b7b4e764abc6c977de97528ffd0b4e64",
         "researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md": "69704bd74250ddb02ab3a96b0389b27bbe11ac55ebdd5cd84d61943c54b7334e",
-        "researchers/vishesh/notes/dissent/reopening/offline/validation.json": "52269fc8ac9ef623c92c873e6233a9895d542de511797d7e75d3e1fbc4460b68",
-        "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "45f1d844105362efb0182f453691d04a57847f1da0f583e38957fdd459d55036",
-        "researchers/vishesh/notes/dissent/reopening/OPERATOR.md": "14e992270f06c31c1768a447d52d08c437a0818696f314f77ffc26c9913309a1",
-        "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "65d04eba9e404a528e4a2ee3624c102c7ca4d1fa5dba9cdb87f1e3232035e576"
+        "researchers/vishesh/notes/dissent/reopening/offline/validation.json": "05830d4afd878822c0190d8a486133d3f74e0f9e4517482d908931f7a416f6b4",
+        "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "8ea72a423f863dc53ab199daba9b9148e923ace666c8a8139722499b9d27bf1b",
+        "researchers/vishesh/notes/dissent/reopening/OPERATOR.md": "bab0b4a7aa3347efcad344552332a3f0335aef889f5484c83d077411497a4c1f",
+        "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "cf067328a2c52bf462018ddbb037d210adb85648ce7b122744d829f19304979e",
+        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md": "ffe90cc83d44b51615edad10aded05f6ff3f94c3edce6852f5e55f09131cbc2b"
       },
-      "status_at_assessment": "native_integration_offline_validated_scope_and_call_ceiling_decision_pending",
+      "status_at_assessment": "approved_scope_current_admission_in_preparation",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "f7ef9048b7d4073a7f0e4f97222e19154d370770"
+      "source_commit": "c71249c4f981c817813b9716fa72c39d51e12907"
     },
     {
       "id": "phantom-coast-pc9",

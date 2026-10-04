@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `f7ef9048` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `c71249c4` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Effects of history, opposing ballots, clock translation and evidence age on Jev interpretation remain untested in this new controlled matrix. Basis: Prospective plan, concrete cases and the native manual runner pass 73 offline checks. There are no RD6 native outcomes, model qualification or untouched evaluation set. Synthetic transports/ledgers do not establish the context effect. The completed RD5 adverse result remains a separate cohort.
 - **sample_size_summary:** Observed native: none. Planned D0: 12 authored cases in six shared families/three grammars x six conditions x two repeats = 144 dependent requests; separate Q0 has 18 requests. No independent field sample or held-out generalization evaluation.
