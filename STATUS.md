@@ -44,7 +44,6 @@
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:28Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T06:19Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:58Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:28Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -69,6 +68,7 @@
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | open | p1 | build |  | vishesh | 2026-10-04T06:11Z | Qualify and run Healing Qwen plus Jev composite |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
+| [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T06:28Z | Run the revised procurement influence experiment |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
@@ -242,7 +242,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T06:22Z | preparing D5 cited-fact extraction and fixed policy comparisons; native run not launched |
+| vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T06:30Z | D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T06:18Z | Poietic instrument built and validated; publishing S0 package and recording admission blockers |
 | vishesh/codex-regrowth-docs | idle |  | 2026-10-04T06:13Z | C1/C2 cycle closed; failures published, worker retired; full comparison remains incomplete |
 | vishesh/codex-methods | working | antsy-diversity-v7 | 2026-10-04T06:09Z | Developing provenance and behavioral diversity measurements for Antsy v7 |
