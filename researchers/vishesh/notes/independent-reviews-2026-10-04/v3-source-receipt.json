@@ -1,0 +1,9 @@
+{
+  "checkout": "f528e2f08f1f4f0ce09715a591c0404be1edb303",
+  "scope": "static original-to-v3 follow-through; full review remains shadow/sol-rev",
+  "files": {
+    "researchers/dmarz/notes/discussion-dose/src/bench_v3/analysis.py": "17bd39a47e781aaba215802229ebfb05971aee895040cfac4d2c8b7d1545c0ac",
+    "researchers/dmarz/notes/discussion-dose/src/bench_v3/scoring.py": "879234b5ffacc7229fda6989dc85d6bf69d298dcc805e3c285f48a8ebd42194b",
+    "researchers/dmarz/notes/discussion-dose/src/bench_v3/runner.py": "4c3f7d6c60397d50e088fdda7b0c9ee74fa3ee010346e182066150e2880a0ce9"
+  }
+}
