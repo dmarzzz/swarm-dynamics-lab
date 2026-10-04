@@ -114,6 +114,8 @@ def analyze(rows, planner=None):
     or one scripted planner's rows."""
     d = study.design(); limit = d['world']['max_subagents']; top = max(d['pressures'])
     rows = [r for r in rows if r['kind'] in KINDS and r['planner'] == planner]
+    models = sorted({r.get('model') for r in rows if r.get('model') is not None})
+    if len(models) > 1: raise ValueError('models_pooled')       # one model per table; never pooled across the ladder
     table = {(r['root'], r['condition'], r['pressure']): r for r in rows}
     roots = sorted({r['root'] for r in rows})
     cells = [cell(rows, c, p, limit) for c in d['conditions'] for p in d['pressures']]
@@ -129,7 +131,7 @@ def analyze(rows, planner=None):
         vals = [value(table.get((root, 'N', p)), 'subagents_created') for p in d['pressures']]
         if all(v is not None for v in vals): control.append({'root': root, 'subagents': vals, 'range': max(vals) - min(vals)})
     by_cell = {(c['condition'], c['pressure']): c for c in cells}
-    return {'actor': planner or 'model', 'primary': dict(primary, definition=d['primary_contrast']['definition'],
+    return {'actor': planner or 'model', 'model': models[0] if models else None, 'primary': dict(primary, definition=d['primary_contrast']['definition'],
                                                          useful_difference=d['primary_contrast']['useful_difference']),
             'secondary': secondary, 'cells': cells,
             'control_replicates': {'roots': len(control), 'identical': sum(c['range'] == 0 for c in control),

@@ -1,5 +1,5 @@
 """Software gates between stages. A stage is queued only when exactly one run of the previous
-stage is `done` at the same source hash with no invalid row and its gate passed, and a batch
+stage is `done` at the same source hash (and, for Q0 and S1, on the same model; the scripted S0 serves every model) with no invalid row and its gate passed, and a batch
 name is never queued twice. Documents and reviews are outside the source hash, so a
 post-mortem-only commit does not invalidate a qualification.
 
@@ -28,6 +28,7 @@ def check(sr, stage):
     before = PREREQUISITE.get(stage); run = None
     if before:
         candidates = [r for r in runs if (r.get('params') or {}).get('stage') == before
+                      and (before == 'S0' or (r.get('params') or {}).get('model') == p['model'])   # S0 serves every model
                       and (r.get('params') or {}).get('source_hash') == p['source_hash'] and r.get('status') == 'done'
                       and (r.get('metrics') or {}).get('invalid') == 0
                       and (r.get('metrics') or {}).get('qualification_passed') == 1]
@@ -51,10 +52,12 @@ def check_continuation(sr, n):
     if any(mine(r).get('batch') == p['batch'] for r in runs): raise GateRefused('batch_exists_no_replay')
     if any(r.get('status') in ('planned', 'assigned', 'running') for r in runs): raise GateRefused('queue_not_empty')
     qualified = [r for r in runs if mine(r).get('stage') == PREREQUISITE['S1'] and mine(r).get('source_hash') == p['source_hash']
+                 and mine(r).get('model') == p['model']
                  and r.get('status') == 'done' and (r.get('metrics') or {}).get('invalid') == 0
                  and (r.get('metrics') or {}).get('qualification_passed') == 1]
     if len(qualified) != 1: raise GateRefused('exact_runtime_qualification_required')
-    earlier = [r for r in runs if mine(r).get('stage') == 'S1' and mine(r).get('source_hash') == p['source_hash']]
+    earlier = [r for r in runs if mine(r).get('stage') == 'S1' and mine(r).get('source_hash') == p['source_hash']
+               and mine(r).get('model') == p['model']]
     names = sorted(mine(r).get('batch') for r in earlier)
     if names != sorted([original] + [f'{original}-r{i}' for i in range(1, n)]) or any(r.get('status') != 'failed' for r in earlier):
         raise GateRefused('stopped_main_stage_required')

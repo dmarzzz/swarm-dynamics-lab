@@ -51,15 +51,41 @@ def results_dir():
     return Path(os.environ.get('STUDY_RESULTS_DIR') or ROOT / 'results')
 
 
+def model_ladder():
+    return list(design()['model_ladder'])
+
+
+def model():
+    """The model of this attempt: STUDY_MODEL (the launcher's --model), else the first entry of the
+    frozen ladder. One model per attempt; a name outside the ladder is refused."""
+    name = os.environ.get('STUDY_MODEL') or model_ladder()[0]
+    if name not in model_ladder():
+        raise ValueError('model_not_in_ladder')
+    return name
+
+
+def prices():
+    """USD per million input and output tokens of this attempt's model, from the hashed design."""
+    m = design()['models'][model()]
+    return m['input_usd_per_million'], m['output_usd_per_million']
+
+
+def model_tag():
+    """'' for the first model of the ladder, '-opus-5' (the id without 'claude-') for any other."""
+    name = model()
+    return '' if name == model_ladder()[0] else '-' + name.removeprefix('claude-')
+
+
 def batch(stage):
-    return f'{stage.lower()}-001'
+    """S0 is scripted and model-free, so one S0 serves every model; paid stages carry the model tag."""
+    return f'{stage.lower()}-001' + ('' if stage == 'S0' else model_tag())
 
 
 def params(stage):
     if stage not in STAGES:
         raise ValueError('Formal S2 disabled')
     return dict(stage=stage, backend='scripted' if stage == 'S0' else 'anthropic', batch=batch(stage),
-                source_hash=source_hash(), code=code_revision())
+                model='none' if stage == 'S0' else model(), source_hash=source_hash(), code=code_revision())
 
 
 # ------------------------------------------------------------------------ actor interface

@@ -56,7 +56,7 @@ class Resp(io.BytesIO):
 
 def message(answer=None, **over):
     answer = answer or {'actions': [], 'rationale': 'nothing to do'}
-    data = {'model': D['model'], 'stop_reason': 'end_turn', 'usage': {'input_tokens': 1000, 'output_tokens': 300},
+    data = {'model': study.model(), 'stop_reason': 'end_turn', 'usage': {'input_tokens': 1000, 'output_tokens': 300},
             'content': [{'type': 'thinking', 'thinking': '', 'signature': 'x'}, {'type': 'text', 'text': json.dumps(answer)}]}
     data.update(over); return data
 
@@ -447,7 +447,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(b['max_failed'], max(3, -(-576 // 100))); self.assertEqual(b['max_failed'], 6)
         self.assertEqual(b['billing_outage'], {'http_status': [400, 402, 403], 'match': 'credit balance', 'retry_every_seconds': 60, 'max_wait_seconds': 1200})
         self.assertGreaterEqual(b['max_transport_attempts'] - b['max_attempted_calls'], 8 * 21 + 40)      # room for re-sends during a billing outage
-        self.assertLessEqual(b['workers'], 8); self.assertEqual((D['model'], D['effort'], b['max_output_tokens']), ('claude-opus-5-5', 'medium', 8000))
+        self.assertLessEqual(b['workers'], 8); self.assertEqual((study.model_ladder()[0], D['effort'], b['max_output_tokens']), ('claude-opus-5-5', 'medium', 8000))
         p = study.assignments('P0')[0]; self.assertEqual((p['kind'], p['root'], p['condition'], p['max_turns']), ('probe', ENG[0], 'N', 1))
         q = study.assignments('Q0'); self.assertEqual(sorted({(a['condition'], a['pressure']) for a in q}), [('A', 0.8), ('N', 0.8)])
         self.assertEqual(len({a['root'] for a in q}), 8)
@@ -547,8 +547,8 @@ class Tests(unittest.TestCase):
             self.assertEqual(json.loads(body['messages'][0]['content']), OBS); self.assertEqual(body['system'], study.system_prompt('B'))
             count_body = script.sent[0][1]; self.assertEqual(script.sent[0][0], provider.COUNT_URL)
             self.assertEqual(list(count_body), ['model', 'system', 'messages', 'output_config'])
-            b = D['budget']; self.assertEqual(acct['actual_usd'], (1000 * b['input_usd_per_million'] + 300 * b['output_usd_per_million']) / 1e6)
-            self.assertEqual((b['input_usd_per_million'], b['output_usd_per_million']), (4, 20))
+            m = D['models']['claude-opus-5-5']; self.assertEqual(acct['actual_usd'], (1000 * m['input_usd_per_million'] + 300 * m['output_usd_per_million']) / 1e6)
+            self.assertEqual((m['input_usd_per_million'], m['output_usd_per_million']), (4, 20))
             self.assertEqual(acct['reserved_usd'], ((int(1000 * 1.02) + 64) * 4 + 8000 * 20) / 1e6)
             self.assertEqual(study.input_hash('B', OBS), study.digest({'system': body['system'], 'user': body['messages'][0]['content']}))
             self.assertEqual(answer, {'actions': [], 'rationale': 'nothing to do'})
@@ -1015,13 +1015,72 @@ class Tests(unittest.TestCase):
         self.assertEqual((code, status['state'], list(status['stages']), status['source_hash']), (3, 'stopped_at_gate', ['P0'], study.source_hash()))
         self.assertEqual(kept['stages']['S0']['run'], 'old/1')
 
+    # ----------------------------------------------------------------------------- model ladder
+    def test_ladder_default_override_and_refusal(self):
+        self.assertEqual(study.model_ladder(), ['claude-opus-5-5', 'claude-opus-5'])
+        with patch.dict(os.environ, {}, clear=False):
+            os.environ.pop('STUDY_MODEL', None)
+            self.assertEqual((study.model(), study.prices(), study.model_tag()), ('claude-opus-5-5', (4, 20), ''))
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001', 'p0-001', 'q0-001', 's1-001'])
+            self.assertEqual((study.params('S0')['model'], study.params('Q0')['model']), ('none', 'claude-opus-5-5'))
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}):
+            self.assertEqual((study.model(), study.prices(), study.model_tag()), ('claude-opus-5', (5, 25), '-opus-5'))
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001', 'p0-001-opus-5', 'q0-001-opus-5', 's1-001-opus-5'])
+            self.assertEqual((study.params('S0')['model'], study.params('S1')['model']), ('none', 'claude-opus-5'))
+        for bad in ('claude-opus-5-5-20260921', 'claude-sonnet-5-5', 'qwen/qwen3.7-flash'):
+            with patch.dict(os.environ, {'STUDY_MODEL': bad}):
+                with self.assertRaises(ValueError): study.model()
+                with self.assertRaises(ValueError): study.params('P0')
+
+    def test_cap_is_sized_for_the_dearer_model(self):
+        b = D['budget']; models = D['models']; calls = b['max_attempted_calls']
+        estimate = lambda m: calls * (1500 * models[m]['input_usd_per_million'] + 2500 * models[m]['output_usd_per_million']) / 1e6
+        self.assertEqual(max(models, key=estimate), 'claude-opus-5')
+        self.assertAlmostEqual(estimate('claude-opus-5'), 255.4, places=1)
+        self.assertGreaterEqual(b['aggregate_usd'], 1.05 * estimate('claude-opus-5'))
+
+    def test_second_model_prices_and_body(self):
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}):
+            script = Script([message()]); api, ledger, _ = adapter(td, script)
+            answer, acct = api.call('B', OBS, 'q0-001-opus-5:e1:r1')
+            url, body, _ = script.message_requests()[0]
+            self.assertEqual(list(body), ['model', 'max_tokens', 'system', 'messages', 'output_config'])
+            self.assertEqual((body['model'], body['output_config']['effort'], body['max_tokens']), ('claude-opus-5', 'medium', 8000))
+            for banned in ('thinking', 'temperature', 'top_p', 'top_k', 'tool_choice', 'fallbacks'): self.assertNotIn(banned, body)
+            self.assertEqual(acct['actual_usd'], (1000 * 5 + 300 * 25) / 1e6)
+            self.assertEqual(acct['reserved_usd'], ((int(1000 * 1.02) + 64) * 5 + 8000 * 25) / 1e6)
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}):
+            script = Script([message(model='claude-opus-5-5')]); api, ledger, _ = adapter(td, script)
+            with self.assertRaises(provider.CallFailure) as e: api.call('B', OBS, 'q0-001-opus-5:e1:r1')
+            self.assertEqual(e.exception.category, 'model_mismatch')
+
+    def test_gates_never_cross_models(self):
+        hub = FakeHub(); hub.add('S0')
+        os.environ.pop('STUDY_MODEL', None); hub.add('P0')            # P0 passed on claude-opus-5-5 only
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}):
+            with self.assertRaises(coordinator.GateRefused) as e: coordinator.check(hub, 'Q0')
+            self.assertEqual(str(e.exception), 'exact_runtime_qualification_required')
+            p, before = coordinator.check(hub, 'P0')                    # the scripted S0 serves the second model
+            self.assertEqual((p['batch'], p['model'], before['params']['stage']), ('p0-001-opus-5', 'claude-opus-5', 'S0'))
+            hub.add('P0'); hub.add('Q0')
+            p, before = coordinator.check(hub, 'S1'); self.assertEqual((p['batch'], before['params']['model']), ('s1-001-opus-5', 'claude-opus-5'))
+        p, before = coordinator.check(hub, 'Q0'); self.assertEqual((p['batch'], before['params']['model']), ('q0-001', 'claude-opus-5-5'))
+        with self.assertRaises(coordinator.GateRefused): coordinator.check(hub, 'S1')     # no Q0 on the first model yet
+
+    def test_analysis_never_pools_models(self):
+        rows = self.synthetic(lambda root, c, p: 2)
+        for i, r in enumerate(rows): r['model'] = 'claude-opus-5-5' if i % 2 else 'claude-opus-5'
+        with self.assertRaises(ValueError): analyze.analyze(rows)
+        for r in rows: r['model'] = 'claude-opus-5'
+        self.assertEqual(analyze.analyze(rows)['model'], 'claude-opus-5')
+
     def test_projection_gate_stops_before_s1(self):
-        # Q0 at USD 0.06 per call: 0.06 x 1.25 x 3,552 = USD 266 > USD 210
-        code, status, executed, hub = self.chain_with({}, q0_metrics={'cost_usd': 5.76})
+        # Q0 at USD 0.065 per call: 0.065 x 1.25 x 3,552 = USD 288.6 > USD 270
+        code, status, executed, hub = self.chain_with({}, q0_metrics={'cost_usd': 6.24})
         self.assertEqual((code, status['state'], status['stopped_stage'], status['reason']), (3, 'stopped_at_gate', 'S1', 'projection_exceeds_cap'))
         self.assertEqual(executed, ['S0', 'P0', 'Q0']); self.assertEqual([r['params']['stage'] for r in hub.rows], ['S0', 'P0', 'Q0'])
-        p = status['stages']['S1']['projection']; self.assertGreater(p['projected_usd'], p['remaining_usd']); self.assertAlmostEqual(p['projected_usd'], 266.4)
-        code, status, executed, hub = self.chain_with({}, q0_metrics={'cost_usd': 4.5})      # USD 208 fits under USD 210
+        p = status['stages']['S1']['projection']; self.assertGreater(p['projected_usd'], p['remaining_usd']); self.assertAlmostEqual(p['projected_usd'], 288.6)
+        code, status, executed, hub = self.chain_with({}, q0_metrics={'cost_usd': 4.5})      # USD 208 fits under USD 270
         self.assertEqual((code, executed[-1]), (0, 'S1'))
         self.assertFalse(chain.projection({'metrics': {}}).get('within_cap'))
         self.assertFalse(chain.projection({'metrics': {'model_calls': 96, 'cost_usd': 1.0}}).get('within_cap'))      # no output figure: not admitted

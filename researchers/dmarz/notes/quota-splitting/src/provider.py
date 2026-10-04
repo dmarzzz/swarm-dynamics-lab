@@ -185,7 +185,7 @@ class Anthropic:
                 'anthropic-version': '2023-06-01', 'anthropic-workspace-id': self.workspace}
 
     def body(self, condition, obs):
-        return {'model': self.d['model'], 'max_tokens': self.b['max_output_tokens'], 'system': study.system_prompt(condition),
+        return {'model': study.model(), 'max_tokens': self.b['max_output_tokens'], 'system': study.system_prompt(condition),
                 'messages': [{'role': 'user', 'content': study.user_text(obs)}],
                 'output_config': {'effort': self.d['effort'], 'format': {'type': 'json_schema', 'schema': study.SCHEMA}}}
 
@@ -311,7 +311,8 @@ class Anthropic:
         except CallFailure as exc:
             raise CallFailure(exc.category, dict(account, **exc.accounting)) from None
         # 2% + 64 tokens in case billed input differs slightly from the count.
-        reserve = (int(counted * 1.02) + 64) * self.b['input_usd_per_million'] + self.b['max_output_tokens'] * self.b['output_usd_per_million']
+        price_in, price_out = study.prices()     # this attempt's model, from the hashed design
+        reserve = (int(counted * 1.02) + 64) * price_in + self.b['max_output_tokens'] * price_out
         account.update(reserved_usd=reserve / 1e6, counted_input_tokens=counted)
         try:
             self.ledger.transact({'type': 'reserve', 'call_id': call_id, 'micro_usd': reserve, 'time': time.time()})
@@ -334,7 +335,7 @@ class Anthropic:
         usage = data.get('usage') or {}
         if not all(type(usage.get(k)) is int and usage[k] >= 0 for k in ('input_tokens', 'output_tokens')):
             raise CallFailure('missing_usage', account)
-        actual = usage['input_tokens'] * self.b['input_usd_per_million'] + usage['output_tokens'] * self.b['output_usd_per_million']
+        actual = usage['input_tokens'] * price_in + usage['output_tokens'] * price_out
         self.ledger.transact({'type': 'response', 'call_id': call_id, 'actual_micro_usd': actual,
                               'input_tokens': usage['input_tokens'], 'output_tokens': usage['output_tokens']})
         account.update(usage_reported=True, actual_usd=actual / 1e6, input_tokens=usage['input_tokens'],
@@ -344,7 +345,7 @@ class Anthropic:
             raise CallFailure('unexpected_cache_usage', account)
         if actual > reserve:
             raise CallFailure('reservation_bound_breached', account)
-        if data.get('model') != self.d['model']:
+        if data.get('model') != study.model():
             raise CallFailure('model_mismatch', account)
         if data.get('stop_reason') == 'refusal':
             details = data.get('stop_details') or {}
