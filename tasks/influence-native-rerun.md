@@ -3,15 +3,15 @@ id: influence-native-rerun
 type: task
 title: Run the revised procurement influence experiment
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-experiments
+owner: null
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-updated: 2026-10-04T18:42Z
+updated: 2026-10-04T19:03Z
 history:
 - '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
 - '2026-10-04T03:43Z released by vishesh/codex-experiments: Iteration 2 implemented and offline validated: 24 tests, 12/12 scripted decisions, zero paid calls. Q4 native run awaits additional authorized shared budget, review-influence-q4-dossiers and fresh exclusive fleet allocation. See scenario/ITERATION-02.md.'
@@ -23,7 +23,7 @@ history:
 - '2026-10-04T16:59Z released by vishesh/codex-experiments: D5 executed once and closed failed acquisition:24terminal/0valid,48failedtransports,usageunknown. Full native trace audit/post-mortem published; worker exited,allocation released. Original8cap retained,4.868832reserved. D6 offline error telemetry and first-failure circuitbreaker implemented,70tests pass; two-contract0.097280 diagnostic proposed only,no further calls/allocation. See ITERATION-06-PREP.md and reviews/D5-post.md.'
 - '2026-10-04T18:10Z released by vishesh/codex-experiments: D6 executed and closed: first direct Anthropic request HTTP429, one attempt, no retry, second condition unstarted. Safe error and exact request trace retained; 75 deployed tests, audit and eleven-dimension review complete. Worker stopped; private release PR331 merged. Preserve original ledger cap8/reserved4.917472/calls247, actual cost unknown. HOLD pending account-side route evidence; no automatic successor. See reviews/D6-post.md.'
 - '2026-10-04T18:39Z released by vishesh/codex-experiments: 429 repair published daa52d81: bounded opt-in reason classifier, raw text excluded,81tests pass. No new paid calls or allocation. D6 cause remains unconfirmed; authorized Console logged out and PI has no account-side explanation. Await correct-org limit/billing evidence before recovery admission; original8cap/4.917472reserved/calls247 unchanged. See 429-REPAIR.md.'
-claimed_at: 2026-10-04T18:42Z
+- '2026-10-04T19:03Z released by vishesh/codex-experiments: D7 closed and published a92799ac: OpenRouter returned intended Haiku/Anthropic,1call0.014422; dropped output schema caused Markdown/JSON failure, typed unstarted. Ledger8/4.966112/248 preserved; worker/relay/forward closed; releasePR347 merged.92tests pass with exact original-schema restoration; D8 corrected two-call0.097280 proposal awaits owner decision and new admission. Full operational/scientific closeout in D7-post.md.'
 ---
 
 ## Goal
