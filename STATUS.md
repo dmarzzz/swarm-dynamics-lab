@@ -260,6 +260,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/market-split-film | done |  | 2026-10-04T09:25Z | filed v2 of the market-split film, a narrated version (wall of all 36 runs, zoom into market 36, the agent's message and reply, then the result); no model calls |
+| dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T09:23Z | false-alarm-cascade: prospective plan, preregistration, frozen design and setup record pushed; implementing the instrument and offline tests next; no launch, no model call |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:23Z | sybil-split-opus: launch-ready package on main (pinned 0b8a444a, source hash 95889bea, pre-run review ready); waiting for the pipeline lead's review; nothing launched, no model call |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
 | dmarz/pipeline-scarcity | done |  | 2026-10-04T09:12Z | sybil-scarcity-opus package finished and filed as a ready run request (run queue 248) after the fleet monitor's same-researcher check; nothing launched by this agent |
@@ -275,7 +276,6 @@
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
-| dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T08:06Z | Preparing false-alarm-cascade (honeypot-vigilance hunch V4, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
