@@ -1,0 +1,662 @@
+[
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 625,
+      "assistant_stop_messages": 1,
+      "candidate_flagged_results": 25,
+      "compactions": 1,
+      "explicit_exit_status_results": 422,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 25,
+      "source_lines": 1253,
+      "tool_results": 621,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-fable-5-1": 625
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "replay",
+    "providers": {
+      "anthropic-proxy": 625
+    },
+    "run_id": "shadow-replay-01",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 625,
+        "sum_observed": 144435554
+      },
+      "cache_write": {
+        "observations": 625,
+        "sum_observed": 37697329
+      },
+      "estimated_cost_usd": {
+        "observations": 625,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 625,
+        "sum_observed": 1246
+      },
+      "output": {
+        "observations": 625,
+        "sum_observed": 253790
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 1,
+      "assistant_messages": 159,
+      "assistant_stop_messages": 1,
+      "candidate_flagged_results": 7,
+      "compactions": 1,
+      "explicit_exit_status_results": 150,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 7,
+      "source_lines": 341,
+      "tool_results": 173,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-opus-5-5": 159
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "development",
+    "providers": {
+      "anthropic-proxy": 159
+    },
+    "run_id": "shadow-audit-dev",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 159,
+        "sum_observed": 23971992
+      },
+      "cache_write": {
+        "observations": 159,
+        "sum_observed": 1279933
+      },
+      "estimated_cost_usd": {
+        "observations": 159,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 159,
+        "sum_observed": 320
+      },
+      "output": {
+        "observations": 159,
+        "sum_observed": 203842
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 150,
+      "assistant_stop_messages": 1,
+      "candidate_flagged_results": 5,
+      "compactions": 1,
+      "explicit_exit_status_results": 67,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 5,
+      "source_lines": 312,
+      "tool_results": 155,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "other": 150
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "replay",
+    "providers": {
+      "openai-codex": 150
+    },
+    "run_id": "shadow-replay-04",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 150,
+        "sum_observed": 8399232
+      },
+      "cache_write": {
+        "observations": 150,
+        "sum_observed": 0
+      },
+      "estimated_cost_usd": {
+        "observations": 150,
+        "sum_observed": 154.30757200000002
+      },
+      "input": {
+        "observations": 150,
+        "sum_observed": 14364494
+      },
+      "output": {
+        "observations": 150,
+        "sum_observed": 45268
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 180,
+      "assistant_stop_messages": 1,
+      "candidate_flagged_results": 1,
+      "compactions": 1,
+      "explicit_exit_status_results": 116,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 1,
+      "source_lines": 366,
+      "tool_results": 179,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-fable-5-1": 180
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "replay",
+    "providers": {
+      "anthropic-proxy": 180
+    },
+    "run_id": "shadow-replay-02",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 180,
+        "sum_observed": 24444515
+      },
+      "cache_write": {
+        "observations": 180,
+        "sum_observed": 213937
+      },
+      "estimated_cost_usd": {
+        "observations": 180,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 180,
+        "sum_observed": 362
+      },
+      "output": {
+        "observations": 180,
+        "sum_observed": 74651
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 157,
+      "assistant_stop_messages": 3,
+      "candidate_flagged_results": 10,
+      "compactions": 1,
+      "explicit_exit_status_results": 137,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 9,
+      "source_lines": 374,
+      "tool_results": 208,
+      "wrapper_error_results": 1
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-opus-5-5": 157
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "replay",
+    "providers": {
+      "anthropic-proxy": 157
+    },
+    "run_id": "shadow-replay-03",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 157,
+        "sum_observed": 36846272
+      },
+      "cache_write": {
+        "observations": 157,
+        "sum_observed": 3283441
+      },
+      "estimated_cost_usd": {
+        "observations": 157,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 157,
+        "sum_observed": 320
+      },
+      "output": {
+        "observations": 157,
+        "sum_observed": 258366
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 133,
+      "assistant_stop_messages": 1,
+      "candidate_flagged_results": 5,
+      "compactions": 1,
+      "explicit_exit_status_results": 67,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 5,
+      "source_lines": 272,
+      "tool_results": 132,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-fable-5-1": 133
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "development",
+    "providers": {
+      "anthropic-proxy": 133
+    },
+    "run_id": "shadow-capture-dev",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 133,
+        "sum_observed": 17539601
+      },
+      "cache_write": {
+        "observations": 133,
+        "sum_observed": 184918
+      },
+      "estimated_cost_usd": {
+        "observations": 133,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 133,
+        "sum_observed": 268
+      },
+      "output": {
+        "observations": 133,
+        "sum_observed": 190480
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 101,
+      "assistant_stop_messages": 1,
+      "candidate_flagged_results": 3,
+      "compactions": 1,
+      "explicit_exit_status_results": 46,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 2,
+      "source_lines": 208,
+      "tool_results": 100,
+      "wrapper_error_results": 1
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-fable-5-1": 101
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "development",
+    "providers": {
+      "anthropic-proxy": 101
+    },
+    "run_id": "shadow-capture-s1b-dev",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 101,
+        "sum_observed": 9932418
+      },
+      "cache_write": {
+        "observations": 101,
+        "sum_observed": 150102
+      },
+      "estimated_cost_usd": {
+        "observations": 101,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 101,
+        "sum_observed": 204
+      },
+      "output": {
+        "observations": 101,
+        "sum_observed": 136570
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 81,
+      "assistant_stop_messages": 2,
+      "candidate_flagged_results": 0,
+      "compactions": 0,
+      "explicit_exit_status_results": 47,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 0,
+      "source_lines": 166,
+      "tool_results": 79,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-fable-5-1": 81
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "development",
+    "providers": {
+      "anthropic-proxy": 81
+    },
+    "run_id": "shadow-review-dev",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 81,
+        "sum_observed": 8249519
+      },
+      "cache_write": {
+        "observations": 81,
+        "sum_observed": 149741
+      },
+      "estimated_cost_usd": {
+        "observations": 81,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 81,
+        "sum_observed": 166
+      },
+      "output": {
+        "observations": 81,
+        "sum_observed": 173439
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 144,
+      "assistant_stop_messages": 0,
+      "candidate_flagged_results": 3,
+      "compactions": 0,
+      "explicit_exit_status_results": 100,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 3,
+      "source_lines": 292,
+      "tool_results": 143,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-fable-5-1": 144
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "development",
+    "providers": {
+      "anthropic-proxy": 144
+    },
+    "run_id": "shadow-capture-ship-dev",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 144,
+        "sum_observed": 19232358
+      },
+      "cache_write": {
+        "observations": 144,
+        "sum_observed": 205668
+      },
+      "estimated_cost_usd": {
+        "observations": 144,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 144,
+        "sum_observed": 290
+      },
+      "output": {
+        "observations": 144,
+        "sum_observed": 275024
+      }
+    }
+  },
+  {
+    "artifact_commit": null,
+    "assignment_manifest_sha256": null,
+    "billed_cost_usd": null,
+    "brief_sha256": null,
+    "counts": {
+      "assistant_error_messages": 0,
+      "assistant_messages": 172,
+      "assistant_stop_messages": 0,
+      "candidate_flagged_results": 2,
+      "compactions": 0,
+      "explicit_exit_status_results": 94,
+      "incomplete_lines": 0,
+      "malformed_lines": 0,
+      "malformed_messages": 0,
+      "nonzero_exit_status_results": 2,
+      "source_lines": 349,
+      "tool_results": 172,
+      "wrapper_error_results": 0
+    },
+    "coverage": {
+      "complete_episode": "unknown",
+      "content_exported": false,
+      "parse_integrity": "parsed",
+      "physical_call_count": "unknown",
+      "pool_join": "unavailable"
+    },
+    "granularity": "episode-rollup",
+    "independent_review": null,
+    "models": {
+      "claude-fable-5-1": 172
+    },
+    "outcome": "ungraded",
+    "parent_run_id": null,
+    "partition": "development",
+    "providers": {
+      "anthropic-proxy": 172
+    },
+    "run_id": "shadow-goal-dev",
+    "schema_version": "research-trace/0.1",
+    "source": "openclaw-session",
+    "study_id": "swarm-hackathon-rsi",
+    "task_root_id": null,
+    "usage": {
+      "cache_read": {
+        "observations": 172,
+        "sum_observed": 31868822
+      },
+      "cache_write": {
+        "observations": 172,
+        "sum_observed": 245924
+      },
+      "estimated_cost_usd": {
+        "observations": 172,
+        "sum_observed": 0
+      },
+      "input": {
+        "observations": 172,
+        "sum_observed": 346
+      },
+      "output": {
+        "observations": 172,
+        "sum_observed": 274386
+      }
+    }
+  }
+]

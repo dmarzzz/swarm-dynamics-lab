@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research trace 0.1 content-free OpenClaw episode projection",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "research-trace/0.1"
+    },
+    "study_id": {
+      "const": "swarm-hackathon-rsi"
+    },
+    "source": {
+      "const": "openclaw-session"
+    },
+    "granularity": {
+      "const": "episode-rollup"
+    },
+    "outcome": {
+      "const": "ungraded"
+    },
+    "billed_cost_usd": {
+      "const": null
+    },
+    "independent_review": {
+      "const": null
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^shadow-[a-z0-9-]{1,50}$"
+    },
+    "partition": {
+      "enum": [
+        "development",
+        "replay"
+      ]
+    },
+    "parent_run_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "task_root_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "brief_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assignment_manifest_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "artifact_commit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "assistant_error_messages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "assistant_messages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "assistant_stop_messages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "candidate_flagged_results": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "compactions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "explicit_exit_status_results": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "incomplete_lines": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "malformed_lines": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "malformed_messages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonzero_exit_status_results": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_lines": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tool_results": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "wrapper_error_results": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "assistant_error_messages",
+        "assistant_messages",
+        "assistant_stop_messages",
+        "candidate_flagged_results",
+        "compactions",
+        "explicit_exit_status_results",
+        "incomplete_lines",
+        "malformed_lines",
+        "malformed_messages",
+        "nonzero_exit_status_results",
+        "source_lines",
+        "tool_results",
+        "wrapper_error_results"
+      ],
+      "additionalProperties": false
+    },
+    "models": {
+      "type": "object",
+      "properties": {
+        "claude-opus-5-5": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "claude-fable-5-1": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gpt-6-astra": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "other": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "providers": {
+      "type": "object",
+      "properties": {
+        "anthropic-proxy": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "anthropic": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "openai-codex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "openrouter": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "other": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "cache_read": {
+          "type": "object",
+          "properties": {
+            "observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sum_observed": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "observations",
+            "sum_observed"
+          ],
+          "additionalProperties": false
+        },
+        "cache_write": {
+          "type": "object",
+          "properties": {
+            "observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sum_observed": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "observations",
+            "sum_observed"
+          ],
+          "additionalProperties": false
+        },
+        "estimated_cost_usd": {
+          "type": "object",
+          "properties": {
+            "observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sum_observed": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "observations",
+            "sum_observed"
+          ],
+          "additionalProperties": false
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sum_observed": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "observations",
+            "sum_observed"
+          ],
+          "additionalProperties": false
+        },
+        "output": {
+          "type": "object",
+          "properties": {
+            "observations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sum_observed": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "required": [
+            "observations",
+            "sum_observed"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "cache_read",
+        "cache_write",
+        "estimated_cost_usd",
+        "input",
+        "output"
+      ],
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "content_exported": {
+          "const": false
+        },
+        "pool_join": {
+          "const": "unavailable"
+        },
+        "physical_call_count": {
+          "const": "unknown"
+        },
+        "complete_episode": {
+          "const": "unknown"
+        },
+        "parse_integrity": {
+          "enum": [
+            "parsed",
+            "partial"
+          ]
+        }
+      },
+      "required": [
+        "content_exported",
+        "pool_join",
+        "physical_call_count",
+        "complete_episode",
+        "parse_integrity"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "study_id",
+    "source",
+    "granularity",
+    "outcome",
+    "billed_cost_usd",
+    "independent_review",
+    "run_id",
+    "partition",
+    "parent_run_id",
+    "task_root_id",
+    "brief_sha256",
+    "assignment_manifest_sha256",
+    "artifact_commit",
+    "counts",
+    "models",
+    "providers",
+    "usage",
+    "coverage"
+  ],
+  "additionalProperties": false
+}

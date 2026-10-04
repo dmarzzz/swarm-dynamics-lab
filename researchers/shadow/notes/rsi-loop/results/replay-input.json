@@ -1,0 +1,90 @@
+{
+  "kind": "derived-status-histograms",
+  "lanes": [
+    {
+      "bins": [
+        {
+          "count": 25,
+          "exit_status": "nonzero",
+          "wrapper_error": false
+        },
+        {
+          "count": 199,
+          "exit_status": "unknown",
+          "wrapper_error": false
+        },
+        {
+          "count": 397,
+          "exit_status": "zero",
+          "wrapper_error": false
+        }
+      ],
+      "run_id": "shadow-replay-01"
+    },
+    {
+      "bins": [
+        {
+          "count": 5,
+          "exit_status": "nonzero",
+          "wrapper_error": false
+        },
+        {
+          "count": 88,
+          "exit_status": "unknown",
+          "wrapper_error": false
+        },
+        {
+          "count": 62,
+          "exit_status": "zero",
+          "wrapper_error": false
+        }
+      ],
+      "run_id": "shadow-replay-04"
+    },
+    {
+      "bins": [
+        {
+          "count": 1,
+          "exit_status": "nonzero",
+          "wrapper_error": false
+        },
+        {
+          "count": 63,
+          "exit_status": "unknown",
+          "wrapper_error": false
+        },
+        {
+          "count": 115,
+          "exit_status": "zero",
+          "wrapper_error": false
+        }
+      ],
+      "run_id": "shadow-replay-02"
+    },
+    {
+      "bins": [
+        {
+          "count": 9,
+          "exit_status": "nonzero",
+          "wrapper_error": false
+        },
+        {
+          "count": 70,
+          "exit_status": "unknown",
+          "wrapper_error": false
+        },
+        {
+          "count": 128,
+          "exit_status": "zero",
+          "wrapper_error": false
+        },
+        {
+          "count": 1,
+          "exit_status": "unknown",
+          "wrapper_error": true
+        }
+      ],
+      "run_id": "shadow-replay-03"
+    }
+  ]
+}

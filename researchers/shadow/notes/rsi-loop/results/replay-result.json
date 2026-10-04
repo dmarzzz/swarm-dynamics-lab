@@ -1,0 +1,65 @@
+{
+  "code_sha256": "f5eb95ef3e33b4fc46f050859aeac90180f4a274dbd638aeba2ed56d100dc79a",
+  "kind": "offline-engineering-replay",
+  "lanes": [
+    {
+      "baseline_detected": 0,
+      "baseline_false_flags": 0,
+      "candidate_detected": 25,
+      "candidate_false_flags": 0,
+      "candidate_wrapper_errors": 0,
+      "clean_zero_status_results": 397,
+      "nonzero_status_results": 25,
+      "run_id": "shadow-replay-01",
+      "wrapper_errors": 0
+    },
+    {
+      "baseline_detected": 0,
+      "baseline_false_flags": 0,
+      "candidate_detected": 5,
+      "candidate_false_flags": 0,
+      "candidate_wrapper_errors": 0,
+      "clean_zero_status_results": 62,
+      "nonzero_status_results": 5,
+      "run_id": "shadow-replay-04",
+      "wrapper_errors": 0
+    },
+    {
+      "baseline_detected": 0,
+      "baseline_false_flags": 0,
+      "candidate_detected": 1,
+      "candidate_false_flags": 0,
+      "candidate_wrapper_errors": 0,
+      "clean_zero_status_results": 115,
+      "nonzero_status_results": 1,
+      "run_id": "shadow-replay-02",
+      "wrapper_errors": 0
+    },
+    {
+      "baseline_detected": 0,
+      "baseline_false_flags": 0,
+      "candidate_detected": 9,
+      "candidate_false_flags": 0,
+      "candidate_wrapper_errors": 1,
+      "clean_zero_status_results": 128,
+      "nonzero_status_results": 9,
+      "run_id": "shadow-replay-03",
+      "wrapper_errors": 1
+    }
+  ],
+  "paid_model_calls": 0,
+  "parser_contract_passed": true,
+  "scientific_promotion": "blocked-no-independent-evaluation",
+  "selected_lanes": 4,
+  "study": "R0",
+  "totals": {
+    "baseline_detected": 0,
+    "baseline_false_flags": 0,
+    "candidate_detected": 40,
+    "candidate_false_flags": 0,
+    "candidate_wrapper_errors": 1,
+    "clean_zero_status_results": 702,
+    "nonzero_status_results": 40,
+    "wrapper_errors": 1
+  }
+}
