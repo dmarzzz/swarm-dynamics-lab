@@ -1,0 +1,9 @@
+{
+  "wrong_returned_model_accepted": true,
+  "retry_dispatch_count": 2,
+  "retry_budget_count": 1,
+  "negative_cost_accepted": true,
+  "talk_issue_uses_blog": true,
+  "web_issue_targets_talks": true,
+  "tree_errors_on_checker_crash": []
+}
