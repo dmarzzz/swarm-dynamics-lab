@@ -60,8 +60,8 @@ budget:
     S0: 0
     P0: 1
     Q0: 96        # 16 episodes x 6 rounds
-    S1: 3456      # 576 episodes x 6 rounds
-  max_attempted_calls: 3553
+    S1: 3552      # 576 episodes x 6 rounds = 3,456, plus 96 used only when episodes are replayed after a billing stop
+  max_attempted_calls: 3649
   aggregate_usd: 210
   projection_growth_factor: 1.25
   output_headroom_fraction: 0.75   # S1 is not queued if any Q0 call used more than this share of max_output_tokens
@@ -77,8 +77,16 @@ budget:
     retryable_http_status: [429, 529]
     backoff_seconds: [2, 6]
     retry_after_cap_seconds: 20
-  max_transport_attempts: 3908
+    count_resend_seconds: 2       # a failed token-counting request is re-sent once, then the byte-count fallback
+  max_transport_attempts: 4014
   workers: 8
+  max_failed: 6                   # S1 only: the larger of 3 and 1% of 576 episodes, rounded up; more failed episodes stop dispatch
+  error_body_chars: 2000
+  billing_outage:                 # a credit-balance error pauses the stage; it is not an outcome
+    http_status: [400, 402, 403]
+    match: credit balance
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
   input_usd_per_million: 4
   output_usd_per_million: 20
 primary_contrast:

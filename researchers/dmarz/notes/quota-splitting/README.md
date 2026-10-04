@@ -9,7 +9,9 @@ Assessed 2026-10-04 by dmarz/pipeline-quota; source `9781739c` ([registry](../..
 - **sample_size_summary:** Observed: none. Planned: 24 paired synthetic roots × 8 quota conditions × 3 quota sizes = 576 episodes of one model agent, at most 6 calls each (at most 3,456 S1 calls); separate Q0 of 16 episodes on 8 roots and a one-call probe. Roots are the independent units, not episodes, rounds or calls.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests, runbook and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-quota on 2026-10-04 for the pipeline lead dmarz/pipeline.
+**Paused, work in progress (2026-10-04).** This package is not launch-ready. The code has been changed for the pipeline's failure-handling rule (failed requests keep their evidence; the token-counting request never fails a call; S1 continues until more than 6 episodes have failed; a credit-balance outage pauses the stage and S1 can be resumed) and its tests pass, but this README, the preregistration, RUN.md, SETUP.md and VISUALIZATION.md still describe the earlier behaviour (first failed call stops S1; call caps 3,456 and 3,553), there is no `READY.yaml` and no pre-run review (`READY.draft.yaml` and `reviews/chain-001-pre.draft.md` are stale drafts), and the dated amendment for the rule is not written yet.
+
+**Nothing has run.** This directory holds the plan, frozen design, code, offline tests and a runbook. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-quota on 2026-10-04 for the pipeline lead dmarz/pipeline.
 
 It is hunch B2 of [the agent-budgets note](../agent-budgets-hunches.md) ("Identity splitting for quota"). The `agent-budgets` survey has not passed the prior-art gate, so this is a hunch-level exploratory study in researcher notes, not a hypothesis, and it makes no novelty claim. The closest prior work is theory on false-name manipulation [[yokoo-2004-effect]] [[yokoo-2007-making]] [[hu-2026-dissociative]] and the observation that lead agents over-spawn subagents without any quota incentive [[anthropic-2025-how]]. It follows the [ready-chain contract](../pipeline/READY-CHAIN.md). S2 is disabled.
 
@@ -82,7 +84,7 @@ The episode's model turns end when the job is complete, when the lead finishes, 
 
 ## Protocol
 
-[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md), [runbook](RUN.md), [visual mapping](VISUALIZATION.md), [pre-run review](reviews/chain-001-pre.md), [launcher summary](READY.yaml), [assignment manifest](manifest.json).
+[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md), [runbook](RUN.md), [visual mapping](VISUALIZATION.md), pre-run review and launcher summary (not written yet; stale drafts: [review draft](reviews/chain-001-pre.draft.md), [READY draft](READY.draft.yaml)), [assignment manifest](manifest.json).
 
 | Stage | Batch | Calls | What it does | Passes when |
 |---|---|---|---|---|

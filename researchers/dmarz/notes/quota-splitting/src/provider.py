@@ -8,9 +8,20 @@ and exactly one text block is required.
 
 No answer is ever retried. Only a request the provider rejected before running the model
 (HTTP 429 or 529) is re-sent, at most budget.retry.transport_retries times, inside the one
-request time budget. Credentials, request headers and raw transport exceptions never enter a
-record. The ledger and the transport rule are those of sybil-split-opus; the prompt, the schema
-and the per-turn call are this study's (study.system_prompt, study.SCHEMA).
+request time budget. Credentials and request headers never enter a record. The ledger and the
+transport rule are those of sybil-split-opus; the prompt, the schema and the per-turn call are
+this study's (study.system_prompt, study.SCHEMA).
+
+Failure handling (2026-10-04 rule):
+1. A failed HTTP request keeps its status, its response body (first 2,000 characters, with the
+   key and workspace id removed if they ever appeared) and the request-id response header.
+2. The token-counting request never fails a call: after the 429/529 rule, any other failure is
+   re-sent once after 2 s; if that fails too the reservation uses the size of the encoded
+   request in bytes as the input-token count (an upper bound) and the call proceeds.
+3. A credit-balance error (HTTP 400, 402 or 403 whose body names the credit balance, from either
+   endpoint) is a billing outage, not an outcome: it pauses every new call of the stage and the
+   same request is re-sent every 60 s for up to 1,200 s. If the outage outlasts that, every
+   later call is refused with the category `provider_credit_balance_low`.
 """
 import fcntl
 import json
@@ -28,6 +39,14 @@ MESSAGES_URL = 'https://api.anthropic.com/v1/messages'
 COUNT_URL = 'https://api.anthropic.com/v1/messages/count_tokens'
 
 BODY_KEYS = ('model', 'max_tokens', 'system', 'messages', 'output_config')
+
+
+SLEEP = time.sleep          # the rehearsal replaces it so that backoff and billing waits take no time
+CREDIT = 'provider_credit_balance_low'
+# Failures that stop a stage at once, whatever the number of failed units.
+INTEGRITY = ('duplicate_call_refused', 'stage_call_cap_reached', 'study_call_cap_reached', 'aggregate_budget_exhausted',
+             'attempt_without_reservation', 'transport_attempt_cap_reached', 'reservation_bound_breached', 'model_mismatch',
+             'stage_deadline', 'input_size_limit')
 
 
 class CallFailure(Exception):
@@ -116,12 +135,46 @@ class Ledger:
                     'input_tokens': self._tokens[0], 'output_tokens': self._tokens[1]}
 
 
+class BillingGate:
+    """Shared by every worker thread of a stage. While a credit-balance outage lasts no new call
+    starts; once the outage has outlasted its limit the gate is dead and every call is refused."""
+
+    def __init__(self):
+        self.lock = threading.Lock(); self.clear = threading.Event(); self.clear.set()
+        self.dead = False; self.pauses = 0; self.pause_seconds = 0; self.affected = 0
+
+    def begin(self, first=True):
+        with self.lock:
+            self.affected += bool(first)
+            if self.clear.is_set() and not self.dead: self.pauses += 1; self.clear.clear()
+
+    def end(self, waited):
+        with self.lock:
+            if not self.clear.is_set() and not self.dead: self.pause_seconds += waited; self.clear.set()
+
+    def stop(self, waited):
+        with self.lock:
+            if not self.dead: self.dead = True; self.pause_seconds += waited
+            self.clear.set()        # wake the waiting threads; they see the dead gate
+
+    def wait(self):
+        self.clear.wait()
+        if self.dead: raise CallFailure(CREDIT, {'attempted': False, 'usage_reported': False, 'attempts': 0, 'billing_stop': True})
+
+    def paused(self):
+        return not self.clear.is_set()
+
+    def stats(self):
+        return {'billing_pauses': self.pauses, 'billing_pause_seconds': self.pause_seconds, 'billing_affected_calls': self.affected}
+
+
 class Anthropic:
-    def __init__(self, ledger, opener=None, clock=time.monotonic, sleep=time.sleep):
+    def __init__(self, ledger, opener=None, clock=time.monotonic, sleep=None):
         self.ledger = ledger; self.opener = opener or urllib.request.urlopen
-        self.clock, self.sleep = clock, sleep
-        self.d = study.design(); self.b = self.d['budget']; self.retry = self.b['retry']
+        self.clock = clock; self.sleep = sleep or (lambda seconds: SLEEP(seconds))
+        self.d = study.design(); self.b = self.d['budget']; self.retry = self.b['retry']; self.outage = self.b['billing_outage']
         self.local = threading.local()      # the last response's rate-limit numbers, per worker thread
+        self.gate = BillingGate()
         self.key = os.environ.get('SWARM_MODEL_API_KEY')
         self.workspace = os.environ.get('SWARM_MODEL_WORKSPACE_ID')
         if not self.key or not self.workspace:
@@ -135,6 +188,22 @@ class Anthropic:
         return {'model': self.d['model'], 'max_tokens': self.b['max_output_tokens'], 'system': study.system_prompt(condition),
                 'messages': [{'role': 'user', 'content': study.user_text(obs)}],
                 'output_config': {'effort': self.d['effort'], 'format': {'type': 'json_schema', 'schema': study.SCHEMA}}}
+
+    def evidence(self, exc):
+        """What is kept of a failed HTTP response: status, body (truncated, credentials removed if
+        the provider ever echoed them) and the request-id header. Never a request header."""
+        try: raw = exc.read()
+        except Exception: raw = b''
+        text = raw.decode('utf-8', 'replace') if isinstance(raw, (bytes, bytearray)) else str(raw or '')
+        for secret in (self.key, self.workspace): text = text.replace(secret, '[removed]')
+        out = {'http_status': exc.code, 'error_body': text[:self.b['error_body_chars']]}
+        try: request_id = exc.headers.get('request-id') if exc.headers else None
+        except Exception: request_id = None
+        if request_id: out['request_id'] = str(request_id)[:200]
+        return out
+
+    def is_credit_error(self, ev):
+        return ev['http_status'] in self.outage['http_status'] and self.outage['match'] in ev['error_body'].lower()
 
     def post(self, url, encoded, prefix='', on_attempt=None):
         """One logical request. Returns (parsed JSON, attempts). Re-sends only after HTTP 429/529,
@@ -153,9 +222,9 @@ class Anthropic:
                     self.local.limits = rate_limits(getattr(response, 'headers', None))
                     return json.loads(response.read()), attempts
             except urllib.error.HTTPError as exc:
-                code = exc.code
+                code = exc.code; ev = self.evidence(exc)
                 try: retry_after = float(exc.headers.get('retry-after')) if exc.headers else None
-                except (TypeError, ValueError): retry_after = None
+                except (TypeError, ValueError, AttributeError): retry_after = None
                 try: exc.close()
                 except Exception: pass
                 if code in self.retry['retryable_http_status'] and attempts <= self.retry['transport_retries']:
@@ -165,7 +234,8 @@ class Anthropic:
                     if self.clock() + wait < deadline - 1:
                         self.sleep(wait)
                         continue
-                raise CallFailure(prefix + 'http_' + str(code), {'attempts': attempts}) from None
+                category = CREDIT if self.is_credit_error(ev) else prefix + 'http_' + str(code)
+                raise CallFailure(category, dict(ev, attempts=attempts)) from None
             except (socket.timeout, TimeoutError):
                 raise CallFailure(prefix + 'timeout', {'attempts': attempts}) from None
             except urllib.error.URLError as exc:
@@ -176,44 +246,87 @@ class Anthropic:
             except Exception as exc:
                 raise CallFailure(prefix + 'transport_' + type(exc).__name__, {'attempts': attempts}) from None
 
-    def count(self, body):
+    def guarded(self, send, note):
+        """Run one request. On a credit-balance error: pause the stage and re-send the same request
+        on the slow schedule, each re-send with its own request time budget. Returns what `send`
+        returns, raises its other failures unchanged, or raises CREDIT when the outage outlasted
+        the limit. `note` collects what happened for the call's accounting."""
         try:
-            data, attempts = self.post(COUNT_URL, json.dumps(body).encode(), 'count_')
+            return send()
         except CallFailure as exc:
-            raise CallFailure(exc.category, {'attempted': False, 'usage_reported': False, 'attempts': 0,
-                                             'count_attempts': exc.accounting.get('attempts', 0)}) from None
-        tokens = data.get('input_tokens') if isinstance(data, dict) else None
-        if type(tokens) is not int or tokens <= 0:
-            raise CallFailure('count_missing', {'attempted': False, 'usage_reported': False, 'attempts': 0, 'count_attempts': attempts})
-        return tokens, attempts
+            if exc.category != CREDIT: raise
+            first = exc
+        every, limit = self.outage['retry_every_seconds'], self.outage['max_wait_seconds']
+        note.update(billing_error={k: first.accounting[k] for k in ('http_status', 'error_body', 'request_id') if k in first.accounting})
+        waited = 0; self.gate.begin()
+        while True:
+            note.update(billing_resends=waited // every, billing_wait_seconds=waited)
+            if self.gate.dead or waited + every > limit:
+                self.gate.stop(waited); raise CallFailure(CREDIT, {'billing_stop': True}) from None
+            self.sleep(every); waited += every
+            try:
+                result = send()
+            except CallFailure as exc:
+                if exc.category == CREDIT:
+                    self.gate.begin(first=False)      # another call's success may have lifted the pause too early
+                    continue
+                note.update(billing_resends=waited // every, billing_wait_seconds=waited); self.gate.end(waited); raise
+            note.update(billing_resends=waited // every, billing_wait_seconds=waited); self.gate.end(waited)
+            return result
+
+    def count(self, body, request_bytes, note):
+        """Input tokens for the reservation. Never fails a call: 429/529 by the retry rule, any
+        other failure re-sent once after a short wait, then the request size in bytes (a token is
+        at least one byte, so this is an upper bound). Only a billing stop is raised."""
+        encoded = json.dumps(body).encode(); note.update(count_attempts=0)
+        for round_ in (1, 2):
+            try:
+                data, attempts = self.guarded(lambda: self.post(COUNT_URL, encoded, 'count_'), note)
+                note['count_attempts'] += attempts
+                tokens = data.get('input_tokens') if isinstance(data, dict) else None
+                if type(tokens) is int and tokens > 0: return tokens
+                failure = {'category': 'count_missing'}
+            except CallFailure as exc:
+                if exc.category == CREDIT: raise
+                note['count_attempts'] += exc.accounting.get('attempts', 0)
+                failure = dict({k: v for k, v in exc.accounting.items() if k in ('http_status', 'error_body', 'request_id')}, category=exc.category)
+            note.setdefault('count_errors', []).append(failure)
+            if round_ == 1: self.sleep(self.retry['count_resend_seconds'])
+        note['count_fallback'] = True
+        return request_bytes
 
     def call(self, condition, obs, call_id):
         """One turn: the condition's system prompt and the state of the round. Returns
         (validated answer, accounting) or raises CallFailure with the accounting so far."""
+        self.gate.wait()                     # no new call starts during a billing outage
         body = self.body(condition, obs)
         assert tuple(body) == BODY_KEYS
         encoded = json.dumps(body).encode()
         if len(encoded) > self.b['max_input_bytes']:
             raise CallFailure('input_size_limit', {'attempted': False, 'usage_reported': False, 'attempts': 0})
-        # Exact input tokens from the free counting endpoint; the whole output limit priced in full.
-        counted, count_attempts = self.count({k: v for k, v in body.items() if k != 'max_tokens'})
+        account = {'request_bytes': len(encoded), 'usage_reported': False, 'attempted': False, 'attempts': 0}
+        # Input tokens from the free counting endpoint (or the byte-count fallback); the whole output limit priced in full.
+        try:
+            counted = self.count({k: v for k, v in body.items() if k != 'max_tokens'}, len(encoded), account)
+        except CallFailure as exc:
+            raise CallFailure(exc.category, dict(account, **exc.accounting)) from None
         # 2% + 64 tokens in case billed input differs slightly from the count.
         reserve = (int(counted * 1.02) + 64) * self.b['input_usd_per_million'] + self.b['max_output_tokens'] * self.b['output_usd_per_million']
-        account = {'reserved_usd': reserve / 1e6, 'counted_input_tokens': counted, 'request_bytes': len(encoded),
-                   'usage_reported': False, 'attempted': False, 'attempts': 0, 'count_attempts': count_attempts}
+        account.update(reserved_usd=reserve / 1e6, counted_input_tokens=counted)
         try:
             self.ledger.transact({'type': 'reserve', 'call_id': call_id, 'micro_usd': reserve, 'time': time.time()})
         except CallFailure as exc:
             raise CallFailure(exc.category, account) from None
         account['attempted'] = True          # one call, reserved once, however many HTTP attempts follow
         def on_attempt(n):
-            self.ledger.transact({'type': 'attempt', 'call_id': call_id, 'n': n, 'time': time.time()})
-            account['attempts'] = n
+            self.ledger.transact({'type': 'attempt', 'call_id': call_id, 'n': account['attempts'] + 1, 'time': time.time()})
+            account['attempts'] += 1
         started = self.clock()
         try:
-            data, _ = self.post(MESSAGES_URL, encoded, '', on_attempt)
+            data, _ = self.guarded(lambda: self.post(MESSAGES_URL, encoded, '', on_attempt), account)
         except CallFailure as exc:
-            raise CallFailure(exc.category, account) from None
+            extra = {k: v for k, v in exc.accounting.items() if k in ('http_status', 'error_body', 'request_id', 'billing_stop')}
+            raise CallFailure(exc.category, dict(account, **extra)) from None
         account['latency_seconds'] = self.clock() - started
         if getattr(self.local, 'limits', None): account['rate_limits'] = self.local.limits
         if not isinstance(data, dict):

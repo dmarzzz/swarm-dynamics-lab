@@ -2,6 +2,9 @@
 
   python src/chain.py run --stages S0,P0,Q0,S1   exit 0 all requested stages done, 3 stopped at a
                                                  failed stage or gate, other non-zero internal error
+  python src/chain.py resume                     only after S1 stopped with provider_credit_balance_low at
+                                                 this source hash: queues a continuation batch s1-001-r<n>
+                                                 with exactly the unfinished episodes; same ledger and caps
   python src/chain.py status                     chain-status.json plus ledger totals, one JSON line
   python src/chain.py verify                     artifact checksums against the hub, every episode
                                                  replayed from its saved answers, the gates and the
@@ -90,6 +93,82 @@ def projection(q0_run):
             'output_room_ok': metrics['max_output_tokens_per_call'] <= room}
 
 
+def execute_run(run, entry, status, deadline, opener, units=None, prior_rows=None):
+    """Execute one queued run in this process and record it in `entry`. Returns (outcome, exit code, reason)."""
+    out = study.results_dir() / f'{run.id.replace("/", "__")}-attempt-{run.attempt}'
+    entry.update(status='running', run=run.id, directory=str(out), started=now()); write_status(status)
+    outcome, code, reason = 'done', None, None
+    try:
+        with run:
+            worker.execute(run.params, out, run, deadline=deadline, opener=opener, units=units, prior_rows=prior_rows)
+    except worker.StageFailed as exc:
+        outcome, code, reason = 'failed', EXIT_STOPPED, str(exc)
+    except Exception as exc:
+        outcome, code, reason = 'failed', EXIT_INTERNAL, 'internal_' + type(exc).__name__
+    entry.update(status=outcome, ended=now())
+    summary_file = out / 'summary.json'
+    if summary_file.exists():
+        s = json.loads(summary_file.read_text())
+        entry.update(calls=s['model_calls'], transport_attempts=s['transport_attempts'], input_tokens=s['input_tokens'],
+                     max_output_tokens_per_call=s.get('max_output_tokens_per_call'),
+                     output_tokens=s['output_tokens'], cost_usd=s['cost_usd'], planned=s['planned'], valid=s['graded'],
+                     invalid=s['invalid'], failed=s.get('failed'), not_started=s['not_started'], qualification_passed=s['qualification_passed'],
+                     errors=s['errors'], count_fallbacks=s.get('count_fallbacks'), billing_pauses=s.get('billing_pauses'),
+                     billing_pause_seconds=s.get('billing_pause_seconds'), resumable=s.get('resumable'))
+    status['ledger'] = ledger_totals(); write_status(status)
+    return outcome, code, reason
+
+
+def stage_rows(entry):
+    """Rows of a stage's original run followed by its continuations, in run order."""
+    rows = []
+    for e in [entry] + list(entry.get('continuations') or []):
+        if e.get('directory') and (Path(e['directory']) / 'episodes.jsonl.gz').exists():
+            rows += read_jsonl(Path(e['directory']) / 'episodes.jsonl.gz')
+    return rows
+
+
+def resume(sr=None, opener=None):
+    """Continue S1 after a billing stop. Allowed only when the chain's last state is S1 stopped with
+    provider_credit_balance_low at the current source hash. Queues one continuation run holding
+    exactly the episodes that stop left unfinished and executes it under the same ledger."""
+    if sr is None:
+        import swarm_report as sr
+    status = read_status(); entry = ((status or {}).get('stages') or {}).get('S1') or {}
+    def refuse(reason):
+        print(json.dumps({'state': 'resume_refused', 'reason': reason})); return EXIT_STOPPED
+    if not status or status.get('source_hash') != study.source_hash(): return refuse('no_chain_at_this_source_hash')
+    if status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' or status.get('reason') != provider.CREDIT:
+        return refuse('last_stop_was_not_a_billing_stop_of_S1')
+    prior = stage_rows(entry); final = study.combine(prior)
+    units = sorted(r['id'] for r in final if r['status'] in ('interrupted', 'not_started'))
+    if not units or len(final) != len(study.cells('S1')): return refuse('no_unfinished_units')
+    n = len(entry.get('continuations') or []) + 1
+    budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
+    cont = {'status': 'gating', 'batch': f'{study.batch("S1")}-r{n}', 'units': len(units)}
+    entry.setdefault('continuations', []).append(cont)
+    status.update(state='running', stopped_stage=None, reason=None); write_status(status)
+    def stop(reason, code):
+        status.update(state='stopped_at_gate', stopped_stage='S1', reason=reason, ledger=ledger_totals()); write_status(status)
+        print(json.dumps({'state': 'stopped_at_gate', 'stage': 'S1', 'reason': reason})); return code
+    try:
+        ids = coordinator.enqueue_continuation(sr, n); run = sr.next_run(study.EXPERIMENT)
+    except coordinator.GateRefused as exc:
+        cont['status'] = 'refused'; return stop(str(exc), EXIT_STOPPED)
+    except Exception as exc:
+        cont['status'] = 'failed'; return stop('internal_' + type(exc).__name__, EXIT_INTERNAL)
+    if run is None or run.id != ids[0] or run.attempt != 1:
+        cont.update(status='failed', run=ids[0]); return stop('queued_run_not_received', EXIT_INTERNAL)
+    outcome, code, reason = execute_run(run, cont, status, deadline, opener, units=units, prior_rows=prior)
+    if outcome != 'done': return stop(reason, code)
+    entry.update(status='done', completed_by=cont['batch'])
+    status.update(state='completed', all_stages_done=all(status['stages'].get(s, {}).get('status') == 'done' for s in study.STAGES),
+                  ledger=ledger_totals())
+    write_status(status)
+    print(json.dumps({'state': 'completed', 'stages': ['S1'], 'continuation': cont['batch'], 'units': len(units)}))
+    return EXIT_DONE
+
+
 def run_chain(stages, sr=None, opener=None):
     if sr is None:
         import swarm_report as sr
@@ -136,26 +215,7 @@ def run_chain(stages, sr=None, opener=None):
         if run is None or run.id != ids[0] or run.attempt != 1:
             entry.update(status='failed', run=ids[0])
             return stop(stage, 'queued_run_not_received', EXIT_INTERNAL)
-        out = study.results_dir() / f'{run.id.replace("/", "__")}-attempt-{run.attempt}'
-        entry.update(status='running', run=run.id, directory=str(out), started=now()); write_status(status)
-        outcome, code = 'done', None
-        try:
-            with run:
-                worker.execute(run.params, out, run, deadline=deadline, opener=opener)
-        except worker.StageFailed as exc:
-            outcome, code, reason = 'failed', EXIT_STOPPED, str(exc)
-        except Exception as exc:
-            outcome, code, reason = 'failed', EXIT_INTERNAL, 'internal_' + type(exc).__name__
-        entry.update(status=outcome, ended=now())
-        summary_file = out / 'summary.json'
-        if summary_file.exists():
-            s = json.loads(summary_file.read_text())
-            entry.update(calls=s['model_calls'], transport_attempts=s['transport_attempts'], input_tokens=s['input_tokens'],
-                         max_output_tokens_per_call=s.get('max_output_tokens_per_call'),
-                         output_tokens=s['output_tokens'], cost_usd=s['cost_usd'], planned=s['planned'], valid=s['graded'],
-                         invalid=s['invalid'], not_started=s['not_started'], qualification_passed=s['qualification_passed'],
-                         errors=s['errors'])
-        status['ledger'] = ledger_totals(); write_status(status)
+        outcome, code, reason = execute_run(run, entry, status, deadline, opener)
         if outcome != 'done':
             return stop(stage, reason, code)
     status.update(state='completed', all_stages_done=all(status['stages'].get(s, {}).get('status') == 'done' for s in study.STAGES),
@@ -200,10 +260,12 @@ def regrade(a, r):
         and close(study.spawn_notes(r['turns']), r['spawn_notes'])
 
 
-def verify_stage(sr, stage, entry, reference):
+def verify_stage(sr, stage, entry, reference, prior_rows=None, original=True):
+    """Checks of one hub run. For a continuation, `prior_rows` are the rows of the earlier runs of
+    the stage; the saved analysis then covers the earlier runs and this one together."""
     checks = {}; out = Path(entry['directory'])
     detail = sr.get_run(entry['run']); hub = {a['name']: a for a in detail.get('artifacts', [])}
-    checks['hub_status_matches'] = detail.get('status') == entry['status']
+    checks['hub_status_matches'] = detail.get('status') == ('failed' if entry.get('completed_by') else entry['status'])
     checks['hub_has_every_artifact'] = all(name in hub for name in worker.ARTIFACTS)
     checks['artifact_checksums'] = bool(hub) and all(
         (out / name).is_file() and hashlib.sha256((out / name).read_bytes()).hexdigest() == a['sha256'] for name, a in hub.items())
@@ -213,26 +275,44 @@ def verify_stage(sr, stage, entry, reference):
     fresh = {a['id']: a for a in (study.assignment(*(a[k] for k in study.ID_FIELDS), a['max_turns']) for a in assigned)}
     checks['fixed_inputs_regenerate'] = all(close(json.loads(json.dumps(fresh[i])), a) for i, a in by_id.items()) and all(
         r['fixed_hash'] == by_id[r['id']]['fixed_hash'] for r in rows if r['id'] in by_id)
-    checks['manifest_matches'] = manifest.stage_entry(assigned)['digest'] == reference['stages'][stage]['digest']
+    listed = set(reference['stages'][stage]['ids'])
+    checks['manifest_matches'] = manifest.stage_entry(assigned)['digest'] == reference['stages'][stage]['digest'] if original else \
+        all(f'{a["id"]}:{a["fixed_hash"][:16]}' in listed for a in assigned)
     good = [r for r in rows if r['status'] == 'completed']
     checks['episodes_replayed'] = all(regrade(by_id[r['id']], r) for r in rows if r['turns'])
-    logged = sorted((c['episode'], c['round']) for c in calls)
-    checks['turn_log_complete'] = logged == sorted((r['id'], t['round']) for r in rows for t in r['turns'] + ([r['failed_turn']] if r.get('failed_turn') and 'round' in r['failed_turn'] else []))
+    extra = lambda r: [r[key] for key in ('failed_turn', 'billing_turn') if r.get(key) and 'round' in r[key]]
+    checks['turn_log_complete'] = sorted((c['episode'], c['round']) for c in calls) == sorted((r['id'], t['round']) for r in rows for t in r['turns'] + extra(r))
     summary = json.loads((out / 'summary.json').read_text()); saved = json.loads((out / 'analysis.json').read_text())
-    compared = [r for r in rows if r['kind'] in analyze.KINDS]
-    checks['analysis_recomputed'] = close(saved, json.loads(json.dumps(analyze.analyze(rows, analyze.actor(stage))))) if compared else saved.get('cells') == []
+    everyone = study.combine(list(prior_rows or []) + rows)
+    compared = [r for r in everyone if r['kind'] in analyze.KINDS]
+    checks['analysis_recomputed'] = close(saved, json.loads(json.dumps(analyze.analyze(everyone, analyze.actor(stage))))) if compared else saved.get('cells') == []
     t = worker.totals(rows, len(assigned))
     checks['totals_recomputed'] = all(close(float(summary[k]), float(v)) for k, v in t.items())
-    violations = [v for v in summary.get('invariant_violations') or []]
-    gate = study.gate(stage, rows, violations)
+    gate = study.gate(stage, rows, summary.get('invariant_violations') or [])
     checks['gate_recomputed'] = (None if gate is None else int(gate)) == summary['qualification_passed']
+    budget = study.design()['budget']; failed = sum(r['status'] == 'failed' for r in everyone)
+    stopped = any(r['status'] in ('interrupted', 'not_started') for r in rows)
+    want = (t['invalid'] == 0 and gate is not False) if stage in worker.STRICT else (not stopped and failed <= budget['max_failed'])
+    checks['passed_recomputed'] = summary['passed'] == (bool(want) and not summary.get('invariant_violations'))
     metrics = detail.get('metrics') or {}
     checks['hub_metrics_match'] = all(k in metrics and close(float(metrics[k]), float(t[k])) for k in
-                                      ('episodes', 'invalid', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd'))
+                                      ('episodes', 'invalid', 'failed', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd'))
     checks['source_hash_current'] = summary['params']['source_hash'] == study.source_hash()
-    checks['call_cap_respected'] = t['model_calls'] <= study.design()['budget']['max_calls'][stage]
-    return {'run': entry['run'], 'status': entry['status'], 'ok': all(checks.values()), 'checks': checks,
-            'episodes': len(assigned), 'completed': len(good), 'model_calls': t['model_calls'], 'cost_usd': t['cost_usd']}
+    checks['call_cap_respected'] = t['model_calls'] <= budget['max_calls'][stage]
+    return {'run': entry['run'], 'status': entry['status'], 'ok': all(checks.values()), 'checks': checks, 'episodes': len(assigned),
+            'completed': len(good), 'failed': t['failed'], 'model_calls': t['model_calls'], 'cost_usd': t['cost_usd']}, rows
+
+
+def units(rows, reference):
+    """S1 as a whole, from the rows of its original run and its continuations: one terminal row per
+    episode, and the primary contrast with its complete-case denominator and all-assigned bounds."""
+    final = study.combine(rows); count = lambda s: sum(r['status'] == s for r in final)
+    a = analyze.analyze(final, analyze.actor('S1'))['primary']
+    return {'assigned': len(final), 'completed': count('completed'), 'failed': count('failed'),
+            'interrupted': count('interrupted'), 'not_started': count('not_started'),
+            'every_unit_exactly_once': sorted(r['id'] for r in final) == sorted(x.split(':')[0] for x in reference['stages']['S1']['ids']),
+            'primary_estimate': a['estimate'], 'primary_roots': a['roots'], 'primary_assigned_roots': a['assigned_roots'],
+            'primary_bounds_all_assigned': a['bounds_all_assigned']}
 
 
 def verify(sr=None):
@@ -245,7 +325,14 @@ def verify(sr=None):
     for stage in study.STAGES:
         entry = status['stages'].get(stage)
         if not entry or 'run' not in entry or 'directory' not in entry: continue
-        try: stages[stage] = verify_stage(sr, stage, entry, reference)
+        try:
+            stages[stage], rows = verify_stage(sr, stage, entry, reference)
+            for n, cont in enumerate(entry.get('continuations') or [], 1):
+                if 'run' not in cont or 'directory' not in cont: continue
+                stages[f'{stage}-r{n}'], more = verify_stage(sr, stage, cont, reference, prior_rows=rows, original=False); rows = rows + more
+            if stage == 'S1':       # the stage as a whole: every episode exactly once, with the bounds the analysis reports
+                stages[stage]['units'] = units(rows, reference)
+                stages[stage]['ok'] = stages[stage]['ok'] and stages[stage]['units']['every_unit_exactly_once']
         except Exception as exc: stages[stage] = {'run': entry.get('run'), 'ok': False, 'error': type(exc).__name__ + ': ' + str(exc)[:200]}
     ok = bool(stages) and all(s['ok'] for s in stages.values())
     print(json.dumps({'ok': ok, 'state': status.get('state'), 'manifest_digest': reference['digest'], 'stages': stages}, sort_keys=True))
@@ -256,9 +343,10 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='cmd', required=True)
     r = sub.add_parser('run'); r.add_argument('--stages', default=','.join(study.STAGES))
-    sub.add_parser('status'); sub.add_parser('verify')
+    sub.add_parser('status'); sub.add_parser('verify'); sub.add_parser('resume')
     a = ap.parse_args(argv)
     if a.cmd == 'run': return run_chain(parse_stages(a.stages))
+    if a.cmd == 'resume': return resume()
     if a.cmd == 'status': return show_status()
     return verify()
 
