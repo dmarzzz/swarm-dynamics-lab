@@ -16,6 +16,8 @@ providers: {qwen/qwen3.7-flash: openrouter, gpt-6-sol: openai, gpt-6-luna: opena
 # Replications (pre-registration Amendment 2): R1 = --model gpt-6-sol --replication r1; R2 = --model gpt-6-luna.
 replications: [r1]
 review: reviews/chain-004-pre.md
+# R1 and R2 each start their own ledger file on the coordinator (launcher contract: READY-CHAIN.md, fresh ledger).
+ledger: fresh
 max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192}
 max_reissued_calls: 360
 max_calls_total: 8478

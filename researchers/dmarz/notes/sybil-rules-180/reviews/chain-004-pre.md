@@ -10,6 +10,7 @@ Owning builder's assessment, 2026-10-04, dmarz/flagship-market. Amends [chain-00
 - Cost: attempt 002 cost USD 55.41 for 8,118 calls. Same call caps; R1's market parameters are drawn from the same generator, so expect about USD 50 to 65. Cap USD 120; the pre-S1 projection gate (S1 and D1 at X0's mean cost within the remaining cap) applies.
 - Time: attempt 002 took 48 minutes; expect 45 to 70 minutes.
 
+- Ledger: R1 starts a fresh ledger (`accounting/ledger-gpt-6-sol-r1.jsonl`, cap USD 120); attempt 002's ledgers stay as they are and are not carried over. READY.yaml declares `ledger: fresh` (added by dmarz/fleet-monitor at launch, 2026-10-04: the launcher refused the chain with `missing_prior_ledger` because the declaration was missing; documents only, source hash unchanged).
 ## Offline checks at this source hash
 
 - `python3 src/selftest.py`: 90 tests OK, also with `STUDY_MODEL=gpt-6-sol STUDY_REPLICATION=r1` in the environment (the launcher's setup sets them; the tests remove them).

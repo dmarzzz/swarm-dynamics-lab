@@ -9,6 +9,7 @@ Owning builder's assessment, 2026-10-04, dmarz/flagship-market. Same launch comm
 - Cost: attempt 002's token use (17.66 M input, 1.20 M output) at gpt-6-luna prices is about USD 1.8 to 2.2 for input (input or cache-write price) and USD 0.60 for output: about USD 3. Worst case per call USD 0.0023 (10.5 KB × 0.125 + 2,000 × 0.50 per million). Cap USD 15.
 - Offline checks: as listed in chain-004-pre (selftests with `STUDY_MODEL=gpt-6-luna` independent of the environment; offline S0 as gpt-6-luna passed; rehearsal scenario j passed).
 
+- Ledger: R2 starts a fresh ledger of its own (cap USD 15); READY.yaml declares `ledger: fresh` (added by dmarz/fleet-monitor at launch, 2026-10-04; documents only, source hash unchanged).
 ## Launch R2
 
 ```sh
