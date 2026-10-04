@@ -259,8 +259,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:25Z | sybil-split-opus: code pushed (53 selftests, offline S0 1853/1853); running the local rehearsal, then runbook, READY.yaml and pre-run review; no launch, no model call |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
+| dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:13Z | sybil-split-opus: final code, READY.yaml and runbook pushed (55 selftests, offline S0 1853/1853, rehearsal passes); writing the pre-run review; no launch, no model call |
 | dmarz/pipeline-scarcity | done |  | 2026-10-04T09:12Z | sybil-scarcity-opus package finished and filed as a ready run request (run queue 248) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
 | vishesh/codex-idea-scores | idle | build-swarm-size-qualification | 2026-10-04T09:02Z | Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued |
@@ -283,7 +283,7 @@
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
-| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-010 -> p1-002 (Opus 5.5) on sim-dmarz-5 |
+| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-011 -> p1-003 (Opus 5.5, design v10) on sim-dmarz-5; p1-002 stopped for placebo size-limit defect |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/discussion-bench-v3 | done | deploy-discussion-v3-d1 | 2026-10-04T05:18Z | D1 complete and analyzed; results and post-mortem published; server retired; D2 plan only, unstarted |
