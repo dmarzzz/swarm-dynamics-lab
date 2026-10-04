@@ -2449,6 +2449,48 @@
         "researchers/dmarz/notes/memory-handoff-qwen/experiment.yaml"
       ],
       "status_at_assessment": "planned_unrun"
+    },
+    {
+      "id": "sybil-scale-opus",
+      "title": "Sybil resistance as swarms grow: Opus 5.5 cohort",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-opus/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-opus/experiment.yaml"
+      ],
+      "assessor": "dmarz/orchestrator-2",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "On identical assignments, claude-opus-5-5 (effort low, no temperature) reproduces the population-scaling direction (proportional strong checks raise N972 specialist accuracy by +100.0 pp) but scores lower than Haiku and Sonnet over the grid because it abstains on 31% of rare fields while giving the fewest wrong values.",
+        "rationale": "Same-owner audit of 24 paired world roots, 2,400/2,400 valid, exact local recomputation, assignments identical to the Haiku and Sonnet cohorts. One synthetic task family and graph, admission independent of the model, configuration differs from the earlier cohorts in more than the model (no temperature, effort low), descriptive unadjusted intervals, owner waiver in place of independent review."
+      },
+      "sample_size_summary": "Observed: 24 paired world roots from one synthetic task family; 2,400/2,400 S1 outcomes analyzed, zero missing; 100 conditions at 36-972 simulated identities feeding one synthesizer. Q0 separately 64/64. Compared by world with the separate Haiku (sybil-scale-api/56defc84) and Sonnet (sybil-scale-sonnet/afd8d5b9) cohorts; not pooled.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-opus/RESULTS.md",
+        "researchers/dmarz/notes/sybil-scale-opus/verification-summary.json",
+        "researchers/dmarz/notes/sybil-scale-opus/results-summary.json",
+        "researchers/dmarz/notes/sybil-scale-opus/model-comparison-haiku-cells.csv",
+        "researchers/dmarz/notes/sybil-scale-opus/model-comparison-sonnet-cells.csv",
+        "researchers/dmarz/notes/sybil-scale-opus/rare-field-outcomes.json",
+        "researchers/dmarz/notes/sybil-scale-opus/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-scale-opus/design.yaml"
+      ],
+      "status_at_assessment": "complete_valid_result_claim_released",
+      "source_sha256": {
+        "researchers/dmarz/notes/sybil-scale-opus/RESULTS.md": "c80e0b14db9e3c9a21ed2b0b9a17fa26d556df50e4313c87762b5d28c08733e2",
+        "researchers/dmarz/notes/sybil-scale-opus/verification-summary.json": "9fe60d77772d2c23a9ae13528ec3653659b69055296bf5f15cffc9f84a141900",
+        "researchers/dmarz/notes/sybil-scale-opus/results-summary.json": "be252eb049841e8dc7673512686de251bf8be1eb61e602442fe866ee61a1af00",
+        "researchers/dmarz/notes/sybil-scale-opus/model-comparison-haiku-cells.csv": "c4fc3c03405bf8ab53a042a065f6c6ea40e3412d8b34d88189d599513b58d262",
+        "researchers/dmarz/notes/sybil-scale-opus/model-comparison-sonnet-cells.csv": "eda238d17f5f61294f67f127dc4554634406f6bc3cd4033e0ab591042ff112d3",
+        "researchers/dmarz/notes/sybil-scale-opus/rare-field-outcomes.json": "971b4505d45185a884366fdfb98db0c2a46ddba96a43e0ad203c3f3bc33b131e",
+        "researchers/dmarz/notes/sybil-scale-opus/reviews/s1-001-post.md": "beee347ab04297da32d8d87c615bb3369f65b7371f5dff467fcdcc978effcddc",
+        "researchers/dmarz/notes/sybil-scale-opus/design.yaml": "dc4136d54508e0014e201644030fd91577283b119b5a35fd8ff036c64bd1e0d0"
+      }
     }
   ],
   "source_sha256": {
