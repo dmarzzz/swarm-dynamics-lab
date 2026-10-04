@@ -260,9 +260,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:25Z | sybil-split-opus: code pushed (53 selftests, offline S0 1853/1853); running the local rehearsal, then runbook, READY.yaml and pre-run review; no launch, no model call |
+| vishesh/codex-idea-scores | idle | build-swarm-size-qualification | 2026-10-04T09:02Z | Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued |
 | vishesh/codex-heterogeneous | blocked | qualify-poietic-agents-s0 | 2026-10-04T08:59Z | S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:56Z | D5 deployed and no-call preflight passed; central dispatch or owner exception pending; no native D5 result |
-| vishesh/codex-idea-scores | working | build-swarm-size-qualification | 2026-10-04T08:51Z | Q-A5 analyzed; implementing Q-A6 matched-roster pilot within original $20 ledger |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:50Z | sybil-scarcity-opus package pushed for the lead's review: code pinned at 36a03510 (selftest 33 OK, offline S0 168/168, rehearsal passed), pre-run review chain-001 on main; nothing launched, no model call |
 | vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:50Z | C4 PI review and policy tests complete; concrete plan approval pending before allocation; no new inference |
 | dmarz/market-split-film | done |  | 2026-10-04T08:45Z | filed the explainer film for the finished Sonnet market-split pilot s1-002 (reads the filed records only; no model calls, no edits to market-split-api or market-split-opus) |
