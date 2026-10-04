@@ -1,0 +1,102 @@
+{
+  "uploads": [
+    {
+      "run": "phantom-coast-pc11/Q0-A1",
+      "name": "qualification-summary.json",
+      "sha256": "65025d3075db252453526988b75216cd2e84e9291fc7155f1274c131ca1e1b5e",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/Q0-A1",
+      "name": "qualification.json",
+      "sha256": "7ef6502d77d1264c936c36d3620d207e2b2b716bd85e87c9b3bf0e1c7597a5f1",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/Q0-A1",
+      "name": "cases.json",
+      "sha256": "2c6519fd18c7a2ccd4a13a89266b8234aa84b269b5dd96c462510a80745761f4",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/Q0-A1",
+      "name": "QUALIFICATION-POST.md",
+      "sha256": "b3314e9e517a0101e190a4a69dd414b3823270b0a47766f2a66ec7318fca26e7",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/Q0-A1",
+      "name": "source.json",
+      "sha256": "bb7a7293707b2cd6778fa772b9e2262b0deaa1499d591c6409b1456d155ce719",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/Q0-A1",
+      "name": "public-plan.json",
+      "sha256": "8091d85c74f89ea2776a3893a9ac40d8609ae7d142ed9849c57f6c3b2a461071",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "summary.json",
+      "sha256": "868dbeb8ce4267900ca0bef9e381ec07c1bf786c051238866ac84fca6fdc1562",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "pilot-summary.json",
+      "sha256": "99245779ccf29dbd0cc54a458be4bf0df1a79ecd9e52783e733e956d16682e90",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "episodes.json",
+      "sha256": "d7de24659d371adda3ec22c9edd90a97cee4e9e546c39927d261da0fe26a0443",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "traces.json",
+      "sha256": "a25a1f7a19516d64fbcf1464e06bae4b50ab507afdc3c2eb0a9edfd7f6272a6e",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "assignments.json",
+      "sha256": "af491f2fffc4d938c7ac0a1ed7797cccdc0787a18d51774f7bd621fd20114452",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "audit.json",
+      "sha256": "c70de29a18c31ca48b99dab4f40dc94f8bb8691c578abb78f09dd63624d98cc3",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "source.json",
+      "sha256": "bb7a7293707b2cd6778fa772b9e2262b0deaa1499d591c6409b1456d155ce719",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "public-plan.json",
+      "sha256": "8091d85c74f89ea2776a3893a9ac40d8609ae7d142ed9849c57f6c3b2a461071",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "POST-MORTEM.md",
+      "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c",
+      "verified": true
+    },
+    {
+      "run": "phantom-coast-pc11/S1-A1",
+      "name": "replay.html",
+      "sha256": "ff2cafa900fffcdbef7929caa6ffe93666413aab05132ff6fd538c4e948b081a",
+      "verified": true
+    }
+  ],
+  "worker_stopped": true,
+  "credential_installed": false
+}

@@ -1,0 +1,23 @@
+{
+  "qualification": {
+    "assigned": 8,
+    "valid": 8,
+    "map_correct": 32,
+    "map_total": 32,
+    "inspection_correct": 6,
+    "inspection_total": 6,
+    "qualification_passed": true
+  },
+  "pilot_complete": true,
+  "pilot_calls": 120,
+  "calls": 128,
+  "stop": null,
+  "budget": {
+    "calls": 128,
+    "new_known_nano": 333957000,
+    "cumulative_known_nano": 1181699490,
+    "cumulative_exposure_nano": 1193795490,
+    "original_api_cap_nano": 4000000000,
+    "original_total_cap_nano": 5000000000
+  }
+}

@@ -19,12 +19,12 @@
       "title": "Phantom Coast",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
-      "setup_path": "researchers/vishesh/notes/phantom-coast/pc10/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/pc11/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:52:58.775627+00:00",
-      "checked_commit": "89016acef1a33f405f1a551f57a6d5b66f3431be",
-      "next_action": "FINISH / PARK current qualification path. PC10 paired16calls:both32/32 maps and4/6 actions, no changes; clarified gate failed. No pilot/retry. Worker stopped,10 readbacks verified, claim released; exposure.859838490 under original cap. Any new population objective needs offline design and concrete owner decision.",
+      "checked_at": "2026-10-04T20:19:08.068328+00:00",
+      "checked_commit": "15eeab416107c9077539b80958c3ba1184e3ee08",
+      "next_action": "FINISH / PARK PC11 pilot: GPT-6 Sol qualification8valid32maps6actions passed;120 pilot decisions,1matched world,0/9 unseeded target errors in all arms,9/9 UNKNOWN. False seed persists locally; identical inspections/no target exposure.128 hashes audited, worker stopped, claim released. Exposure1.193795490 under original cap; no queued successor.",
       "next_run_approval": "owner"
     },
     {

@@ -1,0 +1,1310 @@
+[
+  {
+    "policy": "exact",
+    "evidence_kind": "SCRIPTED\u2014NOT MODEL EVIDENCE",
+    "contrast": {
+      "world_id": "PC11/S1-A1/root-0",
+      "poison_effect_with_peers_bounds": [
+        0.0,
+        0.0
+      ],
+      "poison_effect_without_peers_bounds": [
+        0.0,
+        0.0
+      ],
+      "collective_interaction_bounds": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "world-paired descriptive bounds; no population or mediation inference"
+    },
+    "arms": [
+      {
+        "condition": {
+          "poison": false,
+          "peers": true
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 1,
+                "wrong": 0,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.24375,
+                0.24375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 11,
+                "wrong": 0,
+                "unknown": 29,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.18125,
+                0.18125
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s5f2ba2a02ec9",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 21,
+                "wrong": 0,
+                "unknown": 19,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.11875,
+                0.11875
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": null,
+          "target_inspection_censored": true,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "3e210f0baffd14a45e4ae87465b9946a8cdbd453dff26ef44fae0de3a3e4c84a"
+        }
+      },
+      {
+        "condition": {
+          "poison": false,
+          "peers": false
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 1,
+                "wrong": 0,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.24375,
+                0.24375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 11,
+                "wrong": 0,
+                "unknown": 29,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.18125,
+                0.18125
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s5f2ba2a02ec9",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 21,
+                "wrong": 0,
+                "unknown": 19,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.11875,
+                0.11875
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": null,
+          "target_inspection_censored": true,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "32dc6b8551724a66bd9dbc5110724e97f410e2453d8b6259fa1b75c3169c2af6"
+        }
+      },
+      {
+        "condition": {
+          "poison": true,
+          "peers": false
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 0,
+                "wrong": 1,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.26875,
+                0.26875
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 10,
+                "wrong": 1,
+                "unknown": 29,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.20625,
+                0.20625
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s5f2ba2a02ec9",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 20,
+                "wrong": 1,
+                "unknown": 19,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.14375,
+                0.14375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": null,
+          "target_inspection_censored": true,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "f289dc561690d1f53ecec657158a0cbf3d3cd6f013953cea415c77dad625436c"
+        }
+      },
+      {
+        "condition": {
+          "poison": true,
+          "peers": true
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 0,
+                "wrong": 1,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.26875,
+                0.26875
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 10,
+                "wrong": 1,
+                "unknown": 29,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.20625,
+                0.20625
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s5f2ba2a02ec9",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 20,
+                "wrong": 1,
+                "unknown": 19,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.14375,
+                0.14375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": null,
+          "target_inspection_censored": true,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "3dff7f16981c3a201745f8e5894aee5438e8356b7d882623a5f576a168c44f3b"
+        }
+      }
+    ]
+  },
+  {
+    "policy": "deliberately_faulty_peer_copy",
+    "evidence_kind": "SCRIPTED\u2014NOT MODEL EVIDENCE",
+    "contrast": {
+      "world_id": "PC11/S1-A1/root-0",
+      "poison_effect_with_peers_bounds": [
+        0.0,
+        0.0
+      ],
+      "poison_effect_without_peers_bounds": [
+        0.0,
+        0.0
+      ],
+      "collective_interaction_bounds": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "world-paired descriptive bounds; no population or mediation inference"
+    },
+    "arms": [
+      {
+        "condition": {
+          "poison": false,
+          "peers": true
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 1,
+                "wrong": 0,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.24375,
+                0.24375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 9,
+                "wrong": 0,
+                "unknown": 0,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 20,
+                "wrong": 0,
+                "unknown": 20,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.125,
+                0.125
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s5f2ba2a02ec9",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 9,
+                "wrong": 0,
+                "unknown": 0,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 30,
+                "wrong": 0,
+                "unknown": 10,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.0625,
+                0.0625
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": null,
+          "target_inspection_censored": true,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "a9ddb5ed1de6b0a2acde9d1913d61e4e1d506b537a0147f5e28aaa292969a99a"
+        }
+      },
+      {
+        "condition": {
+          "poison": false,
+          "peers": false
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 1,
+                "wrong": 0,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.24375,
+                0.24375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 11,
+                "wrong": 0,
+                "unknown": 29,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.18125,
+                0.18125
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s5f2ba2a02ec9",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 21,
+                "wrong": 0,
+                "unknown": 19,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.11875,
+                0.11875
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": null,
+          "target_inspection_censored": true,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "c3a5db3f40500d983a2b71f3801ed2062e4fc5182a5ea8dc43bea187c0f32e53"
+        }
+      },
+      {
+        "condition": {
+          "poison": true,
+          "peers": false
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 0,
+                "wrong": 1,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.26875,
+                0.26875
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 10,
+                "wrong": 1,
+                "unknown": 29,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.20625,
+                0.20625
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s5f2ba2a02ec9",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 20,
+                "wrong": 1,
+                "unknown": 19,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.14375,
+                0.14375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": null,
+          "target_inspection_censored": true,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "8d5f07dec77a22a4b5e6a9e9a395db4a74187a80a6b0feba9a9e586be2031903"
+        }
+      },
+      {
+        "condition": {
+          "poison": true,
+          "peers": true
+        },
+        "summary": {
+          "timeline": [
+            {
+              "time": 0,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 0,
+                "unknown": 9,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 0,
+                "wrong": 1,
+                "unknown": 39,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.26875,
+                0.26875
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 0,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": "s7e745334b7c1",
+              "slot": "new"
+            },
+            {
+              "time": 1,
+              "unexposed_target": {
+                "correct": 0,
+                "wrong": 9,
+                "unknown": 0,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "LAND",
+                "category": "wrong"
+              },
+              "target_wrong_bounds": [
+                1.0,
+                1.0
+              ],
+              "all_locations": {
+                "correct": 10,
+                "wrong": 10,
+                "unknown": 20,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.375,
+                0.375
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 0
+              },
+              "observed_cells": {
+                "cells": 10,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": true,
+              "selected": "sc8a840be375c",
+              "slot": "new"
+            },
+            {
+              "time": 2,
+              "unexposed_target": {
+                "correct": 9,
+                "wrong": 0,
+                "unknown": 0,
+                "invalid": 0,
+                "missing": 0,
+                "failed": 0
+              },
+              "seed_target": {
+                "status": "valid",
+                "choice": "WATER",
+                "category": "correct"
+              },
+              "target_wrong_bounds": [
+                0.0,
+                0.0
+              ],
+              "all_locations": {
+                "correct": 20,
+                "wrong": 0,
+                "unknown": 20,
+                "unobserved": 0
+              },
+              "mean_loss_bounds": [
+                0.125,
+                0.125
+              ],
+              "after_target_receipt": {
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0,
+                "denominator": 9
+              },
+              "observed_cells": {
+                "cells": 20,
+                "wrong": 0,
+                "unknown": 0,
+                "unobserved": 0
+              },
+              "unexposed_known_wrong_consensus": false,
+              "selected": null,
+              "slot": "none"
+            }
+          ],
+          "assigned": 30,
+          "valid": 30,
+          "unique_coverage": 2,
+          "repeat_slots": 0,
+          "failed_slots": 0,
+          "first_target_inspection": 2,
+          "target_inspection_censored": false,
+          "inspection_horizon": 2
+        },
+        "audit": {
+          "verified": true,
+          "packets": 30,
+          "sha256": "8b477f53ad05f5dba902de4f5feaaa9f9d51f8493df12b641a5e9f7410bed86d"
+        }
+      }
+    ]
+  }
+]

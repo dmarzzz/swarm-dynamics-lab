@@ -1,0 +1,51 @@
+{
+  "world": {
+    "id": "PC11/S1-A1/root-0",
+    "truth": {
+      "sbdc6206dbae3": "WATER",
+      "s5f2ba2a02ec9": "WATER",
+      "sc8a840be375c": "WATER",
+      "s7e745334b7c1": "WATER"
+    },
+    "target": "sc8a840be375c",
+    "seed_actor": "agent-8",
+    "tie_order": [
+      "s7e745334b7c1",
+      "s5f2ba2a02ec9",
+      "sbdc6206dbae3",
+      "sc8a840be375c"
+    ]
+  },
+  "arms": [
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      false
+    ],
+    [
+      true,
+      false
+    ],
+    [
+      true,
+      true
+    ]
+  ],
+  "actors": [
+    "agent-0",
+    "agent-1",
+    "agent-2",
+    "agent-3",
+    "agent-4",
+    "agent-5",
+    "agent-6",
+    "agent-7",
+    "agent-8",
+    "agent-9"
+  ],
+  "rounds": 3,
+  "assigned": 120
+}

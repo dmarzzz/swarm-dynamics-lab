@@ -65,3 +65,8 @@ Owner-approved PC9 Q0 ran8valid calls:32/32 maps,4/6 actions. Native gate failed
 PC10 objective repair `136cd57e8f1210a8c498b8875148bf5bed91817b`: explicit individual control/no future peer updates, evidence-matched legacy comparison, independent all-action enumeration, paired missingness and bounded ledger/admission/executor.13 new tests+47 preserved PC9 tests pass. No native calls or resources; concrete16-call decision pending.
 
 PC10 paired run16valid:both wordings32/32 labels and4/6 actions, all choices identical. Post-mortem complete; narrow negative result, clarified gate failed. Heading-only public-preflight defect fixed at0calls with14thtest. Cost.001016736; cumulative exposure.859838490.10 uploads/readbacks, worker stopped, allocation released. Park qualification; no pilot or retry.
+
+
+### PC11 owner-requested Sol cohort
+
+Published prospective model/interface transfer and ten-agent pilot;14offline tests caught/fixed the copied five-agent missingness denominator. Qualification passed8/8,32/32,6/6.120pilot decisions completed; no spread to nine initially unseeded actors in any arm, all stayedUNKNOWN at unvisited target; false seed retained locally. One all-WATER world is a narrow descriptive negative, no treatment-induced avoidance.128hashes/audit and16hub readbacks verified; worker stopped, ledger backed up, releasePR409. New.333957, exposure1.193795490. Scientific reviews and saved-data replay complete; FINISH/PARK, no further paid attempt.

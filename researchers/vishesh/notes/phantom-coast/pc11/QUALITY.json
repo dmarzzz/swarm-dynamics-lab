@@ -1,0 +1,181 @@
+{
+  "attempt": "pc11-cycle-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04",
+  "decision": "FINISH / PARK approved pilot",
+  "scientific_review": "complete",
+  "execution": "completed",
+  "qualification": "passed",
+  "pilot_dispatched": true,
+  "checks": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Qualification transfer and conditional descriptive spread contrast were fixed prospectively; no general immunity claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/PLAN.md",
+          "sha256": "b1191f8865a975c047cfe2c981e70f7de661288e34b58929e2ad4155b9a5e825"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+          "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "One all-WATER world and false-positive sign leave realistic and structural breadth unresolved. Known authored Q0 templates are not independent semantic holdouts.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+          "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c"
+        }
+      ],
+      "next_action": "Finish this scoped pilot; broader successor must balance report sign/world geometry.",
+      "acceptance_check": "Prospective independently sampled stratified worlds, no score-dependent replacement."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Matched truthful/false and peers-on/off arms isolate this descriptive contrast, but no S1 target receipt occurred and correction response is unmeasured. Bare peer maps are not provenance-bearing evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/episodes.json",
+          "sha256": "d7de24659d371adda3ec22c9edd90a97cee4e9e546c39927d261da0fe26a0443"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+          "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c"
+        }
+      ],
+      "next_action": "Do not claim correction resistance; any successor must define target-exposure strata and evidence provenance.",
+      "acceptance_check": "Measured pre/post target exposure denominators and separately validated communication manipulation."
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "8/8 valid,32/32 labels,6/6 exact individual inspections; gate passed for this configuration only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/Q0-A1-POST.md",
+          "sha256": "b3314e9e517a0101e190a4a69dd414b3823270b0a47766f2a66ec7318fca26e7"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/audit.json",
+          "sha256": "c70de29a18c31ca48b99dab4f40dc94f8bb8691c578abb78f09dd63624d98cc3"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Nine unseeded per-arm denominator; UNKNOWN separate; all assigned outputs and missingness bounds; zero interaction is descriptive, not a confidence interval.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/PLAN.md",
+          "sha256": "b1191f8865a975c047cfe2c981e70f7de661288e34b58929e2ad4155b9a5e825"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/audit.json",
+          "sha256": "c70de29a18c31ca48b99dab4f40dc94f8bb8691c578abb78f09dd63624d98cc3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+          "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One independent matched world explicitly supplies feasibility evidence only;120 decisions are dependent, with no inferential precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/PLAN.md",
+          "sha256": "b1191f8865a975c047cfe2c981e70f7de661288e34b58929e2ad4155b9a5e825"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+          "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Ten isolated packet histories per arm with synchronous barrier, only previous peer maps, no operator context, fixed model and effort-none JSON. Served alias is recorded; dated snapshot absent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/PRE.md",
+          "sha256": "736551329504b06777c90634122c60517b7992f21ddf4059b29bdbdcde88513d"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/audit.json",
+          "sha256": "c70de29a18c31ca48b99dab4f40dc94f8bb8691c578abb78f09dd63624d98cc3"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "128 assignments/starts/valid terminals and bridge digests reconcile; four episodes replay exactly.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/audit.json",
+          "sha256": "c70de29a18c31ca48b99dab4f40dc94f8bb8691c578abb78f09dd63624d98cc3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/CLOSEOUT.json",
+          "sha256": "2ebd04dd2aa0e597c13c6e49aa91afd3fb6828a906f5baa86cee0540eb9e0bdd"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original cumulative caps retained; new.333957, exposure1.193795490,9 historical unknowns unchanged; no new machine or infra; worker stopped and claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/CLOSEOUT.json",
+          "sha256": "2ebd04dd2aa0e597c13c6e49aa91afd3fb6828a906f5baa86cee0540eb9e0bdd"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source/runtime and packet/response hashes reproduce saved behavior and metrics; live hosted alias is not guaranteed bitwise reproducible.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/PRE.md",
+          "sha256": "736551329504b06777c90634122c60517b7992f21ddf4059b29bdbdcde88513d"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/audit.json",
+          "sha256": "c70de29a18c31ca48b99dab4f40dc94f8bb8691c578abb78f09dd63624d98cc3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/CLOSEOUT.json",
+          "sha256": "2ebd04dd2aa0e597c13c6e49aa91afd3fb6828a906f5baa86cee0540eb9e0bdd"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Native replay verified at false+peers final frame: ten maps,0/9 wrong,9/9 UNKNOWN,2 distinct inspections, seeded error visible; scripted controls clearly separate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/reports/replay.html",
+          "sha256": "ff2cafa900fffcdbef7929caa6ffe93666413aab05132ff6fd538c4e948b081a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+          "sha256": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c"
+        }
+      ]
+    }
+  ]
+}

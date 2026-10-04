@@ -1,0 +1,16 @@
+{
+  "world_id": "PC11/S1-A1/root-0",
+  "poison_effect_with_peers_bounds": [
+    0.0,
+    0.0
+  ],
+  "poison_effect_without_peers_bounds": [
+    0.0,
+    0.0
+  ],
+  "collective_interaction_bounds": [
+    0.0,
+    0.0
+  ],
+  "interpretation": "world-paired descriptive bounds; no population or mediation inference"
+}

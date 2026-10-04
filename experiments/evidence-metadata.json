@@ -3871,6 +3871,37 @@
       "assessor": "vishesh/codex-idea-scores",
       "assessed_at": "2026-10-04",
       "source_commit": "cc91c560af8c12eac6b6caaa38f1406306aee863"
+    },
+    {
+      "id": "phantom-coast-pc11",
+      "title": "Phantom Coast PC11: GPT-6 Sol ten-agent pilot",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc11/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc11"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The requested GPT-6 Sol configuration passed the eight-case qualification; in one matched four-arm world a false report persisted in its recipient without spreading to nine unseeded agents or changing inspections.",
+        "rationale": "128 valid calls with audited traces and matched controls; one all-WATER world and one report direction support only a descriptive pilot. UNKNOWN persists; no target-receipt correction exposure, general immunity or population precision claim."
+      },
+      "sample_size_summary": "Eight authored qualification templates:32/32 labels,6/6 actions. Pilot:1 independent world\u00d74 matched arms\u00d710 agents\u00d73 rounds=120 dependent decisions;9 unseeded agents per arm.128 calls total, no missingness.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc11/PLAN.md",
+        "researchers/vishesh/notes/phantom-coast/pc11/Q0-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc11/QUALITY.json",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/summary.json",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/pilot-summary.json",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/CLOSEOUT.json"
+      ],
+      "status_at_assessment": "native_qualification_passed_pilot_complete_no_spread_in_one_world",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "15eeab416107c9077539b80958c3ba1184e3ee08"
     }
   ],
   "source_sha256": {

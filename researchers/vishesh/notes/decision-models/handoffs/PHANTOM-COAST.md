@@ -63,3 +63,8 @@ Built and published `136cd57e8f1210a8c498b8875148bf5bed91817b`. [Plan](../../pha
 ## PC10 paired native closeout, 2026-10-04 UTC
 
 Owner-approved16-call run completed:both original/clarified wording32/32 maps and4/6 optimal inspections; all six choices identical. Clarified qualification failed. [Post-mortem](../../phantom-coast/pc10/Q1-A1-POST.md), [quality review](../../phantom-coast/pc10/QUALITY.json), [closeout](../../phantom-coast/pc10/results/Q1-A1/CLOSEOUT.json). Source/result revision `89016acef1a33f405f1a551f57a6d5b66f3431be`. NewUSD.001016736, cumulative known.847742490/exposure.859838490. Worker stopped,10 artifacts verified, allocation released; no new VM or pilot. FINISH / PARK this qualification path; ambiguity-only clarification did not rescue the two acquisition errors. No automatic successor.
+
+
+## PC11 closeout — 2026-10-04
+
+Owner-requested GPT-6 Sol qualification and ten-agent pilot completed.8valid/32correct labels/6optimal inspections passed; conditional120-call four-arm pilot on one world completed with no missingness. False report persisted only in the seed recipient; all9unseeded agents stayed UNKNOWN, same two inspections across arms, target unvisited. No spread/avoidance or broad immunity claim. New API.333957; cumulative exposure1.193795490, original cap unchanged. Worker stopped,16readbacks verified,128bridge hashes reconcile, claim released. FINISH / PARK this pilot; no successor queued. Authoritative [setup](../../phantom-coast/pc11/SETUP.md), [post-mortem](../../phantom-coast/pc11/S1-A1-POST.md), [native replay](../../phantom-coast/pc11/reports/replay.html). Prior PC10 negative preserved.
