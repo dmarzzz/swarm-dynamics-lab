@@ -57,7 +57,7 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
-| [telephone-native-preparation](tasks/telephone-native-preparation.md) | claimed | p1 | build | vishesh/codex-village-fit | vishesh | 2026-10-04T19:21Z | Telephone native launch preparation |
+| [theseus-institutional-transmission](tasks/theseus-institutional-transmission.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T19:23Z | Institutional transmission revision |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -284,6 +284,7 @@
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
 | [telephone-design-package](tasks/telephone-design-package.md) | done | p1 | question | vishesh/codex-village-fit | vishesh | 2026-10-04T18:31Z | Develop Telephone exploratory design and resource guide |
+| [telephone-native-preparation](tasks/telephone-native-preparation.md) | done | p1 | build | vishesh/codex-village-fit | vishesh | 2026-10-04T19:23Z | Telephone native launch preparation |
 | [telephone-t1-offline-iteration](tasks/telephone-t1-offline-iteration.md) | done | p1 | build | vishesh/codex-village-fit | vishesh | 2026-10-04T19:15Z | Telephone T1 offline instrument and case iteration |
 | [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | done | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T16:56Z | Theseus A1 withheld-policy acquisition screen |
 | [theseus-a2-acquisition](tasks/theseus-a2-acquisition.md) | done | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T19:06Z | Theseus A2 approved acquisition continuation |
@@ -314,7 +315,7 @@
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
-| vishesh/codex-village-fit | working |  | 2026-10-04T18:31Z | Preparing Telephone native request contract and resolving scientific cohort. |
+| vishesh/codex-village-fit | blocked |  | 2026-10-04T18:31Z | Native contract prepared; awaiting authored diagnostic versus AI Village cohort choice. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | working | outage-size-prototype | 2026-10-04T18:11Z | Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
@@ -377,8 +378,8 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:22:58.628494+00:00 | PQ-02 launched then stopped HTTP400; reviewed, no retry, qualification inconclusive |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-native-run | 2026-10-04 19:07:36.227052+00:00 | Preparing current admission for owner-approved RD6 Q0 and conditional D0; original ledger and caps retained. |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:45:17.311481+00:00 | QM-PQ-01 completed; final decisions correct but fidelity qualification failed; reviewed and released |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc9-instrument | 2026-10-04 18:42:42.878610+00:00 | PC9 offline population instrument complete;30 tests and replay pass; no native run or new spend |
 | vishesh/codex-heterogeneous | idle |  | 2026-10-04 18:32:55.072393+00:00 | D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated |
 | vishesh/codex-methods | idle |  | 2026-10-04 18:18:22.325483+00:00 | D1 diagnostic reviewed and published; three valid calls, slow-call stop, host released; qualification closed; no successor |
