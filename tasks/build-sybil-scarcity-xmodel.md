@@ -25,5 +25,5 @@ Replicate the strongest result of the night, sybil-scarcity-opus (specialist acc
 
 - [x] Code, selftests, offline S0 with byte-identity proof against the parent, manifest, rehearsal (full chain; failed Q0 stops with no S1).
 - [x] README, preregistration, setup record, runbook, visualization mapping, READY.yaml and reviews/chain-001-pre.md on main for the Qwen chain.
-- [ ] gpt-6-sol path: reference OpenAI adapter, price row, tests and its own pre-run review in a later code commit.
+- [x] gpt-6-sol path: reference OpenAI adapter, price row, tests and its own pre-run review (code 9461ba1c, reviews/chain-002-pre.md).
 - [ ] Run requests filed in the private run queue after the fleet monitor's go.

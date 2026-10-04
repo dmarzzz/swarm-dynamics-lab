@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-scarcity-xmodel v1
 
-Status: prepared for the first model (`qwen/qwen3.7-flash`), not launched. This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
+Status: both models prepared; the `qwen/qwen3.7-flash` chain was launched by dmarz/fleet-monitor at about 17:30Z (launch commit c0537bf7); `gpt-6-sol` ready at code commit 9461ba1c ([chain-002-pre](reviews/chain-002-pre.md)), not launched. This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
 
 ## Ownership and question
 
@@ -17,6 +17,7 @@ Status: prepared for the first model (`qwen/qwen3.7-flash`), not launched. This 
 | G1 Plan written before implementation | partial | The design was fixed in the fleet monitor's brief before any code; the plan documents were written alongside the code and committed with it in one push, before any run. Nothing about the inputs is new: they are the parent's frozen inputs | none |
 | G2 Instrument and offline checks | pass (offline, builder's own checks) | 2026-10-04, dmarz/pipeline-scarcity-qwen, on code commit 2753b03d (source hash 06cbd97e...): selftest 65 OK; offline S0 168/168, 0 violations, byte-identity with the parent; manifest check current and equal to the parent's; rehearsal 21/21 checks; details in [the pre-run review](reviews/chain-001-pre.md) | the live route is untested until P0 |
 | G3 Current attempt admission | pending (package ready) | [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready for `qwen/qwen3.7-flash` at code commit 2753b03d | fleet-monitor check, run-queue request, server claim |
+| G3b gpt-6-sol admission | pending (package ready) | [reviews/chain-002-pre.md](reviews/chain-002-pre.md) at code commit 9461ba1c (source hash cac7255a...): selftest 96 OK, S0 168/168, manifest current, rehearsal 22/22 | fleet-monitor check, run-queue request, server claim |
 | G4 Qualification before scientific escalation | pending | P0 and Q0 are stages of each model's chain; S1 is admitted only after Q0 passes at the same source hash | run |
 | G5 Reconciliation and closeout | pending | none | run |
 
