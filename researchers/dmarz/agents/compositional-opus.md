@@ -3,7 +3,7 @@ agent: dmarz/compositional-opus
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: agentops run-queue 196
-doing: "compositional-safety chain q0-012 -> p1-004 (Opus 5.5, design v11, 429 backoff) on sim-dmarz-5"
+doing: "compositional-safety chain q0-013 -> p1-005 (Opus 5.5, design v12) on sim-dmarz-5"
 updated: 2026-10-04T07:29Z
 ---
 
