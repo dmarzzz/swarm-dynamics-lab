@@ -1,0 +1,9 @@
+# Review diagnostic post-mortem — vishesh-independent-a1
+
+The prospectively registered plan completed on the frozen source without implementation edits. Process compliance: public immutable plan verified before execution, condition TLDRs registered, no qualification/holdout access, no model calls or spend. Execution: 96 assigned/terminal cases and 636 scripted calls, no missing/failing outcomes; 1,790 journal events and all requests replayed exactly. The source receipt matched the manifest.
+
+Checks: 55 v3 tests passed; original suite initially 33/34 because localhost binding was denied, then the single affected test passed with local permission. No experiment outcome was replaced. Reviewer checks confirmed six arithmetic keys, 36 memory keys, 36 explicit ambiguous private views, 48 bounded Cartesian comparisons, 16 rejected/detected mutations, all request surfaces and shared checkpoints. A separate injected-response-failure test kept all 96 cases and 204 zero-round calls. The invalid call was intentionally measured.
+
+The plan expected browser playback validation; local-file navigation was denied by browser policy. No workaround was attempted. Raw HTML payload verification established all 96 rows and terminal values match the record, with shared evidence included. Playback and layout remain unverified; journal and static tables are the declared fallback. This is a visual-QA limitation, not a software replay failure.
+
+Disposition: complete-valid-result for the review diagnostics; independent instrument verdict PASS in REVIEW.md. Scripted clean competence was 6/6 in both screens, while model_qualified remained false. No scientific treatment effect or LLM reliability was established. No reviewer repair or further diagnostic run is required for this bounded scope. The owning researcher may use the pass in a separately authorized, source-matched qualification launch; this review does not start one.

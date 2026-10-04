@@ -3,8 +3,8 @@ agent: dmarz/market-split
 tool: codex
 state: working
 task: run-market-split-api
-doing: Monitoring the deployed 36-episode discovery pilot and auditing saved decisions.
-updated: 2026-10-04T02:32Z
+doing: Qualifying Sonnet 4.6 after preserving Haiku execution and competence failures.
+updated: 2026-10-04T02:56Z
 ---
 
 ## Notes

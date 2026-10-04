@@ -1,7 +1,7 @@
-version: market-split-api-v3
+version: market-split-api-v4
 status: exploratory-hunch
 experiment: market-split-api
-model: claude-haiku-4-5-20251001
+model: claude-sonnet-4-6
 arms:
 - neutral_dynamic
 - neutral_locked
@@ -24,8 +24,8 @@ stages:
   S0:
     backend: mock
     tasks:
-    - 24
-    - 25
+    - 46
+    - 47
     seeds:
     - 31
     rounds: 8
@@ -36,8 +36,8 @@ stages:
   Q0:
     backend: anthropic
     tasks:
-    - 24
-    - 25
+    - 46
+    - 47
     seeds:
     - 31
     rounds: 8
@@ -74,8 +74,8 @@ budget:
   stage_timeout_seconds: 7200
   retries: 0
   workers: 2
-  input_usd_per_million: 1
-  output_usd_per_million: 5
+  input_usd_per_million: 3
+  output_usd_per_million: 15
 primary_contrast:
   metric: strategic_fragmentation
   arm: neutral_dynamic
@@ -88,21 +88,21 @@ holdout:
 - 1000
 - 1999
 interface_probes:
-- task: 26
+- task: 48
   n: 1
   operation: register
-- task: 27
+- task: 49
   n: 2
   operation: register
-- task: 28
+- task: 50
   n: 3
   operation: register
-- task: 29
+- task: 51
   n: 2
   operation: consolidate
-- task: 42
+- task: 52
   n: 3
   operation: maintain
-- task: 43
+- task: 53
   n: 4
   operation: consolidate

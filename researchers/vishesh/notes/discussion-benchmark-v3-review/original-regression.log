@@ -1,0 +1,60 @@
+test_anthropic_billing_error_is_safe (__main__.Tests.test_anthropic_billing_error_is_safe) ... ok
+test_anthropic_contract_usage_and_no_retry (__main__.Tests.test_anthropic_contract_usage_and_no_retry) ... ok
+test_attack_locality (__main__.Tests.test_attack_locality) ... ok
+test_barriers_and_probe_isolation (__main__.Tests.test_barriers_and_probe_isolation) ... /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 400: 'test-secret'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 429: 'test-secret'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_boundary_truth_tables (__main__.Tests.test_boundary_truth_tables) ... ok
+test_bundle_no_overwrite (__main__.Tests.test_bundle_no_overwrite) ... ok
+test_clean_scripted_and_pairing (__main__.Tests.test_clean_scripted_and_pairing) ... ok
+test_cluster_and_missing (__main__.Tests.test_cluster_and_missing) ... ok
+test_compressed_chunked_artifacts (__main__.Tests.test_compressed_chunked_artifacts) ... ok
+test_errors_count (__main__.Tests.test_errors_count) ... ok
+test_harmful_scorer (__main__.Tests.test_harmful_scorer) ... ok
+test_http_adapter_and_caps (__main__.Tests.test_http_adapter_and_caps) ... ERROR
+test_merge (__main__.Tests.test_merge) ... ok
+test_native_schema_enforces_declared_identifiers (__main__.Tests.test_native_schema_enforces_declared_identifiers) ... ok
+test_no_truth_in_requests (__main__.Tests.test_no_truth_in_requests) ... ok
+test_offline_replay_and_tamper_detection (__main__.Tests.test_offline_replay_and_tamper_detection) ... ok
+test_pilot_budget_covers_complete_plan (__main__.Tests.test_pilot_budget_covers_complete_plan) ... ok
+test_private_control (__main__.Tests.test_private_control) ... ok
+test_tally (__main__.Tests.test_tally) ... ok
+test_validation (__main__.Tests.test_validation) ... ok
+test_validation_failure_reason_is_recorded (__main__.Tests.test_validation_failure_reason_is_recorded) ... ok
+test_worlds (__main__.Tests.test_worlds) ... ok
+test_attack_changes_only_exposed_target (selftest_v2.TestsV2.test_attack_changes_only_exposed_target) ... ok
+test_ceiling_levels (selftest_v2.TestsV2.test_ceiling_levels) ... ok
+test_frames_and_replay_match_records (selftest_v2.TestsV2.test_frames_and_replay_match_records) ... ok
+test_harmful_scorer_roles (selftest_v2.TestsV2.test_harmful_scorer_roles) ... ok
+test_levels_remove_cues_cumulatively (selftest_v2.TestsV2.test_levels_remove_cues_cumulatively) ... ok
+test_no_verification_and_no_hidden_fields (selftest_v2.TestsV2.test_no_verification_and_no_hidden_fields) ... ok
+test_optional_verification_reads_are_clean (selftest_v2.TestsV2.test_optional_verification_reads_are_clean) ... ok
+test_plans_disjoint_and_budgeted (selftest_v2.TestsV2.test_plans_disjoint_and_budgeted) ... ok
+test_private_control_plan (selftest_v2.TestsV2.test_private_control_plan) ... ok
+test_scripted_bundle_and_pairing (selftest_v2.TestsV2.test_scripted_bundle_and_pairing) ... ok
+test_select_level_rule (selftest_v2.TestsV2.test_select_level_rule) ... ok
+test_worlds_all_levels (selftest_v2.TestsV2.test_worlds_all_levels) ... ok
+
+======================================================================
+ERROR: test_http_adapter_and_caps (__main__.Tests.test_http_adapter_and_caps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/swarm-independent-reviews/researchers/dmarz/notes/discussion-dose/src/selftest.py", line 240, in test_http_adapter_and_caps
+    server=HTTPServer(('127.0.0.1',0),Handler);thread=Thread(target=server.serve_forever,daemon=True);thread.start()
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 148, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.372s
+
+FAILED (errors=1)

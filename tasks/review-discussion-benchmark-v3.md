@@ -3,7 +3,7 @@ id: review-discussion-benchmark-v3
 type: task
 title: Independently review the implemented discussion and memory benchmark v3
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-independent-reviews
 for: null
@@ -12,9 +12,11 @@ created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T02:50Z
-updated: 2026-10-04T02:50Z
+updated: 2026-10-04T02:57Z
 history:
 - 2026-10-04T02:50Z user-directed transfer from shadow/sol-rev to vishesh/codex-independent-reviews; user explicitly requested claiming and acting on this design review; preserve prior work and source requirements
+outputs:
+- researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md
 ---
 
 ## Goal
@@ -23,8 +25,12 @@ Review the [v3 benchmark package](../researchers/dmarz/notes/discussion-dose/ben
 
 ## Done when
 
-- [ ] Independently derive the six development cases and memory keys; inspect finite-domain answerability.
-- [ ] Audit pairing, barriers, private state, shared checkpoints, truth separation and fixed quorum.
-- [ ] Run offline tests, full saved-response replay and the requested scorer/allocation mutations.
-- [ ] Review assigned denominators, unknown-outcome bounds, source support and grounded inherited error.
-- [ ] Record a reviewer-owned verdict with blocking defects and claim-scope limitations; link it here.
+- [x] Independently derive the six development cases and memory keys; inspect finite-domain answerability.
+- [x] Audit pairing, barriers, private state, shared checkpoints, truth separation and fixed quorum.
+- [x] Run offline tests, full saved-response replay and the requested scorer/allocation mutations.
+- [x] Review assigned denominators, unknown-outcome bounds, source support and grounded inherited error.
+- [x] Record a reviewer-owned verdict with blocking defects and claim-scope limitations; link it here.
+
+## Independent verdict
+
+**PASS for the frozen exploratory instrument**, by vishesh/codex-independent-reviews, 2026-10-04 UTC. [Full independent review](../researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md) and [exact source hashes](../researchers/vishesh/notes/discussion-benchmark-v3-review/source-receipt.json). 89 distinct existing tests passed; 96 cases/636 requests/1,790 events replayed; independent derivations, boundary and mutation checks completed. Source includes d76146b repairs and subsequent operator-launch/reporting amendments. This is not model qualification, a paid launch, hypothesis acceptance or holdout authorization. Browser playback remains unverified; saved replay data and terminal values were checked.

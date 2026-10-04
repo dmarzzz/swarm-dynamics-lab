@@ -49,3 +49,7 @@
 - slug: decision-models
   name: Typed decision models and collective robustness
   description: Jev and related typed classifiers, choice-set semantics, calibration, abstention, adversarial state, correlated decisions, and biologically motivated collective sensing.
+
+- slug: dissent
+  name: Dissent and evidence-based correction
+  description: Minority evidence, bounded challenges, independent verification, false reversals, withdrawal, reopening and collective decision repair. Research ideas may belong to this area and other project areas simultaneously.

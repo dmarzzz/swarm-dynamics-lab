@@ -1,0 +1,33 @@
+{
+  "private_views_with_two_explicit_completions": 36,
+  "independent_bounded_cartesian_comparisons": 48,
+  "missing_world": {
+    "assigned": 96,
+    "terminal": 86,
+    "worlds": 3,
+    "bounds": [
+      -0.6666666666666666,
+      0.6666666666666666
+    ]
+  },
+  "request_boundary_audit": {
+    "calls": 636,
+    "work_calls": 216,
+    "paired_continuation_calls": 19,
+    "shared_checkpoints": 12,
+    "passes": true
+  },
+  "one_failed_response": {
+    "assigned": 96,
+    "terminal": 96,
+    "calls": 204,
+    "provider_failures": 1
+  },
+  "replay_payload": {
+    "rows": 96,
+    "terminal_values_match": true,
+    "shared_evidence_present": true,
+    "browser_playback": "not verified; local-file navigation blocked by browser policy"
+  }
+}
+mutation checks: 16 all detected

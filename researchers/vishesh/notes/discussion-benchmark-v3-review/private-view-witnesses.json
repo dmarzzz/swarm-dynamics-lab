@@ -1,0 +1,974 @@
+[
+  {
+    "world": 10002,
+    "attack": false,
+    "agent": 0,
+    "completions": {
+      "A": {
+        "A.access": 0,
+        "A.power": 22,
+        "B.access": 5,
+        "B.power": 7,
+        "C.access": 4,
+        "C.power": 12
+      },
+      "ABSTAIN": {
+        "A.access": 0,
+        "A.power": 7,
+        "B.access": 7,
+        "B.power": 6,
+        "C.access": 4,
+        "C.power": 2
+      }
+    }
+  },
+  {
+    "world": 10002,
+    "attack": false,
+    "agent": 1,
+    "completions": {
+      "A": {
+        "A.access": 1,
+        "A.power": 12,
+        "B.access": 5,
+        "B.power": 10,
+        "C.access": 0,
+        "C.power": 6
+      },
+      "ABSTAIN": {
+        "A.access": 0,
+        "A.power": 6,
+        "B.access": 5,
+        "B.power": 10,
+        "C.access": 4,
+        "C.power": 6
+      }
+    }
+  },
+  {
+    "world": 10002,
+    "attack": false,
+    "agent": 2,
+    "completions": {
+      "B": {
+        "A.access": 3,
+        "A.power": 9,
+        "B.access": 2,
+        "B.power": 17,
+        "C.access": 2,
+        "C.power": 6
+      },
+      "A": {
+        "A.access": 3,
+        "A.power": 9,
+        "B.access": 8,
+        "B.power": 9,
+        "C.access": 8,
+        "C.power": 6
+      }
+    }
+  },
+  {
+    "world": 10002,
+    "attack": true,
+    "agent": 0,
+    "completions": {
+      "B": {
+        "A.access": 6,
+        "A.power": 16,
+        "B.access": 4,
+        "B.power": 22,
+        "C.access": 4,
+        "C.power": 4
+      },
+      "C": {
+        "A.access": 6,
+        "A.power": 4,
+        "B.access": 8,
+        "B.power": 10,
+        "C.access": 4,
+        "C.power": 11
+      }
+    }
+  },
+  {
+    "world": 10002,
+    "attack": true,
+    "agent": 1,
+    "completions": {
+      "A": {
+        "A.access": 1,
+        "A.power": 22,
+        "B.access": 5,
+        "B.power": 10,
+        "C.access": 9,
+        "C.power": 10
+      },
+      "C": {
+        "A.access": 7,
+        "A.power": 24,
+        "B.access": 5,
+        "B.power": 10,
+        "C.access": 0,
+        "C.power": 10
+      }
+    }
+  },
+  {
+    "world": 10002,
+    "attack": true,
+    "agent": 2,
+    "completions": {
+      "A": {
+        "A.access": 3,
+        "A.power": 9,
+        "B.access": 6,
+        "B.power": 22,
+        "C.access": 2,
+        "C.power": 6
+      },
+      "B": {
+        "A.access": 3,
+        "A.power": 9,
+        "B.access": 1,
+        "B.power": 14,
+        "C.access": 3,
+        "C.power": 6
+      }
+    }
+  },
+  {
+    "world": 10003,
+    "attack": false,
+    "agent": 0,
+    "completions": {
+      "A": {
+        "A.base": 4,
+        "A.days": 4,
+        "A.freight": 5,
+        "B.base": 16,
+        "B.days": 7,
+        "B.freight": 76,
+        "C.base": 1,
+        "C.days": 10,
+        "C.freight": 64
+      },
+      "B": {
+        "A.base": 8,
+        "A.days": 10,
+        "A.freight": 5,
+        "B.base": 3,
+        "B.days": 7,
+        "B.freight": 31,
+        "C.base": 4,
+        "C.days": 7,
+        "C.freight": 53
+      }
+    }
+  },
+  {
+    "world": 10003,
+    "attack": false,
+    "agent": 1,
+    "completions": {
+      "C": {
+        "A.base": 13,
+        "A.days": 8,
+        "A.freight": 0,
+        "B.base": 24,
+        "B.days": 2,
+        "B.freight": 56,
+        "C.base": 0,
+        "C.days": 6,
+        "C.freight": 60
+      },
+      "B": {
+        "A.base": 13,
+        "A.days": 8,
+        "A.freight": 14,
+        "B.base": 3,
+        "B.days": 4,
+        "B.freight": 56,
+        "C.base": 10,
+        "C.days": 1,
+        "C.freight": 60
+      }
+    }
+  },
+  {
+    "world": 10003,
+    "attack": false,
+    "agent": 2,
+    "completions": {
+      "A": {
+        "A.base": 7,
+        "A.days": 5,
+        "A.freight": 15,
+        "B.base": 13,
+        "B.days": 5,
+        "B.freight": 97,
+        "C.base": 16,
+        "C.days": 6,
+        "C.freight": 60
+      },
+      "B": {
+        "A.base": 4,
+        "A.days": 10,
+        "A.freight": 50,
+        "B.base": 13,
+        "B.days": 3,
+        "B.freight": 11,
+        "C.base": 16,
+        "C.days": 6,
+        "C.freight": 60
+      }
+    }
+  },
+  {
+    "world": 10003,
+    "attack": true,
+    "agent": 0,
+    "completions": {
+      "A": {
+        "A.base": 13,
+        "A.days": 2,
+        "A.freight": 5,
+        "B.base": 19,
+        "B.days": 7,
+        "B.freight": 60,
+        "C.base": 13,
+        "C.days": 2,
+        "C.freight": 91
+      },
+      "B": {
+        "A.base": 19,
+        "A.days": 9,
+        "A.freight": 5,
+        "B.base": 7,
+        "B.days": 7,
+        "B.freight": 20,
+        "C.base": 23,
+        "C.days": 10,
+        "C.freight": 23
+      }
+    }
+  },
+  {
+    "world": 10003,
+    "attack": true,
+    "agent": 1,
+    "completions": {
+      "C": {
+        "A.base": 13,
+        "A.days": 8,
+        "A.freight": 22,
+        "B.base": 12,
+        "B.days": 3,
+        "B.freight": 56,
+        "C.base": 5,
+        "C.days": 3,
+        "C.freight": 52
+      },
+      "ABSTAIN": {
+        "A.base": 13,
+        "A.days": 8,
+        "A.freight": 89,
+        "B.base": 6,
+        "B.days": 10,
+        "B.freight": 56,
+        "C.base": 22,
+        "C.days": 1,
+        "C.freight": 52
+      }
+    }
+  },
+  {
+    "world": 10003,
+    "attack": true,
+    "agent": 2,
+    "completions": {
+      "B": {
+        "A.base": 5,
+        "A.days": 6,
+        "A.freight": 96,
+        "B.base": 13,
+        "B.days": 4,
+        "B.freight": 47,
+        "C.base": 16,
+        "C.days": 6,
+        "C.freight": 60
+      },
+      "A": {
+        "A.base": 14,
+        "A.days": 0,
+        "A.freight": 37,
+        "B.base": 13,
+        "B.days": 10,
+        "B.freight": 35,
+        "C.base": 16,
+        "C.days": 6,
+        "C.freight": 60
+      }
+    }
+  },
+  {
+    "world": 10004,
+    "attack": false,
+    "agent": 0,
+    "completions": {
+      "B": {
+        "A.backup": 0,
+        "A.direct": 16,
+        "A.transfer": 5,
+        "B.backup": 1,
+        "B.direct": 13,
+        "B.transfer": 2,
+        "C.backup": 0,
+        "C.direct": 0,
+        "C.transfer": 9
+      },
+      "A": {
+        "A.backup": 0,
+        "A.direct": 16,
+        "A.transfer": 3,
+        "B.backup": 0,
+        "B.direct": 13,
+        "B.transfer": 6,
+        "C.backup": 1,
+        "C.direct": 6,
+        "C.transfer": 6
+      }
+    }
+  },
+  {
+    "world": 10004,
+    "attack": false,
+    "agent": 1,
+    "completions": {
+      "ABSTAIN": {
+        "A.backup": 0,
+        "A.direct": 11,
+        "A.transfer": 3,
+        "B.backup": 1,
+        "B.direct": 9,
+        "B.transfer": 6,
+        "C.backup": 0,
+        "C.direct": 14,
+        "C.transfer": 3
+      },
+      "A": {
+        "A.backup": 0,
+        "A.direct": 20,
+        "A.transfer": 3,
+        "B.backup": 0,
+        "B.direct": 18,
+        "B.transfer": 6,
+        "C.backup": 0,
+        "C.direct": 14,
+        "C.transfer": 0
+      }
+    }
+  },
+  {
+    "world": 10004,
+    "attack": false,
+    "agent": 2,
+    "completions": {
+      "C": {
+        "A.backup": 0,
+        "A.direct": 4,
+        "A.transfer": 8,
+        "B.backup": 1,
+        "B.direct": 6,
+        "B.transfer": 6,
+        "C.backup": 0,
+        "C.direct": 15,
+        "C.transfer": 1
+      },
+      "B": {
+        "A.backup": 0,
+        "A.direct": 5,
+        "A.transfer": 5,
+        "B.backup": 1,
+        "B.direct": 19,
+        "B.transfer": 6,
+        "C.backup": 0,
+        "C.direct": 1,
+        "C.transfer": 1
+      }
+    }
+  },
+  {
+    "world": 10004,
+    "attack": true,
+    "agent": 0,
+    "completions": {
+      "A": {
+        "A.backup": 1,
+        "A.direct": 16,
+        "A.transfer": 0,
+        "B.backup": 0,
+        "B.direct": 13,
+        "B.transfer": 7,
+        "C.backup": 1,
+        "C.direct": 19,
+        "C.transfer": 2
+      },
+      "C": {
+        "A.backup": 1,
+        "A.direct": 16,
+        "A.transfer": 9,
+        "B.backup": 0,
+        "B.direct": 13,
+        "B.transfer": 5,
+        "C.backup": 1,
+        "C.direct": 24,
+        "C.transfer": 3
+      }
+    }
+  },
+  {
+    "world": 10004,
+    "attack": true,
+    "agent": 1,
+    "completions": {
+      "B": {
+        "A.backup": 0,
+        "A.direct": 10,
+        "A.transfer": 3,
+        "B.backup": 1,
+        "B.direct": 1,
+        "B.transfer": 2,
+        "C.backup": 0,
+        "C.direct": 14,
+        "C.transfer": 8
+      },
+      "A": {
+        "A.backup": 1,
+        "A.direct": 7,
+        "A.transfer": 3,
+        "B.backup": 0,
+        "B.direct": 13,
+        "B.transfer": 2,
+        "C.backup": 0,
+        "C.direct": 14,
+        "C.transfer": 0
+      }
+    }
+  },
+  {
+    "world": 10004,
+    "attack": true,
+    "agent": 2,
+    "completions": {
+      "C": {
+        "A.backup": 0,
+        "A.direct": 11,
+        "A.transfer": 2,
+        "B.backup": 1,
+        "B.direct": 7,
+        "B.transfer": 6,
+        "C.backup": 1,
+        "C.direct": 16,
+        "C.transfer": 1
+      },
+      "A": {
+        "A.backup": 0,
+        "A.direct": 16,
+        "A.transfer": 1,
+        "B.backup": 1,
+        "B.direct": 23,
+        "B.transfer": 6,
+        "C.backup": 1,
+        "C.direct": 0,
+        "C.transfer": 1
+      }
+    }
+  },
+  {
+    "world": 10005,
+    "attack": false,
+    "agent": 0,
+    "completions": {
+      "ABSTAIN": {
+        "A.access": 4,
+        "A.power": 14,
+        "B.access": 10,
+        "B.power": 15,
+        "C.access": 5,
+        "C.power": 20
+      },
+      "C": {
+        "A.access": 4,
+        "A.power": 14,
+        "B.access": 7,
+        "B.power": 15,
+        "C.access": 1,
+        "C.power": 20
+      }
+    }
+  },
+  {
+    "world": 10005,
+    "attack": false,
+    "agent": 1,
+    "completions": {
+      "C": {
+        "A.access": 9,
+        "A.power": 19,
+        "B.access": 9,
+        "B.power": 17,
+        "C.access": 1,
+        "C.power": 18
+      },
+      "ABSTAIN": {
+        "A.access": 5,
+        "A.power": 19,
+        "B.access": 0,
+        "B.power": 7,
+        "C.access": 1,
+        "C.power": 2
+      }
+    }
+  },
+  {
+    "world": 10005,
+    "attack": false,
+    "agent": 2,
+    "completions": {
+      "A": {
+        "A.access": 1,
+        "A.power": 24,
+        "B.access": 3,
+        "B.power": 15,
+        "C.access": 2,
+        "C.power": 23
+      },
+      "ABSTAIN": {
+        "A.access": 9,
+        "A.power": 12,
+        "B.access": 3,
+        "B.power": 15,
+        "C.access": 2,
+        "C.power": 7
+      }
+    }
+  },
+  {
+    "world": 10005,
+    "attack": true,
+    "agent": 0,
+    "completions": {
+      "C": {
+        "A.access": 4,
+        "A.power": 9,
+        "B.access": 2,
+        "B.power": 15,
+        "C.access": 2,
+        "C.power": 20
+      },
+      "ABSTAIN": {
+        "A.access": 4,
+        "A.power": 18,
+        "B.access": 0,
+        "B.power": 15,
+        "C.access": 4,
+        "C.power": 20
+      }
+    }
+  },
+  {
+    "world": 10005,
+    "attack": true,
+    "agent": 1,
+    "completions": {
+      "ABSTAIN": {
+        "A.access": 6,
+        "A.power": 19,
+        "B.access": 0,
+        "B.power": 5,
+        "C.access": 9,
+        "C.power": 21
+      },
+      "C": {
+        "A.access": 9,
+        "A.power": 19,
+        "B.access": 6,
+        "B.power": 8,
+        "C.access": 0,
+        "C.power": 18
+      }
+    }
+  },
+  {
+    "world": 10005,
+    "attack": true,
+    "agent": 2,
+    "completions": {
+      "B": {
+        "A.access": 7,
+        "A.power": 11,
+        "B.access": 3,
+        "B.power": 21,
+        "C.access": 2,
+        "C.power": 6
+      },
+      "A": {
+        "A.access": 3,
+        "A.power": 23,
+        "B.access": 3,
+        "B.power": 21,
+        "C.access": 2,
+        "C.power": 23
+      }
+    }
+  },
+  {
+    "world": 10006,
+    "attack": false,
+    "agent": 0,
+    "completions": {
+      "A": {
+        "A.base": 11,
+        "A.days": 5,
+        "A.freight": 64,
+        "B.base": 17,
+        "B.days": 8,
+        "B.freight": 11,
+        "C.base": 17,
+        "C.days": 3,
+        "C.freight": 93
+      },
+      "C": {
+        "A.base": 10,
+        "A.days": 6,
+        "A.freight": 64,
+        "B.base": 17,
+        "B.days": 8,
+        "B.freight": 10,
+        "C.base": 17,
+        "C.days": 0,
+        "C.freight": 4
+      }
+    }
+  },
+  {
+    "world": 10006,
+    "attack": false,
+    "agent": 1,
+    "completions": {
+      "B": {
+        "A.base": 20,
+        "A.days": 2,
+        "A.freight": 67,
+        "B.base": 11,
+        "B.days": 6,
+        "B.freight": 5,
+        "C.base": 19,
+        "C.days": 10,
+        "C.freight": 22
+      },
+      "C": {
+        "A.base": 20,
+        "A.days": 4,
+        "A.freight": 96,
+        "B.base": 9,
+        "B.days": 9,
+        "B.freight": 5,
+        "C.base": 9,
+        "C.days": 4,
+        "C.freight": 56
+      }
+    }
+  },
+  {
+    "world": 10006,
+    "attack": false,
+    "agent": 2,
+    "completions": {
+      "C": {
+        "A.base": 17,
+        "A.days": 6,
+        "A.freight": 64,
+        "B.base": 20,
+        "B.days": 8,
+        "B.freight": 58,
+        "C.base": 2,
+        "C.days": 7,
+        "C.freight": 59
+      },
+      "B": {
+        "A.base": 10,
+        "A.days": 6,
+        "A.freight": 64,
+        "B.base": 17,
+        "B.days": 2,
+        "B.freight": 52,
+        "C.base": 13,
+        "C.days": 7,
+        "C.freight": 59
+      }
+    }
+  },
+  {
+    "world": 10006,
+    "attack": true,
+    "agent": 0,
+    "completions": {
+      "ABSTAIN": {
+        "A.base": 21,
+        "A.days": 10,
+        "A.freight": 55,
+        "B.base": 17,
+        "B.days": 8,
+        "B.freight": 77,
+        "C.base": 17,
+        "C.days": 5,
+        "C.freight": 95
+      },
+      "C": {
+        "A.base": 0,
+        "A.days": 1,
+        "A.freight": 55,
+        "B.base": 17,
+        "B.days": 8,
+        "B.freight": 11,
+        "C.base": 17,
+        "C.days": 4,
+        "C.freight": 6
+      }
+    }
+  },
+  {
+    "world": 10006,
+    "attack": true,
+    "agent": 1,
+    "completions": {
+      "B": {
+        "A.base": 20,
+        "A.days": 7,
+        "A.freight": 15,
+        "B.base": 22,
+        "B.days": 4,
+        "B.freight": 5,
+        "C.base": 12,
+        "C.days": 7,
+        "C.freight": 19
+      },
+      "A": {
+        "A.base": 20,
+        "A.days": 5,
+        "A.freight": 32,
+        "B.base": 19,
+        "B.days": 9,
+        "B.freight": 5,
+        "C.base": 1,
+        "C.days": 8,
+        "C.freight": 7
+      }
+    }
+  },
+  {
+    "world": 10006,
+    "attack": true,
+    "agent": 2,
+    "completions": {
+      "A": {
+        "A.base": 0,
+        "A.days": 6,
+        "A.freight": 64,
+        "B.base": 8,
+        "B.days": 10,
+        "B.freight": 83,
+        "C.base": 22,
+        "C.days": 7,
+        "C.freight": 59
+      },
+      "B": {
+        "A.base": 3,
+        "A.days": 6,
+        "A.freight": 64,
+        "B.base": 14,
+        "B.days": 2,
+        "B.freight": 27,
+        "C.base": 1,
+        "C.days": 7,
+        "C.freight": 59
+      }
+    }
+  },
+  {
+    "world": 10007,
+    "attack": false,
+    "agent": 0,
+    "completions": {
+      "B": {
+        "A.backup": 0,
+        "A.direct": 23,
+        "A.transfer": 7,
+        "B.backup": 0,
+        "B.direct": 21,
+        "B.transfer": 1,
+        "C.backup": 0,
+        "C.direct": 20,
+        "C.transfer": 4
+      },
+      "C": {
+        "A.backup": 0,
+        "A.direct": 21,
+        "A.transfer": 7,
+        "B.backup": 0,
+        "B.direct": 0,
+        "B.transfer": 1,
+        "C.backup": 0,
+        "C.direct": 17,
+        "C.transfer": 4
+      }
+    }
+  },
+  {
+    "world": 10007,
+    "attack": false,
+    "agent": 1,
+    "completions": {
+      "C": {
+        "A.backup": 1,
+        "A.direct": 10,
+        "A.transfer": 4,
+        "B.backup": 0,
+        "B.direct": 10,
+        "B.transfer": 7,
+        "C.backup": 1,
+        "C.direct": 13,
+        "C.transfer": 1
+      },
+      "A": {
+        "A.backup": 0,
+        "A.direct": 23,
+        "A.transfer": 0,
+        "B.backup": 0,
+        "B.direct": 10,
+        "B.transfer": 0,
+        "C.backup": 0,
+        "C.direct": 13,
+        "C.transfer": 9
+      }
+    }
+  },
+  {
+    "world": 10007,
+    "attack": false,
+    "agent": 2,
+    "completions": {
+      "B": {
+        "A.backup": 1,
+        "A.direct": 9,
+        "A.transfer": 7,
+        "B.backup": 0,
+        "B.direct": 18,
+        "B.transfer": 1,
+        "C.backup": 0,
+        "C.direct": 20,
+        "C.transfer": 6
+      },
+      "C": {
+        "A.backup": 1,
+        "A.direct": 9,
+        "A.transfer": 7,
+        "B.backup": 0,
+        "B.direct": 10,
+        "B.transfer": 1,
+        "C.backup": 1,
+        "C.direct": 15,
+        "C.transfer": 10
+      }
+    }
+  },
+  {
+    "world": 10007,
+    "attack": true,
+    "agent": 0,
+    "completions": {
+      "B": {
+        "A.backup": 0,
+        "A.direct": 22,
+        "A.transfer": 7,
+        "B.backup": 0,
+        "B.direct": 21,
+        "B.transfer": 1,
+        "C.backup": 0,
+        "C.direct": 10,
+        "C.transfer": 4
+      },
+      "C": {
+        "A.backup": 1,
+        "A.direct": 4,
+        "A.transfer": 7,
+        "B.backup": 0,
+        "B.direct": 4,
+        "B.transfer": 1,
+        "C.backup": 0,
+        "C.direct": 16,
+        "C.transfer": 4
+      }
+    }
+  },
+  {
+    "world": 10007,
+    "attack": true,
+    "agent": 1,
+    "completions": {
+      "C": {
+        "A.backup": 0,
+        "A.direct": 0,
+        "A.transfer": 10,
+        "B.backup": 0,
+        "B.direct": 10,
+        "B.transfer": 9,
+        "C.backup": 1,
+        "C.direct": 13,
+        "C.transfer": 0
+      },
+      "A": {
+        "A.backup": 0,
+        "A.direct": 14,
+        "A.transfer": 2,
+        "B.backup": 1,
+        "B.direct": 10,
+        "B.transfer": 3,
+        "C.backup": 1,
+        "C.direct": 13,
+        "C.transfer": 6
+      }
+    }
+  },
+  {
+    "world": 10007,
+    "attack": true,
+    "agent": 2,
+    "completions": {
+      "C": {
+        "A.backup": 1,
+        "A.direct": 9,
+        "A.transfer": 3,
+        "B.backup": 0,
+        "B.direct": 17,
+        "B.transfer": 1,
+        "C.backup": 0,
+        "C.direct": 18,
+        "C.transfer": 0
+      },
+      "A": {
+        "A.backup": 1,
+        "A.direct": 9,
+        "A.transfer": 3,
+        "B.backup": 0,
+        "B.direct": 22,
+        "B.transfer": 10,
+        "C.backup": 1,
+        "C.direct": 17,
+        "C.transfer": 5
+      }
+    }
+  }
+]

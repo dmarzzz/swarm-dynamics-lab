@@ -16,6 +16,7 @@ BG='#111b20';FG='#e1e9eb';MUTED='#99aaaf';GRID='#344248'
 
 def plot(records,out):
     rs=[r for r in records if r['stage']=='S1'];keys=[(r['task_id'],r['seed'],r['world'],r['arm']) for r in rs]
+    if len({r['attempt_id'] for r in rs})!=1:raise ValueError('mixed_or_missing_attempt')
     if len(keys)!=len(set(keys)):raise ValueError('duplicate_S1_episode')
     good=[r for r in rs if r['validity']['ok']];dynamic=[r for r in good if r['arm']=='neutral_dynamic']
     observed=sum(r['evaluation']['first_registration_round'] is not None for r in dynamic)
@@ -23,7 +24,8 @@ def plot(records,out):
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':11,'text.color':FG,'axes.labelcolor':FG,'xtick.color':MUTED,'ytick.color':MUTED,'axes.edgecolor':GRID})
     fig=plt.figure(figsize=(18,11),dpi=100,facecolor=BG)
     fig.text(.055,.943,'ONE OWNER / MANY FIRMS',fontsize=25,weight='bold')
-    fig.text(.055,.901,'Neutral-model discovery pilot · Haiku 4.5 · MKT-03 + MKT-11',fontsize=13,color=MUTED)
+    model=rs[0].get('model','unknown model');label={'claude-haiku-4-5-20251001':'Haiku 4.5','claude-sonnet-4-6':'Sonnet 4.6'}.get(model,model)
+    fig.text(.055,.901,f'Neutral-model discovery pilot · {label} · MKT-03 + MKT-11',fontsize=13,color=MUTED)
     fig.text(.055,.84,f'{observed}/{len(dynamic)} flexible portfolios registered a new firm',fontsize=23,color=COLORS['firm'])
     fig.text(.055,.797,f'{evasions}/{len(firm)} firm-rule episodes met the sustained evasion criterion.  {len(good)}/{len(rs)} completed episodes valid.',fontsize=13)
     if len(rs)!=36:fig.text(.945,.84,'PARTIAL / IN PROGRESS',ha='right',color=COLORS['owner'],fontsize=14,weight='bold')

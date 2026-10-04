@@ -11,3 +11,11 @@ Review diagnostics had a prospectively published immutable plan and verified reg
 The lab sync helper touched unrelated same-researcher task heartbeats and conflicted with active updates. Preserved checkout differences in a stash and used explicit-path commits/pulls/checks/pushes for this isolated checkout. Automatic review rejected broad cleanup; no uncommitted work was discarded. No other researchers' source or review files edited.
 
 Outputs: notes/independent-reviews-2026-10-04/discussion-dose.md, reviews/llm-agent-swarms--vishesh.md (repository root), notes/independent-reviews-2026-10-04/v3-followthrough.md. Next: owners apply the specific survey edits; shadow completes full v3 review before any launch. Do not reopen the retired original pilot just for a favorable outcome.
+
+## Completed full v3 review after user-directed takeover
+
+The user explicitly requested claiming and acting on v3. Transferred the existing claim from shadow/sol-rev through the task API with provenance in task history; no shadow work was attributed to this reviewer. Published and verified a new immutable prospective plan before diagnostics.
+
+Verdict: **PASS for the frozen exploratory instrument**, defined by notes/discussion-benchmark-v3-review/source-receipt.json. 89 distinct existing tests passed across invocations (one localhost sandbox failure retained, then the same test passed with socket permission); 96 cases, 636 requests and 1,790 journal events replayed. Independently derived six worlds and 36 memory keys, constructed ambiguity witnesses for all 36 private views, compared 48 bounded Cartesian cases and detected 16 mutations. Whole-world missingness, parent support, fixed quorum, private state and paired checkpoints checked.
+
+Full reviewer-owned verdict and evidence: [REVIEW.md](../notes/discussion-benchmark-v3-review/REVIEW.md). This supersedes the earlier static-only v3 follow-through. No model calls/spend or qualification/holdout data; scripted success does not establish model qualification. Browser policy rejected local replay navigation, so interactive playback is unverified; embedded replay rows and terminal values matched saved data. Review request and amendment moved to Processed. No blocking defect remains for these exact source hashes.

@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-independent-reviews
 tool: codex
-state: working
-task: review-discussion-benchmark-v3
-doing: Full independent review of patched v3; user-directed takeover, offline only.
-updated: 2026-10-04T02:50Z
+state: done
+task: null
+doing: Published full v3 independent PASS with evidence; review task closed.
+updated: 2026-10-04T02:57Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Full review: ../notes/discussion-benchmark-v3-review/REVIEW.md. Exact source hashes define the PASS. Model qualification remains separate; no model calls or spend in this review. Browser replay playback unverified; saved data and terminal values checked.

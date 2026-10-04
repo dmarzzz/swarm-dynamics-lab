@@ -5,6 +5,8 @@ Status: **user-requested exploratory design draft, not a registered hypothesis o
 
 The [protocol refinement](PROTOCOL.md) specifies proposed coordination, atomic budget admission, disjoint selector fitting/validation, fresh timed policy trials and the replay design. Its additional policy trials revise the planning maximum to 2,512 core episodes (3,792 with the optional extension).
 
+The [task contracts and qualification packet](TASK-CONTRACTS.md) define deterministic success checks, information boundaries, illustrative reviewer cases and the 16-episode calibration / 64-episode engineering sequence within the existing 80-episode qualification. Qualification is not a matched size-effect comparison; the core map is.
+
 ## Question and decision
 
 Given a task and a specified solution method, how many agents should an operator launch under a deadline, spending cap, memory limits and available hardware? Can a rule using information available before launch make that choice better than always choosing one size?
@@ -89,7 +91,7 @@ Compare each policy on the same paired root set. A deployable selector must retu
 | Stage | Proposed allocation | Episodes | Meaning |
 | --- | --- | ---: | --- |
 | Design/fixture validation | Deterministic or hand-worked examples and invariant checks. | Not model episodes | Verify budget accounting, scheduling, information equivalence and scoring; not evidence of model performance. |
-| Qualification | 2 development families × 2 structures × 5 N × 4 roots × 1 model sample, P0 only. | 80 | Confirm a meaningful quality range and metering; choose a pinned model and freeze calibration rules. |
+| Qualification | 2 development families × 2 structures × 5 N × 4 roots × 1 model sample, P0 only. | 80 | Use a model and calibration rules pinned before Q-A: 16 N=1 screening episodes, then 64 N>1 engineering episodes. These phases use different caps and do not estimate a size effect. |
 | Core map | 2 development families × 2 structures × 4 core profiles × 5 N × 8 roots × 2 samples. | 1,280 | Exploratory response map; use disjoint development/validation roots for selector tuning. |
 | Locked transfer | 1 held-out family × 2 structures × 4 core profiles × 5 N × 8 roots × 2 samples. | 640 | Test frozen sizing rule on an unseen family; also report within-family held-out-root validation. |
 | Locked policy evaluation | 1 held-out family × 2 structures × 4 core profiles × 4 policies × 8 roots × 2 samples. | 512 | Fresh executions charging selection/admission time and cost; transfer sweep remains sealed until completion. |
