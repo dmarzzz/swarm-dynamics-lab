@@ -261,7 +261,7 @@
 |---|---|---|---|---|
 | dmarz/market-split-film | done |  | 2026-10-04T09:25Z | filed v2 of the market-split film, a narrated version (wall of all 36 runs, zoom into market 36, the agent's message and reply, then the result); no model calls |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
-| dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:13Z | sybil-split-opus: final code, READY.yaml and runbook pushed (55 selftests, offline S0 1853/1853, rehearsal passes); writing the pre-run review; no launch, no model call |
+| dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:19Z | sybil-split-opus: launch-ready package on main (pinned 0b8a444a, source hash 95889bea, pre-run review ready); waiting for the pipeline lead's review; nothing launched, no model call |
 | dmarz/pipeline-scarcity | done |  | 2026-10-04T09:12Z | sybil-scarcity-opus package finished and filed as a ready run request (run queue 248) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
 | vishesh/codex-idea-scores | idle | build-swarm-size-qualification | 2026-10-04T09:02Z | Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued |
