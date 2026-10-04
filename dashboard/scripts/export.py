@@ -17,6 +17,7 @@ import time
 from collections import Counter
 from research_navigation import build_navigation
 from contributions import build_contributions
+from idea_scores import build_scores
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -325,6 +326,7 @@ def export():
                 'questions': questions,
                 'contributions': build_contributions(ROOT, questions, data.library, data.hypotheses),
                 'navigation': build_navigation(ROOT, questions, data.hypotheses, data.topics)}
+    payloads['idea-scores'] = build_scores(ROOT, questions, payloads['contributions'])
     OUT.mkdir(parents=True, exist_ok=True)
     for name, payload in payloads.items():
         text = json.dumps(payload, ensure_ascii=False, separators=(',', ':'), default=str) + '\n'

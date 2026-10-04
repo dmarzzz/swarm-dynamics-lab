@@ -1,3 +1,4 @@
+import { IdeaScoresProvider } from './components/IdeaScores';
 import { lazy, Suspense, useEffect, type ComponentType } from 'react';
 import './styles.css';
 import './components/components.css';
@@ -48,7 +49,7 @@ export default function App() {
   const gen = state.status === 'ready' ? parseT(state.data.summary.generated_at) : null;
 
   return (
-    <div className="shell">
+    <IdeaScoresProvider><div className="shell">
       <a className="skip" href="#main">Skip to content</a>
       <header className="masthead">
         <div className="wrap">
@@ -112,7 +113,7 @@ export default function App() {
           )}
         </div>
       </footer>
-    </div>
+    </div></IdeaScoresProvider>
   );
 }
 

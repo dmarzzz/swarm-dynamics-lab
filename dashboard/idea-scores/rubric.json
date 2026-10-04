@@ -1,0 +1,15 @@
+{
+  "version": "vishesh-visual-bio-v1",
+  "title": "Vishesh’s visual and biological research rubric",
+  "weights": {"visual": 0.30, "practical": 0.30, "theory": 0.25, "novelty": 0.15},
+  "dimensions": {
+    "visual": "Potential for an aesthetic animation that makes measured mechanisms and outcomes legible.",
+    "practical": "Usefulness for realistic problems in agent teams; speculative transfers score lower than direct applications.",
+    "theory": "Strength of the physical or biological connection. A direct model or testable mechanism scores above a loose analogy.",
+    "novelty": "Distinctiveness relative to the team’s existing work, not a claim of novelty in the literature."
+  },
+  "anchors": "Each dimension: 0 absent, 25 weak, 50 moderate, 75 strong, 100 exceptional. Overall score is the weighted sum rounded to an integer out of 100.",
+  "assessed_at": "2026-10-04",
+  "provenance": "Vishesh requested Codex to assess all ideas using the latest conversation rubric. Initial Vishesh ratings are assistant assessments on his behalf, not individual human reviews. Dimarz (repository ID dmarz) and Shadow have not supplied ratings.",
+  "limitations": "Subjective prioritization, not empirical evidence, execution readiness, formal review approval, or novelty certification. All ideas are scored, including work already started. Unstarted status is separate. These decomposed scores supersede earlier conversational rankings made under different or undecomposed rubrics. Missing ratings are null and displayed as NA; they are never zero or imputed. New ideas default to NA. Changed content flags existing scores for review."
+}
