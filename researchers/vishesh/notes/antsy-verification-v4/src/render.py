@@ -24,7 +24,7 @@ def render_overview(blocks,out,stage):
         write(d,(950,y),f"{100*a['regret']:.1f} pp");write(d,(1210,y),f"{a['checks']:.2f}")
     write(d,(50,806),'What this tests: selecting useful checks and deciding when to stop.',25)
     write(d,(50,855),'All configurations were actually run; the agents never see hidden scores before committing.',21,MUTED)
-    write(d,(50,893),'Same local Laya checkpoint, five role prompts; votes are not independent evidence. CORD / CC BY 4.0.',20,MUTED)
+    write(d,(50,893),'One checkpoint per backend, five role prompts; votes are not independent evidence. CORD / CC BY 4.0.',20,MUTED)
     im.save(out/'final_frame.png')
     im,d=canvas('Antsy | how much room is there to improve?',f'{stage}: each dot is one receipt; all three configurations run on the same image')
     x0,y0,w,h=145,180,720,610
