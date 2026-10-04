@@ -1,0 +1,63 @@
+{
+  "receipt_units": 2,
+  "vendor_layout_independence": "unknown",
+  "planned_receipts": 20,
+  "started": 6,
+  "valid": 5,
+  "unstarted": 34,
+  "unresolved_started": 0,
+  "readers": {
+    "P": {
+      "correct": 2,
+      "wrong": 0,
+      "refer": 0,
+      "unknown_accepted": 0,
+      "correctness_wilson95": [
+        0.34238022750665303,
+        1
+      ],
+      "accepted_error_wilson95": [
+        0,
+        0.6576197724933469
+      ]
+    },
+    "C": {
+      "correct": 2,
+      "wrong": 0,
+      "refer": 0,
+      "unknown_accepted": 0,
+      "correctness_wilson95": [
+        0.34238022750665303,
+        1
+      ],
+      "accepted_error_wilson95": [
+        0,
+        0.6576197724933469
+      ]
+    }
+  },
+  "conditional": {
+    "checker_correct_given_primary_missing": {
+      "numerator": 0,
+      "denominator": 0,
+      "wilson95": null
+    },
+    "checker_correct_given_primary_wrong": {
+      "numerator": 0,
+      "denominator": 0,
+      "wilson95": null
+    },
+    "agreement_refers_correct_primary": {
+      "numerator": 0,
+      "denominator": 2
+    }
+  },
+  "qualified": false,
+  "same_author": true,
+  "scope": "Descriptive qualification only. Receipt dependence and adaptive development limit population inference; intervals assume independent binomial receipt outcomes.",
+  "input_sha256": {
+    "records.jsonl": "53b961910cfeee2ea37aaecd47224c1ba8dbd9b9bcda67465904893d6324fc8f",
+    "calls.jsonl": "6e2e6238e562ab3595bd6e692981e0d1358eed305902620b66b15c44415fee39",
+    "summary.json": "833f417f438bccf2eccd41bde55f3fc0fbd3970c05a4e013f486273ed34d9c59"
+  }
+}

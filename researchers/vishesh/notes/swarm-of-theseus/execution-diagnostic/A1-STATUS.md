@@ -1,20 +1,16 @@
-# Theseus A1 acquisition: prepared, dispatch blocked
+# Theseus A1: stopped on first HTTP429, no scientific result
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-theseus; source `daf5c507` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-theseus; source `dd09575d` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Acquisition from labeled history with the true policy withheld remains untested. Basis: Prospective plan and15offline software checks only; native dispatch blocked by orbital-one credential/launcher compatibility. R1 qualification is a separate supplied-policy cohort.
-- **sample_size_summary:** Observed: none,0native calls. Planned: six fixed acquisition roots,12learners and96distinct test case/family pairs;204call slots,96executor calls per arm. No culture test.
+- **evidence_confidence:** **0/4** — Withheld-policy acquisition remains untested after a provider failure. Basis: First request returnedHTTP429 with no model text/usage;203slots unstarted. This is no evidence of acquisition success/failure or cultural preservation. Prior R1 remains separate.
+- **sample_size_summary:** Planned: six fixed acquisition roots,12learners and96test case/family pairs. Observed:1/204calls endedHTTP429,0valid responses,203unstarted;0executor decisions and no root outcomes. No culture test.
 <!-- experiment-evidence:end -->
 
-The one-iteration preparation is complete; no native A1 attempt has started. [Prospective plan](A1-PLAN.md), [setup](A1-SETUP.md), [assessment](A1-PRE.md), [operator runbook](A1-RUNBOOK.md), [validation](A1-VALIDATION.json), [preparation postmortem](A1-PREPARATION-POST.md).
+A1 actually launched under the owner-approved direct path.204assigned,1started/terminal provider failure,0valid model responses,203unstarted; no retry. Learning and execution accuracy are unobserved. [Postmortem](RESULTS-A1.md), [actual trace](results/A1/TRACE-REVIEW.md), [setup](A1-SETUP.md), [plan](A1-PLAN.md).
 
-Pinned instrument source: `daf5c507fc1256ab566937614f4833399e434ea1`. Fifteen offline tests pass. Prepared204call slots:12learning,96learned-policy and96true-policy execution; six designed acquisition roots. Native started0, terminal0, valid0; accuracy and scientific outcome are unobserved. No paid qualification, model probe, model retry, machine claim, deployment or resource creation occurred this cycle.
+Source dd09575d050e54fd8e4202d05cf1cc4aaa38033c. Sixteen offline checks passed, source/public-plan/account/claim/credential/runtime gates passed before dispatch. Queue295 was fenced and closed; exclusivePR303 used existing sim-shadow, no provisioning. Worker exited and12evidence artifacts were uploaded/readback verified. Final claim release is in results/A1/closeout.json.
 
-The PI decision uses actual R1 evidence: F qualified192/192, but its separate material-benefit threshold was not met. A1 freezes F and tests hidden-policy learning; historical incident labels are binary rather than source-valued, holdouts differ in evidence patterns, and citation validity requires distinguishing the source by content. No culture or multi-agent benefit is claimed.
-
-Current private queue request295 is explicitly blocked. The orbital-one-only dispatch policy needs a compatible Haiku manual launcher and owner-authorized Keychain-only in-memory credential handoff. Generic ready-chain model/credential/ledger substitutions are not authorized. The fleet operator must establish this path, then obtain current exclusive approved-account allocation, verify original ledger/source/runtime/host trust, and complete immutable public registration/page admission. This is an infrastructure/dispatch dependency, not another researcher sign-off or generic owner-approval request.
-
-Original authority USD5; cumulative prior estimated USD0.8122310437; new spend0; unresolved parent reservations0. Proposed A1 reserve2.50model +0.10infra has not been allocated. No new allowance. Queueing a blocked request is not a running experiment.
+Prior estimatedUSD0.8122310437 plus unknown-charge reserveUSD0.010452 =USD0.8226830437 of originalUSD5. No budget reset. Provider category/Retry-After were not retained, so underlying429cause is unknown. Stop this attempt; no second A1 or culture run. Any future request needs resolved provider availability, safer diagnostics and separate scope admission. Operator prompts/transcripts are not published.

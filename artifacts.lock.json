@@ -9101,6 +9101,139 @@
    "sha256": "d079adb417eb5f0a62388d17ee056b00c54c6e0ee3f9cb173c557f6cbfb8247b",
    "size_bytes": 121202
   },
+  "theseus-a1-native-evidence@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791132406,
+     "sha256": "43f1ce34a8f738c0e57c967defc19c1236f7507434e5f7b877da0b12d622e202",
+     "size": 216762,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/manifest.json"
+    },
+    {
+     "mtime": 1791132406,
+     "sha256": "46de330660447309f842da41a27884d6c3e43dc44b6a1d3034b3c9dc8364e217",
+     "size": 123,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/terminal.json"
+    },
+    {
+     "mtime": 1791132873,
+     "sha256": "e083064bd4479282537eeb4f775684eff6e092a33bc21ea7df1f50996b4e2231",
+     "size": 1293,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791132873,
+   "path": "artifacts/theseus-a1-native-evidence/theseus-a1-native-evidence-v1.gz",
+   "prompt_sha256": "a477ccfe1f03a72cb78335ae76c78b3ce9cf8841c904c3378b9a4d86564237a8",
+   "sha256": "afeec4d70f2eb48eb37eca3359d37921030d6d3ba9b7bc8194a82f2b74f45a2e",
+   "size_bytes": 141716
+  },
+  "theseus-a1-native-evidence@2": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791132928,
+     "sha256": "95c2197aaea6cb52e5776cef5f440359e806001bd394a0db3c3752e9fcdcd4dc",
+     "size": 11639,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/scientific-post-mortem.json"
+    },
+    {
+     "mtime": 1791132873,
+     "sha256": "e083064bd4479282537eeb4f775684eff6e092a33bc21ea7df1f50996b4e2231",
+     "size": 1293,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791132928,
+   "path": "artifacts/theseus-a1-native-evidence/theseus-a1-native-evidence-v2.gz",
+   "prompt_sha256": "f5d59bac8ba21987502319a6cac97132731631eabb24e03b263ae6873b02e9ad",
+   "sha256": "96d2c1061d755e981a2b5d1cda9bac4169b6e0d590879dbd5ffa09cb753b76f3",
+   "size_bytes": 141770
+  },
+  "theseus-a1-native-outcome@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791132597,
+     "sha256": "815463a825ba03803b1f8cdb03afc18bfed1dafd7a3aecdba448e5620169a18b",
+     "size": 4282,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_a1_closeout.py"
+    },
+    {
+     "mtime": 1791132406,
+     "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98",
+     "size": 1509,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json"
+    },
+    {
+     "mtime": 1791132873,
+     "sha256": "e083064bd4479282537eeb4f775684eff6e092a33bc21ea7df1f50996b4e2231",
+     "size": 1293,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791132597,
+   "path": "artifacts/theseus-a1-native-outcome/theseus-a1-native-outcome-v1.png",
+   "prompt_sha256": "835131be7d9a4d48561cae549d21a02fc84893c7eab5ce1cfcf3a40d44bec678",
+   "sha256": "4ef9695133632333fa3f04b84b302a7b0192435916703b4ff2cadc01cd651e82",
+   "size_bytes": 119768
+  },
+  "theseus-a1-native-postmortem@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791132597,
+     "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3",
+     "size": 5866,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json"
+    },
+    {
+     "mtime": 1791132928,
+     "sha256": "95c2197aaea6cb52e5776cef5f440359e806001bd394a0db3c3752e9fcdcd4dc",
+     "size": 11639,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/scientific-post-mortem.json"
+    },
+    {
+     "mtime": 1791132873,
+     "sha256": "e083064bd4479282537eeb4f775684eff6e092a33bc21ea7df1f50996b4e2231",
+     "size": 1293,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791132873,
+   "path": "artifacts/theseus-a1-native-postmortem/theseus-a1-native-postmortem-v1.md",
+   "prompt_sha256": "7ae7e0dcb9ee34d4750d34424e490bbaa041a5ce75356398e28883088fd23266",
+   "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151",
+   "size_bytes": 5656
+  },
+  "theseus-a1-native-postmortem@2": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791132928,
+     "sha256": "95c2197aaea6cb52e5776cef5f440359e806001bd394a0db3c3752e9fcdcd4dc",
+     "size": 11639,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/scientific-post-mortem.json"
+    },
+    {
+     "mtime": 1791132873,
+     "sha256": "e083064bd4479282537eeb4f775684eff6e092a33bc21ea7df1f50996b4e2231",
+     "size": 1293,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791132873,
+   "path": "artifacts/theseus-a1-native-postmortem/theseus-a1-native-postmortem-v2.md",
+   "prompt_sha256": "6f25058f64d2db1ac5c3115c0f362958435e0b90d10c32f87ad5639c9c4f4e1e",
+   "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151",
+   "size_bytes": 5656
+  },
   "theseus-film@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [

@@ -31,3 +31,8 @@ The main comparison is primary alone versus targeted fallback versus always-chec
 The Q0 floor is deliberately stronger than v7: each selected reader must reach at least50% correct on scorable receipts and at most one wrong acceptance, with >=16 scorable, complete accounting and no execution errors. Fresh Q0 uses train60–79; one reserved repair uses80–99; test50–99 stays sealed. Failure means stop, not engine shopping on the same qualification set.
 
 Eighteen offline tests pass, covering association boundaries, dotted/hyphenated subtotal, unresolved grand total, conflicting/multiple amounts, wrong digits, fallback semantics and malformed adapter output. These are software checks, not EasyOCR competence evidence. Read-only replay reused existing OCR durations for cost accounting and made0 new calls; it does not measure v8 runtime or establish a matched-compute benefit.
+
+
+## Native Q0-attempt-1 — 2026-10-04
+
+Execution failed on EasyOCR train62 at45.079 seconds. Of40 assigned OCR calls,6 started,5 returned valid results,1 timed out and34 never started. Two paired receipts completed correctly for both readers; the partial third primary abstained. Qualification is incomplete and complementary correction is not estimable. This cohort is separate from reused development observations. See the [full post-mortem](reviews/Q0-attempt-1-post.md), [audit](results/Q0-attempt-1/audit.json) and [all-assignment figure](results/Q0-attempt-1/closeout.png). No automatic retry or S1; allocation released after verified backup and readback.

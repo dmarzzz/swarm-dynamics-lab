@@ -1,0 +1,174 @@
+{
+  "scope": "Retrospective saved-output inspection; no OCR rerun. Five retained native outputs replayed through unchanged parser. Sixth call timed out without retained intermediate output or stderr; internal phase unknown. No operator prompts or raw receipt words published.",
+  "calls": [
+    {
+      "id": 60,
+      "worker": "P",
+      "valid": true,
+      "wall_s": 5.330893213998934,
+      "image_size": [
+        576,
+        864
+      ],
+      "image_sha256": "1a091c3da858f283e92409cdff13cfec01a3e319e8ca54d9d6aa653c8866c31b",
+      "raw_output_retained": true,
+      "error": null,
+      "raw_output_sha256": "5d80514a55994e77d3ed9d208268801301536ca9ca0315d326d7b55d7a108bc9",
+      "word_count": 16,
+      "observation_sha256": "677f0ffbe0b4f0952370a4a2ede3979faed86fd318809674f477c469c3347397",
+      "candidate_replay_match": true,
+      "observation_hash_match": true,
+      "candidate": {
+        "status": "ok",
+        "value": "161000.00",
+        "evidence": [
+          {
+            "value": "161000.00",
+            "region_hash": "14b65d6781ad2d54935b041194b0d421cdb40eadc14e1551fd8a5658e35a91ff",
+            "observation_hash": "fff20a3b33157a4c5270ba036deb71fe1d629617f3dfe43494c3d33d590456aa"
+          }
+        ],
+        "reasons": [],
+        "contract": "anchor-row-v2"
+      }
+    },
+    {
+      "id": 60,
+      "worker": "C",
+      "valid": true,
+      "wall_s": 23.215309437000542,
+      "image_size": [
+        576,
+        864
+      ],
+      "image_sha256": "1a091c3da858f283e92409cdff13cfec01a3e319e8ca54d9d6aa653c8866c31b",
+      "raw_output_retained": true,
+      "error": null,
+      "raw_output_sha256": "b2f5a129ca8ecc7f1931c15293ee05e78518ce5fc263b131bb6c9a4606f5ee0c",
+      "word_count": 16,
+      "observation_sha256": "08db3bc3857fe012f3e5e3c5b706f2568958832a63a597a1d6d8004c714076f2",
+      "candidate_replay_match": true,
+      "observation_hash_match": true,
+      "candidate": {
+        "status": "ok",
+        "value": "161000.00",
+        "evidence": [
+          {
+            "value": "161000.00",
+            "region_hash": "3e02738eb91712fa52b0a30319371db42f514851e6beca040431163056a1df63",
+            "observation_hash": "a335e0bc1753671670c302b9776e779c569428484fcfe0d0b37a30c5fb6de1fc"
+          }
+        ],
+        "reasons": [],
+        "contract": "anchor-row-v2"
+      }
+    },
+    {
+      "id": 61,
+      "worker": "P",
+      "valid": true,
+      "wall_s": 4.8651821479943465,
+      "image_size": [
+        576,
+        864
+      ],
+      "image_sha256": "e705c2bb9388948d58f6cd301f793a475624f2781c1f64cc308cdbcc65029160",
+      "raw_output_retained": true,
+      "error": null,
+      "raw_output_sha256": "c5533e4cbaff60197d2cb84b6549c7b743a9114c4b4e2cbe9af652a38e151092",
+      "word_count": 12,
+      "observation_sha256": "08e42dce8094a5528288700e04b418dc1493b40d84e954a09120276c98068276",
+      "candidate_replay_match": true,
+      "observation_hash_match": true,
+      "candidate": {
+        "status": "ok",
+        "value": "17000.00",
+        "evidence": [
+          {
+            "value": "17000.00",
+            "region_hash": "5300ab34b80ca23f79a241ab443e8198c70d1f0c4e955c872c8cdab4847916f9",
+            "observation_hash": "c5d53493413acf8645bb25f005fc00d5fdeb4f1e9547755bcb09ae061a5bf4c0"
+          }
+        ],
+        "reasons": [
+          "excluded_context"
+        ],
+        "contract": "anchor-row-v2"
+      }
+    },
+    {
+      "id": 61,
+      "worker": "C",
+      "valid": true,
+      "wall_s": 18.87308629600011,
+      "image_size": [
+        576,
+        864
+      ],
+      "image_sha256": "e705c2bb9388948d58f6cd301f793a475624f2781c1f64cc308cdbcc65029160",
+      "raw_output_retained": true,
+      "error": null,
+      "raw_output_sha256": "e6b952a3d848d69cac90fde3da90baa5ba3a5de1f50b29c8f64d68bf63124595",
+      "word_count": 11,
+      "observation_sha256": "b4868af9b7d53eb2324fd83edfb41873b8d4064654515f0a9fded0771f89ad19",
+      "candidate_replay_match": true,
+      "observation_hash_match": true,
+      "candidate": {
+        "status": "ok",
+        "value": "17000.00",
+        "evidence": [
+          {
+            "value": "17000.00",
+            "region_hash": "23e4bd3ad67efe97e07e64a80b11d3deed4d662ea5ff02bc59833937147f94d3",
+            "observation_hash": "a755dfda0fb480928a799a7b556f39a09e0483be7fa3a6c7026994e03236b9be"
+          }
+        ],
+        "reasons": [
+          "excluded_context"
+        ],
+        "contract": "anchor-row-v2"
+      }
+    },
+    {
+      "id": 62,
+      "worker": "P",
+      "valid": true,
+      "wall_s": 7.8848090969986515,
+      "image_size": [
+        960,
+        1706
+      ],
+      "image_sha256": "3dfba6b1e12cb68df13a674240d245c87c228fce6883cfc2a3a9b36c9651e0aa",
+      "raw_output_retained": true,
+      "error": null,
+      "raw_output_sha256": "6d2eabb9a34dc6e5b634cef53de139763df27adedda616db19f2c57454aafaa6",
+      "word_count": 9,
+      "observation_sha256": "26875e14e12070487dbcbb1d2e83a6f4dc70df9bd6b1f6699658974c65a3a3db",
+      "candidate_replay_match": true,
+      "observation_hash_match": true,
+      "candidate": {
+        "status": "missing",
+        "value": null,
+        "evidence": [],
+        "reasons": [
+          "excluded_context"
+        ],
+        "contract": "anchor-row-v2"
+      }
+    },
+    {
+      "id": 62,
+      "worker": "C",
+      "valid": false,
+      "wall_s": 45.07947058399441,
+      "image_size": [
+        960,
+        1706
+      ],
+      "image_sha256": "3dfba6b1e12cb68df13a674240d245c87c228fce6883cfc2a3a9b36c9651e0aa",
+      "raw_output_retained": false,
+      "error": "TimeoutExpired"
+    }
+  ],
+  "same_author": true
+}

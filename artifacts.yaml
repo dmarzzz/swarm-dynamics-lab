@@ -3502,4 +3502,82 @@ artifacts:
           - researchers/shadow/notes/wild-halflife/results/summary.json
           - researchers/shadow/notes/wild-halflife/results/supplement.json
         commit: 4eff98d076dcdf6d1c0b849f067fc5442c127132-dirty
+  - id: theseus-a1-native-outcome
+    category: content
+    type: figure
+    title: Theseus A1 provider stop and missing observations
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-a1-native-outcome/theseus-a1-native-outcome-v1.png
+        built_at: '2026-10-04T16:54:34Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:835131be7d9a4d48561cae549d21a02fc84893c7eab5ce1cfcf3a40d44bec678
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/analysis/report_a1_closeout.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json
+        commit: c97927f3c6a727bc63ec4b5430f7272a18aa32bb-dirty
+  - id: theseus-a1-native-postmortem
+    category: content
+    type: doc
+    title: Theseus A1 native attempt postmortem
+    versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/theseus-a1-native-postmortem/theseus-a1-native-postmortem-v2.md
+        built_at: '2026-10-04T16:55:28Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:6f25058f64d2db1ac5c3115c0f362958435e0b90d10c32f87ad5639c9c4f4e1e
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/scientific-post-mortem.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json
+        commit: c97927f3c6a727bc63ec4b5430f7272a18aa32bb-dirty
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-a1-native-postmortem/theseus-a1-native-postmortem-v1.md
+        built_at: '2026-10-04T16:54:45Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:7ae7e0dcb9ee34d4750d34424e490bbaa041a5ce75356398e28883088fd23266
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/scientific-post-mortem.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json
+        commit: c97927f3c6a727bc63ec4b5430f7272a18aa32bb-dirty
+  - id: theseus-a1-native-evidence
+    category: content
+    type: dataset
+    title: Theseus A1 complete native evidence and closeout
+    versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/theseus-a1-native-evidence/theseus-a1-native-evidence-v2.gz
+        built_at: '2026-10-04T16:55:29Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:f5d59bac8ba21987502319a6cac97132731631eabb24e03b263ae6873b02e9ad
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/scientific-post-mortem.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json
+        commit: c97927f3c6a727bc63ec4b5430f7272a18aa32bb-dirty
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-a1-native-evidence/theseus-a1-native-evidence-v1.gz
+        built_at: '2026-10-04T16:54:46Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:a477ccfe1f03a72cb78335ae76c78b3ce9cf8841c904c3378b9a4d86564237a8
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/manifest.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/terminal.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json
+        commit: c97927f3c6a727bc63ec4b5430f7272a18aa32bb-dirty
 requires: '1.2'

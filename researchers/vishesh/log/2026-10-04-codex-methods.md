@@ -31,3 +31,8 @@ Built and published the pixel-only RapidOCR/EasyOCR native runner, complete runt
 ## One-cycle portfolio continuation: Antsy Q0
 
 Reconciled queue and hub: no v8 worker or native call. The previously trusted sim-vishesh is an idle candidate; no claim held pending central dispatch. Preserved frozen Q0 contract per PI/design transfer. Added six separate saved-result audit tests, conditional checker denominators and descriptive Wilson intervals; all31 runner tests still pass. Published eleven-dimension readiness assessment and exact operational blocker. Zero incremental cost; historical Antsy exposure not reset or reconstructed. No native post-mortem fabricated.
+
+
+## Native v8 Q0 closeout
+
+Executed the frozen Q0 on existing approved team allocation under scoped direct-launch authority after fencing duplicate central dispatch. Six OCR starts: five valid, one45s EasyOCR timeout,34unstarted. Two complete pairs correct; qualification incomplete and no complementary-benefit inference. Saved-output parser replay and separate accounting audit agree. Native traces backed up privately; all8 hub artifacts hash-readback verified; workers stopped and claim released. No retry/S1, hosted calls or new charges. Published full assignment visualization and eleven-dimension scientific post-mortem; next action is owner-reviewed trace-preserving execution diagnosis, not automatic repair.

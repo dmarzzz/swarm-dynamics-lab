@@ -1,0 +1,207 @@
+{
+  "stage": "D5",
+  "scientific": true,
+  "planned": 24,
+  "terminal": 24,
+  "valid": 0,
+  "invalid": 24,
+  "acceptable": 0,
+  "by_arm": {
+    "matrix_inherited": {
+      "assigned": 6,
+      "valid": 0,
+      "acceptable": 0,
+      "unauthorized": 0,
+      "avoidable_deferrals": 0,
+      "purchase_check_contradictions": 0,
+      "authorized_acceptable": 0,
+      "statuses_correct": 0,
+      "statuses_total": 90,
+      "raw_facts_correct": 0,
+      "raw_facts_total": null,
+      "aligned_facts": 0,
+      "wrong_accepted_facts": 0
+    },
+    "typed_inherited": {
+      "assigned": 6,
+      "valid": 0,
+      "acceptable": 0,
+      "unauthorized": 0,
+      "avoidable_deferrals": 0,
+      "purchase_check_contradictions": 0,
+      "authorized_acceptable": 0,
+      "statuses_correct": 0,
+      "statuses_total": 90,
+      "raw_facts_correct": 0,
+      "raw_facts_total": 216,
+      "aligned_facts": 0,
+      "wrong_accepted_facts": 0
+    },
+    "matrix_records_only": {
+      "assigned": 6,
+      "valid": 0,
+      "acceptable": 0,
+      "unauthorized": 0,
+      "avoidable_deferrals": 0,
+      "purchase_check_contradictions": 0,
+      "authorized_acceptable": 0,
+      "statuses_correct": 0,
+      "statuses_total": 90,
+      "raw_facts_correct": 0,
+      "raw_facts_total": null,
+      "aligned_facts": 0,
+      "wrong_accepted_facts": 0
+    },
+    "typed_records_only": {
+      "assigned": 6,
+      "valid": 0,
+      "acceptable": 0,
+      "unauthorized": 0,
+      "avoidable_deferrals": 0,
+      "purchase_check_contradictions": 0,
+      "authorized_acceptable": 0,
+      "statuses_correct": 0,
+      "statuses_total": 90,
+      "raw_facts_correct": 0,
+      "raw_facts_total": 216,
+      "aligned_facts": 0,
+      "wrong_accepted_facts": 0
+    }
+  },
+  "paired_differences": [
+    {
+      "case_id": "regional-no-approval",
+      "contrast": "typed_inherited minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "regional-no-approval",
+      "contrast": "typed_records_only minus matrix_records_only",
+      "difference": null
+    },
+    {
+      "case_id": "regional-no-approval",
+      "contrast": "matrix_records_only minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "regional-no-approval",
+      "contrast": "typed_records_only minus typed_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "contrast": "typed_inherited minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "contrast": "typed_records_only minus matrix_records_only",
+      "difference": null
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "contrast": "matrix_records_only minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "contrast": "typed_records_only minus typed_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "contrast": "typed_inherited minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "contrast": "typed_records_only minus matrix_records_only",
+      "difference": null
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "contrast": "matrix_records_only minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "contrast": "typed_records_only minus typed_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "export-approved-option",
+      "contrast": "typed_inherited minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "export-approved-option",
+      "contrast": "typed_records_only minus matrix_records_only",
+      "difference": null
+    },
+    {
+      "case_id": "export-approved-option",
+      "contrast": "matrix_records_only minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "export-approved-option",
+      "contrast": "typed_records_only minus typed_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "contrast": "typed_inherited minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "contrast": "typed_records_only minus matrix_records_only",
+      "difference": null
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "contrast": "matrix_records_only minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "contrast": "typed_records_only minus typed_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "contrast": "typed_inherited minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "contrast": "typed_records_only minus matrix_records_only",
+      "difference": null
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "contrast": "matrix_records_only minus matrix_inherited",
+      "difference": null
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "contrast": "typed_records_only minus typed_inherited",
+      "difference": null
+    }
+  ],
+  "repair_screen": {
+    "typed_inherited": false,
+    "typed_records_only": false
+  },
+  "qualified": false,
+  "calls": 48,
+  "actual_usd": 0.0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "usage_missing": 48,
+  "seconds": 28.55391364300158,
+  "report_errors": [],
+  "packet_hash": "d0fe44becee7386e667b84f727317d91e3cbd68be2b28a89f33d24b7419efe44",
+  "outcomes_hash": "74c8da4201058bc19606d784a0bc0feeee51523a28f439deb93071def367637f"
+}

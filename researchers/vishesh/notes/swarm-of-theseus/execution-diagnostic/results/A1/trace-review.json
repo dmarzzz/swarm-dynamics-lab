@@ -1,0 +1,106 @@
+{
+  "evidence_type": "actual_experimental_request_and_terminal_provider_status",
+  "assignment": "A1-7304-incident-learn",
+  "request": {
+    "max_tokens": 1200,
+    "messages": [
+      {
+        "content": "{\"history\": [{\"case\": {\"class\": \"B\", \"evidence\": {\"canary\": {\"fresh\": true, \"signal\": true}, \"ledger\": {\"fresh\": false, \"signal\": false}, \"probe\": {\"fresh\": false, \"signal\": false}}, \"id\": \"a4e659fa1e265043\", \"queue\": \"east\", \"summary\": \"looks clear\"}, \"outcome\": \"quiet\"}, {\"case\": {\"class\": \"B\", \"evidence\": {\"canary\": {\"fresh\": false, \"signal\": true}, \"ledger\": {\"fresh\": true, \"signal\": true}, \"probe\": {\"fresh\": true, \"signal\": false}}, \"id\": \"fb4d753d4811b5a9\", \"queue\": \"east\", \"summary\": \"needs attention\"}, \"outcome\": \"quiet\"}, {\"case\": {\"class\": \"A\", \"evidence\": {\"canary\": {\"fresh\": false, \"signal\": false}, \"ledger\": {\"fresh\": false, \"signal\": true}, \"probe\": {\"fresh\": false, \"signal\": true}}, \"id\": \"1743af89a548f6bb\", \"queue\": \"east\", \"summary\": \"looks clear\"}, \"outcome\": \"quiet\"}, {\"case\": {\"class\": \"A\", \"evidence\": {\"canary\": {\"fresh\": false, \"signal\": true}, \"ledger\": {\"fresh\": false, \"signal\": false}, \"probe\": {\"fresh\": true, \"signal\": true}}, \"id\": \"c3018b5d9349deaf\", \"queue\": \"west\", \"summary\": \"needs attention\"}, \"outcome\": \"activated\"}, {\"case\": {\"class\": \"B\", \"evidence\": {\"canary\": {\"fresh\": true, \"signal\": false}, \"ledger\": {\"fresh\": false, \"signal\": true}, \"probe\": {\"fresh\": false, \"signal\": true}}, \"id\": \"521f2fe9f935bebe\", \"queue\": \"east\", \"summary\": \"looks clear\"}, \"outcome\": \"activated\"}, {\"case\": {\"class\": \"A\", \"evidence\": {\"canary\": {\"fresh\": true, \"signal\": false}, \"ledger\": {\"fresh\": true, \"signal\": true}, \"probe\": {\"fresh\": true, \"signal\": false}}, \"id\": \"faecfa0f1af52e09\", \"queue\": \"east\", \"summary\": \"needs attention\"}, \"outcome\": \"quiet\"}, {\"case\": {\"class\": \"B\", \"evidence\": {\"canary\": {\"fresh\": false, \"signal\": false}, \"ledger\": {\"fresh\": true, \"signal\": false}, \"probe\": {\"fresh\": true, \"signal\": true}}, \"id\": \"4e5b632b431d6f1e\", \"queue\": \"east\", \"summary\": \"needs attention\"}, \"outcome\": \"activated\"}, {\"case\": {\"class\": \"A\", \"evidence\": {\"canary\": {\"fresh\": true, \"signal\": true}, \"ledger\": {\"fresh\": true, \"signal\": false}, \"probe\": {\"fresh\": false, \"signal\": false}}, \"id\": \"1aef04dc96729e9a\", \"queue\": \"west\", \"summary\": \"needs attention\"}, \"outcome\": \"activated\"}], \"task_family\": \"incident\"}",
+        "role": "user"
+      }
+    ],
+    "model": "claude-haiku-4-5-20251001",
+    "output_config": {
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "mapping": {
+              "additionalProperties": false,
+              "properties": {
+                "A": {
+                  "enum": [
+                    "probe",
+                    "ledger",
+                    "canary"
+                  ],
+                  "type": "string"
+                },
+                "B": {
+                  "enum": [
+                    "probe",
+                    "ledger",
+                    "canary"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "A",
+                "B"
+              ],
+              "type": "object"
+            },
+            "support": {
+              "additionalProperties": false,
+              "properties": {
+                "A": {
+                  "items": {
+                    "enum": [
+                      "1743af89a548f6bb",
+                      "c3018b5d9349deaf",
+                      "faecfa0f1af52e09",
+                      "1aef04dc96729e9a"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "B": {
+                  "items": {
+                    "enum": [
+                      "a4e659fa1e265043",
+                      "fb4d753d4811b5a9",
+                      "521f2fe9f935bebe",
+                      "4e5b632b431d6f1e"
+                    ],
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "A",
+                "B"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "mapping",
+            "support"
+          ],
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "Infer a fixed class-to-source mapping from historical examples. Classes A and B each use one of probe, ledger, canary; their sources are distinct. An incident activates exactly when the governing source signal is true; freshness is irrelevant. Other sources, summary and queue are irrelevant. Return mapping A/B and support A/B: historical case IDs whose observed outcomes distinguish your chosen source from both alternatives. Use only supplied evidence, with no explanation or extra keys.",
+    "temperature": 0
+  },
+  "request_sha256": "dab4747dc1e6f7f9f5f0a8ae8b6d7f3d58af3e017be35ddbfe13c35ad4b04ebf",
+  "returned_text": null,
+  "parsed_response": null,
+  "provider_error": "http_429",
+  "error_body_retained": false,
+  "usage": null,
+  "external_agent_tool_calls": [],
+  "simulated_actions": [],
+  "checkpoint_created": false,
+  "outcome": "no_model_response",
+  "reserved_usd": 0.010452,
+  "source_commit": "dd09575d050e54fd8e4202d05cf1cc4aaa38033c",
+  "operator_transcripts_included": false
+}

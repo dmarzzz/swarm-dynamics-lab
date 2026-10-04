@@ -88,3 +88,7 @@ Shared validation limitations are recorded in results/R1/validation-closeout.jso
 ## Current continuation: A1 acquisition
 
 [A1 status](A1-STATUS.md): prospective plan and tested instrument published;204planned calls,0native calls. Orbital-one dispatch compatibility is blocked; no culture result. R1's bounded F qualification remains the latest native evidence.
+
+## Latest native attempt: A1
+
+[A1 postmortem](RESULTS-A1.md): actual direct launch stopped on its firstHTTP429;1/204calls,0model responses,203unstarted, no retry. Prior estimated plus unknown exposureUSD0.8226830437/5. Acquisition remains untested; R1's qualified supplied-policy executor is not a cultural result.

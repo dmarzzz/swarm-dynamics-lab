@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d5-01",
+  "native_attempt_id": "native-D5-01",
+  "assessed_at": "2026-10-04T16:53:26.266659+00:00",
+  "assessor": "vishesh/codex-experiments",
+  "verdict": "repair",
+  "outcome_interpretation": "Operational acquisition failure; scientific result inconclusive. No automatic rerun; changed execution contract and budget envelope need next-plan decision.",
+  "parent_handoff_sha256": "8b05df799f59f32f7323c0960f078028e14cc7bc826cafd07744699ada1c0b13",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Frozen diagnostic asks whether fact extraction/policy compilation and context removal repair known blockers; current failure cannot answer it.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Six reused inspected synthetic procurement cases. No untouched or independently authored realism test; zero evaluable cases this attempt.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ],
+      "next_action": "Evaluate the concrete repairs in D5-post.md offline before a successor plan.",
+      "acceptance_check": "No live dispatch until prospective updated contract, bounded acquisition telemetry, retained-budget envelope and owner decision are recorded."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "All24 request hashes verified; matrix/typed reviewer observations match within context. No response-level contrast is estimable.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Zero model responses; native task or schema capability unassessed. Neither typed repair screen met.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ],
+      "next_action": "Evaluate the concrete repairs in D5-post.md offline before a successor plan.",
+      "acceptance_check": "No live dispatch until prospective updated contract, bounded acquisition telemetry, retained-budget envelope and owner decision are recorded."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "HTTP statuses/retry metadata were discarded; all48 usage records missing. No graded behavior; original true agreement flags are vacuous.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ],
+      "next_action": "Evaluate the concrete repairs in D5-post.md offline before a successor plan.",
+      "acceptance_check": "No live dispatch until prospective updated contract, bounded acquisition telemetry, retained-budget envelope and owner decision are recorded."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Six planned clusters,zero evaluable clusters.24 dependent assignments are not independent outcomes and48 failed transports are not samples.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ],
+      "next_action": "Evaluate the concrete repairs in D5-post.md offline before a successor plan.",
+      "acceptance_check": "No live dispatch until prospective updated contract, bounded acquisition telemetry, retained-budget envelope and owner decision are recorded."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Fresh frozen requests preserved. Checked observation boundary excludes evaluator fields; no operator transcript entered actor inputs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "gap",
+      "finding": "24requests/24error/24terminal events reconcile,0responses. Logical event coverage complete, per-transport diagnostics unavailable.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ],
+      "next_action": "Evaluate the concrete repairs in D5-post.md offline before a successor plan.",
+      "acceptance_check": "No live dispatch until prospective updated contract, bounded acquisition telemetry, retained-budget envelope and owner decision are recorded."
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Preserved8cap;4.868832 cumulative reservation,3.131168 remainder. Budget held; repeated transient retries consumed1.690512 without responses.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ],
+      "next_action": "Evaluate the concrete repairs in D5-post.md offline before a successor plan.",
+      "acceptance_check": "No live dispatch until prospective updated contract, bounded acquisition telemetry, retained-budget envelope and owner decision are recorded."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Exact frozen source,packet,manifest,requests and original failed outcomes retained; supplemental audit is offline and reproducible.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "Original replay retained. Supplemental replay labels no responses/cost unknown and preserves recorded72events. No invented agent behavior or success animation. Supplemental HTML was checked as saved source; browser visual inspection was blocked by local-file URL policy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-failure-audit.json",
+          "sha256": "a63075d642a23e65559225484604bbb2dd9dfe76aea25cdcc9cf9dcab2f9de15"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D5-post.md",
+          "sha256": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3"
+        }
+      ],
+      "next_action": "Evaluate the concrete repairs in D5-post.md offline before a successor plan.",
+      "acceptance_check": "No live dispatch until prospective updated contract, bounded acquisition telemetry, retained-budget envelope and owner decision are recorded."
+    }
+  ]
+}

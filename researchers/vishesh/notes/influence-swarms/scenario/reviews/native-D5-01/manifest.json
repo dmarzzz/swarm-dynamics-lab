@@ -1,0 +1,22 @@
+{
+  "stage": "D5",
+  "packet_hash": "d0fe44becee7386e667b84f727317d91e3cbd68be2b28a89f33d24b7419efe44",
+  "source_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
+  "instrument_signature": "c559544c75a04be2d19757a6a88a3c10e43887fcef3d16e3271fb87017bd3fd1",
+  "planned": 24,
+  "model": "claude-haiku-4-5-20251001",
+  "scientific": true,
+  "config": {
+    "model": "claude-haiku-4-5-20251001",
+    "input_usd_per_million": 1,
+    "output_usd_per_million": 5,
+    "max_output_tokens": 3072,
+    "max_input_bytes": 32768,
+    "timeout_seconds": 60,
+    "total_api_cap_usd": 8,
+    "qualified_nonreasoning_endpoint": true,
+    "pricing_verified_date": "2026-10-04",
+    "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+  },
+  "started_utc": "2026-10-04T16:48:20.284375+00:00"
+}

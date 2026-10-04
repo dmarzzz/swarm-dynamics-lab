@@ -1,0 +1,34 @@
+{
+  "id": 62,
+  "split": "train",
+  "image_sha256": "3dfba6b1e12cb68df13a674240d245c87c228fce6883cfc2a3a9b36c9651e0aa",
+  "workers": {
+    "P": {
+      "valid": true,
+      "candidate": {
+        "status": "missing",
+        "value": null,
+        "evidence": [],
+        "reasons": [
+          "excluded_context"
+        ],
+        "contract": "anchor-row-v2"
+      },
+      "input_sha256": "3dfba6b1e12cb68df13a674240d245c87c228fce6883cfc2a3a9b36c9651e0aa",
+      "runtime_sha256": "bf13260bcbc745ecb3bd2d9e0f3b21d002510180ba8f1baeeca4fb86f9b932e8",
+      "observation_sha256": "26875e14e12070487dbcbb1d2e83a6f4dc70df9bd6b1f6699658974c65a3a3db",
+      "wall_s": 7.8848090969986515
+    },
+    "C": {
+      "valid": false,
+      "candidate": {
+        "status": "error",
+        "value": null
+      },
+      "input_sha256": "3dfba6b1e12cb68df13a674240d245c87c228fce6883cfc2a3a9b36c9651e0aa",
+      "runtime_sha256": "fc3c16f6d8c66edf5feaa79001f9778b3553cb4b9703b2cfb6272c9ce420b615",
+      "error": "TimeoutExpired",
+      "wall_s": 45.07947058399441
+    }
+  }
+}
