@@ -3,6 +3,7 @@
 No credentials or native dispatch are used on import. Each stage is separately
 admitted and launched once; there is no automatic Q-to-main transition or retry.
 """
+import contextlib
 import argparse,hashlib,hmac,json,os,queue,sqlite3,threading,time,urllib.request,urllib.error
 from pathlib import Path
 from decimal import Decimal
@@ -11,13 +12,24 @@ import scale_contract as c,scale_study as s
 from q3_runner import parse,write_new
 from q3_relay import NoRedirect,safe_http_error
 ROOT=Path(__file__).resolve().parent
+Q50_SOURCE='84423a431d6758606c61938f475f7a8b0ecc22112126c4d426fef8ff35aed8d3'
+Q50_SCIENCE='ceb9ae9e3f5189e1565ac845c79c689f0545b69d04834953002d4ee7b70c5628'
 
 def source_hash():
  files={str(p.relative_to(ROOT.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for folder in (ROOT,ROOT.parent,ROOT.parent/'baseline-replication') for p in folder.glob('*.py')}
  return c.digest(files)
 
+def scientific_hash():
+ files={str(p.relative_to(ROOT.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for folder in (ROOT,ROOT.parent,ROOT.parent/'baseline-replication') for p in folder.glob('*.py') if p.name!='scale_runtime.py' and not p.name.startswith('test_')}
+ return c.digest(files)
+
+def qualification_source_matches(receipt):
+ q=receipt.get('qualification',{})
+ if q.get('source_sha256')==receipt.get('source_sha256'):return True
+ return q.get('source_sha256')==Q50_SOURCE and receipt.get('operational_amendment')=='explicit-sqlite-close-only' and scientific_hash()==Q50_SCIENCE
+
 def historical_hash(path):
- with sqlite3.connect(path) as db:
+ with contextlib.closing(sqlite3.connect(path)) as db:
   tables=[x[0] for x in db.execute("SELECT name FROM sqlite_master WHERE type='table'") if x[0] in ('calls','sol50_calls','r3_calls','r3_successor')]
   if not {'r3_calls','r3_successor'}<=set(tables) or not ({'calls','sol50_calls'}&set(tables)):raise ValueError('original_ledger_missing')
   return c.digest({name:db.execute('SELECT * FROM '+name+' ORDER BY 1').fetchall() for name in sorted(tables)})
@@ -40,7 +52,7 @@ def admit(r,ledger,now=None):
   if r.get(name) is not True:raise ValueError('missing_'+name)
  if stage=='S50':
   q=r.get('qualification',{})
-  if q.get('source_sha256')!=r['source_sha256'] or q.get('packet_sha256')!=r['packet_sha256'] or not q.get('passed') or not q.get('authored_trace_review_passed') or not q.get('result_sha256'):raise ValueError('qualification_gate')
+  if not qualification_source_matches(r) or q.get('packet_sha256')!=r['packet_sha256'] or not q.get('passed') or not q.get('authored_trace_review_passed') or not q.get('result_sha256'):raise ValueError('qualification_gate')
   if not 0<q.get('p90_seconds',0)*1150*1.25<r['deadline']-now:raise ValueError('observed_latency_feasibility')
  return True
 
@@ -61,7 +73,12 @@ class Ledger:
   if not Path(path).is_file():raise ValueError('original_ledger_absent')
   with self.connect() as db:
    db.execute('CREATE TABLE IF NOT EXISTS theseus_scale_calls(id TEXT PRIMARY KEY,stage TEXT,seq INTEGER,reserved TEXT,actual TEXT,status TEXT,answer TEXT,seconds REAL,UNIQUE(stage,seq))')
- def connect(self):return sqlite3.connect(self.path,timeout=30)
+ @contextlib.contextmanager
+ def connect(self):
+  db=sqlite3.connect(self.path,timeout=30)
+  try:
+   with db:yield db
+  finally:db.close()
  def reserve(self,seq,body):
   c.validate(body)
   with self.connect() as db:

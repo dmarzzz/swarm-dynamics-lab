@@ -1,0 +1,177 @@
+{
+  "assessor": "vishesh/codex-theseus",
+  "date": "2026-10-04",
+  "attempt": "Q50",
+  "source_revision": "06e0ff48aaae5c9b2830c0990584a09058a13819",
+  "decision": "advance_after_operational_repair_and_separate_main_allocation",
+  "independent_review": false,
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Readiness for the fixed actual-roster handoff contract, not cultural survival.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Synthetic failover cases cover current/invalid/conflicting evidence and supported route changes; narrow realism.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Inherited notes and uninformed controls remained separated; no interactive-superiority inference. Exact controller uses legal evidence.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Six acquired routes,60/60decisions,4/4inherited notes and6/6strict commits meet Q50 gate. Twenty witness calls have one owner; two-owner main remains an explicit coverage limit.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "60effective requests replay exactly; every response reviewed; schema, memory and action success counted separately.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One qualification world, six learned owners; no independent-n inflation or population interval.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Actual50-seat roster, scoped memory, no operator/gold context or fallback; scientific source frozen.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "60assigned/started/terminal/known-usage calls; exact original local/remote ledger match and retained raw archive.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.20554423333333333all-in; cumulative2.1523447770333335/60, historicalunknown unchanged; allocation released. SQLite explicit-close repair prepared for main.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Immutable source/packet/plan, exact replay and raw result/archive hashes; hosted randomness not called deterministic.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "Live progress and aggregate results exist; dedicated native temporal replay is not yet rendered.",
+      "evidence": [
+        {
+          "path": "Q50-AUDIT.json",
+          "sha256": "36a75d0fe264f7154122cdf9e2fe6eedd306b84813b39f5c50098cff664bb574"
+        },
+        {
+          "path": "Q50-POST-MORTEM.md",
+          "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+        }
+      ],
+      "next_action": "Render measured replacement events with gray unobserved seats at closeout of the requested main scope.",
+      "acceptance_check": "Every displayed generation and metric reconstructs from retained results; no fabricated main turnover."
+    }
+  ]
+}

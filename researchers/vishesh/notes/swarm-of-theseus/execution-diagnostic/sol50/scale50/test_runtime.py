@@ -1,8 +1,34 @@
 import copy,json,sqlite3,tempfile,unittest
+from unittest.mock import patch
 from pathlib import Path
 import scale_runtime as r,scale_contract as c,scale_study as s
 
 class RuntimeTests(unittest.TestCase):
+ def test_operational_amendment_preserves_exact_scientific_closure(self):
+  receipt={'source_sha256':'operational-successor','qualification':{'source_sha256':r.Q50_SOURCE},'operational_amendment':'explicit-sqlite-close-only'}
+  self.assertEqual(r.scientific_hash(),r.Q50_SCIENCE);self.assertTrue(r.qualification_source_matches(receipt))
+  with patch.object(r,'scientific_hash',return_value='changed-actor-wire'):
+   self.assertFalse(r.qualification_source_matches(receipt))
+  receipt['qualification']['source_sha256']='unqualified-other';self.assertFalse(r.qualification_source_matches(receipt))
+ def test_connections_close_on_success_and_rollback_without_gc(self):
+  original=sqlite3.connect;opened=[]
+  class Tracked(sqlite3.Connection):
+   def close(self):self.closed=True;return super().close()
+  def connect(*args,**kwargs):
+   value=original(*args,**kwargs,factory=Tracked);value.closed=False;opened.append(value);return value
+  with tempfile.TemporaryDirectory() as tmp:
+   p=Path(tmp)/'ledger.sqlite';db=original(p);db.close()
+   with patch.object(r.sqlite3,'connect',connect):
+    l=r.Ledger(p,'Q50');self.assertTrue(all(x.closed for x in opened))
+    body=c.wire('commit','failover',{})
+    for i in range(60):
+     ident=l.reserve(i,body);self.assertTrue(all(x.closed for x in opened))
+     with self.assertRaisesRegex(ValueError,'sequence'):l.reserve(i,body)
+     self.assertTrue(all(x.closed for x in opened));l.settle(ident,.001,{},.1);self.assertTrue(all(x.closed for x in opened))
+    with self.assertRaisesRegex(ValueError,'stage_cap'):l.reserve(60,body)
+    self.assertTrue(all(x.closed for x in opened))
+    with self.assertRaisesRegex(ValueError,'terminal'):l.settle('Q50-0000',.001,{},.1)
+    self.assertTrue(all(x.closed for x in opened));self.assertEqual(len(l.rows()),60)
  def test_mirror_matches_every_qualification_request(self):
   m=r.Mirror('Q50');count=0
   def call(family,phase,p,condition):

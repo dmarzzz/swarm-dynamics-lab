@@ -107,3 +107,8 @@ Implemented three family validity rules, matched/boundary labels, nuisance deliv
 ## Actual fifty-seat scale packet
 
 Reopened owner-directed scale work after C2 closeout. Diagnosed the retained correct-note/extra-field failure and preserved strict rejection. Wrote prospective plan before implementation; added equivalent compact acquisition evidence, scoped memory commits, fifty-seat lifecycle, strong four-arm/exact-controller controls and a sequential exact-request mirror on the original ledger. Eleven offline tests pass, including1,200 evidence equivalence instances and full scripted turnover. Q50<=60 requests/USD2.204 and conditional S50<=1150/USD42.14; total worst cumulativeUSD46.2908005437 under study60. One main world is feasibility n=1, not fifty independent samples. No native calls, grant or machine claim yet. Await finite Q50 allocation while preserving historical publication holds.
+
+
+## Q50 actual qualification and prospective main operations repair
+
+Grant23 completed60calls: six learned owners in fifty-seat context,60/60decisions correct,4/4inherited notes,6strict commits,zero new uncertainty. Replayed every request and manually reviewed all responses; main50-founder turnover remains unrun. Closed claim477 and native/transport processes; conservative all-inUSD0.20554423333333333, cumulativeUSD2.1523447770333335/60. Authored eleven-dimension review and operational finalize07ffc15404070cfc6b07d816b4646a248d8c310f5dcbb6495a5634a948b23c07. Explicit-close SQLite repair and six runtime tests preserve scientific closure and oldQ provenance. Main finite42.14allocation pending; stop after requested main and closeout.
