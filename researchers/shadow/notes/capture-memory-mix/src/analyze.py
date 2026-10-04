@@ -61,6 +61,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stage", default="M1")
     ap.add_argument("--local", required=True)
+    ap.add_argument("--name", help="output name (default = stage), e.g. MP2 for the second-model pilot")
     a = ap.parse_args()
     d = load("design.yaml")
     eps = [e for e in read_local(Path(a.local)) if e.get("stage") == a.stage]
@@ -114,12 +115,12 @@ def main():
                          "delta_long_c": round(mean([x["delta_long"] for x in cap]), 4),
                          "recovered_c": round(mean([x["recovered"] for x in cap]), 4),
                          "half_time_med": _median([x["half_time"] for x in cap if x["half_time"] is not None])})
-    with open(out / f"{a.stage}_cells.csv", "w", newline="") as f:
+    with open(out / f"{a.name or a.stage}_cells.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
 
-    L = [f"# capture-memory-mix: {a.stage} results", "",
+    L = [f"# capture-memory-mix: {a.name or a.stage} results", "",
          f"{len(eps)} episode records, backends {backends}, about {calls} model calls in these records; provider-reported spend on the shared ledger (all models, all pilot work) {spend:.4f} USD. "
          + ("Scripted policy: these numbers describe the tanh rule in sim.py, not LLM agents. " if backends == ["scripted"] else "")
          + f"Code commits: {sorted({str(e.get('code')) for e in eps})}.", "",
@@ -213,7 +214,7 @@ def main():
                  + f" | {at(min(50, R), 'series_long'):.3f} | {at(min(50, R), 'series_short'):.3f} |")
 
     L += ["", "Invalid episodes per cell and arm are in the CSV; none are dropped or retried. Capture is decided before removal and shared by the arms."]
-    (out / f"{a.stage}.md").write_text("\n".join(L) + "\n")
+    (out / f"{a.name or a.stage}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))
 
 

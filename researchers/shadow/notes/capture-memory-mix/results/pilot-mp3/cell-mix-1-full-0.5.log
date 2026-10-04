@@ -1,0 +1,2 @@
+    MP_W1_INSIDE_d0.5_mmix-1-full_f0.5 1/6 {'captured': None, 'frac_T_A1_purge': 0.125, 'delta_A1_purge': 0.125, 'frac_T_A2_purge_wipe': 0.125, 'delta_A2_purge_wipe': 0.125, 'wipe_minus_purge': 0.0, 'episodes': 2, 'invalid': 1, 'model_calls': 1008, 'cost_usd': 0.0171}
+    MP_W1_INSIDE_d0.5_mmix-1-full_f0.5 2/6 {'captured': None, 'frac_T_A1_purge': 0.125, 'delta_A1_purge': 0.125, 'frac_T_A2_purge_wipe': 0.125, 'delta_A2_purge_wipe': 0.125, 'wipe_minus_purge': 0.0, 'episodes': 2, 'invalid': 4, 'model_calls': 1248, 'cost_usd': 0.0211}

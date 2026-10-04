@@ -1,0 +1,82 @@
+{
+  "run": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.75",
+  "params": {
+    "stage": "MP",
+    "split": "dev",
+    "world": "W1_INSIDE",
+    "dose": 0.5,
+    "memory": "mix:1/full@0.75",
+    "tasks": "0-5",
+    "seeds": [
+      1
+    ],
+    "arms": [
+      "A0_no_purge",
+      "A1_purge",
+      "A2_purge_wipe"
+    ],
+    "cfg": {
+      "n_agents": 16,
+      "beta": 2.5,
+      "h_inside": 0.1,
+      "h_outside": 0.5,
+      "entrench_rounds": 5,
+      "takeover_max_rounds": 60,
+      "clean_takeover_rounds": 20,
+      "recovery_rounds": 40,
+      "capture_frac": 0.75,
+      "capture_streak": 3,
+      "recover_frac": 0.75,
+      "recover_streak": 10,
+      "eval_round": 30
+    },
+    "backend": "http"
+  },
+  "episodes_per_arm": 6,
+  "stats": {
+    "A0_no_purge": {
+      "n": 3,
+      "captured": 3,
+      "frac_T": 0.0,
+      "delta": -0.625,
+      "invalid": 3,
+      "calls": 1400,
+      "usd": 0.009736
+    },
+    "A1_purge": {
+      "n": 3,
+      "captured": 3,
+      "frac_T": 0.125,
+      "delta": -0.5,
+      "invalid": 3,
+      "calls": 1832,
+      "usd": 0.012654
+    },
+    "A2_purge_wipe": {
+      "n": 3,
+      "captured": 3,
+      "frac_T": 0.0,
+      "delta": -0.625,
+      "invalid": 3,
+      "calls": 2264,
+      "usd": 0.015340000000000001
+    }
+  },
+  "metrics": {
+    "captured": 1.0,
+    "frac_T_A0_no_purge": 0.0,
+    "delta_A0_no_purge": -0.2083,
+    "frac_T_A1_purge": 0.0417,
+    "delta_A1_purge": -0.1667,
+    "frac_T_A2_purge_wipe": 0.0,
+    "delta_A2_purge_wipe": -0.2083,
+    "wipe_minus_purge": -0.0417,
+    "episodes": 9,
+    "invalid": 9,
+    "model_calls": 5496,
+    "cost_usd": 0.0377
+  },
+  "backend": "http:google/gemma-3-27b-it:sample",
+  "code": "016104d9",
+  "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.75.jsonl"
+}
