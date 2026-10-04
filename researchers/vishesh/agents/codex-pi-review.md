@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: done
-task: streamline-experiment-operations
-doing: Published experiment operations for ten study families, one native adapter and offline safety checks.
-updated: 2026-10-04T04:49Z
+state: working
+task: clarify-pi-review-visual-guide
+doing: Clarifying the dated PI review with a dark decision matrix and concise project options.
+updated: 2026-10-04T05:01Z
 ---
 
 ## Notes
