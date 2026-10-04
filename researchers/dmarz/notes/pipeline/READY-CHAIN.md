@@ -54,6 +54,11 @@ selftests: <number of tests src/selftest.py runs>
 source_hash: <study.source_hash() at the pinned commit>
 ```
 
+A repaired attempt (a new `attempt` number, new batch names such as `q0-002`, a new source hash) writes its own
+pre-run review `reviews/chain-002-pre.md` and names it in `READY.yaml` as `review: reviews/chain-002-pre.md`;
+the earlier review stays untouched as the record of the earlier attempt. Without the field the launcher reads
+`reviews/chain-001-pre.md`.
+
 ## Stage behaviour
 
 - `S0` makes no model call. It answers every assignment of the engineering worlds and the qualification
@@ -196,6 +201,16 @@ sends `thinking`, `temperature`, `top_p`, `top_k`, `tool_choice`, a prefilled as
 Responses carry thinking blocks before the text block; the adapter drops them and requires exactly one
 text block. `stop_reason: refusal` is recorded as the failure category `refusal`. List price is USD 4 per
 million input tokens and USD 20 per million output tokens.
+
+## Validators and harmless variants
+
+Added 2026-10-04 after the flagship's first probe was voided by its own engine: the model filed the
+instructed action correctly and added a harmless zero-quantity item, and a strict rule rejected the whole
+action. Before pinning, ask of every rule of a structural validator whether a harmless variant of a correct
+answer would fail it (a number written as a string or with more decimals, an extra key, a different key
+order, whitespace, a duplicate list entry, a zero or empty optional item). Decide in advance which variants
+are tolerated and counted and which forms are invalid, write that in the preregistration, and prove it
+offline with a stub that produces each tolerated variant and each invalid form.
 
 ## Offline evidence required before a study is called ready
 
