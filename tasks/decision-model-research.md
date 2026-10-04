@@ -3,14 +3,19 @@ id: decision-model-research
 type: task
 title: Jev decision boundaries and collective robustness research
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
-for: vishesh  # set to a researcher name to direct the task at them
+owner: vishesh/codex-decision-models
+for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-decision-models
 depends_on: []
-topics: [llm-agent-swarms, collective-decision, criticality-measurement]
+topics:
+- llm-agent-swarms
+- collective-decision
+- criticality-measurement
+claimed_at: 2026-10-04T02:17Z
+updated: 2026-10-04T02:17Z
 ---
 
 ## Goal
