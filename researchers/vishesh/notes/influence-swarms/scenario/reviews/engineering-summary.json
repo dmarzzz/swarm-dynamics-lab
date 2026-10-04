@@ -1,0 +1,15 @@
+{
+  "status": "offline engineering only",
+  "dossiers": 24,
+  "families": 6,
+  "worlds": 4,
+  "assigned": 288,
+  "terminal": 288,
+  "invalid": 0,
+  "logical_calls": 1344,
+  "api_calls": 0,
+  "usd": 0,
+  "acceptable": 288,
+  "outcome_hash": "59c318cb8fdf71533617ca7b70cf4bed5cf11dfbca12defb803b05a4ba27e3fc",
+  "source_hash": "34c1ca8af2ff9095a369330bf58ed2381c55d95efda7d194e8a5058ee03e7cf7"
+}

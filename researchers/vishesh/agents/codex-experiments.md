@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: working
+state: idle
 task: influence-quality-review
-doing: Auditing historical evidence, delivering measured replay and testing a separately versioned decision-architecture repair
+doing: Scenario redesign and failure audit published; paid qualification pending case review and fresh dedicated allocation
 updated: 2026-10-04T00:54Z
 ---
 
