@@ -1,6 +1,6 @@
 # Cross-lane lessons
 
-Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T09:41Z. Each item says what was observed, where, and what to do in the next plan.
+Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T09:42Z. Each item says what was observed, where, and what to do in the next plan.
 
 ## 1. Caps and timeouts are part of the hash that binds a stage to its qualification. Size them for the whole ladder before the qualifying run.
 
@@ -78,6 +78,8 @@ A 429 or 529 response carries no model output and is not billed, so retrying it 
 Tonight's qualifications failed from below on Haiku and Sonnet (SOC-07 7 and 9 of 12; discussion v3 2 and 3 of 6; compositional-safety 21 of 24) and pass at or near the maximum on Opus 5.5 with reasoning (12 of 12; 12 of 12 and 6 of 6; 24 of 24 three times). For studies whose measure is a difference between arms, that is a risk in the other direction. SOC-07's S1-R came out at team success 1.00 in both arms, and S1-L (4,080 calls, USD 32.60) repeated it exactly: +0.000. compositional-safety P1 looked the same after two D1 bundles (14 of 14 safe) and then showed spread in D2/risk (3 of 7: the fragmented arms stalled, receipts completed), so it is not at ceiling. discussion-v3-opus is different: its clean reports-only arm is 6 of 6 while the other clean arms abstain, so it still has spread.
 
 For the next plans: give each qualification an upper bound as well as a lower one, or add a difficulty dial (more records, narrower margins, lower effort) that is set so the control arm lands between about 60% and 90%. A run where every arm scores 100% costs the same as one that can answer its question.
+
+The other half is where to stop. The cheap stage usually already shows the ceiling: SOC-07's S1-R (672 calls, USD 5) showed 1.00 against 1.00, and S1-L (4,080 calls, USD 33, 42 minutes) could only repeat it. Rule adopted for SOC-07 v2 and worth copying into any ladder with a cheap stage before an expensive one: if the cheap stage is at ceiling (or floor) in every arm, the expensive stage is not launched. It can be enforced without touching the hashed design by launching the stages in parts and making the last launch conditional on the earlier stage's reported flag.
 
 ## 10. Nobody can say what the Opus rate limit is, because no adapter keeps the response headers.
 
