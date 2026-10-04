@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Poietic D0-02 tested repaired Haiku, Qwen and Jev interfaces against protected expected actions. Haiku returned12parseable actions with7exact correct; Qwen1correct fetch thenHTTP429; Jev unstarted.14started/36terminal;22unstarted;no retries or qualification/swarm efficacy conclusion. All14traces reviewed and9aggregate artifacts verified. Cumulative exposureUSD0.590633047 of ownerUSD10;allocation released. Next: prepare requested30-member cheap-model design and fresh qualification.",
+  "description": "TLDR: Q30-01 qualifies two inexpensive executors for the requested30-member Poietic swarm. Each gets12fresh four-step lifecycle cases; compare exact actions and executed effects to protected references. Require48/48valid and at least44/48correct with zero protected access. No retries; transport/integrity stops all; this stage is not swarm efficacy.",
   "params": {
     "stage": {
       "type": "str",
@@ -43,5 +43,5 @@
     "terminal_jobs"
   ],
   "primary_metric": "verified_success_rate",
-  "url": "https://github.com/dmarzzz/swarm-lab/blob/d2b33c0cd4534a4bd7eb027a206d3487d5ed016a/researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md"
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/e91876daafb66a4521f70f78cc68a517a611a702/researchers/vishesh/notes/poietic-agents/P30-PLAN.md"
 }

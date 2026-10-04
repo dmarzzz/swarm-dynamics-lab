@@ -1,12 +1,12 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T20:17:03.824589+00:00",
+  "updated_utc": "2026-10-04T20:39:10.738922+00:00",
   "study": "poietic-agents",
   "design_status": "D0-02 closed; requested 30-member cheap-model feasibility plan in preparation",
   "implementation_status": "131 runtime checks; original history retained",
-  "execution_status": "D0-02 failed:14started/22unstarted/36terminal",
-  "qualification_status": "failed; no model qualifies",
-  "scientific_conclusion": "none",
+  "execution_status": "Q30-01 completed and reviewed; Q30-02 prepared, not launched",
+  "qualification_status": "Q30-01 both candidate contracts failed",
+  "scientific_conclusion": "No30-member swarm efficacy result; candidate readiness failed.",
   "process_compliance": "D0 admitted; original authority unchanged; trace/cost/artifact closeout and scientific review complete",
   "publication": {
     "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/d2b33c0cd4534a4bd7eb027a206d3487d5ed016a/researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
@@ -39,7 +39,7 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 9,
-  "next_action": "Prepare 30-member paired feasibility design with inexpensive routes; run necessary fresh contract diagnostic under standing authority, preserving all54charges.",
+  "next_action": "Admit fresh GPT-OSS120B/20B qualification after149offline tests; preserve79-call original authority.",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -52,17 +52,18 @@
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "selected cheap-model contract qualification",
-    "30-member prospective design and instrument checks",
-    "current public/runtime/budget/exclusive-allocation admission"
+    "Q30-02 public registration and rendered page",
+    "current exclusive allocation and deployed149tests",
+    "existing ledger/deadline and route checks",
+    "passing qualification before P30 main"
   ],
   "s1_not_yet_admitted": [
     "qualified hash match",
     "A2 development selection and construction receipt",
     "S1 budget and stage admission"
   ],
-  "observed_model_calls": 54,
-  "actual_poietic_api_spend_usd": null,
+  "observed_model_calls": 79,
+  "actual_poietic_api_spend_usd": 0.017249753,
   "host_claimed": false,
   "authorized_total_cumulative_usd": 10,
   "allocation_preparation": {
@@ -75,25 +76,15 @@
     "model_calls_observed": 40
   },
   "unresolved_api_exposure_usd": 0.482080768,
-  "allocated_infrastructure_usd": 0.09385108333333333,
-  "cumulative_cost_upper_usd": 0.5906330473333333,
+  "allocated_infrastructure_usd": 0.10087503333333334,
+  "cumulative_cost_upper_usd": 0.6002055543333333,
   "successor_scope_approved": true,
   "deadline_renewal_approved": true,
   "deadline_renewal_applied": true,
-  "known_settled_api_usd": 0.014701196,
+  "known_settled_api_usd": 0.017249753,
   "diagnostic_passed": false,
   "scientific_review_complete": true,
   "D0_deadline_renewal_applied": false,
   "operational_finalize": "completed offline; immutable handoff retained privately; separate owning scientific review complete",
-  "latest_preparation": {
-    "attempt": "D0-02",
-    "owner_scope_approved": true,
-    "status": "completed_failed_diagnostic",
-    "plan": "D0-02-PLAN.md",
-    "assessment": "reviews/D0-02-pre.md",
-    "offline_tests_passed": 131,
-    "native_calls": 14,
-    "resources_created": 0,
-    "checked_utc": "2026-10-04T19:32:25.153360+00:00"
-  }
+  "latest_preparation": "Q30-02-PLAN.md"
 }

@@ -1,0 +1,49 @@
+{
+  "verified": true,
+  "worker_stopped": true,
+  "checks": [
+    {
+      "role": "generalist",
+      "name": "summary.json",
+      "sha256": "a2e996114d94e1b5337bb9b256d739586172af69a6040c5e7ad76a68a932f7e7",
+      "hash_matches": true,
+      "bytes": 5319
+    },
+    {
+      "role": "generalist",
+      "name": "artifact-manifest.json",
+      "sha256": "0ae89f5cbe33f2c6eee37bf68991becdeb3a47d4daa5d1ae1ecbab6cb0b82e7f",
+      "hash_matches": true,
+      "bytes": 894
+    },
+    {
+      "role": "generalist",
+      "name": "final_frame.png",
+      "sha256": "6971e4310cf2135c78d9e10e1c390f854982d2646ef0c5614d3c3c322c72d384",
+      "hash_matches": true,
+      "bytes": 46243
+    },
+    {
+      "role": "cheap_generative",
+      "name": "summary.json",
+      "sha256": "a2e996114d94e1b5337bb9b256d739586172af69a6040c5e7ad76a68a932f7e7",
+      "hash_matches": true,
+      "bytes": 5319
+    },
+    {
+      "role": "cheap_generative",
+      "name": "artifact-manifest.json",
+      "sha256": "0ae89f5cbe33f2c6eee37bf68991becdeb3a47d4daa5d1ae1ecbab6cb0b82e7f",
+      "hash_matches": true,
+      "bytes": 894
+    },
+    {
+      "role": "cheap_generative",
+      "name": "final_frame.png",
+      "sha256": "6971e4310cf2135c78d9e10e1c390f854982d2646ef0c5614d3c3c322c72d384",
+      "hash_matches": true,
+      "bytes": 46243
+    }
+  ],
+  "checked_utc": "2026-10-04T20:34:35.196390+00:00"
+}
