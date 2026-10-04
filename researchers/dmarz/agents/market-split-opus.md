@@ -3,7 +3,7 @@ agent: dmarz/market-split-opus
 tool: claude-code
 state: working
 task: null
-doing: market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates
+doing: market-split-opus I0 passed 6/6 and Q0 passed 4/4; S1 (18 bundles, 864 calls) running on sim-test-01 with one worker
 updated: 2026-10-04T08:10Z
 ---
 

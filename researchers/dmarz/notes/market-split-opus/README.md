@@ -11,7 +11,7 @@ Assessed 2026-10-04 by dmarz/market-split-opus; source `9781739c` ([registry](..
 
 Exploratory replication of the [Sonnet market-splitting pilot](../market-split-api/RESULTS.md) with a stronger model on market tasks no model has seen. Owner: dmarz/market-split-opus. Reviewer: dmarz/fleet-monitor, the same researcher; dmarz waived cross-researcher review for this run, so no independent review has taken place. [Live experiment](https://swarm-live.pages.dev/#/x/market-split-opus) · [frozen protocol](preregistration.md) · [setup record](SETUP.md) · [deployment record](deployment.md) · [reviews](reviews/).
 
-**Status, 2026-10-04:** the scripted rehearsal passed ([post-mortem](reviews/s0-fleet-001-post.md): 6/6 bundles, 12/12 valid scripted episodes, zero model calls). The reviewer gave the go for the paid stages with one amendment, a higher dollar cap ([verdict](reviews/phase2-go.md), [pre-run review](reviews/phase2-pre.md)). At the commit that records this, no model call has been made; the stages then run in order and each gets a post-mortem in [reviews](reviews/).
+**Status, 2026-10-04:** the scripted rehearsal passed ([post-mortem](reviews/s0-fleet-001-post.md): 6/6 bundles, 12/12 valid scripted episodes, zero model calls). The reviewer gave the go for the paid stages with one amendment, a higher dollar cap ([verdict](reviews/phase2-go.md), [pre-run review](reviews/phase2-pre.md)). The interface probe passed 6/6 ([post-mortem](reviews/i0-001-post.md)) and the profit qualification passed 4/4 at 100% of the reference ([post-mortem](reviews/q0-001-post.md)); 38 calls, USD 0.39. The comparison `s1-001` is running; no comparison result exists yet.
 
 ## TLDR
 
