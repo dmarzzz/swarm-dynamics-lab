@@ -17,10 +17,10 @@ updated: 2026-10-04T05:53Z
 
 ## Goal
 
-Obtain independent D1 review, fresh dedicated allocation, record owner USD5 authority, publish current plan and run exactly the admitted diagnostic through the fleet queue. Preserve all outcomes and stop rules.
+Apply owner review waiver, obtain new dedicated allocation, record owner USD5 authority, publish current plan and run exactly the admitted diagnostic through the fleet queue. Preserve all outcomes and stop rules.
 
 ## Done when
 
-- Independent review completed and findings resolved.
+- Researcher-review gate waived by explicit owner direction; operator assessment and known defects addressed.
 - Fresh host and budget/source/public admission verified.
 - D1 executed or exact external blocker recorded; outcomes, cost, analysis, artifacts and release reconciled.
