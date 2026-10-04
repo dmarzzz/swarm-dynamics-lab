@@ -38,12 +38,12 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T03:53Z | Ship the compositional safety benchmark and qualification |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:49Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
-| [healing-practical-repair](tasks/healing-practical-repair.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T03:40Z | Compare Healing evidence repair with practical central baselines |
+| [healing-practical-repair](tasks/healing-practical-repair.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:05Z | Compare Healing evidence repair with practical central baselines |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [reconcile-dmarz-pi-review-2026-10-04](tasks/reconcile-dmarz-pi-review-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:54Z | Incorporate and respond to Dmarz PI recommendations |
+| [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:04Z | Launch bounded Phantom Coast native pilot |
+| [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:04Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:53Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -55,21 +55,21 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T03:51Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
+| [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:04Z | Build and qualify a practical Theseus continuity iteration |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | open | p1 | build |  | vishesh | 2026-10-04T00:11Z | Implement and deploy developed exploratory experiment designs |
+| [build-compositional-safety](tasks/build-compositional-safety.md) | open | p1 | build |  | dmarz | 2026-10-04T04:04Z | Ship the compositional safety benchmark and qualification |
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | open | p1 | experiment |  | dmarz |  | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T03:43Z | Run the revised procurement influence experiment |
-| [phantom-coast-live](tasks/phantom-coast-live.md) | open | p1 | build |  | vishesh | 2026-10-04T03:59Z | Launch bounded Phantom Coast native pilot |
 | [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Independently review the four fresh influence qualification dossiers |
 | [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Review Right Dissenter RD-1 design and offline prototype |
 | [review-swarm-size-qualification](tasks/review-swarm-size-qualification.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Independently review the optimal swarm-size qualification package |
-| [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | open | p1 | experiment |  | vishesh | 2026-10-04T03:52Z | Deploy and assess the Right Dissenter exploratory live study |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -93,7 +93,6 @@
 | [synthesis-open-problems](tasks/synthesis-open-problems.md) | open | p1 | synthesis |  |  |  | Build the open-problems register |
 | [synthesis-swarm-detection-methods](tasks/synthesis-swarm-detection-methods.md) | open | p1 | synthesis |  |  |  | Synthesis: taxonomy of swarm-detection methods and the honeypot design space |
 | [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
-| [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | open | p1 | build |  | vishesh | 2026-10-04T03:57Z | Build and qualify a practical Theseus continuity iteration |
 | [design-avalon-swarm](tasks/design-avalon-swarm.md) | open | p2 | synthesis |  | dmarz |  | Design brief (no build): swarm-scale Avalon benchmark layer |
 | [review-avalon-tooling](tasks/review-avalon-tooling.md) | open | p2 | build |  |  |  | Review imported Avalon Swarm tooling for possible reuse |
 | [scan-papers-avalon-scaling](tasks/scan-papers-avalon-scaling.md) | open | p2 | scan |  | dmarz |  | Prior art on hidden-role games at large N: Mafia game theory, committee selection under adversaries, gossip topology |
@@ -162,6 +161,7 @@
 | [publish-pi-review-2026-10-04](tasks/publish-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:50Z | Publish the PI project review and agent lifecycle guidance |
 | [quorum-mirrors-design-v2](tasks/quorum-mirrors-design-v2.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:45Z | Refine Quorum of Mirrors design and offline contracts |
 | [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:02Z | Prepare and qualify Quorum of Mirrors S0 |
+| [reconcile-dmarz-pi-review-2026-10-04](tasks/reconcile-dmarz-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:05Z | Incorporate and respond to Dmarz PI recommendations |
 | [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:51Z | Refine swarm-size coordination and policy evaluation design |
 | [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | done | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:25Z | Reflect on the original discussion dose pilot before running more |
 | [regrowth-plan-registration](tasks/regrowth-plan-registration.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:15Z | Repair missing Regrowth plan registration and publish experiment TLDRs |
@@ -209,23 +209,23 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T04:06Z | Resuming frozen Sonnet cases serially; diagnosing Haiku output truncation and moving repair qualification to its dedicated host. |
+| vishesh/codex-pi-review | done | reconcile-dmarz-pi-review-2026-10-04 | 2026-10-04T04:05Z | Published Dmarz PI incorporation across 17 study and methods documents; all 27 items reconciled. |
+| vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04T04:04:19.842414+00:00 | Approved USD 2 study; allocating dedicated fleet machine and launching Q0 |
 | vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
 | dmarz/discussion-bench-v3 | idle |  | 2026-10-04T04:00Z | Q0 and successor plan on main; 120-call diagnostic planned, cloud access/lifecycle not configured, no new launch |
+| dmarz/patchwork-hypotheses | blocked | build-compositional-safety | 2026-10-04T04:00Z | Qualification reconciled and server released; awaiting an approved alternative model connection for competence diagnostics |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment stopped and backed up; awaiting scoped deletion approval and correct Dmarz provisioning path |
 | vishesh/codex-theseus | blocked | theseus-v2-iteration | 2026-10-04T03:56Z | V2 built and validated; awaiting explicit additional USD15 API authorization before allocation and qualification |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
-| vishesh/codex-pi-review | working |  | 2026-10-04T03:54Z | Reconcile Dmarz PI review e0a3170 and incorporate current methods improvements. |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T03:53Z | Delivered fleet separation reminders and external influence design feedback; market agent acknowledged dispatch hold. |
 | vishesh/codex-heterogeneous | done | heterogeneous-priority-revision | 2026-10-04T03:53Z | Published owner-revised scores and the self-differentiating swarm recommendation |
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T03:51Z | Both fleet scripted qualifications verified; committing API qualification launch checkpoint |
 | vishesh/codex-methods | done | antsy-verification-v5 | 2026-10-04T03:51Z | Completed Antsy v5 numerical repair and cost-aware diagnostics; practical successor gated |
-| vishesh/codex-decision-models | blocked | right-dissenter-live-study | 2026-10-04T03:51:21Z | Standalone study registered and implemented; awaiting the pending USD 2 cap approval before dedicated provisioning and native Q0 |
-| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T03:49Z | Finishing frozen qualification and dashboard recovery; next model connection requested after provider refusals |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T03:46Z | Running qualified Sonnet discovery and launching the independently qualified Haiku comparison. |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
 | vishesh/codex-experiments | blocked |  | 2026-10-04T03:43Z | Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; paid Q4 awaits independent dossier review and fresh allocation |
-| dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T03:30Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
