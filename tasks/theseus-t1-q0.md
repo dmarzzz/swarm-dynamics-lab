@@ -3,7 +3,7 @@ id: theseus-t1-q0
 type: task
 title: Theseus approved apprenticeship qualification and collective study design
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-theseus
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-theseus
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T19:33Z
-updated: 2026-10-04T20:16Z
+updated: 2026-10-04T20:26Z
+outputs:
+- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/RESULTS-SOL50.md
 ---
 
 ## Goal
