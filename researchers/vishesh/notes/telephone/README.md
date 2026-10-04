@@ -1,14 +1,15 @@
 # Telephone: where evidence changes in an agent swarm
 
-## Results TLDR — 2026-10-04 UTC
+## Remembering facts wasn't enough to make the right call.
 
-- **Progression:** B2 hit a copied-answer ceiling; B4R1 tested fresh-reader deployment decisions after three handoffs: 9 authored worlds, 3 recipes, 2 blocks.
-- **Finding:** Original source restored to the same handoff yielded **18/18 correct**, versus **7/18** with the handoff alone.
-- **Consequence:** Handoff-only readers withheld all 6 legitimate releases and turned 5 explicit denials into unknowns; **no unsafe authorization** occurred.
-- **Limit:** Synthetic, nested cases in one model; no error-recovery experiment, real AI Village evaluation, or single-phrase causal proof.
-- **Status:** **FINISH bounded diagnostic.** The 50-agent chain remains unrun; no automatic successor.
+- Three handoffs later, readers got just 7 of 18 deployment decisions right.
+- Give them the original source alongside the same handoff: 18 of 18 correct.
+- The damage was hesitation: every legitimate release was withheld. No unsafe release occurred.
+- Scope: a small synthetic test; it does not prove which missing phrase caused each error.
 
-[Reviewed results and limitations](native/b4r1/results/POST-MORTEM.md) · [Earlier B2 results](native/b2/results/POST-MORTEM.md) · [Authoritative setup and run history](SETUP.md)
+2026-10-04 UTC · [Reviewed results and limitations](native/b4r1/results/POST-MORTEM.md) · [Earlier B2 results](native/b2/results/POST-MORTEM.md) · [Authoritative setup and run history](SETUP.md)
+
+**Progression and status:** B2 hit a copied-answer ceiling; B4R1 tested fresh readers on 9 authored worlds nested in 3 recipes, repeated in 2 blocks. All 6 legitimate-release observations were withheld; 5 explicit denials became unknowns. FINISH bounded diagnostic; the 50-agent chain remains unrun. This was not an error-recovery experiment or a real AI Village evaluation.
 
 Key learning: supporting facts can survive a handoff while the governing rule, evidential threshold or downstream interpretation changes. Source restoration helped on these selected cases; the study does not isolate policy omission, distrust of inherited evidence and added prerequisites as separate causes. These results describe decision answers, not actual deployment actions.
 
