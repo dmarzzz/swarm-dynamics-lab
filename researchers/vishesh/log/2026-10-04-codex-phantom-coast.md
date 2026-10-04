@@ -17,3 +17,7 @@ Pulled fresh main and reviewed PI feedback, saved native records, post-mortem an
 ## PC-2 native readiness
 
 Pulled current research and operations workflow. Published RUNNER-PRE before native implementation; built the gated choice/map runner, fixed schedules, durable records, carried-forward budget, qualification/analysis and actual-event replay. 42 offline checks pass, including start acknowledgment and launch denials. Initial/audit/final fixture frames visually checked. No reserved world or paid route was opened, no new spend or host claim. One researcher review/research disposition remains external; current operational admission follows it. RUNBOOK.md names exact evidence and commands.
+
+## Owner-directed review process change
+
+User explicitly requested skipping researcher review. Updated standing workspace/shared process for Vishesh-owned experiments and removed reviewer identity/receipt/pass requirements from PC-2 admission. Preserved historical assessments, added prospective amendment and refreshed source hashes. 44 offline checks pass, including two proving the removed gate stays removed; budget/public-plan/fleet/source/qualification checks remain. No paid run or new spend.

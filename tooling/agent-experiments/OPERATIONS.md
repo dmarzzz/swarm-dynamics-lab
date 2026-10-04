@@ -61,7 +61,7 @@ The first adapter retains Theseus v2's native guards: each prepared packet/confi
 | Host change or interrupted transfer | Deployment verification, exclusive allocation, single budget authority and pending-call reconciliation; no ledger reset |
 | Any new attempt or stage | Current public plan and condition TLDR, pre-assessment, source/dependency match, quota, claim lifetime and applicable account checks |
 
-A completed researcher review can be reused within its stated design scope. For Vishesh's studies, one researcher review satisfies the owner requirement; routine repairs do not automatically create another design or dossier sign-off. A design review is not an independent code or arithmetic audit. Qualification can be reused only when its actual scope and relevant hashes match. A failed competence gate cannot be replaced by a favorable diagnostic.
+A completed researcher review can be reused within its stated design scope. For Vishesh's studies, researcher review is optional by owner direction; no design or dossier sign-off blocks launch. A design review is not an independent code or arithmetic audit. Qualification can be reused only when its actual scope and relevant hashes match. A failed competence gate cannot be replaced by a favorable diagnostic.
 
 ## Initialize the agent that was specified
 

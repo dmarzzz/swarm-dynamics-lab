@@ -1,6 +1,6 @@
 # Experiment setup record: Phantom Coast PC-2
 
-Prospective record created before implementation. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-reviewer: vishesh/codex-phantom-coast; independent reviewer pending. Research status: exploratory development; no native outcomes and no accepted hypothesis.
+Prospective record created before implementation. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-reviewer: vishesh/codex-phantom-coast; researcher review not required by owner direction. Research status: exploratory development; no native outcomes and no accepted hypothesis.
 
 ## Ownership and question
 
@@ -10,10 +10,10 @@ Does misleading inherited evidence change inspection choices under a fixed budge
 
 | Gate | Status | Evidence / next action |
 |---|---|---|
-| G0 research status | Incomplete | Prior-art/hypothesis and independent-review disposition remain pending; no formal claim |
+| G0 research status | Exploratory scope recorded | No formal accepted hypothesis claimed; researcher review is optional under reviews/REVIEW-POLICY-AMENDMENT.md. Prior-art limitations remain documented, not a substituted reviewer gate. |
 | G1 prospective design | Pass for development | PLAN.md published at a250808391bb2e1f224a12d23d3d2f1fcbc0ace0 before source; PLAN-PUBLICATION.json verifies public bytes |
-| G2 instrument | Offline pass, self-validated | RUNNER-VALIDATION.json: 42 checks; native adapter, persistence, carry-forward budget, qualification, analysis and event rendering implemented. Independent review and real route qualification remain pending. |
-| G3 admission | Blocked | Different-researcher review/research disposition, current plan registration/page, single-authority budget receipt, verified runtime and fresh exclusive Mars host required. RUNBOOK.md and admission-template.json define exact inputs. |
+| G2 instrument | Offline pass, self-validated | RUNNER-VALIDATION.json: 44 checks; native adapter, persistence, carry-forward budget, qualification, analysis and event rendering implemented. Real route qualification remains pending; researcher review is optional. |
+| G3 admission | Blocked | Current plan registration/page, single-authority budget receipt, verified runtime and fresh exclusive Mars host required. RUNBOOK.md and admission-template.json define exact inputs. |
 | G4 qualification | Not run | Proposed 24 requests; PC-1 does not qualify inspection choices |
 | G5 development closeout | Pass | DEVELOPMENT-POST.md and parent ITERATION-02.md; no paid run or resources |
 
@@ -23,12 +23,12 @@ Does misleading inherited evidence change inspection choices under a fixed budge
 
 ## Current attempt admission
 
-No run admitted. No machine claimed or cloud resource created. No credentials consumed. Prior budget authority: phantom-coast-usd5-20261004; already spent $0.162723246. Previous 540-call envelope remains closed. A new envelope, if admitted, must carry historical spend and fit the existing total; no automatic top-up. Public plan publication is distinct from hub registration. Independent review and native qualification remain required.
+No run admitted. No machine claimed or cloud resource created. No credentials consumed. Prior budget authority: phantom-coast-usd5-20261004; already spent $0.162723246. Previous 540-call envelope remains closed. A new envelope, if admitted, must carry historical spend and fit the existing total; no automatic top-up. Public plan publication is distinct from hub registration. Native qualification remains required; researcher review is not required by owner direction.
 
 ## Attempt and repair history
 
-Parent PC-1 Q0/S0 completed validly; next-stage development addresses a different observation-choice mechanism. This record is prospective, fixing the earlier late-SETUP process gap. Current action: review the implemented native instrument using RUNBOOK.md, then complete current G3 operational checks. Future native results must be a separate cohort with evidence_confidence 0 until measured.
+Parent PC-1 Q0/S0 completed validly; next-stage development addresses a different observation-choice mechanism. This record is prospective, fixing the earlier late-SETUP process gap. Current action: complete current G3 operational checks using RUNBOOK.md. Future native results must be a separate cohort with evidence_confidence 0 until measured.
 
 ## Closeout
 
-Execution: no native attempt. Development validation: 42/42 (RUNNER-VALIDATION.json). Scientific effect: untested. Process: prospective plan/setup published before implementation; public bytes verified, no run registration claimed. Reporting: parent measured replay checked against records and in browser. Costs: unchanged cumulative $0.162723246, no new spend. Next action: one different-researcher review and research-scope disposition, then fresh G3 admission and native Q0; the operator can handle registration and allocation without another $5 authorization. See reviews/RUNNER-POST.md.
+Execution: no native attempt. Development validation: 44/44 (RUNNER-VALIDATION.json). Scientific effect: untested. Process: prospective plan/setup published before implementation; public bytes verified, no run registration claimed. Reporting: parent measured replay checked against records and in browser. Costs: unchanged cumulative $0.162723246, no new spend. Next action: fresh G3 operational admission and native Q0; the operator can handle registration and allocation without another $5 authorization. See reviews/REVIEW-POLICY-POST.md; reviews/RUNNER-POST.md is the earlier assessment.

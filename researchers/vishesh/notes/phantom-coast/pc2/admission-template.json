@@ -5,8 +5,6 @@
   "source_commit": null,
   "instrument": null,
   "assignment_sha256": null,
-  "reviewer_researcher": null,
-  "researcher_review_passed": false,
   "research_scope_admitted": false,
   "authorization": "phantom-coast-usd5-20261004",
   "prior_spend_nano": 162723246,
@@ -25,10 +23,6 @@
   "run_tldr": null,
   "qualification_directory": null,
   "qualification_hashes": null,
-  "researcher_review": {
-    "path": null,
-    "sha256": null
-  },
   "research_scope": {
     "path": null,
     "sha256": null

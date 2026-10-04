@@ -10,7 +10,7 @@ from wire import digest,SNAPSHOT
 BASE=Path(__file__).resolve().parents[1]
 
 def fingerprint():
-    files=sorted((BASE/'src').glob('*.py'))+[BASE/'PLAN.md',BASE/'reviews/RUNNER-PRE.md']
+    files=sorted((BASE/'src').glob('*.py'))+[BASE/'PLAN.md',BASE/'reviews/RUNNER-PRE.md',BASE/'reviews/REVIEW-POLICY-AMENDMENT.md']
     return {str(p.relative_to(BASE)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 
 def utc():return datetime.datetime.now(datetime.timezone.utc)
@@ -28,9 +28,9 @@ class Admission:
         if stage not in STAGES or c.get('design')!='PC-2' or c.get('stage')!=stage or not re.fullmatch(r'[a-zA-Z0-9-]{3,80}',c.get('attempt','')):raise ValueError('configuration')
         head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=BASE,text=True).strip()
         if c.get('source_commit')!=head or c.get('instrument')!=fingerprint() or c.get('assignment_sha256')!=digest(schedule(stage)):raise ValueError('source_binding')
-        for name in ('researcher_review','research_scope','pre_assessment','page_verification','allocation','budget_lineage','runtime'):
+        for name in ('research_scope','pre_assessment','page_verification','allocation','budget_lineage','runtime'):
             receipt_file(c.get(name))
-        if c.get('researcher_review_passed') is not True or c.get('reviewer_researcher') in (None,'','vishesh'):raise ValueError('different_researcher_review_required')
+        # Scope is the operator's experiment/budget scope, not researcher approval.
         if c.get('research_scope_admitted') is not True:raise ValueError('research_scope_required')
         if c.get('authorization')!='phantom-coast-usd5-20261004' or c.get('prior_spend_nano')!=162723246 or c.get('api_cap_nano')!=4000000000 or c.get('max_calls')!=1816:raise ValueError('budget_authority')
         for flag in ('predecessor_fenced','predecessor_reconciled','single_ledger_authority','exclusive_allocation','approved_mars_fleet','rendered_page_verified'):
