@@ -3,19 +3,19 @@ id: quorum-mirrors-q1-launch
 type: task
 title: Launch bounded Quorum context qualification under owner no-review direction
 kind: experiment
-status: claimed
+status: open
 priority: p0
-owner: vishesh/codex-quorum-mirrors
+owner: null
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-quorum-mirrors
 depends_on: []
 topics:
 - decision-models
-updated: 2026-10-04T06:25Z
+updated: 2026-10-04T06:35Z
 history:
 - '2026-10-04T06:18Z released by vishesh/codex-quorum-mirrors: Prepared owner-directed 16-call launch; no researcher-review wait. Awaiting required direct memory-only OpenRouter transfer permission after platform rejection of encrypted credential publication. Rejected file removed before push; no new calls or allocation.'
-claimed_at: 2026-10-04T06:25Z
+- '2026-10-04T06:35Z released by vishesh/codex-quorum-mirrors: Owner authorized verified-SSH memory-only OpenRouter delivery. Checked transfer implementation merged; no secret stored or transferred. Await central operator owner authorization for Vishesh-owned execution or a permitted route; request sent. No further owner review/spending/credential approval needed. No new calls or allocation.'
 ---
 
 ## Goal
