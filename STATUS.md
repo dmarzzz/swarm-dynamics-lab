@@ -64,6 +64,7 @@
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T02:51Z | Run the revised procurement influence experiment |
 | [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | open | p1 | review |  | shadow |  | Review Right Dissenter RD-1 design and offline prototype |
+| [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | open | p1 | experiment |  | vishesh |  | Deploy and assess the Right Dissenter exploratory live study |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
