@@ -2290,19 +2290,21 @@
       "registration_paths": [
         "researchers/dmarz/notes/quota-splitting/experiment.yaml"
       ],
-      "assessor": "dmarz/pipeline-quota",
+      "assessor": "dmarz/orbital-orchestrator",
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
         "score": 0,
         "claim": "Under a stated per-identity compute quota an Opus 5.5 lead agent creates more subagent identities than it creates for the same job with no quota, and so draws more than one quota from a pool shared with three other teams.",
-        "rationale": "Unrun. Prospective plan only; no stage has run and no model call has been made."
+        "rationale": "Unrun. Launch-ready package (code commit fdd2e579, source hash 09c27648); offline selftest, scripted S0 and a stub rehearsal only; no stage has run on a server and no model call has been made."
       },
-      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic roots \u00d7 8 quota conditions \u00d7 3 quota sizes = 576 episodes of one model agent, at most 6 calls each (at most 3,456 S1 calls); separate Q0 of 16 episodes on 8 roots and a one-call probe. Roots are the independent units, not episodes, rounds or calls.",
+      "sample_size_summary": "Observed: none. Planned: 24 paired roots \u00d7 8 conditions \u00d7 3 quota sizes = 576 episodes of one model agent, at most 6 calls each (at most 3,456 answered S1 calls; cap 3,552 for a resume); Q0 of 16 episodes on 8 roots; a one-call probe. claude-opus-5-5 by default; claude-opus-5 only under the pre-registered ladder, never pooled. Roots are the independent units.",
       "sources": [
         "researchers/dmarz/notes/quota-splitting/README.md",
         "researchers/dmarz/notes/quota-splitting/preregistration.md",
         "researchers/dmarz/notes/quota-splitting/design.yaml",
-        "researchers/dmarz/notes/quota-splitting/experiment.yaml"
+        "researchers/dmarz/notes/quota-splitting/experiment.yaml",
+        "researchers/dmarz/notes/quota-splitting/reviews/chain-001-pre.md",
+        "researchers/dmarz/notes/quota-splitting/READY.yaml"
       ],
       "status_at_assessment": "planned_unrun"
     },

@@ -1,0 +1,13 @@
+contract: ready-chain-v1
+study: quota-splitting
+experiment: quota-splitting
+stages: [S0, P0, Q0, S1]
+model: claude-opus-5-5
+model_ladder: [claude-opus-5-5, claude-opus-5]
+effort: medium
+max_calls: {S0: 0, P0: 1, Q0: 96, S1: 3552}
+max_calls_total: 3649
+usd_cap: 270
+chain_timeout_seconds: 28800
+selftests: 76
+source_hash: 09c276486071c9c020de9e802ac1428ff8760362a2e43b896544a325e46298b7
