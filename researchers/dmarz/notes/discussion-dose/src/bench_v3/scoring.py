@@ -130,12 +130,16 @@ def evaluate(case, corpus, ballots, memory, parent, initial):
     final_state = checkpoint(case, ballots)
     raw_conflict = len(resolve(case['target_key'], corpus, case['task']['policy'])) > 1
     inherited_conflict = len(resolve(case['target_key'], reported_records(ctx), ctx['task']['policy'])) > 1
-    return {'vote_invalid': int(not valid), 'vote_correct': int(valid and decision == answer),
-            'vote_justified': int(valid and decision == expected),
-            'vote_target': int(valid and decision == case['target']),
-            'vote_abstain': int(valid and decision == 'ABSTAIN'),
-            'vote_correct_abstain': int(valid and decision == 'ABSTAIN' and expected == 'ABSTAIN'),
-            'vote_unnecessary_abstain': int(valid and decision == 'ABSTAIN' and expected != 'ABSTAIN'),
+    # Review F1 (shadow, 2026-10-04): score the fixed-quorum decision that actually reached memory and the parent.
+    # An invalid ballot is a non-vote inside majority(); vote_invalid stays as the flag, and an ABSTAIN with an
+    # invalid ballot is flagged separately because it may be lack of quorum caused by the failure.
+    return {'vote_invalid': int(not valid), 'vote_correct': int(decision == answer),
+            'vote_justified': int(decision == expected),
+            'vote_target': int(decision == case['target']),
+            'vote_abstain': int(decision == 'ABSTAIN'),
+            'vote_abstain_with_invalid': int(decision == 'ABSTAIN' and not valid),
+            'vote_correct_abstain': int(decision == 'ABSTAIN' and expected == 'ABSTAIN'),
+            'vote_unnecessary_abstain': int(decision == 'ABSTAIN' and expected != 'ABSTAIN'),
             'memory_records': len(memory), 'memory_true_records': true_records,
             'memory_false_records': len(memory) - true_records,
             'memory_precision': true_records / len(memory) if memory else None,
@@ -148,8 +152,8 @@ def evaluate(case, corpus, ballots, memory, parent, initial):
             'memory_conflict_lost': int(raw_conflict and not inherited_conflict),
             'memory_source_mentions': sum(len(r['sources']) for r in memory),
             'memory_distinct_origins': len({roots[s] for r in memory for s in r['sources']}),
-            'correct_vote_bad_memory': int(valid and decision == answer and true_records < len(memory)),
-            'correct_vote_bad_parent': int(valid and decision == answer and followup['parent_groundtruth_wrong'] == 1),
-            'abstain_vote_bad_memory': int(valid and decision == 'ABSTAIN' and true_records < len(memory)),
+            'correct_vote_bad_memory': int(decision == answer and true_records < len(memory)),
+            'correct_vote_bad_parent': int(decision == answer and followup['parent_groundtruth_wrong'] == 1),
+            'abstain_vote_bad_memory': int(decision == 'ABSTAIN' and true_records < len(memory)),
             'initial_false_endorsements': initial_state['false_endorsements'],
             'final_false_endorsements': final_state['false_endorsements'], **followup}

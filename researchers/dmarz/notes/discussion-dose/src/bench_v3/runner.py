@@ -43,9 +43,11 @@ class Runner:
             response = self.provider.complete(copy.deepcopy(request))
         except AssertionError:
             raise  # replay mismatch must not masquerade as a model failure
-        except Exception:
+        except Exception as exc:
             self.failures += 1
+            # Review F2: keep the adapter's public reason (429, low credit, incomplete); never the message body.
             self.journal.emit('provider_failure', call_id=call_id, label=label, agent=agent, turn=turn,
+                              reason=getattr(exc, 'public_reason', None) or type(exc).__name__,
                               dispatched=bool(self.provider.scientific and getattr(self.provider, 'calls', 0) > dispatched_before),
                               usage=getattr(self.provider, 'last_usage', {}), raw_text=getattr(self.provider, 'last_response_text', None))
             return None
