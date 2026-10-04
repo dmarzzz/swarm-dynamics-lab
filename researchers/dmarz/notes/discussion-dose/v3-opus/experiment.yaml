@@ -1,0 +1,31 @@
+id: discussion-v3-opus
+title: Discussion and memory v3 on Claude Opus 5.5
+description: 'TLDR: Does the v3 swarm benchmark qualify with a model that passes the competence screen,
+  and how do independent votes, reports, private work and public discussion then compare? Q0 on 6 fresh
+  worlds (636 calls), chained into S1 on 24 fresh worlds (2,436 calls) only if the unchanged gate passes;
+  claude-opus-5-5, adaptive thinking, effort high, no temperature; new configuration, never pooled with Haiku.'
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  batch:
+    type: str
+    role: replicate
+  model:
+    type: str
+    role: fixed
+  effort:
+    type: str
+    role: fixed
+metrics:
+- model_calls
+- cost_usd
+- episodes
+- invalid_calls
+- refusals
+- clean_accuracy
+- qualification_passed
+- execution_complete
+primary_metric: model_calls
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/discussion-dose/v3-opus

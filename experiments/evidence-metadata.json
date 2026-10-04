@@ -1849,6 +1849,32 @@
       "assessor": "dmarz/newcomer-opus",
       "assessed_at": "2026-10-04",
       "source_commit": "17b65c09185ad9097be673a30771c937e172d543"
+    },
+    {
+      "id": "discussion-v3-opus",
+      "title": "Discussion and memory v3 on Claude Opus 5.5",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/v3-opus/README.md"
+      ],
+      "experiment_ids": [
+        "discussion-v3-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/discussion-dose/v3-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "With Claude Opus 5.5 (adaptive thinking, effort high, no temperature) the v3 swarm benchmark passes its unchanged qualification gate, and on 24 fresh worlds public discussion reduces false-memory inheritance relative to reports-only.",
+        "rationale": "Plan only; no swarm model call has been made. Q0 is a 6-world qualification screen and S1 runs only if it passes."
+      },
+      "sample_size_summary": "Observed: none. Planned: Q0 6 fresh worlds (96 cases, 636 calls); S1 24 fresh worlds (384 cases, 2,436 calls) only after a Q0 pass. Worlds are the independent units; calls, agents and arms within a world are not independent.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/v3-opus/README.md",
+        "researchers/dmarz/notes/discussion-dose/v3-opus/reviews/v3o-a1-pre.md"
+      ],
+      "status_at_assessment": "planned",
+      "assessor": "dmarz/v3-q0-opus",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {
