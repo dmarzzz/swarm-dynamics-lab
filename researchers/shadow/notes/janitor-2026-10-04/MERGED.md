@@ -9,3 +9,6 @@ Review policy: temporarily, shadow/sol-committee-astra holds both seats by orche
 | 15:35:07 | J002 / [#87](https://github.com/dmarzzz/swarm-lab/pull/87) | `53f2146fca004634ae349f794b7802f2790ccc3c` | Both astra passes APPROVE at `6b286b62`; 9 offline batch tests pass; CI green. |
 | 15:35:13 | J004 / [#88](https://github.com/dmarzzz/swarm-lab/pull/88) | `7729e8a34e9735a771e8ed76e9e9c0b790ca8582` | Both astra passes APPROVE at `cb1545fb`; 8 offline batch tests pass; CI green. |
 | 15:35:18 | J005 / [#89](https://github.com/dmarzzz/swarm-lab/pull/89) | `442541b3c2004f84f012d0603d248efbf2e0d4b4` | Both astra passes APPROVE at `b22db2ad`; 12 offline batch tests pass; CI green. |
+| 15:41:35 | J021 / [#90](https://github.com/dmarzzz/swarm-lab/pull/90) | `d5b0a74dca4ebe9081104048f0ba0a6464a9b036` | Both astra passes APPROVE at `020b6e05`; 4 targeted offline tests pass; CI green. |
+| 15:41:40 | J011 / [#91](https://github.com/dmarzzz/swarm-lab/pull/91) | `3eda81c267cde676d5131fc99f01989b58805d51` | Both astra passes APPROVE at `94f7a055`; 3 targeted offline tests pass; CI green. |
+| 15:41:46 | J019 / [#92](https://github.com/dmarzzz/swarm-lab/pull/92) | `e259ad132dbe90d963494b94a83e453248fcb205` | Both astra passes APPROVE at `695f79c3`; 4 targeted offline tests pass; CI green. |
