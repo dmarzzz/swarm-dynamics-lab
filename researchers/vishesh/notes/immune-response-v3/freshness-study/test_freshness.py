@@ -27,3 +27,9 @@ class Semantics(unittest.TestCase):
  def test_same_arm_source_records(self):
   f,w=s.fixture('masked_crash',9401);a=[{'observed_epoch':6,'recommendation':'inspect','role':'test'}];raw=s.observe(f,w,1,[],a,False);checked=s.observe(f,w,1,[],a,True);checked.pop('probe_receipt');checked['team_advice'][0].pop('freshness_receipt');self.assertEqual(raw,checked)
 if __name__=='__main__':unittest.main()
+
+class Admission(unittest.TestCase):
+ def test_credential_payload_fails_closed(self):
+  from launch import validate
+  for p in [{},{'key':'invalid','workspace':'invalid'},{'key':'invalid','workspace':'invalid','extra':True}]:
+   with self.assertRaises(ValueError):validate(p)
