@@ -43,7 +43,6 @@
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T06:51Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T06:48Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
-| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T06:59Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -65,6 +64,7 @@
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T06:28Z | Run the revised procurement influence experiment |
+| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T07:14Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [quorum-mirrors-q1-interface-repair](tasks/quorum-mirrors-q1-interface-repair.md) | open | p1 | build |  | vishesh |  | Preserve rejected-response usage and reconcile Q1 output-token contract |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
