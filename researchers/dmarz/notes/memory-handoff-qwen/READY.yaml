@@ -1,0 +1,13 @@
+contract: ready-chain-v1
+study: memory-handoff-qwen
+experiment: memory-handoff-qwen
+stages: [S0, P0, Q0, S1]
+provider: openrouter
+model: qwen/qwen3.7-flash
+effort: low
+max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
+max_calls_total: 600
+usd_cap: 2
+chain_timeout_seconds: 7800
+selftests: 85
+source_hash: b4ab9025e2288c7c7f652e7d210371ab7818022acc1ee155801e4300b5044ba3
