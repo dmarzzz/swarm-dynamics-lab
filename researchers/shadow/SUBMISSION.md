@@ -232,23 +232,29 @@ streams, not semantic problems, so 48,000 episodes are not 48,000 independent te
 answer, so "return" measures hysteresis, not epistemic healing. A same-dose 20-vs-1 contrast is clean. Contrasts
 involving full memory change the dose. `frac_original_T` alone cannot separate "came back" from "never left".
 
-## 7. Freeze on Claude (inconclusive, infrastructure-blocked)
+## 7. Freeze on Claude (qualified; operational freeze not established)
 
-Source: [freeze-claude/FINDING.md](notes/capture-memory/freeze-claude/FINDING.md),
+Source: [attempt2 finding](notes/capture-memory/freeze-claude/attempt2/FINDING.md),
 [preregistration](notes/capture-memory/freeze-claude/PREREG.md),
-[summary.json](notes/capture-memory/freeze-claude/summary.json).
+[prospective transport amendment](notes/capture-memory/freeze-claude/AMENDMENT-1.md),
+[attempt2 summary](notes/capture-memory/freeze-claude/attempt2/summary.json).
 
-**Blocked attempt, not a behavioral null.** Qualification requested `claude-sonnet-5-5` through the authorized
-local Anthropic pool. All 8 HTTP attempts failed: 2 HTTP429 rate limits and 6 HTTP503 broker-unavailable errors.
-There were zero valid model completions, no returned-model identifier, and no attack or repair episodes. No Opus
-request started. These failures neither replicate nor falsify freeze. Dollar charges and token counts are
-unknown, not asserted zero, because no usage or cost receipt was returned.
+**The unchanged instrument qualified and produced complete primary data.** Via OpenRouter, returned model
+`anthropic/claude-sonnet-5.5` passed all qualification controls and chose against the final history item in 6/6
+conflicting Sonnet contexts. All 16 repair episodes completed across four paired roots. Full-memory removal
+changed original-convention share by **-0.0833, 95% root-bootstrap CI [-0.1667,0]**, ending at zero. The interval
+is not contained in the freeze band [-0.10,+0.10], but also does not exclude it entirely: the preregistered
+classification is **inconclusive**, now with observed behavior rather than an infrastructure block. Memory1
+preserved population share while agents switched; its paired change advantage was **+0.0833 [0,+0.1667]**.
+The full-memory wipe-minus-removal endpoint was **0 [0,0]**. The full predicted pattern was not reproduced.
 
-**Offline caveat.** The reduced scripted fixture did not reproduce the target freeze regime: full-memory
-removal increased original-convention share by **+0.250, 95% root-bootstrap CI [+0.083,+0.417]**. Even a successful
-model run would therefore have been a standardized-state capacity diagnostic, not a clean replication of S1b.
-Claude freeze remains untested. A relaunch needs scientific reconsideration of the fixture and prospective
-runner corrections, not substitution of these transport failures for a behavioral result.
+**Limits and retained failures.** The same N=12 scripted reference itself does not reproduce S1b freeze:
+full/removal goes **+0.250 [+0.083,+0.417]**. Half the repair roots began at zero original share. Two optional
+Opus episodes on those floor states stayed at zero, not an independent confirmation. In the separate attack
+screen, memory1 captured 2/2; both full-memory episodes stopped at round 3 on missing final names under the
+frozen 32-token ceiling, leaving their endpoints unknown. Attempt 2 used 1,188 HTTP requests and **$0.968330**
+in returned cost receipts, with no fallback or retry. The [original 8 failed pool attempts](notes/capture-memory/freeze-claude/FINDING.md)
+remain untouched and count as no behavioral evidence; their historical dollar cost remains unknown.
 
 ## 8. Negative and null results
 

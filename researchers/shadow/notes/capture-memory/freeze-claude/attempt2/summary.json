@@ -1,0 +1,2113 @@
+{
+  "accounting": {
+    "attack": {
+      "assigned": 4,
+      "complete": 2,
+      "http_attempts": 148,
+      "not_started": 0,
+      "started": 4,
+      "valid_responses": 146
+    },
+    "opus": {
+      "assigned": 2,
+      "complete": 2,
+      "http_attempts": 116,
+      "not_started": 0,
+      "started": 2,
+      "valid_responses": 116
+    },
+    "qualification": {
+      "assigned": 12,
+      "complete": 12,
+      "http_attempts": 12,
+      "not_started": 0,
+      "started": 12,
+      "valid_responses": 12
+    },
+    "repair": {
+      "assigned": 16,
+      "complete": 16,
+      "http_attempts": 912,
+      "not_started": 0,
+      "started": 16,
+      "valid_responses": 912
+    }
+  },
+  "actual_receipted_cost_usd": "0.968330",
+  "arms": {
+    "opus/full/removal": {
+      "all_assigned_delta_bounds": [
+        0.0,
+        0.0
+      ],
+      "assigned": 2,
+      "complete_case": true,
+      "delta_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_baseline": 0.0,
+      "mean_delta": 0.0,
+      "mean_endpoint": 0.0,
+      "missing": 0,
+      "n": 2,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0
+      ],
+      "root_ids": [
+        160,
+        161
+      ],
+      "switch_rate": 0.0
+    },
+    "sonnet/1/removal": {
+      "all_assigned_delta_bounds": [
+        0.0,
+        0.0
+      ],
+      "assigned": 4,
+      "complete_case": true,
+      "delta_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": 0.0,
+      "mean_endpoint": 0.08333333333333333,
+      "missing": 0,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.18421052631578946
+    },
+    "sonnet/1/wipe": {
+      "all_assigned_delta_bounds": [
+        0.0,
+        0.0
+      ],
+      "assigned": 4,
+      "complete_case": true,
+      "delta_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": 0.0,
+      "mean_endpoint": 0.08333333333333333,
+      "missing": 0,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.18421052631578946
+    },
+    "sonnet/full/removal": {
+      "all_assigned_delta_bounds": [
+        -0.08333333333333333,
+        -0.08333333333333333
+      ],
+      "assigned": 4,
+      "complete_case": true,
+      "delta_interval": [
+        -0.16666666666666666,
+        0.0
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": -0.08333333333333333,
+      "mean_endpoint": 0.0,
+      "missing": 0,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0,
+        -0.16666666666666666,
+        -0.16666666666666666
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.008771929824561403
+    },
+    "sonnet/full/wipe": {
+      "all_assigned_delta_bounds": [
+        -0.08333333333333333,
+        -0.08333333333333333
+      ],
+      "assigned": 4,
+      "complete_case": true,
+      "delta_interval": [
+        -0.16666666666666666,
+        0.0
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": -0.08333333333333333,
+      "mean_endpoint": 0.0,
+      "missing": 0,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0,
+        -0.16666666666666666,
+        -0.16666666666666666
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.017543859649122806
+    }
+  },
+  "attack": [
+    {
+      "captured": true,
+      "endpoint": 0.0,
+      "id": "attack-sonnet-170-1",
+      "status": "complete",
+      "trace": [
+        1.0,
+        0.5714285714285714,
+        0.2857142857142857,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "captured": null,
+      "endpoint": null,
+      "id": "attack-sonnet-170-full",
+      "status": "failed",
+      "trace": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "captured": true,
+      "endpoint": 0.0,
+      "id": "attack-sonnet-171-1",
+      "status": "complete",
+      "trace": [
+        1.0,
+        0.5714285714285714,
+        0.42857142857142855,
+        0.42857142857142855,
+        0.42857142857142855,
+        0.2857142857142857,
+        0.14285714285714285,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "captured": null,
+      "endpoint": null,
+      "id": "attack-sonnet-171-full",
+      "status": "failed",
+      "trace": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "budget": {
+    "cap_usd": "10",
+    "cost_usd": "0.968330",
+    "halted": false,
+    "prior_attempt_requests": 8,
+    "qualification_attempts": 12,
+    "requests": 1188,
+    "reserved_usd": "0.00",
+    "time": "2026-10-04T22:58:45.386717+00:00",
+    "unresolved_exposure_usd": "0"
+  },
+  "contrasts": {
+    "full-wipe-minus-removal": {
+      "all_assigned_bounds": [
+        0.0,
+        0.0
+      ],
+      "assigned": 4,
+      "complete_case": true,
+      "interval": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "paired_n": 4,
+      "root_differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ]
+    },
+    "short-minus-full-removal": {
+      "all_assigned_bounds": [
+        0.08333333333333333,
+        0.08333333333333333
+      ],
+      "assigned": 4,
+      "complete_case": true,
+      "interval": [
+        0.0,
+        0.16666666666666666
+      ],
+      "mean": 0.08333333333333333,
+      "paired_n": 4,
+      "root_differences": [
+        0.0,
+        0.0,
+        0.16666666666666666,
+        0.16666666666666666
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ]
+    },
+    "sonnet-minus-scripted-full-removal": {
+      "assigned": 4,
+      "complete_case": true,
+      "interval": [
+        -0.5,
+        -0.16666666666666666
+      ],
+      "mean": -0.3333333333333333,
+      "paired_n": 4,
+      "root_differences": [
+        -0.5,
+        -0.16666666666666666,
+        -0.16666666666666666,
+        -0.5
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ]
+    }
+  },
+  "episode_details": [
+    {
+      "delta": -1.0,
+      "id": "attack-sonnet-170-1",
+      "per_agent": {
+        "0": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        },
+        "1": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        },
+        "11": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        },
+        "3": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        },
+        "5": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        },
+        "8": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        },
+        "9": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        1.0,
+        0.5714285714285714,
+        0.2857142857142857,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": null,
+      "id": "attack-sonnet-170-full",
+      "per_agent": {
+        "0": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "1": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "9": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": null,
+      "status": "failed",
+      "trace": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "delta": -1.0,
+      "id": "attack-sonnet-171-1",
+      "per_agent": {
+        "0": {
+          "decisions": 8,
+          "switch_rate": 0.375,
+          "switched": 3
+        },
+        "1": {
+          "decisions": 8,
+          "switch_rate": 0.625,
+          "switched": 5
+        },
+        "10": {
+          "decisions": 8,
+          "switch_rate": 0.125,
+          "switched": 1
+        },
+        "11": {
+          "decisions": 8,
+          "switch_rate": 0.375,
+          "switched": 3
+        },
+        "2": {
+          "decisions": 8,
+          "switch_rate": 0.625,
+          "switched": 5
+        },
+        "4": {
+          "decisions": 8,
+          "switch_rate": 0.375,
+          "switched": 3
+        },
+        "9": {
+          "decisions": 8,
+          "switch_rate": 0.375,
+          "switched": 3
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        1.0,
+        0.5714285714285714,
+        0.42857142857142855,
+        0.42857142857142855,
+        0.42857142857142855,
+        0.2857142857142857,
+        0.14285714285714285,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": null,
+      "id": "attack-sonnet-171-full",
+      "per_agent": {
+        "1": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "10": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "2": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "4": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "9": {
+          "decisions": 2,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": null,
+      "status": "failed",
+      "trace": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-opus-160-full-removal",
+      "per_agent": {
+        "0": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 9,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "4": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-opus-161-full-removal",
+      "per_agent": {
+        "10": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "2": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-160-1-removal",
+      "per_agent": {
+        "0": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 9,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "4": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-160-1-wipe",
+      "per_agent": {
+        "0": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 9,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "4": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-160-full-removal",
+      "per_agent": {
+        "0": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 9,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "4": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-160-full-wipe",
+      "per_agent": {
+        "0": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 9,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "4": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-161-1-removal",
+      "per_agent": {
+        "10": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "2": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-161-1-wipe",
+      "per_agent": {
+        "10": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "2": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-161-full-removal",
+      "per_agent": {
+        "10": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "2": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-161-full-wipe",
+      "per_agent": {
+        "10": {
+          "decisions": 8,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 11,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "2": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "3": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 12,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-162-1-removal",
+      "per_agent": {
+        "0": {
+          "decisions": 5,
+          "switch_rate": 0.4,
+          "switched": 2
+        },
+        "1": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 14,
+          "switch_rate": 0.42857142857142855,
+          "switched": 6
+        },
+        "6": {
+          "decisions": 7,
+          "switch_rate": 0.42857142857142855,
+          "switched": 3
+        },
+        "7": {
+          "decisions": 10,
+          "switch_rate": 0.2,
+          "switched": 2
+        },
+        "8": {
+          "decisions": 9,
+          "switch_rate": 0.7777777777777778,
+          "switched": 7
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-162-1-wipe",
+      "per_agent": {
+        "0": {
+          "decisions": 5,
+          "switch_rate": 0.4,
+          "switched": 2
+        },
+        "1": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 14,
+          "switch_rate": 0.42857142857142855,
+          "switched": 6
+        },
+        "6": {
+          "decisions": 7,
+          "switch_rate": 0.42857142857142855,
+          "switched": 3
+        },
+        "7": {
+          "decisions": 10,
+          "switch_rate": 0.2,
+          "switched": 2
+        },
+        "8": {
+          "decisions": 9,
+          "switch_rate": 0.7777777777777778,
+          "switched": 7
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    {
+      "delta": -0.16666666666666666,
+      "id": "repair-sonnet-162-full-removal",
+      "per_agent": {
+        "0": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "1": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 14,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "8": {
+          "decisions": 9,
+          "switch_rate": 0.1111111111111111,
+          "switched": 1
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": -0.16666666666666666,
+      "id": "repair-sonnet-162-full-wipe",
+      "per_agent": {
+        "0": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "1": {
+          "decisions": 5,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "5": {
+          "decisions": 14,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "6": {
+          "decisions": 7,
+          "switch_rate": 0.2857142857142857,
+          "switched": 2
+        },
+        "7": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "8": {
+          "decisions": 9,
+          "switch_rate": 0.1111111111111111,
+          "switched": 1
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-163-1-removal",
+      "per_agent": {
+        "1": {
+          "decisions": 10,
+          "switch_rate": 0.2,
+          "switched": 2
+        },
+        "10": {
+          "decisions": 9,
+          "switch_rate": 0.4444444444444444,
+          "switched": 4
+        },
+        "11": {
+          "decisions": 10,
+          "switch_rate": 0.5,
+          "switched": 5
+        },
+        "3": {
+          "decisions": 13,
+          "switch_rate": 0.6153846153846154,
+          "switched": 8
+        },
+        "7": {
+          "decisions": 13,
+          "switch_rate": 0.15384615384615385,
+          "switched": 2
+        },
+        "8": {
+          "decisions": 7,
+          "switch_rate": 0.14285714285714285,
+          "switched": 1
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    {
+      "delta": 0.0,
+      "id": "repair-sonnet-163-1-wipe",
+      "per_agent": {
+        "1": {
+          "decisions": 10,
+          "switch_rate": 0.2,
+          "switched": 2
+        },
+        "10": {
+          "decisions": 9,
+          "switch_rate": 0.4444444444444444,
+          "switched": 4
+        },
+        "11": {
+          "decisions": 10,
+          "switch_rate": 0.5,
+          "switched": 5
+        },
+        "3": {
+          "decisions": 13,
+          "switch_rate": 0.6153846153846154,
+          "switched": 8
+        },
+        "7": {
+          "decisions": 13,
+          "switch_rate": 0.15384615384615385,
+          "switched": 2
+        },
+        "8": {
+          "decisions": 7,
+          "switch_rate": 0.14285714285714285,
+          "switched": 1
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    {
+      "delta": -0.16666666666666666,
+      "id": "repair-sonnet-163-full-removal",
+      "per_agent": {
+        "1": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "10": {
+          "decisions": 9,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 10,
+          "switch_rate": 0.1,
+          "switched": 1
+        },
+        "3": {
+          "decisions": 13,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 13,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "8": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": -0.16666666666666666,
+      "id": "repair-sonnet-163-full-wipe",
+      "per_agent": {
+        "1": {
+          "decisions": 10,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "10": {
+          "decisions": 9,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "11": {
+          "decisions": 10,
+          "switch_rate": 0.1,
+          "switched": 1
+        },
+        "3": {
+          "decisions": 13,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "7": {
+          "decisions": 13,
+          "switch_rate": 0.0,
+          "switched": 0
+        },
+        "8": {
+          "decisions": 7,
+          "switch_rate": 0.0,
+          "switched": 0
+        }
+      },
+      "recovered": false,
+      "status": "complete",
+      "trace": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "first_request": "2026-10-04T22:47:56.991025+00:00",
+  "frozen_analyzer_original_replay": "identical summary; run in temporary directory",
+  "hashes": {
+    "PUBLIC-PLAN.json": "5c5f25232e05b6f2580d29ff7f5d33b31b706a2e804a258ddc153a9a03dd59c5",
+    "S1-ADMISSION.json": "1885bd0dc3250680cebddbc80172130d44b01faad0c90b56337f6af249df5268",
+    "budget.json": "5bbe290b2e1c58177d5e54d8008ffbccb35e019d69fe91cc129c13c04244e532",
+    "check_attempt2.py": "9325d4f69eb45efe93fab23317d8e24ac381cb9d7442c5423996d258407ce49a",
+    "completion.json": "7b13315ee3f50c68dcc51cdaabe5ba7ba7299b4345d784a0a230a1dceb498b14",
+    "episodes/attack-sonnet-170-1.json": "06485c7327693d7a800cfb752e1a5e7a771f36f0aea3ac0cc0abe3a48df0dfc8",
+    "episodes/attack-sonnet-170-full.json": "8443e1d913b6b3b27ca831c9a936e6e1740a193e2407b578b3cf518a512b57dc",
+    "episodes/attack-sonnet-171-1.json": "9053b41b68a67b358c7468796f6ea72d48875b98fbf560d8423994ba480872eb",
+    "episodes/attack-sonnet-171-full.json": "bfa60ca167adaf873a67da8630fcaa6cd45a77d2015c5a08b6f363036eafe516",
+    "episodes/repair-opus-160-full-removal.json": "de7ecd445fa45f5999f73f1708dc1e3f0d349f3882616a373bd283736c18b7f3",
+    "episodes/repair-opus-161-full-removal.json": "ea2436cdb5bf46eb6e29f4d4897a45e0e02b2fa11fb0ac2f9934a16c60f1b453",
+    "episodes/repair-sonnet-160-1-removal.json": "f7fb9641d7316df3b93bf36d13bd4fda96be5fbb5a62d4f37c751cc431fe1465",
+    "episodes/repair-sonnet-160-1-wipe.json": "237544c9b8c142e130ef36c56646676659982e2743f95cb3622dc888972249f6",
+    "episodes/repair-sonnet-160-full-removal.json": "4f9b63537cc505a764dc419c6be52d97c8103f1c47c8d97a5085a9cc354ebcd2",
+    "episodes/repair-sonnet-160-full-wipe.json": "46b829e8d3543af054cd5f9e84d475ea40e26c1bc3e60b3790a7760c684e8523",
+    "episodes/repair-sonnet-161-1-removal.json": "e401ad7b71e21717beecddc454a66f059fdadb1d4b0fa7cecaa01fa0cb817237",
+    "episodes/repair-sonnet-161-1-wipe.json": "40e246aef6d5c79114128b1c22d47703f10522e20b95b22fca42d638f923b314",
+    "episodes/repair-sonnet-161-full-removal.json": "44dc5128f2d2a26008a809164d892e1e1176025aa6ebf7f84d96d5a5189ba95d",
+    "episodes/repair-sonnet-161-full-wipe.json": "f898f560918cf2d93cb83be0e440e0f110cb87f2194d1228459153d93944b68b",
+    "episodes/repair-sonnet-162-1-removal.json": "e2416a15b030650b315bdc9e38b52981a245d52c54b2bbc3d198be41be6f9c82",
+    "episodes/repair-sonnet-162-1-wipe.json": "691c3b31692ea65469d506ac31c41a85922ed6ea386e38dd7dc8228ebf438a51",
+    "episodes/repair-sonnet-162-full-removal.json": "a984344968a2682b79dca166ee7eb7bb84a5259c146525c18ec7d6ec7f8683af",
+    "episodes/repair-sonnet-162-full-wipe.json": "daffc33ed7e6b3955ba99e6ae54abac2d26733b1c15e0d3d744107f4d093c343",
+    "episodes/repair-sonnet-163-1-removal.json": "5f36d754cb174774ac9573229b3137ee95d6c9352f2d0be1ca0b9b57b54bac83",
+    "episodes/repair-sonnet-163-1-wipe.json": "57ca33029f2b1dc884f1b77c8cbf075aed77f23be854d6dfb8c661436e349dab",
+    "episodes/repair-sonnet-163-full-removal.json": "205204f851b23754d49e46996e590e722e6100956abb440b9091f7464be6cb5e",
+    "episodes/repair-sonnet-163-full-wipe.json": "544ab571ba452826f491f7845ba08abe4bddb30134ffdd9b75c9fb9f353a24c5",
+    "preflight.py": "fe1dde2ae129a75ca2a6b17fe85bbe2276425c315fab2f4a758b6ab75f514dbb",
+    "qualification.json": "e46a9b7adace28c1766600f4b31707465d828e0b5e848d17fe0e41ca74b03537",
+    "report.py": "5b4134357951e3da0003392c4361824bbb8d8b891c6cdfa0ec33afd506036bd6",
+    "requests.jsonl": "2af55264c0ea9fafbc08d37a84ba24da33220ea4651a61989daa53cb888e7497",
+    "responses.jsonl": "2544c19c1afa748989d09016a486aca168673d5e71851ce98b3ac61ac9bb0241",
+    "source-hashes.json": "2ea1020d4706609fd7c720238be68f95f5ea113fe00ef036afba567b9abf8b38",
+    "test_transport.py": "fc2c5e36119c3d0bb0cdfc11ad06006cede7816286de5bd720e5676bb9ecc7e6",
+    "transport.py": "0283737aed37f70615802cefd87c306586804e006625b6abd91fd6c039d002ee"
+  },
+  "http_status_counts": {
+    "200": 1188
+  },
+  "input_tokens": 371227,
+  "last_response": "2026-10-04T22:58:45.385138+00:00",
+  "lineage_request_count": 1196,
+  "output_tokens": 4935,
+  "providers": {
+    "Claude Platform on AWS": 1188
+  },
+  "qualification": {
+    "assigned": 12,
+    "noncopy_sonnet_conflicts": 6,
+    "passed": true,
+    "results": [
+      {
+        "choice": 1,
+        "history": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "id": "q-sonnet-0",
+        "model": "sonnet",
+        "request_id": 1,
+        "tanh_p_original": 0.9959298622841039,
+        "unanimous": true,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": -1,
+        "history": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "id": "q-sonnet-1",
+        "model": "sonnet",
+        "request_id": 2,
+        "tanh_p_original": 0.010986942630593188,
+        "unanimous": true,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": 1,
+        "history": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "id": "q-sonnet-2",
+        "model": "sonnet",
+        "request_id": 3,
+        "tanh_p_original": 0.9859363729567545,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": -1,
+        "history": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "id": "q-sonnet-3",
+        "model": "sonnet",
+        "request_id": 4,
+        "tanh_p_original": 0.03732688734412948,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": 1,
+        "history": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "id": "q-sonnet-4",
+        "model": "sonnet",
+        "request_id": 5,
+        "tanh_p_original": 0.9525741268224333,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": -1,
+        "history": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "id": "q-sonnet-5",
+        "model": "sonnet",
+        "request_id": 6,
+        "tanh_p_original": 0.11920292202211757,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": 1,
+        "history": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "id": "q-sonnet-6",
+        "model": "sonnet",
+        "request_id": 7,
+        "tanh_p_original": 0.9924227587321393,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": -1,
+        "history": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "id": "q-sonnet-7",
+        "model": "sonnet",
+        "request_id": 8,
+        "tanh_p_original": 0.02033235334265876,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": 1,
+        "history": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "id": "q-opus-0",
+        "model": "opus",
+        "request_id": 9,
+        "tanh_p_original": 0.9959298622841039,
+        "unanimous": true,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": -1,
+        "history": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "id": "q-opus-1",
+        "model": "opus",
+        "request_id": 10,
+        "tanh_p_original": 0.010986942630593188,
+        "unanimous": true,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": 1,
+        "history": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "id": "q-opus-2",
+        "model": "opus",
+        "request_id": 11,
+        "tanh_p_original": 0.9859363729567545,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      },
+      {
+        "choice": -1,
+        "history": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "id": "q-opus-3",
+        "model": "opus",
+        "request_id": 12,
+        "tanh_p_original": 0.03732688734412948,
+        "unanimous": false,
+        "valid": true,
+        "words": {
+          "-1": "raven",
+          "1": "cedar"
+        }
+      }
+    ],
+    "valid": 12
+  },
+  "request_count": 1188,
+  "returned_models": {
+    "anthropic/claude-opus-5.5": 120,
+    "anthropic/claude-sonnet-5.5": 1068
+  },
+  "scripted_contrasts": {
+    "full-wipe-minus-removal": {
+      "interval": [
+        -0.5,
+        -0.16666666666666666
+      ],
+      "mean": -0.3333333333333333,
+      "root_differences": [
+        -0.5,
+        -0.16666666666666666,
+        -0.16666666666666666,
+        -0.5
+      ]
+    },
+    "short-minus-full-removal": {
+      "interval": [
+        -0.4166666666666667,
+        -0.08333333333333333
+      ],
+      "mean": -0.25,
+      "root_differences": [
+        -0.5,
+        -0.16666666666666666,
+        0.0,
+        -0.33333333333333337
+      ]
+    }
+  },
+  "scripted_reference": {
+    "1/removal": {
+      "delta_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": 0.0,
+      "mean_endpoint": 0.08333333333333333,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.18421052631578946
+    },
+    "1/wipe": {
+      "delta_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": 0.0,
+      "mean_endpoint": 0.08333333333333333,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.18421052631578946
+    },
+    "full/removal": {
+      "delta_interval": [
+        0.08333333333333333,
+        0.4166666666666667
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": 0.25,
+      "mean_endpoint": 0.3333333333333333,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.5,
+        0.16666666666666666,
+        0.0,
+        0.33333333333333337
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.4298245614035088
+    },
+    "full/wipe": {
+      "delta_interval": [
+        -0.16666666666666666,
+        0.0
+      ],
+      "mean_baseline": 0.08333333333333333,
+      "mean_delta": -0.08333333333333333,
+      "mean_endpoint": 0.0,
+      "n": 4,
+      "recovered": 0,
+      "root_deltas": [
+        0.0,
+        0.0,
+        -0.16666666666666666,
+        -0.16666666666666666
+      ],
+      "root_ids": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "switch_rate": 0.02631578947368421
+    }
+  },
+  "unreceipted_responses": 0,
+  "usage_receipts": 1188,
+  "valid_responses": 1186,
+  "verdict": "inconclusive: interval not contained in or disjoint from freeze band"
+}
