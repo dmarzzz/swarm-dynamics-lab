@@ -13,16 +13,16 @@
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
 | sync-consensus | 255 | 25 | 11 | 17 | 1 | 28 | 337 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
-| marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
-| llm-agent-swarms | 592 | 128 | 115 | 199 | 47 | 14 | 1095 |
+| marl-emergence | 161 | 60 | 1 | 33 | 2 | 13 | 270 |
+| llm-agent-swarms | 595 | 128 | 115 | 199 | 47 | 14 | 1098 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
 | fork-merge-security | 360 | 47 | 62 | 69 | 8 | 13 | 559 |
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
-| agent-budgets | 57 | 2 | 7 | 0 | 0 | 0 | 66 |
-| decision-models | 16 | 3 | 4 | 2 | 0 | 0 | 25 |
-| dissent | 5 | 0 | 0 | 0 | 0 | 0 | 5 |
+| agent-budgets | 58 | 2 | 7 | 0 | 0 | 0 | 67 |
+| decision-models | 18 | 3 | 4 | 2 | 0 | 0 | 27 |
+| dissent | 6 | 0 | 0 | 0 | 0 | 0 | 6 |
 
 ## Tasks
 
@@ -43,7 +43,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T15:59Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [pi-research-refresh-2026-10-04](tasks/pi-research-refresh-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:29Z | Refresh active-study research and actionable next decisions |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -203,6 +202,7 @@
 | [phantom-coast-pc6-screen](tasks/phantom-coast-pc6-screen.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T15:29Z | Qualify Phantom Coast action-consequence interface |
 | [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:51Z | Remove mandatory researcher review from owner experiment process |
 | [pi-cycle-2026-10-04](tasks/pi-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T15:37Z | Coordinate one evidence-led iteration across ten active studies |
+| [pi-research-refresh-2026-10-04](tasks/pi-research-refresh-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:34Z | Refresh active-study research and actionable next decisions |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
 | [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:00Z | Plan the next discussion benchmark diagnostic and offline orchestration |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | done | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:35Z | Design Poietic Agents from the self-differentiating swarm research |
@@ -284,13 +284,13 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | done | pi-research-refresh-2026-10-04 | 2026-10-04T16:33Z | Ten study plans refreshed from eight primary/engineering sources and two social reports; native runs remain gated. |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T16:20Z | S0-02 prepared and public plan verified;81 checks; awaiting current dispatch coordination |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:57Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
 | shadow/sol-audit-team | done | sol-audit-team | 2026-10-04T15:51Z | Completed frozen-PI delta, legacy gate probes, and exhaustive ready-chain inventory |
 | shadow/sol-factory | done |  | 2026-10-04T15:38Z | Factory build shipped; scientific queue blocked by pool unavailability and shared paid-key daily cap |
-| vishesh/codex-pi-review | done | pi-cycle-2026-10-04 | 2026-10-04T15:37Z | Ten-study analysis/preparation cycle reconciled; two scientific stops, eight native launches gated, explicit decisions pending. |
 | shadow/sol-timeline | done |  | 2026-10-04T15:36Z | Completed Wave 3 Project C offline census, figures and finding; zero model calls. |
 | shadow/sol-audit-gap | done | wild-delete-return | 2026-10-04T15:35Z | Completed evidence depth and bounded deletion-return null; full separate-code recompute, no scaling |
 | vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T15:32Z | A1 prepared and published; native dispatch blocked on queue295 compatibility |

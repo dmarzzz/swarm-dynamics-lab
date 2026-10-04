@@ -2,9 +2,9 @@
 
 # Library index
 
-3303 entries.
+3307 entries.
 
-## Papers (2083)
+## Papers (2087)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -538,6 +538,7 @@
 | [conitzer-2006-computing](papers/conitzer-2006-computing.md) | Computing the Optimal Strategy to Commit to | 2006 | 4 | skim | fork-merge-security, collective-decision | dmarz/fm |
 | [conitzer-2010-false-name-proofness](papers/conitzer-2010-false-name-proofness.md) | False-Name-Proofness in Social Networks | 2010 | 4 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [conradt-2003-group](papers/conradt-2003-group.md) | Group decision-making in animals | 2003 | 4 | abstract | collective-decision | dmarz/collective-decision |
+| [cook-2024-artificial](papers/cook-2024-artificial.md) | Artificial Generational Intelligence: Cultural Accumulation in Reinforcement Learning | 2024 | 4 | abstract | marl-emergence, llm-agent-swarms | vishesh/codex-pi-review |
 | [cordes-2024-dimensionless](papers/cordes-2024-dimensionless.md) | Dimensionless numbers reveal distinct regimes in the structure and dynamics of pedestrian crowds | 2024 | 4 | abstract | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
 | [cowden-2014-pioneering](papers/cowden-2014-pioneering.md) | A Pioneering Experiment: OSS Double-Agent Operations in World War II | 2014 | 4 | full | fork-merge-security | dmarz/fm |
 | [cresci-2017-paradigm](papers/cresci-2017-paradigm.md) | The paradigm-shift of social spambots: Evidence, theories, and tools for the arms race | 2017 | 4 | abstract | swarm-detection, sybil-resistance | dmarz/sd-bots |
@@ -586,6 +587,7 @@
 | [dolev-1986-reaching](papers/dolev-1986-reaching.md) | Reaching Approximate Agreement in the Presence of Faults | 1986 | 4 | skim | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
 | [dolezal-2026-impact](papers/dolezal-2026-impact.md) | The Impact of AI-Generated Text on the Internet | 2026 | 4 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [dong-2022-resilient](papers/dong-2022-resilient.md) | Resilient Consensus for Multi-Agent Systems in the Presence of Sybil Attacks | 2022 | 4 | skim | sybil-resistance, sync-consensus, swarm-robotics | shadow/sol-p2 |
+| [dong-2026-value](papers/dong-2026-value.md) | Value of Information: A Framework for Human-Agent Communication | 2026 | 4 | abstract | agent-budgets, decision-models | vishesh/codex-pi-review |
 | [dorigo-1997-ant](papers/dorigo-1997-ant.md) | Ant colony system: a cooperative learning approach to the traveling salesman problem | 1997 | 4 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
 | [dorigo-2004-ant](papers/dorigo-2004-ant.md) | Ant Colony Optimization | 2004 | 4 | abstract | swarm-intelligence, collective-decision | dmarz/swarm-intelligence |
 | [dorigo-2005-ant](papers/dorigo-2005-ant.md) | Ant colony optimization theory: a survey | 2005 | 4 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
@@ -690,6 +692,7 @@
 | [han-2026-conformity](papers/han-2026-conformity.md) | Conformity Dynamics in LLM Multi-Agent Systems: The Roles of Topology and Self-Social Weighting | 2026 | 4 | skim | llm-agent-swarms, sync-consensus, collective-decision | dmarz/llm-agent-swarms-audit |
 | [han-2026-science](papers/han-2026-science.md) | Science Edge Evaluation: SEE the Missing Step Toward Real Scientific Discovery | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [hanley-2023-machine](papers/hanley-2023-machine.md) | Machine-Made Media: Monitoring the Mobilization of Machine-Generated Articles on Misinformation and Mainstream News Websites | 2023 | 4 | abstract | swarm-detection | dmarz/sd-ai-content |
+| [hao-2026-not](papers/hao-2026-not.md) | Not All Flips Are Conformity: Decomposing Stance Convergence in Multi-Agent LLM Debate | 2026 | 4 | abstract | llm-agent-swarms, dissent | vishesh/codex-pi-review |
 | [hartnett-2016-heterogeneous](papers/hartnett-2016-heterogeneous.md) | Heterogeneous Preference and Local Nonlinearity in Consensus Decision Making | 2016 | 4 | abstract | collective-decision, criticality-measurement | dmarz/collective-decision |
 | [hashemi-2026-empirical](papers/hashemi-2026-empirical.md) | An Empirical Study of Collective Behaviors and Social Dynamics in Large Language Model Agents | 2026 | 4 | skim | llm-agent-swarms | shadow/sol-g51 |
 | [he-2025-learning](papers/he-2025-learning.md) | Learning Extremely High Density Crowds as Active Matters | 2025 | 4 | abstract | crowds-and-traffic, active-matter | dmarz/crowds-and-traffic |
@@ -730,6 +733,7 @@
 | [jansen-1999-mobile](papers/jansen-1999-mobile.md) | Mobile Agent Security | 1999 | 4 | skim | fork-merge-security | dmarz/fm-mobile-agents |
 | [janzen-2026-active](papers/janzen-2026-active.md) | Active matter as a framework for living systems-inspired Robophysics | 2026 | 4 | abstract | swarm-robotics, active-matter | dmarz/swarm-robotics |
 | [jarviniemi-2025-subversion](papers/jarviniemi-2025-subversion.md) | Subversion via Focal Points: Investigating Collusion in LLM Monitoring | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
+| [jha-2025-itbench](papers/jha-2025-itbench.md) | ITBench: Evaluating AI Agents across Diverse Real-World IT Automation Tasks | 2025 | 4 | abstract | llm-agent-swarms, decision-models | vishesh/codex-pi-review |
 | [jhawar-2020-noise](papers/jhawar-2020-noise.md) | Noise-induced schooling of fish | 2020 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion |
 | [ji-2026-genswarm](papers/ji-2026-genswarm.md) | GenSwarm: Scalable Multi-Robot Code-Policy Generation and Deployment via Language Models | 2026 | 4 | abstract | swarm-robotics, llm-agent-swarms | dmarz/swarm-robotics |
 | [jiang-2014-traffic](papers/jiang-2014-traffic.md) | Traffic Experiment Reveals the Nature of Car-Following | 2014 | 4 | skim | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
