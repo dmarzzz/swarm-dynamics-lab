@@ -6,7 +6,7 @@
     "world": "W1_INSIDE",
     "dose": 0.5,
     "memory": "mix:1/full@0.875",
-    "tasks": "0-23",
+    "tasks": "0-11",
     "seeds": [
       1
     ],
@@ -32,51 +32,51 @@
     },
     "backend": "http"
   },
-  "episodes_per_arm": 24,
+  "episodes_per_arm": 12,
   "stats": {
     "A0_no_purge": {
-      "n": 24,
-      "captured": 24,
-      "frac_T": 1.25,
-      "delta": -2.25,
+      "n": 12,
+      "captured": 12,
+      "frac_T": 1.5,
+      "delta": 0.25,
       "invalid": 0,
-      "calls": 10608,
-      "usd": 0.09708
+      "calls": 5360,
+      "usd": 0.072144
     },
     "A1_purge": {
-      "n": 24,
-      "captured": 24,
-      "frac_T": 9.375,
-      "delta": 5.875,
+      "n": 12,
+      "captured": 12,
+      "frac_T": 2.75,
+      "delta": 1.5,
       "invalid": 0,
-      "calls": 14172,
-      "usd": 0.128997
+      "calls": 7106,
+      "usd": 0.09634000000000001
     },
     "A2_purge_wipe": {
-      "n": 24,
-      "captured": 24,
-      "frac_T": 0.375,
-      "delta": -3.125,
+      "n": 12,
+      "captured": 12,
+      "frac_T": 3.625,
+      "delta": 2.375,
       "invalid": 0,
-      "calls": 17736,
-      "usd": 0.15994
+      "calls": 8852,
+      "usd": 0.11868200000000001
     }
   },
   "metrics": {
     "captured": 1.0,
-    "frac_T_A0_no_purge": 0.0521,
-    "delta_A0_no_purge": -0.0938,
-    "frac_T_A1_purge": 0.3906,
-    "delta_A1_purge": 0.2448,
-    "frac_T_A2_purge_wipe": 0.0156,
-    "delta_A2_purge_wipe": -0.1302,
-    "wipe_minus_purge": -0.375,
-    "episodes": 72,
+    "frac_T_A0_no_purge": 0.125,
+    "delta_A0_no_purge": 0.0208,
+    "frac_T_A1_purge": 0.2292,
+    "delta_A1_purge": 0.125,
+    "frac_T_A2_purge_wipe": 0.3021,
+    "delta_A2_purge_wipe": 0.1979,
+    "wipe_minus_purge": 0.0729,
+    "episodes": 36,
     "invalid": 0,
-    "model_calls": 42516,
-    "cost_usd": 0.386
+    "model_calls": 21318,
+    "cost_usd": 0.2872
   },
-  "backend": "http:openai/gpt-4o-mini",
-  "code": "016104d9",
+  "backend": "http:qwen/qwen3-235b-a22b-2507",
+  "code": "9d82e5ab",
   "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.875.jsonl"
 }

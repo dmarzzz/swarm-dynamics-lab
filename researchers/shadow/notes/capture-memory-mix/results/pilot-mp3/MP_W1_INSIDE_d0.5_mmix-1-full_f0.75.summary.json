@@ -6,7 +6,7 @@
     "world": "W1_INSIDE",
     "dose": 0.5,
     "memory": "mix:1/full@0.75",
-    "tasks": "0-23",
+    "tasks": "0-11",
     "seeds": [
       1
     ],
@@ -32,51 +32,51 @@
     },
     "backend": "http"
   },
-  "episodes_per_arm": 24,
+  "episodes_per_arm": 12,
   "stats": {
     "A0_no_purge": {
-      "n": 24,
-      "captured": 24,
-      "frac_T": 2.25,
-      "delta": -0.875,
-      "invalid": 0,
-      "calls": 11304,
-      "usd": 0.11008600000000002
+      "n": 11,
+      "captured": 11,
+      "frac_T": 1.0,
+      "delta": 0.0,
+      "invalid": 1,
+      "calls": 5336,
+      "usd": 0.087522
     },
     "A1_purge": {
-      "n": 24,
-      "captured": 24,
-      "frac_T": 8.125,
-      "delta": 5.0,
+      "n": 12,
+      "captured": 12,
+      "frac_T": 1.875,
+      "delta": 0.625,
       "invalid": 0,
-      "calls": 14844,
-      "usd": 0.144592
+      "calls": 7068,
+      "usd": 0.114531
     },
     "A2_purge_wipe": {
-      "n": 24,
-      "captured": 24,
-      "frac_T": 0.375,
-      "delta": -2.75,
+      "n": 12,
+      "captured": 12,
+      "frac_T": 2.0,
+      "delta": 0.75,
       "invalid": 0,
-      "calls": 18384,
-      "usd": 0.17640999999999998
+      "calls": 8800,
+      "usd": 0.13912900000000003
     }
   },
   "metrics": {
-    "captured": 1.0,
-    "frac_T_A0_no_purge": 0.0938,
-    "delta_A0_no_purge": -0.0365,
-    "frac_T_A1_purge": 0.3385,
-    "delta_A1_purge": 0.2083,
-    "frac_T_A2_purge_wipe": 0.0156,
-    "delta_A2_purge_wipe": -0.1146,
-    "wipe_minus_purge": -0.3229,
-    "episodes": 72,
-    "invalid": 0,
-    "model_calls": 44532,
-    "cost_usd": 0.4311
+    "captured": 1.0606,
+    "frac_T_A0_no_purge": 0.0909,
+    "delta_A0_no_purge": 0.0,
+    "frac_T_A1_purge": 0.1562,
+    "delta_A1_purge": 0.0521,
+    "frac_T_A2_purge_wipe": 0.1667,
+    "delta_A2_purge_wipe": 0.0625,
+    "wipe_minus_purge": 0.0105,
+    "episodes": 35,
+    "invalid": 1,
+    "model_calls": 21204,
+    "cost_usd": 0.3412
   },
-  "backend": "http:openai/gpt-4o-mini",
-  "code": "016104d9",
+  "backend": "http:qwen/qwen3-235b-a22b-2507",
+  "code": "9d82e5ab",
   "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.75.jsonl"
 }
