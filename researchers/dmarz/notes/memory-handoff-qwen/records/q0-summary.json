@@ -1,0 +1,116 @@
+{
+  "analyzed": 23,
+  "answered_calls": 23,
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0,
+  "continuation": null,
+  "cost_per_call_usd": 2.85e-05,
+  "cost_usd": 0.000647,
+  "elapsed_seconds": 6.564448081000592,
+  "episodes": 23,
+  "errors": [],
+  "experiment": "memory-handoff-qwen",
+  "failed": 0,
+  "failed_in_stage": 0,
+  "gate": {
+    "probe_row": "qa00-r5501-clean-content",
+    "qualification": {
+      "fixtures": 24,
+      "misses": [
+        "qa02-r5503-stale-content",
+        "qa03-r5504-copies-content",
+        "qa04-r5505-contradiction-content",
+        "qa10-r5505-contradiction-metadata",
+        "qa13-r5502-misquote-raw"
+      ],
+      "passed": false,
+      "supported": 19,
+      "valid": 24
+    }
+  },
+  "graded": 23,
+  "headline": {},
+  "initial_study_accounting": {
+    "actual_usd": 3.7e-05,
+    "attempted_calls": 1,
+    "calls_by_batch": {
+      "p0-001": 1
+    },
+    "calls_by_stage": {
+      "P0": 1
+    },
+    "cap_calls": 624,
+    "cap_transport_attempts": 800,
+    "cap_usd": 2,
+    "committed_usd": 3.7e-05,
+    "input_tokens": 1129,
+    "output_tokens": 26,
+    "reserved_usd": 0.002651,
+    "transport_attempts": 1,
+    "usage_reported_calls": 1,
+    "voided_calls": 0
+  },
+  "input_tokens": 20671,
+  "invalid": 0,
+  "invariants": null,
+  "max_failed": null,
+  "max_output_tokens_per_call": 44,
+  "model_calls": 23,
+  "not_started": 0,
+  "output_tokens": 561,
+  "params": {
+    "backend": "openrouter",
+    "batch": "q0-001",
+    "code": "0d54225c23238cf17022d9859da93c05ef2854ea",
+    "source_hash": "b4ab9025e2288c7c7f652e7d210371ab7818022acc1ee155801e4300b5044ba3",
+    "stage": "Q0"
+  },
+  "passed": false,
+  "planned": 23,
+  "qualification_passed": 0,
+  "reason": "qualification_failed",
+  "reporting_errors": [],
+  "request_bytes_max": 5064,
+  "resumable": false,
+  "retrieval_bytes": 8290,
+  "retrieval_count": 74,
+  "stage_units": {
+    "assigned": 23,
+    "completed": 23,
+    "failed": 0,
+    "not_started": 0
+  },
+  "started": 23,
+  "stop_reason": null,
+  "study_accounting": {
+    "actual_usd": 0.000684,
+    "attempted_calls": 24,
+    "calls_by_batch": {
+      "p0-001": 1,
+      "q0-001": 23
+    },
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 23
+    },
+    "cap_calls": 624,
+    "cap_transport_attempts": 800,
+    "cap_usd": 2,
+    "committed_usd": 0.000684,
+    "input_tokens": 21800,
+    "output_tokens": 587,
+    "reserved_usd": 0.058779,
+    "transport_attempts": 24,
+    "usage_reported_calls": 24,
+    "voided_calls": 0
+  },
+  "terminal": 23,
+  "tokens_per_byte_max": 0.26283570300157977,
+  "transport_attempts": 23,
+  "visualization": {
+    "mapping": "v1",
+    "replay_frames": 24
+  },
+  "voided_calls": 0
+}
