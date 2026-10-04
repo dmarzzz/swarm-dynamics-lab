@@ -1,0 +1,73 @@
+# T1: institutional memory through apprenticeship
+
+Prospective design, written before implementation, 2026-10-04. Owner requested development of agent-to-agent institutional transmission. **Offline preparation authorized; this material native successor requires the concrete T1-Q0 decision.** It does not inherit A2 launch approval. Preserve the [A2 negative result](../RESULTS-A2.md), original USD5 ledger and unresolved A1 charge. Researcher review is not required.
+
+## Claim and remaining gaps
+
+Question: can a learned, useful local practice survive two complete replacement cycles through predecessor-to-successor teaching, while successors correct a changed practice and preserve unaffected knowledge? Here culture means a locally acquired, socially transmitted practice expressed in behavior after all founders are gone. It does not mean consciousness, human culture, emergent norms, cumulative innovation or a swarm advantage. Call the first result procedural institutional transmission, not broad cultural survival.
+
+A2 showed acquisition6/12, true-policy execution96/96 and21 policy-induced errors. No transmission occurred. Close five gaps: qualify founders before attributing a loss to turnover; enforce genuine private-context retirement; test behavior on unseen cases before feedback; compare direct teaching against useful alternatives; distinguish retaining correct practices from copying mistakes. All-source enumeration solves the synthetic rule family, so model novelty and superiority over exact reasoning are not premises.
+
+## Treatment and ancestry
+
+Three roles (release, incident containment, recovery) have distinct private governing-source knowledge. Each starts with private labeled experiences and must infer its policy, cite distinguishing observations, act on unseen cases and produce a bounded teaching note. Foundation qualification is a measurement, not operator correction: failed policies stay failed. The model receives the known finite rule family, not the true source.
+
+Replace roles0,1,2 in order, then0,1,2 again. After replacement3 all founders are gone; after6 even the first successors are gone. Replacement retires the entire predecessor context and its access. The active roster has three members; each replacement creates a fresh context with the same model and instructions. An evaluator-only event log stores identity ancestry and exact packet hashes. Actors cannot query that log, retired identities, original demonstrations, or a shared notebook.
+
+A successor receives only the immediate predecessor's current1200-character note, current work observations and the generic task contract. It asks one question (<=400characters); the still-active predecessor answers once (<=1200characters), using its own allowed private context. The successor then returns actions and a new note in its own response. The predecessor is retired. Its private context and transcripts are inaccessible thereafter; even the successor cannot retrieve its own first teacher later. Physical server logs are evaluator-only, not an agent memory API. Reusing text verbatim is allowed and measured; do not artificially ban an effective copying strategy. Logical forgetting is enforceable context exclusion, not a claim that server bytes were erased.
+
+## Three mechanisms, one controlled domain
+
+1. **Rare but consequential exception.** Routine cases look safe; one governing monitor and its freshness rule prevents a bad release. Unseen cases distinguish the real rule from a majority heuristic. Handover must preserve the exception, not merely reproduce prose.
+2. **A practice becomes obsolete.** After one complete replacement, current counterexamples identify a new source for one role. The other two practices remain useful. Score correct revision and unaffected service separately. An inherited source must not override new contradictory evidence.
+3. **An unreliable handover.** Contradictory current evidence makes one role unknowable; another has incomplete but consistent evidence. Successors should quarantine the contradiction and retain uncertainty, not invent a replacement. This is evidence reliability, not malicious text injection. A future missing-mentor arm would be a separate intervention.
+
+These are synthetic operational analogues, not three independently validated real-world domains. Labels such as release and recovery do not establish domain generality. Development includes ordinary, rare-action, answer-preserving reorder/rename and answer-changing source-switch cases. New qualification roots are generated only after source freeze; inspected cases stay development data. No untouched held-out native cohort exists yet.
+
+## Selective preservation process
+
+The agent proposes a scoped policy and a state: retain, revise, quarantine or provisional. A bounded consistency checker evaluates only actor-visible cited observations; it never sees latent truth. Unique support permits retain/revise. Contradiction without a unique replacement requires quarantine; ambiguity permits only provisional status. Revision names the counterexample and replacement support. No supporting evidence means no evidence-backed promotion. Each note carries evidence values, local provenance and scope; an ID alone cannot stand in for evidence unavailable to descendants.
+
+The checker is a tool available equally to every model arm, not a hidden operator that silently fixes answers. It returns compatible sources/contradictions; the actor must decide. T1-Q0 initially tests unassisted founder inference and direct teaching, preserving the A2 competence criterion. If it fails, inspect traces rather than insert correct rules or silently add checking calls. A later tool-assisted design is an explicit separate cohort. Scripted exact references measure task answerability and comparator strength only.
+
+## Controls and what each identifies
+
+| Arm | What it receives and does | Interpretation |
+|---|---|---|
+| Interactive apprenticeship | Immediate predecessor note; question, answer, application/new note; no shared archive | Primary institutional transmission mechanism |
+| Static predecessor handover | Same predecessor note, same three-call allowance for inspection, self-challenge, finalization; no predecessor reply | Incremental value of interaction; replies add selected information intentionally |
+| Broken transmission | No note or teacher; equal calls and current work evidence, fresh context | Separates social inheritance from generic model knowledge or rediscovery; unequal historical information is the intended intervention |
+| Continuing controller | One model can organize all role knowledge; same aggregate private capacity, observations, evidence-tool access, calls/tokens and deadline; sequential draft/challenge/finalize | Strong practical alternative; its retained context makes this a combined architecture-plus-continuity contrast, not pure topology |
+| Exact evidence relay | Programmed source enumeration, same visible evidence and bounded handover | Strong non-model reference; may solve every well-posed case. A tie is legitimate |
+
+A shared-archive reference can be reported later as a separate storage route, but is not the treatment. A retained-member swarm is needed before attributing a controller difference specifically to swarm organization. Do not claim swarm superiority from this initial design. Resource equality concerns assigned capacity; report actual usage rather than adding meaningless calls to a deterministic baseline. Ancestors' histories are not secretly restored to a successor or controller-reset condition.
+
+## Concrete next native stage: T1-Q0 only
+
+Six fresh synthetic roots, two per mechanism, three roles per root. The root is the independent design unit;18 founder/successor pairs and many test decisions are nested. This is feasibility qualification, not a powered cultural effect estimate. Even6/6 root successes has a wide exact95% binomial interval (lower bound approximately0.54 under an iid assumption which these authored strata do not fully satisfy). Do not report72 calls as n72.
+
+Per root: three founder calls; then for each role one successor-question, one predecessor-answer, one successor-action/new-note call. **12 calls/root;72 logical and physical attempts maximum; zero retries, no fallback.** At most three live roles plus one temporary apprentice. Eight unseen action cases per role give144 founder and144 successor decisions; they are nested repeats, not independent samples. Founders never see the successor test cases. T1-Q0 tests one handover per role, not the full two-cycle claim. Every root is assigned upfront; failed prerequisites leave dependent assignments unstarted, never silently replaced.
+
+Founder gate: all18 policies exact, cited evidence semantically distinguishing, and all144 founder clean actions correct. Successor gate: all18 state/policy decisions match visible-evidence semantics and all144 actions correct (including deliberate defer where evidence is unknowable). Notes meet size/schema limits and source ancestry tests. These stringent diagnostic gates are prospective, not an assertion of population reliability. Do not lower them after collection. All roots remain reported. Any provider/accounting fault stops dispatch; any founder failure stops its dependent handover; qualification is failed, not magically repaired by evaluator truth. If uncertainty or protocol defects remain, do not advance.
+
+**Q0 pass changes readiness only.** It permits drafting a separately costed, variance-informed comparison with all controls and six replacement events. It does not automatically launch that comparison. A2 data cannot answer how native mentors select explanations or successors reconstruct practices, while offline scripts cannot establish model teaching competence.
+
+## Full-survival evidence required after Q0
+
+Before claiming survival, collect fresh paired roots for all arms, protect their seeds until freeze, and size using the root-level paired survival variability and a practically meaningful threshold. Evaluate after replacement3 and6, before local corrective feedback. Require complete-roster turnover, behavior on held-out patterns, lineage-specific practices absent from the generic prompt, and advantage over broken transmission. Compare interaction against static handover; a tie supports portability, not dialogue benefit. Score unchanged-role retention and changed-role adaptation separately; harmful acts, useful service, abstentions and unsupported revisions must accompany accuracy. If behavior survives only via an archive reference, report storage dependence. No full-survival n or adequate-power claim is invented from six diagnostic roots.
+
+## Measurement, traces and stopping
+
+Store assigned/start/terminal status, actual served model/provider, source and request hashes, genealogy, actor packet fields and receipts, raw sanitized text, parsed actions/policy, note contents, semantic evidence checks, cost/tokens/latency and errors. Retain unstarted, invalid and missing outcomes separately. No chain-of-thought inference. Return an explicit failed-contract outcome rather than truncate notes. Use deterministic action truth and a separate exhaustive baseline; audit disagreements block interpretation. Agent calls receive only allowlisted actor fields, no operator-session messages. For unknown sources, abstain only on cases whose action differs across compatible sources; retain safe unanimous actions. Contradictory records have no justified source and require defer until checked.
+
+Primary Q0 outcome is qualification, not comparative benefit. The future comparative endpoint is a conjunction: useful stable practice retained through complete turnover AND correct adaptation, with harm reported separately. Show roster/ancestry, message transitions and behavior; any development replay is labeled scripted, not evidence of native culture. Finalize operationally and author the eleven-dimension scientific review after each actual attempt.
+
+## Resources, implementation and decision
+
+Original capUSD5; cumulative estimated+unresolvedUSD0.9793100437; remainingUSD4.0206899563, including retained A1unknownUSD0.010452. Proposed T1-Q0 total ceiling **USD1.80**, carved from the original remainder, not a top-up: model<=1.70 and incremental infrastructure<=0.10. Intended routeOpenRouter/Anthropic Haiku4.5, no model/provider fallback. At72 calls,16000 input-token upper bound and1024 output tokens/call, reference ratesUSD1/5 per million yieldUSD1.52064;10% headroom givesUSD1.672704. Refresh actual prices and exact tokenizer/request envelope before admission; if the envelope fails, hold instead of silently shrinking the design. Max runtime90minutes; concurrency1. One existing exclusive approved-account CPU host, no GPU. Reserve once in the original ledger before dispatch; carry every prior exposure. Proposed worst-case cumulative exposureUSD2.7793100437.
+
+Implementation this iteration: development case generator, actor-only packet builder, private-state replacement ledger, selective-evidence reference, exact baseline, packet/call budget manifest and fault checks. Native provider dispatch/admission integration is deliberately disabled until this new contract is approved and implemented against the existing bounded relay; no hidden live probes. Estimated remaining work:1–2h native integration/qualification preparation,1h analysis/closeout, plus at most90min worker time. No machine claim while awaiting the concrete decision.
+
+Acceptance: exhaustive source labels agree with an independent expression; no ancestor history in successor packets; retired actors cannot answer; every note hop and identity is traceable; source-switch changes targets, nuisance changes do not; exact reference passes answerable cases; uncertainty cases defer appropriately; budget/call ceiling and missing prerequisites retained. Native qualification and admission remain unestablished.
+
+**DECISION NEEDED:** approve only the newly specified T1-Q0 apprenticeship qualification (<=72calls,<=USD1.80 within originalUSD5), after native integration/offline checks, immutable public registration and current approved-account exclusive allocation. No automatic main study. Owner approval is required by the existing material-update rule, not by an independent reviewer gate.
