@@ -17,7 +17,7 @@ class Test(unittest.TestCase):
  def test_schema(self):
   for a in self.aa:
    if a['arm']=='F':
-    s=a['request']['output_config']['format']['schema']['properties']['decisions'];self.assertEqual(s['minItems'],1);self.assertEqual(s['maxItems'],1);self.assertEqual(s['items']['properties']['id']['enum'],[a['cases'][0]['id']])
+    s=a['request']['output_config']['format']['schema']['properties']['decisions'];self.assertEqual(s['minItems'],1);self.assertNotIn('maxItems',s);self.assertEqual(s['items']['properties']['id']['enum'],[a['cases'][0]['id']])
  def test_oracles_and_failures(self):
   for a in self.aa:
    r=oracle(a);self.assertTrue(reference(a,r)[0]['correct']);self.assertTrue(d1.score(dict(a,arm='E'),r)['rows'][0]['correct'])
