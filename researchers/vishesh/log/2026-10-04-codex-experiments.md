@@ -13,3 +13,7 @@ Read PI follow-through and inbox updates. Implemented four fresh numeric qualifi
 ## Budget approval recorded
 
 User approved the pending up-to-USD-10 increase and said someone will review the dossier. Updated shared authority atomically from 45 to 55 with idempotent authorization; all reservations preserved. No model calls. Refreshed review task (still open) and fleet; old sim-dmarz-3 now claimed by another experiment. No claim or worker started while review pending. See scenario/BUDGET-AUTHORIZATION.md for exact launch sequence.
+
+## Dedicated machine resolved through local session history
+
+User directed checking existing sessions. Antsy history identified a released Dmarz fleet machine. Refreshed claims, checked processes and containers, exclusively claimed sim-test-01 (PR103), prepared isolated source/environment and passed all 24 scenario tests. Claim mirrored on hub. Prior sim-dmarz-3 workload untouched; no new cloud resource, no model calls. Review remains pending; claim expires 07:08:17 UTC.
