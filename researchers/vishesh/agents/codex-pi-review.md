@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: done
-task: launch-ready-studies-2026-10-04
-doing: Published actual native starts, terminal outcomes and exact remaining startup/capacity blockers; owning tasks retain closeout.
-updated: 2026-10-04T19:26Z
+state: working
+task: incorporate-external-study-review
+doing: Reconciling all ranked external review recommendations with current native evidence; preparing per-study proposals, no launches.
+updated: 2026-10-04T20:00Z
 ---
 
 ## Notes
 
-Owner-authorized direct scopes are recorded in AGENTS.md. This coordination record is not an admission receipt or a new budget allowance.
+Review incorporation does not authorize a material successor or change frozen runs.

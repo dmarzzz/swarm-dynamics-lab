@@ -84,3 +84,7 @@ Read the [full local results and limitations](local-agents/RESULTS.md), [origina
 ## PI next decision — 2026-10-04
 
 [Design disposition](DESIGN-TRANSFER.md): **analyze existing traces; park further saturated-dose collection**. Historical results and current launch authority remain separate.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

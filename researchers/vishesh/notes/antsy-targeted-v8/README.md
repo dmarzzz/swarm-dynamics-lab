@@ -52,3 +52,7 @@ The frozen Q0 ran on the existing team fleet after verified admission and runtim
 ## Latest: D1 latency diagnostic completed
 
 [D1 post-mortem](reviews/D1-latency-attempt-1-post.md):3valid calls,3unstarted after the larger receipt took46.25s. Its36.63s OCR phase dominated;the resulting candidate still abstained. The45s requirement was not relaxed;qualification remains closed. Full traces retained;no new charges;host released. [Native phase plot](results/D1-latency-attempt-1/final_frame.png).
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

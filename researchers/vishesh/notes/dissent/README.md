@@ -56,3 +56,7 @@ Exploratory Q0/Q1/S1/D1 cycle completed. The current evidence does not establish
 ## Design transfer — 2026-10-04
 
 [Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

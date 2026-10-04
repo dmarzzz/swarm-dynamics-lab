@@ -90,3 +90,7 @@ S0-a3 completed without execution failures, and both seed-bank and repair-dock v
 ## Qualified exploratory pilot — 2026-10-04 UTC
 
 S0-a4 passed all original competence thresholds on fresh seeds 106/107: 12/12 complete outcomes, 72 independently audited frames, and 1.0 verbatim task accuracy/convention in every scenario. The next preplanned S1-a1 comparison uses untouched seeds 200/201 and the exact qualified study/provider/model hashes. This permits exploratory execution only; it does not clear formal research gates or establish the culture result. See reviews/S0-a4-post.md and reviews/S1-a1-pre.md.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

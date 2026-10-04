@@ -84,3 +84,7 @@ The central decision after development is whether Poietic Agents adds enough bey
 ## Current diagnostic execution
 
 The owner has now directed the prepared D0-01 diagnostic. [Prospective plan](D0-01-PLAN.md) and [pre-run assessment](reviews/D0-01-pre.md) define the unchanged36-decision scope. Public artifacts are aggregates/frames/hashes; full traces stay private.106offline checks pass. One run follows current exclusive allocation, original-ledger and public-plan admission. Approval covers no automatic successor.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

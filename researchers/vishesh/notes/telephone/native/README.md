@@ -11,3 +11,7 @@ Prior prefixes touch all 51 goal windows. We therefore cannot label a goal-windo
 The existing cumulative USD2 remains the operative cap while an exact higher amount is unresolved. Both 72-call stages total at most USD1.548288 in model-token charges before infrastructure; actual ledger exposure and infrastructure reservations determine admission. There is no new allowance per stage.
 
 A0 is in the private central run queue with an exclusive host claim. It cannot be described as running until the central receiver starts and credential/admission checks pass. V0 cannot run merely because its packet exists: actual A0 semantic qualification, immutable V0 registration, source/runtime/transfer review and current allocation/budget checks remain mandatory. No researcher sign-off is required.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](../../ai-village-replay-2026-10-04/EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

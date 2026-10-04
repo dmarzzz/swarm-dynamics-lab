@@ -65,3 +65,13 @@ Apply [claim-scoping guidance](CLAIM-SCOPE.md) before implementation: identify t
 ## Evaluate the cases as well as the run
 
 Use [TEST-CASE-QUALITY.md](TEST-CASE-QUALITY.md) to assess answerability, labels, leakage, causal contrasts, realism, strong comparisons, independent units and holdout integrity. Record evidence and critical failures, not a blanket average score. Case readiness, native capability and run admission are separate determinations.
+
+## Mechanism checks from the external study review
+
+The [2026-10-04 recommendation dispositions](../../researchers/vishesh/notes/external-study-review-2026-10-04/README.md) give study-specific proposals and limits. Before adopting an older recommendation, read the linked current post-mortem. These checks refine existing rubric dimensions; they add no reviewer, launcher or universal sample-size gate.
+
+- **Can the treatment matter?** Audit actor-visible information, reachable actions, aggregation/tie-break rules and trigger rates. Demonstrate a treatment-sensitive case and an invariant control offline. Equal perfect-play answers do not prove equal model behavior; information and presentation effects are different questions.
+- **Where does the first error occur?** Separate received evidence, extraction, source support, policy judgment and executed outcome. Preserve transport/format/schema/semantic status independently. Correct final answers can conceal wrong intermediate facts.
+- **What is the strongest fair comparator?** Use the same available evidence and account for construction, selection, checking and coordination. Keep privileged truth as an oracle; do not handicap a deterministic baseline to create model headroom.
+- **What is actually replicated?** Count roots or independent episodes first, with families, actors, repeated calls and fields nested. Use matched differences, missingness and an uncertainty method justified by the sampling design. Do not turn a small negative finding into equivalence.
+- **Does a successor change a decision?** Diagnose from saved traces first. Preserve valid adverse results and completed gates; avoid collecting a larger version of an uninformative contrast. Use standing authority for necessary bounded diagnostics, and ordinary authority for broader studies or increased spending.

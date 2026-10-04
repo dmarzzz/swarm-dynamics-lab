@@ -60,3 +60,7 @@ See [issue closure](ISSUES.md), [test adequacy](TESTING.md) and [reproduction in
 [CORD primary repository](https://github.com/clovaai/cord) and [official dataset card](https://huggingface.co/datasets/naver-clova-ix/cord-v2), README/schema/license and split metadata checked; not a new full literature survey. CORD provides post-OCR parsing labels; Tesseract/policy performance here is measured by us, not claimed by the dataset authors. Existing biological quorum analogy remains motivation only: this is a decision-routing experiment, not an ant-colony replication.
 
 [Prospective lessons from Dmarz’s recent experiments](../antsy-targeted-v8/DESIGN-TRANSFER.md) inform the next design without changing this cohort or authorizing a new run.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](../antsy-targeted-v8/EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

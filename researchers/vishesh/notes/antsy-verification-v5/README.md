@@ -50,3 +50,7 @@ One fresh exclusive fleet allocation, maximum 10 minutes each D0/D1, CPU only, z
 ## Practical successor
 
 [NEXT-STUDY.md](NEXT-STUDY.md) specifies receipt intake, required-field scoring, abstention, measured checker costs, matched inference budgets and fresh vendor/layout splits. These application gates remain distinct from the completed estimator diagnostics.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

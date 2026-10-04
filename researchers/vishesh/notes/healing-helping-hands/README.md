@@ -106,3 +106,7 @@ The central-outage condition disconnects central clients while preserving the me
 
 
 [Prospective lessons from Dmarz’s recent experiments](c4/DESIGN-TRANSFER.md) inform the next design without changing this cohort or authorizing a new run.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

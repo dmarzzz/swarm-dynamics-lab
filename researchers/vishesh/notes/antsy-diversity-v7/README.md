@@ -19,3 +19,7 @@ Exploratory tool-worker study, not an LLM experiment or accepted hypothesis.
 Current result: **qualification failed; S1 not run.** The repaired run completed100/100 valid OCR calls on20 receipts. RapidOCR R0 got11/19 scorable totals correct; the best Tesseract variant got1/19, failing the minimum per-family competence gate. [Results and visual evidence](RESULTS.md) · [post-mortem](reviews/S0-repair-post.md) · [reusable diversity protocol](DIVERSITY-PROTOCOL.md).
 
 [Prospective lessons from Dmarz’s recent experiments](../antsy-targeted-v8/DESIGN-TRANSFER.md) inform the next design without changing this cohort or authorizing a new run.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](../antsy-targeted-v8/EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

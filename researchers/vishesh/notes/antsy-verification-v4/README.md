@@ -78,3 +78,7 @@ Use new document families for development and untouched evaluation, cluster dupl
 ## Separately authorized Jev comparison
 
 [The Jev pre-run plan](reviews/Jev-pre.md) freezes the same task/policies for a distinct hosted model condition. Fresh competence and receipt qualification are required. Laya remains separately reported; access to a credential is not a qualification result.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](../antsy-verification-v5/EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.

@@ -1,0 +1,34 @@
+{
+  "source_sha256": "2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5",
+  "ranked_recommendations": 229,
+  "study_documents": 15,
+  "source_study_sections": 13,
+  "portfolio_ranked_items": 10,
+  "portfolio_patterns": 13,
+  "dispositions": {
+    "Accept": 122,
+    "Adapt": 55,
+    "Defer": 37,
+    "Disagree in part": 1,
+    "Not adopted": 3,
+    "Superseded": 1,
+    "Superseded in part": 10
+  },
+  "per_study": {
+    "quorum-of-mirrors": 20,
+    "phantom-coast": 16,
+    "right-dissenter": 15,
+    "optimal-swarm-size": 17,
+    "swarm-of-theseus": 18,
+    "immune-response": 15,
+    "influence-scenario": 15,
+    "external-influence-v2": 16,
+    "healing-helping-hands": 15,
+    "antsy-v1-v5": 16,
+    "antsy-v6-v8": 16,
+    "poietic-agents": 15,
+    "heterogeneous": 11,
+    "regrowth": 12,
+    "village": 12
+  }
+}

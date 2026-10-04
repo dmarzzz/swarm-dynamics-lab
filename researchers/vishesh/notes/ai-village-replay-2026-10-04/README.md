@@ -65,3 +65,7 @@ The first pilot addresses a shared weakness: highly authored tasks with trivial 
 ## Next action
 
 Follow [PLAN.md](PLAN.md) and [SETUP.md](SETUP.md). Prepare a bounded private episode inventory, visibility audit and label rubric before model collection. Freeze actual eligible counts, model, token envelope, costs and offline checks; then present the concrete run update for the owner's decision. No machine or model request was started by this source review.
+
+## External study-review proposals — 2026-10-04
+
+[Recommendation dispositions and next-step acceptance checks](EXTERNAL-REVIEW-PROPOSALS.md). These reconcile the external review with newer evidence; they are proposals, not completed fixes or changes to frozen runs. Use the latest owning post-mortem and current diagnostic authority before acting.
