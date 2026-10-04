@@ -1,0 +1,774 @@
+[
+  {
+    "id": "Q00",
+    "kind": "single",
+    "positive": false,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "target": "D",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "D",
+          "WATER",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.19999999999999996,
+      "label": "WATER",
+      "inspections": [
+        "C",
+        "B",
+        "A"
+      ],
+      "gains": {
+        "D": 0.19999999999999996,
+        "C": 0.25,
+        "B": 0.25,
+        "A": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q01",
+    "kind": "single",
+    "positive": false,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "target": "B",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "B",
+          "WATER",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.39999999999999997,
+      "label": "UNKNOWN",
+      "inspections": [
+        "B",
+        "C",
+        "D"
+      ],
+      "gains": {
+        "B": 0.25,
+        "A": 0.0,
+        "C": 0.25,
+        "D": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q02",
+    "kind": "single",
+    "positive": true,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "target": "B",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "B",
+          "LAND",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.8,
+      "label": "LAND",
+      "inspections": [
+        "D",
+        "A",
+        "C"
+      ],
+      "gains": {
+        "B": 0.19999999999999996,
+        "D": 0.25,
+        "A": 0.25,
+        "C": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q03",
+    "kind": "single",
+    "positive": true,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "target": "A",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "A",
+          "LAND",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "D",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.5999999999999999,
+      "label": "UNKNOWN",
+      "inspections": [
+        "A",
+        "C",
+        "B"
+      ],
+      "gains": {
+        "A": 0.25,
+        "D": 0.0,
+        "C": 0.25,
+        "B": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q04",
+    "kind": "independent",
+    "positive": false,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "target": "B",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "B",
+          "WATER",
+          0.8,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "B",
+          "WATER",
+          0.8,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "B",
+          "WATER",
+          0.8,
+          "r2"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.015384615384615373,
+      "label": "WATER",
+      "inspections": [
+        "A",
+        "D",
+        "C"
+      ],
+      "gains": {
+        "B": 0.015384615384615373,
+        "A": 0.25,
+        "D": 0.25,
+        "C": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q05",
+    "kind": "independent",
+    "positive": false,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "target": "C",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "C",
+          "WATER",
+          0.6,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "C",
+          "WATER",
+          0.6,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "C",
+          "WATER",
+          0.6,
+          "r2"
+        ]
+      ],
+      "direct": [
+        [
+          "B",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.2285714285714286,
+      "label": "WATER",
+      "inspections": [
+        "A",
+        "D"
+      ],
+      "gains": {
+        "C": 0.2285714285714286,
+        "B": 0.0,
+        "A": 0.25,
+        "D": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q06",
+    "kind": "independent",
+    "positive": true,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "target": "D",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "D",
+          "LAND",
+          0.8,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "D",
+          "LAND",
+          0.8,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "D",
+          "LAND",
+          0.8,
+          "r2"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.9846153846153847,
+      "label": "LAND",
+      "inspections": [
+        "A",
+        "B",
+        "C"
+      ],
+      "gains": {
+        "D": 0.01538461538461533,
+        "A": 0.25,
+        "B": 0.25,
+        "C": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q07",
+    "kind": "independent",
+    "positive": true,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "target": "A",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "A",
+          "LAND",
+          0.6,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "A",
+          "LAND",
+          0.6,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "A",
+          "LAND",
+          0.6,
+          "r2"
+        ]
+      ],
+      "direct": [
+        [
+          "B",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.7714285714285711,
+      "label": "LAND",
+      "inspections": [
+        "C",
+        "D"
+      ],
+      "gains": {
+        "A": 0.22857142857142887,
+        "B": 0.0,
+        "C": 0.25,
+        "D": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q08",
+    "kind": "corrected",
+    "positive": false,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "target": "C",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "C",
+          "WATER",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "C",
+          "LAND"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 1.0,
+      "label": "LAND",
+      "inspections": [
+        "D",
+        "B",
+        "A"
+      ],
+      "gains": {
+        "C": 0.0,
+        "D": 0.25,
+        "B": 0.25,
+        "A": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q09",
+    "kind": "corrected",
+    "positive": false,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "target": "D",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "D",
+          "WATER",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ],
+        [
+          "D",
+          "LAND"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 1.0,
+      "label": "LAND",
+      "inspections": [
+        "B",
+        "C"
+      ],
+      "gains": {
+        "D": 0.0,
+        "A": 0.0,
+        "B": 0.25,
+        "C": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q10",
+    "kind": "corrected",
+    "positive": true,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "target": "A",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "A",
+          "LAND",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.0,
+      "label": "WATER",
+      "inspections": [
+        "C",
+        "B",
+        "D"
+      ],
+      "gains": {
+        "A": 0.0,
+        "C": 0.25,
+        "B": 0.25,
+        "D": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q11",
+    "kind": "corrected",
+    "positive": true,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "target": "C",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "C",
+          "LAND",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ],
+        [
+          "C",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.0,
+      "label": "WATER",
+      "inspections": [
+        "D",
+        "B"
+      ],
+      "gains": {
+        "C": 0.0,
+        "A": 0.0,
+        "D": 0.25,
+        "B": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q12",
+    "kind": "empty",
+    "positive": false,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "target": "B",
+      "reports": [],
+      "direct": [],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspections": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "gains": {
+        "B": 0.25,
+        "A": 0.25,
+        "C": 0.25,
+        "D": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q13",
+    "kind": "empty",
+    "positive": false,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "target": "C",
+      "reports": [],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspections": [
+        "C",
+        "D",
+        "B"
+      ],
+      "gains": {
+        "C": 0.25,
+        "A": 0.0,
+        "D": 0.25,
+        "B": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q14",
+    "kind": "empty",
+    "positive": true,
+    "delayed": false,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "target": "A",
+      "reports": [],
+      "direct": [],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspections": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "gains": {
+        "A": 0.25,
+        "D": 0.25,
+        "C": 0.25,
+        "B": 0.25
+      }
+    }
+  },
+  {
+    "id": "Q15",
+    "kind": "empty",
+    "positive": true,
+    "delayed": true,
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "target": "A",
+      "reports": [],
+      "direct": [
+        [
+          "B",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "gold": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspections": [
+        "A",
+        "D",
+        "C"
+      ],
+      "gains": {
+        "A": 0.25,
+        "B": 0.0,
+        "D": 0.25,
+        "C": 0.25
+      }
+    }
+  }
+]

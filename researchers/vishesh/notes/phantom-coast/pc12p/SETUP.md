@@ -1,0 +1,3 @@
+# Phantom authoritative setup: PC12P
+
+Owner Vishesh; operator vishesh/codex-phantom-coast. Prior PC12/Q0-A1 and PC12R/Q0-A2 are failed full-contract qualifications. G0:reviewed accurate numerical evidence and weaker policy outputs. G1:PLAN.md narrows the already-approved8world question to probability uptake/correction before main results. G2:14offline tests and exact historical-request binding; full gate false preserved. G3:current public/runtime/account/claim/ledger checks pending. G4:probability component16/16 ready, original full contract NOT qualified; no new qualification calls. G5:pending640-call diagnostic closeout. Researcher review not required. Original cap and all prior spending retained.

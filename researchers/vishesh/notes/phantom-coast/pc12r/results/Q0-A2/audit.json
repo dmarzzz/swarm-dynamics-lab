@@ -1,0 +1,20 @@
+{
+  "verified": true,
+  "assigned": 16,
+  "started": 16,
+  "valid": 16,
+  "qualification": {
+    "assigned": 16,
+    "valid": 16,
+    "passed_cases": 11,
+    "independent_gain": [
+      0.18461538461538463,
+      0.1714285714,
+      0.18461538461538463,
+      0.1714
+    ],
+    "qualification_passed": false
+  },
+  "diagnostic": null,
+  "bridge_digest_check_required": true
+}

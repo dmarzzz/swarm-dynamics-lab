@@ -1,0 +1,224 @@
+{
+  "attempt": "pc12-q0-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04",
+  "scientific_review": "complete",
+  "execution": "completed",
+  "qualification": "failed",
+  "diagnostic_dispatched": false,
+  "checks": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The positive-control gate was prospectively fixed; main repetition effect untested.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "16 sourced evidence cases cover two strengths, signs, independent corroboration, contradiction and ignorance; known authored templates.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Independent corroboration increased claim probability by.1714\u2013.1846; all probabilities correct.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Full qualification failed8/16:14labels and10inspection choices; expansion blocked.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ],
+      "next_action": "One prospectively registered explicit-contract diagnostic, unchanged criteria; preserve original failure.",
+      "acceptance_check": "Same16case paired comparison and full original conjunction must pass before conditional main stage."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All16 exact probabilities and choices independently rescored; categorical versus probability inconsistency retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "16 diagnostic templates, no population inference;640main decisions never launched.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Concise decision wording may have induced most-likely labels/target-focused inspection; causal explanation unresolved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ],
+      "next_action": "One prospectively registered explicit-contract diagnostic, unchanged criteria; preserve original failure.",
+      "acceptance_check": "Same16case paired comparison and full original conjunction must pass before conditional main stage."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "16started/returned/valid and consumer digests reconcile; no retry or missing calls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "New.009192, cumulative exposure1.202987490; original cap, ledger backup and fenced continuation retained; same allocation held for named repair.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source/runtime and audit reproduce all qualification scores.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "not_applicable",
+      "finding": "No main trajectory collected; full case-level table/records retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/Q0-A1-POST.md",
+          "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/audit.json",
+          "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc12/results/Q0-A1/summary.json",
+          "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933"
+        }
+      ]
+    }
+  ]
+}

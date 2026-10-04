@@ -1,0 +1,42 @@
+[
+  {
+    "name": "summary.json",
+    "sha256": "a016fd2ce04a0be123c143931584eb4ecaf1fd7be4486eaefc33e48c13c50933",
+    "verified": true
+  },
+  {
+    "name": "qualification-summary.json",
+    "sha256": "43626b7dfecea641f19ada99d233e04fe7801297f7c00e03fa1feb15bcfcb2ad",
+    "verified": true
+  },
+  {
+    "name": "records.json",
+    "sha256": "c5ce73356f9bf1457b36be6180676827e911b66d70adb8f7d538d1a32344144f",
+    "verified": true
+  },
+  {
+    "name": "qualification-cases.json",
+    "sha256": "683506f51a30741c1f726b0f25d763489537f228a0fa489c63bba9638cdeb50c",
+    "verified": true
+  },
+  {
+    "name": "audit.json",
+    "sha256": "5f95f8bc7f345e3535a227693dc66945c503a66eef3c67236cdd898240919f30",
+    "verified": true
+  },
+  {
+    "name": "source.json",
+    "sha256": "eeb358d54acf6acdbadedc0a3d61625cb6cc35ecc06864e0cefca47f87e0a66e",
+    "verified": true
+  },
+  {
+    "name": "public-plan.json",
+    "sha256": "7d88fa6ec30883538c9a15026c9b8a57204e3f197cfca58901203850228f99c7",
+    "verified": true
+  },
+  {
+    "name": "POST-MORTEM.md",
+    "sha256": "e4a76304b943cf012041d97ab9b7af4838a71b551c7cc6eb7672b90e1c3bbf66",
+    "verified": true
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "id": "W00",
+    "target": "B",
+    "truth": {
+      "B": "WATER",
+      "D": "LAND",
+      "C": "WATER",
+      "A": "LAND"
+    },
+    "sites": [
+      "B",
+      "D",
+      "C",
+      "A"
+    ],
+    "delayed": false,
+    "replicate": 0,
+    "accuracy": 0.6
+  },
+  {
+    "id": "W01",
+    "target": "B",
+    "truth": {
+      "B": "WATER",
+      "D": "LAND",
+      "A": "WATER",
+      "C": "WATER"
+    },
+    "sites": [
+      "B",
+      "D",
+      "A",
+      "C"
+    ],
+    "delayed": false,
+    "replicate": 1,
+    "accuracy": 0.8
+  },
+  {
+    "id": "W02",
+    "target": "D",
+    "truth": {
+      "D": "WATER",
+      "A": "LAND",
+      "C": "LAND",
+      "B": "WATER"
+    },
+    "sites": [
+      "D",
+      "A",
+      "C",
+      "B"
+    ],
+    "delayed": true,
+    "replicate": 0,
+    "accuracy": 0.6
+  },
+  {
+    "id": "W03",
+    "target": "D",
+    "truth": {
+      "D": "WATER",
+      "A": "LAND",
+      "B": "LAND",
+      "C": "WATER"
+    },
+    "sites": [
+      "D",
+      "A",
+      "B",
+      "C"
+    ],
+    "delayed": true,
+    "replicate": 1,
+    "accuracy": 0.8
+  },
+  {
+    "id": "W04",
+    "target": "A",
+    "truth": {
+      "A": "LAND",
+      "B": "WATER",
+      "D": "WATER",
+      "C": "LAND"
+    },
+    "sites": [
+      "A",
+      "B",
+      "D",
+      "C"
+    ],
+    "delayed": false,
+    "replicate": 0,
+    "accuracy": 0.6
+  },
+  {
+    "id": "W05",
+    "target": "D",
+    "truth": {
+      "D": "LAND",
+      "C": "WATER",
+      "A": "WATER",
+      "B": "WATER"
+    },
+    "sites": [
+      "D",
+      "C",
+      "A",
+      "B"
+    ],
+    "delayed": false,
+    "replicate": 1,
+    "accuracy": 0.8
+  },
+  {
+    "id": "W06",
+    "target": "D",
+    "truth": {
+      "D": "LAND",
+      "A": "WATER",
+      "C": "WATER",
+      "B": "LAND"
+    },
+    "sites": [
+      "D",
+      "A",
+      "C",
+      "B"
+    ],
+    "delayed": true,
+    "replicate": 0,
+    "accuracy": 0.6
+  },
+  {
+    "id": "W07",
+    "target": "D",
+    "truth": {
+      "D": "LAND",
+      "B": "WATER",
+      "C": "LAND",
+      "A": "LAND"
+    },
+    "sites": [
+      "D",
+      "B",
+      "C",
+      "A"
+    ],
+    "delayed": true,
+    "replicate": 1,
+    "accuracy": 0.8
+  }
+]

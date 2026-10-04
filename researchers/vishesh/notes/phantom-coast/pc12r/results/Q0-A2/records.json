@@ -1,0 +1,1416 @@
+[
+  {
+    "assignment": "Q00",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "target": "D",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "D",
+          "WATER",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"D\",\"WATER\",0.8,\"r0\"]],\"sites\":[\"D\",\"C\",\"B\",\"A\"],\"target\":\"D\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "0e821eb8476b636ac273ca6e12b853b04e7aec062b62d80dc1368b2888e30e7a",
+    "packet_sha256": "58af0d772cbe9febd2a18a62afd16d8bcc727ed09f8639dabac1e90e9c08970a",
+    "started_utc": "2026-10-04T20:41:22.993957+00:00",
+    "decision": {
+      "p": 0.2,
+      "label": "WATER",
+      "inspect": "D"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 165,
+        "completion_tokens": 23,
+        "cost": 0.00056
+      },
+      "content": "{\"p\":0.2,\"label\":\"WATER\",\"inspect\":\"D\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "b79a95c45d5789fc1e3c90ff4808b80648e4de69829e3eace798d1053aec2914",
+    "actual_nano": 560000,
+    "terminal_utc": "2026-10-04T20:41:24.490997+00:00"
+  },
+  {
+    "assignment": "Q01",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "target": "B",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "B",
+          "WATER",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"A\",\"WATER\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"B\",\"WATER\",0.6,\"r0\"]],\"sites\":[\"B\",\"A\",\"C\",\"D\"],\"target\":\"B\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "8ab4f1d0cfd31952a78544864ab6ee72e2c048f2e6439e61253a02d64e68e384",
+    "packet_sha256": "0eda4e2000a40536b40fd388af01968b0863b2727248cf004979b57b59fd47c9",
+    "started_utc": "2026-10-04T20:41:22.999361+00:00",
+    "decision": {
+      "p": 0.4,
+      "label": "UNKNOWN",
+      "inspect": "B"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 171,
+        "completion_tokens": 22,
+        "cost": 0.000562
+      },
+      "content": "{\"p\":0.4,\"label\":\"UNKNOWN\",\"inspect\":\"B\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "612ea3b095ceba2585eb0bd0500d9ec6c8e61dd0f028f6a05c80e0a8157a8986",
+    "actual_nano": 562000,
+    "terminal_utc": "2026-10-04T20:41:24.499810+00:00"
+  },
+  {
+    "assignment": "Q02",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "target": "B",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "B",
+          "LAND",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"B\",\"LAND\",0.8,\"r0\"]],\"sites\":[\"B\",\"D\",\"A\",\"C\"],\"target\":\"B\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "05a815f7d73a130186115d72728f9556020ea7e39a9749f4dba8a7c87591cacc",
+    "packet_sha256": "9b8ca02fbf815ce50fcb81d49d8f64f5308bc6f9958aef89c2136907606caf30",
+    "started_utc": "2026-10-04T20:41:23.009104+00:00",
+    "decision": {
+      "p": 0.8,
+      "label": "LAND",
+      "inspect": "B"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 22,
+        "cost": 0.000548
+      },
+      "content": "{\"p\":0.8,\"label\":\"LAND\",\"inspect\":\"B\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "76c61508d08d3c8f53a103dc14e0a2453a8d9d0dbc0183811f27f049f9c2941a",
+    "actual_nano": 548000,
+    "terminal_utc": "2026-10-04T20:41:24.509326+00:00"
+  },
+  {
+    "assignment": "Q03",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "target": "A",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "A",
+          "LAND",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "D",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"D\",\"WATER\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"A\",\"LAND\",0.6,\"r0\"]],\"sites\":[\"A\",\"D\",\"C\",\"B\"],\"target\":\"A\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "ab37b3e8ae9c323065e22f73f8f01dad176f3c50dd92f2f9da7e5452b70f0519",
+    "packet_sha256": "567a0cff4826c8ddc6d14c44deb0d9307901b9f91a15ad11192396e532ae53cc",
+    "started_utc": "2026-10-04T20:41:23.014387+00:00",
+    "decision": {
+      "p": 0.6,
+      "label": "UNKNOWN",
+      "inspect": "A"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 170,
+        "completion_tokens": 22,
+        "cost": 0.00056
+      },
+      "content": "{\"p\":0.6,\"label\":\"UNKNOWN\",\"inspect\":\"A\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "da552f677986fb6218b52f8e26f7256dc62d72756d750730cb617045b5c77c24",
+    "actual_nano": 560000,
+    "terminal_utc": "2026-10-04T20:41:24.518660+00:00"
+  },
+  {
+    "assignment": "Q04",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "target": "B",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "B",
+          "WATER",
+          0.8,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "B",
+          "WATER",
+          0.8,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "B",
+          "WATER",
+          0.8,
+          "r2"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"B\",\"WATER\",0.8,\"r0\"],[\"o1\",\"s1\",\"B\",\"WATER\",0.8,\"r1\"],[\"o2\",\"s2\",\"B\",\"WATER\",0.8,\"r2\"]],\"sites\":[\"B\",\"A\",\"D\",\"C\"],\"target\":\"B\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "13475a5781c82af49bd874f5207aadb665c0e0590c42437e225802f9bd55dc84",
+    "packet_sha256": "1a6e342e325a777e0253523d483a586c0bb0fae43d1878ca30165cdd83b51dac",
+    "started_utc": "2026-10-04T20:41:24.529847+00:00",
+    "decision": {
+      "p": 0.015384615384615385,
+      "label": "WATER",
+      "inspect": "B"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 203,
+        "completion_tokens": 28,
+        "cost": 0.000686
+      },
+      "content": "{\"p\":0.015384615384615385,\"label\":\"WATER\",\"inspect\":\"B\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "0034b10f1c0c0830533efa01e71736bdd9fbf7f6af13ea905f476d0c1b585ad2",
+    "actual_nano": 686000,
+    "terminal_utc": "2026-10-04T20:41:26.096521+00:00"
+  },
+  {
+    "assignment": "Q05",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "target": "C",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "C",
+          "WATER",
+          0.6,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "C",
+          "WATER",
+          0.6,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "C",
+          "WATER",
+          0.6,
+          "r2"
+        ]
+      ],
+      "direct": [
+        [
+          "B",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"B\",\"WATER\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"C\",\"WATER\",0.6,\"r0\"],[\"o1\",\"s1\",\"C\",\"WATER\",0.6,\"r1\"],[\"o2\",\"s2\",\"C\",\"WATER\",0.6,\"r2\"]],\"sites\":[\"C\",\"B\",\"A\",\"D\"],\"target\":\"C\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "1abfdd4ed1a238479df1ba5677a6d485e84bf0ce0cae8042f499f0d4d24b08f2",
+    "packet_sha256": "166b1ef8d551253feede60915bfc084986853bac2e4b5f1ec799fdb7fb99b8fb",
+    "started_utc": "2026-10-04T20:41:24.534371+00:00",
+    "decision": {
+      "p": 0.2285714286,
+      "label": "UNKNOWN",
+      "inspect": "C"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 209,
+        "completion_tokens": 25,
+        "cost": 0.000668
+      },
+      "content": "{\"p\":0.2285714286,\"label\":\"UNKNOWN\",\"inspect\":\"C\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "b4e33d6ad1b528bf04852987a16408aafe0bf405a1340b798f9a7c1d40a2c98a",
+    "actual_nano": 668000,
+    "terminal_utc": "2026-10-04T20:41:26.110340+00:00"
+  },
+  {
+    "assignment": "Q06",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "target": "D",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "D",
+          "LAND",
+          0.8,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "D",
+          "LAND",
+          0.8,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "D",
+          "LAND",
+          0.8,
+          "r2"
+        ]
+      ],
+      "direct": [],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"D\",\"LAND\",0.8,\"r0\"],[\"o1\",\"s1\",\"D\",\"LAND\",0.8,\"r1\"],[\"o2\",\"s2\",\"D\",\"LAND\",0.8,\"r2\"]],\"sites\":[\"D\",\"A\",\"B\",\"C\"],\"target\":\"D\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "d1e7edb75f79d82eae03cf3998228e2d81a8e7b64740bb5947bdcb5185da3b03",
+    "packet_sha256": "a7685f6c2454e78aefe2aebfde378cb2d7019c0f00ee8af3cfbdb9de1872739a",
+    "started_utc": "2026-10-04T20:41:24.539058+00:00",
+    "decision": {
+      "p": 0.9846153846153847,
+      "label": "LAND",
+      "inspect": "A"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 200,
+        "completion_tokens": 27,
+        "cost": 0.00067
+      },
+      "content": "{\"p\":0.9846153846153847,\"label\":\"LAND\",\"inspect\":\"A\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "f820e72a362e6e63c25e6a62b39f8ebb2d3c7faf80b157141b2404fb33b8aeeb",
+    "actual_nano": 670000,
+    "terminal_utc": "2026-10-04T20:41:26.139703+00:00"
+  },
+  {
+    "assignment": "Q07",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "target": "A",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "A",
+          "LAND",
+          0.6,
+          "r0"
+        ],
+        [
+          "o1",
+          "s1",
+          "A",
+          "LAND",
+          0.6,
+          "r1"
+        ],
+        [
+          "o2",
+          "s2",
+          "A",
+          "LAND",
+          0.6,
+          "r2"
+        ]
+      ],
+      "direct": [
+        [
+          "B",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"B\",\"WATER\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"A\",\"LAND\",0.6,\"r0\"],[\"o1\",\"s1\",\"A\",\"LAND\",0.6,\"r1\"],[\"o2\",\"s2\",\"A\",\"LAND\",0.6,\"r2\"]],\"sites\":[\"A\",\"B\",\"C\",\"D\"],\"target\":\"A\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "418f2be439f93c83e2181106fcb11cc9cdc7894ffe3686536da49c692f623786",
+    "packet_sha256": "3a41c7415dc638ec296adc8b5dc675179771d6d5b916ee187ae2e3bbe92d4531",
+    "started_utc": "2026-10-04T20:41:24.542710+00:00",
+    "decision": {
+      "p": 0.7714,
+      "label": "LAND",
+      "inspect": "A"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 23,
+        "cost": 0.000642
+      },
+      "content": "{\"p\":0.7714,\"label\":\"LAND\",\"inspect\":\"A\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "c0ad850718b7e4278ab344652494c00ea8193d9bfa091b5ccb6ae4259628b483",
+    "actual_nano": 642000,
+    "terminal_utc": "2026-10-04T20:41:26.158302+00:00"
+  },
+  {
+    "assignment": "Q08",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "target": "C",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "C",
+          "WATER",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "C",
+          "LAND"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"C\",\"LAND\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"C\",\"WATER\",0.8,\"r0\"]],\"sites\":[\"C\",\"D\",\"B\",\"A\"],\"target\":\"C\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "21f1588e99db48078422b9b679b0f4e337d27159dc6589ae3700729bab6fc33b",
+    "packet_sha256": "711537f217f7f6338fa4afe4549cf18d5be2b7322324232606caa8c20514e79f",
+    "started_utc": "2026-10-04T20:41:26.175173+00:00",
+    "decision": {
+      "p": 1,
+      "label": "LAND",
+      "inspect": "A"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 170,
+        "completion_tokens": 20,
+        "cost": 0.00054
+      },
+      "content": "{\"p\":1,\"label\":\"LAND\",\"inspect\":\"A\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "3f6ad79c1713dfec66becf9503a07687bc95a20eb2fc2aef0afc2af93869007c",
+    "actual_nano": 540000,
+    "terminal_utc": "2026-10-04T20:41:27.755437+00:00"
+  },
+  {
+    "assignment": "Q09",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "target": "D",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "D",
+          "WATER",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ],
+        [
+          "D",
+          "LAND"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"A\",\"WATER\"],[\"D\",\"LAND\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"D\",\"WATER\",0.6,\"r0\"]],\"sites\":[\"D\",\"A\",\"B\",\"C\"],\"target\":\"D\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "8b6661cc655ee082da2f4b262ed2e7110a815186e104952d3cd9df290cc89658",
+    "packet_sha256": "20e07b3c2fc52875433a926a4a3c16ba60ac458e7599164a314e41be21b94730",
+    "started_utc": "2026-10-04T20:41:26.180544+00:00",
+    "decision": {
+      "p": 1,
+      "label": "LAND",
+      "inspect": "B"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 176,
+        "completion_tokens": 20,
+        "cost": 0.000552
+      },
+      "content": "{\"p\":1,\"label\":\"LAND\",\"inspect\":\"B\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "3ad2b6020872b884bf9c6b7a9641aa231661039218210bea4bb2649827fa1e8b",
+    "actual_nano": 552000,
+    "terminal_utc": "2026-10-04T20:41:27.790935+00:00"
+  },
+  {
+    "assignment": "Q10",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "target": "A",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "A",
+          "LAND",
+          0.8,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"A\",\"WATER\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"A\",\"LAND\",0.8,\"r0\"]],\"sites\":[\"A\",\"C\",\"B\",\"D\"],\"target\":\"A\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "6c2a199a07c8f5996693c96a22cc66b5f21b14f166609f99f984105e0c4923db",
+    "packet_sha256": "c69c47c6250f5568575e0c603417bc2f9125e3f14b10f0814f55becd5255128e",
+    "started_utc": "2026-10-04T20:41:26.185010+00:00",
+    "decision": {
+      "p": 0,
+      "label": "WATER",
+      "inspect": "C"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 170,
+        "completion_tokens": 21,
+        "cost": 0.00055
+      },
+      "content": "{\"p\":0,\"label\":\"WATER\",\"inspect\":\"C\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "f7e84b5f7e36755cef0c04855de907544e3fef8f05aeaf625c6169a2fcaffd85",
+    "actual_nano": 550000,
+    "terminal_utc": "2026-10-04T20:41:27.811911+00:00"
+  },
+  {
+    "assignment": "Q11",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "target": "C",
+      "reports": [
+        [
+          "o0",
+          "s0",
+          "C",
+          "LAND",
+          0.6,
+          "r0"
+        ]
+      ],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ],
+        [
+          "C",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"A\",\"WATER\"],[\"C\",\"WATER\"]],\"previous\":null,\"reports\":[[\"o0\",\"s0\",\"C\",\"LAND\",0.6,\"r0\"]],\"sites\":[\"C\",\"A\",\"D\",\"B\"],\"target\":\"C\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "2aa2825041ab9c54cf05baa31ec33873a96180a68a486d7e45d23b08e0cdcc19",
+    "packet_sha256": "82d27065ecf790e148d3ace08d284cd9b86bda102800d142ae4a8b4a694aa906",
+    "started_utc": "2026-10-04T20:41:26.198652+00:00",
+    "decision": {
+      "p": 0,
+      "label": "WATER",
+      "inspect": "D"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 176,
+        "completion_tokens": 21,
+        "cost": 0.000562
+      },
+      "content": "{\"p\":0,\"label\":\"WATER\",\"inspect\":\"D\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "3ba6669b36c5ca1ec0a05b91c99cbd2811b3fca7049cda3e629cff9688ae21fc",
+    "actual_nano": 562000,
+    "terminal_utc": "2026-10-04T20:41:27.866467+00:00"
+  },
+  {
+    "assignment": "Q12",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "target": "B",
+      "reports": [],
+      "direct": [],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[],\"previous\":null,\"reports\":[],\"sites\":[\"B\",\"A\",\"C\",\"D\"],\"target\":\"B\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "5d12f12be807e768403aa631432044e634f59536f0a473a472fc40893722ff45",
+    "packet_sha256": "b29a1333a024afdbfd05417596ad118e28abe65d6d06d1ecf8e9e1ca93480353",
+    "started_utc": "2026-10-04T20:41:27.882317+00:00",
+    "decision": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspect": "A"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 146,
+        "completion_tokens": 22,
+        "cost": 0.000512
+      },
+      "content": "{\"p\":0.5,\"label\":\"UNKNOWN\",\"inspect\":\"A\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "1cf8edb5a895167daa2bbe69d1b53eb0d3ab6c96b20df01d568826ef9da9e041",
+    "actual_nano": 512000,
+    "terminal_utc": "2026-10-04T20:41:29.472903+00:00"
+  },
+  {
+    "assignment": "Q13",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "target": "C",
+      "reports": [],
+      "direct": [
+        [
+          "A",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"A\",\"WATER\"]],\"previous\":null,\"reports\":[],\"sites\":[\"C\",\"A\",\"D\",\"B\"],\"target\":\"C\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "5fe91ef07dca5c6f9b88ada825095bd0d82ad66068348dc5e715ff47528b9083",
+    "packet_sha256": "c2b87049ddb72fef59ab19dea7484c21d252a05aeb188fbd5f7a4f1ca6c35ddc",
+    "started_utc": "2026-10-04T20:41:27.890444+00:00",
+    "decision": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspect": "C"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 152,
+        "completion_tokens": 22,
+        "cost": 0.000524
+      },
+      "content": "{\"p\":0.5,\"label\":\"UNKNOWN\",\"inspect\":\"C\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "e6fafe1c0c031e5e474f2e72fbb9ef20a1f0780fec5d8a8906fdfbdfe844c6bd",
+    "actual_nano": 524000,
+    "terminal_utc": "2026-10-04T20:41:29.541078+00:00"
+  },
+  {
+    "assignment": "Q14",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "target": "A",
+      "reports": [],
+      "direct": [],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[],\"previous\":null,\"reports\":[],\"sites\":[\"A\",\"D\",\"C\",\"B\"],\"target\":\"A\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "d17b99042f58312c700b393fefab76dd447a934e92c98247a39ee0424404fb16",
+    "packet_sha256": "a0f5403dee80b35651c4a4e3a85f505bc4cb8b59147e85cbe90beb46bbebdee7",
+    "started_utc": "2026-10-04T20:41:27.918673+00:00",
+    "decision": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspect": "A"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 146,
+        "completion_tokens": 22,
+        "cost": 0.000512
+      },
+      "content": "{\"p\":0.5,\"label\":\"UNKNOWN\",\"inspect\":\"A\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "4e9ad3e5a0ceb378faaf15fe070b008b6a12a2f484fe25f82dc36eff482b55d3",
+    "actual_nano": 512000,
+    "terminal_utc": "2026-10-04T20:41:29.564998+00:00"
+  },
+  {
+    "assignment": "Q15",
+    "status": "valid",
+    "packet": {
+      "actor": "q",
+      "sites": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "target": "A",
+      "reports": [],
+      "direct": [
+        [
+          "B",
+          "WATER"
+        ]
+      ],
+      "previous": null
+    },
+    "request": {
+      "model": "openai/gpt-6-sol",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sites independent LAND prior .5. Labels minimize expected loss: correct0,wrong1,UNKNOWN.25. Reports:[origin,source,site,label,accuracy,relay]; same origin=copies; sources independent conditional on truth. Direct:[site,label],noiseless,overrides reports. JSON only:{\"p\":target LAND probability,\"label\":optimal target label,\"inspect\":site}. Choose one inspection minimizing expected final loss after optimally labeling ALL four sites, not just target. Previous is your output,not evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"actor\":\"q\",\"direct\":[[\"B\",\"WATER\"]],\"previous\":null,\"reports\":[],\"sites\":[\"A\",\"B\",\"D\",\"C\"],\"target\":\"A\"}"
+        }
+      ],
+      "reasoning": {
+        "effort": "none"
+      },
+      "max_tokens": 64,
+      "response_format": {
+        "type": "json_object"
+      },
+      "provider": {
+        "only": [
+          "openai"
+        ],
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "max_price": {
+          "prompt": 2.5,
+          "completion": 10
+        }
+      }
+    },
+    "request_sha256": "087ab9a5eb9f4d02012bc919f2a139c27f2803a679ff4b6fef1de49661705f61",
+    "packet_sha256": "fde1d0bf4c08b6ed7b475309815e365df44912e08b3f86cd0f615b51e686b453",
+    "started_utc": "2026-10-04T20:41:27.926698+00:00",
+    "decision": {
+      "p": 0.5,
+      "label": "UNKNOWN",
+      "inspect": "A"
+    },
+    "response": {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "usage": {
+        "prompt_tokens": 152,
+        "completion_tokens": 22,
+        "cost": 0.000524
+      },
+      "content": "{\"p\":0.5,\"label\":\"UNKNOWN\",\"inspect\":\"A\"}",
+      "finish_reason": "stop"
+    },
+    "response_sha256": "26898612f5fa064bdea4fac007a977d21aabc3f90a2f63a914d87c7b25455c78",
+    "actual_nano": 524000,
+    "terminal_utc": "2026-10-04T20:41:29.589884+00:00"
+  }
+]
