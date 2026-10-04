@@ -3660,17 +3660,17 @@
         "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "bd030126cd1a021674facfc9b9e1be7ebd8ab9538d6dc6e78b45f1bdc875429d",
         "researchers/vishesh/notes/dissent/reopening/OPERATOR.md": "e44f3b5164dec4e0eae6b96826faf2560ff18ca5bbf4a655f22c8bfa81beade6",
         "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "615132a91be6c25ed5258625ad0508b34d6058760d3a447bf0e7d8ea1425faf6",
-        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md": "1ee069429bacfd50b96d5bb4c34caac69b56916a6c5c590e44d11db48a1054bf",
+        "researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md": "fd39f702038c3be5dbdd7895555a2f0b3b6f3e9f178eba80a6f92af3e6a621bb",
         "researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md": "2d4843c9cb1e38a883b7cfaee7b281d8beb0b6108daa05775f18058761be63a5",
         "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md": "4089b1e8a34d55d81f04f55930c6e175884af5dad281eee9b1d02807cd24a7fa",
         "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-QUALITY.json": "0e23f666619584e63ad1bba2f99ad9f916a8ec97f88b6497b1b9e55f85da36e6",
         "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/summary.json": "56a1650e0c8c1101900c8f6a5d505fb803010d2175efa95cd89b8e6508ae0139",
         "researchers/vishesh/notes/dissent/reopening/results/q0-a1-startup/resources.json": "ef94c4bf2388704cd5ab43d2fdf80dab15e0962e0926dda5b7a5fbdba9660a93"
       },
-      "status_at_assessment": "q0_a1_zero_dispatch_closed_offline_repair_ready_replacement_decision_pending",
+      "status_at_assessment": "q0_a2_replacement_contract_approved_current_admission_in_preparation",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "94e8e39f33324b5e18211115097b4f06aa9e2c3f"
+      "source_commit": "8715052e8dd51dc4bf0d01b7c51b9b7f2c006b1e"
     },
     {
       "id": "phantom-coast-pc9",

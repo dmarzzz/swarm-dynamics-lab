@@ -35,9 +35,9 @@
       "setup_path": "researchers/vishesh/notes/dissent/rd5/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:43:56.765250+00:00",
-      "checked_commit": "94e8e39f33324b5e18211115097b4f06aa9e2c3f",
-      "next_action": "HOLD: RD6 Q0-A1 closed with0provider calls/18unstarted; D0 unrun. Original488calls/USD0.022699069 API retained, workers stopped and allocations released. Read reopening/STARTUP-REPAIR.md and Q0-A1 post-mortem. Native startup repair passes88offline checks; one explicit zero-dispatch Q0-A2 replacement requires its corresponding owner decision and fresh admission within original20:40:02UTC stop and cumulative infrastructure envelope. No automatic retry, fence deletion or RD5 relaunch.",
+      "checked_at": "2026-10-04T19:50:26.348454+00:00",
+      "checked_commit": "8715052e8dd51dc4bf0d01b7c51b9b7f2c006b1e",
+      "next_action": "Direct owner approval recorded for exact published Q0-A1 to Q0-A2 zero-dispatch replacement and conditional D0. Fresh native admission in preparation; original488calls/USD0.022699069 API, original20:40:02Z deadline and cumulative infrastructure envelope preserved. No automatic retry. See reopening/RUN-STATUS.md and STARTUP-REPAIR.md.",
       "next_run_approval": "owner"
     },
     {

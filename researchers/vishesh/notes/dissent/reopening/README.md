@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `94e8e39f` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `8715052e` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Effects of history, opposing ballots, clock translation and evidence age on Jev interpretation remain untested in this new controlled matrix. Basis: Q0-A1 stopped during startup with zero provider requests; all18qualification assignments remain unstarted and D0 is unrun. The original ledger, failed attempt, operational finalize and eleven-dimension owning review are retained. Startup repairs pass88offline checks with the162request manifest unchanged. No native effect or qualification is established.
 - **sample_size_summary:** Observed native: none. Planned D0: 12 authored cases in six shared families/three grammars x six conditions x two repeats = 144 dependent requests; separate Q0 has 18 requests. No independent field sample or held-out generalization evaluation.
