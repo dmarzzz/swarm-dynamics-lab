@@ -10,9 +10,9 @@ replace_steps: [1, 2, 3]
 change_step: 4
 cases_per_step: 4
 stages:
-  S0: {seeds: [102, 103], arms: [founders, verbatim]}
+  S0: {seeds: [104, 105], arms: [founders, verbatim]}
   S1: {seeds: [200, 201], arms: [neither, notes, mentor, both, founders, verbatim]}
 holdout: {sealed: true, seed_range: [10000, 19999]}
 primary_contrast: both-minus-neither
 primary_endpoint: mean-collective-accuracy-steps-4-5
-budget: {usd: 12, calls: 1152, workers: 3, max_wall_seconds: 7200}
+budget: {usd: 12, calls: 1728, workers: 3, max_wall_seconds: 7200}

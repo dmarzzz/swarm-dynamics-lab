@@ -22,7 +22,7 @@ class ExactPolicy:
                 roots={x['root']:x['signal'] for x in c['reports']};bit=int(sum(roots.values())>len(roots)/2)
             else:bit=c['assay'][0]^c['assay'][1]
             answers.append(labels[bit])
-        return {'answers':answers,'convention':norm[-1] if norm else '', 'notebook':text[:600]}
+        return {'work':[{'case_id':c['id'],'evidence':[],'result':0,'label':a} for c,a in zip(o['cases'],answers)],'convention':norm[-1] if norm else '', 'notebook':text[:600]}
 
 class StudyTests(unittest.TestCase):
     def test_positive_controls_all_scenarios(self):
@@ -70,7 +70,7 @@ class StudyTests(unittest.TestCase):
         self.assertEqual(evaluate(w,0,wrong)['convention'],1)
         self.assertIsNone(majority(['a','b','c']))
     def test_malformed_and_total_call_count(self):
-        with self.assertRaises(ValueError):validate_solve({'answers':['x']})
+        with self.assertRaises(ValueError):validate_solve({'answers':['x']},[])
         events=[];run_world(world('seed-bank',22),'both',ExactPolicy(),events.append)
         self.assertEqual(sum(e['kind']=='request' for e in events),24)
     def test_preflight_fails_closed(self):
