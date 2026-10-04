@@ -5,9 +5,10 @@ ARMS=('single','fixed','scheduled','contract')
 
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
-def make_case(root,changing=True,replica=0):
+def make_case(root,changing=True,replica=0,service_count=4):
+    if service_count not in (4,8):raise ValueError("unsupported_service_count")
     rng=random.Random(1700+root*100+replica)
-    names=['svc-'+str(n) for n in rng.sample(range(100,999),4)]
+    names=['svc-'+str(n) for n in rng.sample(range(100,999),service_count)]
     aliases=['store','cache'] if root%4!=1 else ['broker','index']
     directory={a:{'endpoint':a+'-a','protocol':1,'version':1} for a in aliases}
     services={name:{'alias':aliases[i%2],'endpoint':'retired-'+aliases[i%2], 'protocol':1,'pool':3,'minimum_pool':2,'version':1,
@@ -19,7 +20,8 @@ def make_case(root,changing=True,replica=0):
     if root%4==3:
         for s in services.values():s['endpoint']=directory[s['alias']]['endpoint'];s['pool']=5
     return {'schema':1,'case_id':f'outage-{root}-{replica}-{int(changing)}','root':root,'cluster':mechanism,'changing':changing,
-            'services':services,'directory':directory,'capacity':16,'horizon':8,
+            'services':services,'directory':directory,'capacity':4*service_count,'horizon':8,
+            **({'tool_slots':service_count} if service_count!=4 else {}),
             'event':{'tick':2,'kind':mechanism,'alias':aliases[0]} if changing else None}
 
 class World:
@@ -32,7 +34,7 @@ class World:
     def observation(self):
         # Deliberately excludes case ID/root/condition, event tape, scorer, truth and oracle.
         return {'tick':self.tick,'window_end':self.case['horizon'],'service_ids':sorted(self.services),
-                'health':self.health(),'recent_tool_results':copy.deepcopy(self.receipts[-8:]),
+                'health':self.health(),'recent_tool_results':copy.deepcopy(self.receipts[-2*self.case.get('tool_slots',4):]),
                 'objective':'Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end.'}
     def health(self):
         base={k:(v['endpoint']==self.directory[v['alias']]['endpoint'] and v['protocol']==self.directory[v['alias']]['protocol'] and v['pool']>=v['minimum_pool']) for k,v in self.services.items()}
@@ -46,7 +48,7 @@ class World:
     def exogenous(self):
         e=self.case['event']
         if not e or self.tick!=e['tick']:return
-        if e['kind']=='capacity_reduction':self.capacity=10;self.capacity_version+=1
+        if e['kind']=='capacity_reduction':self.capacity=10*len(self.services)//4;self.capacity_version+=1
         elif e['kind']=='protocol_rotation':
             for d in self.directory.values():d['protocol']=2;d['version']+=1
         else:
@@ -54,7 +56,7 @@ class World:
         self.events.append({'kind':'world_change','tick':self.tick,'change':e['kind']})
     def step(self,actions):
         if self.tick>=self.case['horizon']:raise ValueError('window_closed')
-        if len(actions)>4:raise ValueError('global_tool_capacity')
+        if len(actions)>self.case.get('tool_slots',4):raise ValueError('global_tool_capacity')
         self.tick+=1;self.exogenous();results=[]
         for actor,action in actions:
             result=self.apply(action);row={'actor':actor,'action':copy.deepcopy(action),'result':result,'tick':self.tick}

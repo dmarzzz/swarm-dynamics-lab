@@ -17,23 +17,24 @@ SCHEMA=object_schema({'actions':{'type':'array','items':{'anyOf':[
         'set':object_schema({'endpoint':{'type':'string'},'protocol':{'type':'integer'},'pool':{'type':'integer'}})})
 ]}}})
 
-def payload(messages):
+def payload(messages,max_tokens=512):
     return convert({'model':MODEL,'system':'\n\n'.join(m['content'] for m in messages if m['role']=='system'),
-        'messages':[m for m in messages if m['role']!='system'],'max_tokens':512,'temperature':0,'stream':False,'service_tier':'standard_only',
+        'messages':[m for m in messages if m['role']!='system'],'max_tokens':max_tokens,'temperature':0,'stream':False,'service_tier':'standard_only',
         'output_config':{'format':{'type':'json_schema','schema':SCHEMA}}})
 
 class Native:
-    def __init__(self,bank,episode,journal,expiry,stop=None):
+    def __init__(self,bank,episode,journal,expiry,stop=None,*,max_tokens=512,max_bytes=12000,quote=QUOTE,episode_cap=850000):
+        self.max_tokens=max_tokens;self.max_bytes=max_bytes;self.quote=quote;self.episode_cap=episode_cap
         self.bank=bank;self.episode=episode;self.journal=journal;self.expiry=expiry
         self.stop=stop or threading.Event();self.lock=threading.Lock()
     def __call__(self,messages,actor,tick):
-        body=payload(messages);encoded=json.dumps(body).encode();call=f'{self.episode}/{tick}/{actor}'
-        if len(encoded)>12000:raise SafeFailure('prompt_limit')
+        body=payload(messages,self.max_tokens);encoded=json.dumps(body).encode();call=f'{self.episode}/{tick}/{actor}'
+        if len(encoded)>self.max_bytes:raise SafeFailure('prompt_limit')
         if time.time()+120>=self.expiry:raise SafeFailure('claim_expired')
         with self.lock:
             if self.stop.is_set():raise SafeFailure('sequence_stopped')
-            self.bank.reserve(call,self.episode,QUOTE,850000)
-        self.journal({'kind':'request_context','call':call,'serialized_request':encoded.decode(),'bytes':len(encoded),'sha256':hashlib.sha256(encoded).hexdigest(),'maximum_microdollars':QUOTE})
+            self.bank.reserve(call,self.episode,self.quote,self.episode_cap)
+        self.journal({'kind':'request_context','call':call,'serialized_request':encoded.decode(),'bytes':len(encoded),'sha256':hashlib.sha256(encoded).hexdigest(),'maximum_microdollars':self.quote})
         ctx=multiprocessing.get_context('spawn');parent,child=ctx.Pipe(duplex=False)
         proc=ctx.Process(target=request_child,args=(child,body|{'_call_id':call},110),daemon=True)
         try:
