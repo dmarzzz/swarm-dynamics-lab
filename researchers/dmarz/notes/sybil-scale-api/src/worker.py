@@ -13,14 +13,17 @@ def execute(p,out,run=None,backend=None):
     assert p['source_hash']==study.source_hash(),'runtime_source_mismatch'
     assert p['backend']==('scripted' if p['stage']=='S0' else 'anthropic')
     out=Path(out);out.mkdir(parents=True,exist_ok=False)
-    assigned=study.assignments(p['stage'],out);total=len(assigned)
+    start=time.monotonic()
+    def preparing(n,task):
+        if run:run.progress(0,1,episodes=0,message=f'Preparing recorded inputs: N={n}, world={task}')
+    assigned=study.assignments(p['stage'],out,preparing);total=len(assigned)
     with gzip.open(out/'assignments.jsonl.gz','wt') as f:
         for a in assigned:f.write(json.dumps(a,sort_keys=True)+'\n')
     ledger=None
     if p['backend']=='anthropic':
         path=os.environ.get('SYBIL_API_BUDGET_LEDGER');assert path,'persistent_budget_required'
         ledger=provider.Ledger(path);backend=backend or provider.Anthropic(ledger)
-    initial=ledger.transact() if ledger else {};start=time.monotonic();rows=[];stopped=False;reporting_errors=[]
+    initial=ledger.transact() if ledger else {};rows=[];stopped=False;reporting_errors=[]
     render.frame([],total,p['stage'],accounting=initial).save(out/'initial_frame.png')
     if run:upload(run,out/'initial_frame.png')
     def solve(a):

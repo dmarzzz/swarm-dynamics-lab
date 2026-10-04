@@ -19,8 +19,10 @@ World is assignment/analysis cluster; same-world policies, sizes and badge modes
 
 ## Frozen execution plan
 
-Source/config/model/prompt fingerprints recorded by worker. Source inherited from experiment-worker and owned parent API transport, prompt unchanged; native model disabled for S0. Eight unit/regression tests passed, including exact anchor, connectivity, blindness, fail-closed ledger, missing/failure visuals and disjoint splits. Private launcher setup <commit>, then S0, exclusively claimed sim-dmarz-4. One scripted executor, <=4h, zero spend. No retry; any failure preserves denominator. Scripted qualification, counts, graph audit and renderer must pass before fleet execution. A defect gets new attempt and post-mortem, not overwritten output.
+Source/config/model/prompt fingerprints recorded by worker. Source inherited from experiment-worker and owned parent API transport, prompt unchanged; native model disabled for S0. Nine unit/regression tests passed, including exact anchor, connectivity, blindness, fail-closed ledger, missing/failure visuals and disjoint splits. Private launcher setup <commit>, then S0, exclusively claimed sim-dmarz-4. One scripted executor, <=4h, zero spend. No retry; any failure preserves denominator. Scripted qualification, counts, graph audit and renderer must pass before fleet execution. A defect gets new attempt and post-mortem, not overwritten output.
 
 ## Visualization mapping
 
 VISUALIZATION.md v1 binds every row and run. 1800x1200 curves, visible and hidden badges, accuracy and attacker-seat panels. PNG initial/progress/final and <=33-frame measured-prefix GIF; raw completion records and graphs retained. Empty and failed traces render in unit tests. Inspect initial/final/GIF numerically and visually after run. No graph positions or hidden identity ownership in actor packets.
+
+Preflight audit: assignment construction can be lengthy at972identities. Worker now emits preparation heartbeats and includes generation in elapsed time, preventing a false stale lease. Tie draws are memoized without changing values; original anchor equality remains required. Concurrent injected-failure test confirms at most4 starts and explicit remaining not-started rows.

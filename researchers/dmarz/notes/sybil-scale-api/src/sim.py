@@ -7,6 +7,7 @@ import json
 import math
 import random
 from collections import Counter
+from functools import lru_cache
 
 ARMS = ('no_verification', 'degree', 'random', 'coverage')
 
@@ -89,11 +90,16 @@ def rank(public, passed, failed, cfg):
     return sorted(active,key=lambda x:(-scores[x],x)),scores
 
 
+@lru_cache(maxsize=200000)
+def tie_value(task, step, node):
+    return rng(task,'tie',step,node).random()
+
+
 def select_check(public, arm, passed, failed, checked, task, step):
     candidates=sorted(set(public['nodes'])-set(public['trusted'])-set(checked))
     if not candidates: return None
     adj=public['adj']
-    tie={x:rng(task,'tie',step,x).random() for x in candidates}
+    tie={x:tie_value(task,step,x) for x in candidates}
     if arm=='random': return max(candidates,key=lambda x:tie[x])
     if arm=='degree': return max(candidates,key=lambda x:(len(adj[x]),tie[x]))
     if arm=='coverage':

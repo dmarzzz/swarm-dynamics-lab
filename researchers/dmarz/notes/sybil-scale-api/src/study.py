@@ -50,11 +50,12 @@ def cfg_for(n):
     return cfg
 
 
-def assignments(stage, out=None):
+def assignments(stage, out=None, heartbeat=None):
     import gzip
     d=design(); rows=[]
     worlds_log=gzip.open(out/'worlds.jsonl.gz','wt') if out else None
     def remember(world,n,rate,kind):
+        if heartbeat: heartbeat(n,world['task'])
         if worlds_log: worlds_log.write(json.dumps({'n':n,'rate':rate,'kind':kind,'world':world},sort_keys=True)+'\n')
     def add(world,n,arm,checks,visibility,kind,admitted,passed,checked,events):
         pack=packet(world,admitted,passed,visibility,arm)
