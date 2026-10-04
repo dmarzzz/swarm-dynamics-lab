@@ -1,0 +1,146 @@
+[
+  {
+    "id": "bea-q1",
+    "published": "2024-05-30",
+    "url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-first-quarter-2024-second-estimate-and-corporate-profits",
+    "resolved_url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-first-quarter-2024-second-estimate-and-corporate-profits",
+    "retrieved_utc": "2026-10-04T21:19:08.883132+00:00",
+    "raw_sha256": "16013f38d5374886502da4f8aa5d7c6fa1ad2777611da2976d3f3ff1d389bee0",
+    "normalized_text_sha256": "c5260cb04c0f4435140b1a933bfa228ac1bd2d5860c4abd6cc8bb85d32cb3c79",
+    "text_length": 16115,
+    "publisher": "BEA",
+    "capture": "direct normalized HTML text",
+    "excerpt": "Real gross domestic product (GDP) increased at an annual rate of 1.3 percent in the first quarter of 2024 (table 1), according to the \"second\" estimate released by the Bureau of Economic Analysis. In the fourth quarter of 2023, real GDP increased 3.4 percent. The GDP estimate released today is based on more complete source data than were available for the \"advance\" estimate issued last month. In the advance estimate, the increase in real GDP was 1.6 percent.",
+    "excerpt_sha256": "3ae741077764b368db86f62a087a97e0da3d1655e0c75800241c8ec2e07add9b",
+    "normalized_span": [
+      1652,
+      2114
+    ],
+    "reuse_policy": "https://www.bea.gov/help/faq/145",
+    "rights": "US government textual material; public domain, source attribution retained"
+  },
+  {
+    "id": "bea-q2",
+    "published": "2024-08-29",
+    "url": "https://www.bea.gov/news/2024/gross-domestic-product-second-estimate-corporate-profits-preliminary-estimate-second",
+    "resolved_url": "https://www.bea.gov/news/2024/gross-domestic-product-second-estimate-corporate-profits-preliminary-estimate-second",
+    "retrieved_utc": "2026-10-04T21:19:09.390018+00:00",
+    "raw_sha256": "b7727510f7738229aac63600d920ecbb7c5c2ddf0a0e6617d175e9ab99a73e72",
+    "normalized_text_sha256": "434ab36fa0e8182872fbd74cabf9e43981b52d2be0607d2448fdb411ffdb2b8b",
+    "text_length": 15813,
+    "publisher": "BEA",
+    "capture": "direct normalized HTML text",
+    "excerpt": "Real gross domestic product (GDP) increased at an annual rate of 3.0 percent in the second quarter of 2024 (table 1), according to the \"second\" estimate released by the U.S. Bureau of Economic Analysis. In the first quarter, real GDP increased 1.4 percent. The GDP estimate released today is based on more complete source data than were available for the \"advance\" estimate issued last month. In the advance estimate, the increase in real GDP was 2.8 percent.",
+    "excerpt_sha256": "22b1ec188009f65afa1162828688a1c6b733b37c5652fa0cab300520e734e9a1",
+    "normalized_span": [
+      1676,
+      2135
+    ],
+    "reuse_policy": "https://www.bea.gov/help/faq/145",
+    "rights": "US government textual material; public domain, source attribution retained"
+  },
+  {
+    "id": "bea-q3",
+    "published": "2024-12-19",
+    "url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-third-estimate-corporate-profits-revised-estimate-and-gdp-1",
+    "resolved_url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-third-estimate-corporate-profits-revised-estimate-and-gdp-1",
+    "retrieved_utc": "2026-10-04T21:19:09.885674+00:00",
+    "raw_sha256": "039ef925d12c7c79bd22bb13d52e270c002411d2c3f9afdc7dedaafe431d5e38",
+    "normalized_text_sha256": "8ede73c56bba6ed4582c10118b6359309b837d6ad6970c860976a9148eca0aae",
+    "text_length": 17364,
+    "publisher": "BEA",
+    "capture": "direct normalized HTML text",
+    "excerpt": "Real gross domestic product (GDP) increased at an annual rate of 3.1 percent in the third quarter of 2024 (table 1), according to the \"third\" estimate released by the U.S. Bureau of Economic Analysis. In the second quarter, real GDP increased 3.0 percent. The GDP estimate released today is based on more complete source data than were available for the \"second\" estimate issued last month. In the second estimate, the increase in real GDP was 2.8 percent.",
+    "excerpt_sha256": "e6c5a13c1f08cef2b4e071bc0af26fec13eccc8c7326e157acfdc61289e9712d",
+    "normalized_span": [
+      1723,
+      2179
+    ],
+    "reuse_policy": "https://www.bea.gov/help/faq/145",
+    "rights": "US government textual material; public domain, source attribution retained"
+  },
+  {
+    "id": "bls-feb",
+    "published": "2024-02-02",
+    "publisher": "BLS",
+    "url": "https://www.bls.gov/news.release/archives/empsit_02022024.htm",
+    "retrieved_utc": "2026-10-04T21:20:49.316781+00:00",
+    "capture": "web tool line-rendered extraction; direct HTTP403 recorded",
+    "raw_sha256": null,
+    "web_extraction_sha256": "01b8e964315813e328c80fb23e6d9310744ac0ca263068a21336be9c4d8480d7",
+    "excerpt": "Total nonfarm payroll employment rose by 353,000 in January, and the unemployment rate remained at 3.7 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for November was revised up by 9,000, from +173,000 to +182,000, and the change for December was revised up by 117,000, from +216,000 to +333,000. With these revisions, employment in November and December combined is 126,000 higher than previously reported. (Monthly revisions result from additional reports received from businesses and government agencies since the last published estimates and from the recalculation of seasonal factors. The annual benchmark process also contributed to the November and December revisions.)\n\nThis news release presents statistics from two monthly surveys. The household survey measures labor force status, including unemployment, by demographic characteristics. The establishment survey measures nonfarm employment, hours, and earnings by industry. For more information about the concepts and statistical methodology used in these two surveys, see the Technical Note.",
+    "excerpt_sha256": "7beaf4f9f377ca3f46888fa354e95e45ff0a7e12195338d5f9b62655c0151c75",
+    "line_spans": [
+      [
+        196,
+        199
+      ],
+      [
+        321,
+        328
+      ],
+      [
+        200,
+        205
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm",
+    "rights": "US government text only, no logo/photo; public domain with BLS attribution"
+  },
+  {
+    "id": "bls-mar",
+    "published": "2024-03-08",
+    "publisher": "BLS",
+    "url": "https://www.bls.gov/news.release/archives/empsit_03082024.htm",
+    "retrieved_utc": "2026-10-04T21:20:49.317229+00:00",
+    "capture": "web tool line-rendered extraction; direct HTTP403 recorded",
+    "raw_sha256": null,
+    "web_extraction_sha256": "270e64e4754d36b7baa15008bcbcf2e88c655b570db6769e57ab1a6d7f2de721",
+    "excerpt": "Total nonfarm payroll employment rose by 275,000 in February, and the unemployment rate increased to 3.9 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for December was revised down by 43,000, from +333,000 to +290,000, and the change for January was revised down by 124,000, from +353,000 to +229,000. With these revisions, employment in December and January combined is 167,000 lower than previously reported. (Monthly revisions result from additional reports received from businesses and government agencies since the last published estimates and from the recalculation of seasonal factors.) \n\n This news release presents statistics from two monthly surveys. The household survey measures labor force status, including unemployment, by demographic characteristics. The establishment survey measures nonfarm employment, hours, and earnings by industry. For more information about the concepts and statistical methodology used in these two surveys, see the Technical Note.",
+    "excerpt_sha256": "d983686f56f5201eee582cad0a2ec2732bf2fa89ca0ee9973bd9cd961b4cf461",
+    "line_spans": [
+      [
+        196,
+        199
+      ],
+      [
+        303,
+        309
+      ],
+      [
+        200,
+        205
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm",
+    "rights": "US government text only, no logo/photo; public domain with BLS attribution"
+  },
+  {
+    "id": "bls-apr",
+    "published": "2024-04-05",
+    "publisher": "BLS",
+    "url": "https://www.bls.gov/news.release/archives/empsit_04052024.htm",
+    "retrieved_utc": "2026-10-04T21:20:49.317590+00:00",
+    "capture": "web tool line-rendered extraction; direct HTTP403 recorded",
+    "raw_sha256": null,
+    "web_extraction_sha256": "76a2f520f5538fbe5b270a8eeae39a5b45dcf318b6eff44cb2a3cd0e87cc913b",
+    "excerpt": "Total nonfarm payroll employment rose by 303,000 in March, and the unemployment rate changed little at 3.8 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for January was revised up by 27,000, from +229,000 to +256,000, and the change for February was revised down by 5,000, from +275,000 to +270,000. With these revisions, employment in January and February combined is 22,000 higher than previously reported. (Monthly revisions result from additional reports received from businesses and government agencies since the last published estimates and from the recalculation of seasonal factors.)\n\nThis news release presents statistics from two monthly surveys. The household survey measures labor force status, including unemployment, by demographic characteristics. The establishment survey measures nonfarm employment, hours, and earnings by industry. For more information about the concepts and statistical methodology used in these two surveys, see the Technical Note. ",
+    "excerpt_sha256": "c01403adb8a23084bf150807286f49a1c331eb656c3985e78abae0217c876b11",
+    "line_spans": [
+      [
+        196,
+        199
+      ],
+      [
+        289,
+        294
+      ],
+      [
+        200,
+        205
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm",
+    "rights": "US government text only, no logo/photo; public domain with BLS attribution"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bea-q1",
+    "published": "2024-05-30",
+    "url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-first-quarter-2024-second-estimate-and-corporate-profits",
+    "resolved_url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-first-quarter-2024-second-estimate-and-corporate-profits",
+    "retrieved_utc": "2026-10-04T21:19:08.883132+00:00",
+    "raw_sha256": "16013f38d5374886502da4f8aa5d7c6fa1ad2777611da2976d3f3ff1d389bee0",
+    "normalized_text_sha256": "c5260cb04c0f4435140b1a933bfa228ac1bd2d5860c4abd6cc8bb85d32cb3c79",
+    "text_length": 16115
+  },
+  {
+    "id": "bea-q2",
+    "published": "2024-08-29",
+    "url": "https://www.bea.gov/news/2024/gross-domestic-product-second-estimate-corporate-profits-preliminary-estimate-second",
+    "resolved_url": "https://www.bea.gov/news/2024/gross-domestic-product-second-estimate-corporate-profits-preliminary-estimate-second",
+    "retrieved_utc": "2026-10-04T21:19:09.390018+00:00",
+    "raw_sha256": "b7727510f7738229aac63600d920ecbb7c5c2ddf0a0e6617d175e9ab99a73e72",
+    "normalized_text_sha256": "434ab36fa0e8182872fbd74cabf9e43981b52d2be0607d2448fdb411ffdb2b8b",
+    "text_length": 15813
+  },
+  {
+    "id": "bea-q3",
+    "published": "2024-12-19",
+    "url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-third-estimate-corporate-profits-revised-estimate-and-gdp-1",
+    "resolved_url": "https://www.bea.gov/index.php/news/2024/gross-domestic-product-third-estimate-corporate-profits-revised-estimate-and-gdp-1",
+    "retrieved_utc": "2026-10-04T21:19:09.885674+00:00",
+    "raw_sha256": "039ef925d12c7c79bd22bb13d52e270c002411d2c3f9afdc7dedaafe431d5e38",
+    "normalized_text_sha256": "8ede73c56bba6ed4582c10118b6359309b837d6ad6970c860976a9148eca0aae",
+    "text_length": 17364
+  }
+]

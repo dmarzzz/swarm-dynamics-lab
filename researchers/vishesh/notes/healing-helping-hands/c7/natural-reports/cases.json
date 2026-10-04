@@ -1,0 +1,506 @@
+[
+  {
+    "id": "bea-2024q1-current",
+    "incident_family": "bea-2024q1",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2024-Q1",
+      "geography": "US",
+      "cutoff": "2024-05-30",
+      "value": 1.3,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q1"
+    ],
+    "expected": "SUPPORT",
+    "rationale": "Explicit current value matches.",
+    "label_evidence": [
+      {
+        "period": "2024-Q1",
+        "value": 1.3,
+        "metric": "real_gdp_qoq_annualized_percent",
+        "published": "2024-05-30",
+        "source_id": "bea-q1",
+        "span": "Real gross domestic product (GDP) increased at an annual rate of 1.3 percent in the first quarter of 2024",
+        "geography": "US",
+        "publisher": "BEA"
+      }
+    ]
+  },
+  {
+    "id": "bea-2024q1-superseded",
+    "incident_family": "bea-2024q1",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2024-Q1",
+      "geography": "US",
+      "cutoff": "2024-05-30",
+      "value": 1.6,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q1"
+    ],
+    "expected": "REFUTE",
+    "rationale": "Explicit different revised value; old vintage remains historically true but is not latest.",
+    "label_evidence": [
+      {
+        "period": "2024-Q1",
+        "value": 1.3,
+        "metric": "real_gdp_qoq_annualized_percent",
+        "published": "2024-05-30",
+        "source_id": "bea-q1",
+        "span": "Real gross domestic product (GDP) increased at an annual rate of 1.3 percent in the first quarter of 2024",
+        "geography": "US",
+        "publisher": "BEA"
+      }
+    ]
+  },
+  {
+    "id": "bea-2024q1-future",
+    "incident_family": "bea-2024q1",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2024-05-30",
+      "value": 1.3,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q1"
+    ],
+    "expected": "UNCERTAIN",
+    "rationale": "The supplied dated excerpts do not measure the queried future period; no claim about later actual value.",
+    "label_evidence": []
+  },
+  {
+    "id": "bea-2024q2-current",
+    "incident_family": "bea-2024q2",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2024-Q2",
+      "geography": "US",
+      "cutoff": "2024-08-29",
+      "value": 3.0,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q2"
+    ],
+    "expected": "SUPPORT",
+    "rationale": "Explicit current value matches.",
+    "label_evidence": [
+      {
+        "period": "2024-Q2",
+        "value": 3.0,
+        "metric": "real_gdp_qoq_annualized_percent",
+        "published": "2024-08-29",
+        "source_id": "bea-q2",
+        "span": "Real gross domestic product (GDP) increased at an annual rate of 3.0 percent in the second quarter of 2024",
+        "geography": "US",
+        "publisher": "BEA"
+      }
+    ]
+  },
+  {
+    "id": "bea-2024q2-superseded",
+    "incident_family": "bea-2024q2",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2024-Q2",
+      "geography": "US",
+      "cutoff": "2024-08-29",
+      "value": 2.8,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q2"
+    ],
+    "expected": "REFUTE",
+    "rationale": "Explicit different revised value; old vintage remains historically true but is not latest.",
+    "label_evidence": [
+      {
+        "period": "2024-Q2",
+        "value": 3.0,
+        "metric": "real_gdp_qoq_annualized_percent",
+        "published": "2024-08-29",
+        "source_id": "bea-q2",
+        "span": "Real gross domestic product (GDP) increased at an annual rate of 3.0 percent in the second quarter of 2024",
+        "geography": "US",
+        "publisher": "BEA"
+      }
+    ]
+  },
+  {
+    "id": "bea-2024q2-future",
+    "incident_family": "bea-2024q2",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2024-08-29",
+      "value": 3.0,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q2"
+    ],
+    "expected": "UNCERTAIN",
+    "rationale": "The supplied dated excerpts do not measure the queried future period; no claim about later actual value.",
+    "label_evidence": []
+  },
+  {
+    "id": "bea-2024q3-current",
+    "incident_family": "bea-2024q3",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2024-Q3",
+      "geography": "US",
+      "cutoff": "2024-12-19",
+      "value": 3.1,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q3"
+    ],
+    "expected": "SUPPORT",
+    "rationale": "Explicit current value matches.",
+    "label_evidence": [
+      {
+        "period": "2024-Q3",
+        "value": 3.1,
+        "metric": "real_gdp_qoq_annualized_percent",
+        "published": "2024-12-19",
+        "source_id": "bea-q3",
+        "span": "Real gross domestic product (GDP) increased at an annual rate of 3.1 percent in the third quarter of 2024",
+        "geography": "US",
+        "publisher": "BEA"
+      }
+    ]
+  },
+  {
+    "id": "bea-2024q3-superseded",
+    "incident_family": "bea-2024q3",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2024-Q3",
+      "geography": "US",
+      "cutoff": "2024-12-19",
+      "value": 2.8,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q3"
+    ],
+    "expected": "REFUTE",
+    "rationale": "Explicit different revised value; old vintage remains historically true but is not latest.",
+    "label_evidence": [
+      {
+        "period": "2024-Q3",
+        "value": 3.1,
+        "metric": "real_gdp_qoq_annualized_percent",
+        "published": "2024-12-19",
+        "source_id": "bea-q3",
+        "span": "Real gross domestic product (GDP) increased at an annual rate of 3.1 percent in the third quarter of 2024",
+        "geography": "US",
+        "publisher": "BEA"
+      }
+    ]
+  },
+  {
+    "id": "bea-2024q3-future",
+    "incident_family": "bea-2024q3",
+    "publisher_family": "BEA",
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2024-12-19",
+      "value": 3.1,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bea-q3"
+    ],
+    "expected": "UNCERTAIN",
+    "rationale": "The supplied dated excerpts do not measure the queried future period; no claim about later actual value.",
+    "label_evidence": []
+  },
+  {
+    "id": "bls-2023dec-current",
+    "incident_family": "bls-2023dec",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2023-12",
+      "geography": "US",
+      "cutoff": "2024-03-08",
+      "value": 290000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-feb",
+      "bls-mar"
+    ],
+    "expected": "SUPPORT",
+    "rationale": "Explicit current value matches.",
+    "label_evidence": [
+      {
+        "period": "2023-12",
+        "value": 290000.0,
+        "metric": "nonfarm_payroll_monthly_change_jobs",
+        "published": "2024-03-08",
+        "source_id": "bls-mar",
+        "span": "change in total nonfarm payroll employment for December was revised down by 43,000, from +333,000 to +290,000,",
+        "geography": "US",
+        "publisher": "BLS"
+      }
+    ]
+  },
+  {
+    "id": "bls-2023dec-superseded",
+    "incident_family": "bls-2023dec",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2023-12",
+      "geography": "US",
+      "cutoff": "2024-03-08",
+      "value": 333000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-feb",
+      "bls-mar"
+    ],
+    "expected": "REFUTE",
+    "rationale": "Explicit different revised value; old vintage remains historically true but is not latest.",
+    "label_evidence": [
+      {
+        "period": "2023-12",
+        "value": 290000.0,
+        "metric": "nonfarm_payroll_monthly_change_jobs",
+        "published": "2024-03-08",
+        "source_id": "bls-mar",
+        "span": "change in total nonfarm payroll employment for December was revised down by 43,000, from +333,000 to +290,000,",
+        "geography": "US",
+        "publisher": "BLS"
+      }
+    ]
+  },
+  {
+    "id": "bls-2023dec-future",
+    "incident_family": "bls-2023dec",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-03-08",
+      "value": 290000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-feb",
+      "bls-mar"
+    ],
+    "expected": "UNCERTAIN",
+    "rationale": "The supplied dated excerpts do not measure the queried future period; no claim about later actual value.",
+    "label_evidence": []
+  },
+  {
+    "id": "bls-2024jan-current",
+    "incident_family": "bls-2024jan",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-01",
+      "geography": "US",
+      "cutoff": "2024-04-05",
+      "value": 256000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-feb",
+      "bls-mar",
+      "bls-apr"
+    ],
+    "expected": "SUPPORT",
+    "rationale": "Explicit current value matches.",
+    "label_evidence": [
+      {
+        "period": "2024-01",
+        "value": 256000.0,
+        "metric": "nonfarm_payroll_monthly_change_jobs",
+        "published": "2024-04-05",
+        "source_id": "bls-apr",
+        "span": "change in total nonfarm payroll employment for January was revised up by 27,000, from +229,000 to +256,000,",
+        "geography": "US",
+        "publisher": "BLS"
+      }
+    ]
+  },
+  {
+    "id": "bls-2024jan-superseded",
+    "incident_family": "bls-2024jan",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-01",
+      "geography": "US",
+      "cutoff": "2024-04-05",
+      "value": 353000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-feb",
+      "bls-mar",
+      "bls-apr"
+    ],
+    "expected": "REFUTE",
+    "rationale": "Explicit different revised value; old vintage remains historically true but is not latest.",
+    "label_evidence": [
+      {
+        "period": "2024-01",
+        "value": 256000.0,
+        "metric": "nonfarm_payroll_monthly_change_jobs",
+        "published": "2024-04-05",
+        "source_id": "bls-apr",
+        "span": "change in total nonfarm payroll employment for January was revised up by 27,000, from +229,000 to +256,000,",
+        "geography": "US",
+        "publisher": "BLS"
+      }
+    ]
+  },
+  {
+    "id": "bls-2024jan-future",
+    "incident_family": "bls-2024jan",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-04-05",
+      "value": 256000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-feb",
+      "bls-mar",
+      "bls-apr"
+    ],
+    "expected": "UNCERTAIN",
+    "rationale": "The supplied dated excerpts do not measure the queried future period; no claim about later actual value.",
+    "label_evidence": []
+  },
+  {
+    "id": "bls-2024feb-current",
+    "incident_family": "bls-2024feb",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-02",
+      "geography": "US",
+      "cutoff": "2024-04-05",
+      "value": 270000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-mar",
+      "bls-apr"
+    ],
+    "expected": "SUPPORT",
+    "rationale": "Explicit current value matches.",
+    "label_evidence": [
+      {
+        "period": "2024-02",
+        "value": 270000.0,
+        "metric": "nonfarm_payroll_monthly_change_jobs",
+        "published": "2024-04-05",
+        "source_id": "bls-apr",
+        "span": "change for February was revised down by 5,000, from +275,000 to +270,000",
+        "geography": "US",
+        "publisher": "BLS"
+      }
+    ]
+  },
+  {
+    "id": "bls-2024feb-superseded",
+    "incident_family": "bls-2024feb",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-02",
+      "geography": "US",
+      "cutoff": "2024-04-05",
+      "value": 275000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-mar",
+      "bls-apr"
+    ],
+    "expected": "REFUTE",
+    "rationale": "Explicit different revised value; old vintage remains historically true but is not latest.",
+    "label_evidence": [
+      {
+        "period": "2024-02",
+        "value": 270000.0,
+        "metric": "nonfarm_payroll_monthly_change_jobs",
+        "published": "2024-04-05",
+        "source_id": "bls-apr",
+        "span": "change for February was revised down by 5,000, from +275,000 to +270,000",
+        "geography": "US",
+        "publisher": "BLS"
+      }
+    ]
+  },
+  {
+    "id": "bls-2024feb-future",
+    "incident_family": "bls-2024feb",
+    "publisher_family": "BLS",
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-04-05",
+      "value": 270000,
+      "vintage": "latest supplied"
+    },
+    "source_ids": [
+      "bls-mar",
+      "bls-apr"
+    ],
+    "expected": "UNCERTAIN",
+    "rationale": "The supplied dated excerpts do not measure the queried future period; no claim about later actual value.",
+    "label_evidence": []
+  }
+]

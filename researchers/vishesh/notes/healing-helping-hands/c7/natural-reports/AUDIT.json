@@ -1,0 +1,56 @@
+{
+  "status": "offline_candidate_audited",
+  "native_calls": 0,
+  "model_cost_usd": 0,
+  "source_documents": 6,
+  "incident_roots": 6,
+  "publisher_series_families": 2,
+  "established_independent_population_samples": 0,
+  "queries": 18,
+  "source_baseline_correct": 18,
+  "tests_passed": 8,
+  "all_source_support_read": true,
+  "all_labels_reviewed": true,
+  "independent_adjudication": false,
+  "held_out": false,
+  "unresolved_real_contradictions": 0,
+  "source_reuse": {
+    "bea-q1": [
+      "bea-2024q1"
+    ],
+    "bea-q2": [
+      "bea-2024q2"
+    ],
+    "bea-q3": [
+      "bea-2024q3"
+    ],
+    "bls-feb": [
+      "bls-2023dec",
+      "bls-2024jan"
+    ],
+    "bls-mar": [
+      "bls-2023dec",
+      "bls-2024feb",
+      "bls-2024jan"
+    ],
+    "bls-apr": [
+      "bls-2024feb",
+      "bls-2024jan"
+    ]
+  },
+  "duplicate_urls": 0,
+  "duplicate_excerpt_hashes": 0,
+  "sources_sha256": "bd72558d7521d081efa74e8f6e028aaae045cbdb21daef17bcec6dd9f0fcfc64",
+  "cases_sha256": "f76c8daca127d7a8794e3c35b84fe5be10f8a64a6a8f547262a22c4da5e9333b",
+  "baseline": "same-excerpt literal extraction plus deterministic vintage/scope reconciliation",
+  "gaps": [
+    "two correlated source families",
+    "development-only convenience collection",
+    "no real unresolved contradiction",
+    "no native fresh-run stability",
+    "no independent adjudication",
+    "BLS raw HTML unavailable; exact web-rendered excerpts frozen"
+  ],
+  "next_stage_status": "proposal_only_PI_decision_needed",
+  "proposed_max_additional_usd": 1
+}
