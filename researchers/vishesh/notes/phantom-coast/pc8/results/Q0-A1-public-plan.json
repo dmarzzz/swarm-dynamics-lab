@@ -1,0 +1,9 @@
+{
+  "experiment": "phantom-coast-pc8",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/d100df92ed48c41c49fa079d6a8de9667fdb873d/researchers/vishesh/notes/phantom-coast/pc8/PLAN.md",
+  "commit": "d100df92ed48c41c49fa079d6a8de9667fdb873d",
+  "plan_sha256": "272fd00f363687977dd42f96057ab48da2d9ebe38f94c4d01267571969087606",
+  "registered_tldr": "TLDR: Does native report interpretation improve on a frozen rule parser while preserving valid evidence? Paired structured/prose histories cover duplicates, corrections, staleness and unsupported challenges. Q0 eight roots; conditional pilot24 roots. Measure extraction error, protected evidence harm and exact-controller regret. Synthetic authored feasibility study, not swarm generalization.",
+  "run_tldr": "Q0-A1: eight report histories paired structured/prose;16 native requests,96 record labels. Compare parser and gold extraction; require structured46/48, prose40/48, no protected evidence errors and prose improvement over parser. Synthetic semantic screen; no swarm claim.",
+  "checked_utc": "2026-10-04T18:05:58.384163+00:00"
+}

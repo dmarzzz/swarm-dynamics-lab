@@ -1,0 +1,105 @@
+{
+  "cells": [
+    {
+      "representation": "structured",
+      "assigned": 8,
+      "valid": 8,
+      "native_correct": 39,
+      "parser_correct": 48,
+      "fields": 48,
+      "native_exact": 2,
+      "native_protected_errors": 2,
+      "protected_denominator": 6,
+      "native_regret": 0.0,
+      "parser_regret": 0.0
+    },
+    {
+      "representation": "prose",
+      "assigned": 8,
+      "valid": 8,
+      "native_correct": 48,
+      "parser_correct": 24,
+      "fields": 48,
+      "native_exact": 8,
+      "native_protected_errors": 0,
+      "protected_denominator": 6,
+      "native_regret": 0.0,
+      "parser_regret": 0.0006522135733398049
+    }
+  ],
+  "overall": {
+    "roots": 8,
+    "prose_native_minus_parser_error": -0.5,
+    "paired_se": 0.0,
+    "descriptive_t23_interval": null,
+    "practical_improvement": true,
+    "root_values": [
+      {
+        "seed": 4100,
+        "delta": -0.5
+      },
+      {
+        "seed": 4101,
+        "delta": -0.5
+      },
+      {
+        "seed": 4102,
+        "delta": -0.5
+      },
+      {
+        "seed": 4103,
+        "delta": -0.5
+      },
+      {
+        "seed": 4104,
+        "delta": -0.5
+      },
+      {
+        "seed": 4105,
+        "delta": -0.5
+      },
+      {
+        "seed": 4106,
+        "delta": -0.5
+      },
+      {
+        "seed": 4107,
+        "delta": -0.5
+      }
+    ]
+  },
+  "semantic_passed": false,
+  "incremental_value_passed": true,
+  "qualification_passed": false,
+  "stage": "Q0",
+  "attempt": "q0-a1",
+  "assigned": 16,
+  "started": 16,
+  "terminal": 16,
+  "valid": 16,
+  "stop_reason": null,
+  "budget": {
+    "calls": 16,
+    "prior_usd": 0.857148138,
+    "new_known_usd": 0.001180704,
+    "cumulative_exposure_usd": 0.858328842,
+    "api_cap_usd": 4,
+    "max_calls": 64
+  },
+  "wall_seconds": 3.821595260000322,
+  "instrument": {
+    "src/admission.py": "d14564c158101764a4936df6a279f980a3472e45755fe6702201adbb6ad192de",
+    "src/bayes.py": "20edb872a3f20a249b70811a31d0e03821c67a4b8b61b8b3d00da07ea5cd723a",
+    "src/contract.py": "41388268bdf007c5ab5e53b55aef2f3d7ad02b39e327fcb7ba96184bd4e15ed3",
+    "src/design.py": "551974f972eff292a3f7497c5d595f0b244d2f99eb482d80a77cc6976b81ed46",
+    "src/engine.py": "5bef719d6bf1aa8fc7f788d208dd98effffafb6013468729314e00c1c8730f73",
+    "src/ledger.py": "fd978e43d68c94f1bc5f68136e97cbe7ea833b827025742a9cb020a792be5eac",
+    "src/run.py": "1812b6cf206a3df0368e1ee9644dd8a9820af7089d8dc14d922481cdfb5e7f43",
+    "src/wire.py": "6ca0b0a746258b75c58213cb2037185e60bebd5f8025745d6d30fc00e44146c0",
+    "PLAN.md": "272fd00f363687977dd42f96057ab48da2d9ebe38f94c4d01267571969087606",
+    "reviews/RUNNER-PRE.md": "d5ff0f040907c2d86bc47a94a51ae5e00c98fd8fd0c5dd73f5cf2c64f6203d98",
+    "reviews/REVIEW-POLICY-AMENDMENT.md": "18941f5d689a7d17fc73f2cd34fa3f1e3b407c15b492ea1192a597d8e7f66884"
+  },
+  "model": "typesafe/jev-1.13-20260917",
+  "source_commit": "d100df92ed48c41c49fa079d6a8de9667fdb873d"
+}

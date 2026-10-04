@@ -3510,6 +3510,43 @@
         "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/a2-validation.json"
       ],
       "status_at_assessment": "approved_prepared_provider_hold"
+    },
+    {
+      "id": "phantom-coast-pc8",
+      "title": "Phantom Coast PC8: report interpretation qualification",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc8/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc8"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "This model configuration failed structured/protected-evidence qualification; its prose advantage over the frozen parser is removable on the saved authored corpus.",
+        "rationale": "All16 responses valid and audited;39/48 structured versus48/48 prose. Comparator authority-scope defect and missing boolean legend limit interpretation. Retrospective parser repair is not held-out validation."
+      },
+      "sample_size_summary": "Q0:8 generated history roots,2 per family;16 paired dependent requests and96 labels. Protected eligible records6 per representation within2 roots. S1:0 calls;24 planned roots unopened. Retrospective repair reuses the same data.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc8/PLAN.md",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-summary.json",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-retrospective-parser.json",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/CLOSEOUT.json"
+      ],
+      "status_at_assessment": "qualification_failed_scientifically_reviewed_parked",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "d100df92ed48c41c49fa079d6a8de9667fdb873d",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc8/PLAN.md": "272fd00f363687977dd42f96057ab48da2d9ebe38f94c4d01267571969087606",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-summary.json": "4cc8e5cf402956a7d491ce5c6942d8e2d89f1e07a2711928c34ed32738684fbe",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-audit.json": "f7793638617b6963f4479f3cb66c9deff2c87493943a5f803f2cccf82dc8db01",
+        "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md": "9790f1de70a2496e533a9e8159159d1ccfde88ad781275c936128fcd2d5674d4",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-retrospective-parser.json": "7dce3fa355ccadaea29f407877a4db0fac35f568379b5c3db89614110b33d4cf",
+        "researchers/vishesh/notes/phantom-coast/pc8/results/CLOSEOUT.json": "ad459c0c318b778f9a6d689e2bd523caeefc9422fc0fc09e08c3eab14f85f712"
+      }
     }
   ],
   "source_sha256": {

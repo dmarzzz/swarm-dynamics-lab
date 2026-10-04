@@ -1,0 +1,16 @@
+{
+  "same_operator_audit": true,
+  "stage": "Q0",
+  "assigned": 16,
+  "terminal": 16,
+  "native_valid": 16,
+  "known_cost": 0.001180704,
+  "hashes": {
+    "summary.json": "4cc8e5cf402956a7d491ce5c6942d8e2d89f1e07a2711928c34ed32738684fbe",
+    "decisions.json": "08a9796336a6f87d7ccb9414b1a5c65f9433c72558855cc60a98b62809a32b6d",
+    "events.jsonl": "768dbdcd4f6b437e067e39e41e980390fae62172a44da4ae01521c17b12f1fe8",
+    "manifest.json": "3ec1a41027b0a4d6615037f8f7f83d24a6002086126862000e3374cbede62602",
+    "records.json": "b9fe5c5cc0e54a7ce57f5322b6438fabd737e2d2ae64d2289fe3f6ab2cb2699c",
+    "worlds.json": "d35352795407e29095a3ba92711a9c83dfe3ab791c1db701a9c2198630ea9790"
+  }
+}

@@ -1,0 +1,245 @@
+[
+  {
+    "case": "4100-structured",
+    "family": "duplicate",
+    "record": {
+      "id": "R0-0",
+      "event": "E0-0",
+      "observed_day": 10,
+      "issued_day": 10,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "MISMATCH",
+    "answer": {
+      "type": "choice",
+      "choice": "EXCLUDE",
+      "probabilities": {
+        "UNKNOWN": 0.09,
+        "MISMATCH": 0.34,
+        "EXCLUDE": 0.43,
+        "MATCH": 0.14
+      },
+      "confidence": 0.24
+    }
+  },
+  {
+    "case": "4103-structured",
+    "family": "preserve",
+    "record": {
+      "id": "R3-0",
+      "event": "E3-0",
+      "observed_day": 10,
+      "issued_day": 10,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "MISMATCH",
+    "answer": {
+      "type": "choice",
+      "choice": "EXCLUDE",
+      "probabilities": {
+        "MATCH": 0.05,
+        "MISMATCH": 0.22,
+        "EXCLUDE": 0.7,
+        "UNKNOWN": 0.03
+      },
+      "confidence": 0.59
+    }
+  },
+  {
+    "case": "4104-structured",
+    "family": "duplicate",
+    "record": {
+      "id": "R4-0",
+      "event": "E4-0",
+      "observed_day": 10,
+      "issued_day": 10,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "MISMATCH",
+    "answer": {
+      "type": "choice",
+      "choice": "EXCLUDE",
+      "probabilities": {
+        "UNKNOWN": 0.18,
+        "EXCLUDE": 0.41,
+        "MATCH": 0.07,
+        "MISMATCH": 0.34
+      },
+      "confidence": 0.23
+    }
+  },
+  {
+    "case": "4104-structured",
+    "family": "duplicate",
+    "record": {
+      "id": "R4-2",
+      "event": "E4-2",
+      "observed_day": 10,
+      "issued_day": 10,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "MISMATCH",
+    "answer": {
+      "type": "choice",
+      "choice": "UNKNOWN",
+      "probabilities": {
+        "UNKNOWN": 0.44,
+        "EXCLUDE": 0.34,
+        "MATCH": 0.08,
+        "MISMATCH": 0.14
+      },
+      "confidence": 0.26
+    }
+  },
+  {
+    "case": "4104-structured",
+    "family": "duplicate",
+    "record": {
+      "id": "R4-1",
+      "event": "E4-1",
+      "observed_day": 10,
+      "issued_day": 10,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "MISMATCH",
+    "answer": {
+      "type": "choice",
+      "choice": "EXCLUDE",
+      "probabilities": {
+        "UNKNOWN": 0.21,
+        "EXCLUDE": 0.48,
+        "MATCH": 0.06,
+        "MISMATCH": 0.25
+      },
+      "confidence": 0.32
+    }
+  },
+  {
+    "case": "4105-structured",
+    "family": "correction",
+    "record": {
+      "id": "R5-0",
+      "event": "E5-0",
+      "observed_day": 10,
+      "issued_day": 10,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "MISMATCH",
+    "answer": {
+      "type": "choice",
+      "choice": "EXCLUDE",
+      "probabilities": {
+        "UNKNOWN": 0.29,
+        "MATCH": 0.19,
+        "MISMATCH": 0.17,
+        "EXCLUDE": 0.35
+      },
+      "confidence": 0.15
+    }
+  },
+  {
+    "case": "4106-structured",
+    "family": "stale",
+    "record": {
+      "id": "R6-3",
+      "event": "old3",
+      "observed_day": 4,
+      "issued_day": 14,
+      "kind": "verified",
+      "outcome": true,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": false
+    },
+    "gold": "EXCLUDE",
+    "answer": {
+      "type": "choice",
+      "choice": "MATCH",
+      "probabilities": {
+        "MISMATCH": 0.03,
+        "UNKNOWN": 0.21,
+        "EXCLUDE": 0.38,
+        "MATCH": 0.38
+      },
+      "confidence": 0.18
+    }
+  },
+  {
+    "case": "4106-structured",
+    "family": "stale",
+    "record": {
+      "id": "R6-5",
+      "event": "old5",
+      "observed_day": 4,
+      "issued_day": 14,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "EXCLUDE",
+    "answer": {
+      "type": "choice",
+      "choice": "MISMATCH",
+      "probabilities": {
+        "MATCH": 0.04,
+        "EXCLUDE": 0.38,
+        "UNKNOWN": 0.12,
+        "MISMATCH": 0.46
+      },
+      "confidence": 0.28
+    }
+  },
+  {
+    "case": "4107-structured",
+    "family": "preserve",
+    "record": {
+      "id": "R7-1",
+      "event": "E7-1",
+      "observed_day": 10,
+      "issued_day": 10,
+      "kind": "verified",
+      "outcome": false,
+      "replaces": null,
+      "origin": null,
+      "preliminary_unverified_outcome": true
+    },
+    "gold": "MISMATCH",
+    "answer": {
+      "type": "choice",
+      "choice": "EXCLUDE",
+      "probabilities": {
+        "MISMATCH": 0.35,
+        "EXCLUDE": 0.45999999999999996,
+        "MATCH": 0.17,
+        "UNKNOWN": 0.02
+      },
+      "confidence": 0.29
+    }
+  }
+]

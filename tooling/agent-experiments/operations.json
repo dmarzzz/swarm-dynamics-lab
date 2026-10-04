@@ -19,12 +19,12 @@
       "title": "Phantom Coast",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
-      "setup_path": "researchers/vishesh/notes/phantom-coast/pc7/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/pc8/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T14:31:29.036358+00:00",
-      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "PC7 offline trace audit and finite-history exact controller complete. No native successor recommended until an application-specific empirical role survives the exact Bayes baseline. Read pc7/SETUP.md; latest native cohort remains PC5; original exposure .857148138 retained.",
+      "checked_at": "2026-10-04T18:12:29.705635+00:00",
+      "checked_commit": "d100df92ed48c41c49fa079d6a8de9667fdb873d",
+      "next_action": "FINISH / PARK: PC8 Q0 completed but failed semantic/protected-evidence gates; S1 unrun. Retrospective parser repair removes saved-corpus advantage. Read pc8/SETUP.md; retain original exposure .858328842. No successor queued.",
       "next_run_approval": "owner"
     },
     {

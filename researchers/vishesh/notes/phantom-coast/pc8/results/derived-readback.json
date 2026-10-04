@@ -1,0 +1,25 @@
+{
+  "derived_artifacts": [
+    {
+      "name": "results-frame.png",
+      "matches": true,
+      "sha256": "401683079806db6a20b006167de2b053557b6ca9b73de093e500e926417ddd30"
+    },
+    {
+      "name": "native-replay.html",
+      "matches": true,
+      "sha256": "6dd1fb2c506b42206f8324a6009c0161fcb61eef86fff896410e83e0f6506885"
+    },
+    {
+      "name": "Q0-A1-retrospective-parser.json",
+      "matches": true,
+      "sha256": "7dce3fa355ccadaea29f407877a4db0fac35f568379b5c3db89614110b33d4cf"
+    },
+    {
+      "name": "Q0-A1-audit.json",
+      "matches": true,
+      "sha256": "f7793638617b6963f4479f3cb66c9deff2c87493943a5f803f2cccf82dc8db01"
+    }
+  ],
+  "all_match": true
+}

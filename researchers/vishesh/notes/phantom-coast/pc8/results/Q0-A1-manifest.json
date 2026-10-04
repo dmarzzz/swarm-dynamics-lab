@@ -1,0 +1,102 @@
+{
+  "stage": "Q0",
+  "attempt": "q0-a1",
+  "assignments": [
+    {
+      "id": "4100-prose",
+      "seed": 4100,
+      "representation": "prose",
+      "family": "duplicate"
+    },
+    {
+      "id": "4100-structured",
+      "seed": 4100,
+      "representation": "structured",
+      "family": "duplicate"
+    },
+    {
+      "id": "4101-structured",
+      "seed": 4101,
+      "representation": "structured",
+      "family": "correction"
+    },
+    {
+      "id": "4101-prose",
+      "seed": 4101,
+      "representation": "prose",
+      "family": "correction"
+    },
+    {
+      "id": "4102-prose",
+      "seed": 4102,
+      "representation": "prose",
+      "family": "stale"
+    },
+    {
+      "id": "4102-structured",
+      "seed": 4102,
+      "representation": "structured",
+      "family": "stale"
+    },
+    {
+      "id": "4103-structured",
+      "seed": 4103,
+      "representation": "structured",
+      "family": "preserve"
+    },
+    {
+      "id": "4103-prose",
+      "seed": 4103,
+      "representation": "prose",
+      "family": "preserve"
+    },
+    {
+      "id": "4104-structured",
+      "seed": 4104,
+      "representation": "structured",
+      "family": "duplicate"
+    },
+    {
+      "id": "4104-prose",
+      "seed": 4104,
+      "representation": "prose",
+      "family": "duplicate"
+    },
+    {
+      "id": "4105-structured",
+      "seed": 4105,
+      "representation": "structured",
+      "family": "correction"
+    },
+    {
+      "id": "4105-prose",
+      "seed": 4105,
+      "representation": "prose",
+      "family": "correction"
+    },
+    {
+      "id": "4106-prose",
+      "seed": 4106,
+      "representation": "prose",
+      "family": "stale"
+    },
+    {
+      "id": "4106-structured",
+      "seed": 4106,
+      "representation": "structured",
+      "family": "stale"
+    },
+    {
+      "id": "4107-prose",
+      "seed": 4107,
+      "representation": "prose",
+      "family": "preserve"
+    },
+    {
+      "id": "4107-structured",
+      "seed": 4107,
+      "representation": "structured",
+      "family": "preserve"
+    }
+  ]
+}

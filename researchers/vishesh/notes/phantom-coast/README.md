@@ -1,10 +1,12 @@
 # Phantom Coast: PC-1
 
-**Latest trace-grounded revision:** [PC7](pc7/README.md) audits all140 PC5 request/output pairs and implements a tested finite-history two-step controller. Raw-response retention gaps are explicit; no native successor is justified yet.
+**Latest native result:** [PC8](pc8/README.md) completed16 qualification requests on8 roots, failed the structured/protected-evidence gates and withheld S1. A comparator scope defect explains the apparent prose gain; a retrospective parser repair resolves all96 saved labels. [PI post-mortem](pc8/reviews/Q0-A1-POST.md). FINISH / PARK; cumulative known .846232842, exposure .858328842; allocation released.
 
-**Latest PI review:** [PC6 saved-data analysis](pc6/README.md) confirms the reliable-source regression and a superior simple controller. The proposed successor is parked before any native calls; exact policy and reproducible analysis added, no new spend or allocation.
+**Earlier offline revision:** [PC7](pc7/README.md) audits all140 PC5 request/output pairs and implements a tested finite-history two-step controller. Raw-response retention gaps are explicit; no native successor is justified yet.
 
-**Latest completed cycles:** [PC-5](pc5/README.md) reduced expected one-step decision regret by 0.1578 with explicit scoring/transition instructions, exceeding its 0.10 target, but reliable-report accuracy regressed. [PC-4](pc4/README.md) found that checking all reports improves fully false-report loss by 4.30 points but harms correct reports by 1.52 points; its 5.56-point target was not met. Both used 32 paired roots/layouts, with all 1,316 new qualification/comparison calls valid. Native choices and scripted acquisitions/consequences are labeled separately. Cumulative known API cost $0.845052138, conservative exposure $0.857148138; workers stopped, credentials removed, claims released, no new VM. [PC-5 PI post-mortem and next proposal](pc5/reviews/S1-A1-POST.md). No further native run scheduled.
+**Earlier PI review:** [PC6 saved-data analysis](pc6/README.md) confirms the reliable-source regression and a superior simple controller. The proposed successor is parked before any native calls; exact policy and reproducible analysis added, no new spend or allocation.
+
+**Earlier completed cycles:** [PC-5](pc5/README.md) reduced expected one-step decision regret by 0.1578 with explicit scoring/transition instructions, exceeding its 0.10 target, but reliable-report accuracy regressed. [PC-4](pc4/README.md) found that checking all reports improves fully false-report loss by 4.30 points but harms correct reports by 1.52 points; its 5.56-point target was not met. Both used 32 paired roots/layouts, with all 1,316 new qualification/comparison calls valid. Native choices and scripted acquisitions/consequences are labeled separately. Cumulative known API cost $0.845052138, conservative exposure $0.857148138; workers stopped, credentials removed, claims released, no new VM. [PC-5 PI post-mortem and next proposal](pc5/reviews/S1-A1-POST.md). No further native run scheduled.
 
 **PC-3:** [Coverage-guard results](pc3/README.md) remain a separate valid adverse/inconclusive cohort.
 

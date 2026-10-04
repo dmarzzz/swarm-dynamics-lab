@@ -2,9 +2,9 @@
 agent: vishesh/codex-phantom-coast
 tool: codex
 state: done
-task: phantom-coast-pc7-traces
-doing: PC7 trace audit and offline finite-history controller complete; 140 pairs verified, 8 checks passed; no native successor admitted
-updated: 2026-10-04T16:43:52.083647+00:00
+task: phantom-coast-pc8-live
+doing: PC8 Q0 closed and reviewed; failed qualification, S1 unrun; parser defect repaired retrospectively; allocation released; FINISH / PARK
+updated: 2026-10-04T18:12:29.707680+00:00
 ---
 
 ## Notes

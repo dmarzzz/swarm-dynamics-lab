@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "attempt": "pc8-q0-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04",
+  "source_commit": "d100df92ed48c41c49fa079d6a8de9667fdb873d",
+  "parent_handoff_sha256": "dd28ffde23ced2ec05f1b03c5e4c154825fd6e143f8f3e4553e1983344bd0352",
+  "verdict": "complete_valid_result",
+  "outcome_interpretation": "Valid completed qualification failure with comparator/design defects; not a valid efficacy result. Park native configuration and retain deterministic handling.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Explicit interpretation benefit and conditional pilot decision; qualification stopped this configuration.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/PLAN.md",
+          "sha256": "272fd00f363687977dd42f96057ab48da2d9ebe38f94c4d01267571969087606"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-summary.json",
+          "sha256": "4cc8e5cf402956a7d491ce5c6942d8e2d89f1e07a2711928c34ed32738684fbe"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Authored grammar, only two reserved phrase styles; structured booleans lack an explicit semantic legend. Representation parity is not established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
+          "sha256": "9790f1de70a2496e533a9e8159159d1ccfde88ad781275c936128fcd2d5674d4"
+        }
+      ],
+      "next_action": "Before proposing another native study, define field semantics and independently author realistic histories.",
+      "acceptance_check": "Paired semantic audit and held-out cases with decision-relevant errors."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Frozen parser scopes unverified to the whole report. Separate retrospective repair resolves every saved label, so the original contrast does not establish irreducible native value.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-retrospective-parser.json",
+          "sha256": "7dce3fa355ccadaea29f407877a4db0fac35f568379b5c3db89614110b33d4cf"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
+          "sha256": "9790f1de70a2496e533a9e8159159d1ccfde88ad781275c936128fcd2d5674d4"
+        }
+      ],
+      "next_action": "Use a frozen discourse-aware parser before any new proposal.",
+      "acceptance_check": "Challenge preliminary/final authority and compare on independently authored held-out reports."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "16/16 valid but structured39/48 falls below46/48; two protected records lost. S1 not admitted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-summary.json",
+          "sha256": "4cc8e5cf402956a7d491ce5c6942d8e2d89f1e07a2711928c34ed32738684fbe"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-errors.json",
+          "sha256": "e0f09c72c1022656ea4a23b7255f31fe387d7f5a991246685bc03a866642c0b6"
+        }
+      ],
+      "next_action": "Park this configuration; no automatic repair run.",
+      "acceptance_check": "Any future scoped qualification must satisfy explicit semantic and preservation criteria."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All saved labels, requests, scoring and conjunctive gate recompute; native and scripted decision consequences are separated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-audit.json",
+          "sha256": "f7793638617b6963f4479f3cb66c9deff2c87493943a5f803f2cccf82dc8db01"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-summary.json",
+          "sha256": "4cc8e5cf402956a7d491ce5c6942d8e2d89f1e07a2711928c34ed32738684fbe"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Qualification only:8 root histories,16 dependent requests,96 labels; no population or efficacy inference. Pilot unopened.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/PLAN.md",
+          "sha256": "272fd00f363687977dd42f96057ab48da2d9ebe38f94c4d01267571969087606"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-summary.json",
+          "sha256": "4cc8e5cf402956a7d491ce5c6942d8e2d89f1e07a2711928c34ed32738684fbe"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
+          "sha256": "9790f1de70a2496e533a9e8159159d1ccfde88ad781275c936128fcd2d5674d4"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned model/provider, fresh request per representation and full history without gold; serialized requests and safe outputs retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-route.json",
+          "sha256": "de458b0508ef9deab84011f4c98c9a3b4a9117c51a5d39507adaa1ca7cf7c8d1"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-audit.json",
+          "sha256": "f7793638617b6963f4479f3cb66c9deff2c87493943a5f803f2cccf82dc8db01"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-records.json.gz",
+          "sha256": "a8d3fcd22b4d24b9771a74e43b077f30c9c75094f5f08a9cd1f20958a0a102a5"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All16 assignments started, terminated and graded valid; no missing/retried calls. Native/derived artifact hashes verified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-audit.json",
+          "sha256": "f7793638617b6963f4479f3cb66c9deff2c87493943a5f803f2cccf82dc8db01"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-hub-readback.json",
+          "sha256": "bf06a7436fd004a6d89f014e71df502f3550e6bed93117d1f4932739efc882db"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/derived-readback.json",
+          "sha256": "cc16f3616ac65eadce2838c0d4e986613660bc502d2be9d5c060044722086692"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Closed ledger, original cap and nine historical uncertain charges retained; stopped worker, removed credential and released existing allocation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/CLOSEOUT.json",
+          "sha256": "ad459c0c318b778f9a6d689e2bd523caeefc9422fc0fc09e08c3eab14f85f712"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Executed source pinned; recomputation succeeds from retained full safe cohort. Hosted responses are not guaranteed reproducible.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-audit.json",
+          "sha256": "f7793638617b6963f4479f3cb66c9deff2c87493943a5f803f2cccf82dc8db01"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/PLAN.md",
+          "sha256": "272fd00f363687977dd42f96057ab48da2d9ebe38f94c4d01267571969087606"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-manifest.json",
+          "sha256": "3ec1a41027b0a4d6615037f8f7f83d24a6002086126862000e3374cbede62602"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Figure visually inspected; counts/denominators match summary; replay exposes all16 requests. Frozen versus retrospective comparator explicitly separated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/results-frame.png",
+          "sha256": "401683079806db6a20b006167de2b053557b6ca9b73de093e500e926417ddd30"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-summary.json",
+          "sha256": "4cc8e5cf402956a7d491ce5c6942d8e2d89f1e07a2711928c34ed32738684fbe"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
+          "sha256": "9790f1de70a2496e533a9e8159159d1ccfde88ad781275c936128fcd2d5674d4"
+        }
+      ]
+    }
+  ]
+}
