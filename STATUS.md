@@ -250,8 +250,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/market-split-opus | working |  | 2026-10-04T08:20Z | Phase 1 of market-split-opus (Opus replication of the Sonnet market-splitting pilot on fresh markets); plan, offline checks and scripted rehearsal only, no model call before the reviewer's go |
 | dmarz/d1-opus | blocked |  | 2026-10-04T08:00Z | D1-Opus ready on sim-dmarz-9: rehearsal 72/72 audited, probe d1o-p1 passed ($0.022); 72-call run waits for dmarz go-ahead + G0 decision |
+| dmarz/market-split-opus | blocked |  | 2026-10-04T07:55Z | market-split-opus Phase 1 done (plan, 18/18 offline tests on sim-test-01, scripted S0 6/6, pre-run review for I0/Q0/S1); waiting for the reviewer's go, no model call made |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T07:51Z | Preparing sybil-scarcity-opus (the sybil-scarcity-plan on Opus 5.5) to launch-ready: code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T07:51Z | Preparing sybil-split-opus (identity splitting with fixed attacker resources, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/pipeline | working |  | 2026-10-04T07:51Z | Pipeline lead: keeps at least three launch-ready run requests prepared for dmarz's experiments (plan, code, offline tests, scripted stage, pre-run review, chained launcher); launches nothing and makes no model calls |
