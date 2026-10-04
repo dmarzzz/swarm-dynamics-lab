@@ -64,3 +64,7 @@ Bind case, seed, arm, source hash and backend in every view. Show six measured t
 ## Reproduction and launch
 
 Run `python3 -m unittest discover -s researchers/vishesh/notes/immune-response-v3/scenario-study -p 'test_*.py' -v`, then `python3 researchers/vishesh/notes/immune-response-v3/scenario-study/study.py --backend scripted --out <new-path>`. Freeze this source and protocol before the engineering suite. Native execution requires the dedicated sim-immune-response claim, immutable public-plan check, the real USD 8 budget grant, pinned Haiku config and secure credential environment. The runner refuses an existing output directory. Record the exact source and protocol hashes, model, Python, assignments, call counts and actual costs; never overwrite a prior attempt.
+
+## Architecture control
+
+The separately frozen [single-commander baseline](SOLO-BASELINE.md) compares the same retained-memory cases with the three advisory calls removed. It is conditional on a2 passing the clean-control gate and uses the same cumulative USD 8 grant.

@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: done
-task: null
-doing: Published 30 heterogeneous swarm questions, source ledger, rubric scores and five exploratory designs
-updated: 2026-10-04T02:41Z
+state: working
+task: heterogeneous-biological-frontiers
+doing: Revising the heterogeneous shortlist through X research and evolutionary biology
+updated: 2026-10-04T02:47Z
 ---
 
 ## Handoff

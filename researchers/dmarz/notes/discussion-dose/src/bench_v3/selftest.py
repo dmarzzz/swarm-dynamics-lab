@@ -400,6 +400,96 @@ class RunnerTests(unittest.TestCase):
 
 
 class DurabilityTests(unittest.TestCase):
+    def test_fleet_launch_refuses_duplicate_or_miscounted_batch(self):
+        from .hub_worker import execute
+        class Hub:
+            def __init__(self): self.existing = []
+            def runs(self, *args, **kwargs): return self.existing
+            def register(self, *args, **kwargs): raise AssertionError('must not dispatch')
+        hub = Hub()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); launch = root / 'launch.json'
+            launch.write_text(json.dumps({'split': 'dev', 'rounds': 0}))
+            config = {'max_calls': 204}
+            with patch('bench_v3.hub_worker.approved_model_config', return_value=config):
+                out = root / 'out'; out.mkdir()
+                with self.assertRaisesRegex(ValueError, 'output already exists'):
+                    execute(hub, launch, out, 'test', backend='scripted')
+                out.rmdir(); hub.existing = [{'run': 'discussion-dose-v3/test'}]
+                with self.assertRaisesRegex(ValueError, 'batch already exists'):
+                    execute(hub, launch, out, 'test', backend='scripted')
+                hub.existing = []; out.with_suffix('.launch-receipt.json').write_text('{}')
+                with self.assertRaises(FileExistsError): execute(hub, launch, out, 'test', backend='scripted')
+                config['max_calls'] = 205
+                with self.assertRaisesRegex(ValueError, 'allowance must match'):
+                    execute(hub, launch, out, 'test', backend='scripted')
+
+    def test_fleet_usage_does_not_treat_unknown_as_complete(self):
+        from .hub_worker import Progress
+        tracker = Progress(Path('.'), [], None, 0, 204, (1, 5))
+        self.assertNotIn('clean_accuracy', tracker.metrics())
+        tracker({'kind': 'provider_failure', 'dispatched': True})
+        tracker({'kind': 'call_response', 'dispatched': True, 'usage': {'input_tokens': 10, 'output_tokens': 2}})
+        self.assertEqual(tracker.metrics()['usage_missing_calls'], 1)
+        self.assertEqual(tracker.metrics()['model_calls'], 2)
+        self.assertEqual(tracker.metrics()['model_cost_usd'], .00002)
+
+    def test_observer_cannot_mutate_or_interrupt_durable_events(self):
+        def bad_observer(event):
+            event['payload']['x'] = 99
+            raise RuntimeError('reporter failure')
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'events.jsonl'
+            j = Journal(path, observer=bad_observer); j.emit('check', payload={'x': 1}); j.close()
+            self.assertEqual(j.events[0]['payload']['x'], 1)
+            self.assertEqual(read_events(path), j.events); self.assertEqual(j.observer_failures, 1)
+
+    def test_operator_launch_is_bounded_and_hash_checked(self):
+        import hashlib
+        config = dict(model='offline-mock', max_calls=636, max_output_tokens=2000, max_input_bytes=60000,
+                      timeout=120, max_cost_usd=100, input_usd_per_million=1, output_usd_per_million=5)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); proof = root / 'proof.md'; proof.write_text('operator authorization fixture')
+            evidence = {'path': 'proof.md', 'sha256': hashlib.sha256(proof.read_bytes()).hexdigest()}
+            launch = {'status': 'operator-authorized-qualification', 'source_hashes': source_hashes(), 'split': 'qualification', 'rounds': 3,
+                      'v2_results_review': evidence, 'operator_authorization': evidence,
+                      'independent_review': {'status': 'pending', 'task': 'review-discussion-benchmark-v3'}, 'model_config': config}
+            path = root / 'launch.json'; path.write_text(json.dumps(launch))
+            self.assertEqual(approved_model_config(path, 'qualification', 3), config)
+            for split, rounds in [('dev', 3), ('holdout', 3), ('qualification', 6)]:
+                with self.assertRaises(ValueError): approved_model_config(path, split, rounds)
+            changed = copy.deepcopy(launch); changed['independent_review']['status'] = 'passed'
+            path.write_text(json.dumps(changed))
+            with self.assertRaises(ValueError): approved_model_config(path, 'qualification', 3)
+            path.write_text(json.dumps(launch)); proof.write_text('changed proof')
+            with self.assertRaisesRegex(ValueError, 'hash mismatch'): approved_model_config(path, 'qualification', 3)
+
+    def test_fleet_observer_preserves_outcomes_and_replay(self):
+        from .hub_worker import Progress, publish
+        class Reporter:
+            def __init__(self): self.files = {}
+            def progress(self, *args, **kwargs): pass
+            def artifact(self, path, name=None): self.files[name or path.name] = path.read_bytes()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); out = root / 'run'; reporter = Reporter()
+            tracker = Progress(out, cases(), reporter, 0, 204, (1, 5))
+            summary = run(out, rounds=0, observer=tracker)
+            tracker.finish(); checked = audit(out)
+            self.assertEqual(checked['requests_replayed'], 204)
+            self.assertEqual((tracker.episodes, tracker.finished, tracker.reporting_errors), (96, 204, 0))
+            self.assertEqual(summary['reconciliation']['physical_model_calls'], 0)
+            self.assertLess((out / 'replay.json').stat().st_size, 1_000_000)
+            for frame in tracker.frames:
+                self.assertIn(frame['stage'], ('acquisition', 'continuation'))
+                self.assertIn(frame['phase'], ('report', 'ballot', 'discuss', 'parent', 'starting'))
+                self.assertEqual(len(frame['agents']), 3)
+                for point in frame['trajectory']:
+                    self.assertIn(point['false'], range(4))
+            publish(reporter, out)
+            index = json.loads(reporter.files['artifact-index.json'])
+            self.assertTrue({'events.jsonl', 'episodes.json', 'manifest.json', 'summary.json'} <= {f['name'] for f in index['files']})
+            self.assertIn('frame.json', reporter.files); self.assertIn('replay.json', reporter.files)
+
     def test_hash_chain_mutation_and_truncation(self):
         with tempfile.TemporaryDirectory() as directory:
             p = Path(directory) / 'journal.jsonl'; j = Journal(p); j.emit('example', value=1); j.close()

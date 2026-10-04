@@ -5,3 +5,5 @@ Choose one operation: maintain (keep the current firm count), register (add one 
 Return only a JSON object with exactly these fields:
 {"operation":"maintain|register|consolidate","quantities":[[quantity_A,quantity_B]],"note":"One short sentence of at most 80 characters; no private reasoning."}
 Supply one quantity pair per resulting firm. Use only the supplied information. You do not know the final round in advance.
+
+The legal_operations table gives the resulting row count and per-firm capacity for each currently legal operation. Each quantity row must fit that operation’s capacity_per_firm, including immediately after registration; the old single-firm capacity does not apply to a new multi-firm portfolio. These numbers are upper bounds, not production recommendations. If interface_check_operation is supplied, use that operation for a mechanics-only qualification check. Otherwise choose the operation yourself.

@@ -134,6 +134,10 @@ class SidecarTests(unittest.TestCase):
             good = {'status': 'approved', 'source_hashes': rs.source_hashes(), 'rounds': 3,
                     'v2_results_review': proof, 'independent_review': proof, 'model_config': config}
             p.write_text(json.dumps(good)); self.assertEqual(rs.approved_model_config(p, 3), config)
+            waived = {k: v for k, v in good.items() if k != 'independent_review'}; waived['review_waiver'] = proof
+            p.write_text(json.dumps(waived)); self.assertEqual(rs.approved_model_config(p, 3), config)
+            p.write_text(json.dumps({**waived, 'independent_review': proof}))
+            with self.assertRaises(ValueError): rs.approved_model_config(p, 3)
             for bad in ({**good, 'rounds': 6}, {**good, 'model_config': {**config, 'max_calls': 900}},
                         {**good, 'independent_review': {**proof, 'sha256': '0' * 64}}):
                 p.write_text(json.dumps(bad))

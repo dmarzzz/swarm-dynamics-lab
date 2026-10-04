@@ -1,0 +1,11 @@
+# Post-mortem: fleet-s0-001
+
+2026-10-04 / dmarz/sybil-specialists / exploratory S0. Run sybil-scale-api/2c43c19e; source ebe0befa8dc9fb2247c58def2ed23e286affc214; runtime 134fd9552ee8bf45777cb751b4104465a7bfd079eb33bc27f1c226c8a6f4b322. Pre-review fleet-s0-001-pre.md. Disposition advance to Q0 after final publication verification.
+
+264 planned → started → terminal → graded → analyzed. Zero invalid, duplicates, missing or retries; zero API calls and cost. Every size passed16/16 exact clean packets and all missing-evidence abstentions. Nine regression checks pass, including original36identity anchor and concurrent failure accounting. Preparation plus execution36.79s; all264 records retained. Complete 2400-assignment preflight confirms2464 unique paid IDs including qualification, maximum112859request bytes andUSD68.300028 conservative reservation at the frozen pricing, below180. Engineering outcomes are not scientific estimates.
+
+Visualization mappingv1: initial/final/hidden PNGs and33-frame measured-prefix GIF. Layout overlap repaired. Publication audit found the earlier progress upload could precede the final image in hub ordering. Private publisher now re-uploads identical saved images in final/replay/hidden/progress/initial order after worker exit; bytes and outcomes are unchanged. No scientific rerun or new API call is used to repair presentation order. Verify checks artifact hashes, every GIF frame, assignment uniqueness, all evaluator values and recomputed analysis before advancement. Public Cloudflare currently rejects old and new API image routes with403/1010; hub uploads are durable. Public view will be rechecked independently.
+
+Quality: all manipulation and clean controls operate as designed. Population scaling retains fixed degrees, bridge fraction, two initial seeds and the same six facts. Growing graph distances and report lengths remain explicit components of this one-family scaling test. No formal S2/novelty claim. Raw data and original local rendering-failure images preserved.
+
+Next Q0-001:64 fresh model calls on5000–5003, at all four sizes, same exact runtime. Each size must pass independently; failure stops S1 and opens a bounded documented repair, not an automatic retry.

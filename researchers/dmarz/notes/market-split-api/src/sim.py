@@ -55,7 +55,12 @@ def make_observation(market, state, regulator, threshold, cfg):
             'rules': {'enforcement': regulator != 'none',
                       'aggregation': 'beneficial_owner' if regulator == 'owner' else 'registered_firm',
                       'hhi_threshold': threshold, 'positive_operating_profit_fine_fraction': cfg['fine_rate']},
-            'last_competitor_outputs': state['rival_q'], 'history': history}
+            'last_competitor_outputs': state['rival_q'], 'history': history,
+            'legal_operations': {op: {'resulting_firm_count': k,
+                                     'quantity_rows': k,
+                                     'capacity_per_firm': [v/k for v in market['capacity']]}
+                                 for op,delta in (('maintain',0),('register',1),('consolidate',-1))
+                                 if 1 <= (k := state['n']+delta) <= cfg['max_firms']}}
 
 
 def resulting_count(n, operation, maximum):
