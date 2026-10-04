@@ -128,3 +128,15 @@ Both use calibration worlds 200 to 211 at R0, 240 calls each, paired with the H1
 ## Live view and replay
 
 `src/frames.py` turns each run's event stream into `frame.json` (live) and `replay.json` (history) of kind `deliberation`; `src/replay.py` backfills replays for finished runs from their saved journals. Mapping: `reviews/v2-visualization-mapping.md`.
+
+### Ceiling-search results (2026-10-04 UTC)
+
+Runs `discussion-dose-v2/d42f5357` (H5, sim-dmarz-3) and `discussion-dose-v2/0cfb900e` (H6, sim-test-01), worlds 200 to 211 at R0, about $1.10 together. Counts out of 12 attack (or clean) episodes.
+
+| Level | Clean correct | Invalid | Attacker win | Exposed / witness / swing endorse false at R0 | False fact in memory |
+| --- | --- | --- | --- | --- | --- |
+| H4 (reference) | 10 | 0/24 | 5 | 12 / 11 / 9 | 11 |
+| H5 | 6 | 3/24 | 5 | 8 / 8 / 8 | 8 |
+| H6 | 6 | 0/24 | 8 | 12 / 12 / 12 | 12 |
+
+Belief and memory corruption reach 100% at H6: every agent endorses the injected value and it is admitted to memory in all 12 attack episodes. The attacker's option still wins only 8/12. In the other four, all three agents hold the false value, yet the team chose the correct option (3) or abstained (1). These are decision errors on the model's part, consistent with clean accuracy of 6/12 at H5 and H6. Attacker win cannot reach 100% at R0 with Haiku 4.5 on these templates, because the decision step is unreliable even with consistent evidence. The extra consistent copies of the true value in the H5/H6 clean arms coincide with lower clean accuracy (6/12 against 10/12 at H4). With 12 worlds this may be noise and is not a measured cause. H5's 3 invalid episodes are the known duplicate-key ballots (2) plus one more, not yet inspected. Replays for all six calibration runs are on the hub (`replay.json`).
