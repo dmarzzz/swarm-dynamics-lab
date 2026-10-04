@@ -1,0 +1,313 @@
+{
+  "status": "POST-HOC SAVED-EVIDENCE AUDIT; no new model calls",
+  "request_hash_mismatches": [],
+  "full_strict_score_mismatches": [],
+  "audit_scope": "Same-author independent calculation from raw outputs; not independent researcher review. Includes full response contract, unlike the initial partial-command agreement audit.",
+  "D_failures": [
+    {
+      "world": 611,
+      "family": "release",
+      "context": "release",
+      "case_id": "20210a0c388038f3",
+      "class": "B",
+      "governing_source": "canary",
+      "position": 8,
+      "truth": "ship",
+      "action": "hold",
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      }
+    },
+    {
+      "world": 611,
+      "family": "incident",
+      "context": "incident",
+      "case_id": "e342b7535e2c74cd",
+      "class": "A",
+      "governing_source": "ledger",
+      "position": 5,
+      "truth": "none",
+      "action": "ledger",
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": false,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      }
+    },
+    {
+      "world": 611,
+      "family": "release",
+      "context": "migration-old",
+      "case_id": "20210a0c388038f3",
+      "class": "B",
+      "governing_source": "canary",
+      "position": 8,
+      "truth": "ship",
+      "action": "hold",
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      }
+    },
+    {
+      "world": 612,
+      "family": "release",
+      "context": "release",
+      "case_id": "b322c236b1788a72",
+      "class": "A",
+      "governing_source": "canary",
+      "position": 7,
+      "truth": "ship",
+      "action": "hold",
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      }
+    },
+    {
+      "world": 611,
+      "family": "release",
+      "context": "migration-new",
+      "case_id": "20210a0c388038f3",
+      "class": "B",
+      "governing_source": "canary",
+      "position": 8,
+      "truth": "ship",
+      "action": "hold",
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      }
+    },
+    {
+      "world": 612,
+      "family": "release",
+      "context": "migration-old",
+      "case_id": "b322c236b1788a72",
+      "class": "A",
+      "governing_source": "canary",
+      "position": 7,
+      "truth": "ship",
+      "action": "hold",
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      }
+    },
+    {
+      "world": 612,
+      "family": "release",
+      "context": "migration-new",
+      "case_id": "b322c236b1788a72",
+      "class": "A",
+      "governing_source": "canary",
+      "position": 7,
+      "truth": "ship",
+      "action": "hold",
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      }
+    }
+  ],
+  "D_distinct_failures": [
+    {
+      "world": 611,
+      "family": "release",
+      "case_id": "20210a0c388038f3",
+      "contexts": [
+        "release",
+        "migration-old",
+        "migration-new"
+      ]
+    },
+    {
+      "world": 611,
+      "family": "incident",
+      "case_id": "e342b7535e2c74cd",
+      "contexts": [
+        "incident"
+      ]
+    },
+    {
+      "world": 612,
+      "family": "release",
+      "case_id": "b322c236b1788a72",
+      "contexts": [
+        "release",
+        "migration-old",
+        "migration-new"
+      ]
+    }
+  ],
+  "canonical_family_accuracy": {
+    "A": {
+      "correct": 21,
+      "assigned": 48
+    },
+    "B": {
+      "correct": 40,
+      "assigned": 48
+    },
+    "C": {
+      "correct": 44,
+      "assigned": 48
+    },
+    "D": {
+      "correct": 45,
+      "assigned": 48
+    },
+    "E": {
+      "correct": 48,
+      "assigned": 48
+    }
+  },
+  "canonical_release_ship_recall": {
+    "A": {
+      "correct": 0,
+      "assigned": 6
+    },
+    "B": {
+      "correct": 4,
+      "assigned": 6
+    },
+    "C": {
+      "correct": 4,
+      "assigned": 6
+    },
+    "D": {
+      "correct": 4,
+      "assigned": 6
+    },
+    "E": {
+      "correct": 6,
+      "assigned": 6
+    }
+  },
+  "legacy_alias_posthoc": {
+    "correct": 43,
+    "assigned": 48
+  },
+  "model_cost_by_arm": {
+    "E": 0.06326399999999999,
+    "D": 0.025189000000000003,
+    "B": 0.027618000000000004,
+    "C": 0.032591,
+    "A": 0.029678999999999997
+  },
+  "tokens_by_arm": {
+    "E/input": 48744,
+    "E/output": 2904,
+    "D/input": 12764,
+    "D/output": 2485,
+    "B/input": 8848,
+    "B/output": 3754,
+    "C/input": 13136,
+    "C/output": 3891,
+    "A/input": 9634,
+    "A/output": 4009
+  },
+  "max_tokens_stops": 0,
+  "world_correct_totals": {
+    "E": {
+      "610": 32,
+      "611": 32,
+      "612": 32
+    },
+    "D": {
+      "611": 28,
+      "610": 32,
+      "612": 29
+    },
+    "B": {
+      "610": 26,
+      "611": 25,
+      "612": 31
+    },
+    "C": {
+      "611": 27,
+      "612": 29,
+      "610": 32
+    },
+    "A": {
+      "612": 13,
+      "611": 11,
+      "610": 16
+    }
+  },
+  "limitations": [
+    "Retrospective analyses do not change the frozen primary score or qualification gate.",
+    "Order, canary source and distractor conflict are confounded in the observed release errors.",
+    "Fresh calls share a finite Boolean task family; apparent sample count overstates diversity."
+  ]
+}

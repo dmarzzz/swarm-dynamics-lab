@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "sha256:03a998d5403bf6a717f695d678919a0f35bb3d4123626451a4b1de46cf5893b0"
+   },
+   "internalParameters": {
+    "commit": "c12ac6af5bbc7b35e6f98868511d7d05ab174b05-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "30c9da1be7dcfa8523b1cfbf5c21025525078425766e417cd9aefa6fc8c6d780"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md"
+    },
+    {
+     "digest": {
+      "sha256": "5b40738bc95957ad8b5cadcb2f9bcf5d472bf65be289ad21a62be13e979abe3b"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN-CHECKS.json"
+    },
+    {
+     "digest": {
+      "sha256": "2ace2dfb16b8c335a676c68b1232f594aea8dfecd437eb25bacaebd7b6fdf6a9"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/INTERPRETATION-D1.md"
+    },
+    {
+     "digest": {
+      "sha256": "2a68400ee3f748f83b3c3bba9dba8943c12e4f559163af7555384abd20402286"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/closeout.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "c12ac6af5bbc7b35e6f98868511d7d05ab174b05"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T08:01:55Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T08:01:55Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "30c9da1be7dcfa8523b1cfbf5c21025525078425766e417cd9aefa6fc8c6d780"
+   },
+   "name": "artifacts/vishesh-theseus-d2-plan/vishesh-theseus-d2-plan-v1.md"
+  }
+ ]
+}
