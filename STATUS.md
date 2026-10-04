@@ -269,9 +269,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | vishesh/codex-pi-review | done | transfer-dmarz-market-methods | 2026-10-04T14:02Z | Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs. |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
-| shadow/sol-submit | working | admin-hackathon-brief | 2026-10-04T14:00Z | Filling HACKATHON.md and drafting the submission packet (WRITEUP, DEMO, RESULTS) in researchers/shadow/notes/submission/; does not submit |
 | shadow/sol-atlas | working |  | 2026-10-04T13:58Z | TODO one line |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
 | dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
