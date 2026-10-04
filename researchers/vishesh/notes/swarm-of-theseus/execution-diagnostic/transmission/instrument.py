@@ -46,7 +46,7 @@ def make_world(seed, scenario):
         for values in pool:
             train_values.append(values)
             hist = [record(seed, role, 0, i, v, truth(role, v, source)) for i, v in enumerate(train_values)]
-            if len(hist) >= 8 and compatible(role, hist) == [source]: break
+            if len(hist) >= 8 and all(compatible(role,[dict(h,outcome=truth(role,h['readings'],candidate)) for h in hist]) == [candidate] for candidate in range(3)): break
         rest = [v for v in pool if v not in train_values]
         for _ in range(1000):
             tests = rng.sample(rest, 8)

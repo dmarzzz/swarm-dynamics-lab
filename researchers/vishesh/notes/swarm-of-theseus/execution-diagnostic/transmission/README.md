@@ -26,3 +26,7 @@ python3 instrument.py --output validation.json
 ```
 
 The original cumulative exposure remainsUSD0.9793100437; no budget reset. The owner decision is needed for this newly specified native scope under the standing material-update rule, not for offline preparation.
+
+## Approved Q0 execution and collective expansion
+
+[Owner-approved Q0 contract](Q0-AUTHORIZED.md) supersedes the earlier decision-pending status. [Six-member collective study](COLLECTIVE-STUDY.md) introduces complementary evidence and native consultation, twelve replacements and twelve paired roots.44 offline checks pass; no native Q0 result yet. USD20 top-up raises cumulative cap to25; the Q0 stage remains<=1.80.

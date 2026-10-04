@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: idle
-task: null
-doing: institutional-transmission prototype published; concrete T1-Q0 decision pending
-updated: 2026-10-04T19:28Z
+state: working
+task: theseus-t1-q0
+doing: approved Q0 native admission; six-member collective comparison prepared
+updated: 2026-10-04T19:41Z
 ---
 
-31 offline checks; no native calls or allocation. Material T1-Q0 decision pending.
+44 offline checks pass. Claim PR375; prior exposure retained, cumulative cap25.
