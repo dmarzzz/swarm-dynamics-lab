@@ -63,3 +63,8 @@ One authorized attempt completed its failure bookkeeping:24 assigned/terminal,0v
 ### Offline D6 repair preparation — 2026-10-04
 
 Prospective ITERATION-06-PREP.md preceded a separately versioned acquisition primitive with allowlisted status/retry metadata, known/unknown usage, durable in-flight state and first-failure circuit break.70 tests pass, including8 new fault tests. A two-contract synthetic acquisition packet is prepared; maximum0.097280 fits original3.131168 remainder. Zero new calls/allocation; no runnable launcher or credential loader added. Changed execution contract needs owner plan decision and normal admission. See reviews/D6-offline-validation.json.
+
+
+### D6 approved execution preparation — 2026-10-04
+
+Owner approved the prepared two-request acquisition diagnostic, maximum USD0.097280, zero retries and first-failure stop. Exact packet and method unchanged. Added narrow manual runner after prospective binding addendum: immutable plan/source/wire/packet, current private host admission, original ledger floor and exact untouched D6 output; scoped memory-only stdin credential.75 offline tests pass, including full two-contract fixture and first429retaining unstarted second condition. Existing idle approved-account capacity verified; no new machine. Native result is still unobserved at this preparation step. Current pricing checked against official Haiku4.5 documentation (USD1/M input,5/M output). No follow-up study is authorized.
