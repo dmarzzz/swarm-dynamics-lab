@@ -1,6 +1,6 @@
 # Cross-lane lessons
 
-Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T10:16Z. Each item says what was observed, where, and what to do in the next plan.
+Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T10:47Z. Each item says what was observed, where, and what to do in the next plan.
 
 ## 1. Caps and timeouts are part of the hash that binds a stage to its qualification. Size them for the whole ladder before the qualifying run.
 
@@ -108,6 +108,8 @@ Rules that follow:
 - A canary check must read the failure reason, not a count of 429s or a latency. My 10:06Z and 10:08Z canary readings on discussion-v3-opus (0 failures) were true when taken and were read as "small-request lanes are safe"; two minutes later that lane had 61 failures from a different cause, and a no-retry lane had already lost four episodes to 429s. A canary shows that nothing has failed yet, in lanes that retry.
 - Only the discussion adapters name the cause in the record. The sybil adapters keep `count_http_400` or `http_400` with no message. Keep the provider's error type and the first 300 characters of its message on every 4xx (compositional-safety already does).
 - Before any stage over about USD 50: someone with console access confirms the balance and the auto-reload setting.
+
+Reference implementation as of 10:17Z: compositional-safety design v12 (`src/provider.py` lines 96-110, `design.yaml` `capacity_retries: 10`, `billing_wait_seconds: 1800`). A 429 or 529 is resent unchanged up to ten times, honouring `retry-after`; a 400 whose message contains "credit balance" is treated as a billing outage and waited out in 60-second steps for up to 30 minutes before the call is failed as `billing_outage`. The sybil chains and the discussion adapter still stop or lose the call on a credit error.
 
 ## 12. The rate limit behaves as a 5M-token bucket; a lane with no retry pays for every 429 with data.
 
