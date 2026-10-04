@@ -19,9 +19,9 @@ Status: Phase 1 complete; paid stages admitted by the reviewer on 2026-10-04 and
 | G1 Plan before implementation | pass | [README](README.md), [preregistration.md](preregistration.md), `design.yaml` committed before any run on the server | None |
 | G2 Instrument and offline checks | pass | 18/18 offline tests on `sim-test-01` in the pinned runtime and 18/18 locally, 2026-10-04 07:47, dmarz/market-split-opus. Real provider path not exercised | First real check is I0 |
 | G3 Admission, s0-fleet-001 | pass | [s0-fleet-001-pre](reviews/s0-fleet-001-pre.md); claim merged 07:46; public plan at `8c27b690` checked by the launcher (bytes equal, sections present) before `run_start` | None |
-| G3 Admission, s0-fleet-002 | pending | [s0-fleet-002-pre](reviews/s0-fleet-002-pre.md): repeat at the amended design hash | Run |
+| G3 and G5, s0-fleet-002 | pass | [pre](reviews/s0-fleet-002-pre.md), [post](reviews/s0-fleet-002-post.md): 6/6, identical to s0-fleet-001, 0 calls | None |
 | G3 Admission, i0-001 / q0-001 / s1-001 | pass, subject to each software gate | [phase2-pre](reviews/phase2-pre.md), per-attempt files, and the reviewer's go in [phase2-go](reviews/phase2-go.md) (same-researcher check, not independent review). Issue O3 resolved there | Chain I0, Q0, S1 |
-| G4 Qualification | pending | I0 then Q0, unchanged thresholds | After the go |
+| G4 Qualification | pass | [i0-001-post](reviews/i0-001-post.md) 6/6; [q0-001-post](reviews/q0-001-post.md) 4/4 at 100% of the reference, floor 75%; hashes match the S1 source. 2026-10-04 08:05, dmarz/market-split-opus | S1 running |
 | G5 Reconciliation, s0-fleet-001 | pass | [s0-fleet-001-post](reviews/s0-fleet-001-post.md): 6 assigned, 6 done, 12 valid episodes, 42 artifacts hash-verified, 0 calls | None |
 | G5 Closeout of the study | pending | | After the last stage |
 
@@ -55,10 +55,10 @@ Status: Phase 1 complete; paid stages admitted by the reviewer on 2026-10-04 and
 | Attempt / parent | Stage | Pre-review | Assigned / started / terminal | Post-mortem |
 |---|---|---|---|---|
 | s0-fleet-001 / none | S0 scripted | [pre](reviews/s0-fleet-001-pre.md) | 6 / 6 / 6 done; 12 episodes valid | [post](reviews/s0-fleet-001-post.md): advance to paid-stage review |
-| s0-fleet-002 / s0-fleet-001 | S0 scripted, amended design | [pre](reviews/s0-fleet-002-pre.md) | pending | |
-| i0-001 / s0-fleet-002 | I0 | [pre](reviews/i0-001-pre.md), [phase2-pre](reviews/phase2-pre.md) | not started | |
-| q0-001 / i0-001 | Q0 | [pre](reviews/q0-001-pre.md) | not started | |
-| s1-001 / q0-001 | S1 | [pre](reviews/s1-001-pre.md) | not started | |
+| s0-fleet-002 / s0-fleet-001 | S0 scripted, amended design | [pre](reviews/s0-fleet-002-pre.md) | 6 / 6 / 6 done | [post](reviews/s0-fleet-002-post.md): advance |
+| i0-001 / s0-fleet-002 | I0 | [pre](reviews/i0-001-pre.md), [phase2-pre](reviews/phase2-pre.md) | 6 / 6 / 6 valid | [post](reviews/i0-001-post.md): advance |
+| q0-001 / i0-001 | Q0 | [pre](reviews/q0-001-pre.md) | 2 bundles, 4 episodes, 32 calls, all valid | [post](reviews/q0-001-post.md): advance |
+| s1-001 / q0-001 | S1 | [pre](reviews/s1-001-pre.md) | 18 assigned; running | |
 
 ## Closeout
 
