@@ -55,7 +55,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [standardize-experiment-diagnosis](tasks/standardize-experiment-diagnosis.md) | claimed | p1 | build | vishesh/codex-idea-scores |  | 2026-10-04T20:20Z | Standardize evidence-based diagnosis before experiment scaling |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [telephone-native-both](tasks/telephone-native-both.md) | claimed | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
 | [theseus-t1-q0](tasks/theseus-t1-q0.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T20:16Z | Theseus approved apprenticeship qualification and collective study design |
@@ -285,6 +284,7 @@
 | [sol-audit-team](tasks/sol-audit-team.md) | done | p1 | review | shadow/sol-audit-team | shadow | 2026-10-04 | Frozen PI review delta and unlaunched Dmarz ready-chain inventory |
 | [specify-swarm-size-task-contracts](tasks/specify-swarm-size-task-contracts.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:56Z | Specify swarm-size task contracts and qualification gates |
 | [standard-experiment-iteration-2026-10-04](tasks/standard-experiment-iteration-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T17:50Z | Define the standing experiment iteration process |
+| [standardize-experiment-diagnosis](tasks/standardize-experiment-diagnosis.md) | done | p1 | build | vishesh/codex-idea-scores |  | 2026-10-04T20:22Z | Standardize evidence-based diagnosis before experiment scaling |
 | [streamline-experiment-operations](tasks/streamline-experiment-operations.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T04:49Z | Integrate a lean experiment operations interface |
 | [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | done | p1 | survey | shadow/sol-fm |  | 2026-10-04T14:34Z | Survey: corruption on reintegration in fork-and-merge agents |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
