@@ -9,7 +9,7 @@ owner: null
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/private-control
-depends_on: [build-discussion-benchmark-v3, review-discussion-benchmark-v3]
+depends_on: [build-discussion-benchmark-v3]  # launch additionally gated on review-discussion-benchmark-v3 (see Goal)
 topics: []
 ---
 
