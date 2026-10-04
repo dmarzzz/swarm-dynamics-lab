@@ -39,7 +39,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-diversity-v7](tasks/antsy-diversity-v7.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T06:19Z | Measure worker diversity and correlated errors in Antsy |
 | [build-poietic-agents-instrument](tasks/build-poietic-agents-instrument.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T06:16Z | Build the Poietic Agents offline instrument and qualification package |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:28Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
@@ -129,6 +128,7 @@
 | [add-experiment-evidence-metadata](tasks/add-experiment-evidence-metadata.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:20Z | Add evidence confidence and sample-size metadata to every study |
 | [add-patchwork-hypotheses](tasks/add-patchwork-hypotheses.md) | done | p1 | synthesis | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:04Z | Add Patchwork-derived hypotheses to the research page |
 | [analyze-discussion-v3-q0](tasks/analyze-discussion-v3-q0.md) | done | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:50Z | Audit and publish the completed discussion v3 qualification |
+| [antsy-diversity-v7](tasks/antsy-diversity-v7.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T06:29Z | Measure worker diversity and correlated errors in Antsy |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:55Z | Ground Antsy in measured OCR errors and budgeted verification |
