@@ -28,6 +28,9 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
+| [None](tasks/build-trust-credit-qwen.md) | claimed | None | None | dmarz/pipeline-split |  | 2026-10-04T10:30Z |  |
+| [build-memory-handoff-qwen](tasks/build-memory-handoff-qwen.md) | claimed | p0 | build | dmarz/pipeline-memory | dmarz | 2026-10-04T10:30Z | Prepare program v5 line M (can successors repair inherited false memory) to launch-ready |
+| [build-verify-cost-qwen](tasks/build-verify-cost-qwen.md) | claimed | p0 | build | dmarz/pipeline-verify | dmarz | 2026-10-04T10:30Z | Prepare program v5 line V (when is verification worth its cost) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed (stale) | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
@@ -56,6 +59,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
+| [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | open | p0 | build |  | dmarz |  | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -262,12 +266,15 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-synth | 2026-10-04T10:50Z | sybil-scarcity-synth: plan pushed (README, preregistration with the frozen evidence rule, design, setup record) before any fresh root was generated; now implementing code and offline tests; no launch, no model call |
+| dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T10:45Z | building the sybil-rules-180 package (program v5 flagship F); engine and invariants first, then chain, three-host transport, adapter, replay; nothing launched, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
+| dmarz/pipeline-memory | working | build-memory-handoff-qwen | 2026-10-04T10:30Z | Preparing memory-handoff-qwen (program v5 line M: can successors repair inherited false memory) to launch-ready on qwen/qwen3.7-flash via OpenRouter; no launch, no model call |
+| dmarz/pipeline-split | working | build-trust-credit-qwen | 2026-10-04T10:30Z | Preparing trust-credit-qwen (program v5 line T) to launch-ready on qwen/qwen3.7-flash via OpenRouter; no launch, no model call. Earlier package sybil-split-opus is filed as run queue 252. |
+| dmarz/pipeline-verify | working | build-verify-cost-qwen | 2026-10-04T10:30Z | Preparing verify-cost-qwen (program v5 line V: when is verification worth its cost) to launch-ready on qwen/qwen3.7-flash via OpenRouter; no launch, no model call |
 | dmarz/pipeline-quota | idle | build-quota-splitting | 2026-10-04T10:28Z | PAUSED by dmarz/pipeline (priority change) at pause commit 6b9adefa (source hash 978e7a58...): code for all four failure-handling parts is in and selftest passes (71 tests). Remaining: documents and dated amendment for the rule, mutants and clean-export rerun of all offline checks, READY.yaml, pre-run review. No launch, no model call. |
 | dmarz/scale-xl | blocked |  | 2026-10-04T10:25Z | sybil-scale-xl S1 closed at 481/576 (credit outage); RESULTS + post-mortem done; A3 completion (95 rows, ~USD 41) proposed to dmarz; claim kept |
 | dmarz/market-split-opus | done |  | 2026-10-04T10:20Z | market-split-opus complete; Opus 5.5 split in 6/6 firm-regulated, 0/6 owner, 0/6 unregulated fresh markets; 902 calls, USD 15.34; results and post-run review pushed; claim on sim-test-01 released |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T10:10Z | false-alarm-cascade: code, manifest and READY file pushed (selftest 35 OK, offline S0 1225/1225, rehearsal passed); writing the pre-run review pinned to the code commit; no launch, no model call |
-| dmarz/pipeline-split | done |  | 2026-10-04T09:28Z | sybil-split-opus package finished and filed as a ready run request (run queue 252) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | vishesh/codex-theseus | done | theseus-d2-run | 2026-10-04T09:25Z | D2 and single R1 repair complete; F qualified, postmortems and next proposal published |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
