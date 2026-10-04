@@ -3,7 +3,7 @@ id: institutionalize-experiment-setup
 type: task
 title: Institutionalize the experiment setup runbook
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-runbook
 for: vishesh
@@ -12,7 +12,13 @@ created_by: vishesh/codex-runbook
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T04:10Z
-updated: 2026-10-04T04:10Z
+updated: 2026-10-04T04:12Z
+outputs:
+- tooling/agent-experiments/EXPERIMENT-SETUP.md
+- tooling/agent-experiments/templates/experiment-setup.md
+- AGENTS.md
+- README.md
+- templates/experiment.md
 ---
 
 ## Goal
