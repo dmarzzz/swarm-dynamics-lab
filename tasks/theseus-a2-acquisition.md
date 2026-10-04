@@ -3,14 +3,16 @@ id: theseus-a2-acquisition
 type: task
 title: Theseus A2 approved acquisition continuation
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-theseus
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-theseus
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T18:11Z
+updated: 2026-10-04T18:11Z
 ---
 
 ## Goal
