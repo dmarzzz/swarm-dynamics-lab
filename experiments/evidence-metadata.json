@@ -1842,32 +1842,6 @@
       }
     },
     {
-      "id": "sybil-scale-opus",
-      "title": "Sybil resistance as swarms grow (Opus 5.5 replication)",
-      "documents": [
-        "researchers/dmarz/notes/sybil-scale-opus/README.md"
-      ],
-      "experiment_ids": [
-        "sybil-scale-opus"
-      ],
-      "registration_paths": [
-        "researchers/dmarz/notes/sybil-scale-opus/experiment.yaml"
-      ],
-      "evidence_confidence": {
-        "score": 0,
-        "claim": "Proposed: the Haiku/Sonnet N972 proportional-minus-fixed coverage contrast keeps its sign with Opus 5.5 (effort low, no temperature) on identical worlds.",
-        "rationale": "No Opus outcomes yet; plan, offline selftests and local scripted S0 only."
-      },
-      "sample_size_summary": "Observed: local scripted S0 264/264, 0 model calls. Planned: Q0 64 calls on 4 qualification worlds; S1 2,400 calls on 24 paired world roots (100 conditions each), paired with the Haiku and Sonnet cohorts, never pooled.",
-      "sources": [
-        "researchers/dmarz/notes/sybil-scale-opus/preregistration.md",
-        "researchers/dmarz/notes/sybil-scale-opus/reviews/local-s0-001-post.md"
-      ],
-      "status_at_assessment": "planned_s0_local_passed",
-      "assessor": "dmarz/scale-opus",
-      "assessed_at": "2026-10-04"
-    },
-    {
       "id": "sybil-scarcity-opus",
       "title": "Does Sybil-resistant accuracy depend on repeated knowledge? (Opus 5.5)",
       "documents": [
