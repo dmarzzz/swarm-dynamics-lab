@@ -1,0 +1,17 @@
+# Prospective offline case-design revision
+
+2026-10-04. Before implementation. Parent: trace-review/RESULTS.md and PROPOSAL.md; latest native Q1-02 remains a valid negative (0/8 graded). No native run is requested by this design revision.
+
+Question: what observable evidence makes source identity and permission to count an observation identifiable? Text similarity is not proof of origin, even when only one catalogued receipt has similar wording. Separate origin resolution, supplied dependency constraints, and factual/content fidelity. This revision tests the first two; it does not validate content fidelity, authentication or statistical independence.
+
+Build 24 authored synthetic development cases: six failure mechanisms, two scenario roots per mechanism, two matched variants per root. Mechanisms: paraphrase with/without attestation; identical text with/without a distinguishing acquisition binding; untrusted claimed reference with/without a trusted binding; direct versus relayed copies; known versus unknown/shared dependency metadata; convergent versus divergent provenance paths. Twelve authored roots, not 24 independent sampled worlds. Include both answer-changing and answer-preserving pairs. All inspected cases stay development-only.
+
+Each actor packet receives an explicit trust contract, report, candidate receipts, authenticated origin edges and known dependency groups. Evaluator-only fields contain expected origin, expected admission (NEW_GROUP/KNOWN_GROUP/DEFER), rationale and the pair's one changed evidence property. Authentication is an explicit synthetic assumption, not implemented cryptography. No hidden key, operator context or guessed ancestry may establish the target.
+
+Preserve and hash the prior four lookup controllers unchanged. Apply them through a disclosed legacy projection for failure diagnosis, not a fair model comparison across different input contracts. Add the appropriate strongest inexpensive control: exact traversal of authenticated origin edges, requiring a unique root and refusing dangling/cyclic/cross-event paths. This is the baseline for the richer contract, not an oracle hidden from a model. Do not claim semantic headroom merely because the legacy projection drops the necessary edges.
+
+Acceptance: all 24 hand-declared targets match an independently implemented graph resolver; cases have distinct IDs and labels absent from actor packets; IDs and input order do not change outcomes; duplicate paths to one acquisition do not inflate evidence; deleting attestation cannot silently become proof via text; unknown dependency remains DEFER. Retain every case and all baseline outcomes, including easy controls and failures. Publish a readable casebook with evidence and labels; no animation because these are static packets, not trajectories.
+
+Report coverage and limitations rather than population confidence intervals. No model comparison, safety rate, swarm benefit or real-world generalization can be inferred. Source hash and exact commands allow reproduction. No held-out dataset is created in this cycle; a future set must split by event/acquisition and authoring template before model tuning. No API calls, machine or budget mutation. Retain 49 historical calls/$0.065856 reserved and original $1 API + $1 infrastructure cap.
+
+Next action: finish this offline design package and reassess whether an unresolved useful native task exists. A materially new native instrument still needs preparation and its concrete owner decision; this plan is not a launch packet.
