@@ -27,16 +27,23 @@ import render       # noqa: E402
 import sim          # noqa: E402
 import study        # noqa: E402
 import worker       # noqa: E402
-from test_provider import Request, Answers, Transport, Billing, LedgerRules  # noqa: E402,F401  (the adapter's 32 tests)
+from test_provider import Request, Cost, Answers, Transport, Billing, StubServer, LedgerRules  # noqa: E402,F401  (the adapter's 28 tests)
 
 FROZEN = {'world_4481': '079b32e669f71bb78927dfbde4142d59f11211ef6c9a0049ad1a254f7e1fb6bc',
           'audit_4481': '20268380ea35369b5c49192714657a6593c2617d488fd80dbc9c06329743bd91',
           'admitted_4481': '10eef2c47925c1650572ae877d9a6db9b648635098062daa4bc337355a99d95a',
-          'request_template': '9cbd8bc28ae39aafc5dd86a1627bfd54677052367b4b2aa5811dbb1dae558dbe',
-          'reference_adapter': '2e98d517bad4cf8d2d9383f3126040e576bd4aa5528e4546639f5aeff03fa982',
+          'request_template': 'fafab48fd68dd21133a3875b5876cabe66bff5c44f48885f06af4f802192d756',
+          'reference_adapter': 'f48e8aa819e49878b234a957699f1258703ac3ebca02fc9140e2129dfb1c5404',
           'instruction': 'bddb189fed7f59bd89880a81e46f531a7664919114ca3aed8f14319d666caf04'}
 D = study.design(); CFG = study.cfg(); B = D['budget']
-ENG = D['roots']['engineering']; KEY = 'sk-or-test-SECRET-0123456789'
+ENG = D['roots']['engineering']; KEY = 'sk-proj-test-SECRET-0123456789'
+# Attempt 001's manifest digests (code commit d3219ceb): attempt 002 answers byte-identical packets.
+ATTEMPT_001 = {'S0': 'd973fce7881b0296715e403f105284e292985d13fb937974a69ab47e621974c4',
+               'P0': '7ff52043f055d0a26f2c10a804bd9544bbc1328b3051aed99cf5344d71765f0c',
+               'Q0': '03800f8242fa93b8c6a865832df42cc789d7eb0a1c804e8b1c0c2ccad7d4bc3c',
+               'S1': '1afebafd418540ab3ade71d4f81bb520ddb4636c0e7bdbe97fa450e2b1aad212',
+               'qualification_b': '97447d5a7744813a314e1ced832d70dee4207cca8ebae5313bdc3e0a05e98b95'}
+QUOTA = b'{"error":{"message":"You exceeded your current quota, please check your plan and billing details.","type":"insufficient_quota","code":"insufficient_quota"}}'
 _cache = {}
 
 
@@ -68,14 +75,14 @@ class Model:
         with self.lock:
             if self.credit_forever or self.credit_first > 0:
                 self.credit_first -= 1
-                raise urllib.error.HTTPError(provider.URL, 402, 'x', {}, io.BytesIO(b'{"error":{"message":"Insufficient credits"}}'))
+                raise urllib.error.HTTPError(provider.URL, 429, 'x', {}, io.BytesIO(QUOTA))
             self.n += 1; fault = self.faults.get(self.n)
         body = json.loads(request.data)
         if isinstance(fault, int):
             raise urllib.error.HTTPError(provider.URL, fault, 'x', {'x-request-id': 'req-9'}, io.BytesIO(b'{"error":{"message":"upstream said no"}}'))
         answer = study.scripted(json.loads(body['messages'][1]['content']))
         content = '{"values": [1, 2]}' if fault == 'invalid' else json.dumps(answer)
-        return Resp(json.dumps({'id': 'g', 'model': D['canonical_model'], 'provider': 'Alibaba',
+        return Resp(json.dumps({'id': 'g', 'model': D['model'],
                                 'choices': [{'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': content}}],
                                 'usage': {'prompt_tokens': 2600, 'completion_tokens': 40}}).encode())
 
@@ -270,32 +277,61 @@ class Instrument(unittest.TestCase):
     def test_stage_counts_caps_and_splits(self):
         self.assertEqual(B['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 504}); self.assertEqual(B['max_attempted_calls'], sum(B['max_calls'].values()) + D['qualification']['fixtures']); self.assertEqual((B['max_attempted_calls'], B['reservation_margin']), (552, 10))
         self.assertEqual(24 * (3 * 3 * 2 + 3), 504); self.assertEqual(B['max_failed'], max(3, -(-504 // 100)))
-        self.assertGreaterEqual(B['max_transport_attempts'], 552 + 40); self.assertEqual(B['aggregate_usd'], 2)
+        self.assertGreaterEqual(B['max_transport_attempts'], 552 + 40); self.assertEqual(B['aggregate_usd'], 5)
         groups = [set(D['roots'][k]) for k in ('engineering', 'qualification', 'qualification_b', 'comparison')]
         self.assertEqual([len(g) for g in groups], [8, 8, 8, 24]); self.assertTrue(all(not a & b for i, a in enumerate(groups) for b in groups[i + 1:]))
         self.assertLess(max(set.union(*groups)), 10000)
         with self.assertRaises(ValueError): study.params('S2')
-        self.assertEqual((study.attempt(), study.batch('S1'), study.qualification_set()), ('001', 's1-001', 'a'))
+        self.assertEqual((study.attempt(), study.batch('S1'), study.qualification_set()), ('002', 's1-002', 'a'))
+        self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-002', 'p0-002', 'q0-002', 's1-002'])
+        self.assertEqual((D['model'], D['provider']), ('gpt-6-luna', 'openai'))
+        self.assertEqual({s: study.params(s)['backend'] for s in study.STAGES}, {'S0': 'scripted', 'P0': 'openai', 'Q0': 'openai', 'S1': 'openai'})
+        self.assertEqual(study.params('S1')['model'], 'gpt-6-luna'); self.assertNotIn('model', study.params('S0'))
 
     def test_request_template_and_adapter_are_the_frozen_references(self):
         self.assertEqual(study.digest(D['request_template']), FROZEN['request_template'])
+        self.assertEqual(D['request_template'], {'model': 'gpt-6-luna', 'reasoning_effort': 'low', 'max_completion_tokens': 1500,
+                                                 'response_format': {'type': 'json_object'}})
+        # src/provider.py is the pipeline's reference OpenAI adapter (swarm-lab main 8290d7ad), copied unchanged.
         self.assertEqual(hashlib.sha256((study.ROOT / 'src' / 'provider.py').read_bytes()).hexdigest(), FROZEN['reference_adapter'])
-        c = study.adapter_config(); self.assertEqual(set(c), {'model', 'canonical_model', 'provider', 'request_template', 'budget'})
-        from test_provider import CONFIG
-        self.assertEqual(c['request_template'], CONFIG['request_template']); self.assertLessEqual(set(CONFIG['budget']), set(c['budget']))
-        for key in ('max_calls', 'aggregate_usd', 'max_output_tokens', 'max_input_tokens', 'request_timeout_seconds', 'retry',
-                    'billing_outage', 'max_transport_attempts', 'input_usd_per_million', 'output_usd_per_million'):
-            self.assertEqual(c['budget'][key], CONFIG['budget'][key])
+        reference = study.ROOT.parent / 'pipeline' / 'reference' / 'openai_provider.py'
+        if reference.exists(): self.assertEqual(hashlib.sha256(reference.read_bytes()).hexdigest(), FROZEN['reference_adapter'])
+        c = study.adapter_config(); self.assertEqual(set(c), {'model', 'canonical_model', 'request_template', 'budget'})
+        provider.check_config(c); self.assertEqual(B['prices'], provider.PRICES['gpt-6-luna'])
+        self.assertEqual(B['retry']['retryable_http_status'], [429, 500, 502, 503, 504])
+        self.assertIn('json', study.SYSTEM.lower())          # JSON-object mode needs the word; the frozen instruction has it
         with tempfile.TemporaryDirectory() as td, paid_env(td):
             sent = []
             def opener(request, timeout): sent.append(json.loads(request.data)); return Model()(request)
-            api = provider.OpenRouter(provider.Ledger(Path(td) / 'l', c['budget']), c, opener)
-            a = study.assignments('P0')[0]; answer, acct = api.call(study.SYSTEM, study.user_text(a['packet']), 'p0-001:x', study.validate)
+            api = provider.OpenAI(provider.Ledger(Path(td) / 'l', c['budget']), c, opener)
+            a = study.assignments('P0')[0]; answer, acct = api.call(study.SYSTEM, study.user_text(a['packet']), 'p0-002:x', study.validate)
             self.assertEqual(list(sent[0]), list(provider.BODY_KEYS)); self.assertEqual({k: v for k, v in sent[0].items() if k != 'messages'}, D['request_template'])
+            self.assertEqual(sent[0]['messages'], [{'role': 'system', 'content': study.SYSTEM}, {'role': 'user', 'content': study.user_text(a['packet'])}])
             self.assertEqual(acct['request_bytes'], a['request_bytes']); self.assertEqual(answer, study.scripted(a['packet']))
-            self.assertEqual(acct['reserved_usd'], int((a['request_bytes'] * 0.03 + 1000 * 0.13) * 10 + 0.999999) / 1e6)
-            # even if every call of the study and of the one repair attempt stayed unsettled, the reservations fit under the cap
-            self.assertLess(B['max_attempted_calls'] * (B['max_input_bytes'] * 0.03 + 1000 * 0.13) * B['reservation_margin'] / 1e6, B['aggregate_usd'])
+            self.assertEqual(acct['reserved_usd'], int((a['request_bytes'] * 0.125 + 1500 * 0.50) * 10 + 0.999999) / 1e6)
+            self.assertEqual(acct['cost_source'], 'computed_from_pinned_prices')
+            self.assertAlmostEqual(acct['computed_usd'], (2600 * 0.125 + 40 * 0.50) / 1e6)     # cache writes unreported: upper bound
+        # Open reservations never approach the cap: at most `workers` in flight plus `max_failed` failed calls without usage.
+        one = (B['max_input_bytes'] * 0.125 + 1500 * 0.50) * B['reservation_margin'] / 1e6
+        self.assertLess((B['workers'] + B['max_failed'] + 1) * one, 0.2)
+        # Settled spend at most: every input byte a token at the cache-write price, every call the full output allowance.
+        paid_bytes = sum(manifest.load()['stages'][s]['request_bytes'] for s in ('P0', 'Q0', 'S1'))
+        self.assertLess(paid_bytes * 0.125 / 1e6 + 528 * 1500 * 0.50 / 1e6, 1.0)
+        # Expected spend: 528 calls x about 3,100 input tokens, output up to the 1,500-token allowance.
+        self.assertLess(528 * (3100 * 0.125 + 1500 * 0.50) / 1e6, 1.0)
+
+    def test_attempt_002_answers_the_packets_of_attempt_001(self):
+        fresh = manifest.build()
+        self.assertEqual({s: e['digest'] for s, e in fresh['stages'].items()}, ATTEMPT_001)
+        for stage in ('S0', 'P0', 'Q0', 'S1'):
+            self.assertTrue(all(a['request_bytes'] == study.request_bytes(a['packet']) for a in study.assignments(stage)[:5]))
+
+    def test_launcher_model_and_provider_must_be_this_attempt(self):
+        for env, want in (({'STUDY_MODEL': 'qwen/qwen3.7-flash'}, 'study_model_is_not_this_attempt'),
+                          ({'STUDY_MODEL': 'gpt-6-luna', 'STUDY_PROVIDER': 'openrouter'}, 'study_provider_is_not_this_attempt')):
+            with tempfile.TemporaryDirectory() as td, paid_env(td), patch.dict(os.environ, env):
+                with self.assertRaises(AssertionError) as ctx: worker.execute(study.params('P0'), Path(td) / 'out')
+            self.assertEqual(str(ctx.exception), want)
 
     def test_engineering_grid_reproduces_the_parent_direction_and_is_not_degenerate(self):
         rows = scripted_rows('S0'); self.assertEqual(len(rows), 216); self.assertEqual(study.degeneracy(rows), [])
@@ -342,10 +378,10 @@ class WorkerRules(unittest.TestCase):
         return run, summary, rows, analysis, leaked
 
     def test_one_failed_call_does_not_strand_s1_and_keeps_its_evidence(self):
-        run, summary, rows, analysis, leaked = self.run_s1(Model({5: 500, 9: 'invalid'}))
+        run, summary, rows, analysis, leaked = self.run_s1(Model({5: 400, 9: 'invalid'}))     # 400 is not re-sent (500 is, on this route)
         self.assertEqual((summary['failed'], summary['invalid'], summary['graded'], summary['not_started'], summary['passed'], summary['stop_reason']), (2, 2, 22, 0, True, None))
-        failed = {r['error']: r for r in rows if r['status'] == 'failed'}; self.assertEqual(set(failed), {'http_500', 'invalid_answer'})
-        acct = failed['http_500']['accounting']; self.assertEqual((acct['http_status'], acct['request_id']), (500, 'req-9')); self.assertIn('upstream said no', acct['error_body'])
+        failed = {r['error']: r for r in rows if r['status'] == 'failed'}; self.assertEqual(set(failed), {'http_400', 'invalid_answer'})
+        acct = failed['http_400']['accounting']; self.assertEqual((acct['http_status'], acct['request_id']), (400, 'req-9')); self.assertIn('upstream said no', acct['error_body'])
         self.assertIn('answer_text', failed['invalid_answer']['accounting']); self.assertFalse(leaked)
         kind, metrics = run.final; self.assertEqual(kind, 'done'); self.assertEqual((metrics['episodes'], metrics['invalid'], metrics['failed'], metrics['model_calls']), (24, 2, 2, 24))
         for key in worker.HUB_KEYS: self.assertIn(key, metrics)
@@ -370,7 +406,7 @@ class WorkerRules(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td, paid_env(td), patch.object(render, 'replay', lambda *a, **k: 0):
             with self.assertRaises(worker.StageFailed): worker.execute(run.params, Path(td) / 'out', run, opener=Model({1: 'invalid'}), earlier_rows=probe)
             summary = json.loads((Path(td) / 'out' / 'summary.json').read_text())
-        self.assertEqual(summary['qualification_passed'], 0); self.assertGreaterEqual(summary['not_started'], 23 - B['workers'])
+        self.assertEqual(summary['qualification_passed'], 0); self.assertGreaterEqual(summary['not_started'], 23 - 2 * B['workers'])   # a slot freed before the failure is seen may take one more
         kind, metrics = run.final; self.assertEqual(kind, 'fail'); self.assertEqual(metrics['episodes'], 23)
 
     def test_qualification_stage_passes_with_the_probe_row_and_fails_without_it(self):
@@ -408,42 +444,43 @@ class WorkerRules(unittest.TestCase):
             self.assertTrue(1 <= summary['voided_calls'] <= B['workers'])
             self.assertTrue(all(r['accounting'].get('voided') for r in rows if r['status'] == 'not_started' and r['accounting'].get('attempted')))
             ledger = provider.Ledger(Path(shared) / 'ledger.jsonl', config['budget']); mid = ledger.transact()
-            self.assertEqual((mid['calls_by_batch']['s1-001'], mid['attempted_calls'], mid['voided_calls']), (10, 10, summary['voided_calls']))
+            self.assertEqual((mid['calls_by_batch']['s1-002'], mid['attempted_calls'], mid['voided_calls']), (10, 10, summary['voided_calls']))
             units = [r['id'] for r in rows if r['status'] == 'not_started']
-            p = dict(study.params('S1'), batch='s1-001-r1', continuation=1)
+            p = dict(study.params('S1'), batch='s1-002-r1', continuation=1)
             run2, summary2, rows2, analysis2, _ = self.run_s1(Model(), units=units, prior=rows, params=p, ledger_dir=shared, config=config)
             self.assertEqual((summary2['planned'], summary2['graded'], summary2['passed'], summary2['model_calls']), (14, 14, True, 14))
             end = ledger.transact()
-            self.assertEqual((end['calls_by_batch']['s1-001'], end['attempted_calls'], end['usage_reported_calls']), (24, 24, 24))    # answered plus open never above the cap
-            with self.assertRaises(provider.CallFailure) as ctx: ledger.transact({'type': 'reserve', 'call_id': 's1-001-r2:extra', 'micro_usd': 1})
+            self.assertEqual((end['calls_by_batch']['s1-002'], end['attempted_calls'], end['usage_reported_calls']), (24, 24, 24))    # answered plus open never above the cap
+            with self.assertRaises(provider.CallFailure) as ctx: ledger.transact({'type': 'reserve', 'call_id': 's1-002-r2:extra', 'micro_usd': 1})
             self.assertEqual(ctx.exception.category, 'stage_call_cap_reached')
         whole = worker.merge(rows, rows2); self.assertEqual(len(whole), 24); self.assertTrue(all(r['status'] == 'completed' for r in whole))
         self.assertEqual(analysis2['denominators']['completed'], 24)
         with self.assertRaises(AssertionError): worker.merge(whole, rows2)                                # a unit is never counted twice
 
-    def test_probe_stage_reports_the_raw_response_metadata_and_needs_the_provider_named(self):
+    def test_probe_stage_reports_the_raw_response_metadata_and_needs_the_model_named(self):
         run = FakeRun('x/p0', study.params('P0'))
         with tempfile.TemporaryDirectory() as td, paid_env(td), patch.object(render, 'replay', lambda *a, **k: 0):
             worker.execute(run.params, Path(td) / 'out', run, opener=Model())
             summary = json.loads((Path(td) / 'out' / 'summary.json').read_text())
         probe = summary['probe']; size = study.assignments('P0')[0]['request_bytes']
         self.assertEqual((probe['response_model'], probe['response_provider'], probe['response_id'], probe['finish_reason'], probe['reasoning_tokens']),
-                         (D['canonical_model'], 'Alibaba', 'g', 'stop', None))
+                         (D['model'], None, 'g', 'stop', None))
+        self.assertAlmostEqual(probe['computed_usd'], (2600 * 0.125 + 40 * 0.50) / 1e6)
         self.assertEqual((probe['input_tokens'], probe['output_tokens'], probe['request_bytes'], probe['provider_reported_usd']), (2600, 40, size, None))
         self.assertAlmostEqual(probe['tokens_per_byte'], 2600 / size); self.assertIsNotNone(probe['latency_seconds'])
         kind, metrics = run.final; self.assertEqual((kind, metrics['qualification_passed'], metrics['probe_input_tokens'], metrics['probe_output_tokens']), ('done', 1, 2600, 40))
         self.assertAlmostEqual(metrics['probe_tokens_per_byte'], 2600 / size); self.assertIn('probe_latency_seconds', metrics); self.assertIn('fixture_exact', metrics)
-        for piece in ('model=' + D['canonical_model'], 'provider=Alibaba', 'id=g', 'finish=stop'): self.assertIn(piece, run.message)
+        for piece in ('model=' + D['model'], 'id=g', 'finish=stop', 'computed_usd='): self.assertIn(piece, run.message)
         self.assertTrue(all(isinstance(v, (int, float)) for v in metrics.values()))
-        class Unnamed(Model):
+        class Unnamed(Model):           # a response from another model is an integrity failure
             def __call__(self, request, timeout=None):
-                data = json.loads(super().__call__(request).read()); del data['provider']; return Resp(json.dumps(data).encode())
+                data = json.loads(super().__call__(request).read()); data['model'] = 'gpt-6-sol'; return Resp(json.dumps(data).encode())
         run = FakeRun('x/p0', study.params('P0'))
         with tempfile.TemporaryDirectory() as td, paid_env(td), patch.object(render, 'replay', lambda *a, **k: 0):
             with self.assertRaises(worker.StageFailed): worker.execute(run.params, Path(td) / 'out', run, opener=Unnamed())
             summary = json.loads((Path(td) / 'out' / 'summary.json').read_text())
-        self.assertEqual((run.final[0], summary['errors'], summary['probe']['error'], summary['qualification_passed']), ('fail', ['provider_missing'], 'provider_missing', 0))
-        self.assertIn('error=provider_missing', run.message)
+        self.assertEqual((run.final[0], summary['errors'], summary['probe']['error'], summary['qualification_passed']), ('fail', ['model_mismatch'], 'model_mismatch', 0))
+        self.assertIn('error=model_mismatch', run.message)
 
     def test_structural_violation_blocks_every_call(self):
         run = FakeRun('x/s1', study.params('S1')); model = Model()
@@ -487,7 +524,7 @@ class Gates(unittest.TestCase):
         with self.assertRaises(coordinator.GateRefused) as ctx: coordinator.enqueue_continuation(hub, 1)
         self.assertEqual(str(ctx.exception), 'last_s1_run_is_not_a_billing_stop')
         hub.rows[-1]['metrics']['resumable'] = 1
-        ids = coordinator.enqueue_continuation(hub, 1); self.assertEqual(hub.rows[-1]['params']['batch'], 's1-001-r1'); self.assertEqual(hub.rows[-1]['params']['continuation'], 1)
+        ids = coordinator.enqueue_continuation(hub, 1); self.assertEqual(hub.rows[-1]['params']['batch'], 's1-002-r1'); self.assertEqual(hub.rows[-1]['params']['continuation'], 1)
         with self.assertRaises(coordinator.GateRefused): coordinator.enqueue_continuation(hub, 1)
         hub = FakeHub(); hub.add('S1', status='failed', resumable=1)                       # no passed Q0 at this hash
         with self.assertRaises(coordinator.GateRefused) as ctx: coordinator.enqueue_continuation(hub, 1)
@@ -543,7 +580,7 @@ class Gates(unittest.TestCase):
         self.assertEqual([r['params']['stage'] for r in hub.rows], ['S0', 'P0', 'Q0'])
 
     def test_cost_projection_and_missing_probe_row_stop_the_chain(self):
-        code, status, executed, hub, _ = self.chain_with({}, metrics={'Q0': {'cost_usd': 0.1}})          # 504 x 0.1/23 = 2.19 > 2
+        code, status, executed, hub, _ = self.chain_with({}, metrics={'Q0': {'cost_usd': 0.25}})         # 504 x 0.25/23 = 5.48 > 5
         self.assertEqual((code, status['stopped_stage'], status['reason']), (3, 'S1', 'projection_exceeds_cap'))
         code, status, executed, hub, _ = self.chain_with({}, probe=False)
         self.assertEqual((code, status['stopped_stage'], status['reason'], executed), (3, 'Q0', 'p0_row_missing', ['S0', 'P0']))

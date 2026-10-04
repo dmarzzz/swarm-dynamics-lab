@@ -6,6 +6,8 @@ budget.max_failed calls have failed; an integrity failure (a ledger refusal, a m
 mismatch, a breached reservation, a deadline, an internal error) stops dispatch at once. A billing
 outage that outlasts its limit stops the stage with nothing recorded as failed: the affected and
 unfinished calls are recorded as not started and S1 can be resumed (chain.py resume).
+Attempt 002 (amendment A2) calls gpt-6-luna through the reference OpenAI adapter (src/provider.py); the
+launcher's STUDY_MODEL and STUDY_PROVIDER, when set, must name this attempt's model and its provider.
 On every ending the hub run reports episodes, invalid, failed, model_calls, transport_attempts,
 input_tokens, output_tokens and cost_usd.
 """
@@ -81,7 +83,10 @@ def merge(prior_rows, rows):
 def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(), units=None, prior_rows=None, clock=None, sleep=None):
     stage = p['stage']; d = study.design(); budget = d['budget']; strict = stage in STRICT
     assert p['source_hash'] == study.source_hash(), 'runtime_source_mismatch'
-    assert p['backend'] == ('scripted' if stage == 'S0' else 'openrouter')
+    assert p['backend'] == ('scripted' if stage == 'S0' else 'openai')
+    # The launcher names the ladder model it was asked for; this code runs gpt-6-luna only.
+    assert os.environ.get('STUDY_MODEL') in (None, '', d['model']), 'study_model_is_not_this_attempt'
+    assert os.environ.get('STUDY_PROVIDER') in (None, '', d['provider']), 'study_provider_is_not_this_attempt'
     assert (units is None) == ('continuation' not in p) and (units is None or stage == 'S1')
     out = Path(out); out.mkdir(parents=True, exist_ok=False)
     start = time.monotonic(); run_name = run.id if run else out.name
@@ -96,14 +101,14 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
         for a in assigned: f.write(json.dumps(a, sort_keys=True) + '\n')
     violations = study.check_invariants(stage)
     ledger = None
-    if p['backend'] == 'openrouter':
+    if p['backend'] == 'openai':
         path = os.environ.get(provider.LEDGER_ENV); assert path, 'persistent_budget_required'
         # A continuation runs under the unchanged caps: the ledger voided the reservations of the calls
         # a billing stop left unanswered, and a continuation batch shares its original batch's allowance.
         config = study.adapter_config()
         assert total <= config['budget']['max_calls'][stage], 'assignments_exceed_stage_call_cap'
         ledger = provider.Ledger(path, config['budget'])
-        backend = backend or provider.OpenRouter(ledger, config, opener, clock or time.monotonic, sleep or time.sleep)
+        backend = backend or provider.OpenAI(ledger, config, opener, clock or time.monotonic, sleep or time.sleep)
     initial = ledger.transact() if ledger else {}
     rows = state['rows']; reporting_errors = []
     control = {'reason': 'invariant_violations' if violations and not strict else None, 'failed': 0}
@@ -226,7 +231,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
 
 def hub_metrics(summary):
     m = {k: summary[k] for k in HUB_KEYS}
-    for k in ('input_tokens', 'output_tokens', 'reasoning_tokens', 'latency_seconds', 'provider_reported_usd', 'tokens_per_byte'):
+    for k in ('input_tokens', 'output_tokens', 'reasoning_tokens', 'latency_seconds', 'provider_reported_usd', 'computed_usd', 'tokens_per_byte'):
         if isinstance((summary.get('probe') or {}).get(k), (int, float)): m['probe_' + k] = summary['probe'][k]
     for k in ('qualification_passed', 'primary_contrast', 'rare_correct', 'rare_wrong', 'max_tokens_per_byte', 'fixture_exact', 'resumable'):
         if summary.get(k) is not None: m[k] = summary[k]
@@ -254,7 +259,7 @@ def execute(p, out, run=None, backend=None, deadline=None, opener=None, earlier_
     if probe:       # the probe's raw response metadata, in words because hub metrics are numbers
         message += (f'; probe response model={probe["response_model"]} provider={probe["response_provider"]} id={probe["response_id"]} '
                     f'finish={probe["finish_reason"]} reasoning_tokens={probe["reasoning_tokens"]} input_tokens={probe["input_tokens"]} '
-                    f'output_tokens={probe["output_tokens"]} provider_reported_usd={probe["provider_reported_usd"]} '
+                    f'output_tokens={probe["output_tokens"]} provider_reported_usd={probe["provider_reported_usd"]} computed_usd={probe["computed_usd"]} '
                     f'request_bytes={probe["request_bytes"]} error={probe["error"]} http_status={probe["http_status"]}')
     if not summary['passed']:
         if run: run.fail(message + f'; {summary["reason"]}; rows preserved', **hub_metrics(summary))

@@ -22,7 +22,8 @@ HERE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(HERE / 'src'))
 import analyze, chain, manifest, study, worker  # noqa: E402
 
-SENSITIVE = re.compile(r'(\b\d{1,3}(?:\.\d{1,3}){3}\b|https?://|Bearer|Authorization|x-api-key|sk-or-|sk-ant-|SWARM_HUB_TOKEN|/srv/|/home/|/Users/)')
+ATTEMPT_SOURCE_HASHES = {'001': 'e24e85f52867232cfc1e673e601a1af1be5e092339bb393d1c68a7e4af726209', '002': study.source_hash()}
+SENSITIVE = re.compile(r'(\b\d{1,3}(?:\.\d{1,3}){3}\b|https?://|Bearer|Authorization|x-api-key|sk-or-|sk-ant-|sk-proj-|SWARM_HUB_TOKEN|/srv/|/home/|/Users/)')
 
 
 def jl(path):
@@ -33,7 +34,9 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument('results'); ap.add_argument('--verify'); ap.add_argument('--write', action='store_true')
     a = ap.parse_args(); base = Path(a.results); out = {}
     status = json.loads((base / 'chain-status.json').read_text())
-    assert status['source_hash'] == study.source_hash(), 'the saved run was made at another source hash'
+    # Attempt 001 (qwen/qwen3.7-flash, code d3219ceb) and attempt 002 (gpt-6-luna) answered byte-identical packets;
+    # the study code of either attempt regrades and reanalyses either attempt's saved rows.
+    assert status['source_hash'] in ATTEMPT_SOURCE_HASHES.values(), 'the saved run was made at an unknown source hash'
     dirs = {s: base / os.path.basename(e['directory']) for s, e in status['stages'].items()}
     rows = {s: jl(dirs[s] / 'episodes.jsonl.gz') for s in study.STAGES}
     assigned = {s: jl(dirs[s] / 'assignments.jsonl.gz') for s in study.STAGES}

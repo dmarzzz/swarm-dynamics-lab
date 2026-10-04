@@ -63,7 +63,7 @@ def results_dir():
 
 def attempt():
     a = design()['attempt']
-    assert a in ('001', '002'), 'only the first attempt and the one pre-registered repair exist'
+    assert a in ('001', '002'), 'attempt 001 (qwen/qwen3.7-flash) and attempt 002 (gpt-6-luna, amendment A2) only'
     return a
 
 
@@ -72,15 +72,22 @@ def batch(stage):
 
 
 def qualification_set():
-    """Attempt 001 qualifies on set a; the one repair (attempt 002) on the disjoint set b."""
+    """The fixture set of this attempt's qualification. Attempt 002 is a second model, not the repair, and
+    names set a explicitly (`qualification.set`), the same clean packets as attempt 001. The program's one
+    repair, if it is ever used, qualifies on the disjoint set b."""
+    which = design()['qualification'].get('set')
+    if which is not None:
+        assert which in ('a', 'b'); return which
     return 'a' if attempt() == '001' else 'b'
 
 
 def params(stage):
     if stage not in STAGES:
         raise ValueError('Formal S2 disabled')
-    return dict(stage=stage, backend='scripted' if stage == 'S0' else 'openrouter', batch=batch(stage),
-                source_hash=source_hash(), code=code_revision())
+    p = dict(stage=stage, backend=design()['stages'][stage]['backend'], batch=batch(stage),
+             source_hash=source_hash(), code=code_revision())
+    if stage != 'S0': p['model'] = design()['model']
+    return p
 
 
 def cfg():
@@ -89,7 +96,7 @@ def cfg():
 
 def adapter_config():
     d = design()
-    return {'model': d['model'], 'canonical_model': d['canonical_model'], 'provider': d['provider'],
+    return {'model': d['model'], 'canonical_model': d['canonical_model'],
             'request_template': d['request_template'], 'budget': d['budget']}
 
 
@@ -143,8 +150,8 @@ def user_text(pack):
 def request_bytes(pack):
     """Bytes of the encoded request body, exactly as the adapter builds it."""
     t = design()['request_template']
-    body = {'model': t['model'], 'provider': dict(t['provider']), 'reasoning': dict(t['reasoning']),
-            'max_tokens': t['max_tokens'], 'response_format': dict(t['response_format']),
+    body = {'model': t['model'], 'reasoning_effort': t['reasoning_effort'],
+            'max_completion_tokens': t['max_completion_tokens'], 'response_format': dict(t['response_format']),
             'messages': [{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': user_text(pack)}]}
     return len(json.dumps(body).encode())
 
@@ -294,8 +301,8 @@ def qualification(rows, which=None):
 
 def probe_gate(rows):
     """P0 checks the interface only: its one call completed, which means the response parsed, the
-    model slug and provider matched, usage was reported, the finish reason was stop, there were no
-    reasoning tokens and the answer had the valid structure. Whether the answer is right is counted
+    model id matched, usage was reported, the finish reason was stop, the output stayed inside
+    max_completion_tokens (reasoning included) and the answer had the valid structure. Whether the answer is right is counted
     in the 24-fixture gate at Q0."""
     probes = [r for r in rows if r['kind'] == 'qualification']
     ok = len(probes) == 1 and probes[0]['status'] == 'completed'

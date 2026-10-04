@@ -2,19 +2,18 @@ version: 1
 experiment: trust-credit-qwen
 program: research program v5, line T (2026-10-04)
 status: exploratory
-attempt: '001'
-model: qwen/qwen3.7-flash
-canonical_model: qwen/qwen3.7-flash-20260727
-provider: alibaba
+# Attempt 002 (amendment A2, 2026-10-04): the same packets answered by a second model, gpt-6-luna via
+# OpenAI, because the Anthropic organisation is at its monthly limit (dmarz, 12:00Z). Attempt 001
+# (qwen/qwen3.7-flash via OpenRouter, provider Alibaba, reasoning disabled, max_tokens 1000) ran at
+# source hash e24e85f5 (code commit d3219ceb); its design is that commit's design.yaml.
+attempt: '002'
+model: gpt-6-luna
+canonical_model: gpt-6-luna
+provider: openai
 request_template:
-  model: qwen/qwen3.7-flash
-  provider:
-    only: [alibaba]
-    allow_fallbacks: false
-    require_parameters: true
-  reasoning:
-    enabled: false
-  max_tokens: 1000
+  model: gpt-6-luna
+  reasoning_effort: low
+  max_completion_tokens: 1500
   response_format:
     type: json_object
 rules:
@@ -47,19 +46,20 @@ qualification:
   answerable_min_correct: 7
   missing_min_abstained: 8
   repair_attempts: 1
+  set: a            # attempt 002 is a second model, not the repair: same fixture set as attempt 001
 stages:
   S0: {backend: scripted}
-  P0: {backend: openrouter}
-  Q0: {backend: openrouter}
-  S1: {backend: openrouter}
+  P0: {backend: openai}
+  Q0: {backend: openai}
+  S1: {backend: openai}
   S2: {enabled: false}
 budget:
   max_calls: {S0: 0, P0: 1, Q0: 23, S1: 504}
   max_attempted_calls: 552
   reservation_margin: 10
   max_failed: 6
-  aggregate_usd: 2
-  max_output_tokens: 1000
+  aggregate_usd: 5
+  max_output_tokens: 1500
   max_input_tokens: 8000
   max_input_bytes: 7600
   max_visible_chars: 2000
@@ -70,15 +70,16 @@ budget:
   answer_retries: 0
   retry:
     transport_retries: 2
-    retryable_http_status: [429, 502, 503, 529]
+    retryable_http_status: [429, 500, 502, 503, 504]
     backoff_seconds: [2, 6]
     retry_after_cap_seconds: 20
   billing_outage:
     retry_every_seconds: 60
     max_wait_seconds: 1200
   max_transport_attempts: 640
-  input_usd_per_million: 0.03
-  output_usd_per_million: 0.13
+  # USD per million tokens, Standard tier, prompts up to 272K tokens: the gpt-6-luna row of PRICES in
+  # src/provider.py, from https://developers.openai.com/api/docs/pricing retrieved 2026-10-04T12:10Z.
+  prices: {input: 0.10, cached_input: 0.01, cache_write: 0.125, output: 0.50}
 primary_contrast:
   outcome: attacker_seats
   definition: (propagated at 108 minus propagated at 32) minus (direct at 108 minus direct at 32)

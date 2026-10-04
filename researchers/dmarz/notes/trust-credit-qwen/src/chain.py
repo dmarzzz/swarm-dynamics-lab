@@ -2,7 +2,8 @@
 
   python src/chain.py run --stages S0,P0,Q0,S1   exit 0 all requested stages done, 3 stopped at a
                                                  failed stage or gate, other non-zero internal error
-  python src/chain.py resume                     only after S1 stopped with provider_credit_balance_low
+  python src/chain.py resume                     only after S1 stopped on a billing outage (provider_billing_stopped;
+                                                 attempt 001's adapter called it provider_credit_balance_low)
                                                  at this source hash: queues a continuation batch
                                                  s1-<attempt>-r<n> holding exactly the units not started
   python src/chain.py status                     chain-status.json plus ledger totals, one JSON line
@@ -35,6 +36,8 @@ import worker       # noqa: E402
 
 EXIT_DONE, EXIT_STOPPED, EXIT_INTERNAL = 0, 3, 1
 
+
+BILLING_STOPS = (provider.BILLING_STOP, 'provider_credit_balance_low')   # resumable stop categories
 
 def now():
     return time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
@@ -209,7 +212,7 @@ def stage_rows(entry):
 
 def resume(sr=None, opener=None, clock=None, sleep=None):
     """Continue S1 after a billing stop. Allowed only when the chain's last state is S1 stopped with
-    provider_credit_balance_low at the current source hash. Queues one continuation run holding
+    a billing stop (provider_billing_stopped, or attempt 001's provider_credit_balance_low) at the current source hash. Queues one continuation run holding
     exactly the units not started, under the same ledger and caps."""
     if sr is None:
         import swarm_report as sr
@@ -217,7 +220,7 @@ def resume(sr=None, opener=None, clock=None, sleep=None):
     def refuse(reason):
         print(json.dumps({'state': 'resume_refused', 'reason': reason})); return EXIT_STOPPED
     if not status or status.get('source_hash') != study.source_hash(): return refuse('no_chain_status_at_this_source_hash')
-    if not (status.get('state') == 'stopped_at_gate' and status.get('stopped_stage') == 'S1' and status.get('reason') == provider.BILLING_STOP):
+    if not (status.get('state') == 'stopped_at_gate' and status.get('stopped_stage') == 'S1' and status.get('reason') in BILLING_STOPS):
         return refuse('last_stop_was_not_a_billing_stop_of_S1')
     entry = status['stages']['S1']; prior = stage_rows(entry)
     units = [r['id'] for r in prior if r['status'] == 'not_started']
