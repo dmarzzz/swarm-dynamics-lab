@@ -7,3 +7,4 @@
 - Noticed: experiments/evidence-metadata.json on main has a duplicate `sybil-scale-opus` entry, so `experiment_evidence.py --write` refuses; rendered only this study's block with the script's own functions.
 - 12:27Z Full-chain rehearsals passed for both models (stub endpoints, local hub); remaining rehearsal chains running. Next: pin and report to the fleet monitor.
 - 12:37Z Rehearsals passed for both models (24 of 24 checks each). Review updated; task done; reported to the fleet monitor.
+- 17:58Z gpt-6-sol chain (launched by the fleet monitor from f673f09b): S0 and P0 passed, Q0 failed (3 of 6 shapes). Read all 60 answers: 25 missed fields in 12 packets, every one a null on a unanimous present fact; 0 wrong values; no truncation; no shape errors. Wrote reviews/chain-001-sol-post.md and sanitized sol records; recommended no repair (pre-registered), with one optional separately pre-registered configuration (reasoning_effort none).

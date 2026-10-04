@@ -1,0 +1,119 @@
+{
+  "analyzed": 1853,
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0,
+  "continuation": null,
+  "cost_usd": 0,
+  "elapsed_seconds": 407.2153691499989,
+  "episodes": 1853,
+  "errors": [],
+  "experiment": "sybil-split-xmodel",
+  "failed": 0,
+  "fixture_exact": null,
+  "graded": 1853,
+  "initial_study_accounting": {},
+  "input_tokens": 0,
+  "invalid": 0,
+  "invariant_violations": [],
+  "max_failed": null,
+  "max_request_bytes": 13515,
+  "max_tokens_per_byte": null,
+  "model_calls": 0,
+  "not_started": 0,
+  "output_tokens": 0,
+  "params": {
+    "backend": "scripted",
+    "batch": "s0-001-sol",
+    "code": "f673f09bce75b76380e67f8be4b9adb756dd5aab",
+    "model": "gpt-6-sol",
+    "source_hash": "ebfb2bc3703cbb5ac882641ca0f71dfb9dfda0ee5436dd1a8b4879dcef97c2cd",
+    "stage": "S0"
+  },
+  "passed": true,
+  "planned": 1853,
+  "primary_contrast": 0.40625,
+  "probe": null,
+  "qualification": {
+    "cells": [
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "full",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "common_only",
+        "withheld_fields": 30
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "sparse",
+        "withheld_fields": 10
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow1",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow3",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow9",
+        "withheld_fields": 0
+      }
+    ],
+    "passed": true
+  },
+  "qualification_misses": null,
+  "qualification_passed": 1,
+  "rare_accuracy": 0.252046130952381,
+  "rare_wrong": 0.5796130952380952,
+  "reason": null,
+  "reporting_errors": [],
+  "resumable": 0,
+  "started": 1853,
+  "stop_reason": null,
+  "study_accounting": {},
+  "terminal": 1853,
+  "transport_attempts": 0,
+  "visualization": {
+    "frames": 33,
+    "mapping": "v1"
+  },
+  "voided_calls": 0
+}
