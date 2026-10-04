@@ -1,0 +1,22 @@
+id: sybil-specialists
+title: "Sybil defense and useful specialist teams"
+description: >-
+  SEC-19/43 exploratory scripted instrument. Can verification recover honest specialist work
+  excluded by graph-based admission? Compare degree, random and coverage verification with
+  equal check budgets and a common admission rule. Watch the measured network replay and
+  accuracy versus malicious admission. Labels are evaluator-only; scripted outcomes are not
+  LLM findings. Coverage is a heuristic, not a claimed SybilShield implementation.
+owner: dmarz
+params:
+  stage: {type: str, role: stage}
+  backend: {type: str, role: fixed}
+  bridges: {type: int, role: condition, description: "Degree-preserving bridge swaps per outside community"}
+  attacker_pass: {type: float, role: condition, description: "Attackers' probability of passing a verification probe"}
+  verification_budget: {type: int, role: condition}
+  clean: {type: bool, role: condition}
+  tasks: {type: list, role: replicate}
+  code: {type: str, role: fixed}
+  design_hash: {type: str, role: fixed}
+metrics: [episodes, invalid, rare_accuracy, honest_rejection, malicious_admission, task_accuracy, verification_calls]
+primary_metric: rare_accuracy
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-specialists
