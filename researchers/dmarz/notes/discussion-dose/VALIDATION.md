@@ -41,3 +41,10 @@ Pinned runtime `c53cb78b9ca7f23af39578a839296cc6a0e9097e` passed 18 offline test
 The worker originally marked process completion as done even with 100% invalid outcomes. A corrective fail event now states the billing blocker; the earlier event and all artifacts remain. The subsequent revision makes qualification failures explicit automatically, records safe provider failure categories, and tests the billing-error path (19 offline tests). `haiku45-preflight-v2` is a declared engineering restart after account funding; it does not replace v1 and must not launch while the billing blocker remains. No task, prompt, model or scoring rule changed based on behavioral outcomes, because there were none.
 
 Follow-up runtime `5b0066564292df2edbc53aa353523aa58cee129b` is deployed; all 19 tests passed on the server. Downloaded the failed run artifacts from the hub and verified every indexed payload and raw-content hash. Browser inspection confirmed the billing reason appears in the live failure table. No worker remains active.
+
+
+## Funded preflight, 2026-10-04 UTC
+
+After the user added $20 of API credits, `discussion-dose/00820f46` ran declared preflight v2 on unchanged runtime `5b0066564292df2edbc53aa353523aa58cee129b`. All eight world-6 episodes were valid and correct, with correct parent follow-ups and no false-memory admission. The provider completed 170 calls in 365.192 seconds, reporting 474,073 input and 28,191 output tokens: $0.615028 at the pinned rates. No call lacked usage accounting. The initial billing-blocked v1 remains a separate failed run.
+
+Downloaded the successful preflight artifacts, verified their hashes and chained events, and independently recomputed all eight majority decisions, merged memories and evaluation objects. This is one engineering world, not evidence that discussion prevents corruption. The predeclared 48-episode S0 qualification was then queued; results pending.

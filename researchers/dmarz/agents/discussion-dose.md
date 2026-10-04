@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-dose
 tool: codex
-state: blocked
+state: working
 task: run-discussion-dose-s0
-doing: Native pilot deployed and 19 tests pass; Anthropic rejects generation for insufficient API credits; awaiting funding to resume preflight v2
-updated: 2026-10-03T23:54Z
+doing: Account funded with 20 USD; running declared Haiku preflight v2 before S0 qualification
+updated: 2026-10-03T23:56Z
 ---
 
 ## Notes
