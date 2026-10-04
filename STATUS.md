@@ -257,6 +257,7 @@
 |---|---|---|---|---|
 | dmarz/market-split-film | done |  | 2026-10-04T08:45Z | filed the explainer film for the finished Sonnet market-split pilot s1-002 (reads the filed records only; no model calls, no edits to market-split-api or market-split-opus) |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T08:40Z | sybil-split-opus: prospective plan and frozen design pushed; implementing code, offline tests, scripted stage and rehearsal; no launch, no model call |
+| vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:36Z | C3 complete: 600 reports, 270 worlds, zero transport failures; measured null composite benefit published; machine stopped |
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
 | dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
 | dmarz/always-five-doc | done |  | 2026-10-04T08:22Z | Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned |
@@ -267,7 +268,6 @@
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:10Z | sybil-scarcity-opus: plan documents pushed (README, preregistration, amendments, frozen design, setup record); now implementing code and offline tests; no launch, no model call |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:07Z | owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:07Z | Credential resolved and deployed checks passed; awaiting existing central S0 dispatch, no owner input needed |
-| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T08:07Z | C3-S0 passed; owner-approved C3-S1 running on exclusive sim-dmarz-7 with supervised local transport |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T08:06Z | Preparing false-alarm-cascade (honeypot-vigilance hunch V4, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
