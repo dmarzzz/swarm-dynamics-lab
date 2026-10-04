@@ -13,7 +13,7 @@ in ctx["low_mass"] and the sampled completion decides; if that matches neither w
 Guard rails (never relaxed):
 - refuses to build without SWARM_MODEL_CONFIG carrying a positive max_cost_usd, and clamps that at HARD_CAP_USD;
 - a spend ledger on disk (results/spend-ledger.json) carries actual provider-reported cost across processes
-  and restarts, so parallel workers share ONE cap;
+  and restarts; unresolved reservations are included, so parallel workers share ONE cap;
 - the key is read from the file named in SWARM_MODEL_KEY_FILE (default ~/.moltbot/secrets/openrouter.key),
   never from the environment, never logged;
 - every request reserves a worst-case amount before it is sent; the reservation is replaced by the provider's
@@ -29,6 +29,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
+import uuid
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -51,7 +52,10 @@ class NoCredentialRedirect(urllib.request.HTTPRedirectHandler):
 
 
 class Ledger:
-    """Shared spend ledger: {"spent_usd": float, "calls": int, "by_model": {...}}; locked for each update."""
+    """Shared liability ledger. spent_usd includes actual costs and unresolved
+    reservations; calls counts dispatched/reserved attempts. Old aggregate fields
+    are preserved. All live workers must use this reservation-aware runtime.
+    """
 
     def __init__(self, path: Path):
         self.path = path
@@ -83,6 +87,55 @@ class Ledger:
             m["calls"] += calls
             f.seek(0); f.truncate(); json.dump(d, f)
             return d["spent_usd"]
+
+    @staticmethod
+    def _write_locked(stream, data):
+        stream.seek(0)
+        stream.truncate()
+        json.dump(data, stream)
+        stream.flush()
+        os.fsync(stream.fileno())
+
+    def reserve(self, model: str, usd: float, cap: float) -> str:
+        """Charge durable liability before dispatch, in the same lock as admission."""
+        if not math.isfinite(usd) or usd < 0 or not math.isfinite(cap) or cap <= 0:
+            raise ModelFailure("invalid reservation amount or cap")
+        with self.path.open("r+") as stream:
+            fcntl.flock(stream, fcntl.LOCK_EX)
+            d = json.load(stream)
+            if not math.isfinite(d["spent_usd"]) or d["spent_usd"] < 0:
+                raise ModelFailure("invalid existing spend")
+            if d.get("reservation_breached") or d["spent_usd"] + usd > cap:
+                raise ModelFailure("dollar cap reached or reservation previously breached")
+            ident = uuid.uuid4().hex
+            d.setdefault("reservations", {})[ident] = {"model": model, "usd": usd}
+            d["spent_usd"] += usd
+            d["calls"] += 1
+            m = d["by_model"].setdefault(model, {"usd": 0.0, "calls": 0})
+            m["usd"] += usd
+            m["calls"] += 1
+            self._write_locked(stream, d)
+            return ident
+
+    def settle(self, ident: str, usd: float):
+        """Only a known reservation may release liability against a valid receipt."""
+        if isinstance(usd, bool) or not isinstance(usd, (int, float)) or not math.isfinite(usd) or usd < 0:
+            raise ModelFailure("invalid settlement cost; reservation retained")
+        with self.path.open("r+") as stream:
+            fcntl.flock(stream, fcntl.LOCK_EX)
+            d = json.load(stream)
+            reservation = d.get("reservations", {}).pop(ident, None)
+            if reservation is None:
+                raise ModelFailure("unknown or already settled reservation")
+            delta = usd - reservation["usd"]
+            d["spent_usd"] += delta
+            d["by_model"][reservation["model"]]["usd"] += delta
+            breached = usd > reservation["usd"]
+            if breached:
+                d["reservation_breached"] = True
+            self._write_locked(stream, d)
+        if breached:
+            raise ModelFailure("provider cost exceeded reservation; future dispatch blocked")
 
     def spent(self) -> float:
         with open(self.path) as f:
@@ -126,7 +179,6 @@ class HTTPPolicy:
             raise ModelFailure("mode must be logprobs or sample")
         self.mode = mode
         self.ledger = Ledger(Path(ledger) if ledger else ROOT / "results" / "spend-ledger.json")
-        self.reserved = 0.0
         self.spent_session = 0.0
         self._lock = threading.Lock()
         self.call_log = Path(call_log) if call_log else None   # per-call (memory counts -> P) for policy extraction
@@ -156,12 +208,11 @@ class HTTPPolicy:
             body["provider"]["order"] = self.provider_order
         raw = json.dumps(body).encode()
         est = ((len(raw) / 3 + 64) * self.in_rate + 8 * self.out_rate) / 1e6      # generous worst case
-        if self.ledger.spent() + self.reserved + est > self.cap:
-            raise ModelFailure("dollar cap reached")
-        if self.calls >= self.max_calls:
-            raise ModelFailure("call budget exhausted")
-        self.reserved += est
-        self.calls += 1
+        with self._lock:
+            if self.calls >= self.max_calls:
+                raise ModelFailure("call budget exhausted")
+            reservation = self.ledger.reserve(self.model, est, self.cap)
+            self.calls += 1
         req = urllib.request.Request(self.base + "/chat/completions", data=raw, headers={
             "Content-Type": "application/json", "Authorization": "Bearer " + self.key,
             "HTTP-Referer": "https://github.com/dmarzzz/swarm-lab", "X-Title": "swarm-lab capture-memory-mix"})
@@ -188,22 +239,20 @@ class HTTPPolicy:
         else:
             resp = None
         if resp is None or "choices" not in resp:
-            self.reserved -= est
-            self.ledger.add(self.model, est, 1)          # a failed request may still have cost; charge the estimate
+            # Unknown outcomes retain their durable pre-dispatch liability.
             raise ModelFailure(last or "provider error")
         reported_cost = (resp.get("usage") or {}).get("cost")
         if reported_cost is None:
             cost = est
         elif (isinstance(reported_cost, bool) or not isinstance(reported_cost, (int, float))
               or not math.isfinite(reported_cost) or reported_cost < 0):
-            self.ledger.add(self.model, est, 1)
-            self.reserved -= est
             raise ModelFailure("invalid provider cost; estimate retained")
         else:
             cost = float(reported_cost)
-        self.reserved -= est
-        self.spent_session += cost
-        self.ledger.add(self.model, cost, 1)
+        if reported_cost is not None:
+            self.ledger.settle(reservation, cost)
+        with self._lock:
+            self.spent_session += cost
         resp["_cost"] = cost
         return resp
 
