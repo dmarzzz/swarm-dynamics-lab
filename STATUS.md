@@ -44,7 +44,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [incorporate-external-study-review](tasks/incorporate-external-study-review.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T19:51Z | Incorporate external study review into experiment improvement proposals |
-| [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:46Z | Build and qualify the bounded outage-response prototype |
 | [right-dissenter-rd6-zero-start-replacement](tasks/right-dissenter-rd6-zero-start-replacement.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:49Z | Execute the approved RD6 zero dispatch replacement |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -207,6 +206,7 @@
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
 | [openrouter-route-switch-2026-10-04](tasks/openrouter-route-switch-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T18:44Z | Apply the owner directed OpenRouter migration to affected studies |
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
+| [outage-size-prototype](tasks/outage-size-prototype.md) | done | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:56Z | Build and qualify the bounded outage-response prototype |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:31Z | Launch bounded Phantom Coast native pilot |
 | [phantom-coast-pc1](tasks/phantom-coast-pc1.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:45Z | Develop Phantom Coast PC-1 plan and offline instrument |
 | [phantom-coast-pc10-objective](tasks/phantom-coast-pc10-objective.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T19:45Z | Repair Phantom acquisition objective and prepare paired diagnostic |
@@ -326,7 +326,7 @@
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
 | vishesh/codex-village-fit | blocked |  | 2026-10-04T18:31Z | Telephone A0 ready and queued; central start pending. V0 source pilot prepared; no native outputs yet. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
-| vishesh/codex-idea-scores | working | outage-size-prototype | 2026-10-04T18:11Z | Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration. |
+| vishesh/codex-idea-scores | idle |  | 2026-10-04T18:11Z | O1 and Q-A7 complete with scientific post-mortems; worker released. Broad size sweep parked. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
 | shadow/sol-factory | blocked | factory-provenance-invariance | 2026-10-04T17:29Z | Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation |
