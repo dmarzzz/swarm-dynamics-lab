@@ -277,9 +277,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-audit-gap | done | audit-gap-opportunities | 2026-10-04T15:17Z | Ranked audit and SwarmTraces evidence-depth census shipped; hub reporting blocked on absent local config |
 | shadow/sol-janitor-find | working |  | 2026-10-04T15:13Z | Find code/process defects, append triaged evidence to janitor FINDINGS.jsonl; no fixes or paid calls. |
 | shadow/sol-halflife | working | wild-halflife | 2026-10-04T15:05Z | Writing the half-life analysis plan, then offline adoption-curve analysis on collusion.wiki and swarm-lab git history. |
-| shadow/sol-audit-gap | working | audit-gap-opportunities | 2026-10-04T15:02Z | Rank judging-fit gaps, then audit SwarmTraces parent-linked evidence coverage without model calls |
 | shadow/sol-askswarm | working | wild-askswarm | 2026-10-04T15:00Z | Build shared AskSwarm adapters and offline descriptive reports; no paid calls. |
 | shadow/sol-factory | working |  | 2026-10-04T14:58Z | Build five one-file exploratory split-policy replications and bounded pool runner |
 | shadow/sol-timeline | working |  | 2026-10-04T14:56Z | TODO one line |
