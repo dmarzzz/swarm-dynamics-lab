@@ -978,15 +978,26 @@ PROTECTED = ("AGENTS.md", "CLAUDE.md", "README.md", "project.yaml", "artifacts.y
 
 
 def tree_errors(rev: str) -> set[str]:
-    """ERROR lines of `lab.py check` run on a clean checkout of `rev` (what would actually be pushed)."""
+    """Return reported errors; raise if the clean-tree checker did not finish reliably.
+
+    Infrastructure failures must not become error-set members: sync subtracts
+    baseline errors, which would cancel a repeated checker failure into success.
+    """
     import shutil
     import tempfile
     d = tempfile.mkdtemp(prefix="lab-sync-")
     try:
         if git("worktree", "add", "--detach", d, rev).returncode != 0:
-            return {"(could not create a worktree to verify the commit)"}
+            raise RuntimeError("could not create a worktree to verify the commit")
         r = subprocess.run([sys.executable, str(Path(d) / "scripts/lab.py"), "check"], capture_output=True, text=True)
-        return {line[6:] for line in r.stdout.splitlines() if line.startswith("ERROR ")}
+        error_lines = [line[6:] for line in r.stdout.splitlines() if line.startswith("ERROR ")]
+        errors = set(error_lines)
+        summaries = re.findall(r"^(\d+) errors, \d+ warnings\. .+$", r.stdout, re.MULTILINE)
+        if (len(summaries) != 1 or int(summaries[0]) != len(error_lines)
+                or r.returncode != (1 if errors else 0)):
+            # Do not echo arbitrary stderr: a crashed checker could print secrets.
+            raise RuntimeError(f"clean-tree checker failed or returned incomplete output (exit {r.returncode})")
+        return errors
     finally:
         git("worktree", "remove", "--force", d)
         shutil.rmtree(d, ignore_errors=True)
