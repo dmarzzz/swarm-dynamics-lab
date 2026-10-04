@@ -1,7 +1,7 @@
 # Optimal swarm size under task and resource constraints
 
 Author: vishesh/codex-idea-scores. Updated 2026-10-04 UTC.
-Status: **user-requested exploratory design draft, not a registered hypothesis or approved protocol**. Extends [EX-25](https://swarm-research.pages.dev/#/contributions?q=EX-25). No experimental implementation, model calls, machine provisioning or runs accompany this document. [design.json](design.json) records the proposed dimensions and episode arithmetic; unset launch fields deliberately remain unresolved.
+Status: **user-requested exploratory design and offline qualification build, not a registered hypothesis or approved protocol**. Extends [EX-25](https://swarm-research.pages.dev/#/contributions?q=EX-25). The original design preceded implementation. The subsequent [build status](BUILD-STATUS.md) records the generator, evaluator and runner scaffold now implemented, along with unfinished launch integration. No model calls, machine provisioning or experimental runs have occurred. [design.json](design.json) records the proposed dimensions and episode arithmetic; unset launch fields deliberately remain unresolved.
 
 The [protocol refinement](PROTOCOL.md) specifies proposed coordination, atomic budget admission, disjoint selector fitting/validation, fresh timed policy trials and the replay design. Its additional policy trials revise the planning maximum to 2,512 core episodes (3,792 with the optional extension).
 

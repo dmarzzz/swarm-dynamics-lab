@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: done
-task: heterogeneous-biological-frontiers
-doing: Published eight biological-frontier questions, X research, scoring and five prospective designs
-updated: 2026-10-04T03:23Z
+state: working
+task: heterogeneous-priority-revision
+doing: Updating five scores and consolidating the self-differentiating swarm direction
+updated: 2026-10-04T03:40Z
 ---
 
 ## Handoff
