@@ -72,7 +72,7 @@ def parse_stages(text):
 def ledger_totals():
     path = os.environ.get(provider.LEDGER_ENV)
     if not path or not Path(path).exists(): return None
-    return provider.Ledger(path, study.design()['budget']).transact()
+    return study.adapter()[0].Ledger(path, study.budget()).transact()
 
 
 def projection(q0_run):
@@ -81,7 +81,7 @@ def projection(q0_run):
     Cost: measured mean cost per call x the S1 call cap must fit in what is left under the dollar cap.
     Input size: the largest measured tokens per request byte x the largest S1 request must not exceed
     the input ceiling."""
-    b = study.design()['budget']; metrics = q0_run.get('metrics') or {}
+    b = study.budget(); metrics = q0_run.get('metrics') or {}
     per_call, ratio = metrics.get('cost_per_call_usd'), metrics.get('tokens_per_byte_max')
     if per_call is None or ratio is None:
         return {'usage_measured': False}
@@ -142,14 +142,16 @@ def resume(sr=None, opener=None, clock=None, sleep=None):
 
     def refuse(reason):
         print(json.dumps({'state': 'resume_refused', 'reason': reason})); return EXIT_STOPPED
-    if not status or status.get('source_hash') != study.source_hash(): return refuse('no_chain_at_this_source_hash')
-    if status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' or status.get('reason') != provider.BILLING_STOP:
+    if not status or status.get('source_hash') != study.source_hash() or status.get('model') != study.model():
+        return refuse('no_chain_at_this_source_hash')
+    # the billing stop of this chain's own provider: provider_credit_balance_low (OpenRouter) or provider_billing_stopped (OpenAI)
+    if status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' or status.get('reason') != study.billing_stop():
         return refuse('last_stop_was_not_a_billing_stop_of_S1')
     prior = stage_rows(entry); final = study.combine(prior)
     units = sorted(r['id'] for r in final if r['status'] == 'not_started')
     if not units or len(final) != len(study.assignments('S1')): return refuse('no_unfinished_units')
     n = len(entry.get('continuations') or []) + 1
-    budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
+    budget = study.budget(); deadline = time.monotonic() + budget['chain_timeout_seconds']
     cont = {'status': 'gating', 'batch': f'{study.batch("S1")}-r{n}', 'units': len(units)}
     entry.setdefault('continuations', []).append(cont)
     status.update(state='running', stopped_stage=None, reason=None); write_status(status)
@@ -178,14 +180,15 @@ def resume(sr=None, opener=None, clock=None, sleep=None):
 def run_chain(stages, sr=None, opener=None, clock=None, sleep=None):
     if sr is None:
         import swarm_report as sr
-    budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
+    budget = study.budget(); deadline = time.monotonic() + budget['chain_timeout_seconds']
     status = read_status()
-    if status and status.get('source_hash') != study.source_hash():
-        # records of another source version are kept beside the new status, never mixed into it
+    if status and (status.get('source_hash') != study.source_hash() or status.get('model') != study.model()):
+        # records of another source version or another model are kept beside the new status, never mixed into it
         os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("source_hash"))[:12]}.json'))
         status = None
     status = status or {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'stages': {}}
     status.update(state='running', source_hash=study.source_hash(), code=study.code_revision(), requested=stages,
+                  model=study.model(), provider=study.provider_name(),
                   started=status.get('started') or now(), stopped_stage=None, reason=None)
     write_status(status)
 
@@ -201,6 +204,11 @@ def run_chain(stages, sr=None, opener=None, clock=None, sleep=None):
             if time.monotonic() > deadline:
                 entry['status'] = 'refused'
                 return stop(stage, 'chain_deadline', EXIT_STOPPED)
+            if stage == 'S0':
+                served = coordinator.scripted_passed(sr)
+                if served is not None:      # the scripted stage is model-free: one passed S0 at this source hash serves every model
+                    entry.update(status='done', run=served.get('run') or served.get('id'), reused=True, calls=0, cost_usd=0.0); write_status(status)
+                    continue
             _, before = coordinator.check(sr, stage)
             if stage == 'S1':
                 entry['projection'] = projection(before)
@@ -278,10 +286,10 @@ def verify_stage(sr, stage, entry, reference, probe=None, prior_rows=None, origi
     assigned = read_jsonl(out / 'assignments.jsonl.gz'); rows = read_jsonl(out / 'episodes.jsonl.gz')
     by_id = {a['id']: a for a in assigned}
     checks['every_assignment_has_one_row'] = sorted(r['id'] for r in rows) == sorted(by_id) and len(rows) == len(by_id)
-    checks['fixed_inputs_regenerate'] = all(study.rebuild(a) == a for a in assigned) and all(
+    checks['fixed_inputs_regenerate'] = all(study.rebuild(a, study.stage_model(stage)) == a for a in assigned) and all(
         r['packet_hash'] == by_id[r['id']]['packet_hash'] for r in rows if r['id'] in by_id)
-    listed = set(reference['stages'][stage]['assignments'])
-    checks['manifest_matches'] = manifest.stage_entry(assigned)['digest'] == reference['stages'][stage]['digest'] if original else \
+    listed_entry = manifest.entry(reference, stage); listed = set(listed_entry['assignments'])
+    checks['manifest_matches'] = manifest.stage_entry(assigned)['digest'] == listed_entry['digest'] if original else \
         all(f'{a["id"]} {a["packet_hash"]}' in listed for a in assigned)
     checks['rows_regraded'] = all(regrade(by_id[r['id']], r) for r in rows if r['id'] in by_id)
     checks['retrieval_log_matches'] = all({k: r['retrieval'][k] for k in by_id[r['id']]['retrieval']} == by_id[r['id']]['retrieval']
@@ -299,7 +307,7 @@ def verify_stage(sr, stage, entry, reference, probe=None, prior_rows=None, origi
     checks['totals_recomputed'] = all(close(summary[k], v) for k, v in t.items()) and summary['work'] == worker.work_totals(rows)
     gate, _ = worker.gate_of(stage, rows, study.check_invariants() if stage == 'S0' else None, probe)
     checks['gate_recomputed'] = (None if gate is None else int(gate)) == summary['qualification_passed']
-    budget = study.design()['budget']; failed = sum(r['status'] == 'failed' for r in everyone)
+    budget = study.budget(); failed = sum(r['status'] == 'failed' for r in everyone)
     if stage in study.STRICT:
         want = t['invalid'] == 0 and bool(gate) and summary['stop_reason'] is None
     else:
@@ -309,6 +317,7 @@ def verify_stage(sr, stage, entry, reference, probe=None, prior_rows=None, origi
     checks['hub_metrics_match'] = all(k in metrics and close(metrics[k], t[k]) for k in
                                       ('episodes', 'invalid', 'failed', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd'))
     checks['source_hash_current'] = summary['params']['source_hash'] == study.source_hash()
+    checks['model_current'] = summary['params']['model'] == ('none' if stage == 'S0' else study.model()) and all(r.get('model') == summary['params']['model'] for r in rows)
     checks['call_cap_respected'] = t['answered_calls'] <= budget['max_calls'][stage]
     return {'run': entry['run'], 'status': entry['status'], 'ok': all(checks.values()), 'checks': checks, 'assignments': len(assigned),
             'completed': sum(r['status'] == 'completed' for r in rows), 'failed': t['failed'], 'model_calls': t['model_calls'],
@@ -323,8 +332,8 @@ def units(rows, reference):
     primary = a.get('primary') or {}
     answered = sum(bool((r.get('accounting') or {}).get('usage_reported')) for r in rows)
     return {'assigned': len(final), 'completed': count('completed'), 'failed': count('failed'), 'not_started': count('not_started'),
-            'every_unit_exactly_once': sorted(r['id'] for r in final) == sorted(x.split(' ')[0] for x in reference['stages']['S1']['assignments']),
-            'answered_calls': answered, 'answered_within_cap': answered <= study.design()['budget']['max_calls']['S1'],
+            'every_unit_exactly_once': sorted(r['id'] for r in final) == sorted(x.split(' ')[0] for x in manifest.entry(reference, 'S1')['assignments']),
+            'answered_calls': answered, 'answered_within_cap': answered <= study.budget()['max_calls']['S1'],
             'primary_estimate': primary.get('estimate'), 'primary_roots': primary.get('roots'),
             'primary_assigned_roots': primary.get('assigned_roots'), 'primary_bounds_all_assigned': primary.get('bounds_all_assigned'),
             'clean_correct': {p: v['rate'] for p, v in (a.get('utility_guard') or {}).get('by_policy', {}).items()}}
@@ -338,7 +347,8 @@ def verify(sr=None):
         print(json.dumps({'ok': False, 'reason': 'no chain-status.json under ' + str(study.results_dir())})); return 1
     reference = manifest.load(); stages = {}
     checks = {'manifest_file_regenerates': manifest.render(manifest.build()) == manifest.PATH.read_text(),
-              'status_source_hash_current': status.get('source_hash') == study.source_hash()}
+              'status_source_hash_current': status.get('source_hash') == study.source_hash(),
+              'status_model_current': status.get('model') == study.model()}
     probe = None
     for stage in study.STAGES:
         entry = status['stages'].get(stage)
@@ -355,7 +365,7 @@ def verify(sr=None):
                     and stages[stage]['units']['answered_within_cap']
         except Exception as exc: stages[stage] = {'run': entry.get('run'), 'ok': False, 'error': type(exc).__name__ + ': ' + str(exc)[:200]}
     ok = bool(stages) and all(s['ok'] for s in stages.values()) and all(checks.values())
-    print(json.dumps({'ok': ok, 'state': status.get('state'), 'manifest_digest': reference['digest'], 'checks': checks, 'stages': stages},
+    print(json.dumps({'ok': ok, 'state': status.get('state'), 'model': study.model(), 'manifest_digest': reference['digest'], 'checks': checks, 'stages': stages},
                      sort_keys=True))
     return 0 if ok else 1
 

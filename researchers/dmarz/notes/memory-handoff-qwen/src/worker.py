@@ -32,6 +32,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import analyze      # noqa: E402
 import journal      # noqa: E402
+import openai_provider  # noqa: E402
 import provider     # noqa: E402
 import render       # noqa: E402
 import sim          # noqa: E402
@@ -43,7 +44,10 @@ REQUIRED_METRICS = ('episodes', 'invalid', 'model_calls', 'input_tokens', 'outpu
 HUB_KEYS = REQUIRED_METRICS + ('failed', 'answered_calls', 'transport_attempts', 'retrieval_count', 'retrieval_bytes',
                                'billing_pauses', 'billing_pause_seconds', 'billing_affected_calls')
 # Failures that stop a stage at once, whatever the number of failed calls.
-STOP_NOW = tuple(provider.INTEGRITY) + ('input_size_limit', 'input_ceiling_exceeded', 'packet_mismatch', 'unknown_ledger_event')
+STOP_NOW = tuple(sorted(set(provider.INTEGRITY) | set(openai_provider.INTEGRITY))) + (
+    'input_size_limit', 'input_ceiling_exceeded', 'packet_mismatch', 'unknown_ledger_event', 'json_mode_prompt_lacks_json')
+CALL_FAILURES = (provider.CallFailure, openai_provider.CallFailure)      # each adapter module has its own exception class
+BILLING_STOPS = (provider.BILLING_STOP, openai_provider.BILLING_STOP)
 NO_BILLING = {'billing_pauses': 0, 'billing_pause_seconds': 0.0, 'billing_affected_calls': 0}
 SCRIPTED_ACCOUNT = {'attempted': False, 'usage_reported': False, 'attempts': 0, 'actual_usd': 0, 'reserved_usd': 0}
 
@@ -92,10 +96,9 @@ def load_probe_row(sr=None):
         raise ValueError('no passed P0 at this source hash')
     path = Path(entry['directory']) / 'episodes.jsonl.gz'
     rows = study.read_rows(entry['directory'])
-    q = study.design()['qualification']
-    expected = study.qualification_fixtures(q['set'])[q['probe_fixture']]
-    if len(rows) != 1 or rows[0]['id'] != expected['id'] or rows[0]['source_hash'] != study.source_hash() \
-            or rows[0]['packet_hash'] != expected['packet_hash']:
+    expected = study.assignments('P0')[0]
+    if status.get('model') != study.model() or len(rows) != 1 or rows[0]['id'] != expected['id'] or rows[0].get('model') != study.model() \
+            or rows[0]['source_hash'] != study.source_hash() or rows[0]['packet_hash'] != expected['packet_hash']:
         raise ValueError('saved P0 row does not match the probe fixture')
     if sr is not None:
         detail = sr.get_run(entry['run']); hub = {a['name']: a for a in detail.get('artifacts', [])}
@@ -147,10 +150,11 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
     """`units` (assignment ids) and `prior_rows` are given only for a continuation of S1 after a
     billing stop: the run then holds exactly those assignments and reports the earlier runs' rows
     and its own together."""
-    stage = p.get('stage'); d = study.design(); budget = d['budget']; strict = stage in study.STRICT
+    stage = p.get('stage'); budget = study.budget(); strict = stage in study.STRICT
     if p.get('source_hash') != study.source_hash(): raise RuntimeError('runtime_source_mismatch')
-    if stage not in study.STAGES or p.get('backend') != ('scripted' if stage == 'S0' else study.BACKEND):
+    if stage not in study.STAGES or p.get('backend') != ('scripted' if stage == 'S0' else study.provider_name()):
         raise RuntimeError('stage_backend_mismatch')
+    if p.get('model') != ('none' if stage == 'S0' else study.model()): raise RuntimeError('model_differs_from_environment')
     if (units is None) != (p.get('batch') == study.batch(stage)) or (units is not None and stage != 'S1'):
         raise RuntimeError('batch_mismatch')
     scripted = p['backend'] == 'scripted'
@@ -190,15 +194,16 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
 
     ledger = None
     if not scripted:
-        path = os.environ.get(provider.LEDGER_ENV)
+        module, adapter_class = study.adapter()
+        path = os.environ.get(module.LEDGER_ENV)
         if not path: raise RuntimeError('persistent_budget_ledger_required')
         if total > budget['max_calls'][stage]: raise RuntimeError('assignments_exceed_stage_call_cap')
-        ledger = provider.Ledger(path, budget)
+        ledger = module.Ledger(path, budget)
         if backend is None:
             extra = {k: v for k, v in (('clock', clock), ('sleep', sleep)) if v is not None}
             try:
-                backend = provider.OpenRouter(ledger, study.provider_config(), opener, **extra)
-            except provider.CallFailure as exc:
+                backend = adapter_class(ledger, study.provider_config(), opener, **extra)
+            except CALL_FAILURES as exc:
                 raise RuntimeError(exc.category) from None
     billing = lambda: dict(getattr(backend, 'billing', None) or NO_BILLING)
     initial = ledger.transact() if ledger else {}
@@ -209,7 +214,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
 
     def base(a):
         r = {k: a[k] for k in study.ROW_KEYS}
-        r.update(run=run_name, stage=stage, backend=p['backend'], batch=p['batch'], code=p['code'], source_hash=p['source_hash'],
+        r.update(run=run_name, stage=stage, backend=p['backend'], model=p['model'], batch=p['batch'], code=p['code'], source_hash=p['source_hash'],
                  retrieval=dict(a['retrieval']), reference=sim.reference(a['packet']), packet_summary=study.packet_summary(a),
                  status='not_started')
         return r
@@ -223,7 +228,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
             if time.monotonic() > stop_at:
                 halt('stage_deadline'); r['error'] = 'stage_deadline'; return r
             packet, log = sim.handoff(sim.world(a['root'], study.cfg()), a['state'], a['policy'], study.cfg())
-            if study.packet_hash(packet) != a['packet_hash'] or {k: log[k] for k in a['retrieval']} != a['retrieval']:
+            if study.packet_hash(packet, study.stage_model(stage)) != a['packet_hash'] or {k: log[k] for k in a['retrieval']} != a['retrieval']:
                 raise provider.CallFailure('packet_mismatch', dict(SCRIPTED_ACCOUNT))
             r['retrieval'] = dict(a['retrieval'], seconds=log['seconds'])
             log_book.emit('handoff', id=a['id'], state=a['state'], policy=a['policy'], packet_hash=a['packet_hash'], retrieval=r['retrieval'])
@@ -231,17 +236,17 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
             if scripted:
                 full = study.scripted(a); accounting = dict(SCRIPTED_ACCOUNT)
             else:
-                full, accounting = backend.call(study.SYSTEM, study.user_text(packet), call_id, study.validate)
+                full, accounting = backend.call(study.system(), study.user_text(packet), call_id, study.validate)
             r.update(**study.stored(full), accounting=accounting, work_report=sim.work_report(packet, full),
                      evaluation=study.evaluate(a, full), status='completed')
             log_book.emit('call_response', id=a['id'], call_id=call_id, answer=r['answer'],
                           usage={k: accounting.get(k) for k in ('input_tokens', 'output_tokens', 'actual_usd', 'attempts')})
-        except provider.CallFailure as exc:
+        except CALL_FAILURES as exc:
             r.update(error=exc.category, accounting=exc.accounting)
             log_book.emit('provider_failure' if started else 'not_dispatched', id=a['id'], call_id=call_id, category=exc.category,
                           http_status=exc.accounting.get('http_status'))
-            if exc.category == provider.BILLING_STOP:
-                halt(provider.BILLING_STOP)          # not an outcome: the row stays not_started, nothing is failed
+            if exc.category in BILLING_STOPS:
+                halt(exc.category)                   # not an outcome: the row stays not_started, nothing is failed
             else:
                 r['status'] = 'failed'
                 with control_lock: control['failed'] += 1; failed = control['failed']
@@ -348,7 +353,7 @@ def gate_of(stage, rows, invariants, probe):
 
 def summarize(p, rows, total, invariants, probe, control, elapsed, initial, final, billing, prior, units):
     """Everything here except the measured times is recomputable from the saved rows; `chain.py verify` does so."""
-    stage = p['stage']; budget = study.design()['budget']; strict = stage in study.STRICT
+    stage = p['stage']; budget = study.budget(); strict = stage in study.STRICT
     t = totals(rows, total); gate, details = gate_of(stage, rows, invariants, probe)
     count = lambda rr, s: sum(r['status'] == s for r in rr)
     everyone = study.combine(list(prior) + rows) if prior else rows
@@ -372,7 +377,7 @@ def summarize(p, rows, total, invariants, probe, control, elapsed, initial, fina
                'not_started': count(rows, 'not_started'), **t,
                'errors': sorted({r['error'] for r in rows if r.get('error')}),
                'max_failed': None if strict else budget['max_failed'], 'failed_in_stage': failed_in_stage,
-               'stop_reason': control['reason'], 'resumable': bool(stage == 'S1' and control['reason'] == provider.BILLING_STOP),
+               'stop_reason': control['reason'], 'resumable': bool(stage == 'S1' and control['reason'] in BILLING_STOPS),
                **{k: billing.get(k, 0) for k in NO_BILLING},
                'elapsed_seconds': elapsed, 'gate': details, 'invariants': invariants,
                'qualification_passed': None if gate is None else int(gate), 'passed': passed, 'reason': reason,

@@ -5,7 +5,43 @@ status: exploratory
 program: researchers/dmarz/notes/overnight-program-2026-10-04 (research program v5, line M)
 attempt: '002'       # the one permitted repair; attempt 001 stopped at the qualification gate (reviews/chain-001-post.md)
 
-# Model route (selected-model.json of the program). The request body is request_template plus messages.
+# Two pre-registered models, each its own complete chain (own batches, probe, qualification, ledger, results;
+# never pooled). The model of a chain is STUDY_MODEL (launcher --model), default the first entry.
+model_ladder: [qwen/qwen3.7-flash, gpt-6-luna]
+providers: {qwen/qwen3.7-flash: openrouter, gpt-6-luna: openai}
+scripted_batch: s0-003            # the scripted stage of this code revision; it is model-free and serves both chains
+models:
+  qwen/qwen3.7-flash:             # attempt 002 of the Qwen chain, unchanged: the fields below this block are its route and budget
+    provider: openrouter
+    tag: ''
+    attempt: '002'
+    qualification_set: b
+    answer_format: 2              # working fields, then value and sources
+    reasoning: disabled
+  gpt-6-luna:
+    provider: openai
+    tag: -gpt-6-luna
+    attempt: '003'                # chain 003: batches p0-003-gpt-6-luna, q0-003-gpt-6-luna, s1-003-gpt-6-luna
+    qualification_set: a          # the 24 requests Qwen answered in attempt 001, byte for byte (fleet monitor, 12:38Z)
+    answer_format: 1              # the original format of attempt 001: value and sources only
+    reasoning: low
+    request_template:
+      model: gpt-6-luna
+      reasoning_effort: low
+      max_completion_tokens: 1500
+      response_format:
+        type: json_object
+    budget:                       # overrides of the budget block below for this model's chain
+      aggregate_usd: 5
+      max_output_tokens: 1500     # visible plus reasoning tokens
+      prices: {input: 0.10, cached_input: 0.01, cache_write: 0.125, output: 0.50}
+      retry:
+        transport_retries: 2
+        retryable_http_status: [429, 500, 502, 503, 504]
+        backoff_seconds: [2, 6]
+        retry_after_cap_seconds: 20
+
+# Qwen route (selected-model.json of the program). The request body is request_template plus messages.
 provider: openrouter
 model: qwen/qwen3.7-flash
 canonical_model: qwen/qwen3.7-flash-20260727
@@ -35,6 +71,8 @@ parent:
   adapter: researchers/dmarz/notes/pipeline/reference/openrouter_provider.py     # copied unchanged at main 639e9501
   adapter_commit: 639e9501
   adapter_sha256: 2e98d517bad4cf8d2d9383f3126040e576bd4aa5528e4546639f5aeff03fa982
+  openai_adapter: researchers/dmarz/notes/pipeline/reference/openai_provider.py     # copied unchanged at main 8290d7ad
+  openai_adapter_sha256: f48e8aa819e49878b234a957699f1258703ac3ebca02fc9140e2129dfb1c5404
 
 instrument:
   world_version: memory-handoff-worlds-v1
@@ -123,8 +161,15 @@ attempt_001:
   outcome: stopped at Q0 (qualification_failed); 24 of 24 valid, 19 of 24 supported; S1 not run
   never_pooled_with_attempt_002: true
 
+attempt_002_qwen:               # the Qwen chain pinned before the second model was added; its requests are unchanged here (selftest)
+  code_commit: 3f1b0b9834fafbe0adc07694ff55b820ddc574f6
+  documents_commit: 5831e5342dfe6a3ed3eada42f1659e39c00b808e
+  source_hash: 10f51d2c5d2023fc82df57b2c26173c32aceae1fca4e443971b2686d9a019689
+  manifest_digest: 8f150c0b14b6fe252c591130edf4e1253f395bd563888ddb1de27a71598a3266
+  manifest_sha256: 9cb4a393b924ed4e27bef56165d2acf799b820471273446386ae560ec6626f62
+
 answer_format:
-  version: 2
+  version: 2                    # qwen/qwen3.7-flash; gpt-6-luna uses version 1 (value and sources only), same tolerant validation
   keys: [records, counting_values, distinct_origins, value, sources]
   scored: [value, sources]
   working_fields: [records, counting_values, distinct_origins]       # reported, never gated
