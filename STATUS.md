@@ -46,7 +46,7 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T19:22Z | Run the revised procurement influence experiment |
 | [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:24Z | Build and qualify the bounded outage-response prototype |
-| [right-dissenter-reopening-native-run](tasks/right-dissenter-reopening-native-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:29Z | Execute and review the approved RD6 Q0 and conditional D0 |
+| [phantom-coast-pc10-objective](tasks/phantom-coast-pc10-objective.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T19:44Z | Repair Phantom acquisition objective and prepare paired diagnostic |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -257,6 +257,7 @@
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T17:40Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [right-dissenter-reopening-design](tasks/right-dissenter-reopening-design.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T18:24Z | Draft and validate the Right Dissenter reopening diagnostic |
 | [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T19:02Z | Integrate and fault-test the Right Dissenter reopening runner |
+| [right-dissenter-reopening-native-run](tasks/right-dissenter-reopening-native-run.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:44Z | Execute and review the approved RD6 Q0 and conditional D0 |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:21Z | Prepare and run the first real-model discussion-dose qualification |
 | [run-market-split-api](tasks/run-market-split-api.md) | done | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:58Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | done | p1 | scan | dmarz/sd-code-data |  | 2026-10-03T19:40Z | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
