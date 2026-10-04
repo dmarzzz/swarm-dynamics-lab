@@ -25,7 +25,7 @@ Add the native Anthropic adapter, qualify with Haiku 4.5, and report every explo
 
 - [x] Native adapter, accounting, and offline tests pass.
 - [x] Deploy pinned revision and run the credential-enabled pilot.
-- [ ] Publish qualification results and release fleet claim.
+- [x] Publish qualification results and release fleet claim.
 
 ## Progress
 
