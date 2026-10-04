@@ -1,0 +1,255 @@
+{
+  "assessor": "vishesh/codex-phantom-coast",
+  "date": "2026-10-04",
+  "scope": "PC10 paired acquisition-objective diagnostic",
+  "case_readiness": "offline ready for concrete scope decision; native admission absent",
+  "native_instrument_qualified": false,
+  "run_admitted": false,
+  "native_worlds": 0,
+  "fixture_worlds": 0,
+  "paired_fixture_arms": 2,
+  "assessments": [
+    {
+      "dimension": "decision_relevance",
+      "status": "pass",
+      "acceptance_criterion": "Paired wording diagnostic tests whether explicit individual control changes choices without selecting a favorable repeat.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "answerability",
+      "status": "pass",
+      "acceptance_criterion": "Clarified individual control, no future peer updates, own final loss; paired evidence identical.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "target_scorer_validity",
+      "status": "pass",
+      "acceptance_criterion": "Independent16-world/action-tree enumeration matches every first-action risk; all ties accepted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "actor_isolation",
+      "status": "pass",
+      "acceptance_criterion": "Only packet/request reaches transport; reference/action keys remain outside. Both objective variants have identical evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "mechanism_isolation",
+      "status": "pass",
+      "acceptance_criterion": "Legacy versus clarified packets differ only in objective wording; pair order4/4.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "challenge_coverage",
+      "status": "limited",
+      "acceptance_criterion": "Eight reachable snapshot templates retain both source signs, both direct corrections, consensus correction and missing evidence; population realism remains limited.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "strong_comparisons",
+      "status": "pass",
+      "acceptance_criterion": "Legacy control has identical evidence; dynamic program checked by independent exhaustive world/action-tree enumeration for every first action.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "realism_scope",
+      "status": "limited",
+      "acceptance_criterion": "Transparent four-site individual-control diagnostic only; not realistic geography or a team policy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "independence_precision",
+      "status": "limited",
+      "acceptance_criterion": "Eight authored snapshot pairs, six action pairs and two predeclared report-sign cases; descriptive transitions, no population precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "holdout_integrity",
+      "status": "limited",
+      "acceptance_criterion": "New PC10 namespace; native partition not generated; public templates are not secret or independently authored holdouts.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "robustness_failure_handling",
+      "status": "pass",
+      "acceptance_criterion": "13 offline tests: partial assignments, duplicate ledger claims,16-call cap, missing admission, packet tampering and tied values.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    },
+    {
+      "dimension": "reproducibility_costs",
+      "status": "pass",
+      "acceptance_criterion": "Source fingerprints include frozen PC9 dependencies; new reservation ceiling.10752, historical exposure.858821754 retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
+          "sha256": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
+          "sha256": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
+          "sha256": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979"
+        }
+      ],
+      "scope_limit": "Same-author known templates;13 new offline tests, no PC10 native evidence. Passing would qualify only individual-control snapshot tasks, not decentralized population planning."
+    }
+  ],
+  "development_snapshots": 8,
+  "native_calls": 0
+}
