@@ -1,3 +1,13 @@
+# Current state: D7 closed; schema-delivery repair prepared
+
+2026-10-04. [D7 post-mortem](reviews/D7-post.md), [audit](reviews/D7-audit.json), [eleven-dimension assessment](reviews/D7-quality-review.json). OpenRouter returned the intended Haiku/Anthropic response with complete usage andUSD0.014422 cost. Matrix output was Markdown because the D7 adapter dropped the original Anthropic structured-output schema. One call, no retry; typed condition unstarted. This is failed contract qualification, not failed provider acquisition or scientific evidence of an architecture effect.
+
+Worker and relay stopped; exclusive allocation released. Original cap8/reserved4.966112/calls248;USD3.033888 unreserved. Prior uncertain charges remain. Offline finalize and scientific review complete. Public run and immutable plan verified.
+
+[D8 preparation](ITERATION-08-PREP.md) restores schema delivery through OpenRouter response_format and adds JSON-only instruction;92 tests pass including exact original-schema equality. Proposed matrix/typed wires19706/26375bytes fit the original envelope, maximumUSD0.097280 for two calls. No D8 attempt is approved or admitted; no machine held. Next action: owner decision on this concrete repaired contract, then fresh source/runtime/public-plan/allocation checks. No duplicate researcher review or wait for Anthropic Console.
+
+## Historical state (preserved)
+
 # Latest diagnostic: D6 confirms direct API HTTP429
 
 **HOLD.** [D6 post-mortem](reviews/D6-post.md) · [exact audit](reviews/D6-audit.json) · [native run](https://swarm-live.pages.dev/#/r/influence-swarms%2F1004-180640-faf466).

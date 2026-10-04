@@ -6,6 +6,7 @@ ENDPOINT='https://openrouter.ai/api/v1/chat/completions'
 PROVIDER={'only':['Anthropic'],'order':['Anthropic'],'allow_fallbacks':False,'require_parameters':True,'max_price':{'prompt':1,'completion':5}}
 
 def wire_from_d6(body):
+    """Historical D7 mapping: omits structured output. Use output_contract_d8 for repair."""
     assert body['model']=='claude-haiku-4-5-20251001'
     return {'model':MODEL,'messages':[{'role':'system','content':body['system']}]+body['messages'],'max_tokens':body['max_tokens'],'temperature':body['temperature'],'reasoning':{'enabled':False},'provider':PROVIDER,'stream':False}
 

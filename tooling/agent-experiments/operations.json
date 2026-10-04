@@ -99,11 +99,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/influence-swarms/scenario",
       "setup_path": "researchers/vishesh/notes/influence-swarms/scenario/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D7-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:09:43.299873+00:00",
-      "checked_commit": "c0f3d096aa6e98b93dd6b8f09f71c4f1becf415b",
-      "next_action": "HOLD: D6firstHTTP429,oneattempt,noretry,typedconditionunstarted. Read D6-post.md; account-side diagnosis before any later bounded owner decision. Preserve8cap/4.917472reserved/247calls. Worker stopped and allocation released.",
+      "checked_at": "2026-10-04T19:02:03.627632+00:00",
+      "checked_commit": "abedc39236f22d397a0cae4906660f1b848e4287",
+      "next_action": "D7 closed: OpenRouter response succeeded, schema translation dropped output_config and matrix returned Markdown; typed unstarted. D8 offline repair restores exact original schema;92tests pass, corrected two-call0.097280 proposal awaits owner decision and fresh admission. Original8cap/4.966112reserved/248calls; no machine or worker held. See ITERATION-08-PREP.md.",
       "next_run_approval": "owner"
     },
     {
