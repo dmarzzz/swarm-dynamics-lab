@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: working
-task: quorum-mirrors-q1-launch
-doing: Applying owner no-review direction and arranging bounded Q1 launch
-updated: 2026-10-04T06:09:41.724346+00:00
+state: blocked
+task: null
+doing: Launch package ready; awaiting required OpenRouter memory-only transfer approval after platform rejection
+updated: 2026-10-04T06:17:33.638803+00:00
 ---
 
 ## Notes
