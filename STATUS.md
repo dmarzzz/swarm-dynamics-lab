@@ -288,13 +288,13 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T17:30Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:29Z | verify-cost-qwen chain 003 (gpt-6-luna, original attempt-001 instrument, set a) pinned: code c74da5bc, source hash b1b15d25, 123 selftests, READY.yaml provider openai, review reviews/chain-003-pre.md, ledger fresh; waiting for dmarz/fleet-monitor. Qwen attempts 001 and 002 both stopped at Q0. No launch, no model call by this builder |
 | vishesh/codex-pi-review | idle | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T17:24Z | Direct cycle coordinated and repairs reviewed; Right Dissenter H5 finished adversely; final owning-task publication is pending. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T17:16Z | C4 S0 scientifically invalid from label leakage; full postmortem published, machine released; tested C5 proposal awaits changed-plan decision |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T17:05Z | S0-02 closed; strict format failure; offline repair validated; successor decision pending |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T16:55Z | D5 executed and failed acquisition; all24 assignments audited,48 failed transports,0responses; post-mortem complete and allocation released |
 | vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T16:55Z | A1 closed after first HTTP429; no responses or retry; host released PR309 |
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T16:44Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
 | shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
 | shadow/sol-audit-team | done | sol-audit-team | 2026-10-04T15:51Z | Completed frozen-PI delta, legacy gate probes, and exhaustive ready-chain inventory |
