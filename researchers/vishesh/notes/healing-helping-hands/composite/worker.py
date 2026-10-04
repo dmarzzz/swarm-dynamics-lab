@@ -36,6 +36,12 @@ def admission(a,stage,now=None):
     if not a.get('host') or not a.get('claim_id'):raise ValueError('allocation_missing')
     return True
 
+def check_transport(stage):
+    with urllib.request.urlopen('http://127.0.0.1:18443/health',timeout=5) as response:health=json.load(response)
+    if health.get('ready') is not True or health.get('attempt')!=ATTEMPT or health.get('stage')!=stage or health.get('seconds_remaining',0)<60:
+        raise ValueError('relay_not_ready_for_attempt')
+    return health
+
 def run(out,stage,admit_path,parent=None):
     a=json.loads(admit_path.read_text());admission(a,stage)
     tldr=f'TLDR: {ATTEMPT} {stage}, Qwen 0.6B + Jev versus paired Qwen-only/Jev-only; measure correct labels, correction and anchoring before 200-curator repair. Synthetic feasibility, no independent-agent replication claim.'
@@ -47,7 +53,8 @@ def run(out,stage,admit_path,parent=None):
         if parent is None:raise ValueError('qualification_required')
         q=json.loads((parent/'summary.json').read_text());pm=json.loads((parent/'manifest.json').read_text())
         if not q['admit_s1'] or pm['source_hashes']!=hashes:raise ValueError('unqualified_instrument')
-    out.mkdir(parents=True,exist_ok=False);write(out/'admission.json',a);write(out/'plan-receipt.json',receipt)
+    transport=check_transport(stage)
+    out.mkdir(parents=True,exist_ok=False);write(out/'admission.json',a);write(out/'plan-receipt.json',receipt);write(out/'transport-receipt.json',transport)
     import swarm_report as sdk
     reporter=Reporter(sdk,'healing-helping-hands',f'healing-helping-hands/{ATTEMPT}-{stage}',out/'reporting.jsonl')
     reporter.emit('start',url=receipt['url'],params={'attempt_id':ATTEMPT,'stage':stage,'arm':'qwen+jev'},message=tldr)

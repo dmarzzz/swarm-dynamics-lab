@@ -1,0 +1,49 @@
+{
+  "stage": "S4",
+  "host": "sim-shadow",
+  "budget_approved": true,
+  "allocation_verified": true,
+  "allocation_receipt_sha256": "8bac37a50cfa731907ef19c1c2eb73212de26bfe2ffb9374d2476180dce4b85b",
+  "claim": "vishesh-right-dissenter-rd4",
+  "claim_until": "2026-10-04T06:54:40Z",
+  "source_commit": "60da64ddad98e6fdda5d9d67ea757f53a2813bc8",
+  "file_hashes": {
+    "researchers/vishesh/notes/dissent/src/live_render.py": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+    "researchers/vishesh/notes/dissent/src/jev.py": "d288f630c2241ef0062886fc66b87c31d834ca9f52b744e0cd3bdd9aad89e9dc",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "be4fae50970c35bfa0cf71467ae49bf86f66eade84e73ca3fb4dbf70832da5c3",
+    "researchers/vishesh/notes/dissent/src/live_relay.py": "843543b767f28c1a4a7e9d992e4bbb9c1fb8f3931f6f83982cbb6ae479422568",
+    "researchers/vishesh/notes/dissent/src/live_design.py": "1d764449badab5fa5ebd9f03f443bf8c08c19b565f1a3389c325737da773ecf0",
+    "researchers/vishesh/notes/dissent/src/protocol.py": "e0f0d7f213b7a023580b5a02d4ef59ff120797e0273d4dcd2f74ce1bb96ae269",
+    "researchers/vishesh/notes/dissent/src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "researchers/vishesh/notes/dissent/src/rd4_worker.py": "c54e602095de60ad5ad9106b143136e7c9ceb6586d09727141590bf19fbda6e0",
+    "researchers/vishesh/notes/dissent/src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "researchers/vishesh/notes/dissent/src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "researchers/vishesh/notes/dissent/src/validation_worker.py": "e27d504fad06876bc84662050629fdebf55c5bcfefb69ca5a9cc3b63cd6ff4f3",
+    "researchers/vishesh/notes/dissent/src/rd4_render.py": "7ff1792369e2f7608da7b239e1c50081984e817dcbbb6f1c20991b772e35bf20",
+    "researchers/vishesh/notes/dissent/src/reconcile.py": "ba91e8934436e9b1c26ff71302fe8fbda2081b4fde0f7ef4eb9570a9638d4d3d",
+    "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "researchers/vishesh/notes/dissent/src/rd4_design.py": "fd36f5797dd029a269d51512f309c4e2612deb0968ce79fbc14b753d6bc697a0",
+    "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
+    "researchers/vishesh/notes/experiment-documentation/public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "instrument_sha256": "bc0a79cd2f90fb13262a2b625a2e029fc0c01e7b7e51d7870c7550e0fb3dea72",
+  "assignment_sha256": "5146750d59148e94edf9ec4edcb371408cbeed051c7e5e059bd61f0467dd641f",
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/471d4dd069564c3d534a6b1cf5ecfb5a2b0c6a57/researchers/vishesh/notes/dissent/rd4/C1-PLAN.md",
+  "plan_sha256": "ea2c6507d0a0f6d81f1625042fcd6593997aca2cc70ea8ffcfe85ab80e8045f8",
+  "run_id": "right-dissenter-rd4/s4-c1",
+  "run_tldr": "TLDR: S4-C1 completes only 40 unstarted trajectories, 160 decisions, from interrupted RD4 S4. Retain 416 prefix outcomes and five connection failures; inherit responses/failures without retry. Same policies, qualified instrument and cumulative cap; report separate and combined 576-decision outcomes with finite-template limits.",
+  "qualification_result": "/srv/swarm/rd4-results/q4-a1/summary.json",
+  "qualification_sha256": "98cde6641d62a407e2d850368be6e70f116a9a0122e40d3c9296668ee49330bb",
+  "parent_directory": "/srv/swarm/rd4-results/s4-a1",
+  "parent_sha256": {
+    "configuration.json": "228e1d02a39e7fc60d973d802ce9418fbdac6c3d0f29c28dfe935c4dc9152376",
+    "manifest.json": "bc987ece112ea8dc002353f995d4ed997e636f746fe4a6381e854836e883e883",
+    "records.json": "35aa77db2286d4e7b7337bc385d9ad0327c29309fe8931051064ac437affc65d",
+    "calls.json": "92da1f14417aee6bb84b3000961dc85fbeb50d08af4347e8488c4fa70f041085",
+    "summary.json": "67df05faf8af555df18197305340c2997b84f7105055b0bfa86461ffa1c28732"
+  },
+  "continuation_assignment_sha256": "09703d1c33cdb871f17eb40d703a35f0f3b68f3c52cbb8d889ff46f83b63917d",
+  "continuation_file_hashes": {
+    "researchers/vishesh/notes/dissent/rd4/continuation.py": "255134a68556b920aad8b6698eba6e258cfaefba60347b99a40b2781bc3887fc"
+  }
+}

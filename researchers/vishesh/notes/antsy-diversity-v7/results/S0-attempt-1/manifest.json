@@ -1,0 +1,64 @@
+{
+  "stage": "S0",
+  "split": "train",
+  "ids": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "dataset_revision": "7f0115a4b758a71d6473b8d085751692da2fef98",
+  "complete": false,
+  "qualified": false,
+  "model_calls": 0,
+  "assigned": 20,
+  "utc_start": "2026-10-04T06:11:58.594212+00:00",
+  "source": "8112123dd6741e60f5d9a599eb761a4169383b39",
+  "instrument_sha256": "187559e06e97461f007f5817666885cc0265dd5dd47f2b8ea8853c6580542fad",
+  "runtime": {
+    "tesseract_model_hashes": {
+      "eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+      "ind": "69786901da87ab8766c1ea7fbb10b28f2110c14da3f6c8f2735df131fba95d88"
+    },
+    "python": "3.12.3",
+    "packages": {
+      "rapidocr": "3.9.2",
+      "onnxruntime": "1.30.0",
+      "pillow": "12.3.0",
+      "pyarrow": "25.0.1",
+      "numpy": "2.5.3",
+      "opencv-python": "5.0.0.93"
+    },
+    "model_hashes": {
+      "PP-OCRv6_det_small.onnx": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+      "PP-OCRv6_rec_small.onnx": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+      "ch_ppocr_mobile_v2.0_cls_mobile.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+    },
+    "rapid_config_sha256": "06623941e188461a0bc263fe16175cb5e5f6f6b01f4387e546d3a741569fc021",
+    "tesseract": "tesseract 5.3.4"
+  },
+  "dataset_file": {
+    "file": "data/train-00000-of-00004-b4aaeceff1d90ecb.parquet",
+    "sha256": "da3994eee1bf9bd3c57f0d53a72c3a6812c8696c5ba26245987949ddf73483cc"
+  },
+  "error": "operator_interrupted_missing_libGL",
+  "completed_receipts": 10,
+  "known_completed_calls": 50,
+  "exact_started_calls": null
+}

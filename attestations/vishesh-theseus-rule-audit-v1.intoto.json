@@ -6,7 +6,7 @@
    "externalParameters": {
     "harness": "codex",
     "model": "gpt-6-astra",
-    "prompt": "Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful step. Why are you not just doing it and telling me?"
+    "prompt": "sha256:91e17260ef9d90d0f6ba306b144091688e37a874d87d75be9085e48f67d99a36"
    },
    "internalParameters": {
     "commit": "063f8ce933809fca994a8ef8e51b8d7712ed3347-dirty",

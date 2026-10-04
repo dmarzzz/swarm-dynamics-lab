@@ -14,3 +14,5 @@ Pulled public main through c23b5cb0 before design, 2026-10-04. Read the owner in
 | Wrong-account allocation | Keep incident; fail closed before provisioning | Borrow only verified idle Dmarz fleet machine under fresh exclusive claim |
 
 No reviewer sign-off is invented. Native successor launch remains subject to current plan, source, qualification, resource and budget evidence. Formal S2 stays closed.
+
+Final pull through 2d85cdfb found no additional Right Dissenter-specific feedback. RD-R1/R2/R3 repairs have regression coverage, 59 native retained closures used no new checks, and Q4 passed. The symmetric gate has no net observed benefit; semantic uncertainty and budget exhaustion remain substantive open findings. [Final report](REPORT.md), [plan coverage](PLAN-COVERAGE.md).

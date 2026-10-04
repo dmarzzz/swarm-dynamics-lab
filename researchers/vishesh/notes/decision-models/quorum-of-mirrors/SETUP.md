@@ -1,5 +1,7 @@
 # Experiment setup record: Quorum of Mirrors, iteration 3
 
+> Current admission update, 2026-10-04: the owner reaffirmed that researcher review is not required. The pinned [owner direction](OPERATOR-AUTHORIZATION.json) and [Q1 pre-run assessment](reviews/Q1-01-pre.md) supersede earlier researcher/survey-acceptance launch blockers for this bounded exploratory screen. Prior-art limitations and historical verdicts remain unchanged. The operator handles registration, fresh allocation and execution under the existing budget; no user action is requested.
+
 2026-10-04 · status: S0 closed; retrospective analysis complete; S1 NOT ADMITTED. Follow [the required setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This record is retrospective for S0 and prospective for S1; it does not rewrite historical registration.
 
 ## Ownership and question

@@ -1,9 +1,9 @@
 {
-  "schema": "poietic-launch-state-v0.1",
-  "updated_utc": "2026-10-04T04:34:07.328908+00:00",
+  "schema": "poietic-launch-state-v0.2",
+  "updated_utc": "2026-10-04T06:16:46.442587+00:00",
   "study": "poietic-agents",
-  "design_status": "published-registered-awaiting-independent-review",
-  "implementation_status": "not-started",
+  "design_status": "reviewed-amended-offline-tested",
+  "implementation_status": "S0-launcher-and-lineage-instrument-built",
   "execution_status": "not-launched",
   "qualification_status": "not-run",
   "scientific_conclusion": "none",
@@ -19,23 +19,23 @@
     "native_launch_preflight": "must-repeat-after-runtime-freeze"
   },
   "gates": {
-    "independent_design_review": "pending",
+    "independent_design_review": "received; P1-P3 owner resolution in REVIEW-RESOLUTION.md",
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
-    "exact_runtime_and_assignments": "unresolved",
-    "offline_instrument_checks": "not-implemented",
+    "exact_runtime_and_assignments": "model routes, source and assignment generator fixed; deployment freeze pending",
+    "offline_instrument_checks": "47 passed",
     "model_qualification": "not-run",
     "budget_authorization": "not-recorded",
-    "dedicated_machine_allocation": "not-requested-before-readiness",
+    "dedicated_machine_allocation": "allocation task open; none claimed",
     "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending"
   },
   "review_task": "review-poietic-agents-design",
   "prior_art_task": "heterogeneous-methods-review",
   "authorized_api_usd": 0,
   "authorized_infrastructure_usd": 0,
-  "planned_run_count": 0,
+  "planned_run_count": 3,
   "started_run_count": 0,
-  "next_action": "build-poietic-agents-instrument and review-poietic-agents-design; native dispatch remains blocked",
+  "next_action": "Record S0 budget and credential provenance, resolve allocate-poietic-agents-s0, then deploy and qualify under current public admission",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -43,5 +43,23 @@
     "planned_S1_jobs": 768,
     "qualification_calls": 0,
     "note": "Editorial HX-31 score 94 is interest, not empirical confidence."
-  }
+  },
+  "scientific_outcomes": 0,
+  "launchable": false,
+  "remaining_gates": [
+    "record Poietic-specific S0 budget",
+    "verify approved OpenRouter credential provenance/availability without exposing or transferring it by assumption",
+    "fresh exclusive approved-fleet allocation and idle-workload check",
+    "deploy frozen source and dependencies; verify receipts",
+    "fresh exact public-plan/page admission",
+    "run S0 and reconcile before S1 preparation"
+  ],
+  "s1_not_yet_admitted": [
+    "qualified hash match",
+    "A2 development selection and construction receipt",
+    "S1 budget and stage admission"
+  ],
+  "observed_model_calls": 0,
+  "actual_poietic_api_spend_usd": 0,
+  "host_claimed": false
 }

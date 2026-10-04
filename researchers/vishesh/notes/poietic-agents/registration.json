@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Can identical agents discover and revise shared data services, shed redundant tools and skills, and use cheaper execution while preserving correct, fresh, on-time answers? Compare generalists, coherent caching, static specialists and adaptive alternatives; count learning, communication and recovery costs. Prospective exploratory design, no runs launched; exact runtime, review, budget and dedicated allocation remain launch gates.",
+  "description": "TLDR: Can identical agents discover and revise shared data services, shed redundant tools and skills, and use cheaper execution while preserving correct, fresh, on-time answers? Compare generalists, coherent raw/derived caching and static specialists; charge learning, communication and adaptation delays against fixed arrivals. Reviewed exploratory instrument; 47 offline checks pass. Next is bounded Haiku/Qwen/Jev qualification. No runs yet; study budget, approved credential and dedicated allocation remain launch gates.",
   "params": {
     "stage": {
       "type": "str",
@@ -30,7 +30,7 @@
     "design_version": {
       "type": "str",
       "role": "fixed",
-      "default": "0.1"
+      "default": "0.2"
     }
   },
   "metrics": [

@@ -5,7 +5,7 @@
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
     "harness": "codex",
-    "prompt": "Verify and correct the visual fixture frame, preserving its explicit non-model provenance."
+    "prompt": "sha256:dadaf246930f019eddd191b570b50d365153446e7c37a9afe72ab2f6509462cb"
    },
    "internalParameters": {
     "commit": "33fa302579480d100117c2fd6590f82b255e3163-dirty",

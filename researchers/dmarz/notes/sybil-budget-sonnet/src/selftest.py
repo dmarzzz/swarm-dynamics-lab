@@ -16,26 +16,26 @@ class Tests(unittest.TestCase):
      then=sim.run_episode(w,4,study.design()['arms'],cfg)
      for a,b in zip(now,then):self.assertEqual(a['admitted'],b['trace'][-1]['admitted']);self.assertEqual(a['graph_metrics'],b['evaluation'])
  def test_haiku_cohort_pairing(self):
-    """Only model, prices, caps and the N972 size subset differ from sybil-budget-api."""
+    """Only model, prices and caps differ from sybil-budget-api."""
     parent=study.ROOT.parent/'sybil-budget-api'
     for name in ('sim.py','study.py','analyze.py'):
      self.assertEqual((parent/'src'/name).read_bytes(),(study.ROOT/'src'/name).read_bytes())
     import yaml
     old=yaml.safe_load((parent/'design.yaml').read_text());new=study.design()
     self.assertEqual(old['model'],'claude-haiku-4-5-20251001');self.assertEqual(new['model'],'claude-sonnet-4-6')
-    self.assertEqual(old['sizes'],[324,972]);self.assertEqual(new['sizes'],[972])
+    self.assertEqual(old['sizes'],[324,972]);self.assertEqual(new['sizes'],[324,972])
     changed={k for k in set(old)|set(new) if old.get(k)!=new.get(k)}
-    self.assertEqual(changed,{'experiment','model','sizes','budget','review_waiver','replication_of'})
+    self.assertEqual(changed,{'experiment','model','budget','review_waiver','replication_of'})
     ob,nb=old['budget'],new['budget']
-    self.assertEqual({k for k in ob if ob[k]!=nb[k]},{'aggregate_usd','max_attempted_calls','input_usd_per_million','output_usd_per_million'})
+    self.assertEqual({k for k in ob if ob[k]!=nb[k]},{'aggregate_usd','input_usd_per_million','output_usd_per_million'})
     spec=importlib.util.spec_from_file_location('parentstudy',parent/'src/study.py');ps=importlib.util.module_from_spec(spec);spec.loader.exec_module(ps)
     # One scientific and one qualification world here for speed; reporting/parity_check.py covers all.
     def one(mod,dd):
-     dd=dict(dd);dd['worlds']=dd['worlds'][:1];dd['qualification_worlds']=dd['qualification_worlds'][:1];dd['sizes']=[972];return dd
+     dd=dict(dd);dd['worlds']=dd['worlds'][:1];dd['qualification_worlds']=dd['qualification_worlds'][:1];return dd
     for stage in ('Q0','S1'):
      with patch.object(study,'design',return_value=one(study,new)):mine={a['id']:a for a in study.assignments(stage)}
-     with patch.object(ps,'design',return_value=one(ps,old)):theirs={a['id']:a for a in ps.assignments(stage) if a['n']==972}
-     self.assertEqual(len(mine),2 if stage=='Q0' else 60)
+     with patch.object(ps,'design',return_value=one(ps,old)):theirs={a['id']:a for a in ps.assignments(stage)}
+     self.assertEqual(len(mine),4 if stage=='Q0' else 120)
      self.assertEqual(set(mine),set(theirs))
      for k,a in mine.items():self.assertEqual(a['packet_hash'],theirs[k]['packet_hash']);self.assertEqual(a['expected'],theirs[k]['expected'])
  def test_blind_packet(self):
@@ -59,7 +59,7 @@ class Tests(unittest.TestCase):
       self.assertEqual(r['events'],rr[-1]['events'][:r['checks']])
       self.assertFalse(set(r['checked'])&set(w['public']['trusted']))
  def test_qualification_noattack_missing_and_recompute(self):
-    assignments=study.assignments('Q0');self.assertEqual(len(assignments),8)
+    assignments=study.assignments('Q0');self.assertEqual(len(assignments),16)
     rr=[]
     for a in assignments:
      self.assertEqual(a['graph_metrics']['malicious_count'],0)
@@ -87,7 +87,7 @@ class Tests(unittest.TestCase):
     d=study.design();groups=[set(d[k]) for k in ('worlds','qualification_worlds','engineering_worlds')]
     self.assertTrue(all(not a&b for i,a in enumerate(groups) for b in groups[i+1:]));self.assertTrue(max(set.union(*groups))<10000)
     self.assertFalse(set.union(*groups)&set(range(4900,4902)));self.assertFalse(set.union(*groups)&set(range(5000,5004)));self.assertFalse(set.union(*groups)&set(range(6000,6024)))
-    self.assertEqual(len(d['sizes'])*len(d['arms'])*len(d['checks'])*len(d['pilot']['attacker_pass'])*len(d['worlds']),1440)
+    self.assertEqual(len(d['sizes'])*len(d['arms'])*len(d['checks'])*len(d['pilot']['attacker_pass'])*len(d['worlds']),2880)
     with self.assertRaises(ValueError):study.params('S2')
  def test_invalid_answers_and_duplicate_analysis(self):
     for vals in ({'0':True},{str(i):True for i in range(6)}):

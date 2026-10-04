@@ -28,7 +28,7 @@ class Anthropic(unittest.TestCase):
     def test_request_transform_and_usage_accounting(self):
         from provider import native_payload,usage_charge
         from failures import SafeFailure
-        cfg={'model':'claude-haiku-4-5-20251001','max_output_tokens':4096,'input_usd_per_token':0.000001,'output_usd_per_token':0.000005}
+        cfg={'response_contract':'prompt-only-v1','model':'claude-haiku-4-5-20251001','max_output_tokens':4096,'input_usd_per_token':0.000001,'output_usd_per_token':0.000005}
         body=native_payload([{'role':'system','content':'JSON only'},{'role':'user','content':'task'}],cfg)
         self.assertEqual(body['system'],'JSON only');self.assertEqual(body['messages'],[{'role':'user','content':'task'}])
         self.assertEqual(body['service_tier'],'standard_only');self.assertNotIn('tools',body)

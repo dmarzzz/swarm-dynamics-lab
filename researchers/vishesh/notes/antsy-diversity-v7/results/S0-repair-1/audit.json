@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "assigned": 20,
+  "policy_outcomes": 220,
+  "invariance_checks": 40,
+  "scoring": "separate numeric tally; same-author audit"
+}

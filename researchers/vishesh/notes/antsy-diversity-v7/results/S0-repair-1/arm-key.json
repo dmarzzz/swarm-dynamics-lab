@@ -1,0 +1,13 @@
+{
+  "1": "mixed-robustness/majority",
+  "2": "mixed-robustness/provenance-dissent",
+  "3": "mixed/majority",
+  "4": "mixed/provenance-dissent",
+  "5": "related/majority",
+  "6": "related/provenance-dissent",
+  "7": "single/R0",
+  "8": "single/R1",
+  "9": "single/T0",
+  "10": "single/T1",
+  "11": "single/T2"
+}

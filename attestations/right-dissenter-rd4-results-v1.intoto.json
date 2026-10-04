@@ -1,0 +1,95 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Make the results more practical, robust, compelling, and interesting."
+   },
+   "internalParameters": {
+    "commit": "2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty",
+    "session": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "78848e9fc6b480af64b5a21004768ef3cdcb637f30530d4655d3f1f742691bfa"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/render_report.py"
+    },
+    {
+     "digest": {
+      "sha256": "95253e493c38d323227a14db66de9420ce561adfe5c2f7b73296ddbad2f68203"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/analyze_saved.py"
+    },
+    {
+     "digest": {
+      "sha256": "7ff1792369e2f7608da7b239e1c50081984e817dcbbb6f1c20991b772e35bf20"
+     },
+     "uri": "researchers/vishesh/notes/dissent/src/rd4_render.py"
+    },
+    {
+     "digest": {
+      "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7"
+     },
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "digest": {
+      "sha256": "eda02bf1f2e91719594b240d1c083ffafd74cbb200ca8eb638963b5bf4a205d4"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/continuation.py"
+    },
+    {
+     "digest": {
+      "sha256": "c8de96c7d64572b4fd603caa04bef39cbf86b52b5ec531806da9e93382ec4ed0"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/results/combined/records.json"
+    },
+    {
+     "digest": {
+      "sha256": "15af5ce2916e5a7f3c9a8adb314db1070399cf1a12d7fe58497d9a5a81ef4ef9"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/results/combined/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "33def645c9727025beb6ffcd324927b5cd79f63fd0b88c52e42f468213f11522"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/results/combined/analysis.json"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/api/a/right-dissenter-rd4/s4-c2/combined-final_frame.png"
+    },
+    {
+     "digest": {
+      "gitCommit": "2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T06:25:14Z",
+    "invocationId": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8",
+    "startedOn": "2026-10-04T06:25:14Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "9dfa7e687e4a36bb07a04160a2193a2199900dd5a33823c5e46d6da1f06017bb"
+   },
+   "name": "artifacts/right-dissenter-rd4-results/right-dissenter-rd4-results-v1.png"
+  }
+ ]
+}

@@ -1281,19 +1281,35 @@
         "researchers/vishesh/notes/dissent/rd4/experiment.json"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Untested successor: symmetric stop/resume admission on repaired persistent closure mechanics.",
-        "rationale": "Offline regression checks establish software behavior only; no native successor outcomes observed. Fixed authored templates and scripted votes limit any later claim."
+        "score": 1,
+        "claim": "On this fixed synthetic cohort, symmetric stop/resume wording tied original admission at 87/96 correct; always-check reached 88/96 with fewer logical model calls. Resolved closure retention worked in the observed cases.",
+        "rationale": "Twenty-four authored roots reuse templates and scripted votes; shared responses and retained transport failures limit inference. Failure sensitivity ranges overlap. Same-author replay reproduces every record; no independent semantic validation or deployment claim."
       },
-      "sample_size_summary": "Observed: no native RD4 outcomes. Planned Q4: 24 clean/uncertainty decisions. Planned S4: 24 fixed roots with reused grammar, 6 policies, 4 epochs = 576 dependent decisions. Prior cohort remains separate.",
+      "sample_size_summary": "Observed: 24 fixed roots with reused authored grammar; 576/576 dependent decisions across 6 policies and 4 epochs. S4: 203 valid provider responses, 11 retained worker transport/stop records. Separate Q4: 24/24 correct. No independent replication.",
       "sources": [
         "researchers/vishesh/notes/dissent/rd4/PLAN.md",
-        "researchers/vishesh/notes/dissent/rd4/FEEDBACK.md"
+        "researchers/vishesh/notes/dissent/rd4/FEEDBACK.md",
+        "researchers/vishesh/notes/dissent/rd4/REPORT.md",
+        "researchers/vishesh/notes/dissent/rd4/PLAN-COVERAGE.md",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/summary.json",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/audit.json",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/analysis.json",
+        "researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md"
       ],
-      "status_at_assessment": "planned_not_run",
+      "status_at_assessment": "exploratory_complete_transport_failures_retained",
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
-      "source_commit": "88feac7ea6218c2712914fb5462ab5d66814a50a"
+      "source_commit": "b4429145fd4636bf7dac305ab2226f6a18cd9237",
+      "source_sha256": {
+        "researchers/vishesh/notes/dissent/rd4/PLAN.md": "1dc78d048283a50c50ee711a50be068deabb0be2c10cdf29a8be10a4da1b129b",
+        "researchers/vishesh/notes/dissent/rd4/FEEDBACK.md": "a267b6a2134b775f704a52da607e78faa34cc25245d8fc0bc9400198a0061905",
+        "researchers/vishesh/notes/dissent/rd4/REPORT.md": "b219d62664be1a65d398c566781cbb6c8abfc0476f8404c7217fe9cc521414cc",
+        "researchers/vishesh/notes/dissent/rd4/PLAN-COVERAGE.md": "d2a20ef99b39916154cd5005b4ef228196412ad87504a2dd3136c3b32643fe04",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/summary.json": "15af5ce2916e5a7f3c9a8adb314db1070399cf1a12d7fe58497d9a5a81ef4ef9",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/audit.json": "f3a57a48934e9c6252f3bf715521d56678c5cf97f870fc56be3ed3ec9643e705",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/analysis.json": "33def645c9727025beb6ffcd324927b5cd79f63fd0b88c52e42f468213f11522",
+        "researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md": "f4868138155e76292a974fead01eba9d2d66b006206485b74ec9dce39343c110"
+      }
     },
     {
       "id": "discussion-dose-v3-d1-haiku",
@@ -1454,6 +1470,107 @@
         "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-post.md"
       ],
       "status_at_assessment": "diagnostic_complete_repair_failed_transfer_unrun"
+    },
+    {
+      "id": "antsy-diversity-v7",
+      "title": "Antsy v7: worker diversity",
+      "documents": [
+        "researchers/vishesh/notes/antsy-diversity-v7/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-diversity-v7"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Repaired native pilot shows competence mismatch and quorum coverage loss; it does not establish a diversity benefit.",
+        "rationale": "100/100 valid OCR calls, but best Tesseract worker1/19 correct fails the per-family gate while RapidOCR R0 is11/19. S1 unrun; small dependent qualification outcomes only."
+      },
+      "sample_size_summary": "Repaired qualification:20/20 paired receipts,19 scorable,100/100 valid OCR calls,220 policy outcomes; S1 unrun. Parent interrupted after10 recorded receipts,30 valid/20 invalid calls plus uncertain partial work. Vendor independence unknown.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-diversity-v7/PLAN.md",
+        "researchers/vishesh/notes/antsy-diversity-v7/RESULTS.md",
+        "researchers/vishesh/notes/antsy-diversity-v7/reviews/S0-repair-post.md"
+      ],
+      "status_at_assessment": "execution_repaired_qualification_failed_s1_unrun",
+      "source_commit": "f0be4c82149c5c986d56cf19cd23afa4f8ef2646",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "capture-memory-mix",
+      "title": "Capture Memory Mix",
+      "documents": [
+        "researchers/shadow/notes/capture-memory-mix/README.md"
+      ],
+      "experiment_ids": [
+        "capture-memory-mix"
+      ],
+      "registration_paths": [
+        "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-specialists-sonnet",
+      "title": "Sybil Specialists Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-specialists-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-budget-sonnet",
+      "title": "Sybil Budget Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-budget-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {

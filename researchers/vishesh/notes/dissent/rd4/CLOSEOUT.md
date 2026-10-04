@@ -1,0 +1,15 @@
+# RD4 closeout
+
+Completed 2026-10-04. Q4 qualification: 24/24 correct. S4 assignment accounting: 416 decisions in A1, eight in failed C1, 152 in C2, total 576/576. A1 and C1 remain failed operational attempts; the final continuation completed previously unstarted trajectories only. No failed answer replaced, no retry to improve scores, no new cohort silently substituted.
+
+All four attempts retain immutable public plans, configurations, manifests, calls, records and summaries. Public registration and readable GitHub plans were checked before dispatch. Remote readback hash-matched every uploaded artifact and confirmed no experiment workers. The local dashboard had a DNS failure; its browser rendering was not verified. [Readback receipt](results/artifact-readback.json).
+
+The borrowed existing Dmarz host sim-shadow was held exclusively by claim vishesh-right-dissenter-rd4. Claim creation PR152, extension PR169 and release PR185 were merged in the private fleet. Release completed at 2026-10-04T06:20:52Z; the hub received its release event. The owner machine remains intact. Relay and tunnel processes stopped. No API credential was copied to the host or published. [Release receipt](results/allocation-release.json).
+
+The cumulative budget database was preserved with mode 0600 in the owner's local RD4 review folder. Lifetime 428 provider calls, $0.01662045 settled and $0.004032 historically reserved, within the existing 500-call/$1 API envelope. RD4 added 227 calls and $0.00922278. No new machine purchase; existing fleet operating invoice unavailable. [Budget receipt](results/budget-closeout.json).
+
+Same-author exact replay reproduces 576/576 records; separate arithmetic, uncertainty bounds and closure assertions pass. The qualification chart, final table and sampled replay frames were checked against measured data. A separate report derivative corrects the broad raw caption about repeat checks and adds explicitly retrospective failure examples. Raw uploads stay unchanged. The public repository contains JSON inputs, output records, source, plans, post-mortems and Flight Deck provenance for delivered visuals. The owner also has a durable local copy of every attempt and report video.
+
+This closes the authorized bounded iteration. It does not establish a superior learned gate, independent semantic robustness or a formal S2 result. Further native work needs a new prospective assessment with accumulated spending preserved. Suggested next question: reserve verification capacity for fresh evidence while preventing unresolved repeats from spending it; include broader independently authored semantics and explicit version/expiry/late-verifier strata.
+
+Delivery validation: the three new Flight Deck artifacts pass strict scoped checking with zero errors/warnings. Full-checkout strict checking remains affected by a pre-existing missing discussion-memory film and this clone’s folder-name mismatch. Unrelated artifact provenance was restored unchanged after the filing tool refreshed it globally. The lab check passes with five existing unresolved-library-link warnings. [Validation receipt](DELIVERY-VALIDATION.json).

@@ -39,8 +39,8 @@ pilot:
   - 0.7
   - 0.9
 budget:
-  aggregate_usd: 290
-  max_attempted_calls: 1600
+  aggregate_usd: 400
+  max_attempted_calls: 3200
   max_output_tokens: 500
   max_input_bytes: 240000
   request_timeout_seconds: 120
@@ -70,6 +70,7 @@ secondary_contrast:
   - bad_seat_share
   - specialist_retention
 sizes:
+- 324
 - 972
 worlds:
 - 7000
@@ -119,11 +120,12 @@ joint_target:
 replication_of:
   experiment: sybil-budget-api
   cohort: claude-haiku-4-5-20251001 S1 run sybil-budget-api/46ebda03
-  changed: model, per-million prices, budget caps, sizes restricted to the N972 half
-    (pre-specified before any run, to fit cost); no simulation, packet, prompt, schema,
-    temperature, world or evaluator change
-  pairing: same task roots 7000-7023, identical N972 assignment ids; separate cohort,
-    never pooled
+  changed: model, per-million prices and budget caps only. Full 120-cell grid at N324
+    and N972 (amended 2026-10-04 before any fleet or paid run; the earlier N972-only
+    subset was dropped). No simulation, packet, prompt, schema, temperature, world or
+    evaluator change
+  pairing: same task roots 7000-7023, identical assignment ids; separate cohort, never
+    pooled
 review_waiver:
   date: '2026-10-04'
   scope: None recorded for this study. The parent's owner waiver covered sybil-budget-api

@@ -128,6 +128,9 @@ class AnthropicPolicy(HTTPPolicy):
     def schema(self,request,fallback):
         return output_schema(fallback(request['observation']))
 
+    def parse_answer(self,text):
+        return json.loads(text)
+
     def _once(self,request,fallback):
         body={'model':self.model,'system':request['instructions'],'temperature':0,
               'max_tokens':self.max_output,'messages':[{'role':'user','content':json.dumps(request['observation'],sort_keys=True)}],
@@ -153,7 +156,7 @@ class AnthropicPolicy(HTTPPolicy):
                 self.usage_missing-=1
                 self.input_tokens+=usage['input_tokens'];self.output_tokens+=usage['output_tokens']
             if result.get('stop_reason')!='end_turn':raise PolicyError('incomplete output')
-            return json.loads(result['content'][0]['text'])
+            return self.parse_answer(result['content'][0]['text'])
         except urllib.error.HTTPError as exc:raise PolicyError('HTTP status '+str(exc.code)) from None
         except PolicyError:raise
         except Exception as exc:raise PolicyError('provider '+type(exc).__name__) from None

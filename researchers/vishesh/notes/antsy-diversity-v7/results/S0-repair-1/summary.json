@@ -1,0 +1,106 @@
+{
+  "assigned": 20,
+  "scorable": 19,
+  "invalid": 0,
+  "arms": {
+    "mixed-robustness/majority": {
+      "correct": 9,
+      "wrong": 0,
+      "refer": 10,
+      "unknown_accepted": 0,
+      "coverage": 0.47368421052631576,
+      "accepted_error": 0.0,
+      "tool_s": 382.7179932509898
+    },
+    "mixed-robustness/provenance-dissent": {
+      "correct": 8,
+      "wrong": 0,
+      "refer": 11,
+      "unknown_accepted": 0,
+      "coverage": 0.42105263157894735,
+      "accepted_error": 0.0,
+      "tool_s": 382.7179932509898
+    },
+    "mixed/majority": {
+      "correct": 0,
+      "wrong": 0,
+      "refer": 19,
+      "unknown_accepted": 0,
+      "coverage": 0.0,
+      "accepted_error": null,
+      "tool_s": 224.06470902998262
+    },
+    "mixed/provenance-dissent": {
+      "correct": 0,
+      "wrong": 0,
+      "refer": 19,
+      "unknown_accepted": 0,
+      "coverage": 0.0,
+      "accepted_error": null,
+      "tool_s": 224.06470902998262
+    },
+    "related/majority": {
+      "correct": 0,
+      "wrong": 1,
+      "refer": 18,
+      "unknown_accepted": 0,
+      "coverage": 0.05263157894736842,
+      "accepted_error": 1.0,
+      "tool_s": 129.360371484996
+    },
+    "related/provenance-dissent": {
+      "correct": 0,
+      "wrong": 1,
+      "refer": 18,
+      "unknown_accepted": 0,
+      "coverage": 0.05263157894736842,
+      "accepted_error": 1.0,
+      "tool_s": 129.360371484996
+    },
+    "single/R0": {
+      "correct": 11,
+      "wrong": 0,
+      "refer": 8,
+      "unknown_accepted": 0,
+      "coverage": 0.5789473684210527,
+      "accepted_error": 0.0,
+      "tool_s": 132.37091027100178
+    },
+    "single/R1": {
+      "correct": 9,
+      "wrong": 2,
+      "refer": 8,
+      "unknown_accepted": 0,
+      "coverage": 0.5789473684210527,
+      "accepted_error": 0.18181818181818182,
+      "tool_s": 230.20848554399709
+    },
+    "single/T0": {
+      "correct": 0,
+      "wrong": 1,
+      "refer": 18,
+      "unknown_accepted": 0,
+      "coverage": 0.05263157894736842,
+      "accepted_error": 1.0,
+      "tool_s": 20.13859743599096
+    },
+    "single/T1": {
+      "correct": 1,
+      "wrong": 0,
+      "refer": 18,
+      "unknown_accepted": 0,
+      "coverage": 0.05263157894736842,
+      "accepted_error": 0.0,
+      "tool_s": 71.55520132298989
+    },
+    "single/T2": {
+      "correct": 0,
+      "wrong": 1,
+      "refer": 18,
+      "unknown_accepted": 0,
+      "coverage": 0.05263157894736842,
+      "accepted_error": 1.0,
+      "tool_s": 37.66657272601515
+    }
+  }
+}

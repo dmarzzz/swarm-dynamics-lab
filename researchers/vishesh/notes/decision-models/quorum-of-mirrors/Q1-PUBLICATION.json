@@ -1,14 +1,15 @@
 {
   "checked_utc": "2026-10-04T05:48:08.931906+00:00",
   "experiment": "quorum-of-mirrors",
-  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/7d50d4b2385a6829e3c3af65a6d8b105abdb600a/researchers/vishesh/notes/decision-models/quorum-of-mirrors/NEXT-RUN-PLAN.md",
-  "plan_sha256": "2eac89ac6511747355b130b0b9aecd5ff01f35fdeba3514de59f85987939df3e",
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/a8a11731e9ec670c1d96758781ee7d81cfcb7a25/researchers/vishesh/notes/decision-models/quorum-of-mirrors/NEXT-RUN-PLAN.md",
+  "plan_sha256": "f932d4fc0a33ca7ae68faa7f35a030342001bf5a5e2eed1ae82170114ab936ae",
   "public_manifest_url": "https://github.com/dmarzzz/swarm-lab/blob/feb46e5764e1537950bd4c5241a8ece19120f584/researchers/vishesh/notes/decision-models/quorum-of-mirrors/spec/QM-Q1-01.json",
   "manifest_sha256": "a67d8fdcd2728f22a14ff0b0f171f0f27f0f7db3454670d89e7c075ba91e580e",
   "immutable_manifest_verified": true,
   "experiment_registration_updated": false,
-  "status": "Pending authorized operator registration; public page remains on historical S0 registration",
+  "status": "Owner-directed exploratory launch preparation; operator will register amended plan before dispatch",
   "run_queued": false,
   "native_launch_admitted": false,
-  "new_native_calls": 0
+  "new_native_calls": 0,
+  "researcher_review": "not_required_by_owner"
 }

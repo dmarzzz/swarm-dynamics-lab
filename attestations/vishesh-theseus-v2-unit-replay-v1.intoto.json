@@ -5,7 +5,7 @@
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
     "harness": "codex",
-    "prompt": "Build the improved three scenarios and show more animations, with evaluation quality preserved."
+    "prompt": "sha256:6872cb407834d8a9d6ad298d6435ad9eb89c1fc29b24839b99ced5c52508dc0e"
    },
    "internalParameters": {
     "commit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty",

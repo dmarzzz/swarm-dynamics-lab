@@ -1,0 +1,9 @@
+{
+  "experiment": "right-dissenter-rd4",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/471d4dd069564c3d534a6b1cf5ecfb5a2b0c6a57/researchers/vishesh/notes/dissent/rd4/C1-PLAN.md",
+  "commit": "471d4dd069564c3d534a6b1cf5ecfb5a2b0c6a57",
+  "plan_sha256": "ea2c6507d0a0f6d81f1625042fcd6593997aca2cc70ea8ffcfe85ab80e8045f8",
+  "registered_tldr": "TLDR: Finish only the 40 unstarted RD4 policy trajectories after a transport interruption, retaining all 416 terminal prefix decisions and five failed connections. Same original/symmetric/always-check contrasts, model and 576-decision assignment; no prior request retried. Report separate and combined outcomes, costs and missingness. Finite authored templates and scripted votes limit inference.",
+  "run_tldr": "TLDR: S4-C1 completes only 40 unstarted trajectories, 160 decisions, from interrupted RD4 S4. Retain 416 prefix outcomes and five connection failures; inherit responses/failures without retry. Same policies, qualified instrument and cumulative cap; report separate and combined 576-decision outcomes with finite-template limits.",
+  "checked_utc": "2026-10-04T06:10:13.245156+00:00"
+}
