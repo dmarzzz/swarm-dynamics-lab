@@ -9,16 +9,16 @@
   "scientific_conclusion": "none",
   "process_compliance": "no-run-to-assess",
   "publication": {
-    "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/aaf8e8c6f69bb7fd88c94714e7550ea66d15d5a5/researchers/vishesh/notes/poietic-agents/README.md",
+    "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/f502b05a062925bdaa419d822e1e75f912bb4be4/researchers/vishesh/notes/poietic-agents/README.md",
     "public_page": "https://swarm-live.pages.dev/#/x/poietic-agents",
-    "public_registration": "verified-v0.2",
+    "public_registration": "verified-run-request",
     "public_registration_receipt": "registration-receipt.json",
-    "documentation_preflight": "passed-v0.2-design-only",
-    "documentation_preflight_receipt": "public-plan-verification-v02.json",
-    "rendered_page": "Verified latest immutable plan link and zero runs in browser on 2026-10-04 UTC",
+    "documentation_preflight": "passed-run-request-design-only",
+    "documentation_preflight_receipt": "public-plan-verification-run-request.json",
+    "rendered_page": "Verified updated immutable URL, approved-budget summary, protocol and zero runs in browser on 2026-10-04 UTC",
     "native_launch_preflight": "must-repeat-after-runtime-freeze",
-    "source_commit": "aaf8e8c6f69bb7fd88c94714e7550ea66d15d5a5",
-    "expected_plan_sha256": "8a19e477a418c35a9fa79ebe9bd4382953aecfad17706cc3168cc4ab65e1418b"
+    "source_commit": "f502b05a062925bdaa419d822e1e75f912bb4be4",
+    "expected_plan_sha256": "e4faaf96c990874fe3b0d246078c1cf143ffd906cccc6003804e12e245dfc379"
   },
   "gates": {
     "independent_design_review": "historical review received; P1-P3 resolved",
