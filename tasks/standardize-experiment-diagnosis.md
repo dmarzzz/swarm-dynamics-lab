@@ -3,7 +3,7 @@ id: standardize-experiment-diagnosis
 type: task
 title: Standardize evidence-based diagnosis before experiment scaling
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-idea-scores
 for: null
@@ -12,7 +12,11 @@ created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T20:20Z
-updated: 2026-10-04T20:20Z
+updated: 2026-10-04T20:22Z
+outputs:
+- tooling/agent-experiments/DIAGNOSIS.md
+- tooling/agent-experiments/templates/diagnosis.md
+- researchers/vishesh/notes/optimal-swarm-size/reviews/diagnosis-standard-application.md
 ---
 
 ## Goal
