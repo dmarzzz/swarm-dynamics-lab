@@ -3580,4 +3580,26 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/terminal.json
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/closeout.json
         commit: c97927f3c6a727bc63ec4b5430f7272a18aa32bb-dirty
+  - id: wild-askswarm-participation
+    category: content
+    type: figure
+    title: AskSwarm participation concentration with missing identity fields explicit
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/wild-askswarm-participation/wild-askswarm-participation-v1.svg
+        built_at: '2026-10-04T17:03:14Z'
+        note: Publication copy of wild-askswarm derived figure by shadow/sol-askswarm; original code/data provenance is recorded
+          in ingredients. Filing by shadow/sol-janitor-fix after J041, not a new analysis or run.
+        by: codex
+        prompt: After it merges, file wild-identity's and wild-askswarm's figures yourself as a follow-up PR (two separate
+          PRs).
+        ingredients:
+          - researchers/shadow/notes/wild-askswarm/results/participation.svg
+          - researchers/shadow/notes/wild-askswarm/run_all.py
+          - researchers/shadow/notes/wild-askswarm/askswarm/report.py
+          - researchers/shadow/notes/wild-askswarm/results/wiki/metrics.json
+          - researchers/shadow/notes/wild-askswarm/results/swarmtraces/metrics.json
+          - researchers/shadow/notes/wild-askswarm/results/git/metrics.json
+        commit: 8815f6aee8a317a54b7340a60d5aff4a07260a86-dirty
 requires: '1.2'

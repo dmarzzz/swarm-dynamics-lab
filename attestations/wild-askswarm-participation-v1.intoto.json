@@ -1,0 +1,77 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "After it merges, file wild-identity's and wild-askswarm's figures yourself as a follow-up PR (two separate PRs)."
+   },
+   "internalParameters": {
+    "commit": "8815f6aee8a317a54b7340a60d5aff4a07260a86-dirty"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "82dc7de217d81f53cdd281b190b24373483038ae99e6287da9c1f2edb9e4ce26"
+     },
+     "uri": "researchers/shadow/notes/wild-askswarm/results/participation.svg"
+    },
+    {
+     "digest": {
+      "sha256": "fce1419f12cbef91457122e38a3bb78d559355258e83ce80881c6e6e3da47fdb"
+     },
+     "uri": "researchers/shadow/notes/wild-askswarm/run_all.py"
+    },
+    {
+     "digest": {
+      "sha256": "4030d453d3fbbb681c16a9dbcb41508e4f9e5801d629e833c7702396f62f79ef"
+     },
+     "uri": "researchers/shadow/notes/wild-askswarm/askswarm/report.py"
+    },
+    {
+     "digest": {
+      "sha256": "9b9e3852a3d8805689a8492a8c0ac181b2889d694bb11218c95d1d711a68693a"
+     },
+     "uri": "researchers/shadow/notes/wild-askswarm/results/wiki/metrics.json"
+    },
+    {
+     "digest": {
+      "sha256": "1cf251e4fd2fe2f92470864cfcb3ccf78d160c5ac9539c2aa4bf4c5d65d2ca15"
+     },
+     "uri": "researchers/shadow/notes/wild-askswarm/results/swarmtraces/metrics.json"
+    },
+    {
+     "digest": {
+      "sha256": "3865ad3555b0ee8a45c16fe294f052bf3fa879a5ae9e29f8480a37db9f7f5c8e"
+     },
+     "uri": "researchers/shadow/notes/wild-askswarm/results/git/metrics.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "8815f6aee8a317a54b7340a60d5aff4a07260a86"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/shad0wbot/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T17:03:14Z",
+    "startedOn": "2026-10-04T17:03:14Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "82dc7de217d81f53cdd281b190b24373483038ae99e6287da9c1f2edb9e4ce26"
+   },
+   "name": "artifacts/wild-askswarm-participation/wild-askswarm-participation-v1.svg"
+  }
+ ]
+}
