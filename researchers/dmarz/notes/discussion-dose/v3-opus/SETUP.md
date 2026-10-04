@@ -48,3 +48,10 @@ Operations entry: manual (no registry adapter).
 - Budget authority: dmarz shared model budget; owner removed cost as a gate (relayed 07:42Z) and asked for running totals; `cost_usd` reported to the hub per stage.
 - Credentials: dmarz Anthropic key via SOPS (`discussion-dose.sops.env`), ssh stdin into process memory only.
 - Allocation: `sim-dmarz-9` (released by D1-Opus), exclusive claim `dmarz-v3-q0-opus`.
+
+## Handover 2026-10-04 ~11:20Z (operator may be cut off)
+
+- Server sim-dmarz-9, claim `dmarz-v3-q0-opus` (until 22:13Z; note text still says v3o-a1). Revision `d61a4183c6f8f6deee304d42b625e3ca18bf78d0`.
+- Running: attempt v3o-a3, S1 only (2,436 calls, worlds 54201–54224), gated on passed v3o-a2 Q0; started 10:25:08Z as one detached `python3.12 -m bench_v3_opus chain` process under `timeout`. Journal `/srv/swarm/discussion-v3-opus-results/v3o-a3/*/events.jsonl`. ETA ~14:30–16:30Z.
+- Status (from ~/swarm-labs-agentops): `python3 scripts/run-discussion-v3-opus.py d61a4183c6f8f6deee304d42b625e3ca18bf78d0 --status --prefix v3o-a3` (worker_active false = ended; without `--prefix` it reads the old a1 state). Failures by reason: `grep -o '"reason": *"[a-z_]*"' <journal> | sort | uniq -c`.
+- Remaining after it ends: the runner's audit (see DEPLOYMENT.md and launches/v3o-a3.json), RESULTS + reviews/v3o-a3-s1-post.md, evidence row, release `dmarz-v3-q0-opus`. If it stops on provider_credit_balance_low or a limit that does not clear in 20 min: new dated attempt on claude-opus-5 per the night rule.
