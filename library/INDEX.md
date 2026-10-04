@@ -2,9 +2,9 @@
 
 # Library index
 
-3307 entries.
+3310 entries.
 
-## Papers (2087)
+## Papers (2090)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1490,6 +1490,7 @@
 | [jiang-2020-graph](papers/jiang-2020-graph.md) | Graph Convolutional Reinforcement Learning | 2020 | 3 | skim | marl-emergence | dmarz/marl-emergence-audit |
 | [jiang-2026-large](papers/jiang-2026-large.md) | Large language models for spreading dynamics in complex systems | 2026 | 3 | abstract | llm-agent-swarms, sync-consensus | dmarz/llm-agent-swarms-recent |
 | [jin-2026-physics](papers/jin-2026-physics.md) | Physics-Informed Modeling and Control of Emergent Behaviors in Robot Swarms | 2026 | 3 | abstract | swarm-robotics, marl-emergence, active-matter | dmarz/swarm-robotics |
+| [johnson-2022-endosymbiosis](papers/johnson-2022-endosymbiosis.md) | Endosymbiosis or Bust: Influence of Ectosymbiosis on Evolution of Obligate Endosymbiosis | 2022 | 3 | abstract | collective-decision | vishesh/fm-security-review |
 | [jond-2026-minimal](papers/jond-2026-minimal.md) | A Minimal Model for Emergent Collective Behaviors in Autonomous Robotic Multi-Agent Systems | 2026 | 3 | abstract | swarm-robotics, collective-motion, sync-consensus | dmarz/swarm-robotics-recent |
 | [jones-2025-distributed](papers/jones-2025-distributed.md) | Distributed spatial awareness for robot swarms | 2025 | 3 | skim | swarm-robotics, sync-consensus | dmarz/swarm-robotics-recent-audit |
 | [jones-2026-lies](papers/jones-2026-lies.md) | Lies, damned lies, and language statistics: a comprehensive review of risks from manipulation, persuasion, and deception with large language models | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
@@ -1618,6 +1619,7 @@
 | [morales-2023-quasiuniversal](papers/morales-2023-quasiuniversal.md) | Quasiuniversal scaling in mouse-brain neuronal activity stems from edge-of-instability critical dynamics | 2023 | 3 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [mordatch-2018-emergence](papers/mordatch-2018-emergence.md) | Emergence of Grounded Compositional Language in Multi-Agent Populations | 2018 | 3 | abstract | marl-emergence | dmarz/marl-emergence |
 | [mori-2026-three](papers/mori-2026-three.md) | Three AI-agents walk into a bar . . . . `Lord of the Flies' tribalism emerges among smart AI-Agents | 2026 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent-audit |
+| [morris-2012-black](papers/morris-2012-black.md) | The Black Queen Hypothesis: Evolution of Dependencies through Adaptive Gene Loss | 2012 | 3 | abstract | collective-decision | vishesh/fm-security-review |
 | [motsch-2011-new](papers/motsch-2011-new.md) | A New Model for Self-organized Dynamics and Its Flocking Behavior | 2011 | 3 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [mou-2026-individual](papers/mou-2026-individual.md) | From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents | 2026 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
 | [moulin-2007-scheduling](papers/moulin-2007-scheduling.md) | On Scheduling Fees to Prevent Merging, Splitting, and Transferring of Jobs | 2007 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
@@ -1696,6 +1698,7 @@
 | [rodrigues-2016-kuramoto](papers/rodrigues-2016-kuramoto.md) | The Kuramoto model in complex networks | 2016 | 3 | abstract | sync-consensus | dmarz/sync-consensus |
 | [rodriguez-2026-emergent](papers/rodriguez-2026-emergent.md) | Emergent Coordination in Multi-Agent Systems via Pressure Fields and Temporal Decay | 2026 | 3 | abstract | llm-agent-swarms, swarm-intelligence | dmarz/llm-agent-swarms-recent-audit |
 | [rosales-2025-diverse](papers/rosales-2025-diverse.md) | Diverse LLMs or Diverse Question Interpretations? That is the Ensembling Question | 2025 | 3 | abstract | llm-agent-swarms | shadow/sol-1 |
+| [rosenzweig-1994-microbial](papers/rosenzweig-1994-microbial.md) | Microbial evolution in a simple unstructured environment: genetic differentiation in Escherichia coli. | 1994 | 3 | abstract | collective-decision | vishesh/fm-security-review |
 | [rossetti-2024-y](papers/rossetti-2024-y.md) | Y Social: an LLM-powered Social Media Digital Twin | 2024 | 3 | abstract | llm-agent-swarms, swarm-detection | dmarz/sim-envs |
 | [russell-2025-people](papers/russell-2025-people.md) | People who frequently use ChatGPT for writing tasks are accurate and robust detectors of AI-generated text | 2025 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [russo-latona-2024-ai](papers/russo-latona-2024-ai.md) | The AI Review Lottery: Widespread AI-Assisted Peer Reviews Boost Paper Scores and Acceptance Rates | 2024 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |

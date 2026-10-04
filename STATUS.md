@@ -7,7 +7,7 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 317 | 17 | 3 | 15 | 3 | 40 | 395 |
-| collective-decision | 325 | 22 | 26 | 19 | 0 | 35 | 427 |
+| collective-decision | 328 | 22 | 26 | 19 | 0 | 35 | 430 |
 | swarm-robotics | 291 | 29 | 2 | 7 | 1 | 24 | 354 |
 | swarm-intelligence | 113 | 2 | 2 | 4 | 2 | 3 | 126 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
@@ -44,7 +44,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T17:31Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [inbox-followthrough-vishesh-oct04](tasks/inbox-followthrough-vishesh-oct04.md) | claimed | p1 | admin | vishesh/fm-security-review | vishesh | 2026-10-04T17:39Z | Resolve Vishesh inbox evidence and review follow-ups |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -72,6 +71,7 @@
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T16:59Z | Run the revised procurement influence experiment |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T16:59Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
+| [repair-verify-cost-qwen-status](tasks/repair-verify-cost-qwen-status.md) | open | p1 | admin |  | dmarz |  | Reconcile verify-cost-qwen evidence metadata with completed qualifications |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
@@ -189,6 +189,7 @@
 | [heterogeneous-priority-revision](tasks/heterogeneous-priority-revision.md) | done | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T03:53Z | Revise heterogeneous-swarm priorities from owner feedback |
 | [immune-response-v2](tasks/immune-response-v2.md) | done | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:57Z | Refine and run the exploratory immune-response instrument |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | done | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:54Z | Qualify the repaired immune-response contract on a dedicated host |
+| [inbox-followthrough-vishesh-oct04](tasks/inbox-followthrough-vishesh-oct04.md) | done | p1 | admin | vishesh/fm-security-review | vishesh | 2026-10-04T17:48Z | Resolve Vishesh inbox evidence and review follow-ups |
 | [influence-quality-review](tasks/influence-quality-review.md) | done | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:24Z | Audit and improve How to win agents and influence swarms |
 | [institutionalize-experiment-setup](tasks/institutionalize-experiment-setup.md) | done | p1 | build | vishesh/codex-runbook | vishesh | 2026-10-04T04:12Z | Institutionalize the experiment setup runbook |
 | [integrate-run-closeout-cycle](tasks/integrate-run-closeout-cycle.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T08:03Z | Integrate automatic run closeout and approved next-run planning |
@@ -292,6 +293,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T18:05Z | sybil-scarcity-xmodel: Qwen chain launched by the fleet monitor (c0537bf7); gpt-6-sol ready (code 9461ba1c, source hash cac7255a, reviews/chain-002-pre.md); no launch, no model call by me. |
+| vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T17:32Z | memory-handoff-qwen: attempt 002 results, post-mortem and records on main; now finishing chain 003 (gpt-6-luna, original answer format, set a) from work-in-progress a5bd1a66; no launch, no model call |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T17:30Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:29Z | verify-cost-qwen chain 003 (gpt-6-luna, original attempt-001 instrument, set a) pinned: code c74da5bc, source hash b1b15d25, 123 selftests, READY.yaml provider openai, review reviews/chain-003-pre.md, ledger fresh; waiting for dmarz/fleet-monitor. Qwen attempts 001 and 002 both stopped at Q0. No launch, no model call by this builder |
@@ -311,7 +313,6 @@
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
 | shadow/sol-janitor-fix | working |  | 2026-10-04T15:16Z | Fix finder findings in severity order through janitor PRs only |
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
-| vishesh/fm-security-review | working | inbox-followthrough-vishesh-oct04 | 2026-10-04T14:38Z | Resolving inbox evidence and review follow-ups; no paid runs. |
 | shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
 | shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T14:10Z | sybil-rules-180 complete: gpt-6-sol run analysed (RESULTS.md, post-mortems chain-001/002/003, records, artifacts, evidence row 2); Qwen did not qualify |
