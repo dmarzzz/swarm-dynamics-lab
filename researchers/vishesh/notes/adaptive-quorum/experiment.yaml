@@ -1,0 +1,24 @@
+{
+  "id": "adaptive-quorum",
+  "title": "Adaptive quorum under urgency",
+  "description": "Exploratory S0; fixed evidence schedule, stopping policies, separate scripted and local Laya qualification. Not a Jev result.",
+  "owner": "vishesh",
+  "params": {
+    "backend": {
+      "type": "str"
+    },
+    "stage": {
+      "type": "str"
+    },
+    "code": {
+      "type": "str"
+    }
+  },
+  "metrics": [
+    "episodes",
+    "invalid",
+    "qualified"
+  ],
+  "primary_metric": "qualified",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/adaptive-quorum"
+}

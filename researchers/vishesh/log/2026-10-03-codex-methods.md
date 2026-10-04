@@ -111,3 +111,7 @@ Published 9520080: three reusable context notes, source-access ledger, and forty
 Fresh primary checks included eleven sources with declared abstract/targeted-passage limits. MemTX scope blind spots and MemLineage attribution conditions narrow the repair novelty claim. Scheme C's unanimous-commit counterexample remains in the inspected specification. Several candidate controls are already well designed; critiques acknowledge them and propose sharper tests rather than pretending they are absent.
 
 Validation: all forty targets and content fingerprints resolve after the latest pull, all sixteen project links and local Markdown links pass, and source codes resolve. The arithmetic counterexample was checked directly. Secret scan: zero findings across nine publication files. Repository check: zero errors, five existing citation warnings. No model experiments or private fleet inspection; existing deployment notes were treated as author reports. Scoped manual checked sync preserved the publication audit.
+
+## Adaptive quorum S0 protocol
+
+Scoped stopping-rule comparison with four policies and fixed paired evidence delivery. Added local Laya backend at owner request; hosted Jev via OpenRouter is a deferred, separately qualified factor. Six invariant checks and 144 scripted outcomes passed; no model finding claimed. Continuing scoped manual sync for public-data and secret audit. Protocol precedes model inference.

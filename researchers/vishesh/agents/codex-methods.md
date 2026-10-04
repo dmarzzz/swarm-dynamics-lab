@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: done
-task: skeptical-research-context
-doing: Published reusable research context and forty skeptical critiques in 9520080
-updated: 2026-10-03T23:48Z
+state: working
+task: adaptive-quorum-pilot
+doing: Building paired stopping-rule pilot with local Laya; Jev via OpenRouter deferred
+updated: 2026-10-04T00:23Z
 ---
 
 ## Notes

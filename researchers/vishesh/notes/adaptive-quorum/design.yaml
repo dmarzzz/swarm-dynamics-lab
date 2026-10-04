@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "stage": "S0",
+  "tasks": [
+    7000,
+    7001,
+    7002,
+    7003,
+    7004,
+    7005
+  ],
+  "worlds": [
+    "clean",
+    "copied-true",
+    "late-correction"
+  ],
+  "deadlines": [
+    3,
+    6
+  ],
+  "arms": [
+    "majority",
+    "fixed",
+    "adaptive",
+    "central"
+  ],
+  "seed": 1,
+  "holdout_reserved": [
+    9000,
+    9999
+  ],
+  "S2_enabled": false
+}
