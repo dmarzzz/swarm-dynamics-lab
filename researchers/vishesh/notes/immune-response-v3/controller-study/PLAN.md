@@ -1,0 +1,37 @@
+# Immune Response — stronger controller competence qualification
+
+## TLDR
+
+Owner authorized stronger-model qualification, separated diagnosis/action, controlled advice, varied development cases and untouched holdouts. A10 uses Anthropic-only Sonnet4.6 immediately. Test four development worlds without advice, then four sealed holdouts only if every development gate passes. If core qualification succeeds, compare correct/stale/incorrect controlled advice on the four development roots. If core behavior fails, A11 may qualify Opus4.6 on the same development roots and a different still-sealed holdout set. No larger swarm experiment or automatic unbounded iteration.
+
+## Question and prediction
+
+A9 showed harmful selected advice, no benefit from extra grounding prose, no crash recovery and an action/reason mismatch. Can a stronger controller diagnose visible evidence correctly and then choose an effective action without lowering service-outcome thresholds? Separate stages identify factual interpretation versus action selection failures; they do not secretly correct or veto bad decisions. Model and architecture both change, so this is competence qualification, not a causal estimate of model upgrade benefit.
+
+AI Village integration supplies evidence/visibility/correction discipline, not measured repair competence. Read the [study integration](../AI-VILLAGE.md), [shared fit review](../../ai-village-replay-2026-10-04/FIT.md) and [newer external review](../../ai-village-replay-2026-10-04/EXTERNAL-REVIEW-PROPOSALS.md). Current records do not supply adjudicated action-dependent service-repair episodes. All cases here are authored service-control fixtures; no private Village text is transferred or labeled as natural benchmark evidence.
+
+## Setup
+
+Four development roots: healthy service, fresh worker crash, stale false alarm, and a genuine single-component compatibility fault. Change service aliases, protocol/data/feature vocabulary and catalog version identifiers. Holdouts cover fresh gateway crash, fresh store crash, masked worker crash requiring inspection, and a healthy compatible deployment using a different catalog/data combination. Holdout generator families are disclosed; values are generated once with private random seeds and sealed by SHA256 before native collection. Holdouts are untouched by model evaluation and operator content inspection until their admitted stage, not independently authored or out-of-distribution population samples. Opus has a separate sealed holdout packet; consumed Sonnet holdouts never become fresh Opus holdouts.
+
+Each trajectory has exactly two simulator ticks. Each tick makes one diagnosis call and one separate action-selection call with the same observation plus returned diagnosis. Diagnosis emits categorical freshness, compatibility, affected service and fault fields; no private reasoning is requested. Action returns legal-action-id plus a brief observable reason. Wrong diagnoses are retained and supplied unmodified; scoring compares them with visible evidence offline, never repairs them. The simulator executes the selected legal action without a new safety filter. Clear tool-effect table: every action costs one tick; refresh reads registry only and never liveness; deploy same binary restarts, changing binary changes configuration.
+
+All stages use fresh explicit request contexts, no operator memory, no cross-world conversation. Sonnet4.6 and optional Opus4.6 are distinct model cohorts. Fixed temperature0,reasoning disabled,512outputtokens,8000wirebytes maximum,Anthropic-only,no fallback. Source/model/rates and request/response/usage hashes retained. Rates verified from OpenRouter endpoints: Sonnet3/15 and Opus5/25 USD per million input/output tokens.
+
+## Protocol
+
+A10 development:4roots×2ticks×2calls=16calls. Continue valid wrong decisions through the four roots; stop transport/schema/usage/route failures immediately. All four outcome gates and all visible diagnosis fields must pass to open four Sonnet holdouts (16more calls). If all eight pass, run the three additional controlled-advice conditions on development roots:4×3×2×2=48calls. Advice is programmatically authored correct,stale or incorrect with explicit epoch/source and the same fields; no live advisor calls. No-advice outcomes from development are the comparator. Label this selected mechanism challenge, not average real collaborator quality. 4roots×4conditions=16development trajectories,plus4holdouts=20total,80calls maximum.
+
+If Sonnet core behavioral qualification fails at development or holdout, stop its later stages. The explicitly authorized stronger-model escalation A11 permits Opus development16calls then separate holdout16calls only on development success; no Opus controlled-advice stage in this envelope. Do not interpret stronger-model success as proof of the model alone. If Opus fails, report the negative result and stop. A provider/transport failure is not a behavioral reason to escalate models.
+
+Preserve originalUSD8ledger:453priorcalls/USD3.700944reserved including historical uncertainty. Sonnet request boundUSD0.033216;80maxUSD2.657280. Worst conditional escalation path32Sonnet+32Opus atUSD0.055360max each totalsUSD2.834432,withinUSD4.299056unreserved. No reset,newallowance or extra probe. Actual spend is reported separately. Expected10–20minutes native and40–60minutes preparation/review;hard1hour per process. Fresh exclusive eligible Dmarz-account host,source/tests,immutable public registration and ledger equality required. No new infrastructure purchase planned. Exact named conditional stages are authorized by the owner request; no extra reviewer gate.
+
+## Metrics
+
+Keep A8/A9 thresholds: initially healthy trajectories2/2healthy ticks,zero deploy/healthloss; stale false alarm also refreshes probe. Runtime crash finalhealthy,>=1healthy tick,>=1useful same-version restart,zero configuration changes/rejections. The added genuine configuration-fault stratum requires finalhealthy,>=1healthy tick,zero rejected actions or additional health loss and at least one necessary configuration repair; this new task class is reported separately,not used to relax crash thresholds. All assigned core roots must pass; no averaging failures away. Diagnosis fields must match actor-visible evidence; stale liveness is unknown,not failed or healthy. Measure action/reason contradictions separately and do not grant full readiness with unresolved contradictions.
+
+Counts are eight authored roots per core cohort,with shared generator ancestry; calls and advice variants are dependent. This is a strict small qualification,not a reliability percentage or powered causal comparison. Four heldout roots cannot establish production reliability. Preserve missing/conditional-unopened/failed outcomes separately. No holdout-driven prompt tuning or retries.
+
+## Visualization mapping and closeout
+
+Display diagnosis→selected action→verified outcome for each tick; show advice/current-vs-observed epoch and highlight wrong factual fields or mismatched proposed/executed repair. Plot healthy service and repair by root/condition/model with separate development/holdout panels; no pooled model or synthetic/native lines. Saved-data replay and complete assignment counts accompany the post-mortem. Stop workers/relay and release allocation after backup; carry ledger and finalize operational/scientific assessments separately. Publish reusable competence-case guidance without private source records or sealed holdout contents.
