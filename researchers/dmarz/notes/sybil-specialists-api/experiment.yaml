@@ -1,0 +1,34 @@
+id: sybil-specialists-api
+title: 'Sybil resistance: model synthesis and verification badges'
+description: Exploratory extension of the scripted specialist study. Four algorithmic
+  admission policies, a fixed Haiku 4.5 synthesizer and visible versus hidden verification
+  badges. Graphs, reporter claims and verification remain simulated. S0 is offline;
+  Q0 checks clean model competence; S1 is a 12-world paired pilot. Replay shows actual
+  call completion, never invented model trajectories.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: condition
+  batch:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+  source_hash:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- rare_accuracy
+- task_accuracy
+- model_calls
+- cost_usd
+- qualification_passed
+primary_metric: rare_accuracy
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-specialists-api
