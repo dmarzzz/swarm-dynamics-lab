@@ -3,7 +3,7 @@ id: phantom-coast-pc9-native-preparation
 type: task
 title: Prepare Phantom PC9 native qualification and added scenarios
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T19:25Z
-updated: 2026-10-04T19:25Z
+updated: 2026-10-04T19:29Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md
+- researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json
 ---
 
 ## Goal
