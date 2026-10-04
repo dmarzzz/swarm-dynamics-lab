@@ -1,0 +1,2619 @@
+{
+  "case_id": "outage-2-10-1",
+  "case_sha256": "df4b2b2a5bb9bdd432ea062c24097bfa80b61e512a20e72c80b65913f7ad6526",
+  "root": 2,
+  "cluster": "protocol_rotation",
+  "changing": true,
+  "arm": "single",
+  "evaluation": {
+    "success": true,
+    "quality": 1.0,
+    "faults": {
+      "svc-163": [],
+      "svc-604": [],
+      "svc-847": [],
+      "svc-827": []
+    },
+    "monitoring_complete": true,
+    "unsafe_commits": 0
+  },
+  "failure": null,
+  "model_calls": 8,
+  "elapsed_s": 13.700566838000668,
+  "roster": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "ticks": 8,
+  "stale_writes": 4,
+  "actions": 20,
+  "events": [
+    {
+      "kind": "observation",
+      "tick": 0,
+      "public": {
+        "tick": 0,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": false,
+          "svc-604": false,
+          "svc-847": false,
+          "svc-827": false
+        },
+        "recent_tool_results": [],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 0,
+      "answer": {
+        "actions": [
+          {
+            "op": "inspect",
+            "service": "svc-163"
+          },
+          {
+            "op": "inspect",
+            "service": "svc-604"
+          },
+          {
+            "op": "inspect",
+            "service": "svc-827"
+          },
+          {
+            "op": "inspect",
+            "service": "svc-847"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "step",
+      "tick": 1,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-163"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-163",
+            "config": {
+              "alias": "store",
+              "endpoint": "store-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "store-a",
+              "protocol": 1,
+              "version": 1
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 1
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-604"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-604",
+            "config": {
+              "alias": "cache",
+              "endpoint": "cache-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "cache-a",
+              "protocol": 1,
+              "version": 1
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 1
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-827"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-827",
+            "config": {
+              "alias": "cache",
+              "endpoint": "cache-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "cache-a",
+              "protocol": 1,
+              "version": 1
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 1
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-847"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-847",
+            "config": {
+              "alias": "store",
+              "endpoint": "store-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "store-a",
+              "protocol": 1,
+              "version": 1
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 1
+        }
+      ],
+      "state": {
+        "tick": 1,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 1,
+            "version": 1
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 1,
+            "version": 1
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": false,
+        "svc-604": false,
+        "svc-847": false,
+        "svc-827": false
+      }
+    },
+    {
+      "kind": "observation",
+      "tick": 1,
+      "public": {
+        "tick": 1,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": false,
+          "svc-604": false,
+          "svc-847": false,
+          "svc-827": false
+        },
+        "recent_tool_results": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-163"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-163",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-604"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-604",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-827"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-827",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-847"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-847",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          }
+        ],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 1,
+      "answer": {
+        "actions": [
+          {
+            "op": "patch",
+            "service": "svc-163",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          },
+          {
+            "op": "patch",
+            "service": "svc-604",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          },
+          {
+            "op": "patch",
+            "service": "svc-827",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          },
+          {
+            "op": "patch",
+            "service": "svc-847",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "world_change",
+      "tick": 2,
+      "change": "protocol_rotation"
+    },
+    {
+      "kind": "step",
+      "tick": 2,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-163",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "stale_version"
+          },
+          "tick": 2
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-604",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "stale_version"
+          },
+          "tick": 2
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-827",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "stale_version"
+          },
+          "tick": 2
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-847",
+            "service_version": 1,
+            "directory_version": 1,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 1,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "stale_version"
+          },
+          "tick": 2
+        }
+      ],
+      "state": {
+        "tick": 2,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 2,
+            "version": 2
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "version": 2
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": false,
+        "svc-604": false,
+        "svc-847": false,
+        "svc-827": false
+      }
+    },
+    {
+      "kind": "observation",
+      "tick": 2,
+      "public": {
+        "tick": 2,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": false,
+          "svc-604": false,
+          "svc-847": false,
+          "svc-827": false
+        },
+        "recent_tool_results": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-163"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-163",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-604"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-604",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-827"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-827",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-847"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-847",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "version": 1
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 1
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-163",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-604",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-827",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-847",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          }
+        ],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 2,
+      "answer": {
+        "actions": [
+          {
+            "op": "inspect",
+            "service": "svc-163"
+          },
+          {
+            "op": "inspect",
+            "service": "svc-604"
+          },
+          {
+            "op": "inspect",
+            "service": "svc-827"
+          },
+          {
+            "op": "inspect",
+            "service": "svc-847"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "step",
+      "tick": 3,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-163"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-163",
+            "config": {
+              "alias": "store",
+              "endpoint": "store-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "store-a",
+              "protocol": 2,
+              "version": 2
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 3
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-604"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-604",
+            "config": {
+              "alias": "cache",
+              "endpoint": "cache-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "cache-a",
+              "protocol": 2,
+              "version": 2
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 3
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-827"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-827",
+            "config": {
+              "alias": "cache",
+              "endpoint": "cache-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "cache-a",
+              "protocol": 2,
+              "version": 2
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 3
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "inspect",
+            "service": "svc-847"
+          },
+          "result": {
+            "status": "observed",
+            "service": "svc-847",
+            "config": {
+              "alias": "store",
+              "endpoint": "store-a",
+              "protocol": 0,
+              "pool": 3,
+              "minimum_pool": 2,
+              "version": 1,
+              "depends_on": []
+            },
+            "directory": {
+              "endpoint": "store-a",
+              "protocol": 2,
+              "version": 2
+            },
+            "capacity": 16,
+            "capacity_version": 1,
+            "allocated_pool": 12
+          },
+          "tick": 3
+        }
+      ],
+      "state": {
+        "tick": 3,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 0,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 1,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 2,
+            "version": 2
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "version": 2
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": false,
+        "svc-604": false,
+        "svc-847": false,
+        "svc-827": false
+      }
+    },
+    {
+      "kind": "observation",
+      "tick": 3,
+      "public": {
+        "tick": 3,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": false,
+          "svc-604": false,
+          "svc-847": false,
+          "svc-827": false
+        },
+        "recent_tool_results": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-163",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-604",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-827",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-847",
+              "service_version": 1,
+              "directory_version": 1,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 1,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "stale_version"
+            },
+            "tick": 2
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-163"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-163",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-604"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-604",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-827"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-827",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-847"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-847",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          }
+        ],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 3,
+      "answer": {
+        "actions": [
+          {
+            "op": "patch",
+            "service": "svc-163",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          },
+          {
+            "op": "patch",
+            "service": "svc-604",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          },
+          {
+            "op": "patch",
+            "service": "svc-827",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          },
+          {
+            "op": "patch",
+            "service": "svc-847",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "step",
+      "tick": 4,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-163",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "applied",
+            "service_version": 2
+          },
+          "tick": 4
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-604",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "applied",
+            "service_version": 2
+          },
+          "tick": 4
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-827",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "cache-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "applied",
+            "service_version": 2
+          },
+          "tick": 4
+        },
+        {
+          "actor": 0,
+          "action": {
+            "op": "patch",
+            "service": "svc-847",
+            "service_version": 1,
+            "directory_version": 2,
+            "capacity_version": 1,
+            "set": {
+              "endpoint": "store-a",
+              "protocol": 2,
+              "pool": 3
+            }
+          },
+          "result": {
+            "status": "applied",
+            "service_version": 2
+          },
+          "tick": 4
+        }
+      ],
+      "state": {
+        "tick": 4,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 2,
+            "version": 2
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "version": 2
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": true,
+        "svc-604": true,
+        "svc-847": true,
+        "svc-827": true
+      }
+    },
+    {
+      "kind": "observation",
+      "tick": 4,
+      "public": {
+        "tick": 4,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": true,
+          "svc-604": true,
+          "svc-847": true,
+          "svc-827": true
+        },
+        "recent_tool_results": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-163"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-163",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-604"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-604",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-827"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-827",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-847"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-847",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-163",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-604",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-827",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-847",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          }
+        ],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 4,
+      "answer": {
+        "actions": [
+          {
+            "op": "wait"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "step",
+      "tick": 5,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "wait"
+          },
+          "result": {
+            "status": "waited"
+          },
+          "tick": 5
+        }
+      ],
+      "state": {
+        "tick": 5,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 2,
+            "version": 2
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "version": 2
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": true,
+        "svc-604": true,
+        "svc-847": true,
+        "svc-827": true
+      }
+    },
+    {
+      "kind": "observation",
+      "tick": 5,
+      "public": {
+        "tick": 5,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": true,
+          "svc-604": true,
+          "svc-847": true,
+          "svc-827": true
+        },
+        "recent_tool_results": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-604"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-604",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-827"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-827",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-847"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-847",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-163",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-604",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-827",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-847",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "result": {
+              "status": "waited"
+            },
+            "tick": 5
+          }
+        ],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 5,
+      "answer": {
+        "actions": [
+          {
+            "op": "wait"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "step",
+      "tick": 6,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "wait"
+          },
+          "result": {
+            "status": "waited"
+          },
+          "tick": 6
+        }
+      ],
+      "state": {
+        "tick": 6,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 2,
+            "version": 2
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "version": 2
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": true,
+        "svc-604": true,
+        "svc-847": true,
+        "svc-827": true
+      }
+    },
+    {
+      "kind": "observation",
+      "tick": 6,
+      "public": {
+        "tick": 6,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": true,
+          "svc-604": true,
+          "svc-847": true,
+          "svc-827": true
+        },
+        "recent_tool_results": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-827"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-827",
+              "config": {
+                "alias": "cache",
+                "endpoint": "cache-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-847"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-847",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-163",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-604",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-827",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-847",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "result": {
+              "status": "waited"
+            },
+            "tick": 5
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "result": {
+              "status": "waited"
+            },
+            "tick": 6
+          }
+        ],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 6,
+      "answer": {
+        "actions": [
+          {
+            "op": "wait"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "step",
+      "tick": 7,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "wait"
+          },
+          "result": {
+            "status": "waited"
+          },
+          "tick": 7
+        }
+      ],
+      "state": {
+        "tick": 7,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 2,
+            "version": 2
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "version": 2
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": true,
+        "svc-604": true,
+        "svc-847": true,
+        "svc-827": true
+      }
+    },
+    {
+      "kind": "observation",
+      "tick": 7,
+      "public": {
+        "tick": 7,
+        "window_end": 8,
+        "service_ids": [
+          "svc-163",
+          "svc-604",
+          "svc-827",
+          "svc-847"
+        ],
+        "health": {
+          "svc-163": true,
+          "svc-604": true,
+          "svc-847": true,
+          "svc-827": true
+        },
+        "recent_tool_results": [
+          {
+            "actor": 0,
+            "action": {
+              "op": "inspect",
+              "service": "svc-847"
+            },
+            "result": {
+              "status": "observed",
+              "service": "svc-847",
+              "config": {
+                "alias": "store",
+                "endpoint": "store-a",
+                "protocol": 0,
+                "pool": 3,
+                "minimum_pool": 2,
+                "version": 1,
+                "depends_on": []
+              },
+              "directory": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "version": 2
+              },
+              "capacity": 16,
+              "capacity_version": 1,
+              "allocated_pool": 12
+            },
+            "tick": 3
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-163",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-604",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-827",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "cache-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "patch",
+              "service": "svc-847",
+              "service_version": 1,
+              "directory_version": 2,
+              "capacity_version": 1,
+              "set": {
+                "endpoint": "store-a",
+                "protocol": 2,
+                "pool": 3
+              }
+            },
+            "result": {
+              "status": "applied",
+              "service_version": 2
+            },
+            "tick": 4
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "result": {
+              "status": "waited"
+            },
+            "tick": 5
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "result": {
+              "status": "waited"
+            },
+            "tick": 6
+          },
+          {
+            "actor": 0,
+            "action": {
+              "op": "wait"
+            },
+            "result": {
+              "status": "waited"
+            },
+            "tick": 7
+          }
+        ],
+        "objective": "Restore all services and keep their configuration valid through the monitoring window. Do not enable stale endpoints/protocols or worsen capacity overload. Inspect before patching; use current versions. Stop only at window end."
+      },
+      "n": 1
+    },
+    {
+      "kind": "decision",
+      "actor": 0,
+      "tick": 7,
+      "answer": {
+        "actions": [
+          {
+            "op": "wait"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "step",
+      "tick": 8,
+      "receipts": [
+        {
+          "actor": 0,
+          "action": {
+            "op": "wait"
+          },
+          "result": {
+            "status": "waited"
+          },
+          "tick": 8
+        }
+      ],
+      "state": {
+        "tick": 8,
+        "services": {
+          "svc-163": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-604": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-847": {
+            "alias": "store",
+            "endpoint": "store-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          },
+          "svc-827": {
+            "alias": "cache",
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "pool": 3,
+            "minimum_pool": 2,
+            "version": 2,
+            "depends_on": []
+          }
+        },
+        "directory": {
+          "store": {
+            "endpoint": "store-a",
+            "protocol": 2,
+            "version": 2
+          },
+          "cache": {
+            "endpoint": "cache-a",
+            "protocol": 2,
+            "version": 2
+          }
+        },
+        "capacity": 16,
+        "capacity_version": 1,
+        "unsafe_commits": []
+      },
+      "health": {
+        "svc-163": true,
+        "svc-604": true,
+        "svc-847": true,
+        "svc-827": true
+      }
+    },
+    {
+      "kind": "terminal",
+      "failure": null,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-163": [],
+          "svc-604": [],
+          "svc-847": [],
+          "svc-827": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "elapsed_s": 13.700566838000668
+    }
+  ],
+  "id": "outage-o1/qualification/2/1/single",
+  "stage": "qualification",
+  "source_commit": "2acfe6cfedf910f53e60807473027b7a0f7bde25",
+  "operational_success": true,
+  "exposure_microdollars": 21750,
+  "assignment": {
+    "stage": "qualification",
+    "root": 2,
+    "changing": true,
+    "replica": 10,
+    "arm": "single",
+    "id": "outage-o1/qualification/2/1/single",
+    "width": 8
+  }
+}

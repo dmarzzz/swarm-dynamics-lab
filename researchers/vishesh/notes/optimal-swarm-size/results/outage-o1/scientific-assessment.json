@@ -1,0 +1,132 @@
+{
+  "assessor": "vishesh/codex-idea-scores",
+  "attempt": "outage-o1",
+  "date": "2026-10-04",
+  "decision": "complete_valid_result",
+  "claim_scope": "instrument/competence demonstration only",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Instrument usefulness/competence question answered within bounded scope; optimal-size question remains open.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/PLAN.md",
+          "sha256": "01dd3479220032404af6c34f1e9050d490d1604dce18cde2c42fa260c3b25999"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "All four changing mechanisms answerable by native single agent. These authored simplified worlds are development fixtures only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/analysis.json",
+          "sha256": "5f5886eb88e190cdcbaf76b59a3bd87d905f38ae99ee99c1417f1c682fd0f593"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Contraction also fires in stable world. All four fixed actors repeatedly choose the same service. Current comparison confounds removal of coordination waste with adaptation to changing conditions.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/trace-audit.json",
+          "sha256": "d10ae6c41e50af383de61e960620cac8f86ddca33c4f0de11c223d3037a438d4"
+        }
+      ],
+      "next_action": "For any separately approved successor, compare explicit disjoint ownership plus fixed team against contraction; require contraction specificity and genuine parallel workload.",
+      "acceptance_check": "Stable control avoids gratuitous contraction; coordinated fixed baseline can exploit independent work; prospective new scenario/sample plan approved before launch."
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "4/4 native qualification success, zero unsafe commits, no response/transport failures.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/analysis.json",
+          "sha256": "5f5886eb88e190cdcbaf76b59a3bd87d905f38ae99ee99c1417f1c682fd0f593"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "12 saved final states independently rescored identically; all condition denominators retained, no inferential statistics.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/analysis.json",
+          "sha256": "5f5886eb88e190cdcbaf76b59a3bd87d905f38ae99ee99c1417f1c682fd0f593"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Descriptive one-template demonstration; no eight-independent-case or population claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/PLAN.md",
+          "sha256": "01dd3479220032404af6c34f1e9050d490d1604dce18cde2c42fa260c3b25999"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "140 actual request/response pairs retained, hashes agree, fixed rolling memory and explicit pinned route, no operator history.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/trace-audit.json",
+          "sha256": "d10ae6c41e50af383de61e960620cac8f86ddca33c4f0de11c223d3037a438d4"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "12/12 assignments terminal;48 hub artifact hashes match; raw synthetic evidence retained for public repository publication.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/verification.json",
+          "sha256": "255ca351fe7a0d213c7e8336a0f42b638b01db995ef8544fb5a8215717f5e2c9"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "140 calls; provider settled0.314565, fee hold0.031519; cumulative exposure2.377404 within20. Historical220480micro hold preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/verification.json",
+          "sha256": "255ca351fe7a0d213c7e8336a0f42b638b01db995ef8544fb5a8215717f5e2c9"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source2acfe6cf, all case hashes and exact inputs/outputs/states retained; replay is saved data, not a new sample.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/summary.json",
+          "sha256": "8c05d46efac6f45d48d541284dac9ffd675dd446d0d4da1b17877f53c6358313"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Scripted replay interface verified; native replays use identical saved-state renderer and expose outcome/operational distinction. Raw replay HTML is repository/hub evidence, not exposed by public proxy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1/00/replay.html",
+          "sha256": "460e3643bd16aa6e2b13e92ed90277c75234b86593183960dd430acf8304e241"
+        }
+      ]
+    }
+  ]
+}

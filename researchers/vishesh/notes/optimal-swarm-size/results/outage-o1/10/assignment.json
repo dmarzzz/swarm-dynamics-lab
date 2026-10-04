@@ -1,0 +1,9 @@
+{
+  "stage": "demonstration",
+  "root": 0,
+  "changing": true,
+  "replica": 11,
+  "arm": "fixed",
+  "id": "outage-o1/demonstration/0/1/fixed",
+  "width": 8
+}

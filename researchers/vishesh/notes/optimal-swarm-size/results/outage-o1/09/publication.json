@@ -1,0 +1,31 @@
+{
+  "run": "optimal-swarm-size-outage-o1/5565f99b1635abb3",
+  "complete": true,
+  "artifacts": {
+    "assignment.json": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    },
+    "trace.jsonl": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    },
+    "outcome.json": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    },
+    "replay.html": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    }
+  },
+  "terminal": {
+    "acknowledged": true,
+    "spooled": false,
+    "code": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "experiment": "optimal-swarm-size-outage-o1",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/2acfe6cfedf910f53e60807473027b7a0f7bde25/researchers/vishesh/notes/optimal-swarm-size/outage-prototype/PLAN.md",
+  "commit": "2acfe6cfedf910f53e60807473027b7a0f7bde25",
+  "plan_sha256": "01dd3479220032404af6c34f1e9050d490d1604dce18cde2c42fa260c3b25999",
+  "registered_tldr": "TLDR: Build four synthetic operational scenario mechanisms with stable/changing variants: endpoint failover, dependent-service rerouting, protocol rotation and shared capacity reduction. Compare a tool-capable single model context, fixed four-context team, deterministic public-state controller and four-to-one contraction. Validate all worlds and checker faults offline. Native O1 begins with four single-agent competence episodes; only if at least3/4 succeed without invariant violations run an eight-episode development demonstration on one root \u00d7two variants \u00d7four arms. No automatic larger study. Q-A7 remains a separate existing diagnostic after O1, only if the shared admitted route has not failed. All native stages require ordinary public/source/credential/account/ledger admission.",
+  "run_tldr": "O1 bounded outage competence qualification then conditional four-strategy demonstration; safety and final recovery, no optimal-size inference.",
+  "checked_utc": "2026-10-04T19:15:59.247003+00:00"
+}

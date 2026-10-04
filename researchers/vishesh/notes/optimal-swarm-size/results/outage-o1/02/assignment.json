@@ -1,0 +1,9 @@
+{
+  "stage": "qualification",
+  "root": 2,
+  "changing": true,
+  "replica": 10,
+  "arm": "single",
+  "id": "outage-o1/qualification/2/1/single",
+  "width": 8
+}

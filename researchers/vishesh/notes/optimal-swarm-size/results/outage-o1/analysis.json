@@ -1,0 +1,270 @@
+{
+  "scope": "four qualification mechanisms; one authored demonstration template block",
+  "assigned": 12,
+  "terminal": 12,
+  "unstarted": 0,
+  "model_calls": 140,
+  "qualification_successes": 4,
+  "demonstration_successes": 7,
+  "unsafe_commits": 0,
+  "recomputed_scores_match": true,
+  "artifact_hashes_matched": 48,
+  "o1_cost": {
+    "provider_settled_microdollars": 314565,
+    "exposure_microdollars": 346084,
+    "fee_uncertainty_microdollars": 31519
+  },
+  "demonstration": [
+    {
+      "id": "outage-o1/demonstration/0/0/single",
+      "arm": "single",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 8,
+      "stale_writes": 0,
+      "elapsed_s": 11.303152602005866,
+      "exposure_microdollars": 18820,
+      "roster": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "outage-o1/demonstration/0/0/fixed",
+      "arm": "fixed",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 32,
+      "stale_writes": 12,
+      "elapsed_s": 21.61731962900376,
+      "exposure_microdollars": 83484,
+      "roster": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "outage-o1/demonstration/0/0/scheduled",
+      "arm": "scheduled",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 0,
+      "stale_writes": 0,
+      "elapsed_s": 0.014324335003038868,
+      "exposure_microdollars": 0,
+      "roster": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "outage-o1/demonstration/0/0/contract",
+      "arm": "contract",
+      "changing": false,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 14,
+      "stale_writes": 3,
+      "elapsed_s": 14.917775719004567,
+      "exposure_microdollars": 28324,
+      "roster": [
+        4,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/contract",
+      "arm": "contract",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 14,
+      "stale_writes": 4,
+      "elapsed_s": 17.682958175006206,
+      "exposure_microdollars": 30404,
+      "roster": [
+        4,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/scheduled",
+      "arm": "scheduled",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 0,
+      "stale_writes": 2,
+      "elapsed_s": 0.01761236399761401,
+      "exposure_microdollars": 0,
+      "roster": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/fixed",
+      "arm": "fixed",
+      "changing": true,
+      "evaluation": {
+        "success": false,
+        "quality": 0.75,
+        "faults": {
+          "svc-888": [
+            "endpoint"
+          ],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 32,
+      "stale_writes": 13,
+      "elapsed_s": 16.82444036299421,
+      "exposure_microdollars": 83428,
+      "roster": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/single",
+      "arm": "single",
+      "changing": true,
+      "evaluation": {
+        "success": true,
+        "quality": 1.0,
+        "faults": {
+          "svc-888": [],
+          "svc-600": [],
+          "svc-405": [],
+          "svc-648": []
+        },
+        "monitoring_complete": true,
+        "unsafe_commits": 0
+      },
+      "model_calls": 8,
+      "stale_writes": 2,
+      "elapsed_s": 13.998617807010305,
+      "exposure_microdollars": 19309,
+      "roster": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "decision": "complete_valid_instrument_result; no optimal-size or phase-transition inference"
+}

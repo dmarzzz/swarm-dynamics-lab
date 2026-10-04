@@ -1,0 +1,113 @@
+{
+  "kind": "saved-data owning-agent audit; no new calls",
+  "cases": [
+    {
+      "id": "outage-o1/qualification/0/1/single",
+      "requests": 8,
+      "responses": 8,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    },
+    {
+      "id": "outage-o1/qualification/1/1/single",
+      "requests": 8,
+      "responses": 8,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    },
+    {
+      "id": "outage-o1/qualification/2/1/single",
+      "requests": 8,
+      "responses": 8,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    },
+    {
+      "id": "outage-o1/qualification/3/1/single",
+      "requests": 8,
+      "responses": 8,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    },
+    {
+      "id": "outage-o1/demonstration/0/0/single",
+      "requests": 8,
+      "responses": 8,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    },
+    {
+      "id": "outage-o1/demonstration/0/0/fixed",
+      "requests": 32,
+      "responses": 32,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 24
+    },
+    {
+      "id": "outage-o1/demonstration/0/0/scheduled",
+      "requests": 0,
+      "responses": 0,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    },
+    {
+      "id": "outage-o1/demonstration/0/0/contract",
+      "requests": 14,
+      "responses": 14,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 6
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/contract",
+      "requests": 14,
+      "responses": 14,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 6
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/scheduled",
+      "requests": 0,
+      "responses": 0,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/fixed",
+      "requests": 32,
+      "responses": 32,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 24
+    },
+    {
+      "id": "outage-o1/demonstration/0/1/single",
+      "requests": 8,
+      "responses": 8,
+      "request_hashes_match": true,
+      "role_boundary_checked": true,
+      "unsafe_commits": 0,
+      "duplicate_service_actions": 0
+    }
+  ]
+}
