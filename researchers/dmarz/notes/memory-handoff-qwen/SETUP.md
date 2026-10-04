@@ -1,6 +1,6 @@
-# Experiment setup record: memory-handoff-qwen / attempt 001
+# Experiment setup record: memory-handoff-qwen / attempts 001 and 002
 
-Status: preparation only. Nothing has run; this record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-memory.
+Status: attempt 001 ran and stopped at the qualification gate; attempt 002 is prepared and has not run. This record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-memory.
 
 ## Ownership and question
 
@@ -53,6 +53,18 @@ Operations entry: manual, through the generic private launcher named in [RUN.md]
 - Credentials: environment alias `SWARM_OPENROUTER_API_KEY`, set by the launcher in memory only. Never in files, arguments or logs.
 - Go / no-go: not decided. This builder launches nothing.
 
+## Attempt 002 (the one permitted repair), gate evidence
+
+| Gate | Status | Evidence, timestamp and assessor | Blocker / next action |
+|---|---|---|---|
+| G1 Plan written before implementation | pass | Preregistration section "Attempt 002" pushed at `415d26a8` before any attempt-002 code; 2026-10-04, dmarz/pipeline-memory | none |
+| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, at code commit `3f1b0b98`, source hash `10f51d2c…`: selftest 88 of 88; offline S0 192 of 192 with 25 of 25 invariants; manifest check equal; rehearsal 36 of 36 checks in 93 s. Details in [reviews/chain-002-pre.md](reviews/chain-002-pre.md) | Not tested: Python 3.12, the real hub, the launcher, how the model writes the working fields |
+| G3 Current attempt admission | pending | [Pre-run review of attempt 002](reviews/chain-002-pre.md) on main; `READY.yaml` names it and declares `ledger: fresh` | The fleet monitor's same-researcher check, the queue entry, a fresh server claim |
+| G4 Qualification before scientific escalation | pending | attempt 002 has not run | P0 and Q0 on fixture set b; a second stop ends the line |
+| G5 Reconciliation and closeout | pending | attempt 002 has not run | `verify`, post-mortem |
+
+Attempt 001's gates: G3 passed (launched by dmarz/fleet-monitor at `0d54225c`, run request 275); G4 failed (Q0 19 of 24 supported); G5 done by dmarz/pipeline ([post-mortem](reviews/chain-001-post.md), [records](records/README.md)). The gate table above this section is the attempt-001 record as written before its run.
+
 ## Attempt and repair history
 
 No attempt exists. Offline checks on the build machine are software checks, not attempts: the offline S0 and the rehearsal wrote only to temporary directories, which were deleted, and reported to no real hub.
@@ -61,7 +73,9 @@ History before the pin, all on 2026-10-04 and before any run: plan `bee94550`; i
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
+| 001 / none | S0, P0, Q0 at source hash `b4ab9025…` | [chain-001-pre](reviews/chain-001-pre.md); hub runs `95d12801`, `bc8748ab`, `908c3129` | S0 192/192/192/192/192; P0 1/1/1/1/1; Q0 23/23/23/23/23 (gate over 24: 19 supported); S1 not queued | [chain-001-post](reviews/chain-001-post.md): stopped at the qualification gate; a result; one repair allowed |
+| 002 / 001 | S0, P0, Q0, S1 at source hash `10f51d2c…` | [chain-002-pre](reviews/chain-002-pre.md) | not run | pending |
 
 ## Closeout
 
-Not applicable: nothing has run. Spend USD 0, calls 0.
+Attempt 001: closed by dmarz/pipeline (post-mortem and records linked above); spend USD 0.000684, 24 calls. Attempt 002: not applicable, it has not run.
