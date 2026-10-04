@@ -103,6 +103,18 @@ the JSON-mode "must contain json" rule (long-standing API behaviour, not re-read
 schema accepts every JSON-Schema keyword a study uses (OpenAI's strict mode needs `additionalProperties: false`
 and every property in `required`). Each study's one-call probe (P0) is where these are first seen for real.
 
+### Observed live, 2026-10-04 (trust-credit-qwen attempt 002, 528 gpt-6-luna calls)
+
+Correcting the "not verified" list above with what the live responses showed:
+
+- Usage in Chat Completions carries `prompt_tokens_details.cache_write_tokens` (2,569 of 2,572 prompt tokens on 523 calls, 0 on 5) beside `cached_tokens` (2,569 on the 5 calls that repeated an identical packet). The adapter reads it, so input is priced from reported writes (`input_pricing: cache_write_reported`), not from the upper bound. A prompt of about 2,600 tokens is written to the cache on first use at USD 0.125 per million (gpt-6-luna) instead of 0.10.
+- `completion_tokens_details.reasoning_tokens` is present. At `reasoning_effort: low` gpt-6-luna used 0 reasoning tokens on 358 of 528 calls, at most 840 (mean 120); total output at most 885, so a 1,500 allowance was ample for a short JSON answer.
+- The response `model` was the undated id (`gpt-6-luna`) on every call; no dated form was seen. `system_fingerprint` was null.
+- The `x-ratelimit-limit-requests`, `x-ratelimit-remaining-requests`, `x-ratelimit-limit-tokens` and `x-ratelimit-remaining-tokens` headers are present with these names (10,000 requests and 10,000,000 tokens per minute for gpt-6-luna), and the adapter records them.
+- `prompt_tokens` was exactly 2,572 on every call although the requests ranged from 5,818 to 5,875 bytes; the cause is not known. Do not rely on input tokens to differ between packets of nearly the same size.
+- One call of 528 took 97 s (median 1.1 s); keep the request timeout at 120 s or more.
+- Still not seen live: a 429 `insufficient_quota` body, a rate-limit 429, a 5xx, a refusal or a `length` stop. The flagship study's gpt-6-sol run through the same adapter and launcher path (8,118 calls, as reported by the fleet monitor) had no billing pause either.
+
 ### Switching an OpenRouter ready-chain package to OpenAI
 
 1. Copy `openai_provider.py` into `src/` and call `OpenAI(...)` where the study calls `OpenRouter(...)` (same

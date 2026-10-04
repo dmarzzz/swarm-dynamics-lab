@@ -2455,7 +2455,7 @@
       "evidence_confidence": {
         "score": 1,
         "claim": "In this simulator (324 scripted identities, coverage audit, strong checks), the rise in attacker seats between 32 and 108 checks appears when pass credit is propagated to neighbours and not when it is placed on the passed identity alone: contrast +20.75 seats (17.33 to 24.21), positive in 24 of 24 roots.",
-        "rationale": "Exploratory. The primary is a scripted admission outcome on one synthetic graph family, audit policy and fabrication; one model configuration answered the packets (qualified 24/24). Direct credit is not safer in level (19.6 against 4.4 attacker seats at 32 checks). Builder's own assessment; not independently reviewed or replicated."
+        "rationale": "Exploratory. The primary is a scripted admission outcome on one synthetic graph family, audit policy and fabrication; one model configuration answered the packets (qualified 24/24). Direct credit is not safer in level (19.6 against 4.4 attacker seats at 32 checks). Attempt 002 (gpt-6-luna, reasoning effort low, same packets, qualified 24/24) leaves the scripted primary identical by construction and shows the same answer pattern with more abstention (weak checks: 11.4% null against 3.1%, 49.4% fabricated against 55.4%); its chain.py verify was not run. Builder's own assessment; not independently reviewed or replicated."
       },
       "sample_size_summary": "Observed: 24 paired synthetic roots; 504/504 S1 outcomes (21 cells per root), 0 failed; 324 scripted identities per graph feeding one qwen3.7-flash synthesizer; separate qualification 24/24 on 8 roots. Roots are the independent units; the primary seat outcome is scripted, not a model output.",
       "sources": [
@@ -2466,7 +2466,9 @@
         "researchers/dmarz/notes/trust-credit-qwen/experiment.yaml",
         "researchers/dmarz/notes/trust-credit-qwen/reviews/chain-001-pre.md",
         "researchers/dmarz/notes/trust-credit-qwen/reviews/chain-001-post.md",
-        "researchers/dmarz/notes/trust-credit-qwen/records/s1-analysis.json"
+        "researchers/dmarz/notes/trust-credit-qwen/records/s1-analysis.json",
+        "researchers/dmarz/notes/trust-credit-qwen/reviews/chain-002-post.md",
+        "researchers/dmarz/notes/trust-credit-qwen/records/attempt-002/paired-luna-minus-qwen.json"
       ],
       "status_at_assessment": "complete_valid_exploratory_result"
     },

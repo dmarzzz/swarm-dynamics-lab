@@ -1,0 +1,123 @@
+{
+ "analyzed": 23,
+ "billing_affected_calls": 0,
+ "billing_pause_seconds": 0.0,
+ "billing_pauses": 0,
+ "continuation": null,
+ "cost_usd": 0.008031,
+ "elapsed_seconds": 15.358522877999349,
+ "episodes": 23,
+ "errors": [],
+ "experiment": "trust-credit-qwen",
+ "failed": 0,
+ "fixture_exact": null,
+ "graded": 23,
+ "historical_audit": null,
+ "initial_study_accounting": {
+  "actual_usd": 0.000338,
+  "attempted_calls": 1,
+  "calls_by_batch": {
+   "p0-002": 1
+  },
+  "calls_by_stage": {
+   "P0": 1
+  },
+  "cap_calls": 552,
+  "cap_transport_attempts": 640,
+  "cap_usd": 5,
+  "committed_usd": 0.000338,
+  "input_tokens": 2572,
+  "output_tokens": 33,
+  "reserved_usd": 0.014808,
+  "transport_attempts": 1,
+  "usage_reported_calls": 1,
+  "voided_calls": 0
+ },
+ "input_tokens": 59156,
+ "invalid": 0,
+ "invariant_violations": [],
+ "max_failed": null,
+ "max_request_bytes": 5875,
+ "max_tokens_per_byte": 0.44048638465490664,
+ "model_calls": 23,
+ "not_started": 0,
+ "output_tokens": 1271,
+ "params": {
+  "backend": "openai",
+  "batch": "q0-002",
+  "code": "ca15e8ed659ee200ad369776f870224d86ff7fb4",
+  "model": "gpt-6-luna",
+  "source_hash": "5155d2c6ec89a232db0c46bd025f2dfba5759991cac1b0c6a27b806d916f4b84",
+  "stage": "Q0"
+ },
+ "passed": true,
+ "planned": 23,
+ "primary_contrast": null,
+ "probe": null,
+ "qualification": {
+  "all_valid": true,
+  "cells": {
+   "full": {
+    "abstained": 0,
+    "answerable_correct": 8,
+    "assigned": 8,
+    "exact": 8,
+    "valid": 8
+   },
+   "missing": {
+    "abstained": 8,
+    "answerable_correct": 8,
+    "assigned": 8,
+    "exact": 8,
+    "valid": 8
+   },
+   "sparse": {
+    "abstained": 0,
+    "answerable_correct": 8,
+    "assigned": 8,
+    "exact": 8,
+    "valid": 8
+   }
+  },
+  "fixtures": 24,
+  "passed": true,
+  "set": "a"
+ },
+ "qualification_passed": 1,
+ "rare_correct": null,
+ "rare_wrong": null,
+ "reason": null,
+ "reporting_errors": [],
+ "resumable": 0,
+ "started": 23,
+ "stop_reason": null,
+ "study_accounting": {
+  "actual_usd": 0.008369,
+  "attempted_calls": 24,
+  "calls_by_batch": {
+   "p0-002": 1,
+   "q0-002": 23
+  },
+  "calls_by_stage": {
+   "P0": 1,
+   "Q0": 23
+  },
+  "cap_calls": 552,
+  "cap_transport_attempts": 640,
+  "cap_usd": 5,
+  "committed_usd": 0.008369,
+  "input_tokens": 61728,
+  "output_tokens": 1304,
+  "reserved_usd": 0.355703,
+  "transport_attempts": 24,
+  "usage_reported_calls": 24,
+  "voided_calls": 0
+ },
+ "terminal": 23,
+ "transport_attempts": 23,
+ "visualization": {
+  "frames": 11,
+  "mapping": "v1"
+ },
+ "voided_calls": 0
+}

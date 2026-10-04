@@ -1,0 +1,101 @@
+{
+ "analyzed": 504,
+ "billing_affected_calls": 0,
+ "billing_pause_seconds": 0.0,
+ "billing_pauses": 0,
+ "continuation": null,
+ "cost_usd": 0.20096,
+ "elapsed_seconds": 374.08659026199894,
+ "episodes": 504,
+ "errors": [],
+ "experiment": "trust-credit-qwen",
+ "failed": 0,
+ "fixture_exact": null,
+ "graded": 504,
+ "historical_audit": null,
+ "initial_study_accounting": {
+  "actual_usd": 0.008369,
+  "attempted_calls": 24,
+  "calls_by_batch": {
+   "p0-002": 1,
+   "q0-002": 23
+  },
+  "calls_by_stage": {
+   "P0": 1,
+   "Q0": 23
+  },
+  "cap_calls": 552,
+  "cap_transport_attempts": 640,
+  "cap_usd": 5,
+  "committed_usd": 0.008369,
+  "input_tokens": 61728,
+  "output_tokens": 1304,
+  "reserved_usd": 0.355703,
+  "transport_attempts": 24,
+  "usage_reported_calls": 24,
+  "voided_calls": 0
+ },
+ "input_tokens": 1296288,
+ "invalid": 0,
+ "invariant_violations": [],
+ "max_failed": 6,
+ "max_request_bytes": 5870,
+ "max_tokens_per_byte": 0.4429137248148786,
+ "model_calls": 504,
+ "not_started": 0,
+ "output_tokens": 80720,
+ "params": {
+  "backend": "openai",
+  "batch": "s1-002",
+  "code": "ca15e8ed659ee200ad369776f870224d86ff7fb4",
+  "model": "gpt-6-luna",
+  "source_hash": "5155d2c6ec89a232db0c46bd025f2dfba5759991cac1b0c6a27b806d916f4b84",
+  "stage": "S1"
+ },
+ "passed": true,
+ "planned": 504,
+ "primary_contrast": 20.75,
+ "probe": null,
+ "qualification": null,
+ "qualification_passed": null,
+ "rare_correct": 0.6203703703703703,
+ "rare_wrong": 0.29320987654320985,
+ "reason": null,
+ "reporting_errors": [
+  "HubError"
+ ],
+ "resumable": 0,
+ "started": 504,
+ "stop_reason": null,
+ "study_accounting": {
+  "actual_usd": 0.209329,
+  "attempted_calls": 528,
+  "calls_by_batch": {
+   "p0-002": 1,
+   "q0-002": 23,
+   "s1-002": 504
+  },
+  "calls_by_stage": {
+   "P0": 1,
+   "Q0": 23,
+   "S1": 504
+  },
+  "cap_calls": 552,
+  "cap_transport_attempts": 640,
+  "cap_usd": 5,
+  "committed_usd": 0.209329,
+  "input_tokens": 1358016,
+  "output_tokens": 82024,
+  "reserved_usd": 7.816072,
+  "transport_attempts": 528,
+  "usage_reported_calls": 528,
+  "voided_calls": 0
+ },
+ "terminal": 504,
+ "transport_attempts": 504,
+ "visualization": {
+  "frames": 11,
+  "mapping": "v1"
+ },
+ "voided_calls": 0
+}
