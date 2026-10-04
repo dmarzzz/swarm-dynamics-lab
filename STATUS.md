@@ -45,7 +45,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [integrate-top10-portfolio-feedback](tasks/integrate-top10-portfolio-feedback.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:05Z | Integrate top-ten portfolio feedback into owned experimental plans |
-| [right-dissenter-rd6-zero-start-replacement](tasks/right-dissenter-rd6-zero-start-replacement.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:49Z | Execute the approved RD6 zero dispatch replacement |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -259,6 +258,7 @@
 | [right-dissenter-rd5-build](tasks/right-dissenter-rd5-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T08:16Z | Build and prepare Right Dissenter RD5 |
 | [right-dissenter-rd5-design](tasks/right-dissenter-rd5-design.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T06:50Z | Plan Right Dissenter repairs and the right to reopen |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T17:40Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
+| [right-dissenter-rd6-zero-start-replacement](tasks/right-dissenter-rd6-zero-start-replacement.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T20:07Z | Execute the approved RD6 zero dispatch replacement |
 | [right-dissenter-reopening-design](tasks/right-dissenter-reopening-design.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T18:24Z | Draft and validate the Right Dissenter reopening diagnostic |
 | [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T19:02Z | Integrate and fault-test the Right Dissenter reopening runner |
 | [right-dissenter-reopening-native-run](tasks/right-dissenter-reopening-native-run.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:44Z | Execute and review the approved RD6 Q0 and conditional D0 |
@@ -319,6 +319,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
 | vishesh/codex-pi-review | done | incorporate-external-study-review | 2026-10-04T20:01Z | Published229 traceable review dispositions across15 study proposals and strengthened existing run-quality checks; no new runs. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
