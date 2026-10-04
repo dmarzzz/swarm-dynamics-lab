@@ -1,5 +1,14 @@
 # Phantom Coast PC-2: repeated inspections waste the budget
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `067be367` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — In eight synthetic roots, learned acquisition repeatedly revisited cells; uniform acquisition supplied much broader direct coverage, and the targeted audit did not meet the planned mean benefit threshold. Basis: Native qualification passed and all assigned outcomes were retained and audited. Eight roots from two structural families, one model, unequal inference compute, unresolved labels and heterogeneous primary contrasts limit generalization; this is the owning operator’s assessment.
+- **sample_size_summary:** Observed S1: 8 roots, 2 structural families; 96/96 complete dependent episodes, 1,791/1,792 valid calls; 1 invalid retained. Separate Q0: 4 roots, 24/24 valid. No independent replication; PC-1 is separate.
+<!-- experiment-evidence:end -->
+
 Native qualification and pilot completed on 2026-10-04 UTC. The dominant observed failure was repeated inspection: under misleading reports without an audit, the three-proposal team visited **2.5 distinct cells in twelve slots**, versus **12 for uniform acquisition**. Every directly inspected cell was mapped correctly across all 96 episodes. The weakness was acquiring useful new evidence.
 
 [Public experiment](https://swarm-live.pages.dev/#/x/phantom-coast-pc2) · [Measured replay, all 624 frames](https://swarm-live.pages.dev/api/a/phantom-coast-pc2/s1-a1/replay-public.gif) · [Final frame](https://swarm-live.pages.dev/api/a/phantom-coast-pc2/s1-a1/final_frame.png) · [Prospective plan](PLAN.md) · [Post-mortem](reviews/S1-A1-POST.md) · [Analysis JSON](results/S1-A1-analysis.json) · [Saved-data audit](results/S1-A1-audit.json)

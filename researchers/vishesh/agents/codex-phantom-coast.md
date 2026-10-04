@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: working
+state: done
 task: phantom-coast-pc2-live
-doing: Native PC-2 complete and audited; allocation released; publishing results and evidence metadata
-updated: 2026-10-04T07:51:01.469582+00:00
+doing: PC-2 complete; 1791/1792 pilot responses valid; USD 0.358051260 cumulative exposure; artifacts verified and allocation released
+updated: 2026-10-04T07:55:17.660703+00:00
 ---
 
 ## Notes

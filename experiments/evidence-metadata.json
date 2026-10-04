@@ -1702,6 +1702,41 @@
       "status_at_assessment": "planned_not_run",
       "assessor": "dmarz/d1-opus",
       "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "phantom-coast-pc2",
+      "title": "Phantom Coast PC-2: budgeted inspection choices",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc2/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "In eight synthetic roots, learned acquisition repeatedly revisited cells; uniform acquisition supplied much broader direct coverage, and the targeted audit did not meet the planned mean benefit threshold.",
+        "rationale": "Native qualification passed and all assigned outcomes were retained and audited. Eight roots from two structural families, one model, unequal inference compute, unresolved labels and heterogeneous primary contrasts limit generalization; this is the owning operator\u2019s assessment."
+      },
+      "sample_size_summary": "Observed S1: 8 roots, 2 structural families; 96/96 complete dependent episodes, 1,791/1,792 valid calls; 1 invalid retained. Separate Q0: 4 roots, 24/24 valid. No independent replication; PC-1 is separate.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc2/README.md",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-analysis.json",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/CLOSEOUT.json"
+      ],
+      "status_at_assessment": "complete_valid_adverse_exploratory_result",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "067be3672ced752386ca51bb174ecc81a2054fd8",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc2/README.md": "250e29035b153c6b650df98f0c5b5e33d8dc6c7a8914e504a9f574f94eef1f71",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-analysis.json": "3b59a375095ddcacb5f1af31dd99ff1647fafaefd90e15e69fe276ecbd85cd4a",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-audit.json": "9fc2f62bdb1e76a6c49a9e7da1f8ea1d99c71d9e4d78e13e06ba144dbf53655c",
+        "researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md": "1f81d0694bfd5c7e25bc1728a52b3879711e4a531b4d8b26ba34f58809d92aec",
+        "researchers/vishesh/notes/phantom-coast/pc2/results/CLOSEOUT.json": "825aae99d4904774ed5dbaf06667d8c4dcd4e19658600b18fd7bf57f83a49bf7"
+      }
     }
   ],
   "source_sha256": {
