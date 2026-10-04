@@ -44,7 +44,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [reconcile-study-review-revision](tasks/reconcile-study-review-revision.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:19Z | Reconcile the revised full experiment review |
 | [right-dissenter-freshness-diagnostic](tasks/right-dissenter-freshness-diagnostic.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T20:14Z | Diagnose expired evidence and implement a strong eligibility baseline |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -238,6 +237,7 @@
 | [quorum-mirrors-q1-interface-repair](tasks/quorum-mirrors-q1-interface-repair.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T08:03Z | Preserve rejected-response usage and reconcile Q1 output-token contract |
 | [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:02Z | Prepare and qualify Quorum of Mirrors S0 |
 | [reconcile-dmarz-pi-review-2026-10-04](tasks/reconcile-dmarz-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:05Z | Incorporate and respond to Dmarz PI recommendations |
+| [reconcile-study-review-revision](tasks/reconcile-study-review-revision.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:24Z | Reconcile the revised full experiment review |
 | [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:51Z | Refine swarm-size coordination and policy evaluation design |
 | [refine-swarm-size-question](tasks/refine-swarm-size-question.md) | done | p1 | question | vishesh/codex-idea-scores | vishesh | 2026-10-04T18:11Z | Refine swarm-size definitions, novelty, realistic cases and baselines |
 | [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | done | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:25Z | Reflect on the original discussion dose pilot before running more |
@@ -325,7 +325,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
-| vishesh/codex-pi-review | done | update-experiment-budget-defaults | 2026-10-04T20:16Z | Published USD10 default and USD50 promising-study budget tiers; all nine local/shared policy copies agree. |
+| vishesh/codex-pi-review | working | reconcile-study-review-revision | 2026-10-04T20:22Z | Integrating revised source corrections;229stable recommendations,10changed source items and saved-data count checks. |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
@@ -393,10 +393,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:23:16.963943+00:00 | SP-01 span repair qualification reviewed and closed; no evaluation dispatched |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc11-sol | 2026-10-04 20:20:22.452084+00:00 | PC11 qualified and120-decision ten-agent pilot reviewed; no spread in one world, exposure1.193795490, allocation released |
 | vishesh/codex-decision-models | working | right-dissenter-freshness-diagnostic | 2026-10-04 20:20:19.112342+00:00 | Implementing the approved 48-request freshness diagnostic and strong eligibility baseline. |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Forty-agent Haiku panel authorized under USD20 total; native admission preparation |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:06:15.346937+00:00 | R1 stopped and reviewed; offline guard validated; repaired native design next |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |

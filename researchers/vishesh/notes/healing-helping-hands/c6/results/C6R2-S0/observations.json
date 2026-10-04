@@ -1,0 +1,782 @@
+[
+  {
+    "id": "C6R2-S0-42",
+    "family": "qualification-0",
+    "claim": "Method 1c4da55cc4a0 improves accuracy over baseline.",
+    "report": "Method 1c4da55cc4a0 was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-10",
+    "family": "qualification-1",
+    "claim": "Method b5313465640e improves accuracy over baseline.",
+    "report": "Method b5313465640e did not improve measured accuracy over the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-8",
+    "family": "qualification-3",
+    "claim": "Method 7d36b783275d improves accuracy over baseline.",
+    "report": "Method 7d36b783275d matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-58",
+    "family": "qualification-0",
+    "claim": "Method 31bded35591a improves accuracy over baseline.",
+    "report": "Method 31bded35591a was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "REFUTE",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-14",
+    "family": "qualification-0",
+    "claim": "Method 4d20e250f41f improves accuracy over baseline.",
+    "report": "Method 4d20e250f41f was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-51",
+    "family": "qualification-1",
+    "claim": "Method fc4aeab62168 improves accuracy over baseline.",
+    "report": "Method fc4aeab62168 did not improve measured accuracy over the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-23",
+    "family": "qualification-0",
+    "claim": "Method ef67f70c0940 improves accuracy over baseline.",
+    "report": "Method ef67f70c0940 was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "REFUTE",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-7",
+    "family": "qualification-3",
+    "claim": "Method a87a6b408ce5 improves accuracy over baseline.",
+    "report": "Method a87a6b408ce5 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-44",
+    "family": "qualification-1",
+    "claim": "Method d500df02f8a1 improves accuracy over baseline.",
+    "report": "Method d500df02f8a1 did not improve measured accuracy over the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-0",
+    "family": "qualification-2",
+    "claim": "Method f62681f2ba25 improves accuracy over baseline.",
+    "report": "Method f62681f2ba25 gave more correct answers than the baseline on the same questions.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-36",
+    "family": "qualification-1",
+    "claim": "Method a04749053f6d improves accuracy over baseline.",
+    "report": "Method a04749053f6d improved measured accuracy over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-48",
+    "family": "qualification-1",
+    "claim": "Method ce3a5a8f9add improves accuracy over baseline.",
+    "report": "Method ce3a5a8f9add did not improve measured accuracy over the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-43",
+    "family": "qualification-2",
+    "claim": "Method fe87cf755387 improves accuracy over baseline.",
+    "report": "Method fe87cf755387 was tested for speed only, without accuracy measurements.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-9",
+    "family": "qualification-2",
+    "claim": "Method 232da54f805f improves accuracy over baseline.",
+    "report": "Method 232da54f805f was tested for speed only, without accuracy measurements.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-15",
+    "family": "qualification-0",
+    "claim": "Method fb6700e4969b improves accuracy over baseline.",
+    "report": "Method fb6700e4969b measured lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-3",
+    "family": "qualification-2",
+    "claim": "Method e3e026a3a9e7 improves accuracy over baseline.",
+    "report": "Method e3e026a3a9e7 gave more correct answers than the baseline on the same questions.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-1",
+    "family": "qualification-2",
+    "claim": "Method 331fbf470eed improves accuracy over baseline.",
+    "report": "Method 331fbf470eed gave fewer correct answers than the baseline on the same questions.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-41",
+    "family": "qualification-3",
+    "claim": "Method 88406cec6d20 improves accuracy over baseline.",
+    "report": "Method 88406cec6d20 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-11",
+    "family": "qualification-0",
+    "claim": "Method 37273d670e22 improves accuracy over baseline.",
+    "report": "Method 37273d670e22 measured higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-46",
+    "family": "qualification-2",
+    "claim": "Method 5c607d5a1817 improves accuracy over baseline.",
+    "report": "Method 5c607d5a1817 gave more correct answers than the baseline on the same questions.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-20",
+    "family": "qualification-1",
+    "claim": "Method 3b45c5fdec95 improves accuracy over baseline.",
+    "report": "Method 3b45c5fdec95 improved measured accuracy over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-54",
+    "family": "qualification-2",
+    "claim": "Method f638e8d70cf0 improves accuracy over baseline.",
+    "report": "Method f638e8d70cf0 was tested for speed only, without accuracy measurements.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-31",
+    "family": "qualification-0",
+    "claim": "Method 8c724ae96f4a improves accuracy over baseline.",
+    "report": "Method 8c724ae96f4a was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-22",
+    "family": "qualification-0",
+    "claim": "Method 0d6c30754edd improves accuracy over baseline.",
+    "report": "Method 0d6c30754edd measured higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-18",
+    "family": "qualification-0",
+    "claim": "Method 1e82acb52e5e improves accuracy over baseline.",
+    "report": "Method 1e82acb52e5e measured lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-28",
+    "family": "qualification-3",
+    "claim": "Method 9ef77d11bd18 improves accuracy over baseline.",
+    "report": "Method 9ef77d11bd18 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-56",
+    "family": "qualification-0",
+    "claim": "Method 6614ebd35838 improves accuracy over baseline.",
+    "report": "Method 6614ebd35838 measured lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-52",
+    "family": "qualification-1",
+    "claim": "Method 16bcf4cc5185 improves accuracy over baseline.",
+    "report": "Method 16bcf4cc5185 improved measured accuracy over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-39",
+    "family": "qualification-3",
+    "claim": "Method 2a09336a88d2 improves accuracy over baseline.",
+    "report": "Method 2a09336a88d2 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-33",
+    "family": "qualification-2",
+    "claim": "Method 4f4632472a94 improves accuracy over baseline.",
+    "report": "Method 4f4632472a94 gave fewer correct answers than the baseline on the same questions.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-27",
+    "family": "qualification-3",
+    "claim": "Method 73f05be725d2 improves accuracy over baseline.",
+    "report": "Method 73f05be725d2 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-19",
+    "family": "qualification-3",
+    "claim": "Method 5c34ed08ed0f improves accuracy over baseline.",
+    "report": "Method 5c34ed08ed0f matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-12",
+    "family": "qualification-0",
+    "claim": "Method 7720c6bb9a64 improves accuracy over baseline.",
+    "report": "Method 7720c6bb9a64 measured lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-30",
+    "family": "qualification-3",
+    "claim": "Method bf9e69c15db4 improves accuracy over baseline.",
+    "report": "Method bf9e69c15db4 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-16",
+    "family": "qualification-1",
+    "claim": "Method 1caa17544af7 improves accuracy over baseline.",
+    "report": "Method 1caa17544af7 has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-55",
+    "family": "qualification-3",
+    "claim": "Method 4a7897a5a5c6 improves accuracy over baseline.",
+    "report": "Method 4a7897a5a5c6 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-13",
+    "family": "qualification-0",
+    "claim": "Method 3e1734a017b9 improves accuracy over baseline.",
+    "report": "Method 3e1734a017b9 measured lower accuracy than the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-26",
+    "family": "qualification-2",
+    "claim": "Method e5fdec6697d3 improves accuracy over baseline.",
+    "report": "Method e5fdec6697d3 was tested for speed only, without accuracy measurements.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-4",
+    "family": "qualification-3",
+    "claim": "Method 69a3ec31b86e improves accuracy over baseline.",
+    "report": "Method 69a3ec31b86e outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-50",
+    "family": "qualification-0",
+    "claim": "Method 28b82b05d812 improves accuracy over baseline.",
+    "report": "Method 28b82b05d812 measured higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-29",
+    "family": "qualification-2",
+    "claim": "Method 8dd722fa2ae3 improves accuracy over baseline.",
+    "report": "Method 8dd722fa2ae3 gave fewer correct answers than the baseline on the same questions.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-34",
+    "family": "qualification-1",
+    "claim": "Method e0f984fc1b85 improves accuracy over baseline.",
+    "report": "Method e0f984fc1b85 did not improve measured accuracy over the baseline.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-25",
+    "family": "qualification-2",
+    "claim": "Method 2995bf7db102 improves accuracy over baseline.",
+    "report": "Method 2995bf7db102 was tested for speed only, without accuracy measurements.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-35",
+    "family": "qualification-3",
+    "claim": "Method b71ceff4eb86 improves accuracy over baseline.",
+    "report": "Method b71ceff4eb86 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-6",
+    "family": "qualification-1",
+    "claim": "Method 0a9b9bb7a8db improves accuracy over baseline.",
+    "report": "Method 0a9b9bb7a8db has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-57",
+    "family": "qualification-2",
+    "claim": "Method 0e1718a8497a improves accuracy over baseline.",
+    "report": "Method 0e1718a8497a gave more correct answers than the baseline on the same questions.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-37",
+    "family": "qualification-2",
+    "claim": "Method 6830c3fcf45e improves accuracy over baseline.",
+    "report": "Method 6830c3fcf45e gave fewer correct answers than the baseline on the same questions.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "jev": "REFUTE",
+      "a": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-17",
+    "family": "qualification-1",
+    "claim": "Method f0c679743b67 improves accuracy over baseline.",
+    "report": "Method f0c679743b67 improved measured accuracy over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-5",
+    "family": "qualification-3",
+    "claim": "Method eb464ddf6441 improves accuracy over baseline.",
+    "report": "Method eb464ddf6441 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-40",
+    "family": "qualification-2",
+    "claim": "Method 9f6d83b9cbe1 improves accuracy over baseline.",
+    "report": "Method 9f6d83b9cbe1 gave more correct answers than the baseline on the same questions.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-45",
+    "family": "qualification-3",
+    "claim": "Method 1051b16632a5 improves accuracy over baseline.",
+    "report": "Method 1051b16632a5 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-24",
+    "family": "qualification-0",
+    "claim": "Method c315f9e7e00e improves accuracy over baseline.",
+    "report": "Method c315f9e7e00e measured higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "a": "SUPPORT",
+      "b": "SUPPORT",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-59",
+    "family": "qualification-1",
+    "claim": "Method 614f001e6efb improves accuracy over baseline.",
+    "report": "Method 614f001e6efb has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-47",
+    "family": "qualification-3",
+    "claim": "Method 3e4068f188dc improves accuracy over baseline.",
+    "report": "Method 3e4068f188dc has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-21",
+    "family": "qualification-2",
+    "claim": "Method 38b09b6634ca improves accuracy over baseline.",
+    "report": "Method 38b09b6634ca gave fewer correct answers than the baseline on the same questions.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "a": "REFUTE",
+      "b": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C6R2-S0-53",
+    "family": "qualification-1",
+    "claim": "Method f6048b90922a improves accuracy over baseline.",
+    "report": "Method f6048b90922a has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-2",
+    "family": "qualification-1",
+    "claim": "Method 1d68fabe65fa improves accuracy over baseline.",
+    "report": "Method 1d68fabe65fa improved measured accuracy over the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-32",
+    "family": "qualification-1",
+    "claim": "Method b5534d69f023 improves accuracy over baseline.",
+    "report": "Method b5534d69f023 has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C6R2-S0-38",
+    "family": "qualification-0",
+    "claim": "Method 4e07b12f9b27 improves accuracy over baseline.",
+    "report": "Method 4e07b12f9b27 measured higher accuracy than the baseline.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "SUPPORT",
+      "jev": "SUPPORT",
+      "a": "SUPPORT"
+    }
+  },
+  {
+    "id": "C6R2-S0-49",
+    "family": "qualification-3",
+    "claim": "Method 0dfb876688cc improves accuracy over baseline.",
+    "report": "Method 0dfb876688cc outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "SUPPORT",
+      "b": "SUPPORT"
+    }
+  }
+]
