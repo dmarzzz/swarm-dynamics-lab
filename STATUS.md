@@ -171,8 +171,8 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T02:40Z | building the v3 resampling-only control sidecar (new files only); launch waits on shadow's v3 review |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:27Z | Model qualification passed; launching the frozen 36-episode discovery pilot. |
 | dmarz/patchwork-hypotheses | done | design-compositional-safety-study | 2026-10-04T02:27Z | Published the unreviewed SEC-54 study plan with verified scale arithmetic and explicit launch gates |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:20Z | Implementing neutral-model discovery pilot under the standing shared API budget. |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:20Z | New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase |
 | vishesh/codex-independent-reviews | working | review-discussion-dose | 2026-10-04T02:18Z | Independent review of historical discussion-dose design and survey revisions; v3 is claimed by shadow/sol-rev. |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
