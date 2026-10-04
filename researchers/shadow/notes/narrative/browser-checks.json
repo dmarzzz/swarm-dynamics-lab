@@ -1,0 +1,24 @@
+[
+  {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "errors": [],
+    "score_parity": true,
+    "search": true,
+    "keyboard_graph": true,
+    "no_document_overflow": true
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "errors": [],
+    "score_parity": true,
+    "search": true,
+    "keyboard_graph": true,
+    "no_document_overflow": true
+  }
+]
