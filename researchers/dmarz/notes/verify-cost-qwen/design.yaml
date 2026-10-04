@@ -93,8 +93,9 @@ stages:
 
 budget:
   max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
-  max_attempted_calls: 600
+  max_attempted_calls: 624         # 600 for this attempt, plus the 24 qualification calls of the one permitted repair attempt (002) in the same ledger
   aggregate_usd: 2                 # settled actual cost plus open reservations
+  reservation_margin: 10           # each reservation is 10 times the snapshot-price bound (request bytes as input tokens plus the full output limit)
   max_output_tokens: 1000
   max_input_tokens: 8000
   max_input_bytes: 6000            # a request of at most 6,000 bytes cannot exceed 6,000 tokens
@@ -109,15 +110,13 @@ budget:
     retryable_http_status: [429, 502, 503, 529]
     backoff_seconds: [2, 6]
     retry_after_cap_seconds: 20
-  max_transport_attempts: 760      # 600 calls + 160: two full billing outages (21 attempts each) and 118 transport retries
+  max_transport_attempts: 784      # 624 calls + 160: two full billing outages (21 attempts each) and 118 transport retries
   max_failed: 6                    # S1 only: the larger of 3 and 1% of 576 calls, rounded up
   billing_outage:
     retry_every_seconds: 60
     max_wait_seconds: 1200
-    # A call that met only a credit error holds a ledger reservation although no model ran. When
-    # `chain.py resume` re-sends such a unit, the S1 call cap and the study call cap are raised by the
-    # number of those unanswered reservations and by nothing else; answered S1 calls stay <= 576.
-    resume_reissues_unanswered_reservations: true
+    # A call left unanswered by a billing stop has its reservation voided in the ledger (no model ran), so
+    # `chain.py resume` runs the unit inside the exact S1 cap: standing S1 reservations never exceed 576.
   input_usd_per_million: 0.03
   output_usd_per_million: 0.13
 

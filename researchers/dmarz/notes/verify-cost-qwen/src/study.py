@@ -501,7 +501,8 @@ def check_design():
         rows = _assignments(stage)
         if len(rows) != d['stages'][stage]['assignments'] or len({a['id'] for a in rows}) != len(rows): out.append(f'{stage}:assignment_count')
         if stage != 'S0' and len(rows) != d['budget']['max_calls'][stage]: out.append(f'{stage}:call_cap_differs_from_assignments')
-    if sum(d['budget']['max_calls'].values()) != d['budget']['max_attempted_calls']: out.append('study_call_cap')
+    repair = q['repairs_allowed'] * q['valid_required']       # the repair attempt's P0 and Q0 calls, in the same ledger
+    if sum(d['budget']['max_calls'].values()) + repair != d['budget']['max_attempted_calls']: out.append('study_call_cap')
     if {a['id'] for a in _assignments('P0') + _assignments('Q0')} & {a['id'] for a in _assignments('S1')}: out.append('qualification_inside_main')
     biggest = max(largest_request_bytes(s) for s in ('P0', 'Q0', 'S1'))
     if biggest > d['budget']['max_input_bytes']: out.append('request_larger_than_max_input_bytes')
