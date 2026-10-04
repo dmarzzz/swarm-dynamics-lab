@@ -3,7 +3,7 @@ id: decision-model-reimagination
 type: task
 title: Reimagine Phantom Coast and Quorum of Mirrors
 kind: question
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,9 @@ topics:
 - decision-models
 - collective-decision
 claimed_at: 2026-10-04T02:48Z
-updated: 2026-10-04T02:48Z
+updated: 2026-10-04T02:52Z
+outputs:
+- researchers/vishesh/notes/decision-models/REIMAGINING.md
 ---
 
 ## Goal
