@@ -3,7 +3,7 @@ id: phantom-coast-pc3-live
 type: task
 title: Build and run Phantom Coast PC-3 coverage guard
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T08:00Z
-updated: 2026-10-04T08:10Z
+updated: 2026-10-04T08:22Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/pc3/README.md
+- researchers/vishesh/notes/phantom-coast/pc3/reviews/S1-A1-POST.md
+- researchers/vishesh/notes/phantom-coast/pc3/results/CLOSEOUT.json
 ---
 
 ## Goal
