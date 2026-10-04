@@ -3,6 +3,7 @@ import collections
 import json
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
+from engine import ARMS
 
 BG='#0b1220'; PANEL='#152238'; INK='#edf4ff'; MUTED='#a8bad1'
 COLORS={'A':'#68d6f4','B':'#f6bf66','C':'#b49afa','NONE':'#ed93b1','WAIT':'#72849c',None:'#72849c'}
@@ -41,7 +42,7 @@ def frame(record,t):
         if b['error']:text(d,(x-30,492),'ERROR',15,'#ff7979')
     text(d,(48,525),'POLICY COMMITMENTS  /  frozen once made; future outcomes hidden',19,MUTED)
     visible=visible_decisions(record,t)
-    for j,(arm,out) in enumerate(record['outcomes'].items()):
+    for j,(arm,out) in enumerate((a,record['outcomes'][a]) for a in ARMS):
         y=565+j*47;panel(d,(48,y,1552,y+41));text(d,(66,y+7),arm,20)
         if arm in visible:
             text(d,(375,y+7),out['choice'] or 'ABSTAIN',20,COLORS[out['choice']]);text(d,(565,y+7),f"tick {out['round']}  |  {len(out['roots'])} supporting roots",19)
@@ -76,7 +77,7 @@ def overview(records,summary,destination):
     im=Image.new('RGB',(1600,1050),BG);d=ImageDraw.Draw(im)
     text(d,(48,28),'ANTSY / robustness atlas',40)
     text(d,(48,87),f"{len(records)} paired blocks / 12 task clusters / descriptive synthetic stress test",23,MUTED)
-    arms=list(records[0]['outcomes']);worlds=['clean','copies','early-wrong','late-wrong']
+    arms=ARMS;worlds=['clean','copies','early-wrong','late-wrong']
     text(d,(48,139),'Cells show correct / violation / abstention. Each world pools both deadlines, populations and delivery schedules.',20,MUTED)
     for j,w in enumerate(worlds):text(d,(480+j*265,192),w,23)
     for i,a in enumerate(arms):
