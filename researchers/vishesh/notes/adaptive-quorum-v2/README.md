@@ -1,63 +1,27 @@
 # Antsy
 
-## TLDR
+When should a swarm commit to an API choice, and when should it wait for better evidence?
 
-Can lowering an evidence quorum near a deadline help agents choose a suitable document-extraction API? Five or nine scouts evaluate conflicting synthetic evidence; compare adaptive and fixed stopping, ordinary majority, deadline voting and central solvers, with targeted versus random test controls. Measure correct eligible choice, violations, abstention, loss and cost. Clean qualification is a competence test, not evidence that adaptive quorum helps.
+The current implementation is [repair v3](repair-v3/README.md). The review repaired evidence accounting, agent qualification, timing/cost claims, reproducibility and temporal visualization. The guarded local Laya architecture passed 22/22 qualification cases; 384 matched blocks produced 2,688 policy outcomes with zero actor/schema failures after recovery from a documented rendering bug.
 
-API selection under deadline pressure.
-
-**Exploratory instrument, not an accepted hypothesis.** Replaces the recommendation-counting task in [v1](../adaptive-quorum/README.md) with choosing a document-extraction API from factual evidence. No real documents or customer data are sent to providers. Laya runs locally; Jev via OpenRouter remains deferred.
-
-The first pilot asked when five agents should stop accumulating recommendations. All evidence arrived on a fixed schedule, and the central solver was forced to stop at its first answer. That qualified the implementation but was a weak test of adaptation. Version 2 changes the task, controls, evidence timing and evaluation; results cannot be pooled with v1.
-
-## Application
-
-A workflow must choose an invoice extraction API before its dispatch deadline. The service must support scanned PDFs, retain no input documents, and reach 90% field accuracy on a local test batch. Among eligible services, choose the cheapest per document. The catalog has three fictional providers with shuffled names, prices and capabilities. Sometimes no provider is suitable. The swarm receives conflicting release notes, policy extracts and test reports. A local mock test actually scores returned fields against synthetic invoice fixtures; it cannot certify retention policy.
-
-Five-versus-nine scouts receive different subsets of the same evidence budget. More scouts do not create additional evidence. A centralized solver can see the full available board and wait until the deadline. Verification arms have the same two-probe ceiling; targeted versus random allocation is separated from the stopping comparison.
-
-[Research rationale](RESEARCH.md) · [Frozen protocol](protocol.md) · [Design](design.json) · [Run instructions](RUN.md)
-
-## Outputs
-
-Each assignment records the task, condition, evidence timeline, ballots, commitment round, probes, actual model input tokens, invalid outputs, raw probabilities, and evaluator outcomes. Report all-assigned loss, correct selection, hard-constraint violations, abstention, deadline misses and resource use separately. A safe refusal is not counted as successful completion when an eligible option exists.
-
-Use `python3 src/selftest.py` for invariant checks. Qualification must precede the development sweep. The independent sample unit is the task, not the agent or model call. S2 stays disabled pending survey and hypothesis review.
-
-## Next development matrix
-
-[Planned discriminating cells](design-development.json) use four new tasks balanced across A/B/C/NONE, nine scouts, two deadlines, late/stalled arrivals and accurate/misleading new evidence. The 224 policy outcomes share 32 blocks, with at most 1,392 physical model decisions. Four task clusters are for debugging only, not an effect-size claim. This matrix is not launched automatically and remains blocked until clean qualification is satisfactory.
-
-## Qualification result
-
-**Local Laya failed the clean factual-task screen.** All 168 arm outcomes were schema-valid, but no broader model sweep was launched. [Full counts and costs](results/laya-analysis.md) and [manifest](results/laya-manifest.json) preserve the attempt. The scripted evaluator passed all cells, which validates plumbing, not model competence. [Live dashboard](https://swarm-live.pages.dev/#/x/adaptive-quorum-api-v2).
-
-Across the repeated clean cells: majority 10/24 correct; fixed and adaptive each 16/24; deadline vote 14/24; central deadline 12/24; central targeted testing 0/24; central random testing 4/24. These denominators contain only six task clusters; do not rank policies as established findings. The balanced provider-label gap is also recorded.
-
-The next engineering task is to audit atomic evidence extraction and response to test results, then compare a deterministic constraint checker operating only on model-extracted, cited facts. That would be a new declared architecture, not a silent repair of these outcomes. Qualify on a disjoint balanced task set before any contamination sweep. Switching to Jev does not waive that gate.
+[Quality assessment and results](repair-v3/reviews/S1-attempt-2-post.md) · [Specification](repair-v3/SPEC.md) · [Agent contract](repair-v3/agent-spec.json) · [Runbook](repair-v3/RUN.md) · [Live dashboard](https://swarm-live.pages.dev/#/x/adaptive-quorum-api-v2).
 
 ## Question
 
-Can a smaller evidence quorum near an evidence cutoff improve useful API selection without increasing hard-constraint violations? Does independent testing help, and does targeted allocation beat random allocation?
+Does relaxing an evidence quorum near a deadline improve useful completion, and when does it instead admit misinformation? Compare constant-two and constant-three source requirements, adaptive stopping, majority voting and central controls.
 
 ## Setup
 
-Local pinned Laya, five or nine scouts, three fictional providers, synthetic invoice batches, and seven policies. No customer documents, supplier endpoints, paid model calls or remote inference. The executed qualification source is `4f20626`.
+Five or nine scouts select among three fictional invoice APIs from delayed or misleading synthetic facts. Laya reads atomic predicates; explicit host code guards observed hard constraints and compares prices. This is an exploratory mechanism test, not independent AI expertise or real provider evaluation.
 
 ## Protocol
 
-See [protocol.md](protocol.md). S0 is complete and failed the numerical model-competence gate; the planned development matrix is unexecuted. Survey/hypothesis promotion gates remain unmet.
+The frozen [v3 specification](repair-v3/SPEC.md) and [attempt reviews](repair-v3/reviews/) preserve every diagnostic, qualification and recovery. Twelve task clusters cross four evidence worlds, two arrival schedules, two populations and two cutoffs. Survey/hypothesis promotion gates remain unmet; S2 is disabled.
 
 ## Metrics
 
-All-assigned correct selection, loss, constraint violations, abstentions, false NONE, invalid outputs, physical calls, estimated input tokens and episode wall time. Verification correction/corruption counts are [reported separately](results/verification-flips.json). Denominators include repeated measurements of six task clusters.
+All-assigned correctness, constraint violations, abstention, loss, commitment ticks, logical invocations and actual physical inference costs. Adaptive helps when late information corrects earlier misinformation, but hurts when late information is false. In this study every learned-policy choice matched the symbolic baseline: no incremental AI benefit is established.
 
-## Run review and repair status
+## Historical versions
 
-[Retrospective S0 post-mortem](reviews/S0-attempt-1-post.md) tracks unresolved capability and design issues. Publication completed; qualification remains failed. Future attempts follow the shared pre-run/post-run repair cycle and preserve this attempt.
-
-Display name: **Antsy**. Stable experiment ID `adaptive-quorum-api-v2` retains the existing runs and links.
-
-## Question and prediction
-
-Does reducing a provenance quorum near the deadline improve decisions without increasing hard-constraint violations? The verification comparison separately asks whether targeted tests help more than random tests.
+[V2 original design and failed pilot](V2-HISTORICAL.md), [v2 protocol](protocol.md), [v2 results](results/laya-analysis.md), and [v1](../adaptive-quorum/README.md) remain intact. Stable experiment ID `adaptive-quorum-api-v2` retains old runs. Display name: Antsy. Jev through OpenRouter remains deferred pending secure setup and new qualification.

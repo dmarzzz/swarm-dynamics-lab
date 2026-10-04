@@ -1,0 +1,34 @@
+{
+  "stage": "S1-engineering",
+  "code": "39c3d7a7ccd272edd1ff04cf18a5b6dce96b295c",
+  "assignments": 384,
+  "independent_task_clusters": 12,
+  "complete": true,
+  "parent_attempt": "Q2-attempt-1",
+  "qualification_sha256": "790ce9fd96b7fe8c06e6acd28176c04b5e1a91ab4eec9aaea205d957487fc7fb",
+  "source_sha256": {
+    "runtime.py": "b7ef8a523ec863552cf95d34d9c5da469143a17247d714648628b51a87163cf1",
+    "qualify.py": "167098087ae9da0c7a7c0157c8ca2c83fc9c2b5ebb3964ab43524c8543f138ee",
+    "engine.py": "8a8cd21f6d87d2217823a040e7a3cce7102ba0f59f371b55db6ec373c02c2818",
+    "diagnose.py": "cd1afe7625133c0e04a708b91d0b42eb04f4611a8568f38d278a70ae2461c64d",
+    "sweep.py": "91749f51104ea4a216e90e642780a881fc5a9fe418986680023defb07fdcc069",
+    "adapter.py": "bcd8b0233f660a9f63969895d01a0de83ac6a16b0a0c49dd70a90dd34d4378eb",
+    "render.py": "0445628979fbca580507efd153dcf02eccd79fab805efeaf137d910257d949eb",
+    "test_engine.py": "8614385b17a4a8a6d393c291bbbc2dba23d9b198414599006526a73fb71bb593",
+    "publish_diagnostics.py": "440eb53b0aee8fcd0d0decce8f91e916df3fe02838b30528f3b6aa15b954c3e7"
+  },
+  "resumed_from": "S1-attempt-1",
+  "resumed_blocks": 25,
+  "reused_physical_receipts": 12,
+  "model": "convaiinnovations/laya",
+  "checkpoint": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+  "laya_source": "2e4d9c87e8b1621deb344eac7de5c7258f32f849",
+  "laya_version": "0.3.26",
+  "device": "cpu",
+  "threads": 2,
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "transformers": "4.57.6",
+    "safetensors": "0.8.0"
+  }
+}
