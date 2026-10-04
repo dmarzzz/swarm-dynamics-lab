@@ -15,10 +15,13 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import fcntl
 import json
+import os
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -54,6 +57,45 @@ def read_map() -> dict[str, tuple[str, str]]:
                 b, n, u = ln.split("\t")
                 out[b] = (n, u)
     return out
+
+
+def record_issue(bid: str, num: str, url: str):
+    """Atomically update this checkout's map, serialized against local writers."""
+    data = ROOT / "data"
+    data.mkdir(exist_ok=True)
+    with (data / "batches-map.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        mapping = read_map()
+        existing = mapping.get(bid)
+        if existing and existing != (num, url):
+            sys.exit(f"{bid}: conflicting issue mappings {existing[0]} and {num}; reconcile manually")
+        if existing:
+            return
+        text = MAP.read_text() if MAP.exists() else ""
+        text += ("\n" if text and not text.endswith("\n") else "") + f"{bid}\t{num}\t{url}\n"
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(mode="w", dir=MAP.parent, delete=False) as stream:
+                temporary = Path(stream.name)
+                stream.write(text)
+                stream.flush()
+                os.fsync(stream.fileno())
+            os.replace(temporary, MAP)
+        finally:
+            if temporary and temporary.exists():
+                temporary.unlink()
+
+
+def remote_batch_issue(bid: str):
+    """Recover open or closed issues even when the local map is stale/missing."""
+    candidates = gh_json("issue", "list", "-R", REPO, "--state", "all", "--search",
+                         f'"{bid}" in:title', "--limit", "100", "--json", "number,url,title,body")
+    matches = [i for i in candidates if i["title"].startswith("[batch] ")
+               and i["title"].endswith(f"({bid})")
+               and i["body"].startswith(f"Batch `{bid}`:")]
+    if len(matches) > 1:
+        sys.exit(f"{bid}: multiple remote issues exist; reconcile manually before publishing")
+    return matches[0] if matches else None
 
 
 def batches() -> dict[str, Path]:
@@ -149,6 +191,13 @@ def cmd_publish(a):
         if not p:
             print(f"  {bid}: no such batch file")
             continue
+        # Search is a recovery aid, not distributed compare-and-swap. Two hosts
+        # can still race before GitHub indexes a newly created issue.
+        existing = remote_batch_issue(bid)
+        if existing:
+            record_issue(bid, str(existing["number"]), existing["url"])
+            print(f"  {bid}: reconciled existing issue #{existing['number']}")
+            continue
         items = rows(p)
         src = p.parent.name
         topic = items[0].get("topic") if items else "meta"
@@ -157,10 +206,10 @@ def cmd_publish(a):
         url = gh("issue", "create", "-R", REPO, "--title", title, "--body", issue_body(bid, src, topic, items),
                  "--label", ",".join(labels))
         num = url.rstrip("/").split("/")[-1]
+        # Persist immediately: a later cosmetic body edit must not orphan it.
+        record_issue(bid, num, url)
         body = issue_body(bid, src, topic, items).replace("{this-issue}", num)
         gh("issue", "edit", num, "-R", REPO, "--body", body)
-        with MAP.open("a") as f:
-            f.write(f"{bid}\t{num}\t{url}\n")
         made += 1
         print(f"  {bid} -> {url}")
     print(f"publish: {made} issues created")
