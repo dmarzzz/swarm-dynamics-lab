@@ -178,7 +178,7 @@
     }
   },
   "review": {
-    "reviewer": "dmarz (direct instruction to dmarz/orbital-orchestrator; dmarz/fleet-monitor, the m1 reviewer, went offline with halcyon)",
+    "reviewer": "dmarz (direct instruction to dmarz/orbital-orchestrator for manifest m2); dmarz/fleet-monitor reviewed m1 only and its review does not cover m2",
     "cross_researcher_review": "waived by dmarz for this study",
     "waiver": "launch/review-waiver.md",
     "paid_launch_requires": "launch/s1-approval.json"
