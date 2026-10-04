@@ -37,3 +37,7 @@ Reuse README mapping v1 with attempt receipt-native-a3 and seed 9301. Initial st
 ## Remaining deployment record
 
 Approved account/state path, new host identity, exclusive claim/expiry and verification receipt must be resolved and committed before dispatch. A default personal credential, free occupied machine, or newly initialized infrastructure state cannot fill these fields.
+
+## Account-correction deployment update — 2026-10-04 UTC
+
+The owner explicitly approved the one-machine API lifecycle exception. Correct-account creation matched all twelve registered Dmarz hosts and left existing inventory unchanged. Private fleet registration and exclusive claim are merged; the preserved ledger is restored byte-for-byte with SQLite integrity verified. See [current setup](../../SETUP.md). Original state is now reported on orbital-one; this specific allocation remains manual to avoid duplicate Terraform management. Standard host provisioning, exact public-plan registration and queued dispatch admission remain pending. No A3 model call has been made. This update supersedes the account-allocation blocker, not the remaining launch gates.
