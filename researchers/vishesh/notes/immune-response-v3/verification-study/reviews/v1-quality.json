@@ -1,0 +1,315 @@
+{
+  "attempt": "verification-v1",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "complete_valid_result",
+  "scientific_baseline": "scoped_repeated_native_result",
+  "larger_controller_qualification": "gap",
+  "evidence_revision": "06fc3a20824ba33a0483397ae012be2af78d23a7",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The completed comparison separates explicit execution protection from proposal quality and post-repair verification; it answers a scoped architecture question.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Paired fresh confirmation/contradiction worlds, real necessary repairs and healthy controls are feasible under a public rule. Six parameterized roots in three location families remain a narrow authored scope; repair failure, sensor deception and configuration faults are not covered.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Identical effective inputs across all matched arm/repeat calls, fixed Opus and budgets, no gold correction. Four guard denials occur at the final tick; no later feedback learning is claimed. Scripted rule succeeds without hidden state.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Both arms achieve20/24fullqualification and8/12repairverification despite48/48correctdiagnoses per arm. The action selector reuses stale post-repair failure evidence; guard protection does not qualify it for the larger advice experiment.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ],
+      "next_action": "Prepare a verification-required controller comparison with genuine repair success/failure and mechanism-diverse cases; obtain a finite successor decision before launch.",
+      "acceptance_check": "Public-observation reference feasible, strict no-unnecessary-intervention and actual verification pass on varied development and untouched holdouts; blocked interventions never substitute for model qualification."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All96transitions replay; unnecessary proposals/executions, compatible changes, rejected actions, missed repairs, service opportunities and actual inspection remain distinct. Historical scores and new retrospective C1 summaries are not conflated.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "48episodes are nested in six authored roots, three families, two branches and two fresh repeats per arm. Root/family paired summaries and fourqualification/fiveaction-repeat disagreements are explicit; no broad interval or rare-failure inference.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All192effective requests/routes match the frozen contract;48unique wire payloads each occur four times. Fresh contexts, uncorrected diagnosis and no operator context. Models never observe post-denial feedback because denials occur at finaltick.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All48assignments completed,192responses/usages and96actions retained, no retries/missingness. Full request/state replay passes; original and final ledger lineage retained.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        },
+        {
+          "path": "v1-hub-readback.json",
+          "sha256": "36fe0550b1384f81d14c897fd0a8418600720127b12d5e6855408f01f07ea40b"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "API2.253050, request bounds9.276660 and historical709/15.524695counter separated. Single1294 second approved-account allocation, no newVM, worker/relay/tunnel stopped and claim released; invoice attribution explicitly limited.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source/configuration and pinned runtime replay exactly; two fresh repeats disclose action instability rather than claiming seeds ensure determinism. Worker-expanded failures repeat in both arms. Full raw records remain private; public independent replay requires separate authorized data access. Public release supplies reports, visualization and replay code only.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All48native episodes shown with explicit proposals/executions, healthy-state colors distinct from jointqualification, costs and realinspection. Discrete-tick animation and saved-data provenance; no synthetic outcome substitution.",
+      "evidence": [
+        {
+          "path": "v1-post.md",
+          "sha256": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed"
+        },
+        {
+          "path": "v1-reconciliation.json",
+          "sha256": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733"
+        },
+        {
+          "path": "v1-harm-classification.json",
+          "sha256": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd"
+        },
+        {
+          "path": "v1-manual-review.json",
+          "sha256": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254"
+        },
+        {
+          "path": "v1-cost-closeout.json",
+          "sha256": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52"
+        }
+      ]
+    }
+  ]
+}

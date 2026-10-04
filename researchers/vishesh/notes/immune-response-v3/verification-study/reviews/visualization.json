@@ -1,0 +1,12 @@
+{
+  "source": "saved native episodes",
+  "recorded_episodes": 48,
+  "assigned": 48,
+  "native_calls_by_renderer": 0,
+  "frames": "initial world,post-tick1,post-tick2",
+  "missing": "gray; not recorded",
+  "health": "actual post-state",
+  "service": "pre-action health and no executed deployment",
+  "proposal_contract": "separate from protected outcome",
+  "animated_time": "discrete simulator ticks, not wall-clock time"
+}

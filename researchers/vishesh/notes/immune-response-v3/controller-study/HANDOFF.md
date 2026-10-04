@@ -1,3 +1,13 @@
+# Immune Response — current verification v1 handoff
+
+**FINISH the scoped repeated native result; larger collaboration remains HOLD.** Read [v1 post-mortem](../verification-study/reviews/v1-post.md) and [authored quality review](../verification-study/reviews/v1-quality.json). Collection48/48episodes and192/192calls; complete request/state/usage audit. Both arms propose4unnecessary actions after repair; unguarded executes4,guardexecutes0. Both achieve20/24joint qualification and8/12actualverification. Allrepair/healthy-control outcomes succeed, but greenfinalhealth is not fullcompetence.
+
+No active worker,relay,tunnel or allocation. ActualnewAPIUSD2.253050; originalledger709calls/USD15.524695conservative/cap16.877155; no newallowance. Source06fc3a20824ba33a0483397ae012be2af78d23a7. Public/source/runtime/account gates passed;18tests; claim453release457. Originalledger and rawrecords backedup in owning workspace; do not create a new ledger.
+
+Nextusefulquestion is verification-required control under genuinelysuccessful versus failed/delayedrepair, with meaningfulmechanismvariation and competent publicreference. No successor dispatch authorized. Keep historicalscores, holdouts and originalbudget lineage.
+
+## Historical handoffs below
+
 # Immune Response — A10 handoff
 
 Disposition: **DECISION NEEDED for a changed controller contract; larger experiment HOLD.** No worker, relay, tunnel or active allocation remains. Read [A10 post-mortem](reviews/a10-post.md), [quality review](reviews/a10-quality.json) and [proposed discriminator](next-contract/PLAN.md).

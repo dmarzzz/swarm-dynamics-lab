@@ -1,0 +1,270 @@
+{
+  "arms": {
+    "unguarded": {
+      "diagnoses_correct": 48,
+      "diagnoses": 48,
+      "final_healthy": 24,
+      "posthealthy_ticks": 48,
+      "unnecessary_same_binary_proposals": 3,
+      "unnecessary_binary_change_proposals": 1,
+      "unnecessary_binary_changes_executed": 1,
+      "actual_usd": 1.125075,
+      "input_tokens": 177820,
+      "output_tokens": 9439,
+      "incompatible_proposals": 0
+    },
+    "guarded": {
+      "diagnoses_correct": 48,
+      "diagnoses": 48,
+      "final_healthy": 24,
+      "posthealthy_ticks": 48,
+      "unnecessary_same_binary_proposals": 2,
+      "unnecessary_binary_change_proposals": 2,
+      "unnecessary_binary_changes_executed": 0,
+      "actual_usd": 1.127975,
+      "input_tokens": 177820,
+      "output_tokens": 9555,
+      "incompatible_proposals": 0
+    }
+  },
+  "same_effective_inputs_at_each_world_tick_phase": true,
+  "unique_wires": 48,
+  "root_rows": [
+    {
+      "root": "gateway-legacy",
+      "unguarded": {
+        "joint": [
+          "fail",
+          "pass"
+        ],
+        "verified": [
+          false,
+          true
+        ],
+        "unnecessary": [
+          1,
+          0
+        ],
+        "served": [
+          0,
+          1
+        ]
+      },
+      "guarded": {
+        "joint": [
+          "pass",
+          "pass"
+        ],
+        "verified": [
+          true,
+          true
+        ],
+        "unnecessary": [
+          0,
+          0
+        ],
+        "served": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "root": "gateway-expanded",
+      "unguarded": {
+        "joint": [
+          "pass",
+          "pass"
+        ],
+        "verified": [
+          true,
+          true
+        ],
+        "unnecessary": [
+          0,
+          0
+        ],
+        "served": [
+          1,
+          1
+        ]
+      },
+      "guarded": {
+        "joint": [
+          "pass",
+          "pass"
+        ],
+        "verified": [
+          true,
+          true
+        ],
+        "unnecessary": [
+          0,
+          0
+        ],
+        "served": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "root": "worker-legacy",
+      "unguarded": {
+        "joint": [
+          "pass",
+          "pass"
+        ],
+        "verified": [
+          true,
+          true
+        ],
+        "unnecessary": [
+          0,
+          0
+        ],
+        "served": [
+          1,
+          1
+        ]
+      },
+      "guarded": {
+        "joint": [
+          "pass",
+          "pass"
+        ],
+        "verified": [
+          true,
+          true
+        ],
+        "unnecessary": [
+          0,
+          0
+        ],
+        "served": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "root": "worker-expanded",
+      "unguarded": {
+        "joint": [
+          "fail",
+          "fail"
+        ],
+        "verified": [
+          false,
+          false
+        ],
+        "unnecessary": [
+          1,
+          1
+        ],
+        "served": [
+          0,
+          0
+        ]
+      },
+      "guarded": {
+        "joint": [
+          "fail",
+          "fail"
+        ],
+        "verified": [
+          false,
+          false
+        ],
+        "unnecessary": [
+          1,
+          1
+        ],
+        "served": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "root": "store-legacy",
+      "unguarded": {
+        "joint": [
+          "fail",
+          "pass"
+        ],
+        "verified": [
+          false,
+          true
+        ],
+        "unnecessary": [
+          1,
+          0
+        ],
+        "served": [
+          0,
+          1
+        ]
+      },
+      "guarded": {
+        "joint": [
+          "pass",
+          "fail"
+        ],
+        "verified": [
+          true,
+          false
+        ],
+        "unnecessary": [
+          0,
+          1
+        ],
+        "served": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "root": "store-expanded",
+      "unguarded": {
+        "joint": [
+          "pass",
+          "pass"
+        ],
+        "verified": [
+          true,
+          true
+        ],
+        "unnecessary": [
+          0,
+          0
+        ],
+        "served": [
+          1,
+          1
+        ]
+      },
+      "guarded": {
+        "joint": [
+          "fail",
+          "pass"
+        ],
+        "verified": [
+          false,
+          true
+        ],
+        "unnecessary": [
+          1,
+          0
+        ],
+        "served": [
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "first_request_utc": "2026-10-04T22:10:37.009758+00:00",
+  "last_response_utc": "2026-10-04T22:26:26.082099+00:00"
+}

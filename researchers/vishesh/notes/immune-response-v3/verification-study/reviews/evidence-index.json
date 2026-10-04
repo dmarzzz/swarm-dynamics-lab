@@ -1,0 +1,25 @@
+{
+  "run": "immune-response-v3/1004-221035-647292",
+  "native_source": "06fc3a20824ba33a0483397ae012be2af78d23a7",
+  "files": {
+    "README.md": "2456072de09b4347fdb0c49cc60b25e600bf29e7303be492bc3fc944f8f8652b",
+    "analyze_saved.py": "254f89fd3bf3a625bf676a0f228319f6e90f106c844ee23caae135856806d900",
+    "render_saved.py": "1af4599d999e3ee6cbe4b0be33d21f59f8bdee576bcc797062757f443cbc5b5a",
+    "reproduce_saved.py": "c6ca162a9ce3f937d5053d55bd00920c86ebd40c1da2a11a8e11cb53bb0806c7",
+    "v1-cost-closeout.json": "07abea53d6436b3a6ae24986c799b290bedbddc7c88ef4d59bd675e3c4ca4a52",
+    "v1-harm-classification.json": "037f4df30079cfad4afa34bc77dee639a4646ad63bdeb124e37fb9b80cc02edd",
+    "v1-hub-readback.json": "36fe0550b1384f81d14c897fd0a8418600720127b12d5e6855408f01f07ea40b",
+    "v1-manual-review.json": "5e0ec855490e78d13f249ca7052be152df62df902d0563ed4b032626a7228254",
+    "v1-post.md": "e2b0b91d76be94ee18e8185911b4ad2631a6f28591c70d37d6ccca354ca7b5ed",
+    "v1-quality.json": "2df731ce2c8b3d73500e6942933b3578023365b6ac5ff12049d8cd4adbdbc20d",
+    "v1-reconciliation.json": "53c355f11d9b9aa8af21f1e7406305adc977f30e84eb2f9516a337da80a9d733",
+    "v1-summary.json": "e57856ee341023860f05b49ed387daf6bd92f80482c074e8775537452ebe4943",
+    "verification-replay.gif": "03fa5cee95d2e798d99744b03fd0c2ec5d5dfd636677cd3f4e439d276d618e71",
+    "verification-tick-0.png": "51f0a44b23cd02efc7a60cb3d487966cf751e125e120edc2f39c7ecb68036a3a",
+    "verification-tick-1.png": "12f1fa427ec1c49dc25c64faa55d99f81f49d5c401de2e319320b4b779143bbf",
+    "verification-tick-2.png": "7ce424f27457c55e47a60134ca76adb86b0c977316ae87b47b038696b11e6793",
+    "visualization.json": "bea153dcd61efe56edd8a306d4138ae9a35b6e6a7628ada18b3ed92a347b50d2"
+  },
+  "private_material_included": false,
+  "raw_native_records_published": false
+}

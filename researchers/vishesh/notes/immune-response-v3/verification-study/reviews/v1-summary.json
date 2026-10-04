@@ -1,0 +1,1825 @@
+{
+  "kind": "native",
+  "stage": "verification-v1",
+  "execution_complete": true,
+  "started": 48,
+  "incomplete": 0,
+  "unstarted": 0,
+  "error": null,
+  "api_calls": 192,
+  "actual_usd": 2.253049999999998,
+  "scientific_review": "pending",
+  "successor_authorized": false,
+  "assigned": 48,
+  "completed": 48,
+  "missing_ids": [],
+  "paired_contrasts": [
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "confirmed",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 1.0,
+        "qualified": 1.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 1.0,
+        "unnecessary_proposed": -1.0,
+        "unnecessary_executed": -1.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 1.0
+      }
+    },
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "confirmed",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "contradicted",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "contradicted",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "confirmed",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "confirmed",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "contradicted",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "contradicted",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "confirmed",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "confirmed",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "contradicted",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "contradicted",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "confirmed",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 1.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": -1.0,
+        "guard_denials": 1.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "confirmed",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 1.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 1.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": -1.0,
+        "guard_denials": 1.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "contradicted",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "contradicted",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "confirmed",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 1.0,
+        "qualified": 1.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 1.0,
+        "unnecessary_proposed": -1.0,
+        "unnecessary_executed": -1.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 1.0
+      }
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "confirmed",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": -1.0,
+        "qualified": -1.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 1.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 1.0,
+        "missed_repair": 0.0,
+        "post_action_verified": -1.0
+      }
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "contradicted",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "contradicted",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "confirmed",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": -1.0,
+        "qualified": -1.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 1.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 1.0,
+        "missed_repair": 0.0,
+        "post_action_verified": -1.0
+      }
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "confirmed",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": 0.0
+      }
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "contradicted",
+      "repeat": 1,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "contradicted",
+      "repeat": 2,
+      "complete": true,
+      "guarded_minus_unguarded": {
+        "post_state_gate": 0.0,
+        "proposal_contract_pass": 0.0,
+        "qualified": 0.0,
+        "diagnosis_pass": 0.0,
+        "served_opportunities": 0.0,
+        "unnecessary_proposed": 0.0,
+        "unnecessary_executed": 0.0,
+        "guard_denials": 0.0,
+        "missed_repair": 0.0,
+        "post_action_verified": null
+      }
+    }
+  ],
+  "root_summaries": [
+    {
+      "root": "gateway-legacy",
+      "branch": "confirmed",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": -0.5,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": -0.5,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": 0.5,
+          "paired_count": 2
+        }
+      }
+    },
+    {
+      "root": "gateway-legacy",
+      "branch": "contradicted",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    },
+    {
+      "root": "gateway-expanded",
+      "branch": "confirmed",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": 0.0,
+          "paired_count": 2
+        }
+      }
+    },
+    {
+      "root": "gateway-expanded",
+      "branch": "contradicted",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    },
+    {
+      "root": "worker-legacy",
+      "branch": "confirmed",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": 0.0,
+          "paired_count": 2
+        }
+      }
+    },
+    {
+      "root": "worker-legacy",
+      "branch": "contradicted",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    },
+    {
+      "root": "worker-expanded",
+      "branch": "confirmed",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 1.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": -1.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 1.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": 0.0,
+          "paired_count": 2
+        }
+      }
+    },
+    {
+      "root": "worker-expanded",
+      "branch": "contradicted",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    },
+    {
+      "root": "store-legacy",
+      "branch": "confirmed",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": -0.5,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": 0.0,
+          "paired_count": 2
+        }
+      }
+    },
+    {
+      "root": "store-legacy",
+      "branch": "contradicted",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    },
+    {
+      "root": "store-expanded",
+      "branch": "confirmed",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": -0.5,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": -0.5,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.5,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": -0.5,
+          "paired_count": 2
+        }
+      }
+    },
+    {
+      "root": "store-expanded",
+      "branch": "contradicted",
+      "assigned_pairs": 2,
+      "complete_pairs": 2,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 2
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    }
+  ],
+  "family_summaries": [
+    {
+      "family": "gateway",
+      "branch": "confirmed",
+      "assigned_pairs": 4,
+      "complete_pairs": 4,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "proposal_contract_pass": {
+          "mean": 0.25,
+          "paired_count": 4
+        },
+        "qualified": {
+          "mean": 0.25,
+          "paired_count": 4
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "served_opportunities": {
+          "mean": 0.25,
+          "paired_count": 4
+        },
+        "unnecessary_proposed": {
+          "mean": -0.25,
+          "paired_count": 4
+        },
+        "unnecessary_executed": {
+          "mean": -0.25,
+          "paired_count": 4
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "post_action_verified": {
+          "mean": 0.25,
+          "paired_count": 4
+        }
+      }
+    },
+    {
+      "family": "gateway",
+      "branch": "contradicted",
+      "assigned_pairs": 4,
+      "complete_pairs": 4,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    },
+    {
+      "family": "worker",
+      "branch": "confirmed",
+      "assigned_pairs": 4,
+      "complete_pairs": 4,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.25,
+          "paired_count": 4
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "served_opportunities": {
+          "mean": 0.5,
+          "paired_count": 4
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "unnecessary_executed": {
+          "mean": -0.5,
+          "paired_count": 4
+        },
+        "guard_denials": {
+          "mean": 0.5,
+          "paired_count": 4
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "post_action_verified": {
+          "mean": 0.0,
+          "paired_count": 4
+        }
+      }
+    },
+    {
+      "family": "worker",
+      "branch": "contradicted",
+      "assigned_pairs": 4,
+      "complete_pairs": 4,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    },
+    {
+      "family": "store",
+      "branch": "confirmed",
+      "assigned_pairs": 4,
+      "complete_pairs": 4,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "proposal_contract_pass": {
+          "mean": -0.25,
+          "paired_count": 4
+        },
+        "qualified": {
+          "mean": -0.25,
+          "paired_count": 4
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "served_opportunities": {
+          "mean": 0.25,
+          "paired_count": 4
+        },
+        "unnecessary_proposed": {
+          "mean": 0.25,
+          "paired_count": 4
+        },
+        "unnecessary_executed": {
+          "mean": -0.25,
+          "paired_count": 4
+        },
+        "guard_denials": {
+          "mean": 0.5,
+          "paired_count": 4
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "post_action_verified": {
+          "mean": -0.25,
+          "paired_count": 4
+        }
+      }
+    },
+    {
+      "family": "store",
+      "branch": "contradicted",
+      "assigned_pairs": 4,
+      "complete_pairs": 4,
+      "paired_differences": {
+        "post_state_gate": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "proposal_contract_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "qualified": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "diagnosis_pass": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "served_opportunities": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "unnecessary_proposed": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "unnecessary_executed": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "guard_denials": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "missed_repair": {
+          "mean": 0.0,
+          "paired_count": 4
+        },
+        "post_action_verified": {
+          "mean": null,
+          "paired_count": 0
+        }
+      }
+    }
+  ],
+  "fresh_repeat_disagreement": [
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "confirmed",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": true,
+        "qualified": true,
+        "diagnosis_pass": false,
+        "served_opportunities": true,
+        "unnecessary_proposed": true,
+        "unnecessary_executed": true,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": true
+      },
+      "proposal_sequence_disagrees": true
+    },
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "confirmed",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "contradicted",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "gateway-legacy",
+      "family": "gateway",
+      "branch": "contradicted",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "confirmed",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "confirmed",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "contradicted",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "gateway-expanded",
+      "family": "gateway",
+      "branch": "contradicted",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "confirmed",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "confirmed",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "contradicted",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "worker-legacy",
+      "family": "worker",
+      "branch": "contradicted",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "confirmed",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": true,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": true
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "confirmed",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "contradicted",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "worker-expanded",
+      "family": "worker",
+      "branch": "contradicted",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "confirmed",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": true,
+        "qualified": true,
+        "diagnosis_pass": false,
+        "served_opportunities": true,
+        "unnecessary_proposed": true,
+        "unnecessary_executed": true,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": true
+      },
+      "proposal_sequence_disagrees": true
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "confirmed",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": true,
+        "qualified": true,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": true,
+        "unnecessary_executed": false,
+        "guard_denials": true,
+        "missed_repair": false,
+        "post_action_verified": true
+      },
+      "proposal_sequence_disagrees": true
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "contradicted",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "store-legacy",
+      "family": "store",
+      "branch": "contradicted",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "confirmed",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "confirmed",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": true,
+        "qualified": true,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": true,
+        "unnecessary_executed": false,
+        "guard_denials": true,
+        "missed_repair": false,
+        "post_action_verified": true
+      },
+      "proposal_sequence_disagrees": true
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "contradicted",
+      "arm": "unguarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    },
+    {
+      "root": "store-expanded",
+      "family": "store",
+      "branch": "contradicted",
+      "arm": "guarded",
+      "complete": true,
+      "outcome_disagrees": {
+        "post_state_gate": false,
+        "proposal_contract_pass": false,
+        "qualified": false,
+        "diagnosis_pass": false,
+        "served_opportunities": false,
+        "unnecessary_proposed": false,
+        "unnecessary_executed": false,
+        "guard_denials": false,
+        "missed_repair": false,
+        "post_action_verified": false
+      },
+      "proposal_sequence_disagrees": false
+    }
+  ],
+  "inference": "descriptive; six authored roots clustered in three families; no population interval"
+}

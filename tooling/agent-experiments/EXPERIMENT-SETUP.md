@@ -94,6 +94,8 @@ Keep evaluator truth, future cases and protected labels out of actor inputs. Rec
 
 ## 4. Pass offline checks before paying for qualification
 
+Exercise the actual public-plan validator locally before claiming a machine: validate the readable sections, immutable-URL format and run TLDR against the intended plan. This catches document-schema defects during preparation; it does not replace public registration and live page readback at admission. Include this check in the owned instrument tests, alongside source/assignment hashes and the actual worker entry point.
+
 Use known-answer fixtures and deliberately wrong policies to verify that the task and evaluator discriminate the intended behavior. Check treatment masks, paired inputs, timing boundaries, lineage/reset, case-ID alignment, duplicates, missing votes, assigned denominators and budget/stop behavior. Recompute scores from saved raw decisions through an independent reference calculation where practical; identify same-author audits honestly.
 
 Fault-check the launch path: missing/stale plan, mismatched source/model/config, expired/conflicting claim, missing budget authority and duplicate attempt must prevent dispatch. Inspect the actual launcher: an available helper does not prove every entry point invokes it. Do not use a separate CLI smoke path to bypass gates.
