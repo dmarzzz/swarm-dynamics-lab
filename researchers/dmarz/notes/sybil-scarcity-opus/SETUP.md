@@ -16,8 +16,8 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 |---|---|---|---|
 | G0 Question and applicable research gates | pass for exploratory scope only | [README](README.md), [plan](../sybil-scarcity-plan/README.md); 2026-10-04, dmarz/pipeline-scarcity (same researcher) | Formal survey and hypothesis gates are not met; S2 stays disabled |
 | G1 Plan written before implementation | pass | README, [preregistration](preregistration.md), [AMENDMENTS](AMENDMENTS.md), [design.yaml](design.yaml) and this record were committed before any file under `src/`; 2026-10-04, dmarz/pipeline-scarcity | — |
-| G2 Instrument and offline checks | pending | Not built yet at the time of this entry | Implement; run selftest, offline S0, rehearsal and the manifest check; record results here |
-| G3 Current attempt admission | pending; not requested | No hub registration, no server claim, no queue item, no credential use | Pre-run review on main; same-researcher check by dmarz/fleet-monitor; run request in the private queue; launcher setup at the pinned commit |
+| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, dmarz/pipeline-scarcity, at commit `36a03510`, source hash `82efefd1…`: selftest 33 of 33; offline S0 168 of 168 with 20 of 20 invariants; manifest check equal; rehearsal 17 of 17 checks (full chain exit 0 and verify ok; failed-qualification chain stops at Q0 with exit 3 and no S1 run). Details in the [pre-run review](reviews/chain-001-pre.md) | Not tested: Python 3.12, the real hub, the private launcher, a real model response. The launcher's `setup` reruns the selftests on the server |
+| G3 Current attempt admission | pending; not requested | [Pre-run review](reviews/chain-001-pre.md) on main with the pinned commit. No hub registration, no server claim, no queue item, no credential use | Same-researcher check by dmarz/fleet-monitor; run request in the private queue; launcher setup at the pinned commit |
 | G4 Qualification before scientific escalation | not run | S0, P0 and Q0 have not run | Runs inside the chain; a failed gate stops the chain |
 | G5 Reconciliation and closeout | not applicable yet | No attempt exists | After the chain: `chain.py verify`, post-mortem, results, claim release |
 
@@ -30,7 +30,7 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 - **Root-range recheck, 2026-10-04, at main `69cb6a28`.** The plan required a fresh scan before use. Method: every `.yaml`, `.yml`, `.md`, `.py`, `.toml`, `.sh` and `.txt` file under `researchers/`, `experiments/`, `tooling/`, `hypotheses/`, `tasks/`, `surveys/` and `synthesis/` was searched for 7790, 7791, 7800 to 7823 and 7900 to 7907 as whole numbers; every `.json` and `.jsonl` file under 5 MB was searched for `task`, `world`, `root`, `seed`, `world_id`, `task_id` or `world_seed` keys with those values; design, preregistration, manifest, plan, config and experiment files were also searched for number ranges that span 7790 to 7907. 2,930 files scanned; the plan directory and this directory excluded. Result: 0 exact matches and 0 spanning ranges. The scan covers this repository only; it is not a reservation, and a private or unpushed study could still use these numbers.
 - Agent definition: one stateless synthesizer call per assignment; system prompt and schema of sybil-scale-api; model `claude-opus-5-5`, effort low.
 - Versions: `requirements.txt` pinned; source hash from `study.source_hash()` over `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`; pinned commit and hash in [READY.yaml](READY.yaml) and the pre-run review.
-- Offline checks: pending (G2).
+- Offline checks: `src/selftest.py` (33 tests: parent-simulator equality, byte-identical 81-carrier packets, prompt and schema equality, all S0 invariants, carrier nesting, leak checks, grading, clean fixtures, qualification thresholds, probe gate, request body keys, thinking and redacted-thinking blocks, refusal and other failure categories, transport retry rule, ledger caps, worker failure accounting, coordinator gates, chain stops, projection gate, verify tampering, analysis bounds, frames and GIF, manifest regeneration, READY consistency, no secret in source).
 - Launcher gate integration: `coordinator.enqueue` is the only path that queues a stage; `chain.py` is the only path that executes a queued stage.
 - Visualization: [VISUALIZATION.md](VISUALIZATION.md).
 
@@ -40,7 +40,7 @@ Operations entry: manual, through the generic private launcher named in [RUN.md]
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|
-| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | pending (G2) |
+| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | all four passed locally at `36a03510` |
 | Prepare named stage | `python3 scripts/run-ready-chain.py sybil-scarcity-opus <commit> setup --host <server>` (private launcher) | not run |
 | Dispatch named stage | `python3 scripts/run-ready-chain.py sybil-scarcity-opus <commit> chain --host <server> --confirm-paid` | not run |
 | Resume interrupted execution | unsupported by design: no automatic re-execution; a repair is a new attempt number with its own pre-run review | — |
@@ -56,7 +56,9 @@ Operations entry: manual, through the generic private launcher named in [RUN.md]
 
 ## Attempt and repair history
 
-No attempt exists.
+No attempt exists. Offline checks on the build machine are software checks, not attempts: the offline S0 (`offline-s0-001`, 168 of 168) and the rehearsal wrote only to temporary directories and reported to no real hub.
+
+Plan and design history before the pin, all on 2026-10-04 and before any run: first plan push `15181a01`; dollar cap changed from USD 390 to USD 220 with a projection gate before S1 (dmarz/pipeline); transport retry rule and attempt cap added (relayed by dmarz/fleet-monitor); parent file hashes and the answer-length limit added to `design.yaml`; code, manifest and READY file pushed at `36a03510`, which is the pinned commit.
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|

@@ -1,0 +1,85 @@
+# Pre-run assessment: chain-001 (S0, P0, Q0, S1)
+
+- Experiment / owner / stage: sybil-scarcity-opus / dmarz / one chain of four stages: S0 scripted, P0 one-call probe, Q0 clean qualification, S1 comparison. Batches `s0-001`, `p0-001`, `q0-001`, `s1-001`. Written 2026-10-04 by the builder, dmarz/pipeline-scarcity.
+- Parent attempt and previous post-mortem: none. This is the first attempt of this study. Nothing has run on a server and no model call has been made. Read instead: the [sybil-scale-api S1 post-mortem](../../sybil-scale-api/reviews/s1-001-post.md), the [sybil-scale-xl probe record](../../sybil-scale-xl/reviews/q0-a1-pre.md) and the [cross-lane lessons](../../pipeline/LESSONS.md).
+- Status: **ready** for the chain, once (a) dmarz/fleet-monitor has done its same-researcher check, (b) the request is in the private run queue, and (c) the launcher's `setup` passes on the server at the pinned commit. The builder launches nothing.
+- Review status: exploratory. Cross-researcher review is waived by dmarz for these runs (relayed by dmarz/fleet-monitor, 2026-10-04). dmarz/fleet-monitor's reading is a same-researcher check. This run has not been independently reviewed. This assessment is written by the agent that built the package; it is not a review by anyone else.
+- **Pinned commit: `36a035103efef5fb8db4bf6788688bfd7ade94b4`. Source hash: `82efefd1159ad26c22ae70e53f5e3e71e2e5a9a1f7ab0a40a13ba18043b50be7`** (`study.source_hash()` over `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`; the same value is in [READY.yaml](../READY.yaml) and [manifest.json](../manifest.json)). Later commits that touch only documents do not change this hash.
+- Question and decision: does cutting the truthful carriers of each rare fact from 81 to 1, with graph, audits, admission and attacker reports identical, lower the synthesizer's specialist accuracy? It tells us whether the high accuracy of the scale study rests on repetition.
+- Expected finding: a decrease at random / 108 checks / pass 10%. The scripted plurality rule gives 0% at 1 carrier and 100% at 81 on the engineering roots. Plausible negative result: Opus uses the badges or the pattern of identical false claims and keeps accuracy high with few carriers. The run is uninformative if Q0 fails (the model cannot extract a single truthful report from a clean packet), if the 81-carrier cells are far below the earlier anchors, or if invariance checks report violations.
+
+## Design and assessment
+
+- Closest evidence and comparator: [sybil-scale-api](../../sybil-scale-api/RESULTS.md) (98.6% at 972 identities, 108 checks, Haiku) and [sybil-budget-api](../../sybil-budget-api/RESULTS.md). Within-study comparators: the 81-carrier cell of the same root, random against coverage at equal checks, and the same-packet plurality rule.
+- Units: 24 world roots (7800 to 7823), paired across all 60 conditions. Calls, identities and skills are not samples. 1,440 assignments; 1,207 distinct packets, so 233 assignments share a packet with another cell. They are recorded by hash and each still gets its one planned call.
+- Coverage and boundaries: engineering roots 7790 and 7791 (S0, and the P0 packet from 7790), qualification roots 7900 to 7907, S1 roots 7800 to 7823, holdout 10000 to 19999 unopened. A scan of the repository on 2026-10-04 found no other use of these numbers ([SETUP.md](../SETUP.md)).
+- What the builder has already seen of S1 roots: the S1 packets were generated offline for the manifest and for the rehearsal, and the rehearsal stub answered them with the scripted plurality rule. One layout check rendered scripted answers for 8 S1 roots. These are outputs of a fixed rule, not model outcomes. No model has read any packet of this study.
+- Manipulation check: S0 verifies in code that carriers are nested prefixes of one permutation per root and skill; that only skill and claim of honest noncarrier reports change; that audits, admission and packet order recomputed on each manipulated world equal the base trace; and that the 81-carrier packet is byte-identical to the packet built by the unmodified sybil-scale-api code (parent files pinned by SHA-256 in `design.yaml`).
+- Baseline fairness and information: every condition has 972 reports in the world and 486 in the packet. The manipulation also raises the number of common-skill reports and changes the truthful-to-false ratio of rare reports; that is part of the specified treatment.
+- Evaluator and truth separation: grading uses hidden truth; packets carry only node, skill, claim, age, activity and verification. S0 and a selftest check the serialized actor input for forbidden fields. A manipulated wrong answer and an all-null answer are graded as wrong and as abstention.
+- Clean competence: Q0, 48 clean packets (8 roots × 1, 9 or 81 carriers × all present or one rare fact withheld). The packets are all-truthful and carry `unchecked` badges; the single-carrier profile asks the model to report a value supported by one unverified report. If Opus abstains there, Q0 fails and S1 does not run. That would be a finding about the instrument, and its repair is a new attempt.
+- Primary metric: specialist accuracy, 1 carrier minus 81 carriers at random / 108 / pass 10%, mean paired difference over 24 roots, 10,000-draw root bootstrap with seed 20261004. Practical marker 10 points. Missing outcomes are bounded in [0, 1] and never dropped or set to zero. All 60 cells are reported with 24-root denominators. Exploratory and descriptive; no confirmatory claim.
+- Timing semantics: one independent call per packet; no rounds and no memory. The replay follows completed calls.
+
+## Changes and unresolved issues
+
+| Issue / prior evidence | Change or diagnostic | Expected effect | Acceptance check | Owner |
+|---|---|---|---|---|
+| Plan used Haiku; amendment says Opus 5.5 for every paid stage | Adapter of sybil-scale-xl A1: body has exactly `model`, `max_tokens`, `system`, `messages`, `output_config`; effort low; 8,000 output tokens | Requests accepted | Selftest on body keys; P0 | builder |
+| q0-006 of another study lost 24 calls to a rejected request shape | One-call probe P0 before Q0 | A bad request shape costs one call | P0 gate | chain |
+| Adapters differed on `redacted_thinking` | Both thinking block types are dropped | No false `invalid_structured_answer` | Selftest with a redacted block | builder |
+| One 429 or 529 would end a 1,440-call stage | Transport retry rule: 2 retries, 429 and 529 only, 2 s then 6 s, `retry-after` up to 20 s, inside the request timeout; attempt cap 1,640 in the ledger | Short rate-limit or overload rejections do not stop the stage | Selftests for each case | builder |
+| Caps are hashed and cannot be raised after Q0 | Caps and timeouts sized for the whole chain now; projection gate before S1 | S1 does not start if Q0's cost projects above the remaining cap | Selftest and status entry `projection` | chain |
+| Workspace rate limits are unknown to the builder | None possible offline. At 4 in flight the chain sends about 60 requests and about 1.4 million input tokens per minute | Possible 429s; retried at most twice each | Operator checks the workspace limit before launch | operator |
+| Shared USD 500 dmarz allowance | Not reconciled by the builder | — | dmarz/pipeline and dmarz/fleet-monitor before queueing | lead |
+| S0 and the selftests import `../sybil-scale-api/src` | Stated in RUN.md | S0 fails closed if the directory is missing | `setup` runs the selftests on the server | operator |
+
+## Frozen execution plan
+
+- Protocol and versions: [preregistration.md](../preregistration.md), [AMENDMENTS.md](../AMENDMENTS.md), [design.yaml](../design.yaml); commit and source hash above. Model `claude-opus-5-5`, `output_config.effort: low`, thinking always on (the request never carries `thinking`, `temperature`, `top_p`, `top_k`, `tool_choice`, a prefill or `fallbacks`), 8,000 `max_tokens`, answer text limited to 500 characters, system prompt and schema equal to sybil-scale-api (selftest). Dependencies: `requirements.txt` (PyYAML 6.0.1, Pillow 11.3.0, numpy 2.2.6), Python 3.12 on the server.
+- Assignments: [manifest.json](../manifest.json), digest `e65bcfdb567c159a9952436790a6acff961ebe4b55a876819305fa8e417242e2`, one `<id> <packet sha256>` line per assignment in dispatch order.
+
+| Stage | Assignments | Model calls (hard cap) | Distinct packets | Stage digest (first 16) |
+|---|---|---|---|---|
+| S0 | 168 | 0 (0) | 143 | `774eddf93ce36b72` |
+| P0 | 1 | 1 (1) | 1 | `e9d0744ef549c631` |
+| Q0 | 48 | 48 (48) | 48 | `709f4a58c44ff275` |
+| S1 | 1,440 | 1,440 (1,440) | 1,207 | `a258c2e246ee3f0f` |
+| Total | | 1,489 (1,489) | | |
+
+- Exact command on the server: `python src/chain.py run --stages S0,P0,Q0,S1`, started by `python3 scripts/run-ready-chain.py sybil-scarcity-opus 36a035103efef5fb8db4bf6788688bfd7ade94b4 chain --host <server> --confirm-paid` after `... setup --host <server>` ([RUN.md](../RUN.md)).
+- Gates and what happens when one fails:
+  - Before every stage `coordinator.enqueue` requires exactly one run of the previous stage at this source hash, `done`, `invalid == 0`, `qualification_passed == 1`, and refuses a batch name that exists. A refusal stops the chain with exit code 3; nothing is queued.
+  - S0 fails if any of 168 rows is invalid, the scripted qualification fails or any of 20 invariants is false. Nothing paid has happened.
+  - P0 fails unless the one response parses, the model id matches, usage is reported, the stop reason is `end_turn` and the six values equal the expected values. Cost of a failure: one call.
+  - Q0 fails unless 48 of 48 are valid and each carrier profile of 16 has fields ≥ 95%, exact packets ≥ 90% and null on all 8 withheld rare fields. S1 is never queued.
+  - Before S1: 1,440 × Q0's mean actual cost per call must be at most the cap that remains in the ledger; otherwise the chain stops with `projection_exceeds_cap` and S1 is not queued.
+  - In any stage the first failed call stops new dispatch, calls in flight finish, the rest are recorded `not_started`, and the hub run ends `failed` with episodes, invalid, model_calls, input_tokens, output_tokens, cost_usd and transport_attempts reported.
+- Hard maximums (all in the hashed design): calls P0 1, Q0 48, S1 1,440, total 1,489; transport attempts 1,640; 4 requests in flight; 300 s per request including retries and waits; 14,400 s per stage; 18,000 s for the chain, of which the last 600 s are kept for draining and uploads; USD 220 of settled cost plus open reservations.
+- Cost estimate. Basis: 23,536 input tokens and 38 output tokens measured by the sybil-scale-xl probe on a 486-report packet of this format (a P0 packet here serializes to 47,984 characters).
+  - Input: 1,489 × 23,536 = 35,045,104 tokens × USD 4 per million = USD 140.18 (S1 USD 135.57, Q0 USD 4.52, P0 USD 0.09).
+  - Output at 40 to 500 tokens per call: 1,489 × 40 × USD 20 per million = USD 1.19, up to 1,489 × 500 × USD 20 per million = USD 14.89.
+  - **Expected: USD 141 to 155.**
+  - Reservation per call: (int(23,536 × 1.02) + 64) × USD 4 per million + 8,000 × USD 20 per million = USD 0.0963 + USD 0.1600 = USD 0.2563. At most four are open at once (USD 1.03); they are inside the cap.
+  - Cap USD 220 = USD 140.18 input + USD 79.82 output. USD 79.82 is 3,991,000 output tokens, about 2,680 per call over 1,489 calls, roughly 70 times the probe's 38. Worst case for spend: the ledger refuses any reservation that would take settled cost plus open reservations above USD 220, and a call cannot cost more than its reservation, so settled spend cannot exceed USD 220. Ceiling without the dollar cap, every call at the full output limit: 1,489 × USD 0.2563 = USD 381.60.
+  - As relayed, dollars are not the gate for these runs; the call caps are. Remaining shared allowance: not reconciled by the builder.
+- Expected wall time (builder's estimate, not measured on a server): S0 about 1 minute (16 to 23 s locally). P0 about 5 s. Q0: 48 calls at 4 in flight and 3.3 to 6 s per call (2.9 s measured for the message in the probe, plus the token count request) is 40 to 72 s. S1: 1,440 calls ÷ 4 × 3.3 to 6 s = 20 to 36 minutes, plus about 1 to 2 minutes to prepare 48 world and strength pairs and about 1 minute for the replay and uploads. **Chain: about 25 to 42 minutes.** The stage limit allows an average of 40 s per call.
+- Retry, stop and missing data: no answer retries. Transport retry only as in the table above. A failed stage is not rerun; a repair is a new attempt number with its own pre-run review, and after a failed Q0 it uses fresh qualification roots. Missing S1 outcomes stay in the denominator with [0, 1] bounds.
+- Regression and competence checks, run by the builder on 2026-10-04 on macOS with Python 3.9.6 at the pinned source hash, no network and no model call:
+  - `python3 src/selftest.py`: `Ran 33 tests in 121.674s`, `OK`.
+  - `python3 src/worker.py --stage S0 --attempt offline-s0-001`: 168 planned, 168 graded, 0 invalid, 0 model calls, gate passed, 20 of 20 invariants true, 16.1 s.
+  - `python3 src/manifest.py --check`: `manifest_matches: true`, counts S0 168, P0 1, Q0 48, S1 1,440.
+  - `python3 src/rehearse.py --hub-dir <local copy>`: passed, 17 of 17 checks, 3 min 24 s in total. Full chain against a throwaway hub on 127.0.0.1 with a plurality stub: exit 0, state `completed`, calls 0 / 1 / 48 / 1,440, ledger 1,489 calls, 157.8 s (S1 114.1 s), `chain verify` ok for all four stages in 3.4 s, replay of `s0-001` refused. Chain with a stub that invents a value for a withheld fact: exit 3, state `stopped_at_gate` at Q0 with reason `qualification_failed`, Q0 run `failed` with usage metrics, 49 calls in the ledger, no S1 run on the hub, 42.5 s. Stub dollars are not real.
+  - Not tested: Python 3.12 (not installed on the build machine), numpy 2.2.6 (2.0 installed), the real hub, the private launcher, and any real model response.
+- Server claim and credentials: claim id `dmarz-sybil-scarcity-opus`, taken by the operator; the server is a launcher parameter. Credentials by alias only: `SWARM_MODEL_API_KEY`, `SWARM_MODEL_WORKSPACE_ID`, in the process environment, never in a file, an argument or a log. Outputs go to `STUDY_RESULTS_DIR` and to the hub run's artifacts.
+- Gate decision and next action if this attempt fails: the chain stops by itself. Preserve the status file, the ledger and every artifact; run `status` and `verify`; write the post-mortem; classify the failure per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md). A valid null or adverse S1 result completes the study.
+
+## Visualization mapping
+
+[VISUALIZATION.md](../VISUALIZATION.md), mapping v1, bound to the source hash above.
+
+- Bindings: hub runs of `sybil-scarcity-opus` with batch `s0-001`, `p0-001`, `q0-001`, `s1-001`; rows bind root, policy, checks, strength and carrier count.
+- Signals and encodings: specialist accuracy against carrier count (log-spaced x) in one panel per check strength, policy by colour, checks by line style, root-bootstrap bars and same-packet plurality squares at 108 checks; truth availability after admission below; a 60-cell table of valid over assigned roots; an invariance panel with attacker seat share and a count of mismatches across carrier counts; the primary contrast in the header with bounds while incomplete.
+- Time axis: completed calls, not agent time. Cells without a completed row show no point; failed cells are red in the table.
+- Deliverables: `initial_frame.png`, `progress.png` at most every 20 s, `final_frame.png`, `replay.gif` with at most 33 frames, all 1800×1200; history in `episodes.jsonl.gz`, `assignments.jsonl.gz`, `worlds.jsonl.gz`, `analysis.json`.
+- Fallback and validation: PNG is the static fallback. The selftest renders empty, partial, failed and complete states and decodes every GIF frame. After the run, compare the final frame with `analysis.json` and check playback on the hub page.
