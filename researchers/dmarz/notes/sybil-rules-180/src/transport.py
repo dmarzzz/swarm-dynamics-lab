@@ -11,8 +11,25 @@ Worker side
   run_task       executes one task with the frozen adapter
   serve          the worker process: take one session from the hub queue, execute its tasks in order
 
-A fence is `<session run id>#<sequence number>`. A worker executes each fence at most once and never goes
-back; a task whose result does not arrive by its deadline is recorded as lost and is never re-sent.
+A task fence is `<session run id>#<sequence number>`; a decision fence is the call id
+`<batch>:<economy>.r<round>.<owner>`, reserved once in the coordinator's ledger. A worker executes each task
+fence at most once, never sends a call id twice, and never sends a call after the task's `expires` time.
+
+Lost tasks (reviewer requirement 2). A task is lost when its result has not arrived by the task deadline, or
+earlier when the worker's session stops heart-beating on the hub for `worker_silent_seconds` (or leaves the
+running state). The coordinator then re-issues, once, only that task's call ids that have no recorded response,
+with the same call ids, to a surviving worker (the same one only if no other is alive), and stops giving the
+silent worker work. Each re-issued call id also gets a reservation `reissue-<batch>:<unit>` in the ledger
+(stage key REISSUE, its own cap), because the lost send may have been billed. The first response recorded
+for a call id is the only one ever used; a late result of an abandoned task is never read. A call id with no
+response after the re-issue is recorded as lost (`worker_task_lost`): in S1 a forced null owner-round.
+
+Hub polling (reviewer requirement 3): every `hub_poll_seconds` (3 s); after any hub error the interval
+doubles up to `hub_backoff_max_seconds` and returns to 3 s after the next clean poll.
+
+One reservation authority (reviewer requirement 7): the coordinator's FastLedger is the only ledger of the
+study. Workers hold no ledger: each task carries per-call permits (call id and reserved amount) and the
+adapter on a worker can reserve only those, each once. The adapter's billing pause is per worker process.
 The servers never talk to each other and the coordinator never holds the model credential.
 """
 import gzip
@@ -33,6 +50,29 @@ SESSION_ROLE = 'model-worker'
 TASK_VERSION = 1
 LOST = 'worker_task_lost'
 AMBIGUOUS = 'ambiguous_send_not_retried'
+EXPIRED = 'task_expired_not_sent'
+REISSUE_PREFIX = 'reissue-'
+
+
+class HubTrouble(Exception):
+    """The hub did not answer properly (as opposed to: the artifact does not exist yet)."""
+
+
+class Poller:
+    """Fixed polling interval; after a hub error the interval doubles up to `cap`, then returns to `base`."""
+
+    def __init__(self, base, cap, sleep=time.sleep):
+        self.base, self.cap, self.sleep = float(base), float(cap), sleep
+        self.delay, self.errors = float(base), 0
+
+    def wait(self, trouble=False):
+        if trouble:
+            self.errors += 1
+            self.delay = min(self.cap, max(self.base, self.delay * 2))
+        else:
+            self.delay = self.base
+        self.sleep(self.delay)
+        return self.delay
 
 
 def host_name():
@@ -185,12 +225,17 @@ def _object(obj):
     return obj
 
 
-def run_task(task, api):
-    """Execute one task. Returns the result value. Never raises for a failed call."""
+def run_task(task, api, sent=None, clock=time.time):
+    """Execute one task. Returns the result value. Never raises for a failed call.
+
+    `sent`: call ids this worker has already sent (a set it shares across tasks); such a call is never sent
+    again. A call is not sent after the task's `expires` time."""
     budget = api.b
+    sent = set() if sent is None else sent
     api.ledger = PermitLedger({c['call_id']: c['micro_usd'] for c in task['calls']}, max_attempts_per_call(budget))
     before = dict(api.billing)
     stop = threading.Event()
+    guard = threading.Lock()
     started = time.time()
 
     def one(c):
@@ -199,6 +244,14 @@ def run_task(task, api):
         if stop.is_set():
             row['category'] = 'not_started'
             return row
+        if task.get('expires') is not None and clock() > task['expires']:
+            row['category'] = EXPIRED
+            return row
+        with guard:
+            if c['call_id'] in sent:
+                row['category'] = AMBIGUOUS
+                return row
+            sent.add(c['call_id'])
         try:
             answer, account = api.call(task['systems'][c['system']], c['user'], c['call_id'], _object)
             row.update(ok=True, answer=answer, accounting=account)
@@ -231,16 +284,18 @@ def _read_gz(path):
 
 
 def _fetch(sr, run_id, name, dest):
-    """Download an artifact of a run, or return None while it does not exist (or the hub cannot be reached)."""
+    """Download an artifact of a run. None while it does not exist (HTTP 404); HubTrouble on any other failure."""
     try:
         sr.download('/a/' + urllib.parse.quote(run_id) + '/' + urllib.parse.quote(name), dest)
         return _read_gz(dest)
-    except Exception:
+    except Exception as exc:
         try:
             Path(dest).unlink()
         except OSError:
             pass
-        return None
+        if ': 404' in str(exc):
+            return None
+        raise HubTrouble(type(exc).__name__) from None
 
 
 def _upload(sr, run_id, path, name, sleep=time.sleep, tries=40):
@@ -257,26 +312,29 @@ def _upload(sr, run_id, path, name, sleep=time.sleep, tries=40):
     raise RuntimeError('artifact_not_durably_acknowledged')
 
 
-def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds=10800, sleep=time.sleep, stop=None,
-          api_clock=time.monotonic, api_sleep=time.sleep):
+def serve(sr, work_dir, opener=None, poll=None, attach_seconds=None, idle_seconds=10800, sleep=time.sleep, stop=None,
+          api_clock=time.monotonic, api_sleep=time.sleep, backoff_max=None):
     """The model worker. Returns a process exit code: 0 session closed, 4 refused, 5 nothing to attach to."""
     work_dir = Path(work_dir)
     work_dir.mkdir(parents=True, exist_ok=True)
     budget = study.design()['budget']
     attach_seconds = budget['worker_attach_seconds'] if attach_seconds is None else attach_seconds
+    poll = budget['hub_poll_seconds'] if poll is None else poll
+    poller = Poller(poll, budget['hub_backoff_max_seconds'] if backoff_max is None else backoff_max, sleep)
     waited = 0.0
     run = None
     while run is None:
         if stop is not None and stop.is_set():
             return 5
+        trouble = False
         try:
             run = sr.next_run(study.EXPERIMENT)
         except Exception:
-            run = None
+            run, trouble = None, True
         if run is None:
             if waited >= attach_seconds:
                 return 5
-            sleep(min(5.0, max(poll, 0.05))); waited += min(5.0, max(poll, 0.05))
+            waited += poller.wait(trouble)
     p = run.params or {}
     if p.get('role') != SESSION_ROLE or p.get('source_hash') != study.source_hash():
         run.fail('worker refused this run: not a worker session at this source hash', model_calls=0)
@@ -287,17 +345,19 @@ def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds
         run.fail('worker cannot start: ' + exc.category, model_calls=0)
         return 4
     journal = work_dir / (run.id.replace('/', '__') + '.journal.jsonl')
-    seen = {}
+    seen, sent = {}, set()
     if journal.exists():
         for line in journal.read_text().splitlines():
             if line.strip():
                 e = json.loads(line)
                 seen[e['seq']] = e['state']
+                sent.update(e.get('calls') or [])      # a call id this worker may have sent is never sent again
     totals = {'model_calls': 0, 'input_tokens': 0, 'output_tokens': 0, 'cost_usd': 0.0, 'failed_calls': 0, 'tasks': 0}
 
-    def note(seq, state):
+    def note(seq, state, calls=None):
         with journal.open('a') as f:
-            f.write(json.dumps({'seq': seq, 'state': state, 'time': time.time()}) + '\n'); f.flush(); os.fsync(f.fileno())
+            f.write(json.dumps({'seq': seq, 'state': state, 'time': time.time(), 'calls': calls or []}) + '\n')
+            f.flush(); os.fsync(f.fileno())
         seen[seq] = state
 
     seq, idle = 1, 0.0
@@ -306,12 +366,15 @@ def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds
             if stop is not None and stop.is_set():
                 run.fail('worker stopped before its session was closed', **totals)
                 return 5
-            task = _fetch(sr, run.id, f'task-{seq:06d}.json.gz', work_dir / f'{run.id.replace("/", "__")}-task-{seq:06d}.json.gz')
+            try:
+                task, trouble = _fetch(sr, run.id, f'task-{seq:06d}.json.gz', work_dir / f'{run.id.replace("/", "__")}-task-{seq:06d}.json.gz'), False
+            except HubTrouble:
+                task, trouble = None, True
             if task is None:
                 if idle >= idle_seconds:
                     run.fail('worker idle limit reached before its session was closed', **totals)
                     return 5
-                sleep(poll); idle += poll
+                idle += poller.wait(trouble)
                 continue
             idle = 0.0
             if task.get('fence') != f'{run.id}#{seq:06d}' or task.get('source_hash') != study.source_hash():
@@ -329,8 +392,8 @@ def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds
                           'results': [{'call_id': c['call_id'], 'ok': False, 'category': AMBIGUOUS, 'answer': None,
                                        'accounting': {}} for c in task['calls']], 'billing': {}}
             else:
-                note(seq, 'started')
-                result = run_task(task, api)
+                note(seq, 'started', [c['call_id'] for c in task['calls']])
+                result = run_task(task, api, sent)
                 _write_gz(result_path, result)
                 note(seq, 'finished')
                 for r in result['results']:
@@ -358,31 +421,65 @@ def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds
 # ------------------------------------------------------------------ coordinator side
 
 class StageStop(Exception):
-    """Dispatch must stop: an integrity failure, a billing stop, a lost task over the limit, a deadline."""
+    """Dispatch must stop: an integrity failure, a billing stop, no live worker, a deadline."""
     def __init__(self, reason):
         super().__init__(reason)
         self.reason = reason
 
 
 class Dispatcher:
-    """Reserve, hand out, settle. Subclasses implement `_exchange(tasks, timeout)`."""
+    """Reserve, hand out, re-issue lost assignments once, settle. Subclasses implement `_exchange(tasks, timeout)`."""
 
     def __init__(self, ledger, config, slots):
         self.ledger, self.config, self.slots = ledger, config, slots
         self.seq = [0] * slots
         self.hosts = [None] * slots
+        self.dead = set()                  # slots whose worker was lost; they get no further work
         self.attempts = 0
         self.billing = {'billing_pauses': 0, 'billing_pause_seconds': 0.0, 'billing_affected_calls': 0}
+        self.transport = {'tasks': 0, 'lost_tasks': 0, 'reissued_calls': 0, 'reissue_refused': None,
+                          'lost_calls_after_reissue': 0, 'rerouted_calls': 0, 'hub_errors': 0, 'events': []}
 
     def fence(self, slot):
         raise NotImplementedError
 
-    def dispatch(self, batch, calls, in_flight, label=''):
-        """calls: [{'unit', 'slot', 'system', 'user'}]. Returns {unit: {'ok', 'category', 'answer', 'accounting', 'host'}}.
-
-        Raises StageStop only when a reservation is refused before anything is sent."""
+    def _task(self, slot, batch, label, in_flight, items):
         systems = study.SYSTEMS
-        per_slot = [[] for _ in range(self.slots)]
+        self.seq[slot] += 1
+        issued = time.time()
+        self.transport['tasks'] += 1
+        return {'version': TASK_VERSION, 'kind': 'calls', 'fence': self.fence(slot), 'seq': self.seq[slot],
+                'batch': batch, 'label': label, 'source_hash': study.source_hash(), 'in_flight': in_flight,
+                'systems': {k: systems[k] for k in sorted({i['system'] for i in items})}, 'calls': items,
+                'issued': issued, 'expires': issued + self.config['budget']['task_timeout_seconds']}
+
+    def _live(self, exclude=()):
+        live = [k for k in range(self.slots) if k not in self.dead and k not in exclude]
+        return live or [k for k in range(self.slots) if k not in self.dead]
+
+    def _route(self, items_by_planned_slot, exclude=()):
+        """Planned slot when its worker is alive, else the live slot with the fewest assignments so far."""
+        live = self._live(exclude)
+        if not live:
+            raise StageStop('no_live_worker')
+        out = {}
+        for slot, items in sorted(items_by_planned_slot.items()):
+            if slot in live:
+                out.setdefault(slot, []).extend(items)
+        for slot, items in sorted(items_by_planned_slot.items()):
+            if slot not in live:
+                for it in items:
+                    k = min(live, key=lambda j: (len(out.get(j, [])), j))
+                    self.transport['rerouted_calls'] += 1
+                    out.setdefault(k, []).append(it)
+        return out
+
+    def dispatch(self, batch, calls, in_flight, label=''):
+        """calls: [{'unit', 'slot', 'system', 'user'}]. Returns {unit: {'ok', 'category', 'answer', 'accounting', 'host', ...}}.
+
+        Raises StageStop when a reservation is refused before anything is sent, or when no worker is alive."""
+        systems = study.SYSTEMS
+        per_slot = {}
         events, permits = [], []
         for c in calls:
             micro, n = reservation(self.config, systems[c['system']], c['user'])
@@ -396,78 +493,136 @@ class Dispatcher:
         except provider.CallFailure as exc:
             raise StageStop(exc.category) from None
         for c, call_id, micro in permits:
-            per_slot[c['slot']].append({'call_id': call_id, 'system': c['system'], 'user': c['user'], 'micro_usd': micro})
-        tasks = {}
-        for slot, items in enumerate(per_slot):
-            if not items:
-                continue
-            self.seq[slot] += 1
-            tasks[slot] = {'version': TASK_VERSION, 'kind': 'calls', 'fence': self.fence(slot), 'seq': self.seq[slot],
-                           'batch': batch, 'label': label, 'source_hash': study.source_hash(), 'in_flight': in_flight,
-                           'systems': {k: systems[k] for k in sorted({i['system'] for i in items})}, 'calls': items,
-                           'issued': time.time()}
-        results = self._exchange(tasks, self.config['budget']['task_timeout_seconds'])
-        out, settle = {}, []
+            per_slot.setdefault(c['slot'], []).append({'call_id': call_id, 'system': c['system'], 'user': c['user'], 'micro_usd': micro})
+        tasks = {slot: self._task(slot, batch, label, in_flight, items) for slot, items in self._route(per_slot).items()}
+        recorded = {}                                      # call id -> (row, slot, host, reissued); the first response only
+        lost_items = self._collect(tasks, self._exchange(tasks, self.config['budget']['task_timeout_seconds']), recorded, False)
+        if lost_items:
+            lost_items = self._reissue(batch, label, in_flight, lost_items, recorded)
+        return self._settle(permits, recorded, lost_items)
+
+    def _collect(self, tasks, results, recorded, reissued):
+        """Record the rows of returned tasks; mark slots without a result as lost. Returns {slot: [items without a row]}."""
+        missing = {}
         for slot, task in tasks.items():
             result = results.get(slot)
-            rows = {r['call_id']: r for r in (result or {}).get('results', [])} if result and result.get('fence') == task['fence'] else {}
-            host = (result or {}).get('host')
+            ok = bool(result) and result.get('fence') == task['fence']
+            if not ok:
+                self.dead.add(slot)
+                self.transport['lost_tasks'] += 1
+                self.transport['events'].append({'event': 'task_lost', 'fence': task['fence'], 'calls': len(task['calls']),
+                                                 'reissue': reissued, 'time': time.time()})
+                missing[slot] = list(task['calls'])
+                continue
+            host = result.get('host')
             if host:
                 self.hosts[slot] = host
             for k in self.billing:
-                self.billing[k] += ((result or {}).get('billing') or {}).get(k, 0)
+                self.billing[k] += (result.get('billing') or {}).get(k, 0)
+            rows = {r['call_id']: r for r in result.get('results', [])}
             for item in task['calls']:
                 r = rows.get(item['call_id'])
-                unit = item['call_id'].split(':', 1)[1]
                 if r is None:
-                    out[unit] = {'ok': False, 'category': LOST, 'answer': None, 'accounting': {}, 'host': host, 'slot': slot}
-                    continue
-                a = r.get('accounting') or {}
-                for n in range(int(a.get('attempts', 0) or 0)):
-                    settle.append({'type': 'attempt', 'call_id': item['call_id'], 'n': n + 1, 'time': time.time()})
-                if a.get('usage_reported'):
-                    settle.append({'type': 'response', 'call_id': item['call_id'],
-                                   'actual_micro_usd': int(round(a['actual_usd'] * 1e6)),
-                                   'input_tokens': a['input_tokens'], 'output_tokens': a['output_tokens']})
-                out[unit] = {'ok': bool(r['ok']), 'category': r.get('category'), 'answer': r.get('answer'), 'accounting': a,
-                             'host': host, 'slot': slot, 'started': r.get('started'), 'ended': r.get('ended')}
+                    missing.setdefault(slot, []).append(item)
+                elif item['call_id'] not in recorded:
+                    recorded[item['call_id']] = (r, slot, host, reissued)
+        return missing
+
+    def _reissue(self, batch, label, in_flight, lost_items, recorded):
+        """Once: the lost call ids, same ids, to surviving workers. Returns {slot: [items still without a row]}."""
+        items = [it for its in lost_items.values() for it in its if it['call_id'] not in recorded]
+        if not items:
+            return {}
+        shadow = [{'type': 'reserve', 'call_id': REISSUE_PREFIX + it['call_id'], 'micro_usd': it['micro_usd'], 'time': time.time()}
+                  for it in items]
+        try:
+            self.ledger.transact_many(shadow)
+        except provider.CallFailure as exc:
+            self.transport['reissue_refused'] = exc.category   # those calls stay lost: forced null rounds in S1
+            return lost_items
+        self.transport['reissued_calls'] += len(items)
+        exclude = set(lost_items)
+        routed = self._route({min(exclude): items}, exclude=exclude)
+        tasks = {slot: self._task(slot, batch, label, in_flight, its) for slot, its in routed.items()}
+        self.transport['events'].append({'event': 'reissue', 'calls': len(items), 'to': sorted(tasks), 'time': time.time()})
+        missing = self._collect(tasks, self._exchange(tasks, self.config['budget']['task_timeout_seconds']), recorded, True)
+        n = sum(len(v) for v in missing.values())
+        self.transport['lost_calls_after_reissue'] += n
+        return missing
+
+    def _settle(self, permits, recorded, lost_items):
+        out, settle = {}, []
+        for c, call_id, micro in permits:
+            unit = c['unit']
+            if call_id not in recorded:
+                out[unit] = {'ok': False, 'category': LOST, 'answer': None, 'accounting': {}, 'host': None, 'slot': None,
+                             'transport': {'reissued': True, 'lost': True}}
+                continue
+            r, slot, host, reissued = recorded[call_id]
+            a = r.get('accounting') or {}
+            for n in range(int(a.get('attempts', 0) or 0)):
+                settle.append({'type': 'attempt', 'call_id': call_id, 'n': n + 1, 'time': time.time()})
+            if a.get('usage_reported'):
+                settle.append({'type': 'response', 'call_id': call_id, 'actual_micro_usd': int(round(a['actual_usd'] * 1e6)),
+                               'input_tokens': a['input_tokens'], 'output_tokens': a['output_tokens']})
+            out[unit] = {'ok': bool(r['ok']), 'category': r.get('category'), 'answer': r.get('answer'), 'accounting': a,
+                         'host': host, 'slot': slot, 'started': r.get('started'), 'ended': r.get('ended'),
+                         'transport': {'reissued': reissued, 'served_slot': slot, 'planned_slot': c['slot']}}
         try:
             self.ledger.transact_many(settle)
         except provider.CallFailure as exc:
             raise StageStop(exc.category) from None
         return out
 
+    def stats(self):
+        return dict(self.transport, dead_slots=sorted(self.dead), events=self.transport['events'][-50:])
+
     def close(self):
         pass
 
 
 class LocalDispatcher(Dispatcher):
-    """Executes tasks in this process with the frozen adapter and a supplied opener. Selftests only."""
+    """Executes tasks in this process with the frozen adapter and a supplied opener. Selftests only.
 
-    def __init__(self, ledger, config, slots, opener, clock=time.monotonic, sleep=time.sleep):
+    `lose`: a set of (slot, seq) whose results are dropped, to exercise the lost-task path."""
+
+    def __init__(self, ledger, config, slots, opener, clock=time.monotonic, sleep=time.sleep, lose=()):
         super().__init__(ledger, config, slots)
         self.apis = [provider.OpenRouter(PermitLedger({}, 0), config, opener, clock, sleep) for _ in range(slots)]
+        self.sent = [set() for _ in range(slots)]
+        self.lose = set(lose)
 
     def fence(self, slot):
         return f'local-w{slot}#{self.seq[slot]:06d}'
 
     def _exchange(self, tasks, timeout):
-        return {slot: run_task(task, self.apis[slot]) for slot, task in tasks.items()}
+        out = {}
+        for slot, task in tasks.items():
+            result = run_task(task, self.apis[slot], self.sent[slot])
+            if (slot, task['seq']) not in self.lose:
+                out[slot] = result
+        return out
 
 
 class HubDispatcher(Dispatcher):
     """Tasks and results are artifacts of three worker-session runs on the hub."""
 
-    def __init__(self, sr, ledger, config, slots, work_dir, chain_id, poll=1.0, sleep=time.sleep, clock=time.monotonic,
-                 allow_shared_host=False):
+    def __init__(self, sr, ledger, config, slots, work_dir, chain_id, poll=None, sleep=time.sleep, clock=time.monotonic,
+                 allow_shared_host=False, silent_seconds=None, live_every=None, backoff_max=None):
         super().__init__(ledger, config, slots)
-        self.sr, self.work, self.poll, self.sleep, self.clock = sr, Path(work_dir), poll, sleep, clock
+        b = config['budget']
+        self.sr, self.work, self.sleep, self.clock = sr, Path(work_dir), sleep, clock
+        self.poll = b['hub_poll_seconds'] if poll is None else poll
+        self.backoff_max = b['hub_backoff_max_seconds'] if backoff_max is None else backoff_max
+        self.silent = b['worker_silent_seconds'] if silent_seconds is None else silent_seconds
+        self.live_every = b['liveness_check_seconds'] if live_every is None else live_every
         self.work.mkdir(parents=True, exist_ok=True)
         self.sessions = [f'{study.EXPERIMENT}/workers-{chain_id}-w{k}' for k in range(slots)]
         self.allow_shared_host = allow_shared_host
         self.attached = False
         self.queued = False
         self.closed = False
+        self.heard = [None] * slots        # (hub 'updated' value, local clock when it last changed)
 
     def fence(self, slot):
         return f'{self.sessions[slot]}#{self.seq[slot]:06d}'
@@ -478,19 +633,43 @@ class HubDispatcher(Dispatcher):
                   for k in range(self.slots)]
         self.sr.enqueue(study.EXPERIMENT, params, tags=['worker-session'], run_ids=self.sessions)
         self.queued = True
+        poller = Poller(self.poll, self.backoff_max, self.sleep)
         waited = 0.0
         while True:
-            detail = [self.sr.get_run(s) or {} for s in self.sessions]
+            trouble = False
+            try:
+                detail = [self.sr.get_run(s) or {} for s in self.sessions]
+            except Exception:
+                detail, trouble = [{} for _ in self.sessions], True
+                self.transport['hub_errors'] += 1
             if all(d.get('status') == 'running' for d in detail):
                 break
             if any(d.get('status') in ('failed', 'done') for d in detail) or waited >= timeout:
                 raise StageStop('workers_not_attached')
-            self.sleep(self.poll); waited += self.poll
+            waited += poller.wait(trouble)
         self.hosts = [d.get('host') for d in detail]
         if len(set(self.hosts)) != self.slots and not self.allow_shared_host:
             raise StageStop('workers_share_a_host')
+        now = self.clock()
+        self.heard = [(d.get('updated'), now) for d in detail]
         self.attached = True
         return list(self.hosts)
+
+    def _alive(self, slot):
+        """False when the session left the running state or its hub record has not changed for `silent` seconds."""
+        try:
+            d = self.sr.get_run(self.sessions[slot]) or {}
+        except Exception:
+            self.transport['hub_errors'] += 1
+            raise HubTrouble('get_run') from None
+        now = self.clock()
+        if d.get('status') not in ('running', 'assigned'):
+            return False
+        last = self.heard[slot]
+        if last is None or d.get('updated') != last[0]:
+            self.heard[slot] = (d.get('updated'), now)
+            return True
+        return now - last[1] <= self.silent
 
     def _put(self, slot, task):
         path = self.work / f'w{slot}-task-{task["seq"]:06d}.json.gz'
@@ -501,18 +680,38 @@ class HubDispatcher(Dispatcher):
     def _exchange(self, tasks, timeout):
         for slot, task in tasks.items():
             self._put(slot, task)
-        results, deadline = {}, self.clock() + timeout
-        while len(results) < len(tasks) and self.clock() < deadline:
+        results, given_up = {}, set()
+        start = self.clock()
+        deadline, next_check = start + timeout, start + self.live_every
+        poller = Poller(self.poll, self.backoff_max, self.sleep)
+        while len(results) + len(given_up) < len(tasks) and self.clock() < deadline:
+            trouble = False
             for slot, task in tasks.items():
-                if slot in results:
+                if slot in results or slot in given_up:
                     continue
                 dest = self.work / f'w{slot}-result-{task["seq"]:06d}.json.gz'
-                got = _fetch(self.sr, self.sessions[slot], f'result-{task["seq"]:06d}.json.gz', dest)
+                try:
+                    got = _fetch(self.sr, self.sessions[slot], f'result-{task["seq"]:06d}.json.gz', dest)
+                except HubTrouble:
+                    got, trouble = None, True
+                    self.transport['hub_errors'] += 1
                 if got is not None:
                     results[slot] = got
                     dest.unlink()
-            if len(results) < len(tasks):
-                self.sleep(self.poll)
+            if self.clock() >= next_check:
+                next_check = self.clock() + self.live_every
+                for slot in tasks:
+                    if slot in results or slot in given_up:
+                        continue
+                    try:
+                        if not self._alive(slot):
+                            given_up.add(slot)
+                            self.transport['events'].append({'event': 'worker_silent', 'slot': slot, 'fence': tasks[slot]['fence'],
+                                                             'time': time.time()})
+                    except HubTrouble:
+                        trouble = True
+            if len(results) + len(given_up) < len(tasks):
+                poller.wait(trouble)
         return results
 
     def close(self):

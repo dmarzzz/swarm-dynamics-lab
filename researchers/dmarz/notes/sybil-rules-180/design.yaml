@@ -91,9 +91,10 @@ stages:
 budget:
   authorization: 'dmarz to dmarz/fleet-monitor 2026-10-04: ship the big agent swarm run; OpenRouter key limit USD 50; this study hard cap USD 5'
   aggregate_usd: 5
-  max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192}
-  max_attempted_calls: 8118
-  max_transport_attempts: 9300
+  # REISSUE: ledger reservations for call ids re-issued once after a lost task (the lost send may have been billed).
+  max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192, REISSUE: 360}
+  max_attempted_calls: 8478
+  max_transport_attempts: 9800
   max_output_tokens: 1000
   max_input_tokens: 8000
   max_input_bytes: 32000
@@ -113,6 +114,7 @@ budget:
   in_flight_per_host_max: 3
   task_timeout_seconds: 2700
   worker_silent_seconds: 240
+  liveness_check_seconds: 30
   hub_poll_seconds: 3
   hub_backoff_max_seconds: 30
   worker_attach_seconds: 1800

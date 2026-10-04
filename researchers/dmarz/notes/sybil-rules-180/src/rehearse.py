@@ -10,6 +10,12 @@ Scenarios, each on a fresh hub, results directory and ledger:
   d  a billing outage that never ends: the stage stops with provider_credit_balance_low and the chain stops.
   e  a stub that returns unusable answers for a third of the owners in one branch: that branch stops under the
      material rule, the other branches and the cue diagnostic still run, the chain exits 3.
+  f  one worker is killed in the middle of an S1 round (its calls hang, its hub heartbeats stop): the coordinator
+     declares the task lost after the silence limit, re-issues only that round's unanswered call ids once to the
+     two surviving workers, the round completes with no forced null round, and the rest of the chain runs on two
+     workers. The killed worker's late result is never used.
+  g  a third of the owners return unusable answers on the maximum-context case only: X0 records 120 of 180 valid
+     actions (gate 171), the chain stops at X0 and no main stage exists.
 
 It refuses any hub that is not on 127.0.0.1 and blocks every other network destination for the process.
 A rehearsal answer is never a sample and never leaves the machine. No model call is made.
@@ -97,13 +103,26 @@ class Stub:
     `billing`      (first_call, count): calls from `first_call` on get HTTP 402 `count` times (None = for ever)
     `garbage`      a function of the observation; where true the answer is text that is not JSON
     """
-    def __init__(self, mode='mixed', billing=None, garbage=None):
+    def __init__(self, mode='mixed', billing=None, garbage=None, kill=None):
         self.mode, self.billing, self.garbage = mode, billing, garbage
+        self.kill = kill                  # (worker index, predicate on the observation): from then on that worker hangs
+        self.killed = threading.Event()
+        self.release = threading.Event()
+        self.sessions = {}                # worker index -> the session run it took
         self.lock = threading.Lock()
         self.calls = self.billing_responses = 0
         self.max_in_flight = self.in_flight = 0
 
-    def __call__(self, request, timeout=None):
+    def for_worker(self, k):
+        return lambda request, timeout=None: self(request, timeout, worker=k)
+
+    def __call__(self, request, timeout=None, worker=None):
+        if self.kill and worker == self.kill[0]:
+            obs = json.loads(json.loads(request.data)['messages'][1]['content'])
+            if self.killed.is_set() or self.kill[1](obs):
+                self.killed.set()
+                self.release.wait()        # a hung process: no answer until the scenario ends
+                raise urllib.error.URLError('rehearsal worker killed')
         if request.full_url != provider.URL:
             raise AssertionError('stub_unexpected_url')
         headers = {k.lower(): v for k, v in request.header_items()}
@@ -233,6 +252,30 @@ def wait_for_hub(sr, proc):
     raise SystemExit('rehearse: the throwaway hub did not answer')
 
 
+FAST_TRANSPORT = {'silent_seconds': 3.0, 'live_every': 0.5, 'backoff_max': 1.0}
+
+
+def silence_killed(sr, stub):
+    """While the stub's worker is killed, nothing its session reports reaches the hub (its heartbeats stop).
+    Records which session each worker thread took. Returns the originals to restore."""
+    original, original_next = sr.report, sr.next_run
+
+    def report(kind, *args, **kwargs):
+        run = kwargs.get('run') or (args[1] if len(args) > 1 else None)
+        if stub.killed.is_set() and run is not None and run == stub.sessions.get(stub.kill[0]):
+            return True
+        return original(kind, *args, **kwargs)
+
+    def next_run(*args, **kwargs):
+        run = original_next(*args, **kwargs)
+        name = threading.current_thread().name
+        if run is not None and name.startswith('rehearsal-worker-'):
+            stub.sessions[int(name.rsplit('-', 1)[1])] = run.id
+        return run
+    sr.report, sr.next_run = report, next_run
+    return original, original_next
+
+
 def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
     """One chain with three worker threads on a fresh hub, results directory and ledger."""
     base = tmp / name
@@ -244,9 +287,9 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
         exits = [None] * 3
 
         def work(k):
-            exits[k] = transport.serve(sr, base / f'worker-{k}', opener=stub, poll=0.2, attach_seconds=600, stop=stop,
-                                       api_clock=clock.now, api_sleep=clock.sleep)
-        threads = [threading.Thread(target=work, args=(k,), daemon=True) for k in range(3)]
+            exits[k] = transport.serve(sr, base / f'worker-{k}', opener=stub.for_worker(k), poll=0.2, attach_seconds=600, stop=stop,
+                                       api_clock=clock.now, api_sleep=clock.sleep, backoff_max=1.0)
+        threads = [threading.Thread(target=work, args=(k,), daemon=True, name=f'rehearsal-worker-{k}') for k in range(3)]
         try:
             require_local(sr)
             wait_for_hub(sr, proc)
@@ -254,7 +297,8 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
                 t.start()
             started = time.monotonic()
             ledger = base / 'ledger' / 'ledger.jsonl'
-            code = chain.run_chain(stages, sr, base / 'results', ledger, allow_shared_host=True, poll=0.05)
+            code = chain.run_chain(stages, sr, base / 'results', ledger, allow_shared_host=True, poll=0.05,
+                                   transport_options=FAST_TRANSPORT)
             elapsed = time.monotonic() - started
             for t in threads:
                 t.join(timeout=30)
@@ -276,6 +320,7 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
                     'max_in_flight': stub.max_in_flight, 'worker_exits': exits,
                     'spooled': list((tmp / 'spool').glob('*.json')) if (tmp / 'spool').exists() else []}
         finally:
+            stub.release.set()
             stop.set()
             proc.terminate()
             try:
@@ -299,7 +344,7 @@ def brief(run):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--hub-dir', required=True, help='directory with hub.py and swarm_report.py (not part of this repo)')
-    ap.add_argument('--only', default='a,b,c,d,e')
+    ap.add_argument('--only', default='a,b,c,d,e,f,g')
     ap.add_argument('--keep', action='store_true', help='keep the temporary directory and print its path')
     a = ap.parse_args(argv)
     hub_dir = Path(a.hub_dir).resolve()
@@ -330,8 +375,9 @@ def main(argv=None):
             checks['a_state_completed'] = status.get('state') == 'completed'
             checks['a_all_stages_done'] = all(runs.get(s, {}).get('status') == 'done' for s in all_stages)
             checks['a_metrics_reported'] = all(required <= set(runs.get(s, {}).get('metrics') or {}) for s in all_stages)
-            checks['a_calls_per_stage'] = {s: (runs.get(s, {}).get('metrics') or {}).get('model_calls') for s in all_stages} == budget['max_calls']
-            checks['a_ledger_total_calls'] = run['ledger']['attempted_calls'] == budget['max_attempted_calls'] == run['stub_calls']
+            checks['a_calls_per_stage'] = all((runs.get(s, {}).get('metrics') or {}).get('model_calls') == budget['max_calls'][s] for s in all_stages)
+            checks['a_ledger_total_calls'] = run['ledger']['attempted_calls'] == sum(budget['max_calls'][s] for s in all_stages) == run['stub_calls']
+            checks['a_no_reissue'] = run['ledger']['calls_by_stage'].get('REISSUE', 0) == 0
             checks['a_three_workers_closed'] = run['worker_exits'] == [0, 0, 0]
             checks['a_three_sessions_done'] = sum(r.get('status') == 'done' and (r.get('params') or {}).get('role') == transport.SESSION_ROLE
                                                   for r in runs.values()) == 3
@@ -395,6 +441,44 @@ def main(argv=None):
             result['stopped_branch_chain'] = brief(run)
             result['stopped_branch_verify_failed_checks'] = {s: [k for k, ok in v.get('checks', {}).items() if ok is not True]
                                                              for s, v in run['verify']['stages'].items() if not v.get('ok')}
+        if 'f' in only:
+            # Worker 1 hangs on its first call of S1 round 5 (the first continuation's third round), mid-round.
+            stub = Stub('mixed', kill=(1, lambda obs: _is_main(obs) and obs['round'] == 5))
+            originals = silence_killed(sr, stub)
+            hb = sr.HEARTBEAT_EVERY
+            sr.HEARTBEAT_EVERY = 0.3
+            try:
+                run = scenario(sr, hub_dir, tmp, 'f', stub, all_stages, verify=True)
+            finally:
+                (sr.report, sr.next_run), sr.HEARTBEAT_EVERY = originals, hb
+            runs, status = run['runs'], run['status'] or {}
+            s1 = (status.get('stages') or {}).get('S1', {})
+            t = s1.get('transport') or {}
+            checks['f_worker_was_killed'] = stub.killed.is_set()
+            checks['f_exit_zero'] = run['exit'] == 0 and status.get('state') == 'completed'
+            checks['f_s1_no_forced_null_round'] = s1.get('void') == 0 and s1.get('accepted') == budget['max_calls']['S1']
+            checks['f_one_task_lost_then_reissued'] = t.get('lost_tasks') == 1 and 0 < t.get('reissued_calls', 0) <= 60 \
+                and t.get('lost_calls_after_reissue') == 0 and len(t.get('dead_slots') or []) == 1 \
+                and stub.sessions.get(1, '').endswith(f"-w{(t.get('dead_slots') or [-1])[0]}")
+            checks['f_reissue_reserved_in_ledger'] = run['ledger']['calls_by_stage'].get('REISSUE') == t.get('reissued_calls')
+            checks['f_later_rounds_rerouted'] = t.get('rerouted_calls', 0) > t.get('reissued_calls', 0)
+            checks['f_diagnostic_ran'] = runs.get('D1', {}).get('status') == 'done'
+            checks['f_verify_ok'] = bool(run['verify'] and run['verify']['ok'])
+            checks['f_surviving_workers_closed'] = run['worker_exits'][0] == 0 and run['worker_exits'][2] == 0 and run['worker_exits'][1] != 0
+            result['killed_worker_chain'] = dict(brief(run), s1_transport=t)
+            result['killed_worker_verify_failed_checks'] = {s: [k for k, ok in v.get('checks', {}).items() if ok is not True]
+                                                            for s, v in run['verify']['stages'].items() if not v.get('ok')}
+        if 'g' in only:
+            def context_garbage(obs):
+                return len(obs['portfolio']['firms']) == 4 and int(obs['you'][4:6]) % 3 == 0
+            run = scenario(sr, hub_dir, tmp, 'g', Stub('mixed', garbage=context_garbage), all_stages)
+            runs, status = run['runs'], run['status'] or {}
+            x0 = (status.get('stages') or {}).get('X0', {})
+            checks['g_exit_stopped'] = run['exit'] == chain.EXIT_STOPPED
+            checks['g_stopped_at_x0'] = status.get('stopped_stage') == 'X0' and status.get('reason') == 'gate_failed'
+            checks['g_valid_actions_120'] = x0.get('valid_actions') == 120 and x0.get('accepted') == 120
+            checks['g_no_main_stage'] = not any(s in runs for s in ('S1', 'D1'))
+            result['x0_valid_action_gate_chain'] = brief(run)
         checks['committed_tree_untouched'] = not (study.ROOT / 'results').exists() or not any((study.ROOT / 'results').iterdir())
     finally:
         if a.keep:

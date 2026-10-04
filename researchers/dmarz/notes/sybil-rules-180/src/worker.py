@@ -126,7 +126,7 @@ class Ctx:
                 'owner': it['oid'], 'economy': it['econ'].key, 'slot': it['slot'], 'host': row.get('host'),
                 'system': it['system'], 'user': None if self.scripted else it['user'], 'user_sha256': sim.digest(it['user']),
                 'ok': row['ok'], 'category': row.get('category'), 'answer': row.get('answer'), 'accounting': a,
-                'started': row.get('started'), 'ended': row.get('ended')}, sort_keys=True) + '\n')
+                'started': row.get('started'), 'ended': row.get('ended'), 'transport': row.get('transport')}, sort_keys=True) + '\n')
             if row.get('category') in transport.STOPPING and stop is None:
                 stop = row['category']
         self.calls_log.flush(); os.fsync(self.calls_log.fileno())
@@ -574,6 +574,7 @@ def _finish(ctx, detail):
                'max_prompt_tokens': ctx.max_prompt_tokens, 'elapsed_seconds': time.monotonic() - ctx.started,
                'in_flight_per_host': ctx.in_flight, 'hosts': list(ctx.dispatcher.hosts) if ctx.dispatcher else None,
                'billing': dict(ctx.dispatcher.billing) if ctx.dispatcher else None,
+               'transport': ctx.dispatcher.stats() if ctx.dispatcher else None,
                'detail': detail, 'gate': {'passed': gate_passed}, 'failure': ctx.failure,
                'internal_error': getattr(ctx, 'internal', None),
                'study_accounting': ctx.dispatcher.ledger.transact() if ctx.dispatcher else None,
