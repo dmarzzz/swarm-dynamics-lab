@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: score-research-ideas
-doing: Implement researcher rubric scores across all research ideas
-updated: 2026-10-04T02:09Z
+doing: Published 297 scored ideas and nullable optional reviewer fields
+updated: 2026-10-04T02:15Z
 ---
 
 ## Notes
 
-All 292 ratings and optional peer metadata implemented; local checks passed. Publishing and checking deployment.
+All 297 ratings and optional peer metadata published. Automated checks and public interface verification passed.

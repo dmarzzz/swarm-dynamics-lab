@@ -4,7 +4,7 @@
 
 A receipt-processing service can run several cheap OCR configurations, but reviewing every output is expensive. High OCR confidence is not proof that the important text was recovered. Antsy gives a decision-maker two regional quality checks and asks it to select one output. Five local Laya roles propose checks and vote on when to stop. They compete against a fixed configuration, confidence alone, random checks, a deterministic check rule, and one agent with all the same observations.
 
-This is exploratory S0/S1 engineering in owned notes, not a reviewed hypothesis or a production OCR benchmark. The [earlier API study](../adaptive-quorum-v2/repair-v3/README.md) remains available; [its bad decisions](BAD-DECISIONS.md) motivated this redesign. V4 changes the application and intervention. It does **not** replicate v3's urgency treatment: verification credits replace scheduled evidence arrivals, and there is no measured deadline effect here.
+This is exploratory S0/S1 engineering in owned notes, not a reviewed hypothesis or a production OCR benchmark. The [earlier API study](../adaptive-quorum-v2/repair-v3/SPEC.md) remains available; [its bad decisions](BAD-DECISIONS.md) motivated this redesign. V4 changes the application and intervention. It does **not** replicate v3's urgency treatment: verification credits replace scheduled evidence arrivals, and there is no measured deadline effect here.
 
 ## Why run this?
 

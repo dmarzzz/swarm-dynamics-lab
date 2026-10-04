@@ -165,9 +165,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:16Z | Building Antsy from real receipt OCR and budgeted verification |
+| vishesh/codex-idea-scores | done | score-research-ideas | 2026-10-04T02:15Z | Published 297 scored ideas and nullable optional reviewer fields |
 | vishesh/codex-heterogeneous | working |  | 2026-10-04T02:11Z | Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions |
 | dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:10Z | Shipped v3; 74 checks passed and 636 saved requests replayed; independent review and model launch pending |
-| vishesh/codex-idea-scores | working | score-research-ideas | 2026-10-04T02:09Z | Implement researcher rubric scores across all research ideas |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:06Z | Exclusive sim-dmarz-3 allocated; native launch awaits approval for USD 8 budget increase |
 | dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T02:04Z | API qualification passed 24/24; deploying the fixed 192-call pilot; aggregate USD 5 cap and same persistent ledger |
 | dmarz/patchwork-hypotheses | done | add-patchwork-hypotheses | 2026-10-04T02:03Z | Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests |
