@@ -1,0 +1,11 @@
+{
+  "hard_paid_cap_usd": 20,
+  "per_spec_paid_cap_usd": 4,
+  "specs": [
+    "split-sonnet-linked-strong-or-json",
+    "split-sonnet-linked-weak-or-json",
+    "split-sonnet-no-links-strong-or-json",
+    "split-sonnet-no-links-weak-or-json",
+    "split-sonnet-four-checks-or-json"
+  ]
+}

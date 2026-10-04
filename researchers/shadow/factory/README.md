@@ -1,5 +1,7 @@
 # Shadow's small experiment factory
 
+**Current launcher:** `structured.py queue --watch`. The first paid route produced 20 prose-wrapped, schema-invalid answers; all are retained. The [prospective structured-output repair](AMENDMENT-STRUCTURED.md) adds native JSON-schema output and fresh clean-screen roots in separate `-or-json` cohorts, without increasing the aggregate budget. It stops the whole queue on a failed qualification rather than repeating an interface defect.
+
 **Route update:** all five initial pool attempts returned HTTP429 before any model answer (20 failed requests total). The [prospective paid-route amendment](AMENDMENT-PAID.md) adds separately committed `-or` attempts with a locked USD4/spec, USD20 aggregate ledger. Original attempts and the original runner remain unchanged. Use `paid.py queue --watch` for the amended queue. The original design/route description below is retained for lineage, not a claim the pool runs succeeded.
 
 A queue of five one-file prospective exploratory studies, one resumable runner, one automatic closeout. Built under Shadow's 2026-10-04 Wave 4 instruction. This is a tool for closing small experiments, not another proposal queue. It never launches or modifies Dmarz's or Vishesh's studies.

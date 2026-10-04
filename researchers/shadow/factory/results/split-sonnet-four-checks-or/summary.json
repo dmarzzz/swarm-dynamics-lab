@@ -1,0 +1,30 @@
+{
+  "all_assigned_bounds": [
+    -2.0,
+    2.0
+  ],
+  "attempted": 4,
+  "ci95": null,
+  "cost_unknown_calls": 0,
+  "exploratory": true,
+  "failed": 4,
+  "family_means": {
+    "community": null,
+    "ring": null
+  },
+  "generated_at": "2026-10-04T15:12:18.288193+00:00",
+  "input_tokens": 12768,
+  "main_planned": 192,
+  "main_valid": 0,
+  "output_tokens": 1194,
+  "paid_usd": 0.056214,
+  "paired_roots": 0,
+  "planned": 204,
+  "primary": null,
+  "qualification_passed": false,
+  "roots_planned": 48,
+  "spec": "split-sonnet-four-checks-or",
+  "status": "lead",
+  "unstarted": 200,
+  "valid": 0
+}

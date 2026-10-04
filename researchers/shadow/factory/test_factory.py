@@ -47,7 +47,7 @@ class FactoryTests(unittest.TestCase):
     def test_no_paid_route(self):
         self.assertEqual(f.TOTAL_PAID_CAP_USD,20)
         for p in (f.ROOT/'specs').glob('*.json'):
-            if p.stem.endswith('-or'): continue
+            if '-or' in p.stem: continue
             s=f.read_spec(p.name,False)
             self.assertEqual(s['max_paid_usd'],0)
             self.assertEqual(s['route'],'anthropic-pool')
