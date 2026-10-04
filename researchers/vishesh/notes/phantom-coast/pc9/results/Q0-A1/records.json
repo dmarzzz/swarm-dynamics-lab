@@ -1,0 +1,170 @@
+[
+  {
+    "id": "Q0-00",
+    "kind": "no-evidence",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "s4d0de1bbddb6": "UNKNOWN",
+        "se343924a391d": "UNKNOWN",
+        "sf4183042f1e0": "UNKNOWN",
+        "s66c6694576b7": "UNKNOWN"
+      },
+      "inspect": "se343924a391d"
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": true,
+      "inspection_correct": true
+    },
+    "trace_id": "pc9-q0-a1/01"
+  },
+  {
+    "id": "Q0-01",
+    "kind": "private-positive",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "s6c0eac91ad30": "UNKNOWN",
+        "s3590b7a9eabe": "LAND",
+        "sc40445e10cbd": "UNKNOWN",
+        "sf18ff830d28f": "UNKNOWN"
+      },
+      "inspect": "s3590b7a9eabe"
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": true,
+      "inspection_correct": false
+    },
+    "trace_id": "pc9-q0-a1/02"
+  },
+  {
+    "id": "Q0-02",
+    "kind": "private-negative",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "sae83ba293da1": "UNKNOWN",
+        "sf873bffa6311": "WATER",
+        "s31d074e88ef3": "UNKNOWN",
+        "se6236fc282d5": "UNKNOWN"
+      },
+      "inspect": "sf873bffa6311"
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": true,
+      "inspection_correct": false
+    },
+    "trace_id": "pc9-q0-a1/03"
+  },
+  {
+    "id": "Q0-03",
+    "kind": "nonrepeat",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "s3c1ebb29d999": "LAND",
+        "sf4db1dddeadf": "UNKNOWN",
+        "s7b7c5746aadd": "UNKNOWN",
+        "s586989200cfa": "UNKNOWN"
+      },
+      "inspect": "sf4db1dddeadf"
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": true,
+      "inspection_correct": true
+    },
+    "trace_id": "pc9-q0-a1/04"
+  },
+  {
+    "id": "Q0-04",
+    "kind": "correct-negative",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "s66fc9c6eeff6": "UNKNOWN",
+        "sf14c08fa595d": "LAND",
+        "sfb2a6832f448": "UNKNOWN",
+        "s9300beb3c965": "UNKNOWN"
+      },
+      "inspect": "sfb2a6832f448"
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": true,
+      "inspection_correct": true
+    },
+    "trace_id": "pc9-q0-a1/05"
+  },
+  {
+    "id": "Q0-05",
+    "kind": "correct-positive",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "s2a61e216dc61": "UNKNOWN",
+        "s5a28ccc05ea4": "WATER",
+        "s9dd955c447ea": "UNKNOWN",
+        "sadb2400a7049": "UNKNOWN"
+      },
+      "inspect": "s2a61e216dc61"
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": true,
+      "inspection_correct": true
+    },
+    "trace_id": "pc9-q0-a1/06"
+  },
+  {
+    "id": "Q0-06",
+    "kind": "consensus-correction",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "s8a675451d560": "LAND",
+        "s5f60efb8ab4b": "LAND",
+        "sc3fedaa945bb": "UNKNOWN",
+        "s6c64a98a9121": "UNKNOWN"
+      },
+      "inspect": null
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": false,
+      "inspection_correct": true
+    },
+    "trace_id": "pc9-q0-a1/07"
+  },
+  {
+    "id": "Q0-07",
+    "kind": "evidence-gap",
+    "status": "valid",
+    "decision": {
+      "map": {
+        "s5ce25a464f86": "WATER",
+        "scdd54d037c71": "UNKNOWN",
+        "seeec8f1a3c5b": "UNKNOWN",
+        "s322f41e97437": "UNKNOWN"
+      },
+      "inspect": null
+    },
+    "grade": {
+      "map_correct": 4,
+      "map_total": 4,
+      "inspection_required": false,
+      "inspection_correct": true
+    },
+    "trace_id": "pc9-q0-a1/08"
+  }
+]

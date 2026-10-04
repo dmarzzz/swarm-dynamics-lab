@@ -1,0 +1,58 @@
+{
+  "uploads": [
+    {
+      "name": "summary.json",
+      "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84",
+      "verified": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "7db5ff86293b42702761f2a6c7a55dbd48a4596ab713a42ca2ad3a78f84b24c0",
+      "verified": true
+    },
+    {
+      "name": "traces.json",
+      "sha256": "619944a99716c9aedec5f25229a8eda00522aa734bfa17cf69123381e48025a4",
+      "verified": true
+    },
+    {
+      "name": "cases.json",
+      "sha256": "9871ade19a370af851d609e99adf6e29f1fb18527ce9d8b3d6886069518a7cdc",
+      "verified": true
+    },
+    {
+      "name": "events.jsonl",
+      "sha256": "185b46ef3609a89b6e87327af3e80888eae471c8383cdec7b90b62db80879fa4",
+      "verified": true
+    },
+    {
+      "name": "audit.json",
+      "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299",
+      "verified": true
+    },
+    {
+      "name": "public-plan.json",
+      "sha256": "6739382a653f85a4474d6955da7c9fb2863b7cee64126c81f125e68b8431cf4e",
+      "verified": true
+    },
+    {
+      "name": "route.json",
+      "sha256": "dbf540e7e8cbb13855a230ea6fccb694abfd69917e14cca7f2723bc91bb0fa15",
+      "verified": true
+    },
+    {
+      "name": "provenance.json",
+      "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa",
+      "verified": true
+    },
+    {
+      "name": "POST-MORTEM.md",
+      "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519",
+      "verified": true
+    }
+  ],
+  "worker_stopped": true,
+  "credential_installed": false,
+  "execution": "completed",
+  "qualification": "failed"
+}

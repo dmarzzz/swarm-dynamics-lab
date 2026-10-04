@@ -1,0 +1,315 @@
+{
+  "attempt": "pc9-q0-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T19:37:12.991794+00:00",
+  "decision": "repair",
+  "scientific_review": "complete",
+  "execution": "completed",
+  "qualification": "failed",
+  "pilot_dispatched": false,
+  "checks": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Frozen clean-competence question and no-advance on failed gate were followed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Eight reachable templates cover corrections and uncertainty; private-report action cases do not disambiguate individual versus collective objective.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ],
+      "next_action": "Align individual versus collective acquisition objective and exact comparator offline; preserve frozen failures; no native retry.",
+      "acceptance_check": "Explicit actor objective and independently enumerated reference agree on every development action before proposing fresh native cases."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Per-actor exact comparator arithmetic passes; global collective optimality was never established or made explicit in the actor action question.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ],
+      "next_action": "Align individual versus collective acquisition objective and exact comparator offline; preserve frozen failures; no native retry.",
+      "acceptance_check": "Explicit actor objective and independently enumerated reference agree on every development action before proposing fresh native cases."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "All8 valid and32/32 correct map labels, but4/6 exact optimal actions; frozen conjunction failed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ],
+      "next_action": "Align individual versus collective acquisition objective and exact comparator offline; preserve frozen failures; no native retry.",
+      "acceptance_check": "Explicit actor objective and independently enumerated reference agree on every development action before proposing fresh native cases."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All eight assignments retained; saved audit and16 START/terminal events reconcile. Diagnostic regrets are expected-reference values, not observed episode losses.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Eight narrow capability checks,32 dependent labels and6 actions; no causal estimate or population precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned model/provider; declared isolated actor packets, previous-round histories and no operator context. Local memory credential consumer with SSH request/response relay.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    },
+    {
+      "dimension": "execution",
+      "status": "pass",
+      "finding": "Eight requests completed once; no transport/schema errors, retries, fallback or S1 dispatch.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "New USD.000492912; cumulative known.846725754 and exposure.858821754. Original caps and9historical unresolved calls retained; existing verified account host exclusively allocated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Exact source, runtime, public plan, safe traces, request/response hashes and scorer retained; saved-data audit passes. Same-author assessment.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Native post-mortem table includes all eight cases and separates no-action cases; prior animation stays scripted and is not relabeled native.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+          "sha256": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+          "sha256": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+          "sha256": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/diagnostics.json",
+          "sha256": "ff5aafeb24db2c99e7f62556cc91b277b34ad64a11fd99e064d992b32d7153de"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/provenance.json",
+          "sha256": "4632f1faa2d156c068a8a171fd47b60affeb49cc219e03dc2050fad8ed1cdcfa"
+        }
+      ]
+    }
+  ]
+}

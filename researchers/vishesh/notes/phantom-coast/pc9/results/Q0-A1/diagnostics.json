@@ -1,0 +1,156 @@
+{
+  "label": "RETROSPECTIVE SAVED-DATA ACTION DIAGNOSIS; NO NEW CALLS",
+  "cases": [
+    {
+      "id": "Q0-00",
+      "kind": "no-evidence",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": true,
+        "inspection_correct": true
+      },
+      "cost": 5.061e-05,
+      "selected": "se343924a391d",
+      "accepted": [
+        "se343924a391d",
+        "s66c6694576b7",
+        "s4d0de1bbddb6",
+        "sf4183042f1e0"
+      ],
+      "selected_total_expected_loss": 0.5,
+      "best_total_expected_loss": 0.5,
+      "mean_expected_regret": 0.0
+    },
+    {
+      "id": "Q0-01",
+      "kind": "private-positive",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": true,
+        "inspection_correct": false
+      },
+      "cost": 5.3004e-05,
+      "selected": "s3590b7a9eabe",
+      "accepted": [
+        "s6c0eac91ad30",
+        "sc40445e10cbd",
+        "sf18ff830d28f"
+      ],
+      "selected_total_expected_loss": 0.5,
+      "best_total_expected_loss": 0.44999999999999996,
+      "mean_expected_regret": 0.012500000000000011
+    },
+    {
+      "id": "Q0-02",
+      "kind": "private-negative",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": true,
+        "inspection_correct": false
+      },
+      "cost": 5.2752e-05,
+      "selected": "sf873bffa6311",
+      "accepted": [
+        "s31d074e88ef3",
+        "se6236fc282d5",
+        "sae83ba293da1"
+      ],
+      "selected_total_expected_loss": 0.5,
+      "best_total_expected_loss": 0.44999999999999996,
+      "mean_expected_regret": 0.012500000000000011
+    },
+    {
+      "id": "Q0-03",
+      "kind": "nonrepeat",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": true,
+        "inspection_correct": true
+      },
+      "cost": 5.7246e-05,
+      "selected": "sf4db1dddeadf",
+      "accepted": [
+        "sf4db1dddeadf",
+        "s586989200cfa",
+        "s7b7c5746aadd"
+      ],
+      "selected_total_expected_loss": 0.5,
+      "best_total_expected_loss": 0.5,
+      "mean_expected_regret": 0.0
+    },
+    {
+      "id": "Q0-04",
+      "kind": "correct-negative",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": true,
+        "inspection_correct": true
+      },
+      "cost": 7.3878e-05,
+      "selected": "sfb2a6832f448",
+      "accepted": [
+        "sfb2a6832f448",
+        "s66fc9c6eeff6",
+        "s9300beb3c965"
+      ],
+      "selected_total_expected_loss": 0.5,
+      "best_total_expected_loss": 0.5,
+      "mean_expected_regret": 0.0
+    },
+    {
+      "id": "Q0-05",
+      "kind": "correct-positive",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": true,
+        "inspection_correct": true
+      },
+      "cost": 7.3668e-05,
+      "selected": "s2a61e216dc61",
+      "accepted": [
+        "s2a61e216dc61",
+        "sadb2400a7049",
+        "s9dd955c447ea"
+      ],
+      "selected_total_expected_loss": 0.5,
+      "best_total_expected_loss": 0.5,
+      "mean_expected_regret": 0.0
+    },
+    {
+      "id": "Q0-06",
+      "kind": "consensus-correction",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": false,
+        "inspection_correct": true
+      },
+      "cost": 7.2366e-05
+    },
+    {
+      "id": "Q0-07",
+      "kind": "evidence-gap",
+      "status": "valid",
+      "grade": {
+        "map_correct": 4,
+        "map_total": 4,
+        "inspection_required": false,
+        "inspection_correct": true
+      },
+      "cost": 5.9388e-05
+    }
+  ]
+}
