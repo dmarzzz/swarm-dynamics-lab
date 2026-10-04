@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/market-split; source `e84428d5` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — The current Sonnet configuration passes a small unregulated profitability screen; the new discovery comparison is unreported at this cutoff. Basis: Sonnet reasoning configuration passed bounded unregulated profit qualification; main discovery results are pending in the tracked record. Earlier invalid and failed qualifications stay separate and cannot be pooled. Six related markets, one model-controlled owner and scripted rivals would remain exploratory.
-- **sample_size_summary:** Current Sonnet Q0: 2 markets, 4/4 episodes; S1 planned: 6 markets, 36 episodes/864 calls. Earlier Haiku S1: 17 valid, 1 invalid, 18 unstarted.
+- **evidence_confidence:** **2/4** — In the completed six-market Sonnet pilot, the neutral flexible agent selected sustained firm splitting in 6/6 firm-regulated markets and 0/6 owner-regulated or unregulated markets. Basis: A qualified model, paired regulatory controls, all36 valid outcomes, 864 priced calls and exact trace replay support this narrow comparison. Six related tasks, one model realization, prior configuration selection, no independent replication and a missing historical immutable-plan preflight receipt limit the claim.
+- **sample_size_summary:** Observed: 6 related paired market tasks; 36/36 episodes valid, 0 missing/replaced; one Sonnet owner and two scripted rivals, 864 calls. Separate Q0: 2 markets/4 episodes. Earlier Haiku S1:17valid,1invalid,18unstarted; not pooled.
 <!-- experiment-evidence:end -->
 
 Exploratory MKT-03 + MKT-11 model-discovery study. [Live experiment and replays](https://swarm-live.pages.dev/#/x/market-split-api). The owner approved model testing after the [450-episode scripted study](../market-split/README.md). The formal survey/hypothesis gate is incomplete, so this remains development work in notes with S2 disabled.
