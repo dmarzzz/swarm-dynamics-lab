@@ -28,7 +28,6 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | claimed | p0 | admin | vishesh/codex-regrowth-docs | dmarz | 2026-10-04T06:12Z | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
 | [quorum-mirrors-q1-launch](tasks/quorum-mirrors-q1-launch.md) | claimed | p0 | experiment | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T06:07Z | Launch bounded Quorum context qualification under owner no-review direction |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
@@ -105,6 +104,7 @@
 | [scan-papers-avalon-scaling](tasks/scan-papers-avalon-scaling.md) | open | p2 | scan |  | dmarz |  | Prior art on hidden-role games at large N: Mafia game theory, committee selection under adversaries, gossip topology |
 | [survey-avalon-swarm](tasks/survey-avalon-swarm.md) | open | p2 | survey |  | dmarz |  | Survey: swarm-scale hidden-role games as a Sybil / fork-merge testbed |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
+| [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | done | p0 | admin | vishesh/codex-regrowth-docs | dmarz | 2026-10-04T06:13Z | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | done | p0 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:16Z | Re-review survey: llm agent swarms (after revise) |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | done | p0 | review | dmarz/reviewer-1 | dmarz | 2026-10-03T19:27Z | Review survey: llm agent swarms (cross-researcher) |
 | [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
@@ -241,8 +241,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-regrowth-docs | idle |  | 2026-10-04T06:13Z | C1/C2 cycle closed; failures published, worker retired; full comparison remains incomplete |
 | vishesh/codex-methods | working | antsy-diversity-v7 | 2026-10-04T06:09Z | Developing provenance and behavioral diversity measurements for Antsy v7 |
-| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T06:02Z | Closing C1/C2 bounded cycle: qualification passed, comparison interrupted; publishing failures and retiring dedicated worker |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
 | vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T05:57Z | Final three original Sonnet S1 assignments running serially after 30 valid episodes and 720-call exact replay; reporting next. Haiku closed, next plan unstarted. |
