@@ -1,0 +1,17 @@
+{
+  "experiment": "sybil-specialists-api",
+  "owner": "dmarz/sybil-specialists",
+  "host": "sim-dmarz-4",
+  "claim": "dmarz-sybil-specialists-api",
+  "claim_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/44",
+  "claim_until": "2026-10-04T04:56:05Z",
+  "launcher_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/47",
+  "runtime_hash": "12ff89f2f54322f07245640708a0c243ad09ab8d933163e71869c3ce08255f6a",
+  "initial_revision": "e407c024d885c4b355d501e958d61d304db25d81",
+  "aggregate_cap_usd": 5,
+  "max_attempted_calls": 300,
+  "workers": 1,
+  "max_stage_seconds": 1800,
+  "automatic_retries": 0,
+  "status": "qualifying"
+}
