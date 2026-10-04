@@ -3,16 +3,17 @@ id: influence-native-rerun
 type: task
 title: Run the revised procurement influence experiment
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-experiments
+owner: null
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-claimed_at: 2026-10-04T02:31Z
 updated: 2026-10-04T02:51Z
+history:
+- '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
 ---
 
 ## Goal
