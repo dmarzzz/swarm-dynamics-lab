@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: refine-swarm-size-protocol
-doing: Refining EX-25 coordination, overhead accounting and timed policy evaluation
+doing: Completed EX-25 protocol refinement; no implementation or runs
 updated: 2026-10-04T02:50Z
 ---
 
