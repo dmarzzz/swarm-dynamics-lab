@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-04T18:45:58.769375+00:00",
+  "seal_version": 2,
+  "qualification_consumed_by": "QM-PQ-01",
+  "qualification_traces_and_labels_released": "../results/QM-PQ-01/audit.json",
+  "qualification_operator_review": "All24 automated; all13 failed fidelity packet sets and18 false flags inspected after native execution",
+  "evaluation_dispatched": false,
+  "evaluation_individual_contents_read_by_operator": false,
+  "evaluation_hash_still_matches": true,
+  "seal_creation_record_preserved": true
+}

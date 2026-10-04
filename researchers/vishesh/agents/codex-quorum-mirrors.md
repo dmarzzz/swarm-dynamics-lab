@@ -3,8 +3,8 @@ agent: vishesh/codex-quorum-mirrors
 tool: codex
 state: idle
 task: null
-doing: Packet-study v2 case-ready for controlled scope; no native qualification or admission
-updated: 2026-10-04T18:21:59.245134+00:00
+doing: QM-PQ-01 completed; final decisions correct but fidelity qualification failed; reviewed and released
+updated: 2026-10-04T18:45:17.311481+00:00
 ---
 
-Packet-study v2 cases are ready for the declared bounded synthetic repetition/distortion experiment: 48 development packets/12 roots, 24 sealed qualification packets/6 roots and 96 sealed evaluation packets/24 roots. Strong text parsing plus source counting agrees with every construction label; ten tests pass. V1 qualification imbalance was caught and retired before native use. Fixed grammar and same-operator authorship limit generalization; native qualification and run admission remain separate and not granted. See notes/decision-models/quorum-of-mirrors/packet-study/RESULTS.md.
+QM-PQ-01 ran all 24 Sonnet 4.6 qualification calls: 24/24 valid and final decisions correct, 72/72 source votes correct, 24/24 source quotes valid, but only 11/24 exact distortion sets. All 36 actual distortions were detected; 18 faithful report occurrences were falsely flagged. Qualification failed its unchanged fidelity gate. No evaluation or retry. New actual API cost $0.141846; cumulative 73 calls/$0.785856 reserved. Traces and ledger reconciled; worker exited and claim released. See notes/decision-models/quorum-of-mirrors/reviews/PQ-01-post.md.

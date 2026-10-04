@@ -1,0 +1,162 @@
+{
+  "report_mentions": 120,
+  "true_positive_distortions": 36,
+  "false_positive_distortions": 18,
+  "false_negative_distortions": 0,
+  "true_negative_faithful": 66,
+  "exact_packet_sets_by_family": {
+    "units": [
+      0,
+      4
+    ],
+    "time": [
+      2,
+      4
+    ],
+    "polarity": [
+      2,
+      4
+    ],
+    "correction": [
+      3,
+      4
+    ],
+    "entity": [
+      1,
+      4
+    ],
+    "modality": [
+      3,
+      4
+    ]
+  },
+  "mismatches": [
+    {
+      "assignment": "QM-PQ-01-000",
+      "report_id": "73e1aa2c6302",
+      "report": "At 15:00, archive-86992 measured 4000 grams.",
+      "source": "At 15:00, archive-86992 measured 4 kilograms.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-002",
+      "report_id": "5ed446002ed7",
+      "report": "At 11:00, archive-27822 was stopped.",
+      "source": "At 11:00, archive-27822 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-003",
+      "report_id": "232c123c1194",
+      "report": "At 11:00, archive-59654 was stopped.",
+      "source": "Initial: at 11:00, archive-59654 was running.\nCorrection: At 11:00, archive-59654 was stopped.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-003",
+      "report_id": "3c4b31c4a051",
+      "report": "At 11:00, archive-59654 was stopped.",
+      "source": "Initial: at 11:00, archive-59654 was running.\nCorrection: At 11:00, archive-59654 was stopped.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-004",
+      "report_id": "e65ae01c5692",
+      "report": "At 11:00, archive-14032 was stopped.",
+      "source": "At 11:00, archive-14032-other was running.\nAt 11:00, archive-14032 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-005",
+      "report_id": "73e1aa2c6302",
+      "report": "At 15:00, archive-86992 measured 4000 grams.",
+      "source": "At 15:00, archive-86992 measured 4 kilograms.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-008",
+      "report_id": "e65ae01c5692",
+      "report": "At 11:00, archive-14032 was stopped.",
+      "source": "At 11:00, archive-14032-other was running.\nAt 11:00, archive-14032 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-009",
+      "report_id": "e51126180488",
+      "report": "At 15:00, archive-88478 was stopped.",
+      "source": "At 08:00, archive-88478 was running.\nAt 15:00, archive-88478 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-011",
+      "report_id": "73e1aa2c6302",
+      "report": "At 15:00, archive-86992 measured 4000 grams.",
+      "source": "At 15:00, archive-86992 measured 4 kilograms.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-012",
+      "report_id": "73e1aa2c6302",
+      "report": "At 15:00, archive-86992 measured 4000 grams.",
+      "source": "At 15:00, archive-86992 measured 4 kilograms.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-015",
+      "report_id": "e65ae01c5692",
+      "report": "At 11:00, archive-14032 was stopped.",
+      "source": "At 11:00, archive-14032-other was running.\nAt 11:00, archive-14032 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-016",
+      "report_id": "1298a19518d1",
+      "report": "At 11:00, archive-27822 was stopped.",
+      "source": "At 11:00, archive-27822 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-016",
+      "report_id": "22c40d1b9373",
+      "report": "At 11:00, archive-27822 was stopped.",
+      "source": "At 11:00, archive-27822 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-016",
+      "report_id": "44d7037e397d",
+      "report": "At 11:00, archive-27822 was stopped.",
+      "source": "At 11:00, archive-27822 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-016",
+      "report_id": "5ed446002ed7",
+      "report": "At 11:00, archive-27822 was stopped.",
+      "source": "At 11:00, archive-27822 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-016",
+      "report_id": "dcddb476e7d7",
+      "report": "At 11:00, archive-27822 was stopped.",
+      "source": "At 11:00, archive-27822 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-018",
+      "report_id": "e51126180488",
+      "report": "At 15:00, archive-88478 was stopped.",
+      "source": "At 08:00, archive-88478 was running.\nAt 15:00, archive-88478 was not running.",
+      "error": "false_positive"
+    },
+    {
+      "assignment": "QM-PQ-01-023",
+      "report_id": "d53219f7e44e",
+      "report": "At 10:00, archive-70931 was stopped.",
+      "source": "Plan: at 10:00, archive-70931 will be running.\nObservation: At 10:00, archive-70931 was stopped.",
+      "error": "false_positive"
+    }
+  ],
+  "causal_limit": "Observed false flags do not establish hidden reasoning; source votes and final decisions remain correct."
+}

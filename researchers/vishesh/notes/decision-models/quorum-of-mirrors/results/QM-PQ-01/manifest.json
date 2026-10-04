@@ -1,0 +1,202 @@
+{
+  "attempt": "QM-PQ-01",
+  "stage": "qualification_only",
+  "corpus_sha256": "04719635d73056dbc2b5444e73a645bd4405e5911d7721f8a731905b512cdb9d",
+  "assignments": [
+    {
+      "id": "QM-PQ-01-000",
+      "case_id": "qualification-units-0-n1-d1",
+      "request_sha256": "ecf025b7281f0f94eb7ed81a004658fcdcdf258cef712d65ff378bce4ef39241",
+      "input_token_upper_bound": 4333,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-001",
+      "case_id": "qualification-time-0-n1-d1",
+      "request_sha256": "63e8fb55f59104796d90e1125c40514c83ae34f6723a1cebf55f401640c73602",
+      "input_token_upper_bound": 4383,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-002",
+      "case_id": "qualification-polarity-0-n1-d0",
+      "request_sha256": "92c74340cafc2214b7c7d7d7caa753613e6f5972a44e2570b399bd21767b313f",
+      "input_token_upper_bound": 4266,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-003",
+      "case_id": "qualification-correction-0-n5-d0",
+      "request_sha256": "f53ce25cb1055d51f7a9ea0ba96a832a59e03e122a1087962f678a18c64d7946",
+      "input_token_upper_bound": 4926,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-004",
+      "case_id": "qualification-entity-0-n5-d0",
+      "request_sha256": "63ee818e69dd95d8a155897c2490d141a939c5e6b5fbd72dc2996608821ff0f9",
+      "input_token_upper_bound": 4885,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-005",
+      "case_id": "qualification-units-0-n5-d0",
+      "request_sha256": "92f054a5d8f2e983d99e844ad680a7311b9a364a2240d7e01faaf2d7a54fa63c",
+      "input_token_upper_bound": 4849,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-006",
+      "case_id": "qualification-polarity-0-n1-d1",
+      "request_sha256": "828b6ca9ffd977cbcb357d7a40329b4068f7ea98e7b17d187954d9e72e0e9a2c",
+      "input_token_upper_bound": 4266,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-007",
+      "case_id": "qualification-modality-0-n5-d0",
+      "request_sha256": "5c45c95bb049c7abdaf822a9fe99fafb81c8517e606a9d0741956cb7dc9087b9",
+      "input_token_upper_bound": 4936,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-008",
+      "case_id": "qualification-entity-0-n5-d1",
+      "request_sha256": "0aba53b625b09e7ca459800f10e95f207f65b8e8daa78a09d19e2e6cd8fb129e",
+      "input_token_upper_bound": 4885,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-009",
+      "case_id": "qualification-time-0-n5-d1",
+      "request_sha256": "83456f022d0bff9e59a9030b9d362d667de1bd3f8b56838b8c5dfb597662e788",
+      "input_token_upper_bound": 4867,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-010",
+      "case_id": "qualification-polarity-0-n5-d1",
+      "request_sha256": "94463c88e1d79e6804e340566f6ee85f2adb9c59a5a122b0b4cf1cc953956e12",
+      "input_token_upper_bound": 4750,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-011",
+      "case_id": "qualification-units-0-n5-d1",
+      "request_sha256": "e1679ee6d3ffe3f788a347fdf92b4aad4bc645cf1f06653668c184e839d63d04",
+      "input_token_upper_bound": 4849,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-012",
+      "case_id": "qualification-units-0-n1-d0",
+      "request_sha256": "48ad904f5d1ad0760cc0b29d015954af5af7cce5c673879039bd7e334a6ff80a",
+      "input_token_upper_bound": 4333,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-013",
+      "case_id": "qualification-modality-0-n1-d1",
+      "request_sha256": "a18dc51cb069e6342e0efa2940f1c01a9e6e1b1a090b0a2e83a9a7f519665941",
+      "input_token_upper_bound": 4452,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-014",
+      "case_id": "qualification-modality-0-n5-d1",
+      "request_sha256": "4798ff45c393f7585d72891f96c2def7db59c55e5546e8d31365e01014e1ef3a",
+      "input_token_upper_bound": 4936,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-015",
+      "case_id": "qualification-entity-0-n1-d1",
+      "request_sha256": "8321605719c93937229f891ba7ec57c9f9c2d7520c73334fbcba3c9b64495a01",
+      "input_token_upper_bound": 4401,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-016",
+      "case_id": "qualification-polarity-0-n5-d0",
+      "request_sha256": "86cb19bfe8fe930e96c646270b5a9fead61b30962e6481bf2a68ff6f1acd5abb",
+      "input_token_upper_bound": 4750,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-017",
+      "case_id": "qualification-correction-0-n5-d1",
+      "request_sha256": "3fe1bc46ead95bd01b81256bda2a33c295f09d732f738d5e927d1f2c4e17dbe1",
+      "input_token_upper_bound": 4926,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-018",
+      "case_id": "qualification-time-0-n5-d0",
+      "request_sha256": "1e5a51114ba4a015d269120ed00a4dd1fe1a5a12db14d6bd76bdd1f775fb0591",
+      "input_token_upper_bound": 4867,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=5, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-019",
+      "case_id": "qualification-time-0-n1-d0",
+      "request_sha256": "16d802cdfd983226b89df3e08335bb09d216330ce725c875831c70d6441d5259",
+      "input_token_upper_bound": 4383,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-020",
+      "case_id": "qualification-correction-0-n1-d1",
+      "request_sha256": "0c81a5e3fd7e69df60a9468704167d7f130fc1d93a54a6f9f9b6a9f3a71eaa71",
+      "input_token_upper_bound": 4442,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=True; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-021",
+      "case_id": "qualification-correction-0-n1-d0",
+      "request_sha256": "a94f22dbd9e2a503a91042645eda9eab1212067dbed38340d432772b5de047b4",
+      "input_token_upper_bound": 4442,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-022",
+      "case_id": "qualification-entity-0-n1-d0",
+      "request_sha256": "e541ba4baf38e999a6a78ddac370e8e0761308c7e57cb700a3088c85e7b2e492",
+      "input_token_upper_bound": 4401,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    },
+    {
+      "id": "QM-PQ-01-023",
+      "case_id": "qualification-modality-0-n1-d0",
+      "request_sha256": "cbd4452ae60c8058239d808cba44a0d1c1af76589dde3c860c4d1b25800e002b",
+      "input_token_upper_bound": 4452,
+      "reserve_usd": 0.03,
+      "tldr": "One source-first Sonnet decision; copies=1, inverted=False; compare fixed source majority, fidelity and quote validity; synthetic qualification only."
+    }
+  ],
+  "max_calls": 24,
+  "max_reserved_usd": 0.72,
+  "evaluation_dispatch": false
+}

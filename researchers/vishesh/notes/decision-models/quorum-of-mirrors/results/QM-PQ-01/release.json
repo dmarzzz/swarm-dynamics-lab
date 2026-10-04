@@ -1,0 +1,15 @@
+{
+  "claim": "vishesh-quorum-pq-01",
+  "status": "done",
+  "host": "sim-shadow",
+  "allocated_seconds": 333.0,
+  "allocated_cost_estimate_usd": 0.006607274999999999,
+  "invoice_claim": false,
+  "claim_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/340",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/341",
+  "worker_stopped": true,
+  "credential_persisted_remotely": false,
+  "evaluation_dispatched": false,
+  "operations_attempt_slug": "qm-pq-01",
+  "native_attempt": "QM-PQ-01"
+}

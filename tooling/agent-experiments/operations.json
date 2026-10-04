@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:21:59.245134+00:00",
-      "checked_commit": "fb1987c0b0b96babf0fd8ec659043d519596a1f0",
-      "next_action": "Offline case preparation complete: packet-study/RESULTS.md and READINESS.json. V2 source/claim/decision packets pass bounded-scope case rubric; sealed corpora in local custody. Native adapter, concrete output/qualification and token-cost envelope plus material-scope decision remain before admission. No allocation or model calls.",
+      "checked_at": "2026-10-04T18:45:17.311481+00:00",
+      "checked_commit": "3acd305397863b49ce21f437d042fee40026a5f5",
+      "next_action": "HOLD evaluation: PQ-01 fully traced/closed, decisions24/24 correct but fidelity11/24 failed gate. Read PQ-01-post.md and fidelity-analysis.json. Possible offline explicit semantic-value comparison repair; no automatic native retry, evaluation or budget reset. Worker stopped and claim released.",
       "next_run_approval": "owner"
     },
     {

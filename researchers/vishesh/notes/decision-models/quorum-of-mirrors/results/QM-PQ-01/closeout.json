@@ -1,0 +1,19 @@
+{
+  "calls": 73,
+  "reserved_usd": 0.785856,
+  "known_actual_usd": 0.14356296,
+  "prior_unknown_upper_bound_usd": 0.001344,
+  "new_known_actual_usd": 0.141846,
+  "execution_ledger_status": "complete",
+  "worker_processes": 0,
+  "reconciled": true,
+  "artifacts_sha256": {
+    "summary.json": "0684482b26f1a978d8e1eebb94dae21e9fff932084fcff764d3423d021dc8409",
+    "accounting.jsonl": "bef5d510c64267daa36401b83fb3077444d7a14cd3e714ecc66425abad4b3d2d",
+    "manifest.json": "878e891756922d777fca967bd5f9a8ed295c6bc4bd39cfd95fd20cc8420cc5f8",
+    "preflight.json": "3142a361283992a7f814dd99f8ee7b6f97358bc38f02249f3dd49baba1552948",
+    "responses.jsonl": "e73862f4e1708f413bb9bd82ce7b75cd11a1e5fef65176fc365aea80d7fef1b4",
+    "requests.jsonl": "641018a8950781ce3c81e58861ebf4eb9bd8c82d9642e1afd7912ea2de6182aa",
+    "receipts.jsonl": "a7d8d1ac268cb797be3998a424194be8db49fdba83897e2000183f56102c02d6"
+  }
+}

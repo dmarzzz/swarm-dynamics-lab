@@ -1,0 +1,81 @@
+{
+  "attempt": "QM-PQ-01",
+  "assessor": "vishesh/codex-quorum-mirrors",
+  "assessed_at": "2026-10-04T18:45:17.311481+00:00",
+  "execution": "completed",
+  "qualification": "failed",
+  "scientific_review": "complete",
+  "decision": "complete_valid_result",
+  "next_action": "HOLD evaluation; prospective offline repair only",
+  "evidence": "../../reviews/PQ-01-post.md",
+  "native_outcome_preserved": true,
+  "independent_researcher_review": "not_required_by_owner",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Final correctness and false distortion alarms separated.",
+      "evidence": "audit.json"
+    },
+    {
+      "dimension": "scenarios",
+      "status": "limited",
+      "finding": "Six synthetic controlled roots; no field generalization.",
+      "evidence": "manifest.json"
+    },
+    {
+      "dimension": "controls",
+      "status": "limited",
+      "finding": "2x2 fixed sources, length covaries with repetition.",
+      "evidence": "requests.jsonl"
+    },
+    {
+      "dimension": "capability",
+      "status": "fail",
+      "finding": "Fidelity gate11/24; final/source decisions pass.",
+      "evidence": "summary.json"
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All grades replayed without disagreement.",
+      "evidence": "audit.json"
+    },
+    {
+      "dimension": "sample_size",
+      "status": "limited",
+      "finding": "Six roots,24 calls,120 dependent report occurrences.",
+      "evidence": "fidelity-analysis.json"
+    },
+    {
+      "dimension": "data_collection",
+      "status": "pass",
+      "finding": "24 requests, responses and accounting records retained.",
+      "evidence": "receipts.jsonl"
+    },
+    {
+      "dimension": "analysis",
+      "status": "pass",
+      "finding": "All assigned slots and all13 failed fidelity sets assessed.",
+      "evidence": "fidelity-analysis.json"
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Remote hashes and ledger reconciliation pass.",
+      "evidence": "closeout.json"
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "24-entry static request/response explorer, no invented trajectory.",
+      "evidence": "traces.html"
+    },
+    {
+      "dimension": "cost_resources",
+      "status": "pass",
+      "finding": "Original ledger retained, worker exited, claim released.",
+      "evidence": "release.json"
+    }
+  ]
+}

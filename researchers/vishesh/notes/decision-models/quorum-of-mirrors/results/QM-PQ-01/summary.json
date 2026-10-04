@@ -1,0 +1,16 @@
+{
+  "assigned": 24,
+  "started": 24,
+  "valid": 24,
+  "unstarted": 0,
+  "decision_correct": 24,
+  "source_votes_correct": 72,
+  "distortions_correct": 11,
+  "quotes_valid": 24,
+  "clean_correct": 6,
+  "known_actual_usd": 0.141846,
+  "qualified": false,
+  "attempt": "QM-PQ-01",
+  "stop_reason": null,
+  "execution_complete": true
+}
