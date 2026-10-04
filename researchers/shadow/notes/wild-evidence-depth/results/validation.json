@@ -17,5 +17,7 @@
   "public_plan_http_status": 200,
   "public_plan_checked_at": "2026-10-04T15:06:03Z",
   "public_plan_revision": "b9eb6c8e",
-  "instrument_commit_before_census": "833e3d3fadb48f306ec1d4bb6911934462ca1ee2"
+  "instrument_commit_before_census": "833e3d3fadb48f306ec1d4bb6911934462ca1ee2",
+  "same_instrument_published_after_rebase": "03704d92ebbcb617530097696f7e06257fc6674a",
+  "public_results_commit": "d7301e98cefafe96f1a23c3d257beab06fea129c"
 }

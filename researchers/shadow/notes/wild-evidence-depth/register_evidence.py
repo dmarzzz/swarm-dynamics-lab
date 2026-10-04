@@ -20,7 +20,7 @@ ROW = {
     'sources': [PREFIX + 'PLAN.md', PREFIX + 'results/summary.json', PREFIX + 'results/reference-check.json', PREFIX + 'POST-MORTEM.md'],
     'status_at_assessment': 'complete_descriptive_census_no_execution_or_success_inference',
     'assessor': 'shadow/sol-audit-gap', 'assessed_at': '2026-10-04',
-    'source_commit': '833e3d3fadb48f306ec1d4bb6911934462ca1ee2'
+    'source_commit': 'd7301e98cefafe96f1a23c3d257beab06fea129c'
 }
 
 if __name__ == '__main__':

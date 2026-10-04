@@ -4,7 +4,7 @@ Disposition: **complete-valid-descriptive-result**. Assessor/operator: shadow/so
 
 ## Native attempt and accounting
 
-Plan publication `b9eb6c8e`, public HTTP 200 readback 15:06:03Z; implementation and pre-run assessment committed at `833e3d3f` before A1. Exact command from repository root:
+Plan publication `b9eb6c8e`, public HTTP 200 readback 15:06:03Z; implementation and pre-run assessment locally committed at `833e3d3f` before A1. Rebase for concurrent main pushes preserved the exact analyzer bytes and published that instrument as `03704d92`; results landed on main as `d7301e98`. The original local execution commit is retained here as historical lineage, not represented as an immutable public preregistration. Exact command from repository root:
 
 ```sh
 /usr/bin/time -f 'elapsed_seconds=%e max_rss_kb=%M' nice -n 10 python3 researchers/shadow/notes/wild-evidence-depth/analyze.py --data /path/to/redacted.jsonl.gz --out researchers/shadow/notes/wild-evidence-depth/results

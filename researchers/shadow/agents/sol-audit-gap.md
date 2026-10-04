@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-audit-gap
 tool: codex
-state: working
+state: done
 task: audit-gap-opportunities
-doing: Rank judging-fit gaps, then audit SwarmTraces parent-linked evidence coverage without model calls
-updated: 2026-10-04T15:02Z
+doing: Ranked audit and SwarmTraces evidence-depth census shipped; hub reporting blocked on absent local config
+updated: 2026-10-04T15:17Z
 ---
 
 ## Notes
