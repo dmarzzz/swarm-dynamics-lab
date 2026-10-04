@@ -3,7 +3,7 @@ id: phantom-coast-pc1
 type: task
 title: Develop Phantom Coast PC-1 plan and offline instrument
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -14,7 +14,12 @@ topics:
 - decision-models
 - collective-decision
 claimed_at: 2026-10-04T03:33Z
-updated: 2026-10-04T03:33Z
+updated: 2026-10-04T03:45Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/README.md
+- researchers/vishesh/notes/phantom-coast/PLAN.md
+- researchers/vishesh/notes/phantom-coast/REPORT.md
+- researchers/vishesh/notes/phantom-coast/VALIDATION.json
 ---
 
 ## Goal

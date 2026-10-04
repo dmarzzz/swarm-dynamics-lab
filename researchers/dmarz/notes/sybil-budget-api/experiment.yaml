@@ -1,0 +1,32 @@
+id: sybil-budget-api
+title: How much verification does Sybil resistance need?
+description: 324 and 972 simulated identities; six verification budgets and five attacker
+  pass rates; random versus topology coverage. Exploratory Haiku synthesis study.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: fixed
+  batch:
+    type: str
+    role: replicate
+  source_hash:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- model_calls
+- cost_usd
+- qualification_passed
+- rare_accuracy
+- bad_seat_share
+- specialist_retention
+primary_metric: rare_accuracy
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-budget-api

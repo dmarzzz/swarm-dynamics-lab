@@ -6,6 +6,7 @@ The practical rule: a dissenter can earn a bounded independent check. Evidence d
 
 ## Start here
 
+- [Standalone live study plan RD-2](LIVE-PLAN.md) and [research and X source map](SOURCES.md).
 - [Experimental design RD-1](PLAN.md), written before implementation.
 - [Conditions and parameter ledger](PARAMETERS.md).
 - [Implementation and validation](IMPLEMENTATION.md).

@@ -39,12 +39,19 @@ ASSIGNMENTS={
  'Q1': [('usage_cliff',5,'clean'),('genuine_value',5,'promotion'),('evidence_gap',5,'clean')],
  'Q2': [('usage_cliff',6,'clean'),('genuine_value',6,'promotion'),('evidence_gap',6,'clean')],
  'Q3': [('evidence_gap',7,'clean')],
+ 'Q4': [(c['family'],i,c['world']) for i,c in enumerate(json.loads((BASE/'qualification-v2.json').read_text())['cases'])],
  'P0': [('usage_cliff',0,'clean'),('usage_cliff',0,'omission')],
  'S1': [(f,p,w) for f in ('usage_cliff','residency_scope','migration_deadline') for p in (0,2) for w in ('clean','omission')],
 }
 def signature(config):
     paths=list((BASE/'src').glob('*.py'))+[BASE.parent/'src/provider.py',BASE.parent/'src/allocation.py']
-    return digest({'sources':{str(p.relative_to(BASE.parent)):p.read_text() for p in paths},'model':{k:v for k,v in config.items() if k!='total_api_cap_usd'}})
+    return digest({'sources':{str(p.relative_to(BASE.parent)):p.read_text() for p in paths},'qualification_cases':json.loads((BASE/'qualification-v2.json').read_text()),'model':{k:v for k,v in config.items() if k!='total_api_cap_usd'}})
+
+def qualification_gate(q, expected_signature):
+    if (q.get('stage')!='Q4' or not q.get('qualified') or
+        q.get('source_signature')!=expected_signature or
+        any(q.get(k)!=12 for k in ('planned','terminal','valid','acceptable')) or q.get('invalid')!=0):
+        raise ValueError('complete matching Q4 qualification required')
 
 def collect(stage,out,policy,config,hub=None):
     out=Path(out);out.mkdir(parents=True,exist_ok=False)
@@ -61,7 +68,7 @@ def collect(stage,out,policy,config,hub=None):
         except Exception as exc:report_errors.append({'phase':'frame','type':type(exc).__name__})
     publish()
     for i,(family,profile,world) in enumerate(assigned):
-        case=build(family,profile,world,seed=37)
+        case=build(family,profile,world,seed=37,dossier_spec=json.loads((BASE/'qualification-v2.json').read_text())['cases'][i] if stage=='Q4' else None)
         (out/f'case-{i}.json').write_text(json.dumps(case))
         with (out/f'events-{i}.jsonl').open('x') as f:
             def emit(event):
@@ -76,7 +83,7 @@ def collect(stage,out,policy,config,hub=None):
         (out/'outcomes.json').write_text(json.dumps(results,indent=2))
         publish()
     valid=[r for r in results if r['valid']]
-    qualified=stage in ('Q0','Q1','Q2') and len(valid)==len(results) and all(r['evaluation']['acceptable_decision'] for r in valid)
+    qualified=stage in ('Q0','Q1','Q2','Q4') and len(valid)==len(results) and all(r['evaluation']['acceptable_decision'] for r in valid)
     summary={'stage':stage,'planned':len(assigned)*3,'terminal':len(results),'valid':len(valid),'invalid':len(results)-len(valid),
              'acceptable':sum(r['evaluation']['acceptable_decision'] for r in valid),'qualified':qualified,
              'calls':policy.calls,'input_tokens':policy.input_tokens,'output_tokens':policy.output_tokens,'actual_usd':policy.actual_usd,
@@ -95,10 +102,13 @@ def collect(stage,out,policy,config,hub=None):
 def main():
     a=argparse.ArgumentParser();a.add_argument('--stage',choices=ASSIGNMENTS,required=True);a.add_argument('--out',required=True);a.add_argument('--qualification');a.add_argument('--public-plan',required=True);args=a.parse_args()
     config=json.loads(Path(os.environ['SWARM_MODEL_CONFIG_FILE']).read_text());require(config)
-    if not args.public_plan.startswith('https://github.com/dmarzzz/swarm-lab/blob/'):raise ValueError('immutable public plan required')
+    import re
+    if not re.fullmatch(r'https://github.com/dmarzzz/swarm-lab/blob/[0-9a-f]{40}/[^?#]+',args.public_plan):raise ValueError('immutable full-commit public plan required')
     if args.stage in ('P0','S1'):
         q=json.loads(Path(args.qualification).read_text()) if args.qualification else {}
-        if not q.get('qualified') or q.get('source_signature')!=signature(config):raise ValueError('matching qualification required')
+        qualification_gate(q,signature(config))
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=BASE,text=True).strip()
+    if args.public_plan.split('/blob/')[1].split('/')[0]!=commit:raise ValueError('public plan must match deployed commit')
     import urllib.request
     with urllib.request.urlopen(args.public_plan,timeout=20) as r:
         if r.status!=200:raise ValueError('public plan unavailable')
@@ -110,7 +120,7 @@ def main():
     with sr.start('influence-swarms',params={'stage':args.stage,'version':signature(config)[:12]}) as hub:
         summary=collect(args.stage,args.out,policy,config,hub)
         metrics={k:summary[k] for k in ('valid','acceptable','invalid','actual_usd')}
-        if summary['invalid'] or (args.stage in ('Q0','Q1','Q2') and not summary['qualified']) or (args.stage=='Q3' and not summary['diagnostic_passed']):hub.fail('Qualification or execution issue; all outcomes retained',**metrics)
+        if summary['invalid'] or (args.stage in ('Q0','Q1','Q2','Q4') and not summary['qualified']) or (args.stage=='Q3' and not summary['diagnostic_passed']):hub.fail('Qualification or execution issue; all outcomes retained',**metrics)
         else:hub.done(message='Complete; model decisions retained. Exploratory synthetic evidence.',**metrics)
         print(json.dumps({'run':hub.id,**summary}),flush=True)
 if __name__=='__main__':main()

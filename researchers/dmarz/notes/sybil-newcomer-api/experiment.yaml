@@ -1,0 +1,13 @@
+id: sybil-newcomer-api
+title: Knowledgeable newcomers versus a trusted Sybil coalition
+description: Repeated simulated reports and audits; scarce newcomer facts, earned reputation, constant attacker message budget, and qualified Haiku synthesis. Exploratory follow-up.
+owner: dmarz
+params:
+  stage: {type: str, role: stage}
+  backend: {type: str, role: fixed}
+  batch: {type: str, role: replicate}
+  source_hash: {type: str, role: fixed}
+  code: {type: str, role: fixed}
+metrics: [episodes, invalid, model_calls, cost_usd, qualification_passed, rare_accuracy]
+primary_metric: rare_accuracy
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-newcomer-api

@@ -26,10 +26,12 @@ The same measured firm-output/HHI/profit replay retains all24rounds per main epi
 
 ## Budget and deployment
 
-The owner shared$500 directive remains one pool. Planned902calls (6mechanics+32qualification+864discovery),at most1000including diagnostics. Published Haiku prices$1/Minput,$5/Moutput;conservative whole-comparison reserve$39.456. Sonnet's earlier1600cap and ledger remain unchanged;combined upper reservation ceilings$228.8448. An incomplete hub usage snapshot on2026-10-04 counted251dmarz non-analysis rows and$46.808388 across reported cost fields;this may overlap cumulative reports and is not an invoice. Keep actual ledger totals separate and reconcile both studies.
+The owner shared$500 directive remains one pool. Planned904calls (2failed mechanics+6fresh mechanics+32qualification+864discovery),at most1000including diagnostics. Published Haiku prices$1/Minput,$5/Moutput;conservative whole-comparison reserve$39.456. Sonnet's earlier1600cap and ledger remain unchanged;combined upper reservation ceilings$228.8448. An incomplete hub usage snapshot on2026-10-04 counted251dmarz non-analysis rows and$46.808388 across reported cost fields;this may overlap cumulative reports and is not an invoice. Keep actual ledger totals separate and reconcile both studies.
 
 Use at most two finite workers for this model,four total including Sonnet,on a verified exclusive owner allocation. Request90s and worker2h caps;no automatic retry/restart. Credentials arrive only via approved encrypted aliases in process environment. Do not claim readiness until all gates pass. Release the host only after both studies stop and artifact recovery completes.
 
 Current repair: I0-001 attempted2of6checks;one selected consolidation instead of requested registration. Both actions were legal,one mandate failed. V2 clarifies the primary objective for mechanics-only prompts;ordinary model prompts remain unchanged. Main remains blocked pending fresh I0 and Q0. See reviews/i0-001-post.md.
 
 V2 I0-002 passed6/6fresh mechanics with$0.028879 usage;aggregate8calls/$0.045739 including the failure. Q0-001 is now the remaining gate.
+
+Q0-001 passed all four episodes, minimum profit/reference 97.8075%; all 14 artifacts verified and 32 actions replayed exactly. The independently qualified S1-001 discovery comparison is ready. See its committed pre-run review.

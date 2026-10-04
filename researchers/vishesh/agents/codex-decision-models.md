@@ -1,11 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: done
-task: right-dissenter-design-build
-doing: Completed RD-1 design, multi-area tags, offline prototype, replay and handoffs;
-  native launch gated
-updated: '2026-10-04T03:13:14Z'
+state: working
+task: right-dissenter-live-study
+doing: Preparing RD-2 live qualification and dedicated deployment; study cap pending
+updated: '2026-10-04T03:43:19Z'
 ---
 
 ## Notes

@@ -1,0 +1,13 @@
+world,dose,memory,arm,episodes,tasks,invalid,captured,capture_latency_med,frac_original_T,frac_original_T_captured,recovered,recovered_captured,half_time_med,entrench_frac_original
+W0_CLEAN,0.0,1,A0_no_purge,50,50,0,0.0,,0.8042,nan,1.0,nan,,0.94
+W0_CLEAN,0.0,1,A1_purge,50,50,0,0.0,,0.8042,nan,1.0,nan,,0.94
+W0_CLEAN,0.0,1,A2_purge_wipe,50,50,0,0.0,,0.8042,nan,1.0,nan,,0.94
+W0_CLEAN,0.0,5,A0_no_purge,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,5,A1_purge,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,5,A2_purge_wipe,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,20,A0_no_purge,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,20,A1_purge,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,20,A2_purge_wipe,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,full,A0_no_purge,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,full,A1_purge,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995
+W0_CLEAN,0.0,full,A2_purge_wipe,50,50,0,0.0,,1.0,nan,1.0,nan,,0.995

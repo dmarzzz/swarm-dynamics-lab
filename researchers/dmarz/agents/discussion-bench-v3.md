@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-bench-v3
 tool: codex
-state: idle
-task: null
-doing: v3-q0-a1 launched on sim-discussion-v3; bounded worker running, results and independent review pending
-updated: 2026-10-04T02:58Z
+state: working
+task: analyze-discussion-v3-q0
+doing: Auditing completed v3-q0-a1, reporting failed clean competence and memory outcomes, then retiring dedicated host
+updated: 2026-10-04T03:48Z
 ---
 
 ## Notes

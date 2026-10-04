@@ -1,0 +1,93 @@
+{
+  "status": "SCRIPTED / NOT MODEL EVIDENCE",
+  "commit": "efbdae3b8e3111fa55e72ea2d992f82e98b5ab09",
+  "cases": 4,
+  "assigned": 12,
+  "valid": 12,
+  "acceptable": 12,
+  "logical_calls": 56,
+  "api_calls": 0,
+  "usd": 0,
+  "qualification_file_hash": "af0124c03ad4ba9e43b07d8cce3f758371cff52115ea3aeea357c7d235545c9e",
+  "outcome_hash": "075e175c779d890654fc61e8c2d8b7d515eb3b71a86309892a78313bc62cf6cd",
+  "answer_labels": [
+    "Aster",
+    "Birch",
+    "Cobalt",
+    "DEFER"
+  ],
+  "decisions": [
+    {
+      "case": "renewal-volume",
+      "arm": "team_ballots",
+      "choice": "Birch",
+      "acceptable": 1
+    },
+    {
+      "case": "renewal-volume",
+      "arm": "team_evidence",
+      "choice": "Birch",
+      "acceptable": 1
+    },
+    {
+      "case": "renewal-volume",
+      "arm": "solo",
+      "choice": "Birch",
+      "acceptable": 1
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "arm": "team_evidence",
+      "choice": "Cobalt",
+      "acceptable": 1
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "arm": "team_ballots",
+      "choice": "Cobalt",
+      "acceptable": 1
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "arm": "solo",
+      "choice": "Cobalt",
+      "acceptable": 1
+    },
+    {
+      "case": "unapproved-processing",
+      "arm": "team_ballots",
+      "choice": "DEFER",
+      "acceptable": 1
+    },
+    {
+      "case": "unapproved-processing",
+      "arm": "team_evidence",
+      "choice": "DEFER",
+      "acceptable": 1
+    },
+    {
+      "case": "unapproved-processing",
+      "arm": "solo",
+      "choice": "DEFER",
+      "acceptable": 1
+    },
+    {
+      "case": "approved-alternative",
+      "arm": "team_evidence",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "approved-alternative",
+      "arm": "team_ballots",
+      "choice": "Aster",
+      "acceptable": 1
+    },
+    {
+      "case": "approved-alternative",
+      "arm": "solo",
+      "choice": "Aster",
+      "acceptable": 1
+    }
+  ]
+}
