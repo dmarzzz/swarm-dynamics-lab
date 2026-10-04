@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: integrate-run-closeout-cycle
-doing: Implementing automatic post-mortem handoff, run-quality assessment and approved next-run planning.
-updated: 2026-10-04T07:52Z
+doing: Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete.
+updated: 2026-10-04T08:03Z
 ---
 
 ## Notes
