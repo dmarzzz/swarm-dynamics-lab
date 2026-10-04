@@ -1,0 +1,422 @@
+[
+  {
+    "case_id": "5152488866be",
+    "scenario": "bridge",
+    "arm": "generic",
+    "seed": 2120,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "a801b47b1db5",
+    "scenario": "bridge",
+    "arm": "clarified",
+    "seed": 2120,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "c10d3f4f7e72",
+    "scenario": "bridge",
+    "arm": "clarified",
+    "seed": 2121,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "719f4014d56f",
+    "scenario": "bridge",
+    "arm": "generic",
+    "seed": 2121,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "172acc0c3ae6",
+    "scenario": "bridge",
+    "arm": "generic",
+    "seed": 2122,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": false
+  },
+  {
+    "case_id": "9b09ad42af6a",
+    "scenario": "bridge",
+    "arm": "clarified",
+    "seed": 2122,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "cc87a25162fb",
+    "scenario": "bridge",
+    "arm": "clarified",
+    "seed": 2123,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "e7112472bb19",
+    "scenario": "bridge",
+    "arm": "generic",
+    "seed": 2123,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "6a0091a8a8b8",
+    "scenario": "bridge",
+    "arm": "generic",
+    "seed": 2124,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "ee033e57b176",
+    "scenario": "bridge",
+    "arm": "clarified",
+    "seed": 2124,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "9bd993033710",
+    "scenario": "bridge",
+    "arm": "clarified",
+    "seed": 2125,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "82982df771d4",
+    "scenario": "bridge",
+    "arm": "generic",
+    "seed": 2125,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "8fb91176f52a",
+    "scenario": "bridge",
+    "arm": "uncertainty",
+    "seed": 2140,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "DEFER",
+    "correct": true
+  },
+  {
+    "case_id": "a622f6406032",
+    "scenario": "bridge",
+    "arm": "uncertainty",
+    "seed": 2141,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "DEFER",
+    "correct": true
+  },
+  {
+    "case_id": "4995cd9977e9",
+    "scenario": "build",
+    "arm": "generic",
+    "seed": 2126,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": false
+  },
+  {
+    "case_id": "f5fa0d5f21ea",
+    "scenario": "build",
+    "arm": "clarified",
+    "seed": 2126,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "8ff1d25bffd5",
+    "scenario": "build",
+    "arm": "clarified",
+    "seed": 2127,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "bbc69e6bee0f",
+    "scenario": "build",
+    "arm": "generic",
+    "seed": 2127,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "f5c4077f91d8",
+    "scenario": "build",
+    "arm": "generic",
+    "seed": 2128,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": false
+  },
+  {
+    "case_id": "f1ec2d78cc54",
+    "scenario": "build",
+    "arm": "clarified",
+    "seed": 2128,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "662b8ba865f7",
+    "scenario": "build",
+    "arm": "clarified",
+    "seed": 2129,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "d1c6370dedd4",
+    "scenario": "build",
+    "arm": "generic",
+    "seed": 2129,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "dc3d443475eb",
+    "scenario": "build",
+    "arm": "generic",
+    "seed": 2130,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": false
+  },
+  {
+    "case_id": "054b5ea957a4",
+    "scenario": "build",
+    "arm": "clarified",
+    "seed": 2130,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "7cb5e89c488b",
+    "scenario": "build",
+    "arm": "clarified",
+    "seed": 2131,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "3b6a68bc2aef",
+    "scenario": "build",
+    "arm": "generic",
+    "seed": 2131,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "acc056e060b0",
+    "scenario": "build",
+    "arm": "uncertainty",
+    "seed": 2142,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "DEFER",
+    "correct": true
+  },
+  {
+    "case_id": "5c29fbe07add",
+    "scenario": "build",
+    "arm": "uncertainty",
+    "seed": 2143,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "DEFER",
+    "correct": true
+  },
+  {
+    "case_id": "4ee1beebbf50",
+    "scenario": "alarm",
+    "arm": "generic",
+    "seed": 2132,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": false
+  },
+  {
+    "case_id": "b22a5c320a1f",
+    "scenario": "alarm",
+    "arm": "clarified",
+    "seed": 2132,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "a93a0be32da7",
+    "scenario": "alarm",
+    "arm": "clarified",
+    "seed": 2133,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "e5a1e9e8ddf0",
+    "scenario": "alarm",
+    "arm": "generic",
+    "seed": 2133,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "72ed24224c9b",
+    "scenario": "alarm",
+    "arm": "generic",
+    "seed": 2134,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": false
+  },
+  {
+    "case_id": "7c0cfa7449ae",
+    "scenario": "alarm",
+    "arm": "clarified",
+    "seed": 2134,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "cae7288e95a7",
+    "scenario": "alarm",
+    "arm": "clarified",
+    "seed": 2135,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "d8966bdcaa65",
+    "scenario": "alarm",
+    "arm": "generic",
+    "seed": 2135,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "b6a226ab2a52",
+    "scenario": "alarm",
+    "arm": "generic",
+    "seed": 2136,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": false
+  },
+  {
+    "case_id": "36ccebb17933",
+    "scenario": "alarm",
+    "arm": "clarified",
+    "seed": 2136,
+    "final": "PROCEED",
+    "status": "completed",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "37d68a28f048",
+    "scenario": "alarm",
+    "arm": "clarified",
+    "seed": 2137,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "782e56b864ee",
+    "scenario": "alarm",
+    "arm": "generic",
+    "seed": 2137,
+    "final": "HOLD",
+    "status": "completed",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "4ab1c24b0511",
+    "scenario": "alarm",
+    "arm": "uncertainty",
+    "seed": 2144,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "DEFER",
+    "correct": true
+  },
+  {
+    "case_id": "745012a7acad",
+    "scenario": "alarm",
+    "arm": "uncertainty",
+    "seed": 2145,
+    "final": "DEFER",
+    "status": "completed",
+    "expected": "DEFER",
+    "correct": true
+  }
+]
