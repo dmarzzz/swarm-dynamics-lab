@@ -1,0 +1,59 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "Domain overlap between transluce data_source and wiki page families."
+   },
+   "internalParameters": {
+    "commit": "4caec65d97986c8afc1536474ae804dd8cb526d4-dirty"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "f7a84a3ceca5f38a7e6cc75b376d059c37e0e93a62885ac6db906b3b50811209"
+     },
+     "uri": "researchers/shadow/notes/wild-timeline/timeline.py"
+    },
+    {
+     "digest": {
+      "sha256": "38f96626fe3fe422998713f62b2a4477b4dea0a8d6604048149b87d99da4d7c0"
+     },
+     "uri": "researchers/shadow/notes/wild-timeline/shared_sources.csv"
+    },
+    {
+     "digest": {
+      "sha256": "cd3751c6a53ea91deecc2e5d30b753e8d771abcdb84d886c11ba0e07b9852a46"
+     },
+     "uri": "researchers/shadow/notes/wild-timeline/validation.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "4caec65d97986c8afc1536474ae804dd8cb526d4"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/shad0wbot/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T15:51:14Z",
+    "startedOn": "2026-10-04T15:51:14Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "a2981305822f89a26e6fb47e28a05f190ac18b9385b2c48e2c2120ddb29e8055"
+   },
+   "name": "artifacts/shadow-wild-shared-domains/shadow-wild-shared-domains-v1.png"
+  }
+ ]
+}

@@ -9,7 +9,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 import yaml
 
 HERE = Path(__file__).resolve().parent
@@ -103,7 +103,7 @@ def fetch_hub(path, offline):
     try:
         if offline:
             return {'available': False, 'reason': 'Offline build; no live-status claim.', 'url': url}, {}
-        with urlopen(url, timeout=25) as response:
+        with urlopen(Request(url, headers={'User-Agent': 'CommonThread/1.0 (public research map)', 'Accept': 'application/json'}), timeout=25) as response:
             raw = response.read(16_000_000)
         data = json.loads(raw)
         experiments = {}
@@ -123,7 +123,7 @@ def fetch_hub(path, offline):
             Path(path).write_text(json.dumps({'receipt': receipt, 'experiments': experiments}, indent=2) + '\n')
         return receipt, experiments
     except Exception as exc:
-        return {'available': False, 'url': url, 'reason': type(exc).__name__ + ': public hub unavailable'}, {}
+        return {'available': False, 'url': url, 'reason': type(exc).__name__ + ': public hub unavailable' + (' (HTTP ' + str(exc.code) + ')' if hasattr(exc, 'code') else '')}, {}
 
 
 def scientific_status(row):

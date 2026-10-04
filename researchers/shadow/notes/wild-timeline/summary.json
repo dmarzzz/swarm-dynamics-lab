@@ -1,0 +1,162 @@
+{
+ "transluce": {
+  "included_reports_in_chart": 37638,
+  "days": 325,
+  "first_nonzero_day": "2025-11-05",
+  "last_nonzero_day": "2026-09-20",
+  "peak_day": "2026-05-11",
+  "peak_n": 2239,
+  "in_wiki_window_2026-05-11_to_06-22": 29287,
+  "before_2026-05-11": 8294,
+  "on_or_after_2026-07-14": 39,
+  "source_buckets": 40,
+  "source_buckets_with_wiki_trace": 8,
+  "reports_in_shared_buckets": 25735,
+  "reports_with_source_row": 37638,
+  "share_in_shared_buckets": 0.6838
+ },
+ "wiki": {
+  "held_revisions": 14591,
+  "first": "2026-05-24",
+  "last": "2026-07-02",
+  "peak_day": "2026-06-18",
+  "peak_n": 6543,
+  "admin_deletions": 5217,
+  "deletions_first": "2026-06-04",
+  "deletions_last": "2026-07-14",
+  "probes": 101,
+  "shortener_links": 499,
+  "other_sandbox_revisions": 90,
+  "other_sandbox_first": "2026-05-11",
+  "revisions_linking_transluce_tracked_host": 6224,
+  "share_linking": 0.4266,
+  "page_families_no_transluce_bucket": {
+   "OECD": 106,
+   "UNAIDS": 1
+  },
+  "urlquery_report_links": [
+   {
+    "wiki_reference_count": 2,
+    "transluce_report_time": "2026-05-26T14:25:36Z",
+    "transluce_source": "MAX budget documents"
+   }
+  ]
+ },
+ "swarmtraces": {
+  "records": 189579,
+  "records_with_time_utc": 0,
+  "by_kind": {
+   "payload": 91037,
+   "response": 23008,
+   "recovered_text": 75534
+  }
+ },
+ "comovement": {
+  "window": "2026-05-24..2026-06-22",
+  "days": 30,
+  "days_both_nonzero": 23,
+  "spearman_rho_daily_transluce_total_vs_wiki_save": 0.214,
+  "transluce_last_nonzero_day_before_july": "2026-06-21",
+  "wiki_last_save_day_before_july": "2026-06-24",
+  "transluce_reports_2026-06-22_to_07-13": 18,
+  "transluce_reports_in_HF_window_07-08_to_07-13": 0
+ },
+ "overlays": [
+  {
+   "date": "2026-03-06",
+   "label": "First Transluce tunnelling day (Thai ONCB, 29 reports)",
+   "kind": "data",
+   "source": "transluce daily-source-counts.csv"
+  },
+  {
+   "date": "2026-05-11",
+   "label": "Wiki swarm start per collusion.wiki report; first other-wiki sandbox edit in dump",
+   "kind": "report",
+   "source": "[[collusion-wiki-2026-discovery]], other-wikis.json.gz"
+  },
+  {
+   "date": "2026-05-24",
+   "label": "First held revision in the collusion.wiki dump (first successful write per report)",
+   "kind": "data",
+   "source": "collusion-wiki manifest.json.gz, [[collusion-wiki-2026-discovery]]"
+  },
+  {
+   "date": "2026-06-22",
+   "label": "Wiki swarm end per collusion.wiki report (burst again 07-01, 07-02)",
+   "kind": "report",
+   "source": "[[collusion-wiki-2026-discovery]]"
+  },
+  {
+   "date": "2026-07-08",
+   "label": "First message on the package-cache board (METR scope 07-07 to 07-13)",
+   "kind": "report",
+   "source": "[[metr-2026-brief]]"
+  },
+  {
+   "date": "2026-07-13",
+   "label": "Last logged attacker event at Hugging Face",
+   "kind": "report",
+   "source": "[[huggingface-2026-security]]"
+  },
+  {
+   "date": "2026-07-16",
+   "label": "Hugging Face security disclosure",
+   "kind": "report",
+   "source": "[[huggingface-2026-security]]"
+  },
+  {
+   "date": "2026-08-26",
+   "label": "OpenAI technical report and METR investigation published",
+   "kind": "publication",
+   "source": "[[openai-2026-hugging]], [[metr-2026-brief]]"
+  },
+  {
+   "date": "2026-09-04",
+   "label": "collusion.wiki report published",
+   "kind": "publication",
+   "source": "[[collusion-wiki-2026-discovery]]"
+  },
+  {
+   "date": "2026-09-05",
+   "label": "OpenAI statement on the wiki incident",
+   "kind": "publication",
+   "source": "[[x-openai-2096133504417616165]]"
+  },
+  {
+   "date": "2026-09-08",
+   "label": "arXiv 2609.09150 submitted (copying on the wiki)",
+   "kind": "publication",
+   "source": "[[de-marzo-2026-copying]], https://arxiv.org/abs/2609.09150 (submission date checked)"
+  },
+  {
+   "date": "2026-09-22",
+   "label": "Transluce urlquery dataset v5 / agent-activity post",
+   "kind": "publication",
+   "source": "[[transluce-2026-early]], dataset README"
+  },
+  {
+   "date": "2026-09-25",
+   "label": "SwarmTraces report",
+   "kind": "publication",
+   "source": "[[swarmtraces-2026-revealing]], [[x-jeffladish-2103584701357437133]]"
+  },
+  {
+   "date": "2026-10-01",
+   "label": "Transluce: agents vs government sites",
+   "kind": "publication",
+   "source": "[[x-transluceai-2105725928357937410]]"
+  }
+ ],
+ "windows": [
+  {
+   "start": "2026-05-11",
+   "end": "2026-06-22",
+   "label": "wiki swarm (per report)"
+  },
+  {
+   "start": "2026-07-08",
+   "end": "2026-07-13",
+   "label": "HF board + attack (METR window)"
+  }
+ ]
+}

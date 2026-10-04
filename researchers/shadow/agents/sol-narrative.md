@@ -2,9 +2,9 @@
 agent: shadow/sol-narrative
 tool: codex
 state: working
-task: null
-doing: Building a cited convergence map and headline scorecard, no model calls
-updated: 2026-10-04T15:34Z
+task: build-narrative-convergence
+doing: Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC
+updated: 2026-10-04T15:52Z
 ---
 
 ## Notes

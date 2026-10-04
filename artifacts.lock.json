@@ -8191,6 +8191,70 @@
    "sha256": "22f536ab24826bf8dc63356b62ffb8cf20b10954cca0cef817f92fea9c715668",
    "size_bytes": 90163
   },
+  "shadow-wild-shared-domains@1": {
+   "host": "shad0wbot",
+   "ingredients": [
+    {
+     "mtime": 1791128811,
+     "sha256": "f7a84a3ceca5f38a7e6cc75b376d059c37e0e93a62885ac6db906b3b50811209",
+     "size": 25666,
+     "uri": "researchers/shadow/notes/wild-timeline/timeline.py"
+    },
+    {
+     "mtime": 1791128897,
+     "sha256": "38f96626fe3fe422998713f62b2a4477b4dea0a8d6604048149b87d99da4d7c0",
+     "size": 1050,
+     "uri": "researchers/shadow/notes/wild-timeline/shared_sources.csv"
+    },
+    {
+     "mtime": 1791128914,
+     "sha256": "cd3751c6a53ea91deecc2e5d30b753e8d771abcdb84d886c11ba0e07b9852a46",
+     "size": 1785,
+     "uri": "researchers/shadow/notes/wild-timeline/validation.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791128903,
+   "path": "artifacts/shadow-wild-shared-domains/shadow-wild-shared-domains-v1.png",
+   "prompt_sha256": "63facc869f462c45a4a04eed3f59ec422624f55aa936ac2e73e43326a96c33fe",
+   "sha256": "a2981305822f89a26e6fb47e28a05f190ac18b9385b2c48e2c2120ddb29e8055",
+   "size_bytes": 158535
+  },
+  "shadow-wild-timeline@1": {
+   "host": "shad0wbot",
+   "ingredients": [
+    {
+     "mtime": 1791128811,
+     "sha256": "f7a84a3ceca5f38a7e6cc75b376d059c37e0e93a62885ac6db906b3b50811209",
+     "size": 25666,
+     "uri": "researchers/shadow/notes/wild-timeline/timeline.py"
+    },
+    {
+     "mtime": 1791128897,
+     "sha256": "04f58fc949d22997ae9aa08cdcc1468c46f51e3d8767f4912b9876040990d529",
+     "size": 10357,
+     "uri": "researchers/shadow/notes/wild-timeline/daily.csv"
+    },
+    {
+     "mtime": 1791128897,
+     "sha256": "de32aa7381501a65e3aa8b5cd34b87185bd87a0fa946737dd7dde5dd684717f7",
+     "size": 4475,
+     "uri": "researchers/shadow/notes/wild-timeline/summary.json"
+    },
+    {
+     "mtime": 1791128914,
+     "sha256": "cd3751c6a53ea91deecc2e5d30b753e8d771abcdb84d886c11ba0e07b9852a46",
+     "size": 1785,
+     "uri": "researchers/shadow/notes/wild-timeline/validation.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791128900,
+   "path": "artifacts/shadow-wild-timeline/shadow-wild-timeline-v1.png",
+   "prompt_sha256": "f732e2442399495717e9eec5b21688eceaf99ca9e58c50c2cf7a33ef6f6ff358",
+   "sha256": "3bed3042921b197a10c078c09b5e9b4a55f3541b712fe8c02d3e904f59e9196c",
+   "size_bytes": 193772
+  },
   "swarm-completion-audit-2026-10-04@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [

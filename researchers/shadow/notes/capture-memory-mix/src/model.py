@@ -165,7 +165,9 @@ class HTTPPolicy:
         self.cap = min(float(max_cost_usd), HARD_CAP_USD)
         self.max_calls, self.calls = max_calls, 0
         self.timeout, self.pool = timeout, ThreadPoolExecutor(max_workers=concurrency)
-        self.min_mass, self.retries = min_mass, retries
+        # Keep the legacy config parameter readable, but never retry a dispatch:
+        # a timeout/5xx may already have incurred cost or produced an outcome.
+        self.min_mass, self.retries = min_mass, 1
         self.in_rate, self.out_rate = input_usd_per_million, output_usd_per_million
         self.provider_order = provider_order
         # Decoding temperature applied to the two-word first-token logits (providers report logprobs at T = 1).
@@ -217,27 +219,17 @@ class HTTPPolicy:
             "Content-Type": "application/json", "Authorization": "Bearer " + self.key,
             "HTTP-Referer": "https://github.com/dmarzzz/swarm-lab", "X-Title": "swarm-lab capture-memory-mix"})
         last, resp = None, None
-        for attempt in range(self.retries):
+        try:
+            with self._opener.open(req, timeout=self.timeout) as r:
+                resp = json.loads(r.read(400_000))
+        except urllib.error.HTTPError as e:
             try:
-                with self._opener.open(req, timeout=self.timeout) as r:
-                    resp = json.loads(r.read(400_000))
-                break
-            except urllib.error.HTTPError as e:
-                try:
-                    detail = e.read(600).decode("utf-8", "replace")
-                except Exception:  # noqa: BLE001
-                    detail = ""
-                last = f"provider HTTP {e.code} {detail[:200]}"
-                if e.code in (401, 402, 403):
-                    break
-                # 400 from one upstream provider (seen with qwen3-235b on OpenRouter) is usually provider-specific;
-                # a retry is routed elsewhere, so 400 is retried like a 5xx.
-                time.sleep(1.5 * (attempt + 1))
-            except Exception as e:  # noqa: BLE001
-                last = "provider " + type(e).__name__
-                time.sleep(1.5 * (attempt + 1))
-        else:
-            resp = None
+                detail = e.read(600).decode("utf-8", "replace")
+            except Exception:  # noqa: BLE001
+                detail = ""
+            last = f"provider HTTP {e.code} {detail[:200]}"
+        except Exception as e:  # noqa: BLE001
+            last = "provider " + type(e).__name__
         if resp is None or "choices" not in resp:
             # Unknown outcomes retain their durable pre-dispatch liability.
             raise ModelFailure(last or "provider error")

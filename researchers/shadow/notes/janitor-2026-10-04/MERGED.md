@@ -15,3 +15,5 @@ Review policy: temporarily, shadow/sol-committee-astra holds both seats by orche
 | 15:48:03 | J007 / [#93](https://github.com/dmarzzz/swarm-lab/pull/93) | `632b70a55ec9d92a95c93851408e1dac1e4d5d90` | Both astra passes APPROVE at `3eb5a7b7`; 2 ledger-init tests pass offline; CI green. |
 | 15:48:08 | J030 / [#94](https://github.com/dmarzzz/swarm-lab/pull/94) | `84865b2158749ea3701db3d647bea81a478a1b93` | Both astra passes APPROVE at `28258f4f`; 16 factory tests in each of normal and -O modes pass offline; CI green. |
 | 15:48:13 | J013 / [#95](https://github.com/dmarzzz/swarm-lab/pull/95) | `91e14cba98f178d8a9915ad3505e776b5529fdfb` | Both astra passes APPROVE at `46f782c3`; 6 endpoint/cost tests pass offline; CI green. |
+| 15:54:02 | J008 / [#96](https://github.com/dmarzzz/swarm-lab/pull/96) | `79fb7b6f691a88f6f831caad325c8f04272dacf4` | Both astra passes APPROVE at `8fd218e1`; 4 targeted offline tests pass; CI green. |
+| 15:54:07 | J022 / [#97](https://github.com/dmarzzz/swarm-lab/pull/97) | `5d4c12e23a0e4950bf6008530a331960d286644d` | Both astra passes APPROVE at `b724073d`; 8 targeted offline tests pass; CI green. |

@@ -1,0 +1,65 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "Unified incident timeline across transluce daily counts, wiki events per day, SwarmTraces counts by kind, METR report dates if in data. One clean figure + table."
+   },
+   "internalParameters": {
+    "commit": "4caec65d97986c8afc1536474ae804dd8cb526d4-dirty"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "f7a84a3ceca5f38a7e6cc75b376d059c37e0e93a62885ac6db906b3b50811209"
+     },
+     "uri": "researchers/shadow/notes/wild-timeline/timeline.py"
+    },
+    {
+     "digest": {
+      "sha256": "04f58fc949d22997ae9aa08cdcc1468c46f51e3d8767f4912b9876040990d529"
+     },
+     "uri": "researchers/shadow/notes/wild-timeline/daily.csv"
+    },
+    {
+     "digest": {
+      "sha256": "de32aa7381501a65e3aa8b5cd34b87185bd87a0fa946737dd7dde5dd684717f7"
+     },
+     "uri": "researchers/shadow/notes/wild-timeline/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "cd3751c6a53ea91deecc2e5d30b753e8d771abcdb84d886c11ba0e07b9852a46"
+     },
+     "uri": "researchers/shadow/notes/wild-timeline/validation.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "4caec65d97986c8afc1536474ae804dd8cb526d4"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/shad0wbot/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T15:51:01Z",
+    "startedOn": "2026-10-04T15:51:01Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "3bed3042921b197a10c078c09b5e9b4a55f3541b712fe8c02d3e904f59e9196c"
+   },
+   "name": "artifacts/shadow-wild-timeline/shadow-wild-timeline-v1.png"
+  }
+ ]
+}
