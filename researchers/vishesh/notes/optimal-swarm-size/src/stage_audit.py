@@ -27,4 +27,5 @@ def evidence_stage_audit(task,record):
             'worker_wrong_proofs':sum(not i['worker']['proof_correct'] for i in items),'final_wrong_proofs':sum(not i['final']['proof_correct'] for i in items),
             'first_worker_value_error':next((i['item'] for i in items if not i['worker']['value_correct']),None),
             'first_final_value_error':next((i['item'] for i in items if not i['final']['value_correct']),None),
+            'extra_edges':sum(len(set(deps.get(item,[]))-set(parents)) for item,parents in task.public['dependencies'].items()),
             'missing_required_edges':sum(len(set(parents)-set(deps.get(item,[]))) for item,parents in task.public['dependencies'].items())}

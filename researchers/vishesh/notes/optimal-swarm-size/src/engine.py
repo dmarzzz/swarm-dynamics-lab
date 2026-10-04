@@ -9,7 +9,7 @@ from tasks import strict_json
 from response_contract import schema_for,validate_shape
 
 
-def validate_plan(plan,items):
+def validate_plan(plan,items,required=None):
     if type(plan) is not dict or set(plan)!= {'dependencies'} or type(plan['dependencies']) is not dict or set(plan['dependencies'])!=set(items):
         raise ValueError('plan_shape')
     deps=plan['dependencies']
@@ -21,10 +21,12 @@ def validate_plan(plan,items):
         ready={i for i in items if i not in done and set(deps[i])<=done}
         if not ready:raise ValueError('plan_cycle')
         done.update(ready)
+    if required is not None and any(not set(required[item])<=set(deps[item]) for item in items):
+        raise ValueError("plan_missing_required_edges")
     return deps
 
 
-def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:None,strict_contract=False):
+def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:None,strict_contract=False,enforce_dependencies=False):
     """call(messages, absolute_deadline, actor, phase, item) -> JSON text.
 
     Receives public data ONLY. Time/usage enforcement belongs to the transport and ledger.
@@ -72,11 +74,11 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
         plan_parsed=False
         try:
             plan=turn(0,'plan',plan_prompt,work_deadline);plan_parsed=True
-            deps=validate_plan(plan,public['items'])
+            deps=validate_plan(plan,public['items'],public['dependencies'] if enforce_dependencies else None)
         except (ValueError,TypeError):
             reason='invalid_dependency_map' if plan_parsed else 'invalid_json'
             emit('plan_repair_reason',reason=reason)
-            deps=validate_plan(turn(0,'plan_repair','Your plan failed '+reason+'. Return raw JSON only, no Markdown code fences or commentary: a valid dependencies object for all requested items.',work_deadline),public['items'])
+            deps=validate_plan(turn(0,'plan_repair','Your plan failed '+reason+'. Return raw JSON only, no Markdown code fences or commentary: a valid dependencies object for all requested items.',work_deadline),public['items'],public['dependencies'] if enforce_dependencies else None)
         emit('plan',dependencies=deps)
         pending=set(public['items']);running={};idle=set(range(n));work_counts=[0]*n
         executor=concurrent.futures.ThreadPoolExecutor(max_workers=min(n,slots))

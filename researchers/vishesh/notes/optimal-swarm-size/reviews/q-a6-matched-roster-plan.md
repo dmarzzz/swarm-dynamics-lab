@@ -8,13 +8,13 @@ Compare N=1 with N=2 on four fresh width-16 evidence tasks (two development root
 
 ## Question and prediction
 
-Q-A4's evidence weakness survived schema repair; Q-A5 tests whether errors begin in workers or integration. Early Q-A5 cases locate errors in workers with no integration-induced correctness transitions. If this holds after closeout, changing integration alone lacks support. The next diagnostic changes roster size, the study's intended intervention, while keeping prompts/protocol consistent across arms.
+Q-A4's evidence weakness survived schema repair; Q-A5 tests whether errors begin in workers or integration. Q-A5 completed all eight cases: 128 worker/final item comparisons found no correctness transitions; all errors were already present at the worker stage. Changing integration alone therefore lacks support in this cohort. The next diagnostic changes roster size, the study's intended intervention, while keeping prompts/protocol consistent across arms.
 
 Directional mechanistic prediction: N=2 may reduce parallel-task elapsed time; it should not enable simultaneous dependent chain work under enforced prerequisites. Accuracy can improve, worsen or remain unchanged; no directional success hypothesis is registered. Smaller per-context histories can change errors/token cost, so latency differences alone cannot establish a universal scaling law.
 
 ## Setup
 
-Evidence tasks only; qualification roots4 and5, width16, fresh episode histories, same public-task hash within each N pair. These roots are new to paid runs, but remain development data; they are not held-out validation/transfer. Four paired tasks are not eight independent worlds. Pin the native model, temperature, schema, generator/evaluator and source for both arms. No tools, fallback or evaluator feedback. Four service slots for both N; N=2 can occupy at most two. Full public task visibility remains explicit.
+Evidence tasks only; qualification roots4 and5, width16, fresh episode histories, same public-task hash within each N pair. These roots are new to paid runs, but remain development data; they are not held-out validation/transfer. Four paired tasks share only two independent root seeds; they are not four independent roots or eight independent worlds. Pin the native model, temperature, schema, generator/evaluator and source for both arms. No tools, fallback or evaluator feedback. Four service slots for both N; N=2 can occupy at most two. Full public task visibility remains explicit.
 
 Order counterbalances which N runs first: root4 parallel N1,N2; root4 chain N2,N1; root5 parallel N2,N1; root5 chain N1,N2. Hosted-model calls are fresh; no saved-response replay or history sharing. This fixed order mitigates simple ordering imbalance but is not a randomized large-sample trial.
 
