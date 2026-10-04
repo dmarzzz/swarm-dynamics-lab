@@ -170,6 +170,18 @@ class Tests(unittest.TestCase):
             self.assertEqual(model.calls,3)
             with self.assertRaisesRegex(ProviderFailure,'call budget'): model.complete({'phase':'parent','context':{}})
 
+    def test_offline_replay_and_tamper_detection(self):
+        from audit import audit
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'run';params={'tasks':[0],'seeds':[1],'rounds':[0,1],'n_agents':3,'stage':'S0'}
+            execute_bundle(params,path,Scripted())
+            result=audit(path);self.assertEqual(result['episodes'],4)
+            self.assertTrue(result['observations_replayed'])
+            rows=[json.loads(line) for line in (path/'episodes.jsonl').read_text().splitlines()]
+            rows[0]['evaluation']['correct']=0
+            (path/'episodes.jsonl').write_text(''.join(json.dumps(row)+'\n' for row in rows))
+            with self.assertRaisesRegex(AssertionError,'Replay differs'):audit(path)
+
     def test_anthropic_billing_error_is_safe(self):
         from io import BytesIO
         import urllib.error
