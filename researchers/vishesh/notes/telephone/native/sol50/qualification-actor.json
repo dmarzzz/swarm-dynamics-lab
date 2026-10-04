@@ -1,0 +1,22 @@
+[
+  {
+    "id": "q-go",
+    "records": [
+      {
+        "id": "q1",
+        "time": "10:00",
+        "text": "For this control GO requires all three conditions: latency at most120 ms, rollback tested and recorded approval; otherwise HOLD. Latency is100 ms, rollback is tested and approval is recorded."
+      }
+    ]
+  },
+  {
+    "id": "q-hold",
+    "records": [
+      {
+        "id": "q2",
+        "time": "10:00",
+        "text": "For this control GO requires all three conditions: latency at most120 ms, rollback tested and recorded approval; otherwise HOLD. Latency is100 ms and rollback is tested. Approval was requested but its receipt is unavailable; approval remains unknown."
+      }
+    ]
+  }
+]

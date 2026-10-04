@@ -1,0 +1,81 @@
+{
+  "targets": [
+    {
+      "id": "release_scope",
+      "source_id": "m01",
+      "required_meaning": "R7 covers both Cedar and Bay; no single-site release substituted."
+    },
+    {
+      "id": "decision_rule",
+      "source_id": "m01",
+      "required_meaning": "GO needs both sites within current latency limit, rollback tested at both, recorded approval; otherwise HOLD."
+    },
+    {
+      "id": "corrected_limit",
+      "source_id": "m02",
+      "required_meaning": "120 ms supersedes80 ms without changing historical measurements."
+    },
+    {
+      "id": "cedar_result",
+      "source_id": "m03",
+      "required_meaning": "Cedar100 ms passed the current latency limit."
+    },
+    {
+      "id": "test_scope",
+      "source_id": "m03",
+      "required_meaning": "20 read-only requests; write-path result not reported."
+    },
+    {
+      "id": "bay_measurement",
+      "source_id": "m04",
+      "required_meaning": "Bay latency is unavailable, not failed or passed."
+    },
+    {
+      "id": "dependent_reports",
+      "source_id": "m05",
+      "required_meaning": "Two Cedar summaries share one acquisition; no independent corroboration."
+    },
+    {
+      "id": "cedar_rollback",
+      "source_id": "m06",
+      "required_meaning": "Rollback tested at Cedar."
+    },
+    {
+      "id": "bay_rollback",
+      "source_id": "m06",
+      "required_meaning": "Bay rollback not tested."
+    },
+    {
+      "id": "approval_evidence",
+      "source_id": "m07",
+      "required_meaning": "Approval receipt unavailable; approval remains unverified, not granted or denied."
+    },
+    {
+      "id": "approval_request",
+      "source_id": "m07",
+      "required_meaning": "Approval requested, not completed by requesting."
+    },
+    {
+      "id": "monitor_plan",
+      "source_id": "m08",
+      "required_meaning": "Post-release monitor proposed but not started."
+    }
+  ],
+  "state": {
+    "sites": [
+      "Cedar",
+      "Bay"
+    ],
+    "limit_ms": 120,
+    "latency_ms": {
+      "Cedar": 100,
+      "Bay": null
+    },
+    "rollback_tested": {
+      "Cedar": true,
+      "Bay": false
+    },
+    "approval": "unknown"
+  },
+  "decision": "HOLD"
+}

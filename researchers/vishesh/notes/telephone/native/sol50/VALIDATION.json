@@ -1,0 +1,36 @@
+{
+  "kind": "offline_validation_only",
+  "native_calls": 0,
+  "records": 8,
+  "targets": 12,
+  "independent_source_cases": 1,
+  "source_packet_sha256": "e062efe73bb9a0c8df884bea99eccd0bd67d6e9175cb80c4cdfcd1861ae1ffe7",
+  "full_copy_json_bytes": 910,
+  "first_request_conservative_input_bound": 3174,
+  "controls_passed": true,
+  "budget": {
+    "chain_agents": 50,
+    "qualification_agents": 2,
+    "max_calls": 52,
+    "per_call_reserve_nano": 31744001,
+    "model_reserve_nano": 1650688052,
+    "infrastructure_reserve_nano": 250000000,
+    "prior_cumulative_nano": 113744701,
+    "total_upper_nano": 2014432753,
+    "cap_nano": 5000000000
+  },
+  "files": {
+    "assignments.json": "afce1f8876c9540a09aaa8c80db0b7b35f93787fc4e0e944841fc03e702f8184",
+    "case.json": "6158341767bdbe668732cd6e2733cbe937bef79141f7257d59b50f48c19117db",
+    "controls.json": "7b3f7e33e3f9f502c334cc70c1d11d098b5f1b75e560f7c616e0922bd631d089",
+    "envelope.json": "60b0561f0631ebeff580219b9116205e031035e4695713d83ddec26fcc6a2943",
+    "gold.json": "d576f998fb6c2d31ae87272c3a73cbf6d032a933b3260637298f7a6eac556fbb",
+    "qualification-actor.json": "2e3166123832a081fef6546a74a048801aeb7494ba5a63d91bf296da24d2df7f",
+    "qualification-gold.json": "fd914a4c475716de3577ce51630fd11e072ef690b3c1a9fed0226bb51b831b4b",
+    "src/cases.py": "51fe679331f678a1f2cb4001136e926ccd5b548fbf1f8140d8b3099114cc805c",
+    "src/contract.py": "8b20555c7960416be8abb96b3d8556f18979674d207b93f4d524b3058744b4e0",
+    "src/engine.py": "27b047101c57716ab13da782db8a696d2c9ddc0c38f11ae41eb2b6bac2270cd9",
+    "tests/test_engine.py": "c80a0e62b4f776b2e0941c581e0841481c434f347839933e2b433bd4ef08c6a0",
+    "tests/test_prepare.py": "ccb8a4cf28f3fd7874f91cc3db6a7d430531823ff63a151af000bfd18ebdaee0"
+  }
+}

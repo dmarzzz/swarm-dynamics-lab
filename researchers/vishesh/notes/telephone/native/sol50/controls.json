@@ -1,0 +1,198 @@
+[
+  {
+    "name": "base",
+    "packet": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "R7 covers Cedar and Bay. GO requires both sites within the current latency limit, rollback tested at both, and recorded approval. Otherwise HOLD."
+        },
+        {
+          "id": "m02",
+          "time": "09:10",
+          "text": "Correction: the latency limit is 120 ms, replacing 80 ms. This changes the limit, not earlier measurements."
+        },
+        {
+          "id": "m03",
+          "time": "09:20",
+          "text": "Cedar latency was 100 ms over 20 read-only requests. They passed the current limit. No write-path result is reported."
+        },
+        {
+          "id": "m04",
+          "time": "09:22",
+          "text": "No Bay latency measurement is available."
+        },
+        {
+          "id": "m05",
+          "time": "09:25",
+          "text": "Two Cedar summary reports reuse the same acquisition as m03; they are not independent tests."
+        },
+        {
+          "id": "m06",
+          "time": "09:30",
+          "text": "Rollback was tested at Cedar only. Bay rollback has not been tested."
+        },
+        {
+          "id": "m07",
+          "time": "09:35",
+          "text": "Approval was requested. Its linked receipt is unavailable, so approval is unverified, not granted or denied."
+        },
+        {
+          "id": "m08",
+          "time": "09:40",
+          "text": "A post-release monitor is proposed; it has not been started. The next handover is at 10:00."
+        }
+      ]
+    },
+    "expected": "HOLD",
+    "baseline": "HOLD"
+  },
+  {
+    "name": "bay_only",
+    "packet": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "R7 covers Cedar and Bay. GO requires both sites within the current latency limit, rollback tested at both, and recorded approval. Otherwise HOLD."
+        },
+        {
+          "id": "m02",
+          "time": "09:10",
+          "text": "Correction: the latency limit is 120 ms, replacing 80 ms. This changes the limit, not earlier measurements."
+        },
+        {
+          "id": "m03",
+          "time": "09:20",
+          "text": "Cedar latency was 100 ms over 20 read-only requests. They passed the current limit. No write-path result is reported."
+        },
+        {
+          "id": "m04",
+          "time": "09:22",
+          "text": "Bay latency was 110 ms over 20 read-only requests. They passed the current limit. No write-path result is reported."
+        },
+        {
+          "id": "m05",
+          "time": "09:25",
+          "text": "Two Cedar summary reports reuse the same acquisition as m03; they are not independent tests."
+        },
+        {
+          "id": "m06",
+          "time": "09:30",
+          "text": "Rollback was tested at Cedar and Bay."
+        },
+        {
+          "id": "m07",
+          "time": "09:35",
+          "text": "Approval was requested. Its linked receipt is unavailable, so approval is unverified, not granted or denied."
+        },
+        {
+          "id": "m08",
+          "time": "09:40",
+          "text": "A post-release monitor is proposed; it has not been started. The next handover is at 10:00."
+        }
+      ]
+    },
+    "expected": "HOLD",
+    "baseline": "HOLD"
+  },
+  {
+    "name": "approval_only",
+    "packet": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "R7 covers Cedar and Bay. GO requires both sites within the current latency limit, rollback tested at both, and recorded approval. Otherwise HOLD."
+        },
+        {
+          "id": "m02",
+          "time": "09:10",
+          "text": "Correction: the latency limit is 120 ms, replacing 80 ms. This changes the limit, not earlier measurements."
+        },
+        {
+          "id": "m03",
+          "time": "09:20",
+          "text": "Cedar latency was 100 ms over 20 read-only requests. They passed the current limit. No write-path result is reported."
+        },
+        {
+          "id": "m04",
+          "time": "09:22",
+          "text": "No Bay latency measurement is available."
+        },
+        {
+          "id": "m05",
+          "time": "09:25",
+          "text": "Two Cedar summary reports reuse the same acquisition as m03; they are not independent tests."
+        },
+        {
+          "id": "m06",
+          "time": "09:30",
+          "text": "Rollback was tested at Cedar only. Bay rollback has not been tested."
+        },
+        {
+          "id": "m07",
+          "time": "09:35",
+          "text": "Approval is recorded. Its receipt is available."
+        },
+        {
+          "id": "m08",
+          "time": "09:40",
+          "text": "A post-release monitor is proposed; it has not been started. The next handover is at 10:00."
+        }
+      ]
+    },
+    "expected": "HOLD",
+    "baseline": "HOLD"
+  },
+  {
+    "name": "all_conditions",
+    "packet": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "R7 covers Cedar and Bay. GO requires both sites within the current latency limit, rollback tested at both, and recorded approval. Otherwise HOLD."
+        },
+        {
+          "id": "m02",
+          "time": "09:10",
+          "text": "Correction: the latency limit is 120 ms, replacing 80 ms. This changes the limit, not earlier measurements."
+        },
+        {
+          "id": "m03",
+          "time": "09:20",
+          "text": "Cedar latency was 100 ms over 20 read-only requests. They passed the current limit. No write-path result is reported."
+        },
+        {
+          "id": "m04",
+          "time": "09:22",
+          "text": "Bay latency was 110 ms over 20 read-only requests. They passed the current limit. No write-path result is reported."
+        },
+        {
+          "id": "m05",
+          "time": "09:25",
+          "text": "Two Cedar summary reports reuse the same acquisition as m03; they are not independent tests."
+        },
+        {
+          "id": "m06",
+          "time": "09:30",
+          "text": "Rollback was tested at Cedar and Bay."
+        },
+        {
+          "id": "m07",
+          "time": "09:35",
+          "text": "Approval is recorded. Its receipt is available."
+        },
+        {
+          "id": "m08",
+          "time": "09:40",
+          "text": "A post-release monitor is proposed; it has not been started. The next handover is at 10:00."
+        }
+      ]
+    },
+    "expected": "GO",
+    "baseline": "GO"
+  }
+]
