@@ -3,14 +3,18 @@ id: right-dissenter-rd6-zero-start-replacement
 type: task
 title: Execute the approved RD6 zero dispatch replacement
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-decision-models
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-decision-models
 depends_on: []
-topics: [dissent, decision-models]
+topics:
+- dissent
+- decision-models
+claimed_at: 2026-10-04T19:49Z
+updated: 2026-10-04T19:49Z
 ---
 
 ## Goal
