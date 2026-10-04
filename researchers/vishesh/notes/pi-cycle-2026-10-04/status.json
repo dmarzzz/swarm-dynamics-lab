@@ -1,0 +1,205 @@
+{
+  "updated_at": "2026-10-04T15:36:10.918661+00:00",
+  "cycle_status": "analysis_preparation_complete_native_launches_gated",
+  "native_dispatch_by_coordinator": false,
+  "studies": [
+    {
+      "study": "Poietic Agents",
+      "evidence": "../poietic-agents/reviews/S0-02-pre.md",
+      "baseline": "S0-02 repair after relay failure",
+      "cycle_action": "Reassess and validate; original execution window expired, no new calls.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "Repair S0-02 receipt boundary and cumulative infrastructure accounting; prepare tested authority-renewal helper without applying it.",
+      "commit": "9d99ec2de694f2404ec086380f5a3dfb2879b616",
+      "result": "../poietic-agents/reviews/S0-02-reassessment-2026-10-04.md",
+      "new_native": {
+        "planned_assignments": 144,
+        "started": 0,
+        "valid": 0
+      },
+      "validation": "79 offline checks pass, including12 synthetic-ledger renewal tests independently rerun by coordinator. Original authority/charge fingerprint unchanged; no renewal applied.",
+      "cost": "USD0 new native spend or allocation. Historical36 unresolved calls/API exposure USD0.479232 plus USD0.077223767 allocation estimate = USD0.556455767 conservative cumulative exposure under USD2.",
+      "remaining": "Explicit bounded execution-window renewal is pending; central dispatch remains required unless separately waived for this study. Preserve original host, caps, charges and one ledger authority; no automatic S1 or repair rerun."
+    },
+    {
+      "study": "Quorum of Mirrors",
+      "evidence": "../decision-models/quorum-of-mirrors/DESIGN-TRANSFER.md",
+      "baseline": "Failed reader qualification",
+      "cycle_action": "Reconcile newer records and select a bounded diagnostic only if useful.",
+      "cycle_outcome": "complete_valid_result",
+      "decision": "Finish saved-data analysis; park D1 and do not reopen M1/C1. Exact source arithmetic settles the current grammar; native cause remains confounded.",
+      "commit": "f14404a8fe9ec057bc19816d13cb8bd1de2c5499",
+      "result": "../decision-models/quorum-of-mirrors/analysis/pi-cycle/RESULTS.md",
+      "new_native": {
+        "assigned": 0,
+        "started": 0,
+        "valid": 0
+      },
+      "validation": "Nine new offline tests pass; coordinator reran all nine. 5,488 solver configurations are software checks, not model observations.",
+      "cost": "No new spend. Historical 49 dispatches; known API actual USD0.00171696 plus bounded unknown USD0.001344; reservation total USD0.065856 is a different quantity.",
+      "remaining": "Cause of the eight graded errors and transfer beyond trusted explicit lineage remain unresolved; no owner action required to finish."
+    },
+    {
+      "study": "Phantom Coast",
+      "evidence": "../phantom-coast/pc5/reviews/S1-A1-POST.md",
+      "baseline": "Reliable-source regression remains",
+      "cycle_action": "Analyze saved choices before selecting a focused successor.",
+      "cycle_outcome": "complete_valid_result",
+      "decision": "Reanalyze PC5; park PC6 for insufficient decision value, with native admission disabled.",
+      "commit": "226cfb389d86038b5089ea12173eb1a7da108103",
+      "result": "../phantom-coast/pc6/reviews/PI-POST.md",
+      "new_native": {
+        "assigned": 0,
+        "started": 0,
+        "valid": 0
+      },
+      "finding": "All seven reliable-stratum changes harmed optimality; all nineteen unreliable-stratum changes improved it. Always-check mean expected regret 0.025 beats explicit-model 0.07734375 on the declared equal-risk mix; exact analytic policy is zero by construction.",
+      "validation": "Owning analysis retains all128 old PC5 choices; ten offline checks and original-hash readback reported. New samples zero.",
+      "cost": "USD0 new; prior known API USD0.845052138, conservative exposure USD0.857148138 with nine historical uncertain charges retained.",
+      "remaining": "A future model experiment needs an application decision not already settled by the analytic controller; no owner approval needed to finish this cycle."
+    },
+    {
+      "study": "Right Dissenter",
+      "evidence": "../dissent/rd5/RUN-STATUS.md",
+      "baseline": "Approved Q5 / conditional H5",
+      "cycle_action": "Verify current queue, worker, claim and original ledger; prevent duplicate dispatch.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "Preserve approved Q5 and conditional H5; reconcile expired A1 activation and prepare guarded Q5-A2 activation.",
+      "commit": "15c018083951d07c6eb3a0c478a59a2c4e59e016",
+      "result": "../dissent/rd5/RUN-STATUS.md",
+      "new_native": {
+        "q5_assigned": 24,
+        "q5_started": 0,
+        "q5_valid": 0,
+        "q5_unstarted": 24,
+        "h5_admitted": false
+      },
+      "validation": "61 scientific checks and five activation/fault checks pass. Both frozen packets unchanged; stage lock and prior markers prevent renamed duplicate dispatch.",
+      "cost": "No RD5 provider spend.428 historical calls: USD0.016620450 settled + USD0.004032 unresolved. Conservative lifetime infrastructure estimate USD0.690783567, including the unused activation, under separate USD1 API/USD1 infrastructure caps.",
+      "remaining": "Confirmed central launch slot or explicit dispatch exception, then fresh exclusive allocation and receipts. No idle host or relay retained."
+    },
+    {
+      "study": "Optimal Swarm Size",
+      "evidence": "../optimal-swarm-size/reviews/q-a6-post.md",
+      "baseline": "Q-A6 competence gaps",
+      "cycle_action": "Diagnose correct work completion before broad headcount comparisons.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "One Q-A7 public-input-binding diagnostic at fixed N1; broad size sweep remains parked.",
+      "commit": "1385dd7816385efcc1a26a47725bbea45e482d2b",
+      "result": "../optimal-swarm-size/reviews/q-a7-preparation-post.md",
+      "new_native": {
+        "planned_episodes": 8,
+        "planned_roots": 2,
+        "assigned": 0,
+        "started": 0,
+        "valid": 0
+      },
+      "validation": "Owning record reports63 offline checks and a Q-A6 correct-throughput audit, with root6 futility and unobserved root7 preserved.",
+      "cost": "USD0 new. Original631 calls; USD1.810840 settled plus USD0.220480 held = USD2.031320 cumulative exposure under USD20; proposed attempt sublimit USD2, not a top-up.",
+      "remaining": "Exclusive eligible worker, central dispatch, authorized dedicated-key handoff and sole original-ledger continuity must be verified; historical worker is occupied."
+    },
+    {
+      "study": "Swarm of Theseus",
+      "evidence": "../swarm-of-theseus/execution-diagnostic/NEXT-PLAN.md",
+      "baseline": "R1 executor qualified; culture untested",
+      "cycle_action": "Assess the proposed acquisition screen with hidden true policy.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "R1 executor pass retained; build one A1 acquisition screen with true policy withheld before any turnover claim.",
+      "commit": "907247d71326f99447acf69e67710d613c922352",
+      "result": "../swarm-of-theseus/execution-diagnostic/A1-STATUS.md",
+      "new_native": {
+        "planned_roots": 6,
+        "planned_learning_calls": 12,
+        "planned_evaluation_calls": 192,
+        "planned_total_calls": 204,
+        "started": 0,
+        "valid": 0,
+        "scientific_outcome": "unobserved"
+      },
+      "validation": "15 offline checks, identifiable-history and wrong-source controls, hashed packet and inspected fixture visual. Current manual A1 route distinguished from historical adapter.",
+      "cost": "No new native spend. Prior estimated USD0.8122310437 under original USD5; proposed reserve USD2.60 must be admitted through original sole allocation authority.",
+      "remaining": "Central dispatch and compatible authorized Keychain-only handoff, current allocation/runtime/public-page admission. Direct exception pending; no automatic cultural-preservation run."
+    },
+    {
+      "study": "Immune Response",
+      "evidence": "../immune-response-v3/freshness-study/README.md",
+      "baseline": "A3 null; A4 freshness diagnostic prepared",
+      "cycle_action": "Validate and seek an eligible exclusive allocation within the standing host restrictions.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "A3 narrow null retained; prepare one A4 freshness diagnostic, no automatic A5.",
+      "commit": "44fbbfee170d8218aedd5c744201a97ab4efcc3b",
+      "result": "../immune-response-v3/SETUP.md",
+      "new_native": {
+        "planned_episodes": 12,
+        "started": 0,
+        "valid": 0,
+        "planned_calls": 60,
+        "calls": 0
+      },
+      "validation": "Owning operator reports nine tests and twelve scripted feasibility episodes; epoch telemetry corrected.",
+      "cost": "No new native spend. Preserved 387-call ledger, USD3.179489 conservative reserved under original USD8; completed-cohort actual USD0.752753 excludes unresolved interrupted history.",
+      "remaining": "Platform approval rejected the specific eligible-host claim under the earlier infrastructure restriction. Explicit host approval is pending with the owner; no allocation or credential transfer occurred."
+    },
+    {
+      "study": "How to win agents and influence swarms",
+      "evidence": "../influence-swarms/scenario/ITERATION-05.md",
+      "baseline": "D5 prepared; no started native attempt confirmed",
+      "cycle_action": "Reconcile expired deployment handoff and assess D3/D5; current fleet dispatch required.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "Interpret D3 and preserve frozen D5 diagnostic; close out the expired unstarted handoff.",
+      "commit": "e65be088c48cd55f23084257406533606273ced3",
+      "result": "../influence-swarms/scenario/RUN-HANDOFF.md",
+      "new_native": {
+        "planned_decisions": 24,
+        "planned_calls": 48,
+        "started": 0,
+        "terminal": 0,
+        "valid": 0,
+        "scientific_outcome": "unobserved"
+      },
+      "finding": "D3:18 valid decisions,30 calls;76/90 correct statuses,13 false FAIL and one UNKNOWN\u2192FAIL. Chair4/6 in each arm; six reused clusters, no causal peer-effect claim.",
+      "validation": "All-case pipeline reanalysis and eleven-dimension hashed assessment. D5 source/packet unchanged.",
+      "cost": "USD0 new native spend; preserved USD3.178320 reserved/198 calls under USD8; reported actual subtotal USD0.779101 across retained cohorts is not total settled history.",
+      "remaining": "Central dispatcher unavailable; direct-dispatch exception unresolved. Expired handoff delivered no credential; expired claim released. No idle host held."
+    },
+    {
+      "study": "Healing Helping Hands",
+      "evidence": "../healing-helping-hands/c4/PLAN.md",
+      "baseline": "C3 negative; C4 routing study prepared",
+      "cycle_action": "Finish native integration and stage qualification before evaluation.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "Complete approved C4 native collection, budget, audit and rendering integration; preserve C3 negative finding.",
+      "commit": "bd14477c70fab6b907bcf16ae1b4876e78051c86",
+      "result": "../healing-helping-hands/c4/ADMISSION-POST.md",
+      "new_native": {
+        "planned_qualification_cases": 60,
+        "planned_conditional_evaluation_reports": 432,
+        "assigned": 0,
+        "started": 0,
+        "valid": 0
+      },
+      "validation": "20 tests locally and on prepared machine; two dispatch-origin tests and private CI pass. Frozen source94147dc7. Prepared runtime stopped and exclusive claim released after unacknowledged central dispatch.",
+      "cost": "USD0 new API spend. Original2179-row ledger unchanged: USD0.040890822 completed + USD0.001344 uncertain, USD0.057765178 remaining under USD0.10 API cap; no claim of zero total fleet billing.",
+      "remaining": "Central acceptance and authorized credential/original single-writer ledger handoff, then fresh exclusive claim/admission. C4-S1 remains conditional on qualification; a dispatch exception alone does not satisfy other gates."
+    },
+    {
+      "study": "Antsy",
+      "evidence": "../antsy-targeted-v8/DISPATCH.md",
+      "baseline": "Fresh v8 Q0 queued",
+      "cycle_action": "Use trusted idle-host option if still eligible; existing queue request, no automatic S1.",
+      "cycle_outcome": "prepared_blocked",
+      "decision": "Preserve frozen v8 Q0; audit and close out actual outcomes when the existing request is dispatched. No automatic S1.",
+      "commit": "873675beb614707deecc71477bc947fa52acbe34",
+      "result": "../antsy-targeted-v8/reviews/Q0-readiness-review.md",
+      "new_native": {
+        "planned_receipts": 20,
+        "planned_ocr_calls": 40,
+        "started": 0,
+        "valid": 0
+      },
+      "validation": "31 frozen runner tests plus six new saved-result audit tests passed by owning operator. Coordinator reran the six audit tests.",
+      "cost": "USD0 incremental spend/exposure. Historical lifetime exposure was neither reconstructed nor reset in this cycle.",
+      "remaining": "Existing central fleet dispatcher request requires acknowledgement, staging and current admission. Trusted candidate capacity identified but no host is held."
+    }
+  ]
+}

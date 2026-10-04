@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: pi-cycle-2026-10-04
-doing: Coordinating one cycle across ten owning experiment tasks and reconciling outcomes; no duplicate dispatch.
-updated: 2026-10-04T15:18Z
+doing: Ten-study analysis/preparation cycle reconciled; two scientific stops, eight native launches gated, explicit decisions pending.
+updated: 2026-10-04T15:37Z
 ---
 
 ## Notes

@@ -1,0 +1,18 @@
+{
+  "assessed_at": "2026-10-04T15:37:00.829073+00:00",
+  "study_sources_verified": 10,
+  "cytonomy_author_and_committer_verified": 10,
+  "relative_links_resolve": 11,
+  "coordinator_offline_tests": {
+    "quorum_saved_data_and_solver": 9,
+    "antsy_saved_result_audit": 6,
+    "poietic_synthetic_authority_renewal": 12
+  },
+  "registry_studies_valid": 13,
+  "repository_check": {
+    "errors": 0,
+    "preexisting_citation_warnings": 5
+  },
+  "native_model_calls_by_coordinator": 0,
+  "limitation": "Each operator reports its own live-state/cost checks. Coordinator verifies pinned public records and selected offline tests; this is not a second independent native audit."
+}

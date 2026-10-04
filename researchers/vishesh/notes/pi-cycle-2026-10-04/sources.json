@@ -1,0 +1,75 @@
+{
+  "scope": "Owning-study published closeouts; selective coordinator audit checks, not independent model replication.",
+  "sources": [
+    {
+      "study": "Poietic Agents",
+      "commit": "9d99ec2de694f2404ec086380f5a3dfb2879b616",
+      "path": "researchers/vishesh/notes/poietic-agents/reviews/S0-02-reassessment-2026-10-04.md",
+      "sha256": "fa099ebedb47d1373267618105a3c55cd1a482966af5b2c7bab6795de272a06b",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/9d99ec2de694f2404ec086380f5a3dfb2879b616/researchers/vishesh/notes/poietic-agents/reviews/S0-02-reassessment-2026-10-04.md"
+    },
+    {
+      "study": "Quorum of Mirrors",
+      "commit": "f14404a8fe9ec057bc19816d13cb8bd1de2c5499",
+      "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/pi-cycle/RESULTS.md",
+      "sha256": "2caf5091d1acdf3680e40d8c9223f95c8ef7a3b85b80ca3c4331efd4aa898327",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f14404a8fe9ec057bc19816d13cb8bd1de2c5499/researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/pi-cycle/RESULTS.md"
+    },
+    {
+      "study": "Phantom Coast",
+      "commit": "226cfb389d86038b5089ea12173eb1a7da108103",
+      "path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+      "sha256": "2522e180195a7d7e6783e5df31c1de100ddc22d4fb488e7f139b58dbaa75fa4e",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/226cfb389d86038b5089ea12173eb1a7da108103/researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md"
+    },
+    {
+      "study": "Right Dissenter",
+      "commit": "15c018083951d07c6eb3a0c478a59a2c4e59e016",
+      "path": "researchers/vishesh/notes/dissent/rd5/RUN-STATUS.md",
+      "sha256": "d706f80d56378c72b1c3b22347efb01e02ead6114cb7293d18a2f7757a376252",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/15c018083951d07c6eb3a0c478a59a2c4e59e016/researchers/vishesh/notes/dissent/rd5/RUN-STATUS.md"
+    },
+    {
+      "study": "Optimal Swarm Size",
+      "commit": "1385dd7816385efcc1a26a47725bbea45e482d2b",
+      "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+      "sha256": "8fd45c33532d40010361464e11846926c74e11858a6dfdcd98a2e1d4b0b13650",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/1385dd7816385efcc1a26a47725bbea45e482d2b/researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md"
+    },
+    {
+      "study": "Swarm of Theseus",
+      "commit": "907247d71326f99447acf69e67710d613c922352",
+      "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-STATUS.md",
+      "sha256": "330eefe9899a196e4d81f00410e9daf3ad686fcf07e5d8cf3ea161064f45a1e7",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/907247d71326f99447acf69e67710d613c922352/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-STATUS.md"
+    },
+    {
+      "study": "Immune Response",
+      "commit": "44fbbfee170d8218aedd5c744201a97ab4efcc3b",
+      "path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
+      "sha256": "3725d7d58ff7ad7cf7a72c8954eb1f61dcdd0e070a39f5590735e48e2b8861ed",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/44fbbfee170d8218aedd5c744201a97ab4efcc3b/researchers/vishesh/notes/immune-response-v3/SETUP.md"
+    },
+    {
+      "study": "How to win agents and influence swarms",
+      "commit": "e65be088c48cd55f23084257406533606273ced3",
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/RUN-HANDOFF.md",
+      "sha256": "89b0996cb8d4f5256e523a1970e73c368bea3574804d83a8582caf6d0d9ad287",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/e65be088c48cd55f23084257406533606273ced3/researchers/vishesh/notes/influence-swarms/scenario/RUN-HANDOFF.md"
+    },
+    {
+      "study": "Healing Helping Hands",
+      "commit": "bd14477c70fab6b907bcf16ae1b4876e78051c86",
+      "path": "researchers/vishesh/notes/healing-helping-hands/c4/ADMISSION-POST.md",
+      "sha256": "a5f7570ab6bf37e11fa58fe157c9f6c1c341091aa9ad571e90d9ae351524024e",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/bd14477c70fab6b907bcf16ae1b4876e78051c86/researchers/vishesh/notes/healing-helping-hands/c4/ADMISSION-POST.md"
+    },
+    {
+      "study": "Antsy",
+      "commit": "873675beb614707deecc71477bc947fa52acbe34",
+      "path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/Q0-readiness-review.md",
+      "sha256": "cd69d99954c65bceeb335c98e7e945d2970e4a386acecc1588b25d969a3291f1",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/873675beb614707deecc71477bc947fa52acbe34/researchers/vishesh/notes/antsy-targeted-v8/reviews/Q0-readiness-review.md"
+    }
+  ]
+}
