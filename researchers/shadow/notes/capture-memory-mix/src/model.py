@@ -45,6 +45,11 @@ class ModelFailure(Exception):
     pass
 
 
+class NoCredentialRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise ModelFailure("credential-bearing requests must not follow redirects")
+
+
 class Ledger:
     """Shared spend ledger: {"spent_usd": float, "calls": int, "by_model": {...}}; locked for each update."""
 
@@ -80,8 +85,9 @@ class HTTPPolicy:
                  logit_temperature: float = 1.0, mode: str = "logprobs"):
         if not max_cost_usd > 0:
             raise ModelFailure("positive dollar cap required")
-        if not base_url.startswith("https://"):
-            raise ModelFailure("HTTPS endpoint required")
+        if base_url.rstrip("/") != "https://openrouter.ai/api/v1":
+            raise ModelFailure("this adapter only authorizes the OpenRouter API endpoint")
+        self._opener = urllib.request.build_opener(NoCredentialRedirect())
         keyfile = os.environ.get("SWARM_MODEL_KEY_FILE", os.path.expanduser("~/.moltbot/secrets/openrouter.key"))
         self.key = Path(keyfile).read_text().strip()
         if not self.key:
@@ -146,7 +152,7 @@ class HTTPPolicy:
         last, resp = None, None
         for attempt in range(self.retries):
             try:
-                with urllib.request.urlopen(req, timeout=self.timeout) as r:
+                with self._opener.open(req, timeout=self.timeout) as r:
                     resp = json.loads(r.read(400_000))
                 break
             except urllib.error.HTTPError as e:
