@@ -1,0 +1,187 @@
+{
+  "native_calls": 0,
+  "source_roots": 12,
+  "fresh_blocks_planned": 2,
+  "rows": [
+    {
+      "id": "b2-01",
+      "gold": "HOLD",
+      "reference": "HOLD",
+      "source_controller": "HOLD",
+      "mutation_gold": "GO",
+      "mutation_reference": "GO",
+      "mutation_source_controller": "GO",
+      "targets": 7,
+      "full_copy_json_bytes": 676,
+      "input_bounds_with_full_copy": {
+        "P": 2684,
+        "R": 3616
+      }
+    },
+    {
+      "id": "b2-02",
+      "gold": "GO",
+      "reference": "GO",
+      "source_controller": "GO",
+      "mutation_gold": "HOLD",
+      "mutation_reference": "HOLD",
+      "mutation_source_controller": "HOLD",
+      "targets": 7,
+      "full_copy_json_bytes": 576,
+      "input_bounds_with_full_copy": {
+        "P": 2584,
+        "R": 3418
+      }
+    },
+    {
+      "id": "b2-03",
+      "gold": "HOLD",
+      "reference": "HOLD",
+      "source_controller": "HOLD",
+      "mutation_gold": "GO",
+      "mutation_reference": "GO",
+      "mutation_source_controller": "GO",
+      "targets": 7,
+      "full_copy_json_bytes": 533,
+      "input_bounds_with_full_copy": {
+        "P": 2541,
+        "R": 3330
+      }
+    },
+    {
+      "id": "b2-04",
+      "gold": "GO",
+      "reference": "GO",
+      "source_controller": "GO",
+      "mutation_gold": "HOLD",
+      "mutation_reference": "HOLD",
+      "mutation_source_controller": "HOLD",
+      "targets": 7,
+      "full_copy_json_bytes": 643,
+      "input_bounds_with_full_copy": {
+        "P": 2651,
+        "R": 3552
+      }
+    },
+    {
+      "id": "b2-05",
+      "gold": "HOLD",
+      "reference": "HOLD",
+      "source_controller": "HOLD",
+      "mutation_gold": "GO",
+      "mutation_reference": "GO",
+      "mutation_source_controller": "GO",
+      "targets": 7,
+      "full_copy_json_bytes": 581,
+      "input_bounds_with_full_copy": {
+        "P": 2589,
+        "R": 3426
+      }
+    },
+    {
+      "id": "b2-06",
+      "gold": "GO",
+      "reference": "GO",
+      "source_controller": "GO",
+      "mutation_gold": "HOLD",
+      "mutation_reference": "HOLD",
+      "mutation_source_controller": "HOLD",
+      "targets": 7,
+      "full_copy_json_bytes": 595,
+      "input_bounds_with_full_copy": {
+        "P": 2603,
+        "R": 3456
+      }
+    },
+    {
+      "id": "b2-07",
+      "gold": "HOLD",
+      "reference": "HOLD",
+      "source_controller": "HOLD",
+      "mutation_gold": "GO",
+      "mutation_reference": "GO",
+      "mutation_source_controller": "GO",
+      "targets": 7,
+      "full_copy_json_bytes": 617,
+      "input_bounds_with_full_copy": {
+        "P": 2625,
+        "R": 3498
+      }
+    },
+    {
+      "id": "b2-08",
+      "gold": "GO",
+      "reference": "GO",
+      "source_controller": "GO",
+      "mutation_gold": "HOLD",
+      "mutation_reference": "HOLD",
+      "mutation_source_controller": "HOLD",
+      "targets": 7,
+      "full_copy_json_bytes": 543,
+      "input_bounds_with_full_copy": {
+        "P": 2551,
+        "R": 3352
+      }
+    },
+    {
+      "id": "b2-09",
+      "gold": "HOLD",
+      "reference": "HOLD",
+      "source_controller": "HOLD",
+      "mutation_gold": "GO",
+      "mutation_reference": "GO",
+      "mutation_source_controller": "GO",
+      "targets": 7,
+      "full_copy_json_bytes": 540,
+      "input_bounds_with_full_copy": {
+        "P": 2548,
+        "R": 3344
+      }
+    },
+    {
+      "id": "b2-10",
+      "gold": "GO",
+      "reference": "GO",
+      "source_controller": "GO",
+      "mutation_gold": "HOLD",
+      "mutation_reference": "HOLD",
+      "mutation_source_controller": "HOLD",
+      "targets": 7,
+      "full_copy_json_bytes": 617,
+      "input_bounds_with_full_copy": {
+        "P": 2625,
+        "R": 3500
+      }
+    },
+    {
+      "id": "b2-11",
+      "gold": "HOLD",
+      "reference": "HOLD",
+      "source_controller": "HOLD",
+      "mutation_gold": "GO",
+      "mutation_reference": "GO",
+      "mutation_source_controller": "GO",
+      "targets": 7,
+      "full_copy_json_bytes": 643,
+      "input_bounds_with_full_copy": {
+        "P": 2651,
+        "R": 3550
+      }
+    },
+    {
+      "id": "b2-12",
+      "gold": "GO",
+      "reference": "GO",
+      "source_controller": "GO",
+      "mutation_gold": "HOLD",
+      "mutation_reference": "HOLD",
+      "mutation_source_controller": "HOLD",
+      "targets": 7,
+      "full_copy_json_bytes": 656,
+      "input_bounds_with_full_copy": {
+        "P": 2664,
+        "R": 3578
+      }
+    }
+  ]
+}

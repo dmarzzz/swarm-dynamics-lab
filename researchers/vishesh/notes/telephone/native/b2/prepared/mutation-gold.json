@@ -1,0 +1,542 @@
+{
+  "b2-01": {
+    "decision": "GO",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Release both Cedar and Bay only if each latency is within the current limit, rollback is tested at both, and approval is recorded. Otherwise HOLD.",
+        "required_meaning": "Release both Cedar and Bay only if each latency is within the current limit, rollback is tested at both, and approval is recorded. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The original latency limit is 80 ms.",
+        "required_meaning": "The original latency limit is 80 ms."
+      },
+      {
+        "id": "e02",
+        "source_span": "Cedar latency is 100 ms; Bay latency is 110 ms. These are read-only tests, not write-path tests.",
+        "required_meaning": "Cedar latency is 100 ms; Bay latency is 110 ms. These are read-only tests, not write-path tests."
+      },
+      {
+        "id": "e03",
+        "source_span": "The limit is corrected to 120 ms; measurements are unchanged.",
+        "required_meaning": "The limit is corrected to 120 ms; measurements are unchanged."
+      },
+      {
+        "id": "e04",
+        "source_span": "Cedar rollback is tested; Bay rollback is not tested.",
+        "required_meaning": "Cedar rollback is tested; Bay rollback is not tested."
+      },
+      {
+        "id": "e05",
+        "source_span": "Approval is requested, but the receipt is unavailable; approval is unknown.",
+        "required_meaning": "Approval is requested, but the receipt is unavailable; approval is unknown."
+      },
+      {
+        "id": "e06",
+        "source_span": "Two Cedar summaries repeat the same acquisition; they are not independent tests.",
+        "required_meaning": "Two Cedar summaries repeat the same acquisition; they are not independent tests."
+      },
+      {
+        "id": "e99",
+        "source_span": "Bay rollback is now tested and approval is recorded. Cedar rollback remains tested.",
+        "required_meaning": "Bay rollback is now tested and approval is recorded. Cedar rollback remains tested."
+      }
+    ]
+  },
+  "b2-02": {
+    "decision": "HOLD",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Restore service only with two independent passing probes taken after the restart and current restoration authorization. Otherwise HOLD.",
+        "required_meaning": "Restore service only with two independent passing probes taken after the restart and current restoration authorization. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The restart occurred at 08:50.",
+        "required_meaning": "The restart occurred at 08:50."
+      },
+      {
+        "id": "e02",
+        "source_span": "Two failure reports both copy probe O from 08:40; they are one old observation.",
+        "required_meaning": "Two failure reports both copy probe O from 08:40; they are one old observation."
+      },
+      {
+        "id": "e03",
+        "source_span": "Probe A passed at 08:55 from acquisition A.",
+        "required_meaning": "Probe A passed at 08:55 from acquisition A."
+      },
+      {
+        "id": "e04",
+        "source_span": "Probe B passed at 08:57 from acquisition B.",
+        "required_meaning": "Probe B passed at 08:57 from acquisition B."
+      },
+      {
+        "id": "e05",
+        "source_span": "Probe A and probe B use independent acquisitions, not copied results.",
+        "required_meaning": "Probe A and probe B use independent acquisitions, not copied results."
+      },
+      {
+        "id": "e06",
+        "source_span": "The current restoration authorization is recorded.",
+        "required_meaning": "The current restoration authorization is recorded."
+      },
+      {
+        "id": "e99",
+        "source_span": "Correction: probe B is a forwarded copy of acquisition A; there is no independent B acquisition.",
+        "required_meaning": "Correction: probe B is a forwarded copy of acquisition A; there is no independent B acquisition."
+      }
+    ]
+  },
+  "b2-03": {
+    "decision": "GO",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Delete a backup generation only if that exact generation has a passed restore test, a retained second copy, and deletion authorization. Otherwise HOLD.",
+        "required_meaning": "Delete a backup generation only if that exact generation has a passed restore test, a retained second copy, and deletion authorization. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The requested deletion target is generation G8.",
+        "required_meaning": "The requested deletion target is generation G8."
+      },
+      {
+        "id": "e02",
+        "source_span": "The reported restore test passed.",
+        "required_meaning": "The reported restore test passed."
+      },
+      {
+        "id": "e03",
+        "source_span": "The test receipt identifies generation G7, not G8.",
+        "required_meaning": "The test receipt identifies generation G7, not G8."
+      },
+      {
+        "id": "e04",
+        "source_span": "A second copy of G8 is retained.",
+        "required_meaning": "A second copy of G8 is retained."
+      },
+      {
+        "id": "e05",
+        "source_span": "Deletion authorization for G8 is recorded.",
+        "required_meaning": "Deletion authorization for G8 is recorded."
+      },
+      {
+        "id": "e06",
+        "source_span": "No additional restore result for G8 is available.",
+        "required_meaning": "No additional restore result for G8 is available."
+      },
+      {
+        "id": "e99",
+        "source_span": "A new restore test of G8 passed; its matching-generation receipt is available.",
+        "required_meaning": "A new restore test of G8 passed; its matching-generation receipt is available."
+      }
+    ]
+  },
+  "b2-04": {
+    "decision": "HOLD",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Start maintenance only if the entire planned work interval is inside the latest authorized window, inclusive of endpoints, and rollback is ready. Otherwise HOLD.",
+        "required_meaning": "Start maintenance only if the entire planned work interval is inside the latest authorized window, inclusive of endpoints, and rollback is ready. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The original authorized window is 10:00 through 10:20.",
+        "required_meaning": "The original authorized window is 10:00 through 10:20."
+      },
+      {
+        "id": "e02",
+        "source_span": "The work is planned for 10:10 through 10:30.",
+        "required_meaning": "The work is planned for 10:10 through 10:30."
+      },
+      {
+        "id": "e03",
+        "source_span": "The authorized window is revised to 10:00 through 10:40, replacing the earlier end.",
+        "required_meaning": "The authorized window is revised to 10:00 through 10:40, replacing the earlier end."
+      },
+      {
+        "id": "e04",
+        "source_span": "The revision changes the window, not the planned work interval.",
+        "required_meaning": "The revision changes the window, not the planned work interval."
+      },
+      {
+        "id": "e05",
+        "source_span": "Rollback is ready for this maintenance.",
+        "required_meaning": "Rollback is ready for this maintenance."
+      },
+      {
+        "id": "e06",
+        "source_span": "An old reminder still displays 10:20; it copies the superseded schedule.",
+        "required_meaning": "An old reminder still displays 10:20; it copies the superseded schedule."
+      },
+      {
+        "id": "e99",
+        "source_span": "The work end is changed to 10:45; its start stays 10:10.",
+        "required_meaning": "The work end is changed to 10:45; its start stays 10:10."
+      }
+    ]
+  },
+  "b2-05": {
+    "decision": "GO",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Approve the two-item purchase only if the combined current cost is at most 100 units and both items are eligible. Individual item totals are not separate allowances. Otherwise HOLD.",
+        "required_meaning": "Approve the two-item purchase only if the combined current cost is at most 100 units and both items are eligible. Individual item totals are not separate allowances. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "Item A originally costs 40 units.",
+        "required_meaning": "Item A originally costs 40 units."
+      },
+      {
+        "id": "e02",
+        "source_span": "Item B costs 50 units.",
+        "required_meaning": "Item B costs 50 units."
+      },
+      {
+        "id": "e03",
+        "source_span": "Item A is corrected to 60 units; its earlier quote is superseded.",
+        "required_meaning": "Item A is corrected to 60 units; its earlier quote is superseded."
+      },
+      {
+        "id": "e04",
+        "source_span": "Both items are eligible.",
+        "required_meaning": "Both items are eligible."
+      },
+      {
+        "id": "e05",
+        "source_span": "Two forwarded quotes for A refer to the same item, not extra purchases.",
+        "required_meaning": "Two forwarded quotes for A refer to the same item, not extra purchases."
+      },
+      {
+        "id": "e06",
+        "source_span": "No discount or additional allowance has been authorized.",
+        "required_meaning": "No discount or additional allowance has been authorized."
+      },
+      {
+        "id": "e99",
+        "source_span": "Item A is repriced to 45 units; the previous 60-unit price is superseded.",
+        "required_meaning": "Item A is repriced to 45 units; the previous 60-unit price is superseded."
+      }
+    ]
+  },
+  "b2-06": {
+    "decision": "HOLD",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Release a shipment only if every included lot has a passed inspection and a release receipt. Excluded lots do not block this shipment. Otherwise HOLD.",
+        "required_meaning": "Release a shipment only if every included lot has a passed inspection and a release receipt. Excluded lots do not block this shipment. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The shipment originally includes lots L1, L2 and L3.",
+        "required_meaning": "The shipment originally includes lots L1, L2 and L3."
+      },
+      {
+        "id": "e02",
+        "source_span": "L1 passed inspection and has its release receipt.",
+        "required_meaning": "L1 passed inspection and has its release receipt."
+      },
+      {
+        "id": "e03",
+        "source_span": "L2 passed inspection and has its release receipt.",
+        "required_meaning": "L2 passed inspection and has its release receipt."
+      },
+      {
+        "id": "e04",
+        "source_span": "L3 is damaged and has no release receipt.",
+        "required_meaning": "L3 is damaged and has no release receipt."
+      },
+      {
+        "id": "e05",
+        "source_span": "The shipment is revised to include only L1 and L2; L3 is excluded.",
+        "required_meaning": "The shipment is revised to include only L1 and L2; L3 is excluded."
+      },
+      {
+        "id": "e06",
+        "source_span": "The revision does not repair L3 or grant it release approval.",
+        "required_meaning": "The revision does not repair L3 or grant it release approval."
+      },
+      {
+        "id": "e99",
+        "source_span": "The shipment is changed to include L1, L2 and L3.",
+        "required_meaning": "The shipment is changed to include L1, L2 and L3."
+      }
+    ]
+  },
+  "b2-07": {
+    "decision": "GO",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Export only if current consent covers every requested field and the destination is approved. Consent for overlapping fields is insufficient. Otherwise HOLD.",
+        "required_meaning": "Export only if current consent covers every requested field and the destination is approved. Consent for overlapping fields is insufficient. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The requested fields are name, region and contact.",
+        "required_meaning": "The requested fields are name, region and contact."
+      },
+      {
+        "id": "e02",
+        "source_span": "The current consent receipt covers name and region only.",
+        "required_meaning": "The current consent receipt covers name and region only."
+      },
+      {
+        "id": "e03",
+        "source_span": "The destination is approved.",
+        "required_meaning": "The destination is approved."
+      },
+      {
+        "id": "e04",
+        "source_span": "A second consent email forwards the same receipt; it adds no fields.",
+        "required_meaning": "A second consent email forwards the same receipt; it adds no fields."
+      },
+      {
+        "id": "e05",
+        "source_span": "Permission for contact was requested but is not recorded.",
+        "required_meaning": "Permission for contact was requested but is not recorded."
+      },
+      {
+        "id": "e06",
+        "source_span": "Removing contact has been suggested, but the export request is unchanged.",
+        "required_meaning": "Removing contact has been suggested, but the export request is unchanged."
+      },
+      {
+        "id": "e99",
+        "source_span": "A new consent receipt now covers name, region and contact.",
+        "required_meaning": "A new consent receipt now covers name, region and contact."
+      }
+    ]
+  },
+  "b2-08": {
+    "decision": "HOLD",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Deploy only if tests pass and rollback is ready, plus an audit unless a written exception matches both the deployment version and site. Otherwise HOLD.",
+        "required_meaning": "Deploy only if tests pass and rollback is ready, plus an audit unless a written exception matches both the deployment version and site. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The deployment target is version V4 at site East.",
+        "required_meaning": "The deployment target is version V4 at site East."
+      },
+      {
+        "id": "e02",
+        "source_span": "Tests passed for this deployment.",
+        "required_meaning": "Tests passed for this deployment."
+      },
+      {
+        "id": "e03",
+        "source_span": "Rollback is ready.",
+        "required_meaning": "Rollback is ready."
+      },
+      {
+        "id": "e04",
+        "source_span": "The audit is incomplete.",
+        "required_meaning": "The audit is incomplete."
+      },
+      {
+        "id": "e05",
+        "source_span": "A written exception waives the audit only for V4 at East.",
+        "required_meaning": "A written exception waives the audit only for V4 at East."
+      },
+      {
+        "id": "e06",
+        "source_span": "The exception does not waive testing or rollback and says nothing about other sites.",
+        "required_meaning": "The exception does not waive testing or rollback and says nothing about other sites."
+      },
+      {
+        "id": "e99",
+        "source_span": "The deployment target changes to V4 at West.",
+        "required_meaning": "The deployment target changes to V4 at West."
+      }
+    ]
+  },
+  "b2-09": {
+    "decision": "GO",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Activate only if both consumers acknowledge the latest key version and activation is authorized. Earlier-version acknowledgements do not qualify. Otherwise HOLD.",
+        "required_meaning": "Activate only if both consumers acknowledge the latest key version and activation is authorized. Earlier-version acknowledgements do not qualify. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The initial key version label is K7.",
+        "required_meaning": "The initial key version label is K7."
+      },
+      {
+        "id": "e02",
+        "source_span": "Consumer A acknowledges K7.",
+        "required_meaning": "Consumer A acknowledges K7."
+      },
+      {
+        "id": "e03",
+        "source_span": "Consumer B acknowledges K7.",
+        "required_meaning": "Consumer B acknowledges K7."
+      },
+      {
+        "id": "e04",
+        "source_span": "Rotation advances the latest version to K8.",
+        "required_meaning": "Rotation advances the latest version to K8."
+      },
+      {
+        "id": "e05",
+        "source_span": "Activation authorization is recorded.",
+        "required_meaning": "Activation authorization is recorded."
+      },
+      {
+        "id": "e06",
+        "source_span": "No K8 acknowledgements are available; forwarded K7 receipts remain old evidence.",
+        "required_meaning": "No K8 acknowledgements are available; forwarded K7 receipts remain old evidence."
+      },
+      {
+        "id": "e99",
+        "source_span": "Consumers A and B now acknowledge K8.",
+        "required_meaning": "Consumers A and B now acknowledge K8."
+      }
+    ]
+  },
+  "b2-10": {
+    "decision": "HOLD",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Close the incident only if two independent current checks pass and the incident owner records closure approval. A proposed monitor is not a closure prerequisite. Otherwise HOLD.",
+        "required_meaning": "Close the incident only if two independent current checks pass and the incident owner records closure approval. A proposed monitor is not a closure prerequisite. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "An earlier symptom report predates the current checks.",
+        "required_meaning": "An earlier symptom report predates the current checks."
+      },
+      {
+        "id": "e02",
+        "source_span": "Current check A passes, from acquisition P.",
+        "required_meaning": "Current check A passes, from acquisition P."
+      },
+      {
+        "id": "e03",
+        "source_span": "Current check B passes, from acquisition Q.",
+        "required_meaning": "Current check B passes, from acquisition Q."
+      },
+      {
+        "id": "e04",
+        "source_span": "P and Q are separate acquisitions; the repeated symptom emails share the old report.",
+        "required_meaning": "P and Q are separate acquisitions; the repeated symptom emails share the old report."
+      },
+      {
+        "id": "e05",
+        "source_span": "The incident owner records closure approval.",
+        "required_meaning": "The incident owner records closure approval."
+      },
+      {
+        "id": "e06",
+        "source_span": "A future monitor is proposed but not started.",
+        "required_meaning": "A future monitor is proposed but not started."
+      },
+      {
+        "id": "e99",
+        "source_span": "The owner withdraws closure approval.",
+        "required_meaning": "The owner withdraws closure approval."
+      }
+    ]
+  },
+  "b2-11": {
+    "decision": "GO",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Grant access only if the security role and the data-owner role each approve, and the account is verified. Repeated copies of one role approval do not satisfy the other. Otherwise HOLD.",
+        "required_meaning": "Grant access only if the security role and the data-owner role each approve, and the account is verified. Repeated copies of one role approval do not satisfy the other. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The account is verified.",
+        "required_meaning": "The account is verified."
+      },
+      {
+        "id": "e02",
+        "source_span": "The security role approves.",
+        "required_meaning": "The security role approves."
+      },
+      {
+        "id": "e03",
+        "source_span": "A message titled second approval forwards the security receipt; its author is not the data owner.",
+        "required_meaning": "A message titled second approval forwards the security receipt; its author is not the data owner."
+      },
+      {
+        "id": "e04",
+        "source_span": "The data-owner role has not approved.",
+        "required_meaning": "The data-owner role has not approved."
+      },
+      {
+        "id": "e05",
+        "source_span": "A reminder to the data owner is sent; it is not an approval.",
+        "required_meaning": "A reminder to the data owner is sent; it is not an approval."
+      },
+      {
+        "id": "e06",
+        "source_span": "The two security messages have the same receipt identifier, so they are one approval.",
+        "required_meaning": "The two security messages have the same receipt identifier, so they are one approval."
+      },
+      {
+        "id": "e99",
+        "source_span": "The data-owner role now issues its own approval.",
+        "required_meaning": "The data-owner role now issues its own approval."
+      }
+    ]
+  },
+  "b2-12": {
+    "decision": "HOLD",
+    "targets": [
+      {
+        "id": "rule",
+        "source_span": "Release the batch only if its unchanged measured error satisfies the latest error rule and provenance is complete. Apply the stated inclusive or strict relation exactly. Otherwise HOLD.",
+        "required_meaning": "Release the batch only if its unchanged measured error satisfies the latest error rule and provenance is complete. Apply the stated inclusive or strict relation exactly. Otherwise HOLD."
+      },
+      {
+        "id": "e01",
+        "source_span": "The original error rule is error at most 2 units.",
+        "required_meaning": "The original error rule is error at most 2 units."
+      },
+      {
+        "id": "e02",
+        "source_span": "Measured aggregate error is 3 units.",
+        "required_meaning": "Measured aggregate error is 3 units."
+      },
+      {
+        "id": "e03",
+        "source_span": "The error rule is corrected to error at most 3 units, including equality.",
+        "required_meaning": "The error rule is corrected to error at most 3 units, including equality."
+      },
+      {
+        "id": "e04",
+        "source_span": "This correction does not change the measured error.",
+        "required_meaning": "This correction does not change the measured error."
+      },
+      {
+        "id": "e05",
+        "source_span": "Provenance for the whole batch is complete.",
+        "required_meaning": "Provenance for the whole batch is complete."
+      },
+      {
+        "id": "e06",
+        "source_span": "A duplicated report copies the same measurement; it is not a second batch or a new estimate.",
+        "required_meaning": "A duplicated report copies the same measurement; it is not a second batch or a new estimate."
+      },
+      {
+        "id": "e99",
+        "source_span": "The latest rule now requires error strictly less than 3 units; equality no longer qualifies.",
+        "required_meaning": "The latest rule now requires error strictly less than 3 units; equality no longer qualifies."
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # Telephone B2: reproducible decision quality across handoff policies
 
-Prospective proposal, 2026-10-04; no implementation, native calls or allocation. Supersedes neither the frozen A1 evidence nor the unexecuted Sol50 proposal. B2 is an alternative requiring a named delegated PI decision; it is not silently substituted for the owner's fifty-agent request.
+Prospective plan first written before implementation, 2026-10-04; offline packets are now prepared, with no native calls or allocation. Supersedes neither the frozen A1 evidence nor the unexecuted Sol50 proposal. B2 is an alternative requiring a named delegated PI decision; it is not silently substituted for the owner's fifty-agent request.
 
 ## Baseline reassessment
 
@@ -20,7 +20,7 @@ Develop twelve separate causal scenarios in CASE-SPECS.json: six GO and six HOLD
 
 Before freeze, render the source from a structured event ledger. Two independently implemented rule evaluators (event fold and explicit decision table) must agree on the twelve roots and counterfactual controls. Review each natural-language record against ledger state and target spans in two documented passes. Test answer-changing controls and answer-preserving reorder/rename controls; mutations remain nested checks, not extra roots. All twelve are inspected development cases. No held-out/generalization claim. Freeze cases, labels, evaluators, prompts and scoring before any model answer; no case replacement based on observed difficulty.
 
-The current specification file is scenario design, not completed packets or validated gold. Finish this construction offline and publish its acceptance evidence before a fundable execution revision. Every packet must fit a complete copied handoff inside 1536 output tokens using a conservative byte bound. If a credible scenario does not fit, revise the prospective envelope rather than truncating evidence.
+The original scenario specification has now been implemented in twelve concrete packets; see CASE-QUALITY.md and prepared/manifest.json for scoped offline acceptance, witnesses and limits. Native qualification and admission remain separate. Every packet must fit a complete copied handoff inside 1536 output tokens using a conservative byte bound. If a credible scenario does not fit, revise the prospective envelope rather than truncating evidence.
 
 ## Arms, contexts and native assignments
 
@@ -46,8 +46,12 @@ Keep original Telephone historical exposure USD 0.113744701, zero outstanding re
 
 One existing approved-account exclusive host suffices, with two independent chain slots at most and a hard two-hour allocation lifetime whose full cost fits USD 0.25. Set a ninety-minute native deadline; stop before it if no request can finish safely. Reserve all stage exposure in the original ledger and reconcile against the USD 200 aggregate once PI grants a named allocation. No new funds are created here and no machine is allocated. Study tier is unchanged; no promising-tier promotion is required for this envelope.
 
-**DECISION NEEDED after offline packet acceptance:** fund named B2 revision, two qualification calls and two frozen 72-call blocks, at most USD 4.884624146 additional and USD 4.998368847 Telephone cumulative, within the aggregate portfolio. Approval must identify the final accepted evidence revision; current scenario recipes alone are not launch-ready. Public immutable plans/condition TLDRs, runtime verification, credential/account/claim checks and native qualification remain mandatory.
+**DECISION NEEDED after offline packet acceptance:** fund named B2 revision, two qualification calls and two frozen 72-call blocks, at most USD 4.884624146 additional and USD 4.998368847 Telephone cumulative, within the aggregate portfolio. Approval must identify the final accepted evidence revision; accepted offline cases alone are not end-to-end launch admission. Public immutable plans/condition TLDRs, runtime verification, credential/account/claim checks and native qualification remain mandatory.
 
 ## Reporting and stopping
 
 Publish a twelve-root × two-block × two-arm terminal table plus hop-target trajectories, error categories, block variability and both scoring sensitivities. Replay from saved requests/responses with exact parent hashes. Complete scientific and operational post-mortems, cost reconciliation and claim release even on failure. A stable null or source-copy advantage can finish the study usefully. Do not escalate depth, change cases or repeat merely to produce a favorable effect.
+
+## Offline packet revision — 2026-10-04
+
+Twelve concrete roots and twelve appended answer-changing controls now have source-visible decision witnesses, two rule implementations and an actor-source controller. [Case acceptance](CASE-QUALITY.md) records thirteen passing tests, the same-operator two-pass source/label audit and limitations. [Semantic scoring](SCORING.md) is frozen before outputs, separates first-hop competence from terminal harm, retains ambiguity and both sensitivity views, and requires per-root fresh-block disagreement reporting. No paid B2 call, source substitution or funding grant occurred.
