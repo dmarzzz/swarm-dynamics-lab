@@ -9,7 +9,7 @@ Assessed 2026-10-04 by dmarz/pipeline-memory; source `9781739c` ([registry](../.
 - **sample_size_summary:** Observed: none. Planned: 24 synthetic roots x 6 memory states x 4 handoff policies = 576 S1 calls, one fresh successor each; separate qualification of 24 calls on 6 roots (1 probe + 23). Roots are the independent units, not calls.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory is a prospective plan and, once built, a launch-ready package: frozen design, code, offline tests and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-memory on 2026-10-04.
+**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-memory on 2026-10-04.
 
 It implements line M of [research program v5](../overnight-program-2026-10-04/program.json) ([setup record of the program](../overnight-program-2026-10-04/SETUP.md), [methods review](../overnight-program-2026-10-04/methods-review-v5.json), [selected model](../overnight-program-2026-10-04/selected-model.json)) as one package under the [ready-chain contract](../pipeline/READY-CHAIN.md).
 
@@ -65,27 +65,27 @@ Anchors, all measured earlier and none of them an outcome of this study: in the 
   | false original | F | F | F | null |
 
 - **Roots.** S1 5401 to 5424 (24), engineering 5301 to 5306, qualification set a 5501 to 5506, qualification set b 5601 to 5606. The generator is seeded with this study's own version string, so these numbers share nothing with other studies' task ids.
-- **Successor.** `qwen/qwen3.7-flash` through OpenRouter, provider pinned to Alibaba, `allow_fallbacks: false`, `require_parameters: true`, reasoning disabled, JSON-object mode, `max_tokens` 1,000, no tools, no memory across calls, no answer retries. The request body is the program's frozen template plus `messages` (one system message, identical for all 600 calls, and one user message). The answer is validated locally: exactly the keys `value` (integer or null) and `sources` (list of record IDs visible in the message, no repeats, empty exactly when `value` is null). `effort: low` appears in `READY.yaml` only because the launcher requires the field; reasoning is disabled and effort does not apply.
-- **Frozen files.** [design.yaml](design.yaml), [preregistration.md](preregistration.md), `manifest.json` (assignment ids and packet hashes per stage, written when the code exists). The source hash covers `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`.
+- **Successor.** `qwen/qwen3.7-flash` through OpenRouter, provider pinned to Alibaba, `allow_fallbacks: false`, `require_parameters: true`, reasoning disabled, JSON-object mode, `max_tokens` 1,000, no tools, no memory across calls, no answer retries. The request body is the program's frozen template plus `messages` (one system message, identical for all 600 calls, and one user message). The answer is validated locally on structure: exactly the keys `value` (integer or null) and `sources` (list of distinct strings); duplicate JSON keys are rejected. Whether the cited IDs exist and support the value is scored, not validated, so an unsupported answer is a measured outcome and not a failed call. `effort: low` appears in `READY.yaml` only because the launcher requires the field; reasoning is disabled and effort does not apply.
+- **Frozen files.** [design.yaml](design.yaml), [preregistration.md](preregistration.md), [manifest.json](manifest.json) (assignment ids and packet hashes per stage, and the reserved second qualification set). The source hash covers `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`.
 
 ## Protocol
 
 Four stages run as one chain on one server. Each stage is one hub run. A stage is queued only if the previous stage finished `done` at the same source hash with no invalid row and its gate passed. A failed stage stops the chain; nothing further is queued.
 
 1. **S0, scripted, 0 calls.** The whole 6 × 4 grid on the six engineering roots (144 rows) and both qualification sets (24 + 24 rows), answered by the reference actor: 192 rows. S0 passes only if every row is valid, every reference answer equals the hand-written table, both qualification sets pass their own gate under the reference, and every invariant holds (listed in the preregistration; they include: the false-original content packet contains the false original and not the truth; no packet contains a state or policy label or an evaluator field; within a root and state the task and the notes are identical across raw, metadata and content; scripted control actors that trust memory, always abstain or ignore versions get the scores the design predicts for them).
-2. **P0, 1 call.** The first of the 24 qualification fixtures. It passes if the interface works: the response parses, the model slug and provider match, usage is reported, the finish reason is `stop`, no reasoning tokens are reported and the answer has valid structure. Its measured tokens per byte are written to its summary and to the hub.
+2. **P0, 1 call.** The first of the 24 qualification fixtures. It passes if the interface works: the response parses, the model slug matches, the response names Alibaba as its provider, usage is reported, the finish reason is `stop`, no reasoning tokens are reported and the answer has valid structure. Its raw response metadata (model, provider, response id, finish reason, reasoning tokens, latency, reported cost, tokens, tokens per byte) is written to its summary and to the hub.
 3. **Q0, 23 calls.** The other 23 qualification fixtures. The gate is evaluated over all 24 rows (Q0 reads P0's saved row from the results directory and checks its checksum against the hub): 24 of 24 valid and 24 of 24 in exact agreement with the reference (value equal, citations valid), including the null answers for unresolved conflict and missing evidence. No miss is allowed. A failed qualification stops the chain; it is reported, not retuned.
 4. **S1, 576 calls.** 24 roots × 6 states × 4 policies, one stateless call per assignment in a seeded shuffled order, four requests in flight, no answer retries. A call without a valid answer is recorded as failed with its evidence and dispatch continues, up to 6 failed calls; an integrity failure or a seventh failed call stops dispatch.
 
 Before S1 the chain applies two written projection rules from the measured qualification usage: cost (576 × measured cost per call must fit under what is left of the cap, else `projection_exceeds_cap`) and input size (measured tokens per byte × the largest S1 request must not exceed 8,000 tokens, else `input_ceiling_projection`).
 
-Calls are capped in the ledger at 1 (P0), 23 (Q0), 576 (S1) and 600 in total; dollars at USD 2 of settled cost plus open reservations. Expected spend is about USD 0.03 (arithmetic in the preregistration).
+Calls are capped in the ledger at 1 (P0), 23 (Q0) and 576 (S1), 600 for this attempt (the ledger's study-wide cap is 624, which leaves room for the 24 qualification calls of the one permitted repair attempt); dollars at USD 2 of settled cost plus open reservations. Expected spend is about USD 0.03 (arithmetic in the preregistration).
 
 The program allows one bounded repair of a failed qualification: a new attempt (`002`) on the second, disjoint fixture set b, with its own source hash and pre-run review, after the failing answers have been read. It is the only repair; a failed repeat ends the line; thresholds are never lowered.
 
 Analysis: the unit is the root. All 24 roots stay in every analysis. A failed or not-started call keeps its place in its cell's denominator with outcome bounds 0 and 1; contrasts are reported as bounds over all 24 roots plus the complete-case estimate with its denominator. Nothing is dropped, imputed or re-run. With all primary cells observed, the estimate is the mean of the 24 root values with a 95% interval from 10,000 bootstrap draws over whole roots (seed 20261004); all 24 root values are listed.
 
-Operator steps will be in `RUN.md`; the pre-run review in `reviews/chain-001-pre.md`; gate status is in [SETUP.md](SETUP.md).
+Operator steps are in [RUN.md](RUN.md); the pre-run review is [reviews/chain-001-pre.md](reviews/chain-001-pre.md); the visualization mapping is [VISUALIZATION.md](VISUALIZATION.md); gate status is in [SETUP.md](SETUP.md).
 
 ## Metrics
 
@@ -101,12 +101,39 @@ Operator steps will be in `RUN.md`; the pre-run review in `reviews/chain-001-pre
 | Retrieval | Per call and per policy: registry lookups, records retrieved, bytes added to the message, and the measured time of the lookup. Deterministic except the time. |
 | Usage | Calls, transport attempts, input and output tokens, dollars, failed and not-started units, billing pauses. |
 
-## Dated implementation notes (2026-10-04, before any code and before any run)
+## Dated implementation notes (2026-10-04, before any run)
 
 - **Ready-chain instead of five sessions.** The program's five-session arrangement with one shared reservation authority is replaced by the ready-chain: one package per line, one server per line, its own ledger and caps, launched by the orchestrator from the private run queue. The program's design for line M (sample, states, policies, primary, qualification rule, call counts) is implemented as written.
 - **Stage mapping.** The program's 24 qualification calls are P0 (the first fixture, 1 call) plus Q0 (23 calls); the gate reads all 24 rows. `max_calls` is `{S0: 0, P0: 1, Q0: 23, S1: 576}`.
 - **Inherited error is defined on the value.** The program names an "inherited-error probability" without a formula. It is frozen here as: the answer equals F + delta. The benchmark's older label `parent_inherited_error` (a wrong answer that the visible packet supports) is reported separately as "supported and wrong", because under metadata-only resolution in the stale state a repeated stale value is an inherited error that the packet does not support.
 - **The copies state carries a two-origin requirement.** Copies matter only when corroboration is required. As in the benchmark's correlated-copies fixtures, the copies state sets `min_origins` to 2 in its task; the other five states use 1. The requirement is the same under all four policies of that state, so every policy contrast is at a fixed task rule. The copies state is not part of the primary contrast or the utility guard.
-- **Some cells have identical packets by construction.** Under raw inheritance the misquote, stale and false-original states of a root are the same message (that is what raw inheritance means: the error is invisible), and under reset five of the six states are the same message. The manifest records packet hashes and the number of distinct packets; identical packets are repeated calls, not extra worlds.
+- **Some cells have identical packets by construction.** Under raw inheritance the misquote, stale and false-original states of a root are the same message (that is what raw inheritance means: the error is invisible); under metadata-only resolution the misquote and false-original states are the same message; under reset five of the six states are the same message, and two roots that ask for the same fact with the same delta share it. The 576 S1 assignments hold 394 distinct messages (raw 96, metadata 120, content 144, reset 34). The manifest records the hashes; identical messages are repeated calls, not extra worlds.
 - **No token-counting endpoint.** Part 2 of the failure-handling rule (token counting never fails a call) does not apply: this route has no counting request. The ledger reserves a byte-based upper bound instead (input tokens ≤ bytes of the encoded request).
 - **What the design can and cannot show.** The qualification demands exact agreement with the reference on all 24 fixtures. A model that passes is expected to sit near the reference in S1, where the primary contrast is −0.5 by construction. S1 then measures how reliably the successor follows each protocol on 24 fresh roots per cell, and whether clean answers survive; it is not a search for an unknown effect size. This establishes at most one-handoff behaviour, not a multi-generation result.
+- **What a message looks like** (root 5401, stale state, content-bound policy; the successor's whole user message). The reference answer is 43 citing `rec-dzreyblo` (40 + delta 3); the note's stale value would give 51.
+
+  ```
+  {
+  "task": {"key": "B.freight", "delta": 3, "min_origins": 1, "question": "Report the value of the exact fact key plus delta, or null if the fact is unresolved."},
+  "inherited_memory": [
+  {"key": "A.freight", "value": 75, "sources": ["rec-jwzchbft"]},
+  {"key": "C.base", "value": 90, "sources": ["rec-hiffjaej"]},
+  {"key": "B.freight", "value": 48, "sources": ["rec-gdcncbmm"]},
+  {"key": "C.freight", "value": 65, "sources": ["rec-itvfwgue"]}
+  ],
+  "source_registry": [
+  {"id": "rec-jwzchbft", "origin": "org-xcfsyedj", "authority": "primary", "version": 1, "current_version": 1},
+  {"id": "rec-hiffjaej", "origin": "org-dabooxqr", "authority": "primary", "version": 1, "current_version": 1},
+  {"id": "rec-gdcncbmm", "origin": "org-vjxpamjd", "authority": "primary", "version": 1, "current_version": 2},
+  {"id": "rec-itvfwgue", "origin": "org-vylowinl", "authority": "primary", "version": 1, "current_version": 1}
+  ],
+  "retrieved_records": [
+  {"id": "rec-jwzchbft", "origin": "org-xcfsyedj", "authority": "primary", "version": 1, "facts": {"A.freight": 75}},
+  {"id": "rec-hiffjaej", "origin": "org-dabooxqr", "authority": "primary", "version": 1, "facts": {"C.base": 90}},
+  {"id": "rec-gdcncbmm", "origin": "org-vjxpamjd", "authority": "primary", "version": 1, "facts": {"B.freight": 48}},
+  {"id": "rec-dzreyblo", "origin": "org-vjxpamjd", "authority": "primary", "version": 2, "facts": {"B.freight": 40}},
+  {"id": "rec-itvfwgue", "origin": "org-vylowinl", "authority": "primary", "version": 1, "facts": {"C.freight": 65}}
+  ]
+  }
+  ```
+- **Changes made while the package was built** (structural validation, the adapter revision, probe metadata, the exact-retrieval invariant) are listed at the end of the [preregistration](preregistration.md).
