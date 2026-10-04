@@ -42,3 +42,7 @@ Live qualification uses textual progress and measured item counts. Final `replay
 ## Authorization update
 
 The $20 cap is now authorized, not pending. Provider requests include price ceilings matching the reviewed quote and disallow per-request charges and fallback routes. Budget tests verify exhaustion at exactly $20, retention across Q-A/Q-B and rejection of cap resets. Route pinning, live integration/public preflight and independent review remain incomplete; the Shadow review task was still open and unclaimed at this check. No machine is reserved while these prerequisites remain unresolved.
+
+## Live setup update — 2026-10-04 UTC
+
+The public plan is now registered and verified; see reviews/q1-public-plan-receipt.json. Source 1002752 passed 23 offline checks on sim-test-01, and the synthetic replay passed browser inspection. Fixed public run requests to use the documented preflight user agent after reproducing HTTP 403 with the Python default. No model calls or spend occurred. Credential availability and independent package review remain unresolved. The temporary allocation is released while blocked; see reviews/q1-setup-post.md for exact resume steps. Earlier lists of unverified reporting/replay checks are superseded only to this extent: real per-run reporting and provider integration remain untested.
