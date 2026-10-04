@@ -3,7 +3,7 @@ id: build-sybil-scarcity-xmodel
 type: task
 title: Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready
 kind: build
-status: claimed
+status: done
 priority: p0
 owner: dmarz/pipeline-scarcity-qwen
 for: dmarz
@@ -14,7 +14,9 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T12:29Z
-updated: 2026-10-04T12:29Z
+updated: 2026-10-04T18:26Z
+outputs:
+- researchers/dmarz/notes/sybil-scarcity-xmodel/RESULTS.md
 ---
 
 ## Goal
