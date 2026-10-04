@@ -25,8 +25,8 @@ Design and build hunch B2 of [the agent-budgets note](../researchers/dmarz/notes
 
 ## Done when
 
-- [ ] Prospective plan and frozen design committed before implementation.
-- [ ] Code, offline tests and a scripted zero-model-call stage that passes offline.
-- [ ] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
-- [ ] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter.
+- [x] Prospective plan and frozen design committed before implementation.
+- [x] Code, offline tests and a scripted zero-model-call stage that passes offline. (76 tests; S0 193/193 at code commit fdd2e579, source hash 09c27648)
+- [x] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit. (reviews/chain-001-pre.md)
+- [x] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter. (READY.yaml, RUN.md; model ladder per "Providers and models")
 - [ ] Run request filed in the private run queue after the fleet monitor's go.
