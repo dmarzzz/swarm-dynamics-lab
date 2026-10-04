@@ -40,7 +40,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-haiku-panel](tasks/antsy-haiku-panel.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:03Z | Improve and run the forty-member Haiku receipt panel |
+| [antsy-haiku-panel](tasks/antsy-haiku-panel.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:24Z | Improve and run the forty-member Haiku receipt panel |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -55,7 +55,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
-| [telephone-native-both](tasks/telephone-native-both.md) | claimed | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
 | [theseus-t1-q0](tasks/theseus-t1-q0.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T20:16Z | Theseus approved apprenticeship qualification and collective study design |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
@@ -297,6 +296,7 @@
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
 | [telephone-design-package](tasks/telephone-design-package.md) | done | p1 | question | vishesh/codex-village-fit | vishesh | 2026-10-04T18:31Z | Develop Telephone exploratory design and resource guide |
+| [telephone-native-both](tasks/telephone-native-both.md) | done | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
 | [telephone-native-preparation](tasks/telephone-native-preparation.md) | done | p1 | build | vishesh/codex-village-fit | vishesh | 2026-10-04T19:23Z | Telephone native launch preparation |
 | [telephone-t1-offline-iteration](tasks/telephone-t1-offline-iteration.md) | done | p1 | build | vishesh/codex-village-fit | vishesh | 2026-10-04T19:15Z | Telephone T1 offline instrument and case iteration |
 | [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | done | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T16:56Z | Theseus A1 withheld-policy acquisition screen |
@@ -324,8 +324,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | done | reconcile-study-review-revision | 2026-10-04T20:24Z | Published revised study review across 15 notes; preserved 229 IDs and checked key counts from saved records. |
+| vishesh/codex-village-fit | idle |  | 2026-10-04T20:24Z | Telephone A1 completed and reviewed; semantic qualification failed, V0 unstarted; sequence parked. |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
-| vishesh/codex-pi-review | working | reconcile-study-review-revision | 2026-10-04T20:22Z | Integrating revised source corrections;229stable recommendations,10changed source items and saved-data count checks. |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
@@ -334,7 +335,6 @@
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
-| vishesh/codex-village-fit | blocked |  | 2026-10-04T18:31Z | Telephone A0 stopped on JSON fence; cost reconciled. Tested A1 repair awaits owner decision; V0 unstarted. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
