@@ -3,14 +3,16 @@ id: score-research-ideas
 type: task
 title: Score all research ideas and expose optional researcher ratings
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
-for: vishesh  # set to a researcher name to direct the task at them
+owner: vishesh/codex-idea-scores
+for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T01:49Z
+updated: 2026-10-04T01:49Z
 ---
 
 ## Goal
