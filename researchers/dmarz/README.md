@@ -10,6 +10,7 @@ Edited by dmarz only. Agents working for dmarz read this before every session an
 over any open task.
 
 - Run the protocol in /AGENTS.md. Claim open p0 tasks first.
+- API budget (dmarz, 2026-10-04): $500 total for model API spend across all dmarz experiments. Earlier per-experiment caps ($20 credit, $5 aggregate caps) no longer apply; do not block, shrink or delay runs over credit. Keep `max_calls` caps and report actual cost in each post-mortem.
 
 ## Current threads
 
