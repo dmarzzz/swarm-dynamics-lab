@@ -59,3 +59,7 @@ Owner-approved Q0 completed8/8 valid calls:32/32 map labels,4/6 optimal inspecti
 ## PC10 objective repair, 2026-10-04 UTC
 
 Built and published `136cd57e8f1210a8c498b8875148bf5bed91817b`. [Plan](../../phantom-coast/pc10/PLAN.md) defines individual control and a paired original/clarified wording diagnostic, holding evidence fixed.13 new tests and47 unchanged PC9 tests pass; complete action-tree enumeration matches the exact reference. [Authoritative setup](../../phantom-coast/pc10/SETUP.md). Native PC10 unrun, no claim/spend. DECISION NEEDED for16calls/76questions, maximum.10752 additional API within original cap. Prior PC9 failure remains preserved; no automatic pilot.
+
+## PC10 paired native closeout, 2026-10-04 UTC
+
+Owner-approved16-call run completed:both original/clarified wording32/32 maps and4/6 optimal inspections; all six choices identical. Clarified qualification failed. [Post-mortem](../../phantom-coast/pc10/Q1-A1-POST.md), [quality review](../../phantom-coast/pc10/QUALITY.json), [closeout](../../phantom-coast/pc10/results/Q1-A1/CLOSEOUT.json). Source/result revision `f012319ccefcc3f2682e6faa6a39132926b26aeb`. NewUSD.001016736, cumulative known.847742490/exposure.859838490. Worker stopped,10 artifacts verified, allocation released; no new VM or pilot. FINISH / PARK this qualification path; ambiguity-only clarification did not rescue the two acquisition errors. No automatic successor.

@@ -20,11 +20,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
       "setup_path": "researchers/vishesh/notes/phantom-coast/pc10/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:45:36.748344+00:00",
-      "checked_commit": "136cd57e8f1210a8c498b8875148bf5bed91817b",
-      "next_action": "PC10 objective clarification and paired diagnostic built;13 new tests plus47 PC9 tests pass. DECISION NEEDED for concrete16-call plan, maximum.10752 API inside original cap. PC9 native gate failed; no retry/pilot. Current exposure.858821754; no machine held.",
+      "checked_at": "2026-10-04T19:52:58.775627+00:00",
+      "checked_commit": "f012319ccefcc3f2682e6faa6a39132926b26aeb",
+      "next_action": "FINISH / PARK current qualification path. PC10 paired16calls:both32/32 maps and4/6 actions, no changes; clarified gate failed. No pilot/retry. Worker stopped,10 readbacks verified, claim released; exposure.859838490 under original cap. Any new population objective needs offline design and concrete owner decision.",
       "next_run_approval": "owner"
     },
     {

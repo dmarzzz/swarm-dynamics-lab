@@ -3720,26 +3720,30 @@
       ],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Whether objective clarification changes native inspection decisions is untested.",
-        "rationale": "13 new offline tests and47 unchanged PC9 tests pass; paired evidence equality and independent enumeration validate the diagnostic only."
+        "score": 1,
+        "claim": "Explicit individual-control wording did not change inspection choices on the six tested action pairs; broader effects remain unknown.",
+        "rationale": "All16 valid responses and matched traces audited;4pairs correct and2wrong under both wordings. Clarified qualification failed. Tiny known-template diagnostic supports a narrow negative result, not wording equivalence or population poisoning."
       },
-      "sample_size_summary": "Native PC10:0 calls. Eight inspected development pairs, two wording conditions, six action pairs. Proposed16 calls/76 questions remain unrun; prior PC9 outcome preserved separately.",
+      "sample_size_summary": "Native:8 authored snapshot pairs,16 valid calls,64 dependent map labels and6 matched inspection pairs. Both conditions32/32 maps and4/6 actions; all action choices identical. One response per condition, two report-sign action mechanisms; no population rollout.",
       "sources": [
         "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md",
-        "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json",
-        "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json",
-        "researchers/vishesh/notes/phantom-coast/pc10/CASE-QUALITY.json"
+        "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc10/QUALITY.json",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/CLOSEOUT.json"
       ],
-      "status_at_assessment": "offline_repair_complete_native_plan_decision_needed",
+      "status_at_assessment": "native_paired_diagnostic_complete_no_improvement_qualification_failed_parked",
       "assessor": "vishesh/codex-phantom-coast",
       "assessed_at": "2026-10-04",
-      "source_commit": "136cd57e8f1210a8c498b8875148bf5bed91817b",
+      "source_commit": "f012319ccefcc3f2682e6faa6a39132926b26aeb",
       "source_sha256": {
-        "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795",
-        "researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json": "69af4b3781b538e8815007621eadbd11c87dec340eaa1d31377c2fcf503fa9a5",
-        "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979",
-        "researchers/vishesh/notes/phantom-coast/pc10/CASE-QUALITY.json": "c65b2ca496e11f74d6baecc5a41e0275b1a59c02215c9a75d29e10b69f6b4b8e"
+        "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md": "0e0f192c36c84c0a4518f3406cbe9124ec1f6bb9457ef9b5a992251f5830c92f",
+        "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c",
+        "researchers/vishesh/notes/phantom-coast/pc10/QUALITY.json": "f7d72a8abca4685cd176c8c76a1741f22dbe6319f338aa5e7f274f53ae3225eb",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/summary.json": "358ae128bfedd04085e1061934c171a20b77926070ceb1ac50f7ae5f1c6aac05",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/audit.json": "ca4db97aeca1ff6dbff8c5458bb0df9f8249abc8c7d3bfd171a5eaee5ca34423",
+        "researchers/vishesh/notes/phantom-coast/pc10/results/Q1-A1/CLOSEOUT.json": "96414124a22648790c859d5dc2d07d8732f052e7ab755d7a68523234a08592c8"
       }
     },
     {
