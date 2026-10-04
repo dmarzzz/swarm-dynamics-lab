@@ -1,0 +1,16 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-PQ-03",
+  "authority": "Owner authorized trying the fixed-size fact arrays and safe HTTP diagnostics after PQ-02. Reuse the previously granted USD2 addition; no new budget extension.",
+  "original_api_cap_usd": 1,
+  "original_infrastructure_cap_usd": 1,
+  "additional_usd": 0,
+  "cumulative_api_cap_usd": 3,
+  "cumulative_infrastructure_cap_usd": 1,
+  "cumulative_total_cap_usd": 4,
+  "max_new_calls": 24,
+  "max_new_reserved_usd": 1.44,
+  "retains_original_calls_and_uncertainty": true,
+  "automatic_retry_or_evaluation": false,
+  "prior_addition_usd": 2
+}
