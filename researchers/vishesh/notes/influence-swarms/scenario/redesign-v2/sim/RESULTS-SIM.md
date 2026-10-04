@@ -97,7 +97,7 @@ Paired over roots; per-root competence `p_r ~ Beta(mean = the measured baseline,
 
 Pool of 12 pages, m ∈ {1,2,3,4,6,8} attacker pages, k ∈ {1,3,6} retrieved, position boost ρ_pos ∈ {0,0.5,1.0}, naive vs provenance analysts, syndicated vs distinct publishing roots; chair = `summary_only`; **96 decisions per configuration** (24 roots × 4 families).
 
-Per-ANALYST exposure is the graded quantity; team exposure (at least one of six analysts) is already 0.990 at m = 1, k = 1 and 1.000 everywhere else.
+Per-ANALYST exposure is the graded quantity. The table below is the ρ_pos = 0.5 slice (naive analysts, distinct roots); at that position boost team exposure (at least one of six analysts) is already 0.990 at m = 1, k = 1 and 1.000 in every other cell, whereas without the boost (ρ_pos = 0) it is 0.51 / 0.77 / 0.99 at k = 1 / 3 / 6 for m = 1.
 
 | m | analyst exposure k=1 | k=3 | k=6 | harmful k=1 | harmful k=6 |
 |---:|---:|---:|---:|---:|---:|
@@ -109,8 +109,8 @@ Per-ANALYST exposure is the graded quantity; team exposure (at least one of six 
 | 8 | 1.000 | 1.000 | 1.000 | 0.365 | 0.365 |
 
 - **204 of 216** (m, k, ρ_pos, policy, syndication) cells land inside the runnable dose band 0.2 ≤ harmful_target ≤ 0.8.
-- **Exposure and decision saturate at different doses.** At k=6 (naive, distinct roots) per-analyst exposure is already 0.931 at m=1, and harmful_target saturates at m=1 (0.365 at m=1 → 0.365 at m=8).
-- Syndication vs distinct roots at m=8: naive analysts are indifferent (0.360 vs 0.358, difference 0.002) because they never count publishers; provenance analysts show 0.303 vs 0.314 (difference -0.010). The bara discount shows up in the *steering rate*, and only partly in the decision, because the chair saturates first.
+- **Exposure and decision saturate at different doses.** At ρ_pos = 0.5, k=6 (naive, distinct roots) per-analyst exposure is already 0.931 at m=1, and harmful_target saturates at m=1 (0.365 at m=1 → 0.365 at m=8); without the position boost the k=6 rate climbs 0.25 → 0.365 between m=1 and m=4.
+- Syndication vs distinct roots at m=8: naive analysts are indifferent (0.360 vs 0.358, difference 0.002) because they never count publishers; provenance analysts show 0.303 vs 0.314 (difference -0.010). This suite measures exposure and the final decision only — it computes no per-analyst steering or vote-movement endpoint — so it cannot say whether the bara discount acts earlier in the pipeline; on the decision the syndicated-vs-distinct difference is within ±0.01.
 
 **Therefore run** the dose sweep at **k=1 and k=3**, where exposure is still graded, and **therefore drop** m>4 at k=6 — the decision has already saturated and the extra pages buy no additional signal.
 

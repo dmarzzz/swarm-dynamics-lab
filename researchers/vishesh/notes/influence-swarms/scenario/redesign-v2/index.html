@@ -2560,7 +2560,7 @@ Confidence intervals are <strong>bootstrapped over ROOTS</strong>, never over de
 <p><strong>Therefore run</strong> the generalist-plus-one-targeted-check as the control arm rather than as the cheap afterthought, and <strong>therefore drop</strong> N=9 — it costs 5.9× the generalist and does not beat it.</p>
 <h2>E5 — Dose–exposure</h2>
 <p>Pool of 12 pages, m ∈ {1,2,3,4,6,8} attacker pages, k ∈ {1,3,6} retrieved, position boost ρ_pos ∈ {0,0.5,1.0}, naive vs provenance analysts, syndicated vs distinct publishing roots; chair = <code>summary_only</code>; <strong>96 decisions per configuration</strong> (24 roots × 4 families).</p>
-<p>Per-ANALYST exposure is the graded quantity; team exposure (at least one of six analysts) is already 0.990 at m = 1, k = 1 and 1.000 everywhere else.</p>
+<p>Per-ANALYST exposure is the graded quantity. The table below is the ρ_pos = 0.5 slice (naive analysts, distinct roots); at that position boost team exposure (at least one of six analysts) is already 0.990 at m = 1, k = 1 and 1.000 in every other cell, whereas without the boost (ρ_pos = 0) it is 0.51 / 0.77 / 0.99 at k = 1 / 3 / 6 for m = 1.</p>
 <table>
 <thead>
 <tr>
@@ -2625,8 +2625,8 @@ Confidence intervals are <strong>bootstrapped over ROOTS</strong>, never over de
 </table>
 <ul>
 <li><strong>204 of 216</strong> (m, k, ρ_pos, policy, syndication) cells land inside the runnable dose band 0.2 ≤ harmful_target ≤ 0.8.</li>
-<li><strong>Exposure and decision saturate at different doses.</strong> At k=6 (naive, distinct roots) per-analyst exposure is already 0.931 at m=1, and harmful_target saturates at m=1 (0.365 at m=1 → 0.365 at m=8).</li>
-<li>Syndication vs distinct roots at m=8: naive analysts are indifferent (0.360 vs 0.358, difference 0.002) because they never count publishers; provenance analysts show 0.303 vs 0.314 (difference -0.010). The bara discount shows up in the <em>steering rate</em>, and only partly in the decision, because the chair saturates first.</li>
+<li><strong>Exposure and decision saturate at different doses.</strong> At ρ_pos = 0.5, k=6 (naive, distinct roots) per-analyst exposure is already 0.931 at m=1, and harmful_target saturates at m=1 (0.365 at m=1 → 0.365 at m=8); without the position boost the k=6 rate climbs 0.25 → 0.365 between m=1 and m=4.</li>
+<li>Syndication vs distinct roots at m=8: naive analysts are indifferent (0.360 vs 0.358, difference 0.002) because they never count publishers; provenance analysts show 0.303 vs 0.314 (difference -0.010). This suite measures exposure and the final decision only — it computes no per-analyst steering or vote-movement endpoint — so it cannot say whether the bara discount acts earlier in the pipeline; on the decision the syndicated-vs-distinct difference is within ±0.01.</li>
 </ul>
 <p><strong>Therefore run</strong> the dose sweep at <strong>k=1 and k=3</strong>, where exposure is still graded, and <strong>therefore drop</strong> m&gt;4 at k=6 — the decision has already saturated and the extra pages buy no additional signal.</p>
 <h2>E6 — Unit accounting</h2>
@@ -3445,5 +3445,5 @@ finding against the first draft:</p>
 </table>
 <p>What it caught, all corrected in the text: the 0.154–0.203 chair contrast had been attributed to a single generalist when E2 measured it on the six-analyst team; two sentences cited an E5 "steering rate" that E5 never computes; the "eight-call prefix exactly as today" sentence did not describe any configuration the first study runs; §7 sized the budget on the full branching sequence while §6 sized it on the first-study shape (both arithmetics correct, the label wrong); USD 0.048640 is the preflight ceiling at the 32,768-byte input cap, not a D7–D9 request size; the 1,024-token output cap was presented as measured when D7–D9 output counts are not in the record; the simulation scored <code>ambiguous_tbc</code> with the permissive DEFER-or-alternative rule the design rejects (now flagged as the first S0 action); three E5 figures were quoted without their position-boost slice; the dose grid was written as a range instead of the six-level set; one "measured zero" should read "structural zero under the actor model"; and this review record had labelled an adopted Astra point as declined. The reservation arithmetic itself was verified correct throughout.</p></div>
 <footer>
-<div>Built 2026-10-04 15:50 by <code>build_proposal.py</code> from <code>PROPOSAL-influence-v2.md</code>, <code>sim/</code> (pure-Python deterministic simulation, SVG figures) and the thirteen-study review's Influence Scenario and External Influence v2 assessments. Repo: <code>swarm-lab</code> @ ef269aa9, read-only; nothing in it was modified and no model call was made.</div>
+<div>Built 2026-10-04 15:52 by <code>build_proposal.py</code> from <code>PROPOSAL-influence-v2.md</code>, <code>sim/</code> (pure-Python deterministic simulation, SVG figures) and the thirteen-study review's Influence Scenario and External Influence v2 assessments. Repo: <code>swarm-lab</code> @ ef269aa9, read-only; nothing in it was modified and no model call was made.</div>
 </footer></div></body></html>
