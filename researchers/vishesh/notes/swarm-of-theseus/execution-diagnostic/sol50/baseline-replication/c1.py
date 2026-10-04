@@ -27,7 +27,7 @@ def admit(r,now=None):
 
 def public_check(r):
  def fetch(url):
-  with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=20) as resp:data=resp.read(10000001)
+  with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Theseus-R3','Cache-Control':'no-cache'}),timeout=20) as resp:data=resp.read(10000001)
   if len(data)>10000000:raise ValueError('public_bound')
   return data
  url='https://github.com/dmarzzz/swarm-lab/blob/'+r['source_commit']+'/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C1-PLAN.md'
