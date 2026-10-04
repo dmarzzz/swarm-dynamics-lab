@@ -121,21 +121,24 @@ def phase_schema(phase, context=None):
 
 class Anthropic(HTTP):
     """Native Messages API; no SDK, repair calls, automatic retries or prompt caching."""
-    def __init__(self, **kwargs):
+    def __init__(self, system_prompt=SYSTEM, response_schema=phase_schema, response_decoder=json.loads, **kwargs):
         super().__init__(base_url='https://api.anthropic.com/v1',**kwargs)
+        self.system_prompt=system_prompt; self.response_schema=response_schema; self.response_decoder=response_decoder
         if not self.key: raise ProviderFailure('model credential required')
         self.workspace=os.environ.get('SWARM_MODEL_WORKSPACE_ID','')
         self.actual_cost_usd=0.0
         self.input_tokens=0; self.output_tokens=0
         self.usage_missing_calls=0
+        self.last_response_text=None
 
     def complete(self, request):
+        self.last_usage={}; self.last_response_text=None
         if self.calls >= self.max_calls: raise ProviderFailure('call budget exhausted')
         content=json.dumps(request,sort_keys=True)
         if len(content.encode()) > self.max_input_bytes: raise ProviderFailure('input byte budget exceeded')
-        body={'model':self.model,'system':SYSTEM,'messages':[{'role':'user','content':content}],
+        body={'model':self.model,'system':self.system_prompt,'messages':[{'role':'user','content':content}],
               'temperature':0,'max_tokens':self.max_output_tokens,
-              'output_config':{'format':{'type':'json_schema','schema':phase_schema(request['phase'],request['context'])}}}
+              'output_config':{'format':{'type':'json_schema','schema':self.response_schema(request['phase'],request['context'])}}}
         encoded=json.dumps(body).encode()
         reservation=((len(encoded)+512)*self.input_rate+self.max_output_tokens*self.output_rate)/1_000_000
         if self.reserved_usd+reservation > self.max_cost_usd: raise ProviderFailure('dollar reservation exhausted')
@@ -159,7 +162,8 @@ class Anthropic(HTTP):
             if response.get('stop_reason')!='end_turn': raise ProviderFailure('incomplete response')
             blocks=response['content']
             if len(blocks)!=1 or blocks[0].get('type')!='text': raise ProviderFailure('unexpected response blocks')
-            return json.loads(blocks[0]['text'])
+            self.last_response_text=blocks[0]['text']
+            return self.response_decoder(self.last_response_text)
         except urllib.error.HTTPError as e:
             # Map known provider categories; never persist arbitrary error bodies or headers.
             reason='provider_http_'+str(e.code)
