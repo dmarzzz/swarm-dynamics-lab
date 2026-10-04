@@ -1,5 +1,14 @@
 # Growth pressure and rule evasion in a 200-agent economy
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/astra-ultra-review; source `8ab3e110` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Assigned rival evasion changes sustained levy avoidance by growing ordinary focal owners. Basis: Prospective plan only; no experimental implementation, qualification or scientific observations.
+- **sample_size_summary:** Observed: none. Planned: 16 independent paired markets in four 200-agent batches; 3 arms, 5 shared opening + 20 continuation rounds; 32 focal owners/arm; 52,000 main and 3,296 qualification decisions.
+<!-- experiment-evidence:end -->
+
 **Astra Ultra’s experiment plan.** Owner: dmarz. Prospective exploratory design, published before implementation. No runs started.
 
 [Read the experiment plan](PLAN.md) · [Setup and launch gates](SETUP.md) · [Design numbers](design.json) · [Design review](reviews/design-review.md)
