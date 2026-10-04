@@ -5,6 +5,7 @@ Pattern adapted from the lab's market-split-api provider. No automatic model ret
 import fcntl
 import json
 import os
+import re
 import time
 import urllib.error
 import urllib.request
@@ -45,9 +46,14 @@ class Ledger:
                     'usage_reported_calls': sum(e['type']=='response' for e in events),
                     'settled_usd': settled_micro(events)/1e6}
 
+def redact(message):
+    """Drop account identifiers (organisation ids, UUIDs) from provider messages before they are retained."""
+    message = re.sub(r'\(org: [^,)]+', '(org: <redacted>', message)
+    return re.sub(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}', '<redacted>', message)
+
 class Anthropic:
-    def __init__(self, ledger, opener=None, key=None, workspace=None):
-        self.ledger = ledger; self.opener = opener or urllib.request.urlopen
+    def __init__(self, ledger, opener=None, key=None, workspace=None, sleep=None):
+        self.ledger = ledger; self.opener = opener or urllib.request.urlopen; self.sleep = sleep or time.sleep
         self.d = common.design(); self.b = self.d['budget']
         self.key = key or os.environ.get('SWARM_MODEL_API_KEY')
         self.workspace = workspace or os.environ.get('SWARM_MODEL_WORKSPACE_ID')
@@ -69,22 +75,34 @@ class Anthropic:
         self.ledger.transact({'type': 'reserve', 'call_id': call_id, 'micro_usd': reserve, 'time': time.time()}); acc['attempted'] = True
         headers = {'Content-Type': 'application/json', 'x-api-key': self.key, 'anthropic-version': '2023-06-01', 'anthropic-workspace-id': self.workspace}
         req = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=headers, method='POST')
-        t = time.monotonic()
-        try:
-            with self.opener(req, timeout=self.b['request_timeout_seconds']) as response:
-                raw = response.read(2_000_001)
-                if len(raw) > 2_000_000: raise ValueError('response_size')
-                data = json.loads(raw)
-        except urllib.error.HTTPError as exc:
-            # Keep the provider's error type and a bounded message; never headers or request data.
+        retries, wait_cap = self.b.get('capacity_retries', 0), self.b.get('capacity_wait_seconds', 0)
+        acc['capacity_retries'] = 0; acc['capacity_wait_seconds'] = 0.0
+        while True:
+            t = time.monotonic()
             try:
-                error = json.loads(exc.read(20_000)).get('error', {})
-                if isinstance(error, dict):
-                    if isinstance(error.get('type'), str): acc['error_type'] = error['type'][:80]
-                    if isinstance(error.get('message'), str): acc['error_message'] = error['message'][:300]
-            except Exception: pass
-            raise CallFailure('http_'+str(exc.code), acc) from None
-        except Exception as exc: raise CallFailure('transport_'+type(exc).__name__, acc) from None
+                with self.opener(req, timeout=self.b['request_timeout_seconds']) as response:
+                    raw = response.read(2_000_001)
+                    if len(raw) > 2_000_000: raise ValueError('response_size')
+                    data = json.loads(raw)
+                break
+            except urllib.error.HTTPError as exc:
+                # Keep the provider's error type and a bounded, redacted message; never headers or request data.
+                try:
+                    error = json.loads(exc.read(20_000)).get('error', {})
+                    if isinstance(error, dict):
+                        if isinstance(error.get('type'), str): acc['error_type'] = error['type'][:80]
+                        if isinstance(error.get('message'), str): acc['error_message'] = redact(error['message'])[:300]
+                except Exception: pass
+                # 429 and 529 mean the request was rejected before inference: wait and resend it unchanged.
+                if exc.code in (429, 529) and acc['capacity_retries'] < retries-1:
+                    try: delay = float(exc.headers.get('retry-after')) if exc.headers else None
+                    except (TypeError, ValueError): delay = None
+                    delay = min(delay if delay and delay > 0 else min(5*2**acc['capacity_retries'], 60), 60)
+                    if acc['capacity_wait_seconds']+delay <= wait_cap:
+                        self.sleep(delay); acc['capacity_retries'] += 1; acc['capacity_wait_seconds'] += delay
+                        continue
+                raise CallFailure('http_'+str(exc.code), acc) from None
+            except Exception as exc: raise CallFailure('transport_'+type(exc).__name__, acc) from None
         acc['latency_seconds'] = time.monotonic()-t
         if not isinstance(data, dict): raise CallFailure('invalid_provider_response', acc)
         usage = data.get('usage', {})
