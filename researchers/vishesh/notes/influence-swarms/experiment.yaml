@@ -1,0 +1,25 @@
+{
+  "id": "influence-swarms",
+  "title": "How to win agents and influence swarms",
+  "description": "TLDR: Nine agents face misleading outside evidence. Compare random and targeted checking with exact cost arithmetic and a shared enforced decision rule. Procurement primary; dependency and travel qualification. Exploratory, synthetic, budget limited.",
+  "owner": "vishesh",
+  "params": {
+    "stage": {
+      "type": "str"
+    },
+    "backend": {
+      "type": "str"
+    },
+    "design_hash": {
+      "type": "str"
+    }
+  },
+  "metrics": [
+    "episodes",
+    "invalid",
+    "estimated_actual_usd",
+    "model_backed"
+  ],
+  "primary_metric": "invalid",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/influence-swarms"
+}
