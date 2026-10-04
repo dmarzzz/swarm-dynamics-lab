@@ -40,7 +40,7 @@ def measure(c,tape,mem,notices,active,round):
  return {'round':round,'atlas':atlas,'gold':gold,'local':local,'correct':[local[i]==gold[i%CLAIMS] for i in range(N)],'atlas_accuracy':accuracy,'local_accuracy':sum(local[i]==gold[i%CLAIMS] for i in range(N))/N,'coverage':sum(coverage)/N,'stale_fraction':bad/cited if cited else 0.0,'stale_citations':bad,'citation_count':cited,'abstention':atlas.count('UNCERTAIN')/CLAIMS,'false_confident':sum(a!='UNCERTAIN' and a!=b for a,b in zip(atlas,gold))/CLAIMS,'memory_count':[len(s) for s in mem],'known_withdrawals':[len(s) for s in notices],'stale_by_agent':stale,'state_sha256':hashlib.sha256(json.dumps(state,separators=(',',':')).encode()).hexdigest()}
 def rollout(c,tape,policy,scenario,checkpoint=lambda f:None):
  if len(tape)!=N or any(v not in LABELS for v in tape):raise ValueError('invalid_tape')
- mem=[{i} for i in range(N)];notices=[set() for _ in range(N)];active=set(c['roots']);frames=[]
+ mem=[{i} for i in range(N)];notices=[set() for _ in range(N)];active=set(c['roots']);frames=[];event_snapshot=None
  for t in range(24):
   if t==10:
    if scenario in ('erasure','combined'):
@@ -48,8 +48,9 @@ def rollout(c,tape,policy,scenario,checkpoint=lambda f:None):
    if scenario in ('withdrawal','combined'):
     active-=set(c['withdrawn'])
     for root,i in c['recipients'].items():notices[i].add(root)
+   event_snapshot=measure(c,tape,mem,notices,active,t)
   mem,notices=step(mem,notices,policy)
   f=measure(c,tape,mem,notices,active,t);frames.append(f);checkpoint(f)
  recovery=next((t-10 for t in range(10,22) if all(f['atlas_accuracy']>=.95 for f in frames[t:t+3])),None)
  metrics={'post_event_error':sum(1-f['atlas_accuracy'] for f in frames[10:])/14,'post_event_stale':sum(f['stale_fraction'] for f in frames[10:])/14,'final_accuracy':frames[-1]['atlas_accuracy'],'pre_event_accuracy':frames[9]['atlas_accuracy'],'initial_event_accuracy':frames[10]['atlas_accuracy'],'final_coverage':frames[-1]['coverage'],'final_stale':frames[-1]['stale_fraction'],'recovery_rounds':recovery}
- return {'frames':frames,'metrics':metrics,'final_state':{'memory':[sorted(s) for s in mem],'notices':[sorted(s) for s in notices]}}
+ return {'frames':frames,'event_snapshot':event_snapshot,'metrics':metrics,'final_state':{'memory':[sorted(s) for s in mem],'notices':[sorted(s) for s in notices]}}

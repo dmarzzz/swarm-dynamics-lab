@@ -1,0 +1,20 @@
+{
+  "source": "1aa5c4283049806e9f95bf4debbbdb0c6e82a83c",
+  "runtime": {
+    "model": "typesafe/jev-1.13",
+    "checkpoint": "typesafe/jev-1.13-20260917",
+    "provider": "TypeSafe",
+    "endpoint": "OpenRouter Decisions API",
+    "route_fallbacks": false,
+    "input_usd_per_token": 4.2e-08,
+    "device": "hosted; worker on exclusive fleet allocation"
+  },
+  "assigned": 16,
+  "complete": true,
+  "passed": true,
+  "option_correct": 4,
+  "reading_update_correct": 12,
+  "cost_usd": 0.000239652,
+  "calls": 16,
+  "call_wall_s": 6.5168829380018
+}
