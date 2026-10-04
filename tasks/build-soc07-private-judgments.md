@@ -3,9 +3,9 @@ id: build-soc07-private-judgments
 type: task
 title: Build and run the SOC-07 private-judgments development study (S0, S1)
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/soc07-private
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/soc07-private
@@ -14,6 +14,8 @@ depends_on:
 topics:
 - llm-agent-swarms
 - collective-decision
+claimed_at: 2026-10-04T03:29Z
+updated: 2026-10-04T03:29Z
 ---
 
 ## Goal
