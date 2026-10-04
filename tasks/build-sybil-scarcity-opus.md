@@ -3,9 +3,9 @@ id: build-sybil-scarcity-opus
 type: task
 title: Prepare the Sybil scarcity experiment on Opus 5.5 to launch-ready
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/pipeline-scarcity
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/pipeline
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - sybil-resistance
 - llm-agent-swarms
+claimed_at: 2026-10-04T07:52Z
+updated: 2026-10-04T07:52Z
 ---
 
 ## Goal
