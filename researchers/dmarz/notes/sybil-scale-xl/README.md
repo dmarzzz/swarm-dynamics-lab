@@ -5,8 +5,8 @@
 
 Assessed 2026-10-04 by dmarz/scale-xl ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Opus 5.5 synthesis (amendment A1). Basis: unrun; no stage has completed.
-- **sample_size_summary:** Observed: none. Planned (amendment A1, Opus 5.5): 24 paired worlds × 3 sizes × 8 conditions = 576 S1 calls plus 24 Q0 calls; 972–8,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports. Free scripted S0 216/216 on the v1 manifest.
+- **evidence_confidence:** **2/4** — Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Opus 5.5 synthesis (amendment A1). Basis: decisive primary contrast on 18 of 24 complete world pairs (+100 points, bounded +50 to +100), one graph family, one synthetic task, simulated identities; S1 incomplete (481/576) after an unrelated billing outage.
+- **sample_size_summary:** Observed: S1 481 valid of 576 assigned (24 world clusters × 3 sizes × 8 conditions; 17–24 valid worlds per cell; 94 not started, 1 failed), Q0 24/24 at two runtimes. 972–8,748 simulated identities feeding one Opus 5.5 synthesizer; worlds, not calls or identities, are the independent units.
 <!-- experiment-evidence:end -->
 
 Exploratory scale-up of [sybil-scale-api](../sybil-scale-api), owned by dmarz and operated by dmarz/scale-xl on orbital-one. Requested by dmarz on 2026-10-04: "Find one of our experiences which would benefit the most from trying it at a much larger scale and ship it and don't worry about the budget". This is not an accepted formal hypothesis; S2 stays disabled. The files are copied from [sybil-scale-sonnet](../sybil-scale-sonnet), itself a byte-identical copy of the parent's instrument; neither earlier study, its records nor its launcher is modified.
@@ -55,4 +55,4 @@ Inherits every limit of the parent: synthetic identities and checks, one graph f
 
 ## Results
 
-Not yet collected.
+See [RESULTS.md](RESULTS.md). On Opus 5.5 at 481 of 576 calls (stopped by an account credit outage, inferred): proportional checking keeps specialist accuracy at 100% from 972 to 8,748 identities under informative checks; the primary contrast at 8,748 is +100 points on all 18 complete pairs (bounded +50 to +100 over 24 worlds). Packets of 4,374 reports did not degrade synthesis (Opus equals plurality). With 4 checks Opus abstains where Haiku guessed. Completion of the 95 unfinished assignments is proposed in [AMENDMENT-A3-PROPOSED.md](AMENDMENT-A3-PROPOSED.md).
