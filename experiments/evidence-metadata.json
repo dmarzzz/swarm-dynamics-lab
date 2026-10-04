@@ -1434,6 +1434,31 @@
       "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
     },
     {
+      "id": "discussion-dose-v3-d2-a1",
+      "title": "Discussion v3 D2 \u2014 run plan with Opus arm (v3-d2-a1)",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested: Claude Opus 5.5 passes the canonical-decision and single-option feasibility screens on the six worlds where D1's models failed.",
+        "rationale": "Instrument built and tested with scripted controls only; no model outcome. The Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling, and packaging and contract change together against D1."
+      },
+      "sample_size_summary": "Observed: none. Planned: 6 reused development world clusters; 3 models on identical items; 72 calls (18 canonical decisions + 54 single-option checks) plus 1 uncounted Opus probe; one response per item.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md",
+        "researchers/dmarz/notes/discussion-dose/reviews/v3-d2-a1-pre.md"
+      ],
+      "status_at_assessment": "implemented_not_started",
+      "assessor": "dmarz/v3-d2-opus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "9d119dfd76dbfb4464390a7a8dec6eaefd4c7523"
+    },
+    {
       "id": "sybil-newcomer-sonnet",
       "title": "Knowledgeable newcomers versus a trusted Sybil coalition (Sonnet 4.6 replication)",
       "documents": [
