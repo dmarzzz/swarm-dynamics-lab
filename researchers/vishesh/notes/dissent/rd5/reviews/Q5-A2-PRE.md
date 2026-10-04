@@ -13,3 +13,8 @@ Only after the central coordinator confirms a launch slot may the operator obtai
 Maintain at most 24 Q5 calls and 36 conditional H5 calls, lifetime stop 488, within the existing USD 1 API and USD 1 infrastructure split. Preserve settled, uncertain and unused-allocation costs. Stop on any ambiguous or invalid dispatch; no retries, threshold relaxation or automatic repair stage. Preserve all unstarted rows. Q5 failure ends the sequence. H5 can begin only after native Q5-A2 bundle audit, actual post-mortem, reconciliation and separate fresh admission.
 
 After execution, recompute raw/card correctness from the retained requests and responses, reconcile the original ledger, render every assigned status, upload/read back artifacts, run the offline finalize hook and complete the scientific review. No native outcome, qualification or public artifact readback is claimed by this preparation.
+
+
+## Direct admission update, 2026-10-04
+
+The later scoped owner directive and verified central fence supersede the central-only waiting conditions above. Follow [DIRECT-ACTIVATION.md](../DIRECT-ACTIVATION.md). Same Q5-A2 packet, threshold and original accounting. Fresh exclusive allocation is merged; source/runtime, route, public-plan and final receipt/health checks still precede dispatch. No model outcome is asserted by this update.

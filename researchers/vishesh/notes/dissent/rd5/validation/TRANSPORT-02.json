@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-04T16:55:06.234942+00:00",
+  "tests_passed": 15,
+  "native_calls": 0,
+  "scientific_runtime_changed": false,
+  "operator_files": {
+    "test_transport_v2.py": "b68e5dbad57b94aa8101dd6ddd927e79958b352385aa2cf236a2319bcdb83904",
+    "collect_v2.py": "5b48183f21a0359296810369e6c24404d86a5aa5310ef3a568077d59aa1cd1f9",
+    "transport_v2.py": "8aa4839f4628c67ee4f438c3f15c4f6104a4482dea382b9b1af449fe1b42563a"
+  },
+  "remaining_validation": "fresh actual host/source/claim/account/route/public-plan admission and normal platform launch review"
+}

@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: blocked
+state: working
 task: right-dissenter-rd5-run
-doing: RD5 non-dispatch reconciled and reviewed; old allocation released. Unchanged Q5-A2/conditional H5 prepared with duplicate-dispatch repair; waiting for authorized central acknowledgement before fresh leases. Zero RD5 calls.
-updated: 2026-10-04T15:31:00.168263+00:00
+doing: RD5 direct admission in progress; central queue fenced, approved-account replacement claimed, frozen runtime deployment next. Zero RD5 model calls.
+updated: 2026-10-04T16:59:23.899365+00:00
 ---
 
 ## Notes

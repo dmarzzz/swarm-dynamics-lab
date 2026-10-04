@@ -64,3 +64,8 @@ Published the prospective single-domain amendment, repaired uncertainty/acquisit
 ## RD5 activation reconciliation and single continuation cycle
 
 Read current PI/transfer guidance and the latest native RD4 closeout. Confirmed the Q5-A1 relay expired with no remote worker/output/marker and zero RD5 provider calls; retained all 428 historical calls and unresolved exposure. Released the stale claim. Published the operational renewal before fixing explicit activation paths/shared stage lock; five fault checks and 61 frozen scientific tests pass. Both prepared packets are unchanged. Completed operational finalize plus eleven-dimension scientific review, inspected the 24-unstarted status figure and hash-read back four published evidence files. Native qualification remains unknown; confidence stays 0. No new allocation or relay held. Exact blocker: authorized Orbital launch acknowledgement, followed by current dedicated allocation/receipts; no direct-launch exception is inferred. Existing Q5/conditional H5 approval and USD 2 cumulative cap persist.
+
+
+## RD5 direct admission refresh
+
+Verified the scoped owner directive and completed central duplicate-dispatch fence. Preserved prior platform rejections; no rejected queue mutation retried. Prepared an explicit A2 local transport and complete-artifact collector with15passing synthetic checks; frozen scientific source and packets unchanged. Fresh approved-account fingerprint/resource match, strict SSH, idle workload and rate checks passed;90-minute replacement claim merged. Original cumulative ledger and cap retained. No RD5 model call yet; deploying frozen source and refreshing actual stage admission.
