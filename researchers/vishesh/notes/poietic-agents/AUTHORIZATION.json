@@ -13,7 +13,7 @@
   "S0_physical_call_limit": 288,
   "S0_maximum_requests_usd_at_pinned_tariffs": 1.447723008,
   "larger_budget_request": "No increase beyond USD 2 is approved. Preserve cumulative charges and uncertain reservations across stages and attempts.",
-  "status": "S0-02-completed; successor-unapproved",
+  "status": "D0-01-approved; current admission pending",
   "proposed_total_usd": 2,
   "proposed_api_usd": 1.5,
   "proposed_infrastructure_usd": 0.5,
@@ -21,10 +21,10 @@
   "known_settled_api_usd": 0.00077,
   "actual_api_spend_status": "S0-02 knownUSD0.00077; S0-01 unresolvedUSD0.479232 retained",
   "direct_dispatch_exception_approved": true,
-  "successor_update_approval": false,
+  "successor_update_approval": true,
   "cumulative_cost_upper_usd": 0.5621861833333334,
-  "successor_update_approval_scope": "Historical approval covered completed S0-02 only; D0-01 changed scope pending",
+  "successor_update_approval_scope": "Owner directs the prepared36-decision D0-01 diagnostic only; unchangedUSD2 cumulative cap and original charge history; no automatic successor.",
   "deadline_renewal_approved": true,
   "deadline_renewal_applied": true,
-  "direct_dispatch_exception_scope": "Explicit owner-directed one-shot S0-02 completed; no successor scope"
+  "direct_dispatch_exception_scope": "Current owner instruction directs this owning task to run D0-01 after current admission."
 }

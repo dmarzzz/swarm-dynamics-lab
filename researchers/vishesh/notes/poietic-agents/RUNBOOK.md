@@ -1,3 +1,9 @@
+# Current D0-01 execution
+
+The owner approved the prepared diagnostic on2026-10-04. Follow [D0-01 plan](D0-01-PLAN.md) and [pre-run assessment](reviews/D0-01-pre.md). Native entry points are diagnostic_prepare.py, diagnostic_relay.py and diagnostic_launch.py; no oldS0 launcher. Preserve original37calls/USD0.480002API exposure and original cumulative caps. If the unexpired original deadline meets the one-hour diagnostic maximum, retain it unchanged. No copied/new ledger or reset. Current exclusive resource, frozen runtime, public registration, model catalog and relay health remain mandatory. One36-decision attempt; no retries/follow-up. Use private operational receipts without printing credentials. Public artifact uploads contain only aggregate summary, frame and hashes. At completion privately retain every raw trace, verify public hashes, reconcile lifetime cost, stop/release, finalize offline and complete scientific review.
+
+## Historical preceding handoff
+
 # Poietic Agents execution handoff
 
 Current state: **S0-02 closed; successor decision pending**. Read [post-mortem](reviews/S0-02-post.md), [eleven-dimension scientific review](reviews/S0-02-scientific.json), [trace coverage](results/S0-02/trace-review.json) and [cost closeout](results/S0-02/cost-closeout.json). S0-01 and S0-02 are retained separately. No model qualifies and no swarm effect is established.

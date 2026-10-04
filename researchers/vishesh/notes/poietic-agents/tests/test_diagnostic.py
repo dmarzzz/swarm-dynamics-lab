@@ -84,7 +84,7 @@ class DiagnosticTests(unittest.TestCase):
                     p=d.probe(state,step,role);req=request(models[role],p['sections'],p['choices'])
                     expected[f'D0-01:{role}:{case}:{step}:physical-0']=(copy.deepcopy(p),req)
                     self.assertTrue(d.apply(state,step,p['expected'],p['expected'])['correct'])
-        dispatches=[];completions=[]
+        dispatches=[];completions=[];uploads=[]
         class Provider:
             def open(self,wire,**kwargs):
                 envelope=json.loads(wire.data);dispatches.append(envelope)
@@ -109,7 +109,9 @@ class DiagnosticTests(unittest.TestCase):
         class Run:
             def __init__(self,ident,*args):self.ident=ident;self._alive=threading.Event()
             def progress(self,*args,**kwargs):return True
-            def artifact(self,*args,**kwargs):return {'spooled':False}
+            def artifact(self,path,name):
+                uploads.append(name)
+                return {'spooled':False}
             def done(self,**kwargs):completions.append((self.ident,'done'))
             def fail(self,**kwargs):completions.append((self.ident,'failed'))
         with tempfile.TemporaryDirectory() as directory:
@@ -129,6 +131,11 @@ class DiagnosticTests(unittest.TestCase):
             self.assertEqual(len(records),36);self.assertEqual(summary['terminal'],36)
             self.assertFalse(summary['qualification_passed']);self.assertFalse(summary['scientific_result'])
             self.assertTrue((root/'out/final_frame.png').exists());self.assertEqual(len(charges),len(dispatches))
+            self.assertNotIn('records.json',uploads);self.assertNotIn('assignments.json',uploads)
+            self.assertEqual(uploads.count('artifact-manifest.json'),3)
+            manifest=json.loads((root/'out/artifact-manifest.json').read_text())
+            self.assertFalse(manifest['raw_payloads_public'])
+            self.assertIn('records.json',manifest['files'])
             self.assertEqual(len({x['id'] for x in dispatches}),len(dispatches))
             return summary,records,charges,completions
 

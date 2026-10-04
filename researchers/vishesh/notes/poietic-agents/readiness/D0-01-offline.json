@@ -1,7 +1,7 @@
 {
   "attempt": "D0-01",
   "stage": "D0",
-  "status": "offline-complete; owner approval and runtime admission pending",
+  "status": "owner-approved; current admission pending",
   "created_utc": "2026-10-04T17:04:21.052600+00:00",
   "initial_prospective_draft_sha256": "a84a560d727a73445ac9ebd5ef9f67d39f3789d70cadca1495f32e9f27a603e8",
   "initial_draft_written_utc": "2026-10-04T16:55:02.234208+00:00",
@@ -48,5 +48,7 @@
     "all_role_denominators": 12,
     "unstarted_count_visible": true,
     "scripted_label_visible": true
-  }
+  },
+  "public_raw_payload_uploads": false,
+  "public_artifacts_per_role": 3
 }

@@ -1,10 +1,10 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T16:57:49.223648+00:00",
+  "updated_utc": "2026-10-04T18:00:41.389979+00:00",
   "study": "poietic-agents",
   "design_status": "S0-02-closed; diagnostic-proposal",
   "implementation_status": "separate diagnostic candidate/admission/relay/runner/renewal complete offline;106tests",
-  "execution_status": "S0-02-stopped-on-first-interface-error; closed",
+  "execution_status": "D0-01 approved; not yet dispatched",
   "qualification_status": "failed; no model qualifies",
   "scientific_conclusion": "none",
   "process_compliance": "admitted one-shot S0-02; complete trace/ledger/artifact closeout; scientific review complete",
@@ -39,7 +39,7 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 6,
-  "next_action": "Owner decision on concrete36decision diagnostic; no successor allocation or model calls",
+  "next_action": "Freeze/publishD0-01, verify current original-ledger/resource/source/public admission, then run one diagnostic.",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -51,10 +51,9 @@
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "owner decision on changedD0-01 successor plan",
-    "freeze approved source and register prospective immutableD0plan/conditionTLDRs",
-    "fresh original-ledger bounded renewal/resource/source/runtime admission",
-    "full model qualification beforeS1"
+    "current exclusive original-host resource claim and runtime",
+    "immutableD0plan registration and page verification",
+    "original-ledger/relay evidence"
   ],
   "s1_not_yet_admitted": [
     "qualified hash match",
@@ -77,7 +76,7 @@
   "unresolved_api_exposure_usd": 0.479232,
   "allocated_infrastructure_usd": 0.08218418333333333,
   "cumulative_cost_upper_usd": 0.5621861833333334,
-  "successor_scope_approved": false,
+  "successor_scope_approved": true,
   "deadline_renewal_approved": true,
   "deadline_renewal_applied": true,
   "known_settled_api_usd": 0.00077

@@ -2,7 +2,7 @@
 
 Updated 2026-10-04T08:59:25.064917+00:00; operator vishesh/codex-heterogeneous. Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md) and [quality rubric](../../../../tooling/agent-experiments/RUN-QUALITY.md).
 
-Current gate: G6 successor decision. S0-02 executed, failed strict action parsing after1 call and is fully closed with scientific review. Allocation released; original ledger/cap retained. Read [post-mortem](reviews/S0-02-post.md), [scientific review](reviews/S0-02-scientific.json) and [offline repair/diagnostic proposal](reviews/S0-02-repair-plan.md). The historical G3 notes below are superseded by this closeout.
+Current gate: G3 diagnostic admission. The owner approved the prepared D0-01 diagnostic on2026-10-04. Read [prospective plan](D0-01-PLAN.md) and [assessment](reviews/D0-01-pre.md).106offline tests pass; frozen publication, current allocation and actual ledger/relay checks precede one36-call attempt. No successor stage is included.
 
 
 | Gate | Evidence and status | Next action |

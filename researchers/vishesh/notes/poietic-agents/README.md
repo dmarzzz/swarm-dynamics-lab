@@ -76,3 +76,7 @@ The central decision after development is whether Poietic Agents adds enough bey
 ## Design transfer — 2026-10-04
 
 [Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.
+
+## Current diagnostic execution
+
+The owner has now directed the prepared D0-01 diagnostic. [Prospective plan](D0-01-PLAN.md) and [pre-run assessment](reviews/D0-01-pre.md) define the unchanged36-decision scope. Public artifacts are aggregates/frames/hashes; full traces stay private.106offline checks pass. One run follows current exclusive allocation, original-ledger and public-plan admission. Approval covers no automatic successor.

@@ -1,6 +1,7 @@
 """Explicitly admitted D0-01 only. No retry, no full qualification or successor launch."""
 import argparse
 import contextlib
+import hashlib
 import json
 import math
 import os
@@ -165,9 +166,15 @@ def run(config_path,out):
         from diagnostic_render import diagnostic_frame, diagnostic_png
         diagnostic_frame(summary,out/'final_frame.svg')
         diagnostic_png(summary,out/'final_frame.png')
+        # Full task/request/response payloads stay in the private experiment archive.
+        # The public manifest supports byte-level auditing without disclosing them.
+        evidence_names=('assignments.json','call-starts.jsonl','responses.jsonl','records.json','summary.json','final_frame.png')
+        save(out/'artifact-manifest.json',dict(attempt='D0-01',raw_payloads_public=False,
+             files={name:dict(sha256=hashlib.sha256((out/name).read_bytes()).hexdigest(),bytes=(out/name).stat().st_size)
+                    for name in evidence_names if (out/name).exists()}))
         reporting=[]
         for role,run in runs.items():
-            for name in ('summary.json','records.json','assignments.json','final_frame.png'):
+            for name in ('summary.json','artifact-manifest.json','final_frame.png'):
                 ack=quiet(run.artifact,str(out/name),name)
                 reporting.append(dict(contract=role,name=name,acknowledged=isinstance(ack,dict) and not ack.get('spooled')))
             method=run.done if summary['contracts'][role]['passed'] else run.fail
