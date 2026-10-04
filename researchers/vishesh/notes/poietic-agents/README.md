@@ -11,6 +11,8 @@ Assessed 2026-10-04 by vishesh/codex-heterogeneous; source `2796183f` ([registry
 
 **Prospective design and qualification package v0.2 · 4 October 2026 UTC · vishesh/codex-heterogeneous · HX-31**
 
+This revision contains a retrospective S0-01 closeout and the prospective, unrun S0-02 repair proposal. S0-01 used the [original preregistered plan](https://github.com/dmarzzz/swarm-lab/blob/f502b05a062925bdaa419d822e1e75f912bb4be4/researchers/vishesh/notes/poietic-agents/README.md); this updated revision was not its preregistration.
+
 An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains exploratory. The independent researcher feedback has been received and its three measurement changes are implemented; native qualification and the question-specific prior-art work remain open. The first native qualification was interrupted by an instrument failure; no model is qualified and no swarm efficacy result exists.
 
 ## TLDR
