@@ -1,0 +1,8 @@
+results/episodes/
+results/pulled/
+results/local-*/
+results/local-*.log
+results/pilot-pred-*/
+results/pilot-mp/*.jsonl
+__pycache__/
+*.pyc
