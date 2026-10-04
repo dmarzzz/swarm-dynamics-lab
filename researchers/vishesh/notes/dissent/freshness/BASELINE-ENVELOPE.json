@@ -1,0 +1,41 @@
+{
+  "status": "offline_proposal_not_funded_not_reserved",
+  "plan_sha256": "7c06fba810325ff44b070c590ad377fc1f5f45b1b47f169d3b0e3ffde98f1640",
+  "new_model_calls": 0,
+  "sealed_cases_opened": 0,
+  "observed_semantic_roots": 6,
+  "observed_shared_grammars": 3,
+  "observed_condition_responses": 48,
+  "observed_fresh_repeats_per_condition": 0,
+  "proposed_stage_R": {
+    "reserved_cases": 54,
+    "fresh_rounds": 3,
+    "maximum_calls": 162,
+    "api_ceiling_nano": 217728000,
+    "infrastructure_ceiling_nano": 71430000
+  },
+  "proposed_stage_A": {
+    "semantic_families": 24,
+    "episodes_per_family": 2,
+    "evaluation_episodes": 48,
+    "fresh_executions": 3,
+    "policy_trajectories": 432,
+    "qualification_calls": 60,
+    "evaluation_calls": 720,
+    "maximum_calls": 780,
+    "api_ceiling_nano": 1048320000,
+    "infrastructure_ceiling_nano": 71430000
+  },
+  "total_proposed_calls": 942,
+  "total_proposed_additional_exposure_nano": 1408908000,
+  "projected_lifetime_calls": 1496,
+  "projected_cumulative_api_exposure_nano": 1291528519,
+  "projected_cumulative_infrastructure_estimate_nano": 902622468,
+  "current_api_cap_nano": 1000000000,
+  "current_infrastructure_cap_nano": 1000000000,
+  "proposed_cumulative_api_slice_nano": 2000000000,
+  "proposed_cumulative_infrastructure_slice_nano": 1000000000,
+  "funded_allocation": null,
+  "qualifier": "Original54-call proposal overlaps StageR; do not add it again. Authoring and implementations remain incomplete. Cost ceiling requires request-size and current-price validation before admission.",
+  "projected_cumulative_combined_nano": 2194150987
+}

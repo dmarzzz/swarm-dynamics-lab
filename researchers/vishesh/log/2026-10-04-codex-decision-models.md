@@ -103,3 +103,7 @@ Finite repair signal, not qualified broad dissent utility. Gate-plus-refresh is 
 ## Prospective qualification plan in response to advisory PI review
 
 Accepted preregistered coverage/interface/semantic gates and no tuning/replacements after opening the54-case reserve. Published a plan from public generator structure only, preserving reserve custody, RD6 failure and RD7 finite composite-aid inference.54source-only explicit-interface calls proposed, nine6-case strata,54/54native acceptance; deterministic gate outcomes reported separately. No new collection or spend. Broader useful evidence acquisition must beat gate-plus-refresh/equal-budget checking; optional PI advice does not reinstate waived researcher approval.
+
+## Scientific baseline clarification
+
+Reclassified the line as baseline GAP: the completed finite repair diagnostic has no fresh-run variability evidence and no demonstrated acquisition utility. Published a two-stage prospective plan with repeated reserved qualification and a resource-matched dissenter-versus-neutral-checker primary comparison, plus routine refresh. Explicit24family/48episode dependence, three fresh repetitions, label reachability, strong controls, uncertainty limits, missingness and exact prospective budget distinguish scientific readiness from replayability. No corpus opening, calls, new allocation or funding inferred. Arithmetic checked; additional ceilingUSD1.408908, requiring a funded stage decision and amendment to existing API/call limits before use.

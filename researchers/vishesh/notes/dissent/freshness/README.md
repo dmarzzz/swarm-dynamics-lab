@@ -16,3 +16,5 @@ The approved 48-request diagnostic is complete: explicit eligibility 24/24 corre
 Current disposition: **FINISH / PARK this diagnostic**. All 48 requests and costs reconcile, worker/relay stopped, allocation released. The deterministic eligibility baseline and 61 offline checks are complete. The separate 54-case qualification reserve remains sealed/unrun; the broader approved dissent direction is not a launched main comparison. Six authored roots and three grammars support a finite repair finding, not a field-rate or collective-benefit claim.
 
 [Prospective 54-assignment qualification plan](QUALIFICATION-PLAN.md): explicit source-only interface, nine coverage strata, strict54/54semantic and interface gate; no reserve opened or new run launched.
+
+[Scientific-baseline reassessment and finite successor plan](SCIENTIFIC-BASELINE-PLAN.md): baseline remains a gap. Fresh execution variability and useful evidence acquisition against a neutral checker are unmeasured. The proposal has separately fundable repeatability and acquisition stages; it does not launch either or change current caps. [Checked envelope](BASELINE-ENVELOPE.json).
