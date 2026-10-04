@@ -24,7 +24,7 @@ def prose(state):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();a.out.mkdir(parents=True,exist_ok=False);signal.alarm(1200)
     meta={'stage':'D0','code':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'platform':platform.platform(),'complete':False}
-    (a.out/'manifest.json').write_text(json.dumps(meta,indent=2));model=Runtime();meta.update(model.metadata)
+    (a.out/'manifest.json').write_text(json.dumps(meta,indent=2))
     cases=[]
     for task in range(7400,7408):
         f=study.fixture(task);docs=study.reports(f,'clean','fast',9);target=study.best(f['truth'])
@@ -36,6 +36,7 @@ def main():
         for field,question,target in [('scanned','Does provider A support scanned PDFs?',row['scanned']),('retention_days','Does provider A retain documents for zero days?',row['retention_days']==0),('accuracy','Does provider A have accuracy at least 90 percent?',row['accuracy']>=90)]:
             cases.append({'id':f'{task}-atomic-{field}','kind':'atomic-'+field,'state':f"Provider A: scanned PDF support is {row['scanned']}; retention is {row['retention_days']} days; accuracy is {row['accuracy']} percent.",'instructions':question,'criteria':{'YES':'Yes','NO':'No'},'target':'YES' if target else 'NO'})
     (a.out/'assignments.json').write_text(json.dumps(cases,indent=2))
+    model=Runtime();meta.update(model.metadata)
     results=[]
     with (a.out/'results.jsonl').open('x') as out:
         for c in cases:
