@@ -1,0 +1,163 @@
+{
+  "status": "12/12 reference checks passed",
+  "independence": "same author; shared loaders",
+  "limits": "No independent extraction/source-truth audit; no causal assumptions validated",
+  "checks": [
+    {
+      "source": "wiki",
+      "identity": "A",
+      "kind": "url",
+      "expected": {
+        "units": 22831,
+        "units_ge2": 4429,
+        "units_ge5": 969,
+        "median_activity": 61,
+        "median_wall_h": 0.09833333333333333
+      },
+      "passed": true
+    },
+    {
+      "source": "wiki",
+      "identity": "A",
+      "kind": "line",
+      "expected": {
+        "units": 39986,
+        "units_ge2": 4924,
+        "units_ge5": 676,
+        "median_activity": 54.0,
+        "median_wall_h": 0.059166666666666666
+      },
+      "passed": true
+    },
+    {
+      "source": "wiki",
+      "identity": "A",
+      "kind": "host",
+      "expected": {
+        "units": 200,
+        "units_ge2": 117,
+        "units_ge5": 73,
+        "median_activity": 45,
+        "median_wall_h": 0.5966666666666667
+      },
+      "passed": true
+    },
+    {
+      "source": "wiki",
+      "identity": "B",
+      "kind": "url",
+      "expected": {
+        "units": 23526,
+        "units_ge2": 6220,
+        "units_ge5": 1563,
+        "median_activity": 37.0,
+        "median_wall_h": 0.05625
+      },
+      "passed": true
+    },
+    {
+      "source": "wiki",
+      "identity": "B",
+      "kind": "line",
+      "expected": {
+        "units": 40887,
+        "units_ge2": 7395,
+        "units_ge5": 1438,
+        "median_activity": 35,
+        "median_wall_h": 0.04
+      },
+      "passed": true
+    },
+    {
+      "source": "wiki",
+      "identity": "B",
+      "kind": "host",
+      "expected": {
+        "units": 207,
+        "units_ge2": 141,
+        "units_ge5": 84,
+        "median_activity": 20,
+        "median_wall_h": 0.3030555555555556
+      },
+      "passed": true
+    },
+    {
+      "source": "git",
+      "identity": "A",
+      "kind": "url",
+      "expected": {
+        "units": 9879,
+        "units_ge2": 3957,
+        "units_ge5": 784,
+        "median_activity": 184,
+        "median_wall_h": 1.5575
+      },
+      "passed": true
+    },
+    {
+      "source": "git",
+      "identity": "A",
+      "kind": "line",
+      "expected": {
+        "units": 284150,
+        "units_ge2": 29221,
+        "units_ge5": 2080,
+        "median_activity": 187,
+        "median_wall_h": 3.0052777777777777
+      },
+      "passed": true
+    },
+    {
+      "source": "git",
+      "identity": "A",
+      "kind": "host",
+      "expected": {
+        "units": 691,
+        "units_ge2": 345,
+        "units_ge5": 124,
+        "median_activity": 120,
+        "median_wall_h": 1.2908333333333333
+      },
+      "passed": true
+    },
+    {
+      "source": "git",
+      "identity": "B",
+      "kind": "url",
+      "expected": {
+        "units": 9879,
+        "units_ge2": 3571,
+        "units_ge5": 0,
+        "median_activity": 235,
+        "median_wall_h": 1.7958333333333334
+      },
+      "passed": true
+    },
+    {
+      "source": "git",
+      "identity": "B",
+      "kind": "line",
+      "expected": {
+        "units": 284150,
+        "units_ge2": 6042,
+        "units_ge5": 0,
+        "median_activity": 76.0,
+        "median_wall_h": 1.8858333333333333
+      },
+      "passed": true
+    },
+    {
+      "source": "git",
+      "identity": "B",
+      "kind": "host",
+      "expected": {
+        "units": 691,
+        "units_ge2": 306,
+        "units_ge5": 0,
+        "median_activity": 199.0,
+        "median_wall_h": 1.7766666666666666
+      },
+      "passed": true
+    }
+  ]
+}

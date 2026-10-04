@@ -22,6 +22,8 @@ class T(unittest.TestCase):
         self.assertEqual(H.norm_line("  * Hello   WORLD this is a long enough line"),
                          "hello world this is a long enough line")
         self.assertEqual(H.line_units(["short", "Beschreibe hier die neue Seite."]), set())
+        self.assertEqual(H.finite_json({'undefined': float('nan'), 'data': [1., float('inf')]}),
+                         {'undefined': None, 'data': [1., None]})
 
     def test_repeat_writer_and_ties(self):
         recs = [rec(0, "A", ["u"]), rec(0, "B", ["u"]), rec(5, "A", ["u"]), rec(10, "C", ["u"]),

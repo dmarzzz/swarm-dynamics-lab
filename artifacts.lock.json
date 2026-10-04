@@ -12096,9 +12096,44 @@
    "prompt_sha256": "6872cb407834d8a9d6ad298d6435ad9eb89c1fc29b24839b99ced5c52508dc0e",
    "sha256": "ea4ec1019cee0eabd0176e6326993c227d797117492198050c5c619e4d7e9587",
    "size_bytes": 1542505
+  },
+  "wild-halflife-adoption@1": {
+   "host": "shad0wbot",
+   "ingredients": [
+    {
+     "mtime": 1791129168,
+     "sha256": "fdb63212a29237647b3d58cca00fa47f26ba7e9d92bdb9bce4cd61ed9ccd4a6a",
+     "size": 24356,
+     "uri": "researchers/shadow/notes/wild-halflife/halflife.py"
+    },
+    {
+     "mtime": 1791128946,
+     "sha256": "db17cbfbc75a4205541a1b03a10cea7aaed66af4a9b76f30eee124ffa375987e",
+     "size": 1383,
+     "uri": "researchers/shadow/notes/wild-halflife/render.py"
+    },
+    {
+     "mtime": 1791128953,
+     "sha256": "5f1fd3c5ffc3863c5046b855bb3b3df13b126f7769d60dcb8044ab23b97e7be4",
+     "size": 352993,
+     "uri": "researchers/shadow/notes/wild-halflife/results/summary.json"
+    },
+    {
+     "mtime": 1791128736,
+     "sha256": "22014e231476de2a253728035fb655575b272732c75183a6169777e6bf61ff9d",
+     "size": 43366,
+     "uri": "researchers/shadow/notes/wild-halflife/results/supplement.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791128954,
+   "path": "artifacts/wild-halflife-adoption/wild-halflife-adoption-v1.png",
+   "prompt_sha256": "f196d95ccb99e191a822607c84f7a4bcd58a46fcbd74e2d778b24846912707cb",
+   "sha256": "050b2c9e2ef514145f7501ac72623f51000d89e800d94a70b06f93381418a16a",
+   "size_bytes": 227425
   }
  },
- "generated": "2026-10-04T03:14:05-0700",
+ "generated": "2026-10-04T15:57:11+0000",
  "lock": 1,
  "project": "Swarm Lab"
 }

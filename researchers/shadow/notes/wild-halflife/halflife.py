@@ -152,7 +152,8 @@ def load_git(repo: str, rev: str):
         elif line.startswith("+") and not line.startswith("+++"):
             added.append(line[1:])
     flush()
-    out.wait()
+    if out.wait() != 0:
+        raise RuntimeError('git diff history failed; refusing to analyze partial output')
     meta = dict(source="dmarzzz/swarm-lab git history (non-merge, origin/main)", rev=rev,
                 records=len(recs), skipped=dict(skipped), template_lines_excluded=len(tmpl_lines))
     return recs, meta
@@ -261,6 +262,17 @@ def wls_slope(E, X, mids):
     xm, ym = (w * x).sum() / w.sum(), (w * y).sum() / w.sum()
     den = (w * (x - xm) ** 2).sum()
     return float((w * (x - xm) * (y - ym)).sum() / den) if den > 0 else float("nan")
+
+
+def finite_json(obj):
+    """Undefined estimates are null, never nonstandard JSON NaN tokens."""
+    if isinstance(obj, dict):
+        return {k: finite_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [finite_json(v) for v in obj]
+    if isinstance(obj, float) and not math.isfinite(obj):
+        return None
+    return obj
 
 
 def ci(a):
@@ -491,7 +503,8 @@ def figure(summary, path, visibility=None):
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("--wiki", required=True, help="collusion-wiki data dir (revisions.jsonl.gz)")
+    ap.add_argument("--data", "--wiki", dest="wiki", required=True,
+                    help="collusion-wiki data dir (revisions.jsonl.gz)")
     ap.add_argument("--repo", required=True, help="swarm-lab git checkout")
     ap.add_argument("--rev", default="66fa0aa6")
     ap.add_argument("--out", required=True)
@@ -528,11 +541,11 @@ def main(argv=None):
         summary["posthoc"] = ("POST-HOC sensitivity, not preregistered: excludes the wiki English default page "
                               "line and git lines from any **/templates/** path. Identity A only.")
         with open(os.path.join(a.out, "posthoc.json"), "w") as f:
-            json.dump(summary, f, indent=1)
+            json.dump(finite_json(summary), f, indent=1, allow_nan=False)
         print("done", file=sys.stderr)
         return
     with open(os.path.join(a.out, "summary.json"), "w") as f:
-        json.dump(summary, f, indent=1)
+        json.dump(finite_json(summary), f, indent=1, allow_nan=False)
     figure(summary, os.path.join(a.out, "fig-adoption.png"))
     print("done", file=sys.stderr)
 

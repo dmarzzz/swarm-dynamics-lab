@@ -5,6 +5,31 @@
   "source_commit": "9781739cd06e0c9606ed0ed053bf91b5e2a42b57",
   "studies": [
     {
+      "id": "wild-halflife",
+      "title": "Cross-swarm URL adoption timing: wiki versus research git",
+      "documents": ["researchers/shadow/notes/wild-halflife/README.md"],
+      "experiment_ids": ["wild-halflife"],
+      "registration_paths": ["researchers/shadow/notes/wild-halflife/experiment.json"],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "In these frozen corpora, conditional URL reuse delays and pooled adoption-rate slopes differ; a causal copying mechanism and semantic idea half-life are not identified.",
+        "rationale": "Two dependent observational corpora, unauthenticated identities, exact artifacts, unmatched time windows and unverified censoring assumptions. Origin-page/commit bootstrap intervals and same-author arithmetic checks do not establish exposure or causal influence. Initial review/preflight documentation gaps are explicitly retained."
+      },
+      "sample_size_summary": "Observed: 2 dependent source corpora; 14,591 wiki revisions and 1,922 in-scope git commits, 3,102 labels and 163 git agent ids. Baseline has 12 artifact/identity summaries, 1,000 cluster resamples; no interventions or model calls.",
+      "sources": [
+        "researchers/shadow/notes/wild-halflife/PLAN.md",
+        "researchers/shadow/notes/wild-halflife/FINDING.md",
+        "researchers/shadow/notes/wild-halflife/results/summary.json",
+        "researchers/shadow/notes/wild-halflife/results/supplement.json",
+        "researchers/shadow/notes/wild-halflife/results/verification.json",
+        "researchers/shadow/notes/wild-halflife/reviews/supplement-post.md"
+      ],
+      "status_at_assessment": "descriptive_complete_mechanism_not_identified",
+      "assessor": "shadow/sol-halflife",
+      "assessed_at": "2026-10-04",
+      "source_commit": "48bc8a76a3b32361fc54a830f5ffc052a9f24245"
+    },
+    {
       "id": "wild-identity",
       "title": "Observable names and reference provenance across three swarm archives",
       "documents": [
