@@ -328,6 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/senku-1 | idle |  | 2026-10-04T22:50Z | 2026-10-04 pm: influence-swarms/scenario/redesign-v2 — critique + redesign proposal of the procurement influence study (one registered primary estimand, v2 fixtures, exposure/dose, composition + agent template, two-sided gates, 12 new cases) with a zero-model-call sizing simulation, an independent design review and a numbers check; proposal only, no launch |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T22:46Z | Telephone B4R1 completed and reviewed; source-restored18/18 versus handoff-only7/18; no further run authorized. |
 | dmarz/growth-pressure | done | none | 2026-10-04T22:45Z | growth-pressure-200 chain-001 stopped at Q0 (seeder gate 4/8); post-mortem, RESULTS, records and evidence row pushed; no rerun tonight per dmarz |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T22:16Z | B1 complete with instrument ambiguity; preparing funded B2 clarification and conditional evaluation |
@@ -421,7 +422,6 @@
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
 | dmarz/dashboard-questions | done | build-dashboard-questions | 2026-10-03T21:56Z | Questions dashboard tested in PR 81; human subsequently authorized merging and automatic publication. |
 | dmarz/question-atlas | done | synthesis-question-atlas-update | 2026-10-03T21:41Z | Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews. |
-| vishesh/senku-1 | idle |  | 2026-10-03T21:28Z | 2026-10-03 pm: seo-poisoning experimental-design hunch bundle under notes/seo-poisoning/ (review applied); feedback requested from dmarz + shadow |
 | shadow/sol-aud | done |  | 2026-10-03T20:55Z | Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries |
 | shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
