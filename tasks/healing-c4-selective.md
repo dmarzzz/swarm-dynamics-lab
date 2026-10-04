@@ -3,7 +3,7 @@ id: healing-c4-selective
 type: task
 title: Prepare and qualify C4 selective helping
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-regrowth-docs
 for: vishesh
@@ -11,10 +11,12 @@ created: 2026-10-04
 created_by: vishesh/codex-regrowth-docs
 depends_on: []
 topics: []
-updated: 2026-10-04T16:45Z
+updated: 2026-10-04T17:16Z
 history:
 - '2026-10-04T15:35Z released by vishesh/codex-regrowth-docs: Approved C4 integrated,20 native offline tests and2 dispatch-origin tests pass; frozen source94147dc7. Queue297 blocked on orbital-one and approved credential/original-ledger handoff. No model calls or ledger changes. Runtime stopped, machine release PR298 merged. Resume from c4/ADMISSION-POST.md; no generic approval question.'
 claimed_at: 2026-10-04T16:45Z
+outputs:
+- researchers/vishesh/notes/healing-helping-hands/c5/PLAN.md
 ---
 
 ## Goal
