@@ -1106,6 +1106,14 @@ def sync_once(agent: str, include_protected=False) -> int:
         if pl.returncode != 0:
             print(f"pull failed (resolve by hand, then rerun sync):\n{pl.stdout}{pl.stderr}", file=sys.stderr)
             return 1
+        # Pull may introduce cross-file conflicts (for example duplicate library
+        # ids) without a Git conflict. Validate this exact merged HEAD each time.
+        merged_errors = tree_errors("HEAD") - baseline
+        if merged_errors:
+            print("sync: merged tree introduces validation errors; not pushing:", file=sys.stderr)
+            for error in sorted(merged_errors):
+                print(f"  {error}", file=sys.stderr)
+            return 1
         if git("push").returncode == 0:
             print(f"{now()} sync: pushed {len(stage)} file(s)")
             return 0
