@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Test whether initially identical agents can develop efficient shared data services and cheaper execution without losing fresh, correct answers. First native qualification stopped after 36 relay failures; 144 assigned outcomes are retained and no model or swarm effect is established. Prospective S0-02 retains provider receipts and stops on first interface failure, using fresh cases, original thresholds and the same USD2 cumulative cap. S1/S2 remain closed. Repair is prepared with63 offline checks and awaits owner approval; the first allocation is released.",
+  "description": "TLDR: Test whether initially identical agents can develop efficient shared data services and cheaper execution without losing fresh, correct answers. First native qualification stopped after 36 relay failures; 144 assigned outcomes are retained and no model or swarm effect is established. Prospective S0-02 retains provider receipts and stops on first interface failure, using fresh cases, original thresholds and the same USD 2 cumulative cap. S1/S2 remain closed. Repair is prepared with 63 offline checks and awaits owner approval; the first allocation is released.",
   "params": {
     "stage": {
       "type": "str",
@@ -43,5 +43,5 @@
     "terminal_jobs"
   ],
   "primary_metric": "verified_success_rate",
-  "url": "https://github.com/dmarzzz/swarm-lab/blob/76ab99163f7e9e83e4016d23f7015dbd2e3aee06/researchers/vishesh/notes/poietic-agents/README.md"
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/f8ac5016ad03ac5cdbd7904c6b87bf059ac15e8e/researchers/vishesh/notes/poietic-agents/README.md"
 }

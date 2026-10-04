@@ -54,3 +54,9 @@ The corrected public authorization omits private chat wording. Updated immutable
 ## Credential discovery correction
 
 Found the established project credential selector in existing local access context after the owner correction. Verified availability without displaying its value. The frozen S0 instrument passed 54 deployed checks, and the existing central request now has the necessary private launch details. Model work has not yet started. Private deployment records remain outside this public repository.
+
+## Poietic native qualification closeout
+
+S0-01 actually dispatched 36 calls but failed at an opaque relay boundary: 35 HTTP failures, one interrupted in-flight assignment, 108 unstarted. All 144 statuses retained. No model or swarm inference. Stopped worker/relay, verified all nine artifacts by download/hash and released the allocation. Conservative cost is USD 0.556455767, including USD 0.479232 unresolved API exposure. Original authority and deadline are unchanged.
+
+Prepared S0-02 prospectively: fresh cases, same models/prompts/thresholds, no retries, preparse receipt retention and first-interface-error stop. 63 offline checks pass. Posted full scientific review, structured next plan, evidence metadata and operations navigation. Published immutable public plan at f8ac5016ad03ac5cdbd7904c6b87bf059ac15e8e and verified actual page. Current G6 requires owner approval of this revised execution contract; no successor allocation or calls. The global evidence registry checker has a preexisting uncovered sybil-specialists-opus registration; own metadata was rendered and lab check returned zero errors.
