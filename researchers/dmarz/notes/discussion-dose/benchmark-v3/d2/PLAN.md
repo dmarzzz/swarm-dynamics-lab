@@ -5,7 +5,7 @@
 
 Assessed 2026-10-04 by dmarz/v3-d2-opus; source `9d119dfd` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested: Claude Opus 5.5 passes the canonical-decision and single-option feasibility screens on the six worlds where D1's models failed. Basis: Instrument built and tested with scripted controls only; no model outcome. The Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling, and packaging and contract change together against D1.
+- **evidence_confidence:** **0/4** — Untested: on a compact fact table with a one-field answer, Opus 5.5 stays at ceiling and Haiku 4.5 and Sonnet 4.6 pass the canonical-decision and single-option feasibility screens they are also asked. Basis: Instrument built and tested with scripted controls only; no model outcome. The Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling, and packaging and contract change together against D1.
 - **sample_size_summary:** Observed: none. Planned: 6 reused development world clusters; 3 models on identical items; 72 calls (18 canonical decisions + 54 single-option checks) plus 1 uncounted Opus probe; one response per item.
 <!-- experiment-evidence:end -->
 
@@ -35,6 +35,12 @@ defines. They are kept for the paired contrast with D1's models; they are not ne
 Success for a model is 6/6 canonical decisions and 18/18 feasibility checks with every response valid. Answering
 "infeasible" to everything scores 12/18, so the feasibility count is always shown beside that baseline.
 
+Context added before any D2 call: the separate [D1-Opus run](../../d1-opus/RESULTS.md) (`d1o-a1`, another agent)
+finished on 2026-10-04 08:00 UTC. On D1's original evidence packaging Opus 5.5 chose correctly in 6/6 of these
+worlds and passed a fresh clean gate 12/12. Opus therefore already clears the v3 baseline, and D2 is not on the
+path to qualifying it. What D2 adds is an account of why Haiku and Sonnet failed (does a compact fact table repair
+them, and can they judge one option at a time) and whether Opus is also at ceiling on the compact format.
+
 Limits: six reused development worlds, one response per model and item, no fresh qualification, no swarm, no
 discussion treatment. The Opus arm cannot use the same request settings as the comparison arms (see Setup), so an
 Opus difference is a difference of model and configuration together.
@@ -50,9 +56,10 @@ separated from failures caused by corrupted child returns or merge behaviour bef
 test SOC-07 disclosure, discussion dose, a merge defence or the SEC-52 extension. No new formal hypothesis is made.
 
 Prediction to examine (from D2-PLAN, unchanged): complete explicit facts and a small response contract reduce the
-decision failures seen in D1. Added for the Opus arm: a stronger model with thinking passes both screens. Every
-other outcome is reportable: atomic errors that remain, correct atomic judgments with a wrong selection, a model
-that passes one screen and fails the other, or an Opus arm no better than the comparison arms.
+decision failures seen in D1. Added for the Opus arm: Opus passes both screens, as its 6/6 on the original
+packaging suggests. Every other outcome is reportable: atomic errors that remain, correct atomic judgments with a
+wrong selection, a model that passes one screen and fails the other, an Opus arm no better than the comparison
+arms, or an Opus arm that does worse on the compact format than it did on D1's.
 
 A pass nominates a representation and contract for a later, separate test. It does not establish why D1 failed,
 does not promote D1 and does not qualify a model or a swarm.
@@ -85,7 +92,7 @@ ids were confirmed available on this account through the Models API (a metadata 
 | Model id | `claude-opus-5-5` | `claude-sonnet-4-6` | `claude-haiku-4-5-20251001` |
 | `temperature` | not sent (the model rejects sampling parameters) | 0 | 0 |
 | Thinking | always on, adaptive; `thinking` field not sent | off (field not sent) | off (field not sent) |
-| `output_config.effort` | `medium`, set explicitly (the documented default) | not sent | not sent |
+| `output_config.effort` | `high`, set explicitly (the documented default is `medium`) | not sent | not sent |
 | `max_tokens` | 4,000 (thinking counts against it) | 2,000 | 2,000 |
 | Structured output | `output_config.format`, JSON schema | same | same |
 | Fallback model | none (`fallbacks` not sent) | none | none |
@@ -96,12 +103,15 @@ All three: the same system prompt, user content and schema; input ceiling 60,000
 no tools; no retries; no repair call; no prompt caching. The comparison arms keep D1's settings exactly. The Opus
 arm differs from them in four request settings because the API leaves no choice: Opus 5.5 returns an error for
 `temperature` and cannot turn thinking off. Thinking is billed as output and counts against `max_tokens`, so the
-Opus ceiling is 4,000 instead of 2,000 to keep a truncated answer from being mistaken for a wrong one.
+Opus ceiling is 4,000 instead of 2,000 to keep a truncated answer from being mistaken for a wrong one. Effort is
+`high` because D1-Opus ran these worlds at `high`: the two Opus runs then differ in evidence packaging, response
+contract and output ceiling (16,000 there), not in effort. D1-Opus averaged about 300 output tokens per call on
+larger requests, so 4,000 leaves room.
 
 **Server and budget.** Existing server `sim-dmarz-3`, exclusive claim `dmarz-discussion-v3-d2`, one worker. Hard
 limits: 24 calls per model adapter, 72 assigned calls, plus one Opus compatibility probe. Dollar cap USD 5, given
 for this run inside dmarz's standing USD 500 pool. Worst-case reservation from serialized request sizes and the
-output ceilings: Opus 2.129424, Sonnet 0.877068, Haiku 0.292548, probe 0.088516, total **USD 3.387556**. Each
+output ceilings: Opus 2.129232, Sonnet 0.877068, Haiku 0.292548, probe 0.088508, total **USD 3.387356**. Each
 adapter is capped at its own reservation, so the cap cannot be exceeded.
 
 ## Protocol
@@ -174,10 +184,11 @@ is always false for D2. Schemas and scores are not relaxed after a failure.
    The Haiku and Sonnet arms are the plan's own 48 calls, unchanged in items and settings.
 2. **The Opus arm is not request-identical to the comparison arms.** D1 and D2-PLAN hold temperature 0 and thinking
    off. Opus 5.5 rejects both settings. The arm sends no sampling parameter, runs with thinking on at effort
-   `medium`, and has a 4,000-token output ceiling. What the arm can show: whether Opus 5.5, in its documented
-   default reasoning configuration and on the D2 contract, passes the two screens that the weaker models are also
-   asked. What it cannot show: that model identity alone explains a difference, how Opus behaves at another effort
-   level, or anything about D1's contract, since Opus never saw D1's requests in this run.
+   `high`, and has a 4,000-token output ceiling. What the arm can show: whether Opus 5.5, at the effort level
+   D1-Opus used, is also at ceiling on the compact D2 contract, on the same items the weaker models are asked.
+   What it cannot show: that model identity alone explains a difference from the comparison arms, how Opus behaves
+   at another effort level, or a clean packaging effect for Opus, because the comparison with D1-Opus is across two
+   runs with different output ceilings and both are expected to sit at ceiling.
 3. **Order.** D2-PLAN alternates the first model 12/12 between two models. With three models the order is balanced
    over the six permutations as described in Protocol. Haiku still precedes Sonnet in exactly 12 of 24 items.
 4. **One Opus compatibility probe**, added on the reviewer's instruction after another study's Opus batch failed

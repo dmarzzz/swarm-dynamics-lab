@@ -196,7 +196,7 @@ class D2Tests(unittest.TestCase):
             opus = bodies[d.OPUS]
             self.assertEqual(set(opus), {'model', 'system', 'messages', 'max_tokens', 'output_config'})
             for absent in ('temperature', 'top_p', 'top_k', 'thinking', 'fallbacks', 'tools', 'tool_choice'): self.assertNotIn(absent, opus)
-            self.assertEqual((opus['max_tokens'], opus['output_config']['effort']), (4000, 'medium'))
+            self.assertEqual((opus['max_tokens'], opus['output_config']['effort']), (4000, 'high'))
             # Actor-visible text and schema are identical for all three models.
             for m in d.MODELS:
                 self.assertEqual(bodies[m]['system'], d.SYSTEM)

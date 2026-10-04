@@ -1448,7 +1448,7 @@
       "registration_paths": [],
       "evidence_confidence": {
         "score": 0,
-        "claim": "Untested: Claude Opus 5.5 passes the canonical-decision and single-option feasibility screens on the six worlds where D1's models failed.",
+        "claim": "Untested: on a compact fact table with a one-field answer, Opus 5.5 stays at ceiling and Haiku 4.5 and Sonnet 4.6 pass the canonical-decision and single-option feasibility screens they are also asked.",
         "rationale": "Instrument built and tested with scripted controls only; no model outcome. The Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling, and packaging and contract change together against D1."
       },
       "sample_size_summary": "Observed: none. Planned: 6 reused development world clusters; 3 models on identical items; 72 calls (18 canonical decisions + 54 single-option checks) plus 1 uncounted Opus probe; one response per item.",

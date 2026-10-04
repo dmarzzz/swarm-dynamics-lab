@@ -18,6 +18,9 @@ Status at this commit: instrument built and tested offline and on the server; pl
   Sonnet 4.6 and Haiku 4.5.
 - Research status: exploratory diagnostic instrument under [SEC-47](../../QUESTION-LINKS.md). No hypothesis
   promotion, fresh qualification, S1 or confirmation is authorized or implied.
+- Related completed run: [D1-Opus](../../d1-opus/RESULTS.md) (`d1o-a1`, by `dmarz/d1-opus`): Opus 5.5 6/6 on these
+  worlds and 12/12 on a fresh gate, on D1's packaging at effort `high`. D2 is therefore not on the path to
+  qualifying Opus; it explains the Haiku and Sonnet failures and checks Opus on the compact format.
 - Previous attempt and lessons: [D1 results](../RESULTS-D1.md), [D1 post-mortem](../../reviews/v3-d1-a1-post.md).
   Lessons used: both D1 models failed after correct extraction, so D2 removes extraction; never resubmit an
   ambiguous call; the launch-policy miss at D1 closeout is why the launch route is stated as a deviation here.
@@ -29,7 +32,7 @@ Status at this commit: instrument built and tested offline and on the server; pl
 |---|---|---|---|
 | G0 Question and research gates | pass for diagnosis | Existing SEC-47 link and D1 post-mortem issue D1-C1; no formal hypothesis claimed. `dmarz/v3-d2-opus`, 2026-10-04 | Stay in bounded development scope |
 | G1 Plan before implementation | pass | D2-PLAN first committed as `fb82a38f` (2026-10-04T04:59Z); the first D2 code is `df70c7e9` (2026-10-04T07:48Z). The amendment [PLAN](PLAN.md) was written after the code and before any model call, and fixes no detail after seeing a model output | None |
-| G2 Instrument and offline checks | pass for offline software | 29 D2 tests, 15 D1 tests and 57 v3 tests pass on the server under Python 3.12.3 at source commit `9d119dfd`; 29 D2 tests also pass locally under Python 3.9.6. All 48 canonical values match the retained clean Q0 records on both machines. Same-author checks. | Rehearsal on the server |
+| G2 Instrument and offline checks | pass for offline software | 29 D2 tests, 15 D1 tests and 57 v3 tests pass on the server under Python 3.12.3 at the pinned commit; 29 D2 tests also pass locally under Python 3.9.6. All 48 canonical values match the retained clean Q0 records on both machines. Same-author checks. | Rehearsal on the server |
 | G3 Attempt admission | pending | [Pre-run assessment](../../reviews/v3-d2-a1-pre.md); claim `dmarz-discussion-v3-d2` on `sim-dmarz-3` merged 2026-10-04T07:33Z | Rehearsal receipt, then reviewer go, then preflight and probe |
 | G4 Qualification before escalation | not applicable | D2 is itself the diagnostic for a failed qualification; it qualifies nothing | None |
 | G5 Reconciliation and closeout | pending | | After the run |
@@ -63,7 +66,7 @@ repository.
 
 | Operation | Command (private launcher, run from the agentops checkout) | Evidence |
 |---|---|---|
-| Stage source and inputs, run tests | `run-discussion-v3-d2.py <commit> setup --q0-archive <retained archive>` | 29 / 15 / 57 tests pass on the server at `9d119dfd` |
+| Stage source and inputs, run tests | `run-discussion-v3-d2.py <commit> setup --q0-archive <retained archive>` | 29 / 15 / 57 tests pass on the server at the pinned commit |
 | Freeze | `... <commit> prepare` | Manifest hash recorded in `launches/` after this commit |
 | Zero-cost admission checks | `... <commit> admission-dry` | Same |
 | Rehearse | `... <commit> rehearse`, then `status`, `duplicate`, `verify --batch v3-d2-a1-rehearsal` | Same |
@@ -76,7 +79,7 @@ repository.
 - Immutable public plan: the URL and hash of [PLAN](PLAN.md) at the pinned commit are written into the frozen
   manifest and verified against the public bytes and page before dispatch.
 - Budget authority: USD 5 cap for this run, given by the reviewer inside dmarz's standing USD 500 pool. Reservation
-  USD 3.387556 including the probe. Calls: 72 assigned plus one probe; 24 per model adapter; one worker; one hour.
+  USD 3.387356 including the probe. Calls: 72 assigned plus one probe; 24 per model adapter; one worker; one hour.
 - Allocation: existing server `sim-dmarz-3`, exclusive claim `dmarz-discussion-v3-d2`, held by `dmarz/v3-d2-opus`
   until 2026-10-04T15:33Z. Checked idle before claiming: no active claim in git or on the hub, no worker process,
   no active run. No provisioning; this agent creates and destroys no server.

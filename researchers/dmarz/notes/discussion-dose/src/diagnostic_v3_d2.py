@@ -70,10 +70,11 @@ MODELS = (OPUS, SONNET, HAIKU)
 # Prices are USD per million tokens from the official pricing page, read
 # 2026-10-04. Opus 5.5 rejects non-default sampling parameters and cannot turn
 # thinking off, so its arm omits temperature, sets effort explicitly and has
-# room for thinking inside max_tokens. See benchmark-v3/d2/PLAN.md.
+# room for thinking inside max_tokens. Effort is `high`, the level the D1-Opus
+# run (d1o-a1) used on these worlds. See benchmark-v3/d2/PLAN.md.
 SETTINGS = {
     OPUS: {'role': 'model_under_test', 'input_usd_per_million': 4, 'output_usd_per_million': 20,
-           'max_output_tokens': 4000, 'temperature': None, 'effort': 'medium',
+           'max_output_tokens': 4000, 'temperature': None, 'effort': 'high',
            'thinking': 'adaptive_always_on_field_omitted'},
     SONNET: {'role': 'comparison_arm', 'input_usd_per_million': 3, 'output_usd_per_million': 15,
              'max_output_tokens': 2000, 'temperature': 0, 'effort': None,
