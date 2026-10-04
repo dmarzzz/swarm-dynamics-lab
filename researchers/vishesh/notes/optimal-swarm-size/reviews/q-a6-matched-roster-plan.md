@@ -34,8 +34,12 @@ Readiness is instrument integrity and interpretability, not requiring the baseli
 
 ## Visualization mapping
 
-Use actual actor/service/dependency traces to compare paired N1/N2 runs, with common task and wall-clock origin, cost and outcome annotations. Distinguish allocated contexts, used contexts and simultaneous requests. Mark inaccurate results visibly. The physical interpretation is bounded scheduling capacity and serial dependencies; no GPU measurements or biological-law claim.
+Use actual actor/service/dependency traces to compare paired N1/N2 runs, with common task and wall-clock origin, cost and outcome annotations. Distinguish allocated contexts, used contexts and simultaneous requests. Mark inaccurate results visibly using final task success, quality and exposure labels next to measured service intervals. Replay controls animate recorded elapsed time only; final quality/cost remain explicitly terminal totals. Live progress uses completed items /16; no intermediate quality is inferred. Static interval tables are the fallback where embedded HTML is unsupported. The physical interpretation is bounded scheduling capacity and serial dependencies; no GPU measurements or biological-law claim.
 
 ## Closeout and next decision
 
 Complete a PI-perspective post-mortem on all four pairs, separate scientific results from process compliance, and release/extend only this experiment's resources as appropriate. If effect estimates differ by structure, design a larger preregistered development study; if a scheduling/accounting defect appears, repair before collecting more. Do not automatically sweep N4/8/16 or tune on these roots and call them held-out. Retain the original spending authority across any later cycle.
+
+## Pre-run assessment
+
+Status: diagnostic-only, pending current deployment admission. Q-A5 post-mortem is complete; accept stage localization, reject an integration-only repair, and use fresh roots for the matched-roster diagnostic. 56 offline tests pass, including required-edge rejection, one repair, paired task hashes, order, actor isolation and chain/parallel concurrency. The original all-success Q-A4 criterion remains failed. This is a prospectively revised exploratory instrument, not a retrospective threshold change. The active owner request explicitly delegates selecting and making design improvements, executing the runbook and completing the next post-mortem; that authorization applies within the named study and original budget. No additional reviewer approval is required under standing owner direction. Claims about external validity, optimal N and powered effects remain blocked by scope rather than by optional review.
