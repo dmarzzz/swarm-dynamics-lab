@@ -3,14 +3,18 @@ id: right-dissenter-rd5-build
 type: task
 title: Build and prepare Right Dissenter RD5
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-decision-models
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-decision-models
 depends_on: []
-topics: [dissent, decision-models]
+topics:
+- dissent
+- decision-models
+claimed_at: 2026-10-04T07:53Z
+updated: 2026-10-04T07:53Z
 ---
 
 ## Goal
