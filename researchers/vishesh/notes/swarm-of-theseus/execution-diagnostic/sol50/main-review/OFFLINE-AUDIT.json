@@ -1,0 +1,39 @@
+{
+  "evidence_type": "offline scripted development fixture, not native results",
+  "sealed_main_opened": false,
+  "calls_by_phase": {
+    "learn": 50,
+    "select": 600,
+    "attest": 600,
+    "decide": 600,
+    "question": 100,
+    "teach": 100,
+    "commit": 150
+  },
+  "main_max_calls": 2200,
+  "fixture_max_request_bytes": 7670,
+  "all50_founder_gate_precedes_arms": true,
+  "founders_remaining_final": {
+    "interactive": 0,
+    "static": 0,
+    "broken": 0,
+    "retained": 50
+  },
+  "changed_route_positions": 6,
+  "unchanged_route_positions": 44,
+  "interactive_static_calls_per_replacement": 3,
+  "broken_calls_per_replacement": 1,
+  "retained_replacement_calls": 0,
+  "overlong_teacher_marked_incorrect": true,
+  "overlong_teacher_still_delivered": true,
+  "current_exposure_usd": 1.1637270437,
+  "remaining_study_usd": 58.8362729563,
+  "max_incremental_infrastructure_usd": 1,
+  "remaining_model_envelope_with_full_infrastructure_usd": 57.8362729563,
+  "worst_per_request_usd": 0.0264,
+  "main_worst_model_usd": 58.08,
+  "main_worst_cumulative_with_infrastructure_usd": 60.2437270437,
+  "existing_model_hard_stop_usd": 53.1456,
+  "historical_sol50_reserved_call_count": 44,
+  "native_calls": 0
+}

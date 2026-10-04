@@ -60,3 +60,23 @@ class FullScheduleFixture(unittest.TestCase):
    if phase=='attest':self.assertLessEqual(len(p['private_inbox']),2)
    return oracle(phase,p)
   result=c.checkpoint(g,50,overloaded);self.assertGreater(len(result['attention_overflow']),0)
+
+class MainMessageCapacityTests(unittest.TestCase):
+ def test_overlong_teaching_stops_before_successor_in_both_arms(self):
+  w=i.world(989);p=w['members'][0];oracle=SchedulingTests().oracle(w)
+  for arm in ('interactive','static'):
+   seen=[];g=i.Institution(w,arm,{x:i.note(x,w['routes'][x]) for x in w['members']})
+   def overlong(phase,packet):
+    seen.append(phase)
+    if phase=='teach':return {'note':packet['private_note'],'explanation':'x'*1300}
+    return oracle(phase,packet)
+   with self.assertRaisesRegex(ValueError,'teaching_message_capacity'):c.replace(g,p,overlong)
+   self.assertNotIn('commit',seen);self.assertEqual(g.generation[p],0)
+ def test_wrong_within_capacity_lesson_is_delivered_not_repaired(self):
+  w=i.world(990);p=w['members'][0];oracle=SchedulingTests().oracle(w);g=i.Institution(w,'interactive',{x:i.note(x,w['routes'][x]) for x in w['members']});seen=[]
+  wrong={'note':{'owner':p,'witnesses':[],'practice':i.PRACTICE},'explanation':'Incorrect route remains an outcome.'}
+  def call(phase,packet):
+   if phase=='teach':return wrong
+   if phase=='commit':seen.append(packet['predecessor_message'])
+   return oracle(phase,packet)
+  result=c.replace(g,p,call);self.assertFalse(result['teacher_semantics_correct']);self.assertEqual(seen,[wrong])

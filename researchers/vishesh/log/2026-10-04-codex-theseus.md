@@ -87,3 +87,8 @@ Fresh Q2 is prepared at30 calls/USD0.80. The current owning-session instructions
 ## Approved Q2 completed
 
 Frozen prospective amendment3a7895ff;39offline checks local/remote and public-plan verification preceded dispatch. Q2 completed27calls,5/5founders,30/30joint decisions,one correct direct handover and6/6successor decisions. All27requests/scores replay exactly. Native returned stable positions; alias/retired-identity claims remain offline-only. Simple controller also30/30. Report explicitly limits this to prescribed-policy transmission, not emergent culture. NewUSD0.0784435; cumulativeUSD1.1637270437/60, historical unknown retained. Five aggregate readbacks verified; raw traces private. Worker and transport stopped, claim releasedPR428, original ledger settled. Native operational finalize and authored11-dimension scientific review complete. Q2 FINISH; no repeat indicated.50-member main unrun.
+
+
+## Offline PI advisory response
+
+Audited full50member development schedule without native calls or sealed evaluation access. All50founder gate/retirement pass. Reproduced over-capacity teacher delivery; prospectively specified and fixed fail-closed capacity for both teaching arms,41tests pass, wrong within-capacity lessons preserved. Recorded unmatched broken/retained realized compute and44unchanged/6changed fixture strata. Recomputed2200call worst caseUSD60.2437270437 including current exposure andUSD1infra. Main decision remains pending; proposed7950-byte envelope fitsUSD59.9687270437 but requires separate stage-contract/reporting work. No PI launch authority inferred.

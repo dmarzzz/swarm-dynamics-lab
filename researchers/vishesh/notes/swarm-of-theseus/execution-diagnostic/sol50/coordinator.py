@@ -30,6 +30,9 @@ def replace(g,p,call,changed=False,require_teacher=False):
         inspection=call('question',{'position':p,'inherited_note':inherited,'mode':'private_self_inspection_not_sent_to_teacher'})
         if not isinstance(inspection,dict) or not isinstance(inspection.get('question'),str) or len(inspection['question'])>400:raise ValueError('inspection_contract')
     elif g.arm!='broken':raise ValueError('invalid_replacement_arm')
+    # Communication capacity is enforced before successor delivery; never truncate.
+    if teaching is not None and len(json.dumps(teaching,separators=(',',':')))>1200:
+        raise ValueError('teaching_message_capacity')
     # Teacher semantic defects are outcomes, not hidden repairs. Never inject truth.
     teacher_ok=None if teaching is None else n.qualified_teacher(teaching,g.world,p,changed)
     if require_teacher and teacher_ok is not True:raise ValueError('qualification_teacher_semantics')
