@@ -1411,7 +1411,8 @@
       "id": "sybil-newcomer-sonnet",
       "title": "Knowledgeable newcomers versus a trusted Sybil coalition (Sonnet 4.6 replication)",
       "documents": [
-        "researchers/dmarz/notes/sybil-newcomer-sonnet/README.md"
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/README.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md"
       ],
       "experiment_ids": [
         "sybil-newcomer-sonnet"
@@ -1420,17 +1421,20 @@
         "researchers/dmarz/notes/sybil-newcomer-sonnet/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "The sybil-newcomer-api finding (no audit policy preserved specialist accuracy after a sleeper attack; renewal minus reputation below the useful marker) does not depend on the synthesizing model.",
-        "rationale": "Untested: Sonnet 4.6 replication is planned and unrun; only offline and scripted engineering checks exist."
+        "score": 2,
+        "claim": "In this synthetic newcomer task, replacing the Haiku 4.5 synthesizer with Sonnet 4.6 on identical assignments did not materially change outcomes: the sleeper attack still sharply reduced specialist accuracy, the policy ranking was unchanged, and renewal minus reputation stayed inconclusive (+11.1 pp, interval -0.0 to +22.2 pp; +2.8 pp more than Haiku, interval -2.8 to +8.3 pp).",
+        "rationale": "Same-owner assessment: twenty-four paired roots, passed qualification, 1,944/1,944 outcomes paired by assignment with the Haiku cohort and fully reconciled. One task family, two models from one provider, scripted actors and descriptive unadjusted intervals limit stronger conclusions. Independent review was waived by the owner."
       },
-      "sample_size_summary": "Observed: none. Planned: the parent's 24 paired world roots; 1,944 S1 outcomes plus 36 Q0 calls, paired by assignment ID with the Haiku cohort; 24 honest + 1/4/16 controller identities, one synthesizer.",
+      "sample_size_summary": "Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing, each paired by assignment ID with the separate Haiku cohort (not pooled); 24 honest + 1/4/16 controller identities, one synthesizer model. Q0 separately: 36/36 clean calls.",
       "sources": [
         "researchers/dmarz/notes/sybil-newcomer-sonnet/preregistration.md",
         "researchers/dmarz/notes/sybil-newcomer-sonnet/design.yaml",
-        "researchers/dmarz/notes/sybil-newcomer-sonnet/SETUP.md"
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/SETUP.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/records/s1-001-haiku-comparison.json"
       ],
-      "status_at_assessment": "planned_unrun",
+      "status_at_assessment": "complete_valid_inconclusive_primary_allocation_closed",
       "assessor": "dmarz/newcomer-sonnet",
       "assessed_at": "2026-10-04"
     },

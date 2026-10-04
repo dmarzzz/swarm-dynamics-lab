@@ -1,10 +1,10 @@
 ---
 agent: dmarz/newcomer-sonnet
 tool: claude-code
-state: working
+state: done
 task: null
-doing: Owner waived review; launching Q0 then S1 on sim-dmarz-5
-updated: 2026-10-04T06:00Z
+doing: S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released
+updated: 2026-10-04T07:35Z
 ---
 
 ## Notes
