@@ -1,0 +1,13 @@
+{
+  "historical_file_sha256": "96e00224f3aabbee2eb951c74490e5e75cc37ddd877023f908dd38ba2acd3a57",
+  "current_file_sha256": "ab749b0a60649d43b87581734119b11d150d44c18f5431d8835a091fe2f65134",
+  "unchanged_prompt_and_board_functions": [
+    "project",
+    "peer_board",
+    "initial_input",
+    "request",
+    "continuation"
+  ],
+  "changes": "Known-cost token usage validation and safe diagnostic error codes; no prompt tuning.",
+  "all_inspected_cases": "development only"
+}

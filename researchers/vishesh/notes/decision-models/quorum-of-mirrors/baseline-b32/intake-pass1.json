@@ -1,0 +1,89 @@
+{
+  "status": "capture_only_not_case_admission",
+  "source_sha256": {
+    "train": "ae5eda7c42ddf1695ef185a7ba1bc716928f5adf57103e4f78aae5f9afe00f9c",
+    "dev": "499793726b4a5406780928a3d9dedc48d6dd53de778f22437d129cacdb08e300"
+  },
+  "source_revision": "7c62d1ec8df3fb560d6efe2b85fa191135636f81",
+  "rows": 3568,
+  "exclusions": {
+    "development_connected": 1394,
+    "fewer_than_two_questions": 608,
+    "non_text_or_unspecified_medium": 602,
+    "fewer_than_three_evidence_records": 397,
+    "fact_check_domain": 142,
+    "placeholder_or_search_source": 8,
+    "already_selected_component": 2
+  },
+  "eligible_by_label": {
+    "Supported": 82,
+    "Refuted": 284,
+    "Conflicting Evidence/Cherrypicking": 43,
+    "Not Enough Evidence": 8
+  },
+  "selected_candidates": 40,
+  "selected_by_label": {
+    "Conflicting Evidence/Cherrypicking": 11,
+    "Not Enough Evidence": 8,
+    "Refuted": 11,
+    "Supported": 10
+  },
+  "unique_locators": 87,
+  "capture_status": {
+    "captured": 59,
+    "unavailable": 28
+  },
+  "candidates_with_any_excerpt": 37,
+  "verified_event_clusters": 0,
+  "support_audited_packets": 0,
+  "model_calls": 0,
+  "source_keys": [
+    "dev:100",
+    "dev:435",
+    "dev:419",
+    "train:171",
+    "dev:360",
+    "dev:413",
+    "train:574",
+    "train:2118",
+    "train:2805",
+    "train:2492",
+    "train:844",
+    "train:143",
+    "train:2112",
+    "dev:82",
+    "train:2274",
+    "train:202",
+    "train:197",
+    "train:2153",
+    "train:584",
+    "train:2727",
+    "train:2896",
+    "train:468",
+    "dev:422",
+    "train:2520",
+    "dev:404",
+    "train:2218",
+    "train:153",
+    "train:682",
+    "train:1249",
+    "train:1889",
+    "train:1035",
+    "train:2904",
+    "dev:423",
+    "train:2075",
+    "train:799",
+    "train:1786",
+    "train:2466",
+    "train:2288",
+    "train:1304",
+    "train:1762"
+  ],
+  "private_packet_sha256": "5fc0fcec4b4571d4a5e47c415a0938c89455faff327db244d67559673adebb38",
+  "notes": [
+    "No source label inherited automatically.",
+    "Metadata groups are not verified independent events.",
+    "No actor packet contains annotation answers or gold.",
+    "Capture-version changes require manual temporal review."
+  ]
+}

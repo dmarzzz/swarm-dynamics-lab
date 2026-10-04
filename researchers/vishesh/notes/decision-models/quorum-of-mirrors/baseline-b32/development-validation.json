@@ -1,0 +1,51 @@
+{
+  "status": "offline_development_source_validation_not_native_qualification",
+  "actor_file_sha256": "5ec2fd108c4fd4e06ed31cbd0cdf35e634dad228163c154715c871f93c6e5eec",
+  "manifest_sha256": "c5de4756550e10dff4e5ff4e8c4650fcd2f1da2b32de78c73e2fa4a954f074fd",
+  "source_bound_passages": 12,
+  "cases": 5,
+  "unique_document_ids": 6,
+  "actor_gold_isolated": true,
+  "semantic_audit": "owning operator, not independent reannotation",
+  "tests": 19,
+  "native_calls": 0,
+  "tokenizer_verified": false,
+  "context_note": "Serialized bytes are not model token counts. Admissible long reports produce large boards; the 4000-token continuation cap is not yet demonstrated. Do not fund/launch on these numbers.",
+  "request_sizes": [
+    {
+      "case_id": "127b6f413dd901db",
+      "passages": 2,
+      "documents": 1,
+      "initial_serialized_bytes": 3600,
+      "schema_max_field_peer_serialized_bytes": 21118
+    },
+    {
+      "case_id": "c1f7ceb10f04dc8d",
+      "passages": 2,
+      "documents": 1,
+      "initial_serialized_bytes": 3777,
+      "schema_max_field_peer_serialized_bytes": 31179
+    },
+    {
+      "case_id": "f65b0e5e3ea27d41",
+      "passages": 2,
+      "documents": 1,
+      "initial_serialized_bytes": 3143,
+      "schema_max_field_peer_serialized_bytes": 26541
+    },
+    {
+      "case_id": "266be007151b7ebb",
+      "passages": 2,
+      "documents": 1,
+      "initial_serialized_bytes": 2635,
+      "schema_max_field_peer_serialized_bytes": 22757
+    },
+    {
+      "case_id": "0aeb3ae77e64beb8",
+      "passages": 4,
+      "documents": 2,
+      "initial_serialized_bytes": 4026,
+      "schema_max_field_peer_serialized_bytes": 22384
+    }
+  ]
+}

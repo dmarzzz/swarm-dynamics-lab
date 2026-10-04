@@ -1,0 +1,15 @@
+{
+  "status": "offline_prompt_freeze_not_run_admission",
+  "time": 1791148949.035864,
+  "files": {
+    "fork_runner.py": "96e00224f3aabbee2eb951c74490e5e75cc37ddd877023f908dd38ba2acd3a57",
+    "PLAN.md": "e18f6bedf25a62b54fa2fa8f361c14a3b6d439cdf71c56e9feb43a0e8a6efaf0",
+    "INTAKE-PROTOCOL.md": "382fa7921a6f32eb21047cfb1fc330ce9ac41b0b4bfa356e8b72c5db3eddf2fc"
+  },
+  "purpose": "Native prompt/board protocol fixed before inspecting new captured passages; no model-result selection.",
+  "historical_content_locations": {
+    "INTAKE-PROTOCOL.md": "intake-protocol-frozen.md",
+    "PLAN.md": "Git commit 1b8e64c10f15d4975055d4406c0fba640bbc6791, same directory PLAN.md",
+    "fork_runner.py": "Verified private source archive; unchanged scientific prompt/board functions attested in instrument-revision.json"
+  }
+}

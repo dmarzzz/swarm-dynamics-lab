@@ -1,5 +1,7 @@
 # Quorum of Mirrors: when nine reports are only three observations
 
+**Realistic scale-up preparation:** source capture and all 40 candidate audits are complete. Five defensible development contexts remain; a balanced realistic benchmark is not ready. The six-reviewer fork engine and source reconstruction pass 19 offline tests. The proposed 60-agent GPT-6 Sol experiment has not run. [Concrete source findings, limitations and next work](baseline-b32/SOURCE-AUDIT.md).
+
 **Latest: quote-only SP-02 repair passed.** SP-02 quote-only repair qualification passed: 40/40 valid calls; 120/120 source and 280/280 report selections correct; 40/40 decisions; 20/20 exact paired roots. Native quotations and code-derived facts are distinct. New API cost USD0.314064; authored grammar only, not field reliability or swarm efficacy. SP-01's earlier null-selection gate remains failed. [Results and limits](reviews/SP-02-post.md).
 
 **Previous PQ-01:**24/24 final decisions correct, but only11/24 exact fidelity sets, with18 false flags on faithful reports. That adverse finding remains unchanged. [PQ-01 report](reviews/PQ-01-post.md).

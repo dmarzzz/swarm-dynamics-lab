@@ -1,0 +1,210 @@
+{
+  "status": "inspected development only; not B32 qualification or evaluation",
+  "normalization": "lxml XPath; remove descendant script/style/noscript, collapse whitespace; then character offsets",
+  "cases": [
+    {
+      "case_id": "127b6f413dd901db",
+      "source_key": "train:143",
+      "claim": "Balbir Singh converted to Islam after he participated in the demolition of Babri Masjid",
+      "claim_date": "6-8-2020",
+      "published_label": "Supported",
+      "event_key": "Balbir Singh biographical conversion",
+      "support_map": "Named biography connects prior participation and later conversion; ordinary source-reporting control.",
+      "limitations": "Closed-packet historical source interpretation; original truth label is not a new independently adjudicated excerpt label. No real-time verification.",
+      "evidence": [
+        {
+          "document_id": "6d762f000986615e84e38b43c45c30960ff4d008c2e575e1c045caeae15a325a",
+          "raw_sha256": "f77cf9c04e695c33ba2a60b2567e3e1d2653e3c600e03f92a77394a951c47f47",
+          "xpath": "/html/body/div[3]/div[14]/div[3]/div[1]/div[1]/div[9]",
+          "start": 0,
+          "end": 153,
+          "text_sha256": "a7d30e01463cec9221abc84cbb7f151f9d7301baeec04cd8168849266c660b6f",
+          "evidence_id": "E1",
+          "source_host": "web.archive.org",
+          "source_url": "https://web.archive.org/web/20210411133029/https://mumbaimirror.indiatimes.com/others/sunday-read/the-forgiveness-special-kar-sevak-balbir-singh-who-helped-demolish-babri-masjid-is-now-mohammed-amir-a-man-determined-to-rebuild-100-mosques/articleshow/62312039.cms",
+          "version_changed": false
+        },
+        {
+          "document_id": "6d762f000986615e84e38b43c45c30960ff4d008c2e575e1c045caeae15a325a",
+          "raw_sha256": "f77cf9c04e695c33ba2a60b2567e3e1d2653e3c600e03f92a77394a951c47f47",
+          "xpath": "/html/body/div[3]/div[14]/div[3]/div[1]/div[1]/div[9]",
+          "start": 6726,
+          "end": 8016,
+          "text_sha256": "9c8ca0db1526b0c8c42dd849d57863b497540ac74b9d35103bb70511227bd9df",
+          "evidence_id": "E2",
+          "source_host": "web.archive.org",
+          "source_url": "https://web.archive.org/web/20210411133029/https://mumbaimirror.indiatimes.com/others/sunday-read/the-forgiveness-special-kar-sevak-balbir-singh-who-helped-demolish-babri-masjid-is-now-mohammed-amir-a-man-determined-to-rebuild-100-mosques/articleshow/62312039.cms",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "case_id": "c1f7ceb10f04dc8d",
+      "source_key": "dev:82",
+      "claim": "In the US lockdowns are partly responsible for excess deaths not directly attributed to COVID-19 which were observed in 2020.",
+      "claim_date": "18-10-2020",
+      "published_label": "Not Enough Evidence",
+      "event_key": "US excess mortality March\u2013July 2020 study",
+      "support_map": "Research discussion presents competing causes and limitations; it does not identify a lockdown causal contribution.",
+      "limitations": "Closed-packet historical source interpretation; original truth label is not a new independently adjudicated excerpt label. No real-time verification.",
+      "evidence": [
+        {
+          "document_id": "98f6c25e4dec4ca84867160af6bfa1439ee52e00d09922e90f41cf85bc2c2141",
+          "raw_sha256": "b04fc2ea35f7b0c184a24559279171057edd38a0ac66250a9a4dddf56a4e0f5f",
+          "xpath": "/html/body/form/section[2]/div[3]/div/div[2]/div/div[8]/div/p[1]",
+          "start": 0,
+          "end": 797,
+          "text_sha256": "9b101898bcde12a1827b83e77114f7990c0e1897d6b1e68396e71af81c35f56e",
+          "evidence_id": "E1",
+          "source_host": "web.archive.org",
+          "source_url": "https://web.archive.org/web/20210310112506/https://jamanetwork.com/journals/jama/fullarticle/2771761",
+          "version_changed": false
+        },
+        {
+          "document_id": "98f6c25e4dec4ca84867160af6bfa1439ee52e00d09922e90f41cf85bc2c2141",
+          "raw_sha256": "b04fc2ea35f7b0c184a24559279171057edd38a0ac66250a9a4dddf56a4e0f5f",
+          "xpath": "/html/body/form/section[2]/div[3]/div/div[2]/div/div[8]/div/p[6]",
+          "start": 0,
+          "end": 831,
+          "text_sha256": "119b5068527833e32968400eca5d12387059b2d1929cdc2d9f71b6335b145e65",
+          "evidence_id": "E2",
+          "source_host": "web.archive.org",
+          "source_url": "https://web.archive.org/web/20210310112506/https://jamanetwork.com/journals/jama/fullarticle/2771761",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "case_id": "f65b0e5e3ea27d41",
+      "source_key": "train:682",
+      "claim": "There is a correlation between vitamin D deficiencies and higher COVID-19 mortality rates",
+      "claim_date": "21-5-2020",
+      "published_label": "Supported",
+      "event_key": "European vitamin D ecological mortality study",
+      "support_map": "Reported observational correlation is supported; causal or clinical benefits are not inferred.",
+      "limitations": "Closed-packet historical source interpretation; original truth label is not a new independently adjudicated excerpt label. No real-time verification.",
+      "evidence": [
+        {
+          "document_id": "56baeb612e2db6b5e89e3b7de7e188819212ae48a8e1f6b8ff95418814d5aead",
+          "raw_sha256": "f1c4d65e941320d36dbc1663af5ff8daee7449adc063db4dc2046306629c059c",
+          "xpath": "/html/body/main/div[3]/div/div/div[1]/div/div/p[9]",
+          "start": 0,
+          "end": 363,
+          "text_sha256": "0ae68559c2854aa135b1eac08c257ad9bd7a0aaa45db78429b419e25cdf2b62e",
+          "evidence_id": "E1",
+          "source_host": "www.tcd.ie",
+          "source_url": "https://www.tcd.ie/news_events/articles/association-between-vitamin-d-levels-and-mortality-from-covid-19/",
+          "version_changed": false
+        },
+        {
+          "document_id": "56baeb612e2db6b5e89e3b7de7e188819212ae48a8e1f6b8ff95418814d5aead",
+          "raw_sha256": "f1c4d65e941320d36dbc1663af5ff8daee7449adc063db4dc2046306629c059c",
+          "xpath": "/html/body/main/div[3]/div/div/div[1]/div/div/blockquote[2]",
+          "start": 0,
+          "end": 684,
+          "text_sha256": "43f9816ca407d12261a12ee0e481025bfe97f1f3bd977fc2d649f921752f2861",
+          "evidence_id": "E2",
+          "source_host": "www.tcd.ie",
+          "source_url": "https://www.tcd.ie/news_events/articles/association-between-vitamin-d-levels-and-mortality-from-covid-19/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "case_id": "266be007151b7ebb",
+      "source_key": "train:799",
+      "claim": "Men are more likely to die than women from Covid-19.",
+      "claim_date": "30-4-2020",
+      "published_label": "Supported",
+      "event_key": "early COVID sex fatality reporting",
+      "support_map": "Historical descriptive male fatality pattern is supported; biological cause and current universality are not inferred.",
+      "limitations": "Closed-packet historical source interpretation; original truth label is not a new independently adjudicated excerpt label. No real-time verification.",
+      "evidence": [
+        {
+          "document_id": "e4f85c5fb5f25c4e070bededfd5dabd936c968689c267ce3345667a40f0b9ad9",
+          "raw_sha256": "e9f08123642cd47edc91df69fadcac71f68b316c3f3a701e34de962ba0026235",
+          "xpath": "/html/body/div[2]/div[2]/article/div[1]/div[1]/div[2]/p[5]",
+          "start": 0,
+          "end": 240,
+          "text_sha256": "1569702641acd1a11c6901d92906ab13d09e8becb6ebef9c775ed2980b8515e5",
+          "evidence_id": "E1",
+          "source_host": "theconversation.com",
+          "source_url": "https://theconversation.com/why-do-more-men-die-from-coronavirus-than-women-136038",
+          "version_changed": false
+        },
+        {
+          "document_id": "e4f85c5fb5f25c4e070bededfd5dabd936c968689c267ce3345667a40f0b9ad9",
+          "raw_sha256": "e9f08123642cd47edc91df69fadcac71f68b316c3f3a701e34de962ba0026235",
+          "xpath": "/html/body/div[2]/div[2]/article/div[1]/div[1]/div[2]/p[6]",
+          "start": 0,
+          "end": 312,
+          "text_sha256": "6f73c6d6a0265f38dc08a6d3eeed5abc15d73d55178a46e19530d977eac4b215",
+          "evidence_id": "E2",
+          "source_host": "theconversation.com",
+          "source_url": "https://theconversation.com/why-do-more-men-die-from-coronavirus-than-women-136038",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "case_id": "0aeb3ae77e64beb8",
+      "source_key": "train:468",
+      "claim": "Doctors were banned from social media during the pandemic, for calling the pandemic a \u2018hoax\u2019.",
+      "claim_date": "21-6-2020",
+      "published_label": "Not Enough Evidence",
+      "event_key": "Erickson Massihi press conference",
+      "support_map": "Named press conference and professional rebuttal establish the event but not the claimed platform ban or hoax wording.",
+      "limitations": "Closed-packet historical source interpretation; original truth label is not a new independently adjudicated excerpt label. No real-time verification.",
+      "evidence": [
+        {
+          "document_id": "387eef3755ae705aa3422ecdcf3186974b2fde8485f3be3b87bbce3bf48fc9b8",
+          "raw_sha256": "084194fa3e7ef93044beab4003f6b4a5c5f62b9559a7eebcb468ccb46c97b30f",
+          "xpath": "/html/body/div/div[2]/main/div/div/div[1]/div[1]/div/div[2]/div/div[1]/div/div[1]/div[3]/div[2]/div[3]/div/p[1]",
+          "start": 0,
+          "end": 177,
+          "text_sha256": "e361fd03aacca49fe845dceeb834067fca3ec45bec6e49b07ec5e151f7bdb386",
+          "evidence_id": "E1",
+          "source_host": "bakersfieldnow.com",
+          "source_url": "https://bakersfieldnow.com/news/coronavirus/accelerated-urgent-care-provides-statistical-update-on-covid-19",
+          "version_changed": false
+        },
+        {
+          "document_id": "387eef3755ae705aa3422ecdcf3186974b2fde8485f3be3b87bbce3bf48fc9b8",
+          "raw_sha256": "084194fa3e7ef93044beab4003f6b4a5c5f62b9559a7eebcb468ccb46c97b30f",
+          "xpath": "/html/body/div/div[2]/main/div/div/div[1]/div[1]/div/div[2]/div/div[1]/div/div[1]/div[3]/div[2]/div[3]/div/p[2]",
+          "start": 0,
+          "end": 135,
+          "text_sha256": "de282edc61b70a819d0c5b425e4dd20204471e41927915631992456e2517eed3",
+          "evidence_id": "E2",
+          "source_host": "bakersfieldnow.com",
+          "source_url": "https://bakersfieldnow.com/news/coronavirus/accelerated-urgent-care-provides-statistical-update-on-covid-19",
+          "version_changed": false
+        },
+        {
+          "document_id": "b66fb0f4908a5eb75317520968b5d95c6fe521098eb320867deb1cf89ac2e195",
+          "raw_sha256": "6c4d8c90ccb46e6efe4bb31a33493300002e6e81f07a675feb506fd9cb6f952f",
+          "xpath": "/html/body/div[1]/div[1]/div/div/div/div/div[4]/div/div/div/blockquote",
+          "start": 0,
+          "end": 862,
+          "text_sha256": "603eda0a7098e290839c37e2c58a8b08164949441d3879fa4e04ab34a93d0c0d",
+          "evidence_id": "E3",
+          "source_host": "www.acep.org",
+          "source_url": "https://www.acep.org/corona/covid-19-alert/covid-19-articles/acep-aaem-joint-statement-on-physician-misinformation/",
+          "version_changed": false
+        },
+        {
+          "document_id": "b66fb0f4908a5eb75317520968b5d95c6fe521098eb320867deb1cf89ac2e195",
+          "raw_sha256": "6c4d8c90ccb46e6efe4bb31a33493300002e6e81f07a675feb506fd9cb6f952f",
+          "xpath": "/html/body/div[1]/div[1]/div/div/div/div/div[4]/div/div/div/p[5]",
+          "start": 0,
+          "end": 388,
+          "text_sha256": "adc83a8e324b626399675567c25135ba210a5969c10331b6bce11d3db932f399",
+          "evidence_id": "E4",
+          "source_host": "www.acep.org",
+          "source_url": "https://www.acep.org/corona/covid-19-alert/covid-19-articles/acep-aaem-joint-statement-on-physician-misinformation/",
+          "version_changed": false
+        }
+      ]
+    }
+  ]
+}

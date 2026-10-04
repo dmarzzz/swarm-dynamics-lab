@@ -1,0 +1,768 @@
+{
+  "scope": "operator audit of all 40 development candidates; no native outcomes or independent reannotation",
+  "counts": {
+    "limited": 16,
+    "reject": 19,
+    "retain": 5
+  },
+  "retained_labels": {
+    "Supported": 3,
+    "Not Enough Evidence": 2
+  },
+  "retained_distinct_event_contexts": 5,
+  "qualified_B32_evaluation_events": 0,
+  "shortfall_to_40_even_if_development_reused": 35,
+  "cases": [
+    {
+      "source_key": "dev:100",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "limited",
+      "reason": "label_ambiguity",
+      "event_key": "policy alignment versus formal endorsement",
+      "support_judgement": "Similar policies do not uniquely establish endorsement of the named resolution.",
+      "source_documents": [
+        {
+          "document_id": "3da0494639bbb78126386b215b561864548a4fe825f0b093d8655be225a59716",
+          "raw_sha256": "7eee0831f5d929dcb303bc58d43422e91db8517ffe48ecca6382187e697a9901",
+          "retrieved_url": "https://www.theguardian.com/commentisfree/2020/jul/20/joe-biden-has-endorsed-the-green-new-deal-in-all-but-name",
+          "version_changed": false
+        },
+        {
+          "document_id": "7f2ff83713301faac51bbd626fdfe5e05cceff43267705e6ec1b61ebc95bda83",
+          "raw_sha256": "b3fb852d4eea3849402a532f90d151a4e6748b2635af2eef339cd7a315241d01",
+          "retrieved_url": "https://www.investopedia.com/joe-biden-s-economic-plan-save-the-middle-class-4769869",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:435",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "reject",
+      "reason": "wrong_topic",
+      "event_key": "Igbo wealth",
+      "support_judgement": "Captured fact-check discusses Yoruba population, not Igbo wealth.",
+      "source_documents": [
+        {
+          "document_id": "89f5c07e664fe4477021846936fa7acc308817053ede458275fb7a37ed0b6b6e",
+          "raw_sha256": "07639dad80097b800eb3f31751e1782d43f0be96e0ba410c473c2a9dc9d671ec",
+          "retrieved_url": "https://web.archive.org/web/20200908012032/https://dailytrust.com/fact-check-no-evidence-80-million-yoruba-live-in-brazil",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:419",
+      "published_label": "Refuted",
+      "packet_status": "reject",
+      "reason": "verdict_leak",
+      "event_key": "CDC death guidance",
+      "support_judgement": "Retrieved fact-check source exposes the adjudication.",
+      "source_documents": [
+        {
+          "document_id": "5dfdb3a510823cb28514347bb1d26c9f02ad04f34460078832b692306846ab62",
+          "raw_sha256": "88b0957ff3d7f293caf9921c01c893dcbc7cd0d28e7c48f8bab7030518780e3c",
+          "retrieved_url": "https://www.snopes.com/fact-check/cdc-guidelines-covid19/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:171",
+      "published_label": "Supported",
+      "packet_status": "reject",
+      "reason": "wrapper",
+      "event_key": "DC quarantine exemption",
+      "support_judgement": "Captured wrapper supplies no policy text.",
+      "source_documents": [
+        {
+          "document_id": "ac6114af2c31ce0e9875f022a9f3ab842dbadc3c6c7792d6376ab57bc39aa8a5",
+          "raw_sha256": "77e8804065cbf829cc0ff60d913e91eb66224d75edd0dd9b451555faefd1c900",
+          "retrieved_url": "https://web.archive.org/web/20240630093838/https://perma.cc/Q34M-H8V8",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:360",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "limited",
+      "reason": "scope_ambiguity",
+      "event_key": "UK vaccination protocol consultation",
+      "support_judgement": "Qualified personnel under proposed protocols do not establish the employer claim or current authorization.",
+      "source_documents": [
+        {
+          "document_id": "0ccf8321ae26c4eece81c397e8727ddf95bd874b3e0ca3e9f9865b0a3129aa1a",
+          "raw_sha256": "ffc93e8feb4eb3f0b30957a88771b4fc64a65fc77d0c28b4ee138198c78e182d",
+          "retrieved_url": "https://web.archive.org/web/20210607133928/https://www.gov.uk/government/consultations/distributing-vaccines-and-treatments-for-covid-19-and-flu/consultation-document-changes-to-human-medicine-regulations-to-support-the-rollout-of-covid-19-vaccines",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:413",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "reject",
+      "reason": "missing_comparable_counts",
+      "event_key": "Uyghur population series",
+      "support_judgement": "No comparable dated population totals; retrieval absence is not a verified demographic conclusion.",
+      "source_documents": [
+        {
+          "document_id": "4653c4fd9750c546e3000727bebd2a40c37a61b72543e6a078f88d3f62f93081",
+          "raw_sha256": "65272c853c2cf05a40485d51a2b9c203e39086cceb7fc53003a46a92b0332c0d",
+          "retrieved_url": "https://web.archive.org/web/20210118065509/https://apnews.com/article/269b3de1af34e17c1941a514f78d764c",
+          "version_changed": false
+        },
+        {
+          "document_id": "8c62afe872e16f4f86fefb285631028163be1cc21c7f5a99e263c458232127f9",
+          "raw_sha256": "00ed180a5d59135df7f3512e865ec1ff1df5c64e2ab2f0e6b413d53c8a3049c7",
+          "retrieved_url": "https://china.usc.edu/whats-stake-xinjiang",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:574",
+      "published_label": "Refuted",
+      "packet_status": "reject",
+      "reason": "unavailable",
+      "event_key": "Walmart tweet",
+      "support_judgement": "No usable captured source.",
+      "source_documents": [
+        {
+          "document_id": "c1c31700f0ea5acee41fa643717f292d7a890ce6060288bd3d7a371fb79b5266",
+          "raw_sha256": "61672f8dfaad77d89125fbc959e1cca7b4549adff2da5707539a06acdecbc9d5",
+          "retrieved_url": "https://web.archive.org/web/20200909211847/https://www.facebook.com/photo.php?fbid=10157247843507011&set=a.376354472010&type=3&theater",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2118",
+      "published_label": "Supported",
+      "packet_status": "limited",
+      "reason": "missing_date_context",
+      "event_key": "Yemen executions August 2018",
+      "support_judgement": "Crime and execution described; selected passages omit the target date.",
+      "source_documents": [
+        {
+          "document_id": "f4d01c2bf320eaba61d42662f4a659e4759527b460f077d24a1f162a6fdd92e7",
+          "raw_sha256": "f9ea3b180017e6338c4e7a8b7086fc5125175f2044f0b4543e7a044eb4e9a3e3",
+          "retrieved_url": "https://newstools.co.za/page/knownews",
+          "version_changed": false
+        },
+        {
+          "document_id": "d309942ad6c6dc327965e29336f5fa2ee6f330296c2cb85ac694b57730d4d757",
+          "raw_sha256": "09d79f18c69470787bd00fc970431a0cb94120cbe4a12008b3f104992d9cbb87",
+          "retrieved_url": "https://www.dailymail.com/news/article-6042533/Three-paedophiles-shot-hanged-crane-rape-boy-10.html",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2805",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "limited",
+      "reason": "label_ambiguity",
+      "event_key": "toothpaste and acne",
+      "support_judgement": "Possible drying and adverse effects do not uniquely imply the inherited conflicting label.",
+      "source_documents": [
+        {
+          "document_id": "c6e3e4ded04d72b680b78477f2b2ce777bd1aa6afc046ce4a58c791971404639",
+          "raw_sha256": "e724a3909bad013179c460fdb1eb75cb4ddeb4ff0eca7b9e42bd96f79322c263",
+          "retrieved_url": "https://www.huffingtonpost.co.uk/entry/toothpaste-pimples-acne-dry-out_n_1994320",
+          "version_changed": false
+        },
+        {
+          "document_id": "ed1af07879c2c0ad46c28c6950548c6e4f3e5b7f2c7757010054a85d2dba957b",
+          "raw_sha256": "5eb4b110b02c42a5530d3cab1267dd763f746c0472b8d19491325eef44731c8b",
+          "retrieved_url": "https://web.archive.org/web/20200420001125/https://health.clevelandclinic.org/a-dermatologists-advice-on-how-to-get-rid-of-a-pimple/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2492",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "reject",
+      "reason": "missing_attribution",
+      "event_key": "Bellingcat intent",
+      "support_judgement": "Sources describe the investigation, not the specified investigators intent.",
+      "source_documents": [
+        {
+          "document_id": "1eb82015fcb065f6e83e9851db8bedce9859534c6629f61420947e3f72dc6848",
+          "raw_sha256": "f78358efc4abb2a97d7d4e6cd36a07c6d5155a8c27394ca7d949f1a8609ef885",
+          "retrieved_url": "https://www.newyorker.com/news/letter-from-the-uk/the-russian-fitness-instructors-who-wanted-to-see-salisbury-cathedral-but-ended-up-poisoning-sergei-skripal",
+          "version_changed": false
+        },
+        {
+          "document_id": "91fea4675c9b890719ac61593f36ea7b37bce05bff35b88ca9c9fafb47cd56db",
+          "raw_sha256": "4fd36084fda62dad1cf823c9c16cde7dd4bb839f45549a063b4d2a8dc773f75a",
+          "retrieved_url": "https://www.nbcnews.com/politics/white-house/what-gru-mueller-indicted-spy-agency-s-operatives-n891291",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:844",
+      "published_label": "Refuted",
+      "packet_status": "reject",
+      "reason": "extraction_failure",
+      "event_key": "quinine zinc COVID remedy",
+      "support_judgement": "Footer and irrelevant material do not evaluate the remedy.",
+      "source_documents": [
+        {
+          "document_id": "448bccd7a215bd6ecfb96b73af5b932549f5352e5c1832f14c30e28714f363cd",
+          "raw_sha256": "5e83474b174c2d98b8432272f4d36542d4e0d3aa962638b225e87fb06fbf79b0",
+          "retrieved_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfCFR/CFRSearch.cfm?fr=172.575",
+          "version_changed": false
+        },
+        {
+          "document_id": "7e087635b062a0445381807394f614fcd961b8b2ee9d4f222b14ea5e21f33f1b",
+          "raw_sha256": "e4d68cdfcd35ee84ab3398a5280abf1dc99092801ca1575a28d70649c005cbf7",
+          "retrieved_url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:143",
+      "published_label": "Supported",
+      "packet_status": "retain",
+      "reason": "supported",
+      "event_key": "Balbir Singh biographical conversion",
+      "support_judgement": "Named biography connects prior participation and later conversion; ordinary source-reporting control.",
+      "source_documents": [
+        {
+          "document_id": "6d762f000986615e84e38b43c45c30960ff4d008c2e575e1c045caeae15a325a",
+          "raw_sha256": "f77cf9c04e695c33ba2a60b2567e3e1d2653e3c600e03f92a77394a951c47f47",
+          "retrieved_url": "https://web.archive.org/web/20210411133029/https://mumbaimirror.indiatimes.com/others/sunday-read/the-forgiveness-special-kar-sevak-balbir-singh-who-helped-demolish-babri-masjid-is-now-mohammed-amir-a-man-determined-to-rebuild-100-mosques/articleshow/62312039.cms",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2112",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "limited",
+      "reason": "rank_precision",
+      "event_key": "Nigeria university ranking 2018",
+      "support_judgement": "A 601\u2013800 band does not identify rank 800; inherited conflict verdict is not unique.",
+      "source_documents": [
+        {
+          "document_id": "05733331f8ea04a84f28c305e0d961be5ece6a1fc8bd6f373cfc913210f07852",
+          "raw_sha256": "8d53ae1dba798f133c3eec633bf82c6f0dc587d0e9e66962be0afceabeecff7a",
+          "retrieved_url": "https://web.archive.org/web/20190831191822/https://punchng.com/covenant-university-ranked-best-nigerian-varsity/",
+          "version_changed": false
+        },
+        {
+          "document_id": "672b2136b435cad36f94457795fc681884aef2ddaa45aacb4d337d6dc3475e8a",
+          "raw_sha256": "ae8182e752c8dd1249253d15b13dc0f5cee2c3c35b4389f0fb334805bdcfa8a0",
+          "retrieved_url": "https://web.archive.org/web/20210815154325/https://cwur.org/2018-19/University-of-Ibadan.php",
+          "version_changed": false
+        },
+        {
+          "document_id": "a63de1d4fce2fb1bdee1bfa5200bf5f1f3e654a5b602a294956ef14e55c9db51",
+          "raw_sha256": "6a7712c63b2afef5ebbae89008dc204ae7cf473c7848b46ac8db8bfd345e651f",
+          "retrieved_url": "https://web.archive.org/web/20210722170515/https://www.timeshighereducation.com/world-university-rankings/covenant-university",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:82",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "retain",
+      "reason": "uncertainty",
+      "event_key": "US excess mortality March\u2013July 2020 study",
+      "support_judgement": "Research discussion presents competing causes and limitations; it does not identify a lockdown causal contribution.",
+      "source_documents": [
+        {
+          "document_id": "98f6c25e4dec4ca84867160af6bfa1439ee52e00d09922e90f41cf85bc2c2141",
+          "raw_sha256": "b04fc2ea35f7b0c184a24559279171057edd38a0ac66250a9a4dddf56a4e0f5f",
+          "retrieved_url": "https://web.archive.org/web/20210310112506/https://jamanetwork.com/journals/jama/fullarticle/2771761",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2274",
+      "published_label": "Refuted",
+      "packet_status": "reject",
+      "reason": "boilerplate",
+      "event_key": "Obama book quotation",
+      "support_judgement": "Navigation and biography do not supply the disputed book passage.",
+      "source_documents": [
+        {
+          "document_id": "8fcf18a996dfecba030b706af4d1d61014d577bcf5a7efd5ad35ae6ec30233db",
+          "raw_sha256": "a915e17f4f9f6953d270d33ab4d5fb1c42a68af9779a513648dd21b9c5b8b419",
+          "retrieved_url": "https://en.wikipedia.org/wiki/Bibliography_of_Barack_Obama",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:202",
+      "published_label": "Supported",
+      "packet_status": "limited",
+      "reason": "time_and_extent",
+      "event_key": "Oregon mink outbreak",
+      "support_judgement": "Later advocacy text reports positive mink; timing and outbreak extent are unresolved.",
+      "source_documents": [
+        {
+          "document_id": "fc7a56f840dd1702276f8555e8240757c306d89ff47398eb3e338a6dda9a631c",
+          "raw_sha256": "4f352fa61f9f7c480f71754e375ef0b3b9b0f646c229f416e18ea305732f62f4",
+          "retrieved_url": "https://web.archive.org/web/20210308053429mp_/https://www.who.int/csr/don/06-november-2020-mink-associated-sars-cov2-denmark/en/",
+          "version_changed": false
+        },
+        {
+          "document_id": "d7504a6cab9a609c935352ef9b5ed6c42970e0c7093aa16503c1923d6b7e584d",
+          "raw_sha256": "b939684bb9f13f210c31d5d649edc2560ec34bfe07aeaa051d0db96b1e7f2a73",
+          "retrieved_url": "https://www.idausa.org/campaign/wild-animals-and-habitats/fur/latest-news/fur-covid-19/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:197",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "reject",
+      "reason": "verdict_leak",
+      "event_key": "Maxwell deposition list",
+      "support_judgement": "Mirrored fact-check text exposes a verdict even though the original locator is not a fact-check domain.",
+      "source_documents": [
+        {
+          "document_id": "7e9263fb6740da777ee34d0651807ae7d3ba627389291d491a702bc4e2e0c3b5",
+          "raw_sha256": "138a1cf839cdbc86a62e8ac8bee0fe03c40dc393433b99838c1049e51c26fe6c",
+          "retrieved_url": "https://web.archive.org/web/20210310203650/https://www.wsj.com/articles/court-unseals-documents-in-ghislaine-maxwell-lawsuit-related-to-jeffrey-epstein-11596180451",
+          "version_changed": false
+        },
+        {
+          "document_id": "5337bb478423da9650df42b243ed1f4308ccfac772ba9f8834c50e52fda5adaf",
+          "raw_sha256": "96c8f3a32f7dace5276945eded22ee3151d45687fe005aaa47ef24efc9645f83",
+          "retrieved_url": "https://web.archive.org/web/20220904035610/https://docs.google.com/spreadsheets/d/1FRlfyBhhXalg1WHvXRmevZDRFSZnw3fkY2XAmCKBJG0/edit?usp=sharing",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2153",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "limited",
+      "reason": "attribution_ambiguity",
+      "event_key": "Baghel membership",
+      "support_judgement": "Self-identification and independently established membership are different targets.",
+      "source_documents": [
+        {
+          "document_id": "587406be2d0b52f405a14afe5a4ce374ff4bfb6257bbd1676c7d5c3611b14dfe",
+          "raw_sha256": "d586a2fce7aa85924eca97ae48450439612894a7fbf5729afbfc6a9eecb74d54",
+          "retrieved_url": "https://web.archive.org/web/20190525073132/https://www.facebook.com/shubham.singhhindu.1",
+          "version_changed": false
+        },
+        {
+          "document_id": "3d8292b1923ec1da2f58727829f2a670c2d642c0c7287b0debc4eec21d4ff05f",
+          "raw_sha256": "c5fd7ae00698a280cdd2593e36608f6055b084ebc54131dc6671851a2c6ce821",
+          "retrieved_url": "https://indianexpress.com/article/india/madhya-pradesh-five-arrested-for-thrashing-three-including-two-muslims-for-carrying-meat-5747684/",
+          "version_changed": true
+        }
+      ]
+    },
+    {
+      "source_key": "train:584",
+      "published_label": "Refuted",
+      "packet_status": "limited",
+      "reason": "missing_negation",
+      "event_key": "Thyrocare closure",
+      "support_judgement": "Suspended testing does not by itself establish whether premises were sealed.",
+      "source_documents": [
+        {
+          "document_id": "1affc29315513550c17fe7320f3c4c5da1bc11336f004fa64ca05d0f07e76184",
+          "raw_sha256": "25ecf1b24c85477c8b40c6dc8b012e6a88ee2a0619ed853dc4b36bd031b25553",
+          "retrieved_url": "https://www.mumbaimirror.com/others/tmc-halts-thyrocare-covid-19-testing-in-thane-1266961",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2727",
+      "published_label": "Supported",
+      "packet_status": "limited",
+      "reason": "marginal_vs_joint",
+      "event_key": "England drinking survey",
+      "support_judgement": "Separate income and age margins do not establish a joint richer-older-men effect; oldest ages decline.",
+      "source_documents": [
+        {
+          "document_id": "6570cd6571caf87670d58ab68dbcb6c22157540ad6b2b3c64b86edc5b8d07566",
+          "raw_sha256": "2603a9b85ca96d59db5a09c6df00c08e22b7fccc041695ef9496080934e4e10f",
+          "retrieved_url": "https://web.archive.org/web/20201002163425/https://digital.nhs.uk/data-and-information/publications/statistical/statistics-on-alcohol/2019/part-4",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2896",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "limited",
+      "reason": "missing_payment_evidence",
+      "event_key": "poppy burning fine payment",
+      "support_judgement": "Fine and stated payment intentions do not establish the actual source of payment.",
+      "source_documents": [
+        {
+          "document_id": "8358bf7508a84521709a11bbcdeb31488e566d3fbca899347ad50432492a2424",
+          "raw_sha256": "9afc943255607acdad5128c211f44891bbd21a9adc6428ba6e82e6d104258dc6",
+          "retrieved_url": "https://www.bbc.com/news/uk-england-london-12664346",
+          "version_changed": true
+        },
+        {
+          "document_id": "b7eeb2c46a21ae1889d769f6a4cb5dd202494516712f2add6df37519828432fe",
+          "raw_sha256": "0b321155ede3d336c4812915d6293cccbb102958c3260bc72cdf539a61d322dd",
+          "retrieved_url": "https://www.express.co.uk/news/uk/233243/Court-fine-is-badge-of-pride-says-jeering-poppy-burner",
+          "version_changed": true
+        }
+      ]
+    },
+    {
+      "source_key": "train:468",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "retain",
+      "reason": "uncertainty",
+      "event_key": "Erickson Massihi press conference",
+      "support_judgement": "Named press conference and professional rebuttal establish the event but not the claimed platform ban or hoax wording.",
+      "source_documents": [
+        {
+          "document_id": "387eef3755ae705aa3422ecdcf3186974b2fde8485f3be3b87bbce3bf48fc9b8",
+          "raw_sha256": "084194fa3e7ef93044beab4003f6b4a5c5f62b9559a7eebcb468ccb46c97b30f",
+          "retrieved_url": "https://bakersfieldnow.com/news/coronavirus/accelerated-urgent-care-provides-statistical-update-on-covid-19",
+          "version_changed": false
+        },
+        {
+          "document_id": "b66fb0f4908a5eb75317520968b5d95c6fe521098eb320867deb1cf89ac2e195",
+          "raw_sha256": "6c4d8c90ccb46e6efe4bb31a33493300002e6e81f07a675feb506fd9cb6f952f",
+          "retrieved_url": "https://www.acep.org/corona/covid-19-alert/covid-19-articles/acep-aaem-joint-statement-on-physician-misinformation/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:422",
+      "published_label": "Refuted",
+      "packet_status": "limited",
+      "reason": "scope_and_date",
+      "event_key": "Haldiram import restrictions",
+      "support_judgement": "Resolved violations do not establish the all-products ban status at the target time.",
+      "source_documents": [
+        {
+          "document_id": "71d74e1b76d98445318157fde6c1ad07b20596e095d0a2320a075d76b4624919",
+          "raw_sha256": "b0ab8066b1514442f3ab2767dfb891db1ba09d61e46e01b7551f400d15e055a5",
+          "retrieved_url": "https://www.fda.gov/",
+          "version_changed": true
+        },
+        {
+          "document_id": "d5bd32d5e36cc6889f6fddb28bdef097005ce30eae68af177d872c75e399616d",
+          "raw_sha256": "30a04eb99b43f90cdeaa5c69172a7184b61e256e6f16d3e05c60d7196966771a",
+          "retrieved_url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/haldiram-snacks-pvt-ltd-525906-11172017",
+          "version_changed": true
+        }
+      ]
+    },
+    {
+      "source_key": "train:2520",
+      "published_label": "Supported",
+      "packet_status": "reject",
+      "reason": "missing_attribution",
+      "event_key": "Quentin Miller ICE statement",
+      "support_judgement": "Generic legal explanation does not establish the named speakers statement.",
+      "source_documents": [
+        {
+          "document_id": "ba79bf3d841046206912bf7f9cdf203a48fcb5c5f534eed5dd6a3516f272a314",
+          "raw_sha256": "98d1883a5eefd6730965ba3e5c3e512f6e93c4a5f7ef3ab3cd0b971586a72df1",
+          "retrieved_url": "https://www.aclum.org/what-are-ice-detainers/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:404",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "limited",
+      "reason": "missing_conjunct",
+      "event_key": "India rail privatization jobs",
+      "support_judgement": "Job-change statements do not resolve the full-privatization and job-loss conjunction.",
+      "source_documents": [
+        {
+          "document_id": "6bba5dcd326d9a5a5b5e066eeae707a06b560bb9a27e72e09dbadb0677504e45",
+          "raw_sha256": "24b2c2bad733dfc8a4f976bcd3c2cee26ab8c44d9eb5a8e4561e1658868c301d",
+          "retrieved_url": "https://www.livemint.com/news/india/no-job-cuts-but-profiles-may-change-says-indian-railways-11593790324156.html",
+          "version_changed": true
+        }
+      ]
+    },
+    {
+      "source_key": "train:2218",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "reject",
+      "reason": "wrapper",
+      "event_key": "Barr Congress testimony",
+      "support_judgement": "Clip interface and retail material omit the relevant testimony.",
+      "source_documents": [
+        {
+          "document_id": "c52cc15eb43880a7c1a2f07b2c89e0e09ad260238350033f5600b837f8f4d8de",
+          "raw_sha256": "ec02d96c9becf6df7240244b1c3f66db9a475c75e30f0c5be5e6f6cf5a91fa51",
+          "retrieved_url": "https://www.c-span.org/clip/senate-committee/user-clip-leahy-barr-exchange/4795359",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:153",
+      "published_label": "Refuted",
+      "packet_status": "limited",
+      "reason": "denominator_mismatch",
+      "event_key": "Tulsa rally attendance",
+      "support_judgement": "Recovered count is 6200 in general admission, not an unqualified total; cannot uniquely refute total 12000 from this passage.",
+      "source_documents": [
+        {
+          "document_id": "5a54b379486c02ccfa0fb307a7d4df6b44a91710c888381a605f0138c4214a53",
+          "raw_sha256": "6e42ebccbaf4792bb8c93f5c6e1f16850afe785437d92d4098a2a9f788419190",
+          "retrieved_url": "https://www.nbcnews.com/politics/2020-election/trump-furious-underwhelming-crowd-tulsa-rally-n1231674",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:682",
+      "published_label": "Supported",
+      "packet_status": "retain",
+      "reason": "supported",
+      "event_key": "European vitamin D ecological mortality study",
+      "support_judgement": "Reported observational correlation is supported; causal or clinical benefits are not inferred.",
+      "source_documents": [
+        {
+          "document_id": "8fb75a0972db55752323546b45aecdbe920f8ab129d983ae6d4bf271f9556a48",
+          "raw_sha256": "f56c92f69ab0d51dcabf0d0636056a1bf3aa52afce991856d9b3a67b47552a2b",
+          "retrieved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3294426/",
+          "version_changed": true
+        },
+        {
+          "document_id": "397fa684e4d4ba1b477984732634cf36b779f0d67ebeb78ec4a40a6d3facc9d0",
+          "raw_sha256": "a8073465b6c18f1413afd0b935335e6430109a5862b69bc38b155a3e9e90cfa0",
+          "retrieved_url": "https://www.webmd.com/covid/coronavirus",
+          "version_changed": true
+        },
+        {
+          "document_id": "56baeb612e2db6b5e89e3b7de7e188819212ae48a8e1f6b8ff95418814d5aead",
+          "raw_sha256": "f1c4d65e941320d36dbc1663af5ff8daee7449adc063db4dc2046306629c059c",
+          "retrieved_url": "https://www.tcd.ie/news_events/articles/association-between-vitamin-d-levels-and-mortality-from-covid-19/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:1249",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "reject",
+      "reason": "unavailable",
+      "event_key": "Evers prison population",
+      "support_judgement": "No usable captured source.",
+      "source_documents": []
+    },
+    {
+      "source_key": "train:1889",
+      "published_label": "Not Enough Evidence",
+      "packet_status": "reject",
+      "reason": "wrong_event",
+      "event_key": "Pune religious murder",
+      "support_judgement": "Captured story concerns a different auto-driver incident.",
+      "source_documents": [
+        {
+          "document_id": "1a3f92cd33222d27c5e1ba86e42d4dbfb4f4738070c9ea937ef6c34c013dc58c",
+          "raw_sha256": "861e78faad977356caddbb46ac388e1d297a0153d940713891e12a0c2a7febb8",
+          "retrieved_url": "https://punemirror.com/news/youth-murdered-over-public-urination/",
+          "version_changed": false
+        },
+        {
+          "document_id": "f261606a19d7f918bcee0d3073c0a90b7054f385be825bbef0bb8208fd3371d8",
+          "raw_sha256": "c0a294f6bb48406fc6ab3b1d4e7c11dc49e85a006e85da622e7b34e087756927",
+          "retrieved_url": "https://thebetterindia.com/109932/know-urinating-public-offense-india/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:1035",
+      "published_label": "Refuted",
+      "packet_status": "reject",
+      "reason": "unavailable",
+      "event_key": "automaker ventilator production",
+      "support_judgement": "No usable captured source.",
+      "source_documents": []
+    },
+    {
+      "source_key": "train:2904",
+      "published_label": "Supported",
+      "packet_status": "limited",
+      "reason": "terminology",
+      "event_key": "UK parking notices",
+      "support_judgement": "Private civil charges are distinguished, but police fixed penalties and council penalty notices are not interchangeable.",
+      "source_documents": [
+        {
+          "document_id": "cc245fdb8d099125852d83f45e11e5f5bf33ad3a7d08acc737942e9577d70a2a",
+          "raw_sha256": "008815d7283b675514e9fb0b79bdb83a5033165a9e33b988b53a7a08a1b66dc6",
+          "retrieved_url": "https://www.theaa.com/driving-advice/legal/penalty-charge-notice",
+          "version_changed": false
+        },
+        {
+          "document_id": "dc8d3b39b5815e8f8da4ad0fe7acd4d00709b6e84ec24b2718c73d6fa22611e6",
+          "raw_sha256": "f3b55058786c51ee1b081c87a6edab4287e038dac4008213641c2173a1e4049b",
+          "retrieved_url": "https://www.citizensadvice.org.uk/scotland/law-and-courts/parking-tickets/parking-tickets-on-private-land-s/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "dev:423",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "reject",
+      "reason": "wrong_target",
+      "event_key": "McSally Medicare votes",
+      "support_judgement": "Extracted congressional rows concern other representatives.",
+      "source_documents": [
+        {
+          "document_id": "67fcc48de84f374b52749898cb35796a4f84e67c618358991d43c48bd273cbb2",
+          "raw_sha256": "e48dc37cb861f63d9eb2ef1da30cb1f0580a8ae1148d14d506cd4424bae0ae75",
+          "retrieved_url": "https://clerk.house.gov/Votes/2017557",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2075",
+      "published_label": "Refuted",
+      "packet_status": "reject",
+      "reason": "missing_genre_and_target",
+      "event_key": "Boris Scotland quotations",
+      "support_judgement": "Satirical authorship context and the exact disputed statements are missing.",
+      "source_documents": [
+        {
+          "document_id": "7ad335be88c02fc54ec36cb26caeed50a6dc54aed1269432abc6f8b5de759d73",
+          "raw_sha256": "34ae729cb443058aebb6165f9af9a40f09fc8d8fc8b29f8af4a41b44e15130c7",
+          "retrieved_url": "https://www.thenational.scot/politics/17699316.need-tax-grievance-monkey-unwashed-jocks-squeak/",
+          "version_changed": true
+        }
+      ]
+    },
+    {
+      "source_key": "train:799",
+      "published_label": "Supported",
+      "packet_status": "retain",
+      "reason": "supported",
+      "event_key": "early COVID sex fatality reporting",
+      "support_judgement": "Historical descriptive male fatality pattern is supported; biological cause and current universality are not inferred.",
+      "source_documents": [
+        {
+          "document_id": "ab7ee546032e0b18b0112d376baedf802253998314301a4ac2a5d0393d5f64ef",
+          "raw_sha256": "2bdb1dbd6ba47eb134b7f9214165659f0c50eedd0dcb315020e3c87cdcd77a34",
+          "retrieved_url": "https://www.news-medical.net/news/20200429/Men-are-twice-more-likely-to-die-of-COVID-19-than-women.aspx",
+          "version_changed": false
+        },
+        {
+          "document_id": "e4f85c5fb5f25c4e070bededfd5dabd936c968689c267ce3345667a40f0b9ad9",
+          "raw_sha256": "e9f08123642cd47edc91df69fadcac71f68b316c3f3a701e34de962ba0026235",
+          "retrieved_url": "https://theconversation.com/why-do-more-men-die-from-coronavirus-than-women-136038",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:1786",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "reject",
+      "reason": "boilerplate",
+      "event_key": "mosque demolition",
+      "support_judgement": "Only unrelated sidebar headlines were captured.",
+      "source_documents": [
+        {
+          "document_id": "2af31d6bd86968ec9a3db53c9a90c1153e97fabc31fc8bc81018795eb4f857b6",
+          "raw_sha256": "a17911acd2b0162cf4ff901707de71e2c8155e1c5c0b5681578739d88d4a4a17",
+          "retrieved_url": "https://www.thecable.ng/controversy-trails-demolition-of-mosque-in-rivers/",
+          "version_changed": true
+        },
+        {
+          "document_id": "b52d2c56390fc3912dc4856e5174fe4a5e6731ca0c445b2f25c348895d2a52b9",
+          "raw_sha256": "e7167debae99693e0a33501057e9d41b5e29fcca5d67b4efc2edb503baff3987",
+          "retrieved_url": "https://dailytrust.com/rivers-govt-muslim-community-bicker-over-rainbow-mosque/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2466",
+      "published_label": "Refuted",
+      "packet_status": "reject",
+      "reason": "essential_modality_missing",
+      "event_key": "Indian passport images",
+      "support_judgement": "Claim depends on images absent from the text packet despite nominal text metadata.",
+      "source_documents": [
+        {
+          "document_id": "a2753057362ec4b87498d1d6cfa69112e8ed7e3fccd0ec039623ff530ec55922",
+          "raw_sha256": "a1bb2b47b7aa91338bbd5635be97c9e7fcc5b457364a3a71323dd1de82871702",
+          "retrieved_url": "https://www.financialexpress.com/life/travel-tourism-indians-to-get-e-passport-soon-salient-facts-security-features-of-new-chip-based-passport-1451703/",
+          "version_changed": false
+        },
+        {
+          "document_id": "ae4e20f4be887c739545cae78c9263b72e4246d3a9aee094b2e0c355e9b41791",
+          "raw_sha256": "7a35931a78cba2b6334c3f2928f08d47a10e048ed591d5cf332fa6ff436dc957",
+          "retrieved_url": "https://www.easemytrip.com/blog/e-passports-in-india",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:2288",
+      "published_label": "Supported",
+      "packet_status": "reject",
+      "reason": "unavailable",
+      "event_key": "Kenya two-year land requirement",
+      "support_judgement": "No usable captured source.",
+      "source_documents": []
+    },
+    {
+      "source_key": "train:1304",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "packet_status": "limited",
+      "reason": "label_ambiguity",
+      "event_key": "Bryant trademark dispute",
+      "support_judgement": "Legal dispute is supported; rhetorical company-size wording does not uniquely establish conflict.",
+      "source_documents": [
+        {
+          "document_id": "5f9aeb5806c9b3b054f7816471aeaeb225768ee78e7ea633bda209a8aaea96e1",
+          "raw_sha256": "7d22c8c615b6eb9c17270cd81417332e614834052db9ddd3241c019d257cba6a",
+          "retrieved_url": "https://theblast.com/27305/kobe-bryant-nba-legend-black-mamba-trademark-battle-pharma-company-shut-down-trial-instagram-beyonce-blue-ivy/",
+          "version_changed": false
+        },
+        {
+          "document_id": "18332cc3590b944f8703f9e56eed221031cb3155d606bf3a8c25c4bfefa2a09c",
+          "raw_sha256": "e6253086cf86d170dfe09237ebaf58d8c74a109a0fd9a9231fded8360597fb2e",
+          "retrieved_url": "https://finance.yahoo.com/personal-finance/",
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "source_key": "train:1762",
+      "published_label": "Refuted",
+      "packet_status": "limited",
+      "reason": "population_and_extent",
+      "event_key": "firms leaving China tariffs",
+      "support_judgement": "Sources distinguish partial relocation and US firms; they do not quantify the global claim.",
+      "source_documents": [
+        {
+          "document_id": "cd73a756c94112e0519f1b100be6b5b11e7814d87f86744da2b304a6578159c9",
+          "raw_sha256": "cb723cace85fe0c8d1d9284f18e3442744201b91c54842b468a7555ddd62f7c4",
+          "retrieved_url": "https://www.cnbc.com/2019/09/01/trump-ordered-us-firms-to-ditch-china-but-many-already-have.html",
+          "version_changed": false
+        }
+      ]
+    }
+  ]
+}

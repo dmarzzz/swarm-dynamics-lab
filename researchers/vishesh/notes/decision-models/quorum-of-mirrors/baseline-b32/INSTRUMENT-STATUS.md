@@ -1,0 +1,11 @@
+# B32 instrument preparation and accounting repair
+
+2026-10-04. Prospective offline repair, before implementation below; no native call authorized.
+
+The request/fork engine is implemented, but it is not an admitted production launcher. It projects actor fields, records all 20 assigned slots, rotates evidence order, creates shared-parent peer/private continuations, retains distinct claims on the same source, records actor requests and returned messages, reserves before dispatch, and stops without retries. Schema/literal citation validity does not grade semantic entailment.
+
+An offline review found an accounting measurement gap: a response with a cost but missing token counts could previously pass. Require finite nonnegative integer input/output counts within 4000/2048 after retaining the known cost, preserving uncertainty only when the cost is unknown. Add a safe finite error-code vocabulary so an accounting/schema error is diagnosable without printing provider headers or exception payloads. These changes do not tune scientific prompts or board construction against the inspected cases. The earlier whole-file prompt-freeze hash remains historical; retain a hash of that exact file plus unchanged prompt-function hashes when publishing the revision.
+
+Before a production run, integrate and test actual current-admission and original-study/project-ledger adapters, exact model-tokenizer/message/schema overhead, current route price/parameter support, actual served provider metadata, immutable public registration, approved exclusive allocation, and finalization. Stub receipts in unit tests are not admission evidence. Transport implements OpenRouter Responses with the requested OpenAI-only route, exact GPT-6 Sol and medium reasoning; it has not been qualified natively. Do not assume a passing fake transport proves API compatibility.
+
+The full peer board retains up to six schema-valid reports. Its worst-case size is not yet proven to fit the 4000-input-token cap. Runtime refuses overflow rather than truncating or raising the cap. Native funding is premature until deterministic worst-case context tests and tokenizer verification pass; resolve by a prospective bounded report contract or a separately costed context allowance, then freeze before fresh evaluation curation. Existing inspected packets are development material.

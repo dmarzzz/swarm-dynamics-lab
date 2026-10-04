@@ -103,3 +103,8 @@ Audited the eight previously retained external-label controls:6 defensible for s
 ## Scientific baseline policy correction
 
 Baseline GAP:20 authored SP-02 roots/five mechanisms, one final-interface execution, no same-contract fresh replication; realistic native event n0. Previous offline audit did not establish a robust semantic negative. Prepared B32 replacement:8 qualification and32 evaluation event clusters, two fresh executions, one/six-agent controls with matched peer/private forks. Allocation/precision arithmetic checked offline; corpus and runtime not yet complete. No new calls, allocation or funded authority. Research direction no longer parked solely on portfolio shortlist or replayability.
+
+
+## B32 concrete source capture and fork instrument
+
+Captured 59 of 87 source locations and audited all 40 selected claims. Five retain defensible excerpt-conditioned labels, 16 remain limited and 19 are rejected. Published original-label/support/event distinctions, source binding manifest and five development packets' validation metadata; raw articles and actor passages remain in a verified private local archive. All inspected cases are development-only, not held-out evaluation. Implemented the 20-call fork engine, repaired known-cost token measurement and safe diagnostics; 19 offline tests pass. Current board size still needs tokenizer/contract repair, alongside authentic ledger/admission integration. No native call, allocation, reservation or funded authority. Continue offline work; neither the B32 proposal nor R60 is launched. No rejected cross-task spending disclosure was retried.
