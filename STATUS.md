@@ -393,7 +393,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:23:16.963943+00:00 | SP-01 span repair qualification reviewed and closed; no evaluation dispatched |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:31:03.068871+00:00 | SP-02 quote-only repair reviewed and closed; no main evaluation |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc11-sol | 2026-10-04 20:20:22.452084+00:00 | PC11 qualified and120-decision ten-agent pilot reviewed; no spread in one world, exposure1.193795490, allocation released |
 | vishesh/codex-decision-models | working | right-dissenter-freshness-diagnostic | 2026-10-04 20:20:19.112342+00:00 | Implementing the approved 48-request freshness diagnostic and strong eligibility baseline. |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Forty-agent Haiku panel authorized under USD20 total; native admission preparation |
