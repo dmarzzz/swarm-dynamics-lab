@@ -14,14 +14,14 @@
 | sync-consensus | 255 | 25 | 11 | 17 | 1 | 28 | 337 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
-| llm-agent-swarms | 587 | 128 | 115 | 199 | 47 | 14 | 1090 |
+| llm-agent-swarms | 592 | 128 | 115 | 199 | 47 | 14 | 1095 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
 | fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
 | agent-budgets | 57 | 2 | 7 | 0 | 0 | 0 | 66 |
-| decision-models | 9 | 3 | 4 | 2 | 0 | 0 | 18 |
+| decision-models | 14 | 3 | 4 | 2 | 0 | 0 | 23 |
 | dissent | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 
 ## Tasks
@@ -47,7 +47,6 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:35Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc2-design](tasks/phantom-coast-pc2-design.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:38Z | Iterate Phantom Coast after the native ceiling result |
-| [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | claimed | p1 | survey | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:32Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:27Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:37Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -71,6 +70,7 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
+| [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T04:45Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -231,6 +231,7 @@
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
 | vishesh/codex-theseus | done | theseus-rule-diagnosis | 2026-10-04T04:44Z | Saved-evidence diagnosis complete and published; no additional model calls |
+| vishesh/codex-quorum-mirrors | idle | quorum-mirrors-research-gates | 2026-10-04T04:44:47.736637+00:00 | Research packet and review amendments published; survey saturation and formal acceptance remain open |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:43Z | Published Quorum and Poietic design reviews and routed concrete revisions to Vishesh. |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T04:41Z | Iteration 3 matched approval-review diagnostic; 27 tests and 30/30 scripted checks pass; exclusive PR134 allocation, existing quota retained; native deployment underway |
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
@@ -257,7 +258,6 @@
 | shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc2-design | 2026-10-04 04:29:32+00:00 | Reviewing native ceiling and preparing prospective adaptive observation contract |
-| vishesh/codex-quorum-mirrors | done |  | 2026-10-04 04:28:00.449691+00:00 | Iteration 3 published; S1 pending research gates and review-quorum-mirrors-qm3 |
 | vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04 04:27:46.239298+00:00 | Recovered verified idle Dmarz fleet host sim-shadow, exclusive claim through 05:30Z; deploying Q1 under original approved cap. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
@@ -349,7 +349,7 @@
 | [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
 | [sim-environments](surveys/sim-environments.md) | dmarz | in-progress | 152 | 0 |
 | [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
-| [vishesh-decision-models](surveys/vishesh-decision-models.md) | vishesh | in-progress | 22 | 9 |
+| [vishesh-decision-models](surveys/vishesh-decision-models.md) | vishesh | in-progress | 32 | 1 |
 
 ## Hypotheses
 
