@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: working
+state: done
 task: null
-doing: Developing Telephone design, research and dataset resource documentation.
-updated: 2026-10-04T18:16Z
+doing: Published Telephone T0 design, six background sources and canonical AI Village resource links.
+updated: 2026-10-04T18:31Z
 ---
 
 ## Notes
