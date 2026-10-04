@@ -17,3 +17,7 @@ Readiness checklist:
 - Public admission, dedicated allocation and PI funding: absent; launch blocked.
 
 The smallest scientifically useful question is whether a blind second reading blocks errors that a proposal-conditioned checker accepts, at the same two-call service cost. This is potentially more informative than another larger voter panel, but current readiness is insufficient for a paid decision. The existing negative is complete and remains the baseline. The next permitted action is offline intake and adjudication, not a native launch or architecture sweep.
+
+## New offline intake
+
+The historical gaps above are superseded only where supported by [the48candidate manifest](INTAKE-MANIFEST.json) and [R1packet proposal](R1-PACKET-PROPOSAL.md). Initial source-only assessment found45annotation agreements,2uncertain targets and1quarantined discrepancy, across35provisional families. No full corpus freeze or independent adjudication is claimed. Separate B1 is replaced prospectively by an excluded readiness prefix; no calls funded or launched.

@@ -1,0 +1,7 @@
+# Prospective offline intake protocol
+
+2026-10-04, before new candidate pixels or labels are inspected. Initial feasibility intake remains capped at24per source (48total); this cannot fill a56-unit R1 packet and will not be represented as doing so. A larger predeclared intake is required only if this first tranche supports feasibility. No model calls.
+
+CORD revision7f0115a4b758a71d6473b8d085751692da2fef98, train shard1 (second shard), and the SROIE participant release27be4271b251c256f695acbade9a801bffe85994 are pinned. The latter is a corrected participant mirror, not an independently verified authoritative competition release; retain that provenance limit. Select first24 per source by SHA256 of `antsy-blind-intake-v1|source|source-id`. Retain selected IDs before download/inspection. Separate images from annotation files. Source-only assessment precedes reading total annotations. No paid model annotator; same-operator first pass is explicitly not independent adjudication.
+
+Record visible token/label or uncertainty, quality, apparent source locale/currency and merchant/layout family from pixels. Do not force exactly half of each quality class. Preserve unfilled strata, unresolved totals and unavailable annotations. Candidate selection never depends on experimental model performance. Later compare source-only findings with annotations; disagreements remain unresolved absent a distinct blinded adjudication. Only anonymized IDs, hashes and safe aggregate findings enter public Git.
