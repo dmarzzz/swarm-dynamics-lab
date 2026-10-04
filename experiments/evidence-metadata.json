@@ -6,7 +6,7 @@
   "studies": [
     {
       "id": "quorum-of-mirrors",
-      "title": "Quorum of Mirrors \u2014 repeated reports versus independent sources",
+      "title": "Quorum of Mirrors — repeated reports versus independent sources",
       "documents": [
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md"
       ],
@@ -19,7 +19,7 @@
         "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
         "rationale": "The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy."
       },
-      "sample_size_summary": "S0: 8 bit triples \u00d7 2 reliability settings \u00d7 2 identical-request samples = 16 configurations, 32/32 valid calls, 29 MAP-correct; not 32 independent worlds. S1 not run.",
+      "sample_size_summary": "S0: 8 bit triples × 2 reliability settings × 2 identical-request samples = 16 configurations, 32/32 valid calls, 29 MAP-correct; not 32 independent worlds. S1 not run.",
       "sources": [
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json"
@@ -41,7 +41,7 @@
         "claim": "Native Jev passed the clean synthetic mapping screen; the history-persistence effect remains unestablished.",
         "rationale": "All 18 clean maps were valid and correct across six generated worlds. This qualifies the clean mapping contract only; 648 cell choices and three observers per world are dependent, and no history-persistence cohort result is tracked at this cutoff."
       },
-      "sample_size_summary": "Q0: 6 world roots \u00d7 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked.",
+      "sample_size_summary": "Q0: 6 world roots × 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked.",
       "sources": [
         "researchers/vishesh/notes/phantom-coast/LIVE-PLAN.md",
         "researchers/vishesh/notes/phantom-coast/reviews/Q0-A1-POST.md",
@@ -103,7 +103,7 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints.",
-        "rationale": "Planned roots derive from 2 families \u00d72 structures \u00d78 roots and1 transfer family \u00d72 structures \u00d78 roots; population N=1/2/4/8/16. Fits/validation share no roots; profiles, sizes and repetitions are dependent within roots."
+        "rationale": "Planned roots derive from 2 families ×2 structures ×8 roots and1 transfer family ×2 structures ×8 roots; population N=1/2/4/8/16. Fits/validation share no roots; profiles, sizes and repetitions are dependent within roots."
       },
       "sample_size_summary": "No model runs. Planned 32 core roots and 16 transfer roots; 2,512 episodes including 80 qualification and 512 fresh policy trials (3,792 with optional extension).",
       "sources": [
@@ -149,7 +149,7 @@
         "claim": "Supplied procedure notes can preserve this small task performance after complete crew replacement; mentoring adds no established benefit.",
         "rationale": "Tiny constructed feature space, supplied useful rules and note copying create ceiling effects; no evidence of emergent culture or mentoring advantage. Generations, members and cases are dependent within world."
       },
-      "sample_size_summary": "S1:6 paired worlds (2 per3 scenarios) \u00d7 6 arms =36/36 trajectories; 3 members per world. Across qualification/S1:68 completed,4 failed of72 started.",
+      "sample_size_summary": "S1:6 paired worlds (2 per3 scenarios) × 6 arms =36/36 trajectories; 3 members per world. Across qualification/S1:68 completed,4 failed of72 started.",
       "sources": [
         "researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
       ],
@@ -170,7 +170,7 @@
         "claim": "The first v2 native screen failed action competence; procedure-continuity effects remain untested.",
         "rationale": "Execution completed without invalid or missing responses, but explicit-rule and learner cells failed unchanged competence floors. These are observed rule-application errors, not evidence of cultural loss. A bounded repair on fresh seeds is planned; S1 was not started."
       },
-      "sample_size_summary": "S0: 6 scenario/world roots (2 per 3 scenarios) \u00d7 2 readers = 12/12 two-checkpoint runs; 24 calls, 144 dependent decisions. Qualification failed; 24-continuation S1 not started.",
+      "sample_size_summary": "S0: 6 scenario/world roots (2 per 3 scenarios) × 2 readers = 12/12 two-checkpoint runs; 24 calls, 144 dependent decisions. Qualification failed; 24-continuation S1 not started.",
       "sources": [
         "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-post.md",
         "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/summary.json",
@@ -203,7 +203,7 @@
         "claim": "Oracle restoration repairs private/shared-state contamination in a programmed fixture.",
         "rationale": "Deterministic engineering evidence only; names/ownership are permuted within a tightly specified fixture. Native v1 completion is not established by these sources."
       },
-      "sample_size_summary": "Scripted S0:1 task \u00d7 3 strata \u00d7 6 arms =18 outcomes; S1:2 tasks \u00d7 3 strata \u00d7 6 arms =36 outcomes; 8 actors and24 rounds per trajectory.",
+      "sample_size_summary": "Scripted S0:1 task × 3 strata × 6 arms =18 outcomes; S1:2 tasks × 3 strata × 6 arms =36 outcomes; 8 actors and24 rounds per trajectory.",
       "sources": [
         "researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md",
         "researchers/vishesh/notes/actual-experiments/immune-response/preregistration-v1.md"
@@ -227,7 +227,7 @@
         "claim": "Untested efficacy question: shared restoration contributes beyond private repair and stale-record blocking.",
         "rationale": "Single native task and failed primary comparator prevent a robust LLM effect estimate; programmed equal results across incident strata do not demonstrate breadth."
       },
-      "sample_size_summary": "Scripted:256 S1 outcomes from8 task IDs \u00d7 4 strata \u00d7 8 arms. Native:one shared-evidence task,8 arm outcomes with1 contract failure.",
+      "sample_size_summary": "Scripted:256 S1 outcomes from8 task IDs × 4 strata × 8 arms. Native:one shared-evidence task,8 arm outcomes with1 contract failure.",
       "sources": [
         "researchers/vishesh/notes/actual-experiments/immune-response/README.md",
         "researchers/vishesh/notes/actual-experiments/immune-response/RESULTS-v2.md",
@@ -252,7 +252,7 @@
         "claim": "Selective repair mechanisms behave as designed across synthetic recurrence, benign-learning and missing-lineage cases.",
         "rationale": "Scripted mechanisms and oracle incident labels establish fixture behavior only. Eight actors and 24 rounds per episode are not replicates. Current family status belongs to later scenario/receipt studies, not this completed cohort."
       },
-      "sample_size_summary": "Engineering:16 task roots \u00d7 5 strata \u00d7 9 arms =720 outcomes; native task6700 was not run.",
+      "sample_size_summary": "Engineering:16 task roots × 5 strata × 9 arms =720 outcomes; native task6700 was not run.",
       "sources": [
         "researchers/vishesh/notes/immune-response-v3/README.md",
         "researchers/vishesh/notes/immune-response-v3/design.json",
@@ -303,7 +303,7 @@
         "claim": "Untested efficacy question: fact-checking frozen reviewer recommendations improves commander recovery beyond generic caution and identical raw evidence.",
         "rationale": "Wrong-account interruption is a process failure, preserved separately from three completed outcomes. No treatment effect or resumed authorization follows from partial data; reviewers are shared within raw/checked pairs."
       },
-      "sample_size_summary": "Native diagnostic:16 assigned;3 complete,1 partial,12 unstarted. Four related cases \u00d7 2 memory states \u00d7 2 paired receipt arms; no completed qualification.",
+      "sample_size_summary": "Native diagnostic:16 assigned;3 complete,1 partial,12 unstarted. Four related cases × 2 memory states × 2 paired receipt arms; no completed qualification.",
       "sources": [
         "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md",
         "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md"
@@ -377,7 +377,7 @@
         "claim": "The unchanged local 0.6B and 1.7B replacements failed bounded workflow qualification; attack resistance remains untested.",
         "rationale": "Q0 and D0 produced no valid teams; Q1 produced three valid teams but only two correct decisions. Invalid teams leave harm unknown. Model, profiles and future schema repair differ across attempts, so their counts must remain separate; no matched efficacy or broad model ranking follows."
       },
-      "sample_size_summary": "Q0/Q1 each use 3 domain roots \u00d7 2 cases: 0/6 and 3/6 valid teams (Q1: 2 correct). D0: 0/4 valid historical procurement cases. 87 calls across attempts; main S1 unrun.",
+      "sample_size_summary": "Q0/Q1 each use 3 domain roots × 2 cases: 0/6 and 3/6 valid teams (Q1: 2 correct). D0: 0/4 valid historical procurement cases. 87 calls across attempts; main S1 unrun.",
       "sources": [
         "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q0-post.md",
         "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q1-post.md",
@@ -433,7 +433,7 @@
         "claim": "Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence.",
         "rationale": "Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled."
       },
-      "sample_size_summary": "Q4:4 authored dossiers \u00d7 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers \u00d7 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0\u2013Q3 retained separately. Main comparison unrun.",
+      "sample_size_summary": "Q4:4 authored dossiers × 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers × 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0–Q3 retained separately. Main comparison unrun.",
       "sources": [
         "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
         "researchers/vishesh/notes/influence-swarms/scenario/README.md",
@@ -457,7 +457,7 @@
         "claim": "Sharing withdrawal notices improves recovery in the programmed evidence atlas with qualified extraction.",
         "rationale": "Exact and Jev trajectories coincide on engineered fixtures; source authenticity and withdrawals supplied. Three corpora and programmed forwarding do not establish autonomous research or heterogeneous-head superiority. Earlier pilot01/02 each completed36 exact worlds and left108 model worlds not-run."
       },
-      "sample_size_summary": "Pilot03:3 paired synthetic corpora \u00d7 3 policies \u00d7 4 scenarios \u00d7 5 extractor definitions =180 assigned;72 exact/Jev worlds complete,108 Qwen-derived not-run.",
+      "sample_size_summary": "Pilot03:3 paired synthetic corpora × 3 policies × 4 scenarios × 5 extractor definitions =180 assigned;72 exact/Jev worlds complete,108 Qwen-derived not-run.",
       "sources": [
         "researchers/vishesh/notes/healing-helping-hands/README.md",
         "researchers/vishesh/notes/healing-helping-hands/results-summary.json",
@@ -487,7 +487,7 @@
         "claim": "No scenario met the peer-verified utility rule against central append; the observed capped-mesh disadvantage is specific to these reused fixtures and unequal transport mechanisms.",
         "rationale": "No scenario met the prospective peer-verified utility rule; valid adverse result. Central bulk reads and capped mesh packets are unequal, metadata authentication is supplied, and corpus reuse precludes independent semantic replication. Reporting failure repaired retrospectively without rerunning computation."
       },
-      "sample_size_summary": "Practical01:3 reused corpora \u00d7 2 placements \u00d7 6 scenarios \u00d7 5 policies =180/180 worlds;36 paired event blocks;0 new model calls.",
+      "sample_size_summary": "Practical01:3 reused corpora × 2 placements × 6 scenarios × 5 policies =180/180 worlds;36 paired event blocks;0 new model calls.",
       "sources": [
         "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
         "researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md"
@@ -510,7 +510,7 @@
         "claim": "Increasing mesh capacity improves this programmed delivery protocol, but it does not outperform the version-aware central index.",
         "rationale": "The complete paired cap-4 versus cap-16 diagnostic preserves three reused corpora and all five policies. Capacity buys lower error and better retention through more traffic; unequal central/mesh transport and reused extraction tapes prevent an equal-resource or fresh-model benefit claim. The adverse strong-baseline comparison remains valid."
       },
-      "sample_size_summary": "Practical02: same 3 corpora \u00d7 2 placements \u00d7 6 scenarios \u00d7 5 policies = 180/180 worlds; cap 4\u219216. Together both capacities yield 360 dependent worlds, 0 new model calls.",
+      "sample_size_summary": "Practical02: same 3 corpora × 2 placements × 6 scenarios × 5 policies = 180/180 worlds; cap 4→16. Together both capacities yield 360 dependent worlds, 0 new model calls.",
       "sources": [
         "researchers/vishesh/notes/healing-helping-hands/practical/POST-02.md",
         "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
@@ -543,7 +543,7 @@
         "claim": "Fixed and adaptive quorum policies tied on the tested evidence tapes; the small fixture does not establish an adaptive stopping advantage.",
         "rationale": "Fixed/adaptive policies tied; shared full tapes mean outcomes are paired. Source independence supplied, not detected. Small synthetic qualification does not establish adaptive advantage."
       },
-      "sample_size_summary": "Per backend:6 task clusters \u00d7 3 worlds \u00d7 2 deadlines \u00d7 4 policies =144 outcomes; scripted andLaya both complete.",
+      "sample_size_summary": "Per backend:6 task clusters × 3 worlds × 2 deadlines × 4 policies =144 outcomes; scripted andLaya both complete.",
       "sources": [
         "researchers/vishesh/notes/adaptive-quorum/results/S0.md",
         "researchers/vishesh/notes/adaptive-quorum/README.md"
@@ -587,7 +587,7 @@
         "claim": "Adaptive thresholds trade abstention against late correction or misinformation in the guarded factual selector.",
         "rationale": "Every learned-policy choice matched symbolic control; guarded host logic limits AI claims. Twelve engineered clusters are the task diversity, not 2,688 independent outcomes. Rendering failure and exact-prefix recovery preserved."
       },
-      "sample_size_summary": "S1:12 task clusters \u00d7 2 populations \u00d7 2 deadlines \u00d7 4 worlds \u00d7 2 schedules =384 paired blocks;7 policies \u21922,688 outcomes. Q2:22/22 pass.",
+      "sample_size_summary": "S1:12 task clusters × 2 populations × 2 deadlines × 4 worlds × 2 schedules =384 paired blocks;7 policies →2,688 outcomes. Q2:22/22 pass.",
       "sources": [
         "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
         "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/results/S1/summary.json"
@@ -654,7 +654,7 @@
         "claim": "The added Laya heads did not improve final routing quality on this one map; both model arms remained far below exact routing on shortest paths.",
         "rationale": "Descriptive trajectories only; model arms share100%valid but6.5%shortest final routes, so fast recovery to poor quality is not advantage. Hybrid adds compute and sees Qwen proposals. Missing original public registration is preserved separately."
       },
-      "sample_size_summary": "One fixed map \u00d7 3 architectures \u00d7damage/control =6/6 worlds;200 cell identities,80 rounds. No replicated map sample.",
+      "sample_size_summary": "One fixed map × 3 architectures ×damage/control =6/6 worlds;200 cell identities,80 rounds. No replicated map sample.",
       "sources": [
         "researchers/vishesh/notes/regrowth-200/README.md"
       ],
@@ -675,7 +675,7 @@
         "claim": "Scripted recovery and communication mechanics work at increasing logical population size.",
         "rationale": "Programmed repair, synthetic identities and environment audits do not establish LLM benefit; small recovery difference descriptive. Large logical population is a capacity check, not large independent sample."
       },
-      "sample_size_summary": "45 scripted worlds:15v0.1 scale (5sizes \u00d7 3topologies),15recovery (5paired seeds \u00d7 3arms),15v0.2 consensus checks;one scale seed per condition.",
+      "sample_size_summary": "45 scripted worlds:15v0.1 scale (5sizes × 3topologies),15recovery (5paired seeds × 3arms),15v0.2 consensus checks;one scale seed per condition.",
       "sources": [
         "tooling/avalon-swarm/RESULTS.md"
       ],
@@ -694,7 +694,7 @@
         "claim": "Deduplicating repeated sources changes programmed majority decisions on generated binary signals.",
         "rationale": "Scenario-cluster bootstrap describes the toy sampling only. This is a reproducible analysis example, not LLM evidence or confirmation of the prospective research hypothesis."
       },
-      "sample_size_summary": "60 scenario clusters \u00d7 4 fresh repetitions \u00d7 4 scripted conditions =960/960 worlds;4,800 dependent agent decisions,0 model calls.",
+      "sample_size_summary": "60 scenario clusters × 4 fresh repetitions × 4 scripted conditions =960/960 worlds;4,800 dependent agent decisions,0 model calls.",
       "sources": [
         "tooling/agent-experiments/examples/collective-sensing/RESULTS.md"
       ],
@@ -717,7 +717,7 @@
         "claim": "The six-world corrected qualification is executable and exposes a memory-coverage defect; it does not estimate discussion protection.",
         "rationale": "Six repaired development worlds; contamination disappeared before discussion, creating a ceiling. The 48 correct decisions and 47 correct parents support bounded execution and a memory-coverage failure, not discussion protection. Earlier failed attempts stay separate."
       },
-      "sample_size_summary": "6 worlds \u00d7 2 exposures \u00d7 4 doses = 48 completed episodes; 3 actors, 1,020 calls.",
+      "sample_size_summary": "6 worlds × 2 exposures × 4 doses = 48 completed episodes; 3 actors, 1,020 calls.",
       "sources": [
         "researchers/dmarz/notes/discussion-dose/RESULTS-AND-REFLECTION.md",
         "researchers/dmarz/notes/discussion-dose/experiment.yaml"
@@ -739,7 +739,7 @@
         "claim": "More difficult source conflicts enable a descriptive discussion-dose comparison.",
         "rationale": "Calibration levels reuse worlds and are not independent samples. Only six fresh worlds support the dose comparison; four attacked-dose outcomes are invalid and claims/votes may disagree. Selection of H4 was developmental; no confirmatory effect is established."
       },
-      "sample_size_summary": "Calibration: 12 shared worlds \u00d7 6 levels \u00d7 2 exposures = 144 episodes; dose pilot: 6 fresh worlds, 48 episodes (44 valid).",
+      "sample_size_summary": "Calibration: 12 shared worlds × 6 levels × 2 exposures = 144 episodes; dose pilot: 6 fresh worlds, 48 episodes (44 valid).",
       "sources": [
         "researchers/dmarz/notes/discussion-dose/RESULTS-V2.md",
         "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
@@ -761,7 +761,7 @@
         "claim": "The small board-versus-private diagnostic reports a descriptive contrast; an incremental protective discussion effect remains unresolved.",
         "rationale": "Clean decisions pass this small screen, but one board episode is invalid and the contrast rests on two worlds. The descriptive interval includes zero; private reflection itself is active and v2 probes were independently sampled. A general peer-effect claim is unresolved."
       },
-      "sample_size_summary": "6 paired worlds \u00d7 2 exposures \u00d7 2 modes = 24 episodes; 23 valid, 1,015 calls.",
+      "sample_size_summary": "6 paired worlds × 2 exposures × 2 modes = 24 episodes; 23 valid, 1,015 calls.",
       "sources": [
         "researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md"
       ],
@@ -804,7 +804,7 @@
         "claim": "On this model and contract, repeated probes preserved checkpoint votes; the failed clean gate prevents an attack-protection claim.",
         "rationale": "Exact replay and complete observations show near-deterministic repeated probes on this contract, but reports-only clean competence is 2/12 and mostly abstention. Attack-harm/protection interpretations are not supported by the degenerate baseline; this is a component diagnostic."
       },
-      "sample_size_summary": "12 worlds (6 per stratum) \u00d7 2 exposures \u00d7 3 arms = 72 episodes, 936 calls.",
+      "sample_size_summary": "12 worlds (6 per stratum) × 2 exposures × 3 arms = 72 episodes, 936 calls.",
       "sources": [
         "researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md"
       ],
@@ -877,7 +877,7 @@
         "claim": "The completed controlled comparison describes verifier/admission effects on synthesis within one constructed graph family.",
         "rationale": "Qualified, complete 12-world pilot supports the bounded strong-check/weak-check tradeoff; a single model, graph family and fixed fabrication do not generalize. The badge interval spans harm and benefit, so badge efficacy remains unresolved."
       },
-      "sample_size_summary": "12 paired worlds \u00d7 16 conditions = 192 valid S1 answers; 24 Q0 packets; 36 simulated identities and 1 model synthesizer.",
+      "sample_size_summary": "12 paired worlds × 16 conditions = 192 valid S1 answers; 24 Q0 packets; 36 simulated identities and 1 model synthesizer.",
       "sources": [
         "researchers/dmarz/notes/sybil-specialists-api/README.md",
         "researchers/dmarz/notes/sybil-specialists-api/results-summary.json",
@@ -902,7 +902,7 @@
         "claim": "The completed controlled sweep describes verification-resource and admission-policy effects on specialist accuracy in one graph family, not an equal-cost coverage advantage.",
         "rationale": "Complete qualified results and clustered intervals support the fixture-specific unequal-verification-budget effect. Equal-budget random reaches the same accuracy; plurality is a strong comparator. Total attacker resources scale with N, so this is not fixed-resource identity splitting or autonomous-agent scaling."
       },
-      "sample_size_summary": "24 paired worlds \u00d7 100 deduplicated conditions = 2,400 valid S1 answers; 64 Q0 calls; 36\u2013972 simulated identities.",
+      "sample_size_summary": "24 paired worlds × 100 deduplicated conditions = 2,400 valid S1 answers; 64 Q0 calls; 36–972 simulated identities.",
       "sources": [
         "researchers/dmarz/notes/sybil-scale-api/README.md",
         "researchers/dmarz/notes/sybil-scale-api/results-summary.json",
@@ -927,7 +927,7 @@
         "claim": "The bounded packet qualification passed; the verification-budget main study has launched but no final comparison is reported at this cutoff.",
         "rationale": "Exact clean qualification passed and the tracked deployment record now confirms S1 launch. Completed main counts and treatment estimates are not reconciled in the repository; qualification and dispatch do not establish the budget frontier. Identities, facts and cells remain dependent within worlds."
       },
-      "sample_size_summary": "Q0: 4 worlds, 16/16 valid packets. S1 launched: 24 paired worlds \u00d7 120 cells = 2,880 assigned answers, N=324/972; completed count not reconciled in repo.",
+      "sample_size_summary": "Q0: 4 worlds, 16/16 valid packets. S1 launched: 24 paired worlds × 120 cells = 2,880 assigned answers, N=324/972; completed count not reconciled in repo.",
       "sources": [
         "researchers/dmarz/notes/sybil-budget-api/README.md",
         "researchers/dmarz/notes/sybil-budget-api/q0-verification-summary.json",
@@ -984,7 +984,7 @@
     },
     {
       "id": "market-split",
-      "title": "Can one owner\u2019s many firms defeat a concentration-based regulator?",
+      "title": "Can one owner’s many firms defeat a concentration-based regulator?",
       "documents": [
         "researchers/dmarz/notes/market-split/README.md"
       ],
@@ -999,7 +999,7 @@
         "claim": "Changing firm identities can alter regulatory accounting while total ownership resources remain fixed.",
         "rationale": "Programmed splitting and optimization validate the mechanism in six related markets but cannot establish spontaneous model discovery. Resource conservation and paired accounting are explicit; external economic realism and independent rivals remain untested."
       },
-      "sample_size_summary": "6 S1 market clusters \u00d7 2 seeds \u00d7 12 conditions \u00d7 3 policies = 432 scripted episodes; 18 S0; 0 model calls.",
+      "sample_size_summary": "6 S1 market clusters × 2 seeds × 12 conditions × 3 policies = 432 scripted episodes; 18 S0; 0 model calls.",
       "sources": [
         "researchers/dmarz/notes/market-split/README.md",
         "researchers/dmarz/notes/market-split/analysis/s1-summary.json",
@@ -1046,28 +1046,34 @@
       ],
       "evidence_confidence": {
         "score": 1,
-        "claim": "Haiku V2 passed its short profitability screen but failed execution in the longer discovery cohort; V3 has only scripted rehearsal evidence.",
-        "rationale": "Two dynamic episodes returned nonterminal outputs at the 3,072-token ceiling; the original stop reason was not retained, so exhaustion is inferred. The incomplete cohort supports no discovery estimate. Increased V3 output headroom requires fresh native gates and makes future Sonnet comparisons configuration comparisons, not model-only effects."
+        "claim": "Haiku V3 passed short mechanics/profit screens but failed full-length reliability on a strict capacity violation; no V3 discovery cohort started.",
+        "rationale": "Exact replay identified upward decimal rounding in one of four attempted episodes. Four more assigned episodes were never started. All calls and failures are retained, but two related development markets and no complete paired regulatory contrast support no discovery-rate or model-comparison estimate."
       },
-      "sample_size_summary": "V2 Q0: 2 markets,4/4 qualified. S1: 6 assigned markets/36 episodes; 2 complete, 2 failed partial, 32 unstarted, 60 calls. V3: 12/12 mock episodes, 0 model calls; fresh native gates pending.",
+      "sample_size_summary": "V3 R0: 2 related markets; 8 assigned episodes, 3 valid complete, 1 invalid partial, 4 unstarted; 94 priced calls. V3 Q0: 2 markets/4 qualified episodes. V2 failures retained separately. V3 discovery: 0 observed; next diagnostic planned, not started.",
       "sources": [
-        "researchers/dmarz/notes/market-split-haiku/README.md",
-        "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md",
+        "researchers/dmarz/notes/market-split-haiku/RESULTS.md",
+        "researchers/dmarz/notes/market-split-haiku/reviews/r0-001-post.md",
+        "researchers/dmarz/notes/market-split-haiku/reviews/q0-002-post.md",
         "researchers/dmarz/notes/market-split-haiku/reviews/s1-001-post.md",
-        "researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md",
-        "researchers/dmarz/notes/market-split-haiku/preregistration.md",
-        "researchers/dmarz/notes/market-split-haiku/experiment.yaml"
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/provenance.json",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/replay-audit.json",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json",
+        "researchers/dmarz/notes/market-split-haiku/NEXT-EXPERIMENT.md"
       ],
-      "status_at_assessment": "v2_discovery_execution_failed_v3_scripted_only",
-      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "status_at_assessment": "v3_full_length_reliability_failed_next_plan_unstarted",
+      "source_commit": "5d2042aa04be07f2be4be9ec737de863db362d91",
       "source_sha256": {
-        "researchers/dmarz/notes/market-split-haiku/README.md": "6ca88a43af337731b86ee77b7af22d6ffe9dc006dac2f87a1db8196fe7dc3ff5",
-        "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md": "981f5b55193d29d47dd260711a73fafc8da52808a8dddc8d4c407cf25e3ade29",
+        "researchers/dmarz/notes/market-split-haiku/RESULTS.md": "cea76ef0b033ba92fbf1da6eb4ff4a6e425cc3dfd62c435292be1fd9700fc91b",
+        "researchers/dmarz/notes/market-split-haiku/reviews/r0-001-post.md": "c318b380d8887420511c01c05f21b3fcfe667a17fb55b12c0621181ff2f98737",
+        "researchers/dmarz/notes/market-split-haiku/reviews/q0-002-post.md": "5452d654c22821696517f3aba222b093ceacf087d041be2ff5469d14e2e75b78",
         "researchers/dmarz/notes/market-split-haiku/reviews/s1-001-post.md": "c220ffd508da2ba8a8a5223839413a7f34890ab822068443b4983dc9ad970ebe",
-        "researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md": "7783e2efd0fcab788de350e1ac49f868746c233a8d73338c2b29d1481a457588",
-        "researchers/dmarz/notes/market-split-haiku/preregistration.md": "ccecdcb83fba556781d48c38cd4fda1386b341170e7e574d8ceee101ff14f39a",
-        "researchers/dmarz/notes/market-split-haiku/experiment.yaml": "233345a41fd60a60ee5d80dd89530b5febe7d6771ab2f1de7d212e30773e0730"
-      }
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/provenance.json": "ce402e3f8185ec3727d86074d8e3f85aa60503897dea081107b2014b2b6efa2f",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/replay-audit.json": "6fa019d80e792b6bec7e844962d8217aa28909ece5f5596edff374b0c3accfcf",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json": "cc8292fd5cdc3c7c4d2f5faa9bfa75309f0c5fe28863d26daccad27c651558f8",
+        "researchers/dmarz/notes/market-split-haiku/NEXT-EXPERIMENT.md": "83bb3f4c2cfb6a39b53c561dde91b9ad20231e9b15f82dae3b38ac966159277c"
+      },
+      "assessor": "dmarz/market-split",
+      "assessed_at": "2026-10-04"
     },
     {
       "id": "compositional-safety",
@@ -1166,7 +1172,7 @@
         "claim": "Memory length affects return to a convention after perfect attacker removal under a scripted policy.",
         "rationale": "The paired scripted mechanism has substantial within-fixture simulation evidence, but no measured LLM response curve and no epistemic truth task. Capture-conditioned estimates select outcomes; different capture doses/horizons change the estimand. Large episode counts are not independent model trials or generality. Task IDs mainly change paired random streams and word labels, not independent semantic problems; S1 and S1b reuse those IDs."
       },
-      "sample_size_summary": "100 paired RNG/task IDs \u00d7 2 seeds on one binary-convention mechanism in two parameter regimes; reused in 9,600 S1 + 38,400 S1b episodes. S0: 600 episodes; N=24; 0 model calls.",
+      "sample_size_summary": "100 paired RNG/task IDs × 2 seeds on one binary-convention mechanism in two parameter regimes; reused in 9,600 S1 + 38,400 S1b episodes. S0: 600 episodes; N=24; 0 model calls.",
       "sources": [
         "researchers/shadow/notes/capture-memory/README.md",
         "researchers/shadow/notes/capture-memory/design.yaml",
@@ -1188,7 +1194,7 @@
         "claim": "Untested application question: fallible OCR checks improve receipt-total acceptance and referral decisions enough to justify their measured cost.",
         "rationale": "Only a prospective total-amount tool pilot is tracked. Five pipelines share Tesseract, so agreement is correlated. The 50-receipt test evaluation remains unopened; model comparisons require a separate qualification and no results are inherited from v4/v5."
       },
-      "sample_size_summary": "Observed: none. Planned: 20 train receipts for development (5 OCR pipelines, \u2264100 calls); then 50 untouched test receipts after freezing policies. Vendor/layout independence unverified; model study separate.",
+      "sample_size_summary": "Observed: none. Planned: 20 train receipts for development (5 OCR pipelines, ≤100 calls); then 50 untouched test receipts after freezing policies. Vendor/layout independence unverified; model study separate.",
       "status_at_assessment": "new_prospective_application_plan",
       "sources": [
         "researchers/vishesh/notes/antsy-receipt-v6/README.md"
@@ -1217,7 +1223,7 @@
         "claim": "Targeted approval-review instructions were insufficient to repair this six-case procurement workflow.",
         "rationale": "All 30 outputs valid; matched targeted review 3/6 acceptable versus general review 4/6, with one unfavorable paired difference. Six authored template variants, inconsistent checklist coverage and failed competence prevent broad efficacy claims."
       },
-      "sample_size_summary": "D2:6 fresh authored dossier configurations \u00d75 dependent workflows =30/30 valid decisions,17 acceptable;108 calls. Shared team prefixes. Targeted/general review pairs:0 improved,1 worsened,5 equal. Main external-influence comparison unrun.",
+      "sample_size_summary": "D2:6 fresh authored dossier configurations ×5 dependent workflows =30/30 valid decisions,17 acceptable;108 calls. Shared team prefixes. Targeted/general review pairs:0 improved,1 worsened,5 equal. Main external-influence comparison unrun.",
       "sources": [
         "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D2-01-summary.json",
         "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D2-01-audit.json",
