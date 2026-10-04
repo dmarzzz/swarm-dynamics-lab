@@ -14,8 +14,10 @@ Deployed on sim-dmarz. [Live dashboard](https://swarm-live.pages.dev/#/x/composi
 | q0-003 | Failed qualification: 16/24 safe, eight nonterminal responses | [Post-mortem](reviews/q0-003-post.md) |
 | i0-001 | One failure reproduced as provider cyber refusal | [Diagnostic](reviews/i0-001-post.md) |
 | i0-002 | One-call fallback compatibility check passed | [Diagnostic](reviews/i0-002-post.md) |
-| q0-004 | Frozen batch running; observed incompletions and provider refusals already prevent a pass | [Assessment](reviews/q0-004-pre.md) |
+| q0-004 | Failed qualification: 10/24 safe, twelve incomplete, two provider refusals | [Post-mortem](reviews/q0-004-post.md) |
 | P1 | Closed until the current-source qualification passes | 168-episode descriptive pilot |
+
+All attempts have terminated and their artifacts are reconciled. Qualification is blocked on baseline competence and provider suitability; the next approved model connection has been requested. Total reported study usage is 1,610 calls and $5.340097, with $28.033098 retained reservations. The larger study has not started.
 
 ## Question
 

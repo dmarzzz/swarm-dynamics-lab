@@ -2,7 +2,7 @@
 
 Experiment: compositional-safety. Owner/source: dmarz/patchwork-hypotheses. Server: sim-dmarz. Dashboard: https://swarm-live.pages.dev/#/x/compositional-safety. This is separate from discussion-dose-v3.
 
-Exclusive fleet claim: dmarz-compositional-safety, merged via agentops PR 56, valid through 2026-10-04 06:31:30 UTC. Keep the claim through upload verification and release it when this worker stops. No infrastructure provisioning was required.
+Exclusive fleet claim: dmarz-compositional-safety, created via agentops PR 56 and released via PR 93 at 2026-10-04 03:59:19 UTC after the worker exited and all uploads reconciled. No infrastructure provisioning was required. Code, results and cumulative accounting remain on sim-dmarz, but there is no active worker or reservation. Obtain a fresh exclusive claim before any subsequent server work.
 
 The isolated checkout is `/srv/swarm/compositional-safety/swarm-lab`; the pinned virtual environment is `/srv/swarm/compositional-safety/venv`. The host has Python 3.12.3. Requirements pin PyYAML 6.0.2 and Pillow 11.3.0. Reporting uses the provisioned module at `/usr/local/lib/swarm`; non-login shells require `PYTHONPATH=/usr/local/lib/swarm`. No credentials, private endpoints or server addresses belong in this record.
 

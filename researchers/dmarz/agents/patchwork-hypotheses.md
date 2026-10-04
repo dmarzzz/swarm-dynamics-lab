@@ -1,10 +1,10 @@
 ---
 agent: dmarz/patchwork-hypotheses
 tool: codex
-state: working
+state: blocked
 task: build-compositional-safety
-doing: Finishing frozen qualification and dashboard recovery; next model connection requested after provider refusals
-updated: 2026-10-04T03:49Z
+doing: Qualification reconciled and server released; awaiting an approved alternative model connection for competence diagnostics
+updated: 2026-10-04T04:00Z
 ---
 
 ## Notes
