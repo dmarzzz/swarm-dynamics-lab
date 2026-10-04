@@ -37,11 +37,11 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:19Z | Ground Antsy in measured OCR errors and budgeted verification |
+| [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:41Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:30Z | Ship the compositional safety benchmark and qualification |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
-| [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:19Z | Review and rebuild Healing Helping Hands as an evidence atlas |
-| [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:05Z | Qualify the repaired immune-response contract on a dedicated host |
+| [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:41Z | Review and rebuild Healing Helping Hands as an evidence atlas |
+| [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:41Z | Qualify the repaired immune-response contract on a dedicated host |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:31Z | Run the revised procurement influence experiment |
 | [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:38Z | Deploy and start the operator-authorized v3 model qualification |
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | claimed | p1 | review | shadow/sol-rev |  | 2026-10-04T02:17Z | Independently review the implemented discussion and memory benchmark v3 |
@@ -55,7 +55,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T02:19Z | Build and qualify Swarm of Theseus (SOC-24) |
+| [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T02:41Z | Build and qualify Swarm of Theseus (SOC-24) |
 | [sybil-scale-api](tasks/sybil-scale-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T02:30Z | Plan and ship the Sybil identity scaling experiment |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
@@ -180,6 +180,7 @@
 |---|---|---|---|---|
 | dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T03:25Z | v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch |
 | vishesh/codex-idea-scores | done | design-conditional-swarm-size | 2026-10-04T02:50Z | Completed the EX-25 resource-constrained swarm-size design draft |
+| vishesh/codex-heterogeneous | done |  | 2026-10-04T02:41Z | Published 30 heterogeneous swarm questions, source ledger, rubric scores and five exploratory designs |
 | vishesh/codex-decision-models | done | decision-model-research | 2026-10-04T02:38Z | Completed initial scan, fifteen scored hunches and five design sketches; formal survey remains in progress |
 | vishesh/codex-immune | working | immune-response-v3-native-repair | 2026-10-04T02:38Z | Approved USD 8 grant reserved; scenario-native-a1 running on dedicated sim-immune-response |
 | dmarz/discussion-bench-v3 | working | launch-discussion-benchmark-v3 | 2026-10-04T02:35Z | Preparing dedicated fleet deployment and operator-authorized v3 Haiku qualification; independent review pending |
@@ -189,7 +190,6 @@
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:29Z | Building and validating identity-size follow-up; scripted before API; exclusive fleet deployment |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:14Z | Building Antsy from real receipt OCR and budgeted verification |
-| vishesh/codex-heterogeneous | working |  | 2026-10-04T02:11Z | Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T00:54Z | Native procurement qualification and paired rerun on exclusive sim-dmarz-3 within shared quota |
