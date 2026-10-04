@@ -31,3 +31,17 @@ def safe_openrouter_error(exc):
     if len(reasons)==1:out['reported_reason']=next(iter(reasons))
     elif len(reasons)>1:out['reported_reason']='ambiguous'
     return out
+
+REASONS={'unknown','schema_complexity','schema_invalid_or_unsupported','insufficient_credits','rate_limit','ambiguous'}
+BODY_STATES={'unreadable','oversized','malformed','unknown_envelope','parsed'}
+def safe_relay_error(exc):
+    out=safe_http(exc)
+    try:
+        raw=exc.read(8193)
+        if len(raw)>8192:return out
+        body=json.loads(raw)
+        if isinstance(body,dict):
+            if body.get('reported_reason') in REASONS:out['reported_reason']=body['reported_reason']
+            if body.get('error_body_status') in BODY_STATES:out['error_body_status']=body['error_body_status']
+    except Exception:pass
+    return out

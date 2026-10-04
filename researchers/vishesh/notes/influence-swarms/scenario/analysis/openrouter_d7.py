@@ -29,11 +29,11 @@ class Relay:
     """One fresh durable journal, frozen hashes in order, no retry after ambiguity."""
     def __init__(self,packet,journal):
         self.hashes=[i['wire_sha256'] for i in packet['requests']]
-        assert len(self.hashes)==2 and len(set(self.hashes))==2
+        assert 1<=len(self.hashes)<=12 and len(set(self.hashes))==len(self.hashes)
         self.journal=Path(journal);self.journal.mkdir(mode=0o700)
         self.count=0;self.stopped=False
     def send(self,raw,request):
-        if self.stopped or self.count>=2 or len(raw)>32768:raise ValueError('relay_closed')
+        if self.stopped or self.count>=len(self.hashes) or len(raw)>32768:raise ValueError('relay_closed')
         if hashlib.sha256(raw).hexdigest()!=self.hashes[self.count]:
             self.stopped=True;raise ValueError('wire_refused')
         fd=os.open(self.journal/f'{self.count+1}.start',os.O_CREAT|os.O_EXCL|os.O_WRONLY,0o600)

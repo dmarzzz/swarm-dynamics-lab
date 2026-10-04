@@ -62,17 +62,21 @@ def usage(result):
     return {k:u[k] for k in ('input_tokens','output_tokens')}
 
 class Session:
-    def __init__(self,directory,ledger,*,classify_http_body=False):
+    def __init__(self,directory,ledger,*,classify_http_body=False,maximum_requests=2,reserved_ceiling=8.,calls_ceiling=None,http_error_adapter=None):
         self.directory=Path(directory);self.ledger=Path(ledger)
+        if type(maximum_requests) is not int or not 1<=maximum_requests<=12:raise AcquisitionStopped('request_count_bound')
+        if type(reserved_ceiling) not in (int,float) or not math.isfinite(reserved_ceiling) or not 0<reserved_ceiling<=8:raise AcquisitionStopped('ceiling_bound')
+        if calls_ceiling is not None and (type(calls_ceiling) is not int or calls_ceiling<1):raise AcquisitionStopped('calls_ceiling_bound')
+        self.maximum_requests=maximum_requests;self.reserved_ceiling=reserved_ceiling;self.calls_ceiling=calls_ceiling;self.http_error_adapter=http_error_adapter
         self.classify_http_body=classify_http_body
         if not self.ledger.is_file():raise AcquisitionStopped('existing_ledger_required')
         # mkdir is the exclusive session claim. Existing/inflight journals cannot reopen.
         try:self.directory.mkdir(mode=0o700)
         except FileExistsError:raise AcquisitionStopped('prior_session_preserved') from None
-        self.count=0;self.stopped=False;self.lock=threading.Lock();self._state('ready');self._event({'kind':'session','maximum_attempts':MAX_REQUESTS,'retries':0})
+        self.count=0;self.stopped=False;self.lock=threading.Lock();self._state('ready');self._event({'kind':'session','maximum_attempts':self.maximum_requests,'retries':0})
     def _state(self,status):
         p=self.directory/'state.json';tmp=self.directory/'state.tmp'
-        with tmp.open('w') as f:json.dump({'state':status,'attempts':self.count,'unstarted':MAX_REQUESTS-self.count},f);f.flush();os.fsync(f.fileno())
+        with tmp.open('w') as f:json.dump({'state':status,'attempts':self.count,'unstarted':self.maximum_requests-self.count},f);f.flush();os.fsync(f.fileno())
         os.replace(tmp,p)
         fd=os.open(self.directory,os.O_RDONLY)
         try:os.fsync(fd)
@@ -101,7 +105,7 @@ class Session:
                 raise
     def _dispatch(self,encoded,transport,validate,reservation,input_rate=1.,output_rate=5.,response_adapter=None):
         if json.loads((self.directory/'state.json').read_text())['state']!='ready':raise AcquisitionStopped('not_ready')
-        if self.stopped or self.count>=MAX_REQUESTS:raise AcquisitionStopped('circuit_open_or_complete')
+        if self.stopped or self.count>=self.maximum_requests:raise AcquisitionStopped('circuit_open_or_complete')
         if not isinstance(encoded,bytes) or len(encoded)>32768:raise AcquisitionStopped('request_bound')
         if type(reservation) not in (int,float) or not math.isfinite(reservation) or not 0<reservation<=MAX_RESERVATION:raise AcquisitionStopped('reservation_bound')
         if input_rate!=1. or output_rate!=5.:raise AcquisitionStopped('unapproved_rate')
@@ -111,14 +115,14 @@ class Session:
         with closing(sqlite3.connect(f'file:{self.ledger}?mode=rw',uri=True,timeout=20)) as db, db:
             db.execute('BEGIN IMMEDIATE')
             cap,used,calls=db.execute('SELECT cap,reserved,calls FROM budget WHERE id=1').fetchone()
-            if cap!=8 or used<4.868832-1e-8 or calls<246 or used+reservation>cap:
+            if cap!=8 or used<4.868832-1e-8 or calls<246 or used+reservation>min(cap,self.reserved_ceiling)+1e-10 or (self.calls_ceiling is not None and calls+1>self.calls_ceiling):
                 self.stopped=True;self._state('budget_stopped');raise AcquisitionStopped('budget_lineage_or_capacity')
             db.execute('UPDATE budget SET reserved=?,calls=? WHERE id=1',(used+reservation,calls+1))
         self.count+=1;self._state('inflight')
         request_ref=self._artifact('request',encoded)
         self._event({'kind':'attempt_start','attempt':self.count,'reserved_usd':reservation,'retry_permitted':False,'request':request_ref})
         try:raw=transport(encoded)
-        except urllib.error.HTTPError as e:self._stop(safe_http(e,classify_body=self.classify_http_body))
+        except urllib.error.HTTPError as e:self._stop(self.http_error_adapter(e) if self.http_error_adapter is not None else safe_http(e,classify_body=self.classify_http_body))
         except TimeoutError:self._stop({'category':'timeout'})
         except Exception:self._stop({'category':'transport'})
         if not isinstance(raw,bytes) or len(raw)>1_000_000:self._stop({'category':'response_bound'})
@@ -142,5 +146,5 @@ class Session:
         except Exception:
             self.stopped=True;self._event({'kind':'failure','attempt':self.count,'category':'contract','usage_known':True,'actual_usd':cost,'retry_permitted':False});self._state('stopped');raise AcquisitionStopped('contract') from None
         self._event({'kind':'response_validated','attempt':self.count,'usage_known':True,'actual_usd':cost})
-        self._state('complete' if self.count==MAX_REQUESTS else 'ready')
+        self._state('complete' if self.count==self.maximum_requests else 'ready')
         return answer
