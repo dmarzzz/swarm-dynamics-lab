@@ -11,7 +11,7 @@ def validate(value):
  return value
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--commit',required=True);p.add_argument('--ledger-sha',required=True);p.add_argument('--attempt',choices=['freshness-a4'],required=True);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--commit',required=True);p.add_argument('--ledger-sha',required=True);p.add_argument('--attempt',choices=['freshness-a5'],required=True);a=p.parse_args()
  root=Path(subprocess.check_output(['git','rev-parse','--show-toplevel'],cwd=BASE,text=True).strip());resource.setrlimit(resource.RLIMIT_CORE,(0,0))
  assert re.fullmatch(r'[0-9a-f]{40}',a.commit) and subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()==a.commit
  assert not subprocess.check_output(['git','diff','--name-only','HEAD'],cwd=root).strip()

@@ -1,0 +1,38 @@
+{
+  "kind": "offline_scripted_not_native",
+  "tests_passed": 13,
+  "attempt": "freshness-a5",
+  "file_hashes": {
+    "freshness-study/freshness.py": "7635cbdab590c744b32d27a53001e0b601faf8cae3a634160b9548d4a7a3c4b2",
+    "freshness-study/README.md": "ee5a353bdd6ca2f02488f7370942a4bc4056b2b0ce580d7e0ae814c52d0c3725",
+    "freshness-study/render.py": "53502d9faed207cbc3d926140ffa78527f8636cc792d2f99efc985386c0531f8",
+    "freshness-study/worker.py": "53c7c1f880b0e94da1020c7d765604dc71684ab61d582df6a6f6a3cf2ef242cd",
+    "freshness-study/trace_provider.py": "c831bc97c88add3fa9a9e508b9703055d1304db4c561fc3c010a9a521a8c0c26",
+    "freshness-study/launch.py": "cd8778a3be3a5e4c57b857602be282056f79cd1a70fe7bbffe92763f627836bc",
+    "freshness-study/model-config.json": "9aa4854f0650b97962c4c8bc23f51f88791d56eef6225a27140e395df75ba96e",
+    "freshness-study/audit.py": "42d22da1f96ab4de2557d75b46b2f7e57beea42e753eb2d7312dde5ca175dbfe",
+    "evidence-study/durable_provider.py": "294aa080a5f0f1b756a602aa3851ca32dfb8d213f98d12e2bdcda55326cfa261",
+    "scenario-study/study.py": "a2556967df07da7800996a5577b9771520ebba991b0f31186cfa6eed9b141083",
+    "src/provider.py": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f"
+  },
+  "audit": {
+    "assigned": 12,
+    "recorded": 12,
+    "paired_worlds": 6,
+    "advice_records": 12,
+    "decision_records": 48,
+    "source_records_identical_within_pairs": true,
+    "all_frames_match": true,
+    "health_and_restart_classification_recomputed": true,
+    "paired_healthy_tick_deltas": {
+      "healthy_fresh": 0,
+      "stale_false_alarm": 0,
+      "fresh_crash": 0,
+      "masked_crash": 0,
+      "schema_transition": 0,
+      "registry_unavailable": 0
+    }
+  },
+  "reference_qualification_passed": true,
+  "native_calls": 0
+}
