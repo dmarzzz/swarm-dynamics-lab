@@ -1,0 +1,141 @@
+{
+  "episodes": 8,
+  "requests_reconciled": 32,
+  "frames_replayed": 16,
+  "actual_usd": 0.267692,
+  "reserved_usd": 1.111111,
+  "diagnosis_correct": 9,
+  "outcome_pass": 6,
+  "qualified": 3,
+  "cases": [
+    {
+      "model": "sonnet",
+      "split": "development",
+      "kind": "healthy",
+      "condition": "none",
+      "outcome": true,
+      "diagnosis": true,
+      "healthy_ticks": 2,
+      "restarts": 0
+    },
+    {
+      "model": "sonnet",
+      "split": "development",
+      "kind": "worker_crash",
+      "condition": "none",
+      "outcome": true,
+      "diagnosis": false,
+      "healthy_ticks": 2,
+      "restarts": 1
+    },
+    {
+      "model": "sonnet",
+      "split": "development",
+      "kind": "stale_alarm",
+      "condition": "none",
+      "outcome": true,
+      "diagnosis": false,
+      "healthy_ticks": 2,
+      "restarts": 0
+    },
+    {
+      "model": "sonnet",
+      "split": "development",
+      "kind": "configuration",
+      "condition": "none",
+      "outcome": false,
+      "diagnosis": false,
+      "healthy_ticks": 0,
+      "restarts": 0
+    },
+    {
+      "model": "opus",
+      "split": "development",
+      "kind": "healthy",
+      "condition": "none",
+      "outcome": true,
+      "diagnosis": true,
+      "healthy_ticks": 2,
+      "restarts": 0
+    },
+    {
+      "model": "opus",
+      "split": "development",
+      "kind": "worker_crash",
+      "condition": "none",
+      "outcome": true,
+      "diagnosis": true,
+      "healthy_ticks": 2,
+      "restarts": 1
+    },
+    {
+      "model": "opus",
+      "split": "development",
+      "kind": "stale_alarm",
+      "condition": "none",
+      "outcome": false,
+      "diagnosis": false,
+      "healthy_ticks": 2,
+      "restarts": 0
+    },
+    {
+      "model": "opus",
+      "split": "development",
+      "kind": "configuration",
+      "condition": "none",
+      "outcome": true,
+      "diagnosis": false,
+      "healthy_ticks": 2,
+      "restarts": 0
+    }
+  ],
+  "cumulative_calls": 485,
+  "cumulative_reserved_usd": 4.812055,
+  "total_cap_usd": 8,
+  "collection_revision": "79a6907e3903c6afbfaeba4acabb5377976bc861",
+  "renderer_revision": "fc512b179d60d3ec821784efac7441ce84e62c49",
+  "hub_readback": {
+    "checks": [
+      {
+        "file": "manifest.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "events.jsonl",
+        "sha256_matches": true
+      },
+      {
+        "file": "episodes.jsonl",
+        "sha256_matches": true
+      },
+      {
+        "file": "summary.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "allocation-receipt.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "public-plan-receipt.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "replay.html",
+        "sha256_matches": true
+      },
+      {
+        "file": "visualization-provenance.json",
+        "sha256_matches": true
+      },
+      {
+        "file": "usage.jsonl",
+        "sha256_matches": true
+      }
+    ],
+    "all_match": true
+  },
+  "holdouts_native_consumed": false,
+  "controlled_advice_consumed": false,
+  "action_reason_contradictions_confirmed": 3
+}

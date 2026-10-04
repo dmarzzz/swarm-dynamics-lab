@@ -1,0 +1,7 @@
+{
+  "input_sha256": "f3a38fe0d4c4e3f1fdec1f55b3f6513c486fbeb589883d815f72c88fd91dff8d",
+  "renderer_sha256": "def338b7ba245100f421b2e03a447d17bffa7674ab3c59f436cd89fc76e56a27",
+  "frames": 3,
+  "completed": 8,
+  "backend": "openrouter"
+}

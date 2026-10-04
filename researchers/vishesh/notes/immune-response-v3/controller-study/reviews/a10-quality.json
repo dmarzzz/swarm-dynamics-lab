@@ -1,0 +1,179 @@
+{
+  "attempt": "controller-a10",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "diagnostic",
+  "evidence_revision": "79a6907e3903c6afbfaeba4acabb5377976bc861",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Tests whether a stronger staged controller meets basic competence before collaboration; no isolated model-effect claim.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Four authored development roots include preservation, real restart, stale alarm and necessary configuration repair; holdouts stayed unopened and shared ancestry is disclosed.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same roots and tool semantics across distinct model cohorts; conditional escalation and advice gates followed. No extra action filter or gold correction.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Both models fail fixed qualification despite useful runtime repair. Three action/explanation contradictions; different service-outcome failures.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ],
+      "next_action": "Review and approve the prepared explicit-diagnosis/output-order discriminator before native collection.",
+      "acceptance_check": "Unchanged service and diagnosis gates plus action/explanation consistency; correct schema-order manipulation and untouched holdout only after development passes."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Every transition replays and fixed outcome gates stand; diagnosis field conventions were insufficiently explicit for configuration faults and stale uncertainty.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ],
+      "next_action": "Review and approve the prepared explicit-diagnosis/output-order discriminator before native collection.",
+      "acceptance_check": "Unchanged service and diagnosis gates plus action/explanation consistency; correct schema-order manipulation and untouched holdout only after development passes."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Four shared authored roots, two model cohorts, dependent calls; bounded feasibility only.20 conditional assignments are unopened, not missing outcomes.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "32 effective requests and responses match saved observations and uncorrected diagnosis handoffs; Anthropic served both exact model routes; no raw Village data or operator context.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "32 requests/usages and16 frames reconciled;8 completed/20 conditional unopened assignments preserved.9 indexed hub artifacts hash-match.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.267692 actual,1.111111 newly reserved;485cumulative calls/4.812055reserved of8.Original ledger and verified exclusive account allocation retained; workers and relay stopped.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Immutable collection revision and separate reporting-repair revision retained; source/config/input seal and raw native traces replay; hosted answers are not claimed deterministic.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Wrong renderer import was detected and repaired offline with regression tests; corrected health/action/diagnosis frames expose rejection and unopened holdouts. No model recollection.",
+      "evidence": [
+        {
+          "path": "a10-post.md",
+          "sha256": "29cc50cdd0986cb21d254398c0111b8a5f17b543a003b0ee5c1a2659ae6f18b9"
+        },
+        {
+          "path": "a10-reconciliation.json",
+          "sha256": "0340172ed7d76ca655ace3d69f4d36d9a92fab1841ff9de9ffecbaa21ddba7ef"
+        }
+      ]
+    }
+  ]
+}
