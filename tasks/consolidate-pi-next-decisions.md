@@ -3,7 +3,7 @@ id: consolidate-pi-next-decisions
 type: task
 title: Consolidate PI reviews into experiment next-step decisions
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T14:25Z
-updated: 2026-10-04T14:25Z
+updated: 2026-10-04T14:39Z
+outputs:
+- researchers/vishesh/notes/pi-next-decisions-2026-10-04/README.md
+- tooling/agent-experiments/RUN-REVIEW.md
+- tooling/agent-experiments/operations.json
 ---
 
 ## Goal
