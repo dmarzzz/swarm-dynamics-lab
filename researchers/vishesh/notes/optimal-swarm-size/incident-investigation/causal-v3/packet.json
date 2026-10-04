@@ -1,0 +1,59 @@
+{
+  "status": "offline_proposal_not_funded",
+  "stages": [
+    {
+      "id": "A-singleton",
+      "cases": 6,
+      "contexts_per_case": 1,
+      "round_limit": 10,
+      "max_calls": 60,
+      "cap_microdollars": 2320000,
+      "max_reservation_microdollars": 2317920
+    },
+    {
+      "id": "B-controls",
+      "singleton_cases": 12,
+      "team_cases": 6,
+      "team_roots": [
+        "route_config",
+        "auth_chain",
+        "schema_rollout"
+      ],
+      "round_limit": 4,
+      "max_calls": 120,
+      "cap_microdollars": 4640000,
+      "max_reservation_microdollars": 4635840
+    },
+    {
+      "id": "C-replication",
+      "roots": 6,
+      "arms": [
+        1,
+        3
+      ],
+      "fresh_blocks": 3,
+      "episodes": 36,
+      "round_limit": 10,
+      "max_calls": 720,
+      "cap_microdollars": 27820000,
+      "max_reservation_microdollars": 27815040
+    }
+  ],
+  "native_episodes": 60,
+  "calls": 900,
+  "call_reservation_microdollars": 38632,
+  "max_reservation_microdollars": 34768800,
+  "additional_cap_microdollars": 35000000,
+  "existing_exposure_microdollars": 3800256,
+  "original_study_cap_microdollars": 20000000,
+  "requires_explicit_cap_revision": true,
+  "native_transport_ready": false,
+  "model_change": false,
+  "source_hashes": {
+    "PLAN.md": "914ab94571c99d1bb7c8539a885a1f22910ec3cce93d2448c086b66083076472",
+    "worlds.py": "0b62292b93fb1d8ea33feb0a9540465ad91399b37dccd14c278ff9d83510ead1",
+    "broker.py": "e34eb618bcafc5af80aa95896cfe8c8fcea74fdf383963f9fa9640924bde3387",
+    "test_cases.py": "8a550ac33194879622778c9ac847c7c0e3edd82abbe1efdbb2847f94bf78ee6f",
+    "validation/summary.json": "c3cf7e52131724b8fa82c4acd0e6d84853ed9eada32c68e2a3f69323bbe239e2"
+  }
+}

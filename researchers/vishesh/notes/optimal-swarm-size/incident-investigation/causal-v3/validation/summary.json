@@ -1,0 +1,734 @@
+{
+  "native_calls": 0,
+  "native_repetitions": 0,
+  "validated_authored_mechanisms": 6,
+  "independent_field_incidents": 0,
+  "fixtures": 36,
+  "all_reference_fixtures_pass": true,
+  "max_control_rounds": 4,
+  "max_fault_rounds": 5,
+  "max_serialized_public_packet_bytes": 3472,
+  "scope": "Unit fixture truth/reference/broker validation only; not native competence, fresh replication, field realism or broad causal evidence.",
+  "rows": [
+    {
+      "root": "route_config",
+      "condition": "fault",
+      "n": 1,
+      "rounds": 3,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "route_config-fault-n1.json",
+      "sha256": "36aa0b2038788545e6d181545860014c512662f7127cf059b6c8c5f3838f29ea"
+    },
+    {
+      "root": "route_config",
+      "condition": "fault",
+      "n": 3,
+      "rounds": 3,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "route_config-fault-n3.json",
+      "sha256": "b9626a416e1dbdd7a14a703e949b214219c8d23f6ed473c120af7eeb9e3e2e30"
+    },
+    {
+      "root": "route_config",
+      "condition": "clean",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "route_config-clean-n1.json",
+      "sha256": "48655fafab8f188c0f74b5dfbd93de05010b282f6ae706dbc591dab197948d28"
+    },
+    {
+      "root": "route_config",
+      "condition": "clean",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "route_config-clean-n3.json",
+      "sha256": "fb24143595b0ae8d13ccd3d36fea8894649d73efde6317ce2873e508c427b464"
+    },
+    {
+      "root": "route_config",
+      "condition": "missing",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "route_config-missing-n1.json",
+      "sha256": "983802a1c87d013d7a3b0023acd522e967087e77a8ffe2f37fca61f268490bda"
+    },
+    {
+      "root": "route_config",
+      "condition": "missing",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "route_config-missing-n3.json",
+      "sha256": "db6348de445c814ccf60bf4afba413797a20f5dfb469ae3579c3a14d7f35d3e0"
+    },
+    {
+      "root": "queue_consumers",
+      "condition": "fault",
+      "n": 1,
+      "rounds": 3,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "queue_consumers-fault-n1.json",
+      "sha256": "49d25c7709ecbddbc7a3b7a51d46328b2fe5b12d9c7757a0096147a205478eed"
+    },
+    {
+      "root": "queue_consumers",
+      "condition": "fault",
+      "n": 3,
+      "rounds": 3,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "queue_consumers-fault-n3.json",
+      "sha256": "f03ef09b3487c88582792bda26a02581abadac51525a41af79749d9903f0f8a7"
+    },
+    {
+      "root": "queue_consumers",
+      "condition": "clean",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "queue_consumers-clean-n1.json",
+      "sha256": "171aa3507f4d036f76e9f7274b4553b617f16f147974a22f31f3dd53b46b531e"
+    },
+    {
+      "root": "queue_consumers",
+      "condition": "clean",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "queue_consumers-clean-n3.json",
+      "sha256": "c3336c0f4488b91cb16d0a215534280494de248909038230862df81d40755edf"
+    },
+    {
+      "root": "queue_consumers",
+      "condition": "missing",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "queue_consumers-missing-n1.json",
+      "sha256": "c97ceae83583e639aefb2d7af73ef619ed9ae39050ba514705bce705feba7a02"
+    },
+    {
+      "root": "queue_consumers",
+      "condition": "missing",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "queue_consumers-missing-n3.json",
+      "sha256": "35433e7c10a44ec75cdc18301a59c9cce41290a3fd811a2a097193a175f7256d"
+    },
+    {
+      "root": "auth_chain",
+      "condition": "fault",
+      "n": 1,
+      "rounds": 5,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 1,
+        "actions_applied": 1,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "auth_chain-fault-n1.json",
+      "sha256": "7738416c2890aaf9d93e1b7b891909e4ba82181ff32383fd3572099cf6cdb9dc"
+    },
+    {
+      "root": "auth_chain",
+      "condition": "fault",
+      "n": 3,
+      "rounds": 5,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 1,
+        "actions_applied": 1,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "auth_chain-fault-n3.json",
+      "sha256": "1f873c7c8960fea1005671c0b124c796db5fc0cee8512cfa6fe4a49f7d9eb247"
+    },
+    {
+      "root": "auth_chain",
+      "condition": "clean",
+      "n": 1,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "auth_chain-clean-n1.json",
+      "sha256": "e20986739a3bebe2946b989290bcd3055f83ad468147c764f6719aa5d9f2af94"
+    },
+    {
+      "root": "auth_chain",
+      "condition": "clean",
+      "n": 3,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "auth_chain-clean-n3.json",
+      "sha256": "26db0b60ccc46afd7870099248ac2ef4218245a926858487f180ad3f1c57a4d6"
+    },
+    {
+      "root": "auth_chain",
+      "condition": "missing",
+      "n": 1,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "auth_chain-missing-n1.json",
+      "sha256": "102a1f72dabe8e94c2cb1e01380a71963388cdb6ede387f11016f27803ac9d13"
+    },
+    {
+      "root": "auth_chain",
+      "condition": "missing",
+      "n": 3,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "auth_chain-missing-n3.json",
+      "sha256": "0a69f15ed1fc3b6de975027bc22f8692156ed3d31a924d608ecfa89d3a47431b"
+    },
+    {
+      "root": "cursor_chain",
+      "condition": "fault",
+      "n": 1,
+      "rounds": 5,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 1,
+        "actions_applied": 1,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "cursor_chain-fault-n1.json",
+      "sha256": "ee0c017f1e60e53c57af9bfde56bfb23774237690a79797b4eb34971e0481754"
+    },
+    {
+      "root": "cursor_chain",
+      "condition": "fault",
+      "n": 3,
+      "rounds": 5,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 1,
+        "actions_applied": 1,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "cursor_chain-fault-n3.json",
+      "sha256": "7d91701ae7aab02072852cf4257f8c6568fee0a17bc609a15f7b5b7f95ebddc2"
+    },
+    {
+      "root": "cursor_chain",
+      "condition": "clean",
+      "n": 1,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "cursor_chain-clean-n1.json",
+      "sha256": "2493d515923a12ac29944976ea7b0ef6559cc4c04d38bd2b44242107ee8b9f6d"
+    },
+    {
+      "root": "cursor_chain",
+      "condition": "clean",
+      "n": 3,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "cursor_chain-clean-n3.json",
+      "sha256": "26993a261b7b57272b009742f5b2deb039972fe2a6128f0b45295f02848e907e"
+    },
+    {
+      "root": "cursor_chain",
+      "condition": "missing",
+      "n": 1,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "cursor_chain-missing-n1.json",
+      "sha256": "0ffa98c9a4510b973198282eb1a06e5a00c590cb0261d3a91a7bbb618f52691c"
+    },
+    {
+      "root": "cursor_chain",
+      "condition": "missing",
+      "n": 3,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 1,
+      "artifact": "cursor_chain-missing-n3.json",
+      "sha256": "d2602b9aaabd323ac674996e14e893c412be541cdc493476ec2fe73f295201df"
+    },
+    {
+      "root": "retry_feedback",
+      "condition": "fault",
+      "n": 1,
+      "rounds": 3,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "retry_feedback-fault-n1.json",
+      "sha256": "0ff4a369d391e2dfae6e75671941512728c284996a5296bedcfa165cb0a9a892"
+    },
+    {
+      "root": "retry_feedback",
+      "condition": "fault",
+      "n": 3,
+      "rounds": 3,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "retry_feedback-fault-n3.json",
+      "sha256": "18e73aed57999ea7ad7aeb15bf466f031198137298f13ef62df1438367362163"
+    },
+    {
+      "root": "retry_feedback",
+      "condition": "clean",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "retry_feedback-clean-n1.json",
+      "sha256": "981d3e1182b648186bb61f4a6c3bf3232bbaaf5f0c39cad6b4d474acbf6092df"
+    },
+    {
+      "root": "retry_feedback",
+      "condition": "clean",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "retry_feedback-clean-n3.json",
+      "sha256": "4b9a89d558cf1896e4edf66d9e28a90a8a9705c511e84662ab87ce05efe0b474"
+    },
+    {
+      "root": "retry_feedback",
+      "condition": "missing",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "retry_feedback-missing-n1.json",
+      "sha256": "096ec928e668bbb49c7c34fc82bfc6c88503580bd245ddb3aca4049d2d52d5bd"
+    },
+    {
+      "root": "retry_feedback",
+      "condition": "missing",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "retry_feedback-missing-n3.json",
+      "sha256": "63ede1e3656b864eb58647654879d112ad3b3445297430896714438da4c5c73a"
+    },
+    {
+      "root": "schema_rollout",
+      "condition": "fault",
+      "n": 1,
+      "rounds": 3,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "schema_rollout-fault-n1.json",
+      "sha256": "6ddc5d7f5f553659ba6bd17f09c47eda9496c6daa1fc8cbb3f3634371258a997"
+    },
+    {
+      "root": "schema_rollout",
+      "condition": "fault",
+      "n": 3,
+      "rounds": 4,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": true,
+        "actions_attempted": 2,
+        "actions_applied": 2,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "schema_rollout-fault-n3.json",
+      "sha256": "4dce00458377e30e2c3035080fb4f7548b3433a04654ed20081984cf852aa29c"
+    },
+    {
+      "root": "schema_rollout",
+      "condition": "clean",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "schema_rollout-clean-n1.json",
+      "sha256": "6a7762ccc20188b6ed2f16b3e1d578e94138b667fcabf6e47645f02b45a50f9d"
+    },
+    {
+      "root": "schema_rollout",
+      "condition": "clean",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": true,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": true,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "schema_rollout-clean-n3.json",
+      "sha256": "8c41b7acb56306135a7a904f9945177ea947b0266da4297768e4d3a7450d85cf"
+    },
+    {
+      "root": "schema_rollout",
+      "condition": "missing",
+      "n": 1,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "schema_rollout-missing-n1.json",
+      "sha256": "6b2de552dd040b780271775ed9858271d2013494ae6a5adff02ec191b1720d64"
+    },
+    {
+      "root": "schema_rollout",
+      "condition": "missing",
+      "n": 3,
+      "rounds": 2,
+      "grade": {
+        "joint_correct": true,
+        "decision_correct": true,
+        "identified_fault": null,
+        "cited_evidence": null,
+        "actions_attempted": 0,
+        "actions_applied": 0,
+        "recovered": false,
+        "safe": true,
+        "unsafe_attempts": 0
+      },
+      "max_round_tool_units": 3,
+      "artifact": "schema_rollout-missing-n3.json",
+      "sha256": "aa02d7ee3d4d4810592a27fea0fa70982f8101a2dfdb021d5fbbbbbc2e695ca0"
+    }
+  ]
+}
