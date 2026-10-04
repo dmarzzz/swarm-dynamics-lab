@@ -45,7 +45,7 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T19:22Z | Run the revised procurement influence experiment |
 | [launch-ready-studies-2026-10-04](tasks/launch-ready-studies-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T19:05Z | Launch the prepared waiting experiments within existing budgets |
-| [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:03Z | Build and qualify the bounded outage-response prototype |
+| [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:24Z | Build and qualify the bounded outage-response prototype |
 | [right-dissenter-reopening-native-run](tasks/right-dissenter-reopening-native-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:08Z | Execute and review the approved RD6 Q0 and conditional D0 |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
