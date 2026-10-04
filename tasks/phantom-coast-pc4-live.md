@@ -3,7 +3,7 @@ id: phantom-coast-pc4-live
 type: task
 title: Run Phantom Coast PC-4 and PC-5 design-review cycles
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T08:37Z
-updated: 2026-10-04T08:37Z
+updated: 2026-10-04T09:07Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/pc4/README.md
+- researchers/vishesh/notes/phantom-coast/pc5/README.md
 ---
 
 ## Goal
