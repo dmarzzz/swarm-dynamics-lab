@@ -1,0 +1,62 @@
+{
+  "kind": "offline software and case validation; NOT MODEL EVIDENCE",
+  "assessor": "vishesh/codex-phantom-coast",
+  "date": "2026-10-04",
+  "test_count": 30,
+  "passed": true,
+  "test_output": "test_actor_mutation_cannot_change_engine_or_others (test_instrument.Instrument.test_actor_mutation_cannot_change_engine_or_others) ... ok\ntest_contradictory_direct_data_fails_closed (test_instrument.Instrument.test_contradictory_direct_data_fails_closed) ... ok\ntest_controlled_fault_spreads_and_is_correctable (test_instrument.Instrument.test_controlled_fault_spreads_and_is_correctable) ... ok\ntest_correction_metrics_use_visible_time_not_future (test_instrument.Instrument.test_correction_metrics_use_visible_time_not_future) ... ok\ntest_errors_and_missing_are_distinct (test_instrument.Instrument.test_errors_and_missing_are_distinct) ... ok\ntest_evidence_unknown_and_corrected (test_instrument.Instrument.test_evidence_unknown_and_corrected) ... ok\ntest_exact_reference_matches_independent_world_tree (test_instrument.Instrument.test_exact_reference_matches_independent_world_tree) ... ok\ntest_failed_vote_slot_no_oracle_rescue (test_instrument.Instrument.test_failed_vote_slot_no_oracle_rescue) ... ok\ntest_final_action_is_forbidden (test_instrument.Instrument.test_final_action_is_forbidden) ... ok\ntest_hidden_truth_and_target_do_not_leak_to_unexposed (test_instrument.Instrument.test_hidden_truth_and_target_do_not_leak_to_unexposed) ... ok\ntest_incomplete_or_crossworld_contrast_rejected (test_instrument.Instrument.test_incomplete_or_crossworld_contrast_rejected) ... ok\ntest_majority_and_tie_are_not_selected_by_truth (test_instrument.Instrument.test_majority_and_tie_are_not_selected_by_truth) ... ok\ntest_mirrored_land_water_reference_has_same_loss (test_instrument.Instrument.test_mirrored_land_water_reference_has_same_loss) ... ok\ntest_missing_bounds_and_denominators (test_instrument.Instrument.test_missing_bounds_and_denominators) ... ok\ntest_no_current_round_peer_leak_via_callback (test_instrument.Instrument.test_no_current_round_peer_leak_via_callback) ... ok\ntest_no_duplicate_source_strengthening (test_instrument.Instrument.test_no_duplicate_source_strengthening) ... ok\ntest_null_reference_not_forced_to_poison (test_instrument.Instrument.test_null_reference_not_forced_to_poison) ... ok\ntest_peer_mask_only_removes_interpretations (test_instrument.Instrument.test_peer_mask_only_removes_interpretations) ... ok\ntest_pooled_reference_uses_reports_not_world (test_instrument.Instrument.test_pooled_reference_uses_reports_not_world) ... ok\ntest_private_reports_only_seed (test_instrument.Instrument.test_private_reports_only_seed) ... ok\ntest_renaming_preserves_policy_and_metric (test_instrument.Instrument.test_renaming_preserves_policy_and_metric) ... ok\ntest_repeat_inspection_consumes_capacity (test_instrument.Instrument.test_repeat_inspection_consumes_capacity) ... ok\ntest_replay_detects_tampering_even_if_rehashed (test_instrument.Instrument.test_replay_detects_tampering_even_if_rehashed) ... ok\ntest_round_barrier_and_receipt_time (test_instrument.Instrument.test_round_barrier_and_receipt_time) ... ok\ntest_strict_output_and_wire_roundtrip (test_instrument.Instrument.test_strict_output_and_wire_roundtrip) ... ok\ntest_total_budget_and_question_count (test_instrument.Instrument.test_total_budget_and_question_count) ... ok\ntest_treatment_is_only_report_value (test_instrument.Instrument.test_treatment_is_only_report_value) ... ok\ntest_unique_useful_inspection (test_instrument.Instrument.test_unique_useful_inspection) ... ok\ntest_world_site_order_irrelevant_with_fixed_ties (test_instrument.Instrument.test_world_site_order_irrelevant_with_fixed_ties) ... ok\ntest_zero_wrong_is_not_zero_uncertainty (test_instrument.Instrument.test_zero_wrong_is_not_zero_uncertainty) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.033s\n\nOK\n",
+  "native_calls": 0,
+  "new_spend_usd": 0,
+  "existing_exposure_usd": 0.858328842,
+  "source_files": [
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/src/analysis.py",
+      "sha256": "ddb9e8c8d8e196ea7b4a86f244d905738b2b9d7e9fae2cd384d359120286b163"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/src/contract.py",
+      "sha256": "d4a52fdd524e9ffd66bd3a9169dff968dab12c8ee558012b6d014e99e38ad067"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/src/engine.py",
+      "sha256": "e7059974959f14a693cc7bd06a44d8a255115560b8eac7e16d62dbdb64c2e62c"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/src/fixtures.py",
+      "sha256": "c15cfe725a8de8703bde732655f2b702f893a03aca5558866574e2f40cf1c805"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/src/policies.py",
+      "sha256": "e24a4ebef6a40e56103834ab87da259442db9bd01ed8af8d79bad9487a6c9a8d"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/src/render.py",
+      "sha256": "a72ddaaee1be5797e8a6c1cd02905a13a5062cdea3824151bcf8f370e560f8e1"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_instrument.py",
+      "sha256": "23dd8ca073676de9c148d9bc83c04e6de4112906b724b74f9ee295707cb97343"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/instrument.py",
+      "sha256": "33eb03348b2d6d5ce3d821bebe09aee0f0a1052750f96037ef5d21acba451f6a"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
+      "sha256": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e"
+    }
+  ],
+  "fixture_hash": "bcd6751722e3542e730dac6ea47e75b174f67f9d781b6be3610a915eed4e876b",
+  "visual_inspection": {
+    "browser": "Codex in-app browser",
+    "checked": [
+      "initial state",
+      "honest/peer-on intermediate",
+      "false/peer-on final",
+      "condition/time selectors",
+      "scripted warning",
+      "flat visible-evidence IDs"
+    ],
+    "scope": "desktop; not mobile or accessibility audit"
+  }
+}

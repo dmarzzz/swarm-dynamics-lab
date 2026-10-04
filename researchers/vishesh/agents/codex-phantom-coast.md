@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: done
-task: phantom-coast-pc8-live
-doing: PC8 Q0 closed and reviewed; failed qualification, S1 unrun; parser defect repaired retrospectively; allocation released; FINISH / PARK
-updated: 2026-10-04T18:12:29.707680+00:00
+state: working
+task: phantom-coast-pc9-instrument
+doing: Building and validating PC9 population exploration instrument; no native dispatch
+updated: 2026-10-04T18:37:54.608724+00:00
 ---
 
 ## Notes

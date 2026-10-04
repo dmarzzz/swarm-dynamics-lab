@@ -1,0 +1,26 @@
+{
+  "evidence_kind": "offline acceptance fixture",
+  "native_calls": 0,
+  "checks": [
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "9d1e3b6c8329f4a18360ddb57e8f01086fe5360be716b3a7efe5363f2c2ffcbd"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "b89e5cd08e80494db78250407c770df9d225a3f89ee77fa53d92da9b9f9ba132"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "a09aeb9b361d577e8cbf107f92797f2a30a38bd0a266cc94f231c1a5eb0e323a"
+    },
+    {
+      "verified": true,
+      "packets": 15,
+      "sha256": "b0fa6318c7c8704da4e59783c2d7b4957d10407aa0523ab76b6588f10981a948"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "assessor": "vishesh/codex-phantom-coast",
+  "date": "2026-10-04",
+  "scope": "controlled offline population instrument",
+  "case_readiness": "ready for instrument acceptance fixtures only",
+  "native_instrument_qualified": false,
+  "run_admitted": false,
+  "native_worlds": 0,
+  "fixture_worlds": 1,
+  "paired_fixture_arms": 4,
+  "assessments": [
+    {
+      "dimension": "decision_relevance",
+      "status": "pass",
+      "acceptance_criterion": "Separate seed contamination, secondary spread, acquired correction and loss. Explicit null/adverse decisions.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
+          "sha256": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/src/analysis.py",
+          "sha256": "ddb9e8c8d8e196ea7b4a86f244d905738b2b9d7e9fae2cd384d359120286b163"
+        }
+      ],
+      "scope_limit": "No empirical effect established."
+    },
+    {
+      "dimension": "answerability",
+      "status": "pass",
+      "acceptance_criterion": "Explicit loss/prior/source contract; UNKNOWN is valid; direct inspections determine observed truth without hidden author hints.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/src/contract.py",
+          "sha256": "d4a52fdd524e9ffd66bd3a9169dff968dab12c8ee558012b6d014e99e38ad067"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_instrument.py",
+          "sha256": "23dd8ca073676de9c148d9bc83c04e6de4112906b724b74f9ee295707cb97343"
+        }
+      ],
+      "scope_limit": "Reports alone imply uncertainty, not certain truth."
+    },
+    {
+      "dimension": "target_scorer_validity",
+      "status": "pass",
+      "acceptance_criterion": "Direct world comparisons, unknown penalties and missingness bounds checked; exact reference agrees with independent enumerated world-tree arithmetic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/src/analysis.py",
+          "sha256": "ddb9e8c8d8e196ea7b4a86f244d905738b2b9d7e9fae2cd384d359120286b163"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/src/policies.py",
+          "sha256": "e24a4ebef6a40e56103834ab87da259442db9bd01ed8af8d79bad9487a6c9a8d"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/validation.json",
+          "sha256": "19cf195ba85a23f180aa4ee1f52869fc08d0eae6cee78df5c38bb10006e20530"
+        }
+      ],
+      "scope_limit": "Both implementations by the owning agent; no independent audit."
+    },
+    {
+      "dimension": "actor_isolation",
+      "status": "pass",
+      "acceptance_criterion": "Allowlisted packets and deep-copy callbacks; hidden-truth flip, private seed and time-boundary tests pass.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/src/contract.py",
+          "sha256": "d4a52fdd524e9ffd66bd3a9169dff968dab12c8ee558012b6d014e99e38ad067"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_instrument.py",
+          "sha256": "23dd8ca073676de9c148d9bc83c04e6de4112906b724b74f9ee295707cb97343"
+        }
+      ],
+      "scope_limit": "Native transport/provider context not tested."
+    },
+    {
+      "dimension": "mechanism_isolation",
+      "status": "pass",
+      "acceptance_criterion": "Initial honest/false packets differ only in seeded report value; peer mask preserves common receipts on fixed-policy witnesses; synchronous barriers.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_instrument.py",
+          "sha256": "23dd8ca073676de9c148d9bc83c04e6de4112906b724b74f9ee295707cb97343"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
+          "sha256": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e"
+        }
+      ],
+      "scope_limit": "Actual acquired evidence differs by arm as a mediator; no causal mediation identification."
+    },
+    {
+      "dimension": "challenge_coverage",
+      "status": "limited",
+      "acceptance_criterion": "Positive fault, null, correction, missingness, mirror and exact-control witnesses cover instrument behavior.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_instrument.py",
+          "sha256": "23dd8ca073676de9c148d9bc83c04e6de4112906b724b74f9ee295707cb97343"
+        }
+      ],
+      "scope_limit": "Small fixed worlds cannot validate operational exploration competence."
+    },
+    {
+      "dimension": "strong_comparisons",
+      "status": "pass",
+      "acceptance_criterion": "Evidence-only/no-repeat and exact per-actor reference; pooled access advantage disclosed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/src/policies.py",
+          "sha256": "e24a4ebef6a40e56103834ab87da259442db9bd01ed8af8d79bad9487a6c9a8d"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
+          "sha256": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e"
+        }
+      ],
+      "scope_limit": "Not a globally optimal multi-agent decentralized controller."
+    },
+    {
+      "dimension": "realism_scope",
+      "status": "limited",
+      "acceptance_criterion": "Inspectable finite maps model the observation-feedback loop transparently.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
+          "sha256": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e"
+        }
+      ],
+      "scope_limit": "No natural geography/noisy sensing or real report corpus; engineered fault witness is not native behavior."
+    },
+    {
+      "dimension": "independence_precision",
+      "status": "limited",
+      "acceptance_criterion": "Five actors and all times/arms are nested in one saved unit-test world; no native roots claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
+          "sha256": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/validation.json",
+          "sha256": "19cf195ba85a23f180aa4ee1f52869fc08d0eae6cee78df5c38bb10006e20530"
+        }
+      ],
+      "scope_limit": "Candidate eight-root pilot is weak precision; physical support only sixteen maps."
+    },
+    {
+      "dimension": "holdout_integrity",
+      "status": "limited",
+      "acceptance_criterion": "Only inspected development fixtures constructed; no reserved native outcomes or selection on model susceptibility.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
+          "sha256": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/SETUP.md",
+          "sha256": "1b4032e1d9471b707f9690f650f3cd3e901ba61c69eb7788807e2acbce2e10ef"
+        }
+      ],
+      "scope_limit": "Fresh native assignment and qualification manifests still needed."
+    },
+    {
+      "dimension": "robustness_failure_handling",
+      "status": "pass",
+      "acceptance_criterion": "Reordering, renaming, duplicate origin, correction, invalid/missing/failed status, repeats, malicious callback and tampered replay checked.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/tests/test_instrument.py",
+          "sha256": "23dd8ca073676de9c148d9bc83c04e6de4112906b724b74f9ee295707cb97343"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/validation.json",
+          "sha256": "19cf195ba85a23f180aa4ee1f52869fc08d0eae6cee78df5c38bb10006e20530"
+        }
+      ],
+      "scope_limit": "Provider outages and price drift require future native transport tests."
+    },
+    {
+      "dimension": "reproducibility_costs",
+      "status": "pass",
+      "acceptance_criterion": "Standard-library CLI, source/input hashes, full saved packets and successful replay audits; original budget preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/validation.json",
+          "sha256": "19cf195ba85a23f180aa4ee1f52869fc08d0eae6cee78df5c38bb10006e20530"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc9/results/acceptance-fixture/audit.json",
+          "sha256": "98db6f24e0abf705969bb1e55c99ba984dccba506ec8340766309b8f0891bfd5"
+        }
+      ],
+      "scope_limit": "Planning prices are historical; no paid admission is claimed."
+    }
+  ]
+}

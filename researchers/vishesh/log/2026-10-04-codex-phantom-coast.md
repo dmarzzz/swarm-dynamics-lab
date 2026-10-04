@@ -53,3 +53,7 @@ Re-audited PC5, recomputed paired strata and Qwen declared-cost reversals separa
 ## PC7 trace-grounded revision
 
 Read Dmarz pipeline and historical completion-audit guidance. Audited all140 PC5 request/checked-output pairs and full journals;50 S1 valid-but-wrong, raw bodies/confidence historically absent. Added complete private-operator-free trace viewer/export. Prospective finite-noisy-history scenario precedes exact Bayesian two-step controller implementation; nonmyopic check has lower expected fixture loss than greedy trust, verified by exhaustive policy enumeration. Eight checks pass. Prototype safe trace projection and failure accounting preserve missingness. No empirical model role survives exact-controller baseline yet; no calls/spend/claim/provisioning/key transfer. Original exposure .857148138 retained; concrete proposal is offline, not launch authorization.
+
+## PC9 population instrument
+
+Owner approved the refocused build. Wrote prospective contract before implementing isolated actor packets, synchronous peer delivery, two-slot exploration, strict failures, exact per-actor inference, paired metrics and full replay audit.30 tests pass; case-quality review separates offline readiness from native qualification. Deliberately credulous scripted fixture produces known harm, evidence-only null control does not; neither is native evidence. Browser replay verified. Zero new model calls/spend; no allocation. Next: concrete native qualification and transport/admission scope; original ledger and PC8 closed outcome retained.

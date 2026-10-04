@@ -1,5 +1,7 @@
 # Phantom Coast: PC-1
 
+**Population instrument built:** [PC9](pc9/README.md) implements five actor contexts, peer-on/off × honest/false reports, collective exploration, exact/simple controls,30 passing offline tests and a labeled scripted replay. [Current setup](pc9/SETUP.md). Zero new native calls; PC8 stays closed.
+
 **Current design proposal:** [False maps that prevent their own correction](reopening/PLAN.md) returns to population spread and adaptive evidence collection. [Six development case families](reopening/CASEBOOK.md) are constructed and checked under the updated case-design standard. No new native run; PC8 remains closed.
 
 **Latest native result:** [PC8](pc8/README.md) completed16 qualification requests on8 roots, failed the structured/protected-evidence gates and withheld S1. A comparator scope defect explains the apparent prose gain; a retrospective parser repair resolves all96 saved labels. [PI post-mortem](pc8/reviews/Q0-A1-POST.md). FINISH / PARK; cumulative known .846232842, exposure .858328842; allocation released.

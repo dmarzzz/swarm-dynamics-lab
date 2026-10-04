@@ -19,12 +19,12 @@
       "title": "Phantom Coast",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
-      "setup_path": "researchers/vishesh/notes/phantom-coast/pc8/SETUP.md",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/pc9/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
       "adapter": null,
       "checked_at": "2026-10-04T18:12:29.705635+00:00",
       "checked_commit": "d100df92ed48c41c49fa079d6a8de9667fdb873d",
-      "next_action": "HOLD native collection; PC8 remains closed. Reopening/PLAN.md proposes population spread plus observation feedback; six development roots/30 dependent variants validated offline. Finish acquisition/utility contract, strong baseline and untouched world cohort before concrete new native scope decision. Exposure .858328842 unchanged.",
+      "next_action": "PC9 population exploration instrument built and offline validated;30 tests and replay pass. Read pc9/SETUP.md. HOLD native collection: fresh exact qualification/transport/admission scope remains to prepare; latest native PC8 is closed. Cumulative exposure .858328842 unchanged.",
       "next_run_approval": "owner"
     },
     {

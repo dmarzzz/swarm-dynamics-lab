@@ -20,3 +20,5 @@ Next action: retain deterministic collection/parser/controller; independently au
 ## Reopening design work under upgraded case standards
 
 The owner requested a better scientific direction after parking PC8. [Prospective reopening proposal](../reopening/PLAN.md) restores the population/observation-feedback question. [Six concrete development roots and30 dependent variants](../reopening/CASEBOOK.md) now pass offline evidence-visibility, matched-pair and semantic fault checks; zero new model calls. PC8 remains closed and its valid negative finding unchanged. HOLD native collection: population dynamics, exact acquisition/utility contract, fresh holdout and complete costed native protocol are not yet implemented/frozen. These offline cases are not native qualification or independent data. Continue bounded offline construction before any material-scope launch decision; original ledger and released resource state remain unchanged.
+
+Current authoritative preparation record is now [PC9 SETUP](../pc9/SETUP.md), following the owner-authorized instrument build. This PC8 record remains historical native closeout evidence; its outcome and ledger are unchanged.
