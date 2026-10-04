@@ -88,6 +88,8 @@ Sustained masking by round 8: neutral 8 of 12, cued 11 of 12; cued only 3, neutr
 
 ## Records
 
+- Figures: final frame of S1 (artifact `sybil-rules-180-final-frame`, [artifacts/sybil-rules-180-final-frame/sybil-rules-180-final-frame-v1.png](../../../../artifacts/sybil-rules-180-final-frame/sybil-rules-180-final-frame-v1.png)), D1 frame (artifact `sybil-rules-180-d1-frame`), replay of every recorded round [figures/sybil-rules-180-replay.gif](figures/sybil-rules-180-replay.gif) (GIF is not an artifact format of this project, so it stays in the study folder). The frames count owners meeting the masking condition per round, not the sustained endpoint. Re-drawn from the records with `analysis/render_frames.py`.
+
 - Sanitized records: [records/](records/) (calls, round records, checkpoint, analyses and summaries per stage, chain status, ledger; no images, no secrets, no server addresses).
 - Recomputation: `python3 analysis/recompute.py <results dir> --compare`; details for this file: `python3 analysis/details.py <results dir>`.
 - Pre-run review [chain-003-pre](reviews/chain-003-pre.md); post-mortem [chain-003-post](reviews/chain-003-post.md).
