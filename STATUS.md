@@ -41,8 +41,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-v8-d1-latency](tasks/antsy-v8-d1-latency.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T18:05Z | Run approved Antsy D1 latency diagnostic and close out |
-| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T17:31Z | Build a cited narrative convergence map across the three researchers |
+| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T18:18Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [right-dissenter-reopening-design](tasks/right-dissenter-reopening-design.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T18:12Z | Draft and validate the Right Dissenter reopening diagnostic |
@@ -149,6 +148,7 @@
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
 | [antsy-targeted-v8](tasks/antsy-targeted-v8.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T07:03Z | Repair Antsy extraction and design targeted verification |
+| [antsy-v8-d1-latency](tasks/antsy-v8-d1-latency.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T18:17Z | Run approved Antsy D1 latency diagnostic and close out |
 | [antsy-v8-execution-repair](tasks/antsy-v8-execution-repair.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T17:01Z | Prepare trace-preserving Antsy execution repair and bounded D1 proposal |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T16:53Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:55Z | Ground Antsy in measured OCR errors and budgeted verification |
@@ -299,6 +299,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:17Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-village-fit | done |  | 2026-10-04T18:16Z | Pushed seven offline study contracts and ranked unrun/new fits; real episode annotation remains next. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | done | refine-swarm-size-question | 2026-10-04T18:11Z | Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged. |
@@ -309,7 +310,6 @@
 | vishesh/codex-pi-review | idle | ai-village-dataset-design-2026-10-04 | 2026-10-04T18:02Z | Dataset access verified and replay proposal published; no model run or allocation. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T17:30Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-factory | blocked | factory-provenance-invariance | 2026-10-04T17:29Z | Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T17:05Z | S0-02 closed; strict format failure; offline repair validated; successor decision pending |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
