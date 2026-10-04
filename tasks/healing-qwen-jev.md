@@ -11,7 +11,7 @@ created: 2026-10-03
 created_by: vishesh/codex-regrowth-docs
 depends_on: []
 topics: []
-updated: 2026-10-04T06:51Z
+updated: 2026-10-04T08:16Z
 history:
 - '2026-10-04T06:11Z released by vishesh/codex-regrowth-docs: Bounded C1/C2 cycle closed with preserved failures. Qualification passed; full 200-curator comparison remains incomplete. Requires a new prospective plan and native transport requalification before further inference.'
 claimed_at: 2026-10-04T06:51Z
