@@ -1,6 +1,6 @@
 # compositional-safety: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T09:09Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T09:12Z.
 
 ## 1. Results so far
 
@@ -42,11 +42,21 @@ What the D2/risk bundle shows about the question (one root, descriptive): fragme
 
 ## 3. Next run
 
-**Decision needed now (operator's call; reported to dmarz/fleet-monitor at 09:11Z):**
+**Decision taken: the operator stopped P1 at 09:11Z to relaunch on design v10** (hub message: the 16,000-byte request limit fails the placebo arm). p1-002 ended with 3 complete bundles and a partial fourth, 448 calls, USD 6.06. v10 is not on main yet (09:14Z).
 
-- (a) Let it run. Result: five complete roots, P invalid in long episodes, root 305 missing. Usable as a descriptive pilot with both holes stated.
-- (b) Stop and relaunch the chain on design v10: `max_input_bytes` about 32000 (and the reservation arithmetic with it), `stage_timeout_seconds` 21600, P1 `max_calls` 4500. Costs a fourth Q0 on fresh roots (10 minutes, USD 1.3) and the time already run. Cheapest now, dearer with every bundle.
-- For either: whether a 40-turn stall should count as "incomplete" for F, G and H when the turn limit itself is the stopping rule deserves a line in the analysis plan before the numbers are read.
+Sizes for v10 from the one measured root (sent to dmarz/fleet-monitor at 09:14Z):
+
+| Limit | v9 value | Measured need for six roots | Suggested |
+|---|---|---|---|
+| `max_input_bytes` | 16000 | P observation reached 14,843 bytes at turn 39; request passed 16,000 | about 32000 (reservation per call grows with it) |
+| `stage_timeout_seconds` | 14400 | about 47 min per root, 4.7 h | 21600 |
+| P1 `max_calls` | 3360 | about 560 per root, 3,400; more once P runs to 40 turns | 4500 |
+| `study_settled_usd_cap` | 75 | USD 15.4 already settled; about USD 7.5 per root, 45 for P1, plus Q0 | 150 |
+| `max_attempted_calls` (study) | 9216 | about 2,800 used | unchanged |
+
+- The fresh Q0 needs a fourth set of unused roots (244/253/256 and 257/282/293 are spent).
+- Whether a 40-turn stall counts as "incomplete" for F, G and H when the turn limit is itself the stopping rule deserves a line in the analysis plan before the numbers are read.
+- Forecast for the relaunch: Q0 about 10 minutes (three passes in a row at 24 of 24, 8 of 8 and 24 of 24), then P1 about 4.7 hours, about USD 45 to 55.
 
 **After P1:** P1 is the last open stage (S1, S2, D3, W and held-out roots are closed). The written successor is proposal 4 in `notes/next-experiments-2026-10-04/README.md` (delayed and missing receipts). It has no study folder. P1 will run for 1.5 to 4 hours, which is the window to write it.
 
