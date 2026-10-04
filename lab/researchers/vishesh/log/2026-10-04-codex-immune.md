@@ -65,3 +65,8 @@ Q1 sourceee13a461 ran two Opus/Anthropic calls, then325-character reason violate
 Prospective offline candidate exposes existing string limits/order in instructions, changes no schema/outcome/model, and never truncates or retries.24tests pass; largest checkedwire7020. Saved failure remains invalid. General competence guide gains the same narrowly evidenced lesson. Next: distinct bounded qualification after finite diagnostic reservation and current admission; no peer-effect claim or original-stage reuse.
 
 PI allocated distinct Q2 necessary interface diagnostic only:48calls/2.657280API+.03existinghost20min; no comparison. Integrated only visible existing limits and new stage/admission bindings;27tests pass. Q1 retained; original711/15.606955 ledger baseline enforced. Original unused grant reporting corrected to conservative request-reservation carry-forward, not claimed refund from actual charges.
+
+
+## Q2 closed; paid iteration parked
+
+Q2 stopped at sixthreason247vs240 after12knowncalls. Allsixdiagnoses/waitproposals semanticallycorrect;fivehealthytoolsteps,0/4worldscomplete. All12nativewires/usages replay; authoredquality+operationalfinalize complete. Original723calls/16.118715reserved; incrementalAPI.109390 plus386sechosting.0076588833; conservativegrantcarry.5194188833,unused2.1678611167released. Claim475released and worker/relay/tunnel stopped. Provider documentation identifies unsupported stringlengthconstraints, but downstream transformed schema was not observed. No repair/peereffectclaim. LatestownerstoprelayedbyPI: no further paid iteration; bounded-interface idea retained as unfunded offlineproposal, no newapprovalrequest.

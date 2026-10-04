@@ -1,0 +1,27 @@
+{
+  "status": "prepared_not_funded_or_admitted",
+  "stage": "S50",
+  "max_calls": 1150,
+  "model_cap_usd": "41.86",
+  "hosting_cap_usd": "0.28",
+  "all_in_cap_usd": "42.14",
+  "cumulative_prior_usd": "2.1523447770333335",
+  "study_cap_usd": "60",
+  "source_sha256": "8354c82184d91abba03ce520810c81783870f8db9070ab11b605877cc3a9440d",
+  "scientific_sha256": "ceb9ae9e3f5189e1565ac845c79c689f0545b69d04834953002d4ee7b70c5628",
+  "packet_sha256": "f06af92bb7f1767ffbe09d76a038153da299f27a4c691fe2d8c8aca3d376be9d",
+  "operational_amendment": "explicit-sqlite-close-only",
+  "qualification": {
+    "source_sha256": "84423a431d6758606c61938f475f7a8b0ecc22112126c4d426fef8ff35aed8d3",
+    "packet_sha256": "f06af92bb7f1767ffbe09d76a038153da299f27a4c691fe2d8c8aca3d376be9d",
+    "result_sha256": "44624c268be4e5c6ad7749ab6c449e48a58b9c1b171e4b38a5de3026c421f11c",
+    "passed": true,
+    "authored_trace_review_passed": true,
+    "p90_seconds": 1.9940118789672852
+  },
+  "missing": [
+    "finite main allocation",
+    "fresh exclusive approved-account claim",
+    "fresh main source/runtime/public-plan/tariff admission"
+  ]
+}

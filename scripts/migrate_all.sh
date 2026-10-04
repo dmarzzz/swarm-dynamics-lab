@@ -56,6 +56,7 @@ fi
 
 step "1 layout";            scripts/migrate_layout.sh
 step "2 artifact paths";    python3 scripts/migrate_artifact_paths.py
+step "2b operations registry"; python3 scripts/migrate_operations.py
 step "3 links";             python3 scripts/migrate_links.py --write --include-recorded
 step "4 prose paths";       python3 scripts/migrate_prose_paths.py --write --include-recorded
 step "5 evidence blocks";   python3 scripts/migrate_evidence_relink.py --write --include-recorded

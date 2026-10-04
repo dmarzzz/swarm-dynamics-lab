@@ -1,0 +1,10 @@
+{
+  "amendment": "explicit SQLite close/finally; qualification binds its original closure with identical scientific source",
+  "Q50_source_sha256": "84423a431d6758606c61938f475f7a8b0ecc22112126c4d426fef8ff35aed8d3",
+  "scientific_sha256": "ceb9ae9e3f5189e1565ac845c79c689f0545b69d04834953002d4ee7b70c5628",
+  "scientific_source_unchanged": true,
+  "new_source_sha256": "8354c82184d91abba03ce520810c81783870f8db9070ab11b605877cc3a9440d",
+  "runtime_tests": 6,
+  "new_native_calls": 0,
+  "all_tracked_connections_closed_after_each_success_or_error": true
+}

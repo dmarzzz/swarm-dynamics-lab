@@ -128,3 +128,10 @@ Direct owner scientific direction led to a shared-handoff action-consequence tes
 ## Sol50R1 preparation — 2026-10-04 UTC
 
 The larger fifty-agent objective is now authorized; concrete plan resolution and finite portfolio allocation proceed through delegated PI. [Sol50R1 plan](native/sol50r1/PLAN.md) replaces the old unrun Sol50 execution proposal with50fresh serial prose-only writers,24fresh checkpoint readers and3qualifiers,77calls maximum. Questions and answers do not flow down the writer chain. [Pre-run assessment](native/sol50r1/PRE-RUN.md) records B4R1 trace diagnosis, case/controller controls,11passing offline tests and conservative copy-fit/budget revision. Additional maximum3.877008077USD including0.25hosting, prior0.673196669USD carried forward, study ceiling50USD. No native calls or allocation yet; next action concrete named PI funding then refreshed admission/qualification. Historical completed stages and immutable plans remain intact.
+
+
+## Sol50R1 completed and closed — 2026-10-04 UTC
+
+[Reviewed closeout](native/sol50r1/results/POST-MORTEM.md):77/77native calls valid,50fresh serial writers,24checkpointreaders and3qualifiers. P12/12correct andR12/12correct at depths1,10,25,50; zero missing/retries/fallback/unsafe authorization/withheld legitimate release. All50handoffs and24readerexplanations audited; exact77trace replay and parent/relay bindings pass. A single authored root supports stable usability on this trajectory, not population reliability. Some composite-target qualifications omitted fromhop1 and a verification caveat appears26without wrong decisions. Main203.49seconds.
+
+Original ledger reconciled: API0.242646USD +allocated-time hosting0.006686642USD =attempt0.249332642USD; cumulativeTelephone0.922529311USD, zero unknown/reservations. Existing exclusive claim released, worker/relay/tunnel stopped. Operational finalize and authored scientific11dimensionreview complete; generic manual scaffold does not parse native77count. Raw authored traces retained privately, aggregate/derived findings published. FINISH / CLOSED; latest owner stopping direction prohibits automatic further iteration. No successor queued.

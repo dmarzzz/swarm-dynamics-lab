@@ -1,6 +1,16 @@
 # Telephone: where evidence changes in an agent swarm
 
-## Remembering facts wasn't enough to make the right call.
+## Fifty handoffs. The decisions still held.
+
+- Fifty fresh agents relayed one dossier; new readers answered questions at hops 1, 10, 25 and 50.
+- Handoff alone: **12/12 correct**. Add the original source: **12/12 correct**. No unsafe release or legitimate release withheld.
+- Some qualifications disappeared, but the core rules and evidence remained usable. More handoffs did not inevitably break decisions here.
+- Scope: one synthetic chain, not a general reliability estimate. **Run complete and closed; no further iteration queued.**
+
+2026-10-04 UTC · [Latest findings and limitations](native/sol50r1/results/POST-MORTEM.md) · [Frozen larger-run plan](native/sol50r1/PLAN.md)
+
+
+## Earlier B4R1 finding: remembering facts was not enough
 
 - Three handoffs later, readers got just 7 of 18 deployment decisions right.
 - Give them the original source alongside the same handoff: 18 of 18 correct.
@@ -9,7 +19,7 @@
 
 2026-10-04 UTC · [Reviewed results and limitations](native/b4r1/results/POST-MORTEM.md) · [Earlier B2 results](native/b2/results/POST-MORTEM.md) · [Authoritative setup and run history](SETUP.md)
 
-**Progression and status:** B2 hit a copied-answer ceiling; B4R1 tested fresh readers on 9 authored worlds nested in 3 recipes, repeated in 2 blocks. All 6 legitimate-release observations were withheld; 5 explicit denials became unknowns. FINISH bounded diagnostic; the 50-agent chain remains unrun. This was not an error-recovery experiment or a real AI Village evaluation.
+**Progression and status:** B2 hit a copied-answer ceiling; B4R1 tested fresh readers on 9 authored worlds nested in 3 recipes, repeated in 2 blocks. All 6 legitimate-release observations were withheld; 5 explicit denials became unknowns. That bounded diagnostic finished; the later fifty-agent run above is now complete. This was not an error-recovery experiment or a real AI Village evaluation.
 
 Key learning: supporting facts can survive a handoff while the governing rule, evidential threshold or downstream interpretation changes. Source restoration helped on these selected cases; the study does not isolate policy omission, distrust of inherited evidence and added prerequisites as separate causes. These results describe decision answers, not actual deployment actions.
 

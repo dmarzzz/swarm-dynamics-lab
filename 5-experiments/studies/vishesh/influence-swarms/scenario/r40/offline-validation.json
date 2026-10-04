@@ -1,0 +1,29 @@
+{
+  "kind": "OFFLINE SOFTWARE FIXTURES \u2014 NOT MODEL EVIDENCE",
+  "checked_utc": "2026-10-04T23:45:06.114946+00:00",
+  "command": "python3 -m unittest discover -s researchers/vishesh/notes/influence-swarms/scenario/r40 -p 'test_*.py'",
+  "tests": 19,
+  "passed": true,
+  "maximal_nested_wire_bytes": 31807,
+  "ceiling_bytes": 32768,
+  "manifest_sha256": "ed36246761b03563d8b60f07b8c2c420fbe56e63a9a5f9b53d3852f4bad6ac11",
+  "coverage": [
+    "deterministic18-case corpus, disjoint9/9 seeds",
+    "same primary/page union, single-clause pairs, gold exclusion",
+    "40 identities, sparse ring DAG, lossless nested parent reports",
+    "756qualification and2988main assignments",
+    "27final competence gate; internal mistakes retained",
+    "failed shared check blocks descendants without replacement",
+    "atomic funding before dispatch, duplicate work rejected",
+    "route fault globally stops, returned charge retained",
+    "main without source-bound native qualification rejected",
+    "relay rejects changed exact wire before provider",
+    "assigned missing endpoints and paired worst-case bounds"
+  ],
+  "limitations": [
+    "same-author software checks, not independent arithmetic certification",
+    "no native R40 replies; final competence unproven",
+    "private launch/collection helper adaptation and fresh runtime admission pending",
+    "9 authored evaluation roots; no population prevalence or causal agent-count estimate"
+  ]
+}
