@@ -13,5 +13,25 @@
   "workers": 1,
   "max_stage_seconds": 1800,
   "automatic_retries": 0,
-  "status": "qualifying"
+  "status": "qualifying",
+  "runs": [
+    {
+      "run": "sybil-specialists-api/62c03464",
+      "stage": "S0",
+      "status": "done",
+      "planned": 216,
+      "valid": 216,
+      "model_calls": 0,
+      "source": "e407c024d885c4b355d501e958d61d304db25d81",
+      "verified_artifacts": [
+        "final_frame.png",
+        "replay.gif",
+        "assignment.json",
+        "episodes.jsonl",
+        "summary.json",
+        "progress.png",
+        "initial_frame.png"
+      ]
+    }
+  ]
 }
