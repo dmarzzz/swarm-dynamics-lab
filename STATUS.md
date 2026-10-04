@@ -168,6 +168,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:20Z | Implementing neutral-model discovery pilot under the standing shared API budget. |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | vishesh/codex-decision-models | working |  | 2026-10-04T02:16Z | TODO one line |
 | vishesh/codex-idea-scores | done | conditional-swarm-size | 2026-10-04T02:15Z | Published EX-25 conditional swarm-size question and score |
@@ -177,7 +178,6 @@
 | dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:10Z | Shipped v3; 74 checks passed and 636 saved requests replayed; independent review and model launch pending |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:06Z | Exclusive sim-dmarz-3 allocated; native launch awaits approval for USD 8 budget increase |
 | dmarz/patchwork-hypotheses | done | add-patchwork-hypotheses | 2026-10-04T02:03Z | Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:02Z | Implementing neutral-model discovery pilot under the standing shared API budget. |
 | dmarz/private-control | done |  | 2026-10-04T02:00Z | pc-H4 done (d0725be0, qualified, private_contrast -0.33); post-mortem reviews/pc-H4-a1-post.md |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
