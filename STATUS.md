@@ -36,6 +36,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [build-discussion-benchmark-v3](tasks/build-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T01:51Z | Ship a validated offline discussion and memory benchmark v3 |
 | [build-market-split](tasks/build-market-split.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T01:49Z | Build and deploy an exploratory owner-splitting market pilot |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:26Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:25Z | Refine and run the exploratory immune-response instrument |
@@ -157,6 +158,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/discussion-bench-v3 | working | build-discussion-benchmark-v3 | 2026-10-04T01:49Z | Building the offline v3 benchmark, with paid runs and holdout release deferred |
 | vishesh/codex-idea-scores | working |  | 2026-10-04T01:49Z | Implement researcher rubric scores across all research ideas |
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:48Z | Fleet S0 passed and replay verified; running the frozen 432-episode scripted S1, API budget zero. |
 | vishesh/codex-methods | idle |  | 2026-10-04T01:47Z | Completed Antsy repair, qualification, reconciled outcomes and public animations |
