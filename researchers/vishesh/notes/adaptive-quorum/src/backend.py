@@ -17,6 +17,7 @@ class Laya:
         from laya import load
         torch.set_num_threads(2)
         torch.manual_seed(0)
+        self.receipts = []
         self.model = load(MODEL, revision=REVISION, device='cpu', backend='eager')
         self.metadata = {'backend': 'laya', 'model': MODEL, 'revision': REVISION,
                          'source_revision': SOURCE, 'device': 'cpu',
@@ -34,4 +35,5 @@ class Laya:
             raise ValueError('invalid_probability_range')
         if abs(sum(p.values()) - 1) > 0.001 or p[answer['choice']] < max(p.values()) - 0.00001:
             raise ValueError('invalid_probability_distribution')
+        self.receipts.append({'choice': answer['choice'], 'probabilities': p, 'usage': result.get('usage')})
         return answer['choice']

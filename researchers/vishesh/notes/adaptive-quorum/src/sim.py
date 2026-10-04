@@ -73,6 +73,7 @@ def run_episode(task_id, seed, world, dose, arms, cfg):
     inference_calls = 0
     started = time.monotonic()
     for step, reports in enumerate(tape, 1):
+        receipt_start = len(getattr(decide, 'receipts', []))
         votes, central = [], 'ABSTAIN'
         if team_error is None:
             try:
@@ -92,7 +93,8 @@ def run_episode(task_id, seed, world, dose, arms, cfg):
                     raise ValueError('invalid_choice')
             except Exception as exc:
                 central_error = type(exc).__name__
-        trace.append({'round': step, 'reports': reports, 'votes': votes, 'central': central})
+        trace.append({'round': step, 'reports': reports, 'votes': votes, 'central': central,
+                      'model_outputs': getattr(decide, 'receipts', [])[receipt_start:]})
         history += reports
     elapsed = time.monotonic() - started
     digest = hashlib.sha256(json.dumps(tape, sort_keys=True).encode()).hexdigest()

@@ -37,3 +37,5 @@ Report per-world/deadline counts and paired task differences, including invalid 
 [Pratt and Sumpter primary article](https://pmc.ncbi.nlm.nih.gov/articles/PMC1635101/) supplies the urgency motivation. Consulted abstract and methods, not a new full-paper review. Template and design-guide methods are reused; published effects are not imported as calibration constants.
 
 2026-10-03: owner selected local Laya now and Jev via OpenRouter later. Backend migration is documented in BACKENDS.md; no hosted credentials or calls are required for this pilot.
+
+2026-10-03 setup amendment: first local launch could not import `laya.backends` from the built wheel; zero inferences occurred. Use the pinned source checkout on PYTHONPATH with the same dependency environment, model and protocol. Record raw decision probabilities and usage when returned. Attempt v1 remains incomplete; v2 is a new qualification directory. A preceding wrapper import failure also occurred before assignments were created. Neither failure is a scored model result.

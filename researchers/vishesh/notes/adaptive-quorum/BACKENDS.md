@@ -9,3 +9,5 @@ Before the later Jev run: verify OpenRouter's then-current Jev model ID, provide
 Freeze fixtures, prompts, option order, deadlines, stopping policies and analysis before switching. Backend is a declared factor: never pool Laya and Jev outcomes or describe Laya results as Jev results. Record tokens, latency, invalid outputs and actual cost for both; requalify clean-task competence for Jev. No hosted calls are currently enabled. Initial hosted qualification spending ceiling remains $5, subject to verified route pricing and a conservative request reservation ledger.
 
 Sources inspected 2026-10-03: [Laya source](https://github.com/NandhaKishorM/laya), its loader/revision implementation, and [TypeSafe model specifications](https://docs.typesafe.ai/models). The latter describes native Jev, not an OpenRouter route. No claim of verified OpenRouter availability is made here.
+
+Installation note: the 0.3.26 wheel built from this revision omitted `laya.backends`. Use `PYTHONPATH=/path/to/pinned/laya/source` with the isolated dependencies. The checkpoint is cached before inference, and `HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1` disables model-download traffic during the run.
