@@ -1,0 +1,12 @@
+{
+  "claim": "vishesh-quorum-r1-01",
+  "claim_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/393",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/396",
+  "status": "done",
+  "worker_stopped": true,
+  "allocated_seconds": 407.0,
+  "allocated_cost_usd": 0.008075558333333333,
+  "cost_kind": "allocated-time estimate, not invoice",
+  "operations_slug": "qm-r1-01",
+  "native_attempt": "QM-R1-01"
+}

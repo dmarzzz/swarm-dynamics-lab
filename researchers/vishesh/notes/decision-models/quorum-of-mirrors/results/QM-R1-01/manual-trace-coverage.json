@@ -1,0 +1,16 @@
+{
+  "qualification": "all 10 request/response traces before evaluation admission",
+  "evaluation_ids": [
+    "QM-R1-01-012",
+    "QM-R1-01-014",
+    "QM-R1-01-019",
+    "QM-R1-01-023",
+    "QM-R1-01-031",
+    "QM-R1-01-032",
+    "QM-R1-01-034"
+  ],
+  "selection": "both variants of lexicographically first root per family, plus all misses",
+  "all_assigned_statuses_checked": 50,
+  "actual_responses_replayed": 35,
+  "hidden_reasoning_available": false
+}

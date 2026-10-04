@@ -1,0 +1,143 @@
+{
+  "attempt": "QM-R1-01",
+  "assessor": "vishesh/codex-quorum-mirrors",
+  "assessed_at": "2026-10-04T20:06:15.343304+00:00",
+  "evidence_revision": "29bddcb26f8d8dcb6ec7870db989b24b372459a2",
+  "execution": "stopped",
+  "qualification": "passed",
+  "scientific_interpretation": "R1 passed all ten qualification calls, then stopped after 25 of 40 evaluation calls: 24 valid, one unknown/value contract failure, 15 unstarted. All 24 scored decisions were correct, but one concealed a source-value error; 23/24 scored packets were fully exact. New API cost USD0.458142. The larger test did not establish robustness; original failures and missing cases remain intact.",
+  "evaluation_accepted": false,
+  "reporting": "full replay; manual coverage documented; remote hashes and hub readback verified",
+  "cost_status": "reconciled; historical unknown holds retained",
+  "reviewer_policy": "independent researcher review not required by owner direction",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Scoped extraction robustness and paired repetition contrast, not swarm efficacy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/robustness-v1/PLAN.md",
+          "sha256": "21a4c275ffe7ebf8b215d4bc0d57d69ab0cf614b3e44c49fff4fa378476a49f1"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Five authored grammars; natural language and independent annotations not evaluated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/robustness-v1/cases.py",
+          "sha256": "7740717cda30b2ceaf6390f6addbf657da1bd44a78cf22dd63807c005ca078fe"
+        }
+      ],
+      "next_action": "Prepare a separately annotated naturalistic corpus offline before any new paid design.",
+      "acceptance_check": "Disclose independent units, annotation agreement, ambiguity and real task coverage before approval and fresh qualification."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Source receipts fixed across pairs; strongest same-input parser retained; order/length also change.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/analysis.json",
+          "sha256": "e9d1cb604459ea81c6cbd8d2d4a98dfd8adc551ec2d416d75af8290b701f5a0e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Initial10-call qualification passed; larger evaluation exposed source normalization and unknown/value consistency failures.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/qualification-reviewed.json",
+          "sha256": "fd7baef008fb9b6b44a5fe6736180f2f7517356ae4a88963fa16fe00e92a4a07"
+        }
+      ],
+      "next_action": "Use the offline guard and design a fresh balanced qualification of extraction plus deterministic normalization.",
+      "acceptance_check": "All positive/negative/unknown qualification strata and fact/quote consistency pass with retained native traces."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All assignments replayed; fact and mode mistakes cannot hide behind correct labels.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/audit.json",
+          "sha256": "1cf5906d117c2c4c2710ae23f5c4ab73e4114c799c337f6de725e24d1959643e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Twenty evaluation roots assigned; nine complete valid pairs, eight exact; eleven incomplete or invalid after declared stop. No population precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/summary.json",
+          "sha256": "b42a2600b32a71f9cf91562f266197156a4755f7661b52a79d2ca88f604d783d"
+        }
+      ],
+      "next_action": "Prepare a separately annotated naturalistic corpus offline before any new paid design.",
+      "acceptance_check": "Disclose independent units, annotation agreement, ambiguity and real task coverage before approval and fresh qualification."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Stateless frozen request bodies; no operator memory, gold or inter-call feedback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/requests.jsonl",
+          "sha256": "5503aa1310b89f79575dfe66b6ed204fd1d4b1bf64047b533603cb47831b1498"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "50 assignments,35 charged responses,34 valid,15 unstarted; no missing returned response. All9 remote artifacts hash-verified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/closeout.json",
+          "sha256": "1f58b9a635680bdb07ac60c41642c9c87e41fb7c87603fbdc9278be0466f0b80"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Cumulative funding, original history, uncertain holds and one-time extension reconciled.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/closeout.json",
+          "sha256": "1f58b9a635680bdb07ac60c41642c9c87e41fb7c87603fbdc9278be0466f0b80"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned instrument, manifest and complete saved-data replay; hosted output is not guaranteed deterministic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/preflight.json",
+          "sha256": "13d332a01165dcf82c291102d8a1f04cb9b61bf7ab51a41712dec413cf5062c5"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Stage-separated all-assignment trace table exposes missing/invalid outcomes and pairs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-R1-01/traces.html",
+          "sha256": "b8d32efd4779f4f1a8039775766c415f7126767628177f3a73fde5f70205729b"
+        }
+      ]
+    }
+  ],
+  "decision": "FINISH attempt; HOLD native expansion; offline guard validated, fresh native design required"
+}

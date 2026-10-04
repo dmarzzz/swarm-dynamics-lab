@@ -68,3 +68,8 @@ PQ-02: owner-approved explicit facts/comparator repair andUSD2 cumulative additi
 PQ-03 owner-authorized schema/error repair: constant arrays and strict local ID validation; nine offline tests.24/24 calls complete and qualification passed, noHTTPerrors;24 decisions/labelsets correct,119/120 reportfacts. One report assertion/status error manually reviewed; priorHTTP400 cause remains unproven. NewAPIUSD0.243624, oldledger/unknowns retained; hub done and worker exit verified.
 
 PQ-04: analyzed fullPQ-03 traces; separated report assertions from source evidence and made fact-consistent quotes/component accuracy mandatory. Ten offline tests;8/8 native calls passed all stricter gates,4/4 matched claim invariances and DEFER transitions. All8 traces manually inspected/replayed. NewAPIUSD0.074124, prior ledger/unknowns retained. Finish targeted repair; broader field corpus remains future work, no automatic successor.
+
+
+## R1 larger robustness screen
+
+R1 passed all ten qualification calls, then stopped after 25 of 40 evaluation calls: 24 valid, one unknown/value contract failure, 15 unstarted. All 24 scored decisions were correct, but one concealed a source-value error; 23/24 scored packets were fully exact. New API cost USD0.458142. The larger test did not establish robustness; original failures and missing cases remain intact. All35 native responses replayed, all50 assignment statuses retained, both failures inspected, worker stopped and claim released. Actor-input guard catches both failures on saved data; three tests pass. Next: repaired native design and balanced fresh qualification, no automatic retry.

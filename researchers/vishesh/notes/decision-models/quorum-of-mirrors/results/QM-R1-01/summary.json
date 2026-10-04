@@ -1,0 +1,102 @@
+{
+  "assigned": 50,
+  "started": 35,
+  "valid": 34,
+  "unstarted": 15,
+  "known_actual_usd": 0.458142,
+  "stages": {
+    "qualification": {
+      "assigned": 10,
+      "started": 10,
+      "valid": 10,
+      "unstarted": 0,
+      "source_facts_correct": 30,
+      "report_facts_correct": 70,
+      "reports_total": 70,
+      "labels_correct": 10,
+      "quotes_valid": 10,
+      "grounded_quotes_valid": 10,
+      "decision_correct": 10,
+      "source_votes_correct": 30,
+      "false_contradictions": 0,
+      "missed_contradictions": 0,
+      "unknown_errors": 0,
+      "confusion": {
+        "NOT_ESTABLISHED->NOT_ESTABLISHED": 46,
+        "SUPPORTED->SUPPORTED": 12,
+        "CONTRADICTED->CONTRADICTED": 12
+      },
+      "roots": 5,
+      "roots_exact": 5,
+      "paired_reports_invariant": 5,
+      "paired_decision_delta": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "paired_extraction_delta": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_exact": true
+    },
+    "evaluation": {
+      "assigned": 40,
+      "started": 25,
+      "valid": 24,
+      "unstarted": 15,
+      "source_facts_correct": 71,
+      "report_facts_correct": 170,
+      "reports_total": 170,
+      "labels_correct": 24,
+      "quotes_valid": 24,
+      "grounded_quotes_valid": 23,
+      "decision_correct": 24,
+      "source_votes_correct": 71,
+      "false_contradictions": 0,
+      "missed_contradictions": 0,
+      "unknown_errors": 0,
+      "confusion": {
+        "SUPPORTED->SUPPORTED": 22,
+        "CONTRADICTED->CONTRADICTED": 23,
+        "NOT_ESTABLISHED->NOT_ESTABLISHED": 125
+      },
+      "roots": 20,
+      "roots_exact": 8,
+      "paired_reports_invariant": 9,
+      "paired_decision_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "paired_extraction_delta": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "all_exact": false
+    }
+  },
+  "qualified": true,
+  "evaluation_accepted": false,
+  "attempt": "QM-R1-01",
+  "stop_reason": "ValueError",
+  "execution_complete": false
+}

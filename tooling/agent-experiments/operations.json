@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-04-post.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/R1-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:44:55.270163+00:00",
-      "checked_commit": "7489e37ef377d7bf45428d5fdcadb7560bd72d8e",
-      "next_action": "FINISH PQ-04 targeted repair:8/8 valid;all facts/quotes/labels/decisions correct,4 paired assertion invariances and intended DEFER transitions. Read PQ-04-post.md. No automatic next run; broader evaluation needs compatible cases and concrete scope. Preserve original107call ledger and prior unknowns.",
+      "checked_at": "2026-10-04T20:06:15.346659+00:00",
+      "checked_commit": "29bddcb26f8d8dcb6ec7870db989b24b372459a2",
+      "next_action": "FINISH stopped R1; HOLD native expansion. Read R1-01-post.md and offline r1-repair guard. Design fresh balanced extraction/normalization qualification; no automatic retry. Preserve cumulative ledger and uncertain holds.",
       "next_run_approval": "owner"
     },
     {

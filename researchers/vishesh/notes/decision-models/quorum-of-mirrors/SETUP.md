@@ -1,6 +1,6 @@
-## Current: R1 larger robustness screen prepared
+## Latest: R1 stopped and reviewed
 
-**RUN after admission.** Owner requested larger robust tests and added USD5: cumulative USD8 API + USD1 infrastructure. [Prospective plan](packet-study/robustness-v1/PLAN.md), [pre-run assessment](reviews/R1-01-pre.md), [authority](packet-study/robustness-v1/AUTHORIZATION.json). Ten qualification calls then forty conditional evaluation calls across five families; USD2.40 maximum new reservation. Fifteen offline tests pass including 1,000 software stress packets. Original 107-call ledger retained; known-cost settlement preserves both uncertain charges. No model calls or allocation yet for R1.
+**FINISH attempt; HOLD native expansion.** R1 passed all ten qualification calls, then stopped after 25 of 40 evaluation calls: 24 valid, one unknown/value contract failure, 15 unstarted. All 24 scored decisions were correct, but one concealed a source-value error; 23/24 scored packets were fully exact. New API cost USD0.458142. The larger test did not establish robustness; original failures and missing cases remain intact. [Post-mortem](reviews/R1-01-post.md), [scientific review](results/QM-R1-01/scientific-review.json), [offline repair](packet-study/r1-repair/PLAN.md). Original ledger and both uncertain holds retained; cumulative cap USD8 API + USD1 infrastructure after owner addition. Worker stopped, artifacts reconciled, claim released. Next: concrete repaired extraction/normalization plan and fresh balanced qualification, not an automatic retry.
 
 ## Latest: PQ-04 assertion/evidence repair complete
 

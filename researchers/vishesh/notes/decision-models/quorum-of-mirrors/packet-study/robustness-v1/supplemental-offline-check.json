@@ -1,0 +1,7 @@
+{
+  "timing": "after qualification; before evaluation closeout; no runtime changes",
+  "kind": "software fixtures, not native evidence",
+  "packets": 1000,
+  "seeds": 10,
+  "all_parser_and_typed_labels_agree": true
+}

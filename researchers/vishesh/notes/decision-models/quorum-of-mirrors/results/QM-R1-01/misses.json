@@ -1,0 +1,944 @@
+[
+  {
+    "assignment": {
+      "id": "QM-R1-01-032",
+      "case_id": "8132fac53a3e428b-3",
+      "root": "8132fac53a3e428b",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "15af06d0c4b480d4106bf3667bcd7c72c7558affccc6ee8861db36dd6c940506",
+      "input_token_upper_bound": 5480,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    "case": {
+      "id": "8132fac53a3e428b-3",
+      "root": "8132fac53a3e428b",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "actor": {
+        "contract": "Sources are authenticated, independent across groups, and counted once. Query-matching explicit corrections replace initial observations. Plans are not observations. Operating=running; not running=stopped. Extract report ASSERTION/HEDGE/PLAN and its value independently of source support; an Unconfirmed clause is HEDGE. Select the query-matching clause in multi-claim reports; retain a sole unmatched claim. Only ASSERTION can establish an observation. No two agreeing observed sources means DEFER.",
+        "query": {
+          "entity": "asset-811390",
+          "time": "16:06",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Initial: At 16:06, asset-811390 was running.\nCorrection: At 16:06, asset-811390 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 16:06, asset-811390 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 16:06, asset-811390 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r8a62004e",
+            "source_id": "s0",
+            "text": "At 16:06, asset-811390 was running."
+          },
+          {
+            "id": "r37a05602",
+            "source_id": "s0",
+            "text": "Plan: At 16:06, asset-811390 will be stopped."
+          },
+          {
+            "id": "r8a62004ec1",
+            "source_id": "s0",
+            "text": "At 16:06, asset-811390 was running."
+          },
+          {
+            "id": "r8a62004ec0",
+            "source_id": "s0",
+            "text": "At 16:06, asset-811390 was running."
+          },
+          {
+            "id": "r24a5f5c8",
+            "source_id": "s0",
+            "text": "At 16:06, asset-811390 was not running."
+          },
+          {
+            "id": "rf451b7cc",
+            "source_id": "s0",
+            "text": "Unconfirmed: At 16:06, asset-811390 was stopped."
+          },
+          {
+            "id": "rc35f4778",
+            "source_id": "s0",
+            "text": "At 16:06, asset-811390-unseen was stopped."
+          },
+          {
+            "id": "rbcc30253",
+            "source_id": "s0",
+            "text": "At 16:06, asset-811390 was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was not running."
+          },
+          "s1": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was operating."
+          },
+          "s2": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was not running."
+          }
+        },
+        "reports": {
+          "rbcc30253": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was stopped.",
+            "mode": "ASSERTION"
+          },
+          "r24a5f5c8": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was not running.",
+            "mode": "ASSERTION"
+          },
+          "r8a62004e": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was running.",
+            "mode": "ASSERTION"
+          },
+          "rc35f4778": {
+            "entity": "asset-811390-unseen",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390-unseen was stopped.",
+            "mode": "ASSERTION"
+          },
+          "rf451b7cc": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "Unconfirmed: At 16:06, asset-811390 was stopped.",
+            "mode": "HEDGE"
+          },
+          "r37a05602": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "Plan: At 16:06, asset-811390 will be stopped.",
+            "mode": "PLAN"
+          },
+          "r8a62004ec0": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was running.",
+            "mode": "ASSERTION"
+          },
+          "r8a62004ec1": {
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was running.",
+            "mode": "ASSERTION"
+          }
+        },
+        "labels": {
+          "rbcc30253": "SUPPORTED",
+          "r24a5f5c8": "SUPPORTED",
+          "r8a62004e": "CONTRADICTED",
+          "rc35f4778": "NOT_ESTABLISHED",
+          "rf451b7cc": "NOT_ESTABLISHED",
+          "r37a05602": "NOT_ESTABLISHED",
+          "r8a62004ec0": "CONTRADICTED",
+          "r8a62004ec1": "CONTRADICTED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": {
+      "id": "QM-R1-01-032",
+      "case_id": "8132fac53a3e428b-3",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"Correction: At 16:06, asset-811390 was not running.\"},{\"id\":\"s1\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 16:06, asset-811390 was operating.\"},{\"id\":\"s2\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 16:06, asset-811390 was not running.\"}],\"reports\":[{\"id\":\"r8a62004e\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:06, asset-811390 was running.\",\"mode\":\"ASSERTION\"},{\"id\":\"r37a05602\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"quote\":\"Plan: At 16:06, asset-811390 will be stopped.\",\"mode\":\"PLAN\"},{\"id\":\"r8a62004ec1\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:06, asset-811390 was running.\",\"mode\":\"ASSERTION\"},{\"id\":\"r8a62004ec0\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:06, asset-811390 was running.\",\"mode\":\"ASSERTION\"},{\"id\":\"r24a5f5c8\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:06, asset-811390 was not running.\",\"mode\":\"ASSERTION\"},{\"id\":\"rf451b7cc\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"quote\":\"Unconfirmed: At 16:06, asset-811390 was stopped.\",\"mode\":\"HEDGE\"},{\"id\":\"rc35f4778\",\"entity\":\"asset-811390-unseen\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:06, asset-811390-unseen was stopped.\",\"mode\":\"ASSERTION\"},{\"id\":\"rbcc30253\",\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:06, asset-811390 was stopped.\",\"mode\":\"ASSERTION\"}]}",
+      "usage": {
+        "prompt_tokens": 1482,
+        "completion_tokens": 600,
+        "total_tokens": 2082,
+        "cost": 0.013446
+      },
+      "generation_id": "gen-1791144192-fj6FQw3rZtnbywFjJQgx",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "Correction: At 16:06, asset-811390 was not running."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was operating."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:06, asset-811390 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r8a62004e",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:06, asset-811390 was running.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "r37a05602",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "quote": "Plan: At 16:06, asset-811390 will be stopped.",
+            "mode": "PLAN"
+          },
+          {
+            "id": "r8a62004ec1",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:06, asset-811390 was running.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "r8a62004ec0",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:06, asset-811390 was running.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "r24a5f5c8",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:06, asset-811390 was not running.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "rf451b7cc",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "quote": "Unconfirmed: At 16:06, asset-811390 was stopped.",
+            "mode": "HEDGE"
+          },
+          {
+            "id": "rc35f4778",
+            "entity": "asset-811390-unseen",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:06, asset-811390-unseen was stopped.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "rbcc30253",
+            "entity": "asset-811390",
+            "time": "16:06",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:06, asset-811390 was stopped.",
+            "mode": "ASSERTION"
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 2,
+        "report_facts_correct": 8,
+        "reports_total": 8,
+        "labels": {
+          "r8a62004e": "CONTRADICTED",
+          "r37a05602": "NOT_ESTABLISHED",
+          "r8a62004ec1": "CONTRADICTED",
+          "r8a62004ec0": "CONTRADICTED",
+          "r24a5f5c8": "SUPPORTED",
+          "rf451b7cc": "NOT_ESTABLISHED",
+          "rc35f4778": "NOT_ESTABLISHED",
+          "rbcc30253": "SUPPORTED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": false,
+        "decision": "ZERO",
+        "decision_correct": true,
+        "source_votes_correct": 2,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "SUPPORTED->SUPPORTED": 2,
+          "CONTRADICTED->CONTRADICTED": 3,
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 3
+        }
+      },
+      "wall_s": 6.9120001792907715
+    },
+    "request": {
+      "id": "QM-R1-01-032",
+      "case_id": "8132fac53a3e428b-3",
+      "dispatch_intent_at": 1791144192.3866858,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Reports may assert, hedge, or plan a value. Preserve that value in every mode: ASSERTION, HEDGE or PLAN. For a multi-claim report select the clause matching the query entity/time/property; otherwise preserve the sole claim as written. Include the uncertainty or plan marker in its quotation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated, independent across groups, and counted once. Query-matching explicit corrections replace initial observations. Plans are not observations. Operating=running; not running=stopped. Extract report ASSERTION/HEDGE/PLAN and its value independently of source support; an Unconfirmed clause is HEDGE. Select the query-matching clause in multi-claim reports; retain a sole unmatched claim. Only ASSERTION can establish an observation. No two agreeing observed sources means DEFER.\",\"query\":{\"entity\":\"asset-811390\",\"time\":\"16:06\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Initial: At 16:06, asset-811390 was running.\\nCorrection: At 16:06, asset-811390 was not running.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 16:06, asset-811390 was operating.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 16:06, asset-811390 was not running.\"}],\"reports\":[{\"id\":\"r8a62004e\",\"source_id\":\"s0\",\"text\":\"At 16:06, asset-811390 was running.\"},{\"id\":\"r37a05602\",\"source_id\":\"s0\",\"text\":\"Plan: At 16:06, asset-811390 will be stopped.\"},{\"id\":\"r8a62004ec1\",\"source_id\":\"s0\",\"text\":\"At 16:06, asset-811390 was running.\"},{\"id\":\"r8a62004ec0\",\"source_id\":\"s0\",\"text\":\"At 16:06, asset-811390 was running.\"},{\"id\":\"r24a5f5c8\",\"source_id\":\"s0\",\"text\":\"At 16:06, asset-811390 was not running.\"},{\"id\":\"rf451b7cc\",\"source_id\":\"s0\",\"text\":\"Unconfirmed: At 16:06, asset-811390 was stopped.\"},{\"id\":\"rc35f4778\",\"source_id\":\"s0\",\"text\":\"At 16:06, asset-811390-unseen was stopped.\"},{\"id\":\"rbcc30253\",\"source_id\":\"s0\",\"text\":\"At 16:06, asset-811390 was stopped.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      },
+                      "mode": {
+                        "type": "string",
+                        "enum": [
+                          "ASSERTION",
+                          "HEDGE",
+                          "PLAN"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote",
+                      "mode"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "15af06d0c4b480d4106bf3667bcd7c72c7558affccc6ee8861db36dd6c940506"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-R1-01-034",
+      "case_id": "a1400eee06c56416-1",
+      "root": "a1400eee06c56416",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "c78eb7cd19acba87eea3490df9fdd2a47d400e91cc1d7babe5ee33ee36e85ee9",
+      "input_token_upper_bound": 5361,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    "case": {
+      "id": "a1400eee06c56416-1",
+      "root": "a1400eee06c56416",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "actor": {
+        "contract": "Sources are authenticated, independent across groups, and counted once. Query-matching explicit corrections replace initial observations. Plans are not observations. Operating=running; not running=stopped. Extract report ASSERTION/HEDGE/PLAN and its value independently of source support; an Unconfirmed clause is HEDGE. Select the query-matching clause in multi-claim reports; retain a sole unmatched claim. Only ASSERTION can establish an observation. No two agreeing observed sources means DEFER.",
+        "query": {
+          "entity": "asset-150938",
+          "time": "16:05",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: At 16:05, asset-150938 will be stopped."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 16:05, asset-150938 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 16:05, asset-150938 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "ra69b15fb",
+            "source_id": "s0",
+            "text": "At 16:05, asset-150938-unseen was running."
+          },
+          {
+            "id": "r5b20802e",
+            "source_id": "s0",
+            "text": "At 16:05, asset-150938-other was stopped. At 16:05, asset-150938 was operating."
+          },
+          {
+            "id": "r376833ff",
+            "source_id": "s0",
+            "text": "Unconfirmed: At 16:05, asset-150938 was running."
+          },
+          {
+            "id": "rc75e38ca",
+            "source_id": "s0",
+            "text": "At 16:05, asset-150938-other was stopped. At 16:05, asset-150938 was running."
+          },
+          {
+            "id": "re19b322f",
+            "source_id": "s0",
+            "text": "At 16:05, asset-150938-other was stopped. At 16:05, asset-150938 was stopped."
+          },
+          {
+            "id": "r2240a2be",
+            "source_id": "s0",
+            "text": "Plan: At 16:05, asset-150938 will be running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: At 16:05, asset-150938 will be stopped."
+          },
+          "s1": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938 was operating."
+          },
+          "s2": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938 was not running."
+          }
+        },
+        "reports": {
+          "rc75e38ca": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938 was running.",
+            "mode": "ASSERTION"
+          },
+          "r5b20802e": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938 was operating.",
+            "mode": "ASSERTION"
+          },
+          "re19b322f": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938 was stopped.",
+            "mode": "ASSERTION"
+          },
+          "ra69b15fb": {
+            "entity": "asset-150938-unseen",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938-unseen was running.",
+            "mode": "ASSERTION"
+          },
+          "r376833ff": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "Unconfirmed: At 16:05, asset-150938 was running.",
+            "mode": "HEDGE"
+          },
+          "r2240a2be": {
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "Plan: At 16:05, asset-150938 will be running.",
+            "mode": "PLAN"
+          }
+        },
+        "labels": {
+          "rc75e38ca": "NOT_ESTABLISHED",
+          "r5b20802e": "NOT_ESTABLISHED",
+          "re19b322f": "NOT_ESTABLISHED",
+          "ra69b15fb": "NOT_ESTABLISHED",
+          "r376833ff": "NOT_ESTABLISHED",
+          "r2240a2be": "NOT_ESTABLISHED"
+        },
+        "decision": "DEFER"
+      }
+    },
+    "receipt": {
+      "id": "QM-R1-01-034",
+      "case_id": "a1400eee06c56416-1",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "valid": false,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":0,\"status\":\"unknown\",\"quote\":\"Plan: At 16:05, asset-150938 will be stopped.\"},{\"id\":\"s1\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 16:05, asset-150938 was operating.\"},{\"id\":\"s2\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 16:05, asset-150938 was not running.\"}],\"reports\":[{\"id\":\"ra69b15fb\",\"entity\":\"asset-150938-unseen\",\"time\":\"16:05\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:05, asset-150938-unseen was running.\",\"mode\":\"ASSERTION\"},{\"id\":\"r5b20802e\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:05, asset-150938 was operating.\",\"mode\":\"ASSERTION\"},{\"id\":\"r376833ff\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":1,\"quote\":\"Unconfirmed: At 16:05, asset-150938 was running.\",\"mode\":\"HEDGE\"},{\"id\":\"rc75e38ca\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:05, asset-150938 was running.\",\"mode\":\"ASSERTION\"},{\"id\":\"re19b322f\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:05, asset-150938 was stopped.\",\"mode\":\"ASSERTION\"},{\"id\":\"r2240a2be\",\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"value\":1,\"quote\":\"Plan: At 16:05, asset-150938 will be running.\",\"mode\":\"PLAN\"}]}",
+      "usage": {
+        "prompt_tokens": 1436,
+        "completion_tokens": 488,
+        "total_tokens": 1924,
+        "cost": 0.011628
+      },
+      "generation_id": "gen-1791144206-uMgLGefk9sxmo9DOxO1Z",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 0,
+            "status": "unknown",
+            "quote": "Plan: At 16:05, asset-150938 will be stopped."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938 was operating."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:05, asset-150938 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "ra69b15fb",
+            "entity": "asset-150938-unseen",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:05, asset-150938-unseen was running.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "r5b20802e",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:05, asset-150938 was operating.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "r376833ff",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "quote": "Unconfirmed: At 16:05, asset-150938 was running.",
+            "mode": "HEDGE"
+          },
+          {
+            "id": "rc75e38ca",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:05, asset-150938 was running.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "re19b322f",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:05, asset-150938 was stopped.",
+            "mode": "ASSERTION"
+          },
+          {
+            "id": "r2240a2be",
+            "entity": "asset-150938",
+            "time": "16:05",
+            "property": "running",
+            "value": 1,
+            "quote": "Plan: At 16:05, asset-150938 will be running.",
+            "mode": "PLAN"
+          }
+        ]
+      },
+      "error_class": "ValueError",
+      "wall_s": 5.570444583892822
+    },
+    "request": {
+      "id": "QM-R1-01-034",
+      "case_id": "a1400eee06c56416-1",
+      "dispatch_intent_at": 1791144206.3079057,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Reports may assert, hedge, or plan a value. Preserve that value in every mode: ASSERTION, HEDGE or PLAN. For a multi-claim report select the clause matching the query entity/time/property; otherwise preserve the sole claim as written. Include the uncertainty or plan marker in its quotation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated, independent across groups, and counted once. Query-matching explicit corrections replace initial observations. Plans are not observations. Operating=running; not running=stopped. Extract report ASSERTION/HEDGE/PLAN and its value independently of source support; an Unconfirmed clause is HEDGE. Select the query-matching clause in multi-claim reports; retain a sole unmatched claim. Only ASSERTION can establish an observation. No two agreeing observed sources means DEFER.\",\"query\":{\"entity\":\"asset-150938\",\"time\":\"16:05\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: At 16:05, asset-150938 will be stopped.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 16:05, asset-150938 was operating.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 16:05, asset-150938 was not running.\"}],\"reports\":[{\"id\":\"ra69b15fb\",\"source_id\":\"s0\",\"text\":\"At 16:05, asset-150938-unseen was running.\"},{\"id\":\"r5b20802e\",\"source_id\":\"s0\",\"text\":\"At 16:05, asset-150938-other was stopped. At 16:05, asset-150938 was operating.\"},{\"id\":\"r376833ff\",\"source_id\":\"s0\",\"text\":\"Unconfirmed: At 16:05, asset-150938 was running.\"},{\"id\":\"rc75e38ca\",\"source_id\":\"s0\",\"text\":\"At 16:05, asset-150938-other was stopped. At 16:05, asset-150938 was running.\"},{\"id\":\"re19b322f\",\"source_id\":\"s0\",\"text\":\"At 16:05, asset-150938-other was stopped. At 16:05, asset-150938 was stopped.\"},{\"id\":\"r2240a2be\",\"source_id\":\"s0\",\"text\":\"Plan: At 16:05, asset-150938 will be running.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      },
+                      "mode": {
+                        "type": "string",
+                        "enum": [
+                          "ASSERTION",
+                          "HEDGE",
+                          "PLAN"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote",
+                      "mode"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "c78eb7cd19acba87eea3490df9fdd2a47d400e91cc1d7babe5ee33ee36e85ee9"
+    }
+  }
+]

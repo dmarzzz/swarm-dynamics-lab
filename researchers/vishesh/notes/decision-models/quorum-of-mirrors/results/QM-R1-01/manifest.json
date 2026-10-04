@@ -1,0 +1,760 @@
+{
+  "attempt": "QM-R1-01",
+  "stage": "qualification_then_conditional_evaluation",
+  "corpus_sha256": "4f82cb3671a6009bb43f4a4d7ca58b49d0dbeda886eb23fabc918cf68eed2a56",
+  "assignments": [
+    {
+      "id": "QM-R1-01-000",
+      "case_id": "f0a921be7b0d785e-1",
+      "root": "f0a921be7b0d785e",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "07bbba12493c86f10c3094b97c6ed21709972c808bcf742a850f62be70c6257d",
+      "input_token_upper_bound": 5307,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: decimal_units, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-001",
+      "case_id": "f6e38ab4182acd94-3",
+      "root": "f6e38ab4182acd94",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "bf0c31ffbbd1af85f00ad76d87de68f72a34040b5622d34ce3c3be9c9359c210",
+      "input_token_upper_bound": 5578,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: plans, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-002",
+      "case_id": "c96e42f295f3b078-1",
+      "root": "c96e42f295f3b078",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "720c017ed9dee7ef0740eea4659caf21da0d75ea26dd9c2c4367e57da3458d39",
+      "input_token_upper_bound": 5363,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: entities, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-003",
+      "case_id": "f0a921be7b0d785e-3",
+      "root": "f0a921be7b0d785e",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "5c955b18aa1e248acb67c3fe6180c9c8b1ddda39bca63ca5f830b840f986ad67",
+      "input_token_upper_bound": 5513,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: decimal_units, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-004",
+      "case_id": "7d5be5b2d96331f1-3",
+      "root": "7d5be5b2d96331f1",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "9a33e2a40ec3adf241098b8c92c8bef963e08e6fac8e61c60639f5cbc7355430",
+      "input_token_upper_bound": 5476,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: corrections, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-005",
+      "case_id": "479c3167867ad063-3",
+      "root": "479c3167867ad063",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "655fc686f15e0493bcd0d12fad51b2a7047a2292e8715b06933983d53730048d",
+      "input_token_upper_bound": 5455,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: timelines, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-006",
+      "case_id": "f6e38ab4182acd94-1",
+      "root": "f6e38ab4182acd94",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "c5fd90c78b637a15738d589f6f4816364232a4f19bbe751aa5635833788bcf38",
+      "input_token_upper_bound": 5372,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: plans, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-007",
+      "case_id": "7d5be5b2d96331f1-1",
+      "root": "7d5be5b2d96331f1",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "9e351587767ef3564e3ae05400cb173f504a820382dc1a53749e6d47070cc2dc",
+      "input_token_upper_bound": 5286,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: corrections, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-008",
+      "case_id": "c96e42f295f3b078-3",
+      "root": "c96e42f295f3b078",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "81d0fe145094c36cb2e25e24289b491a0fdf8b3212d8245ff81c7547613ea8b9",
+      "input_token_upper_bound": 5637,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: entities, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-009",
+      "case_id": "479c3167867ad063-1",
+      "root": "479c3167867ad063",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "d1d8602542be494d0a3d3fcdfaef3aed70afec6ba205e4a590d5d2c468aac5bb",
+      "input_token_upper_bound": 5265,
+      "reserve_usd": 0.048,
+      "tldr": "R1 qualification: timelines, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-010",
+      "case_id": "ba486bc622963840-1",
+      "root": "ba486bc622963840",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "45fbc85bda7f86f8bf9efe5753729de7ac01c3c1df7901751bc4a9bc38317f03",
+      "input_token_upper_bound": 5401,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-011",
+      "case_id": "b7a13e1441ef7072-3",
+      "root": "b7a13e1441ef7072",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "b5bf95c2ce4704f0076547d941539fb9be575d29a8ce853fc8d111dfb1fa985f",
+      "input_token_upper_bound": 5574,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-012",
+      "case_id": "5cdc24577e6edb84-1",
+      "root": "5cdc24577e6edb84",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "2d6dadfb761f4b5a11d8aec2fe44943c8cc01174cf3130e7dd958a75bb11106e",
+      "input_token_upper_bound": 5308,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-013",
+      "case_id": "65bf6148fe7ae2fe-3",
+      "root": "65bf6148fe7ae2fe",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "b807528660141b92e469ff2a67f1bc449315c04c3de864fa3e481e2ff03f2251",
+      "input_token_upper_bound": 5427,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-014",
+      "case_id": "1ae93dec2b1d164c-1",
+      "root": "1ae93dec2b1d164c",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "ffbaa8d0e669af0dc17a587c9e3a78c4ce9eb54c6d88ddcb4d15a7625f3cdc8e",
+      "input_token_upper_bound": 5303,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-015",
+      "case_id": "9540c93d641b18e4-3",
+      "root": "9540c93d641b18e4",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "4f3ef3cbce5d1160245f562d53b251ef75c2fdf1cbce680e9f2fdd87abd385ce",
+      "input_token_upper_bound": 5671,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-016",
+      "case_id": "5fc52f7d7bb93338-1",
+      "root": "5fc52f7d7bb93338",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "d8e0dbc1f46ed8a2e52ec44c29ac9a6e3093a52443327d2229546fa4084e0fc0",
+      "input_token_upper_bound": 5306,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-017",
+      "case_id": "f3e8536b67ad8dc8-1",
+      "root": "f3e8536b67ad8dc8",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "121bb3d76922556e879cbafdec198e3a32479bd811b1825c4d442fbde19e8149",
+      "input_token_upper_bound": 5308,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-018",
+      "case_id": "5fcb847c4a15b8cc-3",
+      "root": "5fcb847c4a15b8cc",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "a3e827b1d27ac75f0d3e1917ebebfb9484dea0acebdca63caff5dcc3a9d55ab3",
+      "input_token_upper_bound": 5427,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-019",
+      "case_id": "338d41610db8cc13-3",
+      "root": "338d41610db8cc13",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "259fae0a10b26f9cbf3fbb48a726c14a94d0891a553ed1bf4f377bc7a1c29089",
+      "input_token_upper_bound": 5637,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-020",
+      "case_id": "a1400eee06c56416-3",
+      "root": "a1400eee06c56416",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "6b09fd0e25e78d14e1e44acae48454a7b178d465b15e62bb29431c1fb1061e42",
+      "input_token_upper_bound": 5635,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-021",
+      "case_id": "5fc52f7d7bb93338-3",
+      "root": "5fc52f7d7bb93338",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "bd3af696edb1a80fe41cb97935f85d5ba98921a03e5c78bbff051704916083ec",
+      "input_token_upper_bound": 5512,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-022",
+      "case_id": "ba486bc622963840-3",
+      "root": "ba486bc622963840",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "68bf89ef5e55f47b1023fa0b3ca749b9d937c12515e49931dabb54d09508ed26",
+      "input_token_upper_bound": 5675,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-023",
+      "case_id": "1ae93dec2b1d164c-3",
+      "root": "1ae93dec2b1d164c",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "01899c842a60e824c863e6585977d50b7dae96a1166bccf95224be721f67ee9a",
+      "input_token_upper_bound": 5509,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-024",
+      "case_id": "9540c93d641b18e4-1",
+      "root": "9540c93d641b18e4",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "9856ee41fb48ecb31227f73b9a837cb47b5c33c7b80ab85399b1a0c659358b03",
+      "input_token_upper_bound": 5397,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-025",
+      "case_id": "65bf6148fe7ae2fe-1",
+      "root": "65bf6148fe7ae2fe",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "76953f0e9de6a49235821b8a1ef4fe04e571df5f03463b5481c06001db44ecd8",
+      "input_token_upper_bound": 5237,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-026",
+      "case_id": "b7a13e1441ef7072-1",
+      "root": "b7a13e1441ef7072",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "53f1899088829ae4c95cfbb75ebd19674818e68d69e36db7b5092be170d36692",
+      "input_token_upper_bound": 5368,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-027",
+      "case_id": "f6c7a7a6cd96a3dc-1",
+      "root": "f6c7a7a6cd96a3dc",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "bfe8a811a880f316688689b40113fa5f148b92be834592ffac45aa70b446e200",
+      "input_token_upper_bound": 5307,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-028",
+      "case_id": "696d7253af024ff8-3",
+      "root": "696d7253af024ff8",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "01ec6277d614edb21434ec61704ce8b54f5b1cf3619581226e83b6a826fb345c",
+      "input_token_upper_bound": 5455,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-029",
+      "case_id": "8132fac53a3e428b-1",
+      "root": "8132fac53a3e428b",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "f34a675e90ba3397b684f4850ba053fbe6850ec79ee73a1c17e90433bc091452",
+      "input_token_upper_bound": 5290,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-030",
+      "case_id": "57a50ef7a8aeede7-3",
+      "root": "57a50ef7a8aeede7",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "69b0a03793020f7deebad8de2e38110448215902bd05ee13445264990c8f0198",
+      "input_token_upper_bound": 5425,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-031",
+      "case_id": "338d41610db8cc13-1",
+      "root": "338d41610db8cc13",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "c8523bf94046c7efa6ad54bf119b68f831776292999eafeede8ebb4ab4df87b9",
+      "input_token_upper_bound": 5363,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-032",
+      "case_id": "8132fac53a3e428b-3",
+      "root": "8132fac53a3e428b",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "15af06d0c4b480d4106bf3667bcd7c72c7558affccc6ee8861db36dd6c940506",
+      "input_token_upper_bound": 5480,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-033",
+      "case_id": "f6c7a7a6cd96a3dc-3",
+      "root": "f6c7a7a6cd96a3dc",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "fb9ba4e8c13db907a617a4799f43435c4251fd2359089d3d38b928fe027e4a06",
+      "input_token_upper_bound": 5513,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-034",
+      "case_id": "a1400eee06c56416-1",
+      "root": "a1400eee06c56416",
+      "stage": "evaluation",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "c78eb7cd19acba87eea3490df9fdd2a47d400e91cc1d7babe5ee33ee36e85ee9",
+      "input_token_upper_bound": 5361,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: entities, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-035",
+      "case_id": "3498f85b388b46e1-3",
+      "root": "3498f85b388b46e1",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "d1c394cea72b2e8e108879765375f6aae558789f25fd60040f5860e46015f214",
+      "input_token_upper_bound": 5459,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-036",
+      "case_id": "3b58f73bc3688012-3",
+      "root": "3b58f73bc3688012",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "459013cfd0531bd753d6c7f7f8fcb9064ba07816a7cb4d5955e5c25469099346",
+      "input_token_upper_bound": 5425,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-037",
+      "case_id": "c8a68216ff7dccb8-1",
+      "root": "c8a68216ff7dccb8",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "f3bc73ed68c4169129feeaef8c9f29754af134a9a27d382eb42cbb7648e9ac55",
+      "input_token_upper_bound": 5370,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-038",
+      "case_id": "c8a68216ff7dccb8-3",
+      "root": "c8a68216ff7dccb8",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "c3537022860b37d5ce3db5dbbed57248b4c6cf5ffe1ea3684cbc76110251350e",
+      "input_token_upper_bound": 5576,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-039",
+      "case_id": "f3e8536b67ad8dc8-3",
+      "root": "f3e8536b67ad8dc8",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "e17b4452c56fcdd4a960b4de81b30314c094348dec25ba7efc29af72927d644f",
+      "input_token_upper_bound": 5514,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-040",
+      "case_id": "f948e33a68633a88-1",
+      "root": "f948e33a68633a88",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "5b1714daafe3113b2ef37736ae322fd03d14a68899506d12887edf227d4601ba",
+      "input_token_upper_bound": 5286,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-041",
+      "case_id": "6b3d35a50dcb1703-1",
+      "root": "6b3d35a50dcb1703",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "4f28c3a67d6812e8b5325f9422fb47e23e523be055a66f2a71d758a332988b21",
+      "input_token_upper_bound": 5303,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-042",
+      "case_id": "5fcb847c4a15b8cc-1",
+      "root": "5fcb847c4a15b8cc",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "f97ee541c39b851753928fd415851742ca0c080d33760b718d24924d4332972d",
+      "input_token_upper_bound": 5237,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-043",
+      "case_id": "57a50ef7a8aeede7-1",
+      "root": "57a50ef7a8aeede7",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "46caf746e06c8b1be571070fc40cc0bcbe402ba508823d048434b9e49994f695",
+      "input_token_upper_bound": 5235,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-044",
+      "case_id": "6b3d35a50dcb1703-3",
+      "root": "6b3d35a50dcb1703",
+      "stage": "evaluation",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "feb762061da4d0ea61a01284b921c57e8c67f809d0592de85ee36632e6b86a5d",
+      "input_token_upper_bound": 5509,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: decimal_units, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-045",
+      "case_id": "5cdc24577e6edb84-3",
+      "root": "5cdc24577e6edb84",
+      "stage": "evaluation",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "8d86de3bac7f792ef538d79bc463422b058495f3efad29a5ec93a63a1f86ec07",
+      "input_token_upper_bound": 5514,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: plans, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-046",
+      "case_id": "3498f85b388b46e1-1",
+      "root": "3498f85b388b46e1",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "91b657aeb056e598f5dafb51ba4ae39e5fc3bc16ab5127d08098bfb33c40a936",
+      "input_token_upper_bound": 5269,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-047",
+      "case_id": "696d7253af024ff8-1",
+      "root": "696d7253af024ff8",
+      "stage": "evaluation",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "37da5a93d3f96bcfc2ad4fa9a42bb0f476c4fb4ff87d6c4c51fca4c01109c856",
+      "input_token_upper_bound": 5265,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: timelines, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-048",
+      "case_id": "f948e33a68633a88-3",
+      "root": "f948e33a68633a88",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "3183dacd76481d666b3bef6e2bcfe956c6a67e850150750de70300c134bab540",
+      "input_token_upper_bound": 5476,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-R1-01-049",
+      "case_id": "3b58f73bc3688012-1",
+      "root": "3b58f73bc3688012",
+      "stage": "evaluation",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "4e9663c4ea9fe28a75abdcd6b7a76c1ef73522219ce758327b861f9bf740eab6",
+      "input_token_upper_bound": 5235,
+      "reserve_usd": 0.048,
+      "tldr": "R1 evaluation: corrections, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    }
+  ],
+  "max_calls": 50,
+  "max_reserved_usd": 2.4,
+  "evaluation_dispatch": "only_after_all_qualification_gates"
+}

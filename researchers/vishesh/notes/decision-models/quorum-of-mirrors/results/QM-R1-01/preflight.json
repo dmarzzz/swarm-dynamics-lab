@@ -1,0 +1,47 @@
+{
+  "source_sha256": {
+    "PLAN.md": "21a4c275ffe7ebf8b215d4bc0d57d69ab0cf614b3e44c49fff4fa378476a49f1",
+    "contract.py": "d6a391df5d56674941b421acbe170b68f9a026fe9c5e0961fcea111c95bcd333",
+    "runtime.py": "12310640f38af19081b84cbfdf1873b7699eac674d60abd22b65d8d8753f4ee7",
+    "manifest.json": "a3e64621f730946cd309d8308076e0fb489af0dce08ae142e0966cfee3c2dab5",
+    "cases.py": "7740717cda30b2ceaf6390f6addbf657da1bd44a78cf22dd63807c005ca078fe",
+    "baseline.py": "a3e7b6e84677771d81199f50ffa2e9d969c4e03d7744d23508601c21563cd54a",
+    "qualification-seal.json": "84b8c32ccfb475ff52ce1482832ec91752768dfe13bde4b599e2fc2629c21756",
+    "AUTHORIZATION.json": "2ec11da60347bfb8fca9413a6c6db82f6353953f3a78e3633de495cdd4ff407a",
+    "HISTORY.json": "6aec8a9dc21ba1e4353256260ecf8929eb6a31fddd29e66e1c646c7cfd98f31c",
+    "diagnostics.py": "e713622bdeb520a6066df567189cf9e34e4b289bfab867e5438eadd26179c74d",
+    "budget.py": "2247ac9c5d3de7894a53649cd5190d0dd99dfc458c07b17020aa32f292666e40",
+    "../native-v2/AUTHORIZATION.json": "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d",
+    "../../next_runtime.py": "b68a30faac82dbae25237aa15119fb2764a6481a889d9e9068d566d7f33f8180",
+    "../../qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "../../next_stage.py": "c1958b62d28175288fdc684f1747d788467071268c0505a8ac7ae1378cb1279b",
+    "../../reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "../../public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "manifest_sha256": "56e045f577952fea8650ad5bf4006ee394c6a98068022fd6840e9b94d30b56d8",
+  "public_plan": {
+    "experiment": "quorum-of-mirrors",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/29bddcb26f8d8dcb6ec7870db989b24b372459a2/researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/robustness-v1/PLAN.md",
+    "commit": "29bddcb26f8d8dcb6ec7870db989b24b372459a2",
+    "plan_sha256": "21a4c275ffe7ebf8b215d4bc0d57d69ab0cf614b3e44c49fff4fa378476a49f1",
+    "registered_tldr": "TLDR: QM-R1-01 tests fact/mode extraction across five authored challenge families, one versus three copies of contradictory claims. Ten qualification calls then forty conditional evaluation calls compare exact facts, quotes, labels and decisions against typed truth and a same-input parser. Twenty evaluation roots; synthetic robustness only, not field or swarm efficacy.",
+    "run_tldr": "TLDR: QM-R1-01 tests fact/mode extraction across five authored challenge families, one versus three copies of contradictory claims. Ten qualification calls then forty conditional evaluation calls compare exact facts, quotes, labels and decisions against typed truth and a same-input parser. Twenty evaluation roots; synthetic robustness only, not field or swarm efficacy.",
+    "checked_utc": "2026-10-04T19:59:01.133462+00:00"
+  },
+  "route": {
+    "model": "anthropic/claude-sonnet-4.6",
+    "provider": "Anthropic",
+    "snapshot": "20260217",
+    "pricing_verified": true,
+    "checked_at": 1791143941.1859198
+  },
+  "budget": {
+    "calls": 107,
+    "reserved_usd": 2.825856,
+    "effective_exposure_usd": 0.5352069599999999,
+    "prior_unknown_bound_usd": 0.061344
+  },
+  "checked_at": 1791143939.6565056,
+  "host": "sim-dmarz-5",
+  "claim_id": "vishesh-quorum-r1-01"
+}

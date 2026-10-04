@@ -1,0 +1,55 @@
+{
+  "calls": 142,
+  "reserved_usd": 4.505856,
+  "known_actual_usd": 0.93200496,
+  "prior_unknown_upper_bound_usd": 0.061344,
+  "new_known_actual_usd": 0.458142,
+  "execution_ledger_status": "stopped",
+  "worker_processes": 0,
+  "reconciled": true,
+  "new_unknown_upper_bound_usd": 0,
+  "api_cap_usd": 8,
+  "total_cap_usd": 9,
+  "effective_exposure_usd": 0.99334896,
+  "extension_rows": [
+    [
+      "PQ-02-owner-2026-10-04",
+      2.0,
+      "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d"
+    ],
+    [
+      "R1-owner-2026-10-04",
+      5.0,
+      "2ec11da60347bfb8fca9413a6c6db82f6353953f3a78e3633de495cdd4ff407a"
+    ]
+  ],
+  "artifacts_sha256": {
+    "qualification-review-needed.json": "60813bfbec8ca8b8adbe3e53fab40e00956cba8389160dd6f31f91452e457c54",
+    "summary.json": "b42a2600b32a71f9cf91562f266197156a4755f7661b52a79d2ca88f604d783d",
+    "accounting.jsonl": "e277e21efdf31b205cb0e36c0354d4eb7dde7ba4a7d2e66c8ec05f8ff7b47384",
+    "manifest.json": "265896b0d3bb3342aa8b11f791f88a1b13f1d6e11c650f7f927730fef302b040",
+    "qualification-reviewed.json": "fd7baef008fb9b6b44a5fe6736180f2f7517356ae4a88963fa16fe00e92a4a07",
+    "preflight.json": "13d332a01165dcf82c291102d8a1f04cb9b61bf7ab51a41712dec413cf5062c5",
+    "responses.jsonl": "9ae1a860f09f8d3c580a52342ab69f860b4085faa9501ff6244fab733e4b2f72",
+    "requests.jsonl": "5503aa1310b89f79575dfe66b6ed204fd1d4b1bf64047b533603cb47831b1498",
+    "receipts.jsonl": "10d9965f234b53633e2559a593de94256f761d32e53916a9a11c0dfa4a54ae3a"
+  },
+  "settlement_audit": {
+    "historical_rows_unchanged": true,
+    "prior_calls_sha256": "cd44eb579245a223fe32fe7b16881918f72d487ed93c5b5b647028b96638ccfc",
+    "settlement_rows": 140,
+    "settlements_sha256": "25e98d4123a4a7c879517d869b6b565ac2b323a395d389dbe24feda062d30674",
+    "unknown_holds": [
+      [
+        "QM-PQ-02-001",
+        0.06,
+        "failed_or_uncertain"
+      ],
+      [
+        "QM-Q1-01-006",
+        0.001344,
+        "failed_or_uncertain"
+      ]
+    ]
+  }
+}
