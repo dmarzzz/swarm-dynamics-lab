@@ -99,7 +99,7 @@ class Session:
             except BaseException:
                 self.stopped=True
                 raise
-    def _dispatch(self,encoded,transport,validate,reservation,input_rate=1.,output_rate=5.):
+    def _dispatch(self,encoded,transport,validate,reservation,input_rate=1.,output_rate=5.,response_adapter=None):
         if json.loads((self.directory/'state.json').read_text())['state']!='ready':raise AcquisitionStopped('not_ready')
         if self.stopped or self.count>=MAX_REQUESTS:raise AcquisitionStopped('circuit_open_or_complete')
         if not isinstance(encoded,bytes) or len(encoded)>32768:raise AcquisitionStopped('request_bound')
@@ -125,9 +125,15 @@ class Session:
         self._artifact('response',raw)
         try:result=json.loads(raw)
         except Exception:self._stop({'category':'parse'})
+        if response_adapter is not None:
+            try:result=response_adapter(result)
+            except Exception:self._stop({'category':'response_schema'})
         measured=usage(result)
         if measured is None:self._stop({'category':'missing_or_invalid_usage'})
         cost=(measured['input_tokens']*input_rate+measured['output_tokens']*output_rate)/1e6
+        if response_adapter is not None:
+            cost=result.get('provider_cost_usd')
+            if type(cost) not in (int,float) or not math.isfinite(cost) or not 0<=cost<=reservation:self._stop({'category':'missing_or_invalid_cost'})
         # Preserve known usage even if output validation fails; diagnostic logs contain no body.
         self._event({'kind':'usage','attempt':self.count,'usage_known':True,'tokens':measured,'reported_usd':cost})
         if not isinstance(result,dict) or result.get('stop_reason')!='end_turn':
