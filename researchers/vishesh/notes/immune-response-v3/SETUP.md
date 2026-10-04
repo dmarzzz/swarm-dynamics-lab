@@ -36,3 +36,9 @@ The [visualization mapping](evidence-study/README.md) requires initial state plu
 ## Next action
 
 Finish host provisioning and runtime verification, register and verify the exact immutable public plan, then dispatch through the private repo's current orbital-one run queue. Coordinate memory-only delivery from the explicitly approved project Keychain alias at dispatch; do not persist model credentials or substitute a different key. No additional human budget or researcher-review approval is needed within the existing scope. No native A3 result is claimed yet.
+
+## Provisioning completion and dispatch handoff — 2026-10-04 UTC
+
+Standard sim provisioning completed with exit 0. SSH configuration validates; the reporter is installed and connected. All fourteen offline tests pass on the machine. The dashboard registration and public plan were verified against full pinned runtime `a23f70ca37365fea2df5e688a95eacccdb7e8fb9`, including exact README content hash. No native worker or persisted model credential is present.
+
+[Private run request 186](https://github.com/dmarzzz/swarm-labs-agentops/issues/186) contains the exact bounded queued launch, existing claim/ledger, stopping gates and memory-only handoff instructions. At handoff it is open and untaken; A3 remains unstarted. The current blocker is orchestration and live credential delivery, not an additional budget or researcher-review approval. The coordinator must refresh allocation and public-plan admission at dispatch. The frozen runtime stays at the revision above; this later status note does not silently change the instrument.
