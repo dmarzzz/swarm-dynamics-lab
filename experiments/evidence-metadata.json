@@ -3977,6 +3977,31 @@
         "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-QUALITY.json"
       ],
       "status_at_assessment": "completed_reviewed_instrument_confounded"
+    },
+    {
+      "id": "antsy-haiku-panel",
+      "title": "Antsy:forty readers and shared normalization error",
+      "documents": [
+        "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "antsy-haiku-panel"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Forty Haiku readers shared a1000-fold normalization error on one qualifying receipt; role variation and a16-call locale diagnostic did not repair it.",
+        "rationale": "Two real receipts;96valid calls with full trace coverage, source-label review and original-ledger accounting. Same-author used-case diagnostic, not population evidence."
+      },
+      "sample_size_summary": "2receipt units. Q0:40responses each,1receipt correct and1wrong for both panels. D1:same2receipts \u00d72conditions \u00d74repeats;no benefit. E0:0of18receipts collected.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/QUALITY.json",
+        "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json"
+      ],
+      "status_at_assessment": "qualification_failed_diagnostic_negative_closed",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
     }
   ],
   "source_sha256": {

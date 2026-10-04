@@ -1,0 +1,37 @@
+{
+  "attempt": "D1-normalization-attempt-1",
+  "started": 16,
+  "assigned": 16,
+  "valid": 16,
+  "stop": "completed",
+  "trace_status": "verified_declared_coverage",
+  "actual_usd": 0.030768,
+  "counts": [
+    {
+      "case": "Q0-case-001",
+      "arm": "original",
+      "n": 4,
+      "correct": 4
+    },
+    {
+      "case": "Q0-case-001",
+      "arm": "locale",
+      "n": 4,
+      "correct": 4
+    },
+    {
+      "case": "Q0-case-002",
+      "arm": "original",
+      "n": 4,
+      "correct": 0
+    },
+    {
+      "case": "Q0-case-002",
+      "arm": "locale",
+      "n": 4,
+      "correct": 0
+    }
+  ],
+  "repair_supported_on_used_cases": false,
+  "fresh_qualification_passed": false
+}

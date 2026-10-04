@@ -1,0 +1,144 @@
+{
+  "receipts": 2,
+  "policies": {
+    "singleton": {
+      "correct": 1,
+      "wrong": 1,
+      "refer": 0,
+      "unscorable": 0,
+      "incomplete": 0
+    },
+    "homogeneous5": {
+      "correct": 1,
+      "wrong": 1,
+      "refer": 0,
+      "unscorable": 0,
+      "incomplete": 0
+    },
+    "homogeneous10": {
+      "correct": 1,
+      "wrong": 1,
+      "refer": 0,
+      "unscorable": 0,
+      "incomplete": 0
+    },
+    "homogeneous20": {
+      "correct": 1,
+      "wrong": 1,
+      "refer": 0,
+      "unscorable": 0,
+      "incomplete": 0
+    },
+    "varied20": {
+      "correct": 1,
+      "wrong": 1,
+      "refer": 0,
+      "unscorable": 0,
+      "incomplete": 0
+    },
+    "pooled40": {
+      "correct": 1,
+      "wrong": 1,
+      "refer": 0,
+      "unscorable": 0,
+      "incomplete": 0
+    },
+    "selective": {
+      "correct": 1,
+      "wrong": 1,
+      "refer": 0,
+      "unscorable": 0,
+      "incomplete": 0
+    }
+  },
+  "rows": [
+    {
+      "case": "Q0-case-001",
+      "decisions": {
+        "singleton": {
+          "amount": "32000.00",
+          "outcome": "correct"
+        },
+        "homogeneous5": {
+          "amount": "32000.00",
+          "outcome": "correct"
+        },
+        "homogeneous10": {
+          "amount": "32000.00",
+          "outcome": "correct"
+        },
+        "homogeneous20": {
+          "amount": "32000.00",
+          "outcome": "correct"
+        },
+        "varied20": {
+          "amount": "32000.00",
+          "outcome": "correct"
+        },
+        "pooled40": {
+          "amount": "32000.00",
+          "outcome": "correct"
+        },
+        "selective": {
+          "amount": "32000.00",
+          "outcome": "correct"
+        }
+      },
+      "valid_votes": 40,
+      "correct_votes": 40,
+      "wrong_vote_clusters": {}
+    },
+    {
+      "case": "Q0-case-002",
+      "decisions": {
+        "singleton": {
+          "amount": "14.30",
+          "outcome": "wrong"
+        },
+        "homogeneous5": {
+          "amount": "14.30",
+          "outcome": "wrong"
+        },
+        "homogeneous10": {
+          "amount": "14.30",
+          "outcome": "wrong"
+        },
+        "homogeneous20": {
+          "amount": "14.30",
+          "outcome": "wrong"
+        },
+        "varied20": {
+          "amount": "14.30",
+          "outcome": "wrong"
+        },
+        "pooled40": {
+          "amount": "14.30",
+          "outcome": "wrong"
+        },
+        "selective": {
+          "amount": "14.30",
+          "outcome": "wrong"
+        }
+      },
+      "valid_votes": 40,
+      "correct_votes": 0,
+      "wrong_vote_clusters": {
+        "14.30": 40
+      }
+    }
+  ],
+  "correct_difference_varied_minus_homogeneous": 0,
+  "attempt": "Q0-haiku-attempt-1",
+  "source_sha256": "5adfd3677098cdc99e0262955eb7fde251e6e9dc762301449cf9a214b33d6780",
+  "assigned": 80,
+  "started": 80,
+  "valid": 80,
+  "unstarted": 0,
+  "stop": "completed",
+  "qualification_passed": false,
+  "actual_usd": 0.15156,
+  "usage_missing": 0,
+  "trace_status": "verified_declared_coverage",
+  "historical_hold_usd": 5,
+  "scope_cap_usd": 20
+}

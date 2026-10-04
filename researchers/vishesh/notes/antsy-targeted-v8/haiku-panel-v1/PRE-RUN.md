@@ -1,6 +1,6 @@
 # Native pre-run assessment
 
-2026-10-04, same-author assessment. The prior D1 diagnostic found slow cold OCR and unresolved field coverage; adding repetitions did not establish independent evidence. The new plan tests direct visual Haiku extraction with explicit task-role variation and matched panel size. Previous OCR results are not Haiku results.
+2026-10-04, same-author assessment. This written gate record was committed during Q0; the prospective design is the earlier immutable PLAN, and operational checks were performed before dispatch. The prior D1 diagnostic found slow cold OCR and unresolved field coverage; adding repetitions did not establish independent evidence. The new plan tests direct visual Haiku extraction with explicit task-role variation and matched panel size. Previous OCR results are not Haiku results.
 
 The decision is whether varied checking roles outperform repeated direct extraction on these real receipts, while retaining a single-reader baseline and wrong-majority outcomes. The frozen cases reuse source-label corroboration, disjoint image hashes and held-out evaluation IDs from comparison-v3. Two qualification cases are only a competence screen. Evaluation has16 scorable receipt units, not720 independent samples;18 assigned records include two unscorable labels. Report paired raw outcomes rather than overclaiming precision.
 

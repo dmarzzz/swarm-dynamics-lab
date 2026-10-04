@@ -1,0 +1,17 @@
+{
+  "calls": 96,
+  "actual_usd": 0.18232800000000002,
+  "unknown_reservations_usd": 0,
+  "historical_hold_usd": 5,
+  "conservative_total_usd": 5.182328,
+  "original80rows_unchanged": true,
+  "guard_replay_only": true,
+  "guard_counts_by_case": {
+    "failed_case": {
+      "refer": 48
+    },
+    "passing_case": {
+      "consistent_not_verified": 48
+    }
+  }
+}

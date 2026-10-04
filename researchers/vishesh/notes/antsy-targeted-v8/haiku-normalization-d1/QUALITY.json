@@ -1,0 +1,359 @@
+{
+  "assessor": "vishesh/codex-methods",
+  "date": "2026-10-04",
+  "attempts": [
+    "Q0-haiku-attempt-1",
+    "D1-normalization-attempt-1"
+  ],
+  "decision": "complete_valid_result",
+  "scope": "Failed qualification and valid negative used-case diagnostic; no main evaluation",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Matched role comparison and locale diagnostic have explicit narrow decisions.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Only two real receipts; one normalization failure dominates. No broad field coverage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ],
+      "next_action": "Keep E0 closed; prospectively scope literal-token plus deterministic-normalizer qualification on fresh mixed-format cases.",
+      "acceptance_check": "Fresh native competence screen must pass without gold leakage; disclose locale scope and receipt-level sample size."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Q0 matches model, image and panel count; D1 alternates original/locale prompts on identical pixels. Fixed Q0 order remains a confound.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Qualification failed and locale repair unsupported; E0 remains unstarted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ],
+      "next_action": "Keep E0 closed; prospectively scope literal-token plus deterministic-normalizer qualification on fresh mixed-format cases.",
+      "acceptance_check": "Fresh native competence screen must pass without gold leakage; disclose locale scope and receipt-level sample size."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Exact normalized amount, wrong/referral separation and source-label inspection locate visible normalization mismatch.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Two receipt units; repetitions are nested and cannot estimate population correlation or role benefit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ],
+      "next_action": "Keep E0 closed; prospectively scope literal-token plus deterministic-normalizer qualification on fresh mixed-format cases.",
+      "acceptance_check": "Fresh native competence screen must pass without gold leakage; disclose locale scope and receipt-level sample size."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen request hashes, fresh context, pinned route, no peer/evaluator/operator inputs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "96/96 terminal valid calls; native trace audits pass; five hub artifacts hash-match; backups retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.182328 new charges, zero unknowns; USD5 historical hold retained. Original80ledger rows unchanged; claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source/input/runtime/allowlist hashes retained; hosted sampling is not deterministic reproduction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Native dot plot and paired counts show denominators, failed qualification and unrun evaluation; no swarm motion invented.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/PLAN.md",
+          "sha256": "96fe2db8871375cfa7c31259badea9a83f8e803ed371e1622eb08488a6e7d1a1"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/summary.json",
+          "sha256": "e3bcee804c4a0743928ddf0d104704b859fca57a35a5a3261c5e2d9aeb58d307"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-panel-v1/results/trace-audit.json",
+          "sha256": "12a251a578cf077b9abfbd689ab901525a6f14d246c263e8738da821ac609777"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+          "sha256": "d568534138c5a6e55a65b26f3b0e0e65b7fb8d371a1506125e60fd5df16bd98d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/summary.json",
+          "sha256": "19f4b858946c019bf8d950606391849abeece5cb9ac9f0563f43426e659aa1e8"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/results/reconciliation.json",
+          "sha256": "9940d91383e87cdddf1c2ce6575fc400259a707325f32b3f30317313bf9fbf2d"
+        }
+      ]
+    }
+  ]
+}
