@@ -18,7 +18,7 @@ Author aliases in git, including merges/sync/task commits:
 
 - Since Oct 3 18:00Z: Dmarz **1,004**, Vishesh **918**, automated bot **728**. These 1,922 teammate commits are not 1,922 experiments.
 - Since Oct 4 03:40Z: Dmarz **488**, Vishesh **579**, bot **352**.
-- Evidence registry: **118 rows**, with **48 at 0/4**, **52 at 1/4**, **16 at 2/4**, two rows without a scored evidence-confidence object, none above 2/4. The 16 include a qualification-only D1 recovery and incomplete sybil-scale-xl, so they are **not sixteen completed scientific findings**. Conversely, several later measurements remain at 1/4 or have stale registry text, so low scores are not equivalent to no execution.
+- Evidence registry and rendered `experiments/EVIDENCE.md` at the pinned `aa01058b` snapshot: **118 rows**, with **48 at 0/4**, **52 at 1/4**, **16 at 2/4**, two unassessed rows, none above 2/4. These are frozen-snapshot counts, not a claim about later main. The 16 include a qualification-only D1 recovery and incomplete sybil-scale-xl, so they are **not sixteen completed scientific findings**. Conversely, several later measurements remain at 1/4 or have stale registry text, so low scores are not equivalent to no execution.
 
 Dmarz's dated latest-results review remains frozen at 08:11Z. His four-line program, sidecar readmes and ready queue also lag the hub. The last research/source commits are approximately 12:40Z; there is a later 15:19Z Flight Deck documentation/tooling commit. “Quiet since 12:40Z” is accurate for research output, not literally all git activity.
 
@@ -127,7 +127,7 @@ Source pins/reviews are essential. Candidate reviewed publication commits: false
 - `verify-cost-qwen`: both Qwen qualifications failed; Qwen route declared ended. GPT-Luna code has tests but no new matching READY/review, not ready-unrun.
 - `sybil-rules-180`: Qwen stopped at gates; GPT-6 Sol main+D1 complete on hub. Current READY is historical launch admission, **not permission to duplicate it**.
 
-The Dmarz Anthropic evidence at 11:44Z explicitly says `enforced_spend_limit_reached`, access returning **2026-11-01 00:00Z** unless account limits change. Trying Opus5 on the same organization did not bypass it. This is that account's last recorded status, not a fresh live balance check. Shadow's separate working provider pool is not automatically Dmarz study/account authorization.
+The Dmarz Anthropic evidence first recorded at 11:44Z explicitly says HTTP **429**, `enforced_spend_limit_reached`, access returning **2026-11-01 00:00Z** unless account limits change. Trying Opus5 on the same organization did not bypass it. The requested **11:50Z** incident is also verified: [discussion-v3-opus A3 post-mortem](../../../dmarz/notes/discussion-dose/v3-opus/reviews/v3o-a3-s1-post.md) records **74 consecutive provider failures** and operator SIGTERM at **11:50:58Z**. Its detector covered credit-balance errors only, so it continued dispatching after the organization-limit error. This is a concrete remaining launch/resource-stop defect, not merely stale paperwork. Its last `call_start` has unknown dispatch/billing status; no audited S1 estimate exists. This is that account's recorded status, not a fresh live balance check. Shadow's separate working provider pool is not automatically Dmarz study/account authorization.
 
 ## 6. What to do before the deadline
 
@@ -138,5 +138,7 @@ The Dmarz Anthropic evidence at 11:44Z explicitly says `enforced_spend_limit_rea
 5. Report “partial platform repair, stronger bounded diagnostics, no broad swarm-advantage result.” That is supported by the measured negative controls and source checks; a portfolio-wide all-green declaration is not.
 
 ## Verification and limits
+
+Requested fast recheck: parsed the **score column**, not incidental score strings in sample descriptions, in pinned `EVIDENCE.md`; all 118 rows reconcile with the registry and saved evidence JSON. All eleven READY files and the five primary runnable model choices above reconcile with design/runbook caps; Opus5 remains a conditional fallback ladder, not an additional independently ready cohort. The saved 15:51:18Z hub input matches the evidence JSON's SHA-256. Flagship `s1-002-gpt-6-sol` reports exact B−A **−0.3055555555555556**, hence **−0.306** rounded to three decimals. The 11:50:58Z organization-limit stop is corroborated by its owner's post-mortem. Task was already closed and original audit commit `116e284c` confirmed on main before this focused recheck; no experiment was rerun.
 
 Zero paid calls, no machines/claims, no other researcher's study changed. Public-source hash comparisons and two failure probes recorded in the evidence JSON. PC5 9/9 and Healing practical 22/22 offline tests passed. Original private/local-only Regrowth and Healing archives were not fabricated as public evidence. Hub-only new endpoints are explicitly provisional until committed scientific closeout/replay. Git-author classification is a documented alias heuristic; hub worker reports can duplicate stage costs and are not summed. All source links resolve inside the audited repository.
