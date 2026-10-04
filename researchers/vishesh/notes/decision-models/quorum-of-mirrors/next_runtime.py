@@ -21,10 +21,10 @@ import public_plan
 
 HERE = Path(__file__).resolve().parent
 SOURCE_FILES = ('next_stage.py', 'next_runtime.py', 'qualification.py', 'reference.py',
-                'relay.py', 'public_plan.py')
+                'relay.py', 'public_plan.py', 'OPERATOR-AUTHORIZATION.json')
 
 
-SAFE_FAILURES = frozenset('''accepted_hypothesis_missing hypothesis_review_missing reviewed_survey_missing
+SAFE_FAILURES = frozenset('''owner_direction_missing accepted_hypothesis_missing hypothesis_review_missing reviewed_survey_missing
 allocation_evidence_missing allocation_mismatch allocation_not_verified allocation_stale_or_expired allocation_runtime_host_mismatch
 original_ledger_missing authority_mismatch historical_reservations_missing reservation_invalid
 actual_cost_invalid budget_exhausted stage_not_admitted unreconciled_prior_call another_attempt_running
@@ -121,8 +121,20 @@ class Ledger:
             if changed!=1: raise ValueError('attempt_not_running')
 
 
-def research_check(repo,hypothesis):
-    """Read real repository gate state; configuration cannot substitute a pass flag."""
+def research_check(repo,hypothesis,policy=None):
+    """Preserve formal status; owner-directed Q1 does not invent research acceptance."""
+    if policy == 'owner-directed-exploratory':
+        authority=json.loads((HERE/'OPERATOR-AUTHORIZATION.json').read_text())
+        expected={'experiment':'quorum-of-mirrors','owner':'vishesh',
+                  'researcher_review':'not_required_by_owner','scope':'exploratory_Q1_only',
+                  'allowed_attempts':['QM-Q1-01','QM-Q1-02'],'max_calls_per_attempt':16,
+                  'formal_hypothesis_status':'not_accepted','budget_authority':'AUTHORIZATION.json'}
+        if any(authority.get(k)!=v for k,v in expected.items()):
+            raise ValueError('owner_direction_missing')
+        return {'status':'owner_directed_exploratory','researcher_review':'not_required_by_owner',
+                'formal_hypothesis_status':'not_accepted','scope':'exploratory_Q1_only',
+                'authority_sha256':hashes()['OPERATOR-AUTHORIZATION.json']}
+    if policy is not None: raise ValueError('owner_direction_missing')
     if hypothesis != 'vishesh-quorum-source-aware':
         raise ValueError('accepted_hypothesis_missing')
     spec=importlib.util.spec_from_file_location('quorum_lab_gate',Path(repo)/'scripts/lab.py')
@@ -174,7 +186,7 @@ def preflight(config,manifest,now=None):
     if (auth.get('experiment')!='quorum-of-mirrors' or auth.get('owner_approved') is not True
             or auth.get('api_cap_usd')!=1 or auth.get('infrastructure_cap_usd')!=1
             or auth.get('max_infrastructure_hours')!=6): raise ValueError('authorization_missing')
-    research=research_check(config['repo'],config.get('hypothesis'))
+    research=research_check(config['repo'],config.get('hypothesis'),config.get('research_policy'))
     allocation=json.loads(Path(config['allocation_receipt']).read_text());allocation_check(allocation,now)
     if manifest['attempt']=='QM-Q1-02':
         repair=json.loads(Path(config['repair_assessment']).read_text())
