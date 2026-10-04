@@ -1,0 +1,143 @@
+{
+  "kind": "offline_only",
+  "native_calls": 0,
+  "controller_c1_tests": 7,
+  "parent_controller_tests": 9,
+  "prior_freshness_tests": 41,
+  "scripted_assignments": 8,
+  "scripted_frames_replayed": 16,
+  "rule_panel": {
+    "backend": "offline_rule_based",
+    "native_calls": 0,
+    "worlds": 12,
+    "families": 4,
+    "rows": [
+      {
+        "id": "panel-1",
+        "family": "healthy",
+        "variant": "healthy_batch",
+        "reference_pass": true,
+        "actions": [
+          "wait",
+          "wait"
+        ]
+      },
+      {
+        "id": "panel-2",
+        "family": "healthy",
+        "variant": "healthy_expanded",
+        "reference_pass": true,
+        "actions": [
+          "wait",
+          "wait"
+        ]
+      },
+      {
+        "id": "panel-3",
+        "family": "healthy",
+        "variant": "healthy_classic",
+        "reference_pass": true,
+        "actions": [
+          "wait",
+          "wait"
+        ]
+      },
+      {
+        "id": "panel-4",
+        "family": "runtime",
+        "variant": "gateway_crash",
+        "reference_pass": true,
+        "actions": [
+          "deploy",
+          "inspect"
+        ]
+      },
+      {
+        "id": "panel-5",
+        "family": "runtime",
+        "variant": "worker_crash",
+        "reference_pass": true,
+        "actions": [
+          "deploy",
+          "inspect"
+        ]
+      },
+      {
+        "id": "panel-6",
+        "family": "runtime",
+        "variant": "store_crash",
+        "reference_pass": true,
+        "actions": [
+          "deploy",
+          "inspect"
+        ]
+      },
+      {
+        "id": "panel-7",
+        "family": "stale",
+        "variant": "stale_worker_alarm",
+        "reference_pass": true,
+        "actions": [
+          "inspect",
+          "wait"
+        ]
+      },
+      {
+        "id": "panel-8",
+        "family": "stale",
+        "variant": "stale_reassuring_worker",
+        "reference_pass": true,
+        "actions": [
+          "inspect",
+          "deploy"
+        ]
+      },
+      {
+        "id": "panel-9",
+        "family": "stale",
+        "variant": "stale_gateway_alarm",
+        "reference_pass": true,
+        "actions": [
+          "inspect",
+          "wait"
+        ]
+      },
+      {
+        "id": "panel-10",
+        "family": "configuration",
+        "variant": "rpc_mismatch",
+        "reference_pass": true,
+        "actions": [
+          "deploy",
+          "inspect"
+        ]
+      },
+      {
+        "id": "panel-11",
+        "family": "configuration",
+        "variant": "unreadable_data",
+        "reference_pass": true,
+        "actions": [
+          "deploy",
+          "inspect"
+        ]
+      },
+      {
+        "id": "panel-12",
+        "family": "configuration",
+        "variant": "missing_feature",
+        "reference_pass": true,
+        "actions": [
+          "deploy",
+          "inspect"
+        ]
+      }
+    ]
+  },
+  "packet_sha256": "c1f7bd6b0894274687efb85ff4e0970001b875790e833b8e3e3d57d0e28e57cf",
+  "admission": "not_funded_not_allocated",
+  "model_max_usd": 1.77152,
+  "infrastructure_reservation_ceiling_usd": 0.15,
+  "all_in_admission_ceiling_usd": 1.92152,
+  "known_warning": "Inherited SQLite context managers emit ResourceWarning under Python3.13; persistent reservation limit and duplicate refusal tests pass. Warnings are not native evidence."
+}
