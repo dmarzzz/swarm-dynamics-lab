@@ -1,0 +1,46 @@
+{
+  "stage": "D6-offline",
+  "native_calls": 0,
+  "tests_passed": 70,
+  "fault_cases": [
+    "HTTP429",
+    "HTTP502",
+    "HTTP503",
+    "HTTP504",
+    "HTTP401",
+    "timeout",
+    "parse",
+    "missing_usage",
+    "negative_usage",
+    "unsafe_headers",
+    "budget_shortage",
+    "inflight_journal",
+    "session_reopen",
+    "contract_failure_known_usage",
+    "two_request_limit",
+    "reservation_before_send",
+    "missing_ledger"
+  ],
+  "maximum_proposed_reservation_usd": 0.09728,
+  "original_unreserved_usd": 3.131168,
+  "admitted": false,
+  "owner_decision": "not requested or inferred for this changed execution contract",
+  "files": [
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-06-PREP.md",
+      "sha256": "e8e775c99985ac348bf108c6fc3548096313c39c0b62d648ff7092dc347741ef"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/analysis/acquisition_d6.py",
+      "sha256": "2e04a954f571178914b511933b84ca217f0db6854da56d68eaf9f5e0aed11d3a"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/tests/test_acquisition_d6.py",
+      "sha256": "482124f68f7a5cbed6385e49c64e0006a906b79cea57f78b387e9f11af1fde86"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-acquisition-packet.json",
+      "sha256": "50f20bc6cfe868e694172c1ff7c307855fcc1112f8e13cc25744680f835b4e41"
+    }
+  ]
+}

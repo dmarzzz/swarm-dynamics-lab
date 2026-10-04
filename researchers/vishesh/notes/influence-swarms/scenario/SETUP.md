@@ -58,3 +58,8 @@ The later owner decision explicitly covers one unchanged D5 direct launch. The p
 ### Native D5 failed closeout — 2026-10-04
 
 One authorized attempt completed its failure bookkeeping:24 assigned/terminal,0valid,48 failed transport attempts,48missing usage. Scientific effect unavailable. Original reserved budget now4.868832 of8; no refund/reset,3.131168 remains. Worker exited and credential socket removed; dedicated claim released. See reviews/D5-post.md and reviews/D5-quality-review.json. Native finalize wrote a separate failed-attempt closeout; its zero model_calls field describes the offline finalize operation, not the48 failed acquisition attempts. No successor launched.
+
+
+### Offline D6 repair preparation — 2026-10-04
+
+Prospective ITERATION-06-PREP.md preceded a separately versioned acquisition primitive with allowlisted status/retry metadata, known/unknown usage, durable in-flight state and first-failure circuit break.70 tests pass, including8 new fault tests. A two-contract synthetic acquisition packet is prepared; maximum0.097280 fits original3.131168 remainder. Zero new calls/allocation; no runnable launcher or credential loader added. Changed execution contract needs owner plan decision and normal admission. See reviews/D6-offline-validation.json.
