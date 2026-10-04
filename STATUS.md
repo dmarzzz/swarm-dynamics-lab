@@ -7,7 +7,7 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 317 | 17 | 3 | 15 | 3 | 40 | 395 |
-| collective-decision | 323 | 22 | 26 | 19 | 0 | 35 | 425 |
+| collective-decision | 325 | 22 | 26 | 19 | 0 | 35 | 427 |
 | swarm-robotics | 291 | 29 | 2 | 7 | 1 | 24 | 354 |
 | swarm-intelligence | 113 | 2 | 2 | 4 | 2 | 3 | 126 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
@@ -21,8 +21,8 @@
 | fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
 | agent-budgets | 57 | 2 | 7 | 0 | 0 | 0 | 66 |
-| decision-models | 14 | 3 | 4 | 2 | 0 | 0 | 23 |
-| dissent | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
+| decision-models | 16 | 3 | 4 | 2 | 0 | 0 | 25 |
+| dissent | 5 | 0 | 0 | 0 | 0 | 0 | 5 |
 
 ## Tasks
 
@@ -275,8 +275,8 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
 | vishesh/codex-quorum-mirrors | working | quorum-mirrors-q1-launch | 2026-10-04 06:45:22.628151+00:00 | Directly allocating, deploying and running the authorized Q1 screen |
-| vishesh/codex-decision-models | done | right-dissenter-rd4 | 2026-10-04 06:27:24.563149+00:00 | RD4 completed and published; 576 decisions, preserved failures, measured replay, no workers, allocation released. |
 | vishesh/codex-phantom-coast | done | phantom-coast-review-process | 2026-10-04 05:51:41.825522+00:00 | Researcher review made optional; PC-2 gate updated; 44 tests pass; operational admission next |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
