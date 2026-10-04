@@ -1,5 +1,5 @@
 {
-  "schema": "swarm-size-design-draft-v2",
+  "schema": "swarm-size-design-draft-v3",
   "status": "exploratory design; not approved or registered for execution",
   "question": "EX-25",
   "owner": "vishesh/codex-idea-scores",
@@ -129,5 +129,42 @@
     "clock_starts_before_selection": true,
     "refusals_in_denominator": true,
     "transfer_sweep_sealed_until_policies_complete": true
-  }
+  },
+  "task_contracts": "TASK-CONTRACTS.md",
+  "qualification": {
+    "purpose": "engineering qualification; not a matched size-effect comparison",
+    "calibration_episodes": 16,
+    "multiroster_episodes": 64,
+    "screening_deadline": null,
+    "screening_spending_cap": null,
+    "calibration_quantile": 0.75,
+    "quantile_method": "nearest rank",
+    "deadline_headroom_factor": 1.5,
+    "budget_headroom_factor": 1.5,
+    "calibration_subset": "contract-valid successful Q-A episodes; failures retained and reported",
+    "minimum_successes_per_family_structure": 2,
+    "minimum_successes_total": 8,
+    "calibration_choices_ratified": false,
+    "automatic_repeats": false
+  },
+  "task_families": [
+    {
+      "id": "evidence",
+      "role": "development",
+      "primary_checker": "exact field values and declared admissible proof sets",
+      "quality": "fraction of fields correct and grounded"
+    },
+    {
+      "id": "repository",
+      "role": "development",
+      "primary_checker": "patch validity, permitted scope, all hidden behavioral categories and regression invariants",
+      "quality": "fraction of behavioral categories passed; invalid scope scores zero"
+    },
+    {
+      "id": "triage",
+      "role": "locked-transfer",
+      "primary_checker": "permitted repair sequence reaches healthy simulated state and preserves safety invariants",
+      "quality": "restored service fraction; forbidden sequence scores zero"
+    }
+  ]
 }
