@@ -28,10 +28,12 @@ def owner_of(author, subject=''):
     prefix = re.match(r'\[([^\]]+)\]', subject)
     agent = prefix.group(1) if prefix else None
     if agent and agent.split('/')[0] in OWNERS:
-        return agent.split('/')[0], agent
+        owner = agent.split('/')[0]
+        return owner, agent if '/' in agent else owner + '/unprefixed'
     aliases = {'dmarzzz': 'dmarz', 'dmarz': 'dmarz', 'ultron': 'vishesh', 'cytonomy': 'vishesh',
                'codex': 'vishesh', 'wakesync': 'shadow', 'shad0w': 'shadow'}
-    return aliases.get(author.lower()), agent
+    # Brackets like [docs] are a commit type, not a researcher/lane identity.
+    return aliases.get(author.lower()), None
 
 
 def stamp(s):
@@ -338,7 +340,7 @@ def build(args):
     for thread in threads:
         owner = thread['owner']
         task_path = 'tasks/' + thread['task_ids'][0] + '.md' if thread['task_ids'] else None
-        agent_path = 'researchers/' + owner + '/agents/' + thread['agent'].split('/', 1)[1] + '.md'
+        agent_path = 'researchers/' + owner + '/agents/' + thread['agent'].split('/', 1)[-1] + '.md'
         path = task_path if task_path in snap.paths else agent_path if agent_path in snap.paths else 'researchers/' + owner + '/README.md'
         snap.text(path)
         nodes[thread['id']] = {'id': thread['id'], 'owner': owner, 'label': thread['label'], 'title': thread['agent'],

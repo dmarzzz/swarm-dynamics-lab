@@ -15,6 +15,8 @@ class UnitTests(unittest.TestCase):
         self.assertIsNone(build_map.owner_of('swarm-lab-bot', '[shadow/a] test')[0])
         self.assertEqual(build_map.owner_of('Ultron', 'update')[0], 'vishesh')
         self.assertIsNone(build_map.owner_of('unmapped', 'update')[0])
+        self.assertEqual(build_map.owner_of('wakesync', '[shadow] sync findings'), ('shadow', 'shadow/unprefixed'))
+        self.assertEqual(build_map.owner_of('Codex', '[docs] snapshot'), ('vishesh', None))
 
     def test_status_is_not_hub_done(self):
         row = {'status_at_assessment': 'unrun', 'evidence_confidence': {'score': 0}}
