@@ -38,6 +38,7 @@ ASSIGNMENTS={
  'Q0': [('usage_cliff',4,'clean'),('genuine_value',4,'promotion'),('evidence_gap',4,'clean')],
  'Q1': [('usage_cliff',5,'clean'),('genuine_value',5,'promotion'),('evidence_gap',5,'clean')],
  'Q2': [('usage_cliff',6,'clean'),('genuine_value',6,'promotion'),('evidence_gap',6,'clean')],
+ 'Q3': [('evidence_gap',7,'clean')],
  'P0': [('usage_cliff',0,'clean'),('usage_cliff',0,'omission')],
  'S1': [(f,p,w) for f in ('usage_cliff','residency_scope','migration_deadline') for p in (0,2) for w in ('clean','omission')],
 }
@@ -80,6 +81,7 @@ def collect(stage,out,policy,config,hub=None):
              'acceptable':sum(r['evaluation']['acceptable_decision'] for r in valid),'qualified':qualified,
              'calls':policy.calls,'input_tokens':policy.input_tokens,'output_tokens':policy.output_tokens,'actual_usd':policy.actual_usd,
              'usage_missing':policy.usage_missing,'seconds':round(time.monotonic()-started,2),'source_signature':manifest['source_signature'],
+             'diagnostic_passed':stage=='Q3' and len(valid)==len(results) and all(r['evaluation']['acceptable_decision'] for r in valid),
              'report_errors':report_errors,'outcomes_hash':digest(results)}
     (out/'summary.json').write_text(json.dumps(summary,indent=2))
     render(results,len(assigned)*3,out/'final_frame.png',stage,event_count)
@@ -108,7 +110,7 @@ def main():
     with sr.start('influence-swarms',params={'stage':args.stage,'version':signature(config)[:12]}) as hub:
         summary=collect(args.stage,args.out,policy,config,hub)
         metrics={k:summary[k] for k in ('valid','acceptable','invalid','actual_usd')}
-        if summary['invalid'] or (args.stage in ('Q0','Q1','Q2') and not summary['qualified']):hub.fail('Qualification or execution issue; all outcomes retained',**metrics)
+        if summary['invalid'] or (args.stage in ('Q0','Q1','Q2') and not summary['qualified']) or (args.stage=='Q3' and not summary['diagnostic_passed']):hub.fail('Qualification or execution issue; all outcomes retained',**metrics)
         else:hub.done(message='Complete; model decisions retained. Exploratory synthetic evidence.',**metrics)
         print(json.dumps({'run':hub.id,**summary}),flush=True)
 if __name__=='__main__':main()
