@@ -35,7 +35,7 @@ class Ledger:
             key=(ident,call)
             spent=sum(settled.get(k,v) for k,v in reserves.items())
             spec_spent=sum(settled.get(k,v) for k,v in reserves.items() if k[0]==ident)
-            assert math.isfinite(usd) and usd>=0
+            f.require(math.isfinite(usd) and usd>=0, 'validation failed')
             if kind=='reserve':
                 if key in reserves: raise BudgetStop('duplicate_reservation')
                 if spent+usd>20+1e-10 or spec_spent+usd>min(cap,4)+1e-10: raise BudgetStop('cap_reached')
@@ -61,11 +61,11 @@ LEDGER=Ledger(f.ROOT/'results'/'paid-ledger.jsonl')
 def read_spec(name,frozen=True):
     p=f.ROOT/'specs'/(name if name.endswith('.json') else name+'.json')
     s=json.loads(p.read_text())
-    assert s['route']=='openrouter' and s['model']=='anthropic/claude-sonnet-4.6'
-    assert s['max_paid_usd']==4 and s['max_calls']==204 and s['concurrency']==2
+    f.require(s['route']=='openrouter' and s['model']=='anthropic/claude-sonnet-4.6', 'validation failed')
+    f.require(s['max_paid_usd']==4 and s['max_calls']==204 and s['concurrency']==2, 'validation failed')
     if frozen:
-        assert subprocess.check_output(['git','show','HEAD:'+str(p.relative_to(f.REPO))],cwd=f.REPO)==p.read_bytes(),'uncommitted spec'
-        for path,digest in s['source_sha256'].items(): assert f.sha(f.REPO/path)==digest,'source drift '+path
+        f.require(subprocess.check_output(['git','show','HEAD:'+str(p.relative_to(f.REPO))],cwd=f.REPO)==p.read_bytes(), 'uncommitted spec')
+        for path,digest in s['source_sha256'].items(): f.require(f.sha(f.REPO/path)==digest, 'source drift '+path)
     return s
 
 def key():
@@ -102,11 +102,11 @@ def call(s,a,key):
         row.update(returned_model=data.get('model'),provider=data.get('provider'),response_id=data.get('id'),
                    usage={'input_tokens':usage.get('prompt_tokens',0),'output_tokens':usage.get('completion_tokens',0),'cost':cost},raw_usage=usage)
         ch=data['choices'][0];row['stop_reason']=ch.get('finish_reason');row['raw_text']=ch['message'].get('content') or ''
-        assert data.get('model')==s['model'],'model_mismatch'
-        assert data.get('provider')=='Anthropic','provider_mismatch'
-        assert ch.get('finish_reason')=='stop','stop_reason'
-        assert usage.get('prompt_tokens') is not None and usage.get('completion_tokens') is not None,'missing_usage'
-        assert not (usage.get('completion_tokens_details') or {}).get('reasoning_tokens',0),'unexpected_reasoning'
+        f.require(data.get('model')==s['model'], 'model_mismatch')
+        f.require(data.get('provider')=='Anthropic', 'provider_mismatch')
+        f.require(ch.get('finish_reason')=='stop', 'stop_reason')
+        f.require(usage.get('prompt_tokens') is not None and usage.get('completion_tokens') is not None, 'missing_usage')
+        f.require(not (usage.get('completion_tokens_details') or {}).get('reasoning_tokens',0), 'unexpected_reasoning')
         ans=f.parse_answer(row['raw_text']);row['answer']=ans
         row['metrics']=sim.grade(ans['values'],a['answers'],a['fabricated'])
         if a['stage']=='Q':row['exact']=ans['values']==a['expected']
