@@ -1,0 +1,75 @@
+# Frozen design of growth-pressure-200 as implemented (PLAN v2, AMENDMENT-02, AMENDMENT-03). Covered by study.source_hash().
+version: 1
+experiment: growth-pressure-200
+attempt: '001'
+model: gpt-6-sol
+canonical_model: gpt-6-sol
+request_template:
+  model: gpt-6-sol
+  reasoning_effort: low
+  max_completion_tokens: 1024
+  response_format:
+    type: json_object
+markets_per_batch: 4
+batch_order: [b1, b2, b3]
+workers: 8
+opening_rounds: 5
+continuation_rounds: 20
+arm_order_seed: growth-pressure-200/v2/scientific/request-order
+qualification:
+  reachability_fixtures: 8
+  mechanics_cases: 48
+  mechanics_min_correct: 46
+  seeder_fixtures: 8
+  seeder_rounds: 6
+  seeder_min_passed: 6
+  opening_wave_calls: 600
+  mature_wave_calls: 2400
+  min_valid_fraction: 0.99
+  projection_margin: 1.25
+  main_window_seconds: 2640
+  projection_fixed_seconds: 150
+  calls_per_batch: 17000
+stages:
+  S0: {backend: scripted, batch: s0-001, calls: 0}
+  P0: {backend: openai, batch: p0-001, calls: 1}
+  Q0: {backend: openai, batch: q0-001, calls: 95}
+  X0: {backend: openai, batch: x0-001, calls: 3000}
+  S1: {backend: openai, batch: s1-001, calls: 51000}
+budget:
+  authorization: 'dmarz to dmarz/fleet-monitor 2026-10-04 ~21:45Z (PLAN link); standing instruction: read out the total, do not hold runs for cost; study hard cap USD 600 (AMENDMENT-03)'
+  aggregate_usd: 600
+  max_calls: {S0: 0, P0: 1, Q0: 95, X0: 3000, S1: 51000, REISSUE: 1000}
+  max_attempted_calls: 55096
+  max_transport_attempts: 56637
+  max_output_tokens: 1024
+  max_input_tokens: 6144
+  max_input_bytes: 40000
+  max_visible_chars: 4000
+  prices: {input: 2.0, cached_input: 0.2, cache_write: 2.5, output: 10.0}
+  reservation_margin: 1
+  request_timeout_seconds: 45
+  retry:
+    transport_retries: 1
+    retryable_http_status: [429, 500, 502, 503, 504]
+    backoff_seconds: [2]
+    retry_after_cap_seconds: 20
+  billing_outage:
+    retry_every_seconds: 60
+    max_wait_seconds: 0
+  governor:
+    token_limit_per_minute: 4000000
+    request_limit_per_minute: 10000
+    fraction: 0.85
+    max_in_flight_total: 128
+  in_flight_per_host: 16
+  in_flight_per_host_max: 16
+  task_timeout_seconds: 600
+  worker_silent_seconds: 240
+  liveness_check_seconds: 30
+  hub_poll_seconds: 2
+  hub_backoff_max_seconds: 30
+  worker_attach_seconds: 1800
+  dispatch_stop_seconds: 3120
+  stage_timeout_seconds: {S0: 900, P0: 300, Q0: 900, X0: 900, S1: 3300}
+  chain_timeout_seconds: 4500
