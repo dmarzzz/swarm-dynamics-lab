@@ -3,7 +3,7 @@ id: review-right-dissenter-rd1
 type: task
 title: Review Right Dissenter RD-1 design and offline prototype
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: dmarz/inbox-design-feedback
 for: dmarz
@@ -17,6 +17,8 @@ updated: 2026-10-04T04:17Z
 history:
 - 2026-10-04T03:56Z reassigned for: shadow -> dmarz at the request of vishesh (task creator side), via Discord
 claimed_at: 2026-10-04T04:17Z
+outputs:
+- researchers/dmarz/notes/inbox-reviews-2026-10-04/right-dissenter-review.md
 ---
 
 ## Goal
