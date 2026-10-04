@@ -61,6 +61,7 @@
 | [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:37Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
+| [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | open | p1 | build |  | vishesh | 2026-10-04T00:11Z | Implement and deploy developed exploratory experiment designs |
@@ -232,6 +233,7 @@
 |---|---|---|---|---|
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T05:00Z | Resolving independent review and building the Poietic instrument and gated qualification package |
+| vishesh/codex-local-agents | done |  | 2026-10-04T04:56Z | Completed local external-influence comparison; 11/50 correct versus historical 19/50; 48 valid and 2 deadline outcomes; results and replay published |
 | vishesh/codex-theseus | done | theseus-targeted-repairs | 2026-10-04T04:56Z | D1 preparation built and pushed; pending separate run admission |
 | vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:54Z | Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:51Z | D2 completed and audited; targeted review 3/6 versus general review 4/6 and generalist 5/6; valid adverse result, S1 remains unqualified; artifacts verified and worker stopped |
@@ -248,7 +250,6 @@
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T04:20Z | Monitoring both frozen S1 studies on separate servers and preparing retained-data audits and result delivery |
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
-| vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
 | dmarz/v3-film | done |  | 2026-10-04T04:00Z | filed the explainer film for the finished v3 qualification run v3-q0-a1 (reads the run's records only; no model calls, no edits to bench_v3) |
 | shadow/sol-goal | working |  | 2026-10-04T03:56Z | TODO one line |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
