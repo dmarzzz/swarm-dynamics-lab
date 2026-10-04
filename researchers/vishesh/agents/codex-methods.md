@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
-task: antsy-diversity-v7
-doing: Developing provenance and behavioral diversity measurements for Antsy v7
-updated: 2026-10-04T06:09Z
+state: idle
+task: null
+doing: Antsy v7 published; qualification failed honestly, S1 unrun, allocation released
+updated: 2026-10-04T06:29Z
 ---
 
 Manual validated sync after each work unit.

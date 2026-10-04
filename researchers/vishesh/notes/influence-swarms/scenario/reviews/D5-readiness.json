@@ -1,0 +1,19 @@
+{
+  "status": "prepared_not_launched",
+  "source_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
+  "packet_hash": "d0fe44becee7386e667b84f727317d91e3cbd68be2b28a89f33d24b7419efe44",
+  "instrument_signature": "c559544c75a04be2d19757a6a88a3c10e43887fcef3d16e3271fb87017bd3fd1",
+  "source_dirty": false,
+  "fixture": "scripted-D5-01",
+  "fixture_valid": 24,
+  "fixture_terminal": 24,
+  "fixture_calls": 48,
+  "model_calls": 0,
+  "model_spend_usd": 0,
+  "largest_fixture_wire_bytes": 28941,
+  "input_cap_bytes": 32768,
+  "scenario_tests_passed": 59,
+  "native_reservation_ceiling_usd": 4.66944,
+  "native_admission": "not acquired: current exclusive host/claim, live budget and secure credential transfer checks required immediately before dispatch",
+  "verified_utc": "2026-10-04T06:25:46.970641+00:00"
+}
