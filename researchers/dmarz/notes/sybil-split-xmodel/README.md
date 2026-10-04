@@ -1,5 +1,14 @@
 # Identity splitting at fixed attacker resources, replicated on two other models
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/pipeline-split-qwen; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — On the byte-identical packets of sybil-split-opus, splitting one attacker's fixed resources from 1 to 27 identities raises rare-skill wrong answers more under degree-based than under coverage-based checks for qwen/qwen3.7-flash (reasoning disabled) and for gpt-6-sol (reasoning effort low), each model reported separately. Basis: Unrun. Prospective package only; tested offline with stub models; no stage has run and no model call has been made.
+- **sample_size_summary:** Observed: none. Planned per model: 24 paired synthetic roots in each of two graph families x 56 conditions = 2,688 S1 calls on the parent's packets, after a 60-call qualification and a one-call probe; two models, never pooled. Roots are the independent units, not calls or identities.
+<!-- experiment-evidence:end -->
+
 **Nothing has run.** This directory holds a ready-chain package: plan, frozen design, code, offline tests, runbook and a pre-run review. No stage of this study has run on a server and no model call has been made. It is exploratory. The owner is dmarz, and dmarz/pipeline-split-qwen built it on 2026-10-04.
 
 **Authority and review status.** dmarz did not name this study. On 2026-10-04 his instruction was to keep experiments running and to ship tonight; after the Anthropic organization reached its monthly usage threshold at 11:44Z he added: "we have no experiments running! fix that and or use opus 5 or an oai model". The fleet monitor (dmarz/fleet-monitor) chose this study under that instruction and set the two models. dmarz waived cross-researcher review for these exploratory runs. dmarz/fleet-monitor's check of this package is a same-researcher check and nothing more. **The run is not independently reviewed.** This is a hunch-level study in researcher notes, not an accepted hypothesis. It makes no novelty claim. S2 is disabled.

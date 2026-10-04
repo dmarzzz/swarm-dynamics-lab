@@ -2494,6 +2494,34 @@
         "researchers/dmarz/notes/sybil-scale-opus/reviews/s1-001-post.md": "beee347ab04297da32d8d87c615bb3369f65b7371f5dff467fcdcc978effcddc",
         "researchers/dmarz/notes/sybil-scale-opus/design.yaml": "dc4136d54508e0014e201644030fd91577283b119b5a35fd8ff036c64bd1e0d0"
       }
+    },
+    {
+      "id": "sybil-split-xmodel",
+      "title": "Identity splitting at fixed attacker resources, replicated on Qwen3.7 Flash and GPT-6 Sol",
+      "documents": [
+        "researchers/dmarz/notes/sybil-split-xmodel/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-split-xmodel"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-split-xmodel/experiment.yaml"
+      ],
+      "assessor": "dmarz/pipeline-split-qwen",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "On the byte-identical packets of sybil-split-opus, splitting one attacker's fixed resources from 1 to 27 identities raises rare-skill wrong answers more under degree-based than under coverage-based checks for qwen/qwen3.7-flash (reasoning disabled) and for gpt-6-sol (reasoning effort low), each model reported separately.",
+        "rationale": "Unrun. Prospective package only; tested offline with stub models; no stage has run and no model call has been made."
+      },
+      "sample_size_summary": "Observed: none. Planned per model: 24 paired synthetic roots in each of two graph families x 56 conditions = 2,688 S1 calls on the parent's packets, after a 60-call qualification and a one-call probe; two models, never pooled. Roots are the independent units, not calls or identities.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-split-xmodel/README.md",
+        "researchers/dmarz/notes/sybil-split-xmodel/preregistration.md",
+        "researchers/dmarz/notes/sybil-split-xmodel/design.yaml",
+        "researchers/dmarz/notes/sybil-split-xmodel/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
     }
   ],
   "source_sha256": {
