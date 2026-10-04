@@ -9,7 +9,7 @@
 - Records to keep for S1: input tokens per size measured by Opus, output and thinking tokens per call, latency at N=8,748.
 - Visualization: qualification view per size (mapping v1).
 
-## Interface probe (2026-10-04 ~08:10 UTC, before Q0)
+## Interface probe (2026-10-04 ~07:45 UTC, before Q0)
 
 One call from orbital-one with the A1 adapter at revision d8653369 and a probe-only ledger (not the study ledger): qualification world 5000, N=972, `sample` packet, visible badges. The answer parsed and matched all six expected values exactly. Usage: 23,536 input tokens (count_tokens gave the same number), 38 output tokens, 2.9 s, USD 0.094904 (reserved 0.25628). Opus therefore uses about 48 tokens per report, against about 36 for Haiku, which is the top of the assumed 1.0–1.35× range. At effort low the thinking output was negligible on this packet.
 

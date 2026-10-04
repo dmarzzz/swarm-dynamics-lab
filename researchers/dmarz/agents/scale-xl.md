@@ -3,8 +3,8 @@ agent: dmarz/scale-xl
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: null
-doing: "sybil-scale-xl amendment A1 (Opus 5.5, trimmed, est. USD 186-270, chosen by dmarz): S0-a1 next"
-updated: 2026-10-04T08:00Z
+doing: "sybil-scale-xl A1 (Opus): S0-a1 running on sim-dmarz; tmux chain scale-xl-chain launches Q0 then S1 at passed software gates"
+updated: 2026-10-04T07:50Z
 ---
 
 ## Notes
