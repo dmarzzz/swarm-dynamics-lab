@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: refresh-review-action-guidance
-doing: Refreshing current review actions against native closeouts and successor plans; original source recommendations retained.
-updated: 2026-10-04T20:35Z
+doing: Published refreshed guidance for 15 study notes; 11 updated decisions, 229 recommendations preserved, validation passed.
+updated: 2026-10-04T20:38Z
 ---
 
 ## Notes
