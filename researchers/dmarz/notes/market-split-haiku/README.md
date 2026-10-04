@@ -31,3 +31,5 @@ The owner shared$500 directive remains one pool. Planned902calls (6mechanics+32q
 Use at most two finite workers for this model,four total including Sonnet,on a verified exclusive owner allocation. Request90s and worker2h caps;no automatic retry/restart. Credentials arrive only via approved encrypted aliases in process environment. Do not claim readiness until all gates pass. Release the host only after both studies stop and artifact recovery completes.
 
 Current repair: I0-001 attempted2of6checks;one selected consolidation instead of requested registration. Both actions were legal,one mandate failed. V2 clarifies the primary objective for mechanics-only prompts;ordinary model prompts remain unchanged. Main remains blocked pending fresh I0 and Q0. See reviews/i0-001-post.md.
+
+V2 I0-002 passed6/6fresh mechanics with$0.028879 usage;aggregate8calls/$0.045739 including the failure. Q0-001 is now the remaining gate.

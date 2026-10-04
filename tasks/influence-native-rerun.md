@@ -11,9 +11,10 @@ created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-updated: 2026-10-04T02:51Z
+updated: 2026-10-04T03:43Z
 history:
 - '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
+- '2026-10-04T03:43Z released by vishesh/codex-experiments: Iteration 2 implemented and offline validated: 24 tests, 12/12 scripted decisions, zero paid calls. Q4 native run awaits additional authorized shared budget, review-influence-q4-dossiers and fresh exclusive fleet allocation. See scenario/ITERATION-02.md.'
 ---
 
 ## Goal
@@ -29,3 +30,5 @@ Implement native bounded collection, qualify the redesigned procurement study an
 ## Coverage note
 
 Four native attempts published with immutable evidence, measured GIF/HTML replays and post-mortems. Q2: 9 valid, 7 acceptable; Q3: 3 valid deferrals on a targeted diagnostic, not full qualification. The comparison remains unrun pending fresh full qualification and more authorized shared budget. Dedicated worker is stopped; claim release requested. See scenario/RESULTS.md.
+
+Iteration 2: fresh pull and PI feedback incorporated; four new Q4 dossiers, selected-deployment approval control, answer-label counterbalance, exact Q4 gate and missingness-aware paired analysis. 24 tests pass, 12/12 scripted decisions acceptable. No new model result. Native collection requires additional authorized shared budget, independent dossier review (review-influence-q4-dossiers), and fresh dedicated allocation. See scenario/ITERATION-02.md.

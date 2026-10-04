@@ -11,11 +11,12 @@ def execute(attempt):
     commit = common.frozen(attempt)
     out = common.ROOT/'results'/attempt
     out.mkdir(parents=True, exist_ok=False)
-    parent = common.ROOT/'results/q0-003'
+    lineage = common.design().get('diagnostics',{}).get(attempt,{'parent_attempt':'q0-003','source_attempt':'q0-003'})
+    parent = common.ROOT/'results'/lineage['source_attempt']
     rows = [json.loads(l) for l in (parent/'episodes.jsonl').read_text().splitlines()]
     failed = next(r for r in rows if r['validity']['reason']=='nonterminal_output')
     packet = failed['trace'][-1]['observation']
-    manifest = dict(attempt=attempt, stage='I0', parent_attempt='q0-003',
+    manifest = dict(attempt=attempt, stage='I0', **lineage,
                     source_episode=failed['episode_id'], commit=commit,
                     hashes=common.hashes(), created=time.time(), assigned=1)
     common.dump(out/'manifest.json', manifest)

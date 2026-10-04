@@ -1,0 +1,5 @@
+# Pre-run assessment: s0-local-003
+
+Ready for uncommitted local engineering preparation, not precommitted API research. Read s0-local-002-post.md. Its eight tests and 198/198 S0 outputs passed; the only change is explicit SCRIPTED wording throughout the S0 visualization. Same design, same 198 assignments, same policies and scripted answers, zero API calls, zero spend. No source/plan is claimed committed before this local attempt; the parent commits all plans and runtime before frozen fleet S0.
+
+Command: `python3 src/worker.py --stage S0 --attempt s0-local-003`. Exclusive output directory, no retries. VISUALIZATION.md v1, eight logical replay frames, measured state only, source fingerprint saved with the attempt. Acceptance: 198 valid records, all 36 clean packets exact, changed labels inspected, GIF round count eight, numerical records identical to prior attempt after excluding runtime provenance/timing. Then hand off immutable runtime to parent for fleet S0, Q0 and S1; parent handles server claim, confidential aliases, guarded budget and public artifact verification.

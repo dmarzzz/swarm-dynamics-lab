@@ -1,0 +1,65 @@
+{
+  "kind": "uncommitted engineering validation; fleet freeze occurs separately",
+  "selftests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "summary": {
+    "params": {
+      "stage": "S0",
+      "backend": "scripted",
+      "batch": "s0-001",
+      "source_hash": "66ea4fe1465678ff66d099eec14ea11dbf5bc69063c00e3cc57249e06db98f08",
+      "code": "d1ccd3873b0632a8409f514a1fac70f55ca2c423"
+    },
+    "planned": 256,
+    "started": 256,
+    "terminal": 256,
+    "graded": 256,
+    "analyzed": 256,
+    "invalid": 0,
+    "not_started": 0,
+    "model_calls": 0,
+    "cost_usd": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "elapsed_seconds": 30.858159917,
+    "qualification": {
+      "cells": [
+        {
+          "n": 324,
+          "count": 8,
+          "expected": 8,
+          "fact_accuracy": 1.0,
+          "exact_packet_rate": 1.0,
+          "missing_abstention": 1.0,
+          "passed": true
+        },
+        {
+          "n": 972,
+          "count": 8,
+          "expected": 8,
+          "fact_accuracy": 1.0,
+          "exact_packet_rate": 1.0,
+          "missing_abstention": 1.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "study_accounting": {},
+    "initial_study_accounting": {},
+    "reporting_errors": [],
+    "visualization": {
+      "mapping": "v1",
+      "frames": 25
+    }
+  },
+  "verification": {
+    "assignments": 256,
+    "rows": 256,
+    "invalid": 0,
+    "all_packet_hashes_grades_and_analysis_match": true,
+    "gif_frames": 25
+  }
+}
