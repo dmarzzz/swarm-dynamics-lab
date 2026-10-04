@@ -276,7 +276,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-methods | working | antsy-targeted-v8 | 2026-10-04 07:02:35.547829+00:00 | Antsy v8 development and design delivered; fresh checker qualification pending |
+| vishesh/codex-methods | idle |  | 2026-10-04 07:02:35.547829+00:00 | Antsy v8 development and design delivered; fresh checker qualification pending |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 06:59:50.549036+00:00 | Q1 launch closed; contract failure preserved and allocation released; accounting/interface repair tracked |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc2-live | 2026-10-04 06:42:12.981971+00:00 | Q0 passed; executing admitted S1 pilot and reconciling artifacts within original budget |
