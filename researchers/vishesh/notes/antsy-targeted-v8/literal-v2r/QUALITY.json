@@ -1,0 +1,361 @@
+{
+  "assessor": "vishesh/codex-methods (same author)",
+  "date": "2026-10-04",
+  "attempts": [
+    "Q1-literal-attempt-1",
+    "Q2-literal-attempt-1"
+  ],
+  "decision": "FINISH bounded iteration; evaluation blocked",
+  "scope": "Native qualification and retrospective offline replay, not broad efficacy.",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Useful target: prevent wrong accepted payment totals after correlated normalization errors.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Four real receipts, one partly reused; faint-image and locale coverage remain narrow.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ],
+      "next_action": "Keep evaluation blocked; prospectively design blind literal-read and source-quality controls.",
+      "acceptance_check": "Fresh receipt-level qualification must meet unchanged safety thresholds with complete traces and known costs."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Equal two-call baseline/treatment plus corruption controls; literal-only saved ablation explains all rescues.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ],
+      "next_action": "Keep evaluation blocked; prospectively design blind literal-read and source-quality controls.",
+      "acceptance_check": "Fresh receipt-level qualification must meet unchanged safety thresholds with complete traces and known costs."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Qualification failed: one wrong treatment acceptance and one corrupted-token false approval.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ],
+      "next_action": "Keep evaluation blocked; prospectively design blind literal-read and source-quality controls.",
+      "acceptance_check": "Fresh receipt-level qualification must meet unchanged safety thresholds with complete traces and known costs."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Exact amounts, wrong acceptance and referral retained separately; no repair of invalid baseline.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Four receipt units, not twenty independent observations; no population efficacy estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ],
+      "next_action": "Keep evaluation blocked; prospectively design blind literal-read and source-quality controls.",
+      "acceptance_check": "Fresh receipt-level qualification must meet unchanged safety thresholds with complete traces and known costs."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Fresh contexts and pinned route; checker observes proposed token and is not independent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Twenty Q2 traces valid, Q1 failure retained; all four paired results replayed and five artifacts verified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Known cumulative API USD0.220104, zero pending reservations, USD5 historical hold preserved; USD20 cap unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source/input/runtime evidence retained; exact hosted sampling is not reproducible deterministically.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Measured paired plot inspected; explicit failed qualification, denominators and unrun evaluation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md",
+          "sha256": "d78f475a0db4414299f3f697f85a033ce2de2992b89bb63888c1fea751cadfd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+          "sha256": "5c66b1925cb601add9554d6fac2cd8c1444d1e63f8b5047dc644b1ddaff57e58"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+          "sha256": "855205986575add7a37a66bf3e91d09583f38ee7fc4d90fea202bab532994e8c"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/trace-audit.json",
+          "sha256": "89eeac3fa8274e44d3a0b11cf39872fdc5a2c1e7628477bf9576366b5f987d4f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json",
+          "sha256": "a38faf6dfc5b0edf67e681b0f84a0b21b9f7dcce1574a8f0c32fe1361ef4e6d5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/reconciliation.json",
+          "sha256": "ddfc03226e624076851ca63fd5d1a1f776ed93f600e180dfe840870bfd1f1230"
+        }
+      ]
+    }
+  ]
+}

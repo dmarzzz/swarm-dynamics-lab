@@ -104,3 +104,9 @@ The saved normalization guard refers all48wrong-case responses and retains48cons
 ## Literal v2 — authorized next iteration
 
 Owner approved making the proposed literal extraction/deterministic normalization/source-checking design the next native iteration. [Prospective plan](literal-v2/PLAN.md) published before implementation; prior negative native results remain unchanged. G0/G1: matched two-call baseline versus two-call decomposition,4 fresh Q1 receipts with4 corrupt-token controls, conditional18-receipt evaluation. G2:8 offline tests pass, including full20-call fake collection, first-error stop, trace accounting, strict schema and normalization boundaries. G3 pending exact host/source/runtime verification and public stage registration; no new spending ceiling or machine charges. Native Q1 must meet all stated correctness and negative-control gates before E1.
+
+## Literal extraction Q1/Q2 closeout — latest
+
+FINISH bounded iteration. [Authored post-mortem](literal-v2r/POST-MORTEM.md) and [quality review](literal-v2r/QUALITY.json): Q1 failed after one noncanonical baseline response; Q2 completed20 valid calls on4 receipt units but failed qualification. Baseline1/4 correct, literal+normalizer3/4, checked treatment3/4; one shared visual error and one corrupted-token false approval. E1/E2 unrun. Exact-quote guard is retrospective only. USD0.037776 this iteration; cumulative known API USD0.220104 plus unchanged USD5 historical hold; no unresolved reservations, original USD20 cap. Workers stopped, evidence backed up and five hub artifacts verified. Next action: offline blind-reader/source-quality successor design; no automatic evaluation or favorable-result retry.
+
+Exclusive claim released after stopped-worker verification: agentops PR434 merged. Shared offline finalize records Q1 failed and Q2 execution completed; authored quality review supplies the separate scientific assessment.

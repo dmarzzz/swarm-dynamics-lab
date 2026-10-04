@@ -1,0 +1,10 @@
+{
+  "total_ledger_calls": 117,
+  "known_api_usd": 0.220104,
+  "unknown_reservations_usd": 0,
+  "original97rows_unchanged": true,
+  "historical_hold_usd": 5,
+  "current_iteration_calls": 21,
+  "current_iteration_api_usd": 0.037776000000000004,
+  "cap_usd": 20
+}

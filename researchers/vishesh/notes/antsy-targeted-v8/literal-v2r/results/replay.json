@@ -1,0 +1,60 @@
+{
+  "model_calls": 0,
+  "replay_matches_all4rows": true,
+  "rows": [
+    {
+      "case": "V2R-Q2-case-003",
+      "outcomes": {
+        "singleton": "wrong",
+        "baseline": "wrong",
+        "literal_unchecked": "wrong",
+        "treatment": "wrong"
+      },
+      "native_checker_clean": true,
+      "native_checker_corrupt": false,
+      "saved_exact_guard_clean": true,
+      "saved_exact_guard_corrupt": false
+    },
+    {
+      "case": "V2R-Q2-case-004",
+      "outcomes": {
+        "singleton": "wrong",
+        "baseline": "wrong",
+        "literal_unchecked": "correct",
+        "treatment": "correct"
+      },
+      "native_checker_clean": true,
+      "native_checker_corrupt": true,
+      "saved_exact_guard_clean": true,
+      "saved_exact_guard_corrupt": false
+    },
+    {
+      "case": "V2R-Q2-case-005",
+      "outcomes": {
+        "singleton": "wrong",
+        "baseline": "wrong",
+        "literal_unchecked": "correct",
+        "treatment": "correct"
+      },
+      "native_checker_clean": true,
+      "native_checker_corrupt": false,
+      "saved_exact_guard_clean": true,
+      "saved_exact_guard_corrupt": false
+    },
+    {
+      "case": "V2R-Q2-case-006",
+      "outcomes": {
+        "singleton": "correct",
+        "baseline": "correct",
+        "literal_unchecked": "correct",
+        "treatment": "correct"
+      },
+      "native_checker_clean": true,
+      "native_checker_corrupt": false,
+      "saved_exact_guard_clean": true,
+      "saved_exact_guard_corrupt": false
+    }
+  ],
+  "guard_scope": "retrospective quote consistency only, not image truth; common misreading survives",
+  "all_20_responses_inspected": true
+}

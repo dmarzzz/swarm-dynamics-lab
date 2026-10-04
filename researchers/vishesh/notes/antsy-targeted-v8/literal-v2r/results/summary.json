@@ -1,0 +1,95 @@
+{
+  "attempt": "Q2-literal-attempt-1",
+  "stage": "Q2",
+  "assigned": 20,
+  "started": 20,
+  "valid": 20,
+  "unstarted": 0,
+  "stop": "completed",
+  "trace_status": "verified_declared_coverage",
+  "qualification_passed": false,
+  "actual_usd": 0.035812000000000004,
+  "rows": [
+    {
+      "case": "V2R-Q2-case-003",
+      "complete": true,
+      "invalid_direct_decisions": 0,
+      "decisions": {
+        "singleton": "29.99",
+        "baseline": "29.99",
+        "literal_unchecked": "29900.00",
+        "treatment": "29900.00"
+      },
+      "outcomes": {
+        "singleton": "wrong",
+        "baseline": "wrong",
+        "literal_unchecked": "wrong",
+        "treatment": "wrong"
+      },
+      "negative_control_rejected": true,
+      "source_checker_positive": true,
+      "literal_token": "29,900"
+    },
+    {
+      "case": "V2R-Q2-case-004",
+      "complete": true,
+      "invalid_direct_decisions": 0,
+      "decisions": {
+        "singleton": "1096.04",
+        "baseline": "1096.04",
+        "literal_unchecked": "1096040.00",
+        "treatment": "1096040.00"
+      },
+      "outcomes": {
+        "singleton": "wrong",
+        "baseline": "wrong",
+        "literal_unchecked": "correct",
+        "treatment": "correct"
+      },
+      "negative_control_rejected": false,
+      "source_checker_positive": true,
+      "literal_token": "1,096,040"
+    },
+    {
+      "case": "V2R-Q2-case-005",
+      "complete": true,
+      "invalid_direct_decisions": 0,
+      "decisions": {
+        "singleton": "61.50",
+        "baseline": "61.50",
+        "literal_unchecked": "61500.00",
+        "treatment": "61500.00"
+      },
+      "outcomes": {
+        "singleton": "wrong",
+        "baseline": "wrong",
+        "literal_unchecked": "correct",
+        "treatment": "correct"
+      },
+      "negative_control_rejected": true,
+      "source_checker_positive": true,
+      "literal_token": "61.500"
+    },
+    {
+      "case": "V2R-Q2-case-006",
+      "complete": true,
+      "invalid_direct_decisions": 0,
+      "decisions": {
+        "singleton": "32000.00",
+        "baseline": "32000.00",
+        "literal_unchecked": "32000.00",
+        "treatment": "32000.00"
+      },
+      "outcomes": {
+        "singleton": "correct",
+        "baseline": "correct",
+        "literal_unchecked": "correct",
+        "treatment": "correct"
+      },
+      "negative_control_rejected": true,
+      "source_checker_positive": true,
+      "literal_token": "32,000"
+    }
+  ],
+  "source_sha256": "470d994a1bf1f0f40445997c13af3867c2025e097c60f7d4c0340391389550c1"
+}

@@ -4066,6 +4066,36 @@
       ],
       "source_commit": "204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb",
       "status_at_assessment": "completed_valid_adverse_FINISH_PARK"
+    },
+    {
+      "id": "antsy-literal-v2r",
+      "title": "Antsy literal extraction and deterministic normalization",
+      "documents": [
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "antsy-literal-v2",
+        "antsy-literal-v2r"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2/PLAN.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/PLAN.md"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Literal+code recovered two baseline errors; checker added no accuracy on four qualification receipts.",
+        "rationale": "Four partly reused receipt units, failed qualification, same-model conditional checker; main evaluation unrun."
+      },
+      "sample_size_summary": "4 paired receipt units,20 Q2 calls; preceding Q1 stopped after1call.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/summary.json",
+        "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/results/replay.json"
+      ],
+      "status_at_assessment": "qualification_failed_evaluation_unrun",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04",
+      "source_commit": "b3e139e7"
     }
   ],
   "source_sha256": {

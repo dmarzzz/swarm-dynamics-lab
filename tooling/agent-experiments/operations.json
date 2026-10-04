@@ -151,11 +151,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/antsy-targeted-v8",
       "setup_path": "researchers/vishesh/notes/antsy-targeted-v8/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md",
+      "postmortem_path": "researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md",
       "adapter": null,
-      "checked_at": "2026-10-04T20:30:54.626526+00:00",
+      "checked_at": "2026-10-04T20:54:36.806564+00:00",
       "checked_commit": "96b7ee7f3c79ec5161e95bb1b4c73ac3bb90f43b",
-      "next_action": "FINISH Haiku qualification/locale diagnostic:96 valid calls, original qualification failed, locale clarification did not repair shared1000-fold error. Saved guard refers48wrong-case outputs and retains48consistent outputs, not native qualification. E0 unrun; host released; USD0.182328 new charges plusUSD5historical hold. Scope a literal-token/deterministic-normalization successor before any main run.",
+      "next_action": "FINISH literal Q1/Q2: qualification failed; evaluation unrun. Read post-mortem; prepare blind-reader/source-quality successor offline.",
       "next_run_approval": "owner"
     },
     {

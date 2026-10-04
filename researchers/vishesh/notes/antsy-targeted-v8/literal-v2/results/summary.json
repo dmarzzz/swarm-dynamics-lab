@@ -1,0 +1,91 @@
+{
+  "attempt": "Q1-literal-attempt-1",
+  "stage": "Q1",
+  "assigned": 20,
+  "started": 1,
+  "valid": 0,
+  "unstarted": 19,
+  "stop": "invalid_schema",
+  "trace_status": "verified_declared_coverage",
+  "qualification_passed": false,
+  "actual_usd": 0.001964,
+  "rows": [
+    {
+      "case": "V2-Q1-case-003",
+      "complete": false,
+      "decisions": {
+        "singleton": null,
+        "baseline": null,
+        "literal_unchecked": null,
+        "treatment": null
+      },
+      "outcomes": {
+        "singleton": "incomplete",
+        "baseline": "incomplete",
+        "literal_unchecked": "incomplete",
+        "treatment": "incomplete"
+      },
+      "negative_control_rejected": false,
+      "source_checker_positive": false,
+      "literal_token": null
+    },
+    {
+      "case": "V2-Q1-case-004",
+      "complete": false,
+      "decisions": {
+        "singleton": null,
+        "baseline": null,
+        "literal_unchecked": null,
+        "treatment": null
+      },
+      "outcomes": {
+        "singleton": "incomplete",
+        "baseline": "incomplete",
+        "literal_unchecked": "incomplete",
+        "treatment": "incomplete"
+      },
+      "negative_control_rejected": false,
+      "source_checker_positive": false,
+      "literal_token": null
+    },
+    {
+      "case": "V2-Q1-case-005",
+      "complete": false,
+      "decisions": {
+        "singleton": null,
+        "baseline": null,
+        "literal_unchecked": null,
+        "treatment": null
+      },
+      "outcomes": {
+        "singleton": "incomplete",
+        "baseline": "incomplete",
+        "literal_unchecked": "incomplete",
+        "treatment": "incomplete"
+      },
+      "negative_control_rejected": false,
+      "source_checker_positive": false,
+      "literal_token": null
+    },
+    {
+      "case": "V2-Q1-case-006",
+      "complete": false,
+      "decisions": {
+        "singleton": null,
+        "baseline": null,
+        "literal_unchecked": null,
+        "treatment": null
+      },
+      "outcomes": {
+        "singleton": "incomplete",
+        "baseline": "incomplete",
+        "literal_unchecked": "incomplete",
+        "treatment": "incomplete"
+      },
+      "negative_control_rejected": false,
+      "source_checker_positive": false,
+      "literal_token": null
+    }
+  ],
+  "source_sha256": "3065bcb8b5dcf1bae63e958e57d9c43e2fd6b06269adaa80187449af375b38a3"
+}
