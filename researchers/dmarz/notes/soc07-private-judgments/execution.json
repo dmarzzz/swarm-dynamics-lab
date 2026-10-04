@@ -2,7 +2,7 @@
   "schema_version": 1,
   "study": "soc07-private-judgments",
   "status": "exploratory",
-  "amendment": "A1, 2026-10-04 UTC: execution amendment to design.json; see README section 11. A5, 2026-10-04 UTC: launch manifest m2 after the m1 S1-Q competence failure; see README section 11, A5",
+  "amendment": "A1, 2026-10-04 UTC: execution amendment to design.json; see README section 11. A5, 2026-10-04 UTC: launch manifest m2 after the m1 S1-Q competence failure; see README section 11, A5. A6, 2026-10-04 UTC: launch manifest m3 (Claude Opus 5.5, adaptive reasoning) after the m2 S1-Q competence failure; see README section 11, A6",
   "authorized_stages": [
     "s0",
     "s1q",
@@ -14,13 +14,14 @@
     "s3"
   ],
   "launch_manifest": {
-    "version": "m2",
+    "version": "m3",
     "note": "Everything a model switch would change. A switch is a dated amendment to this block (plus a budget entry for the new qualification set), then a fresh S0, a fresh reviewer approval and a fresh S1-Q on new worlds. No code changes.",
-    "model": "claude-sonnet-4-6",
-    "temperature": 0.7,
+    "model": "claude-opus-5-5",
+    "temperature": null,
     "thinking": {
-      "type": "off",
-      "budget_tokens": 0
+      "type": "adaptive",
+      "budget_tokens": 4096,
+      "effort": "medium"
     },
     "output_token_caps": {
       "initial": 256,
@@ -29,10 +30,10 @@
       "final_private": 64,
       "qualification": 128
     },
-    "input_usd_per_million": 3,
-    "output_usd_per_million": 15,
-    "price_note": "Claude Sonnet 4.6 list price, USD 3 input and USD 15 output per million tokens; the model the market-split study ran on 2026-10-04",
-    "qualification_set": 1
+    "input_usd_per_million": 4,
+    "output_usd_per_million": 20,
+    "price_note": "Claude Opus 5.5 list price from the official pricing page (platform.claude.com/docs/en/about-claude/pricing, read 2026-10-04): USD 4 input and USD 20 output per million tokens; reasoning tokens bill as output",
+    "qualification_set": 2
   },
   "s0": {
     "id": "s0",
@@ -124,9 +125,9 @@
     "max_consecutive_provider_failures": 5
   },
   "budget": {
-    "study_usd_cap": 40,
-    "public_path_usd": 30,
-    "auxiliary_private_usd": 10,
+    "study_usd_cap": 500,
+    "public_path_usd": 375,
+    "auxiliary_private_usd": 125,
     "shared_allowance_note": "inside dmarz's USD 500 total API allowance for all experiments",
     "stages": {
       "s1q": {
@@ -136,6 +137,12 @@
         "retry_allowance": 6
       },
       "s1q.1": {
+        "max_calls": 12,
+        "public": 12,
+        "aux": 0,
+        "retry_allowance": 6
+      },
+      "s1q.2": {
         "max_calls": 12,
         "public": 12,
         "aux": 0,
@@ -153,7 +160,8 @@
         "aux": 1200,
         "retry_allowance": 204
       }
-    }
+    },
+    "cap_note": "Raised from USD 40 / 30 / 10 under amendment A6. dmarz, directly in the orbital-one operator session, 2026-10-04 ~08:00 UTC: \"switch SOC-07 to Opus 5.5\" and a new cost cap $500. The 3:1 public/auxiliary split is kept. This equals dmarz's whole USD 500 shared allowance; the study ledger does not see other studies' spending, so it is a per-study runaway guard, not an account-wide limit. Spend under m1 and m2 (USD 0.042712) stays in the same ledger."
   },
   "gates": {
     "s1q": {
@@ -178,7 +186,7 @@
     }
   },
   "review": {
-    "reviewer": "dmarz (direct instruction to dmarz/orbital-orchestrator for manifest m2); dmarz/fleet-monitor reviewed m1 only and its review does not cover m2",
+    "reviewer": "dmarz (direct instructions for manifests m2 and m3); dmarz/fleet-monitor reviewed m1 only and its review does not cover m2 or m3",
     "cross_researcher_review": "waived by dmarz for this study",
     "waiver": "launch/review-waiver.md",
     "paid_launch_requires": "launch/s1-approval.json"
@@ -205,6 +213,28 @@
       "price_note": "Claude Haiku 4.5 list price, USD 1 input and USD 5 output per million tokens; the same figures the sybil-scale-api and discussion v3 studies used on 2026-10-04",
       "qualification_set": 0,
       "ended": "2026-10-04: S1-Q attempt s1q-a1 (hub run soc07-private-judgments/51b1204c) failed competence, 7 of 12 correct; nothing else ran under m1"
+    },
+    {
+      "version": "m2",
+      "note": "Everything a model switch would change. A switch is a dated amendment to this block (plus a budget entry for the new qualification set), then a fresh S0, a fresh reviewer approval and a fresh S1-Q on new worlds. No code changes.",
+      "model": "claude-sonnet-4-6",
+      "temperature": 0.7,
+      "thinking": {
+        "type": "off",
+        "budget_tokens": 0
+      },
+      "output_token_caps": {
+        "initial": 256,
+        "discussion": 256,
+        "final_public": 64,
+        "final_private": 64,
+        "qualification": 128
+      },
+      "input_usd_per_million": 3,
+      "output_usd_per_million": 15,
+      "price_note": "Claude Sonnet 4.6 list price, USD 3 input and USD 15 output per million tokens; the model the market-split study ran on 2026-10-04",
+      "qualification_set": 1,
+      "ended": "2026-10-04: S1-Q attempt s1q.1-a1 (hub run soc07-private-judgments/5f681258) failed competence, 9 of 12 correct; nothing else ran under m2"
     }
   ]
 }

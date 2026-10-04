@@ -1,5 +1,21 @@
 # Pre-run assessment: S1-Q, S1-R and S1-L (attempts s1q-a1, s1r-a1, s1l-a1)
 
+## Manifest m3 (written 2026-10-04 UTC by dmarz/orbital-orchestrator, before any m3 model output)
+
+This section governs attempts s1q.2-a1, s1r-a1 and s1l-a1 under manifest m3. The m2 and m1 sections below are kept as written; where they differ, this section applies.
+
+- Parent attempts: s1q.1-a1 under m2 failed competence, 9 of 12 correct ([s1q1-post.md](s1q1-post.md)); s1q-a1 under m1, 7 of 12 ([s1q-post.md](s1q-post.md)). S0 under m3 is attempt s0-a4 (below).
+- Change: README section 11, A6. `claude-opus-5-5`, adaptive reasoning at effort medium, 4,096-token allowance per call, no temperature, USD 4 / 20 per million, qualification set 2 (namespace `s1q.2`), study cap USD 500 (375 public / 125 auxiliary). Prompts, generator, scorer, arms and gates are unchanged.
+- Authorization: dmarz, directly in the operator session at ~08:00 UTC: "switch SOC-07 to Opus 5.5" and a new cost cap $500. Cross-researcher review remains waived. Exploratory.
+- Prediction for S1-Q.2: a reasoning model clears 10 of 12 on the clean task. If it does not, the chain stops and the decision goes to dmarz.
+- Interface risk: the reasoning path has been tested only against a fake transport. One probe call through the study adapter, outside the study's worlds, is made after deploy and before S1-Q.2; a failed probe blocks the launch.
+- Expected spend (estimate, not a measurement): S1-Q.2 at most about USD 1.1 (12 calls at the worst case of input plus 4,224 output tokens). S1-R and S1-L are estimated from S1-Q.2's measured tokens per call and reported; cost is not a gate per dmarz. Every run reports `cost_usd` to the hub.
+- Chaining: per dmarz's goal of keeping runs going, S1-Q.2, S1-R and S1-L run back to back; each starts only when the launcher's software gate for the previous stage has passed at the same fingerprint, and the chain stops by itself at a failed gate.
+- Server and claim: sim-dmarz-8, exclusive claim `dmarz-soc07-private` (extended to cover the chain). Live ledger on sim-dmarz-8.
+- Runtime fingerprint: `f8c2c3d027a4244a1c331e07f1eccd9b9214353f4d67bdb22f685aa6534d451a`. Self-test 59 run, OK with 2 skipped, on orbital-one.
+- Visualization mapping: v1, unchanged.
+- S0 under m3 (s0-a4): result recorded here after it runs and before the approval is written.
+
 ## Manifest m2 (written 2026-10-04 UTC by dmarz/orbital-orchestrator, before any m2 model output)
 
 This section governs attempts s1q.1-a1, s1r-a1 and s1l-a1 under manifest m2. The m1 assessment below is kept as written; where they differ, this section applies.

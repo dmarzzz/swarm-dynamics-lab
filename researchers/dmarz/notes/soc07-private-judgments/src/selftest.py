@@ -172,9 +172,9 @@ class PlanCounts(unittest.TestCase):
         self.assertEqual(ex['limits']['episode_timeout_seconds'], d['protocol']['episode_timeout_seconds'])
         self.assertEqual(ex['limits']['max_inflight_requests'], d['protocol']['max_inflight_requests'])
         self.assertEqual(ex['limits']['input_token_cap_per_request'], d['model']['input_token_cap_per_request'])
-        self.assertEqual(config.launch_manifest()['temperature'], d['model']['temperature'])
-        self.assertEqual(config.launch_manifest()['model'], 'claude-sonnet-4-6')
-        self.assertEqual(config.thinking_budget(), 0)
+        self.assertIsNone(config.launch_manifest()['temperature'])     # m3: the model takes no temperature (A6)
+        self.assertEqual(config.launch_manifest()['model'], 'claude-opus-5-5')
+        self.assertEqual((config.thinking_mode(), config.thinking_budget()), ('adaptive', 4096))
         plan_caps = {p['id']: p['max_output_tokens'] for p in d['protocol']['phases']}
         plan_caps['qualification'] = config.stage_config('s1q')['output_tokens_per_agent']
         self.assertEqual(config.phase_caps(), plan_caps)       # launch manifest m1 keeps the plan's caps
@@ -467,8 +467,8 @@ class Ledger(unittest.TestCase):
     def test_declared_caps(self):
         ex = config.execution()
         caps = budget.caps_for({'s1l': {'public': 2880, 'aux': 1200}}, ex)
-        self.assertEqual(caps['study_micro_usd'], 40_000_000)
-        self.assertEqual(caps['pool_micro_usd'], {'public': 30_000_000, 'aux': 10_000_000})
+        self.assertEqual(caps['study_micro_usd'], 500_000_000)                        # A6: raised from USD 40 by dmarz
+        self.assertEqual(caps['pool_micro_usd'], {'public': 375_000_000, 'aux': 125_000_000})
         self.assertEqual(caps['stages']['s1q'], {'public': 12, 'aux': 0, 'attempts': 18})
         self.assertEqual(caps['stages']['s1r'], {'public': 480, 'aux': 192, 'attempts': 706})
         self.assertEqual(caps['stages']['s1l'], {'public': 2880, 'aux': 1200, 'attempts': 4284})
@@ -539,12 +539,12 @@ class Provider(unittest.TestCase):
         self.assertEqual(r['billing'], 'billed')
         request, timeout = self.requests[0]
         body = json.loads(request.data)
-        self.assertEqual(body['model'], 'claude-sonnet-4-6')
-        self.assertEqual(body['temperature'], 0.7)
+        self.assertEqual(body['model'], 'claude-opus-5-5')
+        self.assertNotIn('temperature', body)
+        self.assertEqual(body['thinking'], {'type': 'adaptive'})
         self.assertEqual(body['max_tokens'], 64)
-        self.assertEqual(body['output_config'], {'format': {'type': 'json_schema', 'schema': parse.SCHEMAS['final']}})
-        self.assertEqual(set(body), {'model', 'max_tokens', 'temperature', 'system', 'messages', 'output_config'})
-        self.assertNotIn('thinking', body)
+        self.assertEqual(body['output_config'], {'format': {'type': 'json_schema', 'schema': parse.SCHEMAS['final']}, 'effort': 'medium'})
+        self.assertEqual(set(body), {'model', 'max_tokens', 'thinking', 'system', 'messages', 'output_config'})
         self.assertEqual(request.full_url, 'https://api.anthropic.com/v1/messages')
         self.assertEqual(request.get_header('X-api-key'), 'test-key-not-real')
         self.assertLessEqual(timeout, 60)
@@ -818,30 +818,65 @@ class LaunchManifest(unittest.TestCase):
     def test_run_parameters_record_the_manifest(self):
         p = coordinator.params('s1q')
         self.assertEqual((p['model'], p['reasoning_tokens'], p['output_caps'], p['launch_manifest'], p['batch']),
-                         ('claude-sonnet-4-6', 0, '256/256/64/64/128', 'm2', 's1q.1-a1'))
+                         ('claude-opus-5-5', 4096, '256/256/64/64/128', 'm3', 's1q.2-a1'))
         self.assertEqual(coordinator.params('s0')['model'], 'none')
         plan = study.manifest('s1q')
         self.assertEqual(plan['launch_manifest'], config.launch_manifest())
         registered = json.loads((config.ROOT / 'experiment.json').read_text())
         self.assertTrue(set(p) <= set(registered['params']), set(p) - set(registered['params']))
 
+    def test_adaptive_reasoning_response_and_allowance(self):
+        """Manifest m3 (A6): thinking blocks precede the answer, are billed as output and are never the answer;
+        max_tokens is the visible cap plus the allowance; refusals stay their own failure."""
+        os.environ['SWARM_MODEL_API_KEY'] = 'test-key-not-real'
+        try:
+            replies = [ok_payload(content=[{'type': 'thinking', 'thinking': '', 'signature': 'x'},
+                                           {'type': 'text', 'text': '{"choice":"B","confidence":0.6}'}],
+                                  usage={'input_tokens': 400, 'output_tokens': 700}),
+                       ok_payload(stop_reason='refusal', content=[{'type': 'thinking', 'thinking': '', 'signature': 'x'}],
+                                  stop_details={'type': 'refusal', 'category': 'cyber'})]
+            seen = []
+
+            def opener(request, timeout):
+                seen.append(json.loads(request.data))
+                return FakeResponse(replies.pop(0))
+            a = adapter.AnthropicAdapter(lambda c: None, opener=opener)
+            call = {'call_id': 'c', 'system': 's', 'messages': [{'role': 'user', 'content': 'u'}], 'schema': 'final',
+                    'max_tokens': 64 + config.thinking_budget()}
+            r = a.complete(call)
+            self.assertTrue(r['ok']); self.assertEqual(r['text'], '{"choice":"B","confidence":0.6}')
+            self.assertEqual(seen[0]['max_tokens'], 64 + 4096)
+            self.assertEqual(seen[0]['thinking'], {'type': 'adaptive'})
+            self.assertEqual(seen[0]['output_config']['effort'], 'medium')
+            for banned in ('temperature', 'top_p', 'top_k', 'fallbacks', 'tool_choice'):
+                self.assertNotIn(banned, seen[0])
+            r = a.complete(dict(call, call_id='d'))
+            self.assertFalse(r['ok']); self.assertEqual(r['failure'], 'refusal')
+            with tempfile.TemporaryDirectory() as td:
+                log = journal.Journal(Path(td) / 'j', {})
+                self.addCleanup(log.close)
+                c = protocol.Controller('s1q', a, None, log)
+                self.assertEqual(c.caps['qualification'] + c.thinking, 128 + 4096)
+        finally:
+            os.environ.pop('SWARM_MODEL_API_KEY', None)
+
     def test_switch_needs_no_code_change(self):
         before = study.manifest('s1q')
         old_worlds = [w['records'] for w, _ in study.worlds('s1q')]
-        switch = dict(version='m3', model='some-other-model', thinking={'type': 'budget', 'budget_tokens': 2048},
-                      input_usd_per_million=3, output_usd_per_million=15, qualification_set=2)
+        switch = dict(version='m4', model='some-other-model', thinking={'type': 'budget', 'budget_tokens': 2048},
+                      input_usd_per_million=3, output_usd_per_million=15, qualification_set=3)
         with amended(**switch):
             plan = study.manifest('s1q')
-            self.assertEqual(plan['namespace'], 's1q.2')
+            self.assertEqual(plan['namespace'], 's1q.3')
             self.assertEqual(plan['counts']['total'], 12)
-            self.assertTrue(all(c['call_id'].startswith('s1q.2/') for c in plan['calls']))
+            self.assertTrue(all(c['call_id'].startswith('s1q.3/') for c in plan['calls']))
             new_worlds = [w['records'] for w, _ in study.worlds('s1q')]
             self.assertFalse(any(w in old_worlds for w in new_worlds))          # twelve fresh worlds
             self.assertEqual(study.manifest('s1l')['hashes']['public_worlds'],
                              json.loads(json.dumps(self.s1l_hash)))             # S1-L worlds do not move
             p = coordinator.params('s1q')
             self.assertEqual((p['model'], p['reasoning_tokens'], p['launch_manifest'], p['batch']),
-                             ('some-other-model', 2048, 'm3', 's1q.2-a1'))
+                             ('some-other-model', 2048, 'm4', 's1q.3-a1'))
             os.environ['SWARM_MODEL_API_KEY'] = 'test-key-not-real'
             try:
                 seen = []

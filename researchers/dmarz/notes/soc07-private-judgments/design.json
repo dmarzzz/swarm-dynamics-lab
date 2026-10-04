@@ -273,6 +273,13 @@
       "by": "dmarz/orbital-orchestrator, on dmarz's instruction",
       "summary": "Launch manifest m2 after the m1 S1-Q competence failure (7 of 12): claude-sonnet-4-6, thinking off, temperature 0.7, unchanged caps, USD 3 / 15 per million, qualification set 1. Configuration only; see README section 11, A5.",
       "reason": "m1 failed the S1-Q competence gate; the plan permits a stronger model on a fresh qualification set, followed by S0, a new approval and a fresh S1-Q."
+    },
+    {
+      "id": "A6",
+      "date": "2026-10-04",
+      "by": "dmarz/orbital-orchestrator, on dmarz's direct instruction",
+      "summary": "Launch manifest m3 after the m2 S1-Q competence failure (9 of 12): claude-opus-5-5, adaptive reasoning at effort medium with a 4,096-token allowance, no temperature (rejected by the model), USD 4 / 20 per million, qualification set 2, study cap USD 500. Adapter change to send adaptive thinking and effort; see README section 11, A6.",
+      "reason": "dmarz: \"switch SOC-07 to Opus 5.5\" and a new cost cap $500"
     }
   ]
 }
