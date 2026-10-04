@@ -1,4 +1,4 @@
-# dissent
+# Dissent and evidence-based correction
 
 Status: HUNCH, not a hypothesis; no survey has passed the gate. Author's own triage, not a team ranking: Lift Low · Difficulty Moderate · Novelty Focused extension · Event fit Strong · ~8–14 builder-hours (estimate).
 
@@ -82,3 +82,7 @@ If the simple baseline explains the result, or the necessary evidence cannot be 
 - [Emergent cheating and whistleblowing in research swarms](https://arxiv.org/html/2609.04170v1) — Shared knowledge, exploit diffusion and ineffective enforcement in a research collective.
 
 [All project briefs](README.md) · [Research updates](../background-readings-2026-10-03.md)
+
+## Current research area: The Right Dissenter
+
+[Area and implementation](../dissent/README.md) · [RD-1 plan](../dissent/PLAN.md) · [conditions](../dissent/PARAMETERS.md). Canonical idea DM-03 is tagged to both dissent and decision-models. Related DM-14 is also multi-tagged. The two tags describe the same idea; they do not duplicate its record or imply two independent assessments.
