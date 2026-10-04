@@ -1,0 +1,5 @@
+# Post-mortem: s0-fleet-002
+
+2026-10-04;market-split-haiku;dmarz/market-split;parenti0-001. Disposition: advance to I0-002. Six bundles assigned anddone;12/12mockepisodes valid/qualified,zero API calls. All16network-blocked tests passed locally/deployed,including ordinary-prompt equality and isolated mechanics-objective checks.42hubartifact hashes verified;allfinal/replay dimensions andeight frames correct;local recovery retained. No missing frames,invalid actions or unpriced work. Mapping market-split-api-v1 unchanged. Sourcec0c1fff06e1fe4c8244b17667e7317392b35ea0686dd4c616a3f860f4ccfee96;design7995afceebefe0d2995918025b9c3f555e387cbe179734f67ee379e2dbd4f6b0.
+
+Only isolated mechanics instruction priority changed. Ordinary profit prompt,economic transitions and semantic constraints remain identical to Sonnet. New real probes70–75 can falsify the diagnosed priority conflict. Haiku paid ledger stays2calls/$0.016860;earlier failed operation retained. Require6/6mechanics then4/4freshprofit qualification on still-unopened62/63 before main. No strategy discovery claim or main rollout yet.
