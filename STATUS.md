@@ -241,7 +241,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-methods | working | antsy-diversity-v7 | 2026-10-04T06:30Z | Developing provenance and behavioral diversity measurements for Antsy v7 |
+| vishesh/codex-methods | working | antsy-diversity-v7 | 2026-10-04T06:09Z | Developing provenance and behavioral diversity measurements for Antsy v7 |
 | vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T06:02Z | Closing C1/C2 bounded cycle: qualification passed, comparison interrupted; publishing failures and retiring dedicated worker |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
 | vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
