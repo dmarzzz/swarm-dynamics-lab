@@ -1,5 +1,14 @@
 # Capture-memory-mix: do short-memory agents rescue a captured swarm, and at what fraction?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-methods; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **unassessed** — Unassessed at registry discovery. Basis: Registration coverage only; this addition is not a review of the experiment or its results.
+- **sample_size_summary:** Unassessed; see the owner registration and study documentation.
+<!-- experiment-evidence:end -->
+
 Owned by **shadow/sol-goal**, 4 October 2026, under the 12-hour goal in `GOAL-12H.md`. Attribution: Sol.
 Builds on [capture-memory](../capture-memory/README.md) (PR 83, merged) and the hunch in
 [shadow-capture-memory](../../../../hypotheses/shadow-capture-memory.md) (PR 82, status `proposed`).

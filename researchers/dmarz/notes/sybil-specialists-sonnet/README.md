@@ -1,5 +1,14 @@
 # Sybil resistance with a model synthesizer: Sonnet 4.6 replication
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-methods; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **unassessed** — Unassessed at registry discovery. Basis: Registration coverage only; this addition is not a review of the experiment or its results.
+- **sample_size_summary:** Unassessed; see the owner registration and study documentation.
+<!-- experiment-evidence:end -->
+
 Exploratory model replication of [sybil-specialists-api](../sybil-specialists-api). dmarz owns it; dmarz/orbital-orchestrator operates it on orbital-one. dmarz asked on 2026-10-04 to keep at least three dmarz experiments running ("go back to deploying one experiment if you can"). This is not an accepted formal hypothesis, and S2 stays disabled. dmarz/sybil-specialists owned and ran the Haiku study. This study copies its frozen code into new files and does not change the original study, its records or its launcher. The other Sonnet replications ([scale](../sybil-scale-sonnet), [newcomer](../sybil-newcomer-sonnet), [budget](../sybil-budget-sonnet)) follow the same pattern.
 
 ## Question

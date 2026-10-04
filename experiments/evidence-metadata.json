@@ -1454,6 +1454,106 @@
         "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-post.md"
       ],
       "status_at_assessment": "diagnostic_complete_repair_failed_transfer_unrun"
+    },
+    {
+      "id": "antsy-diversity-v7",
+      "title": "Antsy v7: worker diversity",
+      "documents": [
+        "researchers/vishesh/notes/antsy-diversity-v7/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-diversity-v7"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Prospective tool-worker diversity comparison; no native v7 results yet.",
+        "rationale": "Offline checks establish instrument behavior only. Second-engine competence and efficacy await qualification."
+      },
+      "sample_size_summary": "Planned:20 S0 and50 S1 receipts, five OCR workers and11 paired policies per receipt. Observed: none. Receipt is the paired unit.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-diversity-v7/PLAN.md",
+        "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md"
+      ],
+      "status_at_assessment": "planned_unmeasured",
+      "source_commit": "3c1dbf14741e843c6ed336a2d7d6aa59717cd0ff",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "capture-memory-mix",
+      "title": "Capture Memory Mix",
+      "documents": [
+        "researchers/shadow/notes/capture-memory-mix/README.md"
+      ],
+      "experiment_ids": [
+        "capture-memory-mix"
+      ],
+      "registration_paths": [
+        "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-specialists-sonnet",
+      "title": "Sybil Specialists Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-specialists-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-budget-sonnet",
+      "title": "Sybil Budget Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-budget-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {

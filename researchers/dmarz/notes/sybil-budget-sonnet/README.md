@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/budget-sonnet at planning time ([rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-methods; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4**: planned only. No qualification or scientific outcome exists for this cohort at this revision.
-- **sample_size_summary:** Planned: Q0 4 worlds × 2 packet types × 2 sizes = 16 calls; S1 24 paired worlds × 120 cells = 2,880 assigned answers at N=324 and N=972. Independent unit is the world (24), not the call, cell or identity. Observed: none.
+- **evidence_confidence:** **unassessed** — Unassessed at registry discovery. Basis: Registration coverage only; this addition is not a review of the experiment or its results.
+- **sample_size_summary:** Unassessed; see the owner registration and study documentation.
 <!-- experiment-evidence:end -->
 
 Exploratory model replication of [sybil-budget-api](../sybil-budget-api/README.md), owned by dmarz and operated by dmarz/budget-sonnet. It reruns that study's full frozen 120-cell grid with `claude-sonnet-4-6` in place of `claude-haiku-4-5-20251001`, on the same 24 worlds, so every Sonnet answer pairs with a Haiku answer to an identical packet. The two models are separate cohorts; their data are never pooled. This is not an accepted formal hypothesis, and no independent review is claimed. S2 stays disabled.

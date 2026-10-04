@@ -120,6 +120,18 @@
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
       "next_action": "Create or link the current setup record; reconcile the parser repair and any subsequent held-out measurements before deciding on a new experiment. Trace replay does not create a fresh sample."
+    },
+    {
+      "id": "antsy-diversity-v7",
+      "title": "Antsy worker diversity v7",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/antsy-diversity-v7",
+      "setup_path": "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md",
+      "postmortem_path": null,
+      "adapter": null,
+      "checked_at": "2026-10-04T06:07:47.983737+00:00",
+      "checked_commit": "3c1dbf14741e843c6ed336a2d7d6aa59717cd0ff",
+      "next_action": "Admit native S0 with fresh dedicated allocation and immutable public plan; S1 requires competence pass."
     }
   ]
 }
