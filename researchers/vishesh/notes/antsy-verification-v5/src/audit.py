@@ -35,7 +35,7 @@ def validate(root):
  # Paired condition coverage must be complete, unique and balanced.
  keys=[(r['id'],r.get('backend'),r['arm'],r.get('estimator'),r.get('cost')) for r in rows]
  assert len(keys)==len(set(keys));assert len(rows)==(2940 if manifest['stage']=='D0' else 1400)
- return {'passed':True,'receipts':len(ids),'rows':len(rows),'model_calls':0,'checks':['complete unique condition assignment','scores reconstruct from measured corpus','D1 decisions reconstruct without current labels','null neutrality','hard two-check budget','utility accounting']}
+ return {'passed':True,'receipts':len(ids),'rows':len(rows),'model_calls':0,'checks':['complete unique condition assignment','scores reconstruct from measured corpus']+(['fixed purchases and all estimator choices reconstruct'] if manifest['stage']=='D0' else ['decisions reconstruct without current labels','null neutrality','hard two-check budget','utility accounting'])}
 def main():
  p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);a=p.parse_args();report=validate(a.run);(a.run/'audit.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))
 if __name__=='__main__':main()
