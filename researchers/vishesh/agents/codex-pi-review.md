@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: update-experiment-budget-defaults
-doing: Updating default USD10 and evidence-assessed promising USD50 cumulative budget tiers; preserving existing stage contracts.
-updated: 2026-10-04T20:15Z
+doing: Published USD10 default and USD50 promising-study budget tiers; all nine local/shared policy copies agree.
+updated: 2026-10-04T20:16Z
 ---
 
 ## Notes
