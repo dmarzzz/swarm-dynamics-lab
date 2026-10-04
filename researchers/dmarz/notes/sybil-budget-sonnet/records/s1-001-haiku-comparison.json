@@ -1,0 +1,2671 @@
+{
+ "pairs": 2880,
+ "worlds": 24,
+ "overall_rare_accuracy_diff": 0.05717592592592593,
+ "overall_interval": [
+  0.012384259259259262,
+  0.09965277777777777
+ ],
+ "cells": [
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "haiku": {
+    "rare_accuracy": 0.20833333333333334,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "rare_accuracy_diff": 0.1527777777777778,
+   "interval": [
+    0.05555555555555555,
+    0.2916666666666667
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "haiku": {
+    "rare_accuracy": 0.20833333333333334,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "rare_accuracy_diff": 0.1527777777777778,
+   "interval": [
+    0.05555555555555555,
+    0.2916666666666667
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "haiku": {
+    "rare_accuracy": 0.20833333333333334,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "rare_accuracy_diff": 0.1527777777777778,
+   "interval": [
+    0.05555555555555555,
+    0.2916666666666667
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "haiku": {
+    "rare_accuracy": 0.20833333333333334,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "rare_accuracy_diff": 0.19444444444444445,
+   "interval": [
+    0.08333333333333333,
+    0.3333333333333333
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "haiku": {
+    "rare_accuracy": 0.20833333333333334,
+    "bad_seat_share": 0.0853909465020576,
+    "specialist_retention": 0.15534979423868314
+   },
+   "rare_accuracy_diff": 0.1527777777777778,
+   "interval": [
+    0.05555555555555555,
+    0.2916666666666667
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4166666666666667,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "rare_accuracy_diff": 0.05555555555555555,
+   "interval": [
+    -0.013888888888888888,
+    0.125
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.027777777777777776,
+    0.1111111111111111
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.027777777777777776,
+    0.1111111111111111
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3888888888888889,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "rare_accuracy_diff": 0.027777777777777776,
+   "interval": [
+    -0.041666666666666664,
+    0.09722222222222221
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.05272633744855967,
+    "specialist_retention": 0.0910493827160494
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.027777777777777776,
+    0.1111111111111111
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "haiku": {
+    "rare_accuracy": 0.34722222222222215,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "rare_accuracy_diff": 0.013888888888888886,
+   "interval": [
+    -0.05555555555555555,
+    0.09722222222222221
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "haiku": {
+    "rare_accuracy": 0.3333333333333333,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "rare_accuracy_diff": 0.027777777777777773,
+   "interval": [
+    -0.05555555555555555,
+    0.125
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.34722222222222215,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "haiku": {
+    "rare_accuracy": 0.3333333333333333,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "rare_accuracy_diff": 0.013888888888888886,
+   "interval": [
+    -0.06944444444444443,
+    0.1111111111111111
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "rare_accuracy_diff": -2.3129646346357427e-18,
+   "interval": [
+    -0.05555555555555556,
+    0.08333333333333333
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.0102880658436214,
+    "specialist_retention": 0.023148148148148164
+   },
+   "rare_accuracy_diff": -2.3129646346357427e-18,
+   "interval": [
+    -0.05555555555555556,
+    0.08333333333333333
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.019804526748971193,
+    "specialist_retention": 0.3384773662551441
+   },
+   "haiku": {
+    "rare_accuracy": 0.9722222222222222,
+    "bad_seat_share": 0.019804526748971193,
+    "specialist_retention": 0.3384773662551441
+   },
+   "rare_accuracy_diff": 0.01388888888888889,
+   "interval": [
+    0.0,
+    0.041666666666666664
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9305555555555555,
+    "bad_seat_share": 0.06069958847736625,
+    "specialist_retention": 0.360082304526749
+   },
+   "haiku": {
+    "rare_accuracy": 0.875,
+    "bad_seat_share": 0.06069958847736625,
+    "specialist_retention": 0.360082304526749
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    0.0,
+    0.12500000000000003
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.8472222222222222,
+    "bad_seat_share": 0.1015946502057613,
+    "specialist_retention": 0.360082304526749
+   },
+   "haiku": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.1015946502057613,
+    "specialist_retention": 0.360082304526749
+   },
+   "rare_accuracy_diff": 0.06944444444444445,
+   "interval": [
+    -0.027777777777777776,
+    0.18055555555555555
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6944444444444445,
+    "bad_seat_share": 0.14017489711934156,
+    "specialist_retention": 0.36059670781893005
+   },
+   "haiku": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.14017489711934156,
+    "specialist_retention": 0.36059670781893005
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    -0.01388888888888888,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.17695473251028804,
+    "specialist_retention": 0.360082304526749
+   },
+   "haiku": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.17695473251028804,
+    "specialist_retention": 0.360082304526749
+   },
+   "rare_accuracy_diff": 0.0,
+   "interval": [
+    -0.1111111111111111,
+    0.09722222222222221
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9722222222222222,
+    "bad_seat_share": 0.08513374485596707,
+    "specialist_retention": 0.6460905349794239
+   },
+   "haiku": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.08513374485596707,
+    "specialist_retention": 0.6460905349794239
+   },
+   "rare_accuracy_diff": -0.01388888888888889,
+   "interval": [
+    -0.06944444444444446,
+    0.02777777777777778
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9027777777777778,
+    "bad_seat_share": 0.21347736625514402,
+    "specialist_retention": 0.6903292181069959
+   },
+   "haiku": {
+    "rare_accuracy": 0.8333333333333334,
+    "bad_seat_share": 0.21347736625514402,
+    "specialist_retention": 0.6903292181069959
+   },
+   "rare_accuracy_diff": 0.06944444444444445,
+   "interval": [
+    -0.013888888888888893,
+    0.1388888888888889
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6666666666666666,
+    "bad_seat_share": 0.2767489711934156,
+    "specialist_retention": 0.6759259259259259
+   },
+   "haiku": {
+    "rare_accuracy": 0.5694444444444444,
+    "bad_seat_share": 0.2767489711934156,
+    "specialist_retention": 0.6759259259259259
+   },
+   "rare_accuracy_diff": 0.09722222222222221,
+   "interval": [
+    -0.02777777777777778,
+    0.2222222222222222
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4583333333333333,
+    "bad_seat_share": 0.31147119341563784,
+    "specialist_retention": 0.6810699588477367
+   },
+   "haiku": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.31147119341563784,
+    "specialist_retention": 0.6810699588477367
+   },
+   "rare_accuracy_diff": -0.05555555555555555,
+   "interval": [
+    -0.20833333333333334,
+    0.09722222222222222
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4166666666666667,
+    "bad_seat_share": 0.3323045267489712,
+    "specialist_retention": 0.6805555555555555
+   },
+   "haiku": {
+    "rare_accuracy": 0.3611111111111111,
+    "bad_seat_share": 0.3323045267489712,
+    "specialist_retention": 0.6805555555555555
+   },
+   "rare_accuracy_diff": 0.05555555555555555,
+   "interval": [
+    -0.09722222222222222,
+    0.19444444444444442
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.10699588477366255,
+    "specialist_retention": 0.8004115226337448
+   },
+   "haiku": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.10699588477366255,
+    "specialist_retention": 0.8004115226337448
+   },
+   "rare_accuracy_diff": 0.0,
+   "interval": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.8611111111111112,
+    "bad_seat_share": 0.23173868312757198,
+    "specialist_retention": 0.7294238683127573
+   },
+   "haiku": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.23173868312757198,
+    "specialist_retention": 0.7294238683127573
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    0.0,
+    0.16666666666666666
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.2857510288065844,
+    "specialist_retention": 0.6090534979423868
+   },
+   "haiku": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.2857510288065844,
+    "specialist_retention": 0.6090534979423868
+   },
+   "rare_accuracy_diff": 0.06944444444444443,
+   "interval": [
+    -0.06944444444444446,
+    0.2222222222222222
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.47222222222222215,
+    "bad_seat_share": 0.3019547325102881,
+    "specialist_retention": 0.5534979423868313
+   },
+   "haiku": {
+    "rare_accuracy": 0.3194444444444444,
+    "bad_seat_share": 0.3019547325102881,
+    "specialist_retention": 0.5534979423868313
+   },
+   "rare_accuracy_diff": 0.15277777777777776,
+   "interval": [
+    0.04166666666666668,
+    0.25
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.28497942386831276,
+    "specialist_retention": 0.5823045267489712
+   },
+   "haiku": {
+    "rare_accuracy": 0.3333333333333333,
+    "bad_seat_share": 0.28497942386831276,
+    "specialist_retention": 0.5823045267489712
+   },
+   "rare_accuracy_diff": 0.16666666666666666,
+   "interval": [
+    0.02777777777777778,
+    0.3055555555555555
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7222222222222222,
+    "bad_seat_share": 0.10262345679012345,
+    "specialist_retention": 0.37860082304526754
+   },
+   "haiku": {
+    "rare_accuracy": 0.625,
+    "bad_seat_share": 0.10262345679012345,
+    "specialist_retention": 0.37860082304526754
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    0.02777777777777778,
+    0.18055555555555558
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6666666666666666,
+    "bad_seat_share": 0.12602880658436214,
+    "specialist_retention": 0.3631687242798354
+   },
+   "haiku": {
+    "rare_accuracy": 0.5694444444444444,
+    "bad_seat_share": 0.12602880658436214,
+    "specialist_retention": 0.3631687242798354
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    0.02777777777777778,
+    0.18055555555555555
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.625,
+    "bad_seat_share": 0.13863168724279834,
+    "specialist_retention": 0.35596707818930046
+   },
+   "haiku": {
+    "rare_accuracy": 0.513888888888889,
+    "bad_seat_share": 0.13863168724279834,
+    "specialist_retention": 0.35596707818930046
+   },
+   "rare_accuracy_diff": 0.1111111111111111,
+   "interval": [
+    0.02777777777777778,
+    0.2222222222222222
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5833333333333334,
+    "bad_seat_share": 0.1617798353909465,
+    "specialist_retention": 0.3415637860082305
+   },
+   "haiku": {
+    "rare_accuracy": 0.4861111111111111,
+    "bad_seat_share": 0.1617798353909465,
+    "specialist_retention": 0.3415637860082305
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    4.625929269271485e-18,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.513888888888889,
+    "bad_seat_share": 0.17772633744855967,
+    "specialist_retention": 0.3333333333333333
+   },
+   "haiku": {
+    "rare_accuracy": 0.4305555555555556,
+    "bad_seat_share": 0.17772633744855967,
+    "specialist_retention": 0.3333333333333333
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    0.0,
+    0.19444444444444445
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.875,
+    "bad_seat_share": 0.08770576131687242,
+    "specialist_retention": 0.41409465020576136
+   },
+   "haiku": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.08770576131687242,
+    "specialist_retention": 0.41409465020576136
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    0.02777777777777778,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7638888888888888,
+    "bad_seat_share": 0.10905349794238683,
+    "specialist_retention": 0.4012345679012346
+   },
+   "haiku": {
+    "rare_accuracy": 0.6527777777777778,
+    "bad_seat_share": 0.10905349794238683,
+    "specialist_retention": 0.4012345679012346
+   },
+   "rare_accuracy_diff": 0.11111111111111112,
+   "interval": [
+    0.041666666666666664,
+    0.19444444444444445
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5833333333333334,
+    "bad_seat_share": 0.14609053497942387,
+    "specialist_retention": 0.38220164609053503
+   },
+   "haiku": {
+    "rare_accuracy": 0.5416666666666666,
+    "bad_seat_share": 0.14609053497942387,
+    "specialist_retention": 0.38220164609053503
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.04166666666666668,
+    0.1388888888888889
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5555555555555556,
+    "bad_seat_share": 0.16255144032921812,
+    "specialist_retention": 0.37345679012345684
+   },
+   "haiku": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.16255144032921812,
+    "specialist_retention": 0.37345679012345684
+   },
+   "rare_accuracy_diff": 0.02777777777777778,
+   "interval": [
+    -0.08333333333333333,
+    0.1388888888888889
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.47222222222222227,
+    "bad_seat_share": 0.1831275720164609,
+    "specialist_retention": 0.360082304526749
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.1831275720164609,
+    "specialist_retention": 0.360082304526749
+   },
+   "rare_accuracy_diff": -0.027777777777777776,
+   "interval": [
+    -0.1388888888888889,
+    0.06944444444444446
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9444444444444445,
+    "bad_seat_share": 0.05915637860082304,
+    "specialist_retention": 0.4686213991769548
+   },
+   "haiku": {
+    "rare_accuracy": 0.9027777777777778,
+    "bad_seat_share": 0.05915637860082304,
+    "specialist_retention": 0.4686213991769548
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.013888888888888893,
+    0.125
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9166666666666666,
+    "bad_seat_share": 0.09207818930041152,
+    "specialist_retention": 0.4573045267489712
+   },
+   "haiku": {
+    "rare_accuracy": 0.8055555555555555,
+    "bad_seat_share": 0.09207818930041152,
+    "specialist_retention": 0.4573045267489712
+   },
+   "rare_accuracy_diff": 0.1111111111111111,
+   "interval": [
+    0.0,
+    0.22222222222222224
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7361111111111112,
+    "bad_seat_share": 0.14223251028806583,
+    "specialist_retention": 0.42746913580246915
+   },
+   "haiku": {
+    "rare_accuracy": 0.6527777777777778,
+    "bad_seat_share": 0.14223251028806583,
+    "specialist_retention": 0.42746913580246915
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    -0.05555555555555556,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.625,
+    "bad_seat_share": 0.17901234567901234,
+    "specialist_retention": 0.4110082304526749
+   },
+   "haiku": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.17901234567901234,
+    "specialist_retention": 0.4110082304526749
+   },
+   "rare_accuracy_diff": 0.09722222222222221,
+   "interval": [
+    -6.938893903907228e-18,
+    0.19444444444444442
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.2075617283950617,
+    "specialist_retention": 0.4007201646090535
+   },
+   "haiku": {
+    "rare_accuracy": 0.4305555555555555,
+    "bad_seat_share": 0.2075617283950617,
+    "specialist_retention": 0.4007201646090535
+   },
+   "rare_accuracy_diff": 0.06944444444444445,
+   "interval": [
+    -0.06944444444444443,
+    0.19444444444444445
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.04063786008230452,
+    "specialist_retention": 0.5421810699588477
+   },
+   "haiku": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.04063786008230452,
+    "specialist_retention": 0.5421810699588477
+   },
+   "rare_accuracy_diff": 0.01388888888888889,
+   "interval": [
+    0.0,
+    0.041666666666666664
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9583333333333334,
+    "bad_seat_share": 0.08564814814814814,
+    "specialist_retention": 0.5164609053497943
+   },
+   "haiku": {
+    "rare_accuracy": 0.875,
+    "bad_seat_share": 0.08564814814814814,
+    "specialist_retention": 0.5164609053497943
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    0.013888888888888888,
+    0.18055555555555555
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.8055555555555555,
+    "bad_seat_share": 0.14326131687242796,
+    "specialist_retention": 0.4758230452674897
+   },
+   "haiku": {
+    "rare_accuracy": 0.75,
+    "bad_seat_share": 0.14326131687242796,
+    "specialist_retention": 0.4758230452674897
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    -0.041666666666666664,
+    0.1527777777777778
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.18569958847736623,
+    "specialist_retention": 0.4537037037037037
+   },
+   "haiku": {
+    "rare_accuracy": 0.611111111111111,
+    "bad_seat_share": 0.18569958847736623,
+    "specialist_retention": 0.4537037037037037
+   },
+   "rare_accuracy_diff": -0.013888888888888888,
+   "interval": [
+    -0.1527777777777778,
+    0.11111111111111112
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4444444444444444,
+    "bad_seat_share": 0.22170781893004113,
+    "specialist_retention": 0.4377572016460905
+   },
+   "haiku": {
+    "rare_accuracy": 0.4305555555555555,
+    "bad_seat_share": 0.22170781893004113,
+    "specialist_retention": 0.4377572016460905
+   },
+   "rare_accuracy_diff": 0.013888888888888893,
+   "interval": [
+    -0.09722222222222221,
+    0.125
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.028034979423868314,
+    "specialist_retention": 0.5385802469135802
+   },
+   "haiku": {
+    "rare_accuracy": 0.9722222222222222,
+    "bad_seat_share": 0.028034979423868314,
+    "specialist_retention": 0.5385802469135802
+   },
+   "rare_accuracy_diff": 0.02777777777777778,
+   "interval": [
+    0.0,
+    0.06944444444444446
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9166666666666666,
+    "bad_seat_share": 0.0779320987654321,
+    "specialist_retention": 0.507201646090535
+   },
+   "haiku": {
+    "rare_accuracy": 0.8888888888888888,
+    "bad_seat_share": 0.0779320987654321,
+    "specialist_retention": 0.507201646090535
+   },
+   "rare_accuracy_diff": 0.02777777777777778,
+   "interval": [
+    0.0,
+    0.06944444444444446
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.8333333333333334,
+    "bad_seat_share": 0.13425925925925924,
+    "specialist_retention": 0.4737654320987654
+   },
+   "haiku": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.13425925925925924,
+    "specialist_retention": 0.4737654320987654
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    -0.06944444444444443,
+    0.16666666666666666
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6388888888888888,
+    "bad_seat_share": 0.18261316872427982,
+    "specialist_retention": 0.44495884773662553
+   },
+   "haiku": {
+    "rare_accuracy": 0.5555555555555555,
+    "bad_seat_share": 0.18261316872427982,
+    "specialist_retention": 0.44495884773662553
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    -0.055555555555555546,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5416666666666666,
+    "bad_seat_share": 0.2175925925925926,
+    "specialist_retention": 0.42335390946502055
+   },
+   "haiku": {
+    "rare_accuracy": 0.4861111111111111,
+    "bad_seat_share": 0.2175925925925926,
+    "specialist_retention": 0.42335390946502055
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    -0.041666666666666664,
+    0.1388888888888889
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.024948559670781894,
+    "specialist_retention": 0.5997942386831275
+   },
+   "haiku": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.024948559670781894,
+    "specialist_retention": 0.5997942386831275
+   },
+   "rare_accuracy_diff": 0.01388888888888889,
+   "interval": [
+    0.0,
+    0.041666666666666664
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9583333333333334,
+    "bad_seat_share": 0.08616255144032921,
+    "specialist_retention": 0.565843621399177
+   },
+   "haiku": {
+    "rare_accuracy": 0.9166666666666666,
+    "bad_seat_share": 0.08616255144032921,
+    "specialist_retention": 0.565843621399177
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    0.0,
+    0.08333333333333333
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7638888888888888,
+    "bad_seat_share": 0.15046296296296294,
+    "specialist_retention": 0.5308641975308642
+   },
+   "haiku": {
+    "rare_accuracy": 0.7083333333333334,
+    "bad_seat_share": 0.15046296296296294,
+    "specialist_retention": 0.5308641975308642
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    0.0,
+    0.12500000000000003
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6388888888888888,
+    "bad_seat_share": 0.19753086419753085,
+    "specialist_retention": 0.5092592592592593
+   },
+   "haiku": {
+    "rare_accuracy": 0.611111111111111,
+    "bad_seat_share": 0.19753086419753085,
+    "specialist_retention": 0.5092592592592593
+   },
+   "rare_accuracy_diff": 0.027777777777777776,
+   "interval": [
+    -0.125,
+    0.16666666666666666
+   ]
+  },
+  {
+   "n": 324,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.24254115226337447,
+    "specialist_retention": 0.47890946502057613
+   },
+   "haiku": {
+    "rare_accuracy": 0.4444444444444444,
+    "bad_seat_share": 0.24254115226337447,
+    "specialist_retention": 0.47890946502057613
+   },
+   "rare_accuracy_diff": 0.06944444444444445,
+   "interval": [
+    -0.027777777777777773,
+    0.16666666666666666
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "haiku": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "rare_accuracy_diff": 0.125,
+   "interval": [
+    -0.06944444444444445,
+    0.3194444444444445
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "haiku": {
+    "rare_accuracy": 0.38888888888888884,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "rare_accuracy_diff": 0.125,
+   "interval": [
+    -0.06944444444444445,
+    0.3194444444444445
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4861111111111111,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "haiku": {
+    "rare_accuracy": 0.4444444444444444,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.15277777777777776,
+    0.23611111111111113
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "haiku": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "rare_accuracy_diff": 0.11111111111111112,
+   "interval": [
+    -0.06944444444444445,
+    0.2916666666666667
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 4,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5555555555555555,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "haiku": {
+    "rare_accuracy": 0.4305555555555555,
+    "bad_seat_share": 0.11531207133058985,
+    "specialist_retention": 0.23182441700960219
+   },
+   "rare_accuracy_diff": 0.125,
+   "interval": [
+    -0.05555555555555556,
+    0.3055555555555555
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "haiku": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "rare_accuracy_diff": 9.25185853854297e-18,
+   "interval": [
+    -0.19444444444444445,
+    0.19444444444444445
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4444444444444444,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "haiku": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "rare_accuracy_diff": 0.04166666666666668,
+   "interval": [
+    -0.15277777777777776,
+    0.22222222222222224
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4166666666666667,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "haiku": {
+    "rare_accuracy": 0.40277777777777773,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "rare_accuracy_diff": 0.0138888888888889,
+   "interval": [
+    -0.18055555555555555,
+    0.20833333333333337
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.4583333333333333,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "haiku": {
+    "rare_accuracy": 0.4305555555555555,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "rare_accuracy_diff": 0.02777777777777779,
+   "interval": [
+    -0.16666666666666666,
+    0.22222222222222224
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 8,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.375,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "haiku": {
+    "rare_accuracy": 0.4166666666666667,
+    "bad_seat_share": 0.0973079561042524,
+    "specialist_retention": 0.1958161865569273
+   },
+   "rare_accuracy_diff": -0.041666666666666664,
+   "interval": [
+    -0.23611111111111108,
+    0.15277777777777776
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5833333333333334,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "haiku": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "rare_accuracy_diff": 0.06944444444444443,
+   "interval": [
+    -0.09722222222222222,
+    0.23611111111111108
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "haiku": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "rare_accuracy_diff": -6.938893903907228e-18,
+   "interval": [
+    -0.125,
+    0.12499999999999999
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5833333333333334,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "haiku": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "rare_accuracy_diff": 0.06944444444444443,
+   "interval": [
+    -0.1111111111111111,
+    0.23611111111111108
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "haiku": {
+    "rare_accuracy": 0.4861111111111111,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.11111111111111112,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 16,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5416666666666666,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "haiku": {
+    "rare_accuracy": 0.4861111111111111,
+    "bad_seat_share": 0.06944444444444445,
+    "specialist_retention": 0.14454732510288065
+   },
+   "rare_accuracy_diff": 0.05555555555555555,
+   "interval": [
+    -0.08333333333333336,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5555555555555555,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "rare_accuracy_diff": 0.05555555555555555,
+   "interval": [
+    -0.1111111111111111,
+    0.20833333333333334
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    -0.05555555555555555,
+    0.23611111111111113
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    -0.04166666666666668,
+    0.23611111111111108
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    0.013888888888888886,
+    0.18055555555555555
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 32,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5138888888888888,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.03686556927297668,
+    "specialist_retention": 0.08161865569272979
+   },
+   "rare_accuracy_diff": 0.013888888888888888,
+   "interval": [
+    -0.1388888888888889,
+    0.15277777777777776
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.006258573388203018,
+    "specialist_retention": 0.05915637860082306
+   },
+   "haiku": {
+    "rare_accuracy": 0.8611111111111112,
+    "bad_seat_share": 0.006258573388203018,
+    "specialist_retention": 0.05915637860082306
+   },
+   "rare_accuracy_diff": -0.08333333333333333,
+   "interval": [
+    -0.18055555555555558,
+    -4.625929269271485e-18
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7638888888888888,
+    "bad_seat_share": 0.009430727023319615,
+    "specialist_retention": 0.0577846364883402
+   },
+   "haiku": {
+    "rare_accuracy": 0.8194444444444445,
+    "bad_seat_share": 0.009430727023319615,
+    "specialist_retention": 0.0577846364883402
+   },
+   "rare_accuracy_diff": -0.05555555555555556,
+   "interval": [
+    -0.1527777777777778,
+    0.027777777777777773
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.013203017832647462,
+    "specialist_retention": 0.05486968449931414
+   },
+   "haiku": {
+    "rare_accuracy": 0.7083333333333334,
+    "bad_seat_share": 0.013203017832647462,
+    "specialist_retention": 0.05486968449931414
+   },
+   "rare_accuracy_diff": -0.11111111111111112,
+   "interval": [
+    -0.25,
+    0.013888888888888888
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.513888888888889,
+    "bad_seat_share": 0.017146776406035666,
+    "specialist_retention": 0.052812071330589856
+   },
+   "haiku": {
+    "rare_accuracy": 0.625,
+    "bad_seat_share": 0.017146776406035666,
+    "specialist_retention": 0.052812071330589856
+   },
+   "rare_accuracy_diff": -0.1111111111111111,
+   "interval": [
+    -0.23611111111111113,
+    6.938893903907228e-18
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 64,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.513888888888889,
+    "bad_seat_share": 0.023233882030178326,
+    "specialist_retention": 0.052297668038408796
+   },
+   "haiku": {
+    "rare_accuracy": 0.47222222222222227,
+    "bad_seat_share": 0.023233882030178326,
+    "specialist_retention": 0.052297668038408796
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.041666666666666664,
+    0.125
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.028806584362139915,
+    "specialist_retention": 0.37448559670781895
+   },
+   "haiku": {
+    "rare_accuracy": 0.9722222222222222,
+    "bad_seat_share": 0.028806584362139915,
+    "specialist_retention": 0.37448559670781895
+   },
+   "rare_accuracy_diff": 0.02777777777777778,
+   "interval": [
+    0.0,
+    0.06944444444444446
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.0830761316872428,
+    "specialist_retention": 0.39231824417009603
+   },
+   "haiku": {
+    "rare_accuracy": 0.9166666666666666,
+    "bad_seat_share": 0.0830761316872428,
+    "specialist_retention": 0.39231824417009603
+   },
+   "rare_accuracy_diff": 0.06944444444444446,
+   "interval": [
+    0.02777777777777778,
+    0.12500000000000003
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.8194444444444445,
+    "bad_seat_share": 0.13477366255144033,
+    "specialist_retention": 0.40209190672153633
+   },
+   "haiku": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.13477366255144033,
+    "specialist_retention": 0.40209190672153633
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.06944444444444446,
+    0.1527777777777778
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6527777777777778,
+    "bad_seat_share": 0.17704046639231827,
+    "specialist_retention": 0.41512345679012347
+   },
+   "haiku": {
+    "rare_accuracy": 0.6388888888888888,
+    "bad_seat_share": 0.17704046639231827,
+    "specialist_retention": 0.41512345679012347
+   },
+   "rare_accuracy_diff": 0.01388888888888889,
+   "interval": [
+    -0.125,
+    0.13888888888888892
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "coverage",
+   "checks": 108,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.38888888888888884,
+    "bad_seat_share": 0.21056241426611796,
+    "specialist_retention": 0.42472565157750347
+   },
+   "haiku": {
+    "rare_accuracy": 0.4305555555555556,
+    "bad_seat_share": 0.21056241426611796,
+    "specialist_retention": 0.42472565157750347
+   },
+   "rare_accuracy_diff": -0.041666666666666685,
+   "interval": [
+    -0.18055555555555558,
+    0.09722222222222221
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7361111111111112,
+    "bad_seat_share": 0.1266289437585734,
+    "specialist_retention": 0.4158093278463649
+   },
+   "haiku": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.1266289437585734,
+    "specialist_retention": 0.4158093278463649
+   },
+   "rare_accuracy_diff": 0.1388888888888889,
+   "interval": [
+    0.041666666666666664,
+    0.25
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7222222222222222,
+    "bad_seat_share": 0.12980109739368997,
+    "specialist_retention": 0.4166666666666667
+   },
+   "haiku": {
+    "rare_accuracy": 0.5972222222222222,
+    "bad_seat_share": 0.12980109739368997,
+    "specialist_retention": 0.4166666666666667
+   },
+   "rare_accuracy_diff": 0.125,
+   "interval": [
+    0.013888888888888888,
+    0.25
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7222222222222222,
+    "bad_seat_share": 0.14454732510288065,
+    "specialist_retention": 0.40929355281207136
+   },
+   "haiku": {
+    "rare_accuracy": 0.5694444444444444,
+    "bad_seat_share": 0.14454732510288065,
+    "specialist_retention": 0.40929355281207136
+   },
+   "rare_accuracy_diff": 0.1527777777777778,
+   "interval": [
+    0.04166666666666666,
+    0.2777777777777778
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6944444444444445,
+    "bad_seat_share": 0.1526063100137174,
+    "specialist_retention": 0.4056927297668038
+   },
+   "haiku": {
+    "rare_accuracy": 0.5555555555555556,
+    "bad_seat_share": 0.1526063100137174,
+    "specialist_retention": 0.4056927297668038
+   },
+   "rare_accuracy_diff": 0.1388888888888889,
+   "interval": [
+    0.027777777777777773,
+    0.2638888888888889
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 4,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.611111111111111,
+    "bad_seat_share": 0.1795267489711934,
+    "specialist_retention": 0.39283264746227714
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.1795267489711934,
+    "specialist_retention": 0.39283264746227714
+   },
+   "rare_accuracy_diff": 0.1111111111111111,
+   "interval": [
+    -2.3129646346357427e-18,
+    0.23611111111111113
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.11779835390946503,
+    "specialist_retention": 0.43347050754458166
+   },
+   "haiku": {
+    "rare_accuracy": 0.6944444444444445,
+    "bad_seat_share": 0.11779835390946503,
+    "specialist_retention": 0.43347050754458166
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    -0.013888888888888893,
+    0.16666666666666666
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7638888888888888,
+    "bad_seat_share": 0.12954389574759945,
+    "specialist_retention": 0.4290123456790123
+   },
+   "haiku": {
+    "rare_accuracy": 0.6805555555555555,
+    "bad_seat_share": 0.12954389574759945,
+    "specialist_retention": 0.4290123456790123
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    -0.02777777777777778,
+    0.18055555555555558
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6805555555555555,
+    "bad_seat_share": 0.1478909465020576,
+    "specialist_retention": 0.4180384087791495
+   },
+   "haiku": {
+    "rare_accuracy": 0.6527777777777778,
+    "bad_seat_share": 0.1478909465020576,
+    "specialist_retention": 0.4180384087791495
+   },
+   "rare_accuracy_diff": 0.02777777777777778,
+   "interval": [
+    -0.09722222222222221,
+    0.125
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.6527777777777778,
+    "bad_seat_share": 0.15809327846364882,
+    "specialist_retention": 0.4171810699588477
+   },
+   "haiku": {
+    "rare_accuracy": 0.6388888888888888,
+    "bad_seat_share": 0.15809327846364882,
+    "specialist_retention": 0.4171810699588477
+   },
+   "rare_accuracy_diff": 0.013888888888888886,
+   "interval": [
+    -0.09722222222222222,
+    0.11111111111111112
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 8,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5416666666666666,
+    "bad_seat_share": 0.18801440329218108,
+    "specialist_retention": 0.39883401920438954
+   },
+   "haiku": {
+    "rare_accuracy": 0.47222222222222227,
+    "bad_seat_share": 0.18801440329218108,
+    "specialist_retention": 0.39883401920438954
+   },
+   "rare_accuracy_diff": 0.06944444444444443,
+   "interval": [
+    -0.02777777777777779,
+    0.15277777777777776
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.08573388203017833,
+    "specialist_retention": 0.4272976680384088
+   },
+   "haiku": {
+    "rare_accuracy": 0.875,
+    "bad_seat_share": 0.08573388203017833,
+    "specialist_retention": 0.4272976680384088
+   },
+   "rare_accuracy_diff": 0.11111111111111112,
+   "interval": [
+    0.01388888888888889,
+    0.22222222222222224
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9305555555555555,
+    "bad_seat_share": 0.11213991769547325,
+    "specialist_retention": 0.41220850480109744
+   },
+   "haiku": {
+    "rare_accuracy": 0.7638888888888888,
+    "bad_seat_share": 0.11213991769547325,
+    "specialist_retention": 0.41220850480109744
+   },
+   "rare_accuracy_diff": 0.16666666666666666,
+   "interval": [
+    0.06944444444444446,
+    0.2638888888888889
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7916666666666666,
+    "bad_seat_share": 0.12920096021947874,
+    "specialist_retention": 0.40003429355281206
+   },
+   "haiku": {
+    "rare_accuracy": 0.7222222222222222,
+    "bad_seat_share": 0.12920096021947874,
+    "specialist_retention": 0.40003429355281206
+   },
+   "rare_accuracy_diff": 0.06944444444444446,
+   "interval": [
+    -0.05555555555555555,
+    0.18055555555555558
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.75,
+    "bad_seat_share": 0.14506172839506173,
+    "specialist_retention": 0.3883744855967078
+   },
+   "haiku": {
+    "rare_accuracy": 0.6388888888888888,
+    "bad_seat_share": 0.14506172839506173,
+    "specialist_retention": 0.3883744855967078
+   },
+   "rare_accuracy_diff": 0.11111111111111112,
+   "interval": [
+    0.027777777777777787,
+    0.19444444444444445
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 16,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.17704046639231827,
+    "specialist_retention": 0.3713991769547325
+   },
+   "haiku": {
+    "rare_accuracy": 0.4444444444444444,
+    "bad_seat_share": 0.17704046639231827,
+    "specialist_retention": 0.3713991769547325
+   },
+   "rare_accuracy_diff": 0.08333333333333333,
+   "interval": [
+    4.625929269271485e-18,
+    0.1527777777777778
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.06978737997256516,
+    "specialist_retention": 0.45970507544581624
+   },
+   "haiku": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.06978737997256516,
+    "specialist_retention": 0.45970507544581624
+   },
+   "rare_accuracy_diff": 0.0,
+   "interval": [
+    -0.041666666666666664,
+    0.041666666666666664
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.875,
+    "bad_seat_share": 0.10390946502057613,
+    "specialist_retention": 0.4370713305898491
+   },
+   "haiku": {
+    "rare_accuracy": 0.8472222222222222,
+    "bad_seat_share": 0.10390946502057613,
+    "specialist_retention": 0.4370713305898491
+   },
+   "rare_accuracy_diff": 0.02777777777777778,
+   "interval": [
+    -0.09722222222222222,
+    0.1388888888888889
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.8333333333333334,
+    "bad_seat_share": 0.12457133058984911,
+    "specialist_retention": 0.4255829903978052
+   },
+   "haiku": {
+    "rare_accuracy": 0.7777777777777778,
+    "bad_seat_share": 0.12457133058984911,
+    "specialist_retention": 0.4255829903978052
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    -0.08333333333333333,
+    0.1666666666666667
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7083333333333334,
+    "bad_seat_share": 0.15217764060356653,
+    "specialist_retention": 0.40877914951989025
+   },
+   "haiku": {
+    "rare_accuracy": 0.6388888888888888,
+    "bad_seat_share": 0.15217764060356653,
+    "specialist_retention": 0.40877914951989025
+   },
+   "rare_accuracy_diff": 0.06944444444444445,
+   "interval": [
+    -0.05555555555555556,
+    0.16666666666666666
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 32,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.19007201646090535,
+    "specialist_retention": 0.3873456790123457
+   },
+   "haiku": {
+    "rare_accuracy": 0.4444444444444444,
+    "bad_seat_share": 0.19007201646090535,
+    "specialist_retention": 0.3873456790123457
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    -0.09722222222222221,
+    0.19444444444444445
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.04818244170096022,
+    "specialist_retention": 0.5288065843621399
+   },
+   "haiku": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.04818244170096022,
+    "specialist_retention": 0.5288065843621399
+   },
+   "rare_accuracy_diff": 0.0,
+   "interval": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9722222222222222,
+    "bad_seat_share": 0.09190672153635117,
+    "specialist_retention": 0.502400548696845
+   },
+   "haiku": {
+    "rare_accuracy": 0.9305555555555555,
+    "bad_seat_share": 0.09190672153635117,
+    "specialist_retention": 0.502400548696845
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    -0.02777777777777778,
+    0.12500000000000003
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9166666666666666,
+    "bad_seat_share": 0.12594307270233196,
+    "specialist_retention": 0.48199588477366256
+   },
+   "haiku": {
+    "rare_accuracy": 0.8055555555555555,
+    "bad_seat_share": 0.12594307270233196,
+    "specialist_retention": 0.48199588477366256
+   },
+   "rare_accuracy_diff": 0.11111111111111112,
+   "interval": [
+    -4.625929269271485e-18,
+    0.23611111111111113
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.7638888888888888,
+    "bad_seat_share": 0.16323731138545952,
+    "specialist_retention": 0.46262002743484226
+   },
+   "haiku": {
+    "rare_accuracy": 0.75,
+    "bad_seat_share": 0.16323731138545952,
+    "specialist_retention": 0.46262002743484226
+   },
+   "rare_accuracy_diff": 0.013888888888888883,
+   "interval": [
+    -0.08333333333333333,
+    0.1111111111111111
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 64,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5694444444444444,
+    "bad_seat_share": 0.20679012345679013,
+    "specialist_retention": 0.4394718792866941
+   },
+   "haiku": {
+    "rare_accuracy": 0.5277777777777778,
+    "bad_seat_share": 0.20679012345679013,
+    "specialist_retention": 0.4394718792866941
+   },
+   "rare_accuracy_diff": 0.04166666666666666,
+   "interval": [
+    -0.06944444444444446,
+    0.15277777777777776
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.1,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.033950617283950615,
+    "specialist_retention": 0.5236625514403292
+   },
+   "haiku": {
+    "rare_accuracy": 1.0,
+    "bad_seat_share": 0.033950617283950615,
+    "specialist_retention": 0.5236625514403292
+   },
+   "rare_accuracy_diff": 0.0,
+   "interval": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.3,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9861111111111112,
+    "bad_seat_share": 0.08410493827160494,
+    "specialist_retention": 0.4933127572016461
+   },
+   "haiku": {
+    "rare_accuracy": 0.9444444444444445,
+    "bad_seat_share": 0.08410493827160494,
+    "specialist_retention": 0.4933127572016461
+   },
+   "rare_accuracy_diff": 0.041666666666666664,
+   "interval": [
+    0.0,
+    0.11111111111111112
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.5,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.9027777777777778,
+    "bad_seat_share": 0.12988683127572018,
+    "specialist_retention": 0.465877914951989
+   },
+   "haiku": {
+    "rare_accuracy": 0.8055555555555555,
+    "bad_seat_share": 0.12988683127572018,
+    "specialist_retention": 0.465877914951989
+   },
+   "rare_accuracy_diff": 0.09722222222222222,
+   "interval": [
+    -0.013888888888888897,
+    0.2222222222222222
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.7,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.8472222222222222,
+    "bad_seat_share": 0.17146776406035666,
+    "specialist_retention": 0.44821673525377226
+   },
+   "haiku": {
+    "rare_accuracy": 0.7222222222222222,
+    "bad_seat_share": 0.17146776406035666,
+    "specialist_retention": 0.44821673525377226
+   },
+   "rare_accuracy_diff": 0.12500000000000003,
+   "interval": [
+    0.04166666666666668,
+    0.20833333333333337
+   ]
+  },
+  {
+   "n": 972,
+   "arm": "random",
+   "checks": 108,
+   "attacker_pass": 0.9,
+   "visibility": "visible",
+   "sonnet": {
+    "rare_accuracy": 0.5555555555555555,
+    "bad_seat_share": 0.21313443072702332,
+    "specialist_retention": 0.4284979423868313
+   },
+   "haiku": {
+    "rare_accuracy": 0.5,
+    "bad_seat_share": 0.21313443072702332,
+    "specialist_retention": 0.4284979423868313
+   },
+   "rare_accuracy_diff": 0.05555555555555556,
+   "interval": [
+    -0.13888888888888887,
+    0.2222222222222222
+   ]
+  }
+ ],
+ "primary": {
+  "sonnet": 0.47222222222222227,
+  "sonnet_interval": [
+   0.3194444444444445,
+   0.625
+  ],
+  "haiku": 0.5694444444444445,
+  "haiku_interval": [
+   0.4305555555555556,
+   0.7083333333333334
+  ],
+  "sonnet_minus_haiku": -0.09722222222222221,
+  "difference_interval": [
+   -0.2916666666666667,
+   0.09722222222222222
+  ],
+  "worlds": 24
+ },
+ "cells_sonnet_higher": 102,
+ "cells_haiku_higher": 13
+}
