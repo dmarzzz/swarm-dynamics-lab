@@ -2,12 +2,13 @@
 
 ## Latest iteration — 2026-10-04 UTC
 
-- Selector repair and full three-domain qualification passed:103calls,144/144decisions.
-- Fresh P1 baselines scored215/216;one harmful approval used a future timestamp.
-- No P1 full-turnover trajectory completed;the original six-execution attempt remains failed.
-- Five exact initial-pass prefixes have a tested conditional-continuation plan;no replacement outcomes claimed yet.
+- Repaired qualification passed all three domains: 103 calls, 144/144 decisions.
+- Fresh baselines scored 215/216; one harmful approval accepted future-dated evidence.
+- C2 reused 128 calls and made eight new calls: four correct notes, three valid commits.
+- No full-turnover trajectory completed; cultural survival remains unestablished.
+- Native scaling is on hold. A phase-specific commit repair is built and tested offline.
 
-See the [latest post-mortem](execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-POST-MORTEM.md) and [prospective conditional continuation](execution-diagnostic/sol50/baseline-replication/CONTINUATION-PLAN.md). Historical cohort results below remain separate.
+See the [latest C2 post-mortem](execution-diagnostic/sol50/baseline-replication/C2-POST-MORTEM.md), [earlier initial failure](execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-POST-MORTEM.md), and [unused offline repair](execution-diagnostic/sol50/baseline-replication/COMMIT-REPAIR-PLAN.md). Historical cohort results below remain separate.
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata

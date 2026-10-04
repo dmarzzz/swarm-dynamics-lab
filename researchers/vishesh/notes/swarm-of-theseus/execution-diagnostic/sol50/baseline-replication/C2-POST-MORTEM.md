@@ -1,5 +1,14 @@
 # C2: correct inherited note, invalid output shape
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-theseus; source `bdc613e9` ([registry](../../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Four observed successor commits preserved the inherited pair; one violated the exact output schema and full turnover remained unmeasured. Basis: Adaptive five-of-six eligible cohort across three roots, eight new calls, technical-stop censoring. Correct note content is separate from protocol compliance and cultural survival.
+- **sample_size_summary:** 3 roots; 5 eligible of 6 assigned executions, 128 cached calls, 8 new calls. Four correct notes, 3 valid commits; 0 complete turnover trajectories. Failover has one eligible repeat.
+<!-- experiment-evidence:end -->
+
 C2 was an adaptive continuation of five initial-pass executions from six originally assigned, across three roots. It reused128saved native calls without dispatching them again. The excluded failover execution's harmful initial action remains in the original result. No new founder, seed, prompt, native executor or scoring rule was substituted.
 
 Eight new GPT-6 Sol/OpenAI calls completed with known usage. Four were successor memory commits:all four contained the correct inherited pair, but one also contained an unsolicited `decision:"defer"` field. The declared commit schema required exactly the `note` key. The instrument raised `commit_schema`; the shared technical stop censored the other four continuations after accounting for in-flight requests. Three commits were accepted. No complete replacement or terminal four-arm outcome was observed.

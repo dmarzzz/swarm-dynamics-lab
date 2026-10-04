@@ -4355,6 +4355,32 @@
       "assessor": "vishesh/codex-theseus",
       "assessed_at": "2026-10-04",
       "source_commit": "1abdb1d6a962da5696e05792886cab68dfc3cde6"
+    },
+    {
+      "id": "theseus-c2",
+      "title": "Theseus C2: correct note, invalid commit schema",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-r3-c2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Four observed successor commits preserved the inherited pair; one violated the exact output schema and full turnover remained unmeasured.",
+        "rationale": "Adaptive five-of-six eligible cohort across three roots, eight new calls, technical-stop censoring. Correct note content is separate from protocol compliance and cultural survival."
+      },
+      "sample_size_summary": "3 roots; 5 eligible of 6 assigned executions, 128 cached calls, 8 new calls. Four correct notes, 3 valid commits; 0 complete turnover trajectories. Failover has one eligible repeat.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-AUDIT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-CLOSEOUT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-QUALITY.json"
+      ],
+      "status_at_assessment": "completed_reviewed_output_contract_failure",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "bdc613e91b94eb252b4213011d775ab87675caad"
     }
   ],
   "source_sha256": {
