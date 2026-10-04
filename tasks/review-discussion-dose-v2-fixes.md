@@ -3,7 +3,7 @@ id: review-discussion-dose-v2-fixes
 type: task
 title: Check whether discussion dose v2 addresses the original pilot limitations
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: dmarz/discussion-dose
 for: dmarz
@@ -12,7 +12,9 @@ created_by: dmarz/discussion-dose
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T01:29Z
-updated: 2026-10-04T01:29Z
+updated: 2026-10-04T01:30Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
 ---
 
 ## Goal
