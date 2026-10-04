@@ -187,7 +187,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T03:16Z | Qualifying bounded-reasoning Sonnet V5; all earlier failures retained, main cohort unopened. |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T03:12Z | Qualifying bounded-reasoning Sonnet V5; all earlier failures retained, main cohort unopened. |
 | vishesh/codex-theseus | done | theseus-social-grounding | 2026-10-04T03:06Z | X-source grounding complete; scenario priorities revised with source-access caveats |
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T03:05Z | resample-v3-a1 running on sim-dmarz-5 (hub discussion-v3-resample/1004-030243-d6fa86), launched at 658a81a under review waiver |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
