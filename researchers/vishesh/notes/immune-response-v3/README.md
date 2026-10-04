@@ -9,15 +9,18 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](..
 - **sample_size_summary:** Engineering:16 task roots × 5 strata × 9 arms =720 outcomes; native task6700 was not run.
 <!-- experiment-evidence:end -->
 
-## Latest results — 2026-10-04 UTC
+## A healthy system can hide a confused agent.
 
-- Progression: stronger-controller checks led to the completed Opus verification comparison: **192 calls, 48 episodes, six authored roots in three families**.
-- Each arm proposed **four unnecessary interventions**; the unguarded arm executed four and the guard blocked four.
-- Both arms actually verified **8/12 repairs**. All final states were healthy; healthy final state is not proposal competence.
-- Scope: a small synthetic controller comparison, not evidence of general swarm recovery or production reliability.
-- Next: fallible-repair mechanisms pass offline checks; the peer-correction study is prospective and has not run.
+Latest findings — 2026-10-04 UTC
 
-Read the [native results and animation](verification-study/reviews/v1-post.md), [offline controller preparation](verification-loop/README.md), and [prospective peer-correction design](peer-correction/PLAN.md). The older interrupted receipt study and its account incident remain in the [historical post-mortem](evidence-study/reviews/receipt-a2-post.md); they are not the latest run. Historical setup and scoring sections below retain their original scope.
+- Both arms ended healthy—but each proposed four unnecessary interventions.
+- The software guard blocked all four; the unguarded arm executed them. This shows guard protection, not improved agent judgment.
+- Both arms verified only 8 of 12 repairs. Looking fixed is not the same as checking the fix.
+- Next: test whether peers can correct mistaken beliefs before the guard intervenes. That study has not run yet.
+
+Scope: a small synthetic controller comparison—192 calls,48 episodes, six authored roots in three families—not general swarm recovery or production reliability. [Results and animation](verification-study/reviews/v1-post.md). [Reviewed peer-correction plan](peer-correction/PLAN.md) and [current readiness](peer-correction/README.md).
+
+The older interrupted receipt study and its account incident remain in the [historical post-mortem](evidence-study/reviews/receipt-a2-post.md); they are not the latest run. Historical setup and scoring sections below retain their original scope.
 
 ## Previous scenario iteration
 
