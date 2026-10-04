@@ -44,6 +44,7 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
+| [integrate-top10-portfolio-feedback](tasks/integrate-top10-portfolio-feedback.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:05Z | Integrate top-ten portfolio feedback into owned experimental plans |
 | [right-dissenter-rd6-zero-start-replacement](tasks/right-dissenter-rd6-zero-start-replacement.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:49Z | Execute the approved RD6 zero dispatch replacement |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -386,8 +387,8 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-decision-models | working | right-dissenter-rd6-zero-start-replacement | 2026-10-04 20:05:14.729857+00:00 | Publishing reviewed RD6 Q0-A2 negative qualification: 15/18; D0 unrun; worker and allocation released. |
 | vishesh/codex-methods | blocked |  | 2026-10-04 19:55:18.488784+00:00 | Comparison prepared and pushed; awaiting concrete Q0/conditional E0 scope decision; no allocation or native calls |
-| vishesh/codex-decision-models | working | right-dissenter-rd6-zero-start-replacement | 2026-10-04 19:49:11.706268+00:00 | Admitting directly owner-approved RD6 Q0-A2 zero-dispatch replacement within original window and cumulative caps. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | C5 automatic S0/S1 complete and reviewed; valid adverse routing result; ledger reconciled, archive verified, machine released; FINISH/PARK |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:44:55.270351+00:00 | PQ-04 assertion-evidence qualification passed all stricter gates; reviewed; no automatic successor |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc10-objective | 2026-10-04 19:38:27.157070+00:00 | PC10 paired run closed; no action improvement, clarified qualification failed; parked, no pilot, allocation released |
