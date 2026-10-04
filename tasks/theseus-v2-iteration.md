@@ -22,8 +22,8 @@ Evaluate and improve the three scenario directions, freeze a discriminating expl
 
 ## Done when
 
-- Evaluate scenario alternatives and freeze the revised plan before implementation.
-- Build evaluator, lineage tracking, failure accounting and replay; verify discriminating controls.
-- Register and verify the immutable plan before any paid run.
-- Execute qualification and a gated bounded pilot, or record the exact resource blocker and preserve launch-ready work.
-- Publish assessment against plan, unresolved issues and next action.
+- [x] Evaluate scenario alternatives and freeze the revised plan before implementation (v2/PLAN.md).
+- [x] Build evaluator, lineage tracking, failure accounting and replay; 14 offline tests pass.
+- [x] Register and verify immutable plan addecbcd43ee6f07993db2f3f4578ef2aab356e1, exact SHA-256 ca0cab4c530e6ca6e4966da3385d10c475067ffb0a8fd110a8ebc55036aa3d06; 0 runs.
+- [x] Resource blocker documented: existing authority has USD0.097684; additional USD15 requested, not approved. No v2 deployment or calls. Fresh dedicated claim and unblocked review required after approval.
+- [x] Publish v2/ASSESSMENT.md plus registered labeled fixture artifacts; paid execution remains pending.
