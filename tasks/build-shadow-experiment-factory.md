@@ -3,7 +3,7 @@ id: build-shadow-experiment-factory
 type: task
 title: Build and run a lean exploratory experiment factory for Shadow
 kind: build
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-factory
 for: shadow
@@ -14,7 +14,12 @@ topics:
 - sybil-resistance
 - meta
 claimed_at: 2026-10-04T15:00Z
-updated: 2026-10-04T15:24Z
+updated: 2026-10-04T15:47Z
+outputs:
+- researchers/shadow/factory/README.md
+- researchers/shadow/factory/FINDING.md
+- researchers/shadow/factory/HANDOFF.md
+- researchers/shadow/notes/audit-2026-10-04/sol-factory.md
 ---
 
 ## Goal
