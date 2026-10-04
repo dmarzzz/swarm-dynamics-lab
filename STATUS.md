@@ -40,7 +40,7 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed (stale) | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:28Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
-| [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
+| [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:58Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
 | [right-dissenter-rd5-design](tasks/right-dissenter-rd5-design.md) | claimed | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T06:40Z | Plan Right Dissenter repairs and the right to reopen |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:28Z | Ship the neutral-agent market-splitting pilot |
@@ -246,7 +246,7 @@
 |---|---|---|---|---|
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T06:30Z | D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn |
 | vishesh/codex-methods | idle |  | 2026-10-04T06:29Z | Antsy v7 published; qualification failed honestly, S1 unrun, allocation released |
-| vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T06:18Z | Poietic instrument built and validated; publishing S0 package and recording admission blockers |
+| vishesh/codex-heterogeneous | blocked |  | 2026-10-04T06:18Z | Poietic build complete; awaiting explicit USD 2 cap and approved OpenRouter selector before native qualification |
 | vishesh/codex-regrowth-docs | idle |  | 2026-10-04T06:13Z | C1/C2 cycle closed; failures published, worker retired; full comparison remains incomplete |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
 | vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
