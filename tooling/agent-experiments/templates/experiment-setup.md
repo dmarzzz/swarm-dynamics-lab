@@ -40,6 +40,23 @@ Use pending, pass, fail or blocked. Record reviewer and timestamp beside evidenc
 
 ## Current attempt admission
 
+Operations entry: [registry study ID or explicitly manual]. Follow the
+[operations guide](../OPERATIONS.md), correcting this link when copying the template. Reference
+existing records rather than maintaining a second copy of their status.
+
+| Operation | Exact command or unsupported reason | Evidence and last checked revision |
+|---|---|---|
+| Inspect and offline validation | | |
+| Prepare named stage | | |
+| Dispatch named stage | | |
+| Resume interrupted execution | | |
+| Analyze saved evidence and rebuild visuals | | |
+| Stop this study and close out | | |
+
+Keep private configuration, allocation receipts and ledger paths in local context. A registered
+command is not an approved attempt. Record the prepared packet, configuration delta and parent
+attempt when using the shared interface; preserve its consumed/ambiguous state after interruption.
+
 - Attempt / parent / stage / pre-run assessment / status: [fill]
 - Exact immutable public plan URL, revision and expected hash: [fill]
 - Registered experiment TLDR: [question, treatment, comparator, metrics, limitations]

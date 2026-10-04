@@ -1,163 +1,101 @@
 # Experiment worker template
 
-A small distributed experiment that already meets the lab's requirements: the prior-art gate in
-AGENTS.md, and the design rules in vishesh's design guide
-(`researchers/vishesh/notes/seo-poisoning/experimental-design.md`, *Experimental design* §0–§8). Copy it,
-replace the simulator, and follow the steps in order. The infrastructure side (servers, claims, the hub) is
-in the private `swarm-labs-agentops` repo: its `AGENTS.md`, plus `docs/REPORTING.md` for the hub contract.
+This is a distributed **scripted toy**, useful for learning the hub registration, queue, worker and analysis interfaces. Copying it does not satisfy the lab's research gates or make a production launcher. Start a new question or material revision with [the setup runbook](../../tooling/agent-experiments/EXPERIMENT-SETUP.md), write the prospective plan before experimental implementation, and maintain the linked setup record in the owned study directory.
 
-The example is deliberately trivial so that every piece is visible. It is a quorum of agents deciding
-among K options while some of them copy one shared upstream source (from the `quorum` project brief and
-the root-counting idea in the dissent design). Plurality quorum counts votes; provenance-aware quorum
-counts distinct evidence roots. It runs in milliseconds per episode. It is a toy, not a result.
+For discovery and supported study adapters, use [experiment operations](../../tooling/agent-experiments/OPERATIONS.md). This template is not a registered native adapter. The private `swarm-labs-agentops` repository defines infrastructure ownership, claims and the reporting contract; access to the template is not authority to provision or spend.
 
-```
-experiment.yaml       hub registration: id, title, parameter schema, metrics, primary metric
-design.yaml           the frozen design: arms, fixed config, splits, stages S0/S1/S2, seeds, primary contrast
-preregistration.md    hypotheses, contrasts, effect sizes, units, metrics, retry policy, seeds (committed before S2)
-src/sim.py            the environment + the arms. The only file that knows the toy; replace it
-src/selftest.py       offline checks: determinism, pairing, blindness, clean task, manipulation, splits
-src/coordinator.py    register; queue a stage from design.yaml; S2 guarded by the committed pre-registration
-src/worker.py         takes queued runs from the hub, runs every arm on the same draws, uploads episodes.jsonl
-src/analyze.py        pulls episodes from the hub; paired per-task contrasts, cluster bootstrap, McNemar; figure
-run-workers.sh        one worker per core in tmux on a server
-results/              local outputs (episodes/, pulled/, <stage>.md, <stage>_cells.csv, <stage>_tradeoff.png)
-```
+The toy compares plurality quorum, which counts votes, with provenance-aware quorum, which counts distinct evidence roots. Agents select among K options while some copy one upstream source. Its outcomes demonstrate the programmed mechanism, not an LLM result or general swarm advantage.
 
-## Evidence metadata
+## Files and implementation boundaries
 
-Every copied study needs `evidence_confidence` and `sample_size_summary` in its README, following the [shared rubric](../../experiments/EVIDENCE-METADATA.md). Register a row in `experiments/evidence-metadata.json` and render the fields with `python3 scripts/experiment_evidence.py --write`. Use an explicit claim, rationale and dated source; distinguish independent task roots from agents, calls and repeated outcomes. Label planned counts as planned and update the metadata after each analyzed cohort. These are reporting fields, not additions to the frozen `experiment.yaml` or a claim that the hub automatically displays them.
+| File | Existing function |
+|---|---|
+| `experiment.yaml` | Hub registration fields, parameter schema and metrics |
+| `design.yaml` | Toy arms, task splits, stage counts, seeds and primary contrast |
+| `preregistration.md` | Design template; all stages still need a public prospective plan |
+| `src/sim.py` | Scripted environment, policies and evaluator |
+| `src/selftest.py` | Offline pairing, blindness, task, manipulation and split checks |
+| `src/coordinator.py` | Registration and queueing; legacy preregistration guard applies only to S2 |
+| `src/worker.py` | Executes queued blocks and uploads saved episode records |
+| `src/analyze.py` | Downloads saved evidence, computes contrasts and plots |
+| `run-workers.sh` | Starts indefinitely restarting workers; optional reboot persistence |
 
-## Review and repair every attempt
+The current coordinator only **warns** if S1 lacks a finished S0. A finished job is not evidence that qualification thresholds passed. Its S2 check covers committed design files and TODOs; it is not an immutable public-plan, current-source, budget or allocation preflight. `--reopen` does not itself verify a prospective amendment. Do not use those legacy checks as admission for a real experiment.
 
-Follow the shared [run-review cycle](../../tooling/agent-experiments/RUN-REVIEW.md).
-Before each launch, complete and commit a [pre-run assessment](../../tooling/agent-experiments/templates/pre-run.md)
-in `reviews/<attempt>-pre.md` under the experiment (or owned exploratory notes). After every attempt,
-including a failure, complete a [post-mortem](../../tooling/agent-experiments/templates/post-mortem.md).
-Turn its repair ledger into the next pre-run assessment. Continue bounded diagnosis and repair until
-material defects are resolved; do not advance scientific stages with failed qualification gates.
-Keep all attempts, and distinguish valid negative findings from implementation or design faults.
-This is a required operator workflow; existing coordinator scripts do not mechanically enforce the forms.
+The worker's append-only output and reporting recovery help preserve artifacts, but do not guarantee exactly-once model calls or effects. A restarted/requeued block can execute again and append duplicate episodes. `run-workers.sh` restarts after exit and can persist across reboot. Indefinite restarts, `--forever` and `--at-boot` are unsuitable for paid or stateful work until the adapter enforces duplicate detection, cumulative budget, pending-call reconciliation, bounded lifetime and current authority. A reporting outage should be repaired from saved evidence, not by repeating collection.
 
-## The steps, in order
+## Adapt the template in order
 
-**0. Read.** This file, the design guide's *Experimental design* section, and `docs/REPORTING.md` in
-swarm-labs-agentops. Set your agent id: `export SWARM_SOURCE=<researcher>/<tool>-<n>`.
+1. **Establish the research scope.** Follow root `AGENTS.md` for the applicable survey, hypothesis and different-researcher review gates. Label exploratory notes honestly. S0/S1 names do not exempt an exploratory run from review, public-plan, qualification, budget or allocation requirements. For Vishesh's studies, follow the owner's single researcher-review instruction; routine implementation repairs do not automatically require another sign-off.
+2. **Write the design before implementation.** Create `SETUP.md` from the [setup template](../../tooling/agent-experiments/templates/experiment-setup.md), referencing the plan, preceding post-mortem and exact next action. Freeze independent units, controls, treatment, primary endpoint, missingness, seed/task splits, resource limits and claim boundaries. Define what each stage means in this study; the toy uses S1 for development and S2 for its held-out comparison.
+3. **Copy into the permitted study location.** Formal experiments use `scripts/lab.py new experiment`; owned exploratory notes remain explicitly exploratory. Set registration owner/ID and replace template placeholders. Copying does not register a public plan or reserve infrastructure.
+4. **Implement and check the instrument.** Adapt the simulator contract below, complete the agent/context/run specifications, and run appropriate offline fixtures. Preserve truth separation, treatment fidelity, all-assigned denominators and actual context records. Test missing/duplicate outcomes, changed source/configuration, timeouts, uncertain calls, exhausted budget and reporting failure before native execution.
+5. **Wire admission into the actual dispatch path.** Before every attempt and stage, read the preceding post-mortem and commit the pre-run assessment. Publish and verify the exact immutable plan, experiment TLDR and condition-specific TLDRs. Require current qualification, source/dependency match, cumulative spending authority and fresh exclusive allocation. Before new provisioning for Vishesh, verify Dmarz's approved account identity and authoritative state/project privately. Missing or stale evidence must stop queueing/model loading/calls, not merely emit a warning.
+6. **Run only the admitted stage.** Use a finite worker with declared calls, tokens, dollars, time and concurrency limits. Reserve before dispatch, retain uncertain charges and all failures, and keep qualification and scientific conclusions separate. No automatic S0-to-S1 or S1-to-S2 escalation follows from a successful exit. Preserve holdout protection; amendments and repairs receive explicit lineage rather than overwriting old outcomes.
+7. **Reconcile, report and release.** Audit assigned → started → terminal → graded → analyzed; retain unstarted and partial units. Recompute from saved raw decisions, check the visualization, record actual versus reserved cost, complete the post-mortem and verify durable artifact readback. Stop only the owning experiment's workers and release its claim through the applicable infrastructure workflow.
 
-**1. Clear the gate.** Experiments need an `accepted` hypothesis, which needs a reviewed survey (swarm-lab
-AGENTS.md: *The prior-art gate*, *Hypotheses*, *Experiments*). Until then, build and test in
-`researchers/<you>/notes/<id>/` as a labelled hunch, and run S0 and S1 only. S2 waits for the gate.
+For a real launcher, use the [lifecycle contract](../../tooling/agent-experiments/AGENT-LIFECYCLE.md) and record which requirements are implemented versus still manual. This README corrects the operating guidance; the template runtime has not been retrofitted with those gates.
 
-**2. Copy.** Once the hypothesis is accepted:
-```bash
-python3 scripts/lab.py new experiment <id> --agent $SWARM_SOURCE     # experiments/<id>/README.md
+## Manual command reference
+
+These are the existing template interfaces for operators adapting it. Commands that register, claim or queue work require the completed gates above; they are not an alternate launch path around missing admission. They are separate from the supported adapters in `scripts/experiment.py`.
+
+Create the formal study only after its applicable research gate, then copy the template files from the public repository root:
+
+```sh
+export SWARM_SOURCE=<researcher>/<agent-name>
+python3 scripts/lab.py new experiment <id> --agent "$SWARM_SOURCE"
 cp -r templates/experiment-worker/{experiment.yaml,design.yaml,preregistration.md,src,run-workers.sh} experiments/<id>/
 ```
-Set `id` in `experiment.yaml` to `<id>` and `owner` to you. In the experiment README, fill **Setup**
-(environment, versions, hardware), and make **Protocol** and **Metrics** point at `design.yaml` and
-`preregistration.md`.
 
-**3. Replace the simulator** (`src/sim.py`) and keep its contract:
-- `run_episode(task_id, seed, world, dose, arms, cfg)` returns one record per arm.
-- **Deterministic** given `(task_id, seed)`, with every random draw seeded from them.
-- **Paired**: every arm in an episode gets the same draws (common random numbers).
-- **Blind**: arms see only what agents report; ground truth enters only in `evaluate()`, after the decision.
-- **Total**: an exception becomes `validity.ok = false` and is recorded, never retried.
-- A **task** is the cluster unit: its truth must not depend on the seed.
+In the authorized private operations checkout, inspect current allocations before obtaining the experiment's exclusive claim. Keep account verification and private inventory there. For Vishesh, follow the [machine workflow](../../researchers/vishesh/notes/experiment-machine-workflow.md); an unavailable authorized allocation is a blocker, not permission to use the local default cloud account.
 
-Rename the worlds, arms, parameters and metrics to yours; `worker.py`'s `metrics()` names the per-arm
-metrics the dashboard shows.
-
-**4. Fill the design.** `design.yaml`: arms, fixed `cfg`, task splits (dev and holdout never overlap),
-stages, seed lists, and the one `primary_contrast`. `preregistration.md`: every section. Then run
-`python3 src/selftest.py` until it passes, and adapt its checks to your simulator.
-
-**4b. Design the run visualization.** Complete the **Visualization mapping** in the pre-run assessment,
-using [the visualization guide](../../tooling/agent-experiments/RUN-VISUALIZATION.md) and
-[mapping template](../../tooling/agent-experiments/templates/visualization-mapping.md). Bind recorded
-signals to a view that fits this experiment, with time/event semantics, live frames or progress images,
-retained replay history, a final frame and an animation when temporal behavior matters. Record a reason
-and supported fallback where animation is unsuitable or unsupported. Test the renderer against a
-synthetic trace before launch and verify artifacts in the post-mortem. The template worker does not
-implement a renderer automatically; implement or explicitly account for it in the mapping.
-
-**5. Allocate and exclusively claim servers** (swarm-labs-agentops). Refresh the fleet and active
-claims before selecting hosts; do not treat an existing checkout as permission to use its machine.
-For vishesh's experiments, follow the root AGENTS.md dedicated-machine directive and
-[detailed allocation checklist](../../researchers/vishesh/notes/experiment-machine-workflow.md):
-each new experiment gets a fresh exclusive allocation from Dmarz's machine list, including exploratory
-qualification and separately launched versions. If none is available, resolve authorized provisioning
-before launch. Preserve shared budget limits across hosts. Verify the merged claim before step 6.
-
-```bash
+```sh
 python3 scripts/agentops.py claims
+python3 scripts/agentops.py claim <you>-<id> --servers <approved-available-host> --by "$SWARM_SOURCE" \
+    --until 6h --experiment <id> --note "<admitted-stage>"
 ```
 
-After selecting available hosts (replace placeholders):
-```bash
-python3 scripts/agentops.py claim <you>-<id> --servers <available-host> --by $SWARM_SOURCE \
-    --until 6h --experiment <id> --note "S0+S1"
+The six-hour value is the legacy example, not a default authorization: set expiry to the authorized stage window and verify the merged claim. Deploy the intended frozen source into an isolated checkout and verify its hashes. From that study directory, the existing interfaces are:
+
+```sh
+python3 src/selftest.py
+python3 src/coordinator.py register
+python3 src/coordinator.py stage S0
+python3 src/worker.py
+python3 src/coordinator.py status
+python3 src/analyze.py --stage S0
 ```
 
-**6. Register, run S0, start workers.** On each claimed server (the code is pulled from git, so commit
-and push first):
-```bash
-git clone https://github.com/dmarzzz/swarm-lab /srv/swarm/swarm-lab 2>/dev/null; cd /srv/swarm/swarm-lab && git pull
-cd experiments/<id>
-python3 src/coordinator.py register          # once
-python3 src/coordinator.py stage S0          # clean-task validation
-./run-workers.sh                             # one self-restarting worker per core, in tmux "workers"
-                                             # add --at-boot to bring them back after a reboot
-                                             # model-API-bound work waits on the network: ./run-workers.sh 16 on a 4-vCPU box is fine
+Only use queue/worker commands after implementing and checking the required dispatch gates. `worker.py` without `--forever` stops when its queue is empty; it is not itself a time/cost cap. `coordinator.py --dry-run` is also not guaranteed offline: stage checks can query the hub. Repeat admission before queueing S1 or S2. Adapt analysis to the declared independent unit and examine failures before considering the next stage.
+
+After stopping the exact owning workers and verifying artifacts, release the claim in the private operations checkout:
+
+```sh
+python3 scripts/agentops.py release <you>-<id> --note "<stage> reconciled and artifacts verified"
 ```
-Watch the hub dashboard. S0 must show the clean task done (both arms commit and are mostly right). If
-not, diagnose the simulator, model, adapter, fixtures and evaluator in the post-mortem. Repair the
-responsible component and run a new recorded qualification; do not assume the simulator is the cause.
 
-**7. S1 development.** `python3 src/coordinator.py stage S1`, then `python3 src/analyze.py --stage S1`.
-Use S1 to debug, and to estimate the discordant-pair rate and the variance of the per-task difference.
-Write the sample size into `preregistration.md` §4 and `design.yaml` `stages.S2.tasks`.
+If a legacy tmux worker was used, stop only its verified experiment session and remove its associated reboot entry if present. Do not indiscriminately kill a shared session. Authorized fleet owners handle machine teardown. File external deliverables through `.flightdeck/fd.py add` under the root repository's delivery rules.
 
-**8. Pre-register.** Commit and push `design.yaml` and `preregistration.md` with no `TODO` markers left. This is
-the point of no return: `stage S2` refuses uncommitted or TODO-bearing files, stamps their commit on every
-S2 run, and refuses to open the holdout twice.
+## Preserve the simulator contract
 
-**9. S2 primary.** `python3 src/coordinator.py stage S2`, workers as in step 6 (they keep polling if
-started with `--forever`), then `python3 src/analyze.py --stage S2`. The results table marks the
-**PRIMARY** row, and everything else is labelled exploratory. Copy `results/S2.md` into the experiment
-README's **Results** section, interpret under **Analysis**, and update the hypothesis status (`supported`
-or `refuted`).
+`run_episode(task_id, seed, world, dose, arms, cfg)` returns one record per arm. Preserve these properties when replacing the toy:
 
-**10. Release and ship.** Keep the claim valid through completion and artifact upload. Stop this
-experiment's workers (for this template's dedicated tmux session, `tmux kill-session -t workers`),
-verify durable artifacts, then run `python3 scripts/agentops.py release <you>-<id> --note "S2 done"`.
-Temporary machine teardown follows the private fleet's owner-controlled process. File figures that
-leave the team through `.flightdeck/fd.py add`
-(AGENTS.md: *Deliverables*).
+- **Explicit randomness:** use named, stable random streams. Pair exogenous worlds and corresponding baseline observations across arms. Hosted model responses are not guaranteed deterministic even with identical settings.
+- **Truth separation:** actors receive only allowed observations; protected truth enters evaluation after the decision. A prompt instruction alone is not an access boundary.
+- **Complete outcomes:** retain valid, invalid, failed, timed-out and unstarted assignments. An infrastructure retry keeps episode identity and cost; a bad answer is not an invisible retry opportunity.
+- **Declared dependence:** identify the independent unit and task/world clusters. Repeated seeds, agents, votes and arms are not automatically independent samples.
 
-## Where each requirement is met
+Rename worlds, arms, parameters and metrics consistently. The template's `worker.py` metric names and statistical procedures are examples; choose endpoints and analysis appropriate to the new design. Test the task and evaluator using known correct and deliberately wrong policies. Passing software fixtures is not native model qualification.
 
-| Requirement (design guide / AGENTS.md) | Where |
-|---|---|
-| Episode is the unit of analysis; task is the cluster; seeds within a task are not independent | `sim.task()` (truth per task), `analyze.cluster_bootstrap` resamples whole tasks |
-| Paired arms, common random numbers | `sim.run_episode` draws once and scores every arm; `selftest` checks it |
-| Ground truth held apart from the decision | `sim.evaluate()` runs after the rule; `selftest` checks reports carry no truth |
-| Primary contrast declared in advance; the rest exploratory | `design.yaml primary_contrast`; `analyze` marks PRIMARY |
-| Pre-registration committed before the first real run | `coordinator.prereg_commit()` guards S2 and stamps `prereg` on runs |
-| Stages S0 clean validation, S1 development, S2 holdout opened once | `design.yaml stages`; `coordinator` refuses a second S2 |
-| Seeds fixed, never chosen after looking | `design.yaml` seed lists; `selftest` checks they exist |
-| Failed episodes recorded and counted, never retried | `sim.run_episode` try/except; `invalid` column in results |
-| One JSON record per episode, append-only, with provenance | `worker.execute` writes `results/episodes/*.jsonl` with `run`, `prereg`, `code`, `worker` |
-| Paired binary outcome: McNemar; continuous: paired per-task difference | `analyze.mcnemar_exact`, `analyze` diff + CI |
-| Protocol and Metrics before the first run (AGENTS.md *Experiments*) | step 2 and step 8 |
-| Report every run including failures | the hub keeps every run; `analyze` counts invalid episodes |
-| Rerunnable by someone else's agent | seeds + `code` commit + `prereg` commit on every record |
-| No run lost overnight | reports spool locally while the hub is down and replay in order; a silent run is re-queued after 20 min (max 3 attempts); workers restart themselves (`run-workers.sh`, `--at-boot`) |
+## Reporting and evidence metadata
 
-## What the toy shows (S1, dev tasks)
+Complete the [visualization mapping](../../tooling/agent-experiments/templates/visualization-mapping.md) before collection. Bind events, units, denominators, missing states and evaluator reveal to recorded evidence. Test the renderer using fixtures marked **SCRIPTED — NOT MODEL EVIDENCE**. The worker does not implement a study-specific replay automatically.
 
-In W2_FALSE (the shared source is wrong), plurality quorum commits to the wrong option in most episodes
-and the provenance-aware quorum almost never does. The provenance rule pays in delay: it waits for more
-independent roots. In W1_TRUE (the shared source is right), the provenance rule is slower for no accuracy
-gain. That tradeoff is the kind of result the template is built to measure honestly. It is a property of
-the rule written into the toy (see the quorum brief's *Interpretation risk*), not a finding about agents.
+Every study README needs `evidence_confidence` and `sample_size_summary` under the [shared rubric](../../experiments/EVIDENCE-METADATA.md). Register the assessment in `experiments/evidence-metadata.json` and render with `python3 scripts/experiment_evidence.py --write`. Give the claim, rationale and source date; distinguish independent task roots from calls and repeated outcomes. These fields describe evidence, not launch permission or automatic hub display.
+
+Use the [pre-run assessment](../../tooling/agent-experiments/templates/pre-run.md) before each attempt and the [post-mortem](../../tooling/agent-experiments/templates/post-mortem.md) afterward, including failures. A valid adverse result is reported; a defect receives a bounded repair with acceptance evidence. Publication, process compliance and scientific interpretation remain separate.
+
+## What the toy demonstrates
+
+When the shared source is wrong, the scripted plurality rule often commits wrongly and the provenance rule waits for distinct roots. When that source is right, the provenance rule can add delay without an accuracy benefit. This is a property of the programmed rule and constructed worlds. It motivates a possible question but does not establish that real agents, real provenance or a new scenario will behave the same way.

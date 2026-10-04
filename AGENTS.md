@@ -39,6 +39,20 @@ Account for every assigned outcome, retain failed attempts, and complete the pos
 The runbook is a required workflow, not a claim that all launchers enforce it automatically. Resource
 ownership directives retain their stated scope; this requirement grants no new spending or deployment authority.
 
+## Experiment operations
+
+Use `python3 scripts/experiment.py list` and `inspect <study-id>` to locate the current study,
+setup record, post-mortem and supported operations. Follow
+[the operations guide](tooling/agent-experiments/OPERATIONS.md) before preparing an attempt.
+The registry is navigation, not live admission evidence. Only explicitly implemented adapters
+may dispatch through this interface; other studies retain their documented manual workflows.
+
+Keep new designs, configuration iterations, fresh executions, interrupted attempts and saved-data
+reports distinct. Preserve the original budget ledger and attempt lineage. Do not retry ambiguous
+dispatches automatically, turn replayed responses into fresh samples, or copy the operating
+assistant's conversation/memory into experimental-agent context. Reuse unchanged scientific evidence
+only within its recorded scope; refresh operational receipts for each admitted attempt.
+
 ## Quick start
 
 ```bash

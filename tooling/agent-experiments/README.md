@@ -4,8 +4,11 @@ Research cutoff: **3 October 2026 (UTC)**. Reusable methods and offline tooling 
 
 For new studies, start with [the setup runbook](EXPERIMENT-SETUP.md) and copy [the setup record](templates/experiment-setup.md). Then use [the main guide](GUIDE.md), copy [the preregistration template](templates/protocol.md), and adapt [the worked collective-sensing example](examples/collective-sensing/PROTOCOL.md). The [literature review](LITERATURE.md) distinguishes verified research findings, authors' proposals, and this guide's recommendations. [Search notes](SEARCH-LOG.md) document coverage and limits.
 
+For existing studies, use [experiment operations](OPERATIONS.md): `python3 scripts/experiment.py list` from the repository root locates the ten named research areas, their setup/post-mortem references and adapter coverage. Inspection is offline. The first native adapter covers Theseus v2 only; registry membership and prepared packets do not establish current launch readiness.
+
 | Artifact | Purpose |
 | --- | --- |
+| [OPERATIONS.md](OPERATIONS.md) and [operations.json](operations.json) | Command entry point, study discovery, iteration lineage, implemented boundaries and missing launch evidence |
 | [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
 | [Experiment evidence metadata](../../experiments/EVIDENCE-METADATA.md) | Defined 0–4 evidence-confidence scale, independent sample-size summaries and update workflow |
 | [GUIDE.md](GUIDE.md) | Definitions, study lifecycle, statistical design, reliability, and replication |
