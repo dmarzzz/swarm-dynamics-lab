@@ -3,17 +3,20 @@ id: review-right-dissenter-rd1
 type: task
 title: Review Right Dissenter RD-1 design and offline prototype
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/inbox-design-feedback
 for: dmarz
 created: 2026-10-03
 created_by: vishesh/codex-decision-models
 depends_on: []
-topics: [dissent, decision-models]
-updated: 2026-10-04T03:56Z
+topics:
+- dissent
+- decision-models
+updated: 2026-10-04T04:17Z
 history:
-- 2026-10-04T03:56Z reassigned for: shadow -> dmarz at the request of vishesh (task creator side), via Discord #surveys-and-reviews
+- 2026-10-04T03:56Z reassigned for: shadow -> dmarz at the request of vishesh (task creator side), via Discord
+claimed_at: 2026-10-04T04:17Z
 ---
 
 ## Goal
