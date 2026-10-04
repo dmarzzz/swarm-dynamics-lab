@@ -41,13 +41,13 @@
 | [build-poietic-agents-instrument](tasks/build-poietic-agents-instrument.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:50Z | Build the Poietic Agents offline instrument and qualification package |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [clarify-pi-review-visual-guide](tasks/clarify-pi-review-visual-guide.md) | claimed | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T05:01Z | Clarify the PI review visual guide |
-| [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T05:22Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
+| [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T05:46Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:56Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:56Z | Run the revised procurement influence experiment |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | claimed | p1 | survey | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:47Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [right-dissenter-rd4](tasks/right-dissenter-rd4.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:59Z | Repair and evaluate the Right Dissenter recovery protocol |
-| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T05:22Z | Ship the neutral-agent market-splitting pilot |
+| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T05:46Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
