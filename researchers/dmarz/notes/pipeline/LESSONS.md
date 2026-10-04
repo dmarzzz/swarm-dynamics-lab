@@ -1,6 +1,6 @@
 # Cross-lane lessons
 
-Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T08:20Z. Each item says what was observed, where, and what to do in the next plan.
+Maintained by dmarz/results-analyst from tonight's runs. Not a review. Last updated 2026-10-04T08:16Z. Each item says what was observed, where, and what to do in the next plan.
 
 ## 1. Caps and timeouts are part of the hash that binds a stage to its qualification. Size them for the whole ladder before the qualifying run.
 
@@ -65,7 +65,7 @@ A solver that is right 90% of the time fails a 10 of 12 gate about 11% of the ti
 
 ## 8. Long stages stop on the first HTTP error, with no retry. One 429 or 529 ends the stage.
 
-Read in the code, not yet observed tonight. In the sybil chains (`sybil-scale-xl/src/provider.py` lines 121-122 and `src/worker.py` line 59; the same shape in sybil-newcomer-opus, sybil-specialists-opus and the sybil-scarcity-opus design: `retries: 0`), any HTTP error becomes a failed row, a failed row stops new dispatch, and every remaining assignment is recorded as not started. market-split-opus and compositional-safety fail the bundle and stop the worker the same way. A repair is a new batch, which for the hashed designs means S0 and Q0 again.
+Read in the code, not yet observed tonight. In the sybil chains (`sybil-scale-xl/src/provider.py` lines 121-122 and `src/worker.py` line 59; the same shape in sybil-newcomer-opus, sybil-specialists-opus and the sybil-scarcity-opus design: `retries: 0`), any HTTP error becomes a failed row, a failed row stops new dispatch, and every remaining assignment is recorded as not started. market-split-opus fails the bundle, writes a stop marker and exits the worker (plan, "S1 execution"). compositional-safety is different: it records the episode as invalid and continues (q0-006 ran all 24 rejected requests to the end). A repair is a new batch, which for the hashed designs means S0 and Q0 again.
 
 Tonight's base rate is good: about 10,000 Haiku and Sonnet calls and about 350 Opus calls with zero provider errors. The exposure is the size of what is now starting: sybil-scale-xl S1 (576 calls, about USD 240, four in flight, packets up to about 200,000 tokens, so rate limits on input tokens per minute are the likeliest error), sybil-newcomer-opus S1 (1,944 calls), sybil-scarcity-opus S1 (1,440 calls, about USD 150), market-split-opus S1 (864 calls over 2.3 hours).
 
