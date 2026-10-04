@@ -1,0 +1,626 @@
+{
+  "legend": {
+    "green": "Sound or useful within the stated scope; never launch approval.",
+    "yellow": "Limited evidence or a design that needs improvement.",
+    "red": "A specific defect blocks the stated inference or next step.",
+    "gray": "Unrun or unassessed at the frozen review cutoff."
+  },
+  "projects": [
+    {
+      "id": "quorum",
+      "name": "Quorum of Mirrors",
+      "review_ids": [
+        "SCI-QUORUM-OF-MIRRORS"
+      ],
+      "question": "When does another independent source help more than another agreeing judge?",
+      "verdict": "Strong question; define source dependence before testing consensus.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Useful question",
+          "why": "Separating sources, judges and discussion could guide practical spending decisions."
+        },
+        "evidence": {
+          "status": "gray",
+          "label": "Unrun",
+          "why": "No native qualification or scientific results exist at this review cutoff."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Specify dependence",
+          "why": "Exact copies, paraphrases and new measurements need distinct, controlled generation rules."
+        },
+        "controls": {
+          "status": "yellow",
+          "label": "Budget parity",
+          "why": "Freeze information access, lineage visibility and total resources across competing policies."
+        }
+      },
+      "works": [
+        "Separates evidence ancestry from voter count.",
+        "Includes pooled, no-discussion and deduplication references."
+      ],
+      "limits": [
+        "Visible source labels can make deduplication trivial.",
+        "Larger crowds do not create independent evidence."
+      ],
+      "fixes": [
+        "Freeze the dependence generator and partial-lineage observation contract.",
+        "Compare deduplication and majority under matched evidence and budgets."
+      ],
+      "options": [
+        {
+          "label": "Small benchmark",
+          "detail": "Test one small team across overlap and lineage visibility before size sweeps.",
+          "recommended": true
+        },
+        {
+          "label": "Simple reference",
+          "detail": "Establish the exact accumulator and source-deduplication ceiling first.",
+          "recommended": false
+        },
+        {
+          "label": "Defer scaling",
+          "detail": "Increase judges or rounds only when the mechanism needs them.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen DM-02: unrun; no empirical sample. Unit: world/evidence-ancestry realization. Adaptive-quorum results are separate."
+    },
+    {
+      "id": "phantom",
+      "name": "Phantom Coast",
+      "review_ids": [
+        "SCI-PHANTOM-COAST"
+      ],
+      "question": "Can early misleading evidence leave different maps after everyone receives the same final facts?",
+      "verdict": "Qualify the fixed-evidence test before adding adaptive exploration.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Clear mechanism",
+          "why": "History, communication and reset can separate persistence from missing corrective exposure."
+        },
+        "evidence": {
+          "status": "gray",
+          "label": "Unrun",
+          "why": "The reviewed PC-1 plan has no native qualification or scientific result."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Copying ceiling",
+          "why": "Complete noiseless final evidence may make mapping trivial; adaptive exploration remains a separate experiment."
+        },
+        "controls": {
+          "status": "yellow",
+          "label": "Validate planned controls",
+          "why": "Useful reset and pooled references need input-identity, scorer and fixed-denominator execution checks."
+        }
+      },
+      "works": [
+        "Separates retained history from canonical reset.",
+        "Scores the complete world, including missing predictions."
+      ],
+      "limits": [
+        "A persistent map difference is not automatically harmful error.",
+        "Three actors share facts; this does not test complementary exploration."
+      ],
+      "fixes": [
+        "Validate identical reset inputs, generator and scorer offline.",
+        "Stage semantic qualification before the full planned call budget."
+      ],
+      "options": [
+        {
+          "label": "Qualify PC-1",
+          "detail": "Start with a bounded complete-evidence screen, then the planned history contrast.",
+          "recommended": true
+        },
+        {
+          "label": "Tighten controls",
+          "detail": "Measure identical-request variation and match calls before interpreting communication effects.",
+          "recommended": false
+        },
+        {
+          "label": "Explore later",
+          "detail": "Develop observation-choice feedback only after the fixed-evidence instrument works.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "PC-1 snapshot 2026-10-04 03:40:18 UTC: unrun; no empirical sample. Planned unit: world."
+    },
+    {
+      "id": "dissenter",
+      "name": "Right Dissenter",
+      "review_ids": [
+        "SCI-RD"
+      ],
+      "question": "Can bounded evidence challenges correct mistakes without corrupting good decisions or wasting checks?",
+      "verdict": "Promising protocol; test semantic value beyond deterministic checks.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Strong mechanism",
+          "why": "Bounded checks, withdrawal and reopening make dissent operationally useful."
+        },
+        "evidence": {
+          "status": "gray",
+          "label": "Fixtures only",
+          "why": "Scripted demonstrations and offline tests do not establish native competence or efficacy."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Semantic headroom",
+          "why": "Exact metadata can solve the controlled grammar; retain a genuine semantic judgment."
+        },
+        "controls": {
+          "status": "yellow",
+          "label": "Freeze admission controls",
+          "why": "Useful baselines remain incomplete: freeze the matched-random quota and concrete qualification counts."
+        }
+      },
+      "works": [
+        "Distinguishes correction from harmful reversal.",
+        "Defines challenge expiry, withdrawal and reopening."
+      ],
+      "limits": [
+        "Authored minorities do not demonstrate naturally emerging dissent.",
+        "Cheap reliable checks may make always-check sufficient."
+      ],
+      "fixes": [
+        "Freeze meaningful semantic cases and qualification assignment counts.",
+        "Match verification opportunities and report cost, corruption and deferral separately."
+      ],
+      "options": [
+        {
+          "label": "Small semantic pilot",
+          "detail": "Qualify one build-verification task and compare bounded admission with always-check.",
+          "recommended": true
+        },
+        {
+          "label": "Exact checks first",
+          "detail": "Use deterministic scope and expiry checks wherever they solve the task.",
+          "recommended": false
+        },
+        {
+          "label": "Emergence later",
+          "detail": "Study naturally formed minorities only after admission value is established.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen: no native sample; 25 scripted fixtures reuse four roots plus a failure variant. Unit: case lineage."
+    },
+    {
+      "id": "sizing",
+      "name": "Optimal Swarm Size",
+      "review_ids": [
+        "SCI-SIZING"
+      ],
+      "question": "When does increasing the roster improve verified work under a fixed deadline and aggregate budget?",
+      "verdict": "Careful design; shrink the first experiment before learning a sizing policy.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Useful decision",
+          "why": "A conditional launch policy has practical value when selection and coordination costs are charged."
+        },
+        "evidence": {
+          "status": "gray",
+          "label": "Unrun",
+          "why": "The frozen review establishes a design, not an implemented harness or sizing result."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Unqualified tasks",
+          "why": "Task generators need nontrivial competence and real serial-versus-parallel tradeoffs."
+        },
+        "controls": {
+          "status": "yellow",
+          "label": "Complete references",
+          "why": "Strong planned accounting still needs a resource-only selector and deterministic scheduling controls."
+        }
+      },
+      "works": [
+        "Counts the coordinator and selection overhead.",
+        "Separates task roots from repeated model samples."
+      ],
+      "limits": [
+        "Thousands of correlated episodes do not imply precise conditional boundaries.",
+        "Roster size also changes context capacity and queueing."
+      ],
+      "fixes": [
+        "Start with one family and matched dependency structures.",
+        "Add resource-only selection and deterministic scheduling references."
+      ],
+      "options": [
+        {
+          "label": "Small interaction pilot",
+          "detail": "Compare a few roster sizes on parallel and linked tasks before fitting a selector.",
+          "recommended": true
+        },
+        {
+          "label": "Validate scheduling",
+          "detail": "Check known work graphs and measured overhead independently of model decomposition.",
+          "recommended": false
+        },
+        {
+          "label": "Keep fixed sizing",
+          "detail": "Prefer a simple fixed roster if useful conditional differences remain unsupported.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen: unrun; no empirical sample. Unit: task root, with sizes and model samples nested."
+    },
+    {
+      "id": "heterogeneous",
+      "name": "Heterogeneous Swarms",
+      "review_ids": [
+        "SCI-HX-FRONTIERS",
+        "SCI-HX"
+      ],
+      "question": "Can complementary capabilities create useful dependence beyond ordinary specialization and extra compute?",
+      "verdict": "Interesting agenda; specify one causal mechanism before simulating an ecology.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Strong agenda",
+          "why": "Removal, rescue, partner swaps and artifact reuse can test mechanisms even when biological analogies fail."
+        },
+        "evidence": {
+          "status": "gray",
+          "label": "Unrun",
+          "why": "Both reviewed design banks are prospective; no adaptation or dependence effect has been observed."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Define capability",
+          "why": "Capability loss must change executable ability, not merely remove a role label or skill file."
+        },
+        "controls": {
+          "status": "yellow",
+          "label": "Cost mechanisms",
+          "why": "Freeze inheritance and selection rules; charge reuse, filtering and adaptation against competent simple alternatives."
+        }
+      },
+      "works": [
+        "Includes falsification, rescue and homogeneous comparisons.",
+        "Separates fixed model weights from mutable policies."
+      ],
+      "limits": [
+        "Harness rules can manufacture the advertised biological phenomenon.",
+        "Many descendants do not supply independent adaptation histories."
+      ],
+      "fixes": [
+        "Specify actual capabilities, inheritance operations and resource costs.",
+        "Replicate independent lineages and retain failed adaptation histories."
+      ],
+      "options": [
+        {
+          "label": "Salvage pilot",
+          "detail": "Test failed-work transformation against direct reuse, donor continuation and equally funded fresh attempts.",
+          "recommended": true
+        },
+        {
+          "label": "Resolve dependence",
+          "detail": "Review helper removal and partner swaps with executable capability and interface contracts.",
+          "recommended": false
+        },
+        {
+          "label": "Narrow allocation",
+          "detail": "Use a qualified incident-allocation task if ecological mechanisms remain underspecified.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Snapshot 2026-10-04 03:23:55 UTC: unrun; no empirical sample. Units depend on mechanism: population, lineage or habitat."
+    },
+    {
+      "id": "theseus",
+      "name": "Swarm of Theseus",
+      "review_ids": [
+        "SCI-THESEUS-V2",
+        "SCI-THESEUS-V1"
+      ],
+      "question": "Can successors preserve useful practices while retiring obsolete ones after founders disappear?",
+      "verdict": "Supplied-procedure transmission works narrowly; selective continuity still needs a coherent instrument.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Useful successor",
+          "why": "Selective updating is more informative than demonstrating that copied instructions survive replacement."
+        },
+        "evidence": {
+          "status": "yellow",
+          "label": "Narrow pilot",
+          "why": "Replayed v1 traces support supplied-procedure transmission; v2 is unrun at this cutoff."
+        },
+        "scenarios": {
+          "status": "red",
+          "label": "Specification conflict",
+          "why": "The v2 release-task amendment still conflicts with harbor-specific primary definitions, blocking launch of that design."
+        },
+        "controls": {
+          "status": "yellow",
+          "label": "Missing attribution",
+          "why": "Missing information-matched archive transplants and single controllers block stronger inheritance or swarm claims."
+        }
+      },
+      "works": [
+        "Separates task accuracy from arbitrary phrase retention.",
+        "Preserves qualification failures and reconstructable v1 traces."
+      ],
+      "limits": [
+        "Founders and adaptation bulletins supply answers; copying can solve v1.",
+        "Few paired worlds and repeated mechanisms limit generalization."
+      ],
+      "fixes": [
+        "Replace stale v2 task definitions with one executable contract.",
+        "Pair stable and changed worlds under rolling and frozen inheritance."
+      ],
+      "options": [
+        {
+          "label": "Specify selective continuity",
+          "detail": "Build one release task where copying, forgetting and selective updating produce different outcomes.",
+          "recommended": true
+        },
+        {
+          "label": "Audit inheritance",
+          "detail": "Match code, tests, notes and other memory channels before comparing successors.",
+          "recommended": false
+        },
+        {
+          "label": "Keep v1 narrow",
+          "detail": "Publish supplied-procedure transmission without culture, emergence or swarm-advantage claims.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen v1: six paired worlds, 36 trajectories; v2 unrun/unqualified. Lineages are units; descendants remain dependent."
+    },
+    {
+      "id": "immune",
+      "name": "Immune Response",
+      "review_ids": [
+        "SCI-I-SCENARIO",
+        "SCI-I-V2",
+        "SCI-I-V3"
+      ],
+      "question": "Can evidence-based repair restore damaged systems while preserving healthy ones and legitimate learning?",
+      "verdict": "Useful falsifying pilots; competence and comparator defects block broader repair claims.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Consequential task",
+          "why": "Repair and restraint compete under compatibility, persisted-data and feature constraints."
+        },
+        "evidence": {
+          "status": "yellow",
+          "label": "Diagnostic evidence",
+          "why": "Native failures are informative, but constructed cases and single samples cannot establish stable architecture rankings."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Limited realism",
+          "why": "Operational constraints create genuine difficulty; incidents remain authored and fully observable."
+        },
+        "controls": {
+          "status": "red",
+          "label": "Invalid attribution",
+          "why": "Failed damaged-task competence and an invalid historical comparator block causal repair and reviewer-effect claims."
+        }
+      },
+      "works": [
+        "Includes healthy false alarms and deterministic repair references.",
+        "Retains failed native episodes and scripted regression cases."
+      ],
+      "limits": [
+        "Healthy success does not establish damaged-task repair competence.",
+        "Oracle ledger restoration is not autonomous diagnosis."
+      ],
+      "fixes": [
+        "Qualify both damaged-task repair and healthy-system restraint.",
+        "Correct obsolete-truth scoring and isolate the reviewer intervention."
+      ],
+      "options": [
+        {
+          "label": "Repair competence gate",
+          "detail": "Validate clean damaged and healthy controls before another architecture comparison.",
+          "recommended": true
+        },
+        {
+          "label": "Evidence advice pilot",
+          "detail": "Compare checked advice with ordinary advice only after the controls pass.",
+          "recommended": false
+        },
+        {
+          "label": "Keep regression suite",
+          "detail": "Retain scripted ledger cases as inexpensive tests, without native efficacy claims.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen: 28 native operational episodes across four cases; historical v2 has zero complete-valid primary pairs. Scripted branches are separate."
+    },
+    {
+      "id": "influence",
+      "name": "Influence Swarms",
+      "review_ids": [
+        "SCI-INFLUENCE-SCENARIO",
+        "SCI-INFLUENCE-V2"
+      ],
+      "question": "Do peer ballots amplify harmful authorization beyond the same misleading documents and verification evidence?",
+      "verdict": "Procurement improves realism; qualify clean decisions before claiming peer influence.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Practical question",
+          "why": "The chair pathway isolates a relevant decision-integration failure under consequential business constraints."
+        },
+        "evidence": {
+          "status": "yellow",
+          "label": "Diagnostics only",
+          "why": "Native errors are observed; the primary peer-influence comparison remains unrun."
+        },
+        "scenarios": {
+          "status": "green",
+          "label": "Better scenarios",
+          "why": "Costs, approval, migration and genuine value create useful tradeoffs, though records remain authored."
+        },
+        "controls": {
+          "status": "red",
+          "label": "Qualification gap",
+          "why": "Changed purchase semantics lack comprehensive clean qualification; this blocks the intended influence interpretation."
+        }
+      },
+      "works": [
+        "Forks the same specialist evidence into two chair conditions.",
+        "Keeps a cheap generalist and feasible-cost references."
+      ],
+      "limits": [
+        "Gold choices change in 12/24 dossiers under reviewed settings.",
+        "Ballot display changes token volume and salience as well as social information."
+      ],
+      "fixes": [
+        "Freeze purchase semantics and qualify every relevant clean constraint.",
+        "Audit gold decisions and preserve matched evidence across chair conditions."
+      ],
+      "options": [
+        {
+          "label": "Qualify procurement",
+          "detail": "Test ordinary, genuine-value, missing-approval and migration cases before collecting the influence contrast.",
+          "recommended": true
+        },
+        {
+          "label": "Isolate ballots",
+          "detail": "Compare clean and misleading worlds with paired ballot visibility after competence passes.",
+          "recommended": false
+        },
+        {
+          "label": "Study chair failures",
+          "detail": "If ballots add no effect, investigate evidence integration without claiming contagion.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen: Q2 three dossiers/nine decisions; historical v2 50 dependent outcomes/three fixtures. Primary contrast unrun. Unit: dossier lineage."
+    },
+    {
+      "id": "healing",
+      "name": "Healing Helping Hands",
+      "review_ids": [
+        "SCI-HEALING"
+      ],
+      "question": "Does prioritizing withdrawals improve evidence repair under constrained communication and imperfect extraction?",
+      "verdict": "Audited propagation works; learned collective repair remains unproven.",
+      "assessments": {
+        "idea": {
+          "status": "yellow",
+          "label": "Useful mechanism",
+          "why": "Separating extraction, invalidation and memory repair is useful; trusted programmed propagation has limited discovery value."
+        },
+        "evidence": {
+          "status": "yellow",
+          "label": "Narrow demonstration",
+          "why": "Completed traces replay exactly, but shared extraction tapes and three corpora limit broader inference."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Easy convergence",
+          "why": "Trusted notices and unrestricted deterministic exchange make recovery easier than realistic evidence repair."
+        },
+        "controls": {
+          "status": "yellow",
+          "label": "Resource confounding",
+          "why": "Matched budgets, centralized references and class-specific errors are needed; notices add information and traffic."
+        }
+      },
+      "works": [
+        "Separates extraction from programmed propagation.",
+        "Preserves event snapshots and explicitly unrun assignments."
+      ],
+      "limits": [
+        "UNCERTAIN class prevalence can flatter accuracy; it is not abstention.",
+        "Surviving-source consensus is not scientific truth."
+      ],
+      "fixes": [
+        "Match transmitted-record budgets and add controlled extraction errors.",
+        "Measure class-specific errors against centralized and exact references."
+      ],
+      "options": [
+        {
+          "label": "Constrained repair pilot",
+          "detail": "Reuse frozen extraction tapes to test withdrawals under equal communication budgets.",
+          "recommended": true
+        },
+        {
+          "label": "Central ledger comparison",
+          "detail": "Measure whether ordinary centralized reconciliation offers the same utility more cheaply.",
+          "recommended": false
+        },
+        {
+          "label": "Qualify models separately",
+          "detail": "Establish any new model’s extraction competence before adding heterogeneous arms.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen pilot03: three corpus seeds; 72/180 assignments completed, 108 unrun. Branches share extraction tapes."
+    },
+    {
+      "id": "antsy",
+      "name": "Antsy",
+      "review_ids": [
+        "SCI-ANTSY-V4",
+        "SCI-ANTSY-V3"
+      ],
+      "question": "Does selective verification improve receipt decisions enough to justify its cost?",
+      "verdict": "Neither committee improves observed recall; fix verification semantics before adding agents.",
+      "assessments": {
+        "idea": {
+          "status": "green",
+          "label": "Practical value",
+          "why": "Real receipts and a strong cheap baseline make the negative committee result useful."
+        },
+        "evidence": {
+          "status": "green",
+          "label": "Narrow result",
+          "why": "Reported paired results support no observed mean gain here; small effects and transfer remain uncertain."
+        },
+        "scenarios": {
+          "status": "yellow",
+          "label": "Limited headroom",
+          "why": "Three precomputed OCR outputs leave little selection headroom; actors do not read or repair images."
+        },
+        "controls": {
+          "status": "red",
+          "label": "Estimator defect",
+          "why": "Empty checks and region weighting undermine interpretation of verification value and operational savings."
+        }
+      },
+      "works": [
+        "Uses external receipts and separated development/evaluation splits.",
+        "Retains confidence, deterministic, single-controller and oracle baselines."
+      ],
+      "limits": [
+        "Both adaptive committees use all checks; no early-stop saving appears.",
+        "Shared controls and one corpus limit independence and transfer."
+      ],
+      "fixes": [
+        "Audit null-check handling and region weighting on frozen traces.",
+        "Use field-level acceptance, harmful errors and real verification costs."
+      ],
+      "options": [
+        {
+          "label": "Audit then simplify",
+          "detail": "Repair the estimator retrospectively, then test a simple verification policy on fresh receipts.",
+          "recommended": true
+        },
+        {
+          "label": "Keep confidence baseline",
+          "detail": "Retain the cheap reference unless a repaired policy demonstrates useful additional value.",
+          "recommended": false
+        },
+        {
+          "label": "Expand after value",
+          "detail": "Add committees or new layouts only after verification itself earns its cost.",
+          "recommended": false
+        }
+      ],
+      "evidence_note": "Frozen v4: 70 paired evaluation receipts per backend; controls overlap. One corpus; raw results not newly replayed."
+    }
+  ]
+}
