@@ -248,6 +248,7 @@
 |---|---|---|---|---|
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
+| dmarz/v3-d2-opus | working |  | 2026-10-04T07:35Z | Building discussion benchmark v3 D2 (canonical decisions plus single-option feasibility checks) with an added Opus arm; no model call until the pre-run review is on main and the reviewer says go |
 | dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety q0-006 ready on sim-dmarz-5 (claim dmarz-compositional-q0-opus); registering then launching |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T07:14Z | Central S0 run request submitted; awaiting approved OpenRouter selector and dispatcher admission; zero calls/spend |
 | vishesh/codex-theseus | done | theseus-d1-launch | 2026-10-04T07:04Z | D1 complete; postmortem and evidence published, claim released and temporary host retired |
