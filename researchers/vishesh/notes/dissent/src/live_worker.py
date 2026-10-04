@@ -2,7 +2,7 @@
 import argparse,contextlib,datetime,json,os,platform,subprocess,sys,time,urllib.request,urllib.error
 from pathlib import Path
 from cases import digest
-from jev import request
+from jev import request,VALIDATION_CODES
 from live_design import SNAPSHOT,qualification,diagnostic,development,assignments,frozen_requests
 from protocol import episode,summarize,ARMS
 from policies import ExactReference
@@ -30,12 +30,14 @@ class NativePolicy:
                 try:
                     with urllib.request.urlopen(wire,timeout=45) as r:data=json.load(r)
                 except urllib.error.HTTPError as e:
-                    data=json.loads(e.read(2000));raise TransportFailure(data.get('error','relay_error'))
+                    data=json.loads(e.read(2000))
+                    if 'diagnostic' in data:row['diagnostic']=data['diagnostic']
+                    raise TransportFailure(data.get('error','relay_error'))
                 checked=data['checked']
                 if checked['request_sha256']!=h or checked['served_model']!=SNAPSHOT or checked['action'] not in req['questions']['action']['criteria']:raise TransportFailure('checked_contract')
                 row.update(status='completed',checked=checked);self.consecutive=0
             except Exception as e:
-                safe=str(e) if isinstance(e,TransportFailure) and str(e) in ('attempt_stopped','relay_error','checked_contract','duplicate_request','ValueError','TimeoutError','URLError','http_400','http_401','http_402','http_403','http_404','http_408','http_429','http_500','http_502','http_503','http_504') else type(e).__name__
+                safe=str(e) if isinstance(e,TransportFailure) and (str(e) in VALIDATION_CODES or str(e) in ('attempt_stopped','relay_error','checked_contract','duplicate_request','ValueError','TimeoutError','URLError','http_400','http_401','http_402','http_403','http_404','http_408','http_429','http_500','http_502','http_503','http_504')) else type(e).__name__
                 row.update(status='failed',error=safe);self.consecutive+=1
             row['elapsed_seconds']=time.monotonic()-before;self.cache[h]=row;save(self.out/'calls.json',self.calls)
         row=self.cache[h]

@@ -1,4 +1,6 @@
-# S1 feasibility design: does source-aware discussion earn its cost?
+# Historical S1 draft: six-world allocation
+
+**Superseded before implementation by [RUN-ROADMAP.md](RUN-ROADMAP.md), 2026-10-04.** The current proposal adds a 64-call mechanism screen and a self-review branch, using four committee worlds. The six-world/544-new-call numbers below are retained as design history, not current admission instructions. See [research findings and actual gates](RESEARCH-GATES.md).
 
 2026-10-04 · prospective draft for researcher review · no S1 worlds generated, requests dispatched or results observed. This material revision follows [ITERATION-3.md](ITERATION-3.md) and supersedes conflicting S1 instructions in the historical [QM-2 plan](PLAN.md). It is not a registered run or an accepted hypothesis. [SETUP.md](SETUP.md) governs admission.
 

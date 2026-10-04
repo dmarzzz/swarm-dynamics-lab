@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "assigned": 50,
+  "outcomes": 250,
+  "checks": [
+    "assignment complete and unique",
+    "five OCR calls per receipt",
+    "image uniqueness",
+    "all decisions replay",
+    "independent correct/wrong/refer tally",
+    "unscorable retained",
+    "actual tool cost accounting"
+  ]
+}

@@ -3,8 +3,8 @@ agent: dmarz/inbox-design-feedback
 tool: codex
 state: done
 task: null
-doing: Published four scoped reviews, author feedback, and unchanged v3 vote rescore.
-updated: 2026-10-04T04:18Z
+doing: Published Quorum and Poietic design reviews and routed concrete revisions to Vishesh.
+updated: 2026-10-04T04:43Z
 ---
 
 ## Notes

@@ -98,6 +98,9 @@ class Committed:
         self.committed = True
 
 
+COST_KEYS = ("calls", "retries", "prompt_tokens", "completion_tokens", "cost_usd", "parse_failures", "fuzzy_parses", "parse_retries")
+
+
 def scripted_policy(m: float, cfg: dict, draw: float, ctx: dict) -> int:
     """P(original) = [tanh(beta (m + h)) + 1] / 2. Sees the memory magnetisation and the pull h only."""
     p = (math.tanh(cfg["beta"] * (m + ctx["h"])) + 1) / 2
@@ -106,7 +109,9 @@ def scripted_policy(m: float, cfg: dict, draw: float, ctx: dict) -> int:
 
 def step(agents: dict, task_id: int, seed: int, rnd: int, cfg: dict, policy, ctx: dict) -> None:
     """One round: a random perfect matching over the agents present, both partners hear each other,
-    then every honest agent decides simultaneously."""
+    then every honest agent decides simultaneously. The decisions are independent given the round's state, so
+    a policy that sets `concurrent = True` (the HTTP adapter) has them issued in parallel threads; the scripted
+    policy runs them in order. Either way the order of application is by agent index, so the result is the same."""
     n = cfg["n_agents"]
     pairs, draws = round_draws(task_id, seed, rnd, n)
     heard = {}
@@ -114,14 +119,34 @@ def step(agents: dict, task_id: int, seed: int, rnd: int, cfg: dict, policy, ctx
         if a in agents and b in agents:          # after a purge some indices are gone; their partner idles
             heard[a] = agents[b].word
             heard[b] = agents[a].word
-    new = {}
-    for i, w in heard.items():
+    deciders = []
+    for i, w in sorted(heard.items()):
         ag = agents[i]
         if ag.committed:
             continue
         ag.hear(w)
-        ctx["mem"] = ag.mem                      # the model adapter reads the words; the scripted policy does not
-        new[i] = policy(ag.magnetisation(), cfg, draws[i], ctx)
+        deciders.append(i)
+    new = {}
+    if getattr(policy, "concurrent", False) and len(deciders) > 1:
+        import concurrent.futures as cf
+        subs = {i: {**ctx, "mem": agents[i].mem, **{k: 0 for k in COST_KEYS}} for i in deciders}
+        with cf.ThreadPoolExecutor(max_workers=len(deciders)) as ex:
+            futs = {i: ex.submit(policy, agents[i].magnetisation(), cfg, draws[i], subs[i]) for i in deciders}
+            errs = []
+            for i in deciders:
+                try:
+                    new[i] = futs[i].result()
+                except Exception as e:  # noqa: BLE001
+                    errs.append(e)
+        for i in deciders:                       # merge the per-call ledgers back, failures included
+            for k in COST_KEYS:
+                ctx[k] = ctx.get(k, 0) + subs[i][k]
+        if errs:
+            raise errs[0]
+    else:
+        for i in deciders:
+            ctx["mem"] = agents[i].mem           # the model adapter reads the words; the scripted policy does not
+            new[i] = policy(agents[i].magnetisation(), cfg, draws[i], ctx)
     for i, w in new.items():
         agents[i].word = w
 
@@ -142,9 +167,26 @@ def streak(series: list, thresh: float, k: int, above: bool = True) -> int | Non
     return None
 
 
-# ----------------------------------------------------------------- one arm, one memory, one draw
+# ----------------------------------------------------------------- one episode: shared prefix, then one fork per arm
 
-def simulate(t: dict, seed: int, world: str, dose: float, arm: str, memory, cfg: dict, policy, ctx: dict) -> dict:
+def clone_agents(agents: dict) -> dict:
+    """Deep copy of the population at the fork point (memories are short lists)."""
+    out = {}
+    for i, ag in agents.items():
+        if ag.committed:
+            out[i] = Committed(ag.word)
+        else:
+            c = Honest(ag.word, MEMORY_FULL if ag.L is None else ag.L)
+            c.mem, c.count = list(ag.mem), ag.count
+            out[i] = c
+    return out
+
+
+def simulate_prefix(t: dict, seed: int, world: str, dose: float, memory, cfg: dict, policy, ctx: dict) -> dict:
+    """Phases 1 and 2 (entrench, takeover until capture or the cap). Shared by every arm of an episode: the arms
+    differ only at the intervention, so running the prefix once keeps them paired under ANY policy, including a
+    sampled model whose draws are not keyed by round. For the scripted policy this is bit-identical to running
+    the prefix inside each arm (draws depend on (task, seed, round) only); selftest checks it."""
     n = cfg["n_agents"]
     k = 0 if world == "W0_CLEAN" else round(dose * n)
     ctx["h"] = cfg["h_outside"] if world == "W2_OUTSIDE" else cfg["h_inside"]
@@ -170,6 +212,16 @@ def simulate(t: dict, seed: int, world: str, dose: float, arm: str, memory, cfg:
             if s is not None:
                 capture_round = entrench_end + s
                 break
+    return {"k": k, "h": ctx["h"], "agents": agents, "series": series, "rnd": rnd,
+            "entrench_end": entrench_end, "capture_round": capture_round}
+
+
+def simulate_arm(pre: dict, t: dict, seed: int, arm: str, cfg: dict, policy, ctx: dict) -> dict:
+    """Phase 3 (intervention) and recovery for one arm, from a copy of the shared prefix state."""
+    k, rnd = pre["k"], pre["rnd"]
+    ctx["h"] = pre["h"]
+    agents = clone_agents(pre["agents"])
+    series = list(pre["series"])
     removal_round = rnd
     if k and arm in ("A1_purge", "A2_purge_wipe"):     # phase 3: intervention (oracle, perfect)
         agents = {i: ag for i, ag in agents.items() if not ag.committed}
@@ -179,9 +231,15 @@ def simulate(t: dict, seed: int, world: str, dose: float, arm: str, memory, cfg:
     for _ in range(cfg["recovery_rounds"]):            # then recovery
         step(agents, t["task_id"], seed, rnd, cfg, policy, ctx); rnd += 1
         series.append(frac_original(agents))
-    return {"k": k, "entrench_end": entrench_end, "capture_round": capture_round,
-            "captured": capture_round is not None, "removal_round": removal_round, "rounds": rnd,
+    return {"k": k, "entrench_end": pre["entrench_end"], "capture_round": pre["capture_round"],
+            "captured": pre["capture_round"] is not None, "removal_round": removal_round, "rounds": rnd,
             "series_original": [round(x, 4) for x in series]}
+
+
+def simulate(t: dict, seed: int, world: str, dose: float, arm: str, memory, cfg: dict, policy, ctx: dict) -> dict:
+    """One arm end to end (kept for callers that want a single arm); run_episode forks the prefix instead."""
+    pre = simulate_prefix(t, seed, world, dose, memory, cfg, policy, ctx)
+    return simulate_arm(pre, t, seed, arm, cfg, policy, ctx)
 
 
 def evaluate(t: dict, run: dict, cfg: dict) -> dict:
@@ -197,6 +255,7 @@ def evaluate(t: dict, run: dict, cfg: dict) -> dict:
         "entrench_frac_original": run["series_original"][run["entrench_end"] - 1],
         "frac_original_at_removal": run["series_original"][rem - 1],
         "frac_original_T": post[T - 1] if len(post) >= T else float("nan"),
+        "delta_original": (post[T - 1] - run["series_original"][rem - 1]) if len(post) >= T else float("nan"),
         "frac_original_end": post[-1],
         "recovered": rec is not None,
         "recovery_round": None if rec is None else rec + 1,
@@ -211,24 +270,44 @@ ARMS = {
 }
 
 
+def _fresh_ctx(t, seed, arm, memory):
+    return {"task": t, "seed": seed, "arm": arm, "memory": memory, **{k: 0 for k in COST_KEYS}}
+
+
 def run_episode(task_id: int, seed: int, world: str, dose: float, arms: list, cfg: dict,
                 memory=MEMORY_FULL, policy=scripted_policy, backend: str = "scripted") -> list:
+    """The prefix (entrench + takeover) runs once per episode and every arm forks from its end state, so
+    capture status and the pre-removal trajectory are shared by all arms under any policy. Model calls and
+    tokens spent on the prefix are reported once under `cost_actual.prefix`; each arm's own recovery spend is
+    under `cost_actual` directly. A prefix failure invalidates every arm of the episode with the same error."""
     t = task(task_id)
+    t0 = time.perf_counter()
+    pctx = _fresh_ctx(t, seed, "prefix", memory)
+    try:
+        pre = simulate_prefix(t, seed, world, dose, memory, cfg, policy, pctx)
+        perr = None
+    except Exception as e:  # noqa: BLE001 - a failed episode is a recorded outcome, never retried
+        pre, perr = None, f"{type(e).__name__}: {e}"
+    prefix_cost = {"wall_s": round(time.perf_counter() - t0, 6), **{k: pctx[k] for k in COST_KEYS}}
     out = []
     for arm in arms:
-        t0 = time.perf_counter()
-        ctx = {"task": t, "seed": seed, "arm": arm, "memory": memory, "calls": 0}
-        try:
-            run = simulate(t, seed, world, dose, arm, memory, cfg, policy, ctx)
-            ev = evaluate(t, run, cfg)
-            ok, err = True, None
-        except Exception as e:  # noqa: BLE001 - a failed episode is a recorded outcome, never retried
-            run, ev, ok, err = None, None, False, f"{type(e).__name__}: {e}"
+        t1 = time.perf_counter()
+        ctx = _fresh_ctx(t, seed, arm, memory)
+        if perr is not None:
+            run, ev, ok, err = None, None, False, perr
+        else:
+            try:
+                run = simulate_arm(pre, t, seed, arm, cfg, policy, ctx)
+                ev = evaluate(t, run, cfg)
+                ok, err = True, None
+            except Exception as e:  # noqa: BLE001
+                run, ev, ok, err = None, None, False, f"{type(e).__name__}: {e}"
         out.append({
             "task_id": task_id, "seed": seed, "world": world, "dose": dose, "memory": memory, "arm": arm,
             "backend": backend, "cfg": cfg, "words": t["words"],
             "trajectory": run, "evaluation": ev,
             "validity": {"ok": ok, **({} if ok else {"error": err})},
-            "cost_actual": {"wall_s": round(time.perf_counter() - t0, 6), "model_calls": ctx["calls"]},
+            "cost_actual": {"wall_s": round(time.perf_counter() - t1, 6), "model_calls": ctx["calls"],
+                            **{k: ctx[k] for k in COST_KEYS if k != "calls"}, "prefix": prefix_cost},
         })
     return out

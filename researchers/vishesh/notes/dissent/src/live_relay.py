@@ -3,7 +3,7 @@ import argparse,json,sqlite3,time,urllib.request,urllib.error
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler,HTTPServer
 from cases import digest
-from jev import validate
+from jev import validate,response_fingerprint,VALIDATION_CODES
 from live_design import SNAPSHOT,frozen_requests
 
 RATE=0.000000042
@@ -39,7 +39,7 @@ def main(a):
         def log_message(self,*args):pass
         def do_POST(self):
             nonlocal failures
-            status=502;body={'error':'relay_failure'};call_key=None;reserved=False
+            status=502;body={'error':'relay_failure'};call_key=None;reserved=False;diagnostic=None
             try:
                 if self.path!='/decision' or time.monotonic()>expires or failures>=5:raise ValueError('relay_stopped')
                 length=int(self.headers.get('Content-Length','0'))
@@ -51,6 +51,7 @@ def main(a):
                 data=json.dumps(req,separators=(',',':')).encode()
                 wire=urllib.request.Request('https://openrouter.ai/api/alpha/decisions',data,{'Authorization':'Bearer '+key,'Content-Type':'application/json'})
                 with opener.open(wire,timeout=35) as r:response=json.loads(r.read(200000))
+                diagnostic=response_fingerprint(response,req,SNAPSHOT)
                 checked=validate(response,req,SNAPSHOT)
                 cost=round(checked['cost_usd']*1e9)
                 if cost>RESERVE:raise ValueError('cost_above_reservation')
@@ -59,8 +60,9 @@ def main(a):
                 body={'checked':checked};status=200;failures=0
             except Exception as e:
                 failures+=1
-                code='http_'+str(e.code) if isinstance(e,urllib.error.HTTPError) else ('duplicate_request' if isinstance(e,sqlite3.IntegrityError) else type(e).__name__)
+                code='http_'+str(e.code) if isinstance(e,urllib.error.HTTPError) else ('duplicate_request' if isinstance(e,sqlite3.IntegrityError) else str(e) if isinstance(e,ValueError) and str(e) in VALIDATION_CODES else type(e).__name__)
                 body={'error':code}
+                if diagnostic is not None:body['diagnostic']=diagnostic
                 if reserved:db.execute('UPDATE calls SET status=? WHERE key=?',('failed',call_key));db.commit()
             encoded=json.dumps(body).encode();self.send_response(status);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(encoded)));self.end_headers()
             try:self.wfile.write(encoded)
@@ -72,6 +74,6 @@ def main(a):
     finally:server.server_close();db.close()
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--credential-file',type=Path,required=True);p.add_argument('--ledger',type=Path,required=True);p.add_argument('--authorization',type=Path,required=True);p.add_argument('--stage',choices=['Q0','Q1','S1'],required=True)
+    p=argparse.ArgumentParser();p.add_argument('--credential-file',type=Path,required=True);p.add_argument('--ledger',type=Path,required=True);p.add_argument('--authorization',type=Path,required=True);p.add_argument('--stage',choices=['Q0','Q1','S1','D1'],required=True)
     try:main(p.parse_args())
     except Exception as e:print(json.dumps({'relay_start_failed':type(e).__name__}));raise SystemExit(1)

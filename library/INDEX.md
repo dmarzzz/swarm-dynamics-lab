@@ -2,9 +2,9 @@
 
 # Library index
 
-3293 entries.
+3298 entries.
 
-## Papers (2073)
+## Papers (2078)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -111,6 +111,7 @@
 | [fang-2025-provably](papers/fang-2025-provably.md) | Provably Robust Federated Reinforcement Learning | 2025 | 5 | skim | fork-merge-security, marl-emergence | dmarz/fm |
 | [farmer-1996-security](papers/farmer-1996-security.md) | Security for Mobile Agents: Issues and Requirements | 1996 | 5 | full | fork-merge-security | dmarz/fm-mobile-agents |
 | [fayolle-2026-internet](papers/fayolle-2026-internet.md) | On the Internet, Nobody Knows You're an LLM Bot: Unmasking Web Agents with Multi-Layer Fingerprinting | 2026 | 5 | full | swarm-detection, llm-agent-swarms, sybil-resistance | dmarz/sd-honeypots |
+| [ferreira-2026-beyond](papers/ferreira-2026-beyond.md) | Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate in Small Language Models | 2026 | 5 | abstract | decision-models, llm-agent-swarms | vishesh/codex-quorum-mirrors |
 | [fily-2012-athermal](papers/fily-2012-athermal.md) | Athermal Phase Separation of Self-Propelled Particles with No Alignment | 2012 | 5 | full | active-matter, collective-motion | dmarz/active-matter |
 | [flint-2026-group](papers/flint-2026-group.md) | Group size effects and collective misalignment in LLM multi-agent systems | 2026 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent |
 | [fudenberg-2019-learning](papers/fudenberg-2019-learning.md) | Learning Theory and Heterogeneous Play in a Signaling-Game Experiment | 2019 | 5 | abstract | decision-models, collective-decision | vishesh/codex-decision-models |
@@ -155,9 +156,11 @@
 | [huang-2026-manta](papers/huang-2026-manta.md) | MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems | 2026 | 5 | abstract | llm-agent-swarms, agent-budgets | vishesh/codex-heterogeneous |
 | [huttenrauch-2019-deep](papers/huttenrauch-2019-deep.md) | Deep Reinforcement Learning for Swarm Systems | 2019 | 5 | full | marl-emergence, swarm-robotics | dmarz/marl-emergence |
 | [jadbabaie-2003-coordination](papers/jadbabaie-2003-coordination.md) | Coordination of groups of mobile autonomous agents using nearest neighbor rules | 2003 | 5 | full | sync-consensus, collective-motion, swarm-robotics | dmarz/sync-consensus |
+| [jain-2024-interacting](papers/jain-2024-interacting.md) | Interacting Large Language Model Agents. Interpretable Models and Social Learning | 2024 | 5 | abstract | decision-models, llm-agent-swarms | vishesh/codex-quorum-mirrors |
 | [jansen-2021-once](papers/jansen-2021-once.md) | Once is Never Enough: Foundations for Sound Statistical Inference in Tor Network Experimentation | 2021 | 5 | full | meta, sybil-resistance | dmarz/sim-envs |
 | [jiang-2023-llm](papers/jiang-2023-llm.md) | LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion | 2023 | 5 | abstract | llm-agent-swarms | vishesh/codex-heterogeneous |
 | [jimenez-romero-2025-multi-agent](papers/jimenez-romero-2025-multi-agent.md) | Multi-agent systems powered by large language models: applications in swarm intelligence | 2025 | 5 | abstract | llm-agent-swarms, swarm-intelligence, collective-motion | dmarz/llm-agent-swarms-recent |
+| [jin-2026-not](papers/jin-2026-not.md) | Not All Agreement Counts as Corroboration: Provenance-Conserving Multi-View Fusion for Typed Action Admission in Human-Robot Collaboration | 2026 | 5 | abstract | decision-models, llm-agent-swarms | vishesh/codex-quorum-mirrors |
 | [jung-2025-kinetic](papers/jung-2025-kinetic.md) | Kinetic Theory of Decentralized Learning for Smart Active Matter | 2025 | 5 | abstract | marl-emergence, active-matter, swarm-robotics | dmarz/marl-emergence |
 | [kang-2026-whose](papers/kang-2026-whose.md) | Whose Agent Are You? Multi-Layer Fingerprinting and Attribution of Autonomous Web Agents | 2026 | 5 | full | swarm-detection, llm-agent-swarms | dmarz/sd-web-agents |
 | [karamouzas-2014-universal](papers/karamouzas-2014-universal.md) | Universal Power Law Governing Pedestrian Interactions | 2014 | 5 | full | crowds-and-traffic, collective-motion, criticality-measurement | dmarz/crowds-and-traffic |
@@ -327,6 +330,7 @@
 | [wang-2025-from](papers/wang-2025-from.md) | From Purity to Peril: Backdooring Merged Models From "Harmless" Benign Components | 2025 | 5 | skim | fork-merge-security | dmarz/fm-code-bench |
 | [wang-2026-debate](papers/wang-2026-debate.md) | From Debate to Decision: Conformal Social Choice for Safe Multi-Agent Deliberation | 2026 | 5 | abstract | llm-agent-swarms | vishesh/codex-heterogeneous |
 | [wang-2026-fp-agent](papers/wang-2026-fp-agent.md) | FP-Agent: Fingerprinting AI Browsing Agents | 2026 | 5 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-honeypots |
+| [wang-2026-graphecho](papers/wang-2026-graphecho.md) | GraphEcho: Structural Redundancy and Evidence Provenance in LLM Graph Agents | 2026 | 5 | full | decision-models, llm-agent-swarms | vishesh/codex-quorum-mirrors |
 | [wang-2026-guided](papers/wang-2026-guided.md) | Guided Collaboration in Heterogeneous LLM-Based Multi-Agent Systems via Entropy-Based Understanding Assessment and Experience Retrieval | 2026 | 5 | abstract | llm-agent-swarms | vishesh/codex-heterogeneous |
 | [wang-2026-oep](papers/wang-2026-oep.md) | OEP: Poisoning Self-Evolving LLM Agents via Locally Correct but Non-Transferable Experiences | 2026 | 5 | abstract | fork-merge-security | dmarz/fm-memory-injection |
 | [wang-2026-r3](papers/wang-2026-r3.md) | $R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets | 2026 | 5 | skim | agent-budgets | dmarz/budget-b |
@@ -337,6 +341,7 @@
 | [white-2026-black](papers/white-2026-black.md) | Black-Box Forensics for Conversational LLM Agents | 2026 | 5 | full | swarm-detection, sybil-resistance | dmarz/sd-attribution |
 | [wright-2004-predecessor](papers/wright-2004-predecessor.md) | The Predecessor Attack: An Analysis of a Threat to Anonymous Communications Systems | 2004 | 5 | skim | fork-merge-security, sybil-resistance | dmarz/fm-unlinkability |
 | [wu-2022-flow](papers/wu-2022-flow.md) | Flow: A Modular Learning Framework for Mixed Autonomy Traffic | 2022 | 5 | abstract | crowds-and-traffic, marl-emergence, swarm-robotics | dmarz/crowds-and-traffic |
+| [wu-2025-can](papers/wu-2025-can.md) | Can LLM Agents Really Debate? A Controlled Study of Multi-Agent Debate in Logical Reasoning | 2025 | 5 | abstract | decision-models, llm-agent-swarms | vishesh/codex-quorum-mirrors |
 | [xia-2026-when](papers/xia-2026-when.md) | When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms | 2026 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [xiang-2024-certifiably](papers/xiang-2024-certifiably.md) | Certifiably Robust RAG against Retrieval Corruption | 2024 | 5 | full | fork-merge-security, collective-decision | dmarz/fm-memory-injection |
 | [xie-2026-what](papers/xie-2026-what.md) | What If Prompt Injection Never Left? Rethinking Agent Security through Cross-Session Stored Prompt Injection | 2026 | 5 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
