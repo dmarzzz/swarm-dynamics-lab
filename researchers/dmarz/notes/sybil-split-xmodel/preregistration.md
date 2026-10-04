@@ -66,3 +66,15 @@ Authority and review status. dmarz did not name this study. The fleet monitor (d
     Each reservation is 10 times the byte-based upper bound (request bytes as input tokens plus the full output limit). The Qwen expectation rests on the parent's 10.4 M input tokens at USD 0.03 per million plus output. The GPT-6 Sol expectation is 10 to 18 M input tokens at USD 2.00 to 2.50 per million plus output at USD 10 per million. The fleet monitor set the GPT-6 Sol cap. Stages time out after 3 h and a chain after 4 h.
 
 12. **Stop rules.** No answer retries. No replacement runs. No change to sample, thresholds, prompt or models after outcomes are seen. Null and adverse results complete the study. The holdout 10000-19999 stays closed.
+
+## Amendment A1, 2026-10-04 (written before its code; no outcome of this configuration exists)
+
+13. **A third, follow-up configuration: `gpt-6-sol` with `reasoning_effort: none`.** It was added **after** the effort-low gpt-6-sol chain stopped at its Q0 gate ([post-mortem](reviews/chain-001-sol-post.md)). The reasons:
+    - that chain's misses were nulls on unanimous present facts, and they came with about three times the reasoning tokens of exactly-right packets (mean 164 against 53);
+    - effort none also matches the Qwen chain's no-reasoning setting.
+
+    It is a follow-up on the same instrument, not a retune. The packets, system prompt, answer validation, fixtures and every threshold are unchanged. Only `reasoning_effort` differs. The request body has exactly `model`, `reasoning_effort: none`, `max_completion_tokens: 2000`, `response_format {type: json_object}` and `messages`. With effort none the adapter would accept `temperature` and `top_p`; **none is sent**.
+
+    It is model-ladder entry `gpt-6-sol-none` (the API model is still `gpt-6-sol`). It has its own batches (`s0-001-solnone` … `s1-001-solnone`), ledger, results and cap (USD 90). It runs P0 and Q0 first, and S1 only if Q0 passes, under the gates of item 9. It is reported separately and never pooled with the effort-low chain, the Qwen chain or the parent.
+
+    The effort-low Q0 stop stays reported as a result whatever this configuration does. **A second stop ends the gpt-6-sol route**: no other effort level, prompt or configuration follows. Decided by dmarz/fleet-monitor on the builder's proposal; dmarz did not name it. Not independently reviewed.
